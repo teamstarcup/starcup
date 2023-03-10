@@ -1,0 +1,20 @@
+# nyano
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterArmorKendoBogu
+  name: bogu
+  description: A set of armor used in Kendo. It covers the waist, torso, and hands.
+  components:
+  - type: Sprite
+    sprite: Nyanotrasen/Clothing/OuterClothing/Armor/bogu.rsi
+  - type: Clothing
+    sprite: Nyanotrasen/Clothing/OuterClothing/Armor/bogu.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.9
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.85
+# end nyano
