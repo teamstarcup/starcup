@@ -54,3 +54,9 @@ marking-FelinidTailBasicWithBowAndBell-basic_tail_stripes_even = Tail stripes, e
 marking-FelinidTailBasicWithBowAndBell-basic_tail_stripes_odd = Tail stripes, odd
 marking-FelinidTailBasicWithBowAndBell-basic_bow = Bow
 marking-FelinidTailBasicWithBowAndBell-basic_bell = Bell
+
+marking-FelinidFluffyTail-Felinid_fluffy_tail_full = Fluffy Tail
+marking-FelinidFluffyTailRings-Felinid_fluffy_tail_full = Fluffy tail
+marking-FelinidFluffyTailRings-felinid_fluffy_tail_rings = Fluffy Tail Rings
+marking-FelinidFluffyTail = Fluffy Tail
+marking-FelinidFluffyTailRings = Fluffy Tail with rings

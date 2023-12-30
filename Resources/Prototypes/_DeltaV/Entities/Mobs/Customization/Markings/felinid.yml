@@ -151,3 +151,23 @@
     state: basic_bow
   - sprite: _DeltaV/Mobs/Customization/felinid_tails.rsi
     state: basic_bell
+
+  - type: marking
+    id: FelinidFluffyTailRings
+    bodyPart: Tail
+    markingCategory: Tail
+    speciesRestriction: [ Felinid ]
+    sprites:
+    - sprite: DeltaV/Mobs/Customization/Felinid/felinid_tails.rsi
+      state: Felinid_fluffy_tail_full
+    - sprite: DeltaV/Mobs/Customization/Felinid/felinid_tails.rsi
+      state: felinid_fluffy_tail_rings
+
+  - type: marking
+    id: FelinidFluffyTail
+    bodyPart: Tail
+    markingCategory: Tail
+    speciesRestriction: [ Felinid ]
+    sprites:
+    - sprite: DeltaV/Mobs/Customization/Felinid/felinid_tails.rsi
+      state: Felinid_fluffy_tail_full
