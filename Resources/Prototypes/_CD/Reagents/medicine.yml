@@ -210,36 +210,36 @@
         damage:
           types:
             Poison: 0.5
-      - !type:GenericStatusEffect
-        conditions:
-        - !type:ReagentThreshold
-          reagent: Tranquinase # conflicts with many other meds
-          min: 2.0
-        key: ForcedSleep
-        component: ForcedSleeping
-        refresh: false
-        type: Add
-        probability: 0.4
-      - !type:GenericStatusEffect
-        conditions:
-        - !type:ReagentThreshold
-          reagent: Soretizone # conflicts with many other meds
-          min: 3.0
-        key: ForcedSleep
-        component: ForcedSleeping
-        refresh: false
-        type: Add
-        probability: 0.3
-      - !type:GenericStatusEffect
-        conditions:
-        - !type:ReagentThreshold
-          reagent: Agonolexyne # conflicts with many other meds
-          min: 0.25
-        key: ForcedSleep
-        component: ForcedSleeping
-        refresh: false
-        type: Add
-        probability: 0.3
+     #- !type:GenericStatusEffect
+       #conditions:
+       #- !type:ReagentThreshold
+         #reagent: Tranquinase # conflicts with many other meds
+         #min: 2.0
+       #key: ForcedSleep
+       #component: ForcedSleeping
+       #refresh: false
+       #type: Add
+       #probability: 0.4
+     #- !type:GenericStatusEffect # DeltaV - Removed all psych med forcesleeps
+       #conditions:
+       #- !type:ReagentThreshold
+         #reagent: Soretizone # conflicts with many other meds
+         #min: 3.0
+       #key: ForcedSleep
+       #component: ForcedSleeping
+       #refresh: false
+       #type: Add
+       #probability: 0.3
+     #- !type:GenericStatusEffect # DeltaV - Removed all psych med forcesleeps
+       #conditions:
+       #- !type:ReagentThreshold
+         #reagent: Agonolexyne # conflicts with many other meds
+         #min: 0.25
+       #key: ForcedSleep
+       #component: ForcedSleeping
+       #refresh: false
+       #type: Add
+       #probability: 0.3
       - !type:PopupMessage
         type: Local
         visualType: Medium
@@ -348,15 +348,15 @@
         conditions:
         - !type:ReagentThreshold
           min: 16.5
-      - !type:GenericStatusEffect
-        conditions:
-        - !type:ReagentThreshold
-          min: 20.0
-        key: ForcedSleep
-        component: ForcedSleeping
-        refresh: false
-        type: Add
-        probability: 0.1
+     #- !type:GenericStatusEffect # DeltaV - Removed all psych med forcesleeps
+       #conditions:
+       #- !type:ReagentThreshold
+         #min: 20.0
+       #key: ForcedSleep
+       #component: ForcedSleeping
+       #refresh: false
+       #type: Add
+       #probability: 0.1
       - !type:HealthChange # poisons you if you take way too much
         conditions:
         - !type:ReagentThreshold
