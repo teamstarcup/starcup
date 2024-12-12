@@ -30,3 +30,28 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsRobotics ]
+
+# Lavaland Airlocks (any # per map, mining shuttle docks at lavaland here)
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleMining
+  suffix: External, Mining, Glass, Docking, Locked
+  components:
+  - type: PriorityDock
+    tag: DockMining
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsExternal ]
+
+# Mining Shuttle Dock (1 per map, spawns the mining shuttle)
+- type: entity
+  parent: AirlockExternalGlassShuttleMining
+  id: AirlockExternalGlassShuttleMiningFilled
+  suffix: Mining, Filled, Locked
+  components:
+  - type: GridFill
+    path: /Maps/_DeltaV/Shuttles/mining.yml
+    addComponents:
+    - type: IFF
+      flags:
+      - HideLabel
