@@ -55,3 +55,12 @@
     - type: IFF
       flags:
       - HideLabel
+
+# Glacier only (spawns the glacier surface shuttle)
+- type: entity
+  parent: AirlockExternalGlassShuttleMining
+  id: AirlockExternalGlassShuttleGlacierFilled
+  suffix: Glacier, Filled, Locked
+  components:
+  - type: GridFill
+    path: /Maps/_DeltaV/Shuttles/glacier_surface_shuttle.yml
