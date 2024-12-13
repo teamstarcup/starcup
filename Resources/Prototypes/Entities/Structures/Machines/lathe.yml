@@ -632,6 +632,10 @@
       range: 0.30
     - type: PlaceableSurface # Allow ore bags to dump into it directly
       isPlaceable: false # but not place on it if you just click it with a random item
+    - type: MiningPoints # DeltaV - Source of mining points for miners
+      transferSound:
+        path: /Audio/Effects/Cargo/ping.ogg
+    - type: MiningPointsLathe
 # End DeltaV additions
 
 - type: entity
