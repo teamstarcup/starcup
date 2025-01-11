@@ -43,3 +43,21 @@
   storage:
     back:
     - SpeedLoaderMagnum
+
+# Jumpsuit
+
+- type: loadout
+  id: SeniorSecOfficerTurtlesuit
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorOfficer
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSecTurtle
+
+- type: loadout
+  id: SeniorSecOfficerTurtleskirt
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorOfficer
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtSecTurtle
