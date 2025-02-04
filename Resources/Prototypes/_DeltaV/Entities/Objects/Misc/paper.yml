@@ -279,6 +279,21 @@
       amount: 4
 
 - type: entity
+  parent: BoxReamClassic
+  id: BoxReamWhite
+  name: Papermoon glimmer white paper ream
+  description: Create reports that are sure to get noticed with this Papermoon white-as-glimmer paper. Harvested with sustainable noöspheric practices.
+  components:
+  - type: Sprite
+    sprite: _DV/Objects/Misc/bureaucracy.rsi
+    layers:
+    - state: ream-white
+  - type: StorageFill
+    contents:
+    - id: Paper
+      amount: 24
+
+- type: entity
   parent: Paper
   id: PaperCrateHydroCoConsumption
   name: HydroCo Notice
