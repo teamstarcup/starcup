@@ -330,7 +330,7 @@
     sprite: Clothing/Uniforms/Jumpsuit/hop.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseCommandContraband]
+  parent: [ClothingUniformRollableBase, BaseCommandContraband] # DeltaV - add rollable jumpsuits
   id: ClothingUniformJumpsuitHoS
   name: head of security's jumpsuit
   description: It's bright red and rather crisp, much like security's victims tend to be.
@@ -364,7 +364,7 @@
     sprite: Clothing/Uniforms/Jumpsuit/hos_alt.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseCommandContraband]
+  parent: [ClothingUniformRollableBase, BaseCommandContraband] # DeltaV - add rollable jumpsuits
   id: ClothingUniformJumpsuitHoSBlue
   name: head of security's blue jumpsuit
   description: A blue jumpsuit of Head of Security.
@@ -375,7 +375,7 @@
     sprite: Clothing/Uniforms/Jumpsuit/hos_blue.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseCommandContraband]
+  parent: [ClothingUniformRollableBase, BaseCommandContraband] # DeltaV - add rollable jumpsuits
   id: ClothingUniformJumpsuitHoSGrey
   name: head of security's grey jumpsuit
   description: A grey jumpsuit for the Head of Security to help them blend in with the passengers a little. # starcup: rewritten for tone
@@ -474,7 +474,7 @@
     sprite: Clothing/Uniforms/Jumpsuit/paramedic.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformRollableBase # DeltaV - add rollable jumpsuits
   id: ClothingUniformJumpsuitBrigmedic
   name: brigmedic jumpsuit
   description: This uniform is issued to qualified personnel who have been trained. No one cares that the training took half a day.
@@ -602,7 +602,7 @@
     sprite: Clothing/Uniforms/Jumpsuit/roboticist.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseSecurityContraband]
+  parent: [ClothingUniformRollableBase, BaseSecurityContraband] # DeltaV - add rollable jumpsuits
   id: ClothingUniformJumpsuitSec
   name: security jumpsuit
   description: A jumpsuit made of strong material, providing robust protection.
@@ -625,7 +625,7 @@
       - state: overlay-inhand-right
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformRollableBase # DeltaV - add rollable jumpsuits
   id: ClothingUniformJumpsuitSecBlue
   name: blue shirt and tie
   description: I'm a little busy right now, Calhoun.
@@ -636,7 +636,7 @@
     sprite: Clothing/Uniforms/Jumpsuit/security_blue.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseSecurityContraband]
+  parent: [ClothingUniformRollableBase, BaseSecurityContraband] # DeltaV - add rollable jumpsuits
   id: ClothingUniformJumpsuitSecGrey
   name: grey security jumpsuit
   description: A tactical relic of years past before Nanotrasen decided it was cheaper to dye the suits red instead of washing out the blood.
@@ -658,7 +658,7 @@
     sprite: Clothing/Uniforms/Jumpsuit/security_trooper.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseSecurityContraband]
+  parent: [ClothingUniformRollableBase, BaseSecurityContraband] # DeltaV - add rollable jumpsuits
   id: ClothingUniformJumpsuitWarden
   name: warden's uniform
   description: A formal security suit for officers complete with Nanotrasen belt buckle.
