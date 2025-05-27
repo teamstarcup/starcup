@@ -57,7 +57,7 @@ namespace Content.IntegrationTests.Tests
             "/Maps/Shuttles/ShuttleEvent/instigator.yml", // Contains EXP-320g "Friendship"
             "/Maps/Shuttles/ShuttleEvent/syndie_evacpod.yml", // Contains syndicate rubber stamp
 			"/Maps/_starcup/syndicomm.yml",  // starcup: contains centcomm rubber stamp, centcomm folder, handheld crew monitor
-        };e
+        };
 
         private static readonly string[] GameMaps =
         {
