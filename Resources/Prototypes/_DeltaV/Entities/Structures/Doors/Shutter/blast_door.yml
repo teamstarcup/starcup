@@ -1,0 +1,25 @@
+- type: entity
+  parent: BlastDoor
+  id: BlastDoorUnlinkedRobotics
+  suffix: Robotics
+  components:
+  # begin starcup: fix access
+  #- type: AccessReader
+  #  access: [["Robotics"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsRobotics ]
+  # end starcup
+
+- type: entity
+  parent: BlastDoorOpen
+  id: BlastDoorUnlinkedRoboticsOpen
+  suffix: Open, Robotics
+  components:
+  # begin starcup: fix access
+  #- type: AccessReader
+  #  access: [["Robotics"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsRobotics ]
+  # end starcup

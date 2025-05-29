@@ -13,3 +13,12 @@
   components:
   - type: AccessReader
     access: [["Mail"]]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureRoboticsLocked
+  suffix: Robotics, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsRobotics ]

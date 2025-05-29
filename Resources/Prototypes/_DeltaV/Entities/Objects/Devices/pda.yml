@@ -29,6 +29,21 @@
     - MailMetricsCartridge
 
 - type: entity
+  parent: SciencePDA
+  id: RoboticistPDA
+  name: roboticist PDA
+  description: Surprisingly, it doesn't talk to you.
+  components:
+  - type: Pda
+    id: RoboticistIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType: !type:String
+        pda-roboticist
+  - type: Icon
+    state: pda-roboticist
+
+- type: entity
   parent: CargoPDA
   id: CargoAssistantPDA
   name: cargo assistant PDA

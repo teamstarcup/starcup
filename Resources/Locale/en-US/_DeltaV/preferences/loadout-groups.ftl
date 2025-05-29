@@ -47,6 +47,14 @@ loadout-group-medical-doctor-neck = Medical Doctor neck
 
 loadout-group-chemist-neck = Chemist neck
 
+# Epistemics
+loadout-group-roboticist-head = Roboticist head
+loadout-group-roboticist-jumpsuit = Roboticist jumpsuit
+loadout-group-roboticist-gloves = Roboticist gloves
+loadout-group-roboticist-shoes = Roboticist shoes
+loadout-group-roboticist-outerclothing = Roboticist outer clothing
+loadout-group-roboticist-id = Roboticist PDA
+
 # Engineering
 loadout-group-station-engineer-neck = Station Engineer neck
 
