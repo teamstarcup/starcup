@@ -84,6 +84,8 @@ namespace Content.IntegrationTests.Tests
             "Relic",
             "dm01-entryway",
             "Glacier",  // starcup
+            "Omega_starcup", // starcup
+            "Saltern_starcup", // starcup
         };
 
         /// <summary>
