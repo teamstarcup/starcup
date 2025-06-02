@@ -6,8 +6,8 @@ concurrency:
 
 on:
   workflow_dispatch:
-  schedule:
-  - cron: '0 10 * * *'
+#  schedule:  # starcup: we do not use this
+#  - cron: '0 10 * * *'
 
 jobs:
   build:
