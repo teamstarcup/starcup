@@ -2,6 +2,7 @@ using System.Diagnostics.CodeAnalysis;
 using Content.Server.Access.Systems;
 using Content.Server.Forensics;
 using Content.Shared.Access.Components;
+using Content.Shared.Access.Systems; // DeltaV
 using Content.Shared.Forensics.Components;
 using Content.Shared.GameTicking;
 using Content.Shared.Inventory;
@@ -152,12 +153,17 @@ public sealed class StationRecordsSystem : SharedStationRecordsSystem
             return;
         }
 
+        // DeltaV - use id card if possible
+        Entity<IdCardComponent>? card = null;
+        if (idUid != null && _idCard.TryFindIdCard(idUid.Value, out var card2))
+            card = card2;
+
         var record = new GeneralStationRecord()
         {
             Name = name,
             Age = age,
-            JobTitle = jobPrototype.LocalizedName,
-            JobIcon = jobPrototype.Icon,
+            JobTitle = card?.Comp.LocalizedJobTitle ?? jobPrototype.LocalizedName, // DeltaV
+            JobIcon = card?.Comp.JobIcon ?? jobPrototype.Icon, // DeltaV
             JobPrototype = jobId,
             Species = species,
             Gender = gender,
