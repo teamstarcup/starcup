@@ -1,11 +1,11 @@
-using Content.Shared.DeltaV.TapeRecorder.Systems;
+using Content.Shared._DeltaV.TapeRecorder.Systems;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 using Robust.Shared.Utility;
 
-namespace Content.Shared.DeltaV.TapeRecorder.Components;
+namespace Content.Shared._DeltaV.TapeRecorder.Components;
 
 [RegisterComponent, NetworkedComponent, Access(typeof(SharedTapeRecorderSystem))]
 [AutoGenerateComponentState, AutoGenerateComponentPause]
