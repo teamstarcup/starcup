@@ -52,9 +52,20 @@
   description: Even your legs will be warm with this stylish coat.
   components:
     - type: Sprite
-      sprite: Nyanotrasen/Clothing/OuterClothing/WinterCoats/long_winter_coat.rsi
+      sprite: _DeltaV/Clothing/OuterClothing/WinterCoats/long_winter_coat.rsi
     - type: Clothing
-      sprite: Nyanotrasen/Clothing/OuterClothing/WinterCoats/long_winter_coat.rsi
+      sprite: _DeltaV/Clothing/OuterClothing/WinterCoats/long_winter_coat.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingOuterWinterCoatPlaid
+  name: plaid winter coat
+  description: It might be made out of actual wool.
+  components:
+    - type: Sprite
+      sprite: _DeltaV/Clothing/OuterClothing/WinterCoats/plaid_winter_coat.rsi
+    - type: Clothing
+      sprite: _DeltaV/Clothing/OuterClothing/WinterCoats/plaid_winter_coat.rsi
 
 - type: entity
   parent: ClothingOuterWinterCoat
