@@ -13,10 +13,20 @@ loadout-group-security-cadet-outerclothing = Security cadet outer clothing
 loadout-group-warden-shoes = Warden shoes
 
 # Service
+loadout-group-bartender-shoes = Bartender shoes
+
+loadout-group-chaplain-shoes = Chaplain shoes
+
+loadout-group-janitor-shoes = Janitor shoes
 loadout-group-janitor-light = Janitor flashlight
 
 loadout-group-lawyer-outerclothing = Lawyer outer clothing
+loadout-group-lawyer-shoes = Lawyer shoes
 
 loadout-group-librarian-outerclothing = Librarian outer clothing
+loadout-group-librarian-shoes = Librarian shoes
+
+loadout-group-musician-shoes = Musician shoes
 
 loadout-group-service-worker-outerclothing = Service worker outer clothing
+loadout-group-service-worker-shoes = Service worker shoes
