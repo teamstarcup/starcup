@@ -53,6 +53,9 @@ loadout-group-medical-doctor-neck = Medical Doctor neck
 loadout-group-chemist-shoes = Chemist shoes
 loadout-group-chemist-neck = Chemist neck
 
+loadout-group-psychologist-outerclothing = Psychologist outer clothing
+loadout-group-psychologist-shoes = Psychologist shoes
+
 # Epistemics
 loadout-group-roboticist-head = Roboticist head
 loadout-group-roboticist-jumpsuit = Roboticist jumpsuit
