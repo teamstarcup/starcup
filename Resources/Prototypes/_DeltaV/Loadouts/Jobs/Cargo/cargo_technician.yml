@@ -13,3 +13,40 @@
   id: ClothingUniformJumpskirtCargoTechRomper
   equipment:
     jumpsuit: ClothingUniformJumpskirtCargoTechRomper
+
+# PDA
+# starcup - By default, all these files had three issues when merged:
+# - a seemingly broken "startingGear" section
+# - no separate "id:" line for "equipment:"
+# - often did not provide the job's "default" PDA as an option.
+# These all seemed to cause problems, so for now, we're changing that to see what it breaks.
+
+- type: loadout
+  id: CargoPDA
+  equipment:
+    id: CargoPDA
+
+# - type: startingGear
+#   id: CargoPDA
+#   equipment:
+#     id: CargoPDA
+
+- type: loadout
+  id: DeckWorkerPDA
+  equipment:
+    id: DeckWorkerPDA
+
+# - type: startingGear
+#   id: DeckWorkerPDA
+#   equipment:
+#     id: DeckWorkerPDA
+
+- type: loadout
+  id: InventoryAssociatePDA
+  equipment:
+    id: InventoryAssociatePDA
+
+# - type: startingGear
+#   id: InventoryAssociatePDA
+#   equipment:
+#     id: InventoryAssociatePDA

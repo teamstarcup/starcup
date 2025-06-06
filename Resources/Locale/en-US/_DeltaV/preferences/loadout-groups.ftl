@@ -11,6 +11,13 @@ loadout-group-mime-neck = Mime neck
 
 loadout-group-musician-neck = Musician neck
 
+loadout-group-passenger-id-delta = Passenger PDA
+loadout-group-bartender-id-delta = Bartender PDA
+loadout-group-chef-id-delta = Chef PDA
+loadout-group-clown-id-delta = Clown PDA
+
+loadout-group-janitor-id-delta = Janitor PDA
+
 # Command
 loadout-group-captain-shoes = Captain shoes
 loadout-group-hop-shoes = Head of Personnel shoes
@@ -30,6 +37,8 @@ loadout-group-courier-outerclothing = Courier outer clothing
 loadout-group-courier-backpack = Courier backpack
 loadout-group-courier-id = Courier PDA
 
+loadout-group-salvage-id-delta = Salvage Specialist PDA
+
 loadout-group-cargo-assistant-head = Cargo Assistant head
 loadout-group-cargo-assistant-neck = Cargo Assistant neck
 loadout-group-cargo-assistant-jumpsuit = Cargo Assistant jumpsuit
@@ -41,6 +50,8 @@ loadout-group-salvage-specialist-neck = Salvage Specialist neck
 
 loadout-group-cargo-technician-neck = Cargo Technician neck
 
+loadout-group-cargo-id-delta = Cargo Technician PDA
+
 # Security
 loadout-group-head-of-security-shoes = Head of Security shoes
 
@@ -50,8 +61,10 @@ loadout-group-security-neck = Security neck
 # Medical
 loadout-group-medical-doctor-neck = Medical Doctor neck
 
-loadout-group-chemist-shoes = Chemist shoes
+loadout-group-medical-intern-id-delta = Medical Intern PDA
+
 loadout-group-chemist-neck = Chemist neck
+loadout-group-chemist-shoes = Chemist shoes
 
 loadout-group-psychologist-outerclothing = Psychologist outer clothing
 loadout-group-psychologist-shoes = Psychologist shoes
@@ -68,6 +81,8 @@ loadout-group-roboticist-id = Roboticist PDA
 loadout-group-station-engineer-neck = Station Engineer neck
 
 loadout-group-atmospheric-technician-neck = Atmospheric Technician neck
+
+loadout-group-atmos-id-delta = Atmospheric Technician PDA
 
 # Species
 loadout-group-humanoid-silicon = Silicon-friendly survival box

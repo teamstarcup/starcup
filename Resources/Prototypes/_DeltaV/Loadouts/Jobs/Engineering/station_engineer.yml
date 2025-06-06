@@ -1,9 +1,3 @@
-# Neck
-- type: loadout
-  id: Stethoscope
-  equipment:
-    neck: ClothingNeckStethoscope
-
 # PDA
 # starcup - By default, all these files had three issues when merged:
 # - a seemingly broken "startingGear" section
@@ -12,16 +6,26 @@
 # These all seemed to cause problems, so for now, we're changing that to see what it breaks.
 
 - type: loadout
-  id: MedicalDoctorPDA
+  id: StationEngineerPDA
   equipment:
-    id: MedicalPDA
+    id: EngineerPDA
 
 - type: loadout
-  id: ClinicianPDA
+  id: ElectricianPDA
   equipment:
-    id: ClinicianPDA
+    id: ElectricianPDA
 
-# - type: startingGear
-#   id: ClinicianPDA
-#   equipment:
-#     id: ClinicianPDA
+#- type: startingGear
+#  id: ElectricianPDA
+#  equipment:
+#    id: ElectricianPDA
+
+- type: loadout
+  id: MechanicPDA
+  equipment:
+    id: MechanicPDA
+
+#- type: startingGear
+#  id: MechanicPDA
+#  equipment:
+#    id: MechanicPDA
