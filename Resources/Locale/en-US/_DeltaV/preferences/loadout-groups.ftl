@@ -12,6 +12,9 @@ loadout-group-mime-neck = Mime neck
 loadout-group-musician-neck = Musician neck
 
 # Command
+loadout-group-captain-shoes = Captain shoes
+loadout-group-hop-shoes = Head of Personnel shoes
+
 loadout-group-admin-assistant-head = Administrative Assistant head
 loadout-group-admin-assistant-jumpsuit = Administrative Assistant jumpsuit
 loadout-group-admin-assistant-outerclothing = Administrative Assistant outer clothing
@@ -39,12 +42,15 @@ loadout-group-salvage-specialist-neck = Salvage Specialist neck
 loadout-group-cargo-technician-neck = Cargo Technician neck
 
 # Security
-loadout-group-security-cadet-head = Security Cadet head
+loadout-group-head-of-security-shoes = Head of Security shoes
 
+loadout-group-security-cadet-head = Security Cadet head
 loadout-group-security-neck = Security neck
 
+# Medical
 loadout-group-medical-doctor-neck = Medical Doctor neck
 
+loadout-group-chemist-shoes = Chemist shoes
 loadout-group-chemist-neck = Chemist neck
 
 # Epistemics
@@ -59,8 +65,6 @@ loadout-group-roboticist-id = Roboticist PDA
 loadout-group-station-engineer-neck = Station Engineer neck
 
 loadout-group-atmospheric-technician-neck = Atmospheric Technician neck
-
-
 
 # Species
 loadout-group-humanoid-silicon = Silicon-friendly survival box
