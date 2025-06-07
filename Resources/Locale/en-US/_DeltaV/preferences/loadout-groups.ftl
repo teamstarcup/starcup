@@ -60,6 +60,8 @@ loadout-group-medical-intern-id-delta = Medical Intern PDA
 
 loadout-group-chemist-neck = Chemist neck
 
+loadout-group-psychologist-id-delta = Psychologist PDA
+
 # Epistemics
 loadout-group-roboticist-head = Roboticist head
 loadout-group-roboticist-jumpsuit = Roboticist jumpsuit
