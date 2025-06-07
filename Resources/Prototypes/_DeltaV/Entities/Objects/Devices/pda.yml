@@ -293,14 +293,14 @@
 
 # Salvage Technician
 
-# - type: entity
-#  parent: SalvagePDA
-#  id: ProspectorPDA
-#  name: prospector PDA
-#  components:
-#  - type: Pda
-#    id: ProspectorIDCard
-# starcup - feels redundant with Excavator currently, we'll tweak it
+- type: entity
+  parent: SalvagePDA
+  id: ProspectorPDA
+  name: prospector PDA
+  description: Electra Dynamics is always looking for new terraforming candidates. # starcup
+  components:
+  - type: Pda
+    id: ProspectorIDCard
 
 - type: entity
   parent: SalvagePDA

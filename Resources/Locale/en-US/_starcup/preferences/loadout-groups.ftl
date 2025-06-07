@@ -4,8 +4,12 @@ loadout-group-technical-assistant-outerclothing = Technical assistant outer clot
 # Medical
 loadout-group-medical-intern-outerclothing = Medical intern outer clothing
 
+loadout-group-chemist-id-starcup = Chemist PDA
+
 # Research
 loadout-group-research-assistant-outerclothing = Research assistant outer clothing
+
+loadout-group-roboticist-id-starcup = Roboticist PDA
 
 # Security
 loadout-group-security-cadet-outerclothing = Security cadet outer clothing
@@ -18,6 +22,7 @@ loadout-group-botanist-shoes = Botanist shoes
 loadout-group-bartender-shoes = Bartender shoes
 
 loadout-group-chaplain-shoes = Chaplain shoes
+loadout-group-chaplain-id-starcup = Chaplain PDA
 
 loadout-group-chef-shoes = Chef shoes
 
