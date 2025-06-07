@@ -1065,10 +1065,6 @@
   components:
   - type: Pda
     id: VisitorIDCard
-  - type: Appearance # DeltaV - visitor pda sprite
-    appearanceDataInit:
-      enum.PdaVisuals.PdaType: !type:String
-        pda-visitor
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener
