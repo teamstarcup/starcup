@@ -13,7 +13,7 @@
       - type: StationNameSetup
         mapNameTemplate: '{0} Glacier Station {1}'
         nameGenerator:
-          !type:NanotrasenNameGenerator
+          !type:SyndicateNameGenerator
           prefixCreator: 'NY'
       - type: StationEmergencyShuttle
         emergencyShuttlePath: /Maps/_starcup/Shuttles/SYND_EvacShip.yml  # starcup: NTES_Vertex.yml -> SYND_EvacShip.yml

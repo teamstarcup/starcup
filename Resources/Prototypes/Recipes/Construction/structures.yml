@@ -633,15 +633,15 @@
   graph: Catwalk
   startNode: start
   targetNode: Catwalk
-  category: construct
+  category: construction-category-structures
   conditions:
-  - !type:TileNotBlocked
-    failIfSpace: false
-  - !type:TileType
-    targets:
-      - Lattice
-      - Plating
-      - FloorBasalt  # starcup: build catwalks over lava
+    - !type:TileNotBlocked
+      failIfSpace: false
+    - !type:TileType
+      targets:
+        - Lattice
+        - Plating
+        - FloorBasalt  # starcup: build catwalks over lava
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
