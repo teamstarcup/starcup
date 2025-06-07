@@ -1060,12 +1060,19 @@
 - type: entity
   parent: ClearPDA
   id: VisitorPDA
+  name: visitor PDA # DeltaV
+  description: If you hold onto this, it can be a fun souvenier when you get to... wherever you're going! # DeltaV
   components:
   - type: Pda
     id: VisitorIDCard
+  - type: Appearance # DeltaV - visitor pda sprite
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType: !type:String
+        pda-visitor
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener
+    - WhitelistChameleon # DeltaV - it has a unique sprite
 
 - type: entity
   parent: [ BasePDA, BaseSyndicateContraband ]

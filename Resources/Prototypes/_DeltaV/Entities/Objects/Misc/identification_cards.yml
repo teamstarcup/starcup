@@ -70,11 +70,11 @@
 
 - type: entity
   parent: PassengerIDCard
-  id: VisitorIDCard
+  id: VisitorIDCardLoadout
   name: visitor ID card
   components:
   - type: IdCard
-    jobTitle: job-alt-title-visitor
+    jobTitle: job-title-visitor
 
 - type: entity
   parent: PassengerIDCard
@@ -280,14 +280,6 @@
   components:
   - type: IdCard
     jobTitle: job-alt-title-xenoarch
-
-- type: entity
-  parent: ResearchIDCard
-  id: RoboticistIDCard
-  name: roboticist ID card
-  components:
-  - type: IdCard
-    jobTitle: job-alt-title-roboticist
 
 # Clown
 
