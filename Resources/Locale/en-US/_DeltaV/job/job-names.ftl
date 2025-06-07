@@ -19,7 +19,7 @@ job-alt-title-electrician = Electrician
 job-alt-title-mechanic = Mechanic
 job-alt-title-deck-worker = Deck Worker
 job-alt-title-inventory-associate = Inventory Associate
-# job-alt-title-prospector = Prospector
+job-alt-title-prospector = Prospector
 job-alt-title-excavator = Excavator
 job-alt-title-lab-tech = Lab Technician
 job-alt-title-xenoarch = Xenoarchaeologist
@@ -28,7 +28,7 @@ job-alt-title-jester = Jester
 job-alt-title-fool = Fool
 job-alt-title-hygiene-technician = Hygiene Technician
 # starcup - fixed "name" to "alt-title"
-# starcup - commented out "pizzaiolo" for silliness, "prospector" bc it feels a tidge redundant, and "Roboticist" bc we already have one of those.
+# starcup - commented out "pizzaiolo" for silliness and "Roboticist" bc we already have one of those.
 job-alt-title-psychiatrist = Psychiatrist
 job-alt-title-social-worker = Social Worker
 job-alt-title-therapist = Therapist
