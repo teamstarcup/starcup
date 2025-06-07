@@ -1,31 +1,10 @@
-# PDA
-# starcup - By default, all these files had three issues when merged:
-# - a seemingly broken "startingGear" section
-# - no separate "id:" line for "equipment:"
-# - often did not provide the job's "default" PDA as an option.
-# These all seemed to cause problems, so for now, we're changing that to see what it breaks.
-
-- type: loadout
-  id: StationEngineerPDA
-  equipment:
-    id: EngineerPDA
-
+# ID
 - type: loadout
   id: ElectricianPDA
   equipment:
     id: ElectricianPDA
 
-#- type: startingGear
-#  id: ElectricianPDA
-#  equipment:
-#    id: ElectricianPDA
-
 - type: loadout
   id: MechanicPDA
   equipment:
     id: MechanicPDA
-
-#- type: startingGear
-#  id: MechanicPDA
-#  equipment:
-#    id: MechanicPDA

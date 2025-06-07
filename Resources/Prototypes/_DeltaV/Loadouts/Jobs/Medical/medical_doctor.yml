@@ -4,13 +4,7 @@
   equipment:
     neck: ClothingNeckStethoscope
 
-# PDA
-# starcup - By default, all these files had three issues when merged:
-# - a seemingly broken "startingGear" section
-# - no separate "id:" line for "equipment:"
-# - often did not provide the job's "default" PDA as an option.
-# These all seemed to cause problems, so for now, we're changing that to see what it breaks.
-
+# ID
 - type: loadout
   id: MedicalDoctorPDA
   equipment:
@@ -20,8 +14,3 @@
   id: ClinicianPDA
   equipment:
     id: ClinicianPDA
-
-# - type: startingGear
-#   id: ClinicianPDA
-#   equipment:
-#     id: ClinicianPDA
