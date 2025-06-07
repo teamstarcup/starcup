@@ -633,26 +633,15 @@
   graph: Catwalk
   startNode: start
   targetNode: Catwalk
-  category: construction-category-structures
+  category: construct
   conditions:
-    - !type:TileNotBlocked
-      failIfSpace: false
-    - !type:TileType
-      targets:
-        - Lattice
-        - Plating
-  description: Just like a lattice. Except it looks better.
-  # DeltaV - This prevented building catwalk over lava
-  #conditions:
-  #- !type:TileNotBlocked
-  #  failIfSpace: false
-  #- !type:TileType
-  #  targets:
-  #    - Lattice
-  #    - Plating
-  icon:
-    sprite: Structures/catwalk.rsi
-    state: catwalk_preview
+  - !type:TileNotBlocked
+    failIfSpace: false
+  - !type:TileType
+    targets:
+      - Lattice
+      - Plating
+      - FloorBasalt  # starcup: build catwalks over lava
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false

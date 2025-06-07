@@ -1,0 +1,14 @@
+- type: entity
+  parent: BaseWallLocker
+  id: WallLockerScience
+  name: science wall locker
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _starcup/Structures/Storage/wall_locker.rsi
+  - type: EntityStorageVisuals
+    stateBaseClosed: sci
+    stateDoorClosed: sci_door
+    stateDoorOpen: sci_open
+  - type: AccessReader
+    access: [["Research"]]
