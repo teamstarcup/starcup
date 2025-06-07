@@ -29,6 +29,9 @@ job-alt-title-fool = Fool
 job-alt-title-hygiene-technician = Hygiene Technician
 # starcup - fixed "name" to "alt-title"
 # starcup - commented out "pizzaiolo" for silliness, "prospector" bc it feels a tidge redundant, and "Roboticist" bc we already have one of those.
+job-alt-title-psychiatrist = Psychiatrist
+job-alt-title-social-worker = Social Worker
+job-alt-title-therapist = Therapist
 
 # Role timers
 JobCourier = Courier

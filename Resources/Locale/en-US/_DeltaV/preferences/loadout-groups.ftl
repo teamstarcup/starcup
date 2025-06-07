@@ -69,6 +69,8 @@ loadout-group-chemist-shoes = Chemist shoes
 loadout-group-psychologist-outerclothing = Psychologist outer clothing
 loadout-group-psychologist-shoes = Psychologist shoes
 
+loadout-group-psychologist-id-delta = Psychologist PDA
+
 # Epistemics
 loadout-group-roboticist-head = Roboticist head
 loadout-group-roboticist-jumpsuit = Roboticist jumpsuit

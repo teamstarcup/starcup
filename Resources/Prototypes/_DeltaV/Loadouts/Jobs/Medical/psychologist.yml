@@ -1,0 +1,32 @@
+# PDA
+- type: loadout
+  id: PsychologistPDA
+  equipment:
+    id: PsychologistPDA
+
+- type: loadout
+  id: PsychiatristPDA
+  equipment:
+    id: PsychiatristPDA
+
+- type: loadout
+  id: TherapistPDA
+  equipment:
+    id: TherapistPDA
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobPsychologist
+      time: 14400 # 4 hours psychologist
+
+- type: loadout
+  id: SocialWorkerPDA
+  equipment:
+    id: SocialWorkerPDA
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 14400 # 4 hours service
