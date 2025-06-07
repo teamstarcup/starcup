@@ -74,7 +74,7 @@ public sealed class RespiratorSystem : EntitySystem
             if (_mobState.IsDead(uid))
                 continue;
 
-            // Begin DeltaV Code: Addition: 
+            // Begin DeltaV Code: Addition:
             var organs = _bodySystem.GetBodyOrganEntityComps<LungComponent>((uid, body));
             var multiplier = -1f;
             foreach (var (_, lung, _) in organs)
