@@ -4,8 +4,8 @@ meta:
   engineVersion: 260.0.0
   forkId: ""
   forkVersion: ""
-  time: 06/02/2025 14:49:01
-  entityCount: 14571
+  time: 06/07/2025 09:37:53
+  entityCount: 14573
 maps:
 - 1
 grids:
@@ -9278,6 +9278,14 @@ entities:
       name: Salvage Airlock
     - type: Transform
       pos: -40.5,-3.5
+      parent: 2
+- proto: AirlockExternalGlassShuttleMiningFilled
+  entities:
+  - uid: 14572
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -41.5,1.5
       parent: 2
 - proto: AirlockExternalLocked
   entities:
@@ -35884,6 +35892,13 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -22.5,-15.5
+      parent: 2
+- proto: ComputerShuttleMining
+  entities:
+  - uid: 14573
+    components:
+    - type: Transform
+      pos: -39.5,1.5
       parent: 2
 - proto: ComputerSolarControl
   entities:
@@ -78428,6 +78443,12 @@ entities:
     - type: Transform
       pos: 27.5,20.5
       parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
 - proto: SecurityTechFabCircuitboard
   entities:
   - uid: 11580
@@ -86462,6 +86483,12 @@ entities:
     - type: Transform
       pos: 6.5,10.5
       parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
 - proto: UniformPrinterMachineCircuitboard
   entities:
   - uid: 12792
