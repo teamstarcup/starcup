@@ -1,4 +1,186 @@
 - type: entity
+  id: BlastDoorUnlinkedBridge
+  parent: BlastDoor
+  suffix: Bridge
+  components:
+  # begin starcup: fix access
+  #  - type: AccessReader
+  #    access: [["Command"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCommand ]
+  # end starcup
+
+- type: entity
+  id: BlastDoorUnlinkedBridgeOpen
+  parent: BlastDoorOpen
+  suffix: Open, Bridge
+  components:
+  # begin starcup: fix access
+  #  - type: AccessReader
+  #    access: [["Command"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCommand ]
+  # end starcup
+
+- type: entity
+  id: BlastDoorUnlinkedEngineering
+  parent: BlastDoor
+  suffix: Engineering
+  components:
+  # begin starcup: fix access
+  #- type: AccessReader
+  #  access: [["Command"], ["Engineering"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsEngineering ]
+  # end starcup
+
+- type: entity
+  id: BlastDoorUnlinkedEngineeringOpen
+  parent: BlastDoorOpen
+  suffix: Open, Engineering
+  components:
+  # begin starcup: fix access
+  #- type: AccessReader
+  #  access: [["Command"], ["Engineering"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsEngineering ]
+  # end starcup
+
+- type: entity
+  id: BlastDoorUnlinkedEpistemics
+  parent: BlastDoor
+  suffix: Science # starcup: Science, was Epistemics
+  components:
+  # begin starcup: fix access
+  #- type: AccessReader
+  #  access: [["Command"], ["Research"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsResearch ]
+  # end starcup
+
+- type: entity
+  id: BlastDoorUnlinkedEpistemicsOpen
+  parent: BlastDoorOpen
+  suffix: Open, Science # starcup: Science, was Epistemics
+  components:
+  # begin starcup: fix access
+  #- type: AccessReader
+  #  access: [["Command"], ["Research"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsResearch ]
+  # end starcup
+
+- type: entity
+  id: BlastDoorUnlinkedSecurity
+  parent: BlastDoor
+  suffix: Security
+  components:
+  # begin starcup: fix access
+  #- type: AccessReader
+  #  access: [["Command"], ["Security"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+  # end starcup
+
+- type: entity
+  id: BlastDoorUnlinkedSecurityOpen
+  parent: BlastDoorOpen
+  suffix: Open, Security
+  components:
+  # begin starcup: fix access
+  #- type: AccessReader
+  #  access: [["Command"], ["Security"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+  # end starcup
+
+- type: entity
+  id: BlastDoorUnlinkedMedical
+  parent: BlastDoor
+  suffix: Medical
+  components:
+  # begin starcup: fix access
+  #- type: AccessReader
+  #  access: [["Command"], ["Medical"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMedical ]
+  # end starcup
+
+- type: entity
+  id: BlastDoorUnlinkedMedicalOpen
+  parent: BlastDoorOpen
+  suffix: Open, Medical
+  components:
+  # begin starcup: fix access
+  #- type: AccessReader
+  #  access: [["Command"], ["Medical"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMedical ]
+  # end starcup
+
+- type: entity
+  id: BlastDoorUnlinkedLogistics
+  parent: BlastDoor
+  suffix: Logistics
+  components:
+  # begin starcup: fix access
+  #- type: AccessReader
+  #  access: [["Command"], ["Cargo"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCargo ]
+  # end starcup
+
+- type: entity
+  id: BlastDoorUnlinkedLogisticsOpen
+  parent: BlastDoorOpen
+  suffix: Open, Logistics
+  components:
+  # begin starcup: fix access
+  #- type: AccessReader
+  #  access: [["Command"], ["Cargo"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCargo ]
+  # end starcup
+
+- type: entity
+  id: BlastDoorUnlinkedArmory
+  parent: BlastDoor
+  suffix: Armory
+  components:
+  # begin starcup: fix access
+  #- type: AccessReader
+  #  access: [["Command"], ["Armory"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsArmory ]
+  # end starcup
+
+- type: entity
+  id: BlastDoorUnlinkedArmoryOpen
+  parent: BlastDoorOpen
+  suffix: Open, Armory
+  components:
+  # begin starcup: fix access
+  #- type: AccessReader
+  #  access: [["Command"], ["Armory"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsArmory ]
+  # end starcup
+
+- type: entity
   parent: BlastDoor
   id: BlastDoorUnlinkedRobotics
   suffix: Robotics

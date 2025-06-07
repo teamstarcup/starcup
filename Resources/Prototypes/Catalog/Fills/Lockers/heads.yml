@@ -8,6 +8,7 @@
     - id: CargoRequestComputerCircuitboard
     - id: CargoSaleComputerCircuitboard
     - id: CargoShuttleConsoleCircuitboard
+    - id: MiningShuttleConsoleCircuitboard
     - id: SalvageMagnetMachineCircuitboard
     - id: SalvageJobBoardComputerCircuitboard
     - id: CigPackGreen
@@ -20,6 +21,7 @@
     - id: RubberStampQm
     - id: AstroNavCartridge
     - id: ClothingHandsKnuckleDustersQM
+    - id: ClothingShoesBootsWinterLogisticsOfficer # DeltaV
 
 - type: entity
   id: LockerQuarterMasterFilled
@@ -57,6 +59,7 @@
       conditions:
       - !type:PlayerCountCondition
         max: 15
+    - id: ClothingShoesBootsWinterCap # DeltaV
 
 # No laser table + Laser table
 - type: entityTable
@@ -144,6 +147,7 @@
     - id: RubberStampHop
     - id: WeaponDisabler
     - id: ClothingEyesHudCommand
+    - id: ClothingShoesBootsWinterHeadOfPersonel # DeltaV
 
 - type: entity
   id: LockerHeadOfPersonnelFilled
@@ -175,6 +179,7 @@
     - id: RCDAmmo
     - id: RubberStampCE
     - id: MetalFoamGrenade
+    - id: ClothingShoesBootsWinterChiefEngineer # DeltaV
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -235,6 +240,7 @@
     - id: MedkitFilled
     - id: RubberStampCMO
     - id: MedTekCartridge
+    - id: ClothingShoesBootsWinterChiefMedicalOfficer # DeltaV
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -288,6 +294,7 @@
     - id: ResearchComputerCircuitboard
 #    - id: CargoRequestScienceComputerCircuitboard # starcup: disable departmental economy
     - id: RubberStampRd
+    - id: ClothingShoesBootsWinterMystagogue # DeltaV
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -349,6 +356,7 @@
     - id: WeaponDisabler
     - id: WantedListCartridge
     - id: DrinkHosFlask
+    - id: ClothingShoesBootsWinterHeadOfSecurity # DeltaV
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable

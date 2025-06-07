@@ -158,7 +158,7 @@
   name: loadout-group-cargo-assistant-outerclothing
   minLimit: 0
   loadouts:
-  - CargoTechnicianWintercoat
+  - WinterCoatYellow # starcup, changed from CargoTechnicianWintercoat
 
 - type: loadoutGroup
   id: CargoAssistantShoes
@@ -225,6 +225,7 @@
   - BlackShoes
   - WhiteShoes
   - ScienceWinterBoots
+  - RoboticsWinterBoots
 
 # Command
 ## Administrative Assistant
@@ -234,6 +235,7 @@
   loadouts:
   - AdminAssistantJumpsuit
   - AdminAssistantJumpskirt
+  - ElegantDressBlue # starcup
 
 - type: loadoutGroup
   id: AdminAssistantShoes
@@ -241,6 +243,7 @@
   loadouts:
   - BrownLeatherShoes
   - LaceupShoes
+  - WinterBoots # starcup
 
 - type: loadoutGroup
   id: AdminAssistantOuter
@@ -258,7 +261,34 @@
   - HoPGloves
   - InspectionGloves
 
+## Captain
+- type: loadoutGroup
+  id: CaptainShoes
+  name: loadout-group-captain-shoes
+  loadouts:
+  - BrownLeatherShoes
+  - LaceupShoes
+  - CaptainWinterBoots
+
+# Head of Personnel
+- type: loadoutGroup
+  id: HoPShoes
+  name: loadout-group-hop-shoes
+  loadouts:
+  - BrownLeatherShoes
+  - LaceupShoes
+  - HoPWinterBoots
+
 # Security
+## Head of Security
+- type: loadoutGroup
+  id: HeadofSecurityShoes
+  name: loadout-group-head-of-security-shoes
+  loadouts:
+  - JackBoots
+  - SecurityWinterBoots
+  - HeadOfSecurityWinterBoots
+
 ## Security Cadet
 - type: loadoutGroup
   id: SecurityCadetHead
@@ -278,6 +308,25 @@
   - ScarfSyndieRed # starcup
 
 # Medical
+##Psychologist
+- type: loadoutGroup
+  id: PsychologistOuterClothing
+  name: loadout-group-psychologist-outerclothing
+  minLimit: 0
+  loadouts:
+  - MedicalDoctorWintercoat
+  - WinterCoat
+  - WinterCoatPlaid
+
+- type: loadoutGroup
+  id: PsychologistShoes
+  name: loadout-group-psychologist-shoes
+  loadouts:
+  - BrownLeatherShoes
+  - LaceupShoes
+  - MedicalWinterBoots
+  - WinterBoots
+
 ## Medical Doctor
 - type: loadoutGroup
   id: MedicalDoctorNeck
@@ -298,6 +347,13 @@
   - ScarfOrange
   - ScarfTrans # starcup
   - ScarfBlue
+
+- type: loadoutGroup
+  id: ChemistShoes
+  name: loadout-group-chemist-shoes
+  loadouts:
+  - WhiteShoes
+  - ChemistWinterBoots
 
 # Engineering
 ## Station Engineer

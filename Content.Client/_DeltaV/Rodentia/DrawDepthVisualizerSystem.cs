@@ -1,7 +1,7 @@
 using Content.Shared.DrawDepth;
 using Robust.Client.GameObjects;
 
-namespace Content.Client._DV.Abilities;
+namespace Content.Client._DeltaV.Abilities;
 
 /// <summary>
 /// Changes a sprite's draw depth when some appearance data becomes true.

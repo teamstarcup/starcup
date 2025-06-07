@@ -30,3 +30,56 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsRobotics ]
+
+# Security-locked External airlocks. These don't exist upstream for some reason.
+- type: entity
+  parent: AirlockExternal
+  id: AirlockExternalSecurityLocked
+  suffix: External, Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+- type: entity
+  parent: AirlockExternalGlass
+  id: AirlockExternalGlassSecurityLocked
+  suffix: External, Glass, Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+# Lavaland Airlocks (any # per map, mining shuttle docks at lavaland here)
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleMining
+  suffix: External, Mining, Glass, Docking, Locked
+  components:
+  - type: PriorityDock
+    tag: DockMining
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsExternal ]
+
+# Mining Shuttle Dock (1 per map, spawns the mining shuttle)
+- type: entity
+  parent: AirlockExternalGlassShuttleMining
+  id: AirlockExternalGlassShuttleMiningFilled
+  suffix: Mining, Filled, Locked
+  components:
+  - type: GridFill
+    path: /Maps/_DeltaV/Shuttles/mining.yml
+    addComponents:
+    - type: IFF
+      flags:
+      - HideLabel
+
+# Glacier only (spawns the glacier surface shuttle)
+- type: entity
+  parent: AirlockExternalGlassShuttleMining
+  id: AirlockExternalGlassShuttleGlacierFilled
+  suffix: Glacier, Filled, Locked
+  components:
+  - type: GridFill
+    path: /Maps/_DeltaV/Shuttles/glacier_surface_shuttle.yml

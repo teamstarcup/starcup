@@ -13,14 +13,14 @@
       - type: StationNameSetup
         mapNameTemplate: '{0} Glacier Station {1}'
         nameGenerator:
-          !type:NanotrasenNameGenerator
+          !type:SyndicateNameGenerator
           prefixCreator: 'NY'
       - type: StationEmergencyShuttle
         emergencyShuttlePath: /Maps/_starcup/Shuttles/SYND_EvacShip.yml  # starcup: NTES_Vertex.yml -> SYND_EvacShip.yml
-# starcup: no glacier surface yet
-#      - type: StationPlanetSpawner
-#        planet: GlacierSurface
-#        gridPath: /Maps/_DV/Nonstations/glacier_surface_outpost.yml
+# starcup: glacier surface outpost added
+      - type: StationPlanetSpawner
+        planet: GlacierSurface
+        gridPath: /Maps/_DeltaV/Nonstations/glacier_surface_outpost.yml
       - type: StationJobs
         availableJobs:
           Captain: [ 1, 1 ]
