@@ -212,7 +212,7 @@
   components:
   - type: Pda
     id: PsychiatristIDCard
-    state: pda-psychiatrist
+#    state: pda-psychiatrist # starcup - seems unneeded for job titles
 
 - type: entity
   parent: PsychologistPDA
@@ -222,7 +222,7 @@
   components:
   - type: Pda
     id: TherapistIDCard
-    state: pda-therapist
+    # state: pda-therapist # starcup - seems unneeded for job titles
 
 - type: entity
   parent: PsychologistPDA
@@ -232,7 +232,7 @@
   components:
   - type: Pda
     id: SocialWorkerIDCard
-    state: pda-socialworker
+    # state: pda-socialworker # starcup - seems unneeded for job titles
 
 # Atmospherics Technician
 
