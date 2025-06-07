@@ -1,5 +1,5 @@
-using Content.Shared.Damage;  # DeltaV
-using Content.Shared.Whitelist;  # DeltaV
+using Content.Shared.Damage;  // DeltaV
+using Content.Shared.Whitelist;  // DeltaV
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
