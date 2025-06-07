@@ -32,7 +32,7 @@ jobs:
           echo "Checking $file"
 
           # Check for trailing whitespace
-          if grep -qP '[ \t]+$' "$file"; then
+          if grep -nP '[ \t]+$' "$file"; then
             echo "::error file=$file::Trailing whitespace found"
             has_trailing_whitespace=1
           fi
