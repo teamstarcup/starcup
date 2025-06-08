@@ -14,7 +14,7 @@ job-alt-title-gothic-cardinal = Gothic Cardinal
 job-alt-title-n0tary-artist = N0tary Artist
 
 # Chef
-job-alt-flavorist = Flavorist
+job-alt-title-flavorist = Flavorist
 
 # Chemist
 job-alt-title-pharmacist = Pharmacist
