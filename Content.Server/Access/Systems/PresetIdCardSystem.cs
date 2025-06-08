@@ -2,6 +2,7 @@ using Content.Server.Access.Components;
 using Content.Server.GameTicking;
 using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
+using Content.Shared.Access.Components; // DeltaV
 using Content.Shared.Access.Systems;
 using Content.Shared.Roles;
 using Content.Shared.StatusIcon;
@@ -79,10 +80,14 @@ public sealed class PresetIdCardSystem : EntitySystem
 
         _accessSystem.SetAccessToJob(uid, job, extended);
 
-        _cardSystem.TryChangeJobTitle(uid, job.LocalizedName);
+        var card = Comp<IdCardComponent>(uid); // DeltaV
+
+        if (card.JobTitle == null) // DeltaV: only set job title if id card doesnt have one already
+            _cardSystem.TryChangeJobTitle(uid, job.LocalizedName);
         _cardSystem.TryChangeJobDepartment(uid, job);
 
-        if (_prototypeManager.TryIndex(job.Icon, out var jobIcon))
+        // DeltaV: only set to the job's icon if the id doesn't specify one
+        if (card.JobIcon == "JobIconUnknown" && _prototypeManager.TryIndex(job.Icon, out var jobIcon))
             _cardSystem.TryChangeJobIcon(uid, jobIcon);
     }
 }

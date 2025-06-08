@@ -1,8 +1,8 @@
 ﻿name: Benchmarks
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 8 * * *'
+#  schedule:  # starcup: we do not use this
+#    - cron: '0 8 * * *'
 
 concurrency: benchmarks
 

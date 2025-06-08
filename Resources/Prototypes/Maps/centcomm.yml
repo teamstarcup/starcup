@@ -1,15 +1,15 @@
 - type: gameMap
   id: CentComm
   isGrid: true # Did you know that centcomm is the only "game map" that isn't actually a map? Send help.
-  mapName: 'Central Command'
-  mapPath: /Maps/centcomm.yml
+  mapName: 'Syndicate Command'  # starcup: Central Command -> Syndicate Command
+  mapPath: /Maps/_starcup/syndicomm.yml  # starcup: changed to custom syndicomm map
   minPlayers: 10
   stations:
     centcomm:
       stationProto: NanotrasenCentralCommand
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} Central Command {1}'
+          mapNameTemplate: '{0} Syndicate Command {1}'  # starcup: Central Command -> Syndicate Command
           nameGenerator:
-            !type:NanotrasenNameGenerator
+            !type:SyndicateNameGenerator  # starcup: death to nanotrasen
             prefixCreator: 'TG'

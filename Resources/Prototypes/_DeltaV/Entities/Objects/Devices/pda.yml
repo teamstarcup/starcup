@@ -19,14 +19,28 @@
     borderColor: "#e39751"
     accentVColor: "#050c4d"
   - type: Icon
-    sprite: _DeltaV/Objects/Devices/pda.rsi
-    state: pda-mailcarrier
+    state: pda-cargo
   - type: CartridgeLoader # DeltaV - Courier Performance
     preinstalled:
     - CrewManifestCartridge
     - NotekeeperCartridge
     - NewsReaderCartridge
     - MailMetricsCartridge
+
+- type: entity
+  parent: SciencePDA
+  id: RoboticistPDA
+  name: roboticist PDA
+  description: Surprisingly, it doesn't talk to you.
+  components:
+  - type: Pda
+    id: RoboticistIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType: !type:String
+        pda-roboticist
+  - type: Icon
+    state: pda-roboticist
 
 - type: entity
   parent: CargoPDA
@@ -75,5 +89,3 @@
   - type: PdaBorderColor
     borderColor: "#e39751"
     accentVColor: "#050c4d"
-  - type: Icon
-    state: pda-mailcarrier

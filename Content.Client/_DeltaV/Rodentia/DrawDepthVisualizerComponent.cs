@@ -1,6 +1,6 @@
 using DrawDepth = Content.Shared.DrawDepth.DrawDepth;
 
-namespace Content.Client._DV.Abilities;
+namespace Content.Client._DeltaV.Abilities;
 
 /// <summary>
 /// Changes the sprite's draw depth when some appearance data becomes true, reverting it when false.

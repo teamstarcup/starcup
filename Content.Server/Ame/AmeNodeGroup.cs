@@ -170,14 +170,39 @@ public sealed class AmeNodeGroup : BaseNodeGroup
     /// </summary>
     public float CalculatePower(int fuel, int cores)
     {
+        // begin starcup: disable wizden ame power output
         // Balanced around a single core AME with injection level 2 producing 120KW.
         // Two core with four injection is 150kW. Two core with two injection is 90kW.
 
-        // Increasing core count creates diminishing returns, increasing injection amount increases 
+        // Increasing core count creates diminishing returns, increasing injection amount increases
         // Unlike the previous solution, increasing fuel and cores always leads to an increase in power, even if by very small amounts.
         // Increasing core count without increasing fuel always leads to reduced power as well.
         // At 18+ cores and 2 inject, the power produced is less than 0, the Max ensures the AME can never produce "negative" power.
-        return MathF.Max(200000f * MathF.Log10(2 * fuel * MathF.Pow(cores, (float)-0.5)), 0);
+        //return MathF.Max(200000f * MathF.Log10(2 * fuel * MathF.Pow(cores, (float)-0.5)), 0);
+        // end starcup
+
+        // Begin DeltaV
+        // Check if there's any cores attached to the controller
+        if (cores == 0)
+        {
+            return 0f;
+        }
+
+        //more parametrized and linear AME power function https://www.desmos.com/calculator/r523dxiqna
+        float wattsPerCore = 80000f;
+        float startEfficency = 0.5f;
+        float tailPenaltyFactor = 0.9f;
+
+        float efficency = startEfficency * fuel / (2 * cores);
+
+        if (fuel >= 2 * cores - 1)
+            efficency += (fuel - (2 * cores - 1)) * (1 - startEfficency);
+
+        if (fuel >= 2 * cores)
+            efficency -= (fuel - (2 * cores)) * (1 - startEfficency) * tailPenaltyFactor;
+
+        return efficency * wattsPerCore * cores;
+        // End DeltaV
     }
 
     public int GetTotalStability()

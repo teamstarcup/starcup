@@ -57,9 +57,9 @@ namespace Content.Server.VendingMachines
 
             foreach (var entry in component.Inventory.Values)
             {
-                if (!PrototypeManager.TryIndex<EntityPrototype>(entry.ID, out var proto))
+                if (!PrototypeManager.TryIndex<EntityPrototype>(entry.Id, out var proto))
                 {
-                    Log.Error($"Unable to find entity prototype {entry.ID} on {ToPrettyString(uid)} vending.");
+                    Log.Error($"Unable to find entity prototype {entry.Id} on {ToPrettyString(uid)} vending.");
                     continue;
                 }
 
@@ -197,16 +197,16 @@ namespace Content.Server.VendingMachines
 
             if (forceEject)
             {
-                vendComponent.NextItemToEject = item.ID;
+                vendComponent.NextItemToEject = item.Id;
                 vendComponent.ThrowNextItem = throwItem;
-                var entry = GetEntry(uid, item.ID, item.Type, vendComponent);
+                var entry = GetEntry(uid, item.Id, item.Type, vendComponent);
                 if (entry != null)
                     entry.Amount--;
                 EjectItem(uid, vendComponent, forceEject);
             }
             else
             {
-                TryEjectVendorItem(uid, item.Type, item.ID, throwItem, user: null, vendComponent: vendComponent);
+                TryEjectVendorItem(uid, item.Type, item.Id, throwItem, user: null, vendComponent: vendComponent);
             }
         }
 

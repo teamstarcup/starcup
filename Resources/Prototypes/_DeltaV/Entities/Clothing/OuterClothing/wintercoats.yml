@@ -1,4 +1,73 @@
 - type: entity
+  abstract: true
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing]
+  id: ClothingOuterArmoredWinterCoat
+  components:
+  - type: TemperatureProtection
+    heatingCoefficient: 1.1
+    coolingCoefficient: 0.1
+  - type: Item
+    size: Normal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.75
+        Piercing: 0.75
+        Heat: 0.75
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 30
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+  - type: StaticPrice
+    price: 50
+
+- type: entity
+  abstract: true
+  parent: ClothingOuterArmoredWinterCoat
+  id: ClothingOuterArmoredWinterCoatToggleable
+  components:
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodWinterDefault
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      storagebase: !type:Container
+        ents: []
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingOuterWinterCoatLong
+  name: long winter coat
+  description: Even your legs will be warm with this stylish coat.
+  components:
+    - type: Sprite
+      sprite: _DeltaV/Clothing/OuterClothing/WinterCoats/long_winter_coat.rsi
+    - type: Clothing
+      sprite: _DeltaV/Clothing/OuterClothing/WinterCoats/long_winter_coat.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingOuterWinterCoatPlaid
+  name: plaid winter coat
+  description: It might be made out of actual wool.
+  components:
+    - type: Sprite
+      sprite: _DeltaV/Clothing/OuterClothing/WinterCoats/plaid_winter_coat.rsi
+    - type: Clothing
+      sprite: _DeltaV/Clothing/OuterClothing/WinterCoats/plaid_winter_coat.rsi
+
+- type: entity
   parent: ClothingOuterWinterCoat
   id: ClothingOuterWinterCoatMail
   name: mail carrier's winter coat
@@ -8,3 +77,42 @@
       sprite: _DeltaV/Clothing/OuterClothing/WinterCoats/mail_winter_coat.rsi
     - type: Clothing
       sprite: _DeltaV/Clothing/OuterClothing/WinterCoats/mail_winter_coat.rsi
+
+- type: entity
+  parent: ClothingOuterArmoredWinterCoat
+  id: ClothingOuterWinterCCWarden
+  name: central command's armored winter coat
+  description: A tough, utilitarian coat designed for the wardens of Central Command. Reinforced kevlar plating and high quality fur allow the user to look stylish while staying protected.
+  components:
+  - type: Sprite
+    sprite: _DeltaV/Clothing/OuterClothing/WinterCoats/cc_warden_winter_coat.rsi
+  - type: Clothing
+    sprite: _DeltaV/Clothing/OuterClothing/WinterCoats/cc_warden_winter_coat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.4 #Stronger than the warden's armored jacket, because shenanigans and CC spends alot of money.
+        Heat: 0.75
+
+- type: entity
+  parent: ClothingOuterArmoredWinterCoat
+  id: ClothingOuterCoatStasecDet
+  name: detective's coat
+  description: A warm and comfortable winter coat, reinforced with durathread and compliant with Station Security uniform standards. This version is detective plum.
+  components:
+  - type: Sprite
+    sprite: _DeltaV/Clothing/OuterClothing/WinterCoats/detcoat.rsi
+  - type: Clothing
+    sprite: _DeltaV/Clothing/OuterClothing/WinterCoats/detcoat.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoatLong
+  id: ClothingOuterWinterLongMime
+  name: mime's long winter coat
+  components:
+  - type: Sprite
+    sprite: _DeltaV/Clothing/OuterClothing/WinterCoats/mimelongcoat.rsi
+  - type: Clothing
+    sprite: _DeltaV/Clothing/OuterClothing/WinterCoats/mimelongcoat.rsi
