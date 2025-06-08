@@ -19,9 +19,6 @@ loadout-group-clown-id-delta = Clown PDA
 loadout-group-janitor-id-delta = Janitor PDA
 
 # Command
-loadout-group-captain-shoes = Captain shoes
-loadout-group-hop-shoes = Head of Personnel shoes
-
 loadout-group-admin-assistant-head = Administrative Assistant head
 loadout-group-admin-assistant-jumpsuit = Administrative Assistant jumpsuit
 loadout-group-admin-assistant-outerclothing = Administrative Assistant outer clothing
@@ -53,12 +50,10 @@ loadout-group-cargo-technician-neck = Cargo Technician neck
 loadout-group-cargo-id-delta = Cargo Technician PDA
 
 # Security
-loadout-group-head-of-security-shoes = Head of Security shoes
-
 loadout-group-security-cadet-head = Security Cadet head
+
 loadout-group-security-neck = Security neck
 
-# Medical
 loadout-group-medical-doctor-neck = Medical Doctor neck
 
 loadout-group-medical-intern-id-delta = Medical Intern PDA
@@ -66,11 +61,6 @@ loadout-group-medical-intern-id-delta = Medical Intern PDA
 loadout-group-chemist-neck = Chemist neck
 
 loadout-group-psychologist-id-delta = Psychologist PDA
-loadout-group-chemist-shoes = Chemist shoes
-loadout-group-chemist-neck = Chemist neck
-
-loadout-group-psychologist-outerclothing = Psychologist outer clothing
-loadout-group-psychologist-shoes = Psychologist shoes
 
 # Epistemics
 loadout-group-roboticist-head = Roboticist head

@@ -1,5 +1,3 @@
-using Content.Shared.Damage;  // DeltaV
-using Content.Shared.Whitelist;  // DeltaV
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
@@ -22,17 +20,4 @@ public sealed partial class WeatherPrototype : IPrototype
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite), DataField("sound")]
     public SoundSpecifier? Sound;
-
-    /// <summary>
-    /// DeltaV: Damage you can take from being in this weather.
-    /// Only applies when weather has fully set in.
-    /// </summary>
-    [DataField]
-    public DamageSpecifier? Damage;
-
-    /// <summary>
-    /// DeltaV: Don't damage entities that match this blacklist.
-    /// </summary>
-    [DataField]
-    public EntityWhitelist? DamageBlacklist;
 }
