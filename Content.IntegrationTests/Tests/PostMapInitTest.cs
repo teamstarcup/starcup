@@ -89,6 +89,7 @@ namespace Content.IntegrationTests.Tests
             "Omegastarcup", // starcup
             "Salternstarcup", // starcup
             "Byoin",  // starcup
+            "EventFrigidPeril" // starcup
         };
 
         /// <summary>
