@@ -57,6 +57,8 @@ namespace Content.IntegrationTests.Tests
             "/Maps/Shuttles/ShuttleEvent/instigator.yml", // Contains EXP-320g "Friendship"
             "/Maps/Shuttles/ShuttleEvent/syndie_evacpod.yml", // Contains syndicate rubber stamp
 			"/Maps/_starcup/syndicomm.yml",  // starcup: contains centcomm rubber stamp, centcomm folder, handheld crew monitor
+			"/Maps/_starcup/Events/frigid-peril-station.yml",  // starcup: this is an event and events do not play by the rules
+			"/Maps/_starcup/Events/frigid-peril-surface.yml",  // starcup: contains lots of key round-start gear; it's not feasible to place lockers
         };
 
         private static readonly string[] GameMaps =
