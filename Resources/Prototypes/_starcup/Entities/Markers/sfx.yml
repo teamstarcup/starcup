@@ -1,0 +1,14 @@
+- type: entity
+  id: AmbientSFX
+  parent: MarkerBase
+  name: Ambient SFX
+  description: "Plays a looping sound effect."
+  components:
+  - type: Sprite
+    sprite: _starcup/Markers/markers.rsi
+    state: sfx_ambient
+  - type: AmbientSound
+    range: 6
+    volume: -3
+    sound:
+      path: /Audio/Ambience/anomaly_drone.ogg

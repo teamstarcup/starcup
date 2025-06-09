@@ -1,0 +1,168 @@
+# starcup
+- action: !type:InstantActionComponent
+    icon:
+      entity: APCBasic
+    keywords: []
+    checkCanInteract: False
+    clientExclusive: True
+    autoPopulate: False
+    temporary: True
+    event: !type:StartPlacementActionEvent
+      placementOption: SnapgridCenter
+      entityType: APCBasic
+  assignments:
+  - 0: 1
+  name: APC Basic
+- action: !type:InstantActionComponent
+    icon:
+      entity: CableApcExtension
+    keywords: []
+    checkCanInteract: False
+    clientExclusive: True
+    autoPopulate: False
+    temporary: True
+    event: !type:StartPlacementActionEvent
+      placementOption: SnapgridCenter
+      entityType: CableApcExtension
+  assignments:
+  - 0: 2
+  name: Cable LV
+- action: !type:InstantActionComponent
+    icon:
+      entity: CableMV
+    keywords: []
+    checkCanInteract: False
+    clientExclusive: True
+    autoPopulate: False
+    temporary: True
+    event: !type:StartPlacementActionEvent
+      placementOption: SnapgridCenter
+      entityType: CableMV
+  assignments:
+  - 0: 3
+  name: Cable MV
+- action: !type:InstantActionComponent
+    icon:
+      entity: CableHV
+    keywords: []
+    checkCanInteract: False
+    clientExclusive: True
+    autoPopulate: False
+    temporary: True
+    event: !type:StartPlacementActionEvent
+      placementOption: SnapgridCenter
+      entityType: CableHV
+  assignments:
+  - 0: 4
+  name: Cable HV
+- action: !type:InstantActionComponent
+    icon:
+      entity: SubstationBasic
+    keywords: []
+    checkCanInteract: False
+    clientExclusive: True
+    autoPopulate: False
+    temporary: True
+    event: !type:StartPlacementActionEvent
+      placementOption: SnapgridCenter
+      entityType: SubstationBasic
+  assignments:
+  - 0: 5
+  name: Substation Basic
+- action: !type:InstantActionComponent
+    icon:
+      entity: SMESBasic
+    keywords: []
+    checkCanInteract: False
+    clientExclusive: True
+    autoPopulate: False
+    temporary: True
+    event: !type:StartPlacementActionEvent
+      placementOption: SnapgridCenter
+      entityType: SMESBasic
+  assignments:
+  - 0: 6
+  name: SMES Basic
+- action: !type:InstantActionComponent
+    icon:
+      entity: CableTerminal
+    keywords: []
+    checkCanInteract: False
+    clientExclusive: True
+    autoPopulate: False
+    temporary: True
+    event: !type:StartPlacementActionEvent
+      placementOption: SnapgridCenter
+      entityType: CableTerminal
+  assignments:
+  - 0: 7
+  name: Cable Terminal
+- action: !type:InstantActionComponent
+    icon:
+      entity: Poweredlight
+    keywords: []
+    checkCanInteract: False
+    clientExclusive: True
+    autoPopulate: False
+    temporary: True
+    event: !type:StartPlacementActionEvent
+      placementOption: SnapgridCenter
+      entityType: Poweredlight
+  assignments:
+  - 0: 8
+  name: Powered Light
+- action: !type:InstantActionComponent
+    icon:
+      entity: PoweredlightExterior
+    keywords: []
+    checkCanInteract: False
+    clientExclusive: True
+    autoPopulate: False
+    temporary: True
+    event: !type:StartPlacementActionEvent
+      placementOption: SnapgridCenter
+      entityType: PoweredlightExterior
+  assignments:
+  - 0: 9
+  name: Powered Light Exterior
+- action: !type:InstantActionComponent
+    icon:
+      entity: PoweredLightPostSmall
+    keywords: []
+    checkCanInteract: False
+    clientExclusive: True
+    autoPopulate: False
+    temporary: True
+    event: !type:StartPlacementActionEvent
+      placementOption: SnapgridCenter
+      entityType: PoweredLightPostSmall
+  assignments:
+  - 0: 0
+  name: Post Light
+- action: !type:InstantActionComponent
+    icon:
+      entity: PoweredDimSmallLight
+    keywords: []
+    checkCanInteract: False
+    clientExclusive: True
+    autoPopulate: False
+    temporary: True
+    event: !type:StartPlacementActionEvent
+      placementOption: SnapgridCenter
+      entityType: PoweredDimSmallLight
+  assignments:
+  - 1: 1
+  name: Small Light Dim
+- action: !type:InstantActionComponent
+    icon: Interface/VerbIcons/delete.svg.192dpi.png
+    keywords: []
+    checkCanInteract: False
+    clientExclusive: True
+    autoPopulate: False
+    temporary: True
+    event: !type:StartPlacementActionEvent
+      eraser: True
+  assignments:
+  - 1: 2
+  name: action-name-mapping-erase
+...

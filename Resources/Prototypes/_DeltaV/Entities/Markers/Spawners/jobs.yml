@@ -36,3 +36,16 @@
     - state: green
     - sprite: _DeltaV/Markers/jobs.rsi
       state: adminassistant
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointRoboticist
+  name: roboticist
+  components:
+  - type: SpawnPoint
+    job_id: Roboticist
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _DeltaV/Markers/jobs.rsi
+      state: roboticist

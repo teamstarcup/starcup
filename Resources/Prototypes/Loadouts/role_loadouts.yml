@@ -7,6 +7,7 @@
   - CaptainJumpsuit
   - CaptainBackpack
   - CaptainOuterClothing
+  - CaptainShoes # DeltaV
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
@@ -20,6 +21,7 @@
   - HoPJumpsuit
   - HoPBackpack
   - HoPOuterClothing
+  - HoPShoes # DeltaV
   - Glasses
   - Survival
   - Trinkets
@@ -51,6 +53,7 @@
   - PassengerShoes
   - Glasses
   - Survival
+  - Plushies # starcup
   - Trinkets
   - GroupSpeciesBreathTool
 
@@ -63,6 +66,7 @@
   - BartenderJumpsuit
   - CommonBackpack
   - BartenderOuterClothing
+  - BartenderShoes # starcup
   - Glasses
   - Survival
   - Trinkets
@@ -73,8 +77,10 @@
   groups:
   - Scarfs # DeltaV
   - GroupTankHarness
-  - BartenderJumpsuit
+  - ServiceWorkerJumpsuit # starcup, replaces BartenderJumpsuit
+  - ServiceWorkerOuterClothing # starcup
   - CommonBackpack
+  - ServiceWorkerShoes # starcup
   - Glasses
   - Survival
   - Trinkets
@@ -89,6 +95,7 @@
   - ChefJumpsuit
   - CommonBackpack
   - ChefOuterClothing
+  - ChefShoes # starcup
   - Glasses
   - Survival
   - Trinkets
@@ -100,7 +107,9 @@
   - LibrarianNeck # DeltaV
   - GroupTankHarness
   - LibrarianJumpsuit
+  - LibrarianOuterClothing # starcup
   - CommonBackpack
+  - LibrarianShoes # starcup
   - Glasses
   - Survival
   - Trinkets
@@ -112,7 +121,9 @@
   - GroupTankHarness
   - LawyerNeck
   - LawyerJumpsuit
+  - LawyerOuterClothing # starcup
   - CommonBackpack
+  - LawyerShoes # starcup
   - Glasses
   - Survival
   - Trinkets
@@ -126,6 +137,7 @@
   - ChaplainMask
   - ChaplainNeck
   - ChaplainJumpsuit
+  - ChaplainShoes # starcup
   - CommonBackpack
   - ChaplainOuterClothing
   - Glasses
@@ -143,6 +155,7 @@
   - JanitorGloves
   - CommonBackpack
   - JanitorOuterClothing
+  - JanitorShoes # starcup
   - Glasses
   - Survival
   - Trinkets
@@ -159,6 +172,7 @@
   - BotanistJumpsuit
   - BotanistBackpack
   - BotanistOuterClothing
+  - BotanistShoes # starcup
   - Glasses
   - Survival
   - Trinkets
@@ -191,6 +205,7 @@
   - MimeBackpack
   - MimeOuterClothing
   - MimeBelt
+  - MimeShoes # starcup
   - Glasses
   - SurvivalMime
   - Trinkets
@@ -202,6 +217,7 @@
   - MusicianJumpsuit
   - CommonBackpack
   - MusicianOuterClothing
+  - MusicianShoes # starcup
   - Glasses
   - Survival
   - Trinkets
@@ -272,7 +288,9 @@
   groups:
   - GroupTankHarness
   - TechnicalAssistantJumpsuit
+  - TechnicalAssistantOuterClothing # starcup
   - StationEngineerBackpack
+  - StationEngineerShoes # starcup
   - SurvivalExtended
   - Trinkets
   - GroupSpeciesBreathTool
@@ -344,8 +362,10 @@
   groups:
   - GroupTankHarness
   - ResearchAssistantJumpsuit
+  - ResearchAssistantOuterClothing # starcup
   - ScientistBackpack
   - Glasses
+  - ScientistShoes # starcup
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
@@ -360,7 +380,8 @@
   - SecurityBackpack
   - SecurityBelt
   - HeadofSecurityOuterClothing
-  - SecurityShoes
+  - HeadofSecurityShoes # DeltaV - winter boots
+#  - SecurityShoes # DeltaV
   - SurvivalSecurity
   - Trinkets
   - SecurityStar
@@ -377,7 +398,7 @@
   - SecurityBackpack
   - SecurityBelt
   - WardenOuterClothing
-  - SecurityShoes
+  - WardenShoes # starcup, replaces SecurityShoes
   - SurvivalSecurity
   - Trinkets
   - SecurityStar
@@ -407,8 +428,7 @@
   id: JobDetective
   groups:
   - DetectiveHead
-# - DetectiveNeck
-  - SecurityNeck # DeltaV - replace DetectiveNeck for incongruence
+  - DetectiveNeck
   - DetectiveJumpsuit
   - SecurityBackpack
   - DetectiveOuterClothing
@@ -426,7 +446,9 @@
   - SecurityCadetHead # DeltaV
   - SecurityNeck # DeltaV
   - SecurityCadetJumpsuit
+  - SecurityCadetOuterClothing # starcup
   - SecurityBackpack
+  - SecurityShoes # starcup
   - SurvivalSecurity
   - Trinkets
   - GroupSpeciesBreathToolSecurity
@@ -472,8 +494,10 @@
   groups:
   - GroupTankHarness
   - MedicalInternJumpsuit
+  - MedicalInternOuterClothing # starcup
   - MedicalBackpack
   - MedicalEyewear
+  - MedicalShoes # starcup
   - SurvivalMedical
   - Trinkets
   - GroupSpeciesBreathToolMedical
@@ -488,7 +512,7 @@
   - MedicalGloves
   - ChemistBackpack
   - ChemistOuterClothing
-  - MedicalShoes
+  - ChemistShoes # DeltaV, replaces MedicalShoes
   - SurvivalMedical
   - Trinkets
   - GroupSpeciesBreathToolMedical
@@ -539,6 +563,7 @@
   - GroupTankHarness
   - PsychologistJumpsuit
   - MedicalBackpack
+  - PsychologistShoes # DeltaV
   - Glasses
   - Survival
   - Trinkets

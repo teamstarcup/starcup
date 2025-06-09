@@ -9,3 +9,4 @@ job-alt-title-mail-carrier = Mail Carrier
 JobCourier = Courier
 JobCargoAssistant = Cargo Assistant
 JobAdminAssistant = Administrative Assistant
+JobRoboticist = Roboticist
