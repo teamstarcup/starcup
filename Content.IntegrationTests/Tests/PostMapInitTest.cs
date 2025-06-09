@@ -35,7 +35,8 @@ namespace Content.IntegrationTests.Tests
         private static readonly string[] NoSpawnMaps =
         {
             "CentComm",
-            "Dart"
+            "Dart",
+            "EventFrigidPeril",  // starcup
         };
 
         private static readonly string[] Grids =
@@ -43,6 +44,7 @@ namespace Content.IntegrationTests.Tests
             "/Maps/centcomm.yml",
             AdminTestArenaSystem.ArenaMapPath,
 			"/Maps/_starcup/syndicomm.yml",  // starcup
+            "/maps/_starcup/Events/frigid-peril-surface.yml",  // starcup
         };
 
         private static readonly string[] DoNotMapWhitelist =
@@ -398,7 +400,8 @@ namespace Content.IntegrationTests.Tests
 
                 mapSystem.DeleteMap(shuttleMap);
 
-                if (entManager.HasComponent<StationJobsComponent>(station))
+                if (entManager.HasComponent<StationJobsComponent>(station)
+                    && !NoSpawnMaps.Contains(mapProto))  // starcup: no spawn point tests for NoSpawnMaps!
                 {
                     // Test that the map has valid latejoin spawn points or container spawn points
                     if (!NoSpawnMaps.Contains(mapProto))
