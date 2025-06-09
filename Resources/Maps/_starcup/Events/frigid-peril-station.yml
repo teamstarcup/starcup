@@ -69009,26 +69009,6 @@ entities:
       parent: 2
 - proto: FlashlightSeclite
   entities:
-  - uid: 650
-    components:
-    - type: Transform
-      rot: 1.9373154697137058 rad
-      pos: -4.067112,29.881401
-      parent: 2
-    - type: HandheldLight
-      toggleActionEntity: 651
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 652
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 651
-    - type: ActionsContainer
   - uid: 10406
     components:
     - type: Transform
