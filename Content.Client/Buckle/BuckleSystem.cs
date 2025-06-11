@@ -125,11 +125,12 @@ internal sealed class BuckleSystem : SharedBuckleSystem
             !buckled ||
             args.Sprite == null)
         {
-            //_rotationVisualizerSystem.SetHorizontalAngle((uid, rotVisuals), rotVisuals.DefaultRotation); // WD EDIT            return;
+            //_rotationVisualizerSystem.SetHorizontalAngle((uid, rotVisuals), rotVisuals.DefaultRotation); // WD EDIT
+            return;
         }
 
         // Animate strapping yourself to something at a given angle
         // TODO: Dump this when buckle is better
-        _rotationVisualizerSystem.AnimateSpriteRotation(uid, args.Sprite, rotVisuals.HorizontalRotation, 0.125f);
+        _rotationVisualizerSystem.AnimateSpriteRotation(uid, args.Sprite!, rotVisuals.HorizontalRotation, 0.125f);
     }
 }
