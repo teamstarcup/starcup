@@ -1,0 +1,1 @@
+station-event-greytide-virus-start-announcement-starcup = Rogue subroutine of Severity Level { $severity } has overridden the station's secure locking encryption systems. Identify affected departments and check airlock bolts for malfunctions.
