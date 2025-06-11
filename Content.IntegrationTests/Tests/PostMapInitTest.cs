@@ -44,7 +44,7 @@ namespace Content.IntegrationTests.Tests
             "/Maps/centcomm.yml",
             AdminTestArenaSystem.ArenaMapPath,
 			"/Maps/_starcup/syndicomm.yml",  // starcup
-            "/maps/_starcup/Events/frigid-peril-surface.yml",  // starcup
+            "/Maps/_starcup/Events/frigid-peril-surface.yml",  // starcup
         };
 
         private static readonly string[] DoNotMapWhitelist =
