@@ -35,7 +35,8 @@ namespace Content.IntegrationTests.Tests
         private static readonly string[] NoSpawnMaps =
         {
             "CentComm",
-            "Dart"
+            "Dart",
+            "EventFrigidPeril",  // starcup
         };
 
         private static readonly string[] Grids =
@@ -43,6 +44,7 @@ namespace Content.IntegrationTests.Tests
             "/Maps/centcomm.yml",
             AdminTestArenaSystem.ArenaMapPath,
 			"/Maps/_starcup/syndicomm.yml",  // starcup
+            "/Maps/_starcup/Events/frigid-peril-surface.yml",  // starcup
         };
 
         private static readonly string[] DoNotMapWhitelist =
@@ -57,6 +59,8 @@ namespace Content.IntegrationTests.Tests
             "/Maps/Shuttles/ShuttleEvent/instigator.yml", // Contains EXP-320g "Friendship"
             "/Maps/Shuttles/ShuttleEvent/syndie_evacpod.yml", // Contains syndicate rubber stamp
 			"/Maps/_starcup/syndicomm.yml",  // starcup: contains centcomm rubber stamp, centcomm folder, handheld crew monitor
+			"/Maps/_starcup/Events/frigid-peril-station.yml",  // starcup: this is an event and events do not play by the rules
+			"/Maps/_starcup/Events/frigid-peril-surface.yml",  // starcup: contains lots of key round-start gear; it's not feasible to place lockers
         };
 
         private static readonly string[] GameMaps =
@@ -89,6 +93,7 @@ namespace Content.IntegrationTests.Tests
             "Omegastarcup", // starcup
             "Salternstarcup", // starcup
             "Byoin",  // starcup
+            "EventFrigidPeril" // starcup
         };
 
         /// <summary>
@@ -395,7 +400,8 @@ namespace Content.IntegrationTests.Tests
 
                 mapSystem.DeleteMap(shuttleMap);
 
-                if (entManager.HasComponent<StationJobsComponent>(station))
+                if (entManager.HasComponent<StationJobsComponent>(station)
+                    && !NoSpawnMaps.Contains(mapProto))  // starcup: no spawn point tests for NoSpawnMaps!
                 {
                     // Test that the map has valid latejoin spawn points or container spawn points
                     if (!NoSpawnMaps.Contains(mapProto))
