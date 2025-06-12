@@ -168,7 +168,7 @@ namespace Content.Client.Options.UI.Tabs
             AddButton(EngineKeyFunctions.MoveRight);
             AddButton(EngineKeyFunctions.Walk);
             AddCheckBox("ui-options-hotkey-toggle-walk", _cfg.GetCVar(CCVars.ToggleWalk), HandleToggleWalk);
-            AddButton(ContentKeyFunctions.ToggleStanding);
+            AddButton(ContentKeyFunctions.ToggleStanding); // WD EDIT
             AddCheckBox("ui-options-function-auto-get-up", _cfg.GetCVar(WhiteCVars.AutoGetUp), HandleToggleAutoGetUp); // WD EDIT
             InitToggleWalk();
 
