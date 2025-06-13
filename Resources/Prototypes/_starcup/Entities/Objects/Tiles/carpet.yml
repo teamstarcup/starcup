@@ -1,0 +1,50 @@
+- type: entity
+  parent: FloorTileItemBase
+  id: FloorTileItemStarcupCarpetMemphis
+  name: memphis carpet
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Interior/arcade_carpet.rsi
+    state: arcade
+  - type: Item
+    heldPrefix: generic
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetMemphis
+  - type: Stack
+    stackType: FloorTileStarcupCarpetMemphis
+
+- type: entity
+  parent: FloorTileItemBase
+  id: FloorTileItemStarcupCarpetGingham
+  name: gingham carpet
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Interior/piiixl.rsi
+    state: carpet26
+  - type: Item
+    heldPrefix: generic
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetGingham
+  - type: Stack
+    stackType: FloorTileStarcupCarpetGingham
+
+- type: entity
+  parent: FloorTileItemBase
+  id: FloorTileItemStarcupCarpetShagWhite
+  name: white shag carpet
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Interior/piiixl.rsi
+    state: carpet28
+  - type: Item
+    heldPrefix: generic
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetShagWhite
+  - type: Stack
+    stackType: FloorTileStarcupCarpetShagWhite

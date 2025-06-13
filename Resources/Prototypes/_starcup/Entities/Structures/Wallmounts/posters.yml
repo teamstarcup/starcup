@@ -1,0 +1,16 @@
+- type: entity
+  parent: PosterBase
+  id: PosterLegitPPENoExcuseBlue
+  name: "No Excuse"
+  description: "A poster that reminds you rather sternly to make use of personal protective equipment."
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/posters.rsi
+    state: poster-ppe-blue1
+
+- type: entity
+  parent: PosterLegitPPENoExcuseBlue
+  id: PosterLegitPPENoExcusePink
+  components:
+  - type: Sprite
+    state: poster-ppe-pink1
