@@ -54,6 +54,7 @@ namespace Content.IntegrationTests.Tests
             "/Maps/gate.yml", // Contains positronic brain and LSE-1200c "Perforator"
             "/Maps/meta.yml", // Contains warden's rubber stamp
             "/Maps/reach.yml", // Contains handheld crew monitor
+            "/Maps/_starcup/reach.yml" // starcup: Contains handheld crew monitor
             "/Maps/Shuttles/ShuttleEvent/cruiser.yml", // Contains LSE-1200c "Perforator"
             "/Maps/Shuttles/ShuttleEvent/honki.yml", // Contains golden honker, clown's rubber stamp
             "/Maps/Shuttles/ShuttleEvent/instigator.yml", // Contains EXP-320g "Friendship"
@@ -90,7 +91,10 @@ namespace Content.IntegrationTests.Tests
             "Relic",
             "dm01-entryway",
             "Glacier",  // starcup
+            "Loopstarcup" // starcup
             "Omegastarcup", // starcup
+            "Packedstarcup" // starcup
+            "Reachstarcup" // starcup
             "Salternstarcup", // starcup
             "Byoin",  // starcup
             "EventFrigidPeril" // starcup
