@@ -1,0 +1,110 @@
+- type: entity
+  id: BaseCurtainsDirectional
+  parent: BaseCurtains
+  abstract: true
+  components:
+  - type: OrientationHint
+  - type: WallMount
+    arc: 90
+  - type: Clickable
+  - type: InteractionOutline
+
+- type: entity
+  id: HospitalCurtainsDirectional
+  parent: [ BaseCurtainsDirectional, HospitalCurtains ]
+  suffix: Hospital, Directional
+
+- type: entity
+  id: HospitalCurtainsOpenDirectional
+  parent: [ BaseCurtainsDirectional, HospitalCurtainsOpen ]
+  suffix: Hospital, Open, Directional
+
+- type: entity
+  id: CurtainsBlackDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsBlack ]
+  suffix: Fancy black, Directional
+
+- type: entity
+  id: CurtainsBlackOpenDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsBlackOpen ]
+  suffix: Fancy black, Open, Directional
+
+- type: entity
+  id: CurtainsBlueDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsBlue ]
+  suffix: Fancy blue, Directional
+
+- type: entity
+  id: CurtainsBlueOpenDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsBlueOpen ]
+  suffix: Fancy blue, Open, Directional
+
+- type: entity
+  id: CurtainsCyanDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsCyan ]
+  suffix: Fancy cyan, Directional
+
+- type: entity
+  id: CurtainsCyanOpenDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsCyanOpen ]
+  suffix: Fancy cyan, Open, Directional
+
+- type: entity
+  id: CurtainsGreenDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsGreen ]
+  suffix: Fancy green, Directional
+
+- type: entity
+  id: CurtainsGreenOpenDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsGreenOpen ]
+  suffix: Fancy green, Open, Directional
+
+- type: entity
+  id: CurtainsOrangeDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsOrange ]
+  suffix: Fancy orange, Directional
+
+- type: entity
+  id: CurtainsOrangeOpenDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsOrangeOpen ]
+  suffix: Fancy orange, Open, Directional
+
+- type: entity
+  id: CurtainsPinkDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsPink ]
+  suffix: Fancy pink, Directional
+
+- type: entity
+  id: CurtainsPinkOpenDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsPinkOpen ]
+  suffix: Fancy pink, Open, Directional
+
+- type: entity
+  id: CurtainsPurpleDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsPurple ]
+  suffix: Fancy purple, Directional
+
+- type: entity
+  id: CurtainsPurpleOpenDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsPurpleOpen ]
+  suffix: Fancy purple, Open, Directional
+
+- type: entity
+  id: CurtainsRedDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsRed ]
+  suffix: Fancy red, Directional
+
+- type: entity
+  id: CurtainsRedOpenDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsRedOpen ]
+  suffix: Fancy red, Open, Directional
+
+- type: entity
+  id: CurtainsWhiteDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsWhite ]
+  suffix: Fancy white, Directional
+
+- type: entity
+  id: CurtainsWhiteOpenDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsWhiteOpen ]
+  suffix: Fancy white, Open, Directional

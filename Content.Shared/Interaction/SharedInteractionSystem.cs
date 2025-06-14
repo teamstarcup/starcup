@@ -739,7 +739,7 @@ namespace Content.Shared.Interaction
             var inRange = true;
             MapCoordinates originPos = default;
             var targetPos = _transform.ToMapCoordinates(otherCoordinates);
-            Angle targetRot = default;
+            Angle targetRot = other.Comp?.LocalRotation ?? default;  // starcup: previously `default`, interfered with curtains
 
             // So essentially:
             // 1. If fixtures available check nearest point. We take in coordinates / angles because we might want to use a lag compensated position
