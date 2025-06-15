@@ -1,14 +1,15 @@
-using Content.Shared.CCVar;
+using Content.Shared.CCVar;  // starcup: #38276 early merge
 using Robust.Client.Graphics;
-using Robust.Shared.Configuration;
+using Robust.Shared.Configuration;  // starcup: #38276 early merge
 
 namespace Content.Client.Light.EntitySystems;
 
 public sealed class PlanetLightSystem : EntitySystem
 {
-    [Dependency] private readonly IConfigurationManager _cfgManager = default!;
+    [Dependency] private readonly IConfigurationManager _cfgManager = default!;  // starcup: #38276 early merge
     [Dependency] private readonly IOverlayManager _overlayMan = default!;
 
+    // begin starcup: #38276 early merge
     public bool AmbientOcclusion
     {
         get => _ambientOcclusion;
@@ -31,6 +32,7 @@ public sealed class PlanetLightSystem : EntitySystem
     }
 
     private bool _ambientOcclusion;
+    // end starcup
 
     public override void Initialize()
     {
@@ -38,10 +40,12 @@ public sealed class PlanetLightSystem : EntitySystem
 
         SubscribeLocalEvent<GetClearColorEvent>(OnClearColor);
 
+        // begin starcup: #38276 early merge
         _cfgManager.OnValueChanged(CCVars.AmbientOcclusion, val =>
         {
             AmbientOcclusion = val;
         }, true);
+        // end starcup
 
         _overlayMan.AddOverlay(new BeforeLightTargetOverlay());
         _overlayMan.AddOverlay(new RoofOverlay(EntityManager));

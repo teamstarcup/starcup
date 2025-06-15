@@ -5,6 +5,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Client.Light;
 
+// starcup: #38276 early merge
 public sealed class AmbientOcclusionOverlay : Overlay
 {
     [Dependency] private readonly IClyde _clyde = default!;
