@@ -81,6 +81,7 @@ namespace Content.IntegrationTests.Tests
             "Elkridge",
             "Relic",
             "dm01-entryway",
+            "Exo",
             "Glacier",  // starcup
             "Loopstarcup", // starcup
             "Omegastarcup", // starcup
