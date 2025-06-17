@@ -29,10 +29,16 @@ chat-manager-entity-whisper-wrap-message = [font size=11][italic][BubbleHeader][
 chat-manager-entity-whisper-unknown-wrap-message = [font size=11][italic][BubbleHeader]Someone[/BubbleHeader] whispers, "[BubbleContent]{$message}[/BubbleContent]"[/italic][/font]
 
 # THE() is not used here because the entity and its name can technically be disconnected if a nameOverride is passed...
+# begin starcup: possessive case emotes
+#chat-manager-entity-me-wrap-message = [italic]{ PROPER($entity) ->
+#    *[false] The {$entityName} {$message}[/italic]
+#     [true] {CAPITALIZE($entityName)} {$message}[/italic]
+#    }
 chat-manager-entity-me-wrap-message = [italic]{ PROPER($entity) ->
-    *[false] The {$entityName} {$message}[/italic]
-     [true] {CAPITALIZE($entityName)} {$message}[/italic]
+    *[false] The {$entityName}{$space}{$message}[/italic]
+     [true] {CAPITALIZE($entityName)}{$space}{$message}[/italic]
     }
+# end starcup
 
 chat-manager-entity-looc-wrap-message = LOOC: [bold]{$entityName}:[/bold] {$message}
 chat-manager-send-ooc-wrap-message = OOC: [bold]{$playerName}:[/bold] {$message}

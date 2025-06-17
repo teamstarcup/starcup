@@ -596,12 +596,19 @@ public sealed partial class ChatSystem : SharedChatSystem
         // get the entity's apparent name (if no override provided).
         var ent = Identity.Entity(source, EntityManager);
         string name = FormattedMessage.EscapeText(nameOverride ?? Name(ent));
+        // begin starcup: possessive case emotes
+        var formattedMessage = FormattedMessage.RemoveMarkupOrThrow(action);
+        var isPossessive = formattedMessage.StartsWith("'s");
+        var space = isPossessive ? "" : " ";
+        // end starcup
 
         // Emotes use Identity.Name, since it doesn't actually involve your voice at all.
         var wrappedMessage = Loc.GetString("chat-manager-entity-me-wrap-message",
             ("entityName", name),
             ("entity", ent),
-            ("message", FormattedMessage.RemoveMarkupOrThrow(action)));
+        // ("message", FormattedMessage.RemoveMarkupOrThrow(action)));  // starcup: possessive case emotes
+            ("message", formattedMessage),  // starcup: possessive case emotes
+            ("space", space));  // starcup: possessive case emotes
 
         if (checkEmote)
             TryEmoteChatInput(source, action);
