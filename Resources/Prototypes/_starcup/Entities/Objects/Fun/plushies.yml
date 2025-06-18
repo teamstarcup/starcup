@@ -1,0 +1,12 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushieEskie
+  name: eskie plushie
+  description: A highly marketable stuffed toy resembling a famous cartoon character. There's a tag on it that reads "100% polycotton."
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Fun/plushies.rsi
+    state: eskie
+  - type: FoodSequenceElement
+    entries:
+      CottonBurger: EskiePlushie
