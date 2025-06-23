@@ -4,8 +4,8 @@ meta:
   engineVersion: 260.0.0
   forkId: ""
   forkVersion: ""
-  time: 06/07/2025 09:37:53
-  entityCount: 14573
+  time: 06/23/2025 15:37:03
+  entityCount: 14597
 maps:
 - 1
 grids:
@@ -5574,7 +5574,7 @@ entities:
   - uid: 68
     components:
     - type: MetaData
-      name: Psionic Mantis Office
+      name: Science Office
     - type: Transform
       pos: 27.5,-21.5
       parent: 2
@@ -7573,7 +7573,7 @@ entities:
   - uid: 328
     components:
     - type: MetaData
-      name: 'Air Alarm: Chapel and Mantis Office'
+      name: 'Air Alarm: Chapel and Science Office'
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 32.5,-20.5
@@ -7809,7 +7809,7 @@ entities:
   - uid: 341
     components:
     - type: MetaData
-      name: 'Air Alarm: Epistemics'
+      name: 'Air Alarm: Science'
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 33.5,-10.5
@@ -9802,6 +9802,15 @@ entities:
     - type: Transform
       pos: 29.5,-1.5
       parent: 2
+- proto: AirlockMaintRoboticsLocked
+  entities:
+  - uid: 600
+    components:
+    - type: MetaData
+      name: Robotics
+    - type: Transform
+      pos: 39.5,-13.5
+      parent: 2
 - proto: AirlockMaintSalvageLocked
   entities:
   - uid: 558
@@ -10005,9 +10014,18 @@ entities:
   - uid: 588
     components:
     - type: MetaData
-      name: Mystagogue Bedroom
+      name: Research Director's Bedroom
     - type: Transform
       pos: 34.5,-13.5
+      parent: 2
+- proto: AirlockRoboticsLocked
+  entities:
+  - uid: 599
+    components:
+    - type: MetaData
+      name: Robotics
+    - type: Transform
+      pos: 39.5,-9.5
       parent: 2
 - proto: AirlockSalvageLocked
   entities:
@@ -10058,14 +10076,14 @@ entities:
   - uid: 595
     components:
     - type: MetaData
-      name: Epistemics
+      name: Science
     - type: Transform
       pos: 27.5,-7.5
       parent: 2
   - uid: 596
     components:
     - type: MetaData
-      name: Epistemics
+      name: Science
     - type: Transform
       pos: 27.5,-8.5
       parent: 2
@@ -10080,18 +10098,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 32.5,-21.5
-      parent: 2
-  - uid: 599
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 39.5,-9.5
-      parent: 2
-  - uid: 600
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 39.5,-13.5
       parent: 2
 - proto: AirlockScienceLocked
   entities:
@@ -11198,6 +11204,18 @@ entities:
     - type: Transform
       pos: 28.607986,-14.391565
       parent: 2
+- proto: AntiAnomalyZone
+  entities:
+  - uid: 12713
+    components:
+    - type: Transform
+      pos: -40.5,-0.5
+      parent: 2
+  - uid: 14577
+    components:
+    - type: Transform
+      pos: -16.5,22.5
+      parent: 2
 - proto: APCBasic
   entities:
   - uid: 734
@@ -11323,7 +11341,7 @@ entities:
   - uid: 750
     components:
     - type: MetaData
-      name: 'APC: Epistemics'
+      name: 'APC: Science'
     - type: Transform
       pos: 31.5,-5.5
       parent: 2
@@ -13778,6 +13796,30 @@ entities:
     - type: Transform
       pos: -7.5,-12.5
       parent: 2
+- proto: Autolathe
+  entities:
+  - uid: 14574
+    components:
+    - type: Transform
+      pos: -17.5,-10.5
+      parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
+  - uid: 14576
+    components:
+    - type: Transform
+      pos: -4.5,8.5
+      parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
 - proto: BagpipeInstrument
   entities:
   - uid: 1215
@@ -35691,14 +35733,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -14.5,-8.5
       parent: 2
-- proto: ComputerCargoOrdersScience
-  entities:
-  - uid: 5423
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 30.5,-3.5
-      parent: 2
 - proto: ComputerComms
   entities:
   - uid: 5424
@@ -36670,19 +36704,28 @@ entities:
       pos: 6.5,24.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -5936.696
+      secondsUntilStateChange: -9213.489
       state: Opening
+- proto: CurtainsBlackDirectional
+  entities:
+  - uid: 14595
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 24.5,-14.5
+      parent: 2
+  - uid: 14596
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 24.5,-16.5
+      parent: 2
 - proto: CurtainsBlackOpen
   entities:
   - uid: 5590
     components:
     - type: Transform
       pos: 12.5,37.5
-      parent: 2
-  - uid: 5591
-    components:
-    - type: Transform
-      pos: -2.5,-16.5
       parent: 2
   - uid: 5592
     components:
@@ -36694,7 +36737,14 @@ entities:
     - type: Transform
       pos: 19.5,-17.5
       parent: 2
-- proto: CurtainsBlue
+- proto: CurtainsBlackOpenDirectional
+  entities:
+  - uid: 5591
+    components:
+    - type: Transform
+      pos: -2.5,-16.5
+      parent: 2
+- proto: CurtainsBlueDirectional
   entities:
   - uid: 5594
     components:
@@ -36703,12 +36753,6 @@ entities:
       parent: 2
 - proto: CurtainsBlueOpen
   entities:
-  - uid: 5595
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 3.5,-34.5
-      parent: 2
   - uid: 5596
     components:
     - type: Transform
@@ -36724,28 +36768,31 @@ entities:
     - type: Transform
       pos: 8.5,11.5
       parent: 2
+- proto: CurtainsBlueOpenDirectional
+  entities:
   - uid: 5599
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
+      rot: 3.141592653589793 rad
       pos: 5.5,-31.5
       parent: 2
-- proto: CurtainsCyanOpen
-  entities:
-  - uid: 5600
+  - uid: 14579
     components:
     - type: Transform
-      pos: -8.5,-19.5
+      rot: 3.141592653589793 rad
+      pos: -0.5,-19.5
       parent: 2
-  - uid: 5601
+  - uid: 14580
     components:
     - type: Transform
-      pos: -8.5,-23.5
+      rot: 3.141592653589793 rad
+      pos: 0.5,-19.5
       parent: 2
-  - uid: 5602
+  - uid: 14581
     components:
     - type: Transform
-      pos: -7.5,-23.5
+      rot: 3.141592653589793 rad
+      pos: 1.5,-19.5
       parent: 2
 - proto: CurtainsGreenOpen
   entities:
@@ -36772,6 +36819,23 @@ entities:
     - type: Transform
       pos: 23.5,-17.5
       parent: 2
+- proto: CurtainsGreenOpenDirectional
+  entities:
+  - uid: 5600
+    components:
+    - type: Transform
+      pos: -8.5,-23.5
+      parent: 2
+  - uid: 5601
+    components:
+    - type: Transform
+      pos: -8.5,-19.5
+      parent: 2
+  - uid: 5602
+    components:
+    - type: Transform
+      pos: -7.5,-23.5
+      parent: 2
 - proto: CurtainsOrangeOpen
   entities:
   - uid: 5607
@@ -36790,6 +36854,74 @@ entities:
     - type: Transform
       pos: -1.5,15.5
       parent: 2
+- proto: CurtainsOrangeOpenDirectional
+  entities:
+  - uid: 5423
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 5.5,-19.5
+      parent: 2
+  - uid: 5595
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 3.5,-34.5
+      parent: 2
+  - uid: 14582
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 6.5,-19.5
+      parent: 2
+  - uid: 14583
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -0.5,-35.5
+      parent: 2
+  - uid: 14584
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -0.5,-34.5
+      parent: 2
+  - uid: 14585
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -0.5,-36.5
+      parent: 2
+  - uid: 14586
+    components:
+    - type: Transform
+      pos: 0.5,-37.5
+      parent: 2
+  - uid: 14587
+    components:
+    - type: Transform
+      pos: 1.5,-37.5
+      parent: 2
+  - uid: 14588
+    components:
+    - type: Transform
+      pos: 2.5,-37.5
+      parent: 2
+  - uid: 14592
+    components:
+    - type: Transform
+      pos: 6.5,-37.5
+      parent: 2
+  - uid: 14593
+    components:
+    - type: Transform
+      pos: 7.5,-37.5
+      parent: 2
+  - uid: 14594
+    components:
+    - type: Transform
+      pos: 8.5,-37.5
+      parent: 2
 - proto: CurtainSpawner
   entities:
   - uid: 5610
@@ -36797,7 +36929,7 @@ entities:
     - type: Transform
       pos: 56.5,24.5
       parent: 2
-- proto: CurtainsPinkOpen
+- proto: CurtainsPinkOpenDirectional
   entities:
   - uid: 5611
     components:
@@ -36806,26 +36938,6 @@ entities:
       parent: 2
 - proto: CurtainsPurpleOpen
   entities:
-  - uid: 5612
-    components:
-    - type: Transform
-      pos: 3.5,1.5
-      parent: 2
-  - uid: 5613
-    components:
-    - type: Transform
-      pos: 4.5,1.5
-      parent: 2
-  - uid: 5614
-    components:
-    - type: Transform
-      pos: 5.5,1.5
-      parent: 2
-  - uid: 5615
-    components:
-    - type: Transform
-      pos: 6.5,1.5
-      parent: 2
   - uid: 5616
     components:
     - type: Transform
@@ -36850,6 +36962,28 @@ entities:
     components:
     - type: Transform
       pos: -15.5,-1.5
+      parent: 2
+- proto: CurtainsPurpleOpenDirectional
+  entities:
+  - uid: 5612
+    components:
+    - type: Transform
+      pos: 6.5,1.5
+      parent: 2
+  - uid: 5613
+    components:
+    - type: Transform
+      pos: 5.5,1.5
+      parent: 2
+  - uid: 5614
+    components:
+    - type: Transform
+      pos: 4.5,1.5
+      parent: 2
+  - uid: 5615
+    components:
+    - type: Transform
+      pos: 3.5,1.5
       parent: 2
 - proto: CurtainsRedOpen
   entities:
@@ -42640,7 +42774,7 @@ entities:
       pos: 28.5,-2.5
       parent: 2
     - type: FaxMachine
-      name: Epistemics
+      name: Science
   - uid: 6611
     components:
     - type: Transform
@@ -42654,7 +42788,7 @@ entities:
       pos: 29.5,-22.5
       parent: 2
     - type: FaxMachine
-      name: Mantis Office
+      name: Science Office
   - uid: 6613
     components:
     - type: Transform
@@ -42963,7 +43097,7 @@ entities:
   - uid: 6643
     components:
     - type: MetaData
-      name: 'Fire Alarm: Chapel and Mantis Office'
+      name: 'Fire Alarm: Chapel and Science Office'
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 31.5,-20.5
@@ -43227,7 +43361,7 @@ entities:
   - uid: 6659
     components:
     - type: MetaData
-      name: 'Fire Alarm: Epistemics'
+      name: 'Fire Alarm: Science'
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 32.5,-10.5
@@ -75156,6 +75290,31 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 19.5,-15.5
       parent: 2
+- proto: PoweredlightCyan
+  entities:
+  - uid: 14589
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 63.5,-17.5
+      parent: 2
+  - uid: 14590
+    components:
+    - type: Transform
+      pos: 63.5,-11.5
+      parent: 2
+  - uid: 14591
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 66.5,-14.5
+      parent: 2
+  - uid: 14597
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 62.5,-14.5
+      parent: 2
 - proto: PoweredlightEmpty
   entities:
   - uid: 10965
@@ -75508,6 +75667,19 @@ entities:
       rot: 3.141592653589793 rad
       pos: 79.5,-9.5
       parent: 2
+- proto: Protolathe
+  entities:
+  - uid: 14575
+    components:
+    - type: Transform
+      pos: 28.5,-9.5
+      parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
 - proto: PsychBed
   entities:
   - uid: 11024
@@ -78713,7 +78885,7 @@ entities:
   - uid: 11624
     components:
     - type: Transform
-      pos: 32.51198,-14.50757
+      pos: 32.520245,-14.481082
       parent: 2
 - proto: SheetPlasma1
   entities:
@@ -82777,7 +82949,7 @@ entities:
   - uid: 12282
     components:
     - type: MetaData
-      name: 'Substation: Epistemics & Evac'
+      name: 'Substation: Science & Evac'
     - type: Transform
       pos: 31.5,2.5
       parent: 2
@@ -83734,7 +83906,7 @@ entities:
       setupAvailableNetworks:
       - SurveillanceCameraScience
       nameSet: True
-      id: Epistemics
+      id: Science
   - uid: 12381
     components:
     - type: Transform
@@ -85811,11 +85983,6 @@ entities:
     - type: Transform
       pos: 1.5,-27.5
       parent: 2
-  - uid: 12713
-    components:
-    - type: Transform
-      pos: 24.5,-16.5
-      parent: 2
   - uid: 12714
     components:
     - type: Transform
@@ -85845,11 +86012,6 @@ entities:
     components:
     - type: Transform
       pos: 41.5,-0.5
-      parent: 2
-  - uid: 12720
-    components:
-    - type: Transform
-      pos: 24.5,-14.5
       parent: 2
   - uid: 12721
     components:
@@ -94947,6 +95109,11 @@ entities:
       parent: 2
 - proto: Window
   entities:
+  - uid: 12720
+    components:
+    - type: Transform
+      pos: 24.5,-14.5
+      parent: 2
   - uid: 14432
     components:
     - type: Transform
@@ -95176,6 +95343,11 @@ entities:
     components:
     - type: Transform
       pos: 41.5,-27.5
+      parent: 2
+  - uid: 14578
+    components:
+    - type: Transform
+      pos: 24.5,-16.5
       parent: 2
 - proto: WindowDirectional
   entities:
