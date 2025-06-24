@@ -16,6 +16,7 @@ public sealed class AmbientOcclusionOverlay : Overlay
     public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowEntities;
 
     private IRenderTexture? _aoTarget;
+    private IRenderTexture? _aoBlurBuffer;
 
     public AmbientOcclusionOverlay()
     {
@@ -47,6 +48,19 @@ public sealed class AmbientOcclusionOverlay : Overlay
             _aoTarget = _clyde.CreateRenderTarget(target.Size, new RenderTargetFormatParameters(RenderTargetColorFormat.Rgba8Srgb), name: "ambient-occlusion-target");
         }
 
+        if (_aoBlurBuffer?.Texture.Size != target.Size)
+        {
+            _aoBlurBuffer?.Dispose();
+            _aoBlurBuffer = _clyde.CreateRenderTarget(target.Size, new RenderTargetFormatParameters(RenderTargetColorFormat.Rgba8Srgb), name: "ambient-occlusion-blur-target");
+        }
+
+        if (_aoStencilTarget?.Texture.Size != target.Size)
+        {
+            _aoStencilTarget?.Dispose();
+            _aoStencilTarget = _clyde.CreateRenderTarget(target.Size, new RenderTargetFormatParameters(RenderTargetColorFormat.Rgba8Srgb), name: "ambient-occlusion-stencil-target");
+        }
+
+        // Draw the texture data to the texture.
         args.WorldHandle.RenderInRenderTarget(_aoTarget,
             () =>
             {
@@ -67,7 +81,7 @@ public sealed class AmbientOcclusionOverlay : Overlay
                 }
             }, Color.Transparent);
 
-        _clyde.BlurRenderTarget(viewport, _aoTarget, _aoTarget, viewport.Eye!, 14f);
+        _clyde.BlurRenderTarget(viewport, _aoTarget, _aoBlurBuffer, viewport.Eye!, 14f);
 
         args.WorldHandle.RenderInRenderTarget(target,
             () =>
