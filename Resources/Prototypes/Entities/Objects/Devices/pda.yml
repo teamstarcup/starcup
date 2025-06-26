@@ -475,10 +475,12 @@
     state: pda-qm
   - type: CartridgeLoader # DeltaV - MailMetrics courier tracker
     preinstalled:
-      - CrewManifestCartridge
-      - NotekeeperCartridge
-      - NewsReaderCartridge
-      - MailMetricsCartridge
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - AstroNavCartridge
+    - MailMetricsCartridge
 
 - type: entity
   parent: BasePDA
