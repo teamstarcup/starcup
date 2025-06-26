@@ -41,47 +41,49 @@
     tags:
     - MonkeyCube
 
-- type: entity
-  parent: MonkeyCubeBox
-  name: kobold cube box
-  id: KoboldCubeBox
-  description: Condensed kobolds in a cube. Just add water!
-  components:
-  - type: StorageFill
-    contents:
-      - id: KoboldCubeWrapped
-        amount: 8
-  - type: Sprite
-    sprite: Objects/Misc/monkeycube.rsi
-    state: box_kobold
+# begin starcup: remove non-sapient kobolds
+#- type: entity
+#  parent: MonkeyCubeBox
+#  name: kobold cube box
+#  id: KoboldCubeBox
+#  description: Condensed kobolds in a cube. Just add water!
+#  components:
+#  - type: StorageFill
+#    contents:
+#      - id: KoboldCubeWrapped
+#        amount: 8
+#  - type: Sprite
+#    sprite: Objects/Misc/monkeycube.rsi
+#    state: box_kobold
 
-- type: entity
-  parent: MonkeyCubeBox
-  name: variant cube box
-  id: VariantCubeBox
-  description: Both kobold cubes and monkey cubes. Just add water!
-  components:
-  - type: StorageFill
-    contents:
-      - id: KoboldCubeWrapped
-        amount: 4
-      - id: MonkeyCubeWrapped
-        amount: 4
-  - type: Sprite
-    sprite: Objects/Misc/monkeycube.rsi
-    state: box_variant
+#- type: entity
+#  parent: MonkeyCubeBox
+#  name: variant cube box
+#  id: VariantCubeBox
+#  description: Both kobold cubes and monkey cubes. Just add water!
+#  components:
+#  - type: StorageFill
+#    contents:
+#      - id: KoboldCubeWrapped
+#        amount: 4
+#      - id: MonkeyCubeWrapped
+#        amount: 4
+#  - type: Sprite
+#    sprite: Objects/Misc/monkeycube.rsi
+#    state: box_variant
 
-- type: entity
-  parent: BaseWrappedCube
-  name: kobold cube
-  id: KoboldCubeWrapped
-  description: Unwrap this to get a kobold cube.
-  components:
-  - type: SpawnItemsOnUse
-    items:
-      - id: KoboldCube
-  - type: Sprite
-    state: wrapper_kobold
+#- type: entity
+#  parent: BaseWrappedCube
+#  name: kobold cube
+#  id: KoboldCubeWrapped
+#  description: Unwrap this to get a kobold cube.
+#  components:
+#  - type: SpawnItemsOnUse
+#    items:
+#      - id: KoboldCube
+#  - type: Sprite
+#    state: wrapper_kobold
+# end starcup
 
 - type: entity
   parent: MonkeyCubeBox

@@ -647,9 +647,10 @@
     - id: MonkeyCube
       amount: !type:RangeNumberSelector
         range: 1, 10
-    - id: KoboldCube
-      amount: !type:RangeNumberSelector
-        range: 1, 10
+# starcup: remove non-sapient kobolds
+#    - id: KoboldCube
+#      amount: !type:RangeNumberSelector
+#        range: 1, 10
     - id: CowCube
       amount: !type:RangeNumberSelector
         range: 1, 10

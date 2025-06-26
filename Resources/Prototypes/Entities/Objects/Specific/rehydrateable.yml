@@ -80,14 +80,15 @@
     - Meat
     - MonkeyCube
 
-- type: entity
-  parent: RehydratableAnimalCube
-  id: KoboldCube
-  name: kobold cube
-  components:
-  - type: Rehydratable
-    possibleSpawns:
-    - MobKobold
+# starcup: remove non-sapient kobolds
+#- type: entity
+#  parent: RehydratableAnimalCube
+#  id: KoboldCube
+#  name: kobold cube
+#  components:
+#  - type: Rehydratable
+#    possibleSpawns:
+#    - MobKobold
 
 - type: entity
   parent: RehydratableAnimalCube
