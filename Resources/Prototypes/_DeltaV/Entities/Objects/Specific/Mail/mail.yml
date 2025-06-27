@@ -292,7 +292,7 @@
   components:
   - type: Mail
     isFragile: true
-    isPriority: true
+    isPriority: false # starcup: true -> false
     contents:
       # 14.8 total weight, ~6.8% base chance
     - id: FoodCakeApple
@@ -397,7 +397,7 @@
   components:
   - type: Mail
     isFragile: true
-    isPriority: true
+    isPriority: false # starcup: true -> false
     contents:
     - id: FoodCheese
       orGroup: Cheese
@@ -481,7 +481,7 @@
   suffix: cookies, random
   components:
   - type: Mail
-    isPriority: true
+    isPriority: false # starcup: true -> false
     contents:
       # Cookie 1
     - id: FoodBakedCookie
@@ -577,7 +577,7 @@
   suffix: muffins, random
   components:
   - type: Mail
-    isPriority: true
+    isPriority: false # starcup: true -> false
     contents:
       # Muffin 1
     - id: FoodBakedMuffinBerry
@@ -1012,7 +1012,7 @@
   suffix: unusual food
   components:
   - type: Mail
-    isPriority: true
+    isPriority: false # starcup: true -> false
     isFragile: true
     contents:
     - id: FoodMealNachos
@@ -1077,7 +1077,7 @@
   suffix: baked goods
   components:
   - type: Mail
-    isPriority: true
+    isPriority: false # starcup: true -> false
     isFragile: true
     contents:
     - id: FoodBakedBunHoney
@@ -1223,7 +1223,7 @@
   suffix: unusual produce
   components:
   - type: Mail
-    isPriority: true
+    isPriority: false # starcup: true -> false
     isFragile: true
     contents:
     - id: FoodLaughinPeaPod
