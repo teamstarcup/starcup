@@ -736,23 +736,25 @@
   - type: Sprite
     state: poster12_legit
 
-- type: entity
-  parent: PosterBase
-  id: PosterLegitSpaceCops
-  name: "Space Cops."
-  description: "A poster advertising the television show Space Cops."
-  components:
-  - type: Sprite
-    state: poster13_legit
+# begin starcup: removed for tone
+#- type: entity
+#  parent: PosterBase
+#  id: PosterLegitSpaceCops
+#  name: "Space Cops."
+#  description: "A poster advertising the television show Space Cops."
+#  components:
+#  - type: Sprite
+#    state: poster13_legit
 
-- type: entity
-  parent: PosterBase
-  id: PosterLegitUeNo
-  name: "Ue No."
-  description: "This thing is all in Japanese."
-  components:
-  - type: Sprite
-    state: poster14_legit
+#- type: entity
+#  parent: PosterBase
+#  id: PosterLegitUeNo
+#  name: "Ue No."
+#  description: "This thing is all in Japanese."
+#  components:
+#  - type: Sprite
+#    state: poster14_legit
+# end starcup
 
 - type: entity
   parent: PosterBase
@@ -880,14 +882,15 @@
   - type: Sprite
     state: poster28_legit
 
-- type: entity
-  parent: PosterBase
-  id: PosterLegitEnlist
-  name: "Enlist"
-  description: "Enlist in the Nanotrasen Deathsquadron reserves today!"
-  components:
-  - type: Sprite
-    state: poster29_legit
+# starcup: removed for tone
+#- type: entity
+#  parent: PosterBase
+#  id: PosterLegitEnlist
+#  name: "Enlist"
+#  description: "Enlist in the Nanotrasen Deathsquadron reserves today!"
+#  components:
+#  - type: Sprite
+#    state: poster29_legit
 
 - type: entity
   parent: PosterBase
@@ -973,8 +976,8 @@
 - type: entity
   parent: PosterBase
   id: PosterLegitSecWatch
-  name: "Sec is Watching You"
-  description: "A poster reminding you that security is watching your every move."
+  name: "Security Watch"
+  description: "A poster reminding you that security is everyone's concern. Watchful eyes keep saboteurs at bay!" # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster39_legit
@@ -1109,7 +1112,7 @@
   parent: PosterBase
   id: PosterLegitTyrone
   name: "Tyrone's Guide to Space"
-  description: "A poster advertising online schooling about space. The classes listed seem to cover things from the basic usage of station equipment to complicated subjects like creating pipebombs or covering entire hallways in spacelube. A disclaimer reads \"It's never THAT bad, and at the end you might even get a tortilla.\""
+  description: "A poster advertising online schooling about space. The classes listed seem to cover things from the basic usage of station equipment to complicated subjects like creating pipebombs or covering entire hallways in spacelube. A disclaimer reads \"It's never THAT bad, and at the end you might even get a tortilla.\" These courses are probably not approved by your employers." # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster54_legit
