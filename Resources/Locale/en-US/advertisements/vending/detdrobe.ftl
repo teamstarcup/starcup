@@ -1,6 +1,6 @@
 # starcup: removed lines 2, 3 for tone
 # advertisement-detdrobe-2 = Come here and dress up like Sherlock Holmes!
-advertisement-detdrobe-3 = Our outfits are very conservative!
+# advertisement-detdrobe-3 = Our outfits are very conservative!
 
 # starcup: added lines 2, 3
 
