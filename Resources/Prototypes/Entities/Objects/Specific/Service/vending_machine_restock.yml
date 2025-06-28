@@ -60,21 +60,22 @@
       shader: unshaded
     - state: refill_booze
 
-- type: entity
-  parent: BaseVendingMachineRestock
-  id: VendingMachineRestockChang
-  name: Mr. Chang's restock box
-  description: A box covered in white labels with bold red Chinese characters, ready to be loaded into the nearest Mr. Chang's vending machine.
-  components:
-  - type: VendingMachineRestock
-    canRestock:
-    - ChangInventory
-  - type: Sprite
-    layers:
-    - state: base
-    - state: green_bit
-      shader: unshaded
-    - state: refill_chinese
+# starcup: removed for tone
+#- type: entity
+#  parent: BaseVendingMachineRestock
+#  id: VendingMachineRestockChang
+#  name: Mr. Chang's restock box
+#  description: A box covered in white labels with bold red Chinese characters, ready to be loaded into the nearest Mr. Chang's vending machine.
+#  components:
+#  - type: VendingMachineRestock
+#    canRestock:
+#    - ChangInventory
+#  - type: Sprite
+#    layers:
+#    - state: base
+#    - state: green_bit
+#      shader: unshaded
+#    - state: refill_chinese
 
 - type: entity
   parent: BaseVendingMachineRestock
@@ -337,7 +338,7 @@
     - SpaceUpInventory
     - SodaInventory
     - DrGibbInventory
-    - SmiteInventory 
+    - SmiteInventory
   - type: Sprite
     layers:
     - state: base

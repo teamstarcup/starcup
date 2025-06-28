@@ -233,16 +233,17 @@
       - id: VendingMachineRestockGetmoreChocolateCorp
         amount: 2
 
-- type: entity
-  id: CrateVendingMachineRestockChangFilled
-  parent: CratePlastic
-  name: Chang restock crate
-  description: Contains a restock box for a Mr. Chang dispenser.
-  components:
-  - type: StorageFill
-    contents:
-      - id: VendingMachineRestockChang
-        amount: 2
+# starcup: removed for tone
+#- type: entity
+#  id: CrateVendingMachineRestockChangFilled
+#  parent: CratePlastic
+#  name: Chang restock crate
+#  description: Contains a restock box for a Mr. Chang dispenser.
+#  components:
+#  - type: StorageFill
+#    contents:
+#      - id: VendingMachineRestockChang
+#        amount: 2
 
 - type: entity
   id: CrateVendingMachineRestockDiscountDansFilled

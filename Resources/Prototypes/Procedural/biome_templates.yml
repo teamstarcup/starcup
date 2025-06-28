@@ -590,7 +590,8 @@
       allowedTiles:
         - FloorAsteroidSand
       entities:
-        - AsteroidRock
+        # - AsteroidRock  # starcup (Delta-v)
+        - RandomRockSpawner #Delta V - Makes Asteroids Great-ish Again
     - !type:BiomeTileLayer
       threshold: -1.0
       tile: FloorAsteroidSand

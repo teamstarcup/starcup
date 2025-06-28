@@ -3,6 +3,7 @@
 # Bartender
 job-alt-title-barista = Barista
 job-alt-title-speakeasyer = Speakeasyer
+job-alt-title-seniorbartender = Senior Bartender
 
 # Chaplain
 job-alt-title-atheist-shepherd = Atheist Shepherd

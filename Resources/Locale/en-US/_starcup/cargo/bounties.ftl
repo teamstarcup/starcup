@@ -1,0 +1,5 @@
+bounty-description-cuban-carp-starcup = SyndComm has been studying the viability of space carp as a substitute for certain meat products. Ship a Cuban carp so they can perform rigorous taste testing.
+bounty-description-lung-starcup = When an employee raised concerns about having hacked up a lung, it took the doctors a bit too long to realize they were being literal. They'll need a replacement.
+bounty-description-banana-starcup = Hi station! They took away my bike horns when I tried honking ten of them at the same time! I need a new routine now! Bananas please?
+bounty-description-hi-viz-vest-starcup = A corgi got into Engineering and ate the AME controller. Please don't ask how. We've had enough incidents with people running into each other in the maintenance tunnels that we've decided to distribute hi-viz vests to the crew.
+bounty-description-microwave-machine-board-starcup = The Chef's microwaves still aren't turning back on after a recent power outage. We need help getting replacements before she starts eyeing oven catalogs.

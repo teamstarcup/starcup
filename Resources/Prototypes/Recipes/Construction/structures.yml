@@ -1204,17 +1204,18 @@
   conditions:
   - !type:TileNotBlocked
 
-- type: construction
-  id: BananiumClownStatue
-  graph: BananiumStatueClown
-  startNode: start
-  targetNode: bananiumStatue
-  category: construction-category-structures
-  placementMode: SnapgridCenter
-  objectType: Structure
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
+# starcup: removed for tone
+#- type: construction
+#  id: BananiumClownStatue
+#  graph: BananiumStatueClown
+#  startNode: start
+#  targetNode: bananiumStatue
+#  category: construction-category-structures
+#  placementMode: SnapgridCenter
+#  objectType: Structure
+#  canBuildInImpassable: false
+#  conditions:
+#    - !type:TileNotBlocked
 
 - type: construction
   id: BananiumDoor

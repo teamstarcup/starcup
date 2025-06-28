@@ -161,6 +161,8 @@
       behaviors:
       - !type:GibBehavior
         recursive: false
+  - type: Puller # starcup
+    needsHands: false # starcup - bees are very hardworking! will have no effect unless made a ghostrole
 
 - type: entity
   name: bee
@@ -1417,7 +1419,7 @@
   name: monkey
   id: MobMonkey
   parent: MobBaseAncestor
-  description: New church of neo-darwinists actually believe that EVERY animal evolved from a monkey. Tastes like pork, and killing them is both fun and relaxing.
+  description: Primitive non-sapient bipeds, for when you need something a little more resilient than a lab rat or guinea pig. # starcup: rewritten for tone
   components:
   - type: NameIdentifier
     group: Monkey
@@ -1450,7 +1452,7 @@
   name: monkey
   id: MobBaseSyndicateMonkey
   parent: MobBaseAncestor
-  description: New church of neo-darwinists actually believe that EVERY animal evolved from a monkey. Tastes like pork, and killing them is both fun and relaxing.
+  description: Primitive non-sapient bipeds, for when you need something a little more resilient than a lab rat or guinea pig. # starcup: rewritten for tone
   suffix: syndicate base
   components:
   - type: NameIdentifier
@@ -1727,7 +1729,7 @@
         shape:
           !type:PhysShapeCircle
           radius: 0.2
-        density: 100
+        density: 20 # starcup - to balance dragging speed.
         mask:
         - SmallMobMask
         layer:
@@ -1850,6 +1852,8 @@
       behaviors:
       - !type:GibBehavior
         recursive: false
+  - type: Puller # starcup
+    needsHands: false # starcup - let the rat drag the pizza slice (improves ghostrole gameplay and makes sense)
 
 - type: entity
   parent: MobMouse
@@ -2496,6 +2500,8 @@
     raffle:
       settings: short
   - type: GhostTakeoverAvailable
+  - type: Puller # starcup
+    needsHands: false # starcup - allows for creepy spider dragging away bodies stuff, which plays well with the poison
 
 - type: entity
   name: tarantula
@@ -2725,6 +2731,8 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: Puller # starcup
+    needsHands: false # starcup - "THEY CAN GRASP!!!"
 
 - type: entity
   name: fox
@@ -2803,6 +2811,8 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: Puller
+    needsHands: false # starcup - ability to carry emeralds important for niche Minecraft challenge modes
 
 - type: entity
   abstract: true
@@ -2846,6 +2856,8 @@
       gender: epicene
   - type: MobPrice
     price: 200
+  - type: Puller
+    needsHands: false # starcup - gives ghostrole corgis something to do. go fetch!
 
 - type: entity
   parent: MobCorgiBase
@@ -3030,6 +3042,8 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
     baseSprintSpeed: 4
+  - type: Puller
+    needsHands: false # starcup - gives ghostrole cats more to do, lets them drag mice around to leave on their keepers' beds
 
 - type: entity
   name: calico cat

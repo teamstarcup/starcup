@@ -88,6 +88,8 @@
       Dead:
         Base: dead
   - type: Puller
+    needsHands: false # starcup - allows for creepy ghostrole "dragging away the body" behavior
+# ideally we would only give dragging to select xenos, like burrowers/runners/praetorians, but currently burrowers are the parent, so.
   - type: Butcherable
     butcheringType: Spike
     spawned:
