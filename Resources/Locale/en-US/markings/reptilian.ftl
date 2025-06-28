@@ -115,6 +115,5 @@ marking-LizardChestFin-body_fin = Lizard Fin
 marking-LizardChestFin = Lizard Fin
 
 marking-LizardSnoutSplotch = Lizard Snout (Splotch)
-
 marking-LizardSnoutSplotch-snout_splotch_primary = Muzzle
 marking-LizardSnoutSplotch-snout_splotch_secondary = Snoot
