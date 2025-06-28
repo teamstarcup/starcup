@@ -6410,6 +6410,26 @@ entities:
     - type: Transform
       pos: 8.5,4.5
       parent: 818
+- proto: PosterLegitCohibaRobustoAd
+  entities:
+  - uid: 927
+    components:
+    - type: Transform
+      pos: -6.5,1.5
+      parent: 818
+    - type: Godmode
+    missingComponents:
+    - Destructible
+- proto: PosterLegitEnlist
+  entities:
+  - uid: 926
+    components:
+    - type: Transform
+      pos: -14.5,1.5
+      parent: 818
+    - type: Godmode
+    missingComponents:
+    - Destructible
 - proto: PosterLegitHighClassMartini
   entities:
   - uid: 925
@@ -8376,6 +8396,17 @@ entities:
     - Destructible
     - Anchorable
     - ApcPowerReceiver
+- proto: VendingMachineChang
+  entities:
+  - uid: 692
+    components:
+    - type: Transform
+      pos: 9.5,-20.5
+      parent: 818
+    - type: Godmode
+    missingComponents:
+    - Destructible
+    - Anchorable
 - proto: VendingMachineCigs
   entities:
   - uid: 744

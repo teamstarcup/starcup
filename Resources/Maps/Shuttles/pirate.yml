@@ -3161,6 +3161,21 @@ entities:
       rot: 3.141592653589793 rad
       pos: -3.5,5.5
       parent: 1
+- proto: PosterContrabandRise
+  entities:
+  - uid: 479
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -5.5,2.5
+      parent: 1
+- proto: PosterContrabandSmoke
+  entities:
+  - uid: 480
+    components:
+    - type: Transform
+      pos: -8.5,7.5
+      parent: 1
 - proto: PosterContrabandSyndicateRecruitment
   entities:
   - uid: 481
@@ -3168,6 +3183,13 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -2.5,-0.5
+      parent: 1
+- proto: PosterLegitUeNo
+  entities:
+  - uid: 482
+    components:
+    - type: Transform
+      pos: -9.5,3.5
       parent: 1
 - proto: PowerCellRecharger
   entities:
@@ -4025,6 +4047,13 @@ entities:
       name: cigarette machine
     - type: Transform
       pos: -6.5,-5.5
+      parent: 1
+- proto: VendingMachineSovietSoda
+  entities:
+  - uid: 618
+    components:
+    - type: Transform
+      pos: -9.5,-0.5
       parent: 1
 - proto: VendingMachineTankDispenserEVA
   entities:
