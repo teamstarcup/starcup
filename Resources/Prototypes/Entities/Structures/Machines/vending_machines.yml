@@ -138,32 +138,31 @@
   - type: Transform
     noRot: false
 
-# starcup: removed for tone
-#- type: entity
-#  parent: VendingMachine
-#  id: VendingMachineAmmo
-#  name: liberation station
-#  description: An overwhelming amount of ancient patriotism washes over you just by looking at the machine.
-#  components:
-#  - type: VendingMachine
-#    pack: AmmoVendInventory
-#    offState: off
-#    brokenState: broken
-#    normalState: normal-unshaded
-#  - type: Advertise
-#    pack: AmmoVendAds
-#  - type: SpeakOnUIClosed
-#    pack: GenericVendGoodbyes
-#  - type: Sprite
-#    sprite: Structures/Machines/VendingMachines/ammo.rsi
-#    layers:
-#    - state: "off"
-#      map: ["enum.VendingMachineVisualLayers.Base"]
-#    - state: "off"
-#      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
-#      shader: unshaded
-#    - state: panel
-#      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineAmmo
+  name: liberation station
+  description: An overwhelming amount of ancient patriotism washes over you just by looking at the machine.
+  components:
+  - type: VendingMachine
+    pack: AmmoVendInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: Advertise
+    pack: AmmoVendAds
+  - type: SpeakOnUIClosed
+    pack: GenericVendGoodbyes
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/ammo.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
 
 - type: entity
   parent: VendingMachine
@@ -1138,41 +1137,40 @@
     energy: 1.6
     color: "#207E79"
 
-# starcup: removed for tone
-#- type: entity
-#  parent: VendingMachine
-#  id: VendingMachineSovietSoda
-#  name: BODA
-#  description: An old vending machine containing sweet water.
-#  components:
-#  - type: VendingMachine
-#    pack: BodaInventory
-#    dispenseOnHitChance: 0.25
-#    dispenseOnHitThreshold: 2
-#    offState: off
-#    brokenState: broken
-#    normalState: normal-unshaded
-#    ejectState: eject-unshaded
-#    denyState: deny-unshaded
-#    initialStockQuality: 0.33
-#  - type: Advertise
-#    pack: BodaAds
-#  - type: SpeakOnUIClosed
-#    pack: BodaGoodbyes
-#  - type: Sprite
-#    sprite: Structures/Machines/VendingMachines/sovietsoda.rsi
-#    layers:
-#    - state: "off"
-#      map: ["enum.VendingMachineVisualLayers.Base"]
-#    - state: "off"
-#      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
-#      shader: unshaded
-#    - state: panel
-#      map: ["enum.WiresVisualLayers.MaintenancePanel"]
-#  - type: PointLight
-#    radius: 1.5
-#    energy: 1.6
-#    color: "#389690"
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineSovietSoda
+  name: BODA
+  description: An old vending machine containing sweet water.
+  components:
+  - type: VendingMachine
+    pack: BodaInventory
+    dispenseOnHitChance: 0.25
+    dispenseOnHitThreshold: 2
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+    initialStockQuality: 0.33
+  - type: Advertise
+    pack: BodaAds
+  - type: SpeakOnUIClosed
+    pack: BodaGoodbyes
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/sovietsoda.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#389690"
 
 - type: entity
   parent: VendingMachine
@@ -1339,39 +1337,38 @@
     energy: 1.6
     color: "#326e3f"
 
-# starcup: removed for tone
-#- type: entity
-#  parent: VendingMachine
-#  id: VendingMachineChang
-#  name: Mr. Chang
-#  description: A self-serving Chinese food machine, for all your Chinese food needs.
-#  components:
-#  - type: VendingMachine
-#    pack: ChangInventory
-#    dispenseOnHitChance: 0.25
-#    dispenseOnHitThreshold: 2
-#    offState: off
-#    brokenState: broken
-#    normalState: normal-unshaded
-#    initialStockQuality: 0.33
-#  - type: Advertise
-#    pack: ChangAds
-#  - type: SpeakOnUIClosed
-#    pack: ChangGoodbyes
-#  - type: Sprite
-#    sprite: Structures/Machines/VendingMachines/changs.rsi
-#    layers:
-#    - state: "off"
-#      map: ["enum.VendingMachineVisualLayers.Base"]
-#    - state: "off"
-#      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
-#      shader: unshaded
-#    - state: panel
-#      map: ["enum.WiresVisualLayers.MaintenancePanel"]
-#  - type: PointLight
-#    radius: 1.5
-#    energy: 1.6
-#    color: "#ffe599"
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineChang
+  name: Mr. Chang
+  description: A self-serving Chinese food machine, for all your Chinese food needs.
+  components:
+  - type: VendingMachine
+    pack: ChangInventory
+    dispenseOnHitChance: 0.25
+    dispenseOnHitThreshold: 2
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    initialStockQuality: 0.33
+  - type: Advertise
+    pack: ChangAds
+  - type: SpeakOnUIClosed
+    pack: ChangGoodbyes
+  - type: Sprite
+    sprite: Structures/Machines/VendingMachines/changs.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#ffe599"
 
 - type: entity
   parent: VendingMachine
