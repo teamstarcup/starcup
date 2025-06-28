@@ -2,8 +2,7 @@
 
 species-name-human = Human
 species-name-dwarf = Dwarf
-# starcup: rename reptilians to unathi
-species-name-reptilian = Unathi
+species-name-reptilian = Reptilian
 species-name-slime = Slime Person
 species-name-diona = Diona
 species-name-arachnid = Arachnid
