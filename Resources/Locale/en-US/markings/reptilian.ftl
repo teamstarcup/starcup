@@ -1,4 +1,3 @@
-# begin starcup: rename reptilians to unathi
 marking-LizardFrillsShort-frills_short = Lizard Frills (Short)
 marking-LizardFrillsShort = Lizard Frills (Short)
 
@@ -116,7 +115,6 @@ marking-LizardChestFin-body_fin = Lizard Fin
 marking-LizardChestFin = Lizard Fin
 
 marking-LizardSnoutSplotch = Lizard Snout (Splotch)
-# end starcup
 
 marking-LizardSnoutSplotch-snout_splotch_primary = Muzzle
 marking-LizardSnoutSplotch-snout_splotch_secondary = Snoot
