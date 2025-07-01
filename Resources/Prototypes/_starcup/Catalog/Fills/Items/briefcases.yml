@@ -1,0 +1,39 @@
+- type: entity
+  id: BriefcaseNTSniperBundleFilled
+  parent: BriefcaseNT
+  suffix: NanoTrasen, Sniper Bundle
+  components:
+  - type: Item
+    size: Ginormous
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,6,3
+  - type: StorageFill
+    contents:
+      - id: WeaponSniperHristov
+      - id: MagazineBoxAntiMateriel
+      - id: ClothingNeckTieRed
+      - id: ClothingHandsGlovesLatex
+      # - id: ClothingUniformJumpsuitLawyerBlack  # starcup (imp)
+      - id: ClothingUniformHitmanSuit #imp
+      - id: BarberScissors
+
+- type: entity
+  id: BriefcaseNTLobbyingBundleFilled
+  parent: BriefcaseNT
+  suffix: NanoTrasen, Spesos
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingEyesGlassesSunglasses
+      - id: SpaceCash30000
+        amount: 1
+      - id: EncryptionKeyNT
+      - id: RubberStampTrader
+      - id: PhoneInstrumentNanotrasen
+      - id: ClothingUniformJumpsuitTacticool
+      - id: ClothingOuterCoatJensen
+      - id: ClothingHandsGlovesCombat
+      - id: ClothingMaskNeckGaiter
+      - id: NTHandyFlag

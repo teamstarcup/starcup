@@ -2,10 +2,10 @@
 # Guns
 
 - type: listing
-  id: UplinkPistolViper
+  id: UplinkPistolViperNT
   name: uplink-pistol-viper-name
   description: uplink-pistol-viper-desc
-  productEntity: WeaponPistolViper
+  productEntity: WeaponPistolViperNT
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 2
@@ -15,10 +15,10 @@
   - UplinkWeaponryNT
 
 - type: listing
-  id: UplinkRevolverPython
+  id: UplinkRevolverPythonNT
   name: uplink-revolver-python-name
-  description: uplink-revolver-python-desc-starcup # starcup: Syndicate to NT
-  productEntity: WeaponRevolverPythonAP
+  description: uplink-revolver-python-desc-starcup
+  productEntity: WeaponRevolverPythonAPNT
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 2
@@ -29,10 +29,10 @@
 
 # Inbuilt suppressor so it's sneaky + more expensive.
 - type: listing
-  id: UplinkPistolCobra
+  id: UplinkPistolCobraNT
   name: uplink-pistol-cobra-name
   description: uplink-pistol-cobra-desc
-  productEntity: WeaponPistolCobra
+  productEntity: WeaponPistolCobraNT
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 2
@@ -43,7 +43,7 @@
 
 # Poor accuracy, slow to fire, cheap option
 - type: listing
-  id: UplinkRifleMosin
+  id: UplinkRifleMosinNT
   name: uplink-rifle-mosin-name
   description: uplink-rifle-mosin-desc
   productEntity: WeaponSniperMosin
@@ -53,7 +53,7 @@
   - UplinkWeaponryNT
 
 - type: listing
-  id: UplinkEsword
+  id: UplinkEswordNT
   name: uplink-esword-name
   description: uplink-esword-desc
   icon: { sprite: /Textures/Objects/Weapons/Melee/e_sword.rsi, state: icon }
@@ -67,7 +67,7 @@
   - UplinkWeaponryNT
 
 - type: listing
-  id: UplinkEnergyDagger
+  id: UplinkEnergyDaggerNT
   name: uplink-edagger-name
   description: uplink-edagger-desc
   icon: { sprite: /Textures/Objects/Weapons/Melee/e_dagger.rsi, state: icon }
@@ -81,9 +81,9 @@
   - UplinkWeaponryNT
 
 - type: listing
-  id: UplinkThrowingKnivesKit
+  id: UplinkThrowingKnivesKitNT
   name: uplink-knives-kit-name
-  description: uplink-knives-kit-desc-starcup # starcup: Syndicate to NT
+  description: uplink-knives-kit-desc-starcup
   icon: { sprite: /Textures/Objects/Storage/boxicons.rsi, state: throwing_knives }
   productEntity: ThrowingKnivesKit
   discountCategory: rareDiscounts
@@ -95,7 +95,7 @@
     - UplinkWeaponryNT
 
 - type: listing
-  id: UplinkGlovesNorthStar
+  id: UplinkGlovesNorthStarNT
   name: uplink-gloves-north-star-name
   description: uplink-gloves-north-star-desc
   productEntity: ClothingHandsGlovesNorthStar
@@ -108,11 +108,11 @@
   - UplinkWeaponryNT
 
 - type: listing
-  id: UplinkGlovesKnuckleDusters
-  name: uplink-gloves-knuckleduster-name-starcup # starcup: Syndicate to NT
+  id: UplinkGlovesKnuckleDustersNT
+  name: uplink-gloves-knuckleduster-name-starcup
   description: uplink-gloves-knuckleduster-desc
   icon: { sprite: Clothing/Hands/Gloves/KnuckleDusters/syndicateknuckleduster.rsi, state: syndicateknuckleduster }
-  productEntity: ClothingHandsKnuckleDustersSyndicate
+  productEntity: ClothingHandsKnuckleDustersNanotrasen
   discountCategory: veryRareDiscounts
   discountDownTo:
     Telecrystal: 3
@@ -122,10 +122,10 @@
   - UplinkWeaponryNT
 
 - type: listing
-  id: UplinkDisposableTurret
+  id: UplinkDisposableTurretNT
   name: uplink-disposable-turret-name
-  description: uplink-disposable-turret-desc-starcup # starcup: Syndicate to NT
-  productEntity: ToolboxElectricalTurretFilled
+  description: uplink-disposable-turret-desc-starcup
+  productEntity: ToolboxElectricalTurretFilledNT
   discountCategory: usualDiscounts
   discountDownTo:
     Telecrystal: 3
@@ -140,7 +140,7 @@
           - NukeOpsUplink
 
 - type: listing
-  id: UplinkEshield
+  id: UplinkEshieldNT
   name: uplink-eshield-name
   description: uplink-eshield-desc
   icon: { sprite: /Textures/Objects/Weapons/Melee/e_shield.rsi, state: eshield-on }
@@ -159,7 +159,7 @@
       - NukeOpsUplink
 
 - type: listing
-  id: UplinkSniperBundle
+  id: UplinkSniperBundleNT
   name: uplink-sniper-bundle-name
   description: uplink-sniper-bundle-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Snipers/heavy_sniper.rsi, state: base }
@@ -173,7 +173,7 @@
   - UplinkWeaponryNT
 
 - type: listing
-  id: UplinkC20RBundle
+  id: UplinkC20RBundleNT
   name: uplink-c20r-bundle-name
   description: uplink-c20r-bundle-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/SMGs/c20r.rsi, state: icon }
@@ -187,7 +187,7 @@
   - UplinkWeaponryNT
 
 - type: listing
-  id: UplinkBulldogBundle
+  id: UplinkBulldogBundleNT
   name: uplink-buldog-bundle-name
   description: uplink-buldog-bundle-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Shotguns/bulldog.rsi, state: icon }
@@ -201,7 +201,7 @@
   - UplinkWeaponryNT
 
 - type: listing
-  id: UplinkGrenadeLauncherBundle
+  id: UplinkGrenadeLauncherBundleNT
   name: uplink-grenade-launcher-bundle-name
   description: uplink-grenade-launcher-bundle-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Launchers/china_lake.rsi, state: icon }
@@ -215,7 +215,7 @@
   - UplinkWeaponryNT
 
 - type: listing
-  id: UplinkL6SawBundle
+  id: UplinkL6SawBundleNT
   name: uplink-l6-saw-bundle-name
   description: uplink-l6-saw-bundle-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/LMGs/l6.rsi, state: icon }
@@ -231,7 +231,7 @@
 # Explosives
 
 - type: listing
-  id: UplinkExplosiveGrenade
+  id: UplinkExplosiveGrenadeNT
   name: uplink-explosive-grenade-name
   description: uplink-explosive-grenade-desc
   productEntity: ExGrenade
@@ -244,7 +244,7 @@
   - UplinkExplosivesNT
 
 - type: listing
-  id: UplinkExplosiveGrenadeFlash
+  id: UplinkExplosiveGrenadeFlashNT
   name: uplink-flash-grenade-name
   description: uplink-flash-grenade-desc
   productEntity: GrenadeFlashBang
@@ -254,7 +254,7 @@
   - UplinkExplosivesNT
 
 - type: listing
-  id: UplinkSmokeGrenade
+  id: UplinkSmokeGrenadeNT
   name: uplink-smoke-grenade-name
   description: uplink-smoke-grenade-desc
   productEntity: SmokeGrenade
@@ -264,7 +264,7 @@
   - UplinkExplosivesNT
 
 - type: listing
-  id: UplinkSyndieMiniBomb
+  id: UplinkSyndieMiniBombNT
   name: uplink-mini-bomb-name
   description: uplink-mini-bomb-desc
   productEntity: SyndieMiniBomb
@@ -277,7 +277,7 @@
     - UplinkExplosivesNT
 
 - type: listing
-  id: UplinkSingularityGrenade
+  id: UplinkSingularityGrenadeNT
   name: uplink-singularity-grenade-name
   description: uplink-singularity-grenade-desc
   productEntity: SingularityGrenade
@@ -290,7 +290,7 @@
     - UplinkDisruptionNT
 
 - type: listing
-  id: UplinkWhiteholeGrenade
+  id: UplinkWhiteholeGrenadeNT
   name: uplink-whitehole-grenade-name
   description: uplink-whitehole-grenade-desc
   productEntity: WhiteholeGrenade
@@ -303,7 +303,7 @@
     - UplinkDisruptionNT
 
 - type: listing
-  id: UplinkGrenadePenguin
+  id: UplinkGrenadePenguinNT
   name: uplink-penguin-grenade-name
   description: uplink-penguin-grenade-desc-starcup # starcup: Syndicate to NT
   productEntity: MobGrenadePenguin
@@ -321,7 +321,7 @@
       - SurplusBundle
 
 - type: listing
-  id: UplinkC4
+  id: UplinkC4NT
   name: uplink-c4-name
   description: uplink-c4-desc
   productEntity: C4
@@ -334,7 +334,7 @@
   - UplinkExplosivesNT
 
 - type: listing
-  id: UplinkGrenadierRig
+  id: UplinkGrenadierRigNT
   name: uplink-grenadier-rig-name
   description: uplink-grenadier-rig-desc
   productEntity: ClothingBeltMilitaryWebbingGrenadeFilled
@@ -352,7 +352,7 @@
       - NukeOpsUplink
 
 - type: listing
-  id: UplinkC4Bundle
+  id: UplinkC4BundleNT
   name: uplink-c4-bundle-name
   description: uplink-c4-bundle-desc
   productEntity: ClothingBackpackDuffelSyndicateC4tBundle
@@ -365,7 +365,7 @@
   - UplinkExplosivesNT
 
 - type: listing
-  id: UplinkEmpGrenade
+  id: UplinkEmpGrenadeNT
   name: uplink-emp-grenade-name
   description: uplink-emp-grenade-desc
   productEntity: EmpGrenade
@@ -378,7 +378,7 @@
   - UplinkExplosivesNT
 
 - type: listing
-  id: UplinkExplodingPen
+  id: UplinkExplodingPenNT
   name: uplink-exploding-pen-name
   description: uplink-exploding-pen-desc
   icon: { sprite: /Textures/Objects/Misc/pens.rsi, state: pen }
@@ -392,7 +392,7 @@
   - UplinkExplosivesNT
 
 - type: listing
-  id: UplinkSyndicateBomb
+  id: UplinkSyndicateBombNT
   name: uplink-exploding-syndicate-bomb-name-starcup # starcup: Syndicate to NT
   description: uplink-exploding-syndicate-bomb-desc
   productEntity: SyndicateBomb
@@ -408,7 +408,7 @@
       - NukeOpsUplink
 
 - type: listing
-  id: UplinkSyndicateBombNukie
+  id: UplinkSyndicateBombNukieNT
   name: uplink-exploding-syndicate-bomb-name-starcup # starcup: Syndicate to NT
   description: uplink-exploding-syndicate-bomb-desc-starcup # starcup: Syndicate to NT
   productEntity: SyndicateBomb
@@ -423,7 +423,7 @@
       - NukeOpsUplink
 
 - type: listing
-  id: UplinkClusterGrenade
+  id: UplinkClusterGrenadeNT
   name: uplink-cluster-grenade-name
   description: uplink-cluster-grenade-desc
   productEntity: ClusterGrenade
@@ -436,7 +436,7 @@
   - UplinkExplosivesNT
 
 - type: listing
-  id: UplinkGrenadeShrapnel
+  id: UplinkGrenadeShrapnelNT
   name: uplink-shrapnel-grenade-name
   description: uplink-shrapnel-grenade-desc
   productEntity: GrenadeShrapnel
@@ -449,7 +449,7 @@
   - UplinkExplosivesNT
 
 - type: listing
-  id: UplinkGrenadeIncendiary
+  id: UplinkGrenadeIncendiaryNT
   name: uplink-incendiary-grenade-name
   description: uplink-incendiary-grenade-desc
   productEntity: GrenadeIncendiary
@@ -462,7 +462,7 @@
   - UplinkExplosivesNT
 
 - type: listing
-  id: UplinkEmpKit
+  id: UplinkEmpKitNT
   name: uplink-emp-kit-name
   description: uplink-emp-kit-desc
   productEntity: ElectricalDisruptionKit
@@ -477,7 +477,7 @@
 # Ammo
 
 - type: listing
-  id: UplinkPistol9mmMagazine
+  id: UplinkPistol9mmMagazineNT
   name: uplink-pistol-magazine-name
   description: uplink-pistol-magazine-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi, state: red-icon }
@@ -489,7 +489,7 @@
 
 # For the C20R
 - type: listing
-  id: UplinkMagazinePistolSubMachineGun
+  id: UplinkMagazinePistolSubMachineGunNT
   name: uplink-pistol-magazine-c20r-name
   description: uplink-pistol-magazine-c20r-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: red-icon }
@@ -501,7 +501,7 @@
 
 # For the Cobra
 - type: listing
-  id: UplinkMagazinePistolCaselessRifle
+  id: UplinkMagazinePistolCaselessRifleNT
   name: uplink-pistol-magazine-caseless-name
   description: uplink-pistol-magazine-caseless-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi, state: red-icon }
@@ -513,7 +513,7 @@
 
 # For the Python
 - type: listing
-  id: UplinkSpeedLoaderMagnumAP
+  id: UplinkSpeedLoaderMagnumAPNT
   name: uplink-speedloader-magnum-name
   description: uplink-speedloader-magnu-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
@@ -525,7 +525,7 @@
 
 # For the mosin
 - type: listing
-  id: UplinkMosinAmmo
+  id: UplinkMosinAmmoNT
   name: uplink-mosin-ammo-name
   description: uplink-mosin-ammo-desc
   productEntity: MagazineBoxLightRifle
@@ -536,7 +536,7 @@
 
 # for the hristov
 - type: listing
-  id: UplinkHristovAmmo
+  id: UplinkHristovAmmoNT
   name: uplink-sniper-ammo-name
   description: uplink-sniper-ammo-desc
   productEntity: MagazineBoxAntiMateriel
@@ -546,7 +546,7 @@
   - UplinkAmmoNT
 
 - type: listing
-  id: UplinkAmmoNTBundle
+  id: UplinkAmmoNTBundleNT
   name: uplink-ammo-bundle-name
   description: uplink-ammo-bundle-desc
   productEntity: ClothingBackpackDuffelSyndicateAmmoFilled
@@ -567,7 +567,7 @@
 #Chemicals
 
 - type: listing
-  id: UplinkHypopen
+  id: UplinkHypopenNT
   name: uplink-hypopen-name
   description: uplink-hypopen-desc
   icon: { sprite: /Textures/Objects/Misc/pens.rsi, state: pen }
@@ -581,7 +581,7 @@
   - UplinkChemicalsNT
 
 - type: listing
-  id: UplinkHypoDart
+  id: UplinkHypoDartNT
   name: uplink-hypodart-name
   description: uplink-hypodart-desc
   icon: { sprite: /Textures/Objects/Fun/Darts/dart_red.rsi, state: icon }
@@ -595,7 +595,7 @@
   - UplinkChemicalsNT
 
 - type: listing
-  id: UplinkChemistryKitBundle
+  id: UplinkChemistryKitBundleNT
   name: uplink-chemistry-kit-name
   description: uplink-chemistry-kit-desc
   icon: { sprite: /Textures/Objects/Storage/boxicons.rsi, state: vials }
@@ -609,7 +609,7 @@
   - UplinkChemicalsNT
 
 - type: listing
-  id: UplinkZombieBundle
+  id: UplinkZombieBundleNT
   name: uplink-zombie-bundle-name-starcup # starcup: Syndicate to NT
   description: uplink-zombie-bundle-desc
   icon: { sprite: /Textures/Structures/Wallmounts/signs.rsi, state: bio }
@@ -629,7 +629,7 @@
       - SurplusBundle
 
 - type: listing
-  id: UplinkNocturineChemistryBottle
+  id: UplinkNocturineChemistryBottleNT
   name: uplink-nocturine-chemistry-bottle-name
   description: uplink-nocturine-chemistry-bottle-desc
   productEntity: ChemistryBottleNocturine
@@ -642,7 +642,7 @@
   - UplinkChemicalsNT
 
 - type: listing
-  id: UplinkCombatMedkit
+  id: UplinkCombatMedkitNT
   name: uplink-combat-medkit-name
   description: uplink-combat-medkit-desc
   productEntity: MedkitCombatFilled
@@ -655,7 +655,7 @@
   - UplinkChemicalsNT
 
 - type: listing
-  id: UplinkCombatMedipen
+  id: UplinkCombatMedipenNT
   name: uplink-combat-medipen-name
   description: uplink-combat-medipen-desc
   productEntity: CombatMedipen
@@ -668,7 +668,7 @@
   - UplinkChemicalsNT
 
 - type: listing
-  id: UplinkStimpack
+  id: UplinkStimpackNT
   name: uplink-stimpack-name
   description: uplink-stimpack-desc-starcup # starcup: Syndicate to NT
   productEntity: Stimpack
@@ -681,7 +681,7 @@
   - UplinkChemicalsNT
 
 - type: listing
-  id: UplinkStimkit
+  id: UplinkStimkitNT
   name: uplink-stimkit-name
   description: uplink-stimkit-desc
   productEntity: StimkitFilled
@@ -694,7 +694,7 @@
   - UplinkChemicalsNT
 
 - type: listing
-  id: UplinkCigarettes
+  id: UplinkCigarettesNT
   name: uplink-cigarettes-name-starcup # starcup: Syndicate to NT
   description: uplink-cigarettes-desc
   productEntity: CigPackSyndicate
@@ -704,7 +704,7 @@
   - UplinkChemicalsNT
 
 - type: listing
-  id: UplinkMedsBundle
+  id: UplinkMedsBundleNT
   name: uplink-meds-bundle-name
   description: uplink-meds-bundle-desc
   productEntity: ClothingBackpackDuffelSyndicateMedicalBundleFilled
@@ -728,7 +728,7 @@
 # Deception
 
 - type: listing
-  id: UplinkAgentIDCard
+  id: UplinkAgentIDCardNT
   name: uplink-agent-id-card-name
   description: uplink-agent-id-card-desc
   productEntity: AgentIDCard
@@ -741,7 +741,7 @@
   - UplinkDeceptionNT
 
 - type: listing
-  id: UplinkStealthBox
+  id: UplinkStealthBoxNT
   name: uplink-stealth-box-name
   description: uplink-stealth-box-desc
   productEntity: StealthBox
@@ -754,7 +754,7 @@
   - UplinkDeceptionNT
 
 - type: listing
-  id: UplinkChameleonProjector
+  id: UplinkChameleonProjectorNT
   name: uplink-chameleon-projector-name
   description: uplink-chameleon-projector-desc
   productEntity: ChameleonProjector
@@ -767,7 +767,7 @@
   - UplinkDeceptionNT
 
 - type: listing
-  id: UplinkHeadsetEncryptionKey
+  id: UplinkHeadsetEncryptionKeyNT
   name: uplink-encryption-key-name-starcup # starcup: Syndicate to NT
   description: uplink-encryption-key-desc
   icon: { sprite: /Textures/Objects/Devices/encryption_keys.rsi, state: synd_label }
@@ -781,7 +781,7 @@
   - UplinkDeceptionNT
 
 - type: listing
-  id: UplinkBinaryTranslatorKey
+  id: UplinkBinaryTranslatorKeyNT
   name: uplink-binary-translator-key-name
   description: uplink-binary-translator-key-desc
   icon: { sprite: /Textures/Objects/Devices/encryption_keys.rsi, state: ai_label }
@@ -792,7 +792,7 @@
   - UplinkDeceptionNT
 
 - type: listing
-  id: UplinkCyberpen
+  id: UplinkCyberpenNT
   name: uplink-cyberpen-name
   description: uplink-cyberpen-desc
   productEntity: CyberPen
@@ -802,7 +802,7 @@
   - UplinkDeceptionNT
 
 - type: listing
-  id: UplinkDecoyDisk
+  id: UplinkDecoyDiskNT
   name: uplink-decoy-disk-name
   description: uplink-decoy-disk-desc
   productEntity: NukeDiskFake
@@ -812,7 +812,7 @@
   - UplinkDeceptionNT
 
 - type: listing
-  id: UplinkUltrabrightLantern
+  id: UplinkUltrabrightLanternNT
   name: uplink-ultrabright-lantern-name
   description: uplink-ultrabright-lantern-desc
   productEntity: LanternFlash
@@ -825,7 +825,7 @@
   - UplinkDeceptionNT
 
 - type: listing
-  id: UplinkBribe
+  id: UplinkBribeNT
   name: uplink-bribe-name
   description: uplink-bribe-desc
   productEntity: BriefcaseSyndieLobbyingBundleFilled
@@ -848,7 +848,7 @@
 #   - UplinkDeceptionNT
 
 - type: listing
-  id: UplinkDecoyKit
+  id: UplinkDecoyKitNT
   name: uplink-decoy-kit-name
   description: uplink-decoy-kit-desc
   icon: { sprite: /Textures/Objects/Tools/Decoys/operative_decoy.rsi, state: folded }
@@ -862,7 +862,7 @@
   - UplinkDeceptionNT
 
 - type: listing
-  id: UplinkSyndicateBombFake
+  id: UplinkSyndicateBombFakeNT
   name: uplink-exploding-syndicate-bomb-fake-name
   description: uplink-exploding-syndicate-bomb-fake-desc
   productEntity: SyndicateBombFake
@@ -877,7 +877,7 @@
 # Disruption
 
 - type: listing
-  id: UplinkAccessBreaker
+  id: UplinkAccessBreakerNT
   name: uplink-access-breaker-name
   description: uplink-access-breaker-desc
   productEntity: AccessBreaker
@@ -890,7 +890,7 @@
   - UplinkDisruptionNT
 
 - type: listing
-  id: UplinkEmag
+  id: UplinkEmagNT
   name: uplink-emag-name
   description: uplink-emag-desc-starcup # starcup: Syndicate to NT
   productEntity: Emag
@@ -903,7 +903,7 @@
   - UplinkDisruptionNT
 
 - type: listing
-  id: UplinkRadioJammer
+  id: UplinkRadioJammerNT
   name: uplink-radio-jammer-name
   description: uplink-radio-jammer-desc
   productEntity: RadioJammer
@@ -916,7 +916,7 @@
   - UplinkDisruptionNT
 
 - type: listing
-  id: UplinkSyndicateWeaponModule
+  id: UplinkSyndicateWeaponModuleNT
   name: uplink-syndicate-weapon-module-name
   description: uplink-syndicate-weapon-module-desc
   productEntity: BorgModuleSyndicateWeapon
@@ -929,7 +929,7 @@
   - UplinkDisruptionNT
 
 - type: listing
-  id: UplinkSyndicateMartyrModule
+  id: UplinkSyndicateMartyrModuleNT
   name: uplink-syndicate-martyr-module-name
   description: uplink-syndicate-martyr-module-desc
   productEntity: BorgModuleMartyr
@@ -943,7 +943,7 @@
     - UplinkDisruptionNT
 
 - type: listing
-  id: UplinkSoapSyndie
+  id: UplinkSoapSyndieNT
   name: uplink-soap-name
   description: uplink-soap-desc
   productEntity: SoapSyndie
@@ -953,7 +953,7 @@
   - UplinkDisruptionNT
 
 - type: listing
-  id: UplinkSlipocalypseClusterSoap
+  id: UplinkSlipocalypseClusterSoapNT
   name: uplink-slipocalypse-clustersoap-name-starcup # starcup: Syndicate to NT
   description: uplink-slipocalypse-clustersoap-desc-starcup # starcup: Syndicate to NT
   productEntity: SlipocalypseClusterSoap
@@ -966,10 +966,10 @@
   - UplinkDisruptionNT
 
 - type: listing
-  id: UplinkToolbox
+  id: UplinkToolboxNT
   name: uplink-toolbox-name
-  description: uplink-toolbox-desc-starcup # starcup: Syndicate to NT
-  productEntity: ToolboxSyndicateFilled
+  description: uplink-toolbox-desc-starcup
+  productEntity: ToolboxNanotrasenFilled
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 1
@@ -979,7 +979,7 @@
   - UplinkDisruptionNT
 
 - type: listing
-  id: UplinkSyndicateJawsOfLife
+  id: UplinkSyndicateJawsOfLifeNT
   name: uplink-syndicate-jaws-of-life-name
   description: uplink-syndicate-jaws-of-life-desc
   productEntity: SyndicateJawsOfLife
@@ -1006,7 +1006,7 @@
 #   - UplinkDisruptionNT
 
 - type: listing
-  id: UplinkPowerSink
+  id: UplinkPowerSinkNT
   name: uplink-power-sink-name
   description: uplink-power-sink-desc
   productEntity: PowerSink
@@ -1024,7 +1024,7 @@
           - SurplusBundle
 
 - type: listing
-  id: UplinkAntimovCircuitBoard
+  id: UplinkAntimovCircuitBoardNT
   name: uplink-antimov-law-name
   description: uplink-antimov-law-desc
   productEntity: AntimovCircuitBoard
@@ -1042,7 +1042,7 @@
        - NukeOpsUplink
 
 - type: listing
-  id: UplinkNukieAntimovCircuitBoard
+  id: UplinkNukieAntimovCircuitBoardNT
   name: uplink-antimov-law-name
   description: uplink-antimov-law-desc
   productEntity: AntimovCircuitBoard
@@ -1060,7 +1060,7 @@
       - NukeOpsUplink
 
 - type: listing
-  id: UplinkSurplusBundle
+  id: UplinkSurplusBundleNT
   name: uplink-surplus-bundle-name
   description: uplink-surplus-bundle-desc-starcup # starcup: Syndicate to NT
   productEntity: CrateSyndicateSurplusBundle
@@ -1079,7 +1079,7 @@
       - SurplusBundle
 
 - type: listing
-  id: UplinkSuperSurplusBundle
+  id: UplinkSuperSurplusBundleNT
   name: uplink-super-surplus-bundle-name
   description: uplink-super-surplus-bundle-desc-starcup # starcup: Syndicate to NT
   productEntity: CrateSyndicateSuperSurplusBundle
@@ -1098,7 +1098,7 @@
       - SurplusBundle
 
 - type: listing
-  id: UplinkStarterKit
+  id: UplinkStarterKitNT
   name: uplink-starter-kit-name
   description: uplink-starter-kit-desc
   productEntity: ClothingBackpackDuffelSyndicateFilledStarterKit
@@ -1118,7 +1118,7 @@
 
 
 - type: listing
-  id: UplinkSingarityBeacon
+  id: UplinkSingarityBeaconNT
   name: uplink-singularity-beacon-name
   description: uplink-singularity-beacon-desc
   productEntity: SingularityBeacon
@@ -1131,7 +1131,7 @@
     - UplinkDisruptionNT
 
 - type: listing
-  id: UplinkCameraBug
+  id: UplinkCameraBugNT
   name: uplink-cameraBug-name
   description: uplink-cameraBug-desc
   productEntity: CameraBug
@@ -1143,7 +1143,7 @@
 # Allies
 
 - type: listing
-  id: UplinkHoloparaKit
+  id: UplinkHoloparaKitNT
   name: uplink-holopara-kit-name
   description: uplink-holopara-kit-desc
   icon: { sprite: /Textures/Objects/Misc/guardian_info.rsi, state: icon }
@@ -1162,7 +1162,7 @@
       - NukeOpsUplink
 
 - type: listing
-  id: UplinkReinforcementRadioSyndicate
+  id: UplinkReinforcementRadioSyndicateNT
   name: uplink-reinforcement-radio-name
   description: uplink-reinforcement-radio-traitor-desc
   productEntity: ReinforcementRadioSyndicate
@@ -1181,7 +1181,7 @@
           - NukeOpsUplink
 
 - type: listing
-  id: UplinkReinforcementRadioSyndicateNukeops # Version for Nukeops that spawns another nuclear operative without the uplink.
+  id: UplinkReinforcementRadioSyndicateNukeopsNT # Version for Nukeops that spawns another nuclear operative without the uplink.
   name: uplink-reinforcement-radio-nukeops-name
   description: uplink-reinforcement-radio-nukeops-desc
   productEntity: ReinforcementRadioSyndicateNukeops
@@ -1197,7 +1197,7 @@
           - NukeOpsUplink
 
 - type: listing
-  id: UplinkReinforcementRadioSyndicateCyborgAssault
+  id: UplinkReinforcementRadioSyndicateCyborgAssaultNT
   name:  uplink-reinforcement-radio-cyborg-assault-name-starcup # starcup: Syndicate to NT
   description: uplink-reinforcement-radio-cyborg-assault-desc
   productEntity: ReinforcementRadioSyndicateCyborgAssault
@@ -1213,7 +1213,7 @@
           - NukeOpsUplink
 
 - type: listing
-  id: UplinkReinforcementRadioSyndicateAncestor
+  id: UplinkReinforcementRadioSyndicateAncestorNT
   name: uplink-reinforcement-radio-ancestor-name
   description: uplink-reinforcement-radio-ancestor-desc-starcup # starcup: Syndicate to NT
   productEntity: ReinforcementRadioSyndicateAncestor
@@ -1232,7 +1232,7 @@
           - NukeOpsUplink
 
 - type: listing
-  id: UplinkReinforcementRadioSyndicateAncestorNukeops # Version for Nukeops that spawns a syndicate monkey with the NukeOperative component.
+  id: UplinkReinforcementRadioSyndicateAncestorNukeopsNT # Version for Nukeops that spawns a syndicate monkey with the NukeOperative component.
   name: uplink-reinforcement-radio-ancestor-name
   description: uplink-reinforcement-radio-ancestor-desc
   productEntity: ReinforcementRadioSyndicateAncestorNukeops
@@ -1251,7 +1251,7 @@
           - NukeOpsUplink
 
 - type: listing
-  id: UplinkCarpDehydrated
+  id: UplinkCarpDehydratedNT
   name: uplink-carp-dehydrated-name
   description: uplink-carp-dehydrated-desc
   productEntity: DehydratedSpaceCarp
@@ -1269,7 +1269,7 @@
       - NukeOpsUplink
 
 - type: listing
-  id: UplinkMobCatMicrobomb
+  id: UplinkMobCatMicrobombNT
   name: uplink-mobcat-microbomb-name
   description: uplink-mobcat-microbomb-desc
   icon: { sprite: Objects/Devices/communication.rsi, state: old-radio-syndicat }
@@ -1283,7 +1283,7 @@
     - UplinkAlliesNT
 
 - type: listing
-  id: UplinkSyndicatePersonalAI
+  id: UplinkSyndicatePersonalAINT
   name: uplink-syndicate-pai-name-starcup # starcup: Syndicate to NT
   description: uplink-syndicate-pai-desc-starcup # starcup: Syndicate to NT
   icon: { sprite: /Textures/Objects/Fun/pai.rsi, state: syndicate-icon-pai-off }
@@ -1299,7 +1299,7 @@
 # Implants
 
 - type: listing
-  id: UplinkStorageImplanter
+  id: UplinkStorageImplanterNT
   name: uplink-storage-implanter-name
   description: uplink-storage-implanter-desc
   icon: { sprite: /Textures/Clothing/Back/Backpacks/backpack.rsi, state: icon }
@@ -1318,7 +1318,7 @@
           - NukeOpsUplink
 
 - type: listing
-  id: UplinkFreedomImplanter
+  id: UplinkFreedomImplanterNT
   name: uplink-freedom-implanter-name
   description: uplink-freedom-implanter-desc
   icon: { sprite: /Textures/Actions/Implants/implants.rsi, state: freedom }
@@ -1332,7 +1332,7 @@
     - UplinkImplantsNT
 
 - type: listing
-  id: UplinkScramImplanter
+  id: UplinkScramImplanterNT
   name: uplink-scram-implanter-name
   description: uplink-scram-implanter-desc
   icon: { sprite: /Textures/Structures/Specific/anomaly.rsi, state: anom4 }
@@ -1346,7 +1346,7 @@
     - UplinkImplantsNT
 
 - type: listing
-  id: UplinkDnaScramblerImplant
+  id: UplinkDnaScramblerImplantNT
   name: uplink-dna-scrambler-implanter-name
   description: uplink-dna-scrambler-implanter-desc
   icon: { sprite: /Textures/Mobs/Species/Human/parts.rsi, state: full }
@@ -1360,7 +1360,7 @@
     - UplinkImplantsNT
 
 - type: listing
-  id: UplinkEmpImplanter
+  id: UplinkEmpImplanterNT
   name: uplink-emp-implanter-name
   description: uplink-emp-implanter-desc
   icon: { sprite: /Textures/Objects/Magic/magicactions.rsi, state: shield }
@@ -1374,7 +1374,7 @@
     - UplinkImplantsNT
 
 - type: listing
-  id: UplinkRadioImplanter
+  id: UplinkRadioImplanterNT
   name: uplink-radio-implanter-name
   description: uplink-radio-implanter-desc-starcup # starcup: Syndicate to NT
   icon: { sprite: /Textures/Objects/Devices/encryption_keys.rsi, state: synd_label }
@@ -1388,7 +1388,7 @@
   - UplinkImplantsNT
 
 - type: listing
-  id: UplinkMicroBombImplanter
+  id: UplinkMicroBombImplanterNT
   name: uplink-micro-bomb-implanter-name
   description: uplink-micro-bomb-implanter-desc
   icon: { sprite: /Textures/Actions/Implants/implants.rsi, state: explosive }
@@ -1408,7 +1408,7 @@
       - SurplusBundle
 
 - type: listing
-  id: UplinkMacroBombImplanter
+  id: UplinkMacroBombImplanterNT
   name: uplink-macro-bomb-implanter-name
   description: uplink-macro-bomb-implanter-desc
   icon: { sprite: /Textures/Actions/Implants/implants.rsi, state: explosive }
@@ -1428,7 +1428,7 @@
           - SurplusBundle
 
 - type: listing
-  id: UplinkDeathAcidifierImplanter
+  id: UplinkDeathAcidifierImplanterNT
   name: uplink-death-acidifier-implant-name
   description: uplink-death-acidifier-implant-desc
   icon: { sprite: /Textures/Objects/Magic/magicactions.rsi, state: gib }
@@ -1444,7 +1444,7 @@
           - NukeOpsUplink
 
 - type: listing
-  id: UplinkUplinkImplanter # uplink uplink real
+  id: UplinkUplinkImplanterNT # uplink uplink real
   name: uplink-uplink-implanter-name
   description: uplink-uplink-implanter-desc
   icon: { sprite: /Textures/Objects/Devices/communication.rsi, state: old-radio }
@@ -1463,7 +1463,7 @@
           - NukeOpsUplink
 
 - type: listing
-  id: UplinkDeathRattle
+  id: UplinkDeathRattleNT
   name: uplink-deathrattle-implant-name
   description: uplink-deathrattle-implant-desc-starcup # starcup: Syndicate to NT
   productEntity: BoxDeathRattleImplants
@@ -1482,7 +1482,7 @@
           - SurplusBundle
 
 - type: listing
-  id: UplinkFakeMindshield
+  id: UplinkFakeMindshieldNT
   name: uplink-fake-mindshield-name
   description: uplink-fake-mindshield-desc
   icon: { sprite: Interface/Actions/actions_fakemindshield.rsi, state: icon-on }
@@ -1498,7 +1498,7 @@
 # Wearables
 
 - type: listing
-  id: UplinkJetpack
+  id: UplinkJetpackNT
   name: uplink-black-jetpack-name
   description: uplink-black-jetpack-desc
   productEntity: JetpackBlackFilled
@@ -1511,7 +1511,7 @@
   - UplinkWearablesNT
 
 - type: listing
-  id: UplinkVoiceMask
+  id: UplinkVoiceMaskNT
   name: uplink-voice-mask-name
   description: uplink-voice-mask-desc
   productEntity: ClothingMaskGasVoiceChameleon
@@ -1524,7 +1524,7 @@
   - UplinkWearablesNT
 
 - type: listing
-  id: UplinkHolster
+  id: UplinkHolsterNT
   name: uplink-holster-name
   description: uplink-holster-desc
   productEntity: ClothingBeltSyndieHolster
@@ -1534,7 +1534,7 @@
   - UplinkWearablesNT
 
 - type: listing
-  id: UplinkChestRig
+  id: UplinkChestRigNT
   name: uplink-chest-rig-name
   description: uplink-chest-rig-desc
   productEntity: ClothingBeltMilitaryWebbing
@@ -1544,7 +1544,7 @@
   - UplinkWearablesNT
 
 - type: listing
-  id: UplinkChameleon
+  id: UplinkChameleonNT
   name: uplink-chameleon-name
   description: uplink-chameleon-desc
   productEntity: ClothingBackpackChameleonFill
@@ -1558,7 +1558,7 @@
     - UplinkWearablesNT
 
 - type: listing
-  id: UplinkClothingNoSlipsShoes
+  id: UplinkClothingNoSlipsShoesNT
   name: uplink-clothing-no-slips-shoes-name
   description: uplink-clothing-no-slips-shoes-desc
   productEntity: ClothingShoesChameleonNoSlips
@@ -1572,7 +1572,7 @@
 
 # TODO: Revert back to normal thieving gloves when clothes dyeing is added
 - type: listing
-  id: UplinkgClothingThievingGloves
+  id: UplinkgClothingThievingGlovesNT
   name: uplink-clothing-chameleon-thieving-gloves-name
   description: uplink-clothing-chameleon-thieving-gloves-desc
   productEntity: ClothingHandsChameleonThief
@@ -1585,7 +1585,7 @@
   - UplinkWearablesNT
 
 - type: listing
-  id: UplinkClothingOuterVestWeb
+  id: UplinkClothingOuterVestWebNT
   name: uplink-clothing-outer-vest-web-name
   description: uplink-clothing-outer-vest-web-desc
   productEntity: ClothingOuterVestWeb
@@ -1598,7 +1598,7 @@
   - UplinkWearablesNT
 
 - type: listing
-  id: UplinkClothingOuterVestWebElite
+  id: UplinkClothingOuterVestWebEliteNT
   name: uplink-clothing-outer-vest-web-elite-name
   description: uplink-clothing-outer-vest-web-elite-desc
   productEntity: ClothingOuterVestWebElite
@@ -1611,7 +1611,7 @@
   - UplinkWearablesNT
 
 - type: listing
-  id: UplinkClothingShoesBootsMagSyndie
+  id: UplinkClothingShoesBootsMagSyndieNT
   name: uplink-clothing-shoes-boots-mag-syndie-name
   description: uplink-clothing-shoes-boots-mag-syndie-desc
   productEntity: ClothingShoesBootsMagSyndie
@@ -1624,7 +1624,7 @@
   - UplinkWearablesNT
 
 - type: listing
-  id: UplinkEVASyndie
+  id: UplinkEVASyndieNT
   name: uplink-eva-syndie-name-starcup # starcup: Syndicate to NT
   description: uplink-eva-syndie-desc
   icon: { sprite: /Textures/Clothing/OuterClothing/Suits/eva_syndicate.rsi, state: icon }
@@ -1638,7 +1638,7 @@
   - UplinkWearablesNT
 
 - type: listing
-  id: UplinkHardsuitCarp
+  id: UplinkHardsuitCarpNT
   name: uplink-hardsuit-carp-name
   description: uplink-hardsuit-carp-desc
   icon: { sprite: /Textures/Clothing/OuterClothing/Suits/carpsuit.rsi, state: icon }
@@ -1652,7 +1652,7 @@
   - UplinkWearablesNT
 
 - type: listing
-  id: UplinkHardsuitSyndie
+  id: UplinkHardsuitSyndieNT
   name: uplink-hardsuit-syndie-name-starcup # starcup: Syndicate to NT
   description: uplink-hardsuit-syndie-desc-starcup # starcup: Syndicate to NT
   icon: { sprite: /Textures/Clothing/OuterClothing/Hardsuits/syndicate.rsi, state: icon }
@@ -1666,7 +1666,7 @@
   - UplinkWearablesNT
 
 - type: listing
-  id: UplinkClothingOuterArmorRaid
+  id: UplinkClothingOuterArmorRaidNT
   name: uplink-syndie-raid-name-starcup # starcup: Syndicate to NT
   description: uplink-syndie-raid-desc-starcup # starcup: Syndicate to NT
   icon: { sprite: /Textures/Clothing/OuterClothing/Armor/syndie-raid.rsi, state: icon }
@@ -1682,7 +1682,7 @@
       - NukeOpsUplink
 
 - type: listing
-  id: UplinkHardsuitSyndieElite
+  id: UplinkHardsuitSyndieEliteNT
   name: uplink-hardsuit-syndieelite-name-starcup # starcup: Syndicate to NT
   description: uplink-hardsuit-syndieelite-desc-starcup # starcup: Syndicate to NT
   icon: { sprite: /Textures/Clothing/OuterClothing/Hardsuits/syndieelite.rsi, state: icon }
@@ -1698,7 +1698,7 @@
       - NukeOpsUplink
 
 - type: listing
-  id: UplinkClothingOuterHardsuitJuggernaut
+  id: UplinkClothingOuterHardsuitJuggernautNT
   name: uplink-clothing-outer-hardsuit-juggernaut-name-starcup # starcup: Syndicate to NT
   description: uplink-clothing-outer-hardsuit-juggernaut-desc
   icon: { sprite: /Textures/Structures/Storage/Crates/syndicate.rsi, state: icon }
@@ -1714,7 +1714,7 @@
       - NukeOpsUplink
 
 - type: listing
-  id: UplinkClothingEyesHudSyndicate
+  id: UplinkClothingEyesHudSyndicateNT
   name: uplink-clothing-eyes-hud-syndicate-name-starcup # starcup: Syndicate to NT
   description: uplink-clothing-eyes-hud-syndicate-desc-starcup # starcup: Syndicate to NT
   productEntity: ClothingEyesHudSyndicate
@@ -1729,7 +1729,7 @@
           - NukeOpsUplink
 
 - type: listing
-  id: UplinkClothingConductingGloves
+  id: UplinkClothingConductingGlovesNT
   name: uplink-clothing-conducting-gloves-name
   description: uplink-clothing-conducting-gloves-desc
   productEntity: ClothingHandsGlovesConducting
@@ -1739,7 +1739,7 @@
   - UplinkWearablesNT
 
 - type: listing
-  id: UplinkBackpackSyndicate
+  id: UplinkBackpackSyndicateNT
   name: uplink-backpack-syndicate-name-starcup # starcup: Syndicate to NT
   description: uplink-backpack-syndicate-desc
   productEntity: ClothingBackpackSyndicate
@@ -1751,7 +1751,7 @@
  # Pointless
 
 - type: listing
-  id: UplinkBarberScissors
+  id: UplinkBarberScissorsNT
   name: uplink-barber-scissors-name
   description: uplink-barber-scissors-desc
   productEntity: BarberScissors
@@ -1761,7 +1761,7 @@
   - UplinkPointlessNT
 
 - type: listing
-  id: UplinkSnackBox
+  id: UplinkSnackBoxNT
   name: uplink-snack-box-name-starcup # starcup: Syndicate to NT
   description: uplink-snack-box-desc
   productEntity: HappyHonkNukieSnacks
@@ -1771,7 +1771,7 @@
   - UplinkPointlessNT
 
 - type: listing
-  id: UplinkRevolverCapGun
+  id: UplinkRevolverCapGunNT
   name: uplink-revolver-cap-gun-name
   description: uplink-revolver-cap-gun-desc
   productEntity: RevolverCapGun
@@ -1784,7 +1784,7 @@
   - UplinkPointlessNT
 
 - type: listing
-  id: UplinkSyndicateStamp
+  id: UplinkSyndicateStampNT
   name: uplink-syndicate-stamp-name-starcup # starcup: Syndicate to NT
   description: uplink-syndicate-stamp-desc
   productEntity: RubberStampSyndicate
@@ -1797,7 +1797,7 @@
   - UplinkPointlessNT
 
 - type: listing
-  id: UplinkCatEars
+  id: UplinkCatEarsNT
   name: uplink-cat-ears-name
   description: uplink-cat-ears-desc
   productEntity: ClothingHeadHatCatEars
@@ -1807,7 +1807,7 @@
   - UplinkPointlessNT
 
 - type: listing
-  id: UplinkOutlawHat
+  id: UplinkOutlawHatNT
   name: uplink-outlaw-hat-name
   description: uplink-outlaw-hat-desc
   productEntity: ClothingHeadHatOutlawHat
@@ -1817,7 +1817,7 @@
   - UplinkPointlessNT
 
 - type: listing
-  id: UplinkOutlawGlasses
+  id: UplinkOutlawGlassesNT
   name: uplink-outlaw-glasses-name
   description: uplink-outlaw-glasses-desc
   productEntity: ClothingEyesGlassesOutlawGlasses
@@ -1827,7 +1827,7 @@
   - UplinkPointlessNT
 
 - type: listing
-  id: UplinkCostumePyjama
+  id: UplinkCostumePyjamaNT
   name: uplink-costume-pyjama-name-starcup # starcup: Syndicate to NT
   description: uplink-costume-pyjama-desc-starcup # starcup: Syndicate to NT
   productEntity: ClothingBackpackDuffelSyndicatePyjamaBundle
@@ -1837,7 +1837,7 @@
   - UplinkPointlessNT
 
 - type: listing
-  id: UplinkCostumeClown
+  id: UplinkCostumeClownNT
   name: uplink-costume-clown-name
   description: uplink-costume-clown-desc
   productEntity: ClothingBackpackDuffelSyndicateCostumeClown
@@ -1847,7 +1847,7 @@
   - UplinkPointlessNT
 
 - type: listing
-  id: UplinkCarpSuitBundle
+  id: UplinkCarpSuitBundleNT
   name: uplink-carp-suit-bundle-name
   description: uplink-carp-suit-bundle-desc
   productEntity: ClothingBackpackDuffelSyndicateCarpSuit
@@ -1857,7 +1857,7 @@
   - UplinkPointlessNT
 
 - type: listing
-  id: UplinkOperativeSuit
+  id: UplinkOperativeSuitNT
   name: uplink-operative-suit-name
   description: uplink-operative-suit-desc
   productEntity: ClothingUniformJumpsuitOperative
@@ -1867,7 +1867,7 @@
   - UplinkPointlessNT
 
 - type: listing
-  id: UplinkOperativeSkirt
+  id: UplinkOperativeSkirtNT
   name: uplink-operative-skirt-name
   description: uplink-operative-skirt-desc
   productEntity: ClothingUniformJumpskirtOperative
@@ -1877,7 +1877,7 @@
   - UplinkPointlessNT
 
 - type: listing
-  id: UplinkBalloon
+  id: UplinkBalloonNT
   name: uplink-balloon-name
   description: uplink-balloon-desc
   productEntity: BalloonSyn
@@ -1887,7 +1887,7 @@
   - UplinkPointlessNT
 
 - type: listing
-  id: UplinkScarfSyndieRed
+  id: UplinkScarfSyndieRedNT
   name: uplink-scarf-syndie-red-name-starcup # starcup: Syndicate to NT
   description: uplink-scarf-syndie-red-desc-starcup # starcup: Syndicate to NT
   productEntity: ClothingNeckScarfStripedSyndieRed
@@ -1897,7 +1897,7 @@
   - UplinkPointlessNT
 
 - type: listing
-  id: UplinkScarfSyndieGreen
+  id: UplinkScarfSyndieGreenNT
   name: uplink-scarf-syndie-green-name-starcup # starcup: Syndicate to NT
   description: uplink-scarf-syndie-green-desc-starcup # starcup: Syndicate to NT
   productEntity: ClothingNeckScarfStripedSyndieGreen
@@ -1907,7 +1907,7 @@
     - UplinkPointlessNT
 
 - type: listing
-  id: UplinkSyndicateBusinessCard
+  id: UplinkSyndicateBusinessCardNT
   name: uplink-business-card-name-starcup # starcup: Syndicate to NT
   description: uplink-business-card-desc-starcup # starcup: Syndicate to NT
   productEntity: SyndicateBusinessCard
@@ -1920,7 +1920,7 @@
 # Job Specific
 
 - type: listing
-  id: uplinkGatfruitSeeds
+  id: uplinkGatfruitSeedsNT
   name: uplink-gatfruit-seeds-name
   description: uplink-gatfruit-seeds-desc
   productEntity: GatfruitSeeds
@@ -1937,7 +1937,7 @@
     - Botanist
 
 - type: listing
-  id: uplinkRiggedBoxingGlovesPassenger
+  id: uplinkRiggedBoxingGlovesPassengerNT
   name: uplink-rigged-boxing-gloves-name
   description: uplink-rigged-boxing-gloves-desc
   productEntity: ClothingHandsGlovesBoxingRigged
@@ -1954,7 +1954,7 @@
         - Passenger
 
 - type: listing
-  id: uplinkRiggedBoxingGlovesBoxer
+  id: uplinkRiggedBoxingGlovesBoxerNT
   name: uplink-rigged-boxing-gloves-name
   description: uplink-rigged-boxing-gloves-desc
   productEntity: ClothingHandsGlovesBoxingRigged
@@ -1971,7 +1971,7 @@
         - Boxer
 
 - type: listing
-  id: uplinkNecronomicon
+  id: uplinkNecronomiconNT
   name: uplink-necronomicon-name
   description: uplink-necronomicon-desc
   productEntity: BibleNecronomicon
@@ -1992,7 +1992,7 @@
       - SurplusBundle
 
 - type: listing
-  id: uplinkHolyHandGrenade
+  id: uplinkHolyHandGrenadeNT
   name: uplink-holy-hand-grenade-name
   description: uplink-holy-hand-grenade-desc
   productEntity: HolyHandGrenade
@@ -2009,7 +2009,7 @@
     - Chaplain
 
 - type: listing
-  id: uplinkRevolverCapGunFake
+  id: uplinkRevolverCapGunFakeNT
   name: uplink-revolver-cap-gun-fake-name
   description: uplink-revolver-cap-gun-fake-desc
   productEntity: RevolverCapGunFake
@@ -2027,7 +2027,7 @@
     - Clown
 
 - type: listing
-  id: uplinkBananaPeelExplosive
+  id: uplinkBananaPeelExplosiveNT
   name: uplink-banana-peel-explosive-name
   description: uplink-banana-peel-explosive-desc
   icon: { sprite: Objects/Specific/Hydroponics/banana.rsi, state: peel }
@@ -2045,7 +2045,7 @@
     - Clown
 
 - type: listing
-  id: UplinkClusterBananaPeel
+  id: UplinkClusterBananaPeelNT
   name: uplink-cluster-banana-peel-name
   description: uplink-cluster-banana-peel-desc
   productEntity: ClusterBananaPeel
@@ -2062,7 +2062,7 @@
     - Clown
 
 - type: listing
-  id: UplinkHoloclownKit
+  id: UplinkHoloclownKitNT
   name: uplink-holoclown-kit-name
   description: uplink-holoclown-kit-desc
   icon: { sprite: /Textures/Objects/Fun/figurines.rsi, state: holoclown }
@@ -2080,7 +2080,7 @@
     - Clown
 
 - type: listing
-  id: uplinkHotPotato
+  id: uplinkHotPotatoNT
   name: uplink-hot-potato-name
   description: uplink-hot-potato-desc
   discountCategory: usualDiscounts
@@ -2100,7 +2100,7 @@
     - Mime
 
 - type: listing
-  id: UplinkChimpUpgradeKit
+  id: UplinkChimpUpgradeKitNT
   name: uplink-chimp-upgrade-kit-name
   description: uplink-chimp-upgrade-kit-desc
   productEntity: WeaponPistolCHIMPUpgradeKit
@@ -2117,7 +2117,7 @@
       - Science
 
 - type: listing
-  id: uplinkProximityMine
+  id: uplinkProximityMineNT
   name: uplink-proximity-mine-name
   description: uplink-proximity-mine-desc
   productEntity: WetFloorSignMineExplosive
@@ -2138,7 +2138,7 @@
       - SurplusBundle
 
 - type: listing
-  id: UplinkSyndicateSpongeBox
+  id: UplinkSyndicateSpongeBoxNT
   name: uplink-syndicate-sponge-box-name-starcup # starcup: Syndicate to NT
   description: uplink-syndicate-sponge-box-desc-starcup # starcup: Syndicate to NT
   icon: { sprite:  Objects/Misc/monkeycube.rsi, state: box}
@@ -2159,7 +2159,7 @@
     - Chef
 
 - type: listing
-  id: UplinkCaneBlade
+  id: UplinkCaneBladeNT
   name: uplink-cane-blade-name
   description: uplink-cane-blade-desc
   icon: { sprite:  Objects/Weapons/Melee/cane.rsi, state: cane}
@@ -2181,7 +2181,7 @@
       - SurplusBundle
 
 - type: listing
-  id: UplinkCombatBakery
+  id: UplinkCombatBakeryNT
   name: uplink-combat-bakery-name
   description: uplink-combat-bakery-desc-starcup # starcup: Syndicate to NT
   icon: { sprite:  Objects/Consumable/Food/Baked/bread.rsi, state: baguette}
@@ -2200,7 +2200,7 @@
     - Mime
 
 - type: listing
-  id: UplinkSmugglerSatchel
+  id: UplinkSmugglerSatchelNT
   name: uplink-smuggler-satchel-name
   description: uplink-smuggler-satchel-desc
   productEntity: ClothingBackpackSatchelSmugglerUnanchored
@@ -2213,7 +2213,7 @@
   - UplinkDeceptionNT
 
 - type: listing
-  id: UplinkSawAdvanced
+  id: UplinkSawAdvancedNT
   name: uplink-saw-advanced-name
   description: uplink-saw-advanced-desc
   icon: { sprite:  Objects/Specific/Medical/Surgery/saw.rsi, state: advanced}
