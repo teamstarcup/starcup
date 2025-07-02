@@ -1,15 +1,15 @@
 name: RGA schema validator
 on:
-  push:
-    branches: [ main, staging, stable ]
-  merge_group:
+#  push:
+#    branches: [ main, staging, stable ]
+#  merge_group:
   pull_request:
     types: [ opened, reopened, synchronize, ready_for_review ]
 
 jobs:
   yaml-schema-validation:
     name: YAML RGA schema validator
-    if: github.actor != 'PJBot' && github.event.pull_request.draft == false && github.actor != 'teamstarcup-bot'
+    if: github.actor != 'PJBot' && github.event.pull_request.draft == false # && github.actor != 'teamstarcup-bot'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4.2.2

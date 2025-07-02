@@ -1,16 +1,16 @@
 ﻿name: Build & Test Map Renderer
 
 on:
-  push:
-    branches: [ main, staging, stable ]
-  merge_group:
+#  push:
+#    branches: [ main, staging, stable ]
+#  merge_group:
   pull_request:
     types: [ opened, reopened, synchronize, ready_for_review ]
     branches: [ main, staging, stable ]
 
 jobs:
   build:
-    if: github.actor != 'PJBot' && github.event.pull_request.draft == false && github.actor != 'teamstarcup-bot'
+    if: github.actor != 'PJBot' && github.event.pull_request.draft == false # && github.actor != 'teamstarcup-bot'
     strategy:
       matrix:
         os: [ubuntu-latest]
