@@ -1,0 +1,24 @@
+- type: entity
+  parent: [SoapNTAntag, ScatteringGrenadeBase, BaseNanotrasenContraband]
+  id: SlipocalypseClusterSoapNT
+  name: slipocalypse clustersoap
+  description: Spreads small pieces of NanoTrasen soap over an area upon landing on the floor.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Janitorial/soap.rsi
+    layers:
+    - state: nt-4
+  - type: ScatteringGrenade
+    fillPrototype: SoapletNTAntag
+    capacity: 30
+    delayBeforeTriggerContents: 60
+    randomDistance: true
+    randomThrowDistanceMax: 3
+  - type: LandAtCursor
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 10
+  - type: EmitSoundOnTrigger
+    sound:
+      path: "/Audio/Effects/flash_bang.ogg"

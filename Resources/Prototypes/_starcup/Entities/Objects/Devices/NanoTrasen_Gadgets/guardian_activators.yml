@@ -1,0 +1,14 @@
+- type: entity
+  name: holoparasite box
+  parent: [BoxCardboard, BaseNanotrasenContraband]
+  id: BoxHoloparasiteNT
+  description: A box containing a holoparasite injector.
+  components:
+  - type: StorageFill
+    contents:
+      - id: HoloparasiteInjector
+      - id: HoloparasiteInfoNT
+  - type: Sprite
+    layers:
+      - state: box
+      - state: holo

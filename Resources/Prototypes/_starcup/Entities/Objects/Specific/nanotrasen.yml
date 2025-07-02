@@ -1,0 +1,76 @@
+# Uplinks
+- type: entity
+  parent: [BaseItem, StorePresetUplink, BaseNanotrasenContraband]
+  id: BaseUplinkRadioNT
+  name: NanoTrasen uplink
+  description: A suspicious looking old radio...
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/communication.rsi
+    layers:
+    - state: old-radio
+  - type: Item
+    sprite: Objects/Devices/communication.rsi
+    heldPrefix: old-radio
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Store
+    balance:
+      Telecrystal: 0
+
+- type: entity
+  parent: BaseUplinkRadioNT
+  id: BaseUplinkRadio20TCNT
+  suffix: 20 TC
+  components:
+  - type: Store
+    balance:
+      Telecrystal: 20
+
+- type: entity
+  parent: BaseUplinkRadioNT
+  id: BaseUplinkRadio25TCNT
+  suffix: 25 TC
+  components:
+  - type: Store
+    balance:
+      Telecrystal: 25
+
+#this uplink MUST be used for nukeops, as it has the tag for filtering the listing.
+- type: entity
+  parent: BaseUplinkRadioNT
+  id: BaseUplinkRadio40TCNT
+  suffix: 40 TC, NukeOps
+  components:
+  - type: Store
+    balance:
+      Telecrystal: 40
+  - type: Tag
+    tags:
+    - NukeOpsUplink
+
+- type: entity
+  parent: BaseUplinkRadioNT
+  id: BaseUplinkRadio60TCNT
+  suffix: 60 TC, LoneOps
+  components:
+  - type: Store
+    balance:
+      Telecrystal: 60
+  - type: Tag
+    tags:
+    - NukeOpsUplink
+
+- type: entity
+  parent: BaseUplinkRadioNT
+  id: BaseUplinkRadioDebugNT
+  suffix: DEBUG
+  components:
+  - type: Store
+    balance:
+      Telecrystal: 99999

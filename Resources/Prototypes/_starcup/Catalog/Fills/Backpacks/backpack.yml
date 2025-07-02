@@ -1,0 +1,20 @@
+- type: entity
+  parent: ClothingBackpackNanotrasen
+  id: ClothingBackpackNanotrasenBundle
+  abstract: true
+  components:
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+
+- type: entity
+  parent: ClothingBackpackNanotrasenBundle
+  id: ClothingBackpackNanotrasenRaidBundle
+  name: NanoTrasen raid suit bundle
+  description: Contains NanoTrasen's durable raid armor suit.
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingOuterArmorRaidNT
+    - id: ClothingHeadHelmetRaidNanotrasen
+    - id: ClothingMaskGasNanotrasen
+    - id: ClothingHandsGlovesCombat

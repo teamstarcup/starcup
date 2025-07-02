@@ -1,0 +1,131 @@
+- type: entity
+  id: BaseImplantOnlyImplanterNT
+  parent: [BaseImplantOnlyImplanter, BaseNanotrasenContraband]
+  name: NanoTrasen implanter
+  description: A compact disposable syringe exclusively designed for the injection of subdermal implants. Make sure to scrub it with soap or a rag to remove residual DNA after use!
+  abstract: true
+  components:
+    - type: Item
+      sprite: Objects/Specific/Medical/syndi_implanter.rsi
+      heldPrefix: implanter
+    - type: Sprite
+      sprite: Objects/Specific/Medical/syndi_implanter.rsi
+      state: implanter1
+      layers:
+        - state: implanter0
+          map: [ "implantFull" ]
+          visible: true
+        - state: implanter1
+          map: [ "implantOnly" ]
+    - type: GenericVisualizer
+      visuals:
+        enum.ImplanterVisuals.Full:
+          implantFull:
+            True: {visible: true}
+            False: {visible: false}
+        enum.ImplanterImplantOnlyVisuals.ImplantOnly:
+          implantOnly:
+            True: {state: broken}
+            False: {state: implanter1}
+    - type: Tag
+      tags: []
+
+#Traitor implanters
+
+- type: entity
+  id: StorageImplanterNT
+  name: storage implanter
+  parent: BaseImplantOnlyImplanterNT
+  components:
+    - type: Implanter
+      implant: StorageImplant
+
+- type: entity
+  id: FreedomImplanterNT
+  name: freedom implanter
+  parent: BaseImplantOnlyImplanterNT
+  components:
+    - type: Implanter
+      implant: FreedomImplant
+
+- type: entity
+  id: RadioImplanterNT
+  name: NanoTrasen radio implanter
+  parent: BaseImplantOnlyImplanterNT
+  components:
+  - type: Implanter
+    implant: RadioImplantNT
+
+- type: entity
+  id: UplinkImplanterNT
+  name: uplink implanter
+  parent: BaseImplantOnlyImplanterNT
+  components:
+  - type: Implanter
+    implant: UplinkImplantNT
+
+- type: entity
+  id: EmpImplanterNT
+  name: EMP implanter
+  parent: BaseImplantOnlyImplanterNT
+  components:
+    - type: Implanter
+      implant: EmpImplant
+
+- type: entity
+  id: ScramImplanterNT
+  name: scram implanter
+  parent: BaseImplantOnlyImplanterNT
+  components:
+    - type: Implanter
+      implant: ScramImplant
+
+- type: entity
+  id: DnaScramblerImplanterNT
+  name: DNA scrambler implanter
+  parent: BaseImplantOnlyImplanterNT
+  components:
+    - type: Implanter
+      implant: DnaScramblerImplant
+
+#Nuclear Operative/Special implanters
+
+- type: entity
+  id: MicroBombImplanterNT
+  name: micro-bomb implanter
+  parent: BaseImplantOnlyImplanterNT
+  components:
+    - type: Implanter
+      implant: MicroBombImplant
+
+- type: entity
+  id: MacroBombImplanterNT
+  name: macro-bomb implanter
+  parent: BaseImplantOnlyImplanterNT
+  components:
+    - type: Implanter
+      implant: MacroBombImplant
+
+- type: entity
+  id: DeathRattleImplanterNT
+  name: death rattle implanter
+  parent: BaseImplantOnlyImplanterNT
+  components:
+    - type: Implanter
+      implant: DeathRattleImplantNT
+
+- type: entity
+  id: DeathAcidifierImplanterNT
+  name: death acidifier implanter
+  parent: BaseImplantOnlyImplanterNT
+  components:
+  - type: Implanter
+    implant: DeathAcidifierImplant
+
+- type: entity
+  id: FakeMindShieldImplanterNT
+  name: fake mindshield implanter
+  parent: BaseImplantOnlyImplanterNT
+  components:
+  - type: Implanter
+    implant: FakeMindShieldImplant

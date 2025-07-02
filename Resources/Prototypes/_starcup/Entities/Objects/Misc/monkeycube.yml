@@ -1,0 +1,24 @@
+- type: entity
+  parent: MonkeyCubeBox
+  name: monkey cube box
+  suffix: NanoTrasen
+  id: NanotrasenSpongeBox
+  description: Drymate brand monkey cubes. Just add water!
+  components:
+  - type: StorageFill
+    contents:
+      - id: NanotrasenSpongeWrapped
+        amount: 6
+  - type: Sprite
+    sprite: Objects/Misc/monkeycube.rsi
+    state: box
+
+- type: entity
+  parent: MonkeyCubeWrapped
+  name: monkey cube
+  suffix: Wrapped, NanoTrasen
+  id: NanotrasenSpongeWrapped
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: NanotrasenSponge
