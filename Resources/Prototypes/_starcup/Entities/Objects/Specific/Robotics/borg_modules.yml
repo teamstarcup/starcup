@@ -60,15 +60,16 @@
   name: weapon cyborg module
   components:
   - type: Sprite
+    sprite: _starcup/Objects/Specific/Robotics/borgmodule.rsi
     layers:
-    - state: syndicate
-    - state: icon-syndicate
+    - state: nanotrasen
+    - state: icon-nanotrasen
   - type: ItemBorgModule
     items:
     - WeaponPistolEchis
     - EnergyDaggerLoud
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }
+    icon: { sprite: _starcup/Interface/Actions/actions_borg.rsi, state: nanotrasen-weapon-module }
   - type: Item
     inhandVisuals:
       left:
@@ -95,9 +96,10 @@
   description: A module that comes with a crowbar, an Emag, an Access Breaker and a NanoTrasen pinpointer.
   components:
     - type: Sprite
+      sprite: _starcup/Objects/Specific/Robotics/borgmodule.rsi
       layers:
-      - state: syndicate
-      - state: icon-syndicate
+      - state: nanotrasen
+      - state: icon-nanotrasen
     - type: ItemBorgModule
       items:
       - Crowbar
@@ -105,7 +107,7 @@
       - AccessBreaker
       - PinpointerNanotrasenNuclear
     - type: BorgModuleIcon
-      icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-operative-module }
+      icon: { sprite: _starcup/Interface/Actions/actions_borg.rsi, state: nanotrasen-operative-module }
 
 - type: entity
   id: BorgModuleEswordNT
@@ -114,15 +116,16 @@
   description: A module that comes with a double energy sword.
   components:
     - type: Sprite
+      sprite: _starcup/Objects/Specific/Robotics/borgmodule.rsi
       layers:
-      - state: syndicate
-      - state: icon-syndicate
+      - state: nanotrasen
+      - state: icon-nanotrasen
     - type: ItemBorgModule
       items:
       - CyborgEnergySwordDoubleNT
       - PinpointerNanotrasenNuclear
     - type: BorgModuleIcon
-      icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-esword-module }
+      icon: { sprite: _starcup/Interface/Actions/actions_borg.rsi, state: nanotrasen-esword-module }
 
 - type: entity
   id: BorgModuleL6CNT
@@ -131,15 +134,16 @@
   description: A module that comes with a L6C.
   components:
     - type: Sprite
+      sprite: _starcup/Objects/Specific/Robotics/borgmodule.rsi
       layers:
-      - state: syndicate
-      - state: icon-syndicate
+      - state: nanotrasen
+      - state: icon-nanotrasen
     - type: ItemBorgModule
       items:
         - WeaponLightMachineGunL6CNT
         - PinpointerNanotrasenNuclear
     - type: BorgModuleIcon
-      icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-l6c-module }
+      icon: { sprite: _starcup/Interface/Actions/actions_borg.rsi, state: nanotrasen-l6c-module }
 
 - type: entity
   id: BorgModuleMartyrNT
@@ -148,14 +152,15 @@
   description: "A module that comes with an explosive you probably don't want to handle yourself."
   components:
     - type: Sprite
+      sprite: _starcup/Objects/Specific/Robotics/borgmodule.rsi
       layers:
-        - state: syndicateborgbomb
-        - state: icon-bomb
+      - state: nanotrasenborgbomb
+      - state: icon-bomb
     - type: ItemBorgModule
       items:
         - SelfDestructSeq
     - type: BorgModuleIcon
-      icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-martyr-module }
+      icon: { sprite: _starcup/Interface/Actions/actions_borg.rsi, state: nanotrasen-martyr-module }
     - type: Item
       inhandVisuals:
         left:

@@ -5,7 +5,7 @@
   description: A computer printed circuit board for a NanoTrasen communications console.
   components:
   - type: Sprite
-    state: cpu_syndicate
+    state: cpu_command
   - type: ComputerBoard
     prototype: NanotrasenComputerComms
 
@@ -16,7 +16,7 @@
   description: A computer printed circuit board for a NanoTrasen shuttle console.
   components:
   - type: Sprite
-    state: cpu_syndicate
+    state: cpu_command
   - type: ComputerBoard
     prototype: ComputerShuttleNT
 
@@ -27,6 +27,6 @@
   description: Allows you to control the IFF and stealth characteristics of this vessel.
   components:
   - type: Sprite
-    state: cpu_syndicate
+    state: cpu_command
   - type: ComputerBoard
     prototype: ComputerIFFNanotrasen
