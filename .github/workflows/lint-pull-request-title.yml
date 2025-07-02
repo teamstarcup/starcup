@@ -7,8 +7,8 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@077bddd7bdabd0d2b1b25ed0754c7e62e184d7ee
-      - uses: deepakputhraya/action-pr-title@master
+      - uses: actions/checkout@v1
+      - uses: deepakputhraya/action-pr-title@077bddd7bdabd0d2b1b25ed0754c7e62e184d7ee
         with:
           regex: "^(build|ci|docs|feat|fix|perf|refactor|revert|test|map|tweak){1}(\\([\\w\\-\\.]+\\))?(!)?: ([\\w\\-\\,\\'\\\"\\#\\/\\[\\]\\+\\(\\) ])+" # Regex the title should match.
           min_length: 8 # Min length of the title
