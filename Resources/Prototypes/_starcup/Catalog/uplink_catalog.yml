@@ -84,7 +84,7 @@
   id: UplinkThrowingKnivesKitNT
   name: uplink-knives-kit-name
   description: uplink-knives-kit-desc-starcup
-  icon: { sprite: /_starcup/Objects/Storage/boxicons.rsi, state: throwing_knives }
+  icon: { sprite: _starcup/Objects/Storage/boxicons.rsi, state: throwing_knives }
   productEntity: ThrowingKnivesKit
   discountCategory: rareDiscounts
   discountDownTo:
@@ -111,7 +111,7 @@
   id: UplinkGlovesKnuckleDustersNT
   name: uplink-gloves-knuckleduster-name-starcup
   description: uplink-gloves-knuckleduster-desc
-  icon: { sprite: /_starcup/Clothing/Hands/Gloves/KnuckleDusters/nanotrasenknuckleduster.rsi, state: nanotrasenknuckleduster }
+  icon: { sprite: _starcup/Clothing/Hands/Gloves/KnuckleDusters/nanotrasenknuckleduster.rsi, state: nanotrasenknuckleduster }
   productEntity: ClothingHandsKnuckleDustersNanotrasen
   discountCategory: veryRareDiscounts
   discountDownTo:
@@ -697,7 +697,7 @@
   id: UplinkCigarettesNT
   name: uplink-cigarettes-name-starcup
   description: uplink-cigarettes-desc
-  productEntity: CigPackSyndicate
+  productEntity: CigPackNanotrasen
   cost:
     Telecrystal: 1
   categories:
@@ -770,7 +770,7 @@
   id: UplinkHeadsetEncryptionKeyNT
   name: uplink-encryption-key-name-starcup
   description: uplink-encryption-key-desc
-  icon: { sprite: /_starcup//Textures/Objects/Devices/encryption_keys.rsi, state: nt_label }
+  icon: { sprite: /Textures/Objects/Devices/encryption_keys.rsi, state: nano_label }
   productEntity: BoxEncryptionKeyNT # Two for the price of one
   discountCategory: usualDiscounts
   discountDownTo:
@@ -1185,7 +1185,7 @@
   name: uplink-reinforcement-radio-nukeops-name
   description: uplink-reinforcement-radio-nukeops-desc
   productEntity: ReinforcementRadioNanotrasenNukeops
-  icon: { sprite: /_starcup/Objects/Devices/communication.rsi, state: old-radio-nukeop }
+  icon: { sprite: _starcup/Objects/Devices/communication.rsi, state: old-radio-nukeop }
   cost:
     Telecrystal: 30
   categories:
@@ -1201,7 +1201,7 @@
   name:  uplink-reinforcement-radio-cyborg-assault-name-starcup
   description: uplink-reinforcement-radio-cyborg-assault-desc
   productEntity: ReinforcementRadioNanotrasenCyborgAssault
-  icon: { sprite: /_starcup/Objects/Devices/communication.rsi, state: old-radio-borg-assault }
+  icon: { sprite: _starcup/Objects/Devices/communication.rsi, state: old-radio-borg-assault }
   cost:
     Telecrystal: 65
   categories:
@@ -1272,7 +1272,7 @@
   id: UplinkMobCatMicrobombNT
   name: uplink-mobcat-microbomb-name
   description: uplink-mobcat-microbomb-desc
-  icon: { sprite: /_starcup/Objects/Devices/communication.rsi, state: old-radio-nanocat }
+  icon: { sprite: _starcup/Objects/Devices/communication.rsi, state: old-radio-nanocat }
   productEntity: ReinforcementRadioNanotrasenNanoCat
   discountCategory: usualDiscounts
   discountDownTo:
@@ -1377,7 +1377,7 @@
   id: UplinkRadioImplanterNT
   name: uplink-radio-implanter-name
   description: uplink-radio-implanter-desc-starcup
-  icon: { sprite: /Textures/_starcup/Objects/Devices/encryption_keys.rsi, state: nt_label }
+  icon: { sprite: /Textures/Objects/Devices/encryption_keys.rsi, state: nano_label }
   productEntity: RadioImplanterNT
   discountCategory: usualDiscounts
   discountDownTo:
@@ -1879,7 +1879,7 @@
 - type: listing
   id: UplinkBalloonNT
   name: uplink-balloon-name
-  description: uplink-balloon-desc
+  description: uplink-balloon-desc-starcup
   productEntity: BalloonNT
   cost:
     Telecrystal: 20
@@ -2216,7 +2216,7 @@
   id: UplinkSawAdvancedNT
   name: uplink-saw-advanced-name
   description: uplink-saw-advanced-desc
-  icon: { sprite: /_starcup/Objects/Specific/Medical/Surgery/saw.rsi, state: advanced-nt}
+  icon: { sprite: _starcup/Objects/Specific/Medical/Surgery/saw.rsi, state: advanced-nt}
   productEntity: SawAdvancedNT
   discountCategory: rareDiscounts
   discountDownTo:
