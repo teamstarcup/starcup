@@ -126,17 +126,18 @@
   description: Explosive kitten.
   components:
   - type: Sprite
+    sprite: _starcup/Mobs/Pets/cat.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      state: syndicat
+      state: nanocat
   - type: DamageStateVisuals
     states:
       Alive:
-        Base: syndicat
+        Base: nanocat
       Critical:
-        Base: syndicat_dead
+        Base: nanocat_dead
       Dead:
-        Base: syndicat_dead
+        Base: nanocat_dead
   - type: GhostRole
     prob: 1
     name: ghost-role-information-NanoCat-name

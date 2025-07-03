@@ -8,7 +8,7 @@
     sprite: Objects/Fun/pai.rsi
     layers:
     - state: pai-base
-    - state: syndicate-pai-off-overlay
+    - state: pai-off-overlay
       shader: unshaded
       map: ["screen"]
   - type: ToggleableGhostRole
@@ -28,6 +28,6 @@
     visuals:
       enum.ToggleableGhostRoleVisuals.Status:
         screen:
-          Off: { state: syndicate-pai-off-overlay }
-          Searching: { state: syndicate-pai-searching-overlay }
-          On: { state: syndicate-pai-on-overlay }
+          Off: { state: pai-off-overlay }
+          Searching: { state: pai-searching-overlay }
+          On: { state: pai-on-overlay }

@@ -1,0 +1,3 @@
+prayer-chat-notify-nanotrasen = NANOTRASEN
+
+prayer-popup-notify-nanotrasen-sent = You left a voicemail message for NanoTrasen High Command...

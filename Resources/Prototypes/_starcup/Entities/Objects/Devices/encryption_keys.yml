@@ -8,10 +8,10 @@
     channels:
     - Syndicate
     defaultChannel: Syndicate
-  - type: Sprite
+  - type: Spritez
     layers:
-    - state: crypt_red
-    - state: synd_label
+    - state: crypt_nt
+    - state: nt_label
 
 - type: entity
   parent: [ EncryptionKey, BaseNanotrasenContraband ]
@@ -25,5 +25,5 @@
     defaultChannel: Binary
   - type: Sprite
     layers:
-    - state: crypt_red
+    - state: crypt_nt
     - state: ai_label

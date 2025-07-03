@@ -1,0 +1,26 @@
+- type: entity
+  name: nano-treats
+  parent: FoodSnackBase
+  id: FoodSnackNT
+  description: An extremely moist snack cake that tastes just as good after being nuked.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - syndicakes
+  - type: Sprite
+    sprite: _starcup/Objects/Consumable/Food/snacks.rsi
+    state: nanotreats
+  - type: Item
+  - type: Food
+    trash:
+    - FoodPacketNanoTrash
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: FoodPacketTrash
+  id: FoodPacketNanoTrash
+  name: nano-treats box
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Consumable/Food/snacks.rsi
+    state: nanotreats-trash

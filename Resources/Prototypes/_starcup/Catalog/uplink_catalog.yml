@@ -84,7 +84,7 @@
   id: UplinkThrowingKnivesKitNT
   name: uplink-knives-kit-name
   description: uplink-knives-kit-desc-starcup
-  icon: { sprite: /Textures/Objects/Storage/boxicons.rsi, state: throwing_knives }
+  icon: { sprite: /_starcup/Objects/Storage/boxicons.rsi, state: throwing_knives }
   productEntity: ThrowingKnivesKit
   discountCategory: rareDiscounts
   discountDownTo:
@@ -111,7 +111,7 @@
   id: UplinkGlovesKnuckleDustersNT
   name: uplink-gloves-knuckleduster-name-starcup
   description: uplink-gloves-knuckleduster-desc
-  icon: { sprite: Clothing/Hands/Gloves/KnuckleDusters/syndicateknuckleduster.rsi, state: syndicateknuckleduster }
+  icon: { sprite: /_starcup/Clothing/Hands/Gloves/KnuckleDusters/nanotrasenknuckleduster.rsi, state: nanotrasenknuckleduster }
   productEntity: ClothingHandsKnuckleDustersNanotrasen
   discountCategory: veryRareDiscounts
   discountDownTo:
@@ -768,9 +768,9 @@
 
 - type: listing
   id: UplinkHeadsetEncryptionKeyNT
-  name: uplink-encryption-key-name-starcup # starcup: Syndicate to NT
+  name: uplink-encryption-key-name-starcup
   description: uplink-encryption-key-desc
-  icon: { sprite: /Textures/Objects/Devices/encryption_keys.rsi, state: synd_label }
+  icon: { sprite: /_starcup//Textures/Objects/Devices/encryption_keys.rsi, state: nt_label }
   productEntity: BoxEncryptionKeyNT # Two for the price of one
   discountCategory: usualDiscounts
   discountDownTo:
@@ -851,7 +851,7 @@
   id: UplinkDecoyKitNT
   name: uplink-decoy-kit-name
   description: uplink-decoy-kit-desc
-  icon: { sprite: /Textures/Objects/Tools/Decoys/operative_decoy.rsi, state: folded }
+  icon: { sprite: /_starcup/Textures/Objects/Tools/Decoys/operative_decoy.rsi, state: folded }
   productEntity: ClothingBackpackDuffelNanotrasenDecoyKitFilled
   discountCategory: usualDiscounts
   discountDownTo:
@@ -916,7 +916,7 @@
   - UplinkDisruptionNT
 
 - type: listing
-  id: UplinkSyndicateWeaponModuleNT
+  id: UplinkNanotrasenWeaponModule
   name: uplink-syndicate-weapon-module-name
   description: uplink-syndicate-weapon-module-desc
   productEntity: BorgModuleNanotrasenWeapon
@@ -929,11 +929,11 @@
   - UplinkDisruptionNT
 
 - type: listing
-  id: UplinkSyndicateMartyrModuleNT
+  id: UplinkNanotrasenMartyrModule
   name: uplink-syndicate-martyr-module-name
   description: uplink-syndicate-martyr-module-desc
   productEntity: BorgModuleMartyrNT
-  icon: { sprite: /Textures/Objects/Specific/Robotics/borgmodule.rsi, state: syndicateborgbomb }
+  icon: { sprite: /_starcup/Textures/Objects/Specific/Robotics/borgmodule.rsi, state: nanotrasenborgbomb }
   discountCategory: veryRareDiscounts
   discountDownTo:
     Telecrystal: 2
@@ -1185,7 +1185,7 @@
   name: uplink-reinforcement-radio-nukeops-name
   description: uplink-reinforcement-radio-nukeops-desc
   productEntity: ReinforcementRadioNanotrasenNukeops
-  icon: { sprite: Objects/Devices/communication.rsi, state: old-radio-nukeop }
+  icon: { sprite: /_starcup/Objects/Devices/communication.rsi, state: old-radio-nukeop }
   cost:
     Telecrystal: 30
   categories:
@@ -1201,7 +1201,7 @@
   name:  uplink-reinforcement-radio-cyborg-assault-name-starcup
   description: uplink-reinforcement-radio-cyborg-assault-desc
   productEntity: ReinforcementRadioNanotrasenCyborgAssault
-  icon: { sprite: Objects/Devices/communication.rsi, state: old-radio-borg-assault }
+  icon: { sprite: /_starcup/Objects/Devices/communication.rsi, state: old-radio-borg-assault }
   cost:
     Telecrystal: 65
   categories:
@@ -1272,7 +1272,7 @@
   id: UplinkMobCatMicrobombNT
   name: uplink-mobcat-microbomb-name
   description: uplink-mobcat-microbomb-desc
-  icon: { sprite: Objects/Devices/communication.rsi, state: old-radio-syndicat }
+  icon: { sprite: /_starcup/Objects/Devices/communication.rsi, state: old-radio-nanocat }
   productEntity: ReinforcementRadioNanotrasenNanoCat
   discountCategory: usualDiscounts
   discountDownTo:
@@ -1286,7 +1286,7 @@
   id: UplinkSyndicatePersonalAINT
   name: uplink-nanotrasen-pai-name
   description: uplink-nanotrasen-pai-desc
-  icon: { sprite: /Textures/Objects/Fun/pai.rsi, state: syndicate-icon-pai-off }
+  icon: { sprite: /Textures/Objects/Fun/pai.rsi, state: icon-pai-off }
   productEntity: NanotrasenPersonalAI
   cost:
     Telecrystal: 1
@@ -1377,7 +1377,7 @@
   id: UplinkRadioImplanterNT
   name: uplink-radio-implanter-name
   description: uplink-radio-implanter-desc-starcup
-  icon: { sprite: /Textures/Objects/Devices/encryption_keys.rsi, state: synd_label }
+  icon: { sprite: /_starcup/Textures/Objects/Devices/encryption_keys.rsi, state: nt_label }
   productEntity: RadioImplanterNT
   discountCategory: usualDiscounts
   discountDownTo:
@@ -1627,7 +1627,7 @@
   id: UplinkEVASyndieNT
   name: uplink-eva-nanotrasen-name
   description: uplink-eva-syndie-desc
-  icon: { sprite: /Textures/Clothing/OuterClothing/Suits/eva_syndicate.rsi, state: icon }
+  icon: { sprite: /_starcup/Textures/Clothing/OuterClothing/Suits/eva_nanotrasen.rsi, state: icon }
   productEntity: ClothingBackpackDuffelNanotrasenEVABundle
   discountCategory: rareDiscounts
   discountDownTo:
@@ -1655,7 +1655,7 @@
   id: UplinkHardsuitNanotrasen
   name: uplink-hardsuit-nanotrasen-name
   description: uplink-hardsuit-nanotrasen-desc
-  icon: { sprite: /Textures/Clothing/OuterClothing/Hardsuits/syndicate.rsi, state: icon }
+  icon: { sprite: /_starcup/Textures/Clothing/OuterClothing/Hardsuits/nanotrasen.rsi, state: icon }
   productEntity: ClothingBackpackDuffelNanotrasenHardsuitBundle
   discountCategory: veryRareDiscounts
   discountDownTo:
@@ -1669,7 +1669,7 @@
   id: UplinkClothingOuterArmorRaidNT
   name: uplink-nanotrasen-raid-name
   description: uplink-nanotrasen-raid-desc
-  icon: { sprite: /Textures/Clothing/OuterClothing/Armor/syndie-raid.rsi, state: icon }
+  icon: { sprite: /_starcup/Textures/Clothing/OuterClothing/Armor/nt-raid.rsi, state: icon }
   productEntity: ClothingBackpackNanotrasenRaidBundle
   cost:
     Telecrystal: 8
@@ -1685,7 +1685,7 @@
   id: UplinkHardsuitSyndieEliteNT
   name: uplink-hardsuit-ntelite-name
   description: uplink-hardsuit-ntelite-desc
-  icon: { sprite: /Textures/Clothing/OuterClothing/Hardsuits/syndieelite.rsi, state: icon }
+  icon: { sprite: /_starcup/Textures/Clothing/OuterClothing/Hardsuits/ntelite.rsi, state: icon }
   productEntity: ClothingBackpackDuffelNanotrasenEliteHardsuitBundle
   cost:
     Telecrystal: 12
@@ -1701,7 +1701,7 @@
   id: UplinkClothingOuterHardsuitJuggernautNT
   name: uplink-clothing-outer-hardsuit-juggernaut-name-starcup
   description: uplink-clothing-outer-hardsuit-juggernaut-desc
-  icon: { sprite: /Textures/Structures/Storage/Crates/syndicate.rsi, state: icon }
+  icon: { sprite: /_starcup/Textures/Structures/Storage/Crates/nanotrasen.rsi, state: icon }
   productEntity: CrateCybersunJuggernautBundleNT
   cost:
     Telecrystal: 12
@@ -2216,7 +2216,7 @@
   id: UplinkSawAdvancedNT
   name: uplink-saw-advanced-name
   description: uplink-saw-advanced-desc
-  icon: { sprite:  Objects/Specific/Medical/Surgery/saw.rsi, state: advanced}
+  icon: { sprite: /_starcup/Objects/Specific/Medical/Surgery/saw.rsi, state: advanced-nt}
   productEntity: SawAdvancedNT
   discountCategory: rareDiscounts
   discountDownTo:

@@ -25,9 +25,10 @@
       - id: ThrowingKnifeNT
         amount: 4
   - type: Sprite
+
     layers:
-      - state: box_of_doom
-      - state: throwing_knives
+      - state: box_of_doom_nt
+      - state: throwing_knives_nt
 
 - type: entity
   name: deathrattle implant box
@@ -37,7 +38,7 @@
   components:
   - type: Sprite
     layers:
-      - state: box_of_doom
+      - state: box_of_doom_nt
       - state: syringe
   - type: Storage
     grid:
@@ -55,7 +56,7 @@
   components:
   - type: Sprite
     layers:
-      - state: box_of_doom
+      - state: box_of_doom_nt
       - state: france
   - type: StorageFill
     contents:

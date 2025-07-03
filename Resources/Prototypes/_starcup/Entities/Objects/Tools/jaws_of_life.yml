@@ -5,14 +5,14 @@
   description: Useful for entering the station or its departments.
   components:
   - type: Sprite
-    sprite: Objects/Tools/jaws_of_life.rsi
-    state: syn_jaws_pry
+    sprite: _starcup/Objects/Tools/jaws_of_life.rsi
+    state: nt_jaws_pry
   - type: Item
     inhandVisuals:
       left:
-      - state: syn_inhand-left
+      - state: nt_inhand-left
       right:
-      - state: syn_inhand-right
+      - state: nt_inhand-right
     size: Normal
   - type: Prying
     speedModifier: 3.0
@@ -20,14 +20,14 @@
     entries:
       - behavior: Prying
         sprite:
-          sprite: Objects/Tools/jaws_of_life.rsi
-          state: syn_jaws_pry
+          sprite: _starcup/Objects/Tools/jaws_of_life.rsi
+          state: nt_jaws_pry
         useSound: /Audio/Items/jaws_pry.ogg
         changeSound: /Audio/Items/change_jaws.ogg
       - behavior: Cutting
         sprite:
-          sprite: Objects/Tools/jaws_of_life.rsi
-          state: syn_jaws_cutter
+          sprite: _starcup/Objects/Tools/jaws_of_life.rsi
+          state: nt_jaws_cutter
         useSound: /Audio/Items/jaws_cut.ogg
         changeSound: /Audio/Items/change_jaws.ogg
   - type: MeleeWeapon
