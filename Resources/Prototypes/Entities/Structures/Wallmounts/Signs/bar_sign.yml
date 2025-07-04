@@ -1,6 +1,7 @@
 ﻿- type: entity
   id: BaseBarSign
   parent: BaseStructure
+  name: bar sign
   abstract: true
   components:
   - type: MeleeSound
@@ -9,18 +10,6 @@
         collection: GlassSmash
   - type: WallMount
     arc: 360
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.95,-0.45,0.95,0.45"
-        density: 60
-        mask:
-        - MachineMask
-        layer:
-        - MidImpassable
-        - LowImpassable
   - type: Sprite
     drawdepth: WallMountedItems
     sprite: Structures/Wallmounts/barsign.rsi
@@ -62,37 +51,10 @@
     layoutId: BarSign
 
 - type: entity
-  id: BaseBarSignAlignTile
-  parent: BaseBarSign
-  sufix: AlignTile
-  abstract: true
-  components:
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.45,-0.45,1.45,0.45"
-        density: 60
-        mask:
-        - MachineMask
-        layer:
-        - MidImpassable
-        - LowImpassable
-  - type: Sprite
-    offset: 0.5,0
-
-- type: entity
   parent: BaseBarSign
   id: BarSign
   name: bar sign
   suffix: Random
-
-- type: entity
-  parent: BaseBarSignAlignTile
-  id: BarSignAlignTile
-  name: bar sign
-  suffix: Random, AlignTile
 
 # Missing appearance components & various other sprite issues.
 #- type: entity
@@ -120,11 +82,6 @@
     current: ComboCafe
 
 - type: entity
-  parent: [BaseBarSignAlignTile, BarSignComboCafe]
-  id: BarSignComboCafeAlignTile
-  suffix: AlignTile
-
-- type: entity
   parent: BaseBarSign
   id: BarSignEmergencyRumParty
   name: Emergency Rum Party
@@ -132,11 +89,6 @@
   components:
   - type: BarSign
     current: EmergencyRumParty
-
-- type: entity
-  parent: [BaseBarSignAlignTile, BarSignEmergencyRumParty]
-  id: BarSignEmergencyRumPartyAlignTile
-  suffix: AlignTile
 
 - type: entity
   parent: BaseBarSign
@@ -148,11 +100,6 @@
     current: LV426
 
 - type: entity
-  parent: [BaseBarSignAlignTile, BarSignLV426]
-  id: BarSignLV426AlignTile
-  suffix: AlignTile
-
-- type: entity
   parent: BaseBarSign
   id: BarSignMaidCafe
   name: Maid Cafe
@@ -160,11 +107,6 @@
   components:
   - type: BarSign
     current: MaidCafe
-
-- type: entity
-  parent: [BaseBarSignAlignTile, BarSignMaidCafe]
-  id: BarSignMaidCafeAlignTile
-  suffix: AlignTile
 
 - type: entity
   parent: BaseBarSign
@@ -176,11 +118,6 @@
     current: MalteseFalcon
 
 - type: entity
-  parent: [BaseBarSignAlignTile, BarSignMalteseFalcon]
-  id: BarSignMalteseFalconAlignTile
-  suffix: AlignTile
-
-- type: entity
   parent: BaseBarSign
   id: BarSignOfficerBeersky
   name: Officer Beersky
@@ -188,11 +125,6 @@
   components:
   - type: BarSign
     current: OfficerBeersky
-
-- type: entity
-  parent: [BaseBarSignAlignTile, BarSignOfficerBeersky]
-  id: BarSignOfficerBeerskyAlignTile
-  suffix: AlignTile
 
 - type: entity
   parent: BaseBarSign
@@ -204,11 +136,6 @@
     current: RobustaCafe
 
 - type: entity
-  parent: [BaseBarSignAlignTile, BarSignRobustaCafe]
-  id: BarSignRobustaCafeAlignTile
-  suffix: AlignTile
-
-- type: entity
   parent: BaseBarSign
   id: BarSignTheAleNath
   name: The Ale Nath
@@ -216,11 +143,6 @@
   components:
   - type: BarSign
     current: TheAleNath
-
-- type: entity
-  parent: [BaseBarSignAlignTile, BarSignTheAleNath]
-  id: BarSignTheAleNathAlignTile
-  suffix: AlignTile
 
 - type: entity
   parent: BaseBarSign
@@ -232,11 +154,6 @@
     current: TheBirdCage
 
 - type: entity
-  parent: [BaseBarSignAlignTile, BarSignTheBirdCage]
-  id: BarSignTheBirdCageAlignTile
-  suffix: AlignTile
-
-- type: entity
   parent: BaseBarSign
   id: BarSignTheCoderbus
   name: The Coderbus
@@ -244,11 +161,6 @@
   components:
   - type: BarSign
     current: TheCoderbus
-
-- type: entity
-  parent: [BaseBarSignAlignTile, BarSignTheCoderbus]
-  id: BarSignTheCoderbusAlignTile
-  suffix: AlignTile
 
 - type: entity
   parent: BaseBarSign
@@ -260,11 +172,6 @@
     current: TheDrunkCarp
 
 - type: entity
-  parent: [BaseBarSignAlignTile, BarSignTheDrunkCarp]
-  id: BarSignTheDrunkCarpAlignTile
-  suffix: AlignTile
-
-- type: entity
   parent: BaseBarSign
   id: BarSignEngineChange
   name: The Engine Change
@@ -272,11 +179,6 @@
   components:
   - type: BarSign
     current: EngineChange
-
-- type: entity
-  parent: [BaseBarSignAlignTile, BarSignEngineChange]
-  id: BarSignEngineChangeAlignTile
-  suffix: AlignTile
 
 # starcup: removed for tone
 #- type: entity
@@ -287,11 +189,6 @@
 #  components:
 #  - type: BarSign
 #    current: Harmbaton
-#
-#- type: entity
-#  parent: [BaseBarSignAlignTile, BarSignTheHarmbaton]
-#  id: BarSignTheHarmbatonAlignTile
-#  suffix: AlignTile
 
 - type: entity
   parent: BaseBarSign
@@ -303,11 +200,6 @@
     current: TheLightbulb
 
 - type: entity
-  parent: [BaseBarSignAlignTile, BarSignTheLightbulb]
-  id: BarSignTheLightbulbAlignTile
-  suffix: AlignTile
-
-- type: entity
   parent: BaseBarSign
   id: BarSignTheLooseGoose
   name: The Loose Goose
@@ -315,11 +207,6 @@
   components:
   - type: BarSign
     current: Goose
-
-- type: entity
-  parent: [BaseBarSignAlignTile, BarSignTheLooseGoose]
-  id: BarSignTheLooseGooseAlignTile
-  suffix: AlignTile
 
 - type: entity
   parent: BaseBarSign
@@ -331,11 +218,6 @@
     current: TheNet
 
 - type: entity
-  parent: [BaseBarSignAlignTile, BarSignTheNet]
-  id: BarSignTheNetAlignTile
-  suffix: AlignTile
-
-- type: entity
   parent: BaseBarSign
   id: BarSignTheOuterSpess
   name: The Outer Spess
@@ -343,11 +225,6 @@
   components:
   - type: BarSign
     current: TheOuterSpess
-
-- type: entity
-  parent: [BaseBarSignAlignTile, BarSignTheOuterSpess]
-  id: BarSignTheOuterSpessAlignTile
-  suffix: AlignTile
 
 - type: entity
   parent: BaseBarSign
@@ -359,11 +236,6 @@
     current: TheSingulo
 
 - type: entity
-  parent: [BaseBarSignAlignTile, BarSignTheSingulo]
-  id: BarSignTheSinguloAlignTile
-  suffix: AlignTile
-
-- type: entity
   parent: BaseBarSign
   id: BarSignTheSun
   name: The Sun
@@ -371,11 +243,6 @@
   components:
   - type: BarSign
     current: TheSun
-
-- type: entity
-  parent: [BaseBarSignAlignTile, BarSignTheSun]
-  id: BarSignTheSunAlignTile
-  suffix: AlignTile
 
 - type: entity
   parent: BaseBarSign
@@ -387,11 +254,6 @@
     current: WiggleRoom
 
 - type: entity
-  parent: [BaseBarSignAlignTile, BarSignWiggleRoom]
-  id: BarSignWiggleRoomAlignTile
-  suffix: AlignTile
-
-- type: entity
   parent: BaseBarSign
   id: BarSignZocalo
   name: Zocalo
@@ -399,11 +261,6 @@
   components:
   - type: BarSign
     current: Zocalo
-
-- type: entity
-  parent: [BaseBarSignAlignTile, BarSignZocalo]
-  id: BarSignZocaloAlignTile
-  suffix: AlignTile
 
 - type: entity
   parent: BaseBarSign
@@ -415,11 +272,6 @@
     current: Emprah
 
 - type: entity
-  parent: [BaseBarSignAlignTile, BarSignEmprah]
-  id: BarSignEmprahAlignTile
-  suffix: AlignTile
-
-- type: entity
   parent: BaseBarSign
   id: BarSignSpacebucks
   name: Spacebucks
@@ -427,11 +279,6 @@
   components:
   - type: BarSign
     current: Spacebucks
-
-- type: entity
-  parent: [BaseBarSignAlignTile, BarSignSpacebucks]
-  id: BarSignSpacebucksAlignTile
-  suffix: AlignTile
 
 - type: entity
   parent: BaseBarSign
@@ -443,11 +290,6 @@
     current: Maltroach
 
 - type: entity
-  parent: [BaseBarSignAlignTile, BarSignMaltroach]
-  id: BarSignMaltroachAlignTile
-  suffix: AlignTile
-
-- type: entity
   parent: BaseBarSign
   id: BarSignWhiskeyEchoes
   name: Whiskey Echoes
@@ -455,8 +297,3 @@
   components:
   - type: BarSign
     current: WhiskeyEchoes
-
-- type: entity
-  parent: [BaseBarSignAlignTile, BarSignWhiskeyEchoes]
-  id: BarSignWhiskeyEchoesAlignTile
-  suffix: AlignTile
