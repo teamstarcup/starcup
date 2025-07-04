@@ -10,6 +10,8 @@ public sealed class AmbientOcclusionOverlay : Overlay
 {
     [Dependency] private readonly IClyde _clyde = default!;
     [Dependency] private readonly IEntityManager _entManager = default!;
+    [Dependency] private readonly IMapManager _mapManager = default!;
+    [Dependency] private readonly IPrototypeManager _proto = default!;
 
     public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowEntities;
 
@@ -32,6 +34,12 @@ public sealed class AmbientOcclusionOverlay : Overlay
         var target = viewport.RenderTarget;
         var lightScale = target.Size / (Vector2) viewport.Size;
         var scale = viewport.RenderScale / (Vector2.One / lightScale);
+        var maps = _entManager.System<SharedMapSystem>();
+        var lookups = _entManager.System<EntityLookupSystem>();
+        var query = _entManager.System<OccluderSystem>();
+        var xformSystem = _entManager.System<SharedTransformSystem>();
+        var turfSystem = _entManager.System<TurfSystem>();
+        var invMatrix = args.Viewport.GetWorldToLocalMatrix();
 
         if (_aoTarget?.Texture.Size != target.Size)
         {
@@ -67,8 +75,31 @@ public sealed class AmbientOcclusionOverlay : Overlay
                 var localMatrix = target.GetWorldToLocalMatrix(viewport.Eye!, viewport.RenderScale);
                 worldHandle.SetTransform(localMatrix);
 
-                worldHandle.DrawTextureRect(_aoTarget.Texture, worldBounds, color);
-            }, null);
+                foreach (var grid in _mapManager.FindGridsIntersecting(mapId, worldBounds))
+                {
+                    var transform = xformSystem.GetWorldMatrix(grid.Owner);
+                    var worldToTextureMatrix = Matrix3x2.Multiply(transform, invMatrix);
+                    var tiles = maps.GetTilesEnumerator(grid.Owner, grid, worldBounds);
+                    worldHandle.SetTransform(worldToTextureMatrix);
+                    while (tiles.MoveNext(out var tileRef))
+                    {
+                        if (turfSystem.IsSpace(tileRef))
+                            continue;
+
+                        var bounds = lookups.GetLocalBounds(tileRef, grid.TileSize);
+                        worldHandle.DrawRect(bounds, Color.White);
+                    }
+                }
+
+            }, Color.Transparent);
+
+        // Draw the stencil texture to depth buffer.
+        worldHandle.UseShader(_proto.Index<ShaderPrototype>("StencilMask").Instance());
+        worldHandle.DrawTextureRect(_aoStencilTarget!.Texture, worldBounds);
+
+        // Draw the Blurred AO texture finally.
+        worldHandle.UseShader(_proto.Index<ShaderPrototype>("StencilEqualDraw").Instance());
+        worldHandle.DrawTextureRect(_aoTarget!.Texture, worldBounds, color);
 
         args.WorldHandle.SetTransform(Matrix3x2.Identity);
     }
