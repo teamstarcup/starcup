@@ -1,9 +1,9 @@
 - type: entity
-  parent: [BaseItem, BaseSyndicateContraband]
-  id: EmagUnlimited
+  parent: [BaseItem, BaseNanotrasenContraband]
+  id: EmagUnlimitedNT
   suffix: Unlimited
   name: cryptographic sequencer
-  description: The all-in-one hacking solution. Friend of any syndicate. The iconic EMAG.
+  description: The all-in-one hacking solution. Friend of any NanoTrasen agent. The iconic EMAG.
   components:
   - type: Emag
   - type: Sprite
@@ -14,8 +14,8 @@
     storedRotation: -90
 
 - type: entity
-  parent: EmagUnlimited
-  id: Emag
+  parent: EmagUnlimitedNT
+  id: EmagNT
   suffix: Limited
   components:
   - type: LimitedCharges
