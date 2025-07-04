@@ -12,7 +12,9 @@ namespace Content.Client.Paper.UI;
 [GenerateTypedNameReferences]
 public sealed partial class StampWidget : PanelContainer
 {
-    private StyleBoxTexture? _borderTexture;  // imp: made nullable
+    private static readonly ProtoId<ShaderPrototype> PaperStamp = "PaperStamp";
+
+    private StyleBoxTexture? _borderTexture; // imp: made nullable
     private ShaderInstance? _stampShader;
 
     public float Orientation
@@ -75,7 +77,7 @@ public sealed partial class StampWidget : PanelContainer
 
         // begin imp
         // var prototypes = IoCManager.Resolve<IPrototypeManager>();
-        // _stampShader = prototypes.Index<ShaderPrototype>("PaperStamp").InstanceUnique();
+        // _stampShader = prototypes.Index(PaperStamp).InstanceUnique();
         // end imp
     }
 
