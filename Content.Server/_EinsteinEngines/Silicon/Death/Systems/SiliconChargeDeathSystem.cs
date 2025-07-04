@@ -47,7 +47,7 @@ public sealed class SiliconDeathSystem : EntitySystem
             return;
 
         EntityManager.EnsureComponent<SleepingComponent>(uid);
-        EntityManager.EnsureComponent<ForcedSleepingStatusEffectComponent>(uid);
+        EntityManager.EnsureComponent<ForcedSleepingStatusEffectComponent>(uid); // starcup: changed component after status effects refactor
 
         if (TryComp(uid, out HumanoidAppearanceComponent? humanoidAppearanceComponent))
         {
@@ -62,7 +62,7 @@ public sealed class SiliconDeathSystem : EntitySystem
 
     private void SiliconUnDead(EntityUid uid, SiliconDownOnDeadComponent siliconDeadComp, BatteryComponent? batteryComp, EntityUid batteryUid)
     {
-        RemComp<ForcedSleepingStatusEffectComponent>(uid);
+        RemComp<ForcedSleepingStatusEffectComponent>(uid); // starcup: changed component after status effects refactor
         _sleep.TryWaking(uid, true, null);
 
         siliconDeadComp.Dead = false;

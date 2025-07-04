@@ -372,7 +372,13 @@ namespace Content.Server.Carrying
         //  if (_respirator.IsReceivingCPR(carried))
             //  return false;
 
-            if (_hands.CountFreeHands(carrier) < carriedComp.FreeHandsRequired)
+            // starcup: replaced to fix after hands refactor
+            //if (!TryComp<HandsComponent>(carrier, out var hands))
+            //    return false;
+
+            //if (hands.CountFreeHands() < carriedComp.FreeHandsRequired)
+
+            if (_hands.CountFreeHands(carrier) < carriedComp.FreeHandsRequired) // starcup
                 return false;
 
             return true;
