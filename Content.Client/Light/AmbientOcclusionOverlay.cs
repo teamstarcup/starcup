@@ -1,11 +1,18 @@
 using System.Numerics;
+using Content.Shared.CCVar;
+using Content.Shared.Maps;
 using Robust.Client.Graphics;
+using Robust.Shared.Configuration;
 using Robust.Shared.Enums;
+using Robust.Shared.Map;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
 namespace Content.Client.Light;
 
-// starcup: #38276 early merge
+/// <summary>
+/// Applies ambient-occlusion to the viewport.
+/// </summary>
 public sealed class AmbientOcclusionOverlay : Overlay
 {
     private static readonly ProtoId<ShaderPrototype> UnshadedShader = "unshaded";
@@ -13,6 +20,7 @@ public sealed class AmbientOcclusionOverlay : Overlay
     private static readonly ProtoId<ShaderPrototype> StencilEqualDrawShader = "StencilEqualDraw";
 
     [Dependency] private readonly IClyde _clyde = default!;
+    [Dependency] private readonly IConfigurationManager _cfgManager = default!;
     [Dependency] private readonly IEntityManager _entManager = default!;
     [Dependency] private readonly IMapManager _mapManager = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
@@ -22,6 +30,9 @@ public sealed class AmbientOcclusionOverlay : Overlay
     private IRenderTexture? _aoTarget;
     private IRenderTexture? _aoBlurBuffer;
 
+    // Couldn't figure out a way to avoid this so if you can then please do.
+    private IRenderTexture? _aoStencilTarget;
+
     public AmbientOcclusionOverlay()
     {
         IoCManager.InjectDependencies(this);
@@ -30,11 +41,23 @@ public sealed class AmbientOcclusionOverlay : Overlay
 
     protected override void Draw(in OverlayDrawArgs args)
     {
+        /*
+         * tl;dr
+         * - we draw a black square on each "ambient occlusion" entity.
+         * - we blur this.
+         * - We apply it to the viewport.
+         *
+         * We do this while ignoring lighting because it will wash out the actual effect.
+         * In 3D ambient occlusion is more complicated due top having to calculate normals but in 2D
+         * we don't have a concept of depth / corners necessarily.
+         */
+
         var viewport = args.Viewport;
         var mapId = args.MapId;
         var worldBounds = args.WorldBounds;
         var worldHandle = args.WorldHandle;
-        var color = Color.FromHex("#04080FAA");
+        var color = Color.FromHex(_cfgManager.GetCVar(CCVars.AmbientOcclusionColor));
+        var distance = _cfgManager.GetCVar(CCVars.AmbientOcclusionDistance);
         //var color = Color.Red;
         var target = viewport.RenderTarget;
         var lightScale = target.Size / (Vector2) viewport.Size;
@@ -71,9 +94,6 @@ public sealed class AmbientOcclusionOverlay : Overlay
                 worldHandle.UseShader(_proto.Index(UnshadedShader).Instance());
                 var invMatrix = _aoTarget.GetWorldToLocalMatrix(viewport.Eye!, scale);
 
-                var query = _entManager.System<OccluderSystem>();
-                var xformSystem = _entManager.System<SharedTransformSystem>();
-
                 foreach (var entry in query.QueryAabb(mapId, worldBounds))
                 {
                     DebugTools.Assert(entry.Component.Enabled);
@@ -82,13 +102,15 @@ public sealed class AmbientOcclusionOverlay : Overlay
 
                     worldHandle.SetTransform(localMatrix);
                     // 4 pixels
-                    worldHandle.DrawRect(Box2.UnitCentered.Enlarged(4f / EyeManager.PixelsPerMeter), Color.White);
+                    worldHandle.DrawRect(Box2.UnitCentered.Enlarged(distance / EyeManager.PixelsPerMeter), Color.White);
                 }
             }, Color.Transparent);
 
         _clyde.BlurRenderTarget(viewport, _aoTarget, _aoBlurBuffer, viewport.Eye!, 14f);
 
-        args.WorldHandle.RenderInRenderTarget(target,
+        // Need to do stencilling after blur as it will nuke it.
+        // Draw stencil for the grid so we don't draw in space.
+        args.WorldHandle.RenderInRenderTarget(_aoStencilTarget,
             () =>
             {
                 // Don't want lighting affecting it.
@@ -121,5 +143,6 @@ public sealed class AmbientOcclusionOverlay : Overlay
         worldHandle.DrawTextureRect(_aoTarget!.Texture, worldBounds, color);
 
         args.WorldHandle.SetTransform(Matrix3x2.Identity);
+        args.WorldHandle.UseShader(null);
     }
 }
