@@ -13,29 +13,32 @@ public sealed class StandingStateSystem : EntitySystem
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
     [Dependency] private readonly ThrowingSystem _throwingSystem = default!;
+    [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
 
     // begin starcup: rewritten for hands refactor
-    private void FallOver(EntityUid uid, Entity<HandsComponent> entity, StandingStateComponent component, DropHandItemsEvent args)
+    private void FallOver(EntityUid uid, StandingStateComponent component, DropHandItemsEvent args)
     {
         var direction = EntityManager.TryGetComponent(uid, out PhysicsComponent? comp) ? comp.LinearVelocity / 50 : Vector2.Zero;
         var dropAngle = _random.NextFloat(0.8f, 1.2f);
 
-        var fellEvent = new FellDownEvent(entity);
-        RaiseLocalEvent(entity, fellEvent);
+        var fellEvent = new FellDownEvent(uid);
+        RaiseLocalEvent(uid, fellEvent, false);
 
         if (!TryComp(uid, out HandsComponent? handsComp))
             return;
 
-        var worldRotation = EntityManager.GetComponent<TransformComponent>(uid).WorldRotation.ToVec();
-        foreach (var hand in entity.Comp.Hands.Keys)
+        var worldRotation = _transformSystem.GetWorldRotation(uid).ToVec();
+        foreach (var hand in handsComp.Hands.Keys)
         {
-            if (!TryGetHeldItem(entity.AsNullable(), hand, out var heldEntity))
+            var handEntity = new Entity<HandsComponent?>(uid, handsComp);
+
+            if (_handsSystem.GetHeldItem(new Entity<HandsComponent?>(uid, handsComp), hand) is not EntityUid held)
                 continue;
 
-            if (!_handsSystem.TryDrop(uid, hand, null, checkActionBlocker: false))
+            if (!_handsSystem.TryDrop(uid, handEntity, null, checkActionBlocker: false))
                 continue;
 
-            _throwingSystem.TryThrow(heldEntity,
+            _throwingSystem.TryThrow(held,
                 _random.NextAngle().RotateVec(direction / dropAngle + worldRotation / 50),
                 0.5f * dropAngle * _random.NextFloat(-0.9f, 1.1f),
                 uid, 0);
