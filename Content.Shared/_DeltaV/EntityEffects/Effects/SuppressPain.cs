@@ -1,8 +1,7 @@
 using Content.Shared._DeltaV.Pain;
-using Content.Shared.EntityEffects;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.EntityEffects.Effects;
+namespace Content.Shared.EntityEffects.Effects;
 
 public sealed partial class SuppressPain : EntityEffect
 {
