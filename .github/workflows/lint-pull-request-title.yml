@@ -4,7 +4,7 @@ on:
     types: [opened, edited, synchronize, reopened]
 
 jobs:
-  publish:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -14,3 +14,11 @@ jobs:
           min_length: 8 # Min length of the title
           max_length: 80 # Max length of the title
           verbal_description: 'Our custom flavor of the Conventional Commits specification'
+  ci-success:
+    name: Lint pull request title
+    needs:
+      - lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: CI succeeded
+        run: exit 0
