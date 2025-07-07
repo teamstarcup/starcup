@@ -541,7 +541,7 @@ namespace Content.Server._DeltaV.Mail.EntitySystems
             var accessReader = EnsureComp<AccessReaderComponent>(uid);
             foreach (var access in recipient.AccessTags)
             {
-                accessReader.AccessLists.Add([access]);
+                _accessSystem.AddAccess(new Entity<AccessReaderComponent>(uid, accessReader), access); // starcup: rewritten for access reader refactor
             }
         }
 

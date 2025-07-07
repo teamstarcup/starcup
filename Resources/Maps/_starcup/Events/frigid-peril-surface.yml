@@ -2053,164 +2053,6 @@ entities:
     - type: Transform
       pos: 9.917064,-9.67962
       parent: 1
-- proto: ActionToggleLight
-  entities:
-  - uid: 116
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 112
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 112
-  - uid: 117
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 112
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 112
-      attachedEntity: 112
-  - uid: 125
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 122
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 122
-  - uid: 126
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 122
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 122
-      attachedEntity: 122
-  - uid: 153
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 150
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 150
-  - uid: 154
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 150
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 150
-      attachedEntity: 150
-  - uid: 231
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 228
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 228
-  - uid: 232
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 228
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 228
-      attachedEntity: 228
-  - uid: 242
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 239
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 239
-  - uid: 243
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 239
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 239
-      attachedEntity: 239
-  - uid: 252
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 251
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 251
-  - uid: 879
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 878
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 878
-- proto: ActionToggleParamedicSiren
-  entities:
-  - uid: 254
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 253
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 253
-      attachedEntity: 253
-- proto: ActionToggleSuitPiece
-  entities:
-  - uid: 4
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 2
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 2
-      entIcon: 5
-  - uid: 157
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 155
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 155
-      entIcon: 158
-  - uid: 255
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 253
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 253
 - proto: AirAlarm
   entities:
   - uid: 256
@@ -6260,35 +6102,12 @@ entities:
       rot: -1.5707960248032986 rad
       pos: 13.859487,7.6328225
       parent: 1
-    - type: HandheldLight
-      selfToggleActionEntity: 117
-      toggleActionEntity: 116
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 114
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 116
-          - 117
-        solution@food: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 113
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
     - type: EmitSoundOnCollide
       nextSound: -1973.8605011
-    - type: ActionsContainer
-    - type: Actions
-      actions:
-      - 117
     - type: Forensics
       residues: []
       dnas: []
@@ -6565,26 +6384,8 @@ entities:
           endTime: 0
           startTime: 0
           length: 1
-    - type: ToggleClothing
-      actionEntity: 254
-    - type: ContainerContainer
-      containers:
-        toggleable-clothing: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 255
-          - 254
     - type: EmitSoundOnCollide
       nextSound: -5430.5072461
-    - type: ActionsContainer
-    - type: Actions
-      actions:
-      - 254
     - type: Forensics
       residues: []
       dnas: []
@@ -6740,9 +6541,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 26.549223,-10.265521
       parent: 1
-    - type: ToggleableClothing
-      clothingUid: 5
-      actionEntity: 4
     - type: ContainerContainer
       containers:
         toggleable-clothing: !type:ContainerSlot
@@ -6753,11 +6551,6 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 4
         solution@food: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -6768,7 +6561,6 @@ entities:
       - food
     - type: EmitSoundOnCollide
       nextSound: -5430.5072461
-    - type: ActionsContainer
     - type: UseDelay
       delays:
         default:
@@ -6817,9 +6609,6 @@ entities:
     - type: Transform
       pos: 0.5615194,7.636142
       parent: 1
-    - type: ToggleableClothing
-      clothingUid: 158
-      actionEntity: 157
     - type: ContainerContainer
       containers:
         toggleable-clothing: !type:ContainerSlot
@@ -6830,11 +6619,6 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 157
         solution@food: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -6845,7 +6629,6 @@ entities:
       - food
     - type: EmitSoundOnCollide
       nextSound: -2879.4569677
-    - type: ActionsContainer
     - type: UseDelay
       delays:
         default:
@@ -7918,27 +7701,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 30.404284,-4.584153
       parent: 1
-    - type: HandheldLight
-      selfToggleActionEntity: 232
-      toggleActionEntity: 231
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 229
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 231
-          - 232
     - type: EmitSoundOnCollide
       nextSound: -3930.1294623
-    - type: ActionsContainer
-    - type: Actions
-      actions:
-      - 232
     - type: Forensics
       residues: []
       dnas: []
@@ -7952,27 +7716,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 11.944732,-3.593628
       parent: 1
-    - type: HandheldLight
-      selfToggleActionEntity: 243
-      toggleActionEntity: 242
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 240
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 242
-          - 243
     - type: EmitSoundOnCollide
       nextSound: -3930.1294623
-    - type: ActionsContainer
-    - type: Actions
-      actions:
-      - 243
     - type: Forensics
       residues: []
       dnas: []
@@ -7983,39 +7728,11 @@ entities:
     - type: Transform
       pos: 10.446028,4.489975
       parent: 1
-    - type: HandheldLight
-      toggleActionEntity: 252
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 252
-    - type: ActionsContainer
   - uid: 878
     components:
     - type: Transform
       pos: -4.162283,-0.26267672
       parent: 1
-    - type: HandheldLight
-      toggleActionEntity: 879
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 879
-    - type: ActionsContainer
 - proto: FlashlightSeclite
   entities:
   - uid: 122
@@ -8026,29 +7743,10 @@ entities:
       rot: -1.5707960248032986 rad
       pos: -2.225883,6.2798877
       parent: 1
-    - type: HandheldLight
-      selfToggleActionEntity: 126
-      toggleActionEntity: 125
     - type: MeleeWeapon
       nextAttack: -20.9957863
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 123
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 125
-          - 126
     - type: EmitSoundOnCollide
       nextSound: -1973.8605011
-    - type: ActionsContainer
-    - type: Actions
-      actions:
-      - 126
     - type: Forensics
       residues: []
       dnas: []
@@ -8061,29 +7759,10 @@ entities:
     - type: Transform
       pos: 0.5615194,7.495517
       parent: 1
-    - type: HandheldLight
-      selfToggleActionEntity: 154
-      toggleActionEntity: 153
     - type: MeleeWeapon
       nextAttack: -35.7598105
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 151
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 153
-          - 154
     - type: EmitSoundOnCollide
       nextSound: -2879.4569677
-    - type: ActionsContainer
-    - type: Actions
-      actions:
-      - 154
     - type: Forensics
       residues: []
       dnas: []

@@ -225,8 +225,9 @@
   name: Play MIDI
   description: Sing your heart out! Right click yourself to set an instrument.
   components:
-  - type: InstantAction
+  - type: Action # starcup: rewritten for action refactor
     checkCanInteract: false
     icon: _DeltaV/Interface/Actions/harpy_sing.png
+  - type: InstantAction # starcup: rewritten for action refactor
     event: !type:OpenUiActionEvent
       key: enum.InstrumentUiKey.Key

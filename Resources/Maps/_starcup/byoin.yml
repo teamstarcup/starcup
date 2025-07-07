@@ -57,9 +57,7 @@ entities:
     - type: Transform
     - type: Map
       mapPaused: True
-    - type: PhysicsMap
     - type: GridTree
-    - type: MovedGrids
     - type: Broadphase
     - type: OccluderTree
     - type: Parallax
@@ -7084,14 +7082,6 @@ entities:
     - type: Transform
       pos: 22.481207,-17.444302
       parent: 2
-- proto: ActionStethoscope
-  entities:
-  - uid: 302
-    components:
-    - type: Transform
-      parent: 301
-    - type: EntityTargetAction
-      container: 301
 - proto: AirAlarm
   entities:
   - uid: 303
@@ -35197,14 +35187,6 @@ entities:
     - type: Transform
       pos: -4.487977,-26.52824
       parent: 2
-    - type: Stethoscope
-      actionEntity: 302
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 302
 - proto: ClothingNeckStoleChaplain
   entities:
   - uid: 5340
