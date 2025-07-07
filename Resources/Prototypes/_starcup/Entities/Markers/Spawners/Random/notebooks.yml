@@ -1,0 +1,35 @@
+- type: entity
+  id: RandomNotebookSpawner
+  name: random notebook spawner
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Sprite
+    layers:
+    - sprite: _starcup/Objects/Misc/notebooks.rsi
+      state: notebook-random
+  - type: Transform
+    anchored: false
+  - type: RandomSpawner
+    chance: 1
+    offset: 0
+    prototypes:
+    - NotebookCompositionBlack
+    - NotebookCompositionBlue
+    - NotebookCompositionGreen
+    - NotebookCompositionPink
+    - NotebookCompositionRed
+    - NotebookCompositionYellow
+    - NotebookPocketBlue
+    - NotebookPocketBrown
+    - NotebookPocketGreen
+    - NotebookSpiralBeige
+    - NotebookSpiralCybersun
+    - NotebookSpiralInterdyne
+    - NotebookSpiralPurple
+    - NotebookSpiralTeal
+    rareChance: 0.02
+    rarePrototypes:
+    - NotebookSpiralNanotrasen
+    - NotebookSpiralGray
