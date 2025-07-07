@@ -9,6 +9,7 @@
   access:
   - Theatre
   - Maintenance
+  - Clown # starcup: added unique access level
   special:
   - !type:AddComponentSpecial
     components:
@@ -37,3 +38,13 @@
     back:
     - RubberStampClown
     - CrayonRainbow
+
+- type: chameleonOutfit
+  id: ClownChameleonOutfit
+  job: Clown
+  equipment:
+    head: ClothingHeadHatXmasCrown
+    eyes: ClothingEyesGlassesCheapSunglasses
+    neck: ClothingHeadHatFlowerWreath
+    outerClothing: ClothingOuterClownPriest
+    gloves: ClothingHandsGlovesColorYellowBudget

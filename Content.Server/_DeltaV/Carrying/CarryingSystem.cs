@@ -52,6 +52,7 @@ namespace Content.Server.Carrying
         [Dependency] private readonly RespiratorSystem _respirator = default!;
         [Dependency] private readonly SharedTransformSystem _transform = default!;
         [Dependency] private readonly PseudoItemSystem _pseudoItem = default!; // Needed for fitting check
+        [Dependency] private readonly HandsSystem _hands = default!;
 
         public override void Initialize()
         {
@@ -371,10 +372,13 @@ namespace Content.Server.Carrying
         //  if (_respirator.IsReceivingCPR(carried))
             //  return false;
 
-            if (!TryComp<HandsComponent>(carrier, out var hands))
-                return false;
+            // starcup: replaced to fix after hands refactor
+            //if (!TryComp<HandsComponent>(carrier, out var hands))
+            //    return false;
 
-            if (hands.CountFreeHands() < carriedComp.FreeHandsRequired)
+            //if (hands.CountFreeHands() < carriedComp.FreeHandsRequired)
+
+            if (_hands.CountFreeHands(carrier) < carriedComp.FreeHandsRequired) // starcup
                 return false;
 
             return true;
