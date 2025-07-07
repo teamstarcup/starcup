@@ -14,8 +14,8 @@
   abstract: true
 
 - type: quickPhrase
-  parent: [ BaseResearchPhrase, BaseLocationPhrase ]
-  id: BaseResearchLocationPhrase
+  parent: [ BaseSciencePhrase, BaseLocationPhrase ]
+  id: BaseScienceLocationPhrase
   abstract: true
 
 - type: quickPhrase
@@ -193,40 +193,40 @@
   id: LocationTechVaultPhrase
   text: station-beacon-tech-vault
 
-# Research
+# Science
 
 - type: quickPhrase
-  parent: BaseResearchLocationPhrase
+  parent: BaseScienceLocationPhrase
   id: LocationResearchPhrase
   text: station-beacon-research-and-development
 
 - type: quickPhrase
-  parent: BaseResearchLocationPhrase
+  parent: BaseScienceLocationPhrase
   id: LocationResearchDirectorPhrase
   text: station-beacon-research-director
 
 - type: quickPhrase
-  parent: BaseResearchLocationPhrase
+  parent: BaseScienceLocationPhrase
   id: LocationChapelPhrase
   text: station-beacon-chapel
 
 - type: quickPhrase
-  parent: BaseResearchLocationPhrase
+  parent: BaseScienceLocationPhrase
   id: LocationRoboticsPhrase
   text: station-beacon-robotics
 
 - type: quickPhrase
-  parent: BaseResearchLocationPhrase
+  parent: BaseScienceLocationPhrase
   id: LocationArtifactPhrase
   text: station-beacon-artifact-lab
 
 - type: quickPhrase
-  parent: BaseResearchLocationPhrase
+  parent: BaseScienceLocationPhrase
   id: LocationAnomalyPhrase
   text: station-beacon-anomaly-gen
 
 - type: quickPhrase
-  parent: BaseResearchLocationPhrase
+  parent: BaseScienceLocationPhrase
   id: LocationServerPhrase
   text: station-beacon-research-server
 
