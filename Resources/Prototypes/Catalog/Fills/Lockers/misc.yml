@@ -183,6 +183,12 @@
     # Recursive
     - id: ClosetMaintenanceFilledRandom
       prob: 0.01
+    # begin starcup
+    # NanoTrasen Loot
+    - !type:NestedSelector
+      tableId: MaintenanceLootNanotrasen
+      prob: 0.01 # low for now since it's just the notebook
+    # end starcup
 
 - type: entity
   id: ClosetMaintenanceFilledRandom
