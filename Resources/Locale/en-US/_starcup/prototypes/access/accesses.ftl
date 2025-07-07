@@ -1,4 +1,3 @@
-id-card-access-level-paramedic = Paramedic
 id-card-access-level-psychologist = Psychologist
 
 id-card-access-level-boxer = Boxer
