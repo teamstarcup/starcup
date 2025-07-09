@@ -1,15 +1,9 @@
 #Syndicate
 - type: entity
-  parent: [ClothingBackpack, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, ClothingBackpackSyndicate]
   id: ClothingBackpackNanotrasen
   name: NanoTrasen backpack
   description:
   components:
   - type: Sprite
     sprite: _starcup/Clothing/Back/Backpacks/nanotrasen.rsi
-  - type: ExplosionResistance
-    damageCoefficient: 0.1
-  - type: Storage
-    grid:
-    - 0,0,7,3
-    - 8,1,8,3

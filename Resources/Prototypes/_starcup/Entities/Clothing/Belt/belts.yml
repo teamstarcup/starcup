@@ -1,34 +1,15 @@
 - type: entity
-  parent: [ClothingBeltStorageBase, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, ClothingBeltSyndieHolster]
   id: ClothingBeltNTHolster
   name: NanoTrasen shoulder holster
-  description: A deep shoulder holster capable of holding many types of ballistics.
   components:
   - type: Sprite
     sprite: _starcup/Clothing/Belt/nanotrasenholster.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Belt/nanotrasenholster.rsi
-  - type: Item
-    size: Ginormous
-  - type: Storage
-    maxItemSize: Huge
-    grid:
-    - 0,0,3,3
-    whitelist:
-      components:
-        - Gun
-        - BallisticAmmoProvider
-        - CartridgeAmmo
 
 - type: entity
-  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, ClothingBeltMilitaryWebbing]
   id: ClothingBeltMilitaryWebbingNT
-  name: chest rig
+  suffix: NanoTrasen
   description: A set of tactical webbing worn by NanoTrasen boarding parties.
-  components:
-  - type: Sprite
-    sprite: Clothing/Belt/militarywebbing.rsi
-  - type: Clothing
-    sprite: Clothing/Belt/militarywebbing.rsi
-  - type: ExplosionResistance
-    damageCoefficient: 0.1

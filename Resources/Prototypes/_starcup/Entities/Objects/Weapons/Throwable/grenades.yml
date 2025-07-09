@@ -1,60 +1,17 @@
-#The explosive values for these are pretty god damn mediocre, but SS14's explosion system is hard to understand - this is a good enough approximation of how it was in SS13.
-#Ideally, there should be a weak radius around the bomb outside of its gibbing / spacing range capable of dealing fair damage to players / structures.
 - type: entity
   name: NanoTrasen minibomb
   description: A NanoTrasen-manufactured explosive used to sow destruction and cause chaos.
-  parent: [GrenadeBase, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, SyndieMiniBomb]
   id: NanotrasenMiniBomb
   components:
   - type: Sprite
     sprite: _starcup/Objects/Weapons/Grenades/nanogrenade.rsi
-  - type: ExplosionResistance
-    damageCoefficient: 0.1
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 10
-      behaviors:
-      - !type:TimerStartBehavior
-    - trigger:
-        !type:DamageTrigger
-        damage: 45
-      behaviors:
-      - !type:TriggerBehavior
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-  - type: OnUseTimerTrigger
-    delay: 5
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: Minibomb
-    totalIntensity: 200
-    intensitySlope: 30 #Will destroy the tile under it reliably, space 1-2 more to rods. Only does any significant damage in a 5-tile cross.
-    maxIntensity: 60
-  - type: Appearance
-  - type: TimerTriggerVisuals
-    primingSound:
-      path: /Audio/Effects/minibombcountdown.ogg
-      params:
-        volume: 12
 
 - type: entity
   name: NanoTrasen trickybomb
   description: A NanoTrasen-manufactured explosive used to make an excellent distraction.
-  parent: [GrenadeDummy, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, SyndieTrickyBomb]
   id: NanotrasenTrickyBomb
   components:
   - type: Sprite
     sprite: _starcup/Objects/Weapons/Grenades/nanogrenade.rsi
-  - type: OnUseTimerTrigger
-    delay: 5
-  - type: SoundOnTrigger
-    sound:
-      path: /Audio/Effects/Emotes/parp1.ogg
-  - type: Appearance
-  - type: TimerTriggerVisuals
-    primingSound:
-      path: /Audio/Effects/minibombcountdown.ogg
-      params:
-        volume: 12

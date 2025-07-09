@@ -1,13 +1,10 @@
 - type: entity
   name: NanoTrasen encryption key box
-  parent: [BoxEncryptionKeyPassenger, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, BoxEncryptionKeySyndie]
   id: BoxEncryptionKeyNT
   description: Two NanoTrasen encryption keys for the price of one. Miniaturized for ease of use.
   components:
-  - type: Item
-    size: Normal
   - type: StorageFill
     contents:
       - id: EncryptionKeyNT
         amount: 2
-  - type: Storage

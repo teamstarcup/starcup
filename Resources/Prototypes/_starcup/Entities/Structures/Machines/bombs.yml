@@ -1,47 +1,11 @@
 - type: entity
-  parent: [BaseHardBomb, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, SyndicateBomb]
   id: NanotrasenBomb
   name: NanoTrasen bomb
   description: A bomb for NanoTrasen operatives and agents alike. The real deal, no more training, get to it!
-  components:
-    - type: Sprite
-      sprite: Structures/Machines/bomb.rsi
-      layers:
-        - state: syndicate-bomb
-        - state: syndicate-bomb-active
-          visible: false
-          map: [ "primed" ]
-        - state: syndicate-bomb-wires
-          visible: false
-          map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-    - type: GenericVisualizer
-      visuals:
-        enum.DefusableVisuals.Active:
-          primed:
-            True: { visible: true }
-            False: { visible: false }
-        enum.WiresVisualLayers.MaintenancePanel:
-          enum.WiresVisualLayers.MaintenancePanel:
-            True: { visible: true }
-            False: { visible: false }
-    - type: PointLight
-      color: "#C7001B"
-      radius: 1.1
-      softness: 1
-    - type: Explosive
-      explosionType: HardBomb
-      totalIntensity: 4000.0
-      intensitySlope: 3
-      maxIntensity: 400
 
 - type: entity
-  parent: NanotrasenBomb
+  parent: [BaseTraitorContraband, SyndicateBombFake]
   id: NanotrasenBombFake
-  suffix: fake
-  components:
-    - type: Explosive
-      explosionType: Default
-      totalIntensity: 5.0
-      intensitySlope: 5
-      maxIntensity: 4
-      canCreateVacuum: false
+  name: NanoTrasen bomb
+  description: A bomb for NanoTrasen operatives and agents alike. The real deal, no more training, get to it!

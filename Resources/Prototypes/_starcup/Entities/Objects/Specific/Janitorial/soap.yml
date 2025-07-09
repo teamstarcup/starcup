@@ -1,7 +1,6 @@
 - type: entity
-  name: soap
   id: SoapSyndieMundane
-  parent: Soap
+  parent: SoapNT
   description: A Syndicate brand bar of soap.
   components:
   - type: Sprite
@@ -12,21 +11,13 @@
     fillBaseName: syndie-
   - type: Item
     heldPrefix: syndie
-  - type: SolutionContainerManager
-    solutions:
-      soap:
-        maxVol: 100
-        reagents:
-        - ReagentId: SoapReagent
-          Quantity: 100
   - type: Residue
     residueAdjective: residue-slippery
     residueColor: residue-red
 
 - type: entity
-  name: soap
   id: SoapNTAntag
-  parent: [Soap, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, SoapSyndie]
   description: A NanoTrasen bar of soap. Smells of plasma.
   components:
   - type: Sprite
@@ -35,59 +26,17 @@
       map: ["enum.SolutionContainerLayers.Fill"]
   - type: SolutionContainerVisuals
     fillBaseName: nt-
-  - type: Slippery
-    slipData:
-      paralyzeTime: 3
-      launchForwardsMultiplier: 3
   - type: Item
     heldPrefix: nt
-  - type: FlavorProfile
-    flavors:
-      - clean
-      - punishment
-  - type: CleansForensics
-    cleanDelay: 8.0
   - type: Residue
     residueAdjective: residue-slippery
     residueColor: residue-blue
 
 - type: entity
-  name: soaplet
+  parent: [BaseTraitorContraband, SoapletSyndie]
   id: SoapletNTAntag
-  categories: [ HideSpawnMenu ]
-  parent: Soap
-  description: A tiny piece of syndicate soap.
+  description: A tiny piece of NanoTrasen soap.
   components:
   - type: Sprite
     layers:
     - state: nano-soaplet
-  - type: Slippery
-    slipData:
-      paralyzeTime: 1.5 # these things are tiny
-      launchForwardsMultiplier: 1.5
-  - type: StepTrigger
-    intersectRatio: 0.04
-  - type: Item
-    heldPrefix: nt
-  - type: Fixtures
-    fixtures:
-      slips:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.08,-0.06,0.08,0.06"
-        layer:
-        - SlipLayer
-        hard: false
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.08,-0.06,0.08,0.06"
-        density: 1
-        mask:
-        - ItemMask
-  - type: DeleteOnTrigger
-  - type: EmitSoundOnTrigger
-    sound:
-      path: "/Audio/Effects/Fluids/splat.ogg"
-      params:
-        volume: -20
