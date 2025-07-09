@@ -196,9 +196,9 @@ namespace Content.Client.Inventory
             }
 
             // Goobstation: use virtual entity if hidden
-            UpdateEntityIcon(button, EntMan.HasComponent<StripMenuHiddenComponent>(hand.HeldEntity) ? _virtualHiddenEntity : heldEntity);
+            UpdateEntityIcon(button, EntMan.HasComponent<StripMenuHiddenComponent>(heldEntity) ? _virtualHiddenEntity : heldEntity);
             // End Goobstation
-            
+
             _strippingMenu!.HandsContainer.AddChild(button);
             LayoutContainer.SetPosition(button, new Vector2i(_handCount, 0) * (SlotControl.DefaultButtonSize + ButtonSeparation));
             _handCount++;
