@@ -13,7 +13,9 @@ public sealed class StandingStateSystem : EntitySystem
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
     [Dependency] private readonly ThrowingSystem _throwingSystem = default!;
+    [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
 
+    // begin starcup: rewritten for hands refactor
     private void FallOver(EntityUid uid, StandingStateComponent component, DropHandItemsEvent args)
     {
         var direction = EntityManager.TryGetComponent(uid, out PhysicsComponent? comp) ? comp.LinearVelocity / 50 : Vector2.Zero;
@@ -25,13 +27,15 @@ public sealed class StandingStateSystem : EntitySystem
         if (!TryComp(uid, out HandsComponent? handsComp))
             return;
 
-        var worldRotation = EntityManager.GetComponent<TransformComponent>(uid).WorldRotation.ToVec();
-        foreach (var hand in handsComp.Hands.Values)
+        var worldRotation = _transformSystem.GetWorldRotation(uid).ToVec();
+        foreach (var hand in handsComp.Hands.Keys)
         {
-            if (hand.HeldEntity is not EntityUid held)
+            var handEntity = new Entity<HandsComponent?>(uid, handsComp);
+
+            if (_handsSystem.GetHeldItem(new Entity<HandsComponent?>(uid, handsComp), hand) is not EntityUid held)
                 continue;
 
-            if (!_handsSystem.TryDrop(uid, hand, null, checkActionBlocker: false, handsComp: handsComp))
+            if (!_handsSystem.TryDrop(uid, handEntity, null, checkActionBlocker: false))
                 continue;
 
             _throwingSystem.TryThrow(held,
@@ -40,6 +44,7 @@ public sealed class StandingStateSystem : EntitySystem
                 uid, 0);
         }
     }
+    // end starcup
 
     public override void Initialize()
     {

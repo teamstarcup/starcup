@@ -1,0 +1,265 @@
+- type: entity
+  parent: BaseItem
+  id: NotebookBase
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - Book
+  - type: Appearance
+  - type: Paper
+    contentSize: 12000
+  - type: PaperVisuals
+  - type: ActivatableUI
+    key: enum.PaperUiKey.Key
+    requiresComplex: false
+  - type: UserInterface
+    interfaces:
+      enum.PaperUiKey.Key:
+        type: PaperBoundUserInterface
+  - type: Item
+    size: Small
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: NotebookCompositionBase
+  parent: NotebookBase
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: composition-black
+  - type: PaperVisuals
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    contentImagePath: "/Textures/Interface/Paper/paper_content_lined.svg.96dpi.png"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 16.0, 16.0, 16.0, 16.0
+
+- type: entity
+  id: NotebookSpiralBase
+  parent: NotebookBase
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: composition-black
+
+- type: entity
+  id: NotebookPocketBase
+  parent: NotebookBase
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: composition-black
+  - type: Item
+    size: Tiny
+
+- type: entity
+  id: NotebookCompositionBlack
+  parent: NotebookCompositionBase
+  name: black composition notebook
+  description: A classic composition notebook, often carried by students. This one is black.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: composition-black
+  - type: Icon
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: composition-black
+
+- type: entity
+  id: NotebookCompositionBlue
+  parent: NotebookCompositionBase
+  name: blue composition notebook
+  description: A classic composition notebook, often carried by students. This one is blue.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: composition-blue
+  - type: Icon
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: composition-blue
+
+- type: entity
+  id: NotebookCompositionGreen
+  parent: NotebookCompositionBase
+  name: green composition notebook
+  description: A classic composition notebook, often carried by students. This one is green.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: composition-green
+  - type: Icon
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: composition-green
+
+- type: entity
+  id: NotebookCompositionPink
+  parent: NotebookCompositionBase
+  name: pink composition notebook
+  description: A classic composition notebook, often carried by students. This one is pink.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: composition-pink
+  - type: Icon
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: composition-pink
+
+- type: entity
+  id: NotebookCompositionRed
+  parent: NotebookCompositionBase
+  name: red composition notebook
+  description: A classic composition notebook, often carried by students. This one is red.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: composition-red
+  - type: Icon
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: composition-red
+
+- type: entity
+  id: NotebookCompositionYellow
+  parent: NotebookCompositionBase
+  name: yellow composition notebook
+  description: A classic composition notebook, often carried by students. This one is yellow.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: composition-yellow
+  - type: Icon
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: composition-yellow
+
+- type: entity
+  id: NotebookPocketBlue
+  parent: NotebookPocketBase
+  name: blue pocket notebook
+  description: A leather-bound pocket notebook, for those who need to write on the go.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: pocket-blue
+  - type: Icon
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: pocket-blue
+
+- type: entity
+  id: NotebookPocketBrown
+  parent: NotebookPocketBase
+  name: brown pocket notebook
+  description: A leather-bound pocket notebook, for those who need to write on the go.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: pocket-brown
+  - type: Icon
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: pocket-brown
+
+- type: entity
+  id: NotebookPocketGreen
+  parent: NotebookPocketBase
+  name: green pocket notebook
+  description: A leather-bound pocket notebook, for those who need to write on the go.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: pocket-green
+  - type: Icon
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: pocket-green
+
+- type: entity
+  id: NotebookSpiralBeige
+  parent: NotebookSpiralBase
+  name: beige spiral notebook
+  description: A beige spiral-bound notebook. Only for note-taking professionals.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: spiral-beige
+  - type: Icon
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: spiral-beige
+
+- type: entity
+  id: NotebookSpiralCybersun
+  parent: NotebookSpiralBase
+  name: cybersun spiral notebook
+  description: A spiral-bound notebook, specially designed to help Cybersun engineers in their data-wrangling.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: spiral-cybersun
+  - type: Icon
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: spiral-cybersun
+
+- type: entity
+  id: NotebookSpiralGray
+  parent: NotebookSpiralBase
+  name: gray spiral notebook
+  description: A gray spiral-bound notebook. Only for note-taking professionals.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: spiral-gray
+  - type: Icon
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: spiral-gray
+
+- type: entity
+  id: NotebookSpiralInterdyne
+  parent: NotebookSpiralBase
+  name: interdyne spiral notebook
+  description: A spiral-bound notebook, specially designed to help Interdyne chemists in their experiments.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: spiral-interdyne
+  - type: Icon
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: spiral-interdyne
+
+- type: entity
+  id: NotebookSpiralNanotrasen
+  parent: NotebookSpiralBase
+  name: nanotrasen spiral notebook
+  description: A spiral-bound notebook, covered in NanoTrasen branding. How embarassing.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: spiral-nanotrasen
+  - type: Icon
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: spiral-nanotrasen
+
+- type: entity
+  id: NotebookSpiralPurple
+  parent: NotebookSpiralBase
+  name: purple spiral notebook
+  description: A purple spiral-bound notebook. Only for note-taking professionals.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: spiral-purple
+  - type: Icon
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: spiral-purple
+
+- type: entity
+  id: NotebookSpiralTeal
+  parent: NotebookSpiralBase
+  name: teal spiral notebook
+  description: A teal spiral-bound notebook. Only for note-taking professionals.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: spiral-teal
+  - type: Icon
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+    state: spiral-teal

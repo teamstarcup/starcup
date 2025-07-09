@@ -4,7 +4,8 @@
   description: Calm down and sit peacefuly in your carrier's inventory
   categories: [ HideSpawnMenu ]
   components:
-  - type: InstantAction
+  - type: Action # starcup: rewritten for action refactor
+    useDelay: 2 # starcup: rewritten for action refactor
     icon: _DeltaV/Actions/escapeinventory.rsi/cancel-escape.png
+  - type: InstantAction # starcup: rewritten for action refactor
     event: !type:EscapeInventoryCancelActionEvent
-    useDelay: 2

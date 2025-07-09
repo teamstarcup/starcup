@@ -5,7 +5,7 @@ on:
 
 jobs:
   labeler:
-    if: github.actor != 'PJBot' && github.actor != 'teamstarcup-bot'
+    if: github.actor != 'PJBot' # && github.actor != 'teamstarcup-bot'
     permissions:
       issues: write
       contents: read

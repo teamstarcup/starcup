@@ -7,6 +7,7 @@ using Content.Shared.Item;
 using Content.Shared.StatusEffect;
 using Content.Shared.Throwing;
 using Robust.Shared.Random;
+using Content.Shared.Body.Components; // starcup
 
 namespace Content.Server._DeltaV.Felinid;
 

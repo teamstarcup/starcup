@@ -1,19 +1,19 @@
 ﻿name: Test Packaging
 
 on:
-  push:
-    branches: [ main, staging, stable ]
-    paths:
-      - '**.cs'
-      - '**.csproj'
-      - '**.sln'
-      - '**.git**'
-      - '**.yml'
-      # no docs on which one of these is supposed to work, so
-      # why not just do both
-      - 'RobustToolbox'
-      - 'RobustToolbox/**'
-  merge_group:
+#  push:
+#    branches: [ main, staging, stable ]
+#    paths:
+#      - '**.cs'
+#      - '**.csproj'
+#      - '**.sln'
+#      - '**.git**'
+#      - '**.yml'
+#      # no docs on which one of these is supposed to work, so
+#      # why not just do both
+#      - 'RobustToolbox'
+#      - 'RobustToolbox/**'
+#  merge_group:
   pull_request:
     types: [ opened, reopened, synchronize, ready_for_review ]
     branches: [ main, staging, stable ]
@@ -29,7 +29,7 @@ on:
 jobs:
   build:
     name: Test Packaging
-    if: github.actor != 'PJBot' && github.event.pull_request.draft == false && github.actor != 'teamstarcup-bot'
+    if: github.actor != 'PJBot' && github.event.pull_request.draft == false # && github.actor != 'teamstarcup-bot'
     runs-on: ubuntu-latest
 
     steps:
