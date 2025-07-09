@@ -7,19 +7,18 @@
   - type: Item
     size: Small
     shape:
-    - 0,0,1,0
+    - 0,0,1,1
   - type: Sprite
     sprite: EstacaoPirata/Objects/Misc/cards.rsi
-    state: box
     layers:
     - state: black_box
     - state: black_box_open
       map: [ "openLayer" ]
       visible: false
   - type: Storage
-    maxItemSize: Small
+    maxItemSize: Normal
     grid:
-    - 0,0,1,0
+    - 0,0,1,1
     whitelist:
       components:
       - CardDeck
@@ -28,19 +27,31 @@
     - id: CardDeckBase
       amount: 1
   - type: Appearance
+  - type: StaticPrice # Frontier
+    price: 200 # Frontier
+
+# Frontier: base stack for card stack component
+- type: entity
+  parent: [BaseItem, RecyclableItemNoMats] # Frontier: added RecyclableItemNoMats
+  id: CardStackBase
+  name: stack of cards
+  abstract: true
+  components:
+  - type: Item
+    size: Small
+  - type: CardStack
+  - type: ContainerContainer # Frontier
+    containers: # Frontier
+      cardstack-container: !type:Container # Frontier
+# End Frontier
 
 - type: entity
-  parent: BaseItem
+  parent: CardStackBase
   id: CardHandBase
   categories: [ HideSpawnMenu ]
   name: hand of cards
   components:
-  - type: Item
-    size: Small
-    shape:
-    - 0,0,1,0
   - type: CardHand
-  - type: CardStack
   - type: Sprite
     sprite: EstacaoPirata/Objects/Misc/cards.rsi
     state: singlecard_down_black
@@ -48,9 +59,13 @@
     interfaces:
       enum.CardUiKey.Key:
         type: CardHandMenuBoundUserInterface
+  # - type: ActivatableUI # Frontier
+  #   key: enum.CardUiKey.Key # Frontier
+  - type: StaticPrice # Frontier
+    price: 0.01 # Frontier
 
 - type: entity
-  parent: BaseItem
+  parent: CardStackBase
   id: CardDeckBase
   categories: [ HideSpawnMenu ]
   name: deck of cards
@@ -59,11 +74,8 @@
     sprite: EstacaoPirata/Objects/Misc/cards.rsi
     state: deck_black_full
   - type: Item
-    size: Small
-    shape:
-    - 0,0,1,0
+    size: Normal
   - type: CardDeck
-  - type: CardStack
 
 
 - type: entity
@@ -75,7 +87,6 @@
     size: Small
   - type: Sprite
     sprite: EstacaoPirata/Objects/Misc/cards.rsi
-    state: box
     layers:
     - state: black_box
     - state: black_box_open
@@ -154,6 +165,8 @@
     - CardScJackOfSpadesBlack
     # Joker
     - CardScJokerBlack
+  - type: StaticPrice # Frontier
+    price: 0.01 # Frontier
 
 - type: entity
   parent: BaseItem
@@ -169,7 +182,7 @@
     state: singlecard_down_black
   - type: Rotatable
   - type: Item
-    size: Tiny
+    size: Small
   - type: UseDelay
     delay: 0.5
   - type: Card
@@ -177,6 +190,10 @@
     - sprite: EstacaoPirata/Objects/Misc/cards.rsi
       state: singlecard_down_black
     flipped: true
+  - type: StaticPrice # Frontier
+    price: 0.01 # Frontier
+
+# region Black Cards
 
 - type: entity
   parent: CardBase
@@ -765,3 +782,5 @@
   - type: Sprite
     sprite: EstacaoPirata/Objects/Misc/cards.rsi
     state: black_joker
+
+# endregion Black Cards
