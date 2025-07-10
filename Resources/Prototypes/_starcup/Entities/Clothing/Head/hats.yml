@@ -27,49 +27,31 @@
   description: "\"The fish, women, and I are in a loving polyamorous relationship built on mutual trust and a regularly renewed fishing license.\""
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseNanotrasenContraband ]
+  parent: [ BaseTraitorContraband, ClothingHeadPyjamaSyndicateBlack ]
   id: ClothingHeadPyjamaNanotrasenBlack
   name: NanoTrasen black pyjama hat
-  description: For keeping that traitor head of yours warm.
   components:
   - type: Sprite
     sprite: Clothing/Head/Hats/pyjamasyndicateblack.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/pyjamasyndicateblack.rsi
-  - type: HideLayerClothing
-    layers:
-      Hair: HEAD
-      HeadTop : HEAD
-      HeadSide : HEAD
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseNanotrasenContraband ]
+  parent: [ BaseTraitorContraband, ClothingHeadPyjamaSyndicatePink ]
   id: ClothingHeadPyjamaNanotrasenGold
   name: NanoTrasen gold pyjama hat
-  description: For keeping that traitor head of yours warm.
   components:
   - type: Sprite
     sprite: _starcup/Clothing/Head/Hats/pyjamananotrasengold.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Head/Hats/pyjamananotrasengold.rsi
-  - type: HideLayerClothing
-    layers:
-      Hair: HEAD
-      HeadTop : HEAD
-      HeadSide : HEAD
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseNanotrasenContraband ]
+  parent: [ BaseTraitorContraband, ClothingHeadPyjamaSyndicateRed ]
   id: ClothingHeadPyjamaNanotrasenBlue
   name: NanoTrasen blue pyjama hat
-  description: For keeping that traitor head of yours warm.
   components:
   - type: Sprite
     sprite: _starcup/Clothing/Head/Hats/pyjamananotrasenblue.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Head/Hats/pyjamananotrasenblue.rsi
-  - type: HideLayerClothing
-    layers:
-      Hair: HEAD
-      HeadTop : HEAD
-      HeadSide : HEAD
