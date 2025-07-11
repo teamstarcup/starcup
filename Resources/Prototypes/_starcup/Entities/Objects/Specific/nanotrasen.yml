@@ -1,27 +1,8 @@
 # Uplinks
 - type: entity
-  parent: [BaseItem, StorePresetUplinkNT, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, StorePresetUplinkNT, BaseUplinkRadio]
   id: BaseUplinkRadioNT
   name: NanoTrasen uplink
-  description: A suspicious looking old radio...
-  suffix: Empty
-  components:
-  - type: Sprite
-    sprite: Objects/Devices/communication.rsi
-    layers:
-    - state: old-radio
-  - type: Item
-    sprite: Objects/Devices/communication.rsi
-    heldPrefix: old-radio
-  - type: UserInterface
-    interfaces:
-      enum.StoreUiKey.Key:
-        type: StoreBoundUserInterface
-  - type: ActivatableUI
-    key: enum.StoreUiKey.Key
-  - type: Store
-    balance:
-      Telecrystal: 0
 
 - type: entity
   parent: BaseUplinkRadioNT

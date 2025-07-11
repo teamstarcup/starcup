@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ PersonalAI, BaseNanotrasenContraband]
+  parent: [ BaseTraitorContraband, SyndicatePersonalAI ]
   id: NanotrasenPersonalAI
   name: NanoTrasen personal ai device
   description: Your NanoTrasen pal who's fun to be with!
@@ -17,12 +17,6 @@
     roleRules: ghost-role-information-familiar-rules
     mindRoles:
     - MindRoleGhostRoleFamiliar
-  - type: IntrinsicRadioTransmitter
-    channels:
-    - Syndicate
-  - type: ActiveRadio
-    channels:
-    - Syndicate
   - type: Appearance
   - type: GenericVisualizer
     visuals:

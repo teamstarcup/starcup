@@ -1,21 +1,17 @@
 #Syndicate SWAT Helmet
 - type: entity
-  parent: ClothingHeadHelmetSwat
+  parent: ClothingHeadHelmetSwatSyndicate
   id: ClothingHeadHelmetSwatNanotrasen
-  name: SWAT helmet
   suffix: NanoTrasen
-  description: An extremely robust helmet, commonly used by paramilitary forces. It is adorned in a nefarious red and black stripe pattern.
+  description: An extremely robust helmet, commonly used by paramilitary forces. It is adorned in a nefarious red and blue stripe pattern.
   components:
   - type: Sprite
     sprite: _starcup/Clothing/Head/Helmets/swat_nanotrasen.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Head/Helmets/swat_nanotrasen.rsi
-  - type: HideLayerClothing
-    layers:
-      Hair: HEAD
 
 - type: entity
-  parent: [ BaseNanotrasenContraband, ClothingHeadHelmetBase ]
+  parent: [ BaseTraitorContraband, ClothingHeadHelmetRaid ]
   id: ClothingHeadHelmetRaidNanotrasen
   name: NanoTrasen raid helmet
   description: An armored helmet for use with the NanoTrasen raid suit. Very stylish.
@@ -24,13 +20,3 @@
     sprite: _starcup/Clothing/Head/Helmets/nt-raid.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Head/Helmets/nt-raid.rsi
-  - type: Armor
-    modifiers: #There's gotta be SOME reason to use this over other helmets.
-      coefficients:
-        Blunt: 0.85
-        Slash: 0.85
-        Piercing: 0.85
-        Heat: 0.85
-  - type: HideLayerClothing
-    layers:
-      Hair: HEAD

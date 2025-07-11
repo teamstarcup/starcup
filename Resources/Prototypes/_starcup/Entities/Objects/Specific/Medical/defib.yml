@@ -1,8 +1,7 @@
 - type: entity
   id: DefibrillatorNanotrasen
-  parent: [ DefibrillatorCompact, BaseNanotrasenContraband ]
+  parent: [ BaseTraitorContraband, DefibrillatorSyndicate ]
   name: NanoTrasen defibrillator
-  description: Doubles as a self-defense weapon for frontline medical support.
   components:
   - type: Sprite
     sprite: _starcup/Objects/Specific/Medical/defibnano.rsi
@@ -15,21 +14,3 @@
       - state: ready
         map: ["enum.PowerDeviceVisualLayers.Powered"]
         shader: unshaded
-  - type: MeleeWeapon
-    damage:
-      types:
-        Blunt: 8
-  - type: ItemToggleMeleeWeapon
-    activatedSoundOnHit:
-      path: /Audio/Items/Defib/defib_zap.ogg
-      params:
-        variation: 0.250
-    activatedSoundOnHitNoDamage:
-      path: /Audio/Items/Defib/defib_zap.ogg
-      params:
-        variation: 0.250
-        volume: -10
-    activatedDamage:
-      types:
-        Blunt: 8
-        Shock: 16

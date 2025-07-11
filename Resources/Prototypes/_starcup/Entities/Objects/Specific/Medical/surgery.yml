@@ -1,7 +1,6 @@
 - type: entity
-  name: advanced circular saw
   id: SawAdvancedNT
-  parent: [ SawElectric, BaseNanotrasenContraband ]
+  parent: [ BaseTraitorContraband, SawAdvanced ]
   description: NanoTrasen's state-of-the-art surgical saw. Guaranteed to stay spotless and sterile, no matter how messy the job.
   components:
   - type: Sprite
@@ -10,7 +9,3 @@
   - type: Item
     sprite: _starcup/Objects/Specific/Medical/Surgery/saw.rsi
     heldPrefix: advanced-nt
-  - type: MeleeWeapon
-    attackRate: 1.5
-  - type: Tool
-    speedModifier: 2.0

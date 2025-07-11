@@ -1,8 +1,7 @@
 - type: entity
   id: BaseImplantOnlyImplanterNT
-  parent: [BaseImplantOnlyImplanter, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, BaseImplantOnlyImplanterSyndi]
   name: NanoTrasen implanter
-  description: A compact disposable syringe exclusively designed for the injection of subdermal implants. Make sure to scrub it with soap or a rag to remove residual DNA after use!
   abstract: true
   components:
     - type: Item
@@ -17,18 +16,6 @@
           visible: true
         - state: implanter1
           map: [ "implantOnly" ]
-    - type: GenericVisualizer
-      visuals:
-        enum.ImplanterVisuals.Full:
-          implantFull:
-            True: {visible: true}
-            False: {visible: false}
-        enum.ImplanterImplantOnlyVisuals.ImplantOnly:
-          implantOnly:
-            True: {state: broken}
-            False: {state: implanter1}
-    - type: Tag
-      tags: []
 
 #Traitor implanters
 

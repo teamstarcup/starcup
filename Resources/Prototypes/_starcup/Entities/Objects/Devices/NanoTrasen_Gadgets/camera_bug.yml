@@ -1,7 +1,6 @@
 - type: entity
   id: CameraBugNT
-  parent: [ BaseItem, BaseNanotrasenContraband ]
-  name: camera bug
+  parent: [ BaseTraitorContraband, CameraBug ]
   description: An illegal NanoTrasen device that allows you to hack into the station's camera network.
   components:
   - type: Sprite
@@ -10,17 +9,3 @@
     - state: camera_bug
   - type: Item
     sprite: _starcup/Objects/Devices/camera_bug.rsi
-  - type: ActivatableUI
-    requireActiveHand: false
-    inHandsOnly: true
-    key: enum.SurveillanceCameraMonitorUiKey.Key
-  - type: UserInterface
-    interfaces:
-      enum.SurveillanceCameraMonitorUiKey.Key:
-        type: SurveillanceCameraMonitorBoundUserInterface
-  - type: DeviceNetwork
-    deviceNetId: Wired
-    receiveFrequencyId: SurveillanceCamera
-    transmitFrequencyId: SurveillanceCamera
-  - type: WiredNetworkConnection
-  - type: SurveillanceCameraMonitor

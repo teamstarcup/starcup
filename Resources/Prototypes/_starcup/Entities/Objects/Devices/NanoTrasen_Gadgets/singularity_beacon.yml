@@ -1,39 +1,9 @@
 - type: entity
   id: SingularityBeaconNT
-  parent: [BaseMachinePowered, BaseNanotrasenContraband]
-  name: singularity beacon
+  parent: [BaseTraitorContraband, SingularityBeacon]
   description: A NanoTrasen device that attracts the singularity. If it's loose and you're seeing this, run.
   components:
   - type: Sprite
     sprite: _starcup/Objects/Devices/singularity_beacon.rsi
     layers:
     - state: icon
-  - type: Item
-    size: Huge
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.40,-0.40,0.40,0.40"
-        density: 80
-        mask:
-        - MachineMask
-        layer:
-        - MachineLayer
-  - type: SingularityAttractor
-    baseRange: 80
-  - type: SinguloFood
-    energy: 120
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 50
-      behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: ApcPowerReceiver
-    powerLoad: 15000
-  - type: StaticPrice
-    price: 1500

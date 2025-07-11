@@ -1,8 +1,7 @@
 - type: entity
   name: NanoTrasen jaws of life
-  parent: [JawsOfLife, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, SyndicateJawsOfLife]
   id: NanotrasenJawsOfLife
-  description: Useful for entering the station or its departments.
   components:
   - type: Sprite
     sprite: _starcup/Objects/Tools/jaws_of_life.rsi
@@ -14,8 +13,6 @@
       right:
       - state: nt_inhand-right
     size: Normal
-  - type: Prying
-    speedModifier: 3.0
   - type: MultipleTool
     entries:
       - behavior: Prying
@@ -30,7 +27,3 @@
           state: nt_jaws_cutter
         useSound: /Audio/Items/jaws_cut.ogg
         changeSound: /Audio/Items/change_jaws.ogg
-  - type: MeleeWeapon
-    damage:
-      types:
-        Blunt: 14

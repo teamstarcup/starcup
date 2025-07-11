@@ -1,8 +1,7 @@
 - type: entity
-  parent: [UnsensoredClothingUniformBase, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, ClothingUniformJumpsuitPyjamaSyndicateBlack]
   id: ClothingUniformJumpsuitPyjamaNanotrasenBlack
   name: black NanoTrasen pyjamas
-  description: For those long nights in perma.
   components:
   - type: Sprite
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/pyjamananotrasenblack.rsi
@@ -10,10 +9,9 @@
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/pyjamananotrasenblack.rsi
 
 - type: entity
-  parent: [UnsensoredClothingUniformBase, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, ClothingUniformJumpsuitPyjamaSyndicatePink]
   id: ClothingUniformJumpsuitPyjamaNanotrasenGold
   name: gold NanoTrasen pyjamas
-  description: For those long nights in perma.
   components:
   - type: Sprite
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/pyjamananotrasengold.rsi
@@ -21,10 +19,9 @@
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/pyjamananotrasengold.rsi
 
 - type: entity
-  parent: [UnsensoredClothingUniformBase, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, ClothingUniformJumpsuitPyjamaSyndicateRed]
   id: ClothingUniformJumpsuitPyjamaNanotrasenBlue
   name: blue NanoTrasen pyjamas
-  description: For those long nights in perma.
   components:
   - type: Sprite
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/pyjamananotrasenblue.rsi
@@ -32,18 +29,12 @@
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/pyjamananotrasenblue.rsi
 
 - type: entity
-  parent: [UnsensoredClothingUniformBase, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, ClothingUniformJumpsuitOperative]
   id: ClothingUniformJumpsuitOperativeNT
-  name: operative jumpsuit
   description: Uniform for elite NanoTrasen operatives performing tactical operations in deep space.
-  components:
-  - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/operative.rsi
-  - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/operative.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, ClothingUniformJumpsuitSyndieFormal]
   id: ClothingUniformJumpsuitNTFormal
   name: NanoTrasen formal suit
   description: Combines sleek, upper-class elegance with NanoTrasen's signature aura of faint totalitarian menace.

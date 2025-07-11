@@ -1,6 +1,6 @@
 - type: entity
   name: NanoTrasen hypospray
-  parent: BaseItem
+  parent: SyndiHypo
   description: Using reverse engineered designs from the Syndicate, NanoTrasen produced these in limited quantities for their operatives.
   id: NanotrasenHypo
   components:
@@ -14,29 +14,10 @@
         visible: false
   - type: Item
     sprite: _starcup/Objects/Specific/Medical/nanohypo.rsi
-  - type: SolutionContainerManager
-    solutions:
-      hypospray:
-        maxVol: 20
-  - type: RefillableSolution
-    solution: hypospray
-  - type: ExaminableSolution
-    solution: hypospray
-  - type: Hypospray
-    onlyAffectsMobs: false
-  - type: UseDelay
-    delay: 0.5
-  - type: Appearance
-  - type: SolutionContainerVisuals
-    maxFillLevels: 4
-    fillBaseName: hypo_fill
-    solutionName: hypospray
 
 - type: entity
-  name: hyperzine injector
-  parent: [ChemicalMedipen, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, Stimpack]
   id: StimpackNT
-  description: Contains enough hyperzine for you to have the chemical's effect for 30 seconds. Use it when you're sure you're ready to throw down.
   components:
   - type: Item
     inhandVisuals:
@@ -57,30 +38,10 @@
     layers:
     - state: stimpen
       map: ["enum.SolutionContainerLayers.Fill"]
-  - type: SolutionContainerManager
-    solutions:
-      pen:
-        maxVol: 30
-        reagents:
-        - ReagentId: Stimulants
-          Quantity: 30
-  - type: SolutionContainerVisuals
-    maxFillLevels: 1
-    changeColor: false
-    emptySpriteName: stimpen_empty
-  - type: Hypospray
-    solutionName: pen
-    transferAmount: 30
-    onlyAffectsMobs: false
-    injectOnly: true
-  - type: StaticPrice
-    price: 500
 
 - type: entity
-  name: hyperzine microinjector
-  parent: [ChemicalMedipen, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, StimpackMini]
   id: StimpackMiniNT
-  description: A microinjector of hyperzine that give you about 15 seconds of the chemical's effects.
   components:
   - type: Item
     inhandVisuals:
@@ -101,16 +62,3 @@
     layers:
     - state: microstimpen
       map: ["enum.SolutionContainerLayers.Fill"]
-  - type: SolutionContainerManager
-    solutions:
-      pen:
-        maxVol: 15
-        reagents:
-        - ReagentId: Stimulants
-          Quantity: 15
-  - type: SolutionContainerVisuals
-    maxFillLevels: 1
-    changeColor: false
-    emptySpriteName: microstimpen_empty
-  - type: StaticPrice
-    price: 100

@@ -1,6 +1,6 @@
 - type: entity
   id: HappyHonkNukieNT
-  parent: [HappyHonk, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, HappyHonkNukie]
   name: robust nukie meal
   description: A sus meal with a potentially explosive surprise.
   suffix: Toy Unsafe
@@ -27,18 +27,14 @@
       - id: BalloonNT
         prob: 0.6
         orGroup: GiftPool
-      - id: PlushieNuke
+      - id: PlushieNukeNT
         orGroup: GiftPool
 
 - type: entity
-  parent: HappyHonkNukieNT
+  parent: [BaseTraitorContraband, HappyHonkNukieSnacks]
   id: HappyHonkNukieSnacksNT
-  suffix: Toy Unsafe, Snacks
   name: NanoTrasen snack box
   components:
-  - type: Storage
-    grid:
-    - 0,0,5,2
   - type: StorageFill
     contents:
     # toy
@@ -56,7 +52,7 @@
     - id: BalloonNT
       prob: 0.6
       orGroup: GiftPool
-    - id: PlushieNuke
+    - id: PlushieNukeNT
       orGroup: GiftPool
     # drinks - 4 cans, up to 2 blood-red brews
     - id: DrinkNukieCan
@@ -76,6 +72,6 @@
       prob: 0.05
       amount: 4
       orGroup: FoodPool
-    - id: FoodSnackSyndi
+    - id: FoodSnackNT
       amount: 4
       orGroup: FoodPool

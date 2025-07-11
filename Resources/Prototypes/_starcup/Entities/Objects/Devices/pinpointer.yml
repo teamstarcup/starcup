@@ -1,8 +1,7 @@
 - type: entity
   name: NanoTrasen pinpointer
-  description: Produced specifically for nuclear operative missions, get that disk!
   id: PinpointerNanotrasenNuclear
-  parent: [ PinpointerBase, BaseNanotrasenContraband ]
+  parent: [ BaseTraitorContraband, PinpointerSyndicateNuclear ]
   components:
   - type: Sprite
     layers:
@@ -14,6 +13,3 @@
       visible: false
   - type: Icon
     state: pinpointer-nanotrasen
-  - type: Pinpointer
-    component: NukeDisk
-    targetName: nuclear authentication disk

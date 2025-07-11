@@ -1,28 +1,18 @@
 - type: entity
-  parent: [ EncryptionKey, BaseNanotrasenContraband ]
+  parent: [ BaseTraitorContraband, EncryptionKeySyndie ]
   id: EncryptionKeyNT
   name: blueblood encryption key
-  description: An encryption key used by... wait... Who is the owner of this chip?
   components:
-  - type: EncryptionKey
-    channels:
-    - Syndicate
-    defaultChannel: Syndicate
   - type: Sprite
     layers:
     - state: crypt_nt
     - state: nano_label
 
 - type: entity
-  parent: [ EncryptionKey, BaseNanotrasenContraband ]
+  parent: [ BaseTraitorContraband, EncryptionKeyBinarySyndicate ]
   id: EncryptionKeyBinaryNanotrasen
-  name: binary translator key
   description: A NanoTrasen encryption key that translates binary signals used by silicons.
   components:
-  - type: EncryptionKey
-    channels:
-    - Binary
-    defaultChannel: Binary
   - type: Sprite
     layers:
     - state: crypt_nt

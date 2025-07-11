@@ -1,20 +1,9 @@
 - type: entity
-  parent: [BaseItem, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, ReinforcementRadio]
   abstract: true
   id: ReinforcementRadioNT
   name: NanoTrasen reinforcement radio
   description: Call in a NanoTrasen agent of questionable quality, instantly! Only basic equipment provided.
-  components:
-  - type: Sprite
-    sprite: Objects/Devices/communication.rsi
-    layers:
-    - state: old-radio
-  - type: UserInterface
-    interfaces:
-      enum.GhostRoleRadioUiKey.Key:
-        type: GhostRoleRadioBoundUserInterface
-  - type: ActivatableUI
-    key: enum.GhostRoleRadioUiKey.Key
 
 - type: entity
   parent: ReinforcementRadioNT

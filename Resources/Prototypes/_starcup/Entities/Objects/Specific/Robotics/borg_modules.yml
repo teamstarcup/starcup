@@ -56,7 +56,7 @@
 #syndicate modules
 - type: entity
   id: BorgModuleNanotrasenWeapon
-  parent: [ BaseBorgModule, BaseProviderBorgModule, BaseNanotrasenContraband ]
+  parent: [ BaseBorgModule, BaseProviderBorgModule, BaseTraitorContraband ]
   name: weapon cyborg module
   components:
   - type: Sprite
@@ -91,7 +91,7 @@
 
 - type: entity
   id: BorgModuleOperativeNT
-  parent: [ BaseBorgModuleNanotrasen, BaseProviderBorgModule, BaseNanotrasenContraband ]
+  parent: [ BaseBorgModuleNanotrasen, BaseProviderBorgModule, BaseTraitorContraband ]
   name: operative cyborg module
   description: A module that comes with a crowbar, an Emag, an Access Breaker and a NanoTrasen pinpointer.
   components:
@@ -111,7 +111,7 @@
 
 - type: entity
   id: BorgModuleEswordNT
-  parent: [ BaseBorgModuleNanotrasen, BaseProviderBorgModule, BaseNanotrasenContraband ]
+  parent: [ BaseBorgModuleNanotrasen, BaseProviderBorgModule, BaseTraitorContraband ]
   name: energy sword cyborg module
   description: A module that comes with a double energy sword.
   components:
@@ -129,7 +129,7 @@
 
 - type: entity
   id: BorgModuleL6CNT
-  parent: [ BaseBorgModuleNanotrasenAssault, BaseProviderBorgModule, BaseNanotrasenContraband ]
+  parent: [ BaseBorgModuleNanotrasenAssault, BaseProviderBorgModule, BaseTraitorContraband ]
   name: L6C ROW cyborg module
   description: A module that comes with a L6C.
   components:
@@ -147,7 +147,7 @@
 
 - type: entity
   id: BorgModuleMartyrNT
-  parent: [ BaseBorgModule, BaseProviderBorgModule, BaseNanotrasenContraband ]
+  parent: [ BaseBorgModule, BaseProviderBorgModule, BaseTraitorContraband ]
   name: martyr cyborg module
   description: "A module that comes with an explosive you probably don't want to handle yourself."
   components:

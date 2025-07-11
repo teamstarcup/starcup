@@ -1,32 +1,9 @@
 # Antag
 - type: entity
-  name: Python
-  parent: [BaseWeaponRevolver, BaseNanotrasenContraband]
+  parent: [BaseTraitorContraband, WeaponRevolverPython]
   id: WeaponRevolverPythonNT
   description: A powerful double-action revolver manufactured by NanoTrasen. Loud and flashy, perfect for any agent looking to make a statement. Loads 6 rounds of .45 magnum.
-  components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Revolvers/python.rsi
-  - type: Clothing
-    sprite: Objects/Weapons/Guns/Revolvers/python.rsi
-  - type: Gun
-    selectedMode: SemiAuto
-    fireRate: 2
-    availableModes:
-    - SemiAuto
-    soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/revolver.ogg
-      params:
-        volume: 2.25
 
 - type: entity
-  parent: WeaponRevolverPythonNT
+  parent: [BaseTraitorContraband, WeaponRevolverPythonAP]
   id: WeaponRevolverPythonAPNT
-  suffix: armor-piercing
-  components:
-  - type: RevolverAmmoProvider
-    whitelist:
-      tags:
-        - CartridgeMagnum
-        - SpeedLoaderMagnum
-    proto: CartridgeMagnumAP

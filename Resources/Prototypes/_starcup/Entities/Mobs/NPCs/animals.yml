@@ -2,33 +2,9 @@
 - type: entity
   name: monkey
   id: MobBaseNanotrasenMonkey
-  parent: MobBaseAncestor
-  description: Primitive non-sapient bipeds, for when you need something a little more resilient than a lab rat or guinea pig.
+  parent: MobBaseSyndicateMonkey
   suffix: NanoTrasen base
   components:
-  - type: NameIdentifier
-    group: Monkey
-  - type: SentienceTarget
-    flavorKind: station-event-random-sentience-flavor-primate
-  - type: Speech
-    speechSounds: Monkey
-    speechVerb: Monkey
-  - type: MonkeyAccent
-  - type: NpcFactionMember
-    factions:
-    - Syndicate
-  - type: GhostRole
-    prob: 0.05
-    makeSentient: true
-    name: ghost-role-information-monkey-name
-    description: ghost-role-information-monkey-description
-    rules: ghost-role-information-syndicate-reinforcement-rules
-    mindRoles:
-    # This is for syndicate monkeys that randomly gain sentience, thus have no summoner to team with
-    - MindRoleGhostRoleSoloAntagonist
-    raffle:
-      settings: default
-  - type: GhostTakeoverAvailable
   - type: Loadout
     prototypes: [NanotrasenOperativeGearMonkey]
 
@@ -49,81 +25,14 @@
   - type: NukeOperative
 
 - type: entity
-  name: grenade penguin
-  parent: [ MobPenguin, MobCombat, BaseNanotrasenContraband ]
+  parent: [ BaseTraitorContraband, MobGrenadePenguin ]
   id: MobGrenadePenguinNT
   description: A small penguin with a grenade strapped around its neck. Harvested by NanoTrasen from icy shit-hole planets.
-  components:
-  - type: MovementSpeedModifier
-    baseWalkSpeed: 3
-    baseSprintSpeed: 5
-  - type: InputMover
-  - type: MobMover
-  - type: HTN
-    rootTask:
-      task: SimpleHostileCompound
-  - type: NpcFactionMember
-    factions:
-    - Syndicate
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: penguin
-      sprite: Mobs/Animals/grenadepenguin.rsi
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.25
-        density: 25
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-  - type: DamageStateVisuals
-    states:
-      Alive:
-        Base: penguin
-      Critical:
-        Base: dead
-      Dead:
-        Base: dead
-  - type: MeleeWeapon
-    angle: 0
-    animation: WeaponArcBite
-    damage:
-      groups:
-        Brute: 5
-  - type: Item
-    size: Normal
-  - type: OnUseTimerTrigger
-    delay: 10
-    beepSound:
-      path: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg #funny sfx use
-      params:
-        volume: -2
-    beepInterval: 1
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 20
-    intensitySlope: 20
-    totalIntensity: 225
-  - type: ExplodeOnTrigger
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 50
-      behaviors:
-      - !type:ExplodeBehavior
 
 - type: entity
   name: NanoCat
   id: MobCatNT
-  parent: MobCatSpace
-  description: Explosive kitten.
+  parent: MobCatSyndy
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Pets/cat.rsi
@@ -148,23 +57,3 @@
     - MindRoleGhostRoleTeamAntagonist
     raffle:
       settings: default
-  - type: GhostTakeoverAvailable
-  - type: AutoImplant
-    implants:
-    - MicroBombImplant
-  - type: ExplosionResistance
-    damageCoefficient: 0.2
-  - type: NpcFactionMember
-    factions:
-    - Syndicate
-  - type: MeleeWeapon
-    altDisarm: false
-    angle: 0
-    animation: WeaponArcBite
-    soundHit:
-      path: /Audio/Effects/bite.ogg
-    damage:
-      types:
-        Slash: 6
-        Piercing: 6
-        Structural: 15

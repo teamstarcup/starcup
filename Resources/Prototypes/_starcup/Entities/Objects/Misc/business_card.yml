@@ -1,7 +1,7 @@
 - type: entity
   id: NanotrasenBusinessCard
   name: NanoTrasen business card
-  parent: [ Paper, BaseNanotrasenContraband ]
+  parent: [ BaseTraitorContraband, SyndicateBusinessCard ]
   description: A black card with NanoTrasen's logo. There's something written on the back.
   components:
     - type: Sprite
@@ -14,8 +14,6 @@
       - state: paper_stamp-generic
         map: ["enum.PaperVisualLayers.Stamp"]
         visible: false
-    - type: Paper
-      content: syndicate-business-card-base
     - type: PaperVisuals
 #      headerImagePath: "/Textures/Interface/Paper/paper_heading_syndicate_logo.svg.96dpi.png" # commented out until we can get a nanotrasen header
 #      headerMargin: 0.0, 0.0, 0.0, 2.0 # commented out until we can get a nanotrasen header
