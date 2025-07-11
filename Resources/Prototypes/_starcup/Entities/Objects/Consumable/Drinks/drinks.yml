@@ -1,0 +1,24 @@
+- type: entity
+  name: highball glass
+  description: For bright mixed drinks and having a good time. Holds up to 30 units.
+  parent: DrinkGlassBase
+  id: DrinkGlassHighball
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/glass_clear.rsi
+    layers:
+      - state: icon
+        map: [ "enum.SolutionContainerLayers.Base" ]
+      - state: fill1
+        map: [ "enum.SolutionContainerLayers.Fill" ]
+        visible: false
+      - state: icon-front
+        map: [ "enum.SolutionContainerLayers.Overlay" ]
+  - type: Appearance
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+  - type: SolutionContainerVisuals
+    maxFillLevels: 9
+    fillBaseName: fill
