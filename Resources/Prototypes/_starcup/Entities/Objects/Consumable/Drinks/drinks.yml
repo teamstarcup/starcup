@@ -18,14 +18,14 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 15
+        maxVol: 20
   - type: SolutionContainerVisuals
     maxFillLevels: 6
     fillBaseName: fill
 
 - type: entity
   name: cocktail glass
-  description: For drinks meant to be slowly savored. Holds up to 15 units.
+  description: For drinks meant to be slowly savored. Holds up to 20 units.
   parent: DrinkGlassBase
   id: DrinkGlassCocktail
   components:
@@ -43,7 +43,7 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 15
+        maxVol: 20
   - type: SolutionContainerVisuals
     maxFillLevels: 3
     fillBaseName: fill
