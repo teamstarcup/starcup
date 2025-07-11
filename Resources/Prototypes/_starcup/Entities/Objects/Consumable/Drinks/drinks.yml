@@ -1,0 +1,31 @@
+- type: entity
+  parent: DrinkGlass
+  id: DrinkChocolateGlassImitation
+  suffix: imitation chocolate
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: HotCocoaImitation
+          Quantity: 30
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/chocolateglass.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkCoffeeDecaf
+  suffix: decaf coffee
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: CoffeeDecaf
+          Quantity: 30
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/coffee.rsi
+    state: icon

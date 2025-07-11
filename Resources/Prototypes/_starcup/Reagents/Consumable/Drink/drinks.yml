@@ -1,0 +1,31 @@
+- type: reagent
+  id: CoffeeDecaf
+  name: reagent-name-coffee-decaf
+  parent: BaseDrink
+  desc: reagent-desc-coffee-decaf
+  physicalDesc: reagent-physical-desc-aromatic
+  flavor: coffee
+  color: "#664300"
+  recognizable: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/coffeeglass.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  parent: HotCocoa
+  id: HotCocoaImitation
+  name: reagent-name-hot-cocoa-imitation
+  desc: reagent-desc-hot-cocoa-imitation
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2

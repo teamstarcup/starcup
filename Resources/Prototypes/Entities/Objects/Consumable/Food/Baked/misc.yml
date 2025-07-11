@@ -117,13 +117,15 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 12
+        maxVol: 14 # starcup
         reagents:
         - ReagentId: Nutriment
           Quantity: 6
         - ReagentId: Vitamin
           Quantity: 2
         - ReagentId: CocoaPowder
+          Quantity: 2
+        - ReagentId: Theobromine # starcup
           Quantity: 2
 
 - type: entity
@@ -197,6 +199,17 @@
   components:
   - type: Sprite
     state: COOKIE!!!
+  # begin starcup: add theobromine
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 6
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+        - ReagentId: Theobromine
+          Quantity: 1
+  # end starcup
 
 - type: entity
   name: oatmeal cookie
