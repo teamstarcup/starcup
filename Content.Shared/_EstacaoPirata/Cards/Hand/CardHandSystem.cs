@@ -1,5 +1,6 @@
 using Content.Shared._EstacaoPirata.Cards.Card;
 using Content.Shared._EstacaoPirata.Cards.Stack;
+using Content.Shared.Examine;  // starcup
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction;
 using Content.Shared.Popups;
@@ -39,6 +40,8 @@ public sealed class CardHandSystem : EntitySystem
         SubscribeLocalEvent<CardHandComponent, CardHandDrawMessage>(OnCardDraw);
         SubscribeLocalEvent<CardHandComponent, CardStackQuantityChangeEvent>(OnStackQuantityChange);
         SubscribeLocalEvent<CardHandComponent, GetVerbsEvent<AlternativeVerb>>(OnAlternativeVerb);
+
+        SubscribeLocalEvent<CardHandComponent, ExaminedEvent>(OnExamined);  // starcup
     }
 
     private void OnStackQuantityChange(EntityUid uid, CardHandComponent comp, CardStackQuantityChangeEvent args)
@@ -232,4 +235,45 @@ public sealed class CardHandSystem : EntitySystem
             Log.Error($"Failed to spawn {prototype} at coordinates {Transform(uid).Coordinates}");
         return worldEntity;
     }
+
+    // begin starcup: display a summary of cards held in the hand when examined.
+    private void OnExamined(EntityUid handUid, CardHandComponent cardHandComponent, ExaminedEvent args)
+    {
+        if (_net.IsClient)
+        {
+            return;
+        }
+
+        if (Comp<CardStackComponent>(handUid) is not { } cardStackComponent)
+        {
+            return;
+        }
+
+        var cardNames = new List<string>();
+        foreach (var cardUid in cardStackComponent.Cards)
+        {
+            if (Comp<CardComponent>(cardUid) is not { } cardComponent)
+            {
+                continue;
+            }
+
+            cardNames.Add(cardComponent.Name);
+        }
+
+        if (!args.IsInDetailsRange || cardHandComponent.Flipped)
+        {
+            return;
+        }
+
+        var handSummary = "";
+        foreach (var cardName in cardNames)
+        {
+            var localizedCardName = Loc.GetString(cardName);
+            var cardNameSingular = Loc.GetString("card-name-singular", ("cardName", localizedCardName));
+            handSummary += $"{cardNameSingular}, ";
+        }
+
+        args.PushText(Loc.GetString("card-hand-contains", ("cards", handSummary)).Trim().TrimEnd(','));
+    }
+    // end starcup
 }
