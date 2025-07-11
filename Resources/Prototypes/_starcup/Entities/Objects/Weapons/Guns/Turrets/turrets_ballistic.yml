@@ -1,14 +1,10 @@
 - type: entity
-  parent: [BaseWeaponBallisticTurret, BaseSyndicateContraband]
+  parent: [BaseTraitorContraband, WeaponTurretSyndicate]
   id: WeaponTurretNanotrasenAntag
   suffix: NanoTrasen (Antag)
-  components:
-  - type: NpcFactionMember
-    factions:
-    - Syndicate
 
 - type: entity
-  parent: BaseWeaponBallisticTurret
+  parent: WeaponTurretSyndicateDisposable
   id: WeaponTurretNanotrasenDisposableAntag
   name: disposable ballistic turret
   suffix: NanoTrasen (Antag), Disposable
@@ -42,7 +38,7 @@
     capacity: 50
   - type: Construction
     deconstructionTarget: null
-    graph: WeaponTurretSyndicateDisposable
+    graph: WeaponTurretNanotrasenDisposableAntag
     node: disposableTurret
   - type: Repairable
     qualityNeeded: "Anchoring"
