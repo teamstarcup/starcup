@@ -1420,6 +1420,11 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.07 # starcup: decreased from 0.15
+      # begin starcup: add caffeine
+      - !type:AdjustReagent
+        reagent: Caffeine
+        amount: 0.05
+      # end starcup
 
 - type: reagent
   id: JackRose
@@ -2283,7 +2288,7 @@
           reagent: Ethanol
           amount: 0.07 # starcup: decreased from 0.1
         - !type:AdjustReagent
-          reagent: Theobromine
+          reagent: Caffeine # starcup: replacement for theobromine
           amount: 0.05
         - !type:ModifyStatusEffect
           effectProto: StatusEffectDrowsiness
@@ -2314,7 +2319,7 @@
           reagent: Ethanol
           amount: 0.06 # starcup: decreased from 0.15
         - !type:AdjustReagent
-          reagent: Theobromine
+          reagent: Caffeine # starcup: replacement for theobromine
           amount: 0.05
         - !type:ModifyStatusEffect
           effectProto: StatusEffectDrowsiness
@@ -2345,7 +2350,7 @@
           reagent: Ethanol
           amount: 0.06 # starcup: decreased from 0.15
         - !type:AdjustReagent
-          reagent: Theobromine
+          reagent: Caffeine # starcup: replacement for theobromine
           amount: 0.05
         - !type:ModifyStatusEffect
           effectProto: StatusEffectDrowsiness
@@ -2376,7 +2381,7 @@
           reagent: Ethanol
           amount: 0.11 # starcup: decreased from 0.15
         - !type:AdjustReagent
-          reagent: Theobromine
+          reagent: Caffeine # starcup: replacement for theobromine
           amount: 0.05
         - !type:ModifyStatusEffect
           effectProto: StatusEffectDrowsiness
@@ -2407,7 +2412,7 @@
           reagent: Ethanol
           amount: 0.07
         - !type:AdjustReagent
-          reagent: Theobromine
+          reagent: Caffeine # starcup: replacement for theobromine
           amount: 0.05
         - !type:ModifyStatusEffect
           effectProto: StatusEffectDrowsiness
@@ -2438,7 +2443,7 @@
           reagent: Ethanol
           amount: 0.06 # starcup: decreased from 0.15
         - !type:AdjustReagent
-          reagent: Theobromine
+          reagent: Caffeine # starcup: replacement for theobromine
           amount: 0.05
         - !type:ModifyStatusEffect
           effectProto: StatusEffectDrowsiness
@@ -2667,6 +2672,11 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.08 # starcup: decreased from 0.2
+      # begin starcup: add caffeine
+      - !type:AdjustReagent
+        reagent: Caffeine
+        amount: 0.05
+      # end starcup
 
 - type: reagent
   id: Daiquiri
