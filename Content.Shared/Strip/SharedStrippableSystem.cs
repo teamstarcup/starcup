@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Shared._EE.Strip.Components;  // starcup
 using Content.Shared.Administration.Logs;
 using Content.Shared.CombatMode;
 using Content.Shared.Cuffs;
@@ -699,4 +700,16 @@ public abstract class SharedStrippableSystem : EntitySystem
 
         return !HasComp<BypassInteractionChecksComponent>(viewer);
     }
+
+    // begin starcup: allow entities to be hidden from the strip menu via StripMenuHiddenComponent
+    public bool IsStripHidden(EntityUid? wornEntity, EntityUid? viewer)
+    {
+        if (HasComp<StripMenuHiddenComponent>(wornEntity) && !HasComp<BypassInteractionChecksComponent>(viewer))
+        {
+            return true;
+        }
+
+        return false;
+    }
+    // end starcup
 }
