@@ -256,13 +256,13 @@
   - Shake
   reactants:
     Gin:
-      amount: 1
+      amount: 2 # starcup: increased from 1
     Vermouth:
       amount: 1
     JuiceOrange:
       amount: 1
   products:
-    Bronx: 3
+    Bronx: 4 # starcup: increased from 3
 
 - type: reaction
   id: CafeLatte
@@ -288,13 +288,13 @@
   id: Cosmopolitan
   reactants:
     Vodka:
-      amount: 1
+      amount: 2 # starcup: increased from 1
     JuiceBerry:
       amount: 1
     JuiceLime:
       amount: 1
   products:
-    Cosmopolitan: 3
+    Cosmopolitan: 4 # starcup: increased from 3
 
 - type: reaction
   id: CreamOfCoconut
@@ -845,13 +845,13 @@
     JuiceLime:
       amount: 1
     Rum:
-      amount: 1
+      amount: 2 # starcup: increased from 1
     SodaWater:
       amount: 1
     Sugar:
       amount: 1
   products:
-    Mojito: 4
+    Mojito: 5 # starcup: increased from 4
 
 - type: reaction
   id: MonkeyBusiness
@@ -1166,12 +1166,16 @@
 - type: reaction
   id: TequilaSunrise
   reactants:
+  # begin starcup: recipe change
     JuiceOrange:
-      amount: 1
+      amount: 2 # increased from 1
     Tequila:
-      amount: 2
+      amount: 1 # decreased from 2
+    Grenadine:
+      amount: 1 # added
   products:
-    TequilaSunrise: 3
+    TequilaSunrise: 4
+  # end starcup
 
 - type: reaction
   id: ThreeMileIsland
@@ -1398,7 +1402,7 @@
   - Shake
   reactants:
     Rum:
-      amount: 1
+      amount: 2 # starcup: increased from 1
     JuiceLime:
       amount: 1
     Sugar:
@@ -1406,7 +1410,7 @@
     Ice:
       amount: 1
   products:
-    Caipirinha: 4
+    Caipirinha: 5 # starcup: increased from 4
 
 - type: reaction
   id: Daiquiri

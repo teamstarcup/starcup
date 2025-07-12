@@ -72,3 +72,13 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 9
     fillBaseName: fill
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkChocolateGlassImitation
+  suffix: imitation chocolate
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30

@@ -85,7 +85,7 @@
         time: 2
         type: Remove
       - !type:AdjustReagent
-        reagent: Theobromine
+        reagent: Caffeine # starcup: replacement for theobromine
         amount: 0.1
   fizziness: 0.4
 
@@ -268,8 +268,13 @@
       - !type:SatiateThirst
         factor: 2
       - !type:AdjustReagent
-        reagent: Theobromine
+        reagent: Caffeine # starcup: replacement for theobromine
         amount: 0.1
+      # begin starcup: add alcohol content
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.06
+      # end starcup
     Poison:
       effects:
       - !type:HealthChange

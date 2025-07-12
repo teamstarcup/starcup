@@ -1,0 +1,32 @@
+- type: entity
+  name: imitation cocoa pod
+  parent: FoodProduceBase
+  id: FoodCocoaPodImitation
+  description: It's perfectly disguised with the other cocoa plants. One could say there's an...
+  components:
+  - type: FlavorProfile
+    flavors:
+      - chocolate
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 14
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 2
+        - ReagentId: Vitamin
+          Quantity: 1
+        - ReagentId: CocoaPowderImitation
+          Quantity: 1
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/cocoa.rsi
+  - type: Produce
+    seedId: cocoaImitation
+  - type: SpawnItemsOnUse
+    items:
+      - id: FoodCocoaBeansImitation
+    sound:
+      path: /Audio/Effects/packetrip.ogg
+  - type: Tag
+    tags:
+    - Fruit

@@ -42,7 +42,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.05
+        amount: 0.07 # starcup: increased from 0.05
 
 - type: reagent
   id: Silverjack
@@ -65,7 +65,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.0625
+        amount: 0.09 # starcup: increased from 0.0625
 
 - type: reagent
   id: Brainbomb
@@ -95,7 +95,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.085
+        amount: 0.07 # starcup: decreased from 0.085
       - !type:AdjustReagent
         reagent: THC
         amount: 0.33
@@ -122,9 +122,9 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.025
+#      - !type:AdjustReagent # starcup: <0.06 ethanol doesn't do anything
+#        reagent: Ethanol
+#        amount: 0.025
 
 - type: reagent
   id: CircusJuice
@@ -147,7 +147,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.0625
+        amount: 0.06 # starcup: rounded down from 0.0625 for standardization
       - !type:Emote #It's very funny
         emote: Laugh
         probability: 0.15
@@ -173,7 +173,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.065
+        amount: 0.06 # starcup: rounded down from 0.065 for standardization
       - !type:AdjustTemperature
         amount: 75 # thermal energy, not temperature!
 
@@ -196,9 +196,9 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.03
+#      - !type:AdjustReagent # starcup: <0.06 ethanol doesn't do anything
+#        reagent: Ethanol
+#        amount: 0.03
 - type: reagent
   id: Angobitters
   name: reagent-name-angobitters
@@ -213,6 +213,6 @@
       effects:
       - !type:SatiateThirst
         factor: 1
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.3
+#      - !type:AdjustReagent # starcup: <0.06 ethanol doesn't do anything
+#        reagent: Ethanol
+#        amount: 0.03
