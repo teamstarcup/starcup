@@ -147,7 +147,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.2
+        amount: 0.07 # starcup: decreased from 0.2
 
 - type: reagent
   id: Ethanol
@@ -242,6 +242,16 @@
   metamorphicMaxFillLevels: 3
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.08 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: MelonLiquor
@@ -257,6 +267,16 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.08 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: NTCahors
@@ -386,6 +406,16 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.08 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: Vodka
@@ -507,6 +537,16 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.08 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: AlliesCocktail
@@ -522,6 +562,16 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.17 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: Aloe
@@ -552,6 +602,16 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: Andalusia
@@ -567,6 +627,16 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1 # increased from 0.06
+  # end starcup
 
 #Antifreeze as a drink is a bright blue color while it is an orangish red otherwise.
 #As a result this sprite doesn't need changing.
@@ -592,7 +662,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.15
+        amount: 0.1 # starcup: decreased from 0.15
 
 - type: reagent
   id: AtomicBomb
@@ -615,7 +685,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.15
+        amount: 0.12 # starcup: decreased from 0.15
       - !type:AdjustReagent
         reagent: Uranium
         amount: 0.05
@@ -641,7 +711,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.15
+        amount: 0.13 # starcup: decreased from 0.15
 
 - type: reagent
   id: BahamaMama
@@ -657,6 +727,16 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: BananaHonk
@@ -672,6 +752,13 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup: removed alcohol content
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+  # end starcup
 
 - type: reagent
   id: Barefoot
@@ -709,7 +796,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.15
+        amount: 0.07 # starcup: decreased from 0.15
   fizziness: 0.3
 
 - type: reagent
@@ -733,7 +820,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.2
+        amount: 0.16 # starcup: decreased from 0.2
 
 - type: reagent
   id: BloodyMary
@@ -749,6 +836,17 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.07 # increased from 0.06
+  # end starcup
+
 
 - type: reagent
   id:  Booger
@@ -786,7 +884,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.2
+        amount: 0.16 # starcup: decreased from 0.2
 
 - type: reagent
   id: Bronx
@@ -802,6 +900,16 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.12 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: CoconutRum
@@ -824,7 +932,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.2
+        amount: 0.13 # starcup: decreased from 0.2
 
 - type: reagent
   id: Cosmopolitan
@@ -847,7 +955,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.15
+        amount: 0.1 # starcup: decreased from 0.15
 
 - type: reagent
   id: CrushDepth
@@ -863,6 +971,16 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: CubaLibre
@@ -902,6 +1020,16 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: DemonsBlood
@@ -933,6 +1061,16 @@
   metamorphicMaxFillLevels: 3
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.09 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: DoctorsDelight
@@ -1003,6 +1141,16 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: ElectricShark
@@ -1018,6 +1166,16 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: ErikaSurprise
@@ -1127,7 +1285,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.2
+        amount: 0.18 # starcup: decreased from 0.2
 
 - type: reagent
   id: Grog
@@ -1158,6 +1316,16 @@
   metamorphicMaxFillLevels: 6
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.08 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: Hooch
@@ -1205,7 +1373,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.15
+        amount: 0.1 # starcup: decreased from 0.15
 
 - type: reagent
   id: IrishCream
@@ -1228,7 +1396,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.2
+        amount: 0.13 # starcup: decreased from 0.2
 
 - type: reagent
   id: IrishCoffee
@@ -1251,7 +1419,12 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.15
+        amount: 0.07 # starcup: decreased from 0.15
+      # begin starcup: add caffeine
+      - !type:AdjustReagent
+        reagent: Caffeine
+        amount: 0.05
+      # end starcup
 
 - type: reagent
   id: JackRose
@@ -1282,6 +1455,16 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: Kalimotxo
@@ -1319,7 +1502,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.15
+        amount: 0.13 # starcup: decreased from 0.15
 
 - type: reagent
   id: Manhattan
@@ -1335,6 +1518,16 @@
   metamorphicMaxFillLevels: 3
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.16 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: ManhattanProject
@@ -1350,6 +1543,16 @@
   metamorphicMaxFillLevels: 3
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.18 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: ManlyDorf
@@ -1381,6 +1584,16 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.13 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: Martini
@@ -1403,7 +1616,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.15
+        amount: 0.16 # starcup: increased from 0.15
 
 - type: reagent
   id: Mead
@@ -1436,6 +1649,16 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   fizziness: 0.3
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.08 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: MonkeyBusiness
@@ -1451,6 +1674,16 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.13 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: Moonshine
@@ -1525,7 +1758,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.2
+        amount: 0.06 # starcup: decreased from 0.2
 
 - type: reagent
   id: Patron
@@ -1548,7 +1781,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.2
+        amount: 0.18 # starcup: decreased from 0.2
 
 - type: reagent
   id: RedMead
@@ -1625,6 +1858,16 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: ScrewdriverCocktail
@@ -1673,7 +1916,7 @@
           factor: 2
         - !type:AdjustReagent
           reagent: Ethanol
-          amount: 0.15
+          amount: 0.09 # starcup: decreased from 0.15
 
 - type: reagent
   id: Silencer
@@ -1782,7 +2025,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.15
+        amount: 0.06 # starcup: decreased from 0.15
 
 - type: reagent
   id: TheMartinez
@@ -1799,6 +2042,16 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   fizziness: 0.2
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.07 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: ThreeMileIsland
@@ -1821,7 +2074,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.15
+        amount: 0.12 # starcup: decreased from 0.15
       - !type:AdjustReagent
         reagent: Uranium
         amount: 0.05
@@ -1840,6 +2093,16 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: Vampiro
@@ -1855,6 +2118,16 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup additions
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.08 # increased from 0.06
+  # end starcup
 
 - type: reagent
   id: VodkaMartini
@@ -1877,7 +2150,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.15
+        amount: 0.16 # starcup: increased from 0.15
 
 - type: reagent
   id: VodkaTonic
@@ -1966,7 +2239,7 @@
           factor: 1
         - !type:AdjustReagent
           reagent: Ethanol
-          amount: 0.15
+          amount: 0.06 # starcup: decreased from 0.15
   fizziness: 0.5
 
 - type: reagent
@@ -1990,7 +2263,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.15
+        amount: 0.08 # starcup: decreased from 0.15
 
 - type: reagent
   id: VodkaRedBool
@@ -2013,9 +2286,9 @@
           factor: 1
         - !type:AdjustReagent
           reagent: Ethanol
-          amount: 0.10
+          amount: 0.07 # starcup: decreased from 0.1
         - !type:AdjustReagent
-          reagent: Theobromine
+          reagent: Caffeine # starcup: replacement for theobromine
           amount: 0.05
         - !type:ModifyStatusEffect
           effectProto: StatusEffectDrowsiness
@@ -2044,9 +2317,9 @@
           factor: 1
         - !type:AdjustReagent
           reagent: Ethanol
-          amount: 0.15
+          amount: 0.06 # starcup: decreased from 0.15
         - !type:AdjustReagent
-          reagent: Theobromine
+          reagent: Caffeine # starcup: replacement for theobromine
           amount: 0.05
         - !type:ModifyStatusEffect
           effectProto: StatusEffectDrowsiness
@@ -2075,9 +2348,9 @@
           factor: 1
         - !type:AdjustReagent
           reagent: Ethanol
-          amount: 0.10
+          amount: 0.06 # starcup: decreased from 0.15
         - !type:AdjustReagent
-          reagent: Theobromine
+          reagent: Caffeine # starcup: replacement for theobromine
           amount: 0.05
         - !type:ModifyStatusEffect
           effectProto: StatusEffectDrowsiness
@@ -2106,9 +2379,9 @@
           factor: 1
         - !type:AdjustReagent
           reagent: Ethanol
-          amount: 0.15
+          amount: 0.11 # starcup: decreased from 0.15
         - !type:AdjustReagent
-          reagent: Theobromine
+          reagent: Caffeine # starcup: replacement for theobromine
           amount: 0.05
         - !type:ModifyStatusEffect
           effectProto: StatusEffectDrowsiness
@@ -2139,7 +2412,7 @@
           reagent: Ethanol
           amount: 0.07
         - !type:AdjustReagent
-          reagent: Theobromine
+          reagent: Caffeine # starcup: replacement for theobromine
           amount: 0.05
         - !type:ModifyStatusEffect
           effectProto: StatusEffectDrowsiness
@@ -2168,9 +2441,9 @@
           factor: 1
         - !type:AdjustReagent
           reagent: Ethanol
-          amount: 0.15
+          amount: 0.06 # starcup: decreased from 0.15
         - !type:AdjustReagent
-          reagent: Theobromine
+          reagent: Caffeine # starcup: replacement for theobromine
           amount: 0.05
         - !type:ModifyStatusEffect
           effectProto: StatusEffectDrowsiness
@@ -2199,7 +2472,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.2
+        amount: 0.07 # starcup: decreased from 0.2
 
 - type: reagent
   id: Caipirinha
@@ -2222,7 +2495,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.1
+        amount: 0.08 # starcup: decreased from 0.1
 
 - type: reagent
   id: MoscowMule
@@ -2245,7 +2518,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.2
+        amount: 0.13 # starcup: decreased from 0.2
       - !type:AdjustReagent
         reagent: Copper
         amount: 0.05
@@ -2329,7 +2602,7 @@
         factor: 1
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.15
+        amount: 0.06 # starcup: decreased from 0.15
 
 - type: reagent
   id: DeathInTheAfternoon
@@ -2352,7 +2625,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.3
+        amount: 0.22 # starcup: decreased from 0.3
 
 - type: reagent
   id: Empress75
@@ -2375,7 +2648,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.3
+        amount: 0.06 # starcup: decreased from 0.3
 
 - type: reagent
   id: EspressoMartini
@@ -2398,7 +2671,12 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.2
+        amount: 0.08 # starcup: decreased from 0.2
+      # begin starcup: add caffeine
+      - !type:AdjustReagent
+        reagent: Caffeine
+        amount: 0.05
+      # end starcup
 
 - type: reagent
   id: Daiquiri
@@ -2421,7 +2699,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.1
+        amount: 0.13 # starcup: increased from 0.1
 
 - type: reagent
   id: TheSunAlsoRises
@@ -2444,7 +2722,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.3
+        amount: 0.16 # starcup: decreased from 0.3
 
 - type: reagent
   id: WhiskeySour
@@ -2467,7 +2745,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.2
+        amount: 0.08 # starcup: decreased from 0.2
 
 - type: reagent
   id: ZombieCocktail

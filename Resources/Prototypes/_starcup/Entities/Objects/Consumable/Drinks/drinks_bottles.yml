@@ -1,0 +1,16 @@
+- type: entity
+  parent: [DrinkBottleVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: DrinkCoffeeJugDecaf
+  name: decaf coffee jug
+  description: Wake up juice, of the heated kind.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: CoffeeDecaf
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-coffee-decaf
