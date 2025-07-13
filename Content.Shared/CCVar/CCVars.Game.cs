@@ -33,7 +33,7 @@ public sealed partial class CCVars
     ///     Controls the default game preset.
     /// </summary>
     public static readonly CVarDef<string>
-        GameLobbyDefaultPreset = CVarDef.Create("game.defaultpreset", "greenshift", CVar.ARCHIVE); // starcup: make greenshift default
+        GameLobbyDefaultPreset = CVarDef.Create("game.defaultpreset", "secret", CVar.ARCHIVE);
 
     /// <summary>
     ///     Controls if the game can force a different preset if the current preset's criteria are not met.
@@ -45,7 +45,7 @@ public sealed partial class CCVars
     ///     The preset for the game to fall back to if the selected preset could not be used, and fallback is enabled.
     /// </summary>
     public static readonly CVarDef<string>
-        GameLobbyFallbackPreset = CVarDef.Create("game.fallbackpreset", "Greenshift", CVar.ARCHIVE); // starcup: default to greenshift on fallback
+        GameLobbyFallbackPreset = CVarDef.Create("game.fallbackpreset", "Traitor,Extended", CVar.ARCHIVE);
 
     /// <summary>
     ///     Controls if people can win the game in Suspicion or Deathmatch.
