@@ -58,6 +58,7 @@
   id: BorgModuleNanotrasenWeapon
   parent: [ BaseBorgModule, BaseProviderBorgModule, BaseTraitorContraband ]
   name: weapon cyborg module
+  suffix: NanoTrasen
   components:
   - type: Sprite
     sprite: _starcup/Objects/Specific/Robotics/borgmodule.rsi
@@ -93,6 +94,7 @@
   id: BorgModuleOperativeNT
   parent: [ BaseBorgModuleNanotrasen, BaseProviderBorgModule, BaseTraitorContraband ]
   name: operative cyborg module
+  suffix: NanoTrasen
   description: A module that comes with a crowbar, an Emag, an Access Breaker and a NanoTrasen pinpointer.
   components:
     - type: Sprite
@@ -113,6 +115,7 @@
   id: BorgModuleEswordNT
   parent: [ BaseBorgModuleNanotrasen, BaseProviderBorgModule, BaseTraitorContraband ]
   name: energy sword cyborg module
+  suffix: NanoTrasen
   description: A module that comes with a double energy sword.
   components:
     - type: Sprite
@@ -131,6 +134,7 @@
   id: BorgModuleL6CNT
   parent: [ BaseBorgModuleNanotrasenAssault, BaseProviderBorgModule, BaseTraitorContraband ]
   name: L6C ROW cyborg module
+  suffix: NanoTrasen
   description: A module that comes with a L6C.
   components:
     - type: Sprite
@@ -149,6 +153,7 @@
   id: BorgModuleMartyrNT
   parent: [ BaseBorgModule, BaseProviderBorgModule, BaseTraitorContraband ]
   name: martyr cyborg module
+  suffix: NanoTrasen
   description: "A module that comes with an explosive you probably don't want to handle yourself."
   components:
     - type: Sprite

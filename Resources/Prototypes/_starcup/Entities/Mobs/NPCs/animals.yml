@@ -20,13 +20,14 @@
 - type: entity
   id: MobMonkeyNanotrasenAgentNukeops # Reinforcement exclusive to nukeops uplink
   parent: MobBaseNanotrasenMonkey
-  suffix: NukeOps
+  suffix: NukeOps, NanoTrasen
   components:
   - type: NukeOperative
 
 - type: entity
   parent: [ BaseTraitorContraband, MobGrenadePenguin ]
   id: MobGrenadePenguinNT
+  suffix: NanoTrasen
   description: A small penguin with a grenade strapped around its neck. Harvested by NanoTrasen from icy shit-hole planets.
 
 - type: entity
