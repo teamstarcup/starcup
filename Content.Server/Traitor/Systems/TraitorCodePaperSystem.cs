@@ -74,9 +74,9 @@ public sealed class TraitorCodePaperSystem : EntitySystem
         if (!codesMessage.IsEmpty)
         {
             if (i == 1)
-                traitorCode = Loc.GetString("traitor-codes-message-singular") + codesMessage;
+                traitorCode = Loc.GetString("traitor-codes-message-singular-starcup") + codesMessage; // starcup: Syndicate to NT
             else
-                traitorCode = Loc.GetString("traitor-codes-message-plural") + codesMessage;
+                traitorCode = Loc.GetString("traitor-codes-message-plural-starcup") + codesMessage; // starcup: Syndicate to NT
         }
         return !codesMessage.IsEmpty;
     }

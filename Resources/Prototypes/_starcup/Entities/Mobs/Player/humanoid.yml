@@ -1,0 +1,22 @@
+## Syndicate
+
+- type: entity
+  id: RandomHumanoidSpawnerNanotrasenAgent
+  name: NanoTrasen agent
+  components:
+    - type: Sprite
+      sprite: Mobs/Species/Human/parts.rsi
+      state: full
+    - type: RandomMetadata
+      nameSegments: [ NamesDeathCommando ]
+    - type: RandomHumanoidSpawner
+      settings: NanotrasenAgent
+
+- type: randomHumanoidSettings
+  id: NanotrasenAgent
+  components:
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: Loadout
+      prototypes: [NanotrasenOperativeGearExtremelyBasic]
+      roleLoadout: [ RoleSurvivalNanotrasen ]

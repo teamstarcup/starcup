@@ -1,0 +1,123 @@
+# ANTAG HARDSUITS
+# Blueblood Hardsuit
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitNT
+  name: blueblood hardsuit helmet
+  description: A heavily armored helmet designed for work in special operations. Property of NanoTrasen.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Head/Hardsuits/nanotrasen.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Head/Hardsuits/nanotrasen.rsi
+  - type: PointLight
+    color: green
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+# Blueblood Medic Hardsuit
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitNTMedic
+  name: blueblood medic hardsuit helmet
+  description: An advanced blue hardsuit helmet specifically designed for field medic operations.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Head/Hardsuits/ntmedic.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Head/Hardsuits/ntmedic.rsi
+  - type: PointLight
+    color: green
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+# NanoTrasen Elite Hardsuit
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitNTElite
+  name: NanoTrasen elite helmet
+  description: An elite version of the blueblood hardsuit's helmet, with improved radiation resistance and fireproofing. Property of NanoTrasen.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Head/Hardsuits/ntelite.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Head/Hardsuits/ntelite.rsi
+  - type: PointLight
+    color: red
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.005
+    coolingCoefficient: 0.005
+  - type: FireProtection
+    reduction: 0.2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+# NanoTrasen Commander Hardsuit
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitNTCommander
+  name: NanoTrasen commander helmet
+  description: A bulked up version of the blueblood hardsuit's helmet, purpose-built for the commander of a NanoTrasen operative squad. Has significantly improved armor for those deadly front-lines firefights.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Head/Hardsuits/ntcommander.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Head/Hardsuits/ntcommander.rsi
+  - type: PointLight
+    color: green
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+# NanoTrasen Juggernaut Hardsuit
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitJuggernautNT
+  name: NanoTrasen juggernaut helmet
+  description: Made of compressed blue matter, this helmet was designed in the Tau chromosphere facility.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Head/Hardsuits/ntjuggernaut.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Head/Hardsuits/ntjuggernaut.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9

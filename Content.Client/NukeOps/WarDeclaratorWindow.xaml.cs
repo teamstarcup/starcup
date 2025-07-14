@@ -73,7 +73,7 @@ public sealed partial class WarDeclaratorWindow : FancyWindow
                 break;
             case WarConditionStatus.NoWarShuttleDeparted:
                 StatusLabel.Text = Loc.GetString("war-declarator-boost-impossible");
-                InfoLabel.Text = Loc.GetString("war-declarator-conditions-left-outpost");
+                InfoLabel.Text = Loc.GetString("war-declarator-conditions-left-outpost-starcup"); // starcup: Syndicate to NT
                 StatusLabel.SetOnlyStyleClass(StyleNano.StyleClassPowerStateNone);
                 break;
             case WarConditionStatus.NoWarTimeout:

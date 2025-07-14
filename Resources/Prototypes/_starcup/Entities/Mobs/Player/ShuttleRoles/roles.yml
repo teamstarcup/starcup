@@ -1,0 +1,33 @@
+# Misc
+
+### NanoTrasen & Hostiles
+
+- type: entity
+  id: RandomHumanoidNanotrasenSoldierTeamLeader
+  name: NanoTrasen team leader ghost role
+  components:
+    - type: Sprite
+      sprite: Structures/Decoration/banner.rsi
+      state: banner
+    - type: RandomHumanoidSpawner
+      settings: NanotrasenSoldierTeamLeader
+
+- type: entity
+  id: RandomHumanoidNanotrasenSoldier
+  name: NanoTrasen soldier ghost role
+  components:
+    - type: Sprite
+      sprite: Structures/Decoration/banner.rsi
+      state: banner
+    - type: RandomHumanoidSpawner
+      settings: NanotrasenSoldier
+
+- type: entity
+  id: RandomHumanoidNanotrasenVisitor
+  name: NanoTrasen disaster victim ghost role
+  components:
+    - type: Sprite
+      sprite: Structures/Decoration/banner.rsi
+      state: banner
+    - type: RandomHumanoidSpawner
+      settings: NanotrasenVisitor

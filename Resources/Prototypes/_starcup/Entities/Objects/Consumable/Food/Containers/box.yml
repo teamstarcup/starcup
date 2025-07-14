@@ -1,0 +1,83 @@
+- type: entity
+  id: HappyHonkNukieNT
+  parent: [BaseTraitorContraband, HappyHonkNukie]
+  name: robust nukie meal
+  description: A sus meal with a potentially explosive surprise.
+  suffix: Toy Unsafe
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Storage/Happyhonk/nukie.rsi
+    state: box
+  - type: Item
+    sprite: _starcup/Objects/Storage/Happyhonk/nukie.rsi
+    heldPrefix: box
+  - type: StorageFill
+    contents:
+      - id: C4
+        prob: 0.02
+        orGroup: GiftPool
+      - id: ToyMarauder
+        orGroup: GiftPool
+      - id: ToyMauler
+        orGroup: GiftPool
+      - id: ToyNuke
+        orGroup: GiftPool
+      - id: ToySword
+        orGroup: GiftPool
+      - id: BalloonNT
+        prob: 0.6
+        orGroup: GiftPool
+      - id: PlushieNukeNT
+        orGroup: GiftPool
+
+- type: entity
+  parent: [BaseTraitorContraband, HappyHonkNukieSnacks]
+  id: HappyHonkNukieSnacksNT
+  name: NanoTrasen snack box
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Storage/Happyhonk/nukie.rsi
+    state: box
+  - type: Item
+    sprite: _starcup/Objects/Storage/Happyhonk/nukie.rsi
+    heldPrefix: box
+  - type: StorageFill
+    contents:
+    # toy
+    - id: C4
+      prob: 0.02
+      orGroup: GiftPool
+    - id: ToyMarauder
+      orGroup: GiftPool
+    - id: ToyMauler
+      orGroup: GiftPool
+    - id: ToyNuke
+      orGroup: GiftPool
+    - id: ToySword
+      orGroup: GiftPool
+    - id: BalloonNT
+      prob: 0.6
+      orGroup: GiftPool
+    - id: PlushieNukeNT
+      orGroup: GiftPool
+    # drinks - 4 cans, up to 2 blood-red brews
+    - id: DrinkNukieCan
+      prob: 0.2
+      orGroup: Drink1Pool
+    - id: DrinkColaCan
+      orGroup: Drink1Pool
+    - id: DrinkNukieCan
+      prob: 0.2
+      orGroup: Drink2Pool
+    - id: DrinkColaCan
+      orGroup: Drink2Pool
+    - id: DrinkColaCan
+      amount: 2
+    # food
+    - id: FoodSaladValid
+      prob: 0.05
+      amount: 4
+      orGroup: FoodPool
+    - id: FoodSnackNT
+      amount: 4
+      orGroup: FoodPool

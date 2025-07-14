@@ -1,0 +1,15 @@
+- type: entity
+  name: NanoTrasen pinpointer
+  id: PinpointerNanotrasenNuclear
+  parent: [ BaseTraitorContraband, PinpointerSyndicateNuclear ]
+  components:
+  - type: Sprite
+    layers:
+    - state: pinpointer-nanotrasen
+      map: ["enum.PinpointerLayers.Base"]
+    - state: pinonnull
+      map: ["enum.PinpointerLayers.Screen"]
+      shader: unshaded
+      visible: false
+  - type: Icon
+    state: pinpointer-nanotrasen

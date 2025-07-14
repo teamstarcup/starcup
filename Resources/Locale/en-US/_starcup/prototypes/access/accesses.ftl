@@ -7,3 +7,5 @@ id-card-access-level-mime = Mime
 id-card-access-level-musician = Musician
 id-card-access-level-reporter = Reporter
 id-card-access-level-zookeeper = Zookeeper
+
+id-card-access-level-syndicate-agent-starcup = NanoTrasen Agent

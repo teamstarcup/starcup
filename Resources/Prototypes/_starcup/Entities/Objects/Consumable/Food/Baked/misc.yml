@@ -1,0 +1,116 @@
+# Muffins
+
+- type: entity
+  name: imitation chocolate muffin
+  parent: FoodBakedMuffinChocolate
+  id: FoodBakedMuffinChocolateImitation
+  description: A delicious and spongy imitation chocolate muffin.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 14
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 6
+        - ReagentId: Vitamin
+          Quantity: 2
+        - ReagentId: CocoaPowderImitation
+          Quantity: 2
+
+# Cookies
+
+- type: entity
+  name: imitation chocolate chip cookie
+  parent: FoodBakedCookie
+  id: FoodBakedCookieImitation
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 6
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+
+# Waffles/Pancakes
+
+- type: entity
+  name: imitation chocolate chip pancake
+  parent: FoodBakedPancakeCc
+  id: FoodBakedPancakeCcImitation
+  description: A fluffy and delicious imitation chocolate chip pancake.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+
+# Misc
+
+- type: entity
+  name: imitation chocolate brownies
+  parent: FoodBakedBrownieBatch
+  id: FoodBakedBrownieBatchImitation
+  description: A pan of imitation chocolate brownies.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 78
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 30
+  - type: SliceableFood
+    count: 6
+    slice: FoodBakedBrownieImitation
+
+- type: entity
+  name: imitation chocolate brownie
+  parent: FoodBakedBrownie
+  id: FoodBakedBrownieImitation
+  description: A fresh baked imitation chocolate brownie.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 13
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+
+- type: entity
+  name: imitation chocolate special brownies
+  parent: FoodBakedCannabisBrownieBatch
+  id: FoodBakedCannabisBrownieBatchImitation
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 228
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 30
+        - ReagentId: THC
+          Quantity: 150
+  - type: SliceableFood
+    count: 6
+    slice: FoodBakedCannabisBrownieImitation
+
+- type: entity
+  name: imitation chocolate special brownie
+  parent: FoodBakedCannabisBrownie
+  id: FoodBakedCannabisBrownieImitation
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 38
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+        - ReagentId: THC
+          Quantity: 25

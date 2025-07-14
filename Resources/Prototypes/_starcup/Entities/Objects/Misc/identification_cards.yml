@@ -1,3 +1,17 @@
+- type: entity
+  parent: [ IDCardStandard, BaseTraitorContraband ]
+  id: NanotrasenIDCard
+  name: NanoTrasen ID card
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/id_cards.rsi
+    layers:
+    - state: nanotrasen
+  - type: Access
+    tags:
+    - NuclearOperative
+    - SyndicateAgent
+
 # Bartender
 - type: entity
   parent: BartenderIDCard

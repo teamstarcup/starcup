@@ -1,0 +1,39 @@
+- type: entity
+  parent: BoxCardboard
+  id: BoxSurvivalNanotrasen
+  name: extended-capacity survival box
+  description: It's a box with basic internals inside. This one is labelled to contain an extended-capacity tank.
+  suffix: NanoTrasen
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingMaskGasNanotrasen
+    - id: ExtendedEmergencyOxygenTankFilled
+    - id: EmergencyMedipen
+    - id: SpaceMedipen
+    - id: Flare
+    - id: FoodPSB
+  - type: Sprite
+    layers:
+    - state: internals
+    - state: extendedtank
+
+- type: entity
+  parent: BoxSurvivalNanotrasen
+  id: BoxSurvivalNanotrasenNitrogen
+  suffix: NanoTrasen N2
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingMaskGasNanotrasen
+    - id: ExtendedEmergencyNitrogenTankFilled
+    - id: EmergencyMedipen
+    - id: SpaceMedipen
+    - id: Flare
+    - id: FoodPSB
+  - type: Sprite
+    layers:
+    - state: internals
+    - state: nitrogentank
+  - type: Label
+    currentLabel: reagent-name-nitrogen

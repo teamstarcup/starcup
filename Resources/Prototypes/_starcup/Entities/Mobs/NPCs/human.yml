@@ -1,0 +1,21 @@
+- type: entity
+  name: NanoTrasen footsoldier
+  parent: BaseMobHuman
+  id: MobNanotrasenFootsoldier
+  components:
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+    - type: Loadout
+      prototypes:
+        - NanotrasenFootsoldierGearRuin
+    - type: InputMover
+    - type: MobMover
+    - type: HTN
+      rootTask:
+        task: SimpleHumanoidHostileCompound
+
+- type: entity
+  name: NanoTrasen shuttle pilot
+  parent: MobNanotrasenFootsoldier
+  id: MobNanotrasenFootsoldierPilot

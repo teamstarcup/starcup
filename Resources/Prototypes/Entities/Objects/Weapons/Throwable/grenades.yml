@@ -42,7 +42,7 @@
 - type: entity
   name: explosive grenade
   description: Grenade that creates a small but devastating explosion.
-  parent: [GrenadeBase, BaseSyndicateContraband]
+  parent: [GrenadeBase, BaseTraitorContraband] # starcup: shared contraband level with nt gear
   id: ExGrenade
   components:
   - type: ExplodeOnTrigger
@@ -171,7 +171,7 @@
 
 
 - type: entity
-  parent: [ GrenadeBase, BaseSyndicateContraband ]
+  parent: [ GrenadeBase, BaseTraitorContraband ] # starcup: shared contraband level with nt gear
   id: SingularityGrenade
   name: singularity grenade
   description: Grenade that simulates the power of a singularity, pulling things in a heap.
@@ -360,7 +360,7 @@
 - type: entity
   name: EMP grenade
   description: A grenade designed to wreak havoc on electronic systems.
-  parent: [GrenadeBase, BaseSyndicateContraband]
+  parent: [GrenadeBase, BaseTraitorContraband] # starcup: shared contraband level with nt gear
   id: EmpGrenade
   components:
   - type: Sprite
@@ -379,7 +379,7 @@
 - type: entity
   name: holy hand grenade
   description: O Lord, bless this thy hand grenade, that with it thou mayst blow thine enemies to tiny bits, in thy mercy.
-  parent: [GrenadeBase, BaseSyndicateContraband]
+  parent: [GrenadeBase, BaseTraitorContraband] # starcup: shared contraband level with nt gear
   id: HolyHandGrenade
   components:
   - type: Sprite

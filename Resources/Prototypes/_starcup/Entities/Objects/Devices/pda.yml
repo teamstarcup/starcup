@@ -1,3 +1,50 @@
+- type: entity
+  parent: [ BasePDA, BaseTraitorContraband ]
+  id: NTPDA
+  name: NanoTrasen PDA
+  description: Features state-of-the-art encryption technology for deep espionage assignments.
+  components:
+  - type: Pda
+    id: NanotrasenIDCard
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-nt
+  - type: PdaBorderColor
+    borderColor: "#145289"
+  - type: Icon
+    state: pda-nt
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    preinstalled:
+      - NotekeeperCartridge
+      - NanoTaskCartridge
+
+- type: entity
+  parent: [ BaseMedicalPDA, BaseTraitorContraband ]
+  id: NTAgentPDA
+  name: NanoTrasen corpsman PDA
+  description: For those days when healing normal NT agents aren't enough, try healing nuclear operatives instead!
+  components:
+  - type: Pda
+    id: NanotrasenIDCard
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-nt-agent
+  - type: PdaBorderColor
+    borderColor: "#145289"
+  - type: Icon
+    state: pda-nt-agent
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    preinstalled:
+      - NotekeeperCartridge
+      - NanoTaskCartridge
+      - MedTekCartridge
+
 # Bartender
 - type: entity
   parent: BartenderPDA

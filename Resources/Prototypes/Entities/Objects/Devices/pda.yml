@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: [ BaseItem, StorePresetUplink ] #PDA's have uplinks so they have to inherit the data.
+  parent: [ BaseItem, StorePresetUplinkNT ] #PDA's have uplinks so they have to inherit the data. # starcup: Syndicate to NT
   id: BasePDA
   name: PDA
   description: Personal Data Assistant.
@@ -642,7 +642,7 @@
   - type: Pda
     id: CaptainIDCard
     penSlot:
-      startingItem: PenCap
+      startingItem: PenCapSyndie # starcup: Syndicate recolors
       priority: -1
       whitelist:
         tags:

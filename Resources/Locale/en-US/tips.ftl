@@ -28,9 +28,11 @@ tips-dataset-27 = You can add labels to any item, including food or pill caniste
 tips-dataset-28 = Riot armor is significantly more powerful against opponents that aren't using guns compared to regular armor.
 tips-dataset-29 = As a ghost, you can use the Verb Menu to orbit around and follow any entity in game automatically.
 tips-dataset-30 = As a Traitor, you may sometimes be assigned to hunt other traitors, and in turn be hunted by others.
-tips-dataset-31 = As a Traitor, the syndicate encryption key can be used to communicate through a secure channel with any other traitors who have purchased it.
-tips-dataset-32 = As a Traitor, compromising important communications channels like security or engineering can give valuable intelligence. Be aware that this goes in both ways - security can compromise syndicate communications as well!
-tips-dataset-33 = As a Traitor, the syndicate toolbox is extremely versatile. For only 2 telecrystals, you can get a full set of tools to help you in an emergency, insulated combat gloves and a syndicate gas mask.
+# begin starcup: Syndicate to NT
+tips-dataset-31 = As a Traitor, the NanoTrasen encryption key can be used to communicate through a secure channel with any other traitors who have purchased it.
+tips-dataset-32 = As a Traitor, compromising important communications channels like security or engineering can give valuable intelligence. Be aware that this goes in both ways - security can compromise NanoTrasen communications as well!
+tips-dataset-33 = As a Traitor, the NanoTrasen toolbox is extremely versatile. For only 2 telecrystals, you can get a full set of tools to help you in an emergency, insulated combat gloves and a NanoTrasen gas mask.
+# end starcup
 tips-dataset-34 = As a Traitor, never underestimate the web vest. It may not provide space protection, but its cheap cost and robust protection makes it handy for protecting against trigger-happy foes.
 tips-dataset-35 = As a Traitor, any purchased grenade penguins won't attack you, and will explode if killed.
 tips-dataset-36 = As a Traitor, be careful when using vestine from the chemical synthesis kit. If someone checks your station, they could easily out you.
@@ -104,7 +106,8 @@ tips-dataset-102 = You can put napalm in a backpack water tank to make a flameth
 tips-dataset-103 = Some jobs have alternate uniforms in their respective drobe vendors. Don't be afraid to try out a new look!
 tips-dataset-104 = Speed is almost everything in combat. Using hardsuits just for their armor is usually a terrible idea unless the resistances it provides are geared towards combat, or you're not planning to go head-first into the fray.
 tips-dataset-105 = Just because a job can't be a traitor at the beginning of a round doesn't mean that they'll never be a traitor.
-tips-dataset-106 = Syndicate gas masks will both provide welding protection and block flashes. Think twice before trying to flash a Nuclear Operative!
+# starcup: Syndicate to NT
+tips-dataset-106 = NanoTrasen gas masks will both provide welding protection and block flashes. Think twice before trying to flash a Nuclear Operative!
 tips-dataset-107 = Demoman takes skill.
 tips-dataset-108 = You can spray a fire extinguisher, throw items or fire a gun while floating through space to give yourself a minor boost. Simply fire opposite to where you want to go.
 tips-dataset-109 = You can drag other players onto yourself to open the strip menu, allowing you to remove their equipment or force them to wear something. Note that exosuits or helmets will block your access to the clothing beneath them, and that certain items take longer to strip or put on than others.

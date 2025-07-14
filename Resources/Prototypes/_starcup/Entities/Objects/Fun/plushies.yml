@@ -10,3 +10,21 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: EskiePlushie
+
+- type: entity
+  parent: PlushieNuke
+  id: PlushieNukeNT
+  description: A stuffed toy that resembles a NanoTrasen nuclear operative. The tag claims operatives to be purely fictitious.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Fun/Plushies/nukie_nt.rsi
+    state: icon
+  - type: Clothing
+    quickEquip: false
+    sprite: _starcup/Objects/Fun/Plushies/nukie_nt.rsi
+    slots:
+    - HEAD
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"

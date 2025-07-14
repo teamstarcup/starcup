@@ -1,0 +1,55 @@
+- type: entity
+  parent: [BaseTraitorContraband, ClothingBackpackDuffelSyndicate]
+  id: ClothingBackpackDuffelNanotrasen
+  name: NanoTrasen duffel bag
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/nanotrasen.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffelNanotrasen
+  id: ClothingBackpackDuffelNanotrasenBundle
+  abstract: true
+  components:
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+
+- type: entity
+  parent: ClothingBackpackDuffelNanotrasen
+  id: ClothingBackpackDuffelNanotrasenAmmo
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/nanotrasen.rsi
+    state: icon-ammo
+  - type: Item
+    heldPrefix: ammo
+  - type: Clothing
+    equippedPrefix: ammo
+
+- type: entity
+  parent: ClothingBackpackDuffelNanotrasenAmmo
+  id: ClothingBackpackDuffelNanotrasenAmmoBundle
+  abstract: true
+  components:
+    - type: Tag
+      tags: [] # ignore "WhitelistChameleon" tag
+
+- type: entity
+  parent: ClothingBackpackDuffelNanotrasen
+  id: ClothingBackpackDuffelNanotrasenMedical
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/nanotrasen.rsi
+    state: icon-med
+  - type: Item
+    heldPrefix: med
+  - type: Clothing
+    equippedPrefix: med
+
+- type: entity
+  parent: ClothingBackpackDuffelNanotrasenMedical
+  id: ClothingBackpackDuffelNanotrasenMedicalBundle
+  abstract: true
+  components:
+    - type: Tag
+      tags: [] # ignore "WhitelistChameleon" tag

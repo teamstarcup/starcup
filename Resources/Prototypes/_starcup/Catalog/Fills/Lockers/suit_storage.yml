@@ -1,0 +1,25 @@
+#NanoTrasen EVA
+- type: entity
+  id: SuitStorageEVANanotrasen
+  parent: SuitStorageBase
+  suffix: NanoTrasen EVA
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: ClothingOuterEVASuitNanotrasen
+        - id: ClothingHeadHelmetNanotrasen
+        - id: ClothingMaskGasNanotrasen
+
+#Blueblood hardsuit
+- type: entity
+  id: SuitStorageNT
+  parent: SuitStorageBase
+  suffix: NanoTrasen Hardsuit
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: ClothingOuterHardsuitNT
+        - id: ClothingShoesBootsMagNT
+        - id: ClothingMaskGasNanotrasen

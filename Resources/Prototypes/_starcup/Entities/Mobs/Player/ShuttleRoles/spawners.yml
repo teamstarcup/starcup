@@ -1,0 +1,43 @@
+### NanoTrasen & Hostiles
+
+- type: entity
+  name: NanoTrasen team leader spawner
+  id: NTSoldierTeamLeaderSpawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Structures/Decoration/banner.rsi
+        state: banner
+  - type: RandomSpawner
+    prototypes:
+    - RandomHumanoidNanotrasenSoldierTeamLeader
+
+- type: entity
+  name: NanoTrasen soldier spawner
+  id: NTSoldierSpawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Structures/Decoration/banner.rsi
+        state: banner
+  - type: RandomSpawner
+    prototypes:
+    - RandomHumanoidNanotrasenSoldier
+
+- type: entity
+  name: NanoTrasen disaster victim spawner
+  id: NTVisitorSpawnerAntag
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Structures/Decoration/banner.rsi
+        state: banner
+  - type: RandomSpawner
+    prototypes:
+    - RandomHumanoidNanotrasenVisitor

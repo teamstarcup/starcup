@@ -194,9 +194,9 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
     private string GenerateBriefing(string[]? codewords, Note[]? uplinkCode, string? objectiveIssuer = null)
     {
         var sb = new StringBuilder();
-        sb.AppendLine(Loc.GetString("traitor-role-greeting", ("corporation", objectiveIssuer ?? Loc.GetString("objective-issuer-unknown"))));
+        sb.AppendLine(Loc.GetString("traitor-role-greeting-starcup", ("corporation", objectiveIssuer ?? Loc.GetString("objective-issuer-unknown")))); // starcup: Syndicate to NT
         if (codewords != null)
-            sb.AppendLine(Loc.GetString("traitor-role-codewords", ("codewords", string.Join(", ", codewords))));
+            sb.AppendLine(Loc.GetString("traitor-role-codewords-starcup", ("codewords", string.Join(", ", codewords)))); // starcup: Syndicate to NT
         if (uplinkCode != null)
             sb.AppendLine(Loc.GetString("traitor-role-uplink-code", ("code", string.Join("-", uplinkCode).Replace("sharp", "#"))));
         else

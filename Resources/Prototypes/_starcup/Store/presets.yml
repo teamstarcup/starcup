@@ -1,0 +1,22 @@
+- type: entity
+  id: StorePresetUplinkNT
+  abstract: true
+  components:
+  - type: Store
+    name: store-preset-name-uplink
+    categories:
+    - UplinkWeaponryNT
+    - UplinkAmmoNT
+    - UplinkExplosivesNT
+    - UplinkChemicalsNT
+    - UplinkDeceptionNT
+    - UplinkDisruptionNT
+    - UplinkImplantsNT
+    - UplinkAlliesNT
+    - UplinkWearablesNT
+    - UplinkJobNT
+    - UplinkPointlessNT
+    currencyWhitelist:
+    - Telecrystal
+    balance:
+      Telecrystal: 0

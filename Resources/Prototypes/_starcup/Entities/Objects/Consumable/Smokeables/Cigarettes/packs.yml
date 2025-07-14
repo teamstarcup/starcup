@@ -1,0 +1,14 @@
+- type: entity
+  id: CigPackNanotrasen
+  parent: [BaseTraitorContraband, CigPackSyndicate]
+  name: NanoTrasen herbals packet
+  description: Elite cigarettes for elite NanoTrasen agents. Infused with medicine for when you need to do more than calm your nerves.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Consumable/Smokeables/Cigarettes/Packs/nanotrasen.rsi
+  - type: Item
+    sprite: _starcup/Objects/Consumable/Smokeables/Cigarettes/Packs/nanotrasen.rsi
+  - type: StorageFill
+    contents:
+    - id: CigaretteNanotrasen
+      amount: 10
