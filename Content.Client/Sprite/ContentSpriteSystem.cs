@@ -30,6 +30,11 @@ public sealed class ContentSpriteSystem : EntitySystem
 
     public static readonly ResPath Exports = new ResPath("/Exports");
 
+    // begin DEN: upscale exported sprites
+    // Upscaled for better compatibility with height sliders
+    public static readonly Vector2i ExportScale = new(4, 4);
+    // end DEN
+
     public override void Initialize()
     {
         base.Initialize();
@@ -100,6 +105,8 @@ public sealed class ContentSpriteSystem : EntitySystem
         // Stop asserts
         if (size.Equals(Vector2i.Zero))
             return;
+
+        size *= ExportScale; // DEN: upscale exported sprites
 
         var texture = _clyde.CreateRenderTarget(new Vector2i(size.X, size.Y), new RenderTargetFormatParameters(RenderTargetColorFormat.Rgba8Srgb), name: "export");
         var tcs = new TaskCompletionSource(cancelToken);
@@ -179,8 +186,10 @@ public sealed class ContentSpriteSystem : EntitySystem
 
                     handle.RenderInRenderTarget(queued.Texture, () =>
                     {
-                        handle.DrawEntity(result.Entity, result.Texture.Size / 2, Vector2.One, Angle.Zero,
+                        // begin DEN: upscale exported sprites
+                        handle.DrawEntity(result.Entity, result.Texture.Size / 2, ExportScale, Angle.Zero,
                             overrideDirection: result.Direction);
+                        // end DEN
                     }, Color.Transparent);
 
                     ResPath fullFileName;
