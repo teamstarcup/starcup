@@ -1,4 +1,5 @@
-﻿using Content.Server.GameTicking;
+﻿using Content.Server._starcup.Spawners;
+using Content.Server.GameTicking;
 using Content.Server.Spawners.Components;
 using Content.Server.Station.Systems;
 using Robust.Shared.Map;
@@ -31,6 +32,15 @@ public sealed class SpawnPointSystem : EntitySystem
         {
             if (args.Station != null && _stationSystem.GetOwningStation(uid, xform) != args.Station)
                 continue;
+
+            // begin starcup: facilitate checking for spawn point suitability (to override late-join and arrivals)
+            var ev = new CheckSpawnPointSuitabilityEvent<SpawnPointComponent>((uid, spawnPoint), args.Job, args.HumanoidCharacterProfile);
+            RaiseLocalEvent(ref ev);
+            if (ev.NotSuitable)
+            {
+                continue;
+            }
+            // end starcup
 
             if (_gameTicker.RunLevel == GameRunLevel.InRound && spawnPoint.SpawnType == SpawnPointType.LateJoin)
             {

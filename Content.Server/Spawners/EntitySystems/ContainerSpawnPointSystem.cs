@@ -1,4 +1,5 @@
-﻿using Content.Server.GameTicking;
+﻿using Content.Server._starcup.Spawners;
+using Content.Server.GameTicking;
 using Content.Server.Spawners.Components;
 using Content.Server.Station.Systems;
 using Content.Shared.Preferences;
@@ -44,6 +45,15 @@ public sealed class ContainerSpawnPointSystem : EntitySystem
         {
             if (args.Station != null && _station.GetOwningStation(uid, xform) != args.Station)
                 continue;
+
+            // begin starcup: facilitate checking for spawn point suitability (to override late-join and arrivals)
+            var ev = new CheckSpawnPointSuitabilityEvent<ContainerSpawnPointComponent>((uid, spawnPoint), args.Job, args.HumanoidCharacterProfile);
+            RaiseLocalEvent(ref ev);
+            if (ev.NotSuitable)
+            {
+                continue;
+            }
+            // end starcup
 
             // If it's unset, then we allow it to be used for both roundstart and midround joins
             if (spawnPoint.SpawnType == SpawnPointType.Unset)
