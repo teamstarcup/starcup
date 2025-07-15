@@ -106,7 +106,13 @@ public sealed class ContentSpriteSystem : EntitySystem
         if (size.Equals(Vector2i.Zero))
             return;
 
+        // begin DEN
+        // Add a little buffer on each side in case of height sliders making them too tall.
+        if (TryComp<HumanoidAppearanceComponent>(entity, out _))
+            size += new Vector2i(10, 10);
+
         size *= ExportScale; // DEN: upscale exported sprites
+        // end DEN
 
         var texture = _clyde.CreateRenderTarget(new Vector2i(size.X, size.Y), new RenderTargetFormatParameters(RenderTargetColorFormat.Rgba8Srgb), name: "export");
         var tcs = new TaskCompletionSource(cancelToken);
