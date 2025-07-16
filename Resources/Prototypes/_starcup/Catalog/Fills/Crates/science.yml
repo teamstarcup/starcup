@@ -1,0 +1,10 @@
+- type: entity
+  id: CrateSiliconRepair
+  parent: CrateScience
+  name: silicon repair crate
+  description: Tools for patching up your mechanical friends. Contains four silicon repair kits.
+  components:
+  - type: StorageFill
+    contents:
+    - id: MedkitSiliconFilled
+      amount: 4
