@@ -6,6 +6,6 @@ public sealed partial class JobPrototype
     /// starcup: If a job should always spawn at its job spawn rather than late join spawn points or arrivals.
     /// Used for roles like prisoner that always need to spawn in specific locations.
     /// </summary>
-    [DataField("alwaysUseJobSpawn")]
+    [DataField]
     public bool AlwaysUseJobSpawn { get; private set; };
 }
