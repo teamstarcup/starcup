@@ -215,3 +215,121 @@
   storage:
     back:
     - HandheldStationMap
+
+# Writing
+- type: loadout
+  id: BoxFolderClipboard
+  storage:
+    back:
+    - BoxFolderClipboard
+  groupBy: "writing"
+
+- type: loadout
+  id: NotebookCompositionBlack
+  storage:
+    back:
+    - NotebookCompositionBlack
+  groupBy: "writing"
+
+- type: loadout
+  id: NotebookCompositionPink
+  storage:
+    back:
+    - NotebookCompositionPink
+  groupBy: "writing"
+
+- type: loadout
+  id: NotebookCompositionRed
+  storage:
+    back:
+    - NotebookCompositionRed
+  groupBy: "writing"
+
+- type: loadout
+  id: NotebookCompositionGreen
+  storage:
+    back:
+    - NotebookCompositionGreen
+  groupBy: "writing"
+
+- type: loadout
+  id: NotebookCompositionYellow
+  storage:
+    back:
+    - NotebookCompositionYellow
+  groupBy: "writing"
+
+- type: loadout
+  id: NotebookPocketBlue
+  storage:
+    back:
+    - NotebookPocketBlue
+  groupBy: "writing"
+
+- type: loadout
+  id: NotebookPocketGreen
+  storage:
+    back:
+    - NotebookPocketGreen
+  groupBy: "writing"
+
+- type: loadout
+  id: NotebookPocketBrown
+  storage:
+    back:
+    - NotebookPocketBrown
+  groupBy: "writing"
+
+- type: loadout
+  id: NotebookSpiralCybersun
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Command
+      time: 21600 #6 hrs
+  storage:
+    back:
+    - NotebookSpiralCybersun
+  groupBy: "writing"
+
+- type: loadout
+  id: NotebookSpiralInterdyne
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Medical
+      time: 21600 #6 hrs
+  storage:
+    back:
+    - NotebookSpiralInterdyne
+  groupBy: "writing"
+
+- type: loadout
+  id: NotebookSpiralTeal
+  storage:
+    back:
+    - NotebookSpiralTeal
+  groupBy: "writing"
+
+- type: loadout
+  id: NotebookSpiralGray
+  storage:
+    back:
+    - NotebookSpiralGray
+  groupBy: "writing"
+
+- type: loadout
+  id: NotebookSpiralPurple
+  storage:
+    back:
+    - NotebookSpiralPurple
+  groupBy: "writing"
+
+- type: loadout
+  id: NotebookSpiralBeige
+  storage:
+    back:
+    - NotebookSpiralBeige
+  groupBy: "writing"
