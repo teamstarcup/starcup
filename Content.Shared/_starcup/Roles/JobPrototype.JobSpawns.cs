@@ -7,5 +7,5 @@ public sealed partial class JobPrototype
     /// Used for roles like prisoner that always need to spawn in specific locations.
     /// </summary>
     [DataField]
-    public bool AlwaysUseJobSpawn { get; private set; };
+    public bool AlwaysUseJobSpawn { get; private set; }
 }
