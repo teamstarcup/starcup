@@ -161,6 +161,8 @@
       behaviors:
       - !type:GibBehavior
         recursive: false
+  - type: Puller # starcup
+    needsHands: false # starcup - bees are very hardworking! will have no effect unless made a ghostrole
 
 - type: entity
   name: bee
@@ -395,8 +397,26 @@
     - horrible
     - terrible
     - chewy
+  # begin starcup: make less voracious
+  - type: Thirst
+    startingThirst: 25  # spawn with Okay thirst state
+    thresholds:
+      OverHydrated: 30
+      Okay: 20
+      Thirsty: 10
+      Parched: 5
+      Dead: 0
   - type: Hunger
-    baseDecayRate: 0.25
+    thresholds:
+      Overfed: 30
+      Okay: 20
+      Peckish: 10
+      Starving: 5
+      Dead: 0
+    baseDecayRate: 0.1
+  - type: Body
+    prototype: Mouse
+    # end starcup
   - type: Extractable
     grindableSolutionName: food
   - type: SolutionContainerManager
@@ -1199,6 +1219,28 @@
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: Prying
+    pryPowered: true
+    force: true
+    speedModifier: 1.5
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Critical
+      250: Dead
+  - type: StaminaResistance
+    damageCoefficient: 0.40
 
 - type: entity
   name: kangaroo
@@ -1417,7 +1459,7 @@
   name: monkey
   id: MobMonkey
   parent: MobBaseAncestor
-  description: New church of neo-darwinists actually believe that EVERY animal evolved from a monkey. Tastes like pork, and killing them is both fun and relaxing.
+  description: Primitive non-sapient bipeds, for when you need something a little more resilient than a lab rat or guinea pig. # starcup: rewritten for tone
   components:
   - type: NameIdentifier
     group: Monkey
@@ -1450,7 +1492,7 @@
   name: monkey
   id: MobBaseSyndicateMonkey
   parent: MobBaseAncestor
-  description: New church of neo-darwinists actually believe that EVERY animal evolved from a monkey. Tastes like pork, and killing them is both fun and relaxing.
+  description: Primitive non-sapient bipeds, for when you need something a little more resilient than a lab rat or guinea pig. # starcup: rewritten for tone
   suffix: syndicate base
   components:
   - type: NameIdentifier
@@ -1495,166 +1537,168 @@
   components:
   - type: NukeOperative
 
-- type: entity
-  name: kobold
-  id: MobBaseKobold
-  parent: MobBaseAncestor
-  description: Cousins to the sentient race of lizard people, kobolds blend in with their natural habitat and are as nasty as monkeys; ready to pull out your hair and stab you to death.
-  abstract: true
-  components:
-  - type: NameIdentifier
-    group: Kobold
-  - type: LizardAccent
-  - type: ReplacementAccent
-    accent: kobold
-  - type: Speech
-    speechSounds: Lizard
-    speechVerb: Reptilian
-    allowedEmotes: ['Thump']
-  - type: Vocal
-    sounds:
-      Male: MaleReptilian
-      Female: FemaleReptilian
-      Unsexed: MaleReptilian
-  - type: BodyEmotes
-    soundsId: ReptilianBodyEmotes
-  - type: TypingIndicator
-    proto: lizard
-  - type: InteractionPopup
-    successChance: 0.9
-    interactSuccessString: petting-success-monkey
-    interactFailureString: petting-failure-monkey
-    interactSuccessSpawn: EffectHearts
-    interactSuccessSound:
-      path: /Audio/Animals/lizard_happy.ogg
-    interactFailureSound:
-      path: /Audio/Items/wirecutter.ogg
-  - type: MobThresholds
-    thresholds:
-      0: Alive
-      60: Critical
-      125: Dead
-  - type: MovementSpeedModifier
-    baseWalkSpeed: 3.5
-    baseSprintSpeed: 5
-  - type: MeleeWeapon
-    soundHit:
-      collection: AlienClaw
-    angle: 30
-    animation: WeaponArcClaw
-    damage:
-      types:
-        Slash: 5
-        Piercing: 4
-  - type: Temperature
-    heatDamageThreshold: 360
-    coldDamageThreshold: 285
-    currentTemperature: 310.15
-    specificHeat: 42
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      sprite: Mobs/Animals/kobold.rsi
-      state: kobold
-    - map: [ "outline" ]
-      sprite: Mobs/Animals/kobold.rsi
-      state: outline
-    - map: [ "horns" ]
-      sprite: Mobs/Customization/reptilian_parts.rsi
-      state: horns_short
-    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
-      color: "#ffffff"
-      sprite: Objects/Misc/handcuffs.rsi
-      state: body-overlay-2
-      visible: false
-    - map: [ "ears" ]
-    - map: [ "id" ]
-    - map: [ "mask" ]
-    - map: [ "head" ]
-    - map: [ "clownedon" ]
-      sprite: "Effects/creampie.rsi"
-      state: "creampie_human"
-      visible: false
-  - type: RandomSprite
-    getAllGroups: true
-    available:
-      - enum.DamageStateVisualLayers.Base:
-          kobold: KoboldColors
-      - horns:
-          horns_curled: KoboldHornColors
-          horns_ram: KoboldHornColors
-          horns_short: KoboldHornColors
-          horns_myrsore: KoboldHornColors
-          horns_bighorn: KoboldHornColors
-          horns_argali: KoboldHornColors
-          horns_ayrshire: KoboldHornColors
-          horns_floppy_kobold_ears: Inherit
-          horns_double: Inherit
-          horns_kobold_ears: Inherit
-  - type: Butcherable
-    butcheringType: Spike
-    spawned:
-    - id: FoodMeat
-      amount: 2
-  - type: AlwaysRevolutionaryConvertible
-  - type: GhostTakeoverAvailable
-  - type: SentienceTarget
-    flavorKind: station-event-random-sentience-flavor-kobold
-  - type: GhostRole
-    prob: 0.05
-    makeSentient: true
-    name: ghost-role-information-kobold-name
-    description: ghost-role-information-kobold-description
-    rules: ghost-role-information-nonantagonist-rules
+# begin starcup: remove non-sapient kobolds
+#- type: entity
+#  name: kobold
+#  id: MobBaseKobold
+#  parent: MobBaseAncestor
+#  description: Cousins to the sentient race of lizard people, kobolds blend in with their natural habitat and are as nasty as monkeys; ready to pull out your hair and stab you to death.
+#  abstract: true
+#  components:
+#  - type: NameIdentifier
+#    group: Kobold
+#  - type: LizardAccent
+#  - type: ReplacementAccent
+#    accent: kobold
+#  - type: Speech
+#    speechSounds: Lizard
+#    speechVerb: Reptilian
+#    allowedEmotes: ['Thump']
+#  - type: Vocal
+#    sounds:
+#      Male: MaleReptilian
+#      Female: FemaleReptilian
+#      Unsexed: MaleReptilian
+#  - type: BodyEmotes
+#    soundsId: ReptilianBodyEmotes
+#  - type: TypingIndicator
+#    proto: lizard
+#  - type: InteractionPopup
+#    successChance: 0.9
+#    interactSuccessString: petting-success-monkey
+#    interactFailureString: petting-failure-monkey
+#    interactSuccessSpawn: EffectHearts
+#    interactSuccessSound:
+#      path: /Audio/Animals/lizard_happy.ogg
+#    interactFailureSound:
+#      path: /Audio/Items/wirecutter.ogg
+#  - type: MobThresholds
+#    thresholds:
+#      0: Alive
+#      60: Critical
+#      125: Dead
+#  - type: MovementSpeedModifier
+#    baseWalkSpeed: 3.5
+#    baseSprintSpeed: 5
+#  - type: MeleeWeapon
+#    soundHit:
+#      collection: AlienClaw
+#    angle: 30
+#    animation: WeaponArcClaw
+#    damage:
+#      types:
+#        Slash: 5
+#        Piercing: 4
+#  - type: Temperature
+#    heatDamageThreshold: 360
+#    coldDamageThreshold: 285
+#    currentTemperature: 310.15
+#    specificHeat: 42
+#  - type: Sprite
+#    drawdepth: Mobs
+#    layers:
+#    - map: ["enum.DamageStateVisualLayers.Base"]
+#      sprite: Mobs/Animals/kobold.rsi
+#      state: kobold
+#    - map: [ "outline" ]
+#      sprite: Mobs/Animals/kobold.rsi
+#      state: outline
+#    - map: [ "horns" ]
+#      sprite: Mobs/Customization/reptilian_parts.rsi
+#      state: horns_short
+#    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+#      color: "#ffffff"
+#      sprite: Objects/Misc/handcuffs.rsi
+#      state: body-overlay-2
+#      visible: false
+#    - map: [ "ears" ]
+#    - map: [ "id" ]
+#    - map: [ "mask" ]
+#    - map: [ "head" ]
+#    - map: [ "clownedon" ]
+#      sprite: "Effects/creampie.rsi"
+#      state: "creampie_human"
+#      visible: false
+#  - type: RandomSprite
+#    getAllGroups: true
+#    available:
+#      - enum.DamageStateVisualLayers.Base:
+#          kobold: KoboldColors
+#      - horns:
+#          horns_curled: KoboldHornColors
+#          horns_ram: KoboldHornColors
+#          horns_short: KoboldHornColors
+#          horns_myrsore: KoboldHornColors
+#          horns_bighorn: KoboldHornColors
+#          horns_argali: KoboldHornColors
+#          horns_ayrshire: KoboldHornColors
+#          horns_floppy_kobold_ears: Inherit
+#          horns_double: Inherit
+#          horns_kobold_ears: Inherit
+#  - type: Butcherable
+#    butcheringType: Spike
+#    spawned:
+#    - id: FoodMeat
+#      amount: 2
+#  - type: AlwaysRevolutionaryConvertible
+#  - type: GhostTakeoverAvailable
+#  - type: SentienceTarget
+#    flavorKind: station-event-random-sentience-flavor-kobold
+#  - type: GhostRole
+#    prob: 0.05
+#    makeSentient: true
+#    name: ghost-role-information-kobold-name
+#    description: ghost-role-information-kobold-description
+#    rules: ghost-role-information-nonantagonist-rules
 
-- type: entity
-  name: kobold
-  id: MobKobold
-  parent: MobBaseKobold
-  description: Cousins to the sentient race of lizard people, kobolds blend in with their natural habitat and are as nasty as monkeys; ready to pull out your hair and stab you to death.
-  components:
-  - type: Clumsy
-    gunShootFailDamage:
-      types:
-        Blunt: 2
-        Piercing: 7
-      groups:
-        Burn: 3
-    clumsySound:
-      path: /Audio/Voice/Reptilian/reptilian_scream.ogg
+#- type: entity
+#  name: kobold
+#  id: MobKobold
+#  parent: MobBaseKobold
+#  description: Cousins to the sentient race of lizard people, kobolds blend in with their natural habitat and are as nasty as monkeys; ready to pull out your hair and stab you to death.
+#  components:
+#  - type: Clumsy
+#    gunShootFailDamage:
+#      types:
+#        Blunt: 2
+#        Piercing: 7
+#      groups:
+#        Burn: 3
+#    clumsySound:
+#      path: /Audio/Voice/Reptilian/reptilian_scream.ogg
 
-- type: entity
-  id: MobBaseSyndicateKobold
-  parent: MobBaseKobold
-  suffix: syndicate base
-  components:
-  - type: MobThresholds
-    thresholds:
-      0: Alive
-      100: Critical
-      200: Dead
-  - type: NpcFactionMember
-    factions:
-    - Syndicate
-  - type: Loadout
-    prototypes: [SyndicateOperativeGearMonkey]
+#- type: entity
+#  id: MobBaseSyndicateKobold
+#  parent: MobBaseKobold
+#  suffix: syndicate base
+#  components:
+#  - type: MobThresholds
+#    thresholds:
+#      0: Alive
+#      100: Critical
+#      200: Dead
+#  - type: NpcFactionMember
+#    factions:
+#    - Syndicate
+#  - type: Loadout
+#    prototypes: [SyndicateOperativeGearMonkey]
 
-- type: entity
-  id: MobKoboldSyndicateAgent
-  parent: MobBaseSyndicateKobold
-  suffix: syndicate agent
-  components:
-    # make the player a traitor once its taken
-  - type: AutoTraitor
-    profile: TraitorReinforcement
+#- type: entity
+#  id: MobKoboldSyndicateAgent
+#  parent: MobBaseSyndicateKobold
+#  suffix: syndicate agent
+#  components:
+#    # make the player a traitor once its taken
+#  - type: AutoTraitor
+#    profile: TraitorReinforcement
 
-- type: entity
-  id: MobKoboldSyndicateAgentNukeops # Reinforcement exclusive to nukeops uplink
-  parent: MobBaseSyndicateKobold
-  suffix: NukeOps
-  components:
-  - type: NukeOperative
+#- type: entity
+#  id: MobKoboldSyndicateAgentNukeops # Reinforcement exclusive to nukeops uplink
+#  parent: MobBaseSyndicateKobold
+#  suffix: NukeOps
+#  components:
+#  - type: NukeOperative
+# end starcup
 
 - type: entity
   name: guidebook monkey
@@ -1725,7 +1769,7 @@
         shape:
           !type:PhysShapeCircle
           radius: 0.2
-        density: 100
+        density: 20 # starcup - to balance dragging speed.
         mask:
         - SmallMobMask
         layer:
@@ -1764,17 +1808,17 @@
       OverHydrated: 35
       Okay: 25
       Thirsty: 15
-      Parched: 10
+      Parched: 5 # starcup: was 10
       Dead: 0
     baseDecayRate: 0.04
   - type: Hunger
     thresholds:
       Overfed: 35
       Okay: 25
-      Peckish: 15
-      Starving: 10
+      Peckish: 12.5 # starcup: was 15
+      Starving: 5 # starcup: was 10
       Dead: 0
-    baseDecayRate: 0.5 # I'm very hungry! Give me. The cheese.
+    baseDecayRate: 0.05 # starcup, was 0.5
   - type: Extractable
     grindableSolutionName: food
   - type: SolutionContainerManager
@@ -1848,6 +1892,8 @@
       behaviors:
       - !type:GibBehavior
         recursive: false
+  - type: Puller # starcup
+    needsHands: false # starcup - let the rat drag the pizza slice (improves ghostrole gameplay and makes sense)
 
 - type: entity
   parent: MobMouse
@@ -2312,6 +2358,7 @@
         Brute: 5
   - type: Item
     size: Normal
+    sprite: Mobs/Animals/grenadepenguin.rsi
   - type: OnUseTimerTrigger
     delay: 10
     beepSound:
@@ -2494,6 +2541,8 @@
     raffle:
       settings: short
   - type: GhostTakeoverAvailable
+  - type: Puller # starcup
+    needsHands: false # starcup - allows for creepy spider dragging away bodies stuff, which plays well with the poison
 
 - type: entity
   name: tarantula
@@ -2723,6 +2772,8 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: Puller # starcup
+    needsHands: false # starcup - "THEY CAN GRASP!!!"
 
 - type: entity
   name: fox
@@ -2801,6 +2852,8 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: Puller
+    needsHands: false # starcup - ability to carry emeralds important for niche Minecraft challenge modes
 
 - type: entity
   abstract: true
@@ -2844,6 +2897,8 @@
       gender: epicene
   - type: MobPrice
     price: 200
+  - type: Puller
+    needsHands: false # starcup - gives ghostrole corgis something to do. go fetch!
 
 - type: entity
   parent: MobCorgiBase
@@ -3028,6 +3083,8 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
     baseSprintSpeed: 4
+  - type: Puller
+    needsHands: false # starcup - gives ghostrole cats more to do, lets them drag mice around to leave on their keepers' beds
 
 - type: entity
   name: calico cat
@@ -3085,6 +3142,10 @@
   - type: NpcFactionMember
     factions:
     - Syndicate
+  - type: Access
+    tags:
+    - NuclearOperative
+    - SyndicateAgent
   - type: MeleeWeapon
     altDisarm: false
     angle: 0
@@ -3240,6 +3301,7 @@
   - type: Grammar
     attributes:
       gender: epicene
+  - type: SlowAccent
   - type: Tag
     tags:
     - VimPilot
@@ -3377,7 +3439,7 @@
     flavors:
     - meaty
   - type: Hunger
-    baseDecayRate: 0.3
+    baseDecayRate: 0.05 # starcup: was 0.3
   - type: Extractable
     grindableSolutionName: food
   - type: SolutionContainerManager
@@ -3764,3 +3826,6 @@
     - DoorBumpOpener
   - type: StatusIcon # marks them as crew
     bounds: -0.5,-0.5,0.5,0.5
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen

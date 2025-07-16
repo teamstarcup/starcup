@@ -18,9 +18,9 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 1.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 1
         type: Remove
 
 - type: reagent
@@ -80,12 +80,12 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 2.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 2
         type: Remove
       - !type:AdjustReagent
-        reagent: Theobromine
+        reagent: Caffeine # starcup: replacement for theobromine
         amount: 0.1
   fizziness: 0.4
 
@@ -261,15 +261,20 @@
     state: icon_empty
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
-  metamorphicChangeColor: false  
+  metamorphicChangeColor: false
   metabolisms:
     Drink:
       effects:
       - !type:SatiateThirst
         factor: 2
       - !type:AdjustReagent
-        reagent: Theobromine
+        reagent: Caffeine # starcup: replacement for theobromine
         amount: 0.1
+      # begin starcup: add alcohol content
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.06
+      # end starcup
     Poison:
       effects:
       - !type:HealthChange

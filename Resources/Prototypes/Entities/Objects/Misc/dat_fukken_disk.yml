@@ -2,13 +2,13 @@
   name: nuclear authentication disk
   parent: [BaseItem, BaseGrandTheftContraband]
   id: NukeDisk
-  description: A nuclear auth disk, capable of arming a nuke if used along with a code. Note from nanotrasen reads "THIS IS YOUR MOST IMPORTANT POSESSION, SECURE DAT FUKKEN DISK!"
+  description: A nuclear auth disk, capable of arming a nuke if used along with a code. SyndComm corporate guidelines stress the importance of not handing this to the Mime just because they mimed for it nicely. # starcup: rewritten for tone
   components:
   - type: NukeDisk
   - type: SpecialRespawn
     prototype: NukeDisk
   - type: Sprite
-    sprite: Objects/Misc/nukedisk.rsi
+    sprite: _starcup/Objects/Misc/nukedisk.rsi # starcup: resprited to reflect syndicate colors.
     state: icon
   - type: StaticPrice
     price: 2000
@@ -32,10 +32,10 @@
   parent: [BaseItem, BaseGrandTheftContraband]
   id: NukeDiskFake
   suffix: Fake
-  description: A nuclear auth disk, capable of arming a nuke if used along with a code. Note from nanotrasen reads "THIS IS YOUR MOST IMPORTANT POSESSION, SECURE DAT FUKKEN DISK!"
+  description: A nuclear auth disk, capable of arming a nuke if used along with a code. SyndComm corporate guidelines stress the importance of not handing this to the Mime just because they mimed for it nicely. # starcup: rewritten for tone
   components:
   - type: Sprite
-    sprite: Objects/Misc/nukedisk.rsi
+    sprite: _starcup/Objects/Misc/nukedisk.rsi # starcup: resprited to reflect syndicate colors.
     state: icon
   - type: StaticPrice
     price: 1 # it's worth even less than normal items. Perfection.

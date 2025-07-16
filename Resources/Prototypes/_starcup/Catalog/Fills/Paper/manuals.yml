@@ -1,0 +1,28 @@
+- type: entity
+  parent: BaseItem
+  id: HoloparasiteInfoNT
+  name: "holoparasite terms and conditions"
+  suffix: NanoTrasen
+  description: A tiny volumetric display for documents, makes one wonder if NanoTrasen's legal budget is way too high.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/guardian_info.rsi
+    state: guardian_info
+  - type: ActivatableUI
+    key: enum.PaperUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.PaperUiKey.Key:
+        type: PaperBoundUserInterface
+  - type: Paper
+    content: book-text-holoparasite-info-starcup
+
+- type: entity
+  id: PaperWrittenCombatBakeryKitNT
+  name: "combat bakery kit instructions"
+  suffix: NanoTrasen
+  description: "Eat note after reading."
+  parent: Paper
+  components:
+  - type: Paper
+    content: book-text-combat-bakery-kit-starcup

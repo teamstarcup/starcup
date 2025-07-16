@@ -1,0 +1,16 @@
+- type: entity
+  parent: [BaseTraitorContraband, ClothingUniformJumpskirtOperative]
+  id: ClothingUniformJumpskirtOperativeNT
+  suffix: NanoTrasen
+  description: Uniform for elite NanoTrasen operatives performing tactical operations in deep space.
+
+- type: entity
+  parent: [ BaseTraitorContraband, ClothingUniformJumpskirtSyndieFormalDress ]
+  id: ClothingUniformJumpskirtNTFormalDress
+  name: NanoTrasen formal dress
+  description: Combines sleek, upper-class elegance with NanoTrasen's signature aura of faint totalitarian menace.
+  components:
+    - type: Sprite
+      sprite: _starcup/Clothing/Uniforms/Jumpskirt/nanotrasenformaldress.rsi
+    - type: Clothing
+      sprite: _starcup/Clothing/Uniforms/Jumpskirt/nanotrasenformaldress.rsi

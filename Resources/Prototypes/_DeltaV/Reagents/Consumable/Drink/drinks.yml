@@ -67,6 +67,11 @@
       - !type:AdjustReagent
         reagent: Nutriment
         amount: 0.1
+      # begin starcup: add theobromine
+      - !type:AdjustReagent
+        reagent: Theobromine
+        amount: 0.05
+      # end starcup
 - type: reagent
   id: HealthViolation
   name: reagent-name-healthviolation
@@ -124,7 +129,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.20
+        amount: 0.09 # starcup: decreased from 0.2
     Poison:
       effects:
       - !type:HealthChange
@@ -215,7 +220,7 @@
   id: Kvass
   name: reagent-name-kvass
   parent: BaseDrink
-  desc: reagent-desc-kvass
+  desc: reagent-desc-kvass-starcup # starcup: rewritten for tone
   physicalDesc: reagent-physical-desc-bubbly
   flavor: kvass #Delta-V Flavor additions
   color: "#381600"
@@ -248,6 +253,11 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.25
+      # begin starcup: add caffeine
+      - !type:AdjustReagent
+        reagent: Caffeine
+        amount: 0.05
+      # end starcup
     Poison:
       effects:
       - !type:Jitter

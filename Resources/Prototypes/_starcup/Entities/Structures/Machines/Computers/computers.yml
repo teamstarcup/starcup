@@ -1,0 +1,87 @@
+- type: entity
+  parent: BaseComputerShuttle
+  id: ComputerShuttleNT
+  name: NanoTrasen shuttle console
+  description: Used to pilot a NanoTrasen shuttle.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: ntshuttle
+    - map: ["computerLayerKeys"]
+      state: nt_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: Tag
+    tags:
+      - Syndicate
+  - type: RadarConsole
+    maxRange: 384
+  - type: WorldLoader
+    radius: 1536
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#c94242"
+  - type: Computer
+    board: NanotrasenShuttleConsoleCircuitboard
+
+- type: entity
+  parent: ComputerIFF
+  id: ComputerIFFNanotrasen
+  name: IFF computer
+  suffix: NanoTrasen
+  description: Allows you to control the IFF and stealth characteristics of this vessel.
+  components:
+  - type: IFFConsole
+    allowedFlags:
+      - Hide
+      - HideLabel
+  - type: ActivatableUI
+    key: enum.IFFConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+        enum.IFFConsoleUiKey.Key:
+          type: IFFConsoleBoundUserInterface
+        enum.WiresUiKey.Key:
+          type: WiresBoundUserInterface
+  - type: Computer
+    board: ComputerIFFNanotrasenCircuitboard
+
+- type: entity
+  parent: ComputerComms
+  id: NanotrasenComputerComms
+  name: NanoTrasen communications computer
+  description: A computer capable of remotely hacking into the station's communications systems. Using this to make an announcement will alert the station to your presence.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: comm
+    - map: ["computerLayerKeys"]
+      state: nt_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: AccessReader
+    access: [[ "NuclearOperative" ]]
+  - type: CommunicationsConsole
+    title: comms-console-announcement-title-nukie-starcup
+    color: "#ff0000"
+    canShuttle: false
+    global: true #announce to everyone they're about to fuck shit up
+    announceSentBy: false # The title already says who they are.
+    sound: /Audio/Announcements/war.ogg
+  - type: Computer
+    board: NanotrasenCommsComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#f71713"

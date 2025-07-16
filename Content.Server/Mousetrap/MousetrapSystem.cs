@@ -62,7 +62,7 @@ public sealed class MousetrapSystem : EntitySystem
             // Large - small damage
             // yes i punched numbers into a calculator until the graph looked right
             var scaledDamage = -50 * Math.Atan(physics.Mass - component.MassBalance) + (25 * Math.PI);
-            args.Damage *= scaledDamage;
+            args.Damage *= Math.Clamp(scaledDamage, 0, 16.33); // starcup - fixing low-density mouse gibs; the max is actually 32.66
         }
     }
 

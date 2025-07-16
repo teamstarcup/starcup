@@ -302,6 +302,77 @@
   - MimeFrenchBeret
   - SecurityHelmet # starcup
 
+## Security Guns
+- type: loadoutGroup
+  id: SecurityFirearm
+  name: loadout-group-security-gun
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+ # - SecurityFirearmWeaponPistolPollock # starcup - we don't have this yet
+ # - SecurityFirearmWeaponPistolSLP57 # starcup - we don't have this yet
+  - SecurityFirearmWeaponPistolMk58
+  - SecurityFirearmWeaponDisabler
+
+- type: loadoutGroup
+  id: SecurityRevolverFirearm
+  name: loadout-group-revolver-gun
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - SecurityRevolverInspector
+ # - SecurityFirearmWeaponRevolverFitz # starcup - we don't have this yet
+ # - SecurityRevolverWeaponRevolverLucky # starcup - we don't have this yet
+
+- type: loadoutGroup
+  id: SecurityFirearmAmmo
+  name: loadout-group-security-gun-ammo
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+  - SecurityFirearmMagazinePistol
+  - SecurityFirearmMagazinePistolRubber
+
+- type: loadoutGroup
+  id: SecurityRevolverAmmo
+  name: loadout-group-revolver-ammo
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+  - SecurityFirearmSpeedLoaderMagnumRubber
+  - SecurityFirearmSpeedLoaderMagnum
+ # - SecurityFirearmSpeedLoaderSpecialRubber # starcup - we don't have this yet
+ # - SecurityFirearmSpeedLoaderSpecial # starcup - we don't have this yet
+
+- type: loadoutGroup
+  id: SecurityAllFirearm
+  name: loadout-group-all-gun
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+#  - SecurityFirearmWeaponPistolPollock # starcup - we don't have this one yet
+#  - SecurityFirearmWeaponPistolSLP57 # starcup - we don't have this one yet
+  - SecurityFirearmWeaponPistolMk58
+  - SecurityFirearmWeaponDisabler
+  - SecurityRevolverInspector
+ # - SecurityFirearmWeaponRevolverFitz # starcup - we don't have this one yet
+ # - SecurityRevolverWeaponRevolverLucky # starcup - we don't have this one yet
+  - SecurityFirearmWeaponRevolverDeckard
+ # - SecurityFirearmWeaponRevolverK38Master # starcup - we don't have this one yet
+
+- type: loadoutGroup
+  id: SecurityAllAmmo
+  name: loadout-group-all-ammo
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+  - SecurityFirearmMagazinePistol
+  - SecurityFirearmMagazinePistolRubber
+  - SecurityFirearmSpeedLoaderMagnumRubber
+  - SecurityFirearmSpeedLoaderMagnum
+ # - SecurityFirearmSpeedLoaderSpecialRubber # starcup - we don't have this yet
+ # - SecurityFirearmSpeedLoaderSpecial # starcup - we don't have this yet
+
 ## Security Officer
 - type: loadoutGroup
   id: SecurityNeck
@@ -400,6 +471,7 @@
   - MixologistPDA
   - BaristaPDA # starcup
   - SpeakeasyerPDA # starcup
+  - SeniorBartenderPDA # starcup
 
 - type: loadoutGroup
   id: ChefPDADelta

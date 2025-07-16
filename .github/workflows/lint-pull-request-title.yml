@@ -1,0 +1,24 @@
+name: 'Lint pull request title'
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: deepakputhraya/action-pr-title@077bddd7bdabd0d2b1b25ed0754c7e62e184d7ee
+        with:
+          regex: "^(build|ci|docs|feat|fix|perf|refactor|revert|test|map|tweak|upstream){1}(\\([\\w\\-\\.]+\\))?(!)?: ([\\w\\-\\,\\'\\\"\\#\\/\\[\\]\\+\\(\\) ])+" # Regex the title should match.
+          min_length: 8 # Min length of the title
+          max_length: 80 # Max length of the title
+          verbal_description: 'Pull request titles must adhere to our custom flavor of conventional commits (https://www.conventionalcommits.org/en/v1.0.0/)'
+  ci-success:
+    name: Lint pull request title
+    needs:
+      - lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: CI succeeded
+        run: exit 0

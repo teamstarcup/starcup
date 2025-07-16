@@ -1,0 +1,53 @@
+# Syndicate Operative Outfit - Civilian
+- type: startingGear
+  id: NanotrasenOperativeGearCivilian
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNTFormal
+    back: ClothingBackpackDuffelNanotrasen
+    shoes: ClothingShoesBootsCombat
+    gloves: ClothingHandsGlovesColorBlack
+    id: NTPDA
+    ears: ClothingHeadsetAltNanotrasen
+
+# Nanotrasen Footsoldier Gear - No Headset
+- type: startingGear
+  id: NanotrasenFootsoldierGearRuin
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperativeNT
+    head: ClothingHeadHelmetSwatNanotrasen
+    mask: ClothingMaskGasNanotrasen
+    outerClothing: ClothingOuterArmorBasic
+    gloves: ClothingHandsGlovesCombat
+    back: ClothingBackpack
+    shoes: ClothingShoesBootsCombat
+    id: NTPDA
+  storage:
+    back:
+    - BoxSurvival
+
+# Syndicate Footsoldier Gear
+- type: startingGear
+  id: NanotrasenFootsoldierGear
+  parent: NanotrasenOperativeGearCivilian
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperativeNT
+    head: ClothingHeadHelmetSwatNanotrasen
+    eyes: ClothingEyesHudNanotrasen
+    outerClothing: ClothingOuterArmorBasic
+    gloves: ClothingHandsGlovesCombat
+    back: ClothingBackpack
+    shoes: ClothingShoesBootsCombatFilled
+  storage:
+    back:
+    - BoxSurvivalNanotrasen
+
+- type: startingGear
+  id: NanotrasenFootsoldierTeamLeaderGear
+  parent: NanotrasenFootsoldierGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNTFormal
+    head: ClothingHeadHatOutlawHat
+    outerClothing: ClothingOuterArmorBasicSlim
+    back: ClothingBackpackSatchel
+    pocket1: BaseUplinkRadio25TCNT
+    pocket2: EnergySword

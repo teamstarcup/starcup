@@ -72,6 +72,17 @@ public sealed partial class IdCardConsoleComponent : Component
         "Service",
         "Theatre",
         "Robotics", // DeltaV
+        // begin starcup additions
+        "Boxer",
+        "Clown",
+        "Library",
+        "Mime",
+        "Musician",
+        "Paramedic",
+        "Psychologist",
+        "Reporter",
+        "Zookeeper",
+        // end starcup
     };
 
     [Serializable, NetSerializable]

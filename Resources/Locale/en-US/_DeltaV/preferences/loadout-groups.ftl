@@ -58,6 +58,13 @@ loadout-group-head-of-security-shoes = Head of Security shoes
 loadout-group-security-cadet-head = Security Cadet head
 loadout-group-security-neck = Security neck
 
+loadout-group-security-gun = Security Sidearm
+loadout-group-revolver-gun = Security Revolver
+loadout-group-all-gun = Security Sidearm
+loadout-group-security-gun-ammo = Ammunition
+loadout-group-revolver-ammo = Ammunition
+loadout-group-all-ammo = Ammunition
+
 # Medical
 loadout-group-medical-doctor-neck = Medical Doctor neck
 

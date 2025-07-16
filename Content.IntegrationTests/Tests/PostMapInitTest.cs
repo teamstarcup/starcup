@@ -37,6 +37,7 @@ namespace Content.IntegrationTests.Tests
             "CentComm",
             "Dart",
             "EventFrigidPeril",  // starcup
+            "EventCruiseControl",  // starcup
         };
 
         private static readonly string[] Grids =
@@ -51,8 +52,6 @@ namespace Content.IntegrationTests.Tests
         {
             "/Maps/centcomm.yml",
             "/Maps/bagel.yml", // Contains mime's rubber stamp --> Either fix this, remove the category, or remove this comment if intentional.
-            "/Maps/gate.yml", // Contains positronic brain and LSE-1200c "Perforator"
-            "/Maps/meta.yml", // Contains warden's rubber stamp
             "/Maps/reach.yml", // Contains handheld crew monitor
             "/Maps/_starcup/reach.yml", // starcup: Contains handheld crew monitor
             "/Maps/Shuttles/ShuttleEvent/cruiser.yml", // Contains LSE-1200c "Perforator"
@@ -62,6 +61,7 @@ namespace Content.IntegrationTests.Tests
 			"/Maps/_starcup/syndicomm.yml",  // starcup: contains centcomm rubber stamp, centcomm folder, handheld crew monitor
 			"/Maps/_starcup/Events/frigid-peril-station.yml",  // starcup: this is an event and events do not play by the rules
 			"/Maps/_starcup/Events/frigid-peril-surface.yml",  // starcup: contains lots of key round-start gear; it's not feasible to place lockers
+            "/Maps/_starcup/Events/cruise-control.yml",  // starcup: this is an event and events do not play by the rules
         };
 
         private static readonly string[] GameMaps =
@@ -69,27 +69,21 @@ namespace Content.IntegrationTests.Tests
             "Dev",
             "TestTeg",
             "Fland",
-            "Meta",
             "Packed",
-            "Omega",
             "Bagel",
             "CentComm",
             "Box",
-            "Core",
             "Marathon",
             "MeteorArena",
             "Saltern",
             "Reach",
-            "Train",
             "Oasis",
-            "Gate",
             "Amber",
-            "Loop",
             "Plasma",
             "Elkridge",
-            "Convex",
             "Relic",
             "dm01-entryway",
+            "Exo",
             "Glacier",  // starcup
             "Loopstarcup", // starcup
             "Omegastarcup", // starcup
@@ -97,7 +91,8 @@ namespace Content.IntegrationTests.Tests
             "Reachstarcup", // starcup
             "Salternstarcup", // starcup
             "Byoin",  // starcup
-            "EventFrigidPeril" // starcup
+            "EventFrigidPeril", // starcup
+            "EventCruiseControl" // starcup
         };
 
         /// <summary>

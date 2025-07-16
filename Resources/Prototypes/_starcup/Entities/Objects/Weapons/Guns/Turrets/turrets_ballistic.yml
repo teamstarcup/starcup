@@ -1,0 +1,53 @@
+- type: entity
+  parent: [BaseTraitorContraband, WeaponTurretSyndicate]
+  id: WeaponTurretNanotrasenAntag
+  suffix: NanoTrasen (Antag)
+
+- type: entity
+  parent: WeaponTurretSyndicateDisposable
+  id: WeaponTurretNanotrasenDisposableAntag
+  name: disposable ballistic turret
+  suffix: NanoTrasen (Antag), Disposable
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:TriggerBehavior
+  - type: Gun
+    fireRate: 2
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+  - type: BallisticAmmoProvider
+    proto: CartridgePistol
+    capacity: 50
+  - type: Construction
+    deconstructionTarget: null
+    graph: WeaponTurretNanotrasenDisposableAntag
+    node: disposableTurret
+  - type: Repairable
+    qualityNeeded: "Anchoring"
+    doAfterDelay: 3
+  - type: TriggerWhenEmpty
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 10
+    intensitySlope: 1.5
+    totalIntensity: 30
+    canCreateVacuum: false

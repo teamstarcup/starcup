@@ -19,3 +19,39 @@
     proto: robot
   - type: IdentityBlocker
   - type: IngestionBlocker
+
+- type: entity
+  parent: ClothingHeadFishCap
+  id: ClothingHeadFishAlt
+  suffix: Polyamory
+  description: "\"The fish, women, and I are in a loving polyamorous relationship built on mutual trust and a regularly renewed fishing license.\""
+
+- type: entity
+  parent: [ BaseTraitorContraband, ClothingHeadPyjamaSyndicateBlack ]
+  id: ClothingHeadPyjamaNanotrasenBlack
+  name: NanoTrasen black pyjama hat
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hats/pyjamasyndicateblack.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hats/pyjamasyndicateblack.rsi
+
+- type: entity
+  parent: [ BaseTraitorContraband, ClothingHeadPyjamaSyndicatePink ]
+  id: ClothingHeadPyjamaNanotrasenGold
+  name: NanoTrasen gold pyjama hat
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Head/Hats/pyjamananotrasengold.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Head/Hats/pyjamananotrasengold.rsi
+
+- type: entity
+  parent: [ BaseTraitorContraband, ClothingHeadPyjamaSyndicateRed ]
+  id: ClothingHeadPyjamaNanotrasenBlue
+  name: NanoTrasen blue pyjama hat
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Head/Hats/pyjamananotrasenblue.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Head/Hats/pyjamananotrasenblue.rsi

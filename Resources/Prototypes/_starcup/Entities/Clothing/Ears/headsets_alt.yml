@@ -1,0 +1,14 @@
+- type: entity
+  parent: [BaseTraitorContraband, ClothingHeadsetAltSyndicate]
+  id: ClothingHeadsetAltNanotrasen
+  name: blueblood over-ear headset
+  description: An updated, modular NanoTrasen intercom that fits over the head and takes encryption keys (there are 5 key slots.).
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyNT
+  - type: Sprite
+    sprite: _starcup/Clothing/Ears/Headsets/nanotrasen.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Ears/Headsets/nanotrasen.rsi

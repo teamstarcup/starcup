@@ -181,6 +181,11 @@ public sealed class StorageUIController : UIController, IOnSystemChanged<Storage
         _input.FirstChanceOnKeyEvent += OnMiddleMouse;
     }
 
+    public void OnSystemUnloaded(StorageSystem system)
+    {
+        _input.FirstChanceOnKeyEvent -= OnMiddleMouse;
+    }
+
     /// One might ask, Hey Emo, why are you parsing raw keyboard input just to rotate a rectangle?
     /// The answer is, that input bindings regarding mouse inputs are always intercepted by the UI,
     /// thus, if i want to be able to rotate my damn piece anywhere on the screen,
@@ -220,31 +225,17 @@ public sealed class StorageUIController : UIController, IOnSystemChanged<Storage
         if (!IsDragging && EntityManager.System<HandsSystem>().GetActiveHandEntity() == null)
             return;
 
-        // begin starcup: disable original logic for rotation fix
-        //clamp it to a cardinal.
-        // DraggingRotation = (DraggingRotation + Math.PI / 2f).GetCardinalDir().ToAngle();
-        // if (DraggingGhost != null)
-        //     DraggingGhost.Location.Rotation = DraggingRotation;
-
-        // if (IsDragging || UIManager.CurrentlyHovered is StorageWindow)
-        //     keyEvent.Handle();
-        // end starcup
-
-        // begin starcup: only rotate items if we're hovering over a storage window
+        // Do not rotate items unless we are either dragging them or hovering over a storage window.
         if (DraggingGhost is null && UIManager.CurrentlyHovered is not StorageWindow)
             return;
 
+        //clamp it to a cardinal.
         DraggingRotation = (DraggingRotation + Math.PI / 2f).GetCardinalDir().ToAngle();
-        if (DraggingGhost is not null)
+        if (DraggingGhost != null)
             DraggingGhost.Location.Rotation = DraggingRotation;
 
-        keyEvent.Handle();
-        // end starcup
-    }
-
-    public void OnSystemUnloaded(StorageSystem system)
-    {
-        _input.FirstChanceOnKeyEvent -= OnMiddleMouse;
+        if (IsDragging || UIManager.CurrentlyHovered is StorageWindow)
+            keyEvent.Handle();
     }
 
     private void OnPiecePressed(GUIBoundKeyEventArgs args, StorageWindow window, ItemGridPiece control)

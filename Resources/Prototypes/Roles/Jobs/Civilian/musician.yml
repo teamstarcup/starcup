@@ -9,6 +9,7 @@
   access:
   - Maintenance # TODO Remove maint access for all gimmick jobs once access work is completed
   - Theatre
+  - Mime # starcup: added unique access level
   special:
   - !type:GiveItemOnHolidaySpecial
     holiday: MikuDay
@@ -24,3 +25,13 @@
   #storage:
     #back:
     #- Stuff
+
+- type: chameleonOutfit
+  id: MusicianChameleonOutfit
+  job: Musician
+  equipment:
+    head: ClothingHeadHatTophat
+    mask: ClothingMaskBreath
+    neck: ClothingMultipleHeadphones
+    outerClothing: ClothingOuterWinterMusician
+    gloves: ClothingHandsGlovesColorBlack

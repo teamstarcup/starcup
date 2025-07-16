@@ -35,9 +35,21 @@
     id: SecurityCadetPDA
     ears: ClothingHeadsetSecurity
     belt: ClothingBeltSecurityFilled
-    pocket1: WeaponPistolMk58
+    pocket1: WeaponDisabler # DeltaV - loadouts, Security Cadet doesn't spawn with a gun
     pocket2: BookSecurity
   storage:
     back:
     - Flash
     - MagazinePistol
+
+- type: chameleonOutfit
+  id: SecurityCadetChameleonOutfit
+  job: SecurityCadet
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHelmetBasic
+    eyes: ClothingEyesHudSecurity
+    mask: ClothingMaskGasSecurity
+    neck: ClothingNeckScarfStripedRed
+    belt: ClothingBeltSecurity
+    gloves: ClothingHandsGlovesColorBlack

@@ -1,8 +1,10 @@
 reagent-name-oxygen = oxygen
 reagent-desc-oxygen = An oxidizing, colorless gas.
 
+# starcup: rewrote plasma description for tone
+# reagent-desc-plasma = Funky, space-magic pixie dust. You probably shouldn't eat this, but we both know you will anyways.
 reagent-name-plasma = plasma
-reagent-desc-plasma = Funky, space-magic pixie dust. You probably shouldn't eat this, but we both know you will anyways.
+reagent-desc-plasma = This highly flammable gas is the fuel source that propelled NanoTrasen to the corporate dominance it lords over you now. It, like them, is to be dealt with very carefully.
 
 reagent-name-tritium = tritium
 reagent-desc-tritium = Radioactive space-magic pixie dust.

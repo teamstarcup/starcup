@@ -1,0 +1,16 @@
+- type: constructionGraph
+  id: WeaponTurretNanotrasenDisposableAntag
+  start: disposableTurret
+  graph:
+  - node: disposableTurret
+    entity: WeaponTurretNanotrasenDisposableAntag
+    edges:
+    - to: disposableTurret
+      completed:
+      - !type:SpawnPrototype
+            prototype: ToolboxElectricalTurretNT
+            amount: 1
+      - !type:DeleteEntity {}
+      steps:
+        - tool: Screwing
+          doAfter: 10

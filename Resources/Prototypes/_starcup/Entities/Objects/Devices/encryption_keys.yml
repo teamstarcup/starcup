@@ -1,0 +1,20 @@
+- type: entity
+  parent: [ BaseTraitorContraband, EncryptionKeySyndie ]
+  id: EncryptionKeyNT
+  name: blueblood encryption key
+  components:
+  - type: Sprite
+    layers:
+    - state: crypt_nt
+    - state: nano_label
+
+- type: entity
+  parent: [ BaseTraitorContraband, EncryptionKeyBinarySyndicate ]
+  id: EncryptionKeyBinaryNanotrasen
+  suffix: NanoTrasen
+  description: A NanoTrasen encryption key that translates binary signals used by silicons.
+  components:
+  - type: Sprite
+    layers:
+    - state: crypt_nt
+    - state: ai_label

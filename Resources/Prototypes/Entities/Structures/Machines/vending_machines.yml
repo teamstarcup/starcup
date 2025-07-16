@@ -2,7 +2,7 @@
   id: VendingMachine
   parent: BaseMachinePowered
   name: vending machine
-  description: Just add capitalism!
+  description: For when you want to hear a nice KER-CHUNK when retrieving something. Don't worry; all expenses are transferred directly to your employee account. # starcup: rewritten for tone
   abstract: true
   components:
   - type: ActionGrant
@@ -36,6 +36,15 @@
         density: 200
   - type: Destructible
     thresholds:
+    - trigger: # Excess damage, don't do anything
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
         damage: 100
@@ -43,20 +52,6 @@
       - !type:DoActsBehavior
         acts: ["Breakage"]
       - !type:EjectVendorItems
-    - trigger:
-        !type:DamageTrigger
-        damage: 200
-      behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          SheetSteel1:
-            min: 1
-            max: 1
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalGlassBreak
   - type: Repairable
     doAfterDelay: 8
   - type: ActivatableUI
@@ -299,7 +294,7 @@
   parent: VendingMachine
   id: VendingMachineCigs
   name: ShadyCigs Deluxe
-  description: If you want to get cancer, might as well do it in style.
+  description: Proliferation of these across Syndicate stations is the result of heavy and controversial neocorporate lobbying. # starcup: rewritten for tone
   components:
   - type: VendingMachine
     pack: CigaretteMachineInventory
@@ -1171,11 +1166,12 @@
     radius: 1.5
     energy: 1.6
     color: "#389690"
+  - type: RussianAccent
 
 - type: entity
   parent: VendingMachine
   id: VendingMachineTheater
-  name: AutoDrobe
+  name: TheaterDrobe # starcup: renamed for consistency
   description: A vending machine containing costumes.
   components:
   - type: VendingMachine
@@ -1309,7 +1305,7 @@
   parent: VendingMachine
   id: VendingMachineGames
   name: Good Clean Fun
-  description: Vends things that the Captain and Head of Personnel are probably not going to appreciate you fiddling with instead of your job...
+  description: Helps supply the crew with recreation and some much-needed boosts to morale. Except when you roll three natural 1s in a row. # starcup: rewritten for tone
   components:
   - type: VendingMachine
     pack: GoodCleanFunInventory
@@ -1758,7 +1754,7 @@
   parent: VendingMachine
   id: VendingMachineAtmosDrobe
   name: AtmosDrobe
-  description: This relatively unknown vending machine delivers clothing for Atmospherics Technicians, an equally unknown job.
+  description: Dispenses fashionable clothing for Atmospherics Technicians, a notable perk for what can be a rather thankless job. # starcup: rewritten for tone
   components:
   - type: VendingMachine
     pack: AtmosDrobeInventory
@@ -1910,7 +1906,7 @@
   parent: VendingMachine
   id: VendingMachineSciDrobe
   name: SciDrobe
-  description: A simple vending machine suitable to dispense well tailored science clothing. Endorsed by Space Cubans.
+  description: A simple vending machine suitable to dispense well tailored Science clothing. # starcup: rewritten for tone
   components:
   - type: VendingMachine
     pack: SciDrobeInventory

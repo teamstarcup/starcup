@@ -1,0 +1,17 @@
+- type: entity
+  name: NanoTrasen minibomb
+  description: A NanoTrasen-manufactured explosive used to sow destruction and cause chaos.
+  parent: [BaseTraitorContraband, SyndieMiniBomb]
+  id: NanotrasenMiniBomb
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Grenades/nanogrenade.rsi
+
+- type: entity
+  name: NanoTrasen trickybomb
+  description: A NanoTrasen-manufactured explosive used to make an excellent distraction.
+  parent: [BaseTraitorContraband, SyndieTrickyBomb]
+  id: NanotrasenTrickyBomb
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Grenades/nanogrenade.rsi

@@ -1,3 +1,13 @@
+# Senior times
+- type: loadoutEffectGroup
+  id: SeniorBartender
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobBartender
+      time: 187200 #52 hrs (1 hour per week for 1 year)
+
 # ID
 - type: loadout
   id: BaristaPDA
@@ -8,3 +18,11 @@
   id: SpeakeasyerPDA
   equipment:
     id: SpeakeasyerPDA
+
+- type: loadout
+  id: SeniorBartenderPDA
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorBartender
+  equipment:
+    id: SeniorBartenderPDA

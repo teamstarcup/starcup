@@ -161,7 +161,7 @@ namespace Content.Client.Stylesheets
         // DeltaV - AAC button variables
         public static readonly string CommandButtonClass = "CommandButton";
         public static readonly string EngineeringButtonClass = "EngineeringButton";
-        public static readonly string ResearchButtonClass = "ResearchButton";
+        public static readonly string ScienceButtonClass = "ScienceButton";
         public static readonly string JusticeButtonClass = "JusticeButton";
         public static readonly string LogisticsButtonClass = "LogisticsButton";
         public static readonly string MedicalButtonClass = "MedicalButton";
@@ -173,7 +173,7 @@ namespace Content.Client.Stylesheets
         public static readonly Color CommandColorHovered = Color.FromHex("#4F587B");
         public static readonly Color EngineeringButtonColorDefault = Color.FromHex("#77684B");
         public static readonly Color EngineeringColorHovered = Color.FromHex("#776D71");
-        public static readonly Color ResearchButtonColorDefault = Color.FromHex("#6F5973");
+        public static readonly Color ScienceButtonColorDefault = Color.FromHex("#6F5973");
         public static readonly Color ResearchColorHovered = Color.FromHex("#71638E");
         public static readonly Color LogisticsButtonColorDefault = Color.FromHex("#61503A");
         public static readonly Color LogisticsColorHovered = Color.FromHex("#675C64");
@@ -1867,12 +1867,12 @@ namespace Content.Client.Stylesheets
                     .Prop(Control.StylePropertyModulateSelf, EngineeringColorHovered),
 
                 Element<ContainerButton>()
-                    .Class(ResearchButtonClass)
+                    .Class(ScienceButtonClass)
                     .Pseudo(ContainerButton.StylePseudoClassNormal)
-                    .Prop(Control.StylePropertyModulateSelf, ResearchButtonColorDefault),
+                    .Prop(Control.StylePropertyModulateSelf, ScienceButtonColorDefault),
 
                 Element<ContainerButton>()
-                    .Class(ResearchButtonClass)
+                    .Class(ScienceButtonClass)
                     .Pseudo(ContainerButton.StylePseudoClassHover)
                     .Prop(Control.StylePropertyModulateSelf, ResearchColorHovered),
 

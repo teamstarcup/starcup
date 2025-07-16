@@ -152,15 +152,16 @@
     contents:
       - id: MonkeyCubeBox
 
-- type: entity
-  id: CrateNPCKoboldCube
-  parent: CrateGenericSteel
-  name: kobold cube crate
-  description: A crate containing single box of kobold cubes.
-  components:
-  - type: StorageFill
-    contents:
-      - id: KoboldCubeBox
+# starcup: remove non-sapient kobolds
+#- type: entity
+#  id: CrateNPCKoboldCube
+#  parent: CrateGenericSteel
+#  name: kobold cube crate
+#  description: A crate containing single box of kobold cubes.
+#  components:
+#  - type: StorageFill
+#    contents:
+#      - id: KoboldCubeBox
 
 - type: entity
   id: CrateNPCMouse

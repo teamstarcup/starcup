@@ -267,6 +267,8 @@
     - VimPilot
   - type: StealTarget
     stealGroup: AnimalNamedCat
+  - type: Puller
+    needsHands: false # starcup - basically a cat
 
 - type: entity
   name: McGriff
@@ -329,6 +331,8 @@
     - VimPilot
   - type: StealTarget
     stealGroup: AnimalMcGriff
+  - type: Puller
+    needsHands: false # starcup - go fetch!
 
 - type: entity
   name: Paperwork
@@ -363,6 +367,8 @@
     attributes:
       proper: true
       gender: male
+  - type: Puller
+    needsHands: false # starcup - Paperwork likes helping retrieve random books and papers for his librarian caretaker
 
 - type: entity
   name: Walter
@@ -425,6 +431,8 @@
   - type: Speech
     speechVerb: Canine
     speechSounds: Dog
+  - type: Puller
+    needsHands: false # starcup - go fetch!
 
 - type: entity
   name: Morty

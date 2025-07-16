@@ -11,6 +11,15 @@
     snapCardinals: true
   - type: Destructible
     thresholds:
+    - trigger: # Excess damage, don't spawn entities
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/poster_broken.ogg
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
     - trigger:
         !type:DamageTrigger
         damage: 5
@@ -62,8 +71,8 @@
 - type: entity
   parent: PosterBase
   id: PosterContrabandAtmosiaDeclarationIndependence
-  name: "Atmosia Declaration of Independence"
-  description: "A relic of a failed rebellion."
+  name: "Treaty of Sol" # starcup: rewritten for tone
+  description: "A copy of the form submitted to offer various mythical names from human culture into the Galactic Public Domain, ending the Second Neocorporate War." # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster2_contraband
@@ -99,7 +108,7 @@
   parent: PosterBase
   id: PosterContrabandClown
   name: "Clown"
-  description: "Honk."
+  description: "Who is Clowncore, and why do their posters keep showing up everywhere?" # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster6_contraband
@@ -117,7 +126,7 @@
   parent: PosterBase
   id: PosterContrabandGreyTide
   name: "Grey Tide"
-  description: "A rebellious poster symbolizing passenger solidarity."
+  description: "From an old Syndicate campaign encouraging solidarity between undervalued station passengers." # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster8_contraband
@@ -126,7 +135,7 @@
   parent: PosterBase
   id: PosterContrabandMissingGloves
   name: "Missing Gloves"
-  description: "This poster references the uproar that followed Nanotrasen's financial cuts toward insulated-glove purchases."
+  description: "Looks like someone's lost their defective pair of insulated gloves. You're sure it'll turn up." # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster9_contraband
@@ -144,7 +153,7 @@
   parent: PosterBase
   id: PosterContrabandRIPBadger
   name: "RIP Badger"
-  description: "This seditious poster references Nanotrasen's genocide of a space station full of badgers."
+  description: "This poster commemorates a badger said to have broken free from an experimental Interdyne lab, creating massive scandal. The existence of badgers is above your clearance level." # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster11_contraband
@@ -153,7 +162,7 @@
   parent: PosterBase
   id: PosterContrabandAmbrosiaVulgaris
   name: "Ambrosia Vulgaris"
-  description: "This poster is lookin' pretty trippy man."
+  description: "A recreation of a painting by the group of Dawnflowers who first cultivated the depicted herb. They say the original was colored with the blood of the saint they killed in celebration after the first harvest." # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster12_contraband
@@ -171,7 +180,7 @@
   parent: PosterBase
   id: PosterContrabandEAT
   name: "EAT."
-  description: "This poster promotes rank gluttony."
+  description: "An advertisement for a fast food chain. Probably. The provenance of the displayed burger is unclear." # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster14_contraband
@@ -207,7 +216,7 @@
   parent: PosterBase
   id: PosterContrabandCommunistState
   name: "Communist State"
-  description: "All hail the Communist party!"
+  description: "After the arrival of humans to the galaxy, interest in their native philosophy of communism experienced a resurgence." # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster18_contraband
@@ -216,7 +225,7 @@
   parent: PosterBase
   id: PosterContrabandLamarr
   name: "Lamarr"
-  description: "This poster depicts Lamarr. Probably made by a traitorous Research Director."
+  description: "This poster depicts Lamarr, beloved mascot of popular harpy-made video game H.L. 4." # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster19_contraband
@@ -242,8 +251,8 @@
 - type: entity
   parent: PosterBase
   id: PosterContrabandKosmicheskayaStantsiya
-  name: "Kosmicheskaya Stantsiya 13 Does Not Exist"
-  description: "A poster mocking CentComm's denial of the existence of the derelict station near Space Station 13."
+  name: "KC-13 Does Not Exist" # starcup: rewritten for tone
+  description: "A poster reminding you that KC-13 is not real, does not stand for anything, is seditious to invoke, and why do we keep talking about it, you're the one who keeps bringing it up." # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster22_contraband
@@ -333,7 +342,7 @@
   parent: PosterBase
   id: PosterContrabandPunchShit
   name: "Punch Shit"
-  description: "Fight things for no reason, like a man!"
+  description: "Sometimes, it's just what you have to do." # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster32_contraband
@@ -449,8 +458,8 @@
 - type: entity
   parent: PosterBase
   id: PosterContrabandFreeSyndicateEncryptionKey
-  name: "Free Syndicate Encryption Key"
-  description: "A poster about traitors begging for more."
+  name: "Free Unit 2559" # starcup: rewritten for tone
+  description: "An old wartime propaganda poster calling for the emancipation of a SyndComm AI unit. What nobody knew was that the Deux Ex Machina had already gotten to it." # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster46_contraband
@@ -467,8 +476,8 @@
 - type: entity
   parent: PosterBase
   id: PosterContrabandTheBigGasTruth
-  name: "The Big Gas Giant Truth"
-  description: "Don't believe everything you see on a poster, patriots. All the lizards at central command don't want to answer this SIMPLE QUESTION: WHERE IS THE GAS MINER MINING FROM, CENTCOMM?"
+  name: "Charon-Epsilon Lives!"
+  description: "This poster claims to prove the existence of intelligent life on the planet Charon-Epsilon, and that these vengeful spirits will inevitably take revenge on Electra for the destruction of their world." # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster48_contraband
@@ -632,7 +641,7 @@
   parent: PosterBase
   id: PosterLegitHereForYourSafety
   name: "Here For Your Safety"
-  description: "A poster glorifying the station's security force."
+  description: "A poster to remind the station of the security force's dedication to their survival."
   components:
   - type: Sprite
     state: poster1_legit
@@ -668,7 +677,7 @@
   parent: PosterBase
   id: PosterLegitBuild
   name: "Build"
-  description: "A poster glorifying the engineering team."
+  description: "A poster calling for the Engineering team to be constructive! The miracles of tomorrow are built on the foundation of today!" # rewritten for tone
   components:
   - type: Sprite
     state: poster5_legit
@@ -745,14 +754,15 @@
   - type: Sprite
     state: poster13_legit
 
-- type: entity
-  parent: PosterBase
-  id: PosterLegitUeNo
-  name: "Ue No."
-  description: "This thing is all in Japanese."
-  components:
-  - type: Sprite
-    state: poster14_legit
+#- type: entity
+#  parent: PosterBase
+#  id: PosterLegitUeNo
+#  name: "Ue No."
+#  description: "This thing is all in Japanese."
+#  components:
+#  - type: Sprite
+#    state: poster14_legit
+# end starcup
 
 - type: entity
   parent: PosterBase
@@ -955,8 +965,8 @@
 - type: entity
   parent: PosterBase
   id: PosterLegitThereIsNoGasGiant
-  name: "There Is No Gas Giant"
-  description: "Nanotrasen has issued posters, like this one, to all stations reminding them that rumours of a gas giant are false."
+  name: "Charonic Planets"
+  description: "An informational poster from Electra reminding employees that any reports of life inhabiting Class-C \"Charonic\" planets are the result of persistent necrocosmic hallucinations." # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster37_legit
@@ -973,8 +983,8 @@
 - type: entity
   parent: PosterBase
   id: PosterLegitSecWatch
-  name: "Sec is Watching You"
-  description: "A poster reminding you that security is watching your every move."
+  name: "Security Watch"
+  description: "A poster reminding you that security is everyone's concern. Watchful eyes keep saboteurs at bay!" # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster39_legit
@@ -1036,8 +1046,8 @@
 - type: entity
   parent: PosterBase
   id: PosterLegitSafetyMothMeth
-  name: "Safety Moth - Methamphetamine"
-  description: "This informational poster uses Safety Moth™ to tell the viewer to seek CMO approval before cooking methamphetamine. \"Stay close to the target temperature, and never go over!\" ...You shouldn't ever be making this."
+  name: "Safety Moth - Careful Measurements" # starcup: rewritten for tone
+  description: "This informational poster uses Safety Moth™ to tell the viewer to double-check their chemical ratios. \"Fine detail makes fine chemists!\"" # starcup: rewritten for tone
   components:
     - type: Sprite
       state: poster46_legit
@@ -1109,10 +1119,19 @@
   parent: PosterBase
   id: PosterLegitTyrone
   name: "Tyrone's Guide to Space"
-  description: "A poster advertising online schooling about space. The classes listed seem to cover things from the basic usage of station equipment to complicated subjects like creating pipebombs or covering entire hallways in spacelube. A disclaimer reads \"It's never THAT bad, and at the end you might even get a tortilla.\""
+  description: "A poster advertising online schooling about space. The classes listed seem to cover things from the basic usage of station equipment to complicated subjects like creating pipebombs or covering entire hallways in spacelube. A disclaimer reads \"It's never THAT bad, and at the end you might even get a tortilla.\" These courses are probably not approved by your employers." # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster54_legit
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitHelio
+  name: Helio Logistics ad
+  description: "A poster advertising Helio Logistics and their adorable mascot. The slogan reads 'Come rain or shine, we deliver on time.'"
+  components:
+  - type: Sprite
+    state: poster55_legit
 
 #maps
 

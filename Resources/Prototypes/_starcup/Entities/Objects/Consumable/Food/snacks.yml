@@ -1,0 +1,79 @@
+- type: entity
+  name: imitation chocolate bar
+  parent: FoodSnackChocolate
+  id: FoodSnackChocolateImitation
+  description: This brand of theobromine-free chocolate has been selling out even faster than the standard stuff on SyndComm stations. Wonder why...
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Consumable/Food/snacks.rsi
+    state: chocolatebar-imitation
+  - type: Item
+    heldPrefix: chocolatebar-imitation
+    size: Tiny
+  - type: SpawnItemsOnUse
+    items:
+      - id: FoodPacketChocolateTrashImitation
+      - id: FoodSnackChocolateBarImitation
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  name: imitation chocolate bar
+  parent: FoodSnackChocolateBar
+  id: FoodSnackChocolateBarImitation
+  description: This brand of theobromine-free chocolate has been selling out even faster than the standard stuff on SyndComm stations. Wonder why...
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 10
+        - ReagentId: CocoaPowderImitation
+          Quantity: 1
+
+- type: entity
+  name: nano-treats
+  parent: FoodSnackBase
+  id: FoodSnackNT
+  description: An extremely moist snack cake that tastes just as good after being nuked.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - syndicakes
+  - type: Sprite
+    sprite: _starcup/Objects/Consumable/Food/snacks.rsi
+    state: nanotreats
+  - type: Item
+  - type: Food
+    trash:
+    - FoodPacketNanoTrash
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: FoodPacketTrash
+  id: FoodPacketChocolateTrashImitation
+  name: imitation chocolate wrapper
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Consumable/Food/snacks.rsi
+    state: chocolatebar-imitation-trash
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: trash-inhand-left
+        color: "#5E00A2"
+      right:
+      - state: trash-inhand-right
+        color: "#5E00A2"
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: FoodPacketTrash
+  id: FoodPacketNanoTrash
+  name: nano-treats box
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Consumable/Food/snacks.rsi
+    state: nanotreats-trash

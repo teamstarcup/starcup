@@ -247,7 +247,7 @@
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitColorOrange
   name: orange jumpsuit
-  description: Don't wear this near paranoid security officers.
+  description: A jumpsuit so nice, it should be a crime! # starcup: rewritten for tone
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/color.rsi
@@ -492,7 +492,7 @@
 
 # Rainbow Jumpsuit
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ ClothingUniformBase, ClothingUniformFoldableBaseImpstation ] # imp - Add foldable uniform jumpsuits
   id: ClothingUniformColorRainbow
   name: rainbow jumpsuit
   description: A multi-colored jumpsuit!

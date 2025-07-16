@@ -1,0 +1,10 @@
+- type: entity
+  id: SingularityBeaconNT
+  suffix: NanoTrasen
+  parent: [BaseTraitorContraband, SingularityBeacon]
+  description: A NanoTrasen device that attracts the singularity. If it's loose and you're seeing this, run.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Devices/singularity_beacon.rsi
+    layers:
+    - state: icon

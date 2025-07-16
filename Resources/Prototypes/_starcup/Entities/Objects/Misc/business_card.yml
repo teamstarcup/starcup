@@ -1,0 +1,23 @@
+- type: entity
+  id: NanotrasenBusinessCard
+  name: NanoTrasen business card
+  parent: [ BaseTraitorContraband, SyndicateBusinessCard ]
+  description: A black card with NanoTrasen's logo. There's something written on the back.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/bureaucracy.rsi
+      layers:
+      - state: nanotrasen_card
+      - state: nanotrasen_card
+        map: ["enum.PaperVisualLayers.Writing"]
+        visible: false
+      - state: paper_stamp-generic
+        map: ["enum.PaperVisualLayers.Stamp"]
+        visible: false
+    - type: PaperVisuals
+      headerImagePath: null # null until we can get a nanotrasen header
+      headerMargin: 0.0, 0.0, 0.0, 2.0
+      backgroundImagePath: "/Textures/_starcup/Interface/Paper/paper_background_blue.svg.96dpi.png"
+      backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+      contentMargin: 4.0, 4.0, 4.0, 4.0
+      maxWritableArea: 400.0, 256.0

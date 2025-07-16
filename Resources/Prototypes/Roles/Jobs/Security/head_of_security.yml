@@ -48,8 +48,16 @@
     id: HoSPDA
     gloves: ClothingHandsGlovesCombat
     ears: ClothingHeadsetAltSecurity
-    pocket1: WeaponPistolMk58
+  #  pocket1: WeaponPistolMk58Nonlethal # DeltaV - loadouts
   storage:
     back:
     - Flash
-    - MagazinePistol
+  # - MagazinePistol # DeltaV - loadouts
+
+- type: chameleonOutfit
+  id: HeadOfSecurityChameleonOutfit
+  job: HeadOfSecurity
+  hasMindShield: true
+  equipment:
+    mask: ClothingMaskGasSecurity
+    neck: ClothingNeckCloakHos

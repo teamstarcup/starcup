@@ -1,0 +1,52 @@
+- type: entity
+  parent: BaseSubdermalImplant
+  id: RadioImplantNT
+  name: radio implant
+  suffix: NanoTrasen
+  description: This implant grants access to the NanoTrasen channel without a headset.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+  - type: RadioImplant
+    radioChannels:
+    - Syndicate
+
+- type: entity
+  parent: [ BaseSubdermalImplant, StorePresetUplinkNT ]
+  id: UplinkImplantNT
+  name: uplink implant
+  suffix: NanoTrasen
+  description: This implant lets the user access a hidden NanoTrasen uplink at will.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    implantAction: ActionOpenUplinkImplant
+    whitelist:
+      components:
+      - Hands # prevent mouse buying grenade penguin since its not telepathic
+  - type: Store
+    balance:
+      Telecrystal: 0
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: DeathRattleImplantNT
+  name: death rattle implant
+  suffix: NanoTrasen
+  description: This implant will inform the NanoTrasen radio channel should the user fall into critical condition or die.
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      permanent: true
+      whitelist:
+        components:
+        - MobState # admeme implanting a chair with rattle implant needs to give the chair mobstate so it can die first
+    - type: TriggerOnMobstateChange
+      mobState:
+      - Critical
+      - Dead
+    - type: Rattle

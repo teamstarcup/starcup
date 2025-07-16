@@ -57,7 +57,7 @@
       path: /Audio/Effects/countdown.ogg
 
 - type: entity
-  parent: [ProjectileGrenadeBase, BaseSyndicateContraband]
+  parent: [ProjectileGrenadeBase, BaseTraitorContraband] # starcup: shared contraband level with nt gear
   id: GrenadeIncendiary
   name: incendiary grenade
   description: Guaranteed to light up the mood.
@@ -81,9 +81,11 @@
   - type: EmitSoundOnTrigger
     sound:
       path: "/Audio/Weapons/Guns/Gunshots/batrifle.ogg"
+  - type: StaticPrice
+    price: 1500
 
 - type: entity
-  parent: [ProjectileGrenadeBase, BaseSyndicateContraband]
+  parent: [ProjectileGrenadeBase, BaseTraitorContraband] # starcup: shared contraband level with nt gear
   id: GrenadeShrapnel
   name: shrapnel grenade
   description: Releases a deadly spray of shrapnel that causes severe bleeding.
@@ -107,3 +109,5 @@
   - type: EmitSoundOnTrigger
     sound:
       path: "/Audio/Weapons/Guns/Gunshots/batrifle.ogg"
+  - type: StaticPrice
+    price: 1500

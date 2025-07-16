@@ -208,7 +208,7 @@ public abstract class SharedTapeRecorderSystem : EntitySystem
         if (HasComp<FitsInTapeRecorderComponent>(ent))
             return;
 
-        _appearance.SetData(ent, ToggleVisuals.Toggled, false);
+        _appearance.SetData(ent, ToggleableVisuals.Enabled, false); // starcup: rewritten after actions refactor
         AddComp<FitsInTapeRecorderComponent>(ent);
         args.Handled = true;
     }
@@ -221,7 +221,7 @@ public abstract class SharedTapeRecorderSystem : EntitySystem
         if (args.DamageDelta == null || args.DamageDelta.GetTotal() < 5)
             return;
 
-        _appearance.SetData(ent, ToggleVisuals.Toggled, true);
+        _appearance.SetData(ent, ToggleableVisuals.Enabled, true); // starcup: rewritten after actions refactor
 
         RemComp<FitsInTapeRecorderComponent>(ent);
         CorruptRandomEntry(ent);

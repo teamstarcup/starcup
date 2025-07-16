@@ -1,0 +1,138 @@
+- type: entity
+  id: BaseImplantOnlyImplanterNT
+  parent: [BaseTraitorContraband, BaseImplantOnlyImplanterSyndi]
+  name: NanoTrasen implanter
+  abstract: true
+  components:
+    - type: Item
+      sprite: _starcup/Objects/Specific/Medical/nano_implanter.rsi
+      heldPrefix: implanter
+    - type: Sprite
+      sprite: _starcup/Objects/Specific/Medical/nano_implanter.rsi
+      state: implanter1
+      layers:
+        - state: implanter0
+          map: [ "implantFull" ]
+          visible: true
+        - state: implanter1
+          map: [ "implantOnly" ]
+
+#Traitor implanters
+
+- type: entity
+  id: StorageImplanterNT
+  name: storage implanter
+  suffix: NanoTrasen
+  parent: BaseImplantOnlyImplanterNT
+  components:
+    - type: Implanter
+      implant: StorageImplant
+
+- type: entity
+  id: FreedomImplanterNT
+  name: freedom implanter
+  suffix: NanoTrasen
+  parent: BaseImplantOnlyImplanterNT
+  components:
+    - type: Implanter
+      implant: FreedomImplant
+
+- type: entity
+  id: RadioImplanterNT
+  name: NanoTrasen radio implanter
+  parent: BaseImplantOnlyImplanterNT
+  components:
+  - type: Implanter
+    implant: RadioImplantNT
+
+- type: entity
+  id: UplinkImplanterNT
+  name: uplink implanter
+  suffix: NanoTrasen
+  parent: BaseImplantOnlyImplanterNT
+  components:
+  - type: Implanter
+    implant: UplinkImplantNT
+
+- type: entity
+  id: EmpImplanterNT
+  name: EMP implanter
+  suffix: NanoTrasen
+  parent: BaseImplantOnlyImplanterNT
+  components:
+    - type: Implanter
+      implant: EmpImplant
+
+- type: entity
+  id: ScramImplanterNT
+  name: scram implanter
+  suffix: NanoTrasen
+  parent: BaseImplantOnlyImplanterNT
+  components:
+    - type: Implanter
+      implant: ScramImplant
+
+- type: entity
+  id: DnaScramblerImplanterNT
+  name: DNA scrambler implanter
+  suffix: NanoTrasen
+  parent: BaseImplantOnlyImplanterNT
+  components:
+    - type: Implanter
+      implant: DnaScramblerImplant
+
+- type: entity
+  id: ChameleonControllerImplanterNT
+  name: chameleon controller implanter
+  suffix: NanoTrasen
+  parent: BaseImplantOnlyImplanterNT
+  components:
+  - type: Implanter
+    implant: ChameleonControllerImplant
+
+#Nuclear Operative/Special implanters
+
+- type: entity
+  id: MicroBombImplanterNT
+  name: micro-bomb implanter
+  suffix: NanoTrasen
+  parent: BaseImplantOnlyImplanterNT
+  components:
+    - type: Implanter
+      implant: MicroBombImplant
+
+- type: entity
+  id: MacroBombImplanterNT
+  name: macro-bomb implanter
+  suffix: NanoTrasen
+  parent: BaseImplantOnlyImplanterNT
+  components:
+    - type: Implanter
+      implant: MacroBombImplant
+
+- type: entity
+  id: DeathRattleImplanterNT
+  name: death rattle implanter
+  suffix: NanoTrasen
+  parent: BaseImplantOnlyImplanterNT
+  components:
+    - type: Implanter
+      implant: DeathRattleImplantNT
+
+- type: entity
+  id: DeathAcidifierImplanterNT
+  name: death acidifier implanter
+  suffix: NanoTrasen
+  parent: BaseImplantOnlyImplanterNT
+  components:
+  - type: Implanter
+    implant: DeathAcidifierImplant
+
+- type: entity
+  id: FakeMindShieldImplanterNT
+  name: fake mindshield implanter
+  suffix: NanoTrasen
+  parent: BaseImplantOnlyImplanterNT
+  components:
+  - type: Implanter
+    implant: FakeMindShieldImplant

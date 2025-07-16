@@ -115,8 +115,8 @@
   - type: TransformableContainer
 
 - type: entity
-  name: coupe glass
-  description: A classic thin neck coupe glass, the icon of fragile labels on crates around the galaxy.
+  name: wine glass # starcup: renamed for accuracy
+  description: A classic thin neck wine glass, the icon of fragile labels on crates around the galaxy. Holds up to 20 units. # starcup: renamed for accuracy, volume clarified
   parent: DrinkGlassBase
   id: DrinkGlassCoupeShaped
   components:
@@ -134,10 +134,12 @@
     - type: SolutionContainerManager
       solutions:
         drink:
-          maxVol: 30
+          maxVol: 20 # starcup
     - type: SolutionContainerVisuals
       maxFillLevels: 5
       fillBaseName: fill
+      inHandsMaxFillLevels: 1
+      inHandsFillBaseName: -fill-
 
 - type: entity
   parent: DrinkGlass
@@ -147,10 +149,10 @@
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
+        maxVol: 20
         reagents:
         - ReagentId: Absinthe
-          Quantity: 30
+          Quantity: 20
   - type: Icon
     sprite: Objects/Consumable/Drinks/absintheglass.rsi
     state: icon

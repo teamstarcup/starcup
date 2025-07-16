@@ -29,9 +29,19 @@
     eyes: ClothingEyesGlassesSecurity
     id: DetectivePDA
     ears: ClothingHeadsetSecurity
-    belt: ClothingBeltHolsterFilled
+    belt: ClothingBeltHolster # DeltaV - loadouts
   storage:
     back:
     - Flash
     - ForensicPad
     - ForensicScanner
+
+- type: chameleonOutfit
+  id: DetectiveChameleonOutfit
+  job: Detective
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatFedoraBrown
+    mask: ClothingMaskGasSecurity
+    neck: ClothingNeckTieDet
+    gloves: ClothingHandsGlovesForensic

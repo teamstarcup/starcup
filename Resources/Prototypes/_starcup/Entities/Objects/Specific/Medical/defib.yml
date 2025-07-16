@@ -1,0 +1,16 @@
+- type: entity
+  id: DefibrillatorNanotrasen
+  parent: [ BaseTraitorContraband, DefibrillatorSyndicate ]
+  name: NanoTrasen defibrillator
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Specific/Medical/defibnano.rsi
+    layers:
+      - state: icon
+      - state: screen
+        map: [ "enum.ToggleableVisuals.Layer" ]
+        visible: false
+        shader: unshaded
+      - state: ready
+        map: ["enum.PowerDeviceVisualLayers.Powered"]
+        shader: unshaded

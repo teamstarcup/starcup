@@ -1,0 +1,56 @@
+# NanoTrasen Operative Outfit - Monkey
+- type: startingGear
+  id: NanotrasenOperativeGearMonkey
+  equipment:
+    head: ClothingHeadHatOutlawHat
+    jumpsuit: ClothingUniformJumpsuitOperativeNT
+    mask: CigaretteNanotrasen
+
+# NanoTrasen Operative Outfit - Barratry
+- type: startingGear
+  id: NanotrasenOperativeGearExtremelyBasic
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperativeNT
+    back: ClothingBackpackNanotrasen
+    shoes: ClothingShoesBootsCombatFilled
+    gloves: ClothingHandsGlovesColorBlack
+  storage:
+    back:
+    - WeaponPistolViperNT
+    - PinpointerNanotrasenNuclear
+    - DeathAcidifierImplanter
+
+- type: startingGear
+  id: NanotrasenOperativeClothing
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperativeNT
+    back: ClothingBackpackNanotrasen
+    shoes: ClothingShoesBootsNTFilled
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: startingGear
+  id: NanotrasenReinforcementMedic
+  parent: NanotrasenOperativeClothing
+  equipment:
+    pocket1: WeaponPistolViperNT
+  inhand:
+    - MedkitCombatFilled
+
+- type: startingGear
+  id: NanotrasenReinforcementSpy
+  parent: NanotrasenOperativeClothing
+  equipment:
+    id: AgentIDCard
+    mask: ClothingMaskGasVoiceChameleon
+    pocket1: WeaponPistolViperNT
+
+- type: startingGear
+  id: NanotrasenReinforcementThief
+  parent: NanotrasenOperativeClothing
+  equipment:
+    pocket1: WeaponPistolViperNT
+  inhand:
+    - ToolboxNanotrasenFilled
+  storage:
+    back:
+    - NanotrasenJawsOfLife

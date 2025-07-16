@@ -6,7 +6,7 @@ loadout-group-medical-intern-outerclothing = Medical intern outer clothing
 
 loadout-group-chemist-id-starcup = Chemist PDA
 
-# Research
+# Science
 loadout-group-research-assistant-outerclothing = Research assistant outer clothing
 
 loadout-group-roboticist-id-starcup = Roboticist PDA

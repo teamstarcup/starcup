@@ -239,7 +239,7 @@
       max: 3
       playerRatio: 25 # starcup: 15 -> 25, antags that target specific roles need larger shifts to ensure those roles are actually filled
       briefing:
-        text: head-rev-role-greeting
+        text: head-rev-role-greeting-starcup # starcup: remove syndicate mention
         color: CornflowerBlue
         sound: "/Audio/Ambience/Antag/headrev_start.ogg"
       startingGear: HeadRevGear
@@ -449,3 +449,11 @@
       prob: 0.90
     - id: SolarPanelDamageVariationPass
     - id: SolarPanelEmptyVariationPass
+    - id: BasicDecalDirtVariationPass
+    - id: BasicDecalGraffitiVariationPass
+    - id: BasicDecalBrunsVariationPass
+      prob: 0.50
+      orGroup: monospaceDecals
+    - id: BasicDecalDirtMonospaceVariationPass
+      prob: 0.50
+      orGroup: monospaceDecals

@@ -471,11 +471,12 @@
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: BulletDisablerPractice
-    fireCost: 50
+    fireCost: 62.5
   - type: Tag
     tags:
     - Taser
     - Sidearm
+  - type: PacifismAllowedGun # DeltaV - allow pacifist to use the disabler
 
 - type: entity
   name: disabler
@@ -499,7 +500,7 @@
       - Belt
   - type: ProjectileBatteryAmmoProvider
     proto: BulletDisabler
-    fireCost: 50
+    fireCost: 62.5
   - type: GuideHelp
     guides:
     - Security
@@ -542,6 +543,7 @@
   - type: Appearance
   - type: StaticPrice
     price: 260
+  - type: PacifismAllowedGun # DeltaV - allow pacifist to use the disabler
 
 - type: entity
   name: taser
@@ -583,10 +585,10 @@
   name: antique laser pistol
   parent: [BaseWeaponBatterySmall, BaseGrandTheftContraband]
   id: WeaponAntiqueLaser
-  description: This is an antique laser pistol. All craftsmanship is of the highest quality. It is decorated with a mahogany grip and chrome filigree. The object menaces with spikes of energy. On the item is an image of a captain and a clown. The clown is dead. The captain is striking a heroic pose.
+  description: This is an antique laser pistol. All craftsalienship is of the highest quality. It is decorated with a mahogany grip and chrome filigree. The object menaces with spikes of energy. On the item is a hastily scratched out marking. If you didn't know any better, you'd swear the marking resembles the NanoTrasen logo. # starcup: rewritten for tone
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Battery/antiquelasergun.rsi
+    sprite: _starcup/Objects/Weapons/Guns/Battery/antiquelasergun.rsi # starcup: resprited for syndicate
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]

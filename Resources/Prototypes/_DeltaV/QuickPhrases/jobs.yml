@@ -14,8 +14,8 @@
   abstract: true
 
 - type: quickPhrase
-  parent: [ BaseResearchPhrase, BaseJobPhrase ]
-  id: BaseResearchJobPhrase
+  parent: [ BaseSciencePhrase, BaseJobPhrase ]
+  id: BaseScienceJobPhrase
   abstract: true
 
 - type: quickPhrase
@@ -94,30 +94,30 @@
   id: TechAssistantPhrase
   text: job-name-technical-assistant
 
-# Research
+# Science
 
 - type: quickPhrase
-  parent: BaseResearchJobPhrase
+  parent: BaseScienceJobPhrase
   id: ResearchDirectorPhrase
   text: job-name-rd
 
 - type: quickPhrase
-  parent: BaseResearchJobPhrase
+  parent: BaseScienceJobPhrase
   id: ScientistPhrase
   text: job-name-scientist
 
 - type: quickPhrase
-  parent: BaseResearchJobPhrase
+  parent: BaseScienceJobPhrase
   id: ResearchAssistantPhrase
   text: job-name-research-assistant
 
 - type: quickPhrase
-  parent: BaseResearchJobPhrase
+  parent: BaseScienceJobPhrase
   id: RoboticistPhrase
   text: job-name-roboticist
 
 - type: quickPhrase
-  parent: BaseResearchJobPhrase
+  parent: BaseScienceJobPhrase
   id: BorgPhrase
   text: job-name-borg
 

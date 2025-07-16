@@ -1,0 +1,21 @@
+- type: entity
+  parent: [BaseTraitorContraband, AccessBreakerUnlimited]
+  id: AccessBreakerUnlimitedNT
+  suffix: NanoTrasen, Unlimited
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/access_breaker.rsi
+    state: icon
+  - type: Item
+    sprite: _starcup/Objects/Tools/access_breaker.rsi
+
+- type: entity
+  parent: [BaseTraitorContraband, AccessBreaker]
+  id: AccessBreakerNT
+  suffix: NanoTrasen, Limited
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/access_breaker.rsi
+    state: icon
+  - type: Item
+    sprite: _starcup/Objects/Tools/access_breaker.rsi

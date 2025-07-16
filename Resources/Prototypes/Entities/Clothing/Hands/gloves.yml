@@ -156,7 +156,7 @@
   - type: Fiber
     fiberMaterial: fibers-nitrile
   - type: FingerprintMask
-####
+
 - type: entity
   parent: ClothingHandsButcherable
   id: ClothingHandsGlovesLeather
@@ -216,14 +216,14 @@
     sprite: Clothing/Hands/Gloves/spaceninja.rsi
     layers:
     - state: icon
-      map: [ "enum.ToggleVisuals.Layer" ]
+      map: [ "enum.ToggleableVisuals.Layer" ]
   - type: Clothing
     sprite: Clothing/Hands/Gloves/spaceninja.rsi
   - type: Appearance
   - type: GenericVisualizer
     visuals:
-      enum.ToggleVisuals.Toggled:
-        enum.ToggleVisuals.Layer:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
           True: {state: icon-green}
           False: {state: icon}
   - type: Insulated
@@ -384,7 +384,7 @@
   - type: Unremoveable
 
 - type: entity
-  parent: [ClothingHandsButcherable, BaseSyndicateContraband]
+  parent: [ClothingHandsButcherable, BaseTraitorContraband] # starcup: shared contraband level with nt gear
   id: ClothingHandsGlovesNorthStar
   name: gloves of the north star
   description: These gloves allow you to punch incredibly fast.
@@ -417,13 +417,17 @@
       enum.MeleeSpeechUiKey.Key:
         type: MeleeSpeechBoundUserInterface
   - type: StaticPrice
-    price: 0
+    price: 2500
+  - type: Tag
+    tags:
+    - Kangaroo
+    - WhitelistChameleon
 
 - type: entity
   parent: [ClothingHandsBase, BaseSecurityContraband]
   id: ClothingHandsGlovesForensic
   name: forensic gloves
-  description: Do not leave fibers or fingerprints. If you work without them, you're A TERRIBLE DETECTIVE.
+  description: Gloves that do not leave fibers, to ensure that crucial evidence remains preserved. # starcup: rewritten for tone
   components:
   - type: Sprite
     sprite: Clothing/Hands/Gloves/forensic.rsi
@@ -476,6 +480,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - Kangaroo
 
 - type: entity
   parent: [ClothingHandsKnuckleDusters, BaseMinorContraband] #Craftable version of base knuckledusters
@@ -494,6 +499,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - Kangaroo
 
 - type: entity
   parent: [ClothingHandsBase, BaseGrandTheftContraband]
@@ -520,6 +526,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - Kangaroo
   - type: StealTarget
     stealGroup: ClothingHandsKnuckleDustersQM
 
@@ -547,26 +554,29 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - Kangaroo
+  - type: StaticPrice
+    price: 2000
 
 - type: entity
   name: stun knuckle dusters
   parent: [ClothingHandsBase, BaseToggleClothing, BaseSecurityContraband]
   id: ClothingHandsKnuckleDustersStun
-  description: A pair of knuckle dusters combined with the tech of a stun baton. This makes beating tiders a whole lot easier.
+  description: A pair of knuckle dusters combined with the tech of a stun baton, for officers unafraid to get their hands dirty. # starcup: rewritten for tone
   components:
   - type: Sprite
     sprite: Clothing/Hands/Gloves/KnuckleDusters/electricknuckleduster.rsi
     layers:
     - state: knuckleduster_off
-      map: [ "enum.ToggleVisuals.Layer" ]
+      map: [ "enum.ToggleableVisuals.Layer" ]
   - type: Clothing
     sprite: Clothing/Hands/Gloves/KnuckleDusters/electricknuckleduster.rsi
     equippedPrefix: on
   - type: Appearance
   - type: GenericVisualizer
     visuals:
-      enum.ToggleVisuals.Toggled:
-        enum.ToggleVisuals.Layer:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
           True: {state: knuckleduster_on}
           False: {state: knuckleduster_off}
   - type: ToggleClothing
@@ -638,5 +648,5 @@
       collection: Punch
     animation: WeaponArcFist
   - type: Tag
-    tags: [] # ignore "WhitelistChameleon" tag
-
+    tags:
+    - Kangaroo

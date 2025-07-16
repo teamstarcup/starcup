@@ -7,7 +7,7 @@ on:
 
 jobs:
   close-stale:
-    if: github.repository == "teamstarcup/starcup"
+    if: github.repository == 'teamstarcup/starcup'
     runs-on: ubuntu-latest
     steps:
       - name: "Close Stale PRs"

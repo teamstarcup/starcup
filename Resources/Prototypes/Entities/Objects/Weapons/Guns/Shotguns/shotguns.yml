@@ -46,7 +46,7 @@
 - type: entity
   name: Bulldog
   # Don't parent to BaseWeaponShotgun because it differs significantly
-  parent: [BaseItem, BaseGunWieldable, BaseSyndicateContraband]
+  parent: [BaseItem, BaseGunWieldable, BaseTraitorContraband] # starcup: shared contraband level with nt gear
   id: WeaponShotgunBulldog
   description: An automatic magazine-fed shotgun for close-quarters combat. Kicks like a mule on steroids. Uses .50 shotgun shells.
   components:
@@ -99,7 +99,7 @@
     zeroVisible: true
   - type: Appearance
   - type: StaticPrice
-    price: 500
+    price: 5000
 
 - type: entity
   name: double-barreled shotgun
@@ -138,7 +138,7 @@
   name: Enforcer
   parent: [BaseWeaponShotgun, BaseGunWieldable, BaseSecurityContraband]
   id: WeaponShotgunEnforcer
-  description: A premium semi-automatic shotgun, and the pride of all security forces. Uses .50 shotgun shells.
+  description: A high-grade semi-automatic shotgun, and the Security's last resort. Uses .50 shotgun shells. # starcup: rewritten for tone
   components: # intend for Enforcer to have wider choke for semi-auto function
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi

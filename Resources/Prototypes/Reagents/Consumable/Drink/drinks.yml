@@ -12,12 +12,12 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 2.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 2
         type: Remove
       - !type:AdjustReagent
-        reagent: Theobromine
+        reagent: Caffeine # starcup: replacement for theobromine
         amount: 0.05
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/coffeeglass.rsi
@@ -105,10 +105,15 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 2.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 2
         type: Remove
+      # begin starcup: add caffeine
+      - !type:AdjustReagent
+        reagent: Caffeine
+        amount: 0.05
+      # end starcup
 
 - type: reagent
   id: GreenTea
@@ -124,6 +129,14 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup: add theobromine
+  metabolisms:
+    Drink:
+      effects:
+      - !type:AdjustReagent
+        reagent: Theobromine
+        amount: 0.05
+  # end starcup
 
 - type: reagent
   id: Grenadine
@@ -161,10 +174,15 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 2.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 2
         type: Remove
+      # begin starcup: add caffeine
+      - !type:AdjustReagent
+        reagent: Caffeine
+        amount: 0.05
+      # end starcup
 
 - type: reagent
   id: IcedGreenTea
@@ -180,6 +198,14 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup: add theobromine
+  metabolisms:
+    Drink:
+      effects:
+      - !type:AdjustReagent
+        reagent: Theobromine
+        amount: 0.05
+  # end starcup
 
 - type: reagent
   id: IcedTea
@@ -342,9 +368,9 @@
       effects:
       - !type:SatiateThirst
         factor: 6
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 3.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 3
         type: Remove
     Poison:
       effects:
@@ -383,9 +409,9 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 2.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 2
         type: Remove
 
 - type: reagent
@@ -589,6 +615,14 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
   fizziness: 0.3
+  # begin starcup: add caffeine
+  metabolisms:
+    Drink:
+      effects:
+      - !type:AdjustReagent
+        reagent: Caffeine
+        amount: 0.05
+  # end starcup
 
 - type: reagent
   id: Mopwata
@@ -618,3 +652,11 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  # begin starcup: add theobromine
+  metabolisms:
+    Drink:
+      effects:
+      - !type:AdjustReagent
+        reagent: Theobromine
+        amount: 0.05
+  # end starcup
