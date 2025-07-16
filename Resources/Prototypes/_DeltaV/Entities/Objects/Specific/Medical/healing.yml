@@ -16,7 +16,7 @@
     - HumanoidSilicon
     damage:
       groups:
-        Burn: 0 # funny cant remove
+        Toxin: 0 # DeltaV - prevent RequiredFieldNotMapped error # teamstarcup/starcup#224: changed to toxin to prevent useless application
     modifyBloodLevel: 20 # restores a lot of blood for IPCs. # starcup: capitalization changed for action refactor
   - type: Stack
     stackType: Oilpack
