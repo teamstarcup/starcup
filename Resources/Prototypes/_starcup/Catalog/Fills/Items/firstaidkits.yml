@@ -1,4 +1,16 @@
 - type: entity
+  id: MedkitSiliconFilled
+  suffix: Filled
+  parent: MedkitSilicon
+  components:
+  - type: StorageFill
+    contents:
+      - id: CableApcStack10
+      - id: Oilpack
+      - id: ClothingHeadHatWelding
+      - id: Welder
+
+- type: entity
   id: StimkitFilledNT
   suffix: Stimkit, Filled, NanoTrasen
   parent: Medkit
