@@ -13,3 +13,14 @@
   id: ClothingBeltMilitaryWebbingNT
   suffix: NanoTrasen
   description: A set of tactical webbing worn by NanoTrasen boarding parties.
+
+- type: entity
+  parent: ClothingBeltJanitor
+  id: ClothingBeltMaid
+  name: maidbelt
+  description: A belt used to hold most janitorial supplies.
+  components:
+  - type: Sprite
+    sprite: Clothing/Belt/utility.rsi # ideally a specialized sprite can be added later
+  - type: Clothing
+    sprite: Clothing/Belt/utility.rsi
