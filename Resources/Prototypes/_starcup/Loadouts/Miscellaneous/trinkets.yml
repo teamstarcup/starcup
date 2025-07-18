@@ -1,9 +1,90 @@
+# Scarves (grouped)
+
 - type: loadout
-  id: HandheldStationMap
+  id: ClothingNeckScarfStripedAce
   storage:
     back:
-    - HandheldStationMap
+    - ClothingNeckScarfStripedAce
+  groupBy: "scarf"
 
+- type: loadout
+  id: ClothingNeckScarfStripedAro
+  storage:
+    back:
+    - ClothingNeckScarfStripedAro
+  groupBy: "scarf"
+
+- type: loadout
+  id: ClothingNeckScarfStripedAroace
+  storage:
+    back:
+    - ClothingNeckScarfStripedAroace
+  groupBy: "scarf"
+
+- type: loadout
+  id: ClothingNeckScarfStripedBiSexual
+  storage:
+    back:
+    - ClothingNeckScarfStripedBiSexual
+  groupBy: "scarf"
+
+- type: loadout
+  id: ClothingNeckScarfStripedGay
+  storage:
+    back:
+    - ClothingNeckScarfStripedGay
+  groupBy: "scarf"
+
+- type: loadout
+  id: ClothingNeckScarfStripedInter
+  storage:
+    back:
+    - ClothingNeckScarfStripedInter
+  groupBy: "scarf"
+
+- type: loadout
+  id: ClothingNeckScarfStripedLesbian
+  storage:
+    back:
+    - ClothingNeckScarfStripedLesbian
+  groupBy: "scarf"
+
+- type: loadout
+  id: ClothingNeckScarfStripedLesbianLong
+  storage:
+    back:
+    - ClothingNeckScarfStripedLesbianLong
+  groupBy: "scarf"
+
+- type: loadout
+  id: ClothingNeckScarfStripedPan
+  storage:
+    back:
+    - ClothingNeckScarfStripedPan
+  groupBy: "scarf"
+
+- type: loadout
+  id: ClothingNeckScarfStripedNonBinary
+  storage:
+    back:
+    - ClothingNeckScarfStripedNonBinary
+  groupBy: "scarf"
+
+- type: loadout
+  id: ClothingNeckScarfStripedRainbow
+  storage:
+    back:
+    - ClothingNeckScarfStripedRainbow
+  groupBy: "scarf"
+
+- type: loadout
+  id: ClothingNeckScarfStripedTrans
+  storage:
+    back:
+    - ClothingNeckScarfStripedTrans
+  groupBy: "scarf"
+
+# Toys
 - type: loadout
   id: PlushieLizardInversed
   storage:
@@ -21,3 +102,128 @@
   storage:
     back:
     - PlushieSharkBlue
+
+# Bureaucracy
+- type: loadout
+  id: BoxFolderClipboard
+  storage:
+    back:
+    - BoxFolderClipboard
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: BoxFolderBlack
+  storage:
+    back:
+    - BoxFolderBlack
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: BoxFolderRed
+  storage:
+    back:
+    - BoxFolderRed
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: BoxFolderGreen
+  storage:
+    back:
+    - BoxFolderGreen
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: BoxFolderBlue
+  storage:
+    back:
+    - BoxFolderBlue
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: BoxFolderWhite
+  storage:
+    back:
+    - BoxFolderWhite
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: NotebookPocketBlue
+  storage:
+    back:
+    - NotebookPocketBlue
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: NotebookPocketBrown
+  storage:
+    back:
+    - NotebookPocketBrown
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: NotebookPocketGreen
+  storage:
+    back:
+    - NotebookPocketGreen
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: NotebookSpiralCybersun
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Command
+      time: 43200 #12 hrs
+  storage:
+    back:
+    - NotebookSpiralCybersun
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: NotebookSpiralInterdyne
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Medical
+      time: 43200 #12 hrs
+  storage:
+    back:
+    - NotebookSpiralInterdyne
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: NotebookSpiralBeige
+  storage:
+    back:
+    - NotebookSpiralBeige
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: NotebookSpiralPurple
+  storage:
+    back:
+    - NotebookSpiralPurple
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: NotebookSpiralTeal
+  storage:
+    back:
+    - NotebookSpiralTeal
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: NotebookCompositionBlack
+  storage:
+    back:
+    - NotebookCompositionBlack
+  groupBy: "bureaucracy"
+
+# Utility
+- type: loadout
+  id: HandheldStationMap
+  storage:
+    back:
+    - HandheldStationMap

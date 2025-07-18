@@ -3,13 +3,17 @@
   id: NotebookBase
   abstract: true
   components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
   - type: Tag
     tags:
     - Book
-  - type: Appearance
   - type: Paper
     contentSize: 12000
   - type: PaperVisuals
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_book.svg.96dpi.png"
+    backgroundPatchMargin: 23.0, 16.0, 14.0, 15.0
+    contentMargin: 20.0, 20.0, 20.0, 20.0
   - type: ActivatableUI
     key: enum.PaperUiKey.Key
     requiresComplex: false
@@ -27,32 +31,22 @@
   parent: NotebookBase
   abstract: true
   components:
-  - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: composition-black
   - type: PaperVisuals
-    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
-    contentImagePath: "/Textures/Interface/Paper/paper_content_lined.svg.96dpi.png"
-    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
-    contentMargin: 16.0, 16.0, 16.0, 16.0
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_book.svg.96dpi.png"
+    backgroundPatchMargin: 23.0, 16.0, 14.0, 15.0
+    contentImagePath: "/Textures/_starcup/Interface/Paper/paper_content_book_lined.svg.96dpi.png"
+    contentMargin: 20.0, 20.0, 20.0, 20.0
 
 - type: entity
   id: NotebookSpiralBase
   parent: NotebookBase
   abstract: true
-  components:
-  - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: composition-black
 
 - type: entity
   id: NotebookPocketBase
   parent: NotebookBase
   abstract: true
   components:
-  - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: composition-black
   - type: Item
     size: Tiny
 
@@ -63,11 +57,13 @@
   description: A classic composition notebook, often carried by students. This one is black.
   components:
   - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
     state: composition-black
-  - type: Icon
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: composition-black
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: composition-black-inhand-left
+      right:
+      - state: composition-black-inhand-right
 
 - type: entity
   id: NotebookCompositionBlue
@@ -76,11 +72,13 @@
   description: A classic composition notebook, often carried by students. This one is blue.
   components:
   - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
     state: composition-blue
-  - type: Icon
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: composition-blue
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: composition-blue-inhand-left
+      right:
+      - state: composition-blue-inhand-right
 
 - type: entity
   id: NotebookCompositionGreen
@@ -89,11 +87,13 @@
   description: A classic composition notebook, often carried by students. This one is green.
   components:
   - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
     state: composition-green
-  - type: Icon
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: composition-green
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: composition-green-inhand-left
+      right:
+      - state: composition-green-inhand-right
 
 - type: entity
   id: NotebookCompositionPink
@@ -102,11 +102,13 @@
   description: A classic composition notebook, often carried by students. This one is pink.
   components:
   - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
     state: composition-pink
-  - type: Icon
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: composition-pink
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: composition-pink-inhand-left
+      right:
+      - state: composition-pink-inhand-right
 
 - type: entity
   id: NotebookCompositionRed
@@ -115,11 +117,13 @@
   description: A classic composition notebook, often carried by students. This one is red.
   components:
   - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
     state: composition-red
-  - type: Icon
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: composition-red
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: composition-red-inhand-left
+      right:
+      - state: composition-red-inhand-right
 
 - type: entity
   id: NotebookCompositionYellow
@@ -128,11 +132,13 @@
   description: A classic composition notebook, often carried by students. This one is yellow.
   components:
   - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
     state: composition-yellow
-  - type: Icon
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: composition-yellow
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: composition-yellow-inhand-left
+      right:
+      - state: composition-yellow-inhand-right
 
 - type: entity
   id: NotebookPocketBlue
@@ -141,11 +147,13 @@
   description: A leather-bound pocket notebook, for those who need to write on the go.
   components:
   - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
     state: pocket-blue
-  - type: Icon
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: pocket-blue
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: pocket-blue-inhand-left
+      right:
+      - state: pocket-blue-inhand-right
 
 - type: entity
   id: NotebookPocketBrown
@@ -154,11 +162,13 @@
   description: A leather-bound pocket notebook, for those who need to write on the go.
   components:
   - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
     state: pocket-brown
-  - type: Icon
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: pocket-brown
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: pocket-brown-inhand-left
+      right:
+      - state: pocket-brown-inhand-right
 
 - type: entity
   id: NotebookPocketGreen
@@ -167,11 +177,13 @@
   description: A leather-bound pocket notebook, for those who need to write on the go.
   components:
   - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
     state: pocket-green
-  - type: Icon
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: pocket-green
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: pocket-green-inhand-left
+      right:
+      - state: pocket-green-inhand-right
 
 - type: entity
   id: NotebookSpiralBeige
@@ -180,11 +192,13 @@
   description: A beige spiral-bound notebook. Only for note-taking professionals.
   components:
   - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
     state: spiral-beige
-  - type: Icon
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: spiral-beige
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: spiral-beige-inhand-left
+      right:
+      - state: spiral-beige-inhand-right
 
 - type: entity
   id: NotebookSpiralCybersun
@@ -193,24 +207,28 @@
   description: A spiral-bound notebook, specially designed to help Cybersun engineers in their data-wrangling.
   components:
   - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
     state: spiral-cybersun
-  - type: Icon
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: spiral-cybersun
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: spiral-cybersun-inhand-left
+      right:
+      - state: spiral-cybersun-inhand-right
 
 - type: entity
   id: NotebookSpiralGray
   parent: NotebookSpiralBase
   name: gray spiral notebook
-  description: A gray spiral-bound notebook. Only for note-taking professionals.
+  description: A gray spiral-bound notebook with the greek letter Tau on the cover.
   components:
   - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
     state: spiral-gray
-  - type: Icon
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: spiral-gray
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: spiral-gray-inhand-left
+      right:
+      - state: spiral-gray-inhand-right
 
 - type: entity
   id: NotebookSpiralInterdyne
@@ -219,11 +237,13 @@
   description: A spiral-bound notebook, specially designed to help Interdyne chemists in their experiments.
   components:
   - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
     state: spiral-interdyne
-  - type: Icon
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: spiral-interdyne
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: spiral-interdyne-inhand-left
+      right:
+      - state: spiral-interdyne-inhand-right
 
 - type: entity
   id: NotebookSpiralNanotrasen
@@ -232,11 +252,13 @@
   description: A spiral-bound notebook, covered in NanoTrasen branding. How embarassing.
   components:
   - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
     state: spiral-nanotrasen
-  - type: Icon
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: spiral-nanotrasen
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: spiral-nanotrasen-inhand-left
+      right:
+      - state: spiral-nanotrasen-inhand-right
 
 - type: entity
   id: NotebookSpiralPurple
@@ -245,11 +267,13 @@
   description: A purple spiral-bound notebook. Only for note-taking professionals.
   components:
   - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
     state: spiral-purple
-  - type: Icon
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: spiral-purple
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: spiral-purple-inhand-left
+      right:
+      - state: spiral-purple-inhand-right
 
 - type: entity
   id: NotebookSpiralTeal
@@ -258,8 +282,10 @@
   description: A teal spiral-bound notebook. Only for note-taking professionals.
   components:
   - type: Sprite
-    sprite: _starcup/Objects/Misc/notebooks.rsi
     state: spiral-teal
-  - type: Icon
-    sprite: _starcup/Objects/Misc/notebooks.rsi
-    state: spiral-teal
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: spiral-teal-inhand-left
+      right:
+      - state: spiral-teal-inhand-right
