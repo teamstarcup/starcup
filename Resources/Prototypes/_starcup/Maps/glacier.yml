@@ -17,7 +17,6 @@
           prefixCreator: 'NY'
       - type: StationEmergencyShuttle
         emergencyShuttlePath: /Maps/_starcup/Shuttles/SYND_EvacShip.yml  # starcup: NTES_Vertex.yml -> SYND_EvacShip.yml
-      # starcup: glacier surface outpost added
       - type: StationPlanetSpawner
         planet: GlacierSurface
         gridPath: /Maps/_DeltaV/Nonstations/glacier_surface_outpost.yml
@@ -73,7 +72,7 @@
           SecurityOfficer: [ 3, 4 ]
           SecurityCadet: [ 1, 2 ]
 #          Brigmedic: [ 1, 1 ]  # starcup: no corpsman (yet)
-#          Prisoner: [ 2, 3 ]  # starcup: no prisoners (yet)
+          Prisoner: [ 3, 3 ]  # starcup: no prisoners (yet)
         #logistics
           Quartermaster: [ 1, 1 ]
           Courier: [ 2, 3 ]
