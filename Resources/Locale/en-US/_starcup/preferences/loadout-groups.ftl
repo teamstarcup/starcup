@@ -28,6 +28,7 @@ loadout-group-chef-shoes = Chef shoes
 
 loadout-group-clown-mask = Clown mask
 
+loadout-group-janitor-belt-starcup = Janitor belt
 loadout-group-janitor-shoes = Janitor shoes
 loadout-group-janitor-light = Janitor flashlight
 
