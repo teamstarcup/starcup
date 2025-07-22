@@ -3,7 +3,7 @@
   name: guide-entry-species
   text: "/ServerInfo/Guidebook/Mobs/Species.xml"
   children:
-    - Arachnid
+#    - Arachnid # starcup: removed for now
     - Diona
     - Human
     - Moth
@@ -19,25 +19,26 @@
     - IPC # starcup: MKC
     - Skittermouse # starcup
 
-- type: guideEntry
-  id: Arachnid
-  name: species-name-arachnid
-  text: "/ServerInfo/Guidebook/Mobs/Arachnid.xml"
+# starcup: removed for now
+#- type: guideEntry
+#  id: Arachnid
+#  name: species-name-arachnid
+#  text: "/ServerInfo/Guidebook/Mobs/Arachnid.xml"
 
 - type: guideEntry
   id: Diona
   name: species-name-diona
-  text: "/ServerInfo/Guidebook/Mobs/Diona.xml"
+  text: "/ServerInfo/Guidebook/Mobs/_starcup/DionaStarcup.xml" # starcup: rewritten guidebook
 
 - type: guideEntry
   id: Human
   name: species-name-human
-  text: "/ServerInfo/Guidebook/Mobs/Human.xml"
+  text: "/ServerInfo/Guidebook/Mobs/_starcup/HumanStarcup.xml" # starcup: rewritten guidebook
 
 - type: guideEntry
   id: Moth
   name: species-name-moth
-  text: "/ServerInfo/Guidebook/Mobs/Moth.xml"
+  text: "/ServerInfo/Guidebook/Mobs/_starcup/Doptera.xml" # starcup: rewritten guidebook
 
 - type: guideEntry
   id: Reptilian
@@ -58,5 +59,5 @@
 - type: guideEntry
   id: IPC
   name: species-name-ipc
-  text: "/ServerInfo/Guidebook/Mobs/IPCs.xml"
+  text: "/ServerInfo/Guidebook/Mobs/_starcup/MKC.xml"
 # End starcup
