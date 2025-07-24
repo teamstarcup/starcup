@@ -119,9 +119,6 @@
       - !type:WashCreamPieReaction
   - type: StatusEffects
     allowed:
-    - Stun
-    - KnockedDown
-    - SlowedDown
     - Stutter
     - Electrocution
     - Drunk
@@ -282,7 +279,7 @@
         Asphyxiation: -1.0
   - type: FireVisuals
     alternateState: Standing
-  - type: LayingDown # WD EDIT
+  - type: StunVisuals
 
 - type: entity
   save: false

@@ -11,7 +11,7 @@
         - type: StationNameSetup
           mapNameTemplate: '{0} Reach Transport {1}'
           nameGenerator:
-            !type:NanotrasenNameGenerator
+            !type:SyndicateNameGenerator
             prefixCreator: 'SC'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/_starcup/Shuttles/SYND_EmergencyShuttle.yml # starcup: stock emergency.yml -> stock SYND_EmergencyShuttle.yml
@@ -40,4 +40,5 @@
             SalvageSpecialist: [ 1, 1 ]
             #civilian (1+)
             Passenger: [ -1, -1 ] #infinite, not counted
+            Prisoner: [ 2, 2 ]
             Musician: [ 1, 1 ]

@@ -1,0 +1,200 @@
+- type: job
+  id: Prisoner
+  name: job-name-prisoner
+  description: job-description-prisoner
+  playTimeTracker: JobPrisoner
+  startingGear: PrisonerGear
+  icon: JobIconPermaPrisoner
+  supervisors: job-supervisors-security
+  alwaysUseJobSpawn: true
+  special:
+    - !type:AddImplantSpecial
+      implants: [ TrackingImplant ]
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconPermaPrisoner
+  icon:
+    sprite: /Textures/_starcup/Interface/Misc/job_icons.rsi
+    state: Prisoner
+  jobName: job-name-prisoner
+
+- type: startingGear
+  id: PrisonerGear
+  equipment:
+    id: PrisonerPDA
+    ears: ClothingHeadsetPrisoner
+
+# TODO: Move below prototypes to their proper files
+
+- type: entity
+  parent: ClearPDA
+  id: PrisonerPDA
+  name: prisoner PDA
+  description: A clear PDA that's easy to check for contraband.
+  components:
+    - type: Pda
+      id: PrisonerJobIDCard
+
+- type: entity
+  parent: IDCardStandard
+  id: PrisonerJobIDCard
+  name: prisoner ID card
+  suffix: Job
+  components:
+  - type: Sprite
+    layers:
+    - state: orange
+    - sprite: _starcup/Objects/Misc/id_card_prisoner.rsi
+      state: idprisoner
+  - type: PresetIdCard
+    job: Prisoner
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetPrisoner
+  name: prisoner headset
+  description: A headset provided to prisoners.
+  components:
+    - type: ContainerFill
+      containers:
+        key_slots:
+          - EncryptionKeyPrison
+          - EncryptionKeyCommon
+    - type: Sprite
+      sprite: _DeltaV/Clothing/Ears/Headsets/prisoner.rsi
+    - type: Clothing
+      sprite: _DeltaV/Clothing/Ears/Headsets/prisoner.rsi
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyPrison
+  name: Prison encryption key
+  description: An encryption key that allows talking on prison radio channels.
+  components:
+    - type: EncryptionKey
+      channels:
+      - Prison
+      defaultChannel: Prison
+    - type: Sprite
+      layers:
+      - state: crypt_orange
+      - sprite: _starcup/Objects/Devices/encryption_keys.rsi
+        state: prisoner_label
+
+- type: entity
+  name: prison encryption key box
+  parent: BoxEncryptionKeyPassenger
+  id: BoxEncryptionKeyPrison
+  components:
+  - type: StorageFill
+    contents:
+    - id: EncryptionKeyPrison
+      amount: 4
+
+- type: radioChannel
+  id: Prison
+  name: chat-radio-prison
+  keycode: 'p'
+  frequency: 1601
+  color: "#FFA500"
+
+- type: entity
+  parent: TelecomServer
+  id: TelecomServerFilledPrison
+  suffix: Prison
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyPrison
+
+- type: entity
+  id: IntercomPrison
+  parent: Intercom
+  suffix: Prison
+  components:
+  - type: ContainerFill
+    containers:
+      board:
+      - IntercomElectronics
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyPrison
+
+- type: entity
+  id: IntercomSecurityPrison
+  parent: BaseIntercomSecure
+  suffix: Security, Prison
+  components:
+  - type: ContainerFill
+    containers:
+      board:
+      - IntercomElectronics
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyPrison
+      - EncryptionKeySecurity
+
+# Loadouts
+- type: loadout
+  id: PrisonerJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPrisoner
+
+- type: loadout
+  id: PrisonerJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtPrisoner
+
+- type: loadoutGroup
+  id: PrisonerJumpsuit
+  name: loadout-group-prisoner-jumpsuit
+  loadouts:
+    - PrisonerJumpsuit
+    - PrisonerJumpskirt
+
+- type: roleLoadout
+  id: JobPrisoner
+  groups:
+  - GroupTankHarness
+  - PrisonerJumpsuit
+  - CommonBackpack
+  - PassengerShoes
+  - Glasses
+  - Survival
+  - Plushies
+  - Trinkets
+  - GroupSpeciesBreathTool
+
+- type: chameleonOutfit
+  id: PrisonerChameleonOutfit
+  job: Prisoner
+  equipment:
+    Eyes: ClothingEyesGlasses
+    Mask: ClothingMaskBreath
+
+# Spawn Points
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointPrisoner
+  name: prisoner
+  components:
+  - type: SpawnPoint
+    job_id: Prisoner
+  - type: Sprite
+    layers:
+      - state: green
+      - state: prisoner
+
+- type: entity
+  parent: CryogenicSleepUnit
+  id: CryogenicSleepUnitPrisoner
+  suffix: Spawner, Prisoner
+  components:
+    - type: ContainerSpawnPoint
+      containerId: storage
+      spawnType: Job
+      job: Prisoner
+

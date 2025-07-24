@@ -46,5 +46,8 @@ loadout-group-service-worker-jumpsuit = Service worker jumpsuit
 loadout-group-service-worker-outerclothing = Service worker outer clothing
 loadout-group-service-worker-shoes = Service worker shoes
 
+# Wildcards
+loadout-group-prisoner-jumpsuit = Prisoner jumpsuit
+
 # Misc
 loadout-group-plushies = Plushies

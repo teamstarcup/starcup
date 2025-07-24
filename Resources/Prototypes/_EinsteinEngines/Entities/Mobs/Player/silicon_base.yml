@@ -290,9 +290,11 @@
         - Shock
     - type: StatusEffects
       allowed:
-        - Stun
-        - KnockedDown
-        - SlowedDown
+        # begin starcup: removed for stun status refactor
+        # - Stun
+        # - KnockedDown
+        # - SlowedDown
+        # end starcup
         - Stutter
         - SeeingRainbows
         - Electrocution
@@ -316,4 +318,4 @@
     - type: Carriable
     #- type: Targeting
     #- type: SurgeryTarget
-    - type: LayingDown
+    #- type: LayingDown

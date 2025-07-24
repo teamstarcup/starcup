@@ -1,0 +1,12 @@
+- type: entity
+  name: silicon first aid kit
+  description: Equipped with the tools necessary to repair damaged silicons.
+  parent: Medkit
+  id: MedkitSilicon
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Specific/Medical/firstaidkits.rsi
+    state: siliconkit
+  - type: Item
+    sprite: _starcup/Objects/Specific/Medical/firstaidkits.rsi
+    heldPrefix: siliconkit
