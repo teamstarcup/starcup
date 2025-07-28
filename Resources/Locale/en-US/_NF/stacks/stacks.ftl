@@ -1,0 +1,16 @@
+stack-gold-mono-tile = gold mono tile
+stack-silver-mono-tile = silver mono tile
+stack-green-mono-tile = green mono tile
+stack-light-blue-mono-tile = light blue mono tile
+stack-light-green-mono-tile = light green mono tile
+stack-light-pink-mono-tile = light pink mono tile
+stack-light-yellow-mono-tile = light yellow mono tile
+stack-orange-mono-tile = orange mono tile
+stack-sus-floor = sus floor
+stack-light-red-mono-tile = light red mono tile
+stack-red-mono-tile = red mono tile
+stack-checkerboard-wood-floor = checkerboard wood floor
+stack-light-mosaic-wood-floor = light mosaic wood floor
+stack-fancy-wood-floor = fancy wood floor
+stack-versailles-wood-floor = versailles wood floor
+stack-cheese-floor = cheese floor

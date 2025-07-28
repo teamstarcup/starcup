@@ -105,8 +105,11 @@
       sprite: "Effects/creampie.rsi"
       state: "creampie_vox" # Not default
       visible: false
-  - type: HumanoidAppearance
+  - type:  HumanoidAppearance
     species: Vox
+    hideLayersOnEquip: #imp
+    - HeadSide
+    - Hair
     undergarmentTop: UndergarmentTopTanktopVox
     undergarmentBottom: UndergarmentBottomBoxersVox
     markingsDisplacement:
