@@ -1,0 +1,39 @@
+- type: entity
+  id: HolosignEng
+  name: engineering warning sign
+  description: A holographic sign put up by the engineering department to warn crew about engineering hazards. # starcup: rewritten for tone
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Holo/eng.rsi
+    state: icon
+  - type: TimedDespawn
+    lifetime: 360 # starcup: was 180
+  # begin starcup
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.3,-0.3,0.3,0.3"
+        mask:
+          - TableMask
+        layer:
+          - TableLayer
+  - type: PointLight
+    enabled: true
+    radius: 3
+    color: orange # TODO: check
+  - type: Climbable
+  - type: Clickable
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 5 # much weaker than sec variant
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  # end starcup
