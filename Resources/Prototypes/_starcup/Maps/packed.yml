@@ -11,7 +11,7 @@
         - type: StationNameSetup
           mapNameTemplate: '{0} Packed {1}'
           nameGenerator:
-            !type:NanotrasenNameGenerator
+            !type:SyndicateNameGenerator
             prefixCreator: 'VG'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_crimson.yml
