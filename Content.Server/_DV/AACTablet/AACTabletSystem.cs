@@ -1,5 +1,6 @@
 using Content.Server.Chat.Systems;
 using Content.Server.Radio.Components; // starcup
+using Content.Server.Speech.Components;
 using Content.Shared._DV.AACTablet;
 using Content.Shared.IdentityManagement;
 using Robust.Server.GameObjects; // starcup
@@ -78,9 +79,9 @@ public sealed class AACTabletSystem : EntitySystem
         if (_localisedPhrases.Count <= 0)
             return;
 
-        // begin starcup: Radio support
-        // removed voicemask
+        EnsureComp<VoiceOverrideComponent>(ent).NameOverride = speakerName;
 
+        // begin starcup: Radio support
         // Set the player's currently available channels before sending the message
         EnsureComp(ent, out IntrinsicRadioTransmitterComponent transmitter);
         transmitter.Channels = GetAvailableChannels(message.Actor);
