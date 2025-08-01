@@ -19,7 +19,7 @@
           emergencyShuttlePath: /Maps/_starcup/Shuttles/SYND_EvacShip.yml # starcup: added SYND_EvacShip.yml
         - type: StationJobs
           availableJobs: # 53 jobs total w/o latejoins & interns, 65 jobs total w/ latejoins & interns
-            #command (7)
+            #command (8)
             Captain: [ 1, 1 ]
             HeadOfPersonnel: [ 1, 1 ]
             HeadOfSecurity: [ 1, 1 ]
@@ -27,6 +27,7 @@
             ChiefEngineer: [ 1, 1 ]
             ResearchDirector: [ 1, 1 ]
             Quartermaster: [ 1, 1 ]
+            AdministrativeAssistant: [ 1, 1 ]
             #service (11 - 12)
             Bartender: [ 1, 1 ]
             Botanist: [ 2, 2 ]
@@ -45,8 +46,9 @@
             MedicalDoctor: [ 2, 2 ]
             MedicalIntern: [ 2, 2 ] #intern, not counted
             Paramedic: [ 1, 1 ]
-            #science (4)
+            #science (6)
             Scientist: [ 4, 4 ]
+            Roboticist: [ 1, 2 ]
             ResearchAssistant: [ 2, 2 ] #intern, not counted
             #security (9 - 10)
             Warden: [ 1, 1 ]
@@ -56,7 +58,9 @@
             Detective: [ 1, 1 ]
             #supply (6)
             SalvageSpecialist: [ 3, 3 ]
+            Courier: [ 2, 3 ]
             CargoTechnician: [ 3, 3 ]
+            CargoAssistant: [ 2, 2 ] #intern, not counted
             #civilian (3+)
             Passenger: [ -1, -1 ] #infinite, not counted
             Clown: [ 1, 1 ]
