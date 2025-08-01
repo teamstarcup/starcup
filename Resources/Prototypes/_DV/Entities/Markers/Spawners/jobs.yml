@@ -1,0 +1,51 @@
+- type: entity
+  id: SpawnPointCourier
+  parent: SpawnPointJobBase
+  name: courier
+  components:
+  - type: SpawnPoint
+    job_id: Courier
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _DV/Markers/jobs.rsi
+      state: courier
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointCargoAssistant
+  name: cargo assistant
+  components:
+  - type: SpawnPoint
+    job_id: CargoAssistant
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _DV/Markers/jobs.rsi
+      state: cargoassistant
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointAdminAssistant
+  name: administrative assistant
+  components:
+  - type: SpawnPoint
+    job_id: AdministrativeAssistant
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _DV/Markers/jobs.rsi
+      state: adminassistant
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointRoboticist
+  name: roboticist
+  components:
+  - type: SpawnPoint
+    job_id: Roboticist
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _DV/Markers/jobs.rsi
+      state: roboticist

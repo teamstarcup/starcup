@@ -1,5 +1,5 @@
 using Content.Shared.Hands.Components;
-using Content.Shared._DeltaV.Item.PseudoItem;
+using Content.Shared._DV.Item.PseudoItem;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
