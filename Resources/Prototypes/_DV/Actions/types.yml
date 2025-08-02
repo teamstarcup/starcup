@@ -1,0 +1,48 @@
+﻿- type: entity
+  id: ActionEatMouse
+  name: Eat Mouse # starcup: removed loc string
+  description: Eat the mouse in your hand, gaining nutriment and a hairball charge. # starcup: removed loc string
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action # starcup: rewritten for action refactor
+    icon: _DV/Icons/verbiconfangs.png
+  - type: InstantAction # starcup: rewritten for action refactor
+    event: !type:EatMouseActionEvent
+
+- type: entity
+  id: ActionHairball
+  name: action-name-hairball
+  description: action-description-hairball
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action # starcup: rewritten for action refactor
+    icon: { sprite: _DV/Objects/Specific/Species/felinid.rsi, state: icon }
+    useDelay: 30
+  - type: InstantAction # starcup: rewritten for action refactor
+    event: !type:HairballActionEvent
+
+- type: entity
+  id: ActionOpenMouthStorage
+  name: Open cheek storage
+  description: Allows you to store items in your cheeks.
+  components:
+  - type: Action # starcup: rewritten for action refactor
+    itemIconStyle: BigAction
+    priority: -10
+    icon: _DV/Interface/Actions/mouthStorageOpen.png
+  - type: InstantAction # starcup: rewritten for action refactor
+    event: !type:OpenStorageImplantEvent
+
+- type: entity
+  id: ActionToggleSneakMode
+  name: Toggle sneak mode
+  description: Sneak underneath tables.
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    useDelay: 3
+    icon:
+      sprite: Structures/Furniture/Tables/generic.rsi
+      state: full
+  - type: InstantAction # starcup: rewritten for action refactor
+    event: !type:ToggleCrawlingStateEvent
