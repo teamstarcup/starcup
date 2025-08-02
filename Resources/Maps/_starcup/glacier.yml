@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/24/2025 19:24:57
+  time: 08/02/2025 21:15:05
   entityCount: 19379
 maps:
 - 1
@@ -110,7 +110,14 @@ entities:
     - type: Broadphase
     - type: OccluderTree
     - type: MapLight
-      ambientLightColor: '#00000000'
+      ambientLightColor: '#575C94FF'
+    - type: LightCycle
+      minLevel: '#FFFFFFFF'
+      clipLevel: '#FFFFFFFF'
+      clipLight: 2.25
+      minLightLevel: 0.2
+      duration: 3600
+      originalColor: '#575C94FF'
   - uid: 2
     components:
     - type: MetaData
@@ -17448,7 +17455,7 @@ entities:
       pos: 17.5,28.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -66076.45
+      secondsUntilStateChange: -66490.08
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -18038,7 +18045,7 @@ entities:
       pos: 0.5,-1.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -67925.586
+      secondsUntilStateChange: -68339.21
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -18375,7 +18382,7 @@ entities:
       pos: -16.5,32.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -52230.727
+      secondsUntilStateChange: -52644.35
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -18512,7 +18519,7 @@ entities:
       pos: 6.5,-6.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -53159.793
+      secondsUntilStateChange: -53573.418
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -123730,7 +123737,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -79588.13
+      secondsUntilStateChange: -80001.76
       state: Opening
     - type: Airlock
       autoClose: False
@@ -123746,7 +123753,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -79587.57
+      secondsUntilStateChange: -80001.195
       state: Opening
     - type: Airlock
       autoClose: False
@@ -123768,7 +123775,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -79587.1
+      secondsUntilStateChange: -80000.73
       state: Opening
     - type: Airlock
       autoClose: False
@@ -123784,7 +123791,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -79588.63
+      secondsUntilStateChange: -80002.26
       state: Opening
     - type: Airlock
       autoClose: False
