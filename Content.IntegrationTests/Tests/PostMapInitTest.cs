@@ -91,7 +91,7 @@ namespace Content.IntegrationTests.Tests
             "Reachstarcup", // starcup
             "Salternstarcup", // starcup
             "Byoin",  // starcup
-            "Train" // starcup
+            "Train", // starcup
             "EventFrigidPeril", // starcup
             "EventCruiseControl" // starcup
         };
