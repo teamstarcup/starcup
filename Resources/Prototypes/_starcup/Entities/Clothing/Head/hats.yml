@@ -5,9 +5,9 @@
   description: A dramatic, stylish helmet. Designed for maximum rave-induced badassery.
   components:
   - type: Sprite
-    sprite: _DeltaV/Clothing/Head/Helmets/eva_roboneuroticist.rsi
+    sprite: _DV/Clothing/Head/Helmets/eva_roboneuroticist.rsi
   - type: Clothing
-    sprite: _DeltaV/Clothing/Head/Helmets/eva_roboneuroticist.rsi
+    sprite: _DV/Clothing/Head/Helmets/eva_roboneuroticist.rsi
     clothingVisuals:
       head:
       - state: equipped-HELMET
@@ -35,16 +35,6 @@
     sprite: Clothing/Head/Hats/pyjamasyndicateblack.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/pyjamasyndicateblack.rsi
-
-- type: entity
-  parent: [ BaseTraitorContraband, ClothingHeadPyjamaSyndicatePink ]
-  id: ClothingHeadPyjamaNanotrasenGold
-  name: NanoTrasen gold pyjama hat
-  components:
-  - type: Sprite
-    sprite: _starcup/Clothing/Head/Hats/pyjamananotrasengold.rsi
-  - type: Clothing
-    sprite: _starcup/Clothing/Head/Hats/pyjamananotrasengold.rsi
 
 - type: entity
   parent: [ BaseTraitorContraband, ClothingHeadPyjamaSyndicateRed ]

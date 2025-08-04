@@ -314,6 +314,7 @@
     - RoboticsStatic
     - BorgModulesStatic
     - BorgLimbsStatic
+    - RoboticsStarcupStatic # starcup
     dynamicPacks:
     - Robotics
     - BorgModules
@@ -529,6 +530,7 @@
     - Carpets
     - Bedsheets
     - BeltsDeltaV # Delta-V
+    - ClothingStarcup # starcup
   - type: EmagLatheRecipes
     emagStaticPacks:
     - ClothingCentComm
@@ -700,6 +702,7 @@
     runningState: building
     staticPacks:
     - FloorTilesStatic
+    - NFFloorTiles # Frontier
   - type: MaterialStorage
     whitelist:
       tags:
@@ -708,4 +711,5 @@
         - Wooden
         - RawMaterial
         - Plastic
+        - Ingot # Frontier
   - type: OreSiloClient

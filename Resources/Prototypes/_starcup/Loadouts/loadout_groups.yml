@@ -58,7 +58,6 @@
 - type: loadoutGroup
   id: WardenShoes
   name: loadout-group-warden-shoes
-  minLimit: 0
   loadouts:
   - JackBoots
   - SecurityWinterBoots
@@ -69,7 +68,6 @@
 - type: loadoutGroup
   id: BartenderShoes
   name: loadout-group-bartender-shoes
-  minLimit: 0
   loadouts:
   - BlackShoes
   - WinterBoots
@@ -86,7 +84,6 @@
 - type: loadoutGroup
   id: ChaplainShoes
   name: loadout-group-chaplain-shoes
-  minLimit: 0
   loadouts:
   - BlackShoes
   - WinterBoots
@@ -130,12 +127,20 @@
 
 ## Janitor
 - type: loadoutGroup
+  id: JanitorBeltstarcup
+  name: loadout-group-janitor-belt-starcup
+  minLimit: 1
+  loadouts:
+  - JanitorBelt
+  - MaidWaistbag
+
+- type: loadoutGroup
   id: JanitorShoes
   name: loadout-group-janitor-shoes
-  minLimit: 0
   loadouts:
   - JanitorGaloshes
   - JanitorWinterBoots
+  - JanitorWhiteShoes
 
 - type: loadoutGroup
   id: JanitorLight
@@ -197,7 +202,6 @@
 - type: loadoutGroup
   id: ServiceWorkerJumpsuit
   name: loadout-group-service-worker-jumpsuit
-  minLimit: 0
   loadouts:
   - BartenderJumpsuit
   - BartenderJumpskirt

@@ -113,10 +113,12 @@ namespace Content.Shared.Maps
 
         [DataField("sturdy")] public bool Sturdy { get; private set; } = true;
 
-        /// <summary>
-        /// Can weather affect this tile.
-        /// </summary>
-        [DataField("weather")] public bool Weather = false;
+        // begin upstream: early merge of #38638
+        // /// <summary>
+        // /// Can weather affect this tile.
+        // /// </summary>
+        // [DataField("weather")] public bool Weather = false;
+        // end upstream
 
         /// <summary>
         /// Is this tile immune to RCD deconstruct.

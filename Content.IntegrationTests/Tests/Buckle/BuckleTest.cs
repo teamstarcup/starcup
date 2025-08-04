@@ -313,7 +313,7 @@ namespace Content.IntegrationTests.Tests.Buckle
             await server.WaitAssertion(() =>
             {
                 // Still buckled
-                //Assert.That(buckle.Buckled); // goob edit
+                Assert.That(buckle.Buckled);
 
                 // Now with no item in any hand
                 foreach (var hand in hands.Hands.Keys)

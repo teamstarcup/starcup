@@ -72,9 +72,6 @@ uplink-costume-pyjama-desc-starcup = Contains 3 pairs of NanoTrasen pyjamas and 
 uplink-scarf-nanotrasen-blue-name = Striped NanoTrasen blue scarf
 uplink-scarf-nanotrasen-blue-desc = A stylish striped NanoTrasen blue scarf. The perfect winter accessory for those with a keen fashion sense, and those who are in the mood to steal something.
 
-uplink-scarf-nanotrasen-gold-name = Striped NanoTrasen gold scarf
-uplink-scarf-nanotrasen-gold-desc = A stylish striped NanoTrasen gold scarf. The perfect winter accessory for those with a keen fashion sense, and those who are in the mood to steal something.
-
 uplink-nanotrasen-pai-name = NanoTrasen personal ai device
 uplink-nanotrasen-pai-desc = A NanoTrasen variant of the pAI with access to the NanoTrasen radio channel. We do not guarantee their usefulness.
 

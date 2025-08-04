@@ -1,9 +1,13 @@
+using Content.Server.Popups; // starcup
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
+using Content.Shared.Popups; // starcup
 using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Events;
 using Content.Shared.Shuttles.UI.MapObjects;
+using Robust.Server.Audio; // starcup
+using Robust.Shared.Audio; // starcup
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics.Components;
@@ -12,6 +16,11 @@ namespace Content.Server.Shuttles.Systems;
 
 public sealed partial class ShuttleConsoleSystem
 {
+    // begin starcup
+    [Dependency] private readonly PopupSystem _popupSystem = default!;
+    [Dependency] private readonly AudioSystem _audio = default!;
+    // end starcup
+
     private void InitializeFTL()
     {
         SubscribeLocalEvent<FTLBeaconComponent, ComponentStartup>(OnBeaconStartup);
@@ -131,6 +140,10 @@ public sealed partial class ShuttleConsoleSystem
         if (!_shuttle.CanFTL(shuttleUid.Value, out var reason))
         {
             // TODO: Session popup
+            // begin starcup: highly improvised FTL failure notification
+            _popupSystem.PopupEntity(reason, ent.Owner, PopupType.Medium);
+            _audio.PlayPvs(new SoundPathSpecifier("/Audio/Machines/buzz-sigh.ogg"), ent.Owner);
+            // end starcup
             return;
         }
 

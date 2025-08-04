@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Shared._DeltaV.Silicon.IPC; // DeltaV
+using Content.Shared._DV.Silicon.IPC; // DeltaV
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Inventory;
