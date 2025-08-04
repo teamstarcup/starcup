@@ -12,7 +12,6 @@ namespace Content.Server.Ghost.Roles
     {
         [Dependency] private readonly IServerPreferencesManager _prefs = default!;
         [Dependency] private readonly IEntityManager _entityManager = default!;
-        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
         private void OnSpawnerTakeCharacter(Entity<GhostRoleCharacterSpawnerComponent> ent,
             ref TakeGhostRoleEvent args)
@@ -27,15 +26,11 @@ namespace Content.Server.Ghost.Roles
                 return;
             }
 
-            var character = (HumanoidCharacterProfile) _prefs.GetPreferences(args.Player.UserId).SelectedCharacter;
+            var character = (HumanoidCharacterProfile)_prefs.GetPreferences(args.Player.UserId).SelectedCharacter;
 
             var mob = _entityManager.System<StationSpawningSystem>()
                 .SpawnPlayerMob(Transform(uid).Coordinates, null, character, null);
             _transform.AttachToGridOrMap(mob);
-
-            string? outfit = null;
-            if (_prototypeManager.TryIndex<StartingGearPrototype>(component.OutfitPrototype, out var outfitProto))
-                outfit = outfitProto.ID;
 
             var spawnedEvent = new GhostRoleSpawnerUsedEvent(uid, mob);
             RaiseLocalEvent(mob, spawnedEvent);
