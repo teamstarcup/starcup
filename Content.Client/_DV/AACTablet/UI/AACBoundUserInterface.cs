@@ -25,6 +25,7 @@ public sealed partial class AACBoundUserInterface : BoundUserInterface // starcu
         base.Open();
         _window?.Close();
         _window = this.CreateWindow<AACWindow>();
+        _window.Update(Owner); // starcup: quick phrase groups
         _window.PhraseButtonPressed += OnPhraseButtonPressed;
         _window.Typing += OnTyping;
         _window.SubmitPressed += OnSubmit;

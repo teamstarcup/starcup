@@ -1,0 +1,14 @@
+phrase-ku-jasima = reflect
+phrase-ku-kijetesantakalu = raccoon
+phrase-ku-kin = also
+phrase-ku-kipisi = cut
+phrase-ku-ku = Toki Pona Dictionary
+phrase-ku-lanpan = steal
+phrase-ku-leko = block
+phrase-ku-meso = medium
+phrase-ku-misikeke = medicine
+phrase-ku-monsuta = fear
+phrase-ku-n = n
+phrase-ku-namako = spice
+phrase-ku-soko = mushroom
+phrase-ku-tonsi = nonbinary

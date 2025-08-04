@@ -1,3 +1,4 @@
+using Content.Shared._starcup.QuickPhrase; // starcup
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Array;
 
@@ -48,4 +49,10 @@ public sealed partial class QuickPhrasePrototype : IPrototype, IInheritingProtot
     /// </summary>
     [DataField]
     public string StyleClass = string.Empty;
+
+    /// <summary>
+    /// starcup: the quick phrase group this quick phrase belongs to
+    /// </summary>
+    [DataField(required: true)]
+    public ProtoId<QuickPhraseGroupPrototype> PhraseGroup;
 }

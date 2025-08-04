@@ -1,33 +1,42 @@
 # Tabs
 
+- type: quickPhraseGroup
+  id: AACTablet
+
 - type: quickPhrase
   id: BaseCommonPhrase
   tab: Common Phrases
+  phraseGroup: AACTablet
   abstract: true
 
 - type: quickPhrase
   id: BaseJobPhrase
   tab: Jobs
+  phraseGroup: AACTablet
   abstract: true
 
 - type: quickPhrase
   id: BaseLocationPhrase
   tab: Locations
+  phraseGroup: AACTablet
   abstract: true
 
 - type: quickPhrase
   id: BaseSubjectPhrase
   tab: Subjects
+  phraseGroup: AACTablet
   abstract: true
 
 - type: quickPhrase
   id: BaseThreatPhrase
   tab: Safety
+  phraseGroup: AACTablet
   abstract: true
 
 - type: quickPhrase
   id: BaseSpeciesPhrase
   tab: Species
+  phraseGroup: AACTablet
   abstract: true
 
 # Departments
@@ -35,46 +44,54 @@
 - type: quickPhrase
   id: BaseCivilianPhrase
   group: Civilian
+  phraseGroup: AACTablet
   abstract: true
 
 - type: quickPhrase
   id: BaseCommandPhrase
   group: Command
   styleClass: CommandButton
+  phraseGroup: AACTablet
   abstract: true
 
 - type: quickPhrase
   id: BaseEngineeringPhrase
   group: Engineering
   styleClass: EngineeringButton
+  phraseGroup: AACTablet
   abstract: true
 
 - type: quickPhrase
   id: BaseSciencePhrase # starcup: epistemics to science
   group: Science # starcup: epistemics to science
   styleClass: ScienceButton # starcup: epistemics to science
+  phraseGroup: AACTablet
   abstract: true
 
 - type: quickPhrase
   id: BaseLogisticsPhrase
   group: Logistics
   styleClass: LogisticsButton
+  phraseGroup: AACTablet
   abstract: true
 
 - type: quickPhrase
   id: BaseMedicalPhrase
   group: Medical
   styleClass: MedicalButton
+  phraseGroup: AACTablet
   abstract: true
 
 - type: quickPhrase
   id: BaseSecurityPhrase
   group: Security
   styleClass: SecurityButton
+  phraseGroup: AACTablet
   abstract: true
 
 - type: quickPhrase
   id: BaseServicePhrase
   group: Service
   styleClass: ServiceButton
+  phraseGroup: AACTablet
   abstract: true

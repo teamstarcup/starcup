@@ -1,0 +1,25 @@
+- type: entity
+  parent: AACTablet
+  id: PonaTablet
+  name: tool surface of good communicate
+  description: this tool can use towards good communicate.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Devices/pu.rsi
+    layers:
+      - state: pu_tablet
+      - state: pu_screen
+        shader: unshaded
+    state: icon
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: pu-inhand-left
+      - state: pu_screen-inhand-left
+        shader: unshaded
+      right:
+      - state: pu-inhand-right
+      - state: pu_screen-inhand-right
+        shader: unshaded
+  - type: AACTablet
+    phraseGroups: [Pu, Ku] # starcup
