@@ -1,4 +1,18 @@
 - type: entity
+  parent: ClothingHandsGlovesCaptain
+  id: ClothingHandsGlovesCaptainSyndie
+  description: Tyrian purple gloves, with a nice gold trim. Swanky.
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Hands/Gloves/captain_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Hands/Gloves/captain_syndi.rsi
+  - type: Fiber
+    fiberMaterial: fibers-durathread
+    fiberColor: fibers-tyrian-purple
+
+- type: entity
   parent: [BaseTraitorContraband, ClothingHandsKnuckleDustersSyndicate]
   id: ClothingHandsKnuckleDustersNanotrasen
   name: NanoTrasen knuckle dusters

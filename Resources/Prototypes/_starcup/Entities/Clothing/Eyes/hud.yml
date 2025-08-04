@@ -1,4 +1,14 @@
 - type: entity
+  parent: ClothingEyesHudCommand
+  id: ClothingEyesHudCommandSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Hud/command_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Hud/command_syndi.rsi
+
+- type: entity
   parent: [BaseTraitorContraband, ClothingEyesHudSyndicate]
   id: ClothingEyesHudNanotrasen
   name: NanoTrasen visor

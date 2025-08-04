@@ -1,0 +1,26 @@
+- type: entity
+  name: mail RPDS
+  parent: WeaponLauncherChinaLake
+  id: WeaponMailLake
+  description: Rap(b?)id Parcel Delivery System
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Launchers/mail.rsi
+    layers:
+      - state: icon
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: _NF/Objects/Weapons/Guns/Launchers/mail.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - Belt
+    - suitStorage
+  - type: BallisticAmmoProvider
+    proto: null
+    whitelist:
+      tags:
+        - MailCapsule
+    capacity: 4
+  - type: StaticPrice # starcup: remove inherited sell value
+    price: 0 # starcup: remove inherited sell value

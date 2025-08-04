@@ -1,4 +1,18 @@
 - type: entity
+  parent: RubberStampCaptain
+  id: RubberStampCaptainSyndie
+  categories: [ DoNotMap ]
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-captain
+    stampedColor: "#A81962"
+    stampState: "paper_stamp-cap-syndie"
+    stampLargeIcon: "large_stamp-cap-syndie" # imp
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/stamps.rsi
+    state: stamp-cap-syndi
+
+- type: entity
   name: NanoTrasen rubber stamp
   parent: [BaseTraitorContraband, RubberStampSyndicate]
   id: RubberStampNanotrasen

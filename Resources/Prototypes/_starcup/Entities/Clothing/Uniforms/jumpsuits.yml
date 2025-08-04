@@ -1,4 +1,15 @@
 - type: entity
+  parent: ClothingUniformJumpsuitCaptain
+  id: ClothingUniformJumpsuitCaptainSyndie
+  description: It's a Tyrian purple jumpsuit with some gold markings denoting the rank of "Captain".
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/captain_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/captain_syndi.rsi
+
+- type: entity
   parent: [BaseTraitorContraband, ClothingUniformJumpsuitPyjamaSyndicateBlack]
   id: ClothingUniformJumpsuitPyjamaNanotrasenBlack
   name: black NanoTrasen pyjamas
@@ -17,6 +28,16 @@
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/pyjamananotrasenblue.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/pyjamananotrasenblue.rsi
+
+- type: entity
+  parent: ClothingUniformJumpsuitCapFormal
+  id: ClothingUniformJumpsuitCapFormalSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/capformal_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/capformal_syndi.rsi
 
 - type: entity
   parent: [BaseTraitorContraband, ClothingUniformJumpsuitOperative]
