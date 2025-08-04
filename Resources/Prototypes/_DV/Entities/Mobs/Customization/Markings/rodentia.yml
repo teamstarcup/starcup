@@ -364,9 +364,18 @@
   markingCategory: Tail
   bodyPart: Tail
   speciesRestriction: [Rodentia, Harpy] # starcup - added Harpies
+  # begin starcup: tail layering fixes
+  layering:
+    short: TailOversuit
+    short_BACK: TailBehind
+  colorLinks:
+    short_BACK: short
   sprites:
-    - sprite: _DV/Mobs/Customization/Rodentia/tail_markings.rsi
+    - sprite: _starcup/Mobs/Customization/Rodentia/tail_markings.rsi
       state: short
+    - sprite: _starcup/Mobs/Customization/Rodentia/tail_markings.rsi
+      state: short_BACK
+  # end starcup
 
 - type: marking
   id: RodentiaTailSquirrel
