@@ -61,3 +61,12 @@
   components:
     - type: Tag
       tags: [] # ignore "WhitelistChameleon" tag
+
+- type: entity
+  parent: [ ClothingBackpackDuffel, BaseCentcommContraband ]
+  id: ClothingBackpackDuffelSyndcomm
+  name: syndcomm duffel bag
+  description: A stylish Syndcomm-branded duffel bag.
+  components:
+  - type: ClothingSpeedModifier
+    sprintModifier: 1  # no penalty
