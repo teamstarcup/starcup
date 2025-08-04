@@ -5,8 +5,6 @@ using Content.Server.Preferences.Managers;
 using Content.Server.Station.Systems;
 using Content.Shared.Mind.Components;
 using Content.Shared.Preferences;
-using Content.Shared.Roles;
-using Robust.Shared.Prototypes;
 
 namespace Content.Server.Ghost.Roles
 {
@@ -16,9 +14,12 @@ namespace Content.Server.Ghost.Roles
         [Dependency] private readonly IEntityManager _entityManager = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
-        private void OnSpawnerTakeCharacter( EntityUid uid, GhostRoleCharacterSpawnerComponent component,
+        private void OnSpawnerTakeCharacter(Entity<GhostRoleCharacterSpawnerComponent> ent,
             ref TakeGhostRoleEvent args)
         {
+            var uid = ent.Owner;
+            var component = ent.Comp;
+
             if (!TryComp(uid, out GhostRoleComponent? ghostRole) ||
                 ghostRole.Taken)
             {
@@ -43,8 +44,9 @@ namespace Content.Server.Ghost.Roles
 
             GhostRoleInternalCreateMindAndTransfer(args.Player, uid, mob, ghostRole);
 
-            if (outfit != null)
-                SetOutfitCommand.SetOutfit(mob, outfit, _entityManager);
+            SetOutfitCommand.SetOutfit(mob, component.OutfitPrototype, _entityManager);
+
+            EntityManager.AddComponents(mob, component.AddedComponents);
 
             if (++component.CurrentTakeovers < component.AvailableTakeovers)
             {
