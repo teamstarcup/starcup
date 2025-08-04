@@ -1,0 +1,38 @@
+- type: entity
+  id: CrateSyndicateToys
+  parent: CrateSyndicate
+  name: syndicate civilian surplus crate
+  description: Despite the menacing appearance, this crate is nothing but a surplus bundle of fun!
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - !type:NestedSelector
+          rolls: !type:ConstantNumberSelector
+            value: 5
+          tableId: SyndicateCrateToys
+        - !type:NestedSelector
+          rolls: !type:ConstantNumberSelector
+            value: 5
+          tableId: SyndicateCrateToys
+
+- type: entityTable
+  id: SyndicateCrateToys
+  table: !type:GroupSelector
+    children:
+    - id: HappyHonkNukieSnacks
+    - id: ClothingHeadHatOutlawHat
+    - id: ClothingNeckScarfStripedSyndieRed
+    - id: ClothingNeckScarfStripedSyndieGreen
+    - id: RubberStampSyndicate
+    - id: ClothingBackpackDuffelSyndicateCarpSuit
+    - id: ClothingBackpackDuffelSyndicatePyjamaBundle
+    - id: BalloonSyn
+    - id: PlushieNuke
+    - id: ToyFigurineNukie
+    - id: ToyFigurineNukieElite
+    - id: ToyFigurineNukieCommander
+    - id: ToyFigurineFootsoldier
+    - id: ClothingBackpackDuffelSyndicateDecoyKitFilled
+    - id: SoapSyndieMundane
