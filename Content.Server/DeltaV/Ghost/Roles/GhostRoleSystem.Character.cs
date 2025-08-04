@@ -1,4 +1,7 @@
-﻿using Content.Server.Administration.Commands;
+﻿// begin starcup - SetOutfit is in outfitSystem instead of SetOutfitCommand
+// using Content.Server.Administration.Commands;
+using Content.Server.Clothing.Systems;
+// end starcup
 using Content.Server.Ghost.Roles.Components;
 using Content.Server.Ghost.Roles.Events;
 using Content.Server.Preferences.Managers;
@@ -12,6 +15,7 @@ namespace Content.Server.Ghost.Roles
     {
         [Dependency] private readonly IServerPreferencesManager _prefs = default!;
         [Dependency] private readonly IEntityManager _entityManager = default!;
+        [Dependency] private readonly OutfitSystem _outfitSystem = default!; // starcup - SetOutfit is in outfitSystem instead of SetOutfitCommand
 
         private void OnSpawnerTakeCharacter(Entity<GhostRoleCharacterSpawnerComponent> ent,
             ref TakeGhostRoleEvent args)
@@ -26,7 +30,7 @@ namespace Content.Server.Ghost.Roles
                 return;
             }
 
-            var character = (HumanoidCharacterProfile)_prefs.GetPreferences(args.Player.UserId).SelectedCharacter;
+            var character = (HumanoidCharacterProfile) _prefs.GetPreferences(args.Player.UserId).SelectedCharacter;
 
             var mob = _entityManager.System<StationSpawningSystem>()
                 .SpawnPlayerMob(Transform(uid).Coordinates, null, character, null);
@@ -39,7 +43,7 @@ namespace Content.Server.Ghost.Roles
 
             GhostRoleInternalCreateMindAndTransfer(args.Player, uid, mob, ghostRole);
 
-            SetOutfitCommand.SetOutfit(mob, component.OutfitPrototype, _entityManager);
+            _outfitSystem.SetOutfit(mob, component.OutfitPrototype); // starcup - SetOutfit is in outfitSystem instead of SetOutfitCommand
 
             EntityManager.AddComponents(mob, component.AddedComponents);
 
