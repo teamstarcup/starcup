@@ -24,3 +24,17 @@
     stampState: "paper_stamp-admin-assistant"
   - type: Sprite
     state: stamp-cap
+
+- type: entity
+  name: SyndComm rubber stamp
+  parent: [RubberStampBase, BaseCentcommContraband]
+  id: RubberStampSyndComm
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-syndcomm
+    stampedColor: "#664400"
+    stampState: "paper_stamp-syndicate"
+    stampLargeIcon: "large_stamp-syndcomm"
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/stamps.rsi
+    state: stamp-syndcomm
