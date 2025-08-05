@@ -22,3 +22,18 @@
     sprite: _starcup/Clothing/Ears/Headsets/nanotrasen.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Ears/Headsets/nanotrasen.rsi
+
+- type: entity
+  parent: [ClothingHeadsetAlt, BaseCentCommContraband]
+  id: ClothingHeadsetAltSyndComm
+  name: SyndComm over-ear headset
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeySyndcomm
+      - EncryptionKeyStationMaster
+  - type: Sprite
+    sprite: _starcup/Clothing/Ears/Headsets/syndcomm.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Ears/Headsets/syndcomm.rsi

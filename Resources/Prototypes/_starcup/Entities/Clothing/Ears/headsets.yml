@@ -7,3 +7,19 @@
     sprite: _starcup/Clothing/Ears/Headsets/command_syndi.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Ears/Headsets/command_syndi.rsi
+
+- type: entity
+  parent: [ ClothingHeadset, BaseCentcommContraband ]
+  id: ClothingHeadsetSyndComm
+  name: SyndComm headset
+  description: A headset used by Syndicate Command.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeySyndcomm
+      - EncryptionKeyStationMaster
+  - type: Sprite
+    sprite: _starcup/Clothing/Ears/Headsets/syndcomm.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Ears/Headsets/syndcomm.rsi
