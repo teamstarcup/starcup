@@ -31,10 +31,9 @@
   parent: SpawnPointPlayerCharacter
   id: SpawnPointPlayerCharacterTargetImmune
   name: ghost role spawn point
-  suffix: mindshielded, KillObjectiveImmune, player character
+  suffix: mindshielded, AntagImmune, player character
   components:
   - type: GhostRoleCharacterSpawner
     addedComponents:
     - type: MindShield
     - type: AntagImmune
-    - type: TargetObjectiveImmune
