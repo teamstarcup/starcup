@@ -282,3 +282,17 @@
     - state: ert_security
   - type: PresetIdCard
     job: ERTSecurity
+
+- type: entity
+  parent: SyndCommIDCard
+  id: CBURNIDCardSyndicate
+  name: CBURN ID card
+  suffix: Syndicate, CBURN
+  components:
+  - type: Sprite
+    layers:
+    - state: syndcomm
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: CBURN
