@@ -152,6 +152,14 @@
   - type: Sprite
     sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
 
+- type: entity
+  parent: AirlockCentralCommandLocked
+  id: AirlockSyndCommLocked
+  suffix: Syndicate Command, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/syndcomm.rsi
+
 # Glass Airlocks
 - type: entity
   parent: AirlockServiceGlassLocked
@@ -305,6 +313,14 @@
   components:
   - type: Sprite
     sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
+
+- type: entity
+  parent: AirlockCentralCommandGlassLocked
+  id: AirlockSyndCommGlassLocked
+  suffix: Syndicate Command, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/syndcomm.rsi
 
 # Maintenance Hatches
 - type: entity
