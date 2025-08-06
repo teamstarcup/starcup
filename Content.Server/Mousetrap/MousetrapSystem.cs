@@ -7,7 +7,7 @@ using Content.Shared.Inventory;
 using Content.Shared.Mousetrap;
 using Content.Shared.StepTrigger;
 using Content.Shared.StepTrigger.Systems;
-using Content.Shared._DeltaV.Rodentia;
+using Content.Shared._DV.Rodentia;
 using Robust.Server.GameObjects;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Player;

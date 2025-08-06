@@ -65,7 +65,7 @@ public sealed class DamageOnInteractSystem : EntitySystem
             // or checking the entity for  the comp itself if the inventory didn't work
             if (protectiveEntity.Comp == null && TryComp<DamageOnInteractProtectionComponent>(args.User, out var protectiveComp))
                 protectiveEntity = (args.User, protectiveComp);
-            
+
 
             // if protectiveComp isn't null after all that, it means the user has protection,
             // so let's calculate how much they resist
@@ -92,7 +92,7 @@ public sealed class DamageOnInteractSystem : EntitySystem
 
             // Attempt to paralyze the user after they have taken damage
             if (_random.Prob(entity.Comp.StunChance))
-                _stun.TryParalyze(args.User, TimeSpan.FromSeconds(entity.Comp.StunSeconds), true);
+                _stun.TryUpdateParalyzeDuration(args.User, TimeSpan.FromSeconds(entity.Comp.StunSeconds));
         }
         // Check if the entity's Throw bool is false, or if the entity has the PullableComponent, then if the entity is currently being pulled.
         // BeingPulled must be checked because the entity will be spastically thrown around without this.

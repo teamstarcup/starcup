@@ -381,7 +381,7 @@ public abstract partial class SharedBuckleSystem
                 _standing.Stand(buckle, force: true);
                 break;
             case StrapPosition.Down:
-                _standing.Down(buckle, false, false);  // starcup: removed `force: true`
+                _standing.Down(buckle, false, false, force: true);
                 break;
         }
 

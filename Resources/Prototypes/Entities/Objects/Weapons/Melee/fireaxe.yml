@@ -41,6 +41,7 @@
   - type: Tool
     qualities:
       - Prying
+      - Axing # DeltaV - The return of fireaxe prying
   - type: ToolTileCompatible
   - type: Prying
   - type: UseDelay
@@ -68,3 +69,8 @@
     quickEquip: false
     slots:
     - back
+# begin starcup: no Axing (antags shouldn't be able to space rooms this easily)
+  - type: Tool
+    qualities:
+    - Prying
+# end starcup

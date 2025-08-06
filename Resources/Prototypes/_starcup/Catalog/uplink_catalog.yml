@@ -13,8 +13,6 @@
   categories:
   - UplinkWearablesNT
 
-  - UplinkWearables
-
 # Add NanoTrasen deck to traitor uplink
 - type: listing
   id: UplinkNanoTrasenDeck
@@ -24,8 +22,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkPointless
-
+  - UplinkPointlessNT
 
 # TODO: make more categories
 # Guns
@@ -1939,7 +1936,7 @@
 
 - type: listing
   id: UplinkBalloonNT
-  name: uplink-balloon-name
+  name: uplink-balloon-name-starcup
   description: uplink-balloon-desc-starcup
   productEntity: BalloonNT
   cost:
@@ -1956,16 +1953,6 @@
     Telecrystal: 1
   categories:
   - UplinkPointlessNT
-
-- type: listing
-  id: UplinkScarfNanotrasenGold
-  name: uplink-scarf-nanotrasen-gold-name
-  description: uplink-scarf-nanotrasen-gold-desc
-  productEntity: ClothingNeckScarfStripedNTGold
-  cost:
-    Telecrystal: 1
-  categories:
-    - UplinkPointlessNT
 
 - type: listing
   id: UplinkNanotrasenBusinessCard
