@@ -34,7 +34,7 @@
     - RegenerativeMesh
     - BoxZiptie
     - CrowbarRed
-    - MagazineMagnumAP
+    - MagazinePistol
 
 - type: job
   id: SyndCommOperator
@@ -101,6 +101,7 @@
   startingGear: SyndCommAgent
   icon: JobIconSyndCommAgent
   supervisors: job-supervisors-syndcomm-supreme
+  displayWeight: 98
   canBeAntag: false
   whitelisted: true
   accessGroups:
@@ -177,6 +178,7 @@
   startingGear: SyndCommOfficer
   icon: JobIconSyndCommOfficer
   supervisors: job-supervisors-syndcomm-supreme
+  displayWeight: 99
   canBeAntag: false
   whitelisted: true
   accessGroups:
@@ -244,6 +246,7 @@
   startingGear: SyndCommOfficial
   icon: JobIconSyndCommOfficial
   supervisors: job-supervisors-syndcomm-supreme
+  displayWeight: 100
   canBeAntag: false
   whitelisted: true
   accessGroups:
