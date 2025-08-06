@@ -47,6 +47,7 @@ loadout-group-librarian-shoes = Librarian shoes
 
 loadout-group-mime-shoes = Mime shoes
 
+loadout-group-musician-glasses = Musician glasses
 loadout-group-musician-shoes = Musician shoes
 
 loadout-group-service-worker-jumpsuit = Service worker jumpsuit
