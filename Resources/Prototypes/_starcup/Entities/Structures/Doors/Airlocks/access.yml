@@ -159,6 +159,9 @@
   components:
   - type: Sprite
     sprite: _starcup/Structures/Doors/Airlocks/Standard/syndcomm.rsi
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSyndicateCommand ]
 
 # Glass Airlocks
 - type: entity
@@ -321,6 +324,9 @@
   components:
   - type: Sprite
     sprite: _starcup/Structures/Doors/Airlocks/Glass/syndcomm.rsi
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSyndicateCommand ]
 
 # Maintenance Hatches
 - type: entity

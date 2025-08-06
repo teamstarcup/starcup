@@ -4,7 +4,7 @@
   parent: JobIcon
   id: JobIconSyndCommOperator
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_starcup/Interface/Misc/job_icons.rsi
     state: SyndicateCommand
   jobName: job-name-syndcomm-operator
 
@@ -41,11 +41,11 @@
   name: job-name-syndcomm-operator
   description: job-description-syndcomm-operator
   playTimeTracker: JobSyndCommOperator
-  setPreference: false
   startingGear: SyndCommOperator
   icon: JobIconSyndCommOperator
   supervisors: job-supervisors-syndcomm-supreme
   canBeAntag: false
+  whitelisted: true
   accessGroups:
   - AllAccess
   access:
@@ -74,7 +74,7 @@
   parent: JobIcon
   id: JobIconSyndCommAgent
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_starcup/Interface/Misc/job_icons.rsi
     state: SyndicateCommand
   jobName: job-name-syndcomm-agent
 
@@ -98,11 +98,11 @@
   name: job-name-syndcomm-agent
   description: job-description-syndcomm-agent
   playTimeTracker: JobSyndCommAgent
-  setPreference: false
   startingGear: SyndCommAgent
   icon: JobIconSyndCommAgent
   supervisors: job-supervisors-syndcomm-supreme
   canBeAntag: false
+  whitelisted: true
   accessGroups:
   - AllAccess
   access:
@@ -131,7 +131,7 @@
   parent: JobIcon
   id: JobIconSyndCommOfficer
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: //Textures/_starcup/Interface/Misc/job_icons.rsi
     state: SyndicateCommand
   jobName: job-name-syndcomm-officer
 
@@ -174,11 +174,11 @@
   name: job-name-syndcomm-officer
   description: job-description-syndcomm-officer
   playTimeTracker: JobSyndCommOfficer
-  setPreference: false
   startingGear: SyndCommOfficer
   icon: JobIconSyndCommOfficer
   supervisors: job-supervisors-syndcomm-supreme
   canBeAntag: false
+  whitelisted: true
   accessGroups:
   - AllAccess
   access:
@@ -207,7 +207,7 @@
   parent: JobIcon
   id: JobIconSyndCommOfficial
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_starcup/Interface/Misc/job_icons.rsi
     state: SyndicateCommand
   jobName: job-name-syndcomm-official
 
@@ -241,11 +241,11 @@
   name: job-name-syndcomm-official
   description: job-description-syndcomm-official
   playTimeTracker: JobSyndCommOfficial
-  setPreference: false
   startingGear: SyndCommOfficial
   icon: JobIconSyndCommOfficial
   supervisors: job-supervisors-syndcomm-supreme
   canBeAntag: false
+  whitelisted: true
   accessGroups:
   - AllAccess
   access:
