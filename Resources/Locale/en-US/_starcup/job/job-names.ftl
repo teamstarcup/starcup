@@ -39,3 +39,10 @@ job-alt-title-mechatronics = Mechatronics Specialist
 
 # Scientist
 job-alt-title-necrocosmicist = Necrocosmicist
+
+
+# SyndComm
+job-name-syndcomm-operator = Syndicate Command Operator
+job-name-syndcomm-agent = Syndicate Command Agent
+job-name-syndcomm-officer = Syndicate Command Officer
+job-name-syndcomm-official = Syndicate Command Official

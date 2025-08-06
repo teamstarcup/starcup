@@ -191,7 +191,8 @@
 - type: entity
   parent: CentcomIDCard
   id: SyndCommIDCard
-  name: Syndicate Command officer ID card
+  name: syndicate command operator ID card
+  abstract: true
   components:
   - type: Sprite
     sprite: _starcup/Objects/Misc/id_cards.rsi
@@ -200,7 +201,39 @@
   - type: Item
     heldPrefix: blue
   - type: PresetIdCard
-    job: CentralCommandOfficial
+    job: SyndCommOperator
+
+- type: entity
+  parent: SyndCommIDCard
+  id: SyndCommOperatorIDCard
+  name: syndicate command operator ID card
+  components:
+  - type: PresetIdCard
+    job: SyndCommOperator
+
+- type: entity
+  parent: SyndCommIDCard
+  id: SyndCommAgentIDCard
+  name: syndicate command agent ID card
+  components:
+  - type: PresetIdCard
+    job: SyndCommAgent
+
+- type: entity
+  parent: SyndCommIDCard
+  id: SyndCommOfficerIDCard
+  name: syndicate command officer ID card
+  components:
+  - type: PresetIdCard
+    job: SyndCommOfficer
+
+- type: entity
+  parent: SyndCommIDCard
+  id: SyndCommOfficialIDCard
+  name: syndicate command official ID card
+  components:
+  - type: PresetIdCard
+    job: SyndCommOfficial
 
 # SyndComm ERT
 - type: entity
@@ -289,10 +322,5 @@
   name: CBURN ID card
   suffix: Syndicate, CBURN
   components:
-  - type: Sprite
-    layers:
-    - state: syndcomm
-  - type: Item
-    heldPrefix: blue
   - type: PresetIdCard
     job: CBURN

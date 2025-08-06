@@ -276,6 +276,7 @@
   id: SyndCommPDA
   name: SyndComm PDA
   description: Black and gold. Like a really dangerous snake, or something.
+  abstract: true
   components:
   - type: Pda
     id: SyndCommIDCard
@@ -293,6 +294,58 @@
     borderColor: "#805500"
   - type: Icon
     state: pda-syndcomm
+
+- type: entity
+  parent: SyndCommPDA
+  id: SyndCommOperatorPDA
+  name: SyndComm operator PDA
+  components:
+  - type: Pda
+    id: SyndCommOperatorIDCard
+    penSlot:
+      startingItem: CyberPen
+      whitelist:
+        tags:
+        - Write
+
+- type: entity
+  parent: SyndCommPDA
+  id: SyndCommAgentPDA
+  name: SyndComm agent PDA
+  components:
+  - type: Pda
+    id: SyndCommAgentIDCard
+    penSlot:
+      startingItem: CyberPen
+      whitelist:
+        tags:
+        - Write
+
+- type: entity
+  parent: SyndCommPDA
+  id: SyndCommOfficerPDA
+  name: SyndComm officer PDA
+  components:
+  - type: Pda
+    id: SyndCommOfficerIDCard
+    penSlot:
+      startingItem: CyberPen
+      whitelist:
+        tags:
+        - Write
+
+- type: entity
+  parent: SyndCommPDA
+  id: SyndCommOfficialPDA
+  name: SyndComm official PDA
+  components:
+  - type: Pda
+    id: SyndCommOfficialIDCard
+    penSlot:
+      startingItem: CyberPen
+      whitelist:
+        tags:
+        - Write
 
 # ERT
 
