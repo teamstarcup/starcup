@@ -1,5 +1,5 @@
 - type: gameMap
-  id: Loopstarcup
+  id: Loop
   mapName: 'Loop Station'
   mapPath: /Maps/_starcup/loop.yml
   minPlayers: 35
@@ -11,7 +11,7 @@
         - type: StationNameSetup
           mapNameTemplate: '{0} Loop Station {1}'
           nameGenerator:
-            !type:NanotrasenNameGenerator
+            !type:SyndicateNameGenerator
             prefixCreator: '14'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_wode.yml

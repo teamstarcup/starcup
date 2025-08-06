@@ -32,6 +32,7 @@ namespace Content.IntegrationTests.Tests
         private const bool SkipTestMaps = true;
         private const string TestMapsPath = "/Maps/Test/";
 
+        // begin starcup
         private static readonly string[] NoSpawnMaps =
         {
             "CentComm",
@@ -42,7 +43,7 @@ namespace Content.IntegrationTests.Tests
 
         private static readonly string[] Grids =
         {
-            "/Maps/centcomm.yml",
+            // "/Maps/centcomm.yml",
             AdminTestArenaSystem.ArenaMapPath,
 			"/Maps/_starcup/syndicomm.yml",  // starcup
             "/Maps/_starcup/Events/frigid-peril-surface.yml",  // starcup
@@ -50,9 +51,9 @@ namespace Content.IntegrationTests.Tests
 
         private static readonly string[] DoNotMapWhitelist =
         {
-            "/Maps/centcomm.yml",
-            "/Maps/bagel.yml", // Contains mime's rubber stamp --> Either fix this, remove the category, or remove this comment if intentional.
-            "/Maps/reach.yml", // Contains handheld crew monitor
+//            "/Maps/centcomm.yml",
+//            "/Maps/bagel.yml", // Contains mime's rubber stamp --> Either fix this, remove the category, or remove this comment if intentional.
+//            "/Maps/reach.yml", // Contains handheld crew monitor
             "/Maps/_starcup/reach.yml", // starcup: Contains handheld crew monitor
             "/Maps/Shuttles/ShuttleEvent/cruiser.yml", // Contains LSE-1200c "Perforator"
             "/Maps/Shuttles/ShuttleEvent/honki.yml", // Contains golden honker, clown's rubber stamp
@@ -64,36 +65,26 @@ namespace Content.IntegrationTests.Tests
             "/Maps/_starcup/Events/cruise-control.yml",  // starcup: this is an event and events do not play by the rules
         };
 
+
         private static readonly string[] GameMaps =
         {
             "Dev",
             "TestTeg",
-            "Fland",
-            "Packed",
-            "Bagel",
-            "CentComm",
-            "Box",
-            "Marathon",
             "MeteorArena",
-            "Saltern",
-            "Reach",
-            "Oasis",
-            "Amber",
-            "Plasma",
-            "Elkridge",
-            "Relic",
             "dm01-entryway",
-            "Exo",
+            "Syndcomm",
             "Glacier",  // starcup
-            "Loopstarcup", // starcup
-            "Omegastarcup", // starcup
-            "Packedstarcup", // starcup
-            "Reachstarcup", // starcup
-            "Salternstarcup", // starcup
+            "Loop", // starcup
+            "Omega", // starcup
+            "Packed", // starcup
+            "Reach", // starcup
+            "Saltern", // starcup
             "Byoin",  // starcup
+            "Train", // starcup
             "EventFrigidPeril", // starcup
             "EventCruiseControl" // starcup
         };
+        // end starcup
 
         /// <summary>
         /// Asserts that specific files have been saved as grids and not maps.
