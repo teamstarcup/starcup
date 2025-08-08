@@ -6,6 +6,7 @@
   components:
   - type: SetRoof
     value: true
+    blockWeather: true  # starcup: selective weather occlusion on roofs
   - type: Sprite
     layers:
     - state: green
@@ -19,6 +20,7 @@
   components:
   - type: SetRoof
     value: false
+    blockWeather: false  # starcup: selective weather occlusion on roofs
   - type: Sprite
     layers:
     - state: red

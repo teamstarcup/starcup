@@ -10,13 +10,12 @@
     heldPrefix: overpriced_pen
 
 - type: entity
-  name: captain's fountain pen
-  parent: PenEmbeddable
+  parent: PenCap
   id: PenCapSyndie
-  description: A luxurious fountain pen for the captain of the station.
+  suffix: Syndicate
   components:
   - type: Sprite
     sprite: _starcup/Objects/Misc/pens.rsi
-    state: pen_cap
+    state: pen_cap_syndi
   - type: Item
     sprite: _starcup/Objects/Misc/pens.rsi

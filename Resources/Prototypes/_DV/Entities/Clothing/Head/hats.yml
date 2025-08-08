@@ -1,0 +1,34 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadMailCarrier
+  name: mail carrier's hat
+  description: Smells like a good pension.
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Head/Hats/mailman.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Head/Hats/mailman.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCourier
+  name: courier's cap
+  description: Special delivery.
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Head/Soft/couriersoft.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Head/Soft/couriersoft.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCourierFlipped
+  name: courier's cap flipped
+  description: Special delivery.
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Head/Soft/couriersoft.rsi
+    state: flipped-icon
+  - type: Clothing
+    sprite: _DV/Clothing/Head/Soft/couriersoft.rsi
+    equippedPrefix: flipped

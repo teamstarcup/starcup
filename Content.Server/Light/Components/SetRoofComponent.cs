@@ -8,4 +8,9 @@ public sealed partial class SetRoofComponent : Component
 {
     [DataField(required: true)]
     public bool Value;
+
+    // begin starcup: selective weather occlusion for roofs
+    [DataField(required: true)]
+    public bool BlockWeather = true;
+    // end starcup
 }

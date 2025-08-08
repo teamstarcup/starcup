@@ -9,3 +9,5 @@ id-card-access-level-reporter = Reporter
 id-card-access-level-zookeeper = Zookeeper
 
 id-card-access-level-syndicate-agent-starcup = NanoTrasen Agent
+
+id-card-access-level-syndicate-command = Syndicate Command

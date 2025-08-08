@@ -1,0 +1,133 @@
+- type: entity
+  parent: RandomPosterContraband
+  id: RandomPosterContrabandSyndie
+  name: "random contraband poster spawner (syndie)"
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Structures/Wallmounts/posters.rsi
+        state: random_legit
+  - type: RandomSpawner
+    offset: 0
+    prototypes:
+      - PosterContrabandFreeTonto
+      - PosterContrabandFunPolice
+      - PosterContrabandRealExomorph
+      - PosterContrabandClown
+      - PosterContrabandMissingGloves
+      - PosterContrabandHackingGuide
+      - PosterContrabandRIPBadger
+      - PosterContrabandAmbrosiaVulgaris
+      - PosterContrabandDonutCorp
+      - PosterContrabandEAT
+      - PosterContrabandTools
+      - PosterContrabandPower
+      - PosterContrabandSpaceCube
+      - PosterContrabandBorgFancy
+      - PosterContrabandBorgFancyv2
+      - PosterContrabandKosmicheskayaStantsiya
+      - PosterContrabandRebelsUnite
+      - PosterContrabandC20r
+      - PosterContrabandRevolver
+      - PosterContrabandEnergySwords
+      - PosterContrabandRedRum
+      - PosterContrabandCC64KAd
+      - PosterContrabandPunchShit
+      - PosterContrabandTheGriffin
+      - PosterContrabandFreeDrone
+      - PosterContrabandRouny
+      - PosterContrabandRobustSoftdrinks
+      - PosterContrabandShamblersJuice
+      - PosterContrabandPwrGame
+      - PosterContrabandSunkist
+      - PosterContrabandSpaceCola
+      - PosterContrabandSpaceUp
+      - PosterContrabandKudzu
+      - PosterContrabandMaskedMen
+      - PosterContrabandUnreadableAnnouncement
+      - PosterContrabandFreeSyndicateEncryptionKey
+      - PosterContrabandBountyHunters
+      - PosterContrabandTheBigGasTruth
+      - PosterContrabandWehWatches
+      - PosterContrabandVoteWeh
+      - PosterContrabandHighEffectEngineering
+      - PosterContrabandNuclearDeviceInformational
+      - PosterContrabandRevolt
+      - PosterContrabandMissingSpacepen
+      - PosterContrabandExoAcid
+      - PosterContrabandExoRun
+      - PosterContrabandExoChomp
+      - PosterLegitNanotrasenLogo
+      - PosterLegit50thAnniversaryVintageReprint
+      - PosterLegitNTTGC
+    chance: 1
+
+- type: entity
+  parent: RandomPosterLegit
+  id: RandomPosterLegitSyndie
+  name: "random legit poster spawner (syndie)"
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Wallmounts/posters.rsi
+      state: random_contraband
+  - type: RandomSpawner
+    offset: 0
+    prototypes:
+    - PosterLegitHereForYourSafetySyndie
+    - PosterLegitSyndicateLogo
+    - PosterLegitCleanlinessSyndie
+    - PosterLegitHelpOthersSyndie
+    - PosterLegitBuildSyndie
+    - PosterLegitBlessThisSpessSyndie
+    - PosterLegitScienceSyndie
+    - PosterLegitIanSyndie
+    - PosterLegitWalkSyndie
+    - PosterLegitStateLawsSyndie
+    - PosterLegitLoveIanSyndie
+    - PosterLegitGetYourLEGSSyndie
+    - PosterLegitDoNotQuestionSyndie
+    - PosterLegitWorkForAFutureSyndie
+    - PosterLegitSoftCapPopArt
+    - PosterLegitSafetyInternalsSyndie
+    - PosterLegitSafetyEyeProtectionSyndie
+    - PosterLegitSafetyReportSyndie
+    - PosterLegitReportCrimesSyndie
+    - PosterLegitIonRifle
+    - PosterLegitFoamForceAdSyndie
+    - PosterLegitFruitBowl
+    - PosterLegitPDAAdSyndie
+    - PosterLegitSyndmichiAd
+    - PosterLegit12GaugeSyndie
+    - PosterLegitHighClassMartini
+    - PosterLegitTheOwl
+    - PosterLegitNoERPSyndie
+    - PosterLegitCarbonDioxide
+    - PosterLegitDickGumshue
+    - PosterLegitThereIsNoGasGiant
+    - PosterLegitJustAWeekAwaySyndie
+    - PosterLegitSecWatch
+    - PosterLegitVacation
+    - PosterLegitRenaultSyndie
+    - PosterLegitSyndTCG
+    - PosterLegitSafetyMothDelam
+    - PosterLegitSafetyMothEpi
+    - PosterLegitSafetyMothPiping
+    - PosterLegitSafetyMothMeth
+    - PosterLegitSafetyMothHardhat
+    - PosterLegitSafetyMothSSD
+    - PosterLegitOppenhopper
+    - PosterLegitTyrone
+    - PosterLegitMail # DeltaV Poster, see Resources/Prototypes/_DV/Entities/Structures/Wallmount/Signs/posters.yml
+    - PosterLegitHelio
+    - PosterContrabandAtmosiaDeclarationIndependence
+    - PosterContrabandLamarr
+    - PosterContrabandDonk
+    - PosterContrabandEnlistGorlex
+    - PosterContrabandInterdyne
+    - PosterContrabandWaffleCorp
+    - PosterContrabandGreyTide
+    - PosterContrabandSyndicateRecruitment
+    chance: 1

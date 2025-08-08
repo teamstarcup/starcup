@@ -186,3 +186,141 @@
   components:
   - type: IdCard
     jobTitle: job-alt-title-necrocosmicist
+
+# SyndComm
+- type: entity
+  parent: CentcomIDCard
+  id: SyndCommIDCard
+  name: syndicate command operator ID card
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/id_cards.rsi
+    layers:
+    - state: syndcomm
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: SyndCommOperator
+
+- type: entity
+  parent: SyndCommIDCard
+  id: SyndCommOperatorIDCard
+  name: syndicate command operator ID card
+  components:
+  - type: PresetIdCard
+    job: SyndCommOperator
+
+- type: entity
+  parent: SyndCommIDCard
+  id: SyndCommAgentIDCard
+  name: syndicate command agent ID card
+  components:
+  - type: PresetIdCard
+    job: SyndCommAgent
+
+- type: entity
+  parent: SyndCommIDCard
+  id: SyndCommOfficerIDCard
+  name: syndicate command officer ID card
+  components:
+  - type: PresetIdCard
+    job: SyndCommOfficer
+
+- type: entity
+  parent: SyndCommIDCard
+  id: SyndCommOfficialIDCard
+  name: syndicate command official ID card
+  components:
+  - type: PresetIdCard
+    job: SyndCommOfficial
+
+# SyndComm ERT
+- type: entity
+  parent: ERTLeaderIDCard
+  id: ERTLeaderIDCardSyndicate
+  name: ERT leader ID card
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/id_cards.rsi
+    layers:
+    - state: ert_commander
+  - type: Item
+    heldPrefix: gold
+
+- type: entity
+  parent: ERTChaplainIDCard
+  id: ERTChaplainIDCardSyndicate
+  name: ERT chaplain ID card
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/id_cards.rsi
+    layers:
+    - state: ert_chaplain
+  - type: PresetIdCard
+    job: ERTChaplain
+  - type: Item
+    heldPrefix: gold
+
+- type: entity
+  parent: ERTEngineerIDCard
+  id: ERTEngineerIDCardSyndicate
+  name: ERT engineer ID card
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/id_cards.rsi
+    layers:
+    - state: ert_engineer
+  - type: PresetIdCard
+    job: ERTEngineer
+
+- type: entity
+  parent: ERTJanitorIDCard
+  id: ERTJanitorIDCardSyndicate
+  name: ERT janitor ID card
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/id_cards.rsi
+    layers:
+    - state: ert_janitor
+  - type: PresetIdCard
+    job: ERTJanitor
+
+- type: entity
+  parent: ERTMedicIDCard
+  id: ERTMedicIDCardSyndicate
+  name: ERT medic ID card
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/id_cards.rsi
+    layers:
+    - state: ert_medic
+  - type: PresetIdCard
+    job: ERTMedical
+
+- type: entity
+  parent: ERTSecurityIDCard
+  id: ERTSecurityIDCardSyndicate
+  name: ERT security ID card
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/id_cards.rsi
+    layers:
+    - state: ert_security
+  - type: PresetIdCard
+    job: ERTSecurity
+
+- type: entity
+  parent: SyndCommIDCard
+  id: CBURNIDCardSyndicate
+  name: CBURN ID card
+  suffix: Syndicate, CBURN
+  components:
+  - type: PresetIdCard
+    job: CBURN

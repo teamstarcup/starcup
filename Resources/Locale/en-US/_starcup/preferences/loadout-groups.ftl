@@ -1,3 +1,6 @@
+# Command
+loadout-group-command-glasses = Command glasses
+
 # Engineering
 loadout-group-technical-assistant-outerclothing = Technical assistant outer clothing
 
@@ -9,9 +12,12 @@ loadout-group-chemist-id-starcup = Chemist PDA
 # Science
 loadout-group-research-assistant-outerclothing = Research assistant outer clothing
 
+loadout-group-robotics-glasses = Roboticist glasses
 loadout-group-roboticist-id-starcup = Roboticist PDA
 
 # Security
+loadout-group-security-glasses = Security glasses
+
 loadout-group-security-cadet-outerclothing = Security cadet outer clothing
 
 loadout-group-warden-shoes = Warden shoes
@@ -19,6 +25,7 @@ loadout-group-warden-shoes = Warden shoes
 # Service
 loadout-group-botanist-shoes = Botanist shoes
 
+loadout-group-bartender-glasses = Bartender glasses
 loadout-group-bartender-shoes = Bartender shoes
 
 loadout-group-chaplain-shoes = Chaplain shoes
@@ -40,6 +47,7 @@ loadout-group-librarian-shoes = Librarian shoes
 
 loadout-group-mime-shoes = Mime shoes
 
+loadout-group-musician-glasses = Musician glasses
 loadout-group-musician-shoes = Musician shoes
 
 loadout-group-service-worker-jumpsuit = Service worker jumpsuit

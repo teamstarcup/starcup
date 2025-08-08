@@ -1,4 +1,15 @@
 - type: entity
+  parent: ClothingUniformJumpsuitCaptain
+  id: ClothingUniformJumpsuitCaptainSyndie
+  description: It's a Tyrian purple jumpsuit with some gold markings denoting the rank of "Captain".
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/captain_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/captain_syndi.rsi
+
+- type: entity
   parent: [BaseTraitorContraband, ClothingUniformJumpsuitPyjamaSyndicateBlack]
   id: ClothingUniformJumpsuitPyjamaNanotrasenBlack
   name: black NanoTrasen pyjamas
@@ -19,6 +30,16 @@
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/pyjamananotrasenblue.rsi
 
 - type: entity
+  parent: ClothingUniformJumpsuitCapFormal
+  id: ClothingUniformJumpsuitCapFormalSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/capformal_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/capformal_syndi.rsi
+
+- type: entity
   parent: [BaseTraitorContraband, ClothingUniformJumpsuitOperative]
   id: ClothingUniformJumpsuitOperativeNT
   suffix: NanoTrasen
@@ -34,3 +55,47 @@
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/nanotrasenformal.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/nanotrasenformal.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseCentcommContraband]
+  id: ClothingUniformJumpsuitSyndCommFormal
+  name: SyndComm formal suit
+  description: A suit for special occasions.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/syndcommformal.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/syndcommformal.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseCentcommContraband]
+  id: ClothingUniformJumpsuitSyndCommAgent
+  name: SyndComm agent's jumpsuit
+  description: A suit worn by SyndComm's legal team. Smells of burnt coffee.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/syndcomm_agent.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/syndcomm_agent.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseCentcommContraband]
+  id: ClothingUniformJumpsuitSyndCommOfficial
+  name: SyndComm official's jumpsuit
+  description: It's a jumpsuit worn by SyndComm officials.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/syndcomm_official.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/syndcomm_official.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseCentcommContraband]
+  id: ClothingUniformJumpsuitSyndCommOfficer
+  name: SyndComm officer's jumpsuit
+  description: It's a jumpsuit worn by SyndComm officers.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/syndcomm_officer.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/syndcomm_officer.rsi

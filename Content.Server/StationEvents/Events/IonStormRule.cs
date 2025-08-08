@@ -1,4 +1,4 @@
-using Content.Server._CosmaticDrift.Traits; // Cosmatic Drift - synth trait
+using Content.Server._CD.Traits; // Cosmatic Drift - synth trait
 using Content.Server.Silicons.Laws;
 using Content.Server.StationEvents.Components;
 using Content.Shared.GameTicking.Components;

@@ -1,4 +1,14 @@
 - type: entity
+  parent: ClothingHeadsetAltCommand
+  id: ClothingHeadsetAltCommandSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Ears/Headsets/command_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Ears/Headsets/command_syndi.rsi
+
+- type: entity
   parent: [BaseTraitorContraband, ClothingHeadsetAltSyndicate]
   id: ClothingHeadsetAltNanotrasen
   name: blueblood over-ear headset
@@ -12,3 +22,18 @@
     sprite: _starcup/Clothing/Ears/Headsets/nanotrasen.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Ears/Headsets/nanotrasen.rsi
+
+- type: entity
+  parent: [ClothingHeadsetAlt, BaseCentcommContraband]
+  id: ClothingHeadsetAltSyndComm
+  name: SyndComm over-ear headset
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyStationMaster
+      - EncryptionKeySyndcomm
+  - type: Sprite
+    sprite: _starcup/Clothing/Ears/Headsets/syndcomm.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Ears/Headsets/syndcomm.rsi
