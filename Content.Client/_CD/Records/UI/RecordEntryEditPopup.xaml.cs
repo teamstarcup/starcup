@@ -151,9 +151,10 @@ public sealed partial class RecordEntryEditPopup : FancyWindow
         ValidateFields();
     }
 
-    // starcup: Live preview of the edited record
+    // begin starcup: Live preview of the edited record
     private void UpdatePreview(string desc)
     {
         EntryDesc.SetMessage(FormattedMessage.FromMarkupPermissive(desc.Trim()), RecordEntryViewPopup.AllowedTags);
     }
+    // end starcup
 }
