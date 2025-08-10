@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/10/2025 12:40:36
-  entityCount: 11762
+  time: 08/10/2025 12:43:17
+  entityCount: 11771
 maps:
 - 1
 grids:
@@ -49371,6 +49371,69 @@ entities:
     components:
     - type: Transform
       pos: 27.5,19.5
+      parent: 2
+- proto: HolopadCommandBridge
+  entities:
+  - uid: 11765
+    components:
+    - type: Transform
+      pos: 3.5,30.5
+      parent: 2
+- proto: HolopadCommandCaptain
+  entities:
+  - uid: 11766
+    components:
+    - type: Transform
+      pos: 8.5,24.5
+      parent: 2
+- proto: HolopadCommandCmo
+  entities:
+  - uid: 11770
+    components:
+    - type: Transform
+      pos: 23.5,-11.5
+      parent: 2
+- proto: HolopadCommandHop
+  entities:
+  - uid: 11767
+    components:
+    - type: Transform
+      pos: 9.5,19.5
+      parent: 2
+- proto: HolopadCommandHos
+  entities:
+  - uid: 11768
+    components:
+    - type: Transform
+      pos: -9.5,21.5
+      parent: 2
+- proto: HolopadCommandMeetingRoom
+  entities:
+  - uid: 11764
+    components:
+    - type: Transform
+      pos: -0.5,26.5
+      parent: 2
+- proto: HolopadCommandQm
+  entities:
+  - uid: 11763
+    components:
+    - type: Transform
+      pos: 27.5,8.5
+      parent: 2
+- proto: HolopadCommandRd
+  entities:
+  - uid: 11771
+    components:
+    - type: Transform
+      pos: -4.5,-22.5
+      parent: 2
+- proto: HolopadCommandVault
+  entities:
+  - uid: 11769
+    components:
+    - type: Transform
+      pos: -2.5,17.5
       parent: 2
 - proto: HolopadEngineeringAtmosMain
   entities:
