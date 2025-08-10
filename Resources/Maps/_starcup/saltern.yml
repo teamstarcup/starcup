@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/10/2025 12:32:41
-  entityCount: 11759
+  time: 08/10/2025 12:40:36
+  entityCount: 11762
 maps:
 - 1
 grids:
@@ -49350,6 +49350,27 @@ entities:
     components:
     - type: Transform
       pos: 54.5,-9.5
+      parent: 2
+- proto: HolopadCargoBay
+  entities:
+  - uid: 11761
+    components:
+    - type: Transform
+      pos: 21.5,10.5
+      parent: 2
+- proto: HolopadCargoFront
+  entities:
+  - uid: 11760
+    components:
+    - type: Transform
+      pos: 14.5,10.5
+      parent: 2
+- proto: HolopadCargoSalvageBay
+  entities:
+  - uid: 11762
+    components:
+    - type: Transform
+      pos: 27.5,19.5
       parent: 2
 - proto: HolopadEngineeringAtmosMain
   entities:
