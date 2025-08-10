@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/10/2025 12:27:38
-  entityCount: 11742
+  time: 08/10/2025 12:29:02
+  entityCount: 11746
 maps:
 - 1
 grids:
@@ -49350,6 +49350,34 @@ entities:
     components:
     - type: Transform
       pos: 54.5,-9.5
+      parent: 2
+- proto: HolopadScienceAnomaly
+  entities:
+  - uid: 11743
+    components:
+    - type: Transform
+      pos: -8.5,-29.5
+      parent: 2
+- proto: HolopadScienceFront
+  entities:
+  - uid: 11746
+    components:
+    - type: Transform
+      pos: -8.5,-20.5
+      parent: 2
+- proto: HolopadScienceRnd
+  entities:
+  - uid: 11744
+    components:
+    - type: Transform
+      pos: -15.5,-26.5
+      parent: 2
+- proto: HolopadScienceRobotics
+  entities:
+  - uid: 11745
+    components:
+    - type: Transform
+      pos: -1.5,-26.5
       parent: 2
 - proto: HolopadSecurityArmory
   entities:
