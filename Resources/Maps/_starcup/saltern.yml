@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/10/2025 12:25:51
-  entityCount: 11736
+  time: 08/10/2025 12:27:38
+  entityCount: 11742
 maps:
 - 1
 grids:
@@ -49399,6 +49399,48 @@ entities:
     components:
     - type: Transform
       pos: -1.5,8.5
+      parent: 2
+- proto: HolopadServiceBar
+  entities:
+  - uid: 11737
+    components:
+    - type: Transform
+      pos: -4.5,-1.5
+      parent: 2
+- proto: HolopadServiceBotany
+  entities:
+  - uid: 11738
+    components:
+    - type: Transform
+      pos: -18.5,-2.5
+      parent: 2
+- proto: HolopadServiceChapel
+  entities:
+  - uid: 11739
+    components:
+    - type: Transform
+      pos: -35.5,15.5
+      parent: 2
+- proto: HolopadServiceJanitor
+  entities:
+  - uid: 11740
+    components:
+    - type: Transform
+      pos: -19.5,-12.5
+      parent: 2
+- proto: HolopadServiceKitchen
+  entities:
+  - uid: 11741
+    components:
+    - type: Transform
+      pos: -13.5,0.5
+      parent: 2
+- proto: HolopadServiceLibrary
+  entities:
+  - uid: 11742
+    components:
+    - type: Transform
+      pos: 8.5,-27.5
       parent: 2
 - proto: HospitalCurtains
   entities:
