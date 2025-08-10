@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/10/2025 12:30:24
-  entityCount: 11753
+  time: 08/10/2025 12:32:41
+  entityCount: 11759
 maps:
 - 1
 grids:
@@ -49350,6 +49350,48 @@ entities:
     components:
     - type: Transform
       pos: 54.5,-9.5
+      parent: 2
+- proto: HolopadEngineeringAtmosMain
+  entities:
+  - uid: 11754
+    components:
+    - type: Transform
+      pos: 51.5,16.5
+      parent: 2
+- proto: HolopadEngineeringFront
+  entities:
+  - uid: 11755
+    components:
+    - type: Transform
+      pos: 33.5,4.5
+      parent: 2
+- proto: HolopadEngineeringMain
+  entities:
+  - uid: 11759
+    components:
+    - type: Transform
+      pos: 43.5,3.5
+      parent: 2
+- proto: HolopadEngineeringPower
+  entities:
+  - uid: 11757
+    components:
+    - type: Transform
+      pos: 57.5,3.5
+      parent: 2
+- proto: HolopadEngineeringStorage
+  entities:
+  - uid: 11756
+    components:
+    - type: Transform
+      pos: 32.5,-1.5
+      parent: 2
+- proto: HolopadEngineeringTelecoms
+  entities:
+  - uid: 11758
+    components:
+    - type: Transform
+      pos: 50.5,-9.5
       parent: 2
 - proto: HolopadMedicalChemistry
   entities:
