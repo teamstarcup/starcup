@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/02/2025 21:15:05
-  entityCount: 19379
+  time: 08/10/2025 08:09:20
+  entityCount: 19380
 maps:
 - 1
 grids:
@@ -17455,7 +17455,7 @@ entities:
       pos: 17.5,28.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -66490.08
+      secondsUntilStateChange: -67144.27
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -18045,7 +18045,7 @@ entities:
       pos: 0.5,-1.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -68339.21
+      secondsUntilStateChange: -68993.41
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -18382,7 +18382,7 @@ entities:
       pos: -16.5,32.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -52644.35
+      secondsUntilStateChange: -53298.55
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -18519,7 +18519,7 @@ entities:
       pos: 6.5,-6.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -53573.418
+      secondsUntilStateChange: -54227.617
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -52719,6 +52719,14 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 31.5,-22.5
       parent: 2
+- proto: ComputerSalvageJobBoard
+  entities:
+  - uid: 19380
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 47.5,14.5
+      parent: 2
 - proto: ComputerShuttleCargo
   entities:
   - uid: 7470
@@ -56342,11 +56350,6 @@ entities:
     components:
     - type: Transform
       pos: -34.5,16.5
-      parent: 2
-  - uid: 8136
-    components:
-    - type: Transform
-      pos: 47.5,14.5
       parent: 2
   - uid: 8137
     components:
@@ -114264,6 +114267,13 @@ entities:
     - type: Transform
       pos: 15.5,-4.5
       parent: 2
+- proto: VendingMachineMNKDrobe
+  entities:
+  - uid: 8136
+    components:
+    - type: Transform
+      pos: 60.5,29.5
+      parent: 2
 - proto: VendingMachineNutri
   entities:
   - uid: 17397
@@ -123737,7 +123747,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -80001.76
+      secondsUntilStateChange: -80655.95
       state: Opening
     - type: Airlock
       autoClose: False
@@ -123753,7 +123763,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -80001.195
+      secondsUntilStateChange: -80655.39
       state: Opening
     - type: Airlock
       autoClose: False
@@ -123775,7 +123785,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -80000.73
+      secondsUntilStateChange: -80654.92
       state: Opening
     - type: Airlock
       autoClose: False
@@ -123791,7 +123801,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -80002.26
+      secondsUntilStateChange: -80656.45
       state: Opening
     - type: Airlock
       autoClose: False
