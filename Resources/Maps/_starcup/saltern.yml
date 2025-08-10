@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/10/2025 11:00:19
+  time: 08/10/2025 12:06:23
   entityCount: 11729
 maps:
 - 1
@@ -4906,6 +4906,13 @@ entities:
     - type: Transform
       pos: -10.5,-1.5
       parent: 2
+- proto: AirlockLibraryLocked
+  entities:
+  - uid: 246
+    components:
+    - type: Transform
+      pos: 10.5,-30.5
+      parent: 2
 - proto: AirlockMaint
   entities:
   - uid: 174
@@ -5333,13 +5340,6 @@ entities:
       name: Perma
     - type: Transform
       pos: -14.5,10.5
-      parent: 2
-- proto: AirlockServiceLocked
-  entities:
-  - uid: 246
-    components:
-    - type: Transform
-      pos: 10.5,-30.5
       parent: 2
 - proto: AirlockTheatreLocked
   entities:
