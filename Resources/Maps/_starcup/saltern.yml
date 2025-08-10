@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/10/2025 12:29:02
-  entityCount: 11746
+  time: 08/10/2025 12:30:24
+  entityCount: 11753
 maps:
 - 1
 grids:
@@ -49350,6 +49350,55 @@ entities:
     components:
     - type: Transform
       pos: 54.5,-9.5
+      parent: 2
+- proto: HolopadMedicalChemistry
+  entities:
+  - uid: 11747
+    components:
+    - type: Transform
+      pos: 16.5,-1.5
+      parent: 2
+- proto: HolopadMedicalClinic
+  entities:
+  - uid: 11749
+    components:
+    - type: Transform
+      pos: 10.5,-9.5
+      parent: 2
+- proto: HolopadMedicalCryopods
+  entities:
+  - uid: 11748
+    components:
+    - type: Transform
+      pos: 8.5,-15.5
+      parent: 2
+- proto: HolopadMedicalFront
+  entities:
+  - uid: 11750
+    components:
+    - type: Transform
+      pos: 9.5,-1.5
+      parent: 2
+- proto: HolopadMedicalMedbay
+  entities:
+  - uid: 11751
+    components:
+    - type: Transform
+      pos: 17.5,-7.5
+      parent: 2
+- proto: HolopadMedicalMorgue
+  entities:
+  - uid: 11752
+    components:
+    - type: Transform
+      pos: 13.5,-16.5
+      parent: 2
+- proto: HolopadMedicalSurgery
+  entities:
+  - uid: 11753
+    components:
+    - type: Transform
+      pos: 18.5,-16.5
       parent: 2
 - proto: HolopadScienceAnomaly
   entities:
