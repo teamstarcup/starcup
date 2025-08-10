@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/10/2025 12:43:17
-  entityCount: 11771
+  time: 08/10/2025 12:46:54
+  entityCount: 11779
 maps:
 - 1
 grids:
@@ -49476,6 +49476,62 @@ entities:
     components:
     - type: Transform
       pos: 50.5,-9.5
+      parent: 2
+- proto: HolopadGeneralArrivals
+  entities:
+  - uid: 11775
+    components:
+    - type: Transform
+      pos: -39.5,-10.5
+      parent: 2
+- proto: HolopadGeneralCryosleep
+  entities:
+  - uid: 11776
+    components:
+    - type: Transform
+      pos: -41.5,-4.5
+      parent: 2
+- proto: HolopadGeneralDisposals
+  entities:
+  - uid: 11777
+    components:
+    - type: Transform
+      pos: -31.5,-14.5
+      parent: 2
+- proto: HolopadGeneralEvac
+  entities:
+  - uid: 11772
+    components:
+    - type: Transform
+      pos: -43.5,5.5
+      parent: 2
+- proto: HolopadGeneralEVAStorage
+  entities:
+  - uid: 11778
+    components:
+    - type: Transform
+      pos: 7.5,10.5
+      parent: 2
+- proto: HolopadGeneralLounge
+  entities:
+  - uid: 11774
+    components:
+    - type: Transform
+      pos: -24.5,-7.5
+      parent: 2
+- proto: HolopadGeneralTheater
+  entities:
+  - uid: 11773
+    components:
+    - type: Transform
+      pos: -18.5,-8.5
+      parent: 2
+- proto: HolopadGeneralTools
+  entities:
+  - uid: 11779
+    components:
+    - type: Transform
+      pos: -27.5,9.5
       parent: 2
 - proto: HolopadMedicalChemistry
   entities:
