@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/10/2025 12:06:23
-  entityCount: 11729
+  time: 08/10/2025 12:25:51
+  entityCount: 11736
 maps:
 - 1
 grids:
@@ -49350,6 +49350,55 @@ entities:
     components:
     - type: Transform
       pos: 54.5,-9.5
+      parent: 2
+- proto: HolopadSecurityArmory
+  entities:
+  - uid: 11730
+    components:
+    - type: Transform
+      pos: -11.5,20.5
+      parent: 2
+- proto: HolopadSecurityDetective
+  entities:
+  - uid: 11736
+    components:
+    - type: Transform
+      pos: -14.5,-38.5
+      parent: 2
+- proto: HolopadSecurityFront
+  entities:
+  - uid: 11732
+    components:
+    - type: Transform
+      pos: -7.5,12.5
+      parent: 2
+- proto: HolopadSecurityInterrogation
+  entities:
+  - uid: 11735
+    components:
+    - type: Transform
+      pos: 0.5,13.5
+      parent: 2
+- proto: HolopadSecurityLockerRoom
+  entities:
+  - uid: 11733
+    components:
+    - type: Transform
+      pos: -13.5,15.5
+      parent: 2
+- proto: HolopadSecurityPerma
+  entities:
+  - uid: 11731
+    components:
+    - type: Transform
+      pos: -17.5,9.5
+      parent: 2
+- proto: HolopadSecurityWarden
+  entities:
+  - uid: 11734
+    components:
+    - type: Transform
+      pos: -1.5,8.5
       parent: 2
 - proto: HospitalCurtains
   entities:
