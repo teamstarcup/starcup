@@ -17,8 +17,8 @@
         - type: StationEmergencyShuttle # starcup: added the StationEmergencyShuttle type and emergencyShuttlePath
           emergencyShuttlePath: /Maps/_starcup/Shuttles/SYND_EvacShip.yml # starcup: added SYND_EvacShip.yml
         - type: StationJobs
-          availableJobs: # 45 jobs total w/o latejoins & interns, 62 jobs total w/ latejoins & interns
-            #command (7)
+          availableJobs: # 51 jobs total w/o latejoins & interns, 70 jobs total w/ latejoins & interns
+            #command (8)
             Captain: [ 1, 1 ]
             HeadOfPersonnel: [ 1, 1 ]
             HeadOfSecurity: [ 1, 1 ]
@@ -26,6 +26,7 @@
             ChiefEngineer: [ 1, 1 ]
             ResearchDirector: [ 1, 1 ]
             Quartermaster: [ 1, 1 ]
+            AdministrativeAssistant: [ 1, 1 ]
             #service (8 - 9)
             Bartender: [ 1, 1 ]
             Botanist: [ 1, 2 ]
@@ -38,22 +39,27 @@
             AtmosphericTechnician: [ 2, 2 ]
             StationEngineer: [ 4, 4 ]
             TechnicalAssistant: [ 4, 4 ] #intern, not counted
-            #medical (6)
+            #medical (7)
             Chemist: [ 2, 2 ]
             MedicalDoctor: [ 3, 3 ]
             MedicalIntern: [ 4, 4 ] #intern, not counted
             Paramedic: [ 1, 1 ]
-            #science (4)
+            Psychologist: [ 1, 1 ]
+            #science (5)
             Scientist: [ 4, 4 ]
+            Roboticist: [ 1, 1 ]
             ResearchAssistant: [ 2, 2 ] #intern, not counted
-            #security (6)
+            #security (8)
             Warden: [ 1, 1 ]
             Detective: [ 1, 1 ]
             SecurityOfficer: [ 4, 4 ]
+            Prisoner: [ 2, 2 ]
             SecurityCadet: [ 4, 4 ] #intern, not counted
-            #supply (3 - 5)
+            #supply (4 - 6)
             SalvageSpecialist: [ 1, 3 ]
             CargoTechnician: [ 2, 2 ]
+            Courier: [ 1, 1 ]
+            CargoAssistant: [ 2, 2 ] #intern, not counted
             #civilian (3+)
             Passenger: [ -1, -1 ] #infinite, not counted
             Clown: [ 1, 1 ]
