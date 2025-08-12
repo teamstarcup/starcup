@@ -79,7 +79,7 @@
     - type: Sprite
       layers:
       - state: crypt_orange
-      - sprite: _starcup/Objects/Devices/encryption_keys.rsi
+      - sprite: _starcup/Objects/Devices/EncryptionKeys/prisoner.rsi
         state: prisoner_label
 
 - type: entity
@@ -107,7 +107,6 @@
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyCommon
       - EncryptionKeyPrison
 
 - type: entity

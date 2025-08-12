@@ -1,0 +1,271 @@
+# Syndicate Command Operator
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSyndCommOperator
+  icon:
+    sprite: /Textures/_starcup/Interface/Misc/job_icons.rsi
+    state: SyndicateCommand
+  jobName: job-name-syndcomm-operator
+
+- type: playTimeTracker
+  id: JobSyndCommOperator
+
+- type: startingGear
+  id: SyndCommOperator
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackMerc
+    shoes: ClothingShoesBootsCombatFilled
+    head: ClothingHeadHatBeretMerc
+    eyes: ClothingEyesGlassesSunglasses
+    neck: SecurityWhistle
+    gloves: ClothingHandsMercGlovesCombat
+    outerClothing: ClothingOuterArmorBasicSlim
+    id: SyndCommOperatorPDA
+    ears: ClothingHeadsetAltSyndComm
+    belt: ClothingBeltAssault
+    pocket1: WeaponPistolMk58
+    pocket2: FlashlightSeclite
+  storage:
+    back:
+    - WeaponDisabler
+    - MedicatedSuture
+    - RegenerativeMesh
+    - BoxZiptie
+    - CrowbarRed
+    - MagazinePistol
+
+- type: job
+  id: SyndCommOperator
+  name: job-name-syndcomm-operator
+  description: job-description-syndcomm-operator
+  playTimeTracker: JobSyndCommOperator
+  startingGear: SyndCommOperator
+  icon: JobIconSyndCommOperator
+  supervisors: job-supervisors-syndcomm-supreme
+  canBeAntag: false
+  whitelisted: true
+  accessGroups:
+  - AllAccess
+  access:
+  - SyndicateCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantSyndComm, FreedomImplant, DeathAcidifierImplant ]
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointSyndCommOperator
+  name: SyndComm operator
+  components:
+  - type: SpawnPoint
+    job_id: SyndCommOperator
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: Clothing/Head/Hats/beret_merc.rsi
+      state: icon
+
+
+# Syndicate Command Agent
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSyndCommAgent
+  icon:
+    sprite: /Textures/_starcup/Interface/Misc/job_icons.rsi
+    state: SyndicateCommand
+  jobName: job-name-syndcomm-agent
+
+- type: playTimeTracker
+  id: JobSyndCommAgent
+
+- type: startingGear
+  id: SyndCommAgent
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSyndCommAgent
+    shoes: ClothingShoesBootsLaceup
+    gloves: ClothingHandsGlovesInspection
+    outerClothing: ClothingOuterArmorBasicSlim
+    id: SyndCommAgentPDA
+    ears: ClothingHeadsetSyndComm
+  inhand:
+  - BriefcaseSyndCommSpecialFilled
+
+- type: job
+  id: SyndCommAgent
+  name: job-name-syndcomm-agent
+  description: job-description-syndcomm-agent
+  playTimeTracker: JobSyndCommAgent
+  startingGear: SyndCommAgent
+  icon: JobIconSyndCommAgent
+  supervisors: job-supervisors-syndcomm-supreme
+  displayWeight: 98
+  canBeAntag: false
+  whitelisted: true
+  accessGroups:
+  - AllAccess
+  access:
+  - SyndicateCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantSyndComm ]
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointSyndCommAgent
+  name: SyndComm agent
+  components:
+  - type: SpawnPoint
+    job_id: SyndCommAgent
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _starcup/Clothing/Uniforms/Jumpsuit/syndcomm_agent.rsi
+      state: icon
+
+
+# Syndicate Command Officer
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSyndCommOfficer
+  icon:
+    sprite: //Textures/_starcup/Interface/Misc/job_icons.rsi
+    state: SyndicateCommand
+  jobName: job-name-syndcomm-officer
+
+- type: playTimeTracker
+  id: JobSyndCommOfficer
+
+- type: startingGear
+  id: SyndCommOfficer
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSyndCommOfficer
+    back: ClothingBackpackMerc
+    shoes: ClothingShoesBootsLaceup
+    head: ClothingHeadHatSyndieMAA
+    eyes: ClothingEyesGlassesCommandSyndie
+    neck: SecurityWhistle
+    gloves: ClothingHandsMercGlovesCombat
+    outerClothing: ClothingOuterArmorSyndCommCarapace
+    id: SyndCommOfficerPDA
+    ears: ClothingHeadsetAltSyndComm
+    belt: ClothingBeltAssault
+    pocket1: WeaponPistolViper
+    pocket2: FlashlightSeclite
+    suitstorage: WeaponRifleAk
+  storage:
+    back:
+    - MedkitCombatFilled
+    - WeaponDisabler
+    - BoxZiptie
+    - CrowbarRed
+    - BoxFolderSyndCommClipboard
+    belt:
+    - Flash
+    - MagazinePistolHighCapacity
+
+# hat loadout: ClothingHeadHatBeretFrench, ClothingHeadHatSyndie, ClothingHeadHatCorpsoft
+# neck loadout: ClothingNeckMaskGaiterRed
+
+- type: job
+  id: SyndCommOfficer
+  name: job-name-syndcomm-officer
+  description: job-description-syndcomm-officer
+  playTimeTracker: JobSyndCommOfficer
+  startingGear: SyndCommOfficer
+  icon: JobIconSyndCommOfficer
+  supervisors: job-supervisors-syndcomm-supreme
+  displayWeight: 99
+  canBeAntag: false
+  whitelisted: true
+  accessGroups:
+  - AllAccess
+  access:
+  - SyndicateCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantSyndComm, FreedomImplant ]
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointSyndCommOfficer
+  name: SyndComm officer
+  components:
+  - type: SpawnPoint
+    job_id: SyndCommOfficer
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: Clothing/Head/Hats/syndiecap_maa.rsi
+      state: icon
+
+
+# Syndicate Command Official
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSyndCommOfficial
+  icon:
+    sprite: /Textures/_starcup/Interface/Misc/job_icons.rsi
+    state: SyndicateCommand
+  jobName: job-name-syndcomm-official
+
+- type: playTimeTracker
+  id: JobSyndCommOfficial
+
+- type: startingGear
+  id: SyndCommOfficial
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSyndCommFormal
+    back: ClothingBackpackDuffelSyndComm
+    shoes: ClothingShoesBootsSyndieFilled
+    head: ClothingHeadHatSyndCommCap
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesColorWhite
+    outerClothing: ClothingOuterArmorSyndCommCarapace
+    id: SyndCommOfficialPDA
+    ears: ClothingHeadsetAltSyndComm
+    belt: ClothingBeltSheathFilled
+    pocket1: FlippoEngravedLighter
+    pocket2: CigPackSyndicate
+  storage:
+    back:
+    - BoxFolderSyndComm
+    - WeaponPistolViper
+    - MagazinePistolHighCapacity
+    - Flash
+
+- type: job
+  id: SyndCommOfficial
+  name: job-name-syndcomm-official
+  description: job-description-syndcomm-official
+  playTimeTracker: JobSyndCommOfficial
+  startingGear: SyndCommOfficial
+  icon: JobIconSyndCommOfficial
+  supervisors: job-supervisors-syndcomm-supreme
+  displayWeight: 100
+  canBeAntag: false
+  whitelisted: true
+  accessGroups:
+  - AllAccess
+  access:
+  - SyndicateCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantSyndComm, FreedomImplant, MicroBombImplant ]
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointSyndCommOfficial
+  name: SyndComm official
+  components:
+  - type: SpawnPoint
+    job_id: SyndCommOfficial
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _starcup/Clothing/Head/Hats/comcap.rsi
+      state: icon
