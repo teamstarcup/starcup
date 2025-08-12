@@ -9,16 +9,16 @@
   <Box>
     <GuideEntityEmbed Entity="PositronicBrain" Caption="Positronic Brain"/>
   </Box>
-  MKCs are silicon-based beings, having a positronic brain similar to cyborgs. This has a number of unique implications for them: They cannot have reagents fed to or injected into them, cannot ingest any food or drink, do not need to breathe, and [color=red]cannot be healed by normal means at the Medbay.[/color] Damaged MKCs are recommended to be taken to the [color=yellow]Robotics Lab[/color] for repairs, or possibly to [color=yellow]Engineering[/color] depending on crew availability.
+  MKCs are silicon-based beings, having a positronic brain similar to cyborgs. This has a number of unique implications for them: they cannot have reagents fed to or injected into them, cannot ingest any food or drink, do not need to breathe, and [color=red]cannot be healed by normal means at the Medbay.[/color] Damaged MKCs are recommended to be taken to the [color=yellow]Robotics Lab[/color] for repairs, or possibly to [color=yellow]Engineering[/color] depending on crew availability.
 
   In addition, they also have the following traits:
-  - Do not go into critical condition, simply becoming dismantled and dying at 120 damage
+  - Do not go into critical condition, instead dying outright at 120 damage
   - Damage Resistances: Cold -50%, Radiation -50%
   - Damage Weaknesses: Heat +50%, Shock +100%
   - Take more damage from impacting against terrain
   - Usually struck first by lightning
   - Massively increased cold tolerance
-  - Do not take damage from extremely hot environments, but instead instantly die if internal temperature goes over 383 degrees Kelvin
+  - Do not take damage from hot environments except at EXTREMELY high temperatures, but instantly die if internal temperature goes over 383 degrees Kelvin
   - Deal slightly more damage with unarmed attacks than other species
 
   ### Internal Battery
@@ -65,7 +65,7 @@
   </Box>
   <Box HorizontalAlignment="Stretch">
     <GuideEntityEmbed Entity="Oilpack" Caption="Oil Packs"/>
-    MKCs have no blood, but instead have [color=orange]Oil[/color]. Oil packs, which replenish their oil levels, can be ordered by Logistics or printed by Robotics.
+    MKCs have no blood, but instead have [color=orange]Oil[/color]. Oil packs, which replenish their oil levels, can be printed by Robotics or found within silicon repair kits.
   </Box>
   In the event that an MKC dies, after being fully repaired, they should be restarted using the [color=yellow]"Restart"[/color] button (located by right-clicking).
 
@@ -76,7 +76,9 @@
     <GuideEntityEmbed Entity="EncryptionKeyScience" Caption="Encryption key"/>
   </Box>
 
-  MKCs do [bold]not[/bold] use external radios because they already have one built in. They only need to get an encryption key from a radio. By clicking on an MKC with a [color=yellow]wire cutter[/color], you can remove their keys. You can find new keys around the station or remove one from a sector radio using a [color=yellow]screwdriver[/color].
+  MKCs do [bold]not[/bold] use external radios because they already have one built in. They only need to get an encryption key from a radio. By clicking on an unlocked, open MKC with a [color=yellow]wire cutter[/color], you can remove their keys. Additional keys can also be inserted into the MKC to grant them additional radio access.
+
+  Each member of Command has encryption keys available for their respective departments, and encryption keys can also be taken from headsets (typically found in corresponding outfit vendors) by using a [color=yellow]screwdriver[/color].
 
   ## Naming Traditions
   MKCs have a serial designation consisting of two parts: A short alphanumeric portion, typically a word or shortened version thereof, and a three-digit numerical portion.
