@@ -1,4 +1,27 @@
 - type: entity
+  parent: ClothingOuterWinterHoP
+  id: ClothingOuterWinterHoPSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/hop_syndi.rsi
+    layers:
+    - state: HOP-icon
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: HOP-inhand-left
+      right:
+      - state: HOP-inhand-right
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/hop_syndi.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: HOP-equipped-OUTERCLOTHING
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodWinterHOPSyndie
+
+- type: entity
   parent: ClothingOuterWinterCap
   id: ClothingOuterWinterCapSyndie
   suffix: Syndicate

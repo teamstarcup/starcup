@@ -81,3 +81,45 @@
           tableId: LockerFillCaptainLaserSyndie
         - !type:NestedSelector
           tableId: FillCaptainHardsuitSyndie
+
+- type: entityTable
+  id: LockerFillHeadOfPersonnelSyndie
+  table: !type:AllSelector
+    children:
+    - id: AccessConfigurator
+    - id: BoxEncryptionKeyPassenger
+    - id: BoxEncryptionKeyService
+    - id: BoxHeadset
+    - id: BoxID
+    - id: BoxPDA
+    - id: CigarGoldCase
+      prob: 0.25
+      # Fuck the HoP they don't deserve fucking cigars.
+      # Yes they do fuck you.
+    - id: ClothingBackpackIan
+      prob: 0.5
+    - id: ClothingHeadsetCommandSyndie
+    - id: ClothingNeckGoldmedal
+    - id: DoorRemoteService
+    - id: HoPIDCard
+    - id: IDComputerCircuitboard
+#    begin starcup: disable departmental economy
+#    - id: FundingAllocationComputerCircuitboard
+#    - id: CargoRequestServiceComputerCircuitboard
+#    end starcup
+    - id: RubberStampApproved
+    - id: RubberStampDenied
+    - id: RubberStampHopSyndie
+    - id: WeaponDisabler
+    - id: ClothingEyesHudCommandSyndie
+    - id: ClothingShoesBootsWinterHeadOfPersonelSyndie
+
+- type: entity
+  id: LockerHeadOfPersonnelFilled
+  suffix: Filled, Syndicate
+  parent: LockerHeadOfPersonnelSyndie
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: LockerFillHeadOfPersonnelSyndie

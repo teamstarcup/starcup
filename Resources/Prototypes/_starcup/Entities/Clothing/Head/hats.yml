@@ -1,4 +1,29 @@
 - type: entity
+  parent: ClothingHeadHatHopcap
+  id: ClothingHeadHatHopcapSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Head/Hats/hopcap_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Head/Hats/hopcap_syndi.rsi
+
+- type: entity
+  parent: [ClothingHeadBase, BaseCommandContraband]
+  id: ClothingHeadHatBellhopHOP
+  name: head of personnel's bellhop hat
+  description: A stately hat in the style of a hotel bellhop. That said, it's probably unwise to go around asking people for their coats.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Head/Hats/bellhop_hop_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Head/Hats/bellhop_hop_syndi.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+
+- type: entity
   parent: ClothingHeadHatCaptain
   id: ClothingHeadHatCaptainSyndie
   suffix: Syndicate
