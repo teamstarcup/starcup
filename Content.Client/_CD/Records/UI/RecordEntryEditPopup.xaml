@@ -1,7 +1,7 @@
 <controls:FancyWindow xmlns="https://spacestation14.io"
                       xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
                       MinSize="500 700"
-                      SetSize="600 700"
+                      SetSize="1000 700"
                       Title="{Loc 'cd-records-entry-edit-popup-title'}">
     <BoxContainer Margin="5 2 5 5" Orientation="Vertical" HorizontalExpand="True" SeparationOverride="2">
         <!-- Header section -->
@@ -12,14 +12,23 @@
             </BoxContainer>
         </PanelContainer>
 
-        <!-- Content section with styled background -->
-        <PanelContainer Name="ContentPanel" VerticalExpand="True">
-            <TextEdit Name="DescriptionEdit"
-                      HorizontalExpand="True"
-                      VerticalExpand="True"
-                      Margin="8 4 8 8"/>
-        </PanelContainer>
-
+        <!-- begin starcup: Moved into a split container and added PreviewContentPanel -->
+        <SplitContainer Orientation="Horizontal" VerticalExpand="True" HorizontalExpand="True">
+            <!-- Content section with styled background -->
+            <PanelContainer Name="ContentPanel" HorizontalExpand="True">
+                <TextEdit Name="DescriptionEdit"
+                          MinWidth="474"
+                          HorizontalExpand="True"
+                          Margin="8"/>
+            </PanelContainer>
+            <!-- Preview section with styled background -->
+            <PanelContainer Name="PreviewContentPanel" HorizontalExpand="True" >
+                <ScrollContainer HorizontalExpand="True" HScrollEnabled="False" Margin="8" ReserveScrollbarSpace = "True">
+                    <RichTextLabel Name="EntryDesc" VerticalAlignment="Top" Margin="0" MinWidth="50"/>
+                </ScrollContainer>
+            </PanelContainer>
+        </SplitContainer>
+        <!-- end starcup -->
         <!-- Save button and validation section -->
         <BoxContainer Orientation="Vertical" HorizontalExpand="True" SeparationOverride="4">
             <PanelContainer StyleClasses="AngleRect">
