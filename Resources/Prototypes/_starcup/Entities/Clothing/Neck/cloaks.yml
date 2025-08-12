@@ -1,0 +1,36 @@
+- type: entity
+  parent: ClothingNeckCloakHop
+  id: ClothingNeckCloakHopSyndie
+  description: A Tyrian purple cloak for heads of personnel. It's a bit big and boisterous for sitting at a desk, but sometimes you really need to make an impression.
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Neck/Cloaks/hop_syndi.rsi
+
+- type: entity
+  parent: ClothingNeckCloakCap
+  id: ClothingNeckCloakCapSyndie
+  description: A pompous and comfy Tyrian purple cloak with a nice gold trim, while not particularly valuable as your other possessions, it sure is fancy.
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Neck/Cloaks/cap_syndi.rsi
+
+- type: entity
+  parent: ClothingNeckCloakCapFormal
+  id: ClothingNeckCloakCapFormalSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Neck/Cloaks/capcloakformal_syndi.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakSyndComm
+  name: SyndComm cloak
+  description: A pompous and elite black cloak with a nice gold trim, tailored specifically for Syndicate Command officers. It's so heavy, the gold trim might be real.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Neck/Cloaks/syndcommcloakformal.rsi
+  - type: StealTarget
+    stealGroup: HeadCloak

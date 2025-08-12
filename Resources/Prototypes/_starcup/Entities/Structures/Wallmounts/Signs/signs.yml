@@ -1,0 +1,77 @@
+# Directional Station Guide Signs
+- type: entity
+  parent: SignDirectionalBridge
+  id: SignDirectionalBridgeSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/signs.rsi
+    state: direction_bridge_syndi
+
+
+- type: entity
+  parent: SignDirectionalHop
+  id: SignDirectionalHopSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/signs.rsi
+    state: direction_hop_syndi
+
+
+# Regular Signs
+
+- type: entity
+  parent: SignAi
+  id: SignAiSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/signs.rsi
+    state: ai_syndi
+
+- type: entity
+  parent: SignAiUpload
+  id: SignAiUploadSyndie
+  suffix: Syndicate
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Wallmounts/signs.rsi
+      state: ai_upload_syndi
+
+- type: entity
+  parent: SignBridge
+  id: SignBridgeSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/signs.rsi
+    state: bridge_syndi
+
+- type: entity
+  parent: SignConference
+  id: SignConferenceSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/signs.rsi
+    state: conference_room_syndi
+
+- type: entity
+  parent: SignHead
+  id: SignHeadSyndie
+  suffix: Syndicate
+  description: An official sign indicating the dwellings of a Syndicate-certified head of department.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/signs.rsi
+    state: commander_syndi
+
+- type: entity
+  parent: SignVault
+  id: SignVaultSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/signs.rsi
+    state: vault_syndi

@@ -1,3 +1,13 @@
+- type: entity
+  parent: ClothingOuterArmorCaptainCarapace
+  id: ClothingOuterArmorCaptainCarapaceSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Armor/captain_carapace_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Armor/captain_carapace_syndi.rsi
+
 #Elite web vest
 - type: entity
   parent: [BaseTraitorContraband, ClothingOuterVestWebElite]
@@ -25,3 +35,14 @@
       shader: unshaded
   - type: Clothing
     sprite: _starcup/Clothing/OuterClothing/Armor/nt-raid.rsi
+
+- type: entity
+  parent: [ClothingOuterArmorCentcommCarapace, BaseSyndCommContraband]
+  id: ClothingOuterArmorSyndCommCarapace
+  name: SyndComm carapace
+  description: An armored chestpiece that provides protection whilst still offering maximum mobility and flexibility. Issued only to SyndComm officials and agents.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Armor/syndcomm_carapace.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Armor/syndcomm_carapace.rsi

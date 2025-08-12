@@ -69,3 +69,11 @@
   components:
   - type: AccessReader
     access: [["Zookeeper"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsSyndicateCommand
+  suffix: SyndicateCommand, Locked
+  components:
+  - type: AccessReader
+    access: [["SyndicateCommand"]]

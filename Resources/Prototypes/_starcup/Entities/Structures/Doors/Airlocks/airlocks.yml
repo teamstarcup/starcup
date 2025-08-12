@@ -1,0 +1,32 @@
+- type: entity
+  parent: AirlockCommand
+  id: AirlockCommandSyndie
+  suffix: Command, Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
+
+- type: entity
+  parent: AirlockCentralCommand
+  id: AirlockSyndComm
+  suffix: Syndicate Command
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/syndcomm.rsi
+
+# Glass
+- type: entity
+  parent: AirlockCommandGlass
+  id: AirlockCommandGlassSyndie
+  suffix: Command, Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
+
+- type: entity
+  parent: AirlockCentralCommandGlass
+  id: AirlockSyndCommGlass
+  suffix: Syndicate Command
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/syndcomm.rsi

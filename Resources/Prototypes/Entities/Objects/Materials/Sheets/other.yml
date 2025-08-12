@@ -168,8 +168,8 @@
     damageContainers:
     - HumanoidSilicon
     damage:
-      groups:
-        Toxin: 0 # DeltaV - prevent RequiredFieldNotMapped error # teamstarcup/starcup#224: changed to toxin to prevent useless application
+      types:
+        Caustic: 0 # DeltaV - prevent RequiredFieldNotMapped error # teamstarcup/starcup#224: changed to caustic to prevent useless application
     bloodlossModifier: -20
   - type: Stack
     stackType: Plastic

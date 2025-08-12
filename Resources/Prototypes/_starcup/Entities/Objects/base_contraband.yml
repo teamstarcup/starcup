@@ -5,3 +5,12 @@
   components:
   - type: Contraband
     severity: Traitor
+
+# one department restricted contraband
+- type: entity
+  id: BaseSyndCommContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    allowedDepartments: [ SyndicateCommand ]
