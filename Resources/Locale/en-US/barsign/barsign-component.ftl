@@ -102,7 +102,8 @@ barsign-prototype-description-maltroach = Squeak!
 
 ## Whiskey Echoes
 barsign-prototype-name-whiskeyechoes = Whiskey Echoes
-barsign-prototype-description-whiskeyechoes = An elite bar for elite oper-wait, this is a Nanotrasen station. Why's this sign in the database?
+# barsign-prototype-description-whiskeyechoes = An elite bar for elite oper-wait, this is a Nanotrasen station. Why's this sign in the database? #starcup
+barsign-prototype-description-whiskeyechoes = A cozy little pub for Gorlex veterans and loyal Syndicate...wait, was that a NanoTrasen logo? Huh, nevermind. It's gone again.
 
 ## EmpBarSign
 barsign-prototype-description-empbarsign = Something has gone very wrong.

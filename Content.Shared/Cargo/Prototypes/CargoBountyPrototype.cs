@@ -39,7 +39,7 @@ public sealed partial class CargoBountyPrototype : IPrototype
     /// A prefix appended to the beginning of a bounty's ID.
     /// </summary>
     [DataField]
-    public string IdPrefix = "NT";
+    public string IdPrefix = "SC"; // starcup - NT to SC
 
     /// <summary>
     /// A group used for categorizing this bounty.
