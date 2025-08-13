@@ -76,8 +76,8 @@
 - type: entity
   parent: FaxMachineBase
   id: FaxMachineCentcom
-  name: CentComm long range fax machine
-  suffix: CentCom
+  name: SyndComm long range fax machine # starcup - NT-SC swap
+  suffix: SyndComm # starcup - NT-SC swap
   components:
   - type: Sprite
     layers:
@@ -85,7 +85,7 @@
         map: [ "base" ]
         color: "#bfe3ff"
   - type: FaxMachine
-    name: "Central Command"
+    name: "Syndicate Communications" # starcup - NT-SC swap
     notifyAdmins: true
 
 - type: entity
