@@ -1,4 +1,5 @@
-job-supervisors-centcom = Central Command
+# job-supervisors-centcom = Central Command #starcup
+# job-supervisors-centcom = Syndicate Communications
 job-supervisors-captain = the Captain
 job-supervisors-hop = the Head of Personnel
 job-supervisors-hos = the Head of Security
