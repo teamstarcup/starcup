@@ -6,5 +6,5 @@ reagent-desc-three-mile-island-starcup = Named for the minimum safe distance fro
 
 reagent-desc-kvass-starcup = A sweet-and-sour grain alcohol, mellow enough to replace cola in some cultures.
 
-reagent-name-miners-brew = miner's brew
-reagent-desc-miners-brew = A favored choice for groups of asteroid miners after a job. Or before a job. Or during a job.
+reagent-name-rock-and-stone-starcup = rock 'n stone
+reagent-desc-rock-and-stone-starcup = A favored choice for groups of asteroid miners after a job. Or before a job. Or during a job.
