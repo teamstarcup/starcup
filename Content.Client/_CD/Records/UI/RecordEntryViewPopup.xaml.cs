@@ -12,7 +12,7 @@ namespace Content.Client._CD.Records.UI;
 public sealed partial class RecordEntryViewPopup : FancyWindow
 {
     // Font tags bad
-    private static readonly Type[] AllowedTags =
+    internal static readonly Type[] AllowedTags = // starcup: made internal
     [
         typeof(BoldItalicTag),
         typeof(BoldTag),

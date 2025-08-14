@@ -158,4 +158,5 @@ holopad-station-bridge = Station - Bridge
 holopad-station-cargo-bay = Station - Cargo Bay
 
 # CentComm
-holopad-centcomm-evac = CentComm - Evacuation Shuttle
+# holopad-centcomm-evac = CentComm - Evacuation Shuttle #starcup
+holopad-centcomm-evac = SyndComm - Evacuation Shuttle

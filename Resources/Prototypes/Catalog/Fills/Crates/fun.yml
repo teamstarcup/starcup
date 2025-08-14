@@ -43,6 +43,7 @@
     - id: PlushieArachind
     - id: PlushiePenguin
     - id: PlushieEskie  # starcup: add eskie plushie
+    - id: PlushieEikse  # starcup: add eikse plushie
 
 - type: entityTable
   id: AllPottedPlantsTable
@@ -91,7 +92,7 @@
   id: CrateFunPlushie
   parent: CrateGenericSteel
   name: plushie crate
-  description: A buncha soft plushies. Throw them around and then wonder how you're gonna explain this purchase to NT.
+  description: A buncha soft plushies. Throw them around and then wonder how you're gonna explain this purchase to your rep at SyndComm. # starcup - NT-SC swap
   components:
   - type: EntityTableContainerFill
     containers:
@@ -104,7 +105,7 @@
   id: CrateFunLizardPlushieBulk
   parent: CrateGenericSteel
   name: bulk lizard plushie crate
-  description: A buncha soft lizard plushies. Throw them around and then wonder how you're gonna explain this purchase to NT.
+  description: A buncha soft lizard plushies. Throw them around and then wonder how you're gonna explain this purchase to your rep at SyndComm. # starcup - NT-SC swap
   components:
   - type: EntityTableContainerFill
     containers:
@@ -232,7 +233,7 @@
   id: CrateFunInstrumentsSpecial
   parent: CrateGenericSteel
   name: special instrument collector's crate
-  description: Create some noise with this special collection of arguably-instruments! Centcomm is not responsible for any trauma caused by the contents.
+  description: Create some noise with this special collection of arguably-instruments! SyndComm is not responsible for any trauma caused by the contents. # starcup - NT-SC swap
   components:
   - type: StorageFill
     contents:
@@ -412,7 +413,8 @@
       - id: MrDips
         orGroup: Giftpool
       - id: RevolverCapGun
-      - id: BalloonNT
+#      - id: BalloonNT # starcup: removed for syndicate rebranding ops
+      - id: BalloonSyn # starcup: added for syndicate rebranding ops
       - id: ClothingShoesClownLarge
       - id: ClothingHeadHatMagician
       - id: BeachBall
@@ -464,7 +466,7 @@
   name: hydrated scurret
   description: Wait, what?
   id: CrateFunScurret
-  parent: CratePlastic
+  parent: CrateLivestock
   components:
   - type: StorageFill
     contents:

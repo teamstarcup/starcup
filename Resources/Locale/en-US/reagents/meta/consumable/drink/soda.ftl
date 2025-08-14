@@ -11,7 +11,8 @@ reagent-name-dr-gibb = Dr. Gibb
 reagent-desc-dr-gibb = A delicious blend of 42 different flavours.
 
 reagent-name-energy-drink = Red Bool
-reagent-desc-energy-drink = A dose of energy! Nanotrasen is not responsible if you grow avian appendages.
+# reagent-desc-energy-drink = A dose of energy! Nanotrasen is not responsible if you grow avian appendages. #starcup
+reagent-desc-energy-drink = A dose of energy! Electra Dynamics is not liable for the growth of any hypothetical avian appendages.
 
 reagent-name-grape-soda = grape soda
 reagent-desc-grape-soda = It's Graaaaaape!

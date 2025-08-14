@@ -1,21 +1,23 @@
+using System.Numerics;
 using Content.Shared.Actions;
 using Content.Shared.CombatMode;
 using Content.Shared.Damage;
-using Content.Shared._DV.Rodentia;
 using Content.Shared.Examine;
 using Content.Shared.IdentityManagement;
+using Content.Shared.Interaction;
 using Content.Shared.Nutrition;
-using Content.Shared.Standing;
 using Content.Shared.Storage;
-using Content.Shared.Storage.EntitySystems;
+using Content.Shared.Stunnable;
+using Content.Shared.Throwing;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
+using Robust.Shared.Physics.Components;
 
 namespace Content.Shared._DV.Rodentia;
 
 public abstract class SharedMouthStorageSystem : EntitySystem
 {
-    [Dependency] private readonly DumpableSystem _dumpableSystem = default!;
+    // [Dependency] private readonly DumpableSystem _dumpableSystem = default!;  // starcup: removed for refactor
     [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
     [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
 
@@ -24,7 +26,7 @@ public abstract class SharedMouthStorageSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<MouthStorageComponent, MapInitEvent>(OnMouthStorageInit);
-        SubscribeLocalEvent<MouthStorageComponent, DownedEvent>(DropAllContents);
+        SubscribeLocalEvent<MouthStorageComponent, KnockedDownEvent>(DropAllContents);
         SubscribeLocalEvent<MouthStorageComponent, DisarmedEvent>(DropAllContents);
         SubscribeLocalEvent<MouthStorageComponent, DamageChangedEvent>(OnDamageModified);
         SubscribeLocalEvent<MouthStorageComponent, ExaminedEvent>(OnExamined);
@@ -58,10 +60,12 @@ public abstract class SharedMouthStorageSystem : EntitySystem
 
     private void DropAllContents<T>(EntityUid uid, MouthStorageComponent component, ref T _)
     {
+        // begin starcup: upstream breaking changes but this so rarely comes up so it's disabled for now
         if (component.MouthId == null)
             return;
 
-        _dumpableSystem.DumpContents(component.MouthId.Value, uid, uid);
+        // _dumpableSystem.DumpContents(component.MouthId.Value, uid, uid);
+        // end starcup
     }
 
     private void OnDamageModified(EntityUid uid, MouthStorageComponent component, DamageChangedEvent args)

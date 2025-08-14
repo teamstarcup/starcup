@@ -1,6 +1,6 @@
-using Content.Server.Speech;
-using Content.Server.Speech.EntitySystems;
+using Content.Server.Speech.EntitySystems;  // starcup: fixed for upstream merge
 using Content.Shared._DV.Rodentia;
+using Content.Shared.Speech;
 
 namespace Content.Server._DV.Rodentia;
 

@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/02/2025 21:15:05
-  entityCount: 19379
+  time: 08/10/2025 09:29:26
+  entityCount: 19378
 maps:
 - 1
 grids:
@@ -17455,7 +17455,7 @@ entities:
       pos: 17.5,28.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -66490.08
+      secondsUntilStateChange: -67339.97
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -18045,7 +18045,7 @@ entities:
       pos: 0.5,-1.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -68339.21
+      secondsUntilStateChange: -69189.1
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -18382,7 +18382,7 @@ entities:
       pos: -16.5,32.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -52644.35
+      secondsUntilStateChange: -53494.246
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -18519,7 +18519,7 @@ entities:
       pos: 6.5,-6.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -53573.418
+      secondsUntilStateChange: -54423.312
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -52719,6 +52719,14 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 31.5,-22.5
       parent: 2
+- proto: ComputerSalvageJobBoard
+  entities:
+  - uid: 19380
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 47.5,14.5
+      parent: 2
 - proto: ComputerShuttleCargo
   entities:
   - uid: 7470
@@ -53412,6 +53420,11 @@ entities:
     components:
     - type: Transform
       pos: -28.5,10.5
+      parent: 2
+  - uid: 15166
+    components:
+    - type: Transform
+      pos: 7.5,14.5
       parent: 2
 - proto: CratePirate
   entities:
@@ -56342,11 +56355,6 @@ entities:
     components:
     - type: Transform
       pos: -34.5,16.5
-      parent: 2
-  - uid: 8136
-    components:
-    - type: Transform
-      pos: 47.5,14.5
       parent: 2
   - uid: 8137
     components:
@@ -101097,11 +101105,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 1.5,-23.5
       parent: 2
-  - uid: 15166
-    components:
-    - type: Transform
-      pos: 7.5,15.5
-      parent: 2
   - uid: 15167
     components:
     - type: Transform
@@ -101137,12 +101140,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 5.5,-23.5
-      parent: 2
-  - uid: 15173
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 8.5,14.5
       parent: 2
   - uid: 15174
     components:
@@ -101998,17 +101995,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 47.5,7.5
-      parent: 2
-  - uid: 15327
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 8.5,15.5
-      parent: 2
-  - uid: 15328
-    components:
-    - type: Transform
-      pos: 8.5,13.5
       parent: 2
   - uid: 15329
     components:
@@ -106724,6 +106710,22 @@ entities:
     - type: Transform
       pos: 18.415085,35.599545
       parent: 2
+- proto: ShelfBar
+  entities:
+  - uid: 15173
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 17.5,23.5
+      parent: 2
+- proto: ShelfKitchen
+  entities:
+  - uid: 15327
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 6.5,15.5
+      parent: 2
 - proto: ShelfRMetal
   entities:
   - uid: 12610
@@ -108522,13 +108524,6 @@ entities:
     components:
     - type: Transform
       pos: 25.5,18.5
-      parent: 2
-- proto: SpawnMobCow
-  entities:
-  - uid: 16487
-    components:
-    - type: Transform
-      pos: 7.5,14.5
       parent: 2
 - proto: SpawnMobFoxRenault
   entities:
@@ -114263,6 +114258,13 @@ entities:
     components:
     - type: Transform
       pos: 15.5,-4.5
+      parent: 2
+- proto: VendingMachineMNKDrobe
+  entities:
+  - uid: 8136
+    components:
+    - type: Transform
+      pos: 60.5,29.5
       parent: 2
 - proto: VendingMachineNutri
   entities:
@@ -123737,7 +123739,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -80001.76
+      secondsUntilStateChange: -80851.65
       state: Opening
     - type: Airlock
       autoClose: False
@@ -123753,7 +123755,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -80001.195
+      secondsUntilStateChange: -80851.086
       state: Opening
     - type: Airlock
       autoClose: False
@@ -123775,7 +123777,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -80000.73
+      secondsUntilStateChange: -80850.62
       state: Opening
     - type: Airlock
       autoClose: False
@@ -123791,7 +123793,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -80002.26
+      secondsUntilStateChange: -80852.15
       state: Opening
     - type: Airlock
       autoClose: False

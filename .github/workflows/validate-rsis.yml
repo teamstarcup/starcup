@@ -5,8 +5,8 @@ on:
 #    branches: [ main, staging, stable ]
 #  merge_group:
   pull_request:
-    paths:
-      - '**.rsi/**'
+#    paths:  # disabled: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#git-diff-comparisons
+#      - '**.rsi/**'
 
 jobs:
   validate_rsis:

@@ -1,4 +1,14 @@
 - type: entity
+  parent: ClothingHeadsetAdminAssistantSyndie
+  id: ClothingHeadsetAltAdminAssistantSyndie
+  name: administrative assistant over-ear headset
+  components:
+  - type: Sprite
+    state: icon_alt
+  - type: Clothing
+    equippedPrefix: alt
+
+- type: entity
   parent: ClothingHeadsetAltCommand
   id: ClothingHeadsetAltCommandSyndie
   suffix: Syndicate
@@ -24,7 +34,7 @@
     sprite: _starcup/Clothing/Ears/Headsets/nanotrasen.rsi
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseCentcommContraband]
+  parent: [ClothingHeadsetAlt, BaseSyndCommContraband]
   id: ClothingHeadsetAltSyndComm
   name: SyndComm over-ear headset
   components:

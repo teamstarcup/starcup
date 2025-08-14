@@ -12,6 +12,19 @@
       CottonBurger: EskiePlushie
 
 - type: entity
+  parent: BasePlushie
+  id: PlushieEikse
+  name: eikse plushie
+  description: An unmarketable stuffed toy resembling a famous cartoon villain. There's a tag on it that reads "0% polycotton."
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Fun/plushies.rsi
+    state: eikse
+  - type: FoodSequenceElement
+    entries:
+      CottonBurger: EiksePlushie
+
+- type: entity
   parent: PlushieNuke
   id: PlushieNukeNT
   suffix: NanoTrasen

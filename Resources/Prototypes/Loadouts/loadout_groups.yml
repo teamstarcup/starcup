@@ -33,7 +33,13 @@
   - HandheldStationMap # starcup
   - TapeRecorder # Delta-V
   - ThreeCandles
+  # Lighters
   - Lighter
+  - CybersunFlippo
+  - DonkcoLighter
+  - GorlexMatchbox
+  - InterdyneFlippo
+  - SyndicateFlippo
   # Smokeables
   - CigPackGreen
   - CigPackRed
@@ -79,6 +85,13 @@
   - ClothingNeckScarfStripedRainbow
   - ClothingNeckScarfStripedTrans
   - TowelColorWhite # sorry, alphabetization, the top option should be one you usually have access to
+  - OffsetCane
+  - OffsetCaneWood
+  - OffsetCaneClown
+  - OffsetCaneMime
+  - OffsetCaneNT
+  - Cane
+  - WhiteCane # Delta-V
   - TowelColorBlack
   - TowelColorDarkBlue
   - TowelColorDarkGreen
@@ -97,8 +110,6 @@
   # Misc Cosmetics
   - GoldRing # Delta-V
   - SilverRing # Delta-V
-  - Cane # Delta-V
-  - WhiteCane # Delta-V
 
 - type: loadoutGroup
   id: Glasses
@@ -202,14 +213,16 @@
   minLimit: 0
   loadouts:
   - HoPHead
-  - HoPBeret
+  - HoPBellhop # starcup
 
 - type: loadoutGroup
   id: HoPJumpsuit
   name: loadout-group-hop-jumpsuit
   loadouts:
   - HoPJumpsuit
+  - HoPJumpsuitTurtle # starcup
   - HoPJumpskirt
+  - HoPJumpskirtTurtle # starcup
 
 - type: loadoutGroup
   id: HoPNeck
@@ -446,6 +459,17 @@
   minLimit: 0
   loadouts:
   - ChaplainNeck
+
+- type: loadoutGroup
+  id: ChaplainBible
+  name: loadout-group-chaplain-bible
+  minLimit: 1
+  loadouts:
+  - BibleGoshan # starcup: replaced bible with goshan bible
+  - BibleDruid
+#  - BibleNanoTrasen # starcup
+  - BibleSatanic
+#  - BibleTanakh # starcup
 
 - type: loadoutGroup
   id: JanitorHead

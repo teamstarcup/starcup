@@ -16,8 +16,8 @@
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_wode.yml
         - type: StationJobs
-          availableJobs: # 66 jobs total w/o latejoins & interns, 85 jobs total w/ latejoins & interns
-            #command (7)
+          availableJobs: # 76 jobs total w/o latejoins & interns, 95 jobs total w/ latejoins & interns
+            #command (8)
             Captain: [ 1, 1 ]
             HeadOfPersonnel: [ 1, 1 ]
             HeadOfSecurity: [ 1, 1 ]
@@ -25,6 +25,7 @@
             ChiefEngineer: [ 1, 1 ]
             ResearchDirector: [ 1, 1 ]
             Quartermaster: [ 1, 1 ]
+            AdministrativeAssistant: [ 1, 1 ]
             #service (14)
             Bartender: [ 2, 2 ]
             Botanist: [ 2, 2 ]
@@ -44,23 +45,28 @@
             Paramedic: [ 2, 2 ]
             Psychologist: [ 1, 1 ]
             MedicalIntern: [ 4, 4 ] #intern, not counted
-            #science (5)
+            #science (7)
             Scientist: [ 5, 5 ]
+            Roboticist: [ 2, 2 ]
             ResearchAssistant: [ 4, 4 ] #intern, not counted
-            #security (9)
+            #security (12)
             Warden: [ 1, 1 ]
             SecurityOfficer: [ 5, 5 ]
             Detective: [ 1, 1 ]
             SecurityCadet: [ 4, 4 ] #intern, not counted
             Lawyer: [ 2, 2 ]
-            #supply (7)
+            Prisoner: [ 3, 3 ]
+            #supply (9)
             SalvageSpecialist: [ 3, 3 ]
             CargoTechnician: [ 4, 4 ]
-            #civilian (3+)
+            Courier: [ 2, 2 ]
+            CargoAssistant: [ 2, 2 ] #intern, not counted
+            #civilian (5+)
             Passenger: [ -1, -1 ] #infinite, not counted
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]
+            Boxer: [ 2, 2 ]
             #silicon (3 - 4)
             StationAi: [ 1, 1 ]
             Borg: [ 2, 3 ]
