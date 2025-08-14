@@ -79,7 +79,7 @@ flavor-complex-lemon-lime-bitters = like an Aussie dessert
 #flavor-complex-vodka-tonic-deltav = like depression in denial
 #flavor-complex-kvass-deltav = like bread tossed into a blender
 flavor-complex-mothamphetamine-deltav = like there are buzzing wings in your mouth
-starcup: unused
+#starcup: unused
 #flavor-complex-unholy-water = like something cold and wrong
 
 #candy-flavor-profile = This one is supposed to taste {$flavor}.
