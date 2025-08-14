@@ -5,3 +5,6 @@ reagent-desc-circusjuice-starcup = One day, a clown managed to sneak their way i
 reagent-desc-three-mile-island-starcup = Named for the minimum safe distance from your location once you've had enough of it.
 
 reagent-desc-kvass-starcup = A sweet-and-sour grain alcohol, mellow enough to replace cola in some cultures.
+
+reagent-name-miners-brew = miner's brew
+reagent-desc-miners-brew = A favored choice for groups of asteroid miners after a job. Or before a job. Or during a job.

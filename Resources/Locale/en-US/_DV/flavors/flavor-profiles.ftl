@@ -77,7 +77,7 @@ flavor-complex-lemon-lime-bitters = like an Aussie dessert
 #flavor-complex-toxins-special-deltav = like a plasma fire
 #flavor-complex-vodka-martini-deltav = shaken, not stirred
 #flavor-complex-vodka-tonic-deltav = like depression in denial
-#flavor-complex-kvass-deltav = like bread tossed into a blender
+flavor-complex-kvass-deltav = like bread tossed into a blender
 flavor-complex-mothamphetamine-deltav = like there are buzzing wings in your mouth
 #starcup: unused
 #flavor-complex-unholy-water = like something cold and wrong
