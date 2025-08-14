@@ -14,7 +14,7 @@ cmd-launchemergencyshuttle-desc = Early launches the emergency shuttle if possib
 cmd-launchemergencyshuttle-help = Usage: launchemergencyshuttle
 
 # Emergency shuttle
-# emergency-shuttle-left = The Emergency Shuttle has left the station. Estimate {$transitTime} seconds until the shuttle arrives at CentComm. # starcup
+# emergency-shuttle-left = The Emergency Shuttle has left the station. Estimate {$transitTime} seconds until the shuttle arrives at CentComm. # starcup - NT-SC swap
 emergency-shuttle-left = The Emergency Shuttle has left the station. Estimate {$transitTime} seconds until the shuttle arrives at SyndComm.
 emergency-shuttle-launch-time = The emergency shuttle will launch in {$consoleAccumulator} seconds.
 emergency-shuttle-docked = The Emergency Shuttle has docked {$direction} of the station, {$location}. It will leave in {$time} seconds.{$extended}
@@ -40,6 +40,6 @@ emergency-shuttle-ui-authorizations = Authorizations
 emergency-shuttle-ui-remaining = Remaining: {$remaining}
 
 # Map Misc.
-# map-name-centcomm = Central Command
+# map-name-centcomm = Central Command # starcup - NT-SC swap
 map-name-centcomm = Syndicate Communications
 map-name-terminal = Arrivals Terminal
