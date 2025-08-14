@@ -1,0 +1,10 @@
+
+# lockable
+
+- type: entity
+  parent: LockableButtonCentcomm
+  id: LockableButtonSyndComm
+  suffix: SyndComm
+  components:
+  - type: AccessReader
+    access: [["SyndicateCommand"]]
