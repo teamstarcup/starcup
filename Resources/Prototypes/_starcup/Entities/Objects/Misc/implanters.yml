@@ -136,3 +136,22 @@
   components:
   - type: Implanter
     implant: FakeMindShieldImplant
+
+
+# SyndComm implanters
+
+- type: entity
+  parent: [ RadioImplanterCentcomm, BaseSyndCommContraband ]
+  id: RadioImplanterSyndComm
+  name: SyndComm radio implanter
+  components:
+  - type: Implanter
+    implant: RadioImplantSyndComm
+
+- type: entity
+  parent: [ DeathRattleImplanterCentcomm, BaseSyndCommContraband ]
+  id: DeathRattleImplanterSyndComm
+  name: SyndComm death rattle implanter
+  components:
+  - type: Implanter
+    implant: DeathRattleImplantSyndComm

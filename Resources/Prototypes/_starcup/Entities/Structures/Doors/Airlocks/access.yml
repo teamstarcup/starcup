@@ -391,3 +391,14 @@
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+# HighSecDoors
+
+- type: entity
+  parent: HighSecCentralCommandLocked
+  id: HighSecSyndCommLocked
+  suffix: Central Command, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCentralCommand ]
