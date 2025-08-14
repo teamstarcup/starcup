@@ -1,5 +1,7 @@
-# job-supervisors-centcom = Central Command #starcup
-# job-supervisors-centcom = Syndicate Communications
+# begin starcup: rebranding ops
+# job-supervisors-centcom = Central Command
+job-supervisors-centcom = Syndicate Command
+# end starcup
 job-supervisors-captain = the Captain
 job-supervisors-hop = the Head of Personnel
 job-supervisors-hos = the Head of Security
