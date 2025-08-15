@@ -80,8 +80,9 @@ namespace Content.IntegrationTests.Tests
             "Saltern", // starcup
             "Byoin",  // starcup
             "Train", // starcup
+            "Shoukou", // starcup
             "EventFrigidPeril", // starcup
-            "EventCruiseControl" // starcup
+            "EventCruiseControl", // starcup
         };
         // end starcup
 
