@@ -341,6 +341,8 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         // make a handy dict of filename -> colors
         // cus we might need to access it by filename to link
         // one sprite's colors to another
+        
+        // if (!sprite.LayerMapTryGet(markingPrototype.BodyPart, out int targetLayer))
         var colorDict = new Dictionary<string, Color>();
         for (var i = 0; i < markingPrototype.Sprites.Count; i++)
         {
@@ -459,6 +461,10 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             // else
             // {
             //     sprite.LayerSetColor(layerId, Color.White);
+            // }
+            // if (humanoid.MarkingsDisplacement.TryGetValue(markingPrototype.BodyPart, out var displacementData) && markingPrototype.CanBeDisplaced)
+            // {
+            //    _displacement.TryAddDisplacement(displacementData, sprite, targetLayer + j + 1, layerId, out _);
             // }
         }
     }
