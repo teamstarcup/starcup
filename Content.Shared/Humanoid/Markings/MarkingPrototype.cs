@@ -132,23 +132,36 @@ namespace Content.Shared.Humanoid.Markings
  *     This points to an entry in the enum stored in this file:
  *       Content.Shared/Humanoid/HumanoidVisualLayers.cs
  *     Capitalization matters!
- * todo: a way to link the colorations between layers
+ * 
+ * // starcup documentation changes below!
  *
- * Heres an example from Resources/Prototypes/Floof/Entities/Mobs/Customization/Markings/debug.yml
+ * To link the coloring of one marking sprite to another, so that they're treated as one sprite for the purposes of coloring...
+ * Add in a 'colorLinks' entry to the marking prototype.
+ * Then, add in a new entry to the 'colorLinks' dictionary, like so:
+ *    colorLinks:
+ *        name_of_image: sprite_to_inherit_from
+ * Both parts here are what you put for the state of the relevant sprites.
+ *
+ * Heres an example from Resources/Prototypes/Entities/Mobs/Customization/Markings/reptilian.yml (in starcup, at least)
  *
 - type: marking
-  id: TailDebugPro
+  id: LizardTailSmooth
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Human, Oni]
+  speciesRestriction: [Reptilian]
   layering:
-    tail_oversuit: TailOversuit <--------------\
-    tail_behind: TailBehind   <----------------+--------\
-  sprites:                                     |        |
-  - sprite: Floof/Mobs/Customization/debug.rsi |        |
-    state: tail_oversuit   >-------------------/        |
-  - sprite: Floof/Mobs/Customization/debug.rsi          |
-    state: tail_behind   >------------------------------/
+    tail_smooth_front: TailOversuit 
+    tail_smooth_behind_primary: TailBehind
+    tail_smooth_behind_secondary: TailBehind
+  colorLinks:
+    tail_smooth_behind_primary: tail_smooth_front
+    tail_smooth_behind_secondary: tail_smooth_front
+  sprites:                                     
+  - sprite: Mobs/Customization/reptilian_parts.rsi 
+    state: tail_smooth_front
+  - sprite: Mobs/Customization/reptilian_parts.rsi     
+    state: tail_smooth_behind_primary
+  - sprite: Mobs/Customization/reptilian_parts.rsi
+    state: tail_smooth_behind_secondary
  *
- * (dont include the arrows lol)
  */
