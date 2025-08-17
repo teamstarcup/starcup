@@ -55,7 +55,7 @@ public sealed partial class PlayerProvidedCharacterRecords
     [DataField, JsonIgnore]
     public List<RecordEntry> EmploymentEntries { get; private set; }
     [DataField, JsonIgnore]
-    public List<RecordEntry> AdminEntries { get; private set; }
+    public List<RecordEntry> AdminEntries { get; private set; } = [];
 
     [DataDefinition]
     [Serializable, NetSerializable]
