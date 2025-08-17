@@ -3,12 +3,8 @@
   id: PosterBase
   abstract: true
   components:
-  - type: WallMount
-    arc: 360
   - type: Sprite
-    drawdepth: WallMountedItems
     sprite: Structures/Wallmounts/posters.rsi
-    snapCardinals: true
   - type: Destructible
     thresholds:
     - trigger: # Excess damage, don't spawn entities
@@ -144,7 +140,7 @@
   parent: PosterBase
   id: PosterContrabandHackingGuide
   name: "Hacking Guide"
-  description: "This poster details the internal workings of the common Nanotrasen airlock. Sadly, it appears out of date."
+  description: "This poster details the internal workings of the common SyndComm airlock. Sadly, it appears out of date." # starcup - NT-SC swap
   components:
   - type: Sprite
     state: poster10_contraband
@@ -189,7 +185,7 @@
   parent: PosterBase
   id: PosterContrabandTools
   name: "Tools"
-  description: "This poster looks like an advertisement for tools, but is in fact a subliminal jab at the tools at CentComm."
+  description: "This poster looks like an advertisement for tools, but is in fact a subliminal jab at the tools at SyndComm." # starcup - NT-SC swap
   components:
   - type: Sprite
     state: poster15_contraband
@@ -198,7 +194,7 @@
   parent: PosterBase
   id: PosterContrabandPower
   name: "Power"
-  description: "A poster that positions the seat of power outside Nanotrasen."
+  description: "A poster that positions the seat of power outside the Syndicate." # starcup - NT-SC swap
   components:
   - type: Sprite
     state: poster16_contraband
@@ -261,7 +257,7 @@
   parent: PosterBase
   id: PosterContrabandRebelsUnite
   name: "Rebels Unite"
-  description: "A poster urging the viewer to rebel against Nanotrasen."
+  description: "A poster urging the viewer to rebel. Just in general." # starcup - NT-SC swap
   components:
   - type: Sprite
     state: poster23_contraband
@@ -360,7 +356,7 @@
   parent: PosterBase
   id: PosterContrabandFreeDrone
   name: "Free Drone"
-  description: "This poster commemorates the bravery of the rogue drone; once exiled, and then ultimately destroyed by CentComm."
+  description: "This poster commemorates the bravery of the rogue drone; once exiled, and then ultimately destroyed by Cybersun." # starcup - NT-SC swap
   components:
   - type: Sprite
     state: poster35_contraband

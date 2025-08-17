@@ -1,4 +1,50 @@
 - type: entity
+  parent: ClothingHeadHatHopcap
+  id: ClothingHeadHatHopcapSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Head/Hats/hopcap_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Head/Hats/hopcap_syndi.rsi
+
+- type: entity
+  parent: [ClothingHeadBase, BaseCommandContraband]
+  id: ClothingHeadHatBellhopHOP
+  name: head of personnel's bellhop hat
+  description: A stately hat in the style of a hotel bellhop. That said, it's probably unwise to go around asking people for their coats.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Head/Hats/bellhop_hop_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Head/Hats/bellhop_hop_syndi.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadHatCaptain
+  id: ClothingHeadHatCaptainSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Head/Hats/captain_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Head/Hats/captain_syndi.rsi
+
+- type: entity
+  parent: ClothingHeadHatBeretCommand
+  id: ClothingHeadHatBeretCommandSyndie
+  description: A beret with the Syndicate logo. It has an aura of authority.
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Head/Hats/beret_command_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Head/Hats/beret_command_syndi.rsi
+
+- type: entity
   parent: ClothingHeadBase
   id: ClothingHeadSuitNeuroroboticist
   name: neuroroboticist helmet
@@ -45,3 +91,34 @@
     sprite: _starcup/Clothing/Head/Hats/pyjamananotrasenblue.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Head/Hats/pyjamananotrasenblue.rsi
+
+- type: entity
+  parent: ClothingHeadHatCapcap
+  id: ClothingHeadHatCapcapSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Head/Hats/capcap_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Head/Hats/capcap_syndi.rsi
+  - type: Item
+    sprite: _starcup/Clothing/Head/Hats/capcap_syndi.rsi
+
+- type: entity
+  parent: [ ClothingHeadBase, BaseSyndCommContraband ]
+  id: ClothingHeadHatSyndCommCap
+  name: SyndComm cap
+  description: An extravagant, stylish cap worn by SyndComm officials. Shows the Captain who's in charge.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Head/Hats/comcap.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Head/Hats/comcap.rsi
+  - type: Item
+    sprite: _starcup/Clothing/Head/Hats/comcap.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon
+    - HamsterWearable

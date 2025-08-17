@@ -267,3 +267,179 @@
   components:
   - type: Pda
     id: NecrocosmicistIDCard
+
+
+# Syndicate Command
+
+- type: entity
+  parent: [CentcomPDA, BaseSyndCommContraband]
+  id: SyndCommPDA
+  name: SyndComm PDA
+  description: Black and gold. Like a really dangerous snake, or something.
+  abstract: true
+  components:
+  - type: Pda
+    id: SyndCommIDCard
+    penSlot:
+      startingItem: CyberPen
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-syndcomm
+  - type: PdaBorderColor
+    borderColor: "#805500"
+  - type: Icon
+    state: pda-syndcomm
+
+- type: entity
+  parent: SyndCommPDA
+  id: SyndCommOperatorPDA
+  name: SyndComm operator PDA
+  components:
+  - type: Pda
+    id: SyndCommOperatorIDCard
+    penSlot:
+      startingItem: CyberPen
+      whitelist:
+        tags:
+        - Write
+
+- type: entity
+  parent: SyndCommPDA
+  id: SyndCommAgentPDA
+  name: SyndComm agent PDA
+  components:
+  - type: Pda
+    id: SyndCommAgentIDCard
+    penSlot:
+      startingItem: CyberPen
+      whitelist:
+        tags:
+        - Write
+
+- type: entity
+  parent: SyndCommPDA
+  id: SyndCommOfficerPDA
+  name: SyndComm officer PDA
+  components:
+  - type: Pda
+    id: SyndCommOfficerIDCard
+    penSlot:
+      startingItem: CyberPen
+      whitelist:
+        tags:
+        - Write
+
+- type: entity
+  parent: SyndCommPDA
+  id: SyndCommOfficialPDA
+  name: SyndComm official PDA
+  components:
+  - type: Pda
+    id: SyndCommOfficialIDCard
+    penSlot:
+      startingItem: CyberPen
+      whitelist:
+        tags:
+        - Write
+
+# ERT
+
+- type: entity
+  parent: ERTLeaderPDA
+  id: ERTLeaderSyndicatePDA
+  name: ERT Leader PDA
+  suffix: Syndicate, Leader
+  description: Red for firepower.
+  components:
+  - type: Pda
+    id: ERTLeaderIDCardSyndicate
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-ert
+  - type: PdaBorderColor
+#    borderColor: "#805500"
+    accentHColor: "#59251b"
+  - type: Icon
+    state: pda-ert
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - MedTekCartridge
+    - WantedListCartridge
+    - LogProbeCartridge
+    - AstroNavCartridge
+
+- type: entity
+  parent: ERTLeaderSyndicatePDA
+  id: ERTChaplainSyndicatePDA
+  name: ERT Chaplain PDA
+  suffix: Syndicate, Chaplain
+  description: Red for firepower, it's blessed.
+  components:
+  - type: Pda
+    id: ERTChaplainIDCardSyndicate
+
+- type: entity
+  parent: ERTLeaderSyndicatePDA
+  id: ERTEngineerSyndicatePDA
+  name: ERT Engineer PDA
+  suffix: Syndicate, Engineer
+  description: Red for firepower, it's well-worn.
+  components:
+  - type: Pda
+    id: ERTEngineerIDCardSyndicate
+
+- type: entity
+  parent: ERTLeaderSyndicatePDA
+  id: ERTJanitorSyndicatePDA
+  name: ERT Janitor PDA
+  suffix: Syndicate, Janitor
+  description: Red for firepower, it's squeaky clean.
+  components:
+  - type: Pda
+    id: ERTJanitorIDCard
+
+- type: entity
+  parent: ERTLeaderSyndicatePDA
+  id: ERTMedicSyndicatePDA
+  name: ERT Medic PDA
+  suffix: Syndicate, Medic
+  description: Red for firepower, it's shiny and sterile.
+  components:
+  - type: Pda
+    id: ERTMedicIDCardSyndicate
+
+- type: entity
+  parent: ERTLeaderSyndicatePDA
+  id: ERTSecuritySyndicatePDA
+  name: ERT Security PDA
+  suffix: Syndicate, Security
+  description: Red for firepower, it has tally marks etched on the side.
+  components:
+  - type: Pda
+    id: ERTSecurityIDCardSyndicate
+
+- type: entity
+  parent: ERTLeaderSyndicatePDA
+  id: CBURNSyndicatePDA
+  name: CBURN PDA
+  description: Smells like rotten flesh.
+  suffix: Syndicate
+  components:
+  - type: Pda
+    id: CBURNIDCardSyndicate
+  - type: PdaBorderColor
+    borderColor: "#A32D26"
+    accentHColor: "#447987"
+    accentVColor: "#447987"

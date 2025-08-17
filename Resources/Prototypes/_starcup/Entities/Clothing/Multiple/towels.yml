@@ -1,0 +1,32 @@
+- type: entity
+  id: TowelColorSyndComm
+  name: SyndComm towel
+  parent: [ BaseTowel, BaseSyndCommContraband ]
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      color: "#535353"
+    - state: iconstripe
+      color: "#D9A336"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#535353"
+      right:
+      - state: inhand-right
+        color: "#535353"
+  - type: Clothing
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        color: "#535353"
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+        color: "#535353"
+      belt:
+      - state: equipped-BELT
+        color: "#535353"
+  - type: Fiber
+    fiberColor: fibers-black

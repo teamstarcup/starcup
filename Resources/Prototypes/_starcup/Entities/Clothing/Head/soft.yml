@@ -1,0 +1,14 @@
+- type: entity
+  parent: ClothingHeadHatCommandSoft
+  id: ClothingHeadHatCommandSoftSyndie
+  description: A baseball cap in command's distinctive shade of purple.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Head/Soft/commandsoftsyndie.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Head/Soft/commandsoftsyndie.rsi
+
+- type: entity
+  parent: [ ClothingHeadHeadHatBaseFlipped, ClothingHeadHatCommandSoftSyndie ]
+  id: ClothingHeadHatCommandSoftSyndieFlipped
+  name: command cap

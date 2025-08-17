@@ -1,9 +1,9 @@
 - type: guideEntry
   id: Species
   name: guide-entry-species
-  text: "/ServerInfo/Guidebook/Mobs/Species.xml"
+  text: "/ServerInfo/Guidebook/Mobs/_starcup/SpeciesStarcup.xml" # starcup: rewritten guidebook
   children:
-    - Arachnid
+#    - Arachnid # starcup: removed for now
     - Diona
     - Human
     - Moth
@@ -18,45 +18,41 @@
     - Rodentia
     - IPC # starcup: MKC
     - Skittermouse # starcup
+    - Kobold # starcup
 
-- type: guideEntry
-  id: Arachnid
-  name: species-name-arachnid
-  text: "/ServerInfo/Guidebook/Mobs/Arachnid.xml"
+# begin starcup: removed for now
+#- type: guideEntry
+#  id: Arachnid
+#  name: species-name-arachnid
+#  text: "/ServerInfo/Guidebook/Mobs/Arachnid.xml"
+# end starcup
 
 - type: guideEntry
   id: Diona
   name: species-name-diona
-  text: "/ServerInfo/Guidebook/Mobs/Diona.xml"
+  text: "/ServerInfo/Guidebook/Mobs/_starcup/DionaStarcup.xml" # starcup: rewritten guidebook
 
 - type: guideEntry
   id: Human
   name: species-name-human
-  text: "/ServerInfo/Guidebook/Mobs/Human.xml"
+  text: "/ServerInfo/Guidebook/Mobs/_starcup/HumanStarcup.xml" # starcup: rewritten guidebook
 
 - type: guideEntry
   id: Moth
   name: species-name-moth
-  text: "/ServerInfo/Guidebook/Mobs/Moth.xml"
+  text: "/ServerInfo/Guidebook/Mobs/_starcup/Doptera.xml" # starcup: rewritten guidebook
 
 - type: guideEntry
   id: Reptilian
   name: species-name-unathi # starcup: rename reptilians to unathi
-  text: "/ServerInfo/Guidebook/Mobs/Reptilian.xml"
+  text: "/ServerInfo/Guidebook/Mobs/_starcup/Unathi.xml" # starcup: rewritten guidebook
 
 - type: guideEntry
   id: SlimePerson
   name: species-name-slime
-  text: "/ServerInfo/Guidebook/Mobs/SlimePerson.xml"
+  text: "/ServerInfo/Guidebook/Mobs/_starcup/SlimePersonStarcup.xml" # starcup: rewritten guidebook
 
 - type: guideEntry
   id: Vox
   name: species-name-vox
-  text: "/ServerInfo/Guidebook/Mobs/Vox.xml"
-
-# Begin starcup: MKC
-- type: guideEntry
-  id: IPC
-  name: species-name-ipc
-  text: "/ServerInfo/Guidebook/Mobs/IPCs.xml"
-# End starcup
+  text: "/ServerInfo/Guidebook/Mobs/_starcup/VoxStarcup.xml" # starcup: rewritten guidebook

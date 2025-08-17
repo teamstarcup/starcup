@@ -39,9 +39,9 @@
   equipment:
     #shoes: ClothingShoesBootsLaceup # - DeltaV - Commented out for loadout options
     #eyes: ClothingEyesGlassesSunglasses # starcup: moved to loadouts
-    gloves: ClothingHandsGlovesCaptain
+    gloves: ClothingHandsGlovesCaptainSyndie # starcup: command recolors
     id: CaptainPDA
-    ears: ClothingHeadsetAltCommand
+    ears: ClothingHeadsetAltCommandSyndie # starcup: command recolors
   storage:
     back:
     - Flash
@@ -52,7 +52,9 @@
   job: Captain
   hasMindShield: true
   equipment:
-    head: ClothingHeadHatCapcap
-    eyes: ClothingEyesGlassesCommand
-    mask: ClothingMaskGasCaptain
-    neck: ClothingNeckCloakCap
+  # begin starcup: command recolors
+    head: ClothingHeadHatCapcapSyndie
+    eyes: ClothingEyesGlassesCommandSyndie
+    mask: ClothingMaskGasCaptainSyndie
+    neck: ClothingNeckCloakCapSyndie
+  # end starcup

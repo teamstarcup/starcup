@@ -1,0 +1,90 @@
+<Document>
+  # MKCs
+  <GuideEntityEmbed Entity="MobIPCDummy" Caption="MKC"/>
+  An MKC (short for Markov Knowledge Chassis) is a type of sapient robot, originally designed as disposable and easily repairable laborers by a now-defunct corporate power.
+
+  They are considered [color=yellow]independent individuals[/color], meaning [color=red]they are not guided by any laws of robotics[/color]. MKCs cannot be hacked by emags and are not affected by ion storms because they do not have to follow any predefined directives in their system.
+
+  ## Species Traits
+  <Box>
+    <GuideEntityEmbed Entity="PositronicBrain" Caption="Positronic Brain"/>
+  </Box>
+  MKCs are silicon-based beings, having a positronic brain similar to cyborgs. This has a number of unique implications for them: they cannot have reagents fed to or injected into them, cannot ingest any food or drink, do not need to breathe, and [color=red]cannot be healed by normal means at the Medbay.[/color] Damaged MKCs are recommended to be taken to the [color=yellow]Robotics Lab[/color] for repairs, or possibly to [color=yellow]Engineering[/color] depending on crew availability.
+
+  In addition, they also have the following traits:
+  - Do not go into critical condition, instead dying outright at 120 damage
+  - Damage Resistances: Cold -50%, Radiation -50%
+  - Damage Weaknesses: Heat +50%, Shock +100%
+  - Take more damage from impacting against terrain
+  - Usually struck first by lightning
+  - Massively increased cold tolerance
+  - Do not take damage from hot environments except at EXTREMELY high temperatures, but instantly die if internal temperature goes over 383 degrees Kelvin
+  - Deal slightly more damage with unarmed attacks than other species
+
+  ### Internal Battery
+   <Box>
+    <GuideEntityEmbed Entity="APCBasic" Caption="APC Terminal"/>
+    <GuideEntityEmbed Entity="PowerCellMedium" Caption="Power Cell"/>
+  </Box>
+  Instead of food or drink, MKCs have an internal power cell that they must keep charged. This power cell constantly drains at a rate proportionate to the amount of moving around the MKC is doing.
+
+  The internal battery of an MKC can be recharged in two different ways:
+
+  APC Terminal: An MKC can press [color=yellow]Alt + left click[/color] on a powered APC terminal to recharge themselves.
+
+  Power Cell Replacement: Pressing [color=yellow]Alt + left click[/color] or using the right-click menu on an MKC will unlock (or lock) their maintenance panel, allowing their power cell to be taken out and replaced. [color=red]Note that MKCs cannot remove their own power cells![/color]
+
+  ### Repairing
+  <Box HorizontalAlignment="Stretch">
+    <GuideEntityEmbed Entity="WelderIndustrialAdvanced" Caption="Welder"/>
+    Welders can be used to repair [color=yellow]Brute[/color] damage and stop [color=orange]Bleeding[/color]. Be sure to cover your eyes!
+  </Box>
+  <Box HorizontalAlignment="Stretch">
+    <GuideEntityEmbed Entity="CableApcStack" Caption="Cables (any type)"/>
+    Cables can be used to repair [color=yellow]Burns[/color], except for Caustic.
+  </Box>
+  <Box HorizontalAlignment="Stretch">
+    <GuideEntityEmbed Entity="SheetSteel" Caption="Steel Sheets"/>
+    Steel can be used to repair [color=yellow]Caustic[/color] damage.
+  </Box>
+  <Box HorizontalAlignment="Stretch">
+    <GuideEntityEmbed Entity="SheetGlass" Caption="Glass Sheets (any type)"/>
+    Glass Sheets can be used to repair [color=yellow]Blindness[/color].
+  </Box>
+  <Box HorizontalAlignment="Stretch">
+    <GuideEntityEmbed Entity="SheetPlasma" Caption="Plasma Sheets"/>
+    Plasma Sheets can be used to repair [color=green]Radiation[/color] damage.
+  </Box>
+  <Box HorizontalAlignment="Stretch">
+    <GuideEntityEmbed Entity="SheetPlastic" Caption="Plastic Sheets"/>
+    Plastic Sheets can be used to stop [color=orange]Bleeding[/color].
+  </Box>
+  <Box HorizontalAlignment="Stretch">
+    <GuideEntityEmbed Entity="Lighter" Caption="Lighter"/>
+    In a pinch, cauterization via Heat damage (such as from attacks by lit welders or lighters) will also heal [color=orange]Bleeding[/color].
+  </Box>
+  <Box HorizontalAlignment="Stretch">
+    <GuideEntityEmbed Entity="Oilpack" Caption="Oil Packs"/>
+    MKCs have no blood, but instead have [color=orange]Oil[/color]. Oil packs, which replenish their oil levels, can be printed by Robotics or found within silicon repair kits.
+  </Box>
+  In the event that an MKC dies, after being fully repaired, they should be restarted using the [color=yellow]"Restart"[/color] button (located by right-clicking).
+
+  [color=red]NEVER ELECTROCUTE AN MKC with a defibrillator or in any other way while they're dead, as this will cause the battery to discharge energy rays outward![/color]
+
+  ### Integrated Radio
+  <Box>
+    <GuideEntityEmbed Entity="EncryptionKeyScience" Caption="Encryption key"/>
+  </Box>
+
+  MKCs do [bold]not[/bold] use external radios because they already have one built in, granting them access to any radio channels relevant to their job. If they later require access to other channels, an unlocked, open MKC can have additional encryption keys inserted into them. In this state, they can also have encryption keys removed by using a [color=yellow]wire cutter[/color].
+
+  Each member of Command has encryption keys available for their respective departments, and encryption keys can also be taken from headsets (typically found in corresponding outfit vendors) by using a [color=yellow]screwdriver[/color].
+
+  ## Naming Traditions
+  MKCs have a serial designation consisting of two parts: A short alphanumeric portion, typically a word or shortened version thereof, and a three-digit numerical portion.
+
+  Examples:
+  - CROW-550
+  - HNTR-241
+  - EYE-073
+</Document>

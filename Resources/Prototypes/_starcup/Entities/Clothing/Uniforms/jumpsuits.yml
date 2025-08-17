@@ -1,4 +1,36 @@
 - type: entity
+  parent: ClothingUniformJumpsuitHoP
+  id: ClothingUniformJumpsuitHoPSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/hop_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/hop_syndi.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseCommandContraband]
+  id: ClothingUniformJumpsuitHoPTurtle
+  name: head of personnel's turtleneck jumpsuit
+  description: A stately turtleneck for times where a Head of Personnel wants a subtler, more humble impression. Or just something less stiff.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/hop_turtle_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/hop_turtle_syndi.rsi
+
+- type: entity
+  parent: ClothingUniformJumpsuitCaptain
+  id: ClothingUniformJumpsuitCaptainSyndie
+  description: It's a Tyrian purple jumpsuit with some gold markings denoting the rank of "Captain".
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/captain_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/captain_syndi.rsi
+
+- type: entity
   parent: [BaseTraitorContraband, ClothingUniformJumpsuitPyjamaSyndicateBlack]
   id: ClothingUniformJumpsuitPyjamaNanotrasenBlack
   name: black NanoTrasen pyjamas
@@ -19,6 +51,16 @@
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/pyjamananotrasenblue.rsi
 
 - type: entity
+  parent: ClothingUniformJumpsuitCapFormal
+  id: ClothingUniformJumpsuitCapFormalSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/capformal_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/capformal_syndi.rsi
+
+- type: entity
   parent: [BaseTraitorContraband, ClothingUniformJumpsuitOperative]
   id: ClothingUniformJumpsuitOperativeNT
   suffix: NanoTrasen
@@ -34,3 +76,56 @@
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/nanotrasenformal.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/nanotrasenformal.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseSyndCommContraband]
+  id: ClothingUniformJumpsuitSyndCommFormal
+  name: SyndComm formal suit
+  description: A suit for special occasions.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/syndcommformal.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/syndcommformal.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseSyndCommContraband]
+  id: ClothingUniformJumpsuitSyndCommAgent
+  name: SyndComm agent's jumpsuit
+  description: A suit worn by SyndComm's legal team. Smells of burnt coffee.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/syndcomm_agent.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/syndcomm_agent.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseSyndCommContraband]
+  id: ClothingUniformJumpsuitSyndCommOfficial
+  name: SyndComm official's jumpsuit
+  description: It's a jumpsuit worn by SyndComm officials.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/syndcomm_official.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/syndcomm_official.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseSyndCommContraband]
+  id: ClothingUniformJumpsuitSyndCommOfficer
+  name: SyndComm officer's jumpsuit
+  description: It's a jumpsuit worn by SyndComm officers.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/syndcomm_officer.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/syndcomm_officer.rsi
+
+- type: entity
+  parent: ClothingUniformJumpsuitCommandGeneric
+  id: ClothingUniformJumpsuitCommandGenericSyndie
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/commandgenericsyndie.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/commandgenericsyndie.rsi

@@ -393,16 +393,18 @@
   - type: Objective
     difficulty: 0.5
 
-- type: entity
-  parent: BaseThiefStealStructureObjective
-  id: AltarNanotrasenStealObjective
-  components:
-  - type: NotJobRequirement
-    job: Chaplain
-  - type: StealCondition
-    stealGroup: AltarNanotrasen
-  - type: Objective
-    difficulty: 0.5
+# begin starcup changes
+#- type: entity
+#  parent: BaseThiefStealStructureObjective
+#  id: AltarNanotrasenStealObjective
+#  components:
+#  - type: NotJobRequirement
+#    job: Chaplain
+#  - type: StealCondition
+#    stealGroup: AltarNanotrasen
+#  - type: Objective
+#    difficulty: 0.5
+# end starcup changes
 
 - type: entity
   parent: BaseThiefStealStructureObjective
@@ -517,7 +519,7 @@
 - type: entity
   parent: [BaseThiefObjective, BaseLivingObjective]
   id: EscapeThiefShuttleObjective
-  name: Escape to centcomm alive and unrestrained.
+  name: Escape to SyndComm alive and unrestrained. # starcup - NT-SC swap
   description: You don't want your illegal activities to be discovered by anyone, do you?
   components:
   - type: Objective

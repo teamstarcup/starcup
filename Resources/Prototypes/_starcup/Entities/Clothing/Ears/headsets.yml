@@ -1,0 +1,35 @@
+- type: entity
+  parent: ClothingHeadsetAdminAssistant
+  id: ClothingHeadsetAdminAssistantSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Ears/Headsets/adminassistant_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Ears/Headsets/adminassistant_syndi.rsi
+
+- type: entity
+  parent: ClothingHeadsetCommand
+  id: ClothingHeadsetCommandSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Ears/Headsets/command_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Ears/Headsets/command_syndi.rsi
+
+- type: entity
+  parent: [ ClothingHeadset, BaseSyndCommContraband ]
+  id: ClothingHeadsetSyndComm
+  name: SyndComm headset
+  description: A headset used by Syndicate Command.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyStationMaster
+      - EncryptionKeySyndcomm
+  - type: Sprite
+    sprite: _starcup/Clothing/Ears/Headsets/syndcomm.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Ears/Headsets/syndcomm.rsi

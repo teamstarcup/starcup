@@ -1,0 +1,27 @@
+#Empty captain
+- type: entity
+  id: JetpackCaptainSyndie
+  parent: JetpackCaptain
+  suffix: Empty, Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tanks/Jetpacks/captain_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Objects/Tanks/Jetpacks/captain_syndi.rsi
+  - type: Item
+    sprite: _starcup/Objects/Tanks/Jetpacks/captain_syndi.rsi
+    size: Normal
+
+# Filled captain
+- type: entity
+  id: JetpackCaptainFilledSyndie
+  parent: JetpackCaptainFilled
+  suffix: Filled, Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tanks/Jetpacks/captain_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Objects/Tanks/Jetpacks/captain_syndi.rsi
+  - type: Item
+    sprite: _starcup/Objects/Tanks/Jetpacks/captain_syndi.rsi
+    size: Normal

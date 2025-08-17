@@ -1,6 +1,6 @@
 - type: entity
-  name: bible
-  description: New Interstellar Version 2340.
+  name: holy book # starcup: genericize parent entity
+  description: A holy text for one of many interstellar faiths. # starcup: genericize parent entity
   parent: BaseStorageItem
   id: Bible
   components:
@@ -34,11 +34,13 @@
     reactionTypes:
     - Holy
   - type: Sprite
-    sprite: Objects/Specific/Chapel/bible.rsi
-    state: icon
+  # begin starcup: genericize parent entity
+    sprite: Objects/Misc/books.rsi
+    state: book_icon
+  # end starcup
   - type: Item
     size: Small
-    sprite: Objects/Specific/Chapel/bible.rsi
+#    sprite: Objects/Specific/Chapel/bible.rsi # starcup: remove inhand
   - type: Clothing
     slots:
     - Belt
@@ -80,6 +82,7 @@
     respawnTime: 300
   - type: Sprite
     sprite: Objects/Specific/Chapel/necronomicon.rsi
+    state: icon # starcup: necessary due to parent changes
   - type: Item
     sprite: Objects/Specific/Chapel/necronomicon.rsi
 
@@ -94,3 +97,64 @@
     useDelay: 1
   - type: InstantAction
     event: !type:SummonActionEvent
+
+# begin starcup: remove real-world religion references
+#- type: entity
+#  parent: Bible
+#  name: tanakh
+#  description: "For God's chosen crewmembers"
+#  id: BibleTanakh
+#  components:
+#  - type: Sprite
+#    sprite: Objects/Specific/Chapel/tanakh.rsi
+#  - type: Item
+#    sprite: Objects/Specific/Chapel/tanakh.rsi
+# end starcup
+
+- type: entity
+  parent: Bible
+  name: druidic tablet
+  description: Texts of the Broken Stones faith are painstakingly etched into these moss-eaten, crumbling tablets. # starcup: rewritten for setting lore
+  id: BibleDruid
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chapel/mysteryofthedruids.rsi
+    state: icon # starcup: necessary due to parent changes
+  - type: Item
+    sprite: Objects/Specific/Chapel/mysteryofthedruids.rsi
+
+- type: entity
+  parent: Bible
+  name: communist manifesto
+  description: "Remove the mask of humanity from Capital."
+  id: BibleCommunistManifesto
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chapel/communistmanifesto.rsi
+    state: icon # starcup: necessary due to parent changes
+  - type: Item
+    sprite: Objects/Specific/Chapel/communistmanifesto.rsi
+
+- type: entity
+  parent: Bible
+  name: Gothic Bible # starcup: renamed for setting lore
+  description: A copy of an ancient text dedicated to the dark goddess Visigoth. You can't read any of the words, but the pictures are probably goffick enough to base a religion around. # starcup: rewritten for setting lore
+  id: BibleSatanic
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chapel/satanicbible.rsi
+    state: icon # starcup: necessary due to parent changes
+  - type: Item
+    sprite: Objects/Specific/Chapel/satanicbible.rsi
+
+- type: entity
+  parent: Bible
+  name: codex nanotrasimus
+  description: "A familiar book containing the Sacred Operating Procedures."
+  id: BibleNanoTrasen
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chapel/codexnanotrasimus.rsi
+    state: icon # starcup: necessary due to parent changes
+  - type: Item
+    sprite: Objects/Specific/Chapel/codexnanotrasimus.rsi

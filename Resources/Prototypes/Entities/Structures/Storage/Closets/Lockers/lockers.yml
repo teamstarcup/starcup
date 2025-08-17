@@ -17,6 +17,8 @@
       path: /Audio/Effects/woodenclosetclose.ogg
     openSound:
       path: /Audio/Effects/woodenclosetopen.ogg
+  - type: Paintable
+    group: null # not shaped like other lockers
 
 # Basic
 - type: entity
@@ -71,25 +73,6 @@
     stateDoorClosed: cap_door
   - type: AccessReader
     access: [["Captain"]]
-  - type: Sprite  # starcup: changed to reflect syndicate color scheme.
-    layers:
-    - state: cap
-      map: ["enum.StorageVisualLayers.Base"]
-      sprite: _starcup/Structures/Storage/closet.rsi
-    - state: cap_door
-      map: ["enum.StorageVisualLayers.Door"]
-      sprite: _starcup/Structures/Storage/closet.rsi
-    - state: locked
-      map: [ "enum.LockVisualLayers.Lock" ]
-      shader: unshaded
-    - state: welded
-      visible: false
-      map: [ "enum.WeldableLayers.BaseWelded" ]
-    - state: paper
-      visible: false
-      sprite: Structures/Storage/closet_labels.rsi
-      offset: "-0.065,0"
-      map: [ "enum.PaperLabelVisuals.Layer" ]
 
 - type: entity
   id: LockerHeadOfPersonnel
@@ -209,6 +192,8 @@
     node: done
     containers:
     - entity_storage
+  - type: Paintable
+    group: null
 
 - type: entity
   id: LockerFreezer

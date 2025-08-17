@@ -1,4 +1,50 @@
 - type: entity
+  parent: ClothingOuterWinterHoP
+  id: ClothingOuterWinterHoPSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/hop_syndi.rsi
+    layers:
+    - state: HOP-icon
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: HOP-inhand-left
+      right:
+      - state: HOP-inhand-right
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/hop_syndi.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: HOP-equipped-OUTERCLOTHING
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodWinterHOPSyndie
+
+- type: entity
+  parent: ClothingOuterWinterCap
+  id: ClothingOuterWinterCapSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/captain_syndi.rsi
+    layers:
+    - state: CAP-icon
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: CAP-inhand-left
+      right:
+      - state: CAP-inhand-right
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/captain_syndi.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: CAP-equipped-OUTERCLOTHING
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodWinterCaptainSyndie
+
+- type: entity
   parent: ClothingOuterWinterCoat
   id: ClothingOuterSuitNeuroroboticist
   name: neuroroboticist softshell costume
@@ -13,3 +59,37 @@
       - state: equipped-OUTERCLOTHING
       outerClothing-vox:
       - state: equipped-outerclothing-vox
+
+- type: entity
+  parent: [ ClothingOuterWinterCentcom, BaseSyndCommContraband ]
+  id: ClothingOuterWinterSyndComm
+  name: SyndComm winter coat
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/syndcomm.rsi
+    layers:
+    - state: icon
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodWinterSyndComm
+
+- type: entity
+  parent: ClothingOuterWinterCCWarden
+  id: ClothingOuterWinterSyndCommWarden
+  name: SyndComm's armored winter coat
+  description: A tough, utilitarian coat designed for the wardens of Syndicate Command. Reinforced kevlar plating and high quality fur allow the user to look stylish while staying protected.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/cc_warden_winter_coat.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/cc_warden_winter_coat.rsi

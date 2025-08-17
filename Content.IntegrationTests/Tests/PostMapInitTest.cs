@@ -45,7 +45,7 @@ namespace Content.IntegrationTests.Tests
         {
             // "/Maps/centcomm.yml",
             AdminTestArenaSystem.ArenaMapPath,
-			"/Maps/_starcup/syndicomm.yml",  // starcup
+			"/Maps/_starcup/syndcomm.yml",  // starcup
             "/Maps/_starcup/Events/frigid-peril-surface.yml",  // starcup
         };
 
@@ -59,7 +59,7 @@ namespace Content.IntegrationTests.Tests
             "/Maps/Shuttles/ShuttleEvent/honki.yml", // Contains golden honker, clown's rubber stamp
             "/Maps/Shuttles/ShuttleEvent/instigator.yml", // Contains EXP-320g "Friendship"
             "/Maps/Shuttles/ShuttleEvent/syndie_evacpod.yml", // Contains syndicate rubber stamp
-			"/Maps/_starcup/syndicomm.yml",  // starcup: contains centcomm rubber stamp, centcomm folder, handheld crew monitor
+			"/Maps/_starcup/syndcomm.yml",  // starcup: contains centcomm rubber stamp, centcomm folder, handheld crew monitor
 			"/Maps/_starcup/Events/frigid-peril-station.yml",  // starcup: this is an event and events do not play by the rules
 			"/Maps/_starcup/Events/frigid-peril-surface.yml",  // starcup: contains lots of key round-start gear; it's not feasible to place lockers
             "/Maps/_starcup/Events/cruise-control.yml",  // starcup: this is an event and events do not play by the rules
@@ -76,7 +76,6 @@ namespace Content.IntegrationTests.Tests
             "Glacier",  // starcup
             "Loop", // starcup
             "Omega", // starcup
-            "Packed", // starcup
             "Reach", // starcup
             "Saltern", // starcup
             "Byoin",  // starcup
@@ -85,6 +84,8 @@ namespace Content.IntegrationTests.Tests
             "EventCruiseControl" // starcup
         };
         // end starcup
+
+        private static readonly ProtoId<EntityCategoryPrototype> DoNotMapCategory = "DoNotMap";
 
         /// <summary>
         /// Asserts that specific files have been saved as grids and not maps.
@@ -263,7 +264,7 @@ namespace Content.IntegrationTests.Tests
                 return;
 
             var yamlEntities = node["entities"];
-            if (!protoManager.TryIndex<EntityCategoryPrototype>("DoNotMap", out var dnmCategory))
+            if (!protoManager.TryIndex(DoNotMapCategory, out var dnmCategory))
                 return;
 
             Assert.Multiple(() =>

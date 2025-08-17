@@ -238,7 +238,7 @@ figurines-atmostech-5 = Temperature, pressure, volume.
 
 # starcup: added figurines-rd-1, 5, 6, and 7
 figurines-rd-1 = No AI left behind!
-figurines-rd-2 = Tier 3 arsenal? No way.
+figurines-rd-2 = Tier 3 Arsenal? No way.
 figurines-rd-3 = Now where did I leave my hardsuit...?
 figurines-rd-4 = Now you're thinking with portals!
 figurines-rd-5 = Raiding the vault probably isn't illegal... right?
@@ -411,14 +411,14 @@ figurines-nukie-elite-6 = Good work, team.
 # starcup: removed figurines-nukie-commander-2
 # figurines-nukie-commander-2 = Fuckin' flukies.
 
-# starcup: added figurines-nukie-commander-2
+# starcup: added figurines-nukie-commander-2, fixed capitalization on figurines-nukie-commander-3
 figurines-nukie-commander-1 = GET DAT FUKKEN DISK!
 figurines-nukie-commander-2 = Well played, Captain.
-figurines-nukie-commander-3 = The syndicate sends its regards.
+figurines-nukie-commander-3 = The Syndicate sends its regards.
 figurines-nukie-commander-4 = Failure is not an option.
 figurines-nukie-commander-5 = Whoops.
 
-# starcup: fixed capitalization on figurines-footsoldier-4 and 5
+# starcup: fixed capitalization on figurines-footsoldier-3, 4, and 5
 figurines-footsoldier-1 = I'm an evil boy. Less boy every day, more evil every day.
 figurines-footsoldier-2 = Who will you choose? Them or us? Us or them?
 figurines-footsoldier-3 = Glory to the syndicate!

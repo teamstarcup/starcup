@@ -80,6 +80,89 @@
     containers:
       board: [ DoorElectronicsPsychologist ]
 
+- type: entity
+  parent: AirlockCommandLocked
+  id: AirlockCommandLockedSyndie
+  suffix: Command, Syndicate, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
+
+- type: entity
+  parent: AirlockCaptainLocked
+  id: AirlockCaptainLockedSyndie
+  suffix: Captain, Syndicate, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
+
+- type: entity
+  parent: AirlockChiefMedicalOfficerLocked
+  id: AirlockChiefMedicalOfficerLockedSyndie
+  suffix: ChiefMedicalOfficer, Syndicate, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
+
+- type: entity
+  parent: AirlockChiefEngineerLocked
+  id: AirlockChiefEngineerLockedSyndie
+  suffix: ChiefEngineer, Syndicate, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
+
+- type: entity
+  parent: AirlockHeadOfSecurityLocked
+  id: AirlockHeadOfSecurityLockedSyndie
+  suffix: HeadOfSecurity, Syndicate, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
+
+- type: entity
+  parent: AirlockResearchDirectorLocked
+  id: AirlockResearchDirectorLockedSyndie
+  suffix: ResearchDirector, Syndicate, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
+
+- type: entity
+  parent: AirlockHeadOfPersonnelLocked
+  id: AirlockHeadOfPersonnelLockedSyndie
+  suffix: HeadOfPersonnel, Syndicate, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
+
+- type: entity
+  parent: AirlockQuartermasterLocked
+  id: AirlockQuartermasterLockedSyndie
+  suffix: Logistics Officer, Syndicate, Locked # DeltaV - Logistics Department replacing Cargo
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
+
+- type: entity
+  parent: AirlockEVALocked
+  id: AirlockEVALockedSyndie
+  suffix: EVA, Syndicate, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
+
+- type: entity
+  parent: AirlockCentralCommandLocked
+  id: AirlockSyndCommLocked
+  suffix: Syndicate Command, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/syndcomm.rsi
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSyndicateCommand ]
+
 # Glass Airlocks
 - type: entity
   parent: AirlockServiceGlassLocked
@@ -162,6 +245,89 @@
     containers:
       board: [ DoorElectronicsPsychologist ]
 
+- type: entity
+  parent: AirlockCommandGlassLocked
+  id: AirlockCommandGlassLockedSyndie
+  suffix: Command, Syndicate, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
+
+- type: entity
+  parent: AirlockCaptainGlassLocked
+  id: AirlockCaptainGlassLockedSyndie
+  suffix: Captain, Syndicate, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
+
+- type: entity
+  parent: AirlockChiefMedicalOfficerGlassLocked
+  id: AirlockChiefMedicalOfficerGlassLockedSyndie
+  suffix: ChiefMedicalOfficer, Syndicate, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
+
+- type: entity
+  parent: AirlockChiefEngineerGlassLocked
+  id: AirlockChiefEngineerGlassLockedSyndie
+  suffix: ChiefEngineer, Syndicate, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
+
+- type: entity
+  parent: AirlockHeadOfSecurityGlassLocked
+  id: AirlockHeadOfSecurityGlassLockedSyndie
+  suffix: HeadOfSecurity, Syndicate, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
+
+- type: entity
+  parent: AirlockResearchDirectorGlassLocked
+  id: AirlockResearchDirectorGlassLockedSyndie
+  suffix: ResearchDirector, Syndicate, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
+
+- type: entity
+  parent: AirlockHeadOfPersonnelGlassLocked
+  id: AirlockHeadOfPersonnelGlassLockedSyndie
+  suffix: HeadOfPersonnel, Syndicate, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
+
+- type: entity
+  parent: AirlockQuartermasterGlassLocked
+  id: AirlockQuartermasterGlassLockedSyndie
+  suffix: Logistics Officer, Syndicate, Locked # DeltaV - Logistics Department replacing Cargo
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
+
+- type: entity
+  parent: AirlockEVAGlassLocked
+  id: AirlockEVAGlassLockedSyndie
+  suffix: EVA, Syndicate, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
+
+- type: entity
+  parent: AirlockCentralCommandGlassLocked
+  id: AirlockSyndCommGlassLocked
+  suffix: Syndicate Command, Locked
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/syndcomm.rsi
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSyndicateCommand ]
+
 # Maintenance Hatches
 - type: entity
   parent: AirlockBoxerLocked
@@ -225,3 +391,14 @@
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+# HighSecDoors
+
+- type: entity
+  parent: HighSecCentralCommandLocked
+  id: HighSecSyndCommLocked
+  suffix: Central Command, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCentralCommand ]

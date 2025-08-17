@@ -93,52 +93,6 @@
   - UplinkWeaponryNT
 
 - type: listing
-  id: UplinkHyperEutacticBladeNT
-  name: uplink-hypereutactic-blade-name
-  description: uplink-hypereutactic-blade-desc
-  icon: { sprite: /Textures/Objects/Weapons/Melee/hypereutactic_blade.rsi, state: icon }
-  discountCategory: veryRareDiscounts
-  discountDownTo:
-    Telecrystal: 15
-  productEntity: HyperEutacticBlade
-  cost:
-    Telecrystal: 18
-  categories:
-  - UplinkWeaponryNT
-  conditions:
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
-  - !type:StoreWhitelistCondition
-    blacklist:
-      tags:
-      - NukeOpsUplink
-
-- type: listing
-  id: UplinkHyperEutaticBladeNT
-  name: uplink-hypereutatic-blade-name
-  description: uplink-hypereutatic-blade-desc
-  icon: { sprite: /Textures/Objects/Weapons/Melee/hypereutactic_blade.rsi, state: icon }
-  discountCategory: veryRareDiscounts
-  discountDownTo:
-    Telecrystal: 13
-  productEntity: HyperEutaticBlade
-  cost:
-    Telecrystal: 16
-  categories:
-  - UplinkWeaponryNT
-  conditions:
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
-
-- type: listing
   id: UplinkEnergyDaggerNT
   name: uplink-edagger-name
   description: uplink-edagger-desc
@@ -2246,6 +2200,17 @@
     whitelist:
     - Chef
     - Mime
+
+- type: listing
+  id: UplinkNanotrasenLighter
+  name: uplink-nanotrasen-lighter-name
+  description: uplink-nanotrasen-lighter-desc
+  icon: { sprite:  Objects/Tools/Lighters/nanotrasen.rsi, state: icon}
+  productEntity: NanotrasenFlippo
+  cost:
+    Telecrystal: 1
+  categories:
+  - UplinkPointless
 
 - type: listing
   id: UplinkSmugglerSatchelNT

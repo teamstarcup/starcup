@@ -18,8 +18,8 @@
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/_starcup/Shuttles/SYND_EvacShip.yml # starcup: added SYND_EvacShip.yml
         - type: StationJobs
-          availableJobs: # 53 jobs total w/o latejoins & interns, 65 jobs total w/ latejoins & interns
-            #command (8)
+          availableJobs: # 57 jobs total w/o latejoins & interns, 69 jobs total w/ latejoins & interns
+            # command (8)
             Captain: [ 1, 1 ]
             HeadOfPersonnel: [ 1, 1 ]
             HeadOfSecurity: [ 1, 1 ]
@@ -28,7 +28,7 @@
             ResearchDirector: [ 1, 1 ]
             Quartermaster: [ 1, 1 ]
             AdministrativeAssistant: [ 1, 1 ]
-            #service (11 - 12)
+            # service (14 - 15)
             Bartender: [ 1, 1 ]
             Botanist: [ 2, 2 ]
             Chef: [ 1, 1 ]
@@ -37,34 +37,36 @@
             Librarian: [ 1, 1 ]
             ServiceWorker: [ 2, 3 ]
             Reporter: [ 1, 1 ]
-            #engineering (6)
+            Clown: [ 1, 1 ]
+            Mime: [ 1, 1 ]
+            Musician: [ 1, 1 ]
+            # engineering (6)
             AtmosphericTechnician: [ 2, 2 ]
             StationEngineer: [ 4, 4 ]
             TechnicalAssistant: [ 3, 3 ] #intern, not counted
-            #medical (5)
+            # medical (6)
             Chemist: [ 2, 2 ]
             MedicalDoctor: [ 2, 2 ]
             MedicalIntern: [ 2, 2 ] #intern, not counted
             Paramedic: [ 1, 1 ]
-            #science (6)
+            Psychologist: [ 1, 1 ]
+            # science (6)
             Scientist: [ 4, 4 ]
             Roboticist: [ 1, 2 ]
             ResearchAssistant: [ 2, 2 ] #intern, not counted
-            #security (9 - 10)
+            # security (10 - 12)
             Warden: [ 1, 1 ]
             SecurityOfficer: [ 6, 6 ]
             SecurityCadet: [ 3, 3 ] #intern, not counted
             Lawyer: [ 1, 2 ]
             Detective: [ 1, 1 ]
-            #supply (6)
+            Prisoner: [ 1, 2 ]
+            # supply (6)
             SalvageSpecialist: [ 3, 3 ]
             Courier: [ 2, 3 ]
             CargoTechnician: [ 3, 3 ]
             CargoAssistant: [ 2, 2 ] #intern, not counted
-            #civilian (3+)
+            # civilian
             Passenger: [ -1, -1 ] #infinite, not counted
-            Clown: [ 1, 1 ]
-            Mime: [ 1, 1 ]
-            Musician: [ 1, 1 ]
-            #silicon (2)
+            # silicon (2)
             Borg: [ 2, 2 ]
