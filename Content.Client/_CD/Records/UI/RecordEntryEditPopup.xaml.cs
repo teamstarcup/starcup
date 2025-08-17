@@ -35,7 +35,6 @@ public sealed partial class RecordEntryEditPopup : FancyWindow
         };
 
         ContentPanel.PanelOverride = styleBox;
-        PreviewContentPanel.PanelOverride = styleBox; // starcup
 
         SetupEventHandlers();
     }
@@ -60,13 +59,7 @@ public sealed partial class RecordEntryEditPopup : FancyWindow
             ValidateFields();
         };
 
-        // begin starcup: Live preview
-        DescriptionEdit.OnTextChanged += args =>
-        {
-            ValidateFields();
-            UpdatePreview(Rope.Collapse(args.TextRope));
-        };
-        // end starcup
+        DescriptionEdit.OnTextChanged += _ => ValidateFields();
 
         SaveButton.OnPressed += _ =>
         {
@@ -147,14 +140,6 @@ public sealed partial class RecordEntryEditPopup : FancyWindow
         TitleEdit.Text = entry.Title;
         InvolvedEdit.Text = entry.Involved;
         DescriptionEdit.TextRope = new Rope.Leaf(entry.Description);
-        UpdatePreview(entry.Description); // starcup
         ValidateFields();
     }
-
-    // begin starcup: Live preview of the edited record
-    private void UpdatePreview(string desc)
-    {
-        EntryDesc.SetMessage(FormattedMessage.FromMarkupPermissive(desc.Trim()), RecordEntryViewPopup.AllowedTags);
-    }
-    // end starcup
 }
