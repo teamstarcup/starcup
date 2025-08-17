@@ -3,11 +3,9 @@
   name: job-name-admin-assistant
   description: job-description-admin-assistant
   playTimeTracker: JobAdminAssistant
-# begin starcup
-#  requirements:
-#  - !type:OverallPlaytimeRequirement # DeltaV - Playtime requirement
-#    time: 90000 # 25 hours
-# end starcup
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 18000 # starcup: 25 hours to 5 hours
   startingGear: AdminAssistantGear
   icon: "JobIconAdminAssitant"
   supervisors: job-supervisors-command
@@ -15,6 +13,17 @@
   access:
   - Command
   - Maintenance
+  # begin starcup
+  - Bar
+  - Cargo
+  - Cryogenics
+  - Engineering
+  - External
+  - Kitchen
+  - Medical
+  - Research
+  - Service
+  # end starcup
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
@@ -30,7 +39,7 @@
     id: AdminAssistantPDA
     pocket1: RubberStampAdminAssistant
     pocket2: AccessConfigurator # To assist with secure closets access configurations / airlock configs should a head need it.
-    ears: ClothingHeadsetAdminAssistant
+    ears: ClothingHeadsetCommandSyndie # starcup
   storage:
     back:
     - Flash
@@ -40,10 +49,10 @@
   id: AdminAssistantChameleonOutfit
   job:  AdministrativeAssistant
   equipment:
-    Head: ClothingHeadHatCommandSoft
-    Eyes: ClothingEyesHudCommand
+    Head: ClothingHeadHatCommandSoftSyndie
+    Eyes: ClothingEyesHudCommandSyndie
     Mask: ClothingMaskBreath
-    Neck: ClothingNeckScarfStripedBlue
+    Neck: ClothingNeckScarfStripedPurple
     OuterClothing: ClothingOuterVest
     Gloves: ClothingHandsGlovesHop
 # end starcup
