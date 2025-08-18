@@ -1,3 +1,5 @@
+// starcup: this file is part of the examinable clothing speedmerge, and may be reorganized between now and its merge with upstream
+
 using Content.Shared.Inventory;
 using Robust.Shared.GameStates;
 

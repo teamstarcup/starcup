@@ -1,3 +1,5 @@
+# starcup: this file is part of the examinable clothing speedmerge, and may be reorganized between now and its merge with upstream
+
 clothing-medal-bronzeheart = bronzeheart medal, indicating {POSS-ADJ($wearer)} exemplary bravery in the face of danger
 clothing-medal-crewmanship = gold medal of crewmanship, indicating {POSS-ADJ($wearer)} excellent crewmanship
 clothing-medal-cargo = cargo medal, indicating {POSS-ADJ($wearer)} exemplary work in the cargo department

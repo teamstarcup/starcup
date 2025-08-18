@@ -1,3 +1,5 @@
+# starcup: this file is part of the examinable clothing speedmerge, and may be reorganized between now and its merge with upstream
+
 -clothing-pride-type-lgbt = [color=#d479d4]LGBT[/color] pride
 -clothing-pride-type-aromantic = [color=#3DA542]aromantic[/color] pride
 -clothing-pride-type-asexual = [color=#efefef]asexual[/color] [color=#800080]pride[/color]
