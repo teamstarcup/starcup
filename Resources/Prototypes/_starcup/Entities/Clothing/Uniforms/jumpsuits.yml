@@ -31,7 +31,7 @@
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/captain_syndi.rsi
 
 - type: entity
-  parent: [BaseTraitorContraband, ClothingUniformJumpsuitPyjamaSyndicateBlack]
+  parent: [BaseTraitorContraband, ClothingUniformJumpsuitPyjamaSyndicateBlack, BaseExaminableClothing]
   id: ClothingUniformJumpsuitPyjamaNanotrasenBlack
   name: black NanoTrasen pyjamas
   components:
@@ -41,7 +41,7 @@
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/pyjamananotrasenblack.rsi
 
 - type: entity
-  parent: [BaseTraitorContraband, ClothingUniformJumpsuitPyjamaSyndicateRed]
+  parent: [BaseTraitorContraband, ClothingUniformJumpsuitPyjamaSyndicateRed, BaseExaminableClothing]
   id: ClothingUniformJumpsuitPyjamaNanotrasenBlue
   name: blue NanoTrasen pyjamas
   components:
@@ -61,13 +61,16 @@
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/capformal_syndi.rsi
 
 - type: entity
-  parent: [BaseTraitorContraband, ClothingUniformJumpsuitOperative]
+  parent: [BaseTraitorContraband, ClothingUniformJumpsuitOperative, BaseExaminableClothing]
   id: ClothingUniformJumpsuitOperativeNT
   suffix: NanoTrasen
   description: Uniform for elite NanoTrasen operatives performing tactical operations in deep space.
+  components:
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
 
 - type: entity
-  parent: [BaseTraitorContraband, ClothingUniformJumpsuitSyndieFormal]
+  parent: [BaseTraitorContraband, ClothingUniformJumpsuitSyndieFormal, BaseExaminableClothing]
   id: ClothingUniformJumpsuitNTFormal
   name: NanoTrasen formal suit
   description: Combines sleek, upper-class elegance with NanoTrasen's signature aura of faint totalitarian menace.
@@ -76,6 +79,8 @@
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/nanotrasenformal.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Uniforms/Jumpsuit/nanotrasenformal.rsi
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
 
 - type: entity
   parent: [ClothingUniformBase, BaseSyndCommContraband]

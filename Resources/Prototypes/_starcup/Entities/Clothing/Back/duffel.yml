@@ -7,12 +7,14 @@
     sprite: _starcup/Clothing/Back/Duffels/captain_syndi.rsi
 
 - type: entity
-  parent: [BaseTraitorContraband, ClothingBackpackDuffelSyndicate]
+  parent: [BaseTraitorContraband, ClothingBackpackDuffelSyndicate, BaseExaminableClothing]
   id: ClothingBackpackDuffelNanotrasen
   name: NanoTrasen duffel bag
   components:
   - type: Sprite
     sprite: _starcup/Clothing/Back/Duffels/nanotrasen.rsi
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-duffel-bag
 
 - type: entity
   parent: ClothingBackpackDuffelNanotrasen

@@ -10,7 +10,7 @@
 
 #Elite web vest
 - type: entity
-  parent: [BaseTraitorContraband, ClothingOuterVestWebElite]
+  parent: [BaseTraitorContraband, ClothingOuterVestWebElite, BaseExaminableClothing]
   id: ClothingOuterVestWebEliteNT
   suffix: NanoTrasen
   components:
@@ -18,10 +18,12 @@
     sprite: _starcup/Clothing/OuterClothing/Vests/elitevest.rsi
   - type: Clothing
     sprite: _starcup/Clothing/OuterClothing/Vests/elitevest.rsi
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
 
 # Armor covering multiple body parts including limbs
 - type: entity
-  parent: [BaseTraitorContraband, ClothingOuterArmorRaid ]
+  parent: [BaseTraitorContraband, ClothingOuterArmorRaid, BaseExaminableClothing ]
   id: ClothingOuterArmorRaidNT
   name: NanoTrasen raid suit
   description: A somewhat flexible and well-armored suit with a powerful shoulder mounted flashlight manufactured in NanoTrasen's iconic blueblood color scheme, it does not protect its wearer from space.
@@ -35,6 +37,8 @@
       shader: unshaded
   - type: Clothing
     sprite: _starcup/Clothing/OuterClothing/Armor/nt-raid.rsi
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
 
 - type: entity
   parent: [ClothingOuterArmorCentcommCarapace, BaseSyndCommContraband]

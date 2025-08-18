@@ -384,7 +384,7 @@
   - type: Unremoveable
 
 - type: entity
-  parent: [ClothingHandsButcherable, BaseTraitorContraband] # starcup: shared contraband level with nt gear
+  parent: [ClothingHandsButcherable, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
   id: ClothingHandsGlovesNorthStar
   name: gloves of the north star
   description: These gloves allow you to punch incredibly fast.
@@ -416,6 +416,10 @@
     interfaces:
       enum.MeleeSpeechUiKey.Key:
         type: MeleeSpeechBoundUserInterface
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
+  # end starcup
   - type: StaticPrice
     price: 2500
   - type: Tag

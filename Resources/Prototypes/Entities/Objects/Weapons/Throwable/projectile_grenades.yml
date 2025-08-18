@@ -76,7 +76,7 @@
       path: /Audio/Effects/countdown.ogg
 
 - type: entity
-  parent: [ProjectileGrenadeBase, BaseTraitorContraband] # starcup: shared contraband level with nt gear
+  parent: [ProjectileGrenadeBase, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
   id: GrenadeIncendiary
   name: incendiary grenade
   description: Guaranteed to light up the mood.
@@ -103,11 +103,15 @@
     - timer
     sound:
       path: "/Audio/Weapons/Guns/Gunshots/batrifle.ogg"
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
+  # end starcup
   - type: StaticPrice
     price: 1500
 
 - type: entity
-  parent: [ProjectileGrenadeBase, BaseTraitorContraband] # starcup: shared contraband level with nt gear
+  parent: [ProjectileGrenadeBase, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
   id: GrenadeShrapnel
   name: shrapnel grenade
   description: Releases a deadly spray of shrapnel that causes severe bleeding.
@@ -134,5 +138,9 @@
     - timer
     sound:
       path: "/Audio/Weapons/Guns/Gunshots/batrifle.ogg"
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
+  # end starcup
   - type: StaticPrice
     price: 1500

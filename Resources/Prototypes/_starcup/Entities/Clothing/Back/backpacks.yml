@@ -9,10 +9,12 @@
 
 #Syndicate
 - type: entity
-  parent: [BaseTraitorContraband, ClothingBackpackSyndicate]
+  parent: [BaseTraitorContraband, ClothingBackpackSyndicate, BaseExaminableClothing]
   id: ClothingBackpackNanotrasen
   name: NanoTrasen backpack
   description:
   components:
   - type: Sprite
     sprite: _starcup/Clothing/Back/Backpacks/nanotrasen.rsi
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack

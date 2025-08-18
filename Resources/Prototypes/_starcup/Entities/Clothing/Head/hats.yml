@@ -73,7 +73,7 @@
   description: "\"The fish, women, and I are in a loving polyamorous relationship built on mutual trust and a regularly renewed fishing license.\""
 
 - type: entity
-  parent: [ BaseTraitorContraband, ClothingHeadPyjamaSyndicateBlack ]
+  parent: [ BaseTraitorContraband, ClothingHeadPyjamaSyndicateBlack, BaseExaminableClothing ]
   id: ClothingHeadPyjamaNanotrasenBlack
   name: NanoTrasen black pyjama hat
   components:
@@ -81,9 +81,11 @@
     sprite: Clothing/Head/Hats/pyjamasyndicateblack.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/pyjamasyndicateblack.rsi
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
 
 - type: entity
-  parent: [ BaseTraitorContraband, ClothingHeadPyjamaSyndicateRed ]
+  parent: [ BaseTraitorContraband, ClothingHeadPyjamaSyndicateRed, BaseExaminableClothing ]
   id: ClothingHeadPyjamaNanotrasenBlue
   name: NanoTrasen blue pyjama hat
   components:
@@ -91,6 +93,8 @@
     sprite: _starcup/Clothing/Head/Hats/pyjamananotrasenblue.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Head/Hats/pyjamananotrasenblue.rsi
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
 
 - type: entity
   parent: ClothingHeadHatCapcap

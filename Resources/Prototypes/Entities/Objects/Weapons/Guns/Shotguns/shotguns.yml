@@ -46,7 +46,7 @@
 - type: entity
   name: Bulldog
   # Don't parent to BaseWeaponShotgun because it differs significantly
-  parent: [BaseItem, BaseGunWieldable, BaseTraitorContraband] # starcup: shared contraband level with nt gear
+  parent: [BaseItem, BaseGunWieldable, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
   id: WeaponShotgunBulldog
   description: An automatic magazine-fed shotgun for close-quarters combat. Kicks like a mule on steroids. Uses .50 shotgun shells.
   components:
@@ -98,6 +98,10 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
+  # end starcup
   - type: StaticPrice
     price: 5000
 

@@ -15,7 +15,7 @@
 # ANTAG HARDSUITS
 # Blueblood Hardsuit
 - type: entity
-  parent: [ BaseTraitorContraband, ClothingOuterHardsuitSyndie ]
+  parent: [ BaseTraitorContraband, ClothingOuterHardsuitSyndie, BaseExaminableClothing ]
   id: ClothingOuterHardsuitNT
   name: blueblood hardsuit
   description: A heavily armored hardsuit designed for work in special operations. Property of NanoTrasen.
@@ -28,10 +28,12 @@
     sprite: _starcup/Clothing/OuterClothing/Hardsuits/nanotrasen.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitNT
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
 
 # NanoTrasen Medic Hardsuit
 - type: entity
-  parent: [BaseTraitorContraband, ClothingOuterHardsuitSyndieMedic]
+  parent: [BaseTraitorContraband, ClothingOuterHardsuitSyndieMedic, BaseExaminableClothing]
   id: ClothingOuterHardsuitNTMedic
   name: blueblood medic hardsuit
   components:
@@ -41,10 +43,12 @@
     sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntmedic.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitNTMedic
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
 
 # NanoTrasen Elite Hardsuit
 - type: entity
-  parent: [BaseTraitorContraband, ClothingOuterHardsuitSyndieElite]
+  parent: [BaseTraitorContraband, ClothingOuterHardsuitSyndieElite, BaseExaminableClothing]
   id: ClothingOuterHardsuitNTElite
   name: NanoTrasen elite hardsuit
   description: An elite version of the blueblood hardsuit, with improved radiation resistance and fireproofing. Property of NanoTrasen.
@@ -55,10 +59,12 @@
     sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntelite.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitNTElite
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
 
 # NanoTrasen Commander Hardsuit
 - type: entity
-  parent: [BaseTraitorContraband, ClothingOuterHardsuitSyndieCommander]
+  parent: [BaseTraitorContraband, ClothingOuterHardsuitSyndieCommander, BaseExaminableClothing]
   id: ClothingOuterHardsuitNTCommander
   name: NanoTrasen commander hardsuit
   description: A bulked up version of the blueblood hardsuit, purpose-built for the commander of a NanoTrasen operative squad. Has significantly improved armor for those deadly front-lines firefights.
@@ -69,10 +75,12 @@
     sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntcommander.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitNTCommander
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
 
 # NanoTrasen Juggernaut Hardsuit
 - type: entity
-  parent: [BaseTraitorContraband, ClothingOuterHardsuitJuggernaut]
+  parent: [BaseTraitorContraband, ClothingOuterHardsuitJuggernaut, BaseExaminableClothing]
   id: ClothingOuterHardsuitJuggernautNT
   name: NanoTrasen juggernaut suit
   description: A suit made by the cutting edge R&D department at NanoTrasen to be hyper resilient.
@@ -83,3 +91,5 @@
     sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntjuggernaut.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitJuggernautNT
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack

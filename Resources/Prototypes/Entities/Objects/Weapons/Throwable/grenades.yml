@@ -54,7 +54,7 @@
 - type: entity
   name: explosive grenade
   description: Grenade that creates a small but devastating explosion.
-  parent: [GrenadeBase, BaseTraitorContraband] # starcup: shared contraband level with nt gear
+  parent: [GrenadeBase, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
   id: ExGrenade
   components:
   - type: ExplodeOnTrigger
@@ -73,11 +73,15 @@
         volume: 5
     initialBeepDelay: 0
     beepInterval: 2 # 2 beeps total (at 0 and 2)
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
+  # end starcup
 
 - type: entity
   name: flashbang
   description: Eeeeeeeeeeeeeeeeeeeeee.
-  parent: [ GrenadeBase, BaseSecurityContraband ]
+  parent: [ GrenadeBase, BaseSecurityContraband, BaseExaminableClothing ] # starcup: shared contraband level with nt gear, examinable clothing
   id: GrenadeFlashBang
   components:
   - type: Sprite
@@ -199,7 +203,7 @@
 
 
 - type: entity
-  parent: [ GrenadeBase, BaseTraitorContraband ] # starcup: shared contraband level with nt gear
+  parent: [ GrenadeBase, BaseTraitorContraband, BaseExaminableClothing ] # starcup: shared contraband level with nt gear, examinable clothing
   id: SingularityGrenade
   name: singularity grenade
   description: Grenade that simulates the power of a singularity, pulling things in a heap.
@@ -265,6 +269,10 @@
       - type: DeleteOnTrigger
         keysIn:
         - stageTwo
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
+  # end starcup
   - type: StaticPrice
     price: 1000
 
@@ -412,7 +420,7 @@
 - type: entity
   name: EMP grenade
   description: A grenade designed to wreak havoc on electronic systems.
-  parent: [GrenadeBase, BaseTraitorContraband] # starcup: shared contraband level with nt gear
+  parent: [GrenadeBase, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
   id: EmpGrenade
   components:
   - type: Sprite
@@ -429,13 +437,17 @@
   - type: TimerTriggerVisuals
     primingSound:
       path: /Audio/Effects/countdown.ogg
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
+  # end starcup
   - type: StaticPrice
     price: 666 # 2000 for 3, I love fractions
 
 - type: entity
   name: holy hand grenade
   description: O Lord, bless this thy hand grenade, that with it thou mayst blow thine enemies to tiny bits, in thy mercy.
-  parent: [GrenadeBase, BaseTraitorContraband] # starcup: shared contraband level with nt gear
+  parent: [GrenadeBase, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
   id: HolyHandGrenade
   components:
   - type: Sprite
@@ -458,6 +470,10 @@
   - type: TimerTriggerVisuals
     primingSound:
       path: /Audio/Effects/hallelujah.ogg
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
+  # end starcup
   - type: StaticPrice
     price: 10000
 

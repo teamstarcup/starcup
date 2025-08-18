@@ -10,7 +10,7 @@
     sprite: _starcup/Clothing/Mask/gascaptain_syndi.rsi
 
 - type: entity
-  parent: [BaseTraitorContraband, ClothingMaskGasSyndicate]
+  parent: [BaseTraitorContraband, ClothingMaskGasSyndicate, BaseExaminableClothing]
   id: ClothingMaskGasNanotrasen
   name: NanoTrasen gas mask
   components:
@@ -18,6 +18,8 @@
     sprite: _starcup/Clothing/Mask/gasnanotrasen.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Mask/gasnanotrasen.rsi
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
 
 - type: entity
   parent: [ ClothingMaskGasCentcom, BaseSyndCommContraband ]

@@ -91,7 +91,7 @@
 
 - type: entity
   name: Hristov
-  parent: [BaseWeaponSniper, BaseGunWieldable, BaseTraitorContraband] # starcup: shared contraband level with nt gear
+  parent: [BaseWeaponSniper, BaseGunWieldable, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
   id: WeaponSniperHristov
   description: For when you absolutely, positively need to make someone regret their life choices from a safe distance. Uses .60 anti-materiel ammo.
   components:
@@ -120,6 +120,10 @@
   - type: EyeCursorOffset
     maxOffset: 3
     pvsIncrease: 0.3
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack
+  # end starcup
   - type: StaticPrice
     price: 3500
 
