@@ -53,7 +53,7 @@ clothing-nanotrasen-operative-jumpsuit = [color=#007bff]operative jumpsuit[/colo
 clothing-nanotrasen-formal-dress = [color=#007bff]NanoTrasen formal dress[/color]
 clothing-nanotrasen-formal-suit = [color=#007bff]NanoTrasen formal suit[/color]
 
-## Weapons
+# Weapons
 clothing-nanotrasen-l6-saw = [color=#007bff]L6 SAW light machine gun[/color]
 clothing-nanotrasen-viper = [color=#007bff]Viper pistol[/color]
 clothing-nanotrasen-cobra = [color=#007bff]Cobra pistol[/color]
@@ -70,5 +70,5 @@ clothing-grenade-holy = [color=#007bff]holy hand grenade[/color]
 clothing-grenade-incendiary = [color=#007bff]incendiary grenade[/color]
 clothing-grenade-shrapnel = [color=#007bff]shrapnel grenade[/color]
 
-## Misc
+# Misc
 clothing-black-jetpack = [color=#007bff]black jetpack[/color]
