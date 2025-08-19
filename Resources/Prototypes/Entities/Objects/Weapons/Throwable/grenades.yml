@@ -75,13 +75,13 @@
     beepInterval: 2 # 2 beeps total (at 0 and 2)
   # begin starcup: examinable clothing
   - type: ExaminableClothing
-    examineText: clothing-nanotrasen-backpack
+    examineText: clothing-grenade-explosive
   # end starcup
 
 - type: entity
   name: flashbang
   description: Eeeeeeeeeeeeeeeeeeeeee.
-  parent: [ GrenadeBase, BaseSecurityContraband, BaseExaminableClothing ] # starcup: shared contraband level with nt gear, examinable clothing
+  parent: [ GrenadeBase, BaseSecurityContraband ]
   id: GrenadeFlashBang
   components:
   - type: Sprite
@@ -271,7 +271,7 @@
         - stageTwo
   # begin starcup: examinable clothing
   - type: ExaminableClothing
-    examineText: clothing-nanotrasen-backpack
+    examineText: clothing-grenade-singularity
   # end starcup
   - type: StaticPrice
     price: 1000
@@ -439,7 +439,7 @@
       path: /Audio/Effects/countdown.ogg
   # begin starcup: examinable clothing
   - type: ExaminableClothing
-    examineText: clothing-nanotrasen-backpack
+    examineText: clothing-grenade-emp
   # end starcup
   - type: StaticPrice
     price: 666 # 2000 for 3, I love fractions
@@ -472,7 +472,7 @@
       path: /Audio/Effects/hallelujah.ogg
   # begin starcup: examinable clothing
   - type: ExaminableClothing
-    examineText: clothing-nanotrasen-backpack
+    examineText: clothing-grenade-holy
   # end starcup
   - type: StaticPrice
     price: 10000
