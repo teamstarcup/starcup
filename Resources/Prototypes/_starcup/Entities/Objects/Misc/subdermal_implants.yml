@@ -76,3 +76,16 @@
   - type: RattleOnTrigger
     targetUser: true
     radioChannel: SyndComm
+
+# Silly
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: PottymouthImplant
+  name: pottymouth implant
+  description: This implant renders the subject entirely incapable of using naughty language.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: GenericImplant
+    components:
+    - !type:PottyMouthComponent
