@@ -13,7 +13,11 @@ clothing-nanotrasen-headset = [color=#007bff]blueblood over-ear headset[/color]
 ## Eyes
 clothing-nanotrasen-visor = [color=#007bff]NanoTrasen visor[/color]
 clothing-nanotrasen-medical-visor = [color=#007bff]NanoTrasen medical visor[/color]
-clothing-nanotrasen-shoulder-holster = [color=#007bff]NanoTrasen backpack[/color]
+
+## Hands
+clothing-nanotrasen-knuckle-dusters = [color=#007bff]NanoTrasen knuckle dusters[/color]
+
+## Head
 clothing-nanotrasen-shoulder-holster = [color=#007bff]NanoTrasen backpack[/color]
 clothing-nanotrasen-shoulder-holster = [color=#007bff]NanoTrasen backpack[/color]
 clothing-nanotrasen-shoulder-holster = [color=#007bff]NanoTrasen backpack[/color]
