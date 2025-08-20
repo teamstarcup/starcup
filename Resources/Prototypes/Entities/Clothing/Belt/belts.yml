@@ -560,7 +560,7 @@
 # Belts without visualizers
 
 - type: entity
-  parent: [ClothingBeltAmmoProviderBase, BaseSecurityBartenderContraband]
+  parent: [ClothingBeltAmmoProviderBase, BaseSecurityBartenderContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingBeltBandolier
   name: bandolier
   description: A bandolier for holding shotgun ammunition.
@@ -576,6 +576,10 @@
       tags:
         - ShellShotgun
     capacity: 14
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-bandolier
+  # end starcup
 
 - type: entity
   parent: ClothingBeltBase

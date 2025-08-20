@@ -1,6 +1,7 @@
 # Clothing
 ## Belt
 clothing-security-belt = [color=#a40000]security belt[/color]
+clothing-bandolier = [color=#a40000]bandolier[/color]
 
 ## Hands
 clothing-combat-gloves = [color=#a40000]combat gloves[/color]
@@ -67,6 +68,8 @@ clothing-akms = [color=#a40000]AKMS assault rifle[/color]
 clothing-lecter = [color=#a40000]Lecter assault rifle[/color]
 clothing-enforcer = [color=#a40000]Enforcer shotgun[/color]
 clothing-kammerer = [color=#a40000]Kammerer shotgun[/color]
+clothing-double-barrel-shotgun = [color=#a40000]double-barreled shotgun[/color]
+clothing-sawn-off-shotgun = [color=#a40000]sawn-off shotgun[/color]
 clothing-drozd = [color=#a40000]Drozd submachine gun[/color]
 clothing-wt550 = [color=#a40000]WT550 submachine gun[/color]
 clothing-grenade-flashbang = [color=#a40000]flashbang grenade[/color]

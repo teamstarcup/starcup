@@ -107,7 +107,7 @@
 
 - type: entity
   name: double-barreled shotgun
-  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseSecurityBartenderZookeeperContraband]
+  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseSecurityBartenderZookeeperContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponShotgunDoubleBarreled
   description: An immortal classic. Uses .50 shotgun shells.
   components:
@@ -129,6 +129,10 @@
     graph: ShotgunSawn
     node: start
     deconstructionTarget: null
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-double-barrel-shotgun
+  # end starcup
 
 - type: entity
   name: double-barreled shotgun
@@ -197,7 +201,7 @@
 
 - type: entity
   name: sawn-off shotgun
-  parent: [ BaseWeaponShotgun, BaseSecurityBartenderContraband ]
+  parent: [ BaseWeaponShotgun, BaseSecurityBartenderContraband, BaseExaminableClothing ] # starcup: examinable clothing
   id: WeaponShotgunSawn
   description: Groovy! Uses .50 shotgun shells.
   components: # needs to be super inaccurate because you don't need to wield it
@@ -218,6 +222,10 @@
     graph: ShotgunSawn
     node: shotgunsawn
     deconstructionTarget: null
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-sawn-off-shotgun
+  # end starcup
 
 - type: entity
   name: sawn-off shotgun
