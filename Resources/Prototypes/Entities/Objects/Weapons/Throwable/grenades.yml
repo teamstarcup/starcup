@@ -565,9 +565,13 @@
     smokePrototype: AluminiumMetalFoam
   - type: StaticPrice
     price: 350
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-grenade-metal-foam
+  # end starcup
 
 - type: entity
-  parent: [ BaseEngineeringContraband, GrenadeBase ] # Prevent inheriting DeleteOnTrigger from SmokeGrenade
+  parent: [ BaseEngineeringContraband, GrenadeBase, BaseExaminableClothing ] # Prevent inheriting DeleteOnTrigger from SmokeGrenade # starcup: examinable clothing
   id: AirGrenade
   name: air grenade
   description: A special solid state chemical grenade used for quickly releasing standard air into a spaced area. Fills up to 30 tiles!
@@ -601,6 +605,10 @@
         enabled:
           True: { state: active }
           False: { state: spent }
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-grenade-air
+  # end starcup
 
 # Non-explosive "dummy" grenades to use as a distraction.
 

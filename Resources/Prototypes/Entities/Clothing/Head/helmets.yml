@@ -301,7 +301,7 @@
 
 #Atmos Fire Helmet
 - type: entity
-  parent: [ClothingHeadLightBase, BaseEngineeringContraband]
+  parent: [ClothingHeadLightBase, BaseEngineeringContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingHeadHelmetAtmosFire
   name: atmos fire helmet
   description: An atmos fire helmet, able to keep the user cool in any situation.
@@ -331,6 +331,10 @@
       Hair: HEAD
       Snout: HEAD
   - type: BreathMask
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-atmos-fire-helmet
+  # end starcup
 
 #Chitinous Helmet
 - type: entity

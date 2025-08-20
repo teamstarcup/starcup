@@ -104,7 +104,7 @@
 
 #Paramedic Voidsuit
 - type: entity
-  parent: [ClothingOuterEVASuitBase, BaseMedicalContraband] #Despite "Voidsuits are light hardsuits", since it parents of EVA Suits, it goes with the other softsuits
+  parent: [ClothingOuterEVASuitBase, BaseMedicalContraband, BaseExaminableClothing] #Despite "Voidsuits are light hardsuits", since it parents of EVA Suits, it goes with the other softsuits # starcup: examinable clothing
   id: ClothingOuterHardsuitVoidParamed
   name: paramedic void suit
   description: A void suit made for paramedics.
@@ -168,3 +168,7 @@
     tags:
     - CorgiWearable
     - WhitelistChameleon
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-paramedic-void-suit
+  # end starcup

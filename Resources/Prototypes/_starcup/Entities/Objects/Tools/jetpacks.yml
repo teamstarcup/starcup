@@ -1,7 +1,7 @@
 #Empty captain
 - type: entity
   id: JetpackCaptainSyndie
-  parent: JetpackCaptain
+  parent: [JetpackCaptain, BaseExaminableClothing] # starcup: examinable clothing
   suffix: Empty, Syndicate
   components:
   - type: Sprite
@@ -11,11 +11,13 @@
   - type: Item
     sprite: _starcup/Objects/Tanks/Jetpacks/captain_syndi.rsi
     size: Normal
+  - type: ExaminableClothing
+    examineText: clothing-captain-jetpack
 
 # Filled captain
 - type: entity
   id: JetpackCaptainFilledSyndie
-  parent: JetpackCaptainFilled
+  parent: [JetpackCaptainFilled, BaseExaminableClothing] # starcup: examinable clothing
   suffix: Filled, Syndicate
   components:
   - type: Sprite
@@ -25,3 +27,5 @@
   - type: Item
     sprite: _starcup/Objects/Tanks/Jetpacks/captain_syndi.rsi
     size: Normal
+  - type: ExaminableClothing
+    examineText: clothing-captain-jetpack

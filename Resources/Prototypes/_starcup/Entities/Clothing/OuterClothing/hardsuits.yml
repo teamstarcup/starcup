@@ -1,7 +1,7 @@
 # CREW HARDSUITS
 # Captain's Hardsuit
 - type: entity
-  parent: ClothingOuterHardsuitCap
+  parent: [ClothingOuterHardsuitCap, BaseExaminableClothing]
   id: ClothingOuterHardsuitCapSyndie
   suffix: Syndicate
   components:
@@ -11,6 +11,8 @@
     sprite: _starcup/Clothing/OuterClothing/Hardsuits/capspace_syndi.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCapSyndie
+  - type: ExaminableClothing
+    examineText: clothing-captain-hardsuit
 
 # ANTAG HARDSUITS
 # Blueblood Hardsuit

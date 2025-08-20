@@ -1,6 +1,6 @@
 - type: entity
   name: fireaxe
-  parent: [BaseItem, BaseEngineeringContraband]
+  parent: [BaseItem, BaseEngineeringContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: FireAxe
   description: Truly, the weapon of a madman. Who would think to fight fire with an axe?
   components:
@@ -50,6 +50,10 @@
     stealGroup: FireAxe
   - type: IgniteOnMeleeHit
     fireStacks: -4
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-fireaxe
+  # end starcup
 
 - type: entity
   id: FireAxeFlaming

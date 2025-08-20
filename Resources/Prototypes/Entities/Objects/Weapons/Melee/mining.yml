@@ -107,7 +107,7 @@
     radius: 4
 
 - type: entity
-  parent: [BaseWeaponCrusher, BaseSecurityCargoContraband]
+  parent: [BaseWeaponCrusher, BaseSecurityCargoContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponCrusher
   components:
   - type: Tag
@@ -164,6 +164,10 @@
   - type: GunRequiresWield
   - type: DisarmMalus
   - type: Prying
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-crusher
+  # end starcup
 
 - type: entity
   parent: [ BaseKnife, BaseWeaponCrusher, BaseSecurityCargoContraband]
@@ -208,6 +212,10 @@
         - ItemMask
         restitution: 0.3
         friction: 0.2
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-crusher-dagger
+  # end starcup
 
 # Like a crusher... but better
 - type: entity
@@ -238,3 +246,7 @@
   - type: Tag
     tags:
       - Pickaxe
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-crusher-glaive
+  # end starcup

@@ -22,7 +22,7 @@
     clothingPrototype: ClothingHeadHatHoodWinterHOPSyndie
 
 - type: entity
-  parent: ClothingOuterWinterCap
+  parent: [ClothingOuterWinterCap, BaseExaminableClothing]
   id: ClothingOuterWinterCapSyndie
   suffix: Syndicate
   components:
@@ -43,6 +43,8 @@
       - state: CAP-equipped-OUTERCLOTHING
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterCaptainSyndie
+  - type: ExaminableClothing
+    examineText: clothing-captain-winter-coat
 
 - type: entity
   parent: ClothingOuterWinterCoat

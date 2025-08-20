@@ -526,7 +526,7 @@
   # end starcup
 
 - type: entity
-  parent: [ClothingBeltBase, ClothingSlotBase, BaseCommandContraband]
+  parent: [ClothingBeltBase, ClothingSlotBase, BaseCommandContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingBeltSheath
   name: sabre sheath
   description: An ornate sheath designed to hold an officer's blade.
@@ -556,6 +556,10 @@
           tags:
           - CaptainSabre
   - type: Appearance
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-sabre-sheath
+  # end starcup
 
 # Belts without visualizers
 

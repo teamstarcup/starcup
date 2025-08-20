@@ -322,7 +322,7 @@
 # Insulated Gloves (Yellow Gloves)
 # Currently can not be greyscaled without looking like shit.
 - type: entity
-  parent: [ ClothingHandsBase, BaseEngineeringContraband ] # starcup: added contraband label
+  parent: [ ClothingHandsBase, BaseEngineeringContraband, BaseExaminableClothing ] # starcup: added contraband label, examinable clothing
   id: ClothingHandsGlovesColorYellow
   name: insulated gloves
   description: These gloves will protect the wearer from electric shocks.
@@ -340,6 +340,10 @@
   - type: Fiber
     fiberMaterial: fibers-insulative
     fiberColor: fibers-yellow
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-insulated-gloves
+  # end starcup
 
 # Budget Insulated Gloves
 - type: entity
@@ -367,6 +371,10 @@
   - type: Fiber
     fiberMaterial: fibers-insulative-frayed
     fiberColor: fibers-yellow
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-insulated-gloves-budget
+  # end starcup
 
 # Conductive Insulated Gloves
 - type: entity

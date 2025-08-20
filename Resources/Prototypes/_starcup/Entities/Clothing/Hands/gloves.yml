@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingHandsGlovesCaptain
+  parent: [ClothingHandsGlovesCaptain, BaseExaminableClothing]
   id: ClothingHandsGlovesCaptainSyndie
   description: Tyrian purple gloves, with a nice gold trim. Swanky.
   suffix: Syndicate
@@ -11,6 +11,8 @@
   - type: Fiber
     fiberMaterial: fibers-durathread
     fiberColor: fibers-tyrian-purple
+  - type: ExaminableClothing
+    examineText: clothing-captain-gloves
 
 - type: entity
   parent: [BaseTraitorContraband, ClothingHandsKnuckleDustersSyndicate, BaseExaminableClothing]

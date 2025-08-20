@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingOuterArmorCaptainCarapace
+  parent: [ClothingOuterArmorCaptainCarapace, BaseExaminableClothing]
   id: ClothingOuterArmorCaptainCarapaceSyndie
   suffix: Syndicate
   components:
@@ -7,6 +7,8 @@
     sprite: _starcup/Clothing/OuterClothing/Armor/captain_carapace_syndi.rsi
   - type: Clothing
     sprite: _starcup/Clothing/OuterClothing/Armor/captain_carapace_syndi.rsi
+  - type: ExaminableClothing
+    examineText: clothing-captain-carapace
 
 #Elite web vest
 - type: entity

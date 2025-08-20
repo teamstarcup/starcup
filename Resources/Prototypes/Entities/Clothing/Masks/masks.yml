@@ -106,7 +106,7 @@
   - type: IngestionBlocker
 
 - type: entity
-  parent: [ClothingMaskGas, BaseCargoContraband]
+  parent: [ClothingMaskGas, BaseCargoContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingMaskGasExplorer
   name: explorer gas mask
   description: A military-grade gas mask that can be connected to an air supply.
@@ -122,6 +122,10 @@
         Slash: 0.90
         Piercing: 0.95
         Heat: 0.95
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-explorer-gas-mask
+  # end starcup
 
 - type: entity
   parent: ClothingMaskPullableBase

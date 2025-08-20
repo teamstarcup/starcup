@@ -514,7 +514,7 @@
     - Kangaroo
 
 - type: entity
-  parent: [ClothingHandsBase, BaseGrandTheftContraband]
+  parent: [ClothingHandsBase, BaseGrandTheftContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingHandsKnuckleDustersQM
   name: QM's golden knuckle dusters
   description: "24karat gold infused with plasteel and branded with the Hawkmoon Acquisitions logo. A true symbol of the Quartermaster's might." # starcup - NT-SC swap
@@ -541,6 +541,10 @@
     - Kangaroo
   - type: StealTarget
     stealGroup: ClothingHandsKnuckleDustersQM
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-qm-knuckle-dusters
+  # end starcup
 
 - type: entity
   parent: [ClothingHandsBase, BaseSyndicateContraband]
