@@ -203,7 +203,7 @@
 
 #Space Ninja Helmet
 - type: entity
-  parent: [ClothingHeadEVAHelmetBase, BaseMajorContraband]
+  parent: [ClothingHeadEVAHelmetBase, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingHeadHelmetSpaceNinja
   name: space ninja helmet
   description: What may appear to be a simple black garment is in fact a highly sophisticated nano-weave helmet. Standard issue ninja gear.
@@ -221,6 +221,10 @@
     layers:
       Hair: HEAD
       Snout: HEAD
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-ninja-helmet
+  # end starcup
 
 #Knight Helmet
 - type: entity
@@ -458,7 +462,7 @@
 #Bone Helmet
 #No need to hide the hair on this one
 - type: entity
-  parent: [ ClothingHeadHelmetArmoredBase, BaseMinorContraband ]
+  parent: [ ClothingHeadHelmetArmoredBase, BaseMinorContraband, BaseExaminableClothing ] # starcup: examinable clothing
   id: ClothingHeadHelmetBone
   name: bone helmet
   description: Cool-looking helmet made of skull of your enemies.
@@ -470,10 +474,14 @@
   - type: Construction
     graph: BoneHelmet
     node: helmet
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-bone-helmet
+  # end starcup
 
 #Ironclad II Helmet
 - type: entity
-  parent: [ ClothingHeadHelmetArmoredBase, BaseMinorContraband ]
+  parent: [ ClothingHeadHelmetArmoredBase, BaseMinorContraband, BaseExaminableClothing ] # starcup: examinable clothing
   id: ClothingHeadHelmetPodWars
   name: ironclad II helmet
   description: An ironclad II helmet, a relic of the pod wars.
@@ -485,6 +493,10 @@
   - type: HideLayerClothing
     layers:
       Hair: HEAD
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-ironclad-helmet
+  # end starcup
 
 #Justice Helmet
 - type: entity

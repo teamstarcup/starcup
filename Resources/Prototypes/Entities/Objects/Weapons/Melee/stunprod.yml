@@ -1,6 +1,6 @@
 - type: entity
   name: stun prod
-  parent: [BaseItem, BaseMinorContraband]
+  parent: [BaseItem, BaseMinorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: Stunprod
   description: A stun prod for illegal incapacitation.
   components:
@@ -68,3 +68,7 @@
   - type: Construction
     graph: makeshiftstunprod
     node: msstunprod
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-stun-prod
+  # end starcup

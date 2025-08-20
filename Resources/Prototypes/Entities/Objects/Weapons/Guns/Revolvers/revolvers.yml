@@ -161,7 +161,7 @@
 
 - type: entity
   name: pirate revolver
-  parent: [BaseWeaponRevolver, BaseMajorContraband]
+  parent: [BaseWeaponRevolver, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponRevolverPirate
   description: A crude single-action revolver handmade by a space pirate. Old and covered in rust, it somehow still works. Loads 5 rounds of .45 magnum.
   components:
@@ -178,6 +178,10 @@
     capacity: 5
     chambers: [ True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null ]
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-pirate-revolver
+  # end starcup
 
 - type: entity
   parent: WeaponRevolverPirate

@@ -271,7 +271,7 @@
       - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingEyesBase, BaseMajorContraband]
+  parent: [ClothingEyesBase, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingEyesVisorNinja
   name: ninja visor
   description: An advanced visor protecting a ninja's eyes from flashing lights.
@@ -281,6 +281,10 @@
   - type: Clothing
     sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
   - type: FlashImmunity
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-ninja-visor
+  # end starcup
 
 - type: entity
   parent: ClothingEyesBase

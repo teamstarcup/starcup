@@ -466,7 +466,7 @@
     slots: WITHOUT_POCKET
 
 - type: entity
-  parent: [ ClothingOuterBaseLarge, BaseMajorContraband, AllowSuitStorageClothing ]
+  parent: [ ClothingOuterBaseLarge, BaseMajorContraband, AllowSuitStorageClothing, BaseExaminableClothing ] # starcup: examinable clothing
   id: ClothingOuterArmorBone
   name: bone armor
   description: Sits on you like a second skin.
@@ -493,6 +493,10 @@
     node: armor
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-bone-armor
+  # end starcup
 
 - type: entity
   parent: [ ClothingOuterBaseLarge, BaseMajorContraband, AllowSuitStorageClothing ]

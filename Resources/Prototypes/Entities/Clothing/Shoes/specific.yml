@@ -122,7 +122,7 @@
     maxContactWalkSlowdown: 0.7
 
 - type: entity
-  parent: [ClothingShoesBaseButcherable, BaseMajorContraband]
+  parent: [ClothingShoesBaseButcherable, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingShoesSpaceNinja
   name: space ninja shoes
   description: A pair of nano-enhanced boots with built-in magnetic suction cups.
@@ -139,6 +139,10 @@
     sprintModifier: 1.3
   - type: FootstepModifier
     footstepSoundCollection: null
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-ninja-shoes
+  # end starcup
 
 - type: entity
   parent: ClothingShoesBaseButcherable

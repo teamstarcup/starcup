@@ -128,7 +128,7 @@
 
 - type: entity
   name: retro laser blaster
-  parent: [BaseWeaponBatterySmall, BaseMajorContraband]
+  parent: [BaseWeaponBatterySmall, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponLaserGun
   description: A weapon using light amplified by the stimulated emission of radiation.
   components:
@@ -148,10 +148,14 @@
     steps: 5
     zeroVisible: true
   - type: Appearance
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-retro-laser-blaster
+  # end starcup
 
 - type: entity
   name: makeshift laser pistol
-  parent: [BaseWeaponBatterySmall, BaseMinorContraband]
+  parent: [BaseWeaponBatterySmall, BaseMinorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponMakeshiftLaser
   description: Better pray it won't burn your hands off.
   components:
@@ -176,10 +180,14 @@
   - type: Battery
     maxCharge: 500
     startingCharge: 500
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-makeshift-laser
+  # end starcup
 
 - type: entity
   name: tesla gun
-  parent: [BaseWeaponBattery, BaseMajorContraband]
+  parent: [BaseWeaponBattery, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponTeslaGun
   description: The power of the primordial element of lightning in your hands.
   components:
@@ -205,6 +213,10 @@
     steps: 5
     zeroVisible: true
   - type: Appearance
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-tesla-gun
+  # end starcup
 
 - type: entity
   name: practice laser rifle

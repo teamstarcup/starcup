@@ -213,7 +213,7 @@
 
 - type: entity
   name: shiv
-  parent: [BaseKnife, BaseMinorContraband]
+  parent: [BaseKnife, BaseMinorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: Shiv
   description: A crude weapon fashioned from a piece of cloth and a glass shard.
   components:
@@ -237,6 +237,10 @@
     sprite: Objects/Weapons/Melee/shiv.rsi
   - type: DisarmMalus
     malus: 0.225
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-shiv
+  # end starcup
 
 - type: entity
   name: reinforced shiv
@@ -256,6 +260,10 @@
     sprite: Objects/Weapons/Melee/reinforced_shiv.rsi
   - type: Sprite
     sprite: Objects/Weapons/Melee/reinforced_shiv.rsi
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-shiv-reinforced
+  # end starcup
 
 - type: entity
   name: plasma shiv
@@ -275,6 +283,10 @@
     sprite: Objects/Weapons/Melee/plasma_shiv.rsi
   - type: Sprite
     sprite: Objects/Weapons/Melee/plasma_shiv.rsi
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-shiv-plasma
+  # end starcup
 
 - type: entity
   name: uranium shiv
@@ -295,6 +307,10 @@
     sprite: Objects/Weapons/Melee/uranium_shiv.rsi
   - type: Sprite
     sprite: Objects/Weapons/Melee/uranium_shiv.rsi
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-shiv-uranium
+  # end starcup
 
 - type: entity
   name: throwing knife

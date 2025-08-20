@@ -40,7 +40,7 @@
 
 - type: entity
   name: Kardashev-Mosin
-  parent: [BaseWeaponSniper, BaseGunWieldable, BaseMajorContraband]
+  parent: [BaseWeaponSniper, BaseGunWieldable, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponSniperMosin
   description: A true relic, the Kardashev-Mosin has served in nearly every armed conflict since its creation 670 years ago. The bolt-action design of the rifle remains virtually identical to its original design, whether used for hunting, sniping, or endless trench warfare. Loads 10 rounds of .30 rifle.
   components:
@@ -88,6 +88,10 @@
   - type: GunRequiresWield
   - type: StaticPrice
     price: 500
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-mosin
+  # end starcup
 
 - type: entity
   name: Hristov
@@ -129,7 +133,7 @@
 
 - type: entity
   name: musket
-  parent: [ BaseWeaponSniper, BaseGunWieldable, BaseMajorContraband ]
+  parent: [ BaseWeaponSniper, BaseGunWieldable, BaseMajorContraband, BaseExaminableClothing ] # starcup: examinable clothing
   id: Musket
   description: This should've been in a museum long before you were born. Uses .60 anti-materiel ammo.
   components:
@@ -165,10 +169,14 @@
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
   - type: GunRequiresWield
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-musket
+  # end starcup
 
 - type: entity
   name: flintlock pistol
-  parent: [BaseWeaponSniper, BaseMajorContraband]
+  parent: [BaseWeaponSniper, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponPistolFlintlock
   description: A pirate's companion. Yarrr! Uses .45 magnum ammo.
   components:
@@ -196,6 +204,10 @@
     proto: CartridgeMagnum
   - type: StaticPrice
     price: 0
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-flintlock-pistol
+  # end starcup
 
 - type: entity
   parent: WeaponPistolFlintlock
