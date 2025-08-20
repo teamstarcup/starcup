@@ -29,7 +29,7 @@
 
 #Basic Helmet (Security Helmet)
 - type: entity
-  parent: [ClothingHeadHelmetArmoredBase, BaseSecurityContraband]
+  parent: [ClothingHeadHelmetArmoredBase, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingHeadHelmetBasic
   name: helmet
   description: Standard security gear. Protects the head from impacts.
@@ -45,6 +45,10 @@
   - type: HideLayerClothing
     layers:
       Hair: HEAD
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-helmet
+  # end starcup
 
 #Mercenary Helmet
 - type: entity
@@ -63,7 +67,7 @@
 
 #SWAT Helmet
 - type: entity
-  parent: [ClothingHeadHelmetBase, BaseSecurityContraband]
+  parent: [ClothingHeadHelmetBase, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingHeadHelmetSwat
   name: SWAT helmet
   description: An extremely robust helmet, commonly used by paramilitary forces. This one has the Nanotrasen logo emblazoned on the top.
@@ -86,6 +90,10 @@
   - type: HideLayerClothing
     layers:
       Hair: HEAD
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-swat-helmet
+  # end starcup
 
 #Syndicate SWAT Helmet
 - type: entity
@@ -105,7 +113,7 @@
 
 #Light Riot Helmet
 - type: entity
-  parent: [ClothingHeadHelmetBase, BaseSecurityContraband]
+  parent: [ClothingHeadHelmetBase, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingHeadHelmetRiot
   name: light riot helmet
   description: It's a helmet specifically designed to protect against close range attacks.
@@ -124,6 +132,10 @@
   - type: HideLayerClothing
     layers:
       Hair: HEAD
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-riot-helmet
+  # end starcup
 
 #Bombsuit Helmet
 - type: entity

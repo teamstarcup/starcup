@@ -123,7 +123,7 @@
 
 - type: entity
   name: Drozd
-  parent: [BaseWeaponSubMachineGun, BaseSecurityContraband]
+  parent: [BaseWeaponSubMachineGun, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponSubMachineGunDrozd
   description: A modern SMG imported by Hawkmoon from unknown suppliers—the Gorlex Marauders, rumor has it. It features an exceptional rate of fire in burst mode, useful for holding defensive angles or engaging hostiles at longer ranges. Feeds from .35 SMG magazines. # starcup - NT-SC swap
   components:
@@ -179,10 +179,14 @@
       steps: 5
       zeroVisible: true
     - type: Appearance
+    # begin starcup: examinable clothing
+    - type: ExaminableClothing
+      examineText: clothing-drozd
+    # end starcup
 
 - type: entity
   name: WT550
-  parent: [BaseWeaponSubMachineGun, BaseSecurityContraband]
+  parent: [BaseWeaponSubMachineGun, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponSubMachineGunWt550
   description: A truly unique firearm rumored to be of Gorlex make, the WT550 was designed as a compact submachine gun fully controllable with one hand. It contains an exotic internal recoil buffer and feeds from special top-mounted .35 magazines. # starcup - NT-SC swap, we all know NT gets their good ballistics from the Gorlex
   components:
@@ -241,3 +245,7 @@
     steps: 6
     zeroVisible: true
   - type: Appearance
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-wt550
+  # end starcup

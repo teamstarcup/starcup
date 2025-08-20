@@ -21,7 +21,7 @@
     hideOnToggle: true
 
 - type: entity
-  parent: [ClothingMaskGas, BaseSecurityContraband]
+  parent: [ClothingMaskGas, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingMaskGasSecurity
   name: security gas mask
   description: A standard issue Security gas mask.
@@ -39,6 +39,10 @@
         Slash: 0.95
         Piercing: 0.95
         Heat: 0.95
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-security-gas-mask
+  # end starcup
 
 - type: entity
   parent: [ClothingMaskGas, BaseSyndicateContraband]
@@ -372,7 +376,7 @@
     accent: StutteringAccent
 
 - type: entity
-  parent: [ ClothingMaskGas, BaseSecurityContraband ]
+  parent: [ ClothingMaskGas, BaseSecurityContraband, BaseExaminableClothing ] # starcup: examinable clothing
   id: ClothingMaskGasSwat
   name: swat gas mask
   description: A elite issue Security gas mask.
@@ -398,6 +402,10 @@
         Slash: 0.90
         Piercing: 0.95
         Heat: 0.95
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-swat-gas-mask
+  # end starcup
 
 - type: entity
   parent: [ ClothingMaskGas, BaseSecurityCargoContraband ]

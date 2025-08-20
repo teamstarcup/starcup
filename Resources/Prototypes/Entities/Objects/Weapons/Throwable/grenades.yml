@@ -81,7 +81,7 @@
 - type: entity
   name: flashbang
   description: Eeeeeeeeeeeeeeeeeeeeee.
-  parent: [ GrenadeBase, BaseSecurityContraband ]
+  parent: [ GrenadeBase, BaseSecurityContraband, BaseExaminableClothing ] # starcup: examinable clothing
   id: GrenadeFlashBang
   components:
   - type: Sprite
@@ -115,6 +115,10 @@
     tags:
     - HandGrenade
     - GrenadeFlashBang
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-grenade-flashbang
+  # end starcup
 
 - type: entity
   id: GrenadeFlashEffect
@@ -478,7 +482,7 @@
     price: 10000
 
 - type: entity
-  parent: [ GrenadeBase, BaseSecurityContraband ]
+  parent: [ GrenadeBase, BaseSecurityContraband, BaseExaminableClothing ] # starcup: examinable clothing
   id: SmokeGrenade
   name: smoke grenade
   description: A tactical grenade that releases a large, long-lasting cloud of smoke when used.
@@ -500,6 +504,10 @@
   - type: TimerTriggerVisuals
     primingSound:
       path: /Audio/Items/smoke_grenade_prime.ogg
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-grenade-smoke
+  # end starcup
 
 - type: entity
   parent: [ BaseCivilianContraband, SmokeGrenade ]

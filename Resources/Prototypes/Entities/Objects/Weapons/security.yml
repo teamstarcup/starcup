@@ -1,6 +1,6 @@
 - type: entity
   name: stun baton
-  parent: [BaseItem, BaseSecurityContraband]
+  parent: [BaseItem, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: Stunbaton
   description: A stun baton for incapacitating people with. Actively harming with this is considered bad tone.
   components:
@@ -91,6 +91,10 @@
     guides:
     - Security
     - Antagonists
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-stun-baton
+  # end starcup
 
 - type: entity
   name: truncheon
@@ -128,6 +132,10 @@
     guides:
     - Security
     - Antagonists
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-truncheon
+  # end starcup
 
 - type: entity
   name: flash
@@ -175,6 +183,10 @@
       guides:
       - Security
       - Antagonists
+    # begin starcup: examinable clothing
+    - type: ExaminableClothing
+      examineText: clothing-flash
+    # end starcup
 
 - type: entity
   name: flash

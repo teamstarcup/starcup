@@ -191,7 +191,7 @@
 
 - type: entity
   name: mk 58
-  parent: [BaseWeaponPistol, BaseSecurityContraband]
+  parent: [BaseWeaponPistol, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponPistolMk58
   description: Designed by SyndComm’s malnourished Small Arms Division, the Mk58 is a conventional semi-automatic pistol with a simple recoil-operated action and excellent reliability. The standard sidearm of NanoTrasen’s station security and emergency response teams. Feeds from .35 pistol magazines. # starcup - NT-SC swap
   components:
@@ -210,10 +210,14 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-mk58
+  # end starcup
 
 - type: entity
   name: N1984
-  parent: [BaseWeaponPistol, BaseSecurityContraband]
+  parent: [BaseWeaponPistol, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponPistolN1984
   description: An exceptionally powerful ‘hand cannon’ designed as part of NanoTrasen's BFG initiative. Chambered in .45, the Lord’s caliber, it is generally considered too unwieldy for standard use by the Syndicate but has become something of a status symbol among NanoTrasen officials. Feeds from .45 pistol magazines. # starcup - NT-SC swap
   components:
@@ -255,3 +259,7 @@
         whitelist:
           tags:
             - CartridgeMagnum
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-n1984
+  # end starcup

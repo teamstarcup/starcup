@@ -142,7 +142,7 @@
 
 - type: entity
   name: Enforcer
-  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseSecurityContraband]
+  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponShotgunEnforcer
   description: A high-grade semi-automatic shotgun, and the Security's last resort. Uses .50 shotgun shells. # starcup: rewritten for tone
   components: # intend for Enforcer to have wider choke for semi-auto function
@@ -154,6 +154,10 @@
     sprite: Objects/Weapons/Guns/Shotguns/enforcer_inhands_64x.rsi
   - type: BallisticAmmoProvider
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-enforcer
+  # end starcup
 
 - type: entity
   parent: WeaponShotgunEnforcer
@@ -165,7 +169,7 @@
 
 - type: entity
   name: Kammerer
-  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseSecurityContraband]
+  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponShotgunKammerer
   description: An old yet faithful design, and a favorite among irregular forces of many worlds. Uses .50 shotgun shells.
   components: # intend for Kammerer to have tighter choke for slower fire rate and/or manual cycling
@@ -186,6 +190,10 @@
   - type: Tag
     tags:
     - WeaponShotgunKammerer
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-kammerer
+  # end starcup
 
 - type: entity
   name: sawn-off shotgun

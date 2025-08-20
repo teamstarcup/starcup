@@ -261,7 +261,7 @@
       - type: CriminalRecordsHacker
 
 - type: entity
-  parent: [ ClothingHandsGlovesColorBlack, BaseSecurityEngineeringContraband ]
+  parent: [ ClothingHandsGlovesColorBlack, BaseSecurityEngineeringContraband, BaseExaminableClothing ] # starcup: examinable clothing
   id: ClothingHandsGlovesCombat
   name: combat gloves
   description: These tactical gloves are fireproof and shock resistant.
@@ -273,6 +273,10 @@
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-insulative
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-combat-gloves
+  # end starcup
 
 # can't parent combat gloves since they are butcherable
 - type: entity
@@ -428,7 +432,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingHandsBase, BaseSecurityContraband]
+  parent: [ClothingHandsBase, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingHandsGlovesForensic
   name: forensic gloves
   description: Gloves that do not leave fibers, to ensure that crucial evidence remains preserved. # starcup: rewritten for tone
@@ -441,6 +445,10 @@
   - type: GuideHelp
     guides:
     - Forensics
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-forensic-gloves
+  # end starcup
 
 # TODO Make lubed items not slip in hands
 - type: entity
@@ -564,7 +572,7 @@
 
 - type: entity
   name: stun knuckle dusters
-  parent: [ClothingHandsBase, BaseToggleClothing, BaseSecurityContraband]
+  parent: [ClothingHandsBase, BaseToggleClothing, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingHandsKnuckleDustersStun
   description: A pair of knuckle dusters combined with the tech of a stun baton, for officers unafraid to get their hands dirty. # starcup: rewritten for tone
   components:
@@ -629,6 +637,10 @@
     guides:
     - Security
     - Antagonists
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-stun-knuckle-dusters
+  # end starcup
 
 - type: entity #Admeme
   parent: ClothingHandsKnuckleDusters

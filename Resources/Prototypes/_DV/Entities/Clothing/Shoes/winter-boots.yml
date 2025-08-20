@@ -99,7 +99,7 @@
     sprite: _DV/Clothing/Shoes/Boots/winterbootshop.rsi
 
 - type: entity
-  parent: [ClothingShoesBaseWinterBoots, ClothingShoesMilitaryBase, BaseSecurityContraband] # DeltaV - added ClothingShoesMilitaryBase, BaseSecurityContraband to parents
+  parent: [ClothingShoesBaseWinterBoots, ClothingShoesMilitaryBase, BaseSecurityContraband, BaseExaminableClothing] # DeltaV - added ClothingShoesMilitaryBase, BaseSecurityContraband to parents # starcup: examinable clothing
   id: ClothingShoesBootsWinterHeadOfSecurity
   name: HoS's winter boots
   components:
@@ -111,6 +111,10 @@
   - type: ClothingSlowOnDamageModifier
     modifier: 0.5
   # End DeltaV additions
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-hos-winter-boots
+  # end starcup
 
 - type: entity
   parent: ClothingShoesBaseWinterBoots

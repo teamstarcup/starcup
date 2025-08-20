@@ -43,7 +43,7 @@
         friction: 0.2
 
 - type: entity
-  parent: [ProjectileGrenadeBase, BaseSecurityContraband]
+  parent: [ProjectileGrenadeBase, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: GrenadeStinger
   name: stinger grenade
   description: Nothing to see here, please disperse.
@@ -74,6 +74,10 @@
   - type: TimerTriggerVisuals
     primingSound:
       path: /Audio/Effects/countdown.ogg
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-grenade-stinger
+  # end starcup
 
 - type: entity
   parent: [ProjectileGrenadeBase, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing

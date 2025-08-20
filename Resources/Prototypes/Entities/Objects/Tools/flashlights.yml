@@ -77,7 +77,7 @@
 
 - type: entity
   name: seclite
-  parent: [FlashlightLantern, BaseSecurityContraband]
+  parent: [FlashlightLantern, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: FlashlightSeclite
   description: A robust flashlight used by security.
   components:
@@ -125,6 +125,10 @@
     quickEquip: false
     slots:
       - Belt
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-seclite
+  # end starcup
 
 - type: entity
   parent: FlashlightLantern

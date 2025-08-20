@@ -11,7 +11,7 @@
   - type: Matchbox
 
 - type: entity
-  parent: [ClothingShoesMilitaryBase, BaseSecurityContraband]
+  parent: [ClothingShoesMilitaryBase, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingShoesBootsJack
   name: jackboots
   description: SyndComm-issue Security combat boots for combat scenarios or combat situations. All combat, all the time. # starcup - NT-SC swap
@@ -22,6 +22,10 @@
     sprite: Clothing/Shoes/Boots/jackboots.rsi
   - type: ClothingSlowOnDamageModifier
     modifier: 0.5
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-jackboots
+  # end starcup
 
 - type: entity
   parent: ClothingShoesBaseButcherable
@@ -47,7 +51,7 @@
     sprite: Clothing/Shoes/Boots/performer.rsi
 
 - type: entity
-  parent: [ClothingShoesMilitaryBase, BaseSecurityContraband]
+  parent: [ClothingShoesMilitaryBase, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingShoesBootsCombat
   name: combat boots
   description: Robust combat boots for combat scenarios or combat situations. It's in the name, after all. # starcup: rewritten for tone
@@ -56,6 +60,10 @@
     sprite: Clothing/Shoes/Boots/combatboots.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Boots/combatboots.rsi
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-combat-boots
+  # end starcup
 
 - type: entity
   parent: ClothingShoesMilitaryBase
@@ -151,7 +159,7 @@
     sprite: Clothing/Shoes/Boots/winterbootssci.rsi
 
 - type: entity
-  parent: [ClothingShoesBaseWinterBoots, ClothingShoesMilitaryBase, BaseSecurityContraband]
+  parent: [ClothingShoesBaseWinterBoots, ClothingShoesMilitaryBase, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingShoesBootsWinterSec
   name: security winter boots
   components:
@@ -159,6 +167,10 @@
     sprite: Clothing/Shoes/Boots/winterbootssec.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Boots/winterbootssec.rsi
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-security-winter-boots
+  # end starcup
 
 - type: entity
   parent: [ClothingShoesBaseWinterBoots, BaseSyndicateContraband]
