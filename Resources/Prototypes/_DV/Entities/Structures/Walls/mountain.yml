@@ -43,6 +43,11 @@
     oreChance: 0.2
     oreRarityPrototypeId: RandomOreDistributionStandard
   - type: IsRoof # starcup: weather and lighting enhancements
+  - type: Tag # starcup: rock walls display correctly on station maps
+    tags:
+    - Wall
+  - type: PlacementReplacement # starcup: quick replacing
+    key: walls
 
 - type: entity
   id: MountainRockMining
@@ -104,6 +109,11 @@
     key: walls
     base: rock_
   - type: IsRoof # starcup: weather and lighting enhancements
+  - type: Tag # starcup: rock walls display correctly on station maps
+    tags:
+    - Wall
+  - type: PlacementReplacement # starcup: quick replacing
+    key: walls
 
 - type: entity
   id: AsteroidAltRockMining
