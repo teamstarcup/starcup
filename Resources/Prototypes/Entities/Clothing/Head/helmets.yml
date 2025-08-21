@@ -481,7 +481,7 @@
 
 #Ironclad II Helmet
 - type: entity
-  parent: [ ClothingHeadHelmetArmoredBase, BaseMinorContraband, BaseExaminableClothing ] # starcup: examinable clothing
+  parent: [ ClothingHeadHelmetArmoredBase, BaseMinorContraband]
   id: ClothingHeadHelmetPodWars
   name: ironclad II helmet
   description: An ironclad II helmet, a relic of the pod wars.
@@ -493,10 +493,6 @@
   - type: HideLayerClothing
     layers:
       Hair: HEAD
-  # begin starcup: examinable clothing
-  - type: ExaminableClothing
-    examineText: clothing-ironclad-helmet
-  # end starcup
 
 #Justice Helmet
 - type: entity
