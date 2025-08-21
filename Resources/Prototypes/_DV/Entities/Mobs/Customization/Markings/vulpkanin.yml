@@ -273,7 +273,8 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Vulpkanin, Felinid]
-  layering: # Floof
+  # begin floof: tail layering fixes
+  layering:
     vulp: TailOversuit
     vulp-fade: TailOversuit
     vulp_BACK: TailBehind
@@ -290,13 +291,15 @@
       state: vulp_BACK
     - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp-fade_BACK
+  # end floof
 
 - type: marking
   id: VulpTailAnimated
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: []
-  layering: # Floof
+  # begin floof: tail layering fixes
+  layering:
     vulp_wag: TailOversuit
     vulp_wag-fade: TailOversuit
     vulp_wag_BACK: TailBehind
@@ -313,13 +316,15 @@
       state: vulp_wag_BACK
     - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp_wag-fade_BACK
+  # end floof
 
 - type: marking
   id: VulpTailTip
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Vulpkanin, Felinid]
-  layering: # Floof
+  # begin floof: tail layering fixes
+  layering:
     vulp: TailOversuit
     tip: TailOversuit
     vulp_BACK: TailBehind
@@ -336,13 +341,15 @@
       state: vulp_BACK
     - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp-tip_BACK
+  # end floof
 
 - type: marking
   id: VulpTailTipAnimated
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: []
-  layering: # Floof
+  # begin floof: tail layering fixes
+  layering:
     vulp_wag: TailOversuit
     vulp_wag-tip: TailOversuit
     vulp_wag_BACK: TailBehind
@@ -359,13 +366,15 @@
       state: vulp_wag_BACK
     - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp_wag-tip_BACK
+  # end floof
 
 - type: marking
   id: VulpTailAlt
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Vulpkanin, Felinid]
-  layering: # Floof
+  # begin floof: tail layering fixes
+  layering:
     vulp_alt: TailOversuit
     vulp_alt-fade: TailOversuit
     vulp_alt_BACK: TailBehind
@@ -382,13 +391,15 @@
       state: vulp_alt_BACK
     - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp_alt-fade_BACK
+  # end floof
 
 - type: marking
   id: VulpTailAltTip
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Vulpkanin, Felinid]
-  layering: # Floof
+  # begin floof: tail layering fixes
+  layering:
     vulp_alt: TailOversuit
     vulp_alt-tip: TailOversuit
     vulp_alt_BACK: TailBehind
@@ -405,6 +416,7 @@
       state: vulp_alt_BACK
     - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp_alt-tip_BACK
+  # end floof
 
 - type: marking
   id: VulpTailLong
