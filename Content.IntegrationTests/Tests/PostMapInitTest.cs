@@ -72,18 +72,22 @@ namespace Content.IntegrationTests.Tests
             "TestTeg",
             "MeteorArena",
             "dm01-entryway",
+            // begin starcup
             "Syndcomm",
-            "Glacier",  // starcup
-            "Loop", // starcup
-            "Omega", // starcup
-            "Reach", // starcup
-            "Saltern", // starcup
-            "Byoin",  // starcup
-            "Train", // starcup
-            "Shoukou", // starcup
-            "EventFrigidPeril", // starcup
-            "EventCruiseControl", // starcup
+            "Glacier",
+            "Loop",
+            "Omega",
+            "Reach",
+            "Saltern",
+            "Byoin",
+            "Train",
+            "Shoukou",
+            "Banana",
+            "EventFrigidPeril",
+            "EventCruiseControl",
+            // end starcup
         };
+
         // end starcup
 
         private static readonly ProtoId<EntityCategoryPrototype> DoNotMapCategory = "DoNotMap";
