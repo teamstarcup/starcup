@@ -1,0 +1,328 @@
+- type: entity
+  id: BaseSofaPiece
+  parent: SeatBase
+  name: sofa
+  description: Mass-produced seating made of only the finest compressed organic sawdust and wood glue. There's a Prop 65 tag underneath it.
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Physics
+    bodyType: Static
+  - type: Transform
+    anchored: true
+  - type: Rotatable
+  - type: PlacementReplacement
+    key: couches
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Pullable
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+
+- type: entity
+  id: BaseSofaPieceMiddle
+  parent: BaseSofaPiece
+  suffix: Middle
+  abstract: true
+  components:
+  - type: Sprite
+    state: middle
+
+- type: entity
+  id: BaseSofaPieceLeft
+  parent: BaseSofaPiece
+  suffix: Left
+  abstract: true
+  components:
+  - type: Sprite
+    state: left
+
+- type: entity
+  id: BaseSofaPieceRight
+  parent: BaseSofaPiece
+  suffix: Right
+  abstract: true
+  components:
+  - type: Sprite
+    state: right
+
+- type: entity
+  id: BaseSofaPieceCorner
+  parent: BaseSofaPiece
+  suffix: Corner
+  abstract: true
+  components:
+  - type: Sprite
+    state: corner
+
+# Plain sofa - White
+- type: entity
+  id: BaseSofaTypePlainWhite
+  name: white sofa
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Furniture/Bench/sofa.rsi
+
+- type: entity
+  id: BenchSofaPlainWhiteMiddle
+  parent: [ BaseSofaTypePlainWhite, BaseSofaPieceMiddle ]
+
+- type: entity
+  id: BenchSofaPlainWhiteLeft
+  parent: [ BaseSofaTypePlainWhite, BaseSofaPieceLeft ]
+
+- type: entity
+  id: BenchSofaPlainWhiteRight
+  parent: [ BaseSofaTypePlainWhite, BaseSofaPieceRight ]
+
+- type: entity
+  id: BenchSofaPlainWhiteCorner
+  parent: [ BaseSofaTypePlainWhite, BaseSofaPieceCorner ]
+
+# Plain sofa - Gray
+- type: entity
+  id: BaseSofaTypePlainGray
+  name: gray sofa
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Furniture/Bench/sofa.rsi
+    color: "#808080"
+
+- type: entity
+  id: BaseSofaTypePlainGrayMiddle
+  parent: [ BaseSofaTypePlainGray, BaseSofaPieceMiddle ]
+
+- type: entity
+  id: BaseSofaTypePlainGrayLeft
+  parent: [ BaseSofaTypePlainGray, BaseSofaPieceLeft ]
+
+- type: entity
+  id: BaseSofaTypePlainGrayRight
+  parent: [ BaseSofaTypePlainGray, BaseSofaPieceRight ]
+
+- type: entity
+  id: BaseSofaTypePlainGrayCorner
+  parent: [ BaseSofaTypePlainGray, BaseSofaPieceCorner ]
+
+# Plain sofa - Dark Gray
+- type: entity
+  id: BaseSofaTypePlainGrayDark
+  name: dark gray sofa
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Furniture/Bench/sofa.rsi
+    color: "#404040"
+
+- type: entity
+  id: BaseSofaTypePlainGrayDarkMiddle
+  parent: [ BaseSofaTypePlainGrayDark, BaseSofaPieceMiddle ]
+
+- type: entity
+  id: BaseSofaTypePlainGrayDarkLeft
+  parent: [ BaseSofaTypePlainGrayDark, BaseSofaPieceLeft ]
+
+- type: entity
+  id: BaseSofaTypePlainGrayDarkRight
+  parent: [ BaseSofaTypePlainGrayDark, BaseSofaPieceRight ]
+
+- type: entity
+  id: BaseSofaTypePlainGrayDarkCorner
+  parent: [ BaseSofaTypePlainGrayDark, BaseSofaPieceCorner ]
+
+# Plain sofa - Brown
+- type: entity
+  id: BaseSofaTypePlainBrown
+  name: brown sofa
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Furniture/Bench/sofa.rsi
+    color: "#805a40"
+
+- type: entity
+  id: BenchSofaPlainBrownMiddle
+  parent: [ BaseSofaTypePlainBrown, BaseSofaPieceMiddle ]
+
+- type: entity
+  id: BenchSofaPlainBrownLeft
+  parent: [ BaseSofaTypePlainBrown, BaseSofaPieceLeft ]
+- type: entity
+  id: BenchSofaPlainBrownRight
+  parent: [ BaseSofaTypePlainBrown, BaseSofaPieceRight ]
+
+- type: entity
+  id: BenchSofaPlainBrownCorner
+  parent: [ BaseSofaTypePlainBrown, BaseSofaPieceCorner ]
+
+# Plain sofa - Beige
+- type: entity
+  id: BaseSofaTypePlainBeige
+  name: beige sofa
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Furniture/Bench/sofa.rsi
+    color: "#998254"
+
+- type: entity
+  id: BenchSofaPlainBeigeMiddle
+  parent: [ BaseSofaTypePlainBeige, BaseSofaPieceMiddle ]
+
+- type: entity
+  id: BenchSofaPlainBeigeLeft
+  parent: [ BaseSofaTypePlainBeige, BaseSofaPieceLeft ]
+
+- type: entity
+  id: BenchSofaPlainBeigeRight
+  parent: [ BaseSofaTypePlainBeige, BaseSofaPieceRight ]
+
+- type: entity
+  id: BenchSofaPlainBeigeCorner
+  parent: [ BaseSofaTypePlainBeige, BaseSofaPieceCorner ]
+
+# Plain sofa - Olive
+- type: entity
+  id: BaseSofaTypePlainOlive
+  name: olive sofa
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Furniture/Bench/sofa.rsi
+    color: "#91996b"
+
+- type: entity
+  id: BenchSofaPlainOliveMiddle
+  parent: [ BaseSofaTypePlainOlive, BaseSofaPieceMiddle ]
+
+- type: entity
+  id: BenchSofaPlainOliveLeft
+  parent: [ BaseSofaTypePlainOlive, BaseSofaPieceLeft ]
+
+- type: entity
+  id: BenchSofaPlainOliveRight
+  parent: [ BaseSofaTypePlainOlive, BaseSofaPieceRight ]
+
+- type: entity
+  id: BenchSofaPlainOliveCorner
+  parent: [ BaseSofaTypePlainOlive, BaseSofaPieceCorner ]
+
+# Plain sofa - Dark Blue
+- type: entity
+  id: BaseSofaTypePlainBlueDark
+  name: dark blue sofa
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Furniture/Bench/sofa.rsi
+    color: "#405080"
+
+- type: entity
+  id: BenchSofaPlainBlueDarkMiddle
+  parent: [ BaseSofaTypePlainBlueDark, BaseSofaPieceMiddle ]
+
+- type: entity
+  id: BenchSofaPlainBlueDarkLeft
+  parent: [ BaseSofaTypePlainBlueDark, BaseSofaPieceLeft ]
+
+- type: entity
+  id: BenchSofaPlainBlueDarkRight
+  parent: [ BaseSofaTypePlainBlueDark, BaseSofaPieceRight ]
+
+- type: entity
+  id: BenchSofaPlainBlueDarkCorner
+  parent: [ BaseSofaTypePlainBlueDark, BaseSofaPieceCorner ]
+
+# Plain sofa - Light Blue
+- type: entity
+  id: BaseSofaTypePlainBlueLight
+  name: light blue sofa
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Furniture/Bench/sofa.rsi
+    color: "#6078bf"
+
+- type: entity
+  id: BenchSofaPlainBlueLightMiddle
+  parent: [ BaseSofaTypePlainBlueLight, BaseSofaPieceMiddle ]
+
+- type: entity
+  id: BenchSofaPlainBlueLightLeft
+  parent: [ BaseSofaTypePlainBlueLight, BaseSofaPieceLeft ]
+
+- type: entity
+  id: BenchSofaPlainBlueLightRight
+  parent: [ BaseSofaTypePlainBlueLight, BaseSofaPieceRight ]
+
+- type: entity
+  id: BenchSofaPlainBlueLightCorner
+  parent: [ BaseSofaTypePlainBlueLight, BaseSofaPieceCorner ]
+
+
+# Plain sofa - Maroon
+- type: entity
+  id: BaseSofaTypePlainMaroon
+  name: red sofa
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Furniture/Bench/sofa.rsi
+    color: "#802d2d"
+
+- type: entity
+  id: BenchSofaPlainMaroonMiddle
+  parent: [ BaseSofaTypePlainMaroon, BaseSofaPieceMiddle ]
+
+- type: entity
+  id: BenchSofaPlainMaroonLeft
+  parent: [ BaseSofaTypePlainMaroon, BaseSofaPieceLeft ]
+
+- type: entity
+  id: BenchSofaPlainMaroonRight
+  parent: [ BaseSofaTypePlainMaroon, BaseSofaPieceRight ]
+
+- type: entity
+  id: BenchSofaPlainMaroonCorner
+  parent: [ BaseSofaTypePlainMaroon, BaseSofaPieceCorner ]
+
+
+# Corporate sofa
+- type: entity
+  id: BaseSofaTypeCorporate
+  name: corporate sofa
+  abstract: true
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Furniture/Bench/sofa_corp.rsi
+
+- type: entity
+  id: BenchSofaCorporateMiddle
+  parent: [ BaseSofaTypeCorporate, BaseSofaPieceMiddle ]
+
+- type: entity
+  id: BenchSofaCorporateLeft
+  parent: [ BaseSofaTypeCorporate, BaseSofaPieceLeft ]
+
+- type: entity
+  id: BenchSofaCorporateRight
+  parent: [ BaseSofaTypeCorporate, BaseSofaPieceRight ]
+
+- type: entity
+  id: BenchSofaCorporateCorner
+  parent: [ BaseSofaTypeCorporate, BaseSofaPieceCorner ]
