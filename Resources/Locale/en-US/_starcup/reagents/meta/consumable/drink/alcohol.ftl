@@ -42,7 +42,7 @@ reagent-desc-kalimotxo-starcup = A combination of wine and cola, mostly served t
 
 reagent-desc-kvass-starcup = A sweet-and-sour grain alcohol, mellow enough to replace cola in some cultures.
 
-reagent-desc-long-island-starcup = The entire liquor cabinet brought together in a delicious mix.
+reagent-desc-long-island-iced-tea-starcup = The entire liquor cabinet brought together in a delicious mix.
 
 reagent-desc-manhattan-starcup = The namesake borough of this venerable mixed drink may be lost, but if the harrowing tales of what the humans called "Wall Street" are anything to go by, maybe that's for the best.
 
