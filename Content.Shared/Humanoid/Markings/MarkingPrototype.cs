@@ -60,6 +60,7 @@ namespace Content.Shared.Humanoid.Markings
         [DataField("layering")]
         public Dictionary<string, string>? Layering { get; private set; }
 
+        /// begin floof: tail layering fixes
         /// <summary>
         /// Allows you to link a specific sprite's coloring to another sprite's coloring.
         /// This is useful for things like tails, which while they have two sets of sprites,
@@ -72,11 +73,10 @@ namespace Content.Shared.Humanoid.Markings
         /// cooltail -> cooltail-oversuit
         /// cooltail will be hidden from the color picker, and just use whatevers set for
         /// cooltail-oversuit. Easy huh?
-        /// also, FLOOF ADD =3
         /// </summary>
         [DataField("colorLinks")]
         public Dictionary<string, string>? ColorLinks { get; private set; }
-
+        // end floof
         public Marking AsMarking()
         {
             return new Marking(ID, Sprites.Count);
@@ -84,6 +84,7 @@ namespace Content.Shared.Humanoid.Markings
     }
 }
 
+// begin floof documentation
 /* * * * * * * * * * * * * * * * * * * * * * * * *
  * HOW 2 MAKE MARKINGS WITH MULTIPLE LAYERS
  * by Dank Elly
@@ -132,7 +133,7 @@ namespace Content.Shared.Humanoid.Markings
  *     This points to an entry in the enum stored in this file:
  *       Content.Shared/Humanoid/HumanoidVisualLayers.cs
  *     Capitalization matters!
- * 
+ *
  * // starcup documentation changes below!
  *
  * To link the coloring of one marking sprite to another, so that they're treated as one sprite for the purposes of coloring...
@@ -150,18 +151,19 @@ namespace Content.Shared.Humanoid.Markings
   markingCategory: Tail
   speciesRestriction: [Reptilian]
   layering:
-    tail_smooth_front: TailOversuit 
+    tail_smooth_front: TailOversuit
     tail_smooth_behind_primary: TailBehind
     tail_smooth_behind_secondary: TailBehind
   colorLinks:
     tail_smooth_behind_primary: tail_smooth_front
     tail_smooth_behind_secondary: tail_smooth_front
-  sprites:                                     
-  - sprite: Mobs/Customization/reptilian_parts.rsi 
+  sprites:
+  - sprite: Mobs/Customization/reptilian_parts.rsi
     state: tail_smooth_front
-  - sprite: Mobs/Customization/reptilian_parts.rsi     
+  - sprite: Mobs/Customization/reptilian_parts.rsi
     state: tail_smooth_behind_primary
   - sprite: Mobs/Customization/reptilian_parts.rsi
     state: tail_smooth_behind_secondary
  *
  */
+// end floof

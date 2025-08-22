@@ -3,10 +3,12 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared.Humanoid
 {
+    /// begin floof documentation
     /// <summary>
     ///  These are the layer defines for the humanoid sprite system.
     ///  If you want to add a new layer slot to species? Scroll down~
     /// </summary>
+    /// end floof
     [Serializable, NetSerializable]
     public enum HumanoidVisualLayers : byte
     {
@@ -40,6 +42,7 @@ namespace Content.Shared.Humanoid
     }
 }
 
+// begin floof documentation
 /* * * * * * * * * * * * * * * * * * * * * * * * *
  * HOW 2 ADD A NEW LAYER FOR MOB NON-EQUIPMENT APPEARANCE STUFF
  * by Dank Elly
@@ -75,3 +78,4 @@ namespace Content.Shared.Humanoid
  *   So just search for "speciesBaseSprites" and "enum.HumanoidVisualLayers.Chest" and you'll find them all
  *     If you miss some, dont sweat it, someone'll point it out and then you can fix it! Hotties like you make the hottest hotfixes~
  */
+// end floof

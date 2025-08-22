@@ -408,6 +408,7 @@ public sealed partial class MarkingPicker : Control
         List<ColorSelectorSliders> colorSliders = new();
         for (int i = 0; i < prototype.Sprites.Count; i++)
         {
+            // begin floof: tail layering fixes
             // first, check if the coloration is parented to another marking
             // and if so, just kinda sorta dont display it
             var skipdraw = false;
@@ -426,11 +427,15 @@ public sealed partial class MarkingPicker : Control
                     skipdraw = true;
                 }
             }
+            // end floof
             var colorContainer = new BoxContainer
             {
                 Orientation = LayoutOrientation.Vertical,
             };
 
+            // CMarkingColors.AddChild(colorContainer); // floof: code replacement for tail layering foxes
+
+            // begin floof: tail layering fixes
             // so.
             // the color selector sliders decide which destination color to modify
             // based on its index in the list of color selectors.
@@ -439,6 +444,7 @@ public sealed partial class MarkingPicker : Control
             // be in index 0.
             if(!skipdraw)
                 CMarkingColors.AddChild(colorContainer);
+            // end floof
 
             ColorSelectorSliders colorSelector = new ColorSelectorSliders();
             colorSelector.SelectorType = ColorSelectorSliders.ColorSelectorType.Hsv; // defaults color selector to HSV

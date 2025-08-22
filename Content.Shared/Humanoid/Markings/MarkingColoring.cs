@@ -26,12 +26,13 @@ public static class MarkingColoring
     /// <summary>
     ///     Returns list of colors for marking layers
     /// </summary>
-    public static List<Color> GetMarkingLayerColors(
+    public static List<Color> GetMarkingLayerColors
+    (
         MarkingPrototype prototype,
         Color? skinColor,
         Color? eyeColor,
-        MarkingSet markingSet,
-        List<string>? ignores = null
+        MarkingSet markingSet, // floof: layering fixes
+        List<string>? ignores = null // floof: layering fixes
     )
     {
         var colors = new List<Color>();
