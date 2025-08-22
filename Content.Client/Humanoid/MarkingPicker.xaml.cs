@@ -433,7 +433,7 @@ public sealed partial class MarkingPicker : Control
                 Orientation = LayoutOrientation.Vertical,
             };
 
-            // CMarkingColors.AddChild(colorContainer); // floof: code replacement for tail layering foxes
+            // CMarkingColors.AddChild(colorContainer); // floof: code replacement for tail layering fixes
 
             // begin floof: tail layering fixes
             // so.
