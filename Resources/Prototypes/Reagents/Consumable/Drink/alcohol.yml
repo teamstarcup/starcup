@@ -1851,22 +1851,19 @@
   desc: reagent-desc-sbiten
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: sbiten
-  color: "#e86969" # starcup
+  color: "#5A0717" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/sbitenglass.rsi
     state: icon_empty
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
-  # begin starcup additions
+  # begin starcup additions (removed alcohol content)
   metabolisms:
     Drink:
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.1 # increased from 0.06
   # end starcup
 
 - type: reagent
@@ -2570,7 +2567,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.07
+        amount: 0.06 # starcup: decreased from 0.07
 
 - type: reagent
   id: Mayojito
