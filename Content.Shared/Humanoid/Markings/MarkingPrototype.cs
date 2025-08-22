@@ -43,10 +43,11 @@ namespace Content.Shared.Humanoid.Markings
         public List<SpriteSpecifier> Sprites { get; private set; } = default!;
 
         // impstation edit - allow markings to support shaders
-		[DataField("shader")]
-		public string? Shader { get; private set; } = null;
+        [DataField("shader")]
+        public string? Shader { get; private set; } = null;
         // end impstation edit
 
+        /// begin floof: tail layering fixes
         /// <summary>
         /// Allows specific images to be put into any arbitrary layer on the mob.
         /// Whole point of this is to have things like tails be able to be
@@ -55,12 +56,10 @@ namespace Content.Shared.Humanoid.Markings
         /// layer.
         /// Is a dictionary: sprite name -> layer name,
         /// e.g. "tail-cute-vulp" -> "tail-back", "tail-cute-vulp-oversuit" -> "tail-oversuit"
-        /// also, FLOOF ADD =3
         /// </summary>
         [DataField("layering")]
         public Dictionary<string, string>? Layering { get; private set; }
 
-        /// begin floof: tail layering fixes
         /// <summary>
         /// Allows you to link a specific sprite's coloring to another sprite's coloring.
         /// This is useful for things like tails, which while they have two sets of sprites,
