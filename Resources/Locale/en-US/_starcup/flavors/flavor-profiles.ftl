@@ -74,6 +74,7 @@ flavor-complex-roy-rogers-starcup = like a sugar rush
 flavor-complex-rum-starcup = sweet and woody
 flavor-complex-sake-starcup = sweet, with hints of umami
 flavor-complex-sapo-picante-starcup = hot and savory
+flavor-complex-sbiten-starcup = like sweet fire
 flavor-complex-screwdriver-starcup = like very sharp orange juice
 flavor-complex-silencer-starcup = like an unspoken vow
 flavor-complex-silverjack-starcup = like a breath of exhaust fumes
