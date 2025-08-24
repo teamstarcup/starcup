@@ -3,13 +3,21 @@
 - type: entity
   parent: MeteorSpaceDust
   id: MeteorSpaceDustStarcup
+  name: space dust starcup
   components:
-  - type: Explosive
-    totalIntensity: 10
-    intensitySlope: 1
-    maxIntensity: 1.5
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 25
+    - type: Explosive
+      totalIntensity: 10
+      intensitySlope: 1
+      maxIntensity: 1.5
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 25
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak
+            - !type:ExplodeBehavior
