@@ -4,8 +4,8 @@
   id: MeteorSwarmDustEventsTable
   table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
     children:
-    - id: GameRuleSpaceDustMinor
-    - id: GameRuleSpaceDustMajor
+    - id: GameRuleSpaceDustMinorStarcup # starcup: uses a variant that causes spacings less frequently
+    - id: GameRuleSpaceDustMajorStarcup # starcup: uses a variant that causes spacings less frequently
 
 - type: entityTable
   id: MeteorSwarmSmallChanceEventsTable
@@ -32,12 +32,14 @@
     - id: GameRuleMeteorSwarmSmall
     - id: GameRuleMeteorSwarmMedium
     - id: GameRuleMeteorSwarmLarge
-    - id: GameRuleUristSwarm
-    - id: GameRuleClownSwarm
-    - id: GameRuleCowSwarm
-    - id: GameRulePotatoSwarm
-    - id: GameRuleFunSwarm
-    - id: ImmovableRodSpawn
+# begin starcup
+#    - id: GameRuleUristSwarm
+#    - id: GameRuleClownSwarm
+#    - id: GameRuleCowSwarm
+#    - id: GameRulePotatoSwarm
+#    - id: GameRuleFunSwarm
+#    - id: ImmovableRodSpawn
+# end starcup
 
 - type: weightedRandomEntity
   id: MeteorSpawnAsteroidWallTable

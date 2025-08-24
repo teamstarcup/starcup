@@ -1,0 +1,22 @@
+# Game Rules
+
+- type: entity
+  parent: GameRuleSpaceDustMinor
+  id: GameRuleSpaceDustMinorStarcup
+  components:
+  - type: StationEvent
+    earliestStart: 10 # starcup: increased from 2 -> 10, give engineers more time to set up power
+    minimumPlayers: 10 # starcup: increased from 0 -> 10
+  - type: MeteorSwarm
+    meteors:
+      MeteorSpaceDustStarcup: 1
+
+- type: entity
+  parent: GameRuleSpaceDustMajor
+  id: GameRuleSpaceDustMajorStarcup
+  components:
+  - type: StationEvent
+    minimumPlayers: 10 # starcup: increased from 0 -> 10
+  - type: MeteorSwarm
+    meteors:
+      MeteorSpaceDustStarcup: 1

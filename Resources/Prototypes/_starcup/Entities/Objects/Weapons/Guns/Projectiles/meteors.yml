@@ -1,0 +1,15 @@
+# starcup: deals less impact / explosion damage. Two impacts are required to break a reinforced window.
+
+- type: entity
+  parent: MeteorSpaceDust
+  id: MeteorSpaceDustStarcup
+  components:
+  - type: Explosive
+    totalIntensity: 10
+    intensitySlope: 1
+    maxIntensity: 1.5
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 25
