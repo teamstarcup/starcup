@@ -155,13 +155,13 @@
 - type: entity
   parent: AirlockCentralCommandLocked
   id: AirlockSyndCommLocked
-  suffix: Syndicate Command, Locked
+  suffix: Syndicate Communications, Locked
   components:
   - type: Sprite
     sprite: _starcup/Structures/Doors/Airlocks/Standard/syndcomm.rsi
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsSyndicateCommand ]
+      board: [ DoorElectronicsSyndicateCommunications ]
 
 # Glass Airlocks
 - type: entity
@@ -320,13 +320,13 @@
 - type: entity
   parent: AirlockCentralCommandGlassLocked
   id: AirlockSyndCommGlassLocked
-  suffix: Syndicate Command, Locked
+  suffix: Syndicate Communications, Locked
   components:
   - type: Sprite
     sprite: _starcup/Structures/Doors/Airlocks/Glass/syndcomm.rsi
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsSyndicateCommand ]
+      board: [ DoorElectronicsSyndicateCommunications ]
 
 # Maintenance Hatches
 - type: entity

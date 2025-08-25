@@ -41,5 +41,5 @@ emergency-shuttle-ui-remaining = Remaining: {$remaining}
 
 # Map Misc.
 # map-name-centcomm = Central Command # starcup - NT-SC swap
-map-name-centcomm = Syndicate Command
+map-name-centcomm = Syndicate Communications
 map-name-terminal = Arrivals Terminal

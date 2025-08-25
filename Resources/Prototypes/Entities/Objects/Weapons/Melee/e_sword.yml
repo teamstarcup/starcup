@@ -272,7 +272,7 @@
   name: double-bladed energy sword
   parent: [BaseMeleeWeaponEnergy, BaseTraitorContraband] # starcup: shared contraband level with nt gear
   id: EnergySwordDouble
-  description: Syndicate Command Interns thought that having one blade on the energy sword was not enough. This can be stored in pockets.
+  description: Syndicate Communications Interns thought that having one blade on the energy sword was not enough. This can be stored in pockets.
   components:
   - type: ItemToggle
     onUse: false # wielding events control it instead
@@ -391,7 +391,7 @@
   suffix: One-Handed, For Borgs
   parent: EnergySwordDouble
   id: CyborgEnergySwordDouble # why is this invalid if ID is BorgEnergySwordDouble
-  description: Syndicate Command Interns thought that having one blade on the energy sword was not enough. Specially designed for syndicate cyborgs.
+  description: Syndicate Communications Interns thought that having one blade on the energy sword was not enough. Specially designed for syndicate cyborgs.
   components: # could add energy-draining like the L6C
   - type: Wieldable
     freeHandsRequired: 0 # because borg has no off-hand to wield with.  Without this, it will be unable to activate the esword

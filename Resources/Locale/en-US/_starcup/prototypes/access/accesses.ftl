@@ -10,4 +10,4 @@ id-card-access-level-zookeeper = Zookeeper
 
 id-card-access-level-syndicate-agent-starcup = NanoTrasen Agent
 
-id-card-access-level-syndicate-command = Syndicate Command
+id-card-access-level-syndicate-communications = Syndicate Communications

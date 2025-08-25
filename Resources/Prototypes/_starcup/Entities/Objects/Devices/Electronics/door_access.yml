@@ -72,8 +72,8 @@
 
 - type: entity
   parent: DoorElectronics
-  id: DoorElectronicsSyndicateCommand
-  suffix: SyndicateCommand, Locked
+  id: DoorElectronicsSyndicateCommunications
+  suffix: SyndicateCommunications, Locked
   components:
   - type: AccessReader
-    access: [["SyndicateCommand"]]
+    access: [["SyndicateCommunications"]]

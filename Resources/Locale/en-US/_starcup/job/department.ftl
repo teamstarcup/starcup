@@ -1,2 +1,2 @@
-department-syndicate-command = Syndicate Command
-department-syndicate-command-description = It's bureaucracy all the way up.
+department-syndicate-communications = Syndicate Communications
+department-syndicate-communications-description = It's bureaucracy all the way up.

@@ -4,51 +4,51 @@
 - type: entity
   parent: BlastDoorCentralCommand
   id: BlastDoorSyndComm
-  suffix: Syndicate Command, Locked
+  suffix: Syndicate Communications, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsSyndicateCommand ]
+      board: [ DoorElectronicsSyndicateCommunications ]
 
 # shutters
 
 - type: entity
   parent: ShuttersNormal
   id: ShuttersNormalSyndComm
-  suffix: Syndicate Command
+  suffix: Syndicate Communications
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsSyndicateCommand ]
+      board: [ DoorElectronicsSyndicateCommunications ]
 
 - type: entity
   parent: ShuttersNormalOpen
   id: ShuttersNormalOpenSyndComm
-  suffix: Syndicate Command, Open
+  suffix: Syndicate Communications, Open
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsSyndicateCommand ]
+      board: [ DoorElectronicsSyndicateCommunications ]
 
 # window shutters
 
 - type: entity
   parent: ShuttersWindowCentralCommand
   id: ShuttersWindowSyndComm
-  suffix: Syndicate Command, Locked
+  suffix: Syndicate Communications, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsSyndicateCommand ]
+      board: [ DoorElectronicsSyndicateCommunications ]
 
 - type: entity
   parent: ShuttersWindowCentralCommand
   id: ShuttersWindowOpenSyndComm
-  suffix: Syndicate Command, Locked
+  suffix: Syndicate Communications, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsSyndicateCommand ]
+      board: [ DoorElectronicsSyndicateCommunications ]
   - type: Door
     state: Open
   - type: Physics
