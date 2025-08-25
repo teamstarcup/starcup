@@ -1,1 +1,1 @@
-job-supervisors-syndcomm-supreme = the Supreme Council of Syndicate Communications
+job-supervisors-syndcomm-supreme = Syndicate Command
