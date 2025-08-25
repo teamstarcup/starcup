@@ -89,7 +89,7 @@
     thresholds:
       - trigger: # Excess damage, don't spawn entities
           !type:DamageTrigger
-          damage: 400
+          damage: 600 # starcup: increase time to repair, was 400
         behaviors:
           - !type:PlaySoundBehavior
             sound:
@@ -98,7 +98,7 @@
             acts: ["Destruction"]
       - trigger:
           !type:DamageTrigger
-          damage: 225
+          damage: 500 # starcup: increase time to repair, was 225
         behaviors:
           - !type:DoActsBehavior
             acts: [ "Destruction" ]

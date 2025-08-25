@@ -67,7 +67,7 @@ public sealed partial class RadiationReactiveGas
     ///     Set to zero if the reactant does not deplete
     /// </remarks>
     [DataField]
-    public float ReactantBreakdownRate = 1f;
+    public float ReactantBreakdownRate = 0.8f; // starcup: increase time to refill
 
     /// <summary>
     ///     A byproduct gas that is generated when the reactant breaks down
