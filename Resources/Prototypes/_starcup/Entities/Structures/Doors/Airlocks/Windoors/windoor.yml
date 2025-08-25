@@ -8,6 +8,15 @@
       board: [ DoorElectronicsBoxer ]
 
 - type: entity
+  parent: WindoorSecureSecurityLocked
+  id: WindoorSecureCombatMedicLocked
+  suffix: Combat Medic, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCombatMedic ]
+
+- type: entity
   parent: WindoorSecureServiceLocked
   id: WindoorSecureClownLocked
   suffix: Clown, Locked

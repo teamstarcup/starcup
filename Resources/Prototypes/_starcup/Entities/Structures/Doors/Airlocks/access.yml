@@ -9,6 +9,17 @@
       board: [ DoorElectronicsBoxer ]
 
 - type: entity
+  parent: AirlockSecurityLocked
+  id: AirlockCombatMedicLocked
+  suffix: Combat Medic, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCombatMedic ]
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/secmed.rsi
+
+- type: entity
   parent: AirlockServiceLocked
   id: AirlockClownLocked
   suffix: Clown, Locked
@@ -174,6 +185,17 @@
       board: [ DoorElectronicsBoxer ]
 
 - type: entity
+  parent: AirlockSecurityGlassLocked
+  id: AirlockCombatMedicGlassLocked
+  suffix: Combat Medic, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCombatMedic ]
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/secmed.rsi
+
+- type: entity
   parent: AirlockServiceGlassLocked
   id: AirlockClownGlassLocked
   suffix: Clown, Locked
@@ -332,6 +354,14 @@
 - type: entity
   parent: AirlockBoxerLocked
   id: AirlockMaintBoxerLocked
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: AirlockCombatMedicLocked
+  id: AirlockMaintCombatMedicLocked
+  suffix: Combat Medic, Locked
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/maint.rsi
