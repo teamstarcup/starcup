@@ -44,6 +44,46 @@
   - MechatronicsPDA
 
 # Security
+## Combat Medic
+- type: loadoutGroup
+  id: CombatMedicHead
+  name: loadout-group-combat-medic-head
+  minLimit: 0
+  loadouts:
+  - CombatMedicBeret
+
+- type: loadoutGroup
+  id: CombatMedicJumpsuit
+  name: loadout-group-combat-medic-jumpsuit
+  loadouts:
+  - CombatMedicJumpsuit
+  - CombatMedicJumpskirt
+
+- type: loadoutGroup
+  id: CombatMedicOuterClothing
+  name: loadout-group-combat-medic-outerclothing
+  minLimit: 0
+  loadouts:
+  - CombatMedicArmoredGown
+  - SecurityOfficerWintercoat
+
+- type: loadoutGroup
+  id: CombatMedicShoes
+  name: loadout-group-combat-medic-shoes
+  loadouts:
+  - JackBoots
+  - RedShoes
+  - WhiteShoes
+  - SecurityWinterBoots
+
+- type: loadoutGroup
+  id: CombatMedicBackpack
+  name: loadout-group-combat-medic-backpack
+  loadouts:
+  - CombatMedicBackpack
+  - CombatMedicSatchel
+  - CombatMedicDuffel
+
 ## Security Cadet
 - type: loadoutGroup
   id: SecurityCadetOuterClothing
