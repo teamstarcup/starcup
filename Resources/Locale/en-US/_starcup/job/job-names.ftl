@@ -1,3 +1,6 @@
+# Security
+job-name-combat-medic = Combat Medic
+
 # Alternate titles
 
 # Bartender
