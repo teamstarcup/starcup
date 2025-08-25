@@ -782,7 +782,7 @@
 - type: entity
   parent: ComputerComms
   id: CentcommComputerComms
-  name: central command communications computer
+  name: SyndComm communications computer # starcup: NT-SC swap
   description: A computer used to make world wide announcements via keyboard. The superior cousin of the regular communications computer.
   components:
   - type: Sprite
@@ -798,10 +798,10 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: AccessReader
-    access: [[ "CentralCommand" ]]
+    access: [[ "SyndicateCommunications" ]] # starcup: NT-SC swap
   - type: CommunicationsConsole
     title: comms-console-announcement-title-centcom
-    color: "#1d8bad"
+    color: "#d42424" # starcup: NT-SC swap
     canShuttle: false
     global: true
   - type: Computer
