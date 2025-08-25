@@ -151,10 +151,10 @@
       Plastic: 50
 
 - type: entity
-  parent: ClothingMaskBreathMedical
+  parent: [ClothingMaskBreathMedical, BaseSecurityContraband, BaseExaminableClothing] # starcup: add contraband and examinable clothing
   id: ClothingMaskBreathMedicalSecurity
   name: military-style medical mask
-  description: A medical mask with a small layer of protection against damage and viruses, similar to the one used in the medical units of the first corporate war.
+  description: A medical mask with a small layer of protection against damage and viruses, similar to the ones used in the medical units of the early Neocorporate Wars. # starcup: slightly rewrote description
   components:
   - type: Item
     size: Tiny
@@ -169,6 +169,10 @@
         Slash: 0.95
         Piercing: 0.95
         Heat: 0.95
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-combat-medic-gas-mask
+  # end starcup
 
 - type: entity
   parent: ClothingMaskPullableBase

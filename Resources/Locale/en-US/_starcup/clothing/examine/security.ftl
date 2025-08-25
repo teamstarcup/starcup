@@ -16,6 +16,7 @@ clothing-riot-helmet = [color=#a40000]light riot helmet[/color]
 ## Mask
 clothing-security-gas-mask = [color=#a40000]security gas mask[/color]
 clothing-swat-gas-mask = [color=#a40000]SWAT gas mask[/color]
+clothing-combat-medic-gas-mask = [color=#a40000]military-style medical mask[/color]
 
 ## Outer
 clothing-armor-vest = [color=#a40000]armor vest[/color]
