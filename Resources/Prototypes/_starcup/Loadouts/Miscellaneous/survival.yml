@@ -1,4 +1,23 @@
-# Syndicate
+# Security
+- type: loadout
+  id: EmergencyOxygenCombatMedic
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OxygenBreather
+  storage:
+    back:
+    - BoxSurvivalCombatMedic
+
+- type: loadout
+  id: EmergencyNitrogenCombatMedic
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: NitrogenBreather
+  storage:
+    back:
+    - BoxSurvivalCombatMedicNitrogen
+
+# NanoTrasen
 - type: loadout
   id: EmergencyOxygenNanotrasen
   effects:

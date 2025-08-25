@@ -84,6 +84,17 @@
   - CombatMedicSatchel
   - CombatMedicDuffel
 
+- type: loadoutGroup
+  id: SurvivalCombatMedic
+  name: loadout-group-survival-combat-medic
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - EmergencyNitrogenCombatMedic
+  - EmergencyOxygenCombatMedic
+  - LoadoutSpeciesVoxNitrogen
+  - EmergencyIPCBox # DeltaV
+
 ## Security Cadet
 - type: loadoutGroup
   id: SecurityCadetOuterClothing
