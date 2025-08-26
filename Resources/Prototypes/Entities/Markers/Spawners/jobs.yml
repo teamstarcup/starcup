@@ -491,6 +491,10 @@
   parent: SpawnPointJobBase
   name: combat medic # starcup: rename brigmedic to combat medic
   components:
+  # begin starcup: implement combat medic
+  - type: SpawnPoint
+    job_id: CombatMedic
+  # end starcup
   - type: Sprite
     layers:
       - state: green
