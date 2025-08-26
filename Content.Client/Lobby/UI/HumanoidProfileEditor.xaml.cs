@@ -710,8 +710,10 @@ namespace Content.Client.Lobby.UI
                 if (!antag.SetPreference)
                     continue;
 
-                if (!antag.VisiblePreference) // CD change
-                    continue;
+                // begin starcup: skipped since we have individual antag preference
+                // if (!antag.VisiblePreference) // CD change
+                //     continue;
+                // end starcup
 
                 var antagContainer = new BoxContainer()
                 {
