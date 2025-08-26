@@ -1,10 +1,10 @@
-﻿using Content.Server.DeltaV.Objectives.Components;
+﻿using Content.Server._DV.Objectives.Components;
 using Content.Server.Objectives.Components;
 using Content.Server.Objectives.Systems;
 using Content.Shared.Mind;
 using Content.Shared.Mobs;
 
-namespace Content.Server.DeltaV.Objectives.Systems;
+namespace Content.Server._DV.Objectives.Systems;
 
 /// <summary>
 /// Handles teach a lesson condition logic, does not assign target.

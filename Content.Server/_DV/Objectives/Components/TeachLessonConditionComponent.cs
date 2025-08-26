@@ -1,7 +1,7 @@
-﻿using Content.Server.DeltaV.Objectives.Systems;
+﻿using Content.Server._DV.Objectives.Systems;
 using Content.Server.Objectives.Components;
 
-namespace Content.Server.DeltaV.Objectives.Components;
+namespace Content.Server._DV.Objectives.Components;
 
 /// <summary>
 /// Requires that a target dies once and only once.
