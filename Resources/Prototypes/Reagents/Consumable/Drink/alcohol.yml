@@ -20,13 +20,15 @@
       effects:
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.3
+        amount: 0.35 # starcup: increased from 0.3
     Narcotic: # The green fairy
       metabolismRate : 0.01
       effects:
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.05
+      # begin starcup: remove ethanol from narcotic metabolism
+      # - !type:AdjustReagent
+      #   reagent: Ethanol
+      #   amount: 0.05
+      # end starcup
       - !type:ModifyStatusEffect
         effectProto: StatusEffectSeeingRainbow
         conditions:
