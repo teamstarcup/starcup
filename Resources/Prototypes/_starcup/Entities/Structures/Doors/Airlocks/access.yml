@@ -10,12 +10,12 @@
 
 - type: entity
   parent: AirlockSecurityLocked
-  id: AirlockCombatMedicLocked
+  id: AirlockBrigmedicLocked
   suffix: Combat Medic, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsCombatMedic ]
+      board: [ DoorElectronicsBrigmedic ]
   - type: Sprite
     sprite: _starcup/Structures/Doors/Airlocks/Standard/medsec.rsi
 
@@ -186,12 +186,12 @@
 
 - type: entity
   parent: AirlockSecurityGlassLocked
-  id: AirlockCombatMedicGlassLocked
+  id: AirlockBrigmedicGlassLocked
   suffix: Combat Medic, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsCombatMedic ]
+      board: [ DoorElectronicsBrigmedic ]
   - type: Sprite
     sprite: _starcup/Structures/Doors/Airlocks/Glass/medsec.rsi
 
@@ -359,8 +359,8 @@
     sprite: Structures/Doors/Airlocks/Standard/maint.rsi
 
 - type: entity
-  parent: AirlockCombatMedicLocked
-  id: AirlockMaintCombatMedicLocked
+  parent: AirlockBrigmedicLocked
+  id: AirlockMaintBrigmedicLocked
   suffix: Combat Medic, Locked
   components:
   - type: Sprite

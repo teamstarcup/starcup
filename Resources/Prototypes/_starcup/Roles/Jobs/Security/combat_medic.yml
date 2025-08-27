@@ -1,8 +1,8 @@
 - type: job
-  id: CombatMedic
-  name: job-name-combat-medic
-  description: job-description-combat-medic
-  playTimeTracker: JobCombatMedic
+  id: Brigmedic
+  name: job-name-brigmedic
+  description: job-description-brigmedic
+  playTimeTracker: JobBrigmedic
   requirements:
     - !type:DepartmentTimeRequirement
       department: Security
@@ -10,7 +10,7 @@
     - !type:DepartmentTimeRequirement
       department: Medical
       time: 7200 # starcup: 2 hrs
-  startingGear: CombatMedicGear
+  startingGear: BrigmedicGear
   icon: "JobIconBrigmedic"
   supervisors: job-supervisors-hos
   canBeAntag: false
@@ -22,13 +22,13 @@
   - External
   - Cryogenics
   - Medical
-  - CombatMedic
+  - Brigmedic
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
 
 - type: startingGear
-  id: CombatMedicGear
+  id: BrigmedicGear
   equipment:
     ears: ClothingHeadsetBrigmedic
     eyes: ClothingEyesHudMedSec
@@ -36,8 +36,8 @@
     belt: ClothingBeltMedicalFilled
 
 - type: chameleonOutfit
-  id: CombatMedicChameleonOutfit
-  job: CombatMedic
+  id: BrigmedicChameleonOutfit
+  job: Brigmedic
   hasMindShield: true
   equipment:
     head: ClothingHeadHatBeretBrigmedic

@@ -46,30 +46,30 @@
 # Security
 ## Combat Medic
 - type: loadoutGroup
-  id: CombatMedicHead
-  name: loadout-group-combat-medic-head
+  id: BrigmedicHead
+  name: loadout-group-brigmedic-head
   minLimit: 0
   loadouts:
-  - CombatMedicBeret
+  - BrigmedicBeret
 
 - type: loadoutGroup
-  id: CombatMedicJumpsuit
-  name: loadout-group-combat-medic-jumpsuit
+  id: BrigmedicJumpsuit
+  name: loadout-group-brigmedic-jumpsuit
   loadouts:
-  - CombatMedicJumpsuit
-  - CombatMedicJumpskirt
+  - BrigmedicJumpsuit
+  - BrigmedicJumpskirt
 
 - type: loadoutGroup
-  id: CombatMedicOuterClothing
-  name: loadout-group-combat-medic-outerclothing
+  id: BrigmedicOuterClothing
+  name: loadout-group-brigmedic-outerclothing
   minLimit: 0
   loadouts:
-  - CombatMedicArmoredGown
+  - BrigmedicArmoredGown
   - SecurityOfficerWintercoat
 
 - type: loadoutGroup
-  id: CombatMedicShoes
-  name: loadout-group-combat-medic-shoes
+  id: BrigmedicShoes
+  name: loadout-group-brigmedic-shoes
   loadouts:
   - JackBoots
   - RedShoes
@@ -77,21 +77,21 @@
   - SecurityWinterBoots
 
 - type: loadoutGroup
-  id: CombatMedicBackpack
-  name: loadout-group-combat-medic-backpack
+  id: BrigmedicBackpack
+  name: loadout-group-brigmedic-backpack
   loadouts:
-  - CombatMedicBackpack
-  - CombatMedicSatchel
-  - CombatMedicDuffel
+  - BrigmedicBackpack
+  - BrigmedicSatchel
+  - BrigmedicDuffel
 
 - type: loadoutGroup
-  id: SurvivalCombatMedic
-  name: loadout-group-survival-combat-medic
+  id: SurvivalBrigmedic
+  name: loadout-group-survival-brigmedic
   minLimit: 2
   hidden: true
   loadouts:
-  - EmergencyNitrogenCombatMedic
-  - EmergencyOxygenCombatMedic
+  - EmergencyNitrogenBrigmedic
+  - EmergencyOxygenBrigmedic
   - LoadoutSpeciesVoxNitrogen
   - EmergencyIPCBox # DeltaV
 
@@ -374,10 +374,10 @@
   - GlassesJensen
 
 - type: loadoutGroup
-  id: GroupSpeciesBreathToolCombatMedic
+  id: GroupSpeciesBreathToolBrigmedic
   name: loadout-group-breath-tool
   minLimit: 1
   maxLimit: 1
   hidden: true
   loadouts:
-  - LoadoutSpeciesBreathToolCombatMedic
+  - LoadoutSpeciesBreathToolBrigmedic

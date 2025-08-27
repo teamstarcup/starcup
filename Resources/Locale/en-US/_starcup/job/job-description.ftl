@@ -1,5 +1,4 @@
 # Security
-job-description-combat-medic = Provide medical support during hostile encounters, and make sure that the prisoners are kept healthy.
 job-description-prisoner = Do your time in the brig; Take up gardening, chat with security.
 
 # SyndComm

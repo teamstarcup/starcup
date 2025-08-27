@@ -1,21 +1,21 @@
 # Security
 - type: loadout
-  id: EmergencyOxygenCombatMedic
+  id: EmergencyOxygenBrigmedic
   effects:
   - !type:GroupLoadoutEffect
     proto: OxygenBreather
   storage:
     back:
-    - BoxSurvivalCombatMedic
+    - BoxSurvivalBrigmedic
 
 - type: loadout
-  id: EmergencyNitrogenCombatMedic
+  id: EmergencyNitrogenBrigmedic
   effects:
   - !type:GroupLoadoutEffect
     proto: NitrogenBreather
   storage:
     back:
-    - BoxSurvivalCombatMedicNitrogen
+    - BoxSurvivalBrigmedicNitrogen
 
 # NanoTrasen
 - type: loadout
@@ -38,7 +38,7 @@
 
 # Breath Tool on Face
 - type: loadout
-  id: LoadoutSpeciesBreathToolCombatMedic
+  id: LoadoutSpeciesBreathToolBrigmedic
   effects:
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesVox

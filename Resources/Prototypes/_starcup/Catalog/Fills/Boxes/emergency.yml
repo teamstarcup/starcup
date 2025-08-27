@@ -1,6 +1,6 @@
 - type: entity
   parent: BoxCardboard
-  id: BoxSurvivalCombatMedic
+  id: BoxSurvivalBrigmedic
   name: survival box
   description: It's a box with basic internals inside.
   suffix: Combat Medic
@@ -20,8 +20,8 @@
     - state: emergencytank
 
 - type: entity
-  parent: BoxSurvivalCombatMedic
-  id: BoxSurvivalCombatMedicNitrogen
+  parent: BoxSurvivalBrigmedic
+  id: BoxSurvivalBrigmedicNitrogen
   suffix: Combat Medic N2
   components:
   - type: StorageFill
