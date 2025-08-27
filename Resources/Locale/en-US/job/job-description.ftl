@@ -5,7 +5,7 @@ job-description-botanist = Grow food for the chef, drugs for medbay, and other p
 job-description-borg = Half-human, Half-machine. Follow your laws, serve the crew, and hound the science team for upgrades.
 # begin starcup
 # job-description-boxer = Fight your way to the top! Challenge the head of personnel and get brigged when you win. Currently available on Core and Convex.
-job-description-brigmedic = Fight in the rear of the security service, for the lives of your comrades! You are the first and last hope of your squad. Hippocrates bless you.
+# job-description-brigmedic = Fight in the rear of the security service, for the lives of your comrades! You are the first and last hope of your squad. Hippocrates bless you.
 job-description-boxer = Put on exciting performances and spar with the crew. Currently available on Byoin, Glacier, and Loop.
 job-description-brigmedic = Provide medical support during hostile encounters, and make sure that the prisoners are kept healthy.
 job-description-cadet = Learn the basics of arresting criminals and managing the brig. Listen to your supervisors and feel free to ask them for any help.
