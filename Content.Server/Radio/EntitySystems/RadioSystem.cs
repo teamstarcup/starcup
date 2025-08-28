@@ -7,7 +7,6 @@ using Content.Shared.Database;
 using Content.Shared.Radio;
 using Content.Shared.Radio.Components;
 using Content.Shared.Speech;
-using Content.Shared.Ghost; // Nuclear-14
 using Robust.Shared.Map;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
@@ -53,18 +52,6 @@ public sealed class RadioSystem : EntitySystem
         }
     }
 
-    //Nuclear-14
-    /// <summary>
-    /// Gets the message frequency, if there is no such frequency, returns the standard channel frequency.
-    /// </summary>
-    public int GetFrequency(EntityUid source, RadioChannelPrototype channel)
-    {
-        if (TryComp<RadioMicrophoneComponent>(source, out var radioMicrophone))
-            return radioMicrophone.Frequency;
-
-        return channel.Frequency;
-    }
-
     private void OnIntrinsicReceive(EntityUid uid, IntrinsicRadioReceiverComponent component, ref RadioReceiveEvent args)
     {
         if (TryComp(uid, out ActorComponent? actor))
@@ -74,9 +61,9 @@ public sealed class RadioSystem : EntitySystem
     /// <summary>
     /// Send radio message to all active radio listeners
     /// </summary>
-    public void SendRadioMessage(EntityUid messageSource, string message, ProtoId<RadioChannelPrototype> channel, EntityUid radioSource, int? frequency = null, bool escapeMarkup = true) // Frontier: added frequency
+    public void SendRadioMessage(EntityUid messageSource, string message, ProtoId<RadioChannelPrototype> channel, EntityUid radioSource, bool escapeMarkup = true)
     {
-        SendRadioMessage(messageSource, message, _prototype.Index(channel), radioSource, frequency: frequency, escapeMarkup: escapeMarkup); // Frontier: added frequency
+        SendRadioMessage(messageSource, message, _prototype.Index(channel), radioSource, escapeMarkup: escapeMarkup);
     }
 
     /// <summary>
@@ -84,7 +71,7 @@ public sealed class RadioSystem : EntitySystem
     /// </summary>
     /// <param name="messageSource">Entity that spoke the message</param>
     /// <param name="radioSource">Entity that picked up the message and will send it, e.g. headset</param>
-    public void SendRadioMessage(EntityUid messageSource, string message, RadioChannelPrototype channel, EntityUid radioSource, int? frequency = null, bool escapeMarkup = true) // Nuclear-14: add frequency
+    public void SendRadioMessage(EntityUid messageSource, string message, RadioChannelPrototype channel, EntityUid radioSource, bool escapeMarkup = true)
     {
         // TODO if radios ever garble / modify messages, feedback-prevention needs to be handled better than this.
         if (!_messages.Add(message))
@@ -106,20 +93,12 @@ public sealed class RadioSystem : EntitySystem
             ? FormattedMessage.EscapeText(message)
             : message;
 
-        // Frontier: append frequency if the channel requests it
-        string channelText;
-        if (channel.ShowFrequency)
-            channelText = $"\\[{channel.LocalizedName} ({frequency})\\]";
-        else
-            channelText = $"\\[{channel.LocalizedName}\\]";
-        // End Frontier
-
         var wrappedMessage = Loc.GetString(speech.Bold ? "chat-radio-message-wrap-bold" : "chat-radio-message-wrap",
             ("color", channel.Color),
             ("fontType", speech.FontId),
             ("fontSize", speech.FontSize),
             ("verb", Loc.GetString(_random.Pick(speech.SpeechVerbStrings))),
-            ("channel", channelText), // Frontier: $"\\[{channel.LocalizedName}\\]"<channelText
+            ("channel", $"\\[{channel.LocalizedName}\\]"),
             ("name", name),
             ("message", content));
 
@@ -143,10 +122,6 @@ public sealed class RadioSystem : EntitySystem
         var sourceServerExempt = _exemptQuery.HasComp(radioSource);
 
         var radioQuery = EntityQueryEnumerator<ActiveRadioComponent, TransformComponent>();
-
-        if (frequency == null) // Nuclear-14
-            frequency = GetFrequency(messageSource, channel); // Nuclear-14
-
         while (canSend && radioQuery.MoveNext(out var receiver, out var radio, out var transform))
         {
             if (!radio.ReceiveAllChannels)
@@ -155,9 +130,6 @@ public sealed class RadioSystem : EntitySystem
                                                              !intercom.SupportedChannels.Contains(channel.ID)))
                     continue;
             }
-
-            if (!HasComp<GhostComponent>(receiver) && GetFrequency(receiver, channel) != frequency) // Nuclear-14
-                continue; // Nuclear-14
 
             if (!channel.LongRange && transform.MapID != sourceMapId && !radio.GlobalReceive)
                 continue;
