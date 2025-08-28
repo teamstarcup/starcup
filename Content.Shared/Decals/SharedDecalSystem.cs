@@ -18,7 +18,7 @@ namespace Content.Shared.Decals
 
         // Note that this constant is effectively baked into all map files, because of how they save the grid decal component.
         // So if this ever needs changing, the maps need converting.
-        public const int ChunkSize = 32;
+        public const int ChunkSize = 8;  // starcup: 32 -> 8 for performance
         public static Vector2i GetChunkIndices(Vector2 coordinates) => new ((int) Math.Floor(coordinates.X / ChunkSize), (int) Math.Floor(coordinates.Y / ChunkSize));
 
         public override void Initialize()
