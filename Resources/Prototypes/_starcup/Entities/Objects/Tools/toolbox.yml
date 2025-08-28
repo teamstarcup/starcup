@@ -1,0 +1,37 @@
+- type: entity
+  parent: [BaseTraitorContraband, ToolboxSyndicate]
+  id: ToolboxNanotrasen
+  suffix: NanoTrasen
+  description: A sinister looking toolbox filled with elite NanoTrasen tools.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/Toolboxes/toolbox_nt.rsi
+    state: icon
+  - type: Item
+    sprite: _starcup/Objects/Tools/Toolboxes/toolbox_nt.rsi
+
+- type: entity
+  suffix: Turret, NanoTrasen
+  parent: ToolboxElectricalTurret
+  id: ToolboxElectricalTurretNT
+  description: A toolbox typically stocked with electrical gear.
+  components:
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 1
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              WeaponTurretNanotrasenDisposableAntag:
+                min: 1
+                max: 1

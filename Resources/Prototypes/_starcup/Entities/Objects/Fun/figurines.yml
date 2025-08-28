@@ -1,0 +1,18 @@
+- type: entity
+  parent: ToyFigurineHeadOfPersonnel
+  id: ToyFigurineHeadOfPersonnelSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Fun/figurines.rsi
+    state: hop_syndi
+
+- type: entity
+  parent: ToyFigurineCaptain
+  id: ToyFigurineCaptainSyndie
+  description: A figurine depicting the standard outfit of a captain belonging to a civilian-sector Syndicate vessel.
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Fun/figurines.rsi
+    state: captain_syndi

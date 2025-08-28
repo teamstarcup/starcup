@@ -489,8 +489,12 @@
 - type: entity
   id: SpawnPointBrigmedic
   parent: SpawnPointJobBase
-  name: brigmedic
+  name: combat medic # starcup: rename brigmedic to combat medic
   components:
+  # begin starcup: implement combat medic
+  - type: SpawnPoint
+    job_id: Brigmedic
+  # end starcup
   - type: Sprite
     layers:
       - state: green

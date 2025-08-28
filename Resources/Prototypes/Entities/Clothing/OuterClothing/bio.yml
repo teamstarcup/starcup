@@ -17,7 +17,7 @@
     zombificationResistanceCoefficient: 0.35
   - type: GroupExamine
   - type: ClothingSpeedModifier
-    walkModifier: 1
+    walkModifier: 0.95
     sprintModifier: 0.95
 
 - type: entity
@@ -61,7 +61,7 @@
     sprite: Clothing/OuterClothing/Bio/scientist.rsi
 
 - type: entity
-  parent: [ClothingOuterBioGeneral, BaseSecurityContraband]
+  parent: [ClothingOuterBioGeneral, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingOuterBioSecurity
   name: bio suit
   suffix: Security
@@ -79,6 +79,10 @@
         Piercing: 0.8
   - type: ZombificationResistance
     zombificationResistanceCoefficient: 0.4
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-bio-suit-security
+  # end starcup
 
 - type: entity
   parent: ClothingOuterBioGeneral

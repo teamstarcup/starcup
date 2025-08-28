@@ -45,7 +45,7 @@
     - id: ClothingHeadsetAltCommand
     - id: ClothingOuterArmorCaptainCarapace
     - id: CommsComputerCircuitboard
-    - id: DoorRemoteCommand
+    - id: DoorRemoteCustom
     - id: MedalCase
     - id: NukeDisk
     - id: PinpointerNuclear
@@ -121,7 +121,7 @@
   id: LockerFillHeadOfPersonnel
   table: !type:AllSelector
     children:
-    #- id: AccessConfigurator # DeltaV - They don't really need it, moved to the administrative assistant starting gear.
+    - id: AccessConfigurator
     - id: BoxEncryptionKeyPassenger
     - id: BoxEncryptionKeyService
     - id: BoxHeadset
@@ -339,6 +339,7 @@
     - id: WeaponEnergyShotgun
     - id: BookSpaceLaw
     - id: BoxEncryptionKeySecurity
+    - id: BoxEncryptionKeyPrison # starcup
     - id: CigarGoldCase
       prob: 0.50
     - id: ClothingBeltSecurityFilled

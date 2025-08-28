@@ -44,14 +44,58 @@
     - id: PlushiePenguin
     # begin starcup
     - id: PlushieEskie
+    - id: PlushieEikse
     - id: PlushieMort
     # end starcup
+
+- type: entityTable
+  id: AllPottedPlantsTable
+  table: !type:GroupSelector
+    children:
+    - id: PottedPlant0
+    - id: PottedPlant1
+    - id: PottedPlant2
+    - id: PottedPlant3
+    - id: PottedPlant4
+    - id: PottedPlant5
+    - id: PottedPlant6
+    - id: PottedPlant7
+    - id: PottedPlant8
+    - id: PottedPlant10
+    - id: PottedPlant11
+    - id: PottedPlant12
+    - id: PottedPlant13
+    - id: PottedPlant14
+    - id: PottedPlant15
+    - id: PottedPlant16
+    - id: PottedPlant17
+    - id: PottedPlant18
+    - id: PottedPlant19
+    - id: PottedPlant20
+    - id: PottedPlant21
+    - id: PottedPlant22
+    - id: PottedPlant23
+    - id: PottedPlant24
+    - id: PottedPlant26
+
+- type: entity
+  id: CratePlants
+  parent: CrateGenericSteel
+  name: plant crate
+  description: A variety pack of potted plants to spruce up your station!
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: AllPottedPlantsTable
+        rolls: !type:ConstantNumberSelector
+          value: 5
 
 - type: entity
   id: CrateFunPlushie
   parent: CrateGenericSteel
   name: plushie crate
-  description: A buncha soft plushies. Throw them around and then wonder how you're gonna explain this purchase to NT.
+  description: A buncha soft plushies. Throw them around and then wonder how you're gonna explain this purchase to your rep at SyndComm. # starcup - NT-SC swap
   components:
   - type: EntityTableContainerFill
     containers:
@@ -64,7 +108,7 @@
   id: CrateFunLizardPlushieBulk
   parent: CrateGenericSteel
   name: bulk lizard plushie crate
-  description: A buncha soft lizard plushies. Throw them around and then wonder how you're gonna explain this purchase to NT.
+  description: A buncha soft lizard plushies. Throw them around and then wonder how you're gonna explain this purchase to your rep at SyndComm. # starcup - NT-SC swap
   components:
   - type: EntityTableContainerFill
     containers:
@@ -192,7 +236,7 @@
   id: CrateFunInstrumentsSpecial
   parent: CrateGenericSteel
   name: special instrument collector's crate
-  description: Create some noise with this special collection of arguably-instruments! Centcomm is not responsible for any trauma caused by the contents.
+  description: Create some noise with this special collection of arguably-instruments! SyndComm is not responsible for any trauma caused by the contents. # starcup - NT-SC swap
   components:
   - type: StorageFill
     contents:
@@ -372,7 +416,8 @@
       - id: MrDips
         orGroup: Giftpool
       - id: RevolverCapGun
-      - id: BalloonNT
+#      - id: BalloonNT # starcup: removed for syndicate rebranding ops
+      - id: BalloonSyn # starcup: added for syndicate rebranding ops
       - id: ClothingShoesClownLarge
       - id: ClothingHeadHatMagician
       - id: BeachBall
@@ -419,4 +464,23 @@
       - id: BoxDarts
         amount: 1
         prob: 0.05
+
+- type: entity
+  name: hydrated scurret
+  description: Wait, what?
+  id: CrateFunScurret
+  parent: CrateLivestock
+  components:
+  - type: StorageFill
+    contents:
+    - id: MobEmotionalSupportScurret # How? Why?
+    - id: DrinkVodkaBottleFull
+    - id: DrinkWhiskeyBottleFull
+    - id: DrinkTequilaBottleFull # ...that explains it.
+    - id: DrinkShotGlass
+      amount: 2
+    - id: Spear # self defence
+    - id: ClothingHeadHatHardhatYellow
+    - id: ClothingNeckMantleQM
+    - id: ClothingHeadsetCargo
 

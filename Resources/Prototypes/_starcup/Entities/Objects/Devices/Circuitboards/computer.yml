@@ -1,0 +1,32 @@
+- type: entity
+  parent: [ BaseTraitorContraband, SyndicateCommsComputerCircuitboard ]
+  id: NanotrasenCommsComputerCircuitboard
+  name: NanoTrasen communications computer board
+  description: A computer printed circuit board for a NanoTrasen communications console.
+  components:
+  - type: Sprite
+    state: cpu_command
+  - type: ComputerBoard
+    prototype: NanotrasenComputerComms
+
+- type: entity
+  parent: [ BaseTraitorContraband, SyndicateShuttleConsoleCircuitboard ]
+  id: NanotrasenShuttleConsoleCircuitboard
+  name: NanoTrasen shuttle console board
+  description: A computer printed circuit board for a NanoTrasen shuttle console.
+  components:
+  - type: Sprite
+    state: cpu_command
+  - type: ComputerBoard
+    prototype: ComputerShuttleNT
+
+- type: entity
+  parent: [ BaseTraitorContraband, ComputerIFFSyndicateCircuitboard ]
+  id: ComputerIFFNanotrasenCircuitboard
+  name: NanoTrasen IFF console board
+  description: Allows you to control the IFF and stealth characteristics of this vessel.
+  components:
+  - type: Sprite
+    state: cpu_command
+  - type: ComputerBoard
+    prototype: ComputerIFFNanotrasen

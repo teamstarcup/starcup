@@ -110,7 +110,7 @@
   parent: ClothingHeadset
   id: ClothingHeadsetEngineering
   name: engineering headset
-  description: A headset for engineers to chat while the station burns around them.
+  description: A headset for engineers to scream into when the Tesla breaks loose. # starcup: rewritten for tone
   components:
   - type: ContainerFill
     containers:
@@ -126,7 +126,7 @@
   parent: [ClothingHeadsetEngineering, BaseCommandContraband]
   id: ClothingHeadsetCE
   name: ce headset
-  description: A headset for the chief engineer to ignore all emergency calls on.
+  description: A headset for the Chief Engineer to inform Command that the engine is perfectly under control. # starcup: rewritten for tone
   components:
   - type: ContainerFill
     containers:
@@ -237,6 +237,7 @@
       key_slots:
       - EncryptionKeySecurity
       - EncryptionKeyCommon
+      - EncryptionKeyPrison # starcup
   - type: Sprite
     sprite: Clothing/Ears/Headsets/security.rsi
   - type: Clothing
@@ -245,7 +246,7 @@
 - type: entity
   parent: [ClothingHeadset, BaseSecurityContraband]
   id: ClothingHeadsetBrigmedic
-  name: brigmedic headset
+  name: combat medic headset # starcup: rename brigmedic to combat medic
   description: A headset that helps to hear the death cries.
   components:
   - type: ContainerFill
@@ -254,6 +255,7 @@
       - EncryptionKeyMedical
       - EncryptionKeySecurity
       - EncryptionKeyCommon
+      - EncryptionKeyPrison # starcup
   - type: Sprite
     sprite: Clothing/Ears/Headsets/brigmedic.rsi
   - type: Clothing

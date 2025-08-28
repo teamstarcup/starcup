@@ -10,7 +10,7 @@ using Content.Client.UserInterface.ControlExtensions;
 namespace Content.Client.Guidebook.RichText;
 
 [UsedImplicitly]
-public sealed class TextLinkTag : IMarkupTag
+public sealed class TextLinkTag : IMarkupTagHandler
 {
     [Dependency] private readonly IUriOpener _uriOpener = null!;  // starcup: IUriOpener dependency for web hyperlinks
 
@@ -18,10 +18,8 @@ public sealed class TextLinkTag : IMarkupTag
 
     public string Name => "textlink";
 
-    public Control? Control;
-
     /// <inheritdoc/>
-    public bool TryGetControl(MarkupNode node, [NotNullWhen(true)] out Control? control)
+    public bool TryCreateControl(MarkupNode node, [NotNullWhen(true)] out Control? control)
     {
         if (!node.Value.TryGetString(out var text)
             || !node.Attributes.TryGetValue("link", out var linkParameter)
@@ -40,19 +38,18 @@ public sealed class TextLinkTag : IMarkupTag
 
         label.OnMouseEntered += _ => label.FontColorOverride = Color.LightSkyBlue;
         label.OnMouseExited += _ => label.FontColorOverride = Color.CornflowerBlue;
-        label.OnKeyBindDown += args => OnKeybindDown(args, link);
+        label.OnKeyBindDown += args => OnKeybindDown(args, link, label);
 
         control = label;
-        Control = label;
         return true;
     }
 
-    private void OnKeybindDown(GUIBoundKeyEventArgs args, string link)
+    private void OnKeybindDown(GUIBoundKeyEventArgs args, string link, Control? control)
     {
         if (args.Function != EngineKeyFunctions.UIClick)
             return;
 
-        if (Control == null)
+        if (control == null)
             return;
 
         // begin starcup: handle web hyperlinks
@@ -63,7 +60,7 @@ public sealed class TextLinkTag : IMarkupTag
         }
         // end starcup
 
-        if (Control.TryGetParentHandler<ILinkClickHandler>(out var handler))
+        if (control.TryGetParentHandler<ILinkClickHandler>(out var handler))
             handler.HandleClick(link);
         else
             Logger.Warning("Warning! No valid ILinkClickHandler found.");

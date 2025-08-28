@@ -1,0 +1,45 @@
+- type: entity
+  id: SoapSyndieMundane
+  suffix: Syndicate, Mundane
+  parent: SoapNT
+  description: A Syndicate brand bar of soap.
+  components:
+  - type: Sprite
+    layers:
+    - state: syndie-4
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    fillBaseName: syndie-
+  - type: Item
+    heldPrefix: syndie
+  - type: Residue
+    residueAdjective: residue-slippery
+    residueColor: residue-red
+
+- type: entity
+  id: SoapNTAntag
+  suffix: NanoTrasen, Antag
+  parent: [BaseTraitorContraband, SoapSyndie]
+  description: A NanoTrasen bar of soap. Smells of plasma.
+  components:
+  - type: Sprite
+    layers:
+    - state: nt-4
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    fillBaseName: nt-
+  - type: Item
+    heldPrefix: nt
+  - type: Residue
+    residueAdjective: residue-slippery
+    residueColor: residue-blue
+
+- type: entity
+  parent: [BaseTraitorContraband, SoapletSyndie]
+  id: SoapletNTAntag
+  suffix: NanoTrasen
+  description: A tiny piece of NanoTrasen soap.
+  components:
+  - type: Sprite
+    layers:
+    - state: nano-soaplet

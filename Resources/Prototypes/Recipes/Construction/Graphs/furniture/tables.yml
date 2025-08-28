@@ -261,6 +261,12 @@
             - material: FloorCarpetWhite
               amount: 1
 
+        - to: TableWoodReinforced # Nyanotrasen
+          steps:
+            - material: WoodPlank
+              amount: 2
+              doAfter: 1
+
     - node: TableCarpet
       entity: TableCarpet
       edges:
@@ -381,6 +387,18 @@
             - tool: Prying
               doAfter: 1
 
+    - node: TableWoodReinforced # Nyanotrasen
+      entity: TableWoodReinforced
+      edges:
+        - to: TableWood
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 2
+          steps:
+            - tool: Prying
+              doAfter: 1
+
     - node: CounterMetal
       entity: TableCounterMetal
       edges:
@@ -404,3 +422,15 @@
           steps:
             - tool: Prying
               doAfter: 1
+
+    - node: TableXeno
+      entity: TableXeno
+      edges:
+      - to: TableFrame
+        completed:
+        - !type:SpawnPrototype
+          prototype: SheetSteel1
+          amount: 1
+        steps:
+        - tool: Anchoring
+          doAfter: 1

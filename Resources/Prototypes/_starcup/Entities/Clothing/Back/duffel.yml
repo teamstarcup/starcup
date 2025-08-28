@@ -1,0 +1,76 @@
+- type: entity
+  parent: ClothingBackpackDuffelCaptain
+  id: ClothingBackpackDuffelCaptainSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/captain_syndi.rsi
+
+- type: entity
+  parent: [BaseTraitorContraband, ClothingBackpackDuffelSyndicate, BaseExaminableClothing]
+  id: ClothingBackpackDuffelNanotrasen
+  name: NanoTrasen duffel bag
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/nanotrasen.rsi
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-duffel-bag
+
+- type: entity
+  parent: ClothingBackpackDuffelNanotrasen
+  id: ClothingBackpackDuffelNanotrasenBundle
+  abstract: true
+  components:
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+
+- type: entity
+  parent: ClothingBackpackDuffelNanotrasen
+  id: ClothingBackpackDuffelNanotrasenAmmo
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/nanotrasen.rsi
+    state: icon-ammo
+  - type: Item
+    heldPrefix: ammo
+  - type: Clothing
+    equippedPrefix: ammo
+
+- type: entity
+  parent: ClothingBackpackDuffelNanotrasenAmmo
+  id: ClothingBackpackDuffelNanotrasenAmmoBundle
+  abstract: true
+  components:
+    - type: Tag
+      tags: [] # ignore "WhitelistChameleon" tag
+
+- type: entity
+  parent: ClothingBackpackDuffelNanotrasen
+  id: ClothingBackpackDuffelNanotrasenMedical
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/nanotrasen.rsi
+    state: icon-med
+  - type: Item
+    heldPrefix: med
+  - type: Clothing
+    equippedPrefix: med
+
+- type: entity
+  parent: ClothingBackpackDuffelNanotrasenMedical
+  id: ClothingBackpackDuffelNanotrasenMedicalBundle
+  abstract: true
+  components:
+    - type: Tag
+      tags: [] # ignore "WhitelistChameleon" tag
+
+- type: entity
+  parent: [ ClothingBackpackDuffel, BaseSyndCommContraband ]
+  id: ClothingBackpackDuffelSyndComm
+  name: SyndComm duffel bag
+  description: A stylish SyndComm-branded duffel bag.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/syndcomm.rsi
+  - type: ClothingSpeedModifier
+    sprintModifier: 1  # no penalty

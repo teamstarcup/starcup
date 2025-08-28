@@ -156,7 +156,7 @@
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtEngineering
   name: engineering jumpskirt
-  description: If this suit was non-conductive, maybe engineers would actually do their damn job.
+  description: Lightly dusted with soot and debris from long repair jobs. # starcup: rewritten for tone
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/engineering.rsi
@@ -167,7 +167,7 @@
   parent: [ClothingUniformSkirtBase, BaseCommandContraband]
   id: ClothingUniformJumpskirtHoP
   name: head of personnel's jumpskirt
-  description: Rather bland and inoffensive. Perfect for vanishing off the face of the universe.
+  description: You're the person in charge of the uniforms. If your own uniform was anything less than exceptional, it'd be a disgrace! # starcup: rewritten for tone
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/hop.rsi
@@ -175,7 +175,7 @@
     sprite: Clothing/Uniforms/Jumpskirt/hop.rsi
 
 - type: entity
-  parent: [ClothingUniformSkirtBase, BaseCommandContraband]
+  parent: [ClothingUniformSkirtRollableBase, BaseCommandContraband] # DeltaV - add rollable jumpsuits
   id: ClothingUniformJumpskirtHoS
   name: head of security's jumpskirt
   description: It's bright red and rather crisp, much like security's victims tend to be.
@@ -290,8 +290,8 @@
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtBrigmedic
-  name: brigmedic jumpskirt
-  description: This uniform is issued to qualified personnel who have been trained. No one cares that the training took half a day.
+  name: combat medic jumpskirt # starcup: rename brigmedic to combat medic
+  description: This uniform is issued to qualified personnel who have been trained. Infamously hard to keep clean. # starcup: rewritten for tone
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/brigmedic.rsi
@@ -423,7 +423,7 @@
   parent: [ClothingUniformSkirtBase, BaseSecurityContraband]
   id: ClothingUniformJumpskirtWarden
   name: warden's uniform
-  description: A formal security suit for officers complete with Nanotrasen belt buckle.
+  description: A formal security suit for officers, complete with SyndComm belt buckle.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/warden.rsi
@@ -521,6 +521,8 @@
     sprite: Clothing/Uniforms/Jumpskirt/operative_s.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/operative_s.rsi
+  - type: StaticPrice
+    price: 500
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -706,7 +708,7 @@
   parent: [ClothingUniformSkirtBase, BaseSecurityContraband]
   id: ClothingUniformJumpskirtSecGrey
   name: grey security jumpskirt
-  description: A tactical relic of years past before Nanotrasen decided it was cheaper to dye the suits red instead of washing out the blood.
+  description: A tactical relic of years past before Cybersun decided it was cheaper to tell SyndComm to dye the suits red instead of washing out the blood. # starcup - NT-SC swap
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/security_grey.rsi

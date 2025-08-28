@@ -2,7 +2,7 @@
   id: Carpetium
   name: reagent-name-carpetium
   group: Special
-  desc: reagent-desc-carpetium
+  desc: reagent-desc-carpetium-starcup # starcup: rewritten for tone
   physicalDesc: reagent-physical-desc-fibrous
   flavor: carpet
   color: "#800000"
@@ -383,6 +383,37 @@
           min: 50
       - !type:AdjustReagent
         reagent: JuiceThatMakesYouHew
+        amount: -20
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+
+- type: reagent
+  id: CorgiJuice
+  name: reagent-name-corgiessence
+  group: Toxins
+  desc: reagent-desc-corgiessence
+  physicalDesc: reagent-physical-desc-fluffy
+  flavor: dogfood
+  color: "#ed9715"
+  metabolisms:
+    Poison:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        damage:
+          types:
+            Cellular: 0.5
+      - !type:Polymorph
+        prototype: SmartCorgiMorph
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+      - !type:AdjustReagent
+        reagent: CorgiJuice
         amount: -20
         conditions:
         - !type:ReagentThreshold

@@ -26,7 +26,7 @@
 - type: startingGear
   id: DetectiveGear
   equipment:
-    eyes: ClothingEyesGlassesSecurity
+    #eyes: ClothingEyesGlassesSecurity # starcup: moved to loadouts
     id: DetectivePDA
     ears: ClothingHeadsetSecurity
     belt: ClothingBeltHolster # DeltaV - loadouts
@@ -35,3 +35,13 @@
     - Flash
     - ForensicPad
     - ForensicScanner
+
+- type: chameleonOutfit
+  id: DetectiveChameleonOutfit
+  job: Detective
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatFedoraBrown
+    mask: ClothingMaskGasSecurity
+    neck: ClothingNeckTieDet
+    gloves: ClothingHandsGlovesForensic

@@ -11,7 +11,6 @@ public sealed class TypingIndicatorVisualizerSystem : VisualizerSystem<TypingInd
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly InventorySystem _inventory = default!;
 
-
     protected override void OnAppearanceChange(EntityUid uid, TypingIndicatorComponent component, ref AppearanceChangeEvent args)
     {
         if (args.Sprite == null)

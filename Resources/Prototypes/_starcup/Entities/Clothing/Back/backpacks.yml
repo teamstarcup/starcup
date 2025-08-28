@@ -1,0 +1,20 @@
+- type: entity
+  parent: ClothingBackpackCaptain
+  id: ClothingBackpackCaptainSyndie
+  description: It's a special backpack made exclusively for Syndicate officers.
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Backpacks/captain_syndi.rsi
+
+#Syndicate
+- type: entity
+  parent: [BaseTraitorContraband, ClothingBackpackSyndicate, BaseExaminableClothing]
+  id: ClothingBackpackNanotrasen
+  name: NanoTrasen backpack
+  description:
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Backpacks/nanotrasen.rsi
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-backpack

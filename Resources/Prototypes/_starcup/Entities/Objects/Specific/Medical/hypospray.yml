@@ -1,0 +1,66 @@
+- type: entity
+  name: NanoTrasen hypospray
+  parent: SyndiHypo
+  description: Using reverse engineered designs from the Syndicate, NanoTrasen produced these in limited quantities for their operatives.
+  id: NanotrasenHypo
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Specific/Medical/nanohypo.rsi
+    layers:
+      - state: hypo
+        map: ["enum.SolutionContainerLayers.Base"]
+      - state: hypo_fill1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Item
+    sprite: _starcup/Objects/Specific/Medical/nanohypo.rsi
+
+- type: entity
+  parent: [BaseTraitorContraband, Stimpack]
+  id: StimpackNT
+  suffix: NanoTrasen
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-needle-inhand-left
+      - state: base-colorA-inhand-left
+        color: "#04599a"
+      - state: base-colorB-inhand-left
+        color: "#2982c6"
+      right:
+      - state: base-needle-inhand-right
+      - state: base-colorA-inhand-right
+        color: "#04599a"
+      - state: base-colorB-inhand-right
+        color: "#2982c6"
+  - type: Sprite
+    sprite: _starcup/Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: stimpen
+      map: ["enum.SolutionContainerLayers.Fill"]
+
+- type: entity
+  parent: [BaseTraitorContraband, StimpackMini]
+  id: StimpackMiniNT
+  suffix: NanoTrasen
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-needle-inhand-left
+      - state: base-colorA-inhand-left
+        color: "#04599a"
+      - state: base-colorB-inhand-left
+        color: "#2982c6"
+      right:
+      - state: base-needle-inhand-right
+      - state: base-colorA-inhand-right
+        color: "#04599a"
+      - state: base-colorB-inhand-right
+        color: "#2982c6"
+  - type: Sprite
+    sprite: _starcup/Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: microstimpen
+      map: ["enum.SolutionContainerLayers.Fill"]

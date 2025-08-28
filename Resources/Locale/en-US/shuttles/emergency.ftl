@@ -1,17 +1,21 @@
 # Commands
 ## Delay shuttle round end
-emergency-shuttle-command-round-desc = Stops the timer that ends the round when the emergency shuttle exits hyperspace.
+cmd-delayroundend-desc = Stops the timer that ends the round when the emergency shuttle exits hyperspace.
+cmd-delayroundend-help = Usage: delayroundend
 emergency-shuttle-command-round-yes = Round delayed.
 emergency-shuttle-command-round-no = Unable to delay round end.
 
 ## Dock emergency shuttle
-emergency-shuttle-command-dock-desc = Calls the emergency shuttle and docks it to the station... if it can.
+cmd-dockemergencyshuttle-desc = Calls the emergency shuttle and docks it to the station... if it can.
+cmd-dockemergencyshuttle-help = Usage: dockemergencyshuttle
 
 ## Launch emergency shuttle
-emergency-shuttle-command-launch-desc = Early launches the emergency shuttle if possible.
+cmd-launchemergencyshuttle-desc = Early launches the emergency shuttle if possible.
+cmd-launchemergencyshuttle-help = Usage: launchemergencyshuttle
 
 # Emergency shuttle
-emergency-shuttle-left = The Emergency Shuttle has left the station. Estimate {$transitTime} seconds until the shuttle arrives at CentComm.
+# emergency-shuttle-left = The Emergency Shuttle has left the station. Estimate {$transitTime} seconds until the shuttle arrives at CentComm. # starcup - NT-SC swap
+emergency-shuttle-left = The Emergency Shuttle has left the station. Estimate {$transitTime} seconds until the shuttle arrives at SyndComm.
 emergency-shuttle-launch-time = The emergency shuttle will launch in {$consoleAccumulator} seconds.
 emergency-shuttle-docked = The Emergency Shuttle has docked {$direction} of the station, {$location}. It will leave in {$time} seconds.{$extended}
 emergency-shuttle-good-luck = The Emergency Shuttle is unable to find a station. Good luck.
@@ -36,5 +40,6 @@ emergency-shuttle-ui-authorizations = Authorizations
 emergency-shuttle-ui-remaining = Remaining: {$remaining}
 
 # Map Misc.
-map-name-centcomm = Central Command
+# map-name-centcomm = Central Command # starcup - NT-SC swap
+map-name-centcomm = Syndicate Communications
 map-name-terminal = Arrivals Terminal

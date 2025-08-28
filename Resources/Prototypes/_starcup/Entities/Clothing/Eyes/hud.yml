@@ -1,0 +1,35 @@
+- type: entity
+  parent: ClothingEyesHudCommand
+  id: ClothingEyesHudCommandSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Hud/command_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Hud/command_syndi.rsi
+
+- type: entity
+  parent: [BaseTraitorContraband, ClothingEyesHudSyndicate, BaseExaminableClothing]
+  id: ClothingEyesHudNanotrasen
+  name: NanoTrasen visor
+  description: NanoTrasen's professional head-up display, designed for better detection of humanoids and their subsequent elimination.
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Hud/synd.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Hud/synd.rsi
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-visor
+
+- type: entity
+  parent: [BaseTraitorContraband, ClothingEyesHudSyndicateAgent, BaseExaminableClothing]
+  id: ClothingEyesHudNanotrasenAgent
+  name: NanoTrasen medical visor
+  description: The NanoTrasen Corpsman's professional heads-up display, designed for quick diagnosis of their team's status.
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Hud/syndagent.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Hud/syndagent.rsi
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-medical-visor

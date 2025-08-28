@@ -1,0 +1,43 @@
+- type: entity
+  parent: BaseStructure
+  id: ManekiNekoWhite
+  name: maneki-neko
+  description: A figurine of a beckoning cat.
+  suffix: White
+  components:
+  - type: Anchorable
+  - type: Sprite
+    sprite: _starcup/Structures/Furniture/Decor/maneki-neko.rsi
+    drawdepth: SmallObjects
+    offset: "0,0.1"
+    layers:
+    - state: base
+    - state: overlay
+
+- type: entity
+  parent: ManekiNekoWhite
+  id: ManekiNekoGold
+  name: maneki-neko
+  description: A figurine of a beckoning cat.
+  suffix: Gold
+  components:
+  - type: Anchorable
+  - type: Sprite
+    layers:
+    - state: base
+      color: "#a6823a"
+    - state: overlay
+
+- type: entity
+  parent: ManekiNekoWhite
+  id: ManekiNekoBlack
+  name: maneki-neko
+  description: A figurine of a beckoning cat.
+  suffix: Black
+  components:
+  - type: Anchorable
+  - type: Sprite
+    layers:
+    - state: base
+      color: "#4d4d4d"
+    - state: overlay

@@ -1,4 +1,5 @@
 - type: entity
+  parent: BaseWallmount
   categories: [ HideSpawnMenu ]
   id: BaseAPC
   name: APC
@@ -14,17 +15,18 @@
     sound:
       path: /Audio/Ambience/Objects/hdd_buzz.ogg
   - type: PointLight
-    radius: 1.5
-    energy: 1.6
+    radius: 1.8  # starcup: 1.5 -> 1.8
+    energy: 0.8  # starcup: 1.6 -> 0.8
     color: "#3db83b"
     castShadows: false
     netsync: false
-  - type: Clickable
+    # begin starcup: improve lighting
+    mask: /Textures/Effects/LightMasks/cone.png
+    offset: "0, 0"
+    autoRot: true
+    # end starcup
   - type: AccessReader
     access: [["Engineering"]]
-  - type: InteractionOutline
-  - type: Transform
-    anchored: true
   - type: Sprite
     drawdepth: WallMountedItems
     sprite: Structures/Power/apc.rsi
@@ -89,6 +91,8 @@
     interfaces:
       enum.ApcUiKey.Key:
         type: ApcBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
   - type: ActivatableUI
     inHandsOnly: false
     key: enum.ApcUiKey.Key
@@ -102,6 +106,10 @@
     supplyRampRate: 500
   - type: WallMount
   - type: WiresPanel
+  - type: Wires
+    alwaysRandomize: true
+    boardName: wires-board-name-apc
+    layoutId: APC
   - type: WiresVisuals
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -152,6 +160,7 @@
 
 # APC under construction
 - type: entity
+  parent: BaseWallmountMetallic
   categories: [ HideSpawnMenu ]
   id: APCFrame
   name: APC frame
@@ -159,21 +168,12 @@
   placement:
     mode: SnapgridCenter
   components:
-  - type: Clickable
-  - type: InteractionOutline
-  - type: Transform
-    anchored: true
   - type: Sprite
-    drawdepth: WallMountedItems
     sprite: Structures/Power/apc.rsi
     state: frame
   - type: Construction
     graph: APC
     node: apcFrame
-  - type: WallMount
-  - type: Damageable
-    damageContainer: StructuralInorganic
-    damageModifierSet: StructuralMetallic
   - type: Destructible
     thresholds:
     - trigger:

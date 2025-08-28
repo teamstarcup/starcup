@@ -1,0 +1,37 @@
+- type: entity
+  parent: [BoxFolderBase, BaseSyndCommContraband]
+  id: BoxFolderSyndComm
+  name: SyndComm folder
+  description: SyndComm's miserable little pile of secrets!
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/folders.rsi
+    layers:
+    - state: folder-syndcomm
+    - state: folder-base
+  - type: Item
+    sprite: _starcup/Objects/Misc/folders.rsi
+    size: Small
+    shape: null
+
+- type: entity
+  parent: BoxFolderCentComClipboard
+  id: BoxFolderSyndCommClipboard
+  name: SyndComm clipboard
+  description: A luxurious clipboard with gold trim. Often seen carried by SyndComm officials, seldom seen actually used.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/syndcomm-clipboard.rsi
+    layers:
+    - state: clipboard
+    - state: clipboard_paper
+      map: ["clipboard_paper"]
+      visible: false
+    - state: clipboard_pen
+      map: ["clipboard_pen"]
+      visible: false
+    - state: clipboard_over
+  - type: Item
+    sprite: _starcup/Objects/Misc/syndcomm-clipboard.rsi
+  - type: Clothing
+    sprite: _starcup/Objects/Misc/syndcomm-clipboard.rsi

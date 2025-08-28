@@ -15,8 +15,7 @@ namespace Content.Shared.Maps
     [Prototype("tile")]
     public sealed partial class ContentTileDefinition : IPrototype, IInheritingPrototype, ITileDefinition
     {
-        [ValidatePrototypeId<ToolQualityPrototype>]
-        public const string PryingToolQuality = "Prying";
+        public static readonly ProtoId<ToolQualityPrototype> PryingToolQuality = "Prying";
 
         public const string SpaceID = "Space";
 
@@ -113,10 +112,12 @@ namespace Content.Shared.Maps
 
         [DataField("sturdy")] public bool Sturdy { get; private set; } = true;
 
-        /// <summary>
-        /// Can weather affect this tile.
-        /// </summary>
-        [DataField("weather")] public bool Weather = false;
+        // begin upstream: early merge of #38638
+        // /// <summary>
+        // /// Can weather affect this tile.
+        // /// </summary>
+        // [DataField("weather")] public bool Weather = false;
+        // end upstream
 
         /// <summary>
         /// Is this tile immune to RCD deconstruct.

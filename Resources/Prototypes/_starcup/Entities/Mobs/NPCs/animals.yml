@@ -1,0 +1,60 @@
+# Antag
+- type: entity
+  name: monkey
+  id: MobBaseNanotrasenMonkey
+  parent: MobBaseSyndicateMonkey
+  suffix: NanoTrasen base
+  components:
+  - type: Loadout
+    prototypes: [NanotrasenOperativeGearMonkey]
+
+- type: entity
+  id: MobMonkeyNanotrasenAgent
+  parent: MobBaseNanotrasenMonkey
+  suffix: NanoTrasen agent
+  components:
+    # make the player a traitor once its taken
+  - type: AutoTraitor
+    profile: TraitorReinforcement
+
+- type: entity
+  id: MobMonkeyNanotrasenAgentNukeops # Reinforcement exclusive to nukeops uplink
+  parent: MobBaseNanotrasenMonkey
+  suffix: NukeOps, NanoTrasen
+  components:
+  - type: NukeOperative
+
+- type: entity
+  parent: [ BaseTraitorContraband, MobGrenadePenguin ]
+  id: MobGrenadePenguinNT
+  suffix: NanoTrasen
+  description: A small penguin with a grenade strapped around its neck. Harvested by NanoTrasen from icy shit-hole planets.
+
+- type: entity
+  name: NanoCat
+  id: MobCatNT
+  parent: MobCatSyndy
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Pets/cat.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: nanocat
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: nanocat
+      Critical:
+        Base: nanocat_dead
+      Dead:
+        Base: nanocat_dead
+  - type: GhostRole
+    prob: 1
+    name: ghost-role-information-NanoCat-name
+    allowMovement: true
+    description: ghost-role-information-SyndiCat-description
+    rules: ghost-role-information-SyndiCat-rules
+    mindRoles:
+    - MindRoleGhostRoleTeamAntagonist
+    raffle:
+      settings: default

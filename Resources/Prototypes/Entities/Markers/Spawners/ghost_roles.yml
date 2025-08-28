@@ -18,9 +18,9 @@
   - type: GhostRole
     name: ghost-role-information-rat-king-name
     description: ghost-role-information-rat-king-description
-    rules: ghost-role-information-freeagent-rules
+    rules: ghost-role-information-antagonist-rules
     mindRoles:
-    - MindRoleGhostRoleFreeAgent
+    - MindRoleGhostRoleSoloAntagonist
     raffle:
       settings: default
   - type: GhostRoleMobSpawner
@@ -108,7 +108,7 @@
   - type: GhostRole
     name: ghost-role-information-loneop-name
     description: ghost-role-information-loneop-description
-    rules: ghost-role-information-loneop-rules
+    rules: ghost-role-information-loneop-rules-starcup # starcup: Syndicate to NT
     mindRoles:
     - MindRoleGhostRoleSoloAntagonist
   - type: Sprite

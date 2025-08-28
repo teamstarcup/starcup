@@ -7,9 +7,6 @@
   whitelist:
     components:
     - Vocal
-  blacklist:
-    tags:
-    - SiliconEmotes
   chatMessages: ["chat-emote-msg-scream"]
   chatTriggers:
     - scream
@@ -37,9 +34,10 @@
   whitelist:
     components:
     - Vocal
-  blacklist:
-    tags:
-    - SiliconEmotes
+# starcup: silicon emotes
+#  blacklist:
+#    tags:
+#    - SiliconEmotes
   chatMessages: ["chat-emote-msg-laugh"]
   chatTriggers:
     - laugh
@@ -84,9 +82,10 @@
   whitelist:
     components:
     - Vocal
-  blacklist:
-    tags:
-    - SiliconEmotes
+# starcup: silicon emotes
+#  blacklist:
+#    tags:
+#    - SiliconEmotes
   chatMessages: ["chat-emote-msg-sigh"]
   chatTriggers:
     - sigh
@@ -101,9 +100,10 @@
   whitelist:
     components:
     - Vocal
-  blacklist:
-    tags:
-    - SiliconEmotes
+# starcup: silicon emotes
+#  blacklist:
+#    tags:
+#    - SiliconEmotes
   chatMessages: ["chat-emote-msg-whistle"]
   chatTriggers:
     - whistle
@@ -118,9 +118,10 @@
   whitelist:
     components:
     - Vocal
-  blacklist:
-    tags:
-    - SiliconEmotes
+# starcup: silicon emotes
+#  blacklist:
+#    tags:
+#    - SiliconEmotes
   chatMessages: ["chat-emote-msg-crying"]
   chatTriggers:
     - cry
@@ -210,9 +211,10 @@
   whitelist:
     components:
     - Hands
-  blacklist:
-    tags:
-    - SiliconEmotes
+# starcup: silicon emotes
+#  blacklist:
+#    tags:
+#    - SiliconEmotes
   chatMessages: ["chat-emote-msg-clap"]
   chatTriggers:
     - claps
@@ -227,9 +229,10 @@
   whitelist:
     components:
     - Hands
-  blacklist:
-    tags:
-    - SiliconEmotes
+# starcup: silicon emotes
+#  blacklist:
+#    tags:
+#    - SiliconEmotes
   chatMessages: [ "chat-emote-msg-clap-single" ]
   chatTriggers:
     - clap
@@ -246,9 +249,10 @@
   whitelist:
     components:
     - Hands
-  blacklist:
-    tags:
-    - SiliconEmotes
+# starcup: silicon emotes
+#  blacklist:
+#    tags:
+#    - SiliconEmotes
   chatMessages: ["chat-emote-msg-snap"]
   chatTriggers:
     - snap
@@ -297,9 +301,10 @@
   whitelist:
     components:
     - Hands
-  blacklist:
-    tags:
-    - SiliconEmotes
+# starcup: silicon emotes
+#  blacklist:
+#    tags:
+#    - SiliconEmotes
   chatMessages: ["chat-emote-msg-salute"]
   chatTriggers:
     - salute
@@ -333,6 +338,12 @@
   name: chat-emote-name-deathgasp
   icon: Interface/Emotes/deathgasp.png
   chatMessages: ["chat-emote-msg-deathgasp-monkey"]
+
+- type: emote
+  id: ScurretDeathgasp
+  name: chat-emote-name-deathgasp
+  icon: Interface/Emotes/deathgasp.png
+  chatMessages: ["chat-emote-msg-deathgasp-scurret"]
 
 - type: emote
   id: Buzz

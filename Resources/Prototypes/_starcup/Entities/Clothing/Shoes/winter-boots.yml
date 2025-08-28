@@ -1,0 +1,31 @@
+- type: entity
+  parent: ClothingShoesBootsWinterHeadOfPersonel
+  id: ClothingShoesBootsWinterHeadOfPersonelSyndie
+  name: head of personnel's winter boots
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Shoes/Boots/winterbootshop_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Shoes/Boots/winterbootshop_syndi.rsi
+
+- type: entity
+  parent: ClothingShoesBootsWinterCap
+  id: ClothingShoesBootsWinterCapSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Shoes/Boots/winterbootscap_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Shoes/Boots/winterbootscap_syndi.rsi
+
+- type: entity
+  parent: [ClothingShoesBaseWinterBoots, BaseSyndCommContraband]
+  id: ClothingShoesBootsWinterSyndComm
+  name: SyndComm winter boots
+  description: Durable heavy boots.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Shoes/Boots/winterbootssyndcomm.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Shoes/Boots/winterbootssyndcomm.rsi

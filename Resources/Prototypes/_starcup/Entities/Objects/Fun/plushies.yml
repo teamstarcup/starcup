@@ -10,3 +10,35 @@
   - type: FoodSequenceElement
     entries:
       CottonBurger: EskiePlushie
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieEikse
+  name: eikse plushie
+  description: An unmarketable stuffed toy resembling a famous cartoon villain. There's a tag on it that reads "0% polycotton."
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Fun/plushies.rsi
+    state: eikse
+  - type: FoodSequenceElement
+    entries:
+      CottonBurger: EiksePlushie
+
+- type: entity
+  parent: PlushieNuke
+  id: PlushieNukeNT
+  suffix: NanoTrasen
+  description: A stuffed toy that resembles a NanoTrasen nuclear operative. The tag claims operatives to be purely fictitious.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Fun/Plushies/nukie_nt.rsi
+    state: icon
+  - type: Clothing
+    quickEquip: false
+    sprite: _starcup/Objects/Fun/Plushies/nukie_nt.rsi
+    slots:
+    - HEAD
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"

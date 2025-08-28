@@ -13,6 +13,7 @@
     tags:
     - SuitEVA
     - MonkeyWearable
+    - CorgiWearable
     - WhitelistChameleon
     - HidesHarpyWings
 
@@ -33,6 +34,8 @@
     - MonkeyWearable
     - WhitelistChameleon
     - HidesHarpyWings
+  - type: StaticPrice
+    price: 1000 # Helmet is 500
 
 #Emergency EVA
 - type: entity
@@ -58,6 +61,12 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - ScurretWearable
+    - MonkeyWearable
+    - WhitelistChameleon
 
 #Prisoner EVA
 - type: entity
@@ -95,7 +104,7 @@
 
 #Paramedic Voidsuit
 - type: entity
-  parent: [ClothingOuterEVASuitBase, BaseMedicalContraband] #Despite "Voidsuits are light hardsuits", since it parents of EVA Suits, it goes with the other softsuits
+  parent: [ClothingOuterEVASuitBase, BaseMedicalContraband, BaseExaminableClothing] #Despite "Voidsuits are light hardsuits", since it parents of EVA Suits, it goes with the other softsuits # starcup: examinable clothing
   id: ClothingOuterHardsuitVoidParamed
   name: paramedic void suit
   description: A void suit made for paramedics.
@@ -155,3 +164,11 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-paramedic-void-suit
+  # end starcup

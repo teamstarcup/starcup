@@ -1,0 +1,186 @@
+- type: entity
+  id: BaseBorgModuleNanotrasen
+  parent: BaseBorgModule
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - BorgModuleNanotrasen
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-icon-inhand-left
+        color: "#FF0000"
+      - state: base-module-inhand-left
+        color: "#145289"
+      - state: base-part-inhand-left
+      - state: base-stripes-inhand-left
+        color: "#0F487B"
+      right:
+      - state: base-icon-inhand-right
+        color: "#FF0000"
+      - state: base-module-inhand-right
+        color: "#145289"
+      - state: base-part-inhand-right
+      - state: base-stripes-inhand-right
+        color: "#0F487B"
+
+
+- type: entity
+  id: BaseBorgModuleNanotrasenAssault
+  parent: BaseBorgModule
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - BorgModuleNanotrasenAssault
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-icon-inhand-left
+        color: "#FF0000"
+      - state: base-module-inhand-left
+        color: "#145289"
+      - state: base-part-inhand-left
+      - state: base-stripes-inhand-left
+        color: "#0F487B"
+      right:
+      - state: base-icon-inhand-right
+        color: "#FF0000"
+      - state: base-module-inhand-right
+        color: "#145289"
+      - state: base-part-inhand-right
+      - state: base-stripes-inhand-right
+        color: "#0F487B"
+
+#syndicate modules
+- type: entity
+  id: BorgModuleNanotrasenWeapon
+  parent: [ BaseBorgModule, BaseProviderBorgModule, BaseTraitorContraband ]
+  name: weapon cyborg module
+  suffix: NanoTrasen
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Specific/Robotics/borgmodule.rsi
+    layers:
+    - state: nanotrasen
+    - state: icon-nanotrasen
+  - type: ItemBorgModule
+    items:
+    - WeaponPistolEchis
+    - EnergyDaggerLoud
+  - type: BorgModuleIcon
+    icon: { sprite: _starcup/Interface/Actions/actions_borg.rsi, state: nanotrasen-weapon-module }
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-icon-inhand-left
+        color: "#FF0000"
+      - state: base-module-inhand-left
+        color: "#145289"
+      - state: base-part-inhand-left
+      - state: base-stripes-inhand-left
+        color: "#0F487B"
+      right:
+      - state: base-icon-inhand-right
+        color: "#FF0000"
+      - state: base-module-inhand-right
+        color: "#145289"
+      - state: base-part-inhand-right
+      - state: base-stripes-inhand-right
+        color: "#0F487B"
+
+- type: entity
+  id: BorgModuleOperativeNT
+  parent: [ BaseBorgModuleNanotrasen, BaseProviderBorgModule, BaseTraitorContraband ]
+  name: operative cyborg module
+  suffix: NanoTrasen
+  description: A module that comes with a crowbar, an Emag, an Access Breaker and a NanoTrasen pinpointer.
+  components:
+    - type: Sprite
+      sprite: _starcup/Objects/Specific/Robotics/borgmodule.rsi
+      layers:
+      - state: nanotrasen
+      - state: icon-nanotrasen
+    - type: ItemBorgModule
+      items:
+      - Crowbar
+      - EmagNT
+      - AccessBreakerNT
+      - PinpointerNanotrasenNuclear
+    - type: BorgModuleIcon
+      icon: { sprite: _starcup/Interface/Actions/actions_borg.rsi, state: nanotrasen-operative-module }
+
+- type: entity
+  id: BorgModuleEswordNT
+  parent: [ BaseBorgModuleNanotrasen, BaseProviderBorgModule, BaseTraitorContraband ]
+  name: energy sword cyborg module
+  suffix: NanoTrasen
+  description: A module that comes with a double energy sword.
+  components:
+    - type: Sprite
+      sprite: _starcup/Objects/Specific/Robotics/borgmodule.rsi
+      layers:
+      - state: nanotrasen
+      - state: icon-nanotrasen
+    - type: ItemBorgModule
+      items:
+      - CyborgEnergySwordDoubleNT
+      - PinpointerNanotrasenNuclear
+    - type: BorgModuleIcon
+      icon: { sprite: _starcup/Interface/Actions/actions_borg.rsi, state: nanotrasen-esword-module }
+
+- type: entity
+  id: BorgModuleL6CNT
+  parent: [ BaseBorgModuleNanotrasenAssault, BaseProviderBorgModule, BaseTraitorContraband ]
+  name: L6C ROW cyborg module
+  suffix: NanoTrasen
+  description: A module that comes with a L6C.
+  components:
+    - type: Sprite
+      sprite: _starcup/Objects/Specific/Robotics/borgmodule.rsi
+      layers:
+      - state: nanotrasen
+      - state: icon-nanotrasen
+    - type: ItemBorgModule
+      items:
+        - WeaponLightMachineGunL6CNT
+        - PinpointerNanotrasenNuclear
+    - type: BorgModuleIcon
+      icon: { sprite: _starcup/Interface/Actions/actions_borg.rsi, state: nanotrasen-l6c-module }
+
+- type: entity
+  id: BorgModuleMartyrNT
+  parent: [ BaseBorgModule, BaseProviderBorgModule, BaseTraitorContraband ]
+  name: martyr cyborg module
+  suffix: NanoTrasen
+  description: "A module that comes with an explosive you probably don't want to handle yourself."
+  components:
+    - type: Sprite
+      sprite: _starcup/Objects/Specific/Robotics/borgmodule.rsi
+      layers:
+      - state: nanotrasenborgbomb
+      - state: icon-bomb-nt
+    - type: ItemBorgModule
+      items:
+        - SelfDestructSeq
+    - type: BorgModuleIcon
+      icon: { sprite: _starcup/Interface/Actions/actions_borg.rsi, state: nanotrasen-martyr-module }
+    - type: Item
+      inhandVisuals:
+        left:
+        - state: base-icon-inhand-left
+          color: "#FF0000"
+        - state: base-module-inhand-left
+          color: "#145289"
+        - state: base-part-inhand-left
+        - state: base-stripes-inhand-left
+          color: "#0F487B"
+        right:
+        - state: base-icon-inhand-right
+          color: "#FF0000"
+        - state: base-module-inhand-right
+          color: "#145289"
+        - state: base-part-inhand-right
+        - state: base-stripes-inhand-right
+          color: "#0F487B"

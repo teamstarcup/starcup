@@ -1,9 +1,9 @@
-using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
 using Content.Server.DoAfter;
 using Content.Server.Fluids.EntitySystems;
 using Content.Server.Forensics.Components;
 using Content.Server.Popups;
+using Content.Shared.Body.Events;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Popups;
 using Content.Shared.Chemistry.Components;
@@ -34,6 +34,7 @@ namespace Content.Server.Forensics
         public override void Initialize()
         {
             SubscribeLocalEvent<HandsComponent, ContactInteractionEvent>(OnInteract);
+            SubscribeLocalEvent<FiberComponent, MapInitEvent>(OnFiberInit, after: [typeof(BloodstreamSystem)]); // DeltaV - (#1455) unique glove fibers
             SubscribeLocalEvent<FingerprintComponent, MapInitEvent>(OnFingerprintInit, after: new[] { typeof(BloodstreamSystem) });
             // The solution entities are spawned on MapInit as well, so we have to wait for that to be able to set the DNA in the bloodstream correctly without ResolveSolution failing
             SubscribeLocalEvent<DnaComponent, MapInitEvent>(OnDNAInit, after: new[] { typeof(BloodstreamSystem) });
@@ -65,6 +66,14 @@ namespace Content.Server.Forensics
         {
             ApplyEvidence(uid, args.Other);
         }
+
+        // Begin DeltaV Additions
+        // #1455 - unique glove fibers
+        private void OnFiberInit(Entity<FiberComponent> ent, ref MapInitEvent args)
+        {
+            ent.Comp.Fiberprint = GenerateFingerprint(length: 7);
+        }
+        // End DeltaV Additions
 
         private void OnFingerprintInit(Entity<FingerprintComponent> ent, ref MapInitEvent args)
         {
@@ -270,9 +279,9 @@ namespace Content.Server.Forensics
                 targetComp.Residues.Add(string.IsNullOrEmpty(residue.ResidueColor) ? Loc.GetString("forensic-residue", ("adjective", residue.ResidueAdjective)) : Loc.GetString("forensic-residue-colored", ("color", residue.ResidueColor), ("adjective", residue.ResidueAdjective)));
         }
 
-        public string GenerateFingerprint()
+        public string GenerateFingerprint(int length = 16) // DeltaV #1455 - allow changing the length of the fingerprint hash
         {
-            var fingerprint = new byte[16];
+            var fingerprint = new byte[length]; // DeltaV #1455 - allow changing the length of the fingerprint hash
             _random.NextBytes(fingerprint);
             return Convert.ToHexString(fingerprint);
         }
@@ -298,8 +307,15 @@ namespace Content.Server.Forensics
             var component = EnsureComp<ForensicsComponent>(target);
             if (_inventory.TryGetSlotEntity(user, "gloves", out var gloves))
             {
+                // DeltaV #1455 - unique glove fibers
                 if (TryComp<FiberComponent>(gloves, out var fiber) && !string.IsNullOrEmpty(fiber.FiberMaterial))
-                    component.Fibers.Add(string.IsNullOrEmpty(fiber.FiberColor) ? Loc.GetString("forensic-fibers", ("material", fiber.FiberMaterial)) : Loc.GetString("forensic-fibers-colored", ("color", fiber.FiberColor), ("material", fiber.FiberMaterial)));
+                {
+                    var fiberLocale = string.IsNullOrEmpty(fiber.FiberColor)
+                        ? Loc.GetString("forensic-fibers", ("material", fiber.FiberMaterial))
+                        : Loc.GetString("forensic-fibers-colored", ("color", fiber.FiberColor), ("material", fiber.FiberMaterial));
+                    component.Fibers.Add(fiberLocale + " ; " + fiber.Fiberprint);
+                }
+                // End of DeltaV code
             }
 
             if (TryComp<FingerprintComponent>(user, out var fingerprint) && CanAccessFingerprint(user, out _))

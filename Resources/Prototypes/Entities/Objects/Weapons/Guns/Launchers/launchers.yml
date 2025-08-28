@@ -22,7 +22,7 @@
 
 - type: entity
   name: china lake
-  parent: [BaseWeaponLauncher, BaseGunWieldable, BaseSyndicateContraband]
+  parent: [BaseWeaponLauncher, BaseGunWieldable, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
   id: WeaponLauncherChinaLake
   description: PLOOP.
   components:
@@ -52,6 +52,13 @@
     proto: GrenadeFrag
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+  - type: GunRequiresWield
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-china-lake
+  # end starcup
+  - type: StaticPrice
+    price: 10000
 
 - type: entity
   parent: [ BaseWeaponLauncher, BaseGunWieldable, BaseMajorContraband ]
@@ -77,6 +84,7 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+  - type: GunRequiresWield
   - type: ContainerContainer
     containers:
       revolver-ammo: !type:Container
@@ -218,7 +226,7 @@
           map: [ "unshaded" ]
           shader: unshaded
           visible: false
-    - type: ToggleableLightVisuals
+    - type: ToggleableVisuals
       spriteLayer: unshaded
       inhandVisuals:
         left:
@@ -266,7 +274,7 @@
           map: [ "unshaded" ]
           shader: unshaded
           visible: false
-        - type: ToggleableLightVisuals
+        - type: ToggleableVisuals
           spriteLayer: unshaded
           inhandVisuals:
             left:
@@ -338,7 +346,7 @@
           map: [ "unshaded" ]
           shader: unshaded
           visible: false
-    - type: ToggleableLightVisuals
+    - type: ToggleableVisuals
       spriteLayer: unshaded
       inhandVisuals:
         left:
@@ -380,7 +388,7 @@
           map: [ "unshaded" ]
           shader: unshaded
           visible: false
-    - type: ToggleableLightVisuals
+    - type: ToggleableVisuals
       spriteLayer: unshaded
       inhandVisuals:
         left:

@@ -5,7 +5,6 @@ using Content.Server.Ghost.Roles.Components;
 using Content.Server.Ghost.Roles.Events;
 using Content.Shared.Ghost.Roles.Raffles;
 using Content.Server.Ghost.Roles.UI;
-using Content.Server.Mind.Commands;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
@@ -37,7 +36,7 @@ using Content.Shared.Ghost.Roles.Components;
 namespace Content.Server.Ghost.Roles;
 
 [UsedImplicitly]
-public sealed class GhostRoleSystem : EntitySystem
+public sealed partial class GhostRoleSystem : EntitySystem // DeltaV - Converted to partial to allow character ghost roles
 {
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly EuiManager _euiManager = default!;
@@ -88,6 +87,7 @@ public sealed class GhostRoleSystem : EntitySystem
         SubscribeLocalEvent<GhostRoleMobSpawnerComponent, TakeGhostRoleEvent>(OnSpawnerTakeRole);
         SubscribeLocalEvent<GhostRoleMobSpawnerComponent, GetVerbsEvent<Verb>>(OnVerb);
         SubscribeLocalEvent<GhostRoleMobSpawnerComponent, GhostRoleRadioMessage>(OnGhostRoleRadioMessage);
+        SubscribeLocalEvent<GhostRoleCharacterSpawnerComponent, TakeGhostRoleEvent>(OnSpawnerTakeCharacter); // DeltaV - Character ghost roles, see Content.Server/DeltaV/Ghost/Roles/GhostRoleSystem.Character.cs
         _playerManager.PlayerStatusChanged += PlayerStatusChanged;
     }
 
@@ -126,7 +126,7 @@ public sealed class GhostRoleSystem : EntitySystem
     public void OpenEui(ICommonSession session)
     {
         if (session.AttachedEntity is not { Valid: true } attached ||
-            !EntityManager.HasComponent<GhostComponent>(attached))
+            !HasComp<GhostComponent>(attached))
             return;
 
         if (_openUis.ContainsKey(session))
@@ -510,8 +510,13 @@ public sealed class GhostRoleSystem : EntitySystem
 
         DebugTools.AssertNotNull(player.ContentData());
 
+        // After taking a ghost role, the player cannot return to the original body, so wipe the player's current mind
+        // unless it is a visiting mind
+        if(_mindSystem.TryGetMind(player.UserId, out _, out var mind) && !mind.IsVisitingEntity)
+            _mindSystem.WipeMind(player);
+
         var newMind = _mindSystem.CreateMind(player.UserId,
-            EntityManager.GetComponent<MetaDataComponent>(mob).EntityName);
+            Comp<MetaDataComponent>(mob).EntityName);
 
         _mindSystem.SetUserId(newMind, player.UserId);
         _mindSystem.TransferTo(newMind, mob);
@@ -693,7 +698,7 @@ public sealed class GhostRoleSystem : EntitySystem
         RaiseLocalEvent(mob, spawnedEvent);
 
         if (ghostRole.MakeSentient)
-            MakeSentientCommand.MakeSentient(mob, EntityManager, ghostRole.AllowMovement, ghostRole.AllowSpeech);
+            _mindSystem.MakeSentient(mob, ghostRole.AllowMovement, ghostRole.AllowSpeech);
 
         EnsureComp<MindContainerComponent>(mob);
 
@@ -740,7 +745,7 @@ public sealed class GhostRoleSystem : EntitySystem
         }
 
         if (ghostRole.MakeSentient)
-            MakeSentientCommand.MakeSentient(uid, EntityManager, ghostRole.AllowMovement, ghostRole.AllowSpeech);
+            _mindSystem.MakeSentient(uid, ghostRole.AllowMovement, ghostRole.AllowSpeech);
 
         GhostRoleInternalCreateMindAndTransfer(args.Player, uid, uid, ghostRole);
         UnregisterGhostRole((uid, ghostRole));

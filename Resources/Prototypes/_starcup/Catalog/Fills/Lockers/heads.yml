@@ -1,0 +1,125 @@
+# No laser table
+- type: entityTable
+  id: LockerFillCaptainNoLaserSyndie
+  table: !type:AllSelector
+    children:
+    - id: CaptainIDCard
+    - id: CigarGoldCase
+      prob: 0.25
+    - id: ClothingBeltSheathFilled
+    - id: ClothingHeadsetAltCommandSyndie
+    - id: ClothingOuterArmorCaptainCarapaceSyndie
+    - id: CommsComputerCircuitboard
+    - id: DoorRemoteCustom
+    - id: MedalCase
+    - id: NukeDisk
+    - id: PinpointerNuclear
+    - id: PlushieNuke
+      prob: 0.1
+    - id: RubberStampCaptainSyndie
+    - id: SpaceCash1000
+    - id: WeaponDisabler
+    - id: ClothingEyesGlassesCommandSyndie
+    - id: HeadSkeleton # A skull to accompany your skeleton crew
+      conditions:
+      - !type:PlayerCountCondition
+        max: 15
+    - id: ClothingShoesBootsWinterCapSyndie
+
+# No laser table + Laser table
+- type: entityTable
+  id: LockerFillCaptainLaserSyndie
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: LockerFillCaptainNoLaserSyndie
+    - id: WeaponAntiqueLaser
+
+# Hardsuit table, used for suit storage as well
+- type: entityTable
+  id: FillCaptainHardsuitSyndie
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterHardsuitCapSyndie
+    - id: ClothingMaskGasCaptainSyndie
+    - id: JetpackCaptainFilledSyndie
+    - id: OxygenTankFilled
+
+# No laser locker, used when the antique laser is placed in the special display crate
+- type: entity
+  id: LockerCaptainFilledNoLaserSyndie
+  suffix: Filled, Syndicate
+  parent: LockerCaptainSyndie
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: LockerFillCaptainNoLaserSyndie
+
+# No Laser + Laser locker
+- type: entity
+  id: LockerCaptainFilledSyndie
+  suffix: Filled, AntiqueLaser, Syndicate
+  parent: LockerCaptainSyndie
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: LockerFillCaptainLaserSyndie
+
+# No Laser + Laser + Hardsuit locker
+- type: entity
+  id: LockerCaptainFilledHardsuitSyndie
+  suffix: Filled, Hardsuit, Syndicate
+  parent: LockerCaptainSyndie
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - !type:NestedSelector
+          tableId: LockerFillCaptainLaserSyndie
+        - !type:NestedSelector
+          tableId: FillCaptainHardsuitSyndie
+
+- type: entityTable
+  id: LockerFillHeadOfPersonnelSyndie
+  table: !type:AllSelector
+    children:
+    - id: AccessConfigurator
+    - id: BoxEncryptionKeyPassenger
+    - id: BoxEncryptionKeyService
+    - id: BoxHeadset
+    - id: BoxID
+    - id: BoxPDA
+    - id: CigarGoldCase
+      prob: 0.25
+      # Fuck the HoP they don't deserve fucking cigars.
+      # Yes they do fuck you.
+    - id: ClothingBackpackIan
+      prob: 0.5
+    - id: ClothingHeadsetCommandSyndie
+    - id: ClothingNeckGoldmedal
+    - id: DoorRemoteService
+    - id: HoPIDCard
+    - id: IDComputerCircuitboard
+#    begin starcup: disable departmental economy
+#    - id: FundingAllocationComputerCircuitboard
+#    - id: CargoRequestServiceComputerCircuitboard
+#    end starcup
+    - id: RubberStampApproved
+    - id: RubberStampDenied
+    - id: RubberStampHopSyndie
+    - id: WeaponDisabler
+    - id: ClothingEyesHudCommandSyndie
+    - id: ClothingShoesBootsWinterHeadOfPersonelSyndie
+
+- type: entity
+  id: LockerHeadOfPersonnelFilledSyndie
+  suffix: Filled, Syndicate
+  parent: LockerHeadOfPersonnelSyndie
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: LockerFillHeadOfPersonnelSyndie

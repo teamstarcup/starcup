@@ -1,37 +1,4 @@
 - type: entity
-  parent: ClothingNeckBase
-  id: ClothingNeckHeadphones
-  name: headphones
-  description: Quality headphones from Drunk Masters, with good sound insulation.
-  components:
-  - type: Sprite
-    sprite: Clothing/Neck/Misc/headphones.rsi
-    layers:
-    - state: icon
-      map: [ "enum.ToggleVisuals.Layer" ]
-  - type: Clothing
-    equippedPrefix: off
-    sprite: Clothing/Neck/Misc/headphones.rsi
-  - type: ToggleableLightVisuals
-    spriteLayer: enum.ToggleVisuals.Layer
-    clothingVisuals:
-      neck:
-      - state: on-equipped-NECK
-  - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-      enum.ToggleVisuals.Toggled:
-        enum.ToggleVisuals.Layer:
-          True: {state: icon-on}
-          False: {state: icon}
-  - type: ItemToggle
-    predictable: false
-    soundActivate:
-      path: /Audio/Items/flashlight_on.ogg
-    soundDeactivate:
-      path: /Audio/Items/flashlight_off.ogg
-
-- type: entity
   parent: Clothing
   id: ClothingNeckStethoscope
   name: stethoscope
@@ -50,23 +17,26 @@
   - type: Stethoscope
 
 - type: entity
+  parent: BaseAction
   id: ActionStethoscope
   name: Listen with stethoscope
   components:
-  - type: EntityTargetAction
+  - type: Action
     icon:
       sprite: Clothing/Neck/Misc/stethoscope.rsi
       state: icon
-    event: !type:StethoscopeActionEvent
-    checkCanInteract: false
     priority: -1
     itemIconStyle: BigAction
+    checkCanInteract: false
+  - type: TargetAction
+  - type: EntityTargetAction
+    event: !type:StethoscopeActionEvent
 
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckBling
   name: bling
-  description: Damn, it feels good to be a gangster.
+  description: You've never seen anything so shiny. # starcup: rewritten for tone
   components:
   - type: Sprite
     sprite: Clothing/Neck/Misc/bling.rsi
@@ -76,10 +46,10 @@
     sprite: Clothing/Neck/Misc/bling.rsi
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: [ClothingNeckBase, BaseExaminableClothing] # starcup: examinable clothing speedmerge
   id: ClothingNeckLawyerbadge
   name: lawyer badge
-  description: A badge to show that the owner is a 'legitimate' lawyer who passed the NT bar exam required to practice law.
+  description: A badge showing that the owner has passed the bar exam required to practice law. Different goverments and neocorps have different bar exams, mind you, and some are a lot less rigorous than others. # starcup - NT-SC swap
   components:
   - type: Sprite
     sprite: Clothing/Neck/Misc/lawyerbadge.rsi
@@ -87,6 +57,8 @@
     sprite: Clothing/Neck/Misc/lawyerbadge.rsi
   - type: TypingIndicatorClothing
     proto: lawyer
+  - type: ExaminableClothing
+    examineText: clothing-badge-lawyer
 
 - type: entity
   parent: ClothingNeckBase

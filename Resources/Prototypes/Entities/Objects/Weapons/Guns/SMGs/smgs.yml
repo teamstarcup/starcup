@@ -118,12 +118,14 @@
     steps: 6
     zeroVisible: true
   - type: Appearance
+  - type: StaticPrice
+    price: 5000
 
 - type: entity
   name: Drozd
-  parent: [BaseWeaponSubMachineGun, BaseSecurityContraband]
+  parent: [BaseWeaponSubMachineGun, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponSubMachineGunDrozd
-  description: A modern SMG manufactured by Nanotrasen’s Small Arms Division. It features an exceptional rate of fire in burst mode, useful for holding defensive angles or engaging hostiles at longer ranges. Feeds from .35 SMG magazines.
+  description: A modern SMG imported by Hawkmoon from unknown suppliers—the Gorlex Marauders, rumor has it. It features an exceptional rate of fire in burst mode, useful for holding defensive angles or engaging hostiles at longer ranges. Feeds from .35 SMG magazines. # starcup - NT-SC swap
   components:
     - type: Sprite
       sprite: Objects/Weapons/Guns/SMGs/drozd.rsi
@@ -143,15 +145,16 @@
       minAngle: 21
       maxAngle: 32
       fireRate: 6
-      burstFireRate: 12
+      burstFireRate: 18
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+      selectedMode: Burst
       availableModes:
       - Burst
       - FullAuto
       - SemiAuto
       shotsPerBurst: 3
-      burstCooldown: 0.25
+      burstCooldown: 0.375
     - type: ItemSlots
       slots:
         gun_magazine:
@@ -173,15 +176,19 @@
               - CartridgePistol
     - type: MagazineVisuals
       magState: mag
-      steps: 1
+      steps: 5
       zeroVisible: true
     - type: Appearance
+    # begin starcup: examinable clothing
+    - type: ExaminableClothing
+      examineText: clothing-drozd
+    # end starcup
 
 - type: entity
   name: WT550
-  parent: [ BaseWeaponSubMachineGun, BaseSecurityContraband ]
+  parent: [BaseWeaponSubMachineGun, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponSubMachineGunWt550
-  description: A truly unique firearm, the WT550 was designed by Nanotrasen's Small Arms Division as a compact submachine gun fully controllable with one hand. It contains an exotic internal recoil buffer and feeds from special top-mounted .35 magazines.
+  description: A truly unique firearm rumored to be of Gorlex make, the WT550 was designed as a compact submachine gun fully controllable with one hand. It contains an exotic internal recoil buffer and feeds from special top-mounted .35 magazines. # starcup - NT-SC swap, we all know NT gets their good ballistics from the Gorlex
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/SMGs/wt550.rsi
@@ -238,3 +245,7 @@
     steps: 6
     zeroVisible: true
   - type: Appearance
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-wt550
+  # end starcup

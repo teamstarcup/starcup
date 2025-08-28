@@ -19,7 +19,9 @@ chat-manager-no-such-channel = There is no channel with key '{$key}'!
 chat-manager-whisper-headset-on-message = You can't whisper on the radio!
 
 chat-manager-server-wrap-message = [bold]{$message}[/bold]
-chat-manager-sender-announcement = Central Command
+# starcup: NT-SC swap
+# chat-manager-sender-announcement = Central Command
+chat-manager-sender-announcement = Syndicate Communications
 chat-manager-sender-announcement-wrap-message = [font size=14][bold]{$sender} Announcement:[/font][font size=12]
                                                 {$message}[/bold][/font]
 chat-manager-entity-say-wrap-message = [BubbleHeader][bold][Name]{$entityName}[/Name][/bold][/BubbleHeader] {$verb}, [font={$fontType} size={$fontSize}]"[BubbleContent]{$message}[/BubbleContent]"[/font]
@@ -50,6 +52,7 @@ chat-manager-send-admin-chat-wrap-message = {$adminChannelName}: [bold]{$playerN
 chat-manager-send-admin-announcement-wrap-message = [bold]{$adminChannelName}: {$message}[/bold]
 
 chat-manager-send-hook-ooc-wrap-message = OOC: [bold](D){$senderName}:[/bold] {$message}
+chat-manager-send-hook-admin-wrap-message = ADMIN: [bold](D){$senderName}:[/bold] {$message}
 
 chat-manager-dead-channel-name = DEAD
 chat-manager-admin-channel-name = ADMIN
@@ -163,3 +166,9 @@ chat-speech-verb-name-electricity = Electricity
 chat-speech-verb-electricity-1 = crackles
 chat-speech-verb-electricity-2 = buzzes
 chat-speech-verb-electricity-3 = screeches
+
+chat-speech-verb-name-wawa = Wawa
+chat-speech-verb-wawa-1 = intones
+chat-speech-verb-wawa-2 = states
+chat-speech-verb-wawa-3 = declares
+chat-speech-verb-wawa-4 = ponders

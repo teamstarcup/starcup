@@ -1,0 +1,19 @@
+- type: entity
+  parent: [BaseTraitorContraband, SlipocalypseClusterSoap]
+  id: SlipocalypseClusterSoapNT
+  suffix: NanoTrasen
+  description: Spreads small pieces of NanoTrasen soap over an area upon landing on the floor.
+  components:
+  - type: Sprite
+    layers:
+    - state: nt-4
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    fillBaseName: nt-
+  - type: ScatteringGrenade
+    fillPrototype: SoapletNTAntag
+  - type: Item
+    heldPrefix: nt
+  - type: Residue
+    residueAdjective: residue-slippery
+    residueColor: residue-blue

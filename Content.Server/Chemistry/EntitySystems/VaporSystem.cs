@@ -39,7 +39,7 @@ namespace Content.Server.Chemistry.EntitySystems
 
         private void HandleCollide(Entity<VaporComponent> entity, ref StartCollideEvent args)
         {
-            if (!EntityManager.TryGetComponent(entity.Owner, out SolutionContainerManagerComponent? contents)) return;
+            if (!TryComp(entity.Owner, out SolutionContainerManagerComponent? contents)) return;
 
             foreach (var (_, soln) in _solutionContainerSystem.EnumerateSolutions((entity.Owner, contents)))
             {
@@ -50,7 +50,7 @@ namespace Content.Server.Chemistry.EntitySystems
             // Check for collision with a impassable object (e.g. wall) and stop
             if ((args.OtherFixture.CollisionLayer & (int)CollisionGroup.Impassable) != 0 && args.OtherFixture.Hard)
             {
-                EntityManager.QueueDeleteEntity(entity);
+                QueueDel(entity);
             }
         }
 
@@ -67,7 +67,7 @@ namespace Content.Server.Chemistry.EntitySystems
             despawn.Lifetime = aliveTime;
 
             // Set Move
-            if (EntityManager.TryGetComponent(vapor, out PhysicsComponent? physics))
+            if (TryComp(vapor, out PhysicsComponent? physics))
             {
                 _physics.SetLinearDamping(vapor, physics, 0f);
                 _physics.SetAngularDamping(vapor, physics, 0f);
@@ -116,8 +116,11 @@ namespace Content.Server.Chemistry.EntitySystems
 
                     // Check if the tile is a tile we've reacted with previously. If so, skip it.
                     // If we have no previous tile reference, we don't return so we can save one.
-                    if (vaporComp.PreviousTileRef != null && tile == vaporComp.PreviousTileRef)
+                    // begin starcup: track all previous tiles
+                    // if (vaporComp.PreviousTileRef != null && tile == vaporComp.PreviousTileRef)
+                    if (vaporComp.PreviousTileRefs.Contains(tile))
                         continue;
+                    // end starcup
 
                     // Enumerate over all the reagents in the vapor entity solution
                     foreach (var (_, soln) in _solutionContainerSystem.EnumerateSolutions((uid, container)))
@@ -156,12 +159,15 @@ namespace Content.Server.Chemistry.EntitySystems
 
                         // Delete the vapor entity if it has no contents
                         if (contents.Volume == 0)
-                            EntityManager.QueueDeleteEntity(uid);
+                            QueueDel(uid);
 
                     }
 
                     // Set the previous tile reference to the current tile
-                    vaporComp.PreviousTileRef = tile;
+                    // begin starcup: track all previous tiles
+                    // vaporComp.PreviousTileRef = tile;
+                    vaporComp.PreviousTileRefs.Add(tile);
+                    // end starcup
                 }
             }
         }

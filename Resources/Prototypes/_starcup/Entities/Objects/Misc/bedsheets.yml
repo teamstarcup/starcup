@@ -1,0 +1,34 @@
+- type: entity
+  id: BedsheetHOPSyndie
+  parent: BedsheetHOP
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/bedsheets.rsi
+    state: sheethop_syndi
+  - type: Clothing
+    sprite: _starcup/Clothing/Neck/Bedsheets/hop_syndi.rsi
+
+- type: entity
+  id: BedsheetCaptainSyndie
+  parent: BedsheetCaptain
+  description: It has a Syndicate symbol on it, and was woven with a revolutionary new kind of thread guaranteed to have 0.01% permeability for most non-chemical substances, popular among most modern captains.
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/bedsheets.rsi
+    state: sheetcaptain_syndi
+  - type: Clothing
+    sprite: _starcup/Clothing/Neck/Bedsheets/captain_syndi.rsi
+
+- type: entity
+  id: BedsheetSyndComm
+  parent: BedsheetCentcom
+  name: SyndComm bedsheet
+  description: Woven with silk and space cobra venom, essential for all officials.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/bedsheets.rsi
+    state: sheetsyndcomm
+  - type: Clothing
+    sprite: _starcup/Clothing/Neck/Bedsheets/syndcomm.rsi

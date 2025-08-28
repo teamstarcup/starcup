@@ -15,7 +15,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
-using Content.Shared._CosmaticDrift.Records; // CD - Character Records
+using Content.Shared._CD.Records; // CD - Character Records
 
 namespace Content.Shared.Preferences
 {
@@ -218,8 +218,10 @@ namespace Content.Shared.Preferences
         /// </summary>
         /// <param name="species">The species to use in this default profile. The default species is <see cref="SharedHumanoidAppearanceSystem.DefaultSpecies"/>.</param>
         /// <returns>Humanoid character profile with default settings.</returns>
-        public static HumanoidCharacterProfile DefaultWithSpecies(string species = SharedHumanoidAppearanceSystem.DefaultSpecies)
+        public static HumanoidCharacterProfile DefaultWithSpecies(string? species = null)
         {
+            species ??= SharedHumanoidAppearanceSystem.DefaultSpecies;
+
             return new()
             {
                 Species = species,
@@ -241,8 +243,10 @@ namespace Content.Shared.Preferences
             return RandomWithSpecies(species);
         }
 
-        public static HumanoidCharacterProfile RandomWithSpecies(string species = SharedHumanoidAppearanceSystem.DefaultSpecies)
+        public static HumanoidCharacterProfile RandomWithSpecies(string? species = null)
         {
+            species ??= SharedHumanoidAppearanceSystem.DefaultSpecies;
+
             var prototypeManager = IoCManager.Resolve<IPrototypeManager>();
             var random = IoCManager.Resolve<IRobustRandom>();
 
@@ -745,10 +749,17 @@ namespace Content.Shared.Preferences
             var namingSystem = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<NamingSystem>();
             return namingSystem.GetName(species, gender);
         }
+        public bool Equals(HumanoidCharacterProfile? other)
+        {
+            if (other is null)
+                return false;
+
+            return ReferenceEquals(this, other) || MemberwiseEquals(other);
+        }
 
         public override bool Equals(object? obj)
         {
-            return ReferenceEquals(this, obj) || obj is HumanoidCharacterProfile other && Equals(other);
+            return obj is HumanoidCharacterProfile other && Equals(other);
         }
 
         public override int GetHashCode()

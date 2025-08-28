@@ -1,0 +1,65 @@
+- type: startingGear
+  id: NanotrasenOperativeGearFullNoUplink
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperativeNT
+    back: ClothingBackpackDuffelNanotrasen
+    mask: ClothingMaskGasNanotrasen
+    eyes: ClothingEyesHudNanotrasen
+    ears: ClothingHeadsetAltNanotrasen
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitNT
+    shoes: ClothingShoesBootsCombatFilled
+    id: NTPDA
+    pocket2: PlushieCarp
+    belt: ClothingBeltMilitaryWebbing
+  storage:
+    back:
+    - WeaponPistolViperNT
+    - PinpointerNanotrasenNuclear
+    - DeathAcidifierImplanter
+
+#Nuclear Operative Gear
+- type: startingGear
+  id: NanotrasenOperativeGearFull
+  parent: NanotrasenOperativeGearFullNoUplink
+  equipment:
+    pocket2: BaseUplinkRadio40TC
+
+#Nuclear Operative Commander Gear
+- type: startingGear
+  id: NanotrasenCommanderGearFull
+  parent: NanotrasenOperativeGearFull
+  equipment:
+    neck: NanotrasenWhistle
+    outerClothing: ClothingOuterHardsuitNTCommander
+  inhand:
+  - NukeOpsDeclarationOfWarNT
+
+#Nuclear Operative Medic Gear
+- type: startingGear
+  id: NanotrasenOperativeMedicFull
+  parent: NanotrasenOperativeGearFull
+  equipment:
+    eyes: ClothingEyesHudNanotrasenAgent
+    outerClothing: ClothingOuterHardsuitNTMedic
+    shoes: ClothingShoesBootsMagNT
+    id: NTAgentPDA
+    belt: ClothingBeltMilitaryWebbingMedFilled
+  storage:
+    back:
+    - NanotrasenHypo
+    - SawAdvancedNT
+    - Cautery
+    - CombatKnife
+    - WeaponPistolViperNT
+    - PinpointerNanotrasenNuclear
+    - HandheldHealthAnalyzer
+    - CombatMedipen
+    - DeathAcidifierImplanter
+
+#Lone Operative Gear
+- type: startingGear
+  id: NanotrasenLoneOperativeGearFull
+  parent: NanotrasenOperativeGearFull
+  equipment:
+    pocket2: BaseUplinkRadio60TC

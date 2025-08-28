@@ -1,0 +1,291 @@
+- type: entity
+  parent: BaseItem
+  id: NotebookBase
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/notebooks.rsi
+  - type: Tag
+    tags:
+    - Book
+  - type: Paper
+    contentSize: 12000
+  - type: PaperVisuals
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_book.svg.96dpi.png"
+    backgroundPatchMargin: 23.0, 16.0, 14.0, 15.0
+    contentMargin: 20.0, 20.0, 20.0, 20.0
+  - type: ActivatableUI
+    key: enum.PaperUiKey.Key
+    requiresComplex: false
+  - type: UserInterface
+    interfaces:
+      enum.PaperUiKey.Key:
+        type: PaperBoundUserInterface
+  - type: Item
+    size: Small
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: NotebookCompositionBase
+  parent: NotebookBase
+  abstract: true
+  components:
+  - type: PaperVisuals
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_book.svg.96dpi.png"
+    backgroundPatchMargin: 23.0, 16.0, 14.0, 15.0
+    contentImagePath: "/Textures/_starcup/Interface/Paper/paper_content_book_lined.svg.96dpi.png"
+    contentMargin: 20.0, 20.0, 20.0, 20.0
+
+- type: entity
+  id: NotebookSpiralBase
+  parent: NotebookBase
+  abstract: true
+
+- type: entity
+  id: NotebookPocketBase
+  parent: NotebookBase
+  abstract: true
+  components:
+  - type: Item
+    size: Tiny
+
+- type: entity
+  id: NotebookCompositionBlack
+  parent: NotebookCompositionBase
+  name: black composition notebook
+  description: A classic composition notebook, often carried by students. This one is black.
+  components:
+  - type: Sprite
+    state: composition-black
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: composition-black-inhand-left
+      right:
+      - state: composition-black-inhand-right
+
+- type: entity
+  id: NotebookCompositionBlue
+  parent: NotebookCompositionBase
+  name: blue composition notebook
+  description: A classic composition notebook, often carried by students. This one is blue.
+  components:
+  - type: Sprite
+    state: composition-blue
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: composition-blue-inhand-left
+      right:
+      - state: composition-blue-inhand-right
+
+- type: entity
+  id: NotebookCompositionGreen
+  parent: NotebookCompositionBase
+  name: green composition notebook
+  description: A classic composition notebook, often carried by students. This one is green.
+  components:
+  - type: Sprite
+    state: composition-green
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: composition-green-inhand-left
+      right:
+      - state: composition-green-inhand-right
+
+- type: entity
+  id: NotebookCompositionPink
+  parent: NotebookCompositionBase
+  name: pink composition notebook
+  description: A classic composition notebook, often carried by students. This one is pink.
+  components:
+  - type: Sprite
+    state: composition-pink
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: composition-pink-inhand-left
+      right:
+      - state: composition-pink-inhand-right
+
+- type: entity
+  id: NotebookCompositionRed
+  parent: NotebookCompositionBase
+  name: red composition notebook
+  description: A classic composition notebook, often carried by students. This one is red.
+  components:
+  - type: Sprite
+    state: composition-red
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: composition-red-inhand-left
+      right:
+      - state: composition-red-inhand-right
+
+- type: entity
+  id: NotebookCompositionYellow
+  parent: NotebookCompositionBase
+  name: yellow composition notebook
+  description: A classic composition notebook, often carried by students. This one is yellow.
+  components:
+  - type: Sprite
+    state: composition-yellow
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: composition-yellow-inhand-left
+      right:
+      - state: composition-yellow-inhand-right
+
+- type: entity
+  id: NotebookPocketBlue
+  parent: NotebookPocketBase
+  name: blue pocket notebook
+  description: A leather-bound pocket notebook, for those who need to write on the go.
+  components:
+  - type: Sprite
+    state: pocket-blue
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: pocket-blue-inhand-left
+      right:
+      - state: pocket-blue-inhand-right
+
+- type: entity
+  id: NotebookPocketBrown
+  parent: NotebookPocketBase
+  name: brown pocket notebook
+  description: A leather-bound pocket notebook, for those who need to write on the go.
+  components:
+  - type: Sprite
+    state: pocket-brown
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: pocket-brown-inhand-left
+      right:
+      - state: pocket-brown-inhand-right
+
+- type: entity
+  id: NotebookPocketGreen
+  parent: NotebookPocketBase
+  name: green pocket notebook
+  description: A leather-bound pocket notebook, for those who need to write on the go.
+  components:
+  - type: Sprite
+    state: pocket-green
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: pocket-green-inhand-left
+      right:
+      - state: pocket-green-inhand-right
+
+- type: entity
+  id: NotebookSpiralBeige
+  parent: NotebookSpiralBase
+  name: beige spiral notebook
+  description: A beige spiral-bound notebook. Only for note-taking professionals.
+  components:
+  - type: Sprite
+    state: spiral-beige
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: spiral-beige-inhand-left
+      right:
+      - state: spiral-beige-inhand-right
+
+- type: entity
+  id: NotebookSpiralCybersun
+  parent: NotebookSpiralBase
+  name: cybersun spiral notebook
+  description: A spiral-bound notebook, specially designed to help Cybersun engineers in their data-wrangling.
+  components:
+  - type: Sprite
+    state: spiral-cybersun
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: spiral-cybersun-inhand-left
+      right:
+      - state: spiral-cybersun-inhand-right
+
+- type: entity
+  id: NotebookSpiralGray
+  parent: NotebookSpiralBase
+  name: gray spiral notebook
+  description: A gray spiral-bound notebook with the greek letter Tau on the cover.
+  components:
+  - type: Sprite
+    state: spiral-gray
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: spiral-gray-inhand-left
+      right:
+      - state: spiral-gray-inhand-right
+
+- type: entity
+  id: NotebookSpiralInterdyne
+  parent: NotebookSpiralBase
+  name: interdyne spiral notebook
+  description: A spiral-bound notebook, specially designed to help Interdyne chemists in their experiments.
+  components:
+  - type: Sprite
+    state: spiral-interdyne
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: spiral-interdyne-inhand-left
+      right:
+      - state: spiral-interdyne-inhand-right
+
+- type: entity
+  id: NotebookSpiralNanotrasen
+  parent: NotebookSpiralBase
+  name: nanotrasen spiral notebook
+  description: A spiral-bound notebook, covered in NanoTrasen branding. How embarassing.
+  components:
+  - type: Sprite
+    state: spiral-nanotrasen
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: spiral-nanotrasen-inhand-left
+      right:
+      - state: spiral-nanotrasen-inhand-right
+
+- type: entity
+  id: NotebookSpiralPurple
+  parent: NotebookSpiralBase
+  name: purple spiral notebook
+  description: A purple spiral-bound notebook. Only for note-taking professionals.
+  components:
+  - type: Sprite
+    state: spiral-purple
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: spiral-purple-inhand-left
+      right:
+      - state: spiral-purple-inhand-right
+
+- type: entity
+  id: NotebookSpiralTeal
+  parent: NotebookSpiralBase
+  name: teal spiral notebook
+  description: A teal spiral-bound notebook. Only for note-taking professionals.
+  components:
+  - type: Sprite
+    state: spiral-teal
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: spiral-teal-inhand-left
+      right:
+      - state: spiral-teal-inhand-right

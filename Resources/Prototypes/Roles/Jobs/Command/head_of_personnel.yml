@@ -51,6 +51,21 @@
   - Cargo
   - Atmospherics
   - Medical
+  # begin starcup additions: hops have everything but captain, armory, and other heads
+  - Boxer
+  - Clown
+  - Brigmedic
+  - Library
+  - Mail
+  - Mime
+  - Musician
+  - Paramedic
+  - Psychologist
+  - Reporter
+  - Robotics
+  - Zookeeper
+  # end starcup
+
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
@@ -61,11 +76,23 @@
 - type: startingGear
   id: HoPGear
   equipment:
-    shoes: ClothingShoesColorBrown
+    #shoes: ClothingShoesLeather # DeltaV - Commented for Loadouts
     id: HoPPDA
     gloves: ClothingHandsGlovesHop
-    ears: ClothingHeadsetAltCommand
+    ears: ClothingHeadsetAltCommandSyndie # starcup: command recolors
     belt: BoxFolderClipboard
   storage:
     back:
     - Flash
+
+- type: chameleonOutfit
+  id: HeadOfPersonnelChameleonOutfit
+  job: HeadOfPersonnel
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatHopcapSyndie # starcup: command recolors
+    eyes: ClothingEyesHudCommandSyndie # starcup: command recolors
+    mask: ClothingMaskNeckGaiterRed
+    neck: ClothingNeckCloakHopSyndie # starcup: command recolors
+    outerClothing: ClothingOuterWinterHoPSyndie # starcup: command recolors
+

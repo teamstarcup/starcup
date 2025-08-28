@@ -1,7 +1,6 @@
 using Content.Shared.Arcade;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.List;
 
 namespace Content.Server.Arcade.SpaceVillain;
 
@@ -71,8 +70,8 @@ public sealed partial class SpaceVillainArcadeComponent : SharedSpaceVillainArca
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField("possibleFirstEnemyNames")]
     public List<string> PossibleFirstEnemyNames = new(){
-        "the Automatic", "Farmer", "Lord", "Professor", "the Cuban", "the Evil", "the Dread King",
-        "the Space", "Lord", "the Great", "Duke", "General"
+        "the Automatic", "Farmer", "Lord", "Professor", "the Evil", "the Dread King",
+        "the Space", "Lord", "the Great", "Duke", "General" /// starcup: remove "the Cuban"
     };
 
     /// <summary>
@@ -83,15 +82,15 @@ public sealed partial class SpaceVillainArcadeComponent : SharedSpaceVillainArca
     public List<string> PossibleLastEnemyNames = new()
     {
         "Melonoid", "Murdertron", "Sorcerer", "Ruin", "Jeff", "Ectoplasm", "Crushulon", "Uhangoid",
-        "Vhakoid", "Peteoid", "slime", "Griefer", "ERPer", "Lizard Man", "Unicorn"
+        "Vhakoid", "Peteoid", "slime", "Griefer", "Lizard Man", "Unicorn" /// starcup: remove "ERPer"
     };
 
     /// <summary>
     /// The prototypes that can be dispensed as a reward for winning the game.
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("possibleRewards", customTypeSerializer: typeof(PrototypeIdListSerializer<EntityPrototype>))]
-    public List<string> PossibleRewards = new();
+    [DataField]
+    public List<EntProtoId> PossibleRewards = new();
 
     /// <summary>
     /// The minimum number of prizes the arcade machine can have.

@@ -1,0 +1,62 @@
+# Misc
+
+### Syndicate & Hostiles
+
+- type: randomHumanoidSettings
+  id: NanotrasenSoldierTeamLeader
+  parent: EventHumanoid
+  components:
+    - type: NpcFactionMember
+      factions:
+      - Syndicate
+    - type: NukeOperative
+    - type: GhostRole
+      name: ghost-role-information-nanotrasen-soldier-teamlead-name
+      description: ghost-role-information-nanotrasen-soldier-teamlead-description
+      rules: ghost-role-information-rules-team-antagonist
+      mindRoles:
+      - MindRoleGhostRoleTeamAntagonist
+      raffle:
+        settings: default
+    - type: Loadout
+      prototypes: [ NanotrasenFootsoldierTeamLeaderGear ]
+      roleLoadout: [ RoleSurvivalNanotrasen ]
+
+- type: randomHumanoidSettings
+  id: NanotrasenSoldier
+  parent: EventHumanoid
+  components:
+    - type: NpcFactionMember
+      factions:
+      - Syndicate
+    - type: NukeOperative
+    - type: GhostRole
+      name: ghost-role-information-nanotrasen-soldier-name
+      description: ghost-role-information-nanotrasen-soldier-description
+      rules: ghost-role-information-rules-team-antagonist
+      mindRoles:
+      - MindRoleGhostRoleTeamAntagonist
+      raffle:
+        settings: default
+    - type: Loadout
+      prototypes: [ NanotrasenFootsoldierGear ]
+      roleLoadout: [ RoleSurvivalNanotrasen ]
+
+- type: randomHumanoidSettings
+  id: NanotrasenVisitor
+  parent: EventHumanoid
+  components:
+    - type: NpcFactionMember
+      factions:
+      - Syndicate
+    - type: GhostRole
+      name: ghost-role-information-nanotrasen-disaster-victim-name
+      description: ghost-role-information-nanotrasen-disaster-victim-description
+      rules: ghost-role-information-freeagent-rules
+      mindRoles:
+      - MindRoleGhostRoleFreeAgent
+      raffle:
+        settings: short
+    - type: Loadout
+      prototypes: [ NanotrasenOperativeGearCivilian ]
+      roleLoadout: [ RoleSurvivalNanotrasen ]

@@ -1,0 +1,29 @@
+- type: entity
+  id: HoloparasiteInjectorNT
+  suffix: NanoTrasen
+  parent: [BaseTraitorContraband, HoloparasiteInjector]
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Specific/Medical/hypospray.rsi
+    state: combat_hypo_nt
+
+- type: entity
+  name: holoclown injector
+  suffix: NanoTrasen
+  parent: [BaseTraitorContraband, HoloClownInjector]
+  id: HoloClownInjectorNT
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Specific/Medical/hypospray.rsi
+    state: combat_hypo_nt
+
+- type: entity
+  name: holoparasite box
+  suffix: NanoTrasen
+  parent: [BaseTraitorContraband, BoxHoloparasite]
+  id: BoxHoloparasiteNT
+  components:
+  - type: StorageFill
+    contents:
+      - id: HoloparasiteInjectorNT
+      - id: HoloparasiteInfoNT

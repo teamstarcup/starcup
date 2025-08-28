@@ -1,0 +1,12 @@
+- type: entity
+  parent: PhoneInstrument
+  id: PhoneInstrumentNanotrasen
+  name: blueblood phone
+  description: For evil people to call their friends.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Fun/Instruments/blueblood_phone.rsi
+    state: icon
+  - type: Prayable
+    sentMessage: prayer-popup-notify-nanotrasen-sent
+    notificationPrefix: prayer-chat-notify-nanotrasen

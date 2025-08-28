@@ -19,6 +19,7 @@ public sealed class ParallaxOverlay : Overlay
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IConfigurationManager _configurationManager = default!;
     [Dependency] private readonly IParallaxManager _manager = default!;
+    [Dependency] private readonly IClyde _clyde = default!;  // starcup
     private readonly SharedMapSystem _mapSystem;
     private readonly ParallaxSystem _parallax;
 
@@ -89,6 +90,10 @@ public sealed class ParallaxOverlay : Overlay
             // Centre the image.
             originBL -= size / 2;
 
+            // begin starcup: map-lit parallaxes
+            Color? color = layer.Config.UseMapLighting ? _clyde.GetClearColor(args.MapUid) : null;
+            // end starcup
+
             if (layer.Config.Tiled)
             {
                 // Remove offset so we can floor.
@@ -104,13 +109,17 @@ public sealed class ParallaxOverlay : Overlay
                 {
                     for (var y = flooredBL.Y; y < args.WorldAABB.Top; y += size.Y)
                     {
-                        worldHandle.DrawTextureRect(tex, Box2.FromDimensions(new Vector2(x, y), size));
+                        // begin starcup: added color param (map-lit parallaxes)
+                        worldHandle.DrawTextureRect(tex, Box2.FromDimensions(new Vector2(x, y), size), color);
+                        // end starcup
                     }
                 }
             }
             else
             {
-                worldHandle.DrawTextureRect(tex, Box2.FromDimensions(originBL, size));
+                // begin starcup: added color param (map-lit parallaxes)
+                worldHandle.DrawTextureRect(tex, Box2.FromDimensions(originBL, size), color);
+                // end starcup
             }
         }
 

@@ -4,7 +4,7 @@
   parent: BaseSoda
   desc: reagent-desc-cola
   physicalDesc: reagent-physical-desc-fizzy
-  flavor: soda
+  flavor: cola-starcup # starcup: rewritten
   color: "#6c2828"
   recognizable: true
   metamorphicSprite:
@@ -18,9 +18,9 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 1.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 1
         type: Remove
 
 - type: reagent
@@ -29,7 +29,7 @@
   parent: BaseSoda
   desc: reagent-desc-roy-rogers
   physicalDesc: reagent-physical-desc-sweet
-  flavor: cola
+  flavor: royrogers-starcup # starcup: rewritten
   color: "#262019"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/royrogers.rsi
@@ -58,7 +58,7 @@
   parent: BaseSoda
   desc: reagent-desc-dr-gibb
   physicalDesc: reagent-physical-desc-fizzy
-  flavor: drgibb
+  flavor: drgibb-starcup # starcup: rewritten
   color: "#102000"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/dr_gibb_glass.rsi
@@ -80,12 +80,12 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 2.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 2
         type: Remove
       - !type:AdjustReagent
-        reagent: Theobromine
+        reagent: Caffeine # starcup: replacement for theobromine
         amount: 0.1
   fizziness: 0.4
 
@@ -104,7 +104,7 @@
   parent: BaseSoda
   desc: reagent-desc-ice-cream
   physicalDesc: reagent-physical-desc-creamy
-  flavor: icecream
+  flavor: icecream-starcup # starcup: rewritten
   color: "#fffbd6"
   recognizable: true
   metamorphicSprite:
@@ -121,8 +121,8 @@
   parent: BaseSoda
   desc: reagent-desc-lemon-lime
   physicalDesc: reagent-physical-desc-fizzy
-  flavor: lemonlimesoda
-  color: "#878F00"
+  flavor: lemonlimesoda-starcup # starcup: rewritten
+  color: "#f3f7dc55" # starcup
 
 - type: reagent
   id: LemonLimeCranberry
@@ -149,7 +149,7 @@
   parent: BaseSoda
   desc: reagent-desc-root-beer
   physicalDesc: reagent-physical-desc-fizzy
-  flavor: rootbeersoda
+  flavor: rootbeersoda-starcup # starcup: rewritten
   color: "#381c07"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/rootbeerglass.rsi
@@ -162,9 +162,9 @@
   id: RootBeerFloat
   name: reagent-name-root-beer-float
   parent: BaseSoda
-  desc: reagent-desc-root-beer-float
+  desc: reagent-desc-root-beer-float-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-fizzy-and-creamy
-  flavor: rootbeerfloat
+  flavor: rootbeerfloat-starcup # starcup: rewritten
   color: "#4f361f"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/rootbeerfloatglass.rsi
@@ -193,7 +193,7 @@
   id: ShirleyTemple
   name: reagent-name-shirley-temple
   parent: BaseSoda
-  desc: reagent-desc-shirley-temple
+  desc: reagent-desc-shirley-temple-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-fizzy
   flavor: sweet
   color: "#af2221"
@@ -215,7 +215,7 @@
   parent: BaseSoda
   desc: reagent-desc-space-mountain-wind
   physicalDesc: reagent-physical-desc-fizzy
-  flavor: sodacitrus
+  flavor: sodacitrus-starcup # starcup: rewritten
   color: "#a6fa5a"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/space_mountain_wind_glass.rsi
@@ -230,7 +230,7 @@
   parent: BaseSoda
   desc: reagent-desc-space-up
   physicalDesc: reagent-physical-desc-fizzy
-  flavor: spaceup
+  flavor: spaceup-starcup # starcup: rewritten
   color: "#e3e3e37d"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/space-up_glass.rsi
@@ -245,8 +245,8 @@
   parent: BaseSoda
   desc: reagent-desc-starkist
   physicalDesc: reagent-physical-desc-fizzy
-  flavor: starkistsoda
-  color: "#9F3400"
+  flavor: starkistsoda-starcup # starcup: rewritten
+  color: "#ff5300" # starcup
 
 - type: reagent
   id: FourteenLoko
@@ -261,15 +261,20 @@
     state: icon_empty
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
-  metamorphicChangeColor: false  
+  metamorphicChangeColor: false
   metabolisms:
     Drink:
       effects:
       - !type:SatiateThirst
         factor: 2
       - !type:AdjustReagent
-        reagent: Theobromine
+        reagent: Caffeine # starcup: replacement for theobromine
         amount: 0.1
+      # begin starcup: add alcohol content
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.06
+      # end starcup
     Poison:
       effects:
       - !type:HealthChange

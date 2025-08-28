@@ -23,6 +23,7 @@
   - type: ItemToggleSize
     activatedSize: Huge
   - type: ItemTogglePointLight
+    toggleableVisualsColorModulatesLights: true
   - type: ItemToggleMeleeWeapon
     activatedSoundOnHit:
       path: /Audio/Weapons/eblade1.ogg
@@ -59,7 +60,7 @@
     color: white
     netsync: false
   - type: Appearance
-  - type: ToggleableLightVisuals # Add support for multiple layers
+  - type: ToggleableVisuals # Add support for multiple layers
     spriteLayer: blade
     inhandVisuals:
       left:
@@ -74,7 +75,7 @@
 
 - type: entity
   name: energy sword
-  parent: [BaseMeleeWeaponEnergy, BaseSyndicateContraband]
+  parent: [BaseMeleeWeaponEnergy, BaseTraitorContraband] # starcup: shared contraband level with nt gear
   id: EnergySword
   description: A very loud & dangerous sword with a beam made of pure, concentrated plasma. Cuts through unarmored targets like butter.
   components:
@@ -89,10 +90,12 @@
       map: [ "blade" ]
   - type: Item
     sprite: Objects/Weapons/Melee/e_sword-inhands.rsi
+  - type: StaticPrice
+    price: 2500
 
 - type: entity
   name: energy dagger
-  parent: [BaseMeleeWeaponEnergy, BaseSyndicateContraband]
+  parent: [BaseMeleeWeaponEnergy, BaseTraitorContraband] # starcup: shared contraband level with nt gear
   id: EnergyDaggerLoud
   description: A not as loud and dangerous dagger with a beam made of pure, concentrated plasma. This one is completely undisguised.
   components:
@@ -224,7 +227,7 @@
     - Write
 
 - type: entity
-  parent: [BaseItem, BaseSyndicateContraband]
+  parent: [BaseItem, BaseTraitorContraband] # starcup: shared contraband level with nt gear
   id: EnergyDaggerBox
   name: e-dagger box
   suffix: E-Dagger
@@ -267,9 +270,9 @@
 
 - type: entity
   name: double-bladed energy sword
-  parent: [BaseMeleeWeaponEnergy, BaseSyndicateContraband]
+  parent: [BaseMeleeWeaponEnergy, BaseTraitorContraband] # starcup: shared contraband level with nt gear
   id: EnergySwordDouble
-  description: Syndicate Command Interns thought that having one blade on the energy sword was not enough. This can be stored in pockets.
+  description: Syndicate Communications Interns thought that having one blade on the energy sword was not enough. This can be stored in pockets.
   components:
   - type: ItemToggle
     onUse: false # wielding events control it instead
@@ -388,7 +391,7 @@
   suffix: One-Handed, For Borgs
   parent: EnergySwordDouble
   id: CyborgEnergySwordDouble # why is this invalid if ID is BorgEnergySwordDouble
-  description: Syndicate Command Interns thought that having one blade on the energy sword was not enough. Specially designed for syndicate cyborgs.
+  description: Syndicate Communications Interns thought that having one blade on the energy sword was not enough. Specially designed for syndicate cyborgs.
   components: # could add energy-draining like the L6C
   - type: Wieldable
     freeHandsRequired: 0 # because borg has no off-hand to wield with.  Without this, it will be unable to activate the esword

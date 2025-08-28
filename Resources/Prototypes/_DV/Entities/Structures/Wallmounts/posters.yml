@@ -1,0 +1,20 @@
+# Station Maps
+- type: entity
+  parent: PosterBase
+  id: PosterMapGlacier
+  name: "Glacier Map"
+  description: "A map of Glacier outpost."
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Wallmounts/Posters/Hyenh.rsi
+    state: glaciermap
+
+- type: entity
+  parent: PosterBase
+  id: PosterMapShoukou
+  name: "Shōkō Map"
+  description: "A map of Shōkō Station." # starcup: rewritten for consistency
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Wallmounts/Posters/Hyenh.rsi
+    state: shoukoumap

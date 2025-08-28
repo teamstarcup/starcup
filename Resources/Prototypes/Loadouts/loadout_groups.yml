@@ -1,3 +1,5 @@
+# starcup - significantly reordered and organized trinkets. may regret this later.
+
 # Miscellaneous
 - type: loadoutGroup
   id: Trinkets
@@ -5,25 +7,53 @@
   minLimit: 0
   maxLimit: 3
   loadouts:
+  # Head Cosmetics
   - FlowerWreath
   - Hairflower
   - Headphones
-  - PlushieLizard
-  - PlushieSpaceLizard
-  # begin starcup additions
-  - PlushieLizardInversed
-  - PlushieExperiment
-  - PlushieSharkBlue
-  - HandheldStationMap
-  # end starcup additions
+  - CDDogtags # Cosmatic Drift
+  # Bureaucracy # starcup
+  - BoxFolderClipboard
+  - BoxFolderBlack
+  - BoxFolderRed
+  - BoxFolderGreen
+  - BoxFolderBlue
+  - BoxFolderWhite
+  - NotebookPocketBlue
+  - NotebookPocketBrown
+  - NotebookPocketGreen
+  - NotebookSpiralCybersun
+  - NotebookSpiralInterdyne
+  - NotebookSpiralBeige
+  - NotebookSpiralPurple
+  - NotebookSpiralTeal
+  - NotebookCompositionBlack
+  # Utility
+  - AACTablet # Delta-V
+  - HandheldStationMap # starcup
+  - TapeRecorder # Delta-V
   - ThreeCandles
+  # Lighters
   - Lighter
+  - CybersunFlippo
+  - DonkcoLighter
+  - GorlexMatchbox
+  - InterdyneFlippo
+  - SyndicateFlippo
+  # Smokeables
   - CigPackGreen
   - CigPackRed
   - CigPackBlue
   - CigPackBlack
   - CigarCase
   - CigarGold
+  # Plushies
+  - PlushieLizardInversed # starcup
+  - PlushieExperiment # starcup
+  - PlushieSharkBlue # starcup
+  - PlushieLizard
+  - PlushieSpaceLizard
+  # Neck Cosmetics
   - ClothingNeckLGBTPin
   - ClothingNeckAllyPin
   - ClothingNeckAromanticPin
@@ -42,6 +72,26 @@
   - ClothingNeckTransPin
   - ClothingNeckAutismPin
   - ClothingNeckGoldAutismPin
+  - ClothingNeckScarfStripedAce
+  - ClothingNeckScarfStripedAro
+  - ClothingNeckScarfStripedAroace
+  - ClothingNeckScarfStripedBiSexual
+  - ClothingNeckScarfStripedGay
+  - ClothingNeckScarfStripedInter
+  - ClothingNeckScarfStripedLesbian
+  - ClothingNeckScarfStripedLesbianLong
+  - ClothingNeckScarfStripedPan
+  - ClothingNeckScarfStripedNonBinary
+  - ClothingNeckScarfStripedRainbow
+  - ClothingNeckScarfStripedTrans
+  - TowelColorWhite # sorry, alphabetization, the top option should be one you usually have access to
+  - OffsetCane
+  - OffsetCaneWood
+  - OffsetCaneClown
+  - OffsetCaneMime
+  - OffsetCaneNT
+  - Cane
+  - WhiteCane # Delta-V
   - TowelColorBlack
   - TowelColorDarkBlue
   - TowelColorDarkGreen
@@ -56,17 +106,10 @@
   - TowelColorPurple
   - TowelColorRed
   - TowelColorSilver
-  - TowelColorWhite
   - TowelColorYellow
-  # Begin Delta-V Additions
-  - AACTablet
-  - GoldRing
-  - SilverRing
-  - Cane
-  - WhiteCane
-  - TapeRecorder
-  # End Delta-V
-  - CDDogtags # Cosmatic Drift
+  # Misc Cosmetics
+  - GoldRing # Delta-V
+  - SilverRing # Delta-V
 
 - type: loadoutGroup
   id: Glasses
@@ -74,6 +117,7 @@
   minLimit: 0
   loadouts:
   - Glasses
+  - Eyepatch # starcup
   - GlassesJamjar
   - GlassesJensen
 
@@ -169,13 +213,16 @@
   minLimit: 0
   loadouts:
   - HoPHead
+  - HoPBellhop # starcup
 
 - type: loadoutGroup
   id: HoPJumpsuit
   name: loadout-group-hop-jumpsuit
   loadouts:
   - HoPJumpsuit
+  - HoPJumpsuitTurtle # starcup
   - HoPJumpskirt
+  - HoPJumpskirtTurtle # starcup
 
 - type: loadoutGroup
   id: HoPNeck
@@ -278,6 +325,10 @@
   - BartenderJumpskirt
   - BartenderJumpsuitPurple
   - ElegantDressBlack # starcup
+  - ClothingUniformNightclubSuit #imp
+  - ClothingUniformNightclubSuitSkirt #imp
+  - ClothingUniformSeniorBartender #imp
+  - ClothingUniformSeniorBartenderSkirt #imp
 
 - type: loadoutGroup
   id: BartenderOuterClothing
@@ -295,12 +346,13 @@
   loadouts:
   - ChefHead
 
-- type: loadoutGroup
-  id: ChefMask
-  name: loadout-group-chef-mask
-  minLimit: 0
-  loadouts:
-  - ChefMask
+# starcup: removed for tone
+#- type: loadoutGroup
+#  id: ChefMask
+#  name: loadout-group-chef-mask
+#  minLimit: 0
+#  loadouts:
+#  - ChefMask
 
 - type: loadoutGroup
   id: ChefJumpsuit
@@ -326,6 +378,9 @@
   - LibrarianJumpskirt
   - CuratorJumpsuit
   - CuratorJumpskirt
+  - ClothingUniformBrownSuit #imp
+  - ClothingUniformBrownSuitSkirt #imp
+  - LibrarianSpaceDress #imp
 
 - type: loadoutGroup
   id: LawyerJumpsuit
@@ -343,6 +398,8 @@
   - LawyerJumpskirtGood
   - ElegantDressBlack # starcup
   - ElegantDressRed # starcup
+  - ClothingUniformCreamSuit #imp
+  - ClothingUniformCreamSuitSkirt #imp
 
 - type: loadoutGroup
   id: LawyerNeck
@@ -382,6 +439,8 @@
   - ElegantDressRed
   - ElegantDressPurple
   # end starcup
+  - ClothingUniformFuneralSuit #imp
+  - ClothingUniformFuneralSuitSkirt #imp
 
 - type: loadoutGroup
   id: ChaplainOuterClothing
@@ -400,6 +459,17 @@
   minLimit: 0
   loadouts:
   - ChaplainNeck
+
+- type: loadoutGroup
+  id: ChaplainBible
+  name: loadout-group-chaplain-bible
+  minLimit: 1
+  loadouts:
+  - BibleGoshan # starcup: replaced bible with goshan bible
+  - BibleDruid
+#  - BibleNanoTrasen # starcup
+  - BibleSatanic
+#  - BibleTanakh # starcup
 
 - type: loadoutGroup
   id: JanitorHead
@@ -425,6 +495,7 @@
   - JanitorRubberGloves
   - OrangeGloves
   - PurpleGloves
+  - WhiteGloves # starcup - to match maid outfit
 
 - type: loadoutGroup
   id: JanitorOuterClothing
@@ -589,6 +660,8 @@
   loadouts:
   - MusicianJumpsuit
   - MusicianJumpskirt
+  - ClothingUniformMrSpaceWide #imp
+  - ClothingUniformMrSpaceWideSkirt #imp
 
 - type: loadoutGroup
   id: MusicianOuterClothing
@@ -1141,6 +1214,10 @@
   - DetectiveJumpskirt
   - NoirJumpsuit
   - NoirJumpskirt
+  - ClothingUniformMiamiVice #imp
+  - ClothingUniformMiamiViceSkirt #imp
+  - ClothingUniformDetectiveSuit #imp
+  - ClothingUniformDetectiveSuitSkirt #imp
 
 - type: loadoutGroup
   id: DetectiveOuterClothing
@@ -1361,6 +1438,7 @@
   - MedicalHud
   - MedicalEyePatchHud
   - Glasses
+  - Eyepatch # starcup
   - GlassesJamjar
   - GlassesJensen
 
@@ -1382,6 +1460,8 @@
   loadouts:
   - ReporterJumpsuit
   - JournalistJumpsuit
+  - ClothingUniformBrosBlazer #imp
+  - ClothingUniformBrosBlazerSkirt #imp
 
 - type: loadoutGroup
   id: PsychologistJumpsuit

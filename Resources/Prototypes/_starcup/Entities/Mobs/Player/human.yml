@@ -1,0 +1,90 @@
+#Syndie
+- type: entity
+  parent: MobHuman
+  id: MobHumanNanotrasenAgentBase
+  name: NanoTrasen agent
+  suffix: Human, Base
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+    hair: HairBald
+  - type: Loadout
+    prototypes: [NanotrasenOperativeGearExtremelyBasic]
+    roleLoadout: [ RoleSurvivalNanotrasen ]
+  - type: RandomMetadata
+    nameSegments: [NamesDeathCommando]
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+
+- type: entity
+  parent: MobHumanNanotrasenAgentBase
+  id: MobHumanNanotrasenAgent
+  name: NanoTrasen agent
+  suffix: Human, Traitor
+  components:
+  # make the player a traitor once its taken
+  - type: AutoTraitor
+    profile: TraitorReinforcement
+
+- type: entity
+  parent: MobHumanNanotrasenAgent
+  id: MobHumanNanotrasenAgentMedic
+  name: NanoTrasen medic
+  components:
+  - type: Loadout
+    prototypes: [NanotrasenReinforcementMedic]
+    roleLoadout: [ RoleSurvivalNanotrasen ]
+
+- type: entity
+  parent: MobHumanNanotrasenAgent
+  id: MobHumanNanotrasenAgentSpy
+  name: NanoTrasen spy
+  components:
+  - type: Loadout
+    prototypes: [NanotrasenReinforcementSpy]
+    roleLoadout: [ RoleSurvivalNanotrasen ]
+
+- type: entity
+  parent: MobHumanNanotrasenAgent
+  id: MobHumanNanotrasenAgentThief
+  name: NanoTrasen thief
+  components:
+  - type: Loadout
+    prototypes: [NanotrasenReinforcementThief]
+    roleLoadout: [ RoleSurvivalNanotrasen ]
+
+- type: entity
+  parent: MobHumanNanotrasenAgentBase
+  id: MobHumanNanotrasenAgentNukeops # Reinforcement exclusive to nukeops uplink
+  suffix: Human, NukeOps
+  components:
+  - type: NukeOperative
+  - type: RandomMetadata
+    nameSegments:
+    - NamesSyndicateNormal
+    nameFormat: name-format-nukie-operator
+  - type: Loadout
+    prototypes: [NanotrasenOperativeGearFullNoUplink]
+
+# Nuclear Operative
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: MobHuman
+  id: MobHumanLoneNuclearOperativeNT
+  name: Lone Operative, NanoTrasen
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: NukeOperative
+  - type: Loadout
+    prototypes: [NanotrasenLoneOperativeGearFull]
+    roleLoadout: [ RoleSurvivalNanotrasen ]
+  - type: RandomMetadata
+    nameSegments:
+    - NamesSyndicatePrefix
+    - NamesSyndicateNormal
+    nameFormat: name-format-nukie-generic
+  - type: NpcFactionMember
+    factions:
+    - Syndicate

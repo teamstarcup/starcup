@@ -560,7 +560,7 @@
     onlyAffectsMobs: false
     injectOnly: true
   - type: StaticPrice
-    price: 500
+    price: 1500
 
 - type: entity
   name: hyperzine microinjector
@@ -599,11 +599,11 @@
     changeColor: false
     emptySpriteName: microstimpen_empty
   - type: StaticPrice
-    price: 100
+    price: 583 # 3500 for 6 as a freaky fraction
 
 - type: entity
   name: combat medipen
-  parent: [ChemicalMedipen, BaseSyndicateContraband]
+  parent: [ChemicalMedipen, BaseTraitorContraband] # starcup: shared contraband level with nt gear
   id: CombatMedipen
   description: A single-use medipen containing chemicals that regenerate most types of damage.
   components:
@@ -643,7 +643,7 @@
     onlyAffectsMobs: false
     injectOnly: true
   - type: StaticPrice
-    price: 500
+    price: 1500
 
 - type: entity
   name: pen
@@ -671,7 +671,7 @@
     handle: false # don't want the sound to stop the self-inject from triggering
 
 - type: entity
-  parent: [ BaseItem, BaseSyndicateContraband ]
+  parent: [ BaseItem, BaseTraitorContraband ] # starcup: shared contraband level with nt gear
   id: HypopenBox
   name: hypopen box
   description: A small box containing a hypopen. Packaging disintegrates when opened, leaving no evidence behind.

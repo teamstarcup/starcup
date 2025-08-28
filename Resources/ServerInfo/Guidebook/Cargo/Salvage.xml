@@ -7,7 +7,7 @@
 
   ## Preperations
 
-  Before embarking on a Salvage mission, ensure you are prepared with all the required equipment. Otherwise, you will die before seeing any profits!
+  Before leaving the station, ensure you are prepared with all the required equipment. Otherwise, you will likely die before seeing any profits!
 
   <Box>
     <GuideEntityEmbed Entity="SuitStorageSalv"/>
@@ -15,7 +15,7 @@
     <GuideEntityEmbed Entity="VendingMachineSalvage"/>
   </Box>
 
-  Everything needed before leaving the station is provided inside Salvage's starting room. While Science can research better weapons and equipment, it is best to be equipped with something rather than nothing.
+  Everything needed before leaving the station is provided inside Salvage's starting room. While Science can research better weapons and equipment, it is best to be equipped with your starting gear rather than nothing.
 
   <Box>
     <GuideEntityEmbed Entity="ClothingOuterHardsuitSpatio"/>
@@ -44,8 +44,8 @@
 
   Mining (on asteroids or expeditions) requires its own basic set.
 
-  - [color=cyan]Pickaxe[/color]: This is required for mining at any reasonable speed when wielded. Also, it works as a melee weapon!
-  - [color=cyan]Ore Bag[/color]: When equipped with the belt, this magnetizes nearby ore and automatically picks it up for you.
+  - [color=cyan]Pickaxe[/color]: This is required for mining at any reasonable speed when wielded. It also works as a handy melee weapon!
+  - [color=cyan]Ore Bag[/color]: When equipped in your belt slot, this magnetizes nearby ore and automatically picks it up for you.
 
   <Box>
     <GuideEntityEmbed Entity="FultonBeacon"/>
@@ -101,6 +101,20 @@
 
   <Box>
     <GuideEntityEmbed Entity="Wrench"/>
+    <GuideEntityEmbed Entity="FireExtinguisher"/>
+    <GuideEntityEmbed Entity="Recycler"/>
+  </Box>
+
+  [color=cyan]Space Debris[/color] is a versatile option, providing vital basic materials (such as steel, glass, etc.) in short supply at the start of the shift. Items and scrap are scattered across the debris, and must be collected. Consider dragging along one of the lockers or crates aboard the debris for easier storage.
+
+  Debris is sprinkled with numerous threats. Bloodthirsty [color=red]Space Carp[/color] and [color=red]Sharkminnows[/color] infest them, eager to rush any Salvagers that come nearby. [color=red]Landmines[/color] are also rarely found aboard debris, capable of incapacitating the unwary explorer.
+
+  Once you return from the Debris, place any scrap you found aboard the debris into your department's [color=cyan]Recycler[/color] to transform it into useful materials and give it to Cargo to distribute to the station. Should you find valuables aboard the Debris, like [color=yellow]Coins, Rings, and Watches,[/color] give them to Cargo so they can be sold at the [color=cyan]Automated Trade Station[/color] for profit.
+
+  ### Salvage Wrecks
+
+  <Box>
+    <GuideEntityEmbed Entity="SurvivalKnife"/>
     <GuideEntityEmbed Entity="Fulton"/>
     <GuideEntityEmbed Entity="WeaponProtoKineticAccelerator"/>
   </Box>
@@ -130,5 +144,37 @@
 
   - [color=cyan]Expedition Mining[/color]: Mining during expeditions provides access to a wide range of resources, but also increases the risk of getting lost or encountering environmental and hostile threats.
 
-  - [color=cyan]Dungeon Looting[/color]: Dungeon Looting is where you make the most profit. When you touch down on the planet, the direction of the dungeon will be announced over the radio. Next, break into the dungeon, kill all the hostiles, and secure any loot. [color=cyan]Fultons[/color] become especially handy as you will be transferring whole machines and anomalies. The rewards from Dungeon Looting are expensive equipment to sell and exclusive technologies, such as [color=yellow]cloning[/color]. As an addition, the corpses of the hostiles can also be used and sold!
+  The [color=purple]Science Department[/color] is a crucial partner for Salvage. Science depends on Salvage for both basic materials (steel, plastic, glass) and advanced materials (silver, gold, plasma, and uranium), and Salvage relies on Science for the upgraded equipment that makes their work easier.
+
+  Whenever possible, communicate with Science and try to prioritize their requests. While Science will need large quantities of basic materials, they rely entirely on you for their supply of [color=yellow]Gold, Silver and Uranium,[/color] all of which are required for your advanced gear. If you want Science to help you, you have to help them - and vice versa.
+
+  <Box>
+    <GuideEntityEmbed Entity="MiningDrill"/>
+    <GuideEntityEmbed Entity="HandHeldMassScanner"/>
+    <GuideEntityEmbed Entity="PKAUpgradeRange"/>
+  </Box>
+
+  Science is the only source for a variety of extremely useful gear, including:
+
+  - [color=cyan]Mining Gear[/color]: Science can provide you with [color=yellow]Mining Drills and Mineral Scanners[/color], which make mining faster and easier. They can also build you an [color=yellow]Industrial Ore Processor[/color], which processes ore into finished materials at a much better rate.
+  - [color=cyan]Handheld Mass Scanner[/color]: A pocket-portable Mass Scanner Computer. Though it requires a battery to use, it lets you view your position anywhere in space.
+  - [color=cyan]PKA Upgrades[/color]: You can upgrade your PKA with up to two unique upgrades from a pool of three: [color=red]Damage,[/color] [color=yellow]Fire Rate,[/color] and [color=green]Range[/color].
+
+  ## The Mining Asteroid
+
+  Once you feel that you've mastered the Salvage Magnet, the distant [color=red]Mining Asteroid[/color] serves as the next step in a Salvager's journey. Reaching the Mining Asteroid generally requires a shuttle or jetpacks, and it should generally not be explored alone due to the exceptional dangers within.
+
+  <Box>
+    <GuideEntityEmbed Entity="MobGoliath"/>
+    <GuideEntityEmbed Entity="MobHivelord"/>
+    <GuideEntityEmbed Entity="MobBasilisk"/>
+  </Box>
+
+  The Mining Asteroid consists of two sections: the [color=cyan]Dungeon[/color], a randomly-generated structure filled with enemies and material loot, and the [color=cyan]Asteroid[/color], which contains vast deposits of mineral wealth dotted with pockets of loot and monsters.
+
+  Beware of the monsters aboard the Mining Asteroid, as they stand head and shoulders above the threats present on Wrecks and Debris.
+
+  - [color=cyan]Goliaths[/color]: Titanic beasts which can incapacitate targets with writhing tendrils, leaving them helpless against their massive claws and gnashing teeth. They're a pain to take down, but they can be butchered for valuable [color=cyan]Goliath Hide Plating,[/color] useful in both completing Salvage Jobs and upgrading your Spationaut Suit.
+  - [color=cyan]Hivelords[/color]: Fast moving and erratic anomalies. They prefer to keep their distance in combat, spewing out small [color=cyan]Hivelord Brood[/color] to swarm Salvagers. They're not especially tough, so ambush them quickly before they can summon a horde to drown you in. They can be butchered for the quick-rotting [color=cyan]Hivelord Cores,[/color] which are used to complete Salvage Jobs and can also be eaten raw for quick healing.
+  - [color=cyan]Basilisks[/color]: An ice-encrusted terror that lurks in the shadows. Basilisks can fire freezing energy bolts which damage and slow their targets, and will often use them to soften up a target before moving in for the kill. Once defeated, they can be butchered for invaluable [color=cyan]Diamond Ore[/color].
 </Document>

@@ -1,0 +1,36 @@
+- type: entity
+  parent: ToolboxNanotrasen
+  id: ToolboxNanotrasenFilled
+  suffix: Filled, NanoTrasen
+  components:
+  - type: StorageFill
+    contents:
+    - id: Crowbar
+    - id: Wrench
+    - id: Screwdriver
+    - id: Wirecutter
+    - id: Welder
+    - id: Multitool
+    - id: ClothingHandsGlovesCombat
+    - id: ClothingMaskGasNanotrasen
+
+- type: entity
+  id: ToolboxElectricalTurretFilledNT
+  name: electrical toolbox
+  suffix: Turret, NanoTrasen, Filled
+  parent: ToolboxElectricalTurret
+  components:
+  - type: StorageFill
+    contents:
+      - id: Screwdriver
+      - id: CrowbarOrange
+      - id: Wirecutter
+      - id: CableApcStack10
+      - id: CableMVStack10
+      - id: trayScanner
+        prob: 0.9
+      - id: ClothingHandsGlovesColorYellow
+        prob: 0.05
+        orGroup: GlovesOrWires
+      - id: CableHVStack10
+        orGroup: GlovesOrWires

@@ -52,6 +52,8 @@
     guides:
     - AtmosphericAlertsComputer
     - DeviceMonitoringAndControl
+  - type: PointLight # starcup
+    color: "#e6ffff"
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -109,9 +111,9 @@
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 # starcup
     energy: 1.6
-    color: "#43ccb5"
+    color: "#007500"
 
 - type: entity
   parent: BaseComputer
@@ -133,7 +135,7 @@
   - type: WorldLoader
     radius: 256
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#43ccb5"
   - type: ItemSlots
@@ -203,7 +205,7 @@
   - type: WorldLoader
     radius: 1536
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#c94242"
   - type: Computer
@@ -233,7 +235,7 @@
   - type: RadarConsole
     maxRange: 256
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#43ccb5"
   - type: Computer
@@ -271,6 +273,8 @@
           type: WiresBoundUserInterface
   - type: Computer
     board: ComputerIFFCircuitboard
+  - type: PointLight # starcup
+    color: "#1c7a8c"
 
 - type: entity
   parent: ComputerIFF
@@ -313,7 +317,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#c9c042"
   - type: Computer
@@ -355,7 +359,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#1f8c28"
   - type: Computer
@@ -405,9 +409,9 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
-    color: "#1f8c28"
+    color: "#806666"
   - type: Computer
     board: CriminalRecordsComputerCircuitboard
   - type: AccessReader
@@ -438,7 +442,7 @@
     key: enum.CharacterRecordConsoleKey.Key
   # End CD - Character Records
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#1f8c28"
   - type: Computer
@@ -466,9 +470,9 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
-    color: "#006400"
+    color: "#4d8033"
   - type: Computer
     board: CrewMonitoringComputerCircuitboard
   - type: ActivatableUI
@@ -527,7 +531,7 @@
   - type: AccessReader
     access: [["Research"]]
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#b53ca1"
   - type: GuideHelp
@@ -576,7 +580,7 @@
   - type: Computer
     board: AnalysisComputerCircuitboard
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#b53ca1"
   - type: GuideHelp
@@ -636,7 +640,7 @@
   - type: Computer
     board: IDComputerCircuitboard
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#3c5eb5"
   - type: Tag
@@ -660,7 +664,7 @@
   - type: Computer
     board: BodyScannerComputerCircuitboard
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#1f8c28"
 
@@ -687,6 +691,7 @@
   - type: CommunicationsConsole
     title: comms-console-announcement-title-station
   - type: DeviceNetwork
+    deviceNetId: Wireless
     transmitFrequencyId: ShuttleTimer
   - type: ActivatableUI
     key: enum.CommunicationsConsoleUiKey.Key
@@ -699,7 +704,7 @@
   - type: Computer
     board: CommsComputerCircuitboard
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#3c5eb5"
   - type: Damageable
@@ -727,7 +732,7 @@
   - type: AccessReader
     access: [[ "NuclearOperative" ]]
   - type: CommunicationsConsole
-    title: comms-console-announcement-title-nukie
+    title: comms-console-announcement-title-nukie-starcup # starcup: Syndicate to NT
     color: "#ff0000"
     canShuttle: false
     global: true #announce to everyone they're about to fuck shit up
@@ -736,7 +741,7 @@
   - type: Computer
     board: SyndicateCommsComputerCircuitboard
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#f71713"
 
@@ -770,14 +775,14 @@
   - type: Computer
     board: WizardCommsComputerCircuitboard
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#F317F3"
 
 - type: entity
   parent: ComputerComms
   id: CentcommComputerComms
-  name: central command communications computer
+  name: SyndComm communications computer # starcup: NT-SC swap
   description: A computer used to make world wide announcements via keyboard. The superior cousin of the regular communications computer.
   components:
   - type: Sprite
@@ -793,18 +798,18 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: AccessReader
-    access: [[ "CentralCommand" ]]
+    access: [[ "SyndicateCommunications" ]] # starcup: NT-SC swap
   - type: CommunicationsConsole
     title: comms-console-announcement-title-centcom
-    color: "#1d8bad"
+    color: "#d42424" # starcup: NT-SC swap
     canShuttle: false
     global: true
   - type: Computer
     board: CentcommCommsComputerCircuitboard
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
-    color: "#00FF00"
+    color: "#00bf00"
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -836,7 +841,7 @@
   - type: Computer
     board: SolarControlComputerCircuitboard
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#e6e227"
   - type: GuideHelp
@@ -874,7 +879,7 @@
   - type: Computer
     board: RadarConsoleCircuitboard
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#e6e227"
 
@@ -912,7 +917,7 @@
   - type: Computer
     board: CargoRequestComputerCircuitboard
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#b89f25"
   - type: AccessReader
@@ -953,7 +958,7 @@
     account: Engineering
     announcementChannel: Engineering
     removeLimitAccess: [ "ChiefEngineer" ]
-    slipPrinter: true
+    mode: SendToPrimary
   - type: ActiveRadio
     channels:
     - Engineering
@@ -986,7 +991,7 @@
     account: Medical
     announcementChannel: Medical
     removeLimitAccess: [ "ChiefMedicalOfficer" ]
-    slipPrinter: true
+    mode: SendToPrimary
   - type: ActiveRadio
     channels:
     - Medical
@@ -1019,7 +1024,7 @@
     account: Science
     announcementChannel: Science
     removeLimitAccess: [ "ResearchDirector" ]
-    slipPrinter: true
+    mode: SendToPrimary
   - type: ActiveRadio
     channels:
     - Science
@@ -1052,7 +1057,7 @@
     account: Security
     announcementChannel: Security
     removeLimitAccess: [ "HeadOfSecurity" ]
-    slipPrinter: true
+    mode: SendToPrimary
   - type: ActiveRadio
     channels:
     - Security
@@ -1085,7 +1090,7 @@
     account: Service
     announcementChannel: Service
     removeLimitAccess: [ "HeadOfPersonnel" ]
-    slipPrinter: true
+    mode: SendToPrimary
   - type: ActiveRadio
     channels:
     - Service
@@ -1126,7 +1131,7 @@
   - type: Computer
     board: CargoBountyComputerCircuitboard
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#b89f25"
   - type: AccessReader
@@ -1200,7 +1205,7 @@
   - type: Computer
     board: CloningConsoleComputerCircuitboard
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#1f8c28"
   - type: DeviceLinkSource
@@ -1258,9 +1263,9 @@
   - type: Computer
     board: SalvageJobBoardComputerCircuitboard
   - type: PointLight
-    radius: 1.5
-    energy: 1.6
-    color: "#b89f25"
+#    radius: 1.5  # starcup
+#    energy: 1.6  # starcup
+    color: "#6142a5"
 
 - type: entity
   id: ComputerSalvageExpedition
@@ -1307,7 +1312,7 @@
     - type: Computer
       board: SalvageExpeditionsComputerCircuitboard
     - type: PointLight
-      radius: 1.5
+      radius: 2.4 #imp
       energy: 1.6
       color: "#b89f25"
     - type: AccessReader
@@ -1353,6 +1358,8 @@
           type: SurveillanceCameraMonitorBoundUserInterface
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
+  - type: PointLight # starcup
+    color: "#a69d9d"
 
 - type: entity
   parent: BaseComputer
@@ -1428,7 +1435,7 @@
   - type: Computer
     board: CargoSaleComputerCircuitboard
   - type: PointLight
-    radius: 1.5
+    radius: 2.4 #imp
     energy: 1.6
     color: "#b89f25"
   - type: GuideHelp
@@ -1470,6 +1477,8 @@
           type: NewsWriterBoundUserInterface
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
+  - type: PointLight # starcup
+    color: "#a3d936"
 
 - type: entity
   parent: BaseComputer
@@ -1494,7 +1503,7 @@
         - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
           state: generic_panel_open
     - type: PointLight
-      radius: 1.5
+      radius: 2.4 #imp
       energy: 1.6
       color: "#43ccb5"
     - type: Computer
@@ -1538,6 +1547,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: RoboticsConsole
+    allowBorgControl: false # starcup
   - type: ActiveRadio
     channels:
     - Science
@@ -1561,6 +1571,8 @@
     access: [["ResearchDirector"]]
   - type: Lock
     unlockOnClick: false
+  - type: PointLight # starcup
+    color: "#b386b3"
 
 - type: entity
   id: StationAiUploadComputer
@@ -1609,3 +1621,5 @@
     containers:
       circuit_holder: !type:ContainerSlot
       board: !type:Container
+  - type: PointLight # starcup
+    color: "#3300ff"

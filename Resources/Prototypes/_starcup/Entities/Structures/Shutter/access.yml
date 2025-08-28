@@ -1,0 +1,61 @@
+
+# blast doors
+
+- type: entity
+  parent: BlastDoorCentralCommand
+  id: BlastDoorSyndComm
+  suffix: Syndicate Communications, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSyndicateCommunications ]
+
+# shutters
+
+- type: entity
+  parent: ShuttersNormal
+  id: ShuttersNormalSyndComm
+  suffix: Syndicate Communications
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSyndicateCommunications ]
+
+- type: entity
+  parent: ShuttersNormalOpen
+  id: ShuttersNormalOpenSyndComm
+  suffix: Syndicate Communications, Open
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSyndicateCommunications ]
+
+# window shutters
+
+- type: entity
+  parent: ShuttersWindowCentralCommand
+  id: ShuttersWindowSyndComm
+  suffix: Syndicate Communications, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSyndicateCommunications ]
+
+- type: entity
+  parent: ShuttersWindowCentralCommand
+  id: ShuttersWindowOpenSyndComm
+  suffix: Syndicate Communications, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSyndicateCommunications ]
+  - type: Door
+    state: Open
+  - type: Physics
+    canCollide: false
+  - type: Occluder
+    enabled: false
+  - type: Airtight
+    airBlocked: false
+  - type: RadiationBlocker
+    enabled: false

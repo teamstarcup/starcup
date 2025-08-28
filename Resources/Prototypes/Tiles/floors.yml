@@ -171,7 +171,7 @@
     collection: FootstepTile
   itemDrop: FloorTileItemSteelHerringbone
   heatCapacity: 10000
-  weather: true  # starcup - render weather over this for glacier station
+  # weather: true  # starcup: early merge of #38638  # starcup - render weather over this for glacier station
 
 - type: tile
   id: FloorSteelDiagonalMini
@@ -614,6 +614,18 @@
   heatCapacity: 10000
 
 - type: tile
+  id: FloorTechMaintDark
+  name: tiles-techmaint-floor-dark
+  sprite: /Textures/Tiles/tech_maint_dark.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepHull
+  itemDrop: FloorTileItemTechmaintDark
+  heatCapacity: 10000
+
+- type: tile
   id: FloorReinforced
   name: tiles-reinforced-floor
   sprite: /Textures/Tiles/reinforced.png
@@ -653,6 +665,12 @@
   id: FloorSteelDirty
   name: tiles-dirty-steel-floor
   sprite: /Textures/Tiles/steel_dirty.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -1440,7 +1458,7 @@
   footstepSounds:
     collection: FootstepTile
   heatCapacity: 10000
-  weather: true
+  # weather: true  # starcup: early merge of #38638
 
 - type: tile
   id: FloorGrass
@@ -1452,7 +1470,7 @@
     collection: FootstepGrass
   itemDrop: FloorTileItemGrass
   heatCapacity: 10000
-  weather: true
+  # weather: true  # starcup: early merge of #38638
 
 - type: tile
   id: FloorGrassJungle
@@ -1464,7 +1482,7 @@
     collection: FootstepGrass
   itemDrop: FloorTileItemGrassJungle
   heatCapacity: 10000
-  weather: true
+  # weather: true  # starcup: early merge of #38638
 
 - type: tile
   id: FloorGrassDark
@@ -1481,7 +1499,7 @@
   footstepSounds:
     collection: FootstepGrass
   heatCapacity: 10000
-  weather: true
+  # weather: true  # starcup: early merge of #38638
 
 - type: tile
   id: FloorGrassLight
@@ -1498,7 +1516,7 @@
   footstepSounds:
     collection: FootstepGrass
   heatCapacity: 10000
-  weather: true
+  # weather: true  # starcup: early merge of #38638
 
 - type: tile
   id: FloorDirt
@@ -1515,7 +1533,7 @@
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
-  weather: true
+  # weather: true  # starcup: early merge of #38638
 
 # Asteroid
 
@@ -1543,7 +1561,7 @@
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
-  weather: true
+  # weather: true  # starcup: early merge of #38638
 
 - type: tile
   id: FloorAsteroidSand
@@ -1569,7 +1587,7 @@
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
-  weather: true
+  # weather: true  # starcup: early merge of #38638
 
 - type: tile
   id: FloorAsteroidSandDug
@@ -1610,7 +1628,7 @@
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
-  weather: true
+  # weather: true  # starcup: early merge of #38638
 
 - type: tile
   id: FloorAsteroidSandRed
@@ -1637,7 +1655,7 @@
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
-  weather: true
+  # weather: true  # starcup: early merge of #38638
 
 - type: tile
   id: FloorAsteroidIronsandBorderless
@@ -1665,7 +1683,7 @@
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
-  weather: true
+  # weather: true  # starcup: early merge of #38638
 
 - type: tile
   id: FloorAsteroidIronsand
@@ -1691,7 +1709,7 @@
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
-  weather: true
+  # weather: true  # starcup: early merge of #38638
 
 - type: tile
   id: FloorAsteroidSandUnvariantized
@@ -1717,7 +1735,7 @@
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
-  weather: true
+  # weather: true  # starcup: early merge of #38638
 
 - type: tile
   id: FloorAsteroidIronsandUnvariantized
@@ -2014,7 +2032,7 @@
   isSubfloor: false
   deconstructTools: [ Prying ]
   itemDrop: FloorTileItemAstroAsteroidSand
-  weather: false
+# weather: false  # starcup: early merge of #38638
 
 - type: tile
   id: FloorAstroAsteroidSandBorderless
@@ -2024,7 +2042,7 @@
   isSubfloor: false
   deconstructTools: [ Prying ]
   itemDrop: FloorTileItemAstroAsteroidSand
-  weather: false
+# weather: false  # starcup: early merge of #38638
 
 - type: tile
   id: FloorWoodLarge
@@ -2044,4 +2062,165 @@
   barestepSounds:
     collection: BarestepWood
   itemDrop: FloorTileItemWoodLarge
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorXeno
+  name: tiles-xeno-floor
+  sprite: /Textures/Tiles/xeno_flooring.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepBlood
+  itemDrop: FloorTileItemXeno
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorXenoSteel
+  name: tiles-xeno-steel
+  sprite: /Textures/Tiles/xeno_steel.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemXenoSteel
+  heatCapacity: 10000
+  allowRotationMirror: true
+
+- type: tile
+  id: FloorXenoSteelCorner
+  name: tiles-xeno-steel-corner
+  sprite: /Textures/Tiles/xeno_steel_corner.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemXenoSteelCorner
+  heatCapacity: 10000
+  allowRotationMirror: true
+
+- type: tile
+  id: FloorDarkSquiggly
+  name: tiles-dark-squiggly
+  sprite: /Textures/Tiles/dark_squiggly.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemDarkSquiggly
+  heatCapacity: 10000
+  allowRotationMirror: true
+
+- type: tile
+  id: FloorXenoMaint
+  name: tiles-xeno-maint
+  sprite: /Textures/Tiles/xeno_maint.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepHull
+  itemDrop: FloorTileItemXenoMaint
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorWhiteMarble
+  name: tiles-white-marble
+  sprite: /Textures/Tiles/white_marble.png
+  variants: 8
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  friction: 0.8
+  itemDrop: FloorTileItemWhiteMarble
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorDarkMarble
+  name: tiles-dark-marble
+  sprite: /Textures/Tiles/dark_marble.png
+  variants: 8
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  friction: 0.8
+  itemDrop: FloorTileItemDarkMarble
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorPlasmaMarble
+  name: tiles-plasma-marble
+  sprite: /Textures/Tiles/plasmarble.png
+  variants: 8
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  friction: 0.8
+  itemDrop: FloorTileItemPlasmaMarble
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorUraniumMarble
+  name: tiles-uranium-marble
+  sprite: /Textures/Tiles/uranium_marble.png
+  variants: 8
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  friction: 0.8
+  itemDrop: FloorTileItemUraniumMarble
   heatCapacity: 10000

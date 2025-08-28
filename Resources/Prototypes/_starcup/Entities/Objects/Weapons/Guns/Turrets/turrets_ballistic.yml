@@ -1,0 +1,14 @@
+- type: entity
+  parent: [BaseTraitorContraband, WeaponTurretSyndicate]
+  id: WeaponTurretNanotrasenAntag
+  suffix: NanoTrasen (Antag)
+
+- type: entity
+  parent: WeaponTurretSyndicateDisposable
+  id: WeaponTurretNanotrasenDisposableAntag
+  name: disposable ballistic turret
+  suffix: NanoTrasen (Antag), Disposable
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Syndicate

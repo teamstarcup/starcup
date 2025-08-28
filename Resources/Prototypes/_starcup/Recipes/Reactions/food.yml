@@ -1,0 +1,15 @@
+- type: reaction
+  id: CreateChocolateImitation
+  impact: Low
+  quantized: true
+  conserveEnergy: false
+  reactants:
+    CocoaPowderImitation:
+      amount: 4
+    Milk:
+      amount: 2
+    Sugar:
+      amount: 2
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: FoodSnackChocolateBarImitation

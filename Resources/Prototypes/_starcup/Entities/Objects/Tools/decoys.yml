@@ -1,0 +1,81 @@
+- type: entity
+  parent: BaseDecoy
+  id: BalloonOperativeNT
+  name: operative balloon
+  suffix: NanoTrasen
+  description: Upon closer inspection, this NanoTrasen operative is actually a balloon.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/Decoys/operative_decoy.rsi
+    layers:
+    - state: oballoon
+      map: ["unfoldedLayer"]
+    - state: folded
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: BaseDecoy
+  id: BalloonAgentNT
+  name: corpsman balloon
+  suffix: NanoTrasen
+  description: Upon closer inspection, this NanoTrasen corpsman is actually a balloon.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/Decoys/agent_decoy.rsi
+    layers:
+    - state: aballoon
+      map: ["unfoldedLayer"]
+    - state: folded
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: BaseDecoy
+  id: BalloonEliteNT
+  name: elite operative balloon
+  suffix: NanoTrasen
+  description: Upon closer inspection, this NanoTrasen elite operative is actually a balloon.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/Decoys/elite_decoy.rsi
+    layers:
+    - state: eballoon
+      map: ["unfoldedLayer"]
+    - state: folded
+      map: ["foldedLayer"]
+      visible: false
+  - type: PointLight
+    color: red
+
+- type: entity
+  parent: BaseDecoy
+  id: BalloonJuggernautNT
+  name: juggernaut balloon
+  suffix: NanoTrasen
+  description: Upon closer inspection, this NanoTrasen juggernaut is actually a balloon.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/Decoys/juggernaut_decoy.rsi
+    layers:
+    - state: jballoon
+      map: ["unfoldedLayer"]
+    - state: folded
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: BaseDecoy
+  id: BalloonCommanderNT
+  name: commander balloon
+  suffix: NanoTrasen
+  description: Upon closer inspection, this NanoTrasen commander is actually a balloon.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/Decoys/commander_decoy.rsi
+    layers:
+    - state: cballoon
+      map: ["unfoldedLayer"]
+    - state: folded
+      map: ["foldedLayer"]
+      visible: false

@@ -1,0 +1,34 @@
+- type: entity
+  parent: [DrinkBottleVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: DrinkCoffeeJugDecaf
+  name: decaf coffee jug
+  description: Wake up juice, of the heated kind.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: CoffeeDecaf
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-coffee-decaf
+
+- type: entity
+  parent: [DrinkBottleVisualsAll, DrinkBottlePlasticBaseFull]
+  id: DrinkSolDryBottleFull
+  name: Sol Dry bottle
+  description: Sweet ginger soda from outer space!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: SolDry
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-sol-dry
+  - type: Sprite
+    sprite: _starcup/Objects/Consumable/Drinks/soldry_bottle.rsi
+  - type: Sealable

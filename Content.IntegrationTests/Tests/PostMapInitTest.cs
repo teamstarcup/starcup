@@ -32,73 +32,65 @@ namespace Content.IntegrationTests.Tests
         private const bool SkipTestMaps = true;
         private const string TestMapsPath = "/Maps/Test/";
 
+        // begin starcup
         private static readonly string[] NoSpawnMaps =
         {
             "CentComm",
             "Dart",
             "EventFrigidPeril",  // starcup
+            "EventCruiseControl",  // starcup
         };
 
         private static readonly string[] Grids =
         {
-            "/Maps/centcomm.yml",
+            // "/Maps/centcomm.yml",
             AdminTestArenaSystem.ArenaMapPath,
-			"/Maps/_starcup/syndicomm.yml",  // starcup
+			"/Maps/_starcup/syndcomm.yml",  // starcup
             "/Maps/_starcup/Events/frigid-peril-surface.yml",  // starcup
         };
 
         private static readonly string[] DoNotMapWhitelist =
         {
-            "/Maps/centcomm.yml",
-            "/Maps/bagel.yml", // Contains mime's rubber stamp --> Either fix this, remove the category, or remove this comment if intentional.
-            "/Maps/gate.yml", // Contains positronic brain and LSE-1200c "Perforator"
-            "/Maps/meta.yml", // Contains warden's rubber stamp
-            "/Maps/reach.yml", // Contains handheld crew monitor
+//            "/Maps/centcomm.yml",
+//            "/Maps/bagel.yml", // Contains mime's rubber stamp --> Either fix this, remove the category, or remove this comment if intentional.
+//            "/Maps/reach.yml", // Contains handheld crew monitor
             "/Maps/_starcup/reach.yml", // starcup: Contains handheld crew monitor
             "/Maps/Shuttles/ShuttleEvent/cruiser.yml", // Contains LSE-1200c "Perforator"
             "/Maps/Shuttles/ShuttleEvent/honki.yml", // Contains golden honker, clown's rubber stamp
             "/Maps/Shuttles/ShuttleEvent/instigator.yml", // Contains EXP-320g "Friendship"
             "/Maps/Shuttles/ShuttleEvent/syndie_evacpod.yml", // Contains syndicate rubber stamp
-			"/Maps/_starcup/syndicomm.yml",  // starcup: contains centcomm rubber stamp, centcomm folder, handheld crew monitor
+			"/Maps/_starcup/syndcomm.yml",  // starcup: contains centcomm rubber stamp, centcomm folder, handheld crew monitor
 			"/Maps/_starcup/Events/frigid-peril-station.yml",  // starcup: this is an event and events do not play by the rules
 			"/Maps/_starcup/Events/frigid-peril-surface.yml",  // starcup: contains lots of key round-start gear; it's not feasible to place lockers
+            "/Maps/_starcup/Events/cruise-control.yml",  // starcup: this is an event and events do not play by the rules
         };
+
 
         private static readonly string[] GameMaps =
         {
             "Dev",
             "TestTeg",
-            "Fland",
-            "Meta",
-            "Packed",
-            "Omega",
-            "Bagel",
-            "CentComm",
-            "Box",
-            "Core",
-            "Marathon",
             "MeteorArena",
-            "Saltern",
-            "Reach",
-            "Train",
-            "Oasis",
-            "Gate",
-            "Amber",
-            "Loop",
-            "Plasma",
-            "Elkridge",
-            "Convex",
-            "Relic",
             "dm01-entryway",
-            "Glacier",  // starcup
-            "Loopstarcup", // starcup
-            "Omegastarcup", // starcup
-            "Packedstarcup", // starcup
-            "Reachstarcup", // starcup
-            "Salternstarcup", // starcup
-            "Byoin",  // starcup
-            "EventFrigidPeril" // starcup
+            // begin starcup
+            "Syndcomm",
+            "Glacier",
+            "Loop",
+            "Omega",
+            "Reach",
+            "Saltern",
+            "Byoin",
+            "Train",
+            "Shoukou",
+            "Banana",
+            "EventFrigidPeril",
+            "EventCruiseControl",
+            // end starcup
         };
+
+        // end starcup
+
+        private static readonly ProtoId<EntityCategoryPrototype> DoNotMapCategory = "DoNotMap";
 
         /// <summary>
         /// Asserts that specific files have been saved as grids and not maps.
@@ -277,7 +269,7 @@ namespace Content.IntegrationTests.Tests
                 return;
 
             var yamlEntities = node["entities"];
-            if (!protoManager.TryIndex<EntityCategoryPrototype>("DoNotMap", out var dnmCategory))
+            if (!protoManager.TryIndex(DoNotMapCategory, out var dnmCategory))
                 return;
 
             Assert.Multiple(() =>

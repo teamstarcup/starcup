@@ -1,0 +1,34 @@
+- type: entity
+  name: NanoTrasen pen
+  parent: [BaseTraitorContraband, CyberPen]
+  id: NanotrasenPen
+  description: A high-tech pen straight from NanoTrasen's legal department, capable of refracting hard-light at impossible angles through its diamond tip in order to write. So powerful, it's even able to rewrite officially stamped documents should the need arise.
+  components:
+  - type: Sprite
+    state: overpriced_pen
+  - type: Item
+    heldPrefix: overpriced_pen
+
+- type: entity
+  parent: PenCap
+  id: PenCapSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/pens.rsi
+    state: pen_cap_syndi
+  - type: Item
+    sprite: _starcup/Objects/Misc/pens.rsi
+
+- type: entity
+  name: Head of Personnel's fountain pen
+  parent: PenHop
+  id: PenHopSyndie
+  suffix: Syndicate
+  description: A luxurious fountain pen for the station's Head of Personnel.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/pens.rsi
+    state: pen_hop_syndi
+  - type: Item
+    sprite: _starcup/Objects/Misc/pens.rsi

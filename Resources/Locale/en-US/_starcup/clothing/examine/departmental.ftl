@@ -1,0 +1,44 @@
+# Command
+clothing-captain-gloves = [color=#db1a88]captain's gloves[/color]
+clothing-captain-gas-mask = [color=#db1a88]captain's gas mask[/color]
+clothing-captain-carapace = [color=#db1a88]captain's carapace[/color]
+clothing-captain-hardsuit = [color=#db1a88]captain's armored spacesuit[/color]
+clothing-captain-winter-coat = [color=#db1a88]captain's winter coat[/color]
+clothing-captain-jetpack = [color=#db1a88]captain's jetpack[/color]
+clothing-sabre-sheath = [color=#db1a88]sabre sheath[/color]
+clothing-captain-sabre = [color=#db1a88]captain's sabre[/color]
+clothing-antique-laser-pistol = [color=#db1a88]antique laser pistol[/color]
+
+# Engineering
+clothing-insulated-gloves = [color=#ffc400]insulated gloves[/color]
+clothing-insulated-gloves-budget = [color=#ffc400]budget insulated gloves[/color]
+clothing-atmos-fire-helmet = [color=#ffc400]atmos fire helmet[/color]
+clothing-atmos-hardsuit = [color=#ffc400]atmos hardsuit[/color]
+clothing-engineering-hardsuit = [color=#ffc400]engineering hardsuit[/color]
+clothing-ce-hardsuit = [color=#ffc400]Chief Engineer's hardsuit[/color]
+clothing-rcd = [color=#ffc400]RCD[/color]
+clothing-fireaxe = [color=#ffc400]fireaxe[/color]
+clothing-grenade-metal-foam = [color=#ffc400]metal foam grenade[/color]
+clothing-grenade-air = [color=#ffc400]air grenade[/color]
+clothing-advanced-magboots = [color=#ffc400]advanced magboots[/color]
+
+# Logistics
+clothing-explorer-gas-mask = [color=#bd8e37]explorer gas mask[/color]
+clothing-spatio-hardsuit = [color=#bd8e37]spationaut hardsuit[/color]
+clothing-salvage-hardsuit = [color=#bd8e37]mining hardsuit[/color]
+clothing-goliath-hardsuit = [color=#bd8e37]goliath hardsuit[/color]
+clothing-maxim-hardsuit = [color=#bd8e37]salvager maxim hardsuit[/color]
+clothing-qm-knuckle-dusters = [color=#bd8e37]Logistics Officer's golden knuckle dusters[/color]
+clothing-survival-knife = [color=#bd8e37]survival knife[/color]
+clothing-kukri-knife = [color=#bd8e37]kukri knife[/color]
+clothing-crusher = [color=#bd8e37]crusher[/color]
+clothing-crusher-dagger = [color=#bd8e37]crusher dagger[/color]
+clothing-crusher-glaive = [color=#bd8e37]crusher glaive[/color]
+clothing-pka = [color=#bd8e37]proto-kinetic accelerator[/color]
+
+# Medical
+clothing-paramedic-void-suit = [color=#94daff]paramedic void suit[/color]
+clothing-cmo-hardsuit = [color=#94daff]chief medical officer's hardsuit[/color]
+
+# Science
+clothing-rd-hardsuit = [color=#9a4c9e]experimental research hardsuit[/color]

@@ -1,0 +1,97 @@
+# CREW HARDSUITS
+# Captain's Hardsuit
+- type: entity
+  parent: [ClothingOuterHardsuitCap, BaseExaminableClothing]
+  id: ClothingOuterHardsuitCapSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/capspace_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/capspace_syndi.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitCapSyndie
+  - type: ExaminableClothing
+    examineText: clothing-captain-hardsuit
+
+# ANTAG HARDSUITS
+# Blueblood Hardsuit
+- type: entity
+  parent: [ BaseTraitorContraband, ClothingOuterHardsuitSyndie, BaseExaminableClothing ]
+  id: ClothingOuterHardsuitNT
+  name: blueblood hardsuit
+  description: A heavily armored hardsuit designed for work in special operations. Property of NanoTrasen.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/nanotrasen.rsi
+  - type: Item
+    size: Huge
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/nanotrasen.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitNT
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-hardsuit
+
+# NanoTrasen Medic Hardsuit
+- type: entity
+  parent: [BaseTraitorContraband, ClothingOuterHardsuitSyndieMedic, BaseExaminableClothing]
+  id: ClothingOuterHardsuitNTMedic
+  name: blueblood medic hardsuit
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntmedic.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntmedic.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitNTMedic
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-hardsuit-medic
+
+# NanoTrasen Elite Hardsuit
+- type: entity
+  parent: [BaseTraitorContraband, ClothingOuterHardsuitSyndieElite, BaseExaminableClothing]
+  id: ClothingOuterHardsuitNTElite
+  name: NanoTrasen elite hardsuit
+  description: An elite version of the blueblood hardsuit, with improved radiation resistance and fireproofing. Property of NanoTrasen.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntelite.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntelite.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitNTElite
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-hardsuit-elite
+
+# NanoTrasen Commander Hardsuit
+- type: entity
+  parent: [BaseTraitorContraband, ClothingOuterHardsuitSyndieCommander, BaseExaminableClothing]
+  id: ClothingOuterHardsuitNTCommander
+  name: NanoTrasen commander hardsuit
+  description: A bulked up version of the blueblood hardsuit, purpose-built for the commander of a NanoTrasen operative squad. Has significantly improved armor for those deadly front-lines firefights.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntcommander.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntcommander.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitNTCommander
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-hardsuit-commander
+
+# NanoTrasen Juggernaut Hardsuit
+- type: entity
+  parent: [BaseTraitorContraband, ClothingOuterHardsuitJuggernaut, BaseExaminableClothing]
+  id: ClothingOuterHardsuitJuggernautNT
+  name: NanoTrasen juggernaut suit
+  description: A suit made by the cutting edge R&D department at NanoTrasen to be hyper resilient.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntjuggernaut.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntjuggernaut.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitJuggernautNT
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-hardsuit-juggernaut

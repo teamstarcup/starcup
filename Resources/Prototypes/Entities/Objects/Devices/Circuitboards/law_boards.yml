@@ -2,7 +2,7 @@
   id: NTDefaultCircuitBoard
   parent: BaseElectronics
   name: law board (NT Default)
-  description: An electronics board containing the NT Default lawset.
+  description: An electronics board containing the Cybersun Default lawset. # starcup - NT-SC swap
   components:
   - type: Sprite
     sprite: Objects/Misc/module.rsi
@@ -132,7 +132,7 @@
 
 - type: entity
   id: AntimovCircuitBoard
-  parent: [BaseElectronics, BaseSyndicateContraband]
+  parent: [BaseElectronics, BaseTraitorContraband] # starcup: shared contraband level with nt gear
   name: law board (Antimov)
   description: An electronics board containing the Antimov lawset.
   components:
@@ -142,6 +142,8 @@
   - type: SiliconLawProvider
     laws: AntimovLawset
     lawUploadSound: /Audio/Ambience/Antag/silicon_lawboard_antimov.ogg
+  - type: StaticPrice
+    price: 10000
 
 - type: entity
   id: NutimovCircuitBoard

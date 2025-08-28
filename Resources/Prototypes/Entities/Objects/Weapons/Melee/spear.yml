@@ -1,6 +1,6 @@
 - type: entity
   name: spear
-  parent: [BaseItem, BaseMinorContraband]
+  parent: [BaseItem, BaseMinorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: Spear
   description: Definition of a Classic. Keeping murder affordable since 200,000 BCE.
   components:
@@ -116,6 +116,10 @@
     inHandsMaxFillLevels: 1
     equippedFillBaseName: -fill-
     equippedMaxFillLevels: 1
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-spear
+  # end starcup
 
 
 - type: entity
@@ -137,6 +141,10 @@
         Piercing: 18
   - type: Construction
     graph: SpearReinforced
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-spear-reinforced
+  # end starcup
 
 - type: entity
   name: plasma spear
@@ -157,6 +165,10 @@
         Piercing: 21
   - type: Construction
     graph: SpearPlasma
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-spear-plasma
+  # end starcup
 
 - type: entity
   name: uranium spear
@@ -179,6 +191,10 @@
         Radiation: 9
   - type: Construction
     graph: SpearUranium
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-spear-uranium
+  # end starcup
 
 - type: entity
   name: bone spear
@@ -214,10 +230,14 @@
             max: 2
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-spear-bone
+  # end starcup
 
 - type: entity
   name: sharkminnow tooth spear
-  parent: Spear 
+  parent: Spear
   id: SpearSharkMinnow
   description: A spear with a sharkminnow tooth as a tip.
   components:
@@ -234,3 +254,7 @@
         Piercing: 25 #throw dmg enough to two-shot carp
   - type: Construction
     graph: SpearSharkMinnow
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-spear-sharkminnow
+  # end starcup

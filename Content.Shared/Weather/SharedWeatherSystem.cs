@@ -13,7 +13,6 @@ namespace Content.Shared.Weather;
 public abstract class SharedWeatherSystem : EntitySystem
 {
     [Dependency] protected readonly IGameTiming Timing = default!;
-    [Dependency] protected readonly IMapManager MapManager = default!;
     [Dependency] protected readonly IPrototypeManager ProtoMan = default!;
     [Dependency] private readonly ITileDefinitionManager _tileDefManager = default!;
     [Dependency] private readonly MetaDataSystem _metadata = default!;
@@ -47,12 +46,15 @@ public abstract class SharedWeatherSystem : EntitySystem
         if (tileRef.Tile.IsEmpty)
             return true;
 
-        if (Resolve(uid, ref roofComp, false) && _roof.IsRooved((uid, grid, roofComp), tileRef.GridIndices))
+        if (Resolve(uid, ref roofComp, false) && _roof.IsWeatherOccluding((uid, grid, roofComp), tileRef.GridIndices))  // starcup: selective weather occlusion on roofs
             return false;
 
-        var tileDef = (ContentTileDefinition) _tileDefManager[tileRef.Tile.TypeId];
-
-        if (!tileDef.Weather)
+        // begin upstream: early merge of #38638
+        // var tileDef = (ContentTileDefinition) _tileDefManager[tileRef.Tile.TypeId];
+        //
+        // if (!tileDef.Weather)
+        if (HasComp<ImplicitRoofComponent>(uid))
+        // end upstream
             return false;
 
         var anchoredEntities = _mapSystem.GetAnchoredEntitiesEnumerator(uid, grid, tileRef.GridIndices);

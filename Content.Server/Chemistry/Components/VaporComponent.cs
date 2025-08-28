@@ -7,11 +7,14 @@ namespace Content.Server.Chemistry.Components
     {
         public const string SolutionName = "vapor";
 
+        // begin starcup: track all previous tiles
         /// <summary>
-        /// Stores data on the previously reacted tile. We only want to do reaction checks once per tile.
+        /// Stores data on the previously reacted tiles. We only want to do reaction checks once per tile.
         /// </summary>
         [DataField]
-        public TileRef? PreviousTileRef;
+        public HashSet<TileRef?> PreviousTileRefs = [];
+        // public TileRef? PreviousTileRef;
+        // end starcup
 
         /// <summary>
         /// Percentage of the reagent that is reacted with the TileReaction.

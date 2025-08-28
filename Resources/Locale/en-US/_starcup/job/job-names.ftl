@@ -3,6 +3,7 @@
 # Bartender
 job-alt-title-barista = Barista
 job-alt-title-speakeasyer = Speakeasyer
+job-alt-title-seniorbartender = Senior Bartender
 
 # Chaplain
 job-alt-title-atheist-shepherd = Atheist Shepherd
@@ -38,3 +39,10 @@ job-alt-title-mechatronics = Mechatronics Specialist
 
 # Scientist
 job-alt-title-necrocosmicist = Necrocosmicist
+
+
+# SyndComm
+job-name-syndcomm-operator = SyndComm Operator
+job-name-syndcomm-agent = SyndComm Agent
+job-name-syndcomm-officer = SyndComm Officer
+job-name-syndcomm-official = SyndComm Official

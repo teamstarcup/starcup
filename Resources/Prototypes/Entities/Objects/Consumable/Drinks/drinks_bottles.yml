@@ -215,6 +215,8 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 5
     fillBaseName: fill-
+    inHandsMaxFillLevels: 3
+    inHandsFillBaseName: -fill-
 
 # Large Glass Bottles
 
@@ -303,7 +305,7 @@
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
   id: DrinkCognacBottleFull
   name: cognac bottle
-  description: A sweet and strongly alcoholic drink, made after numerous distillations and years of maturing. You might as well not scream 'SHITCURITY' this time.
+  description: A sweet and strongly alcoholic drink, made after numerous distillations and years of maturing. # starcup: rewritten for tone
   components:
   - type: SolutionContainerManager
     solutions:
@@ -331,9 +333,6 @@
           Quantity: 100
   - type: Label
     currentLabel: reagent-name-grenadine
-  # intended use is to spike drinks so starts open
-  - type: Openable
-    opened: true
   - type: Sprite
     sprite: Objects/Consumable/Drinks/grenadinebottle.rsi
   - type: SolutionContainerVisuals
@@ -722,9 +721,6 @@
           Quantity: 30
   - type: Sprite
     sprite: Objects/Consumable/Drinks/waterbottle.rsi
-  - type: SolutionContainerVisuals
-    inHandsMaxFillLevels: 2
-    inHandsFillBaseName: -fill-
   - type: Label
     currentLabel: reagent-name-water
   - type: Sealable

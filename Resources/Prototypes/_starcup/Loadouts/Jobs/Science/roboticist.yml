@@ -1,0 +1,55 @@
+#Eyewear
+- type: loadout
+  id: DiagnosticHud
+  equipment:
+    eyes: ClothingEyesHudDiagnostic
+
+- type: loadout
+  id: DiagnosticEyePatchHud
+  equipment:
+    eyes: ClothingEyesEyepatchHudDiag
+
+# OuterClothing
+- type: loadout
+  id: NeuroroboticistSuit
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorRoboticist
+  equipment:
+    head: ClothingOuterSuitNeuroroboticist
+
+# Jumpsuits
+- type: loadout
+  id: NeuroroboticistJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitRoboNeuroticist
+
+- type: loadout
+  id: NeuroroboticistJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtRoboNeuroticist
+
+# Head
+- type: loadout
+  id: NeuroroboticistHelmet
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorRoboticist
+  equipment:
+    head: ClothingHeadSuitNeuroroboticist
+
+# ID
+- type: loadout
+  id: ToymakerPDA
+  equipment:
+    id: ToymakerPDA
+
+- type: loadout
+  id: NeuroroboticistPDA
+  equipment:
+    id: NeuroroboticistPDA
+
+- type: loadout
+  id: MechatronicsPDA
+  equipment:
+    id: MechatronicsPDA

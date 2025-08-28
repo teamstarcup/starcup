@@ -581,6 +581,7 @@
 
 - type: randomHumanoidSettings
   id: ChallengeVictimChiefEngineer
+  parent: EventHumanoidMindShielded
   randomizeName: false
   components:
     - type: GhostRole
@@ -601,6 +602,7 @@
 
 - type: randomHumanoidSettings
   id: ChallengeVictimCMO
+  parent: EventHumanoidMindShielded
   randomizeName: false
   components:
     - type: GhostRole
@@ -621,6 +623,7 @@
 
 - type: randomHumanoidSettings
   id: ChallengeVictimHeadOfPersonnel
+  parent: EventHumanoidMindShielded
   randomizeName: false
   components:
     - type: GhostRole
@@ -641,6 +644,7 @@
 
 - type: randomHumanoidSettings
   id: ChallengeVictimHeadOfSecurity
+  parent: EventHumanoidMindShielded
   randomizeName: false
   components:
     - type: GhostRole
@@ -661,6 +665,7 @@
 
 - type: randomHumanoidSettings
   id: ChallengeVictimResearchDirector
+  parent: EventHumanoidMindShielded
   randomizeName: false
   components:
     - type: GhostRole
@@ -681,6 +686,7 @@
 
 - type: randomHumanoidSettings
   id: ChallengeVictimQuartermaster
+  parent: EventHumanoidMindShielded
   randomizeName: false
   components:
     - type: GhostRole
@@ -745,8 +751,8 @@
       - Syndicate
     - type: NukeOperative
     - type: GhostRole
-      name: ghost-role-information-syndie-soldier-teamlead-name
-      description: ghost-role-information-syndie-soldier-teamlead-description
+      name: ghost-role-information-syndie-soldier-teamlead-name-starcup # starcup: Syndicate to NT
+      description: ghost-role-information-syndie-soldier-teamlead-description-starcup # starcup: Syndicate to NT
       rules: ghost-role-information-rules-team-antagonist
       mindRoles:
       - MindRoleGhostRoleTeamAntagonist
@@ -765,8 +771,8 @@
       - Syndicate
     - type: NukeOperative
     - type: GhostRole
-      name: ghost-role-information-syndie-soldier-name
-      description: ghost-role-information-syndie-soldier-description
+      name: ghost-role-information-syndie-soldier-name-starcup # starcup: Syndicate to NT
+      description: ghost-role-information-syndie-soldier-description-starcup # starcup: Syndicate to NT
       rules: ghost-role-information-rules-team-antagonist
       mindRoles:
       - MindRoleGhostRoleTeamAntagonist
@@ -784,8 +790,8 @@
       factions:
       - Syndicate
     - type: GhostRole
-      name: ghost-role-information-syndie-disaster-victim-name
-      description: ghost-role-information-syndie-disaster-victim-description
+      name: ghost-role-information-syndie-disaster-victim-name-starcup # starcup: Syndicate to NT
+      description: ghost-role-information-syndie-disaster-victim-description-starcup # starcup: Syndicate to NT
       rules: ghost-role-information-freeagent-rules
       mindRoles:
       - MindRoleGhostRoleFreeAgent

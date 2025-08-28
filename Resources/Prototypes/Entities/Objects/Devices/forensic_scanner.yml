@@ -1,12 +1,12 @@
 - type: entity
   name: forensic scanner
-  parent: [ BaseItem, BaseSecurityContraband ]
+  parent: [ BaseItem, BaseSecurityContraband, BaseExaminableClothing ] # starcup: examinable clothing
   id: ForensicScanner
   description: A handheld device that can scan objects for fingerprints and fibers.
   components:
   - type: Sprite
     sprite: Objects/Devices/forensic_scanner.rsi
-    state: forensicnew
+    state: icon
   - type: Item
     size: Small
     storedRotation: 90
@@ -29,6 +29,10 @@
     - Forensics
   - type: StealTarget
     stealGroup: ForensicScanner
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-forensic-scanner
+  # end starcup
 
 - type: entity
   name: forensic scanner report

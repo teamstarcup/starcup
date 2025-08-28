@@ -1,6 +1,6 @@
 - type: entity
   name: fireaxe
-  parent: [BaseItem, BaseEngineeringContraband]
+  parent: [BaseItem, BaseEngineeringContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: FireAxe
   description: Truly, the weapon of a madman. Who would think to fight fire with an axe?
   components:
@@ -41,6 +41,7 @@
   - type: Tool
     qualities:
       - Prying
+      - Axing # DeltaV - The return of fireaxe prying
   - type: ToolTileCompatible
   - type: Prying
   - type: UseDelay
@@ -49,11 +50,15 @@
     stealGroup: FireAxe
   - type: IgniteOnMeleeHit
     fireStacks: -4
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-fireaxe
+  # end starcup
 
 - type: entity
   id: FireAxeFlaming
   name: fire axe
-  parent: [ BaseSyndicateContraband, FireAxe ]
+  parent: [BaseSyndicateContraband, FireAxe]
   description: Why fight fire with an axe when you can fight with fire and axe? Now featuring rugged rubberized handle!
   components:
   - type: MeleeWeapon
@@ -68,3 +73,8 @@
     quickEquip: false
     slots:
     - back
+# begin starcup: no Axing (antags shouldn't be able to space rooms this easily)
+  - type: Tool
+    qualities:
+    - Prying
+# end starcup

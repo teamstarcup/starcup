@@ -25,10 +25,20 @@
 - type: startingGear
   id: SecurityOfficerGear
   equipment:
-    eyes: ClothingEyesGlassesSecurity
+    #eyes: ClothingEyesGlassesSecurity # starcup: moved to loadouts
     ears: ClothingHeadsetSecurity
   #  pocket1: WeaponPistolMk58Nonlethal # DeltaV - loadouts
   storage:
     back:
     - Flash
   #  - MagazinePistol # DeltaV - loadouts
+
+- type: chameleonOutfit
+  id: SecurityOfficerChameleonOutfit
+  job: SecurityOfficer
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatBeretSecurity
+    mask: ClothingMaskGasSecurity
+    neck: Dinkystar
+    gloves: ClothingHandsGlovesColorBlack

@@ -1,0 +1,249 @@
+# Directional Station Guide Signs
+- type: entity
+  parent: SignDirectionalBridge
+  id: SignDirectionalBridgeSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/signs.rsi
+    state: direction_bridge_syndi
+
+
+- type: entity
+  parent: SignDirectionalHop
+  id: SignDirectionalHopSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/signs.rsi
+    state: direction_hop_syndi
+
+
+# Regular Signs
+
+- type: entity
+  parent: SignAi
+  id: SignAiSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/signs.rsi
+    state: ai_syndi
+
+- type: entity
+  parent: SignAiUpload
+  id: SignAiUploadSyndie
+  suffix: Syndicate
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Wallmounts/signs.rsi
+      state: ai_upload_syndi
+
+- type: entity
+  parent: SignBridge
+  id: SignBridgeSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/signs.rsi
+    state: bridge_syndi
+
+- type: entity
+  parent: SignConference
+  id: SignConferenceSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/signs.rsi
+    state: conference_room_syndi
+
+- type: entity
+  parent: SignHead
+  id: SignHeadSyndie
+  suffix: Syndicate
+  description: An official sign indicating the dwellings of a Syndicate-certified head of department.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/signs.rsi
+    state: commander_syndi
+
+- type: entity
+  parent: SignVault
+  id: SignVaultSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/signs.rsi
+    state: vault_syndi
+
+# Misc
+
+- type: entity
+  parent: BaseSign
+  id: SignChemDiamond
+  name: fire diamond sign
+  description: An NFPA 704 'fire diamond' indicating chemical handling hazards. Blue for health hazard, red for fire hazard, yellow for reactivity, and white for specific hazards. Higher numbers mean more hazardous.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: chemdiamond
+
+- type: entity
+  parent: BaseSign
+  id: SignEyeChart
+  name: eye chart
+  description: A chart with a bunch of random letters on it. Sure to be the work of a dangerous madman.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: eyechart
+
+- type: entity
+  parent: BaseSign
+  id: SignXenoBio
+  name: xenobiology chart
+  description: An informative guide to xenobiology.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: xenobio-guide
+
+- type: entity
+  parent: BaseSign
+  id: SignHazardBio
+  name: biohazard sign
+  description: A sign warning of biohazard risk.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: bio
+
+- type: entity
+  parent: BaseSign
+  id: SignBlueCross
+  name: medical sign
+  description: A sign indicating medical services.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: bluecross2
+
+- type: entity
+  parent: BaseSign
+  id: SignHazardCold
+  name: cold hazard sign
+  description: A sign warning of extreme temperature.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: cold
+
+- type: entity
+  parent: BaseSign
+  id: SignHazardHeat
+  name: heat hazard sign
+  description: A sign warning of extreme temperature.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: heat
+
+- type: entity
+  parent: BaseSign
+  id: SignHazardRespirator
+  name: gas hazard sign
+  description: A sign indicating an area with respiratory hazards. It cautions you to wear protective gear and inspect it regularly.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: gasmask
+
+- type: entity
+  parent: BaseSign
+  id: SignHazardXeno
+  name: xeno hazard sign
+  description: A sign warning of hostile xenobiologicals.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: xeno_warning
+
+- type: entity
+  parent: BaseSign
+  id: SignHazardRadiation
+  name: radiation hazard sign
+  description: A sign warning of significant radiation exposure.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: radiation
+
+- type: entity
+  parent: BaseSign
+  id: SignHazardShock
+  name: shock hazard sign
+  description: A sign warning of the risk of electrocution.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: shock
+
+- type: entity
+  parent: BaseSign
+  id: SignCautionSecureArea
+  name: secure area notice sign
+  description: You are entering a secured area.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: securearea
+
+- type: entity
+  parent: BaseSign
+  id: SignSmokingProhibited
+  name: no smoking sign
+  description: Smoking is prohibited in this area.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: nosmoking
+
+- type: entity
+  parent: BaseSign
+  id: SignSmokingPermitted
+  name: smoking permitted sign
+  description: Smoking is permitted in this area.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: yessmoking
+
+- type: entity
+  parent: BaseSign
+  id: SignNanoTrasenZone
+  name: nanotrasen area sign
+  description: A signpost for monopolistic gluttony.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: nanotrasen
+
+- type: entity
+  parent: BaseSign
+  id: SignPlaqueGolden
+  name: golden plaque
+  description: A golden plaque.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: goldenplaque
+
+- type: entity
+  parent: BaseSign
+  id: SignPlaqueSilver
+  name: silver plaque
+  description: A silver plaque.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: kiddieplaque

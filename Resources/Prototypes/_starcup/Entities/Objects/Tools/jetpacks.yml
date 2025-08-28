@@ -1,0 +1,31 @@
+#Empty captain
+- type: entity
+  id: JetpackCaptainSyndie
+  parent: [JetpackCaptain, BaseExaminableClothing] # starcup: examinable clothing
+  suffix: Empty, Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tanks/Jetpacks/captain_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Objects/Tanks/Jetpacks/captain_syndi.rsi
+  - type: Item
+    sprite: _starcup/Objects/Tanks/Jetpacks/captain_syndi.rsi
+    size: Normal
+  - type: ExaminableClothing
+    examineText: clothing-captain-jetpack
+
+# Filled captain
+- type: entity
+  id: JetpackCaptainFilledSyndie
+  parent: [JetpackCaptainFilled, BaseExaminableClothing] # starcup: examinable clothing
+  suffix: Filled, Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tanks/Jetpacks/captain_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Objects/Tanks/Jetpacks/captain_syndi.rsi
+  - type: Item
+    sprite: _starcup/Objects/Tanks/Jetpacks/captain_syndi.rsi
+    size: Normal
+  - type: ExaminableClothing
+    examineText: clothing-captain-jetpack

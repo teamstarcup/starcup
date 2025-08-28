@@ -11,6 +11,7 @@
   components:
   - type: Sprite
     layers:
+    - map: [ "enum.HumanoidVisualLayers.TailBehind" ] # floof
     - map: [ "enum.HumanoidVisualLayers.Chest" ]
     - map: [ "enum.HumanoidVisualLayers.Head" ]
     - map: [ "enum.HumanoidVisualLayers.Snout" ]
@@ -29,6 +30,7 @@
     - map: [ "gloves" ]
     - map: [ "shoes" ]
     - map: [ "ears" ]
+    - map: [ "enum.HumanoidVisualLayers.TailOversuit" ] # floof
     - map: [ "eyes" ]
     - map: [ "belt" ]
     - map: [ "id" ]
@@ -119,24 +121,18 @@
       - !type:WashCreamPieReaction
   - type: StatusEffects
     allowed:
-    - Stun
-    - KnockedDown
-    - SlowedDown
     - Stutter
-    - SeeingRainbows
     - Electrocution
     - Drunk
     - SlurredSpeech
     - RatvarianLanguage
     - PressureImmunity
     - Muted
-    - ForcedSleep
     - TemporaryBlindness
     - Pacified
     - StaminaModifier
     - Flashed
     - RadiationProtection
-    - Drowsiness
     - Adrenaline
     - InPain # DeltaV - Pain system
     - SuppressPain # DeltaV - Pain system
@@ -217,6 +213,7 @@
     - DoorBumpOpener
     - AnomalyHost
   - type: FootPrints # DeltaV port from EE, blood splatter
+  - type: ShortExamine
 
 - type: entity
   save: false
@@ -259,9 +256,9 @@
         Heat: 1.5 #per second, scales with temperature & other constants
   - type: TemperatureSpeed
     thresholds:
-      293: 0.8
-      280: 0.6
-      260: 0.4
+      293: 0.9
+      280: 0.8
+      260: 0.7
   - type: ThermalRegulator
     metabolismHeat: 800
     radiatedHeat: 100
@@ -285,7 +282,7 @@
         Asphyxiation: -1.0
   - type: FireVisuals
     alternateState: Standing
-  - type: LayingDown # WD EDIT
+  - type: StunVisuals
 
 - type: entity
   save: false
@@ -304,6 +301,7 @@
     noRot: true
     # TODO BODY Turn these into individual body parts?
     layers:
+    - map: [ "enum.HumanoidVisualLayers.TailBehind" ] # floof
     - map: [ "enum.HumanoidVisualLayers.Chest" ]
     - map: [ "enum.HumanoidVisualLayers.Head" ]
     - map: [ "enum.HumanoidVisualLayers.Snout" ]
@@ -331,6 +329,7 @@
     - map: [ "belt" ]
     - map: [ "id" ]
     - map: [ "outerClothing" ]
+    - map: [ "enum.HumanoidVisualLayers.TailOversuit" ] # floof
     - map: [ "back" ]
     - map: [ "neck" ]
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
