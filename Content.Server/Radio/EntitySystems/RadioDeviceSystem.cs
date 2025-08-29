@@ -1,7 +1,6 @@
 using System.Linq;
 using Content.Server.Chat.Systems;
 using Content.Server.Interaction;
-using Content.Server.Language;
 using Content.Server.Popups;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Radio.Components;
@@ -35,7 +34,6 @@ public sealed class RadioDeviceSystem : EntitySystem
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
     [Dependency] private readonly INetManager _netMan = default!;
-    [Dependency] private readonly LanguageSystem _language = default!;
 
     // Used to prevent a shitter from using a bunch of radios to spam chat.
     private HashSet<(string, EntityUid, RadioChannelPrototype)> _recentlySent = new();
