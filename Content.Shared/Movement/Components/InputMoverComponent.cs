@@ -77,7 +77,18 @@ namespace Content.Shared.Movement.Components
 
         public const float LerpTime = 1.0f;
 
-        public bool Sprinting => (HeldMoveButtons & MoveButtons.Walk) == 0x0;
+        public bool Sprinting => (HeldMoveButtons & MoveButtons.Walk) == SprintsWhen; // starcup: changed 0x00 to SprintsWhen
+
+        // begin starcup
+        /// <summary>
+        /// If the walk button needs to be pressed or not to sprint
+        /// When:
+        ///     None - Sprint when not holding walk
+        ///     Walk - Sprint when holding walk
+        /// </summary>
+        [DataField]
+        public MoveButtons SprintsWhen = MoveButtons.None;
+        // end starcup
 
         [ViewVariables(VVAccess.ReadWrite)]
         public bool CanMove = true;
@@ -92,5 +103,6 @@ namespace Content.Shared.Movement.Components
         public Angle RelativeRotation;
         public TimeSpan LerpTarget;
         public bool CanMove;
+        public MoveButtons SprintsWhen; // starcup
     }
 }

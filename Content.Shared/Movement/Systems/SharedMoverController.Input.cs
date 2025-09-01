@@ -113,6 +113,7 @@ namespace Content.Shared.Movement.Systems
             entity.Comp.TargetRelativeRotation = state.TargetRelativeRotation;
             entity.Comp.CanMove = state.CanMove;
             entity.Comp.RelativeEntity = EnsureEntity<InputMoverComponent>(state.RelativeEntity, entity.Owner);
+            entity.Comp.SprintsWhen = state.SprintsWhen; // starcup
 
             // Reset
             entity.Comp.LastInputTick = GameTick.Zero;
@@ -139,6 +140,7 @@ namespace Content.Shared.Movement.Systems
                 HeldMoveButtons = entity.Comp.HeldMoveButtons,
                 RelativeRotation = entity.Comp.RelativeRotation,
                 TargetRelativeRotation = entity.Comp.TargetRelativeRotation,
+                SprintsWhen = entity.Comp.SprintsWhen, // starcup
             };
         }
 

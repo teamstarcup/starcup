@@ -133,6 +133,9 @@ ui-options-header-text-other = Text input other
 
 ui-options-hotkey-keymap = Use US QWERTY Keys
 ui-options-hotkey-toggle-walk = Toggle Walk
+# begin starcup
+ui-options-hotkey-walk-default = Walk by Default
+# end starcup
 
 ui-options-function-move-up = Move Up
 ui-options-function-move-left = Move Left
