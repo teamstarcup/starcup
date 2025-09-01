@@ -32,7 +32,8 @@ public sealed partial class InputMoverSystem : EntitySystem
         if (userId == null)
             return;
 
-        var session = _playerMan.GetSessionById(userId.Value);
+        if (!_playerMan.TryGetSessionById(userId.Value, out var session))
+            return;
 
         ent.Comp.SprintsWhen = _netCfg.GetClientCVar(session.Channel, SCCVars.WalkByDefault) ? WhenWalkPressed : WhenWalkReleased;
     }
