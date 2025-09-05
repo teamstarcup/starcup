@@ -15,10 +15,10 @@
   parent: BaseGameRule
   components:
   - type: BasicStationEventScheduler
-    minimumTimeUntilFirstEvent: 600 # 10 min
+    minimumTimeUntilFirstEvent: 1200 # 20 min
     minMaxEventTiming:
-      min: 1650 # 27.5 min
-      max: 1950 # 32.5 min
+      min: 1650 # 32.5 min
+      max: 1950 # 37.5 min
     scheduledGameRules: !type:NestedSelector
       tableId: TroubleGameRulesTable
 
@@ -48,6 +48,12 @@
   table: !type:AllSelector
     children:
       - !type:NestedSelector
+        tableId: StarcupCalmEventsTable
+      - !type:NestedSelector
+        tableId: CalmCritterEventsTable
+      - !type:NestedSelector
+        tableId: CargoGiftsTable
+      - !type:NestedSelector
         tableId: StarcupDangerEventsTable
       - !type:NestedSelector
         tableId: HostileCritterEventsTable
@@ -61,10 +67,10 @@
       - !type:NestedSelector
         tableId: CalmCritterEventsTable
       - !type:NestedSelector
+        tableId: CargoGiftsTable
+      - !type:NestedSelector
         tableId: StarcupDangerEventsTable
       - !type:NestedSelector
         tableId: HostileCritterEventsTable
       - !type:NestedSelector
         tableId: StarcupAntagEventsTable
-      - !type:NestedSelector
-        tableId: CargoGiftsTable
