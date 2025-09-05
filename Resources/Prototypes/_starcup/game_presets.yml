@@ -45,9 +45,9 @@
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
 
-## "Hidden" Gamemodes, for Admin Use
+## "False" Gamemodes, for Admin Use
 - type: gamePreset
-  id: SecretEmpty #For Admin Use: Runs Empty but shows "Secret" in lobby.
+  id: SecretEmpty # runs Empty but shows "Secret" in lobby.
   alias:
     - secretempty
   name: secret-title
@@ -56,9 +56,8 @@
   rules:
   - BasicRoundstartVariation
 
-## "Hidden" Gamemodes, for Admin Use
 - type: gamePreset
-  id: SecretTrouble #For Admin Use: Runs Trouble but shows "Secret" in lobby.
+  id: SecretTrouble # runs Trouble but shows "Secret" in lobby.
   alias:
     - secrettrouble
   name: secret-title
@@ -69,9 +68,8 @@
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
 
-## "Hidden" Gamemodes, for Admin Use
 - type: gamePreset
-  id: SecretDanger #For Admin Use: Runs Danger but shows "Secret" in lobby.
+  id: SecretDanger # runs Danger but shows "Secret" in lobby.
   alias:
     - secretdanger
   name: secret-title
