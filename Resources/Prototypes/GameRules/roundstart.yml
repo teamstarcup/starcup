@@ -411,7 +411,7 @@
   - type: BasicStationEventScheduler
     minimumTimeUntilFirstEvent: 2700 # 45 mins #shows up like half way through shift.
     minMaxEventTiming:
-      min: 5400 # 20 mins # starcup: increased from 20 to 90 mins
+      min: 5400 # 90 mins # starcup: 20 > 90 mins
       max: 7200 # 120 mins # you probably arent getting a second visitor shuttle in one round, but it is possible.
     scheduledGameRules: !type:NestedSelector
       tableId: SpaceTrafficControlTable
@@ -421,10 +421,10 @@
   parent: BaseGameRule
   components:
   - type: BasicStationEventScheduler
-    minimumTimeUntilFirstEvent: 1200 # starcup: increased from 20 to 45 mins for parity with standard scheduler
+    minimumTimeUntilFirstEvent: 1200 # 45 mins # starcup: 20 > 45 mins for parity with standard scheduler
     minMaxEventTiming:
-      min: 5400 # starcup: increased from 10 to 90 mins for parity with standard scheduler
-      max: 7200 # starcup: increased from 30 to 120 mins for parity with standard scheduler
+      min: 5400 # 90 mins # starcup: 10 > 90 mins for parity with standard scheduler
+      max: 7200 # 120 mins # starcup: 30 > 120 mins for parity with standard scheduler
     scheduledGameRules: !type:NestedSelector
       tableId: UnknownShuttlesFriendlyTable
 
