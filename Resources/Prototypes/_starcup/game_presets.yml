@@ -29,6 +29,7 @@
   showInVote: true
   description: trouble-description
   rules:
+  - CalmStationEventScheduler
   - TroubleStationEventScheduler
   - SlowMeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
@@ -43,6 +44,7 @@
   description: danger-description
   rules:
   - DangerStationEventScheduler
+  - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
 

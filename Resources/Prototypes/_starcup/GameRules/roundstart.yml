@@ -48,17 +48,9 @@
   table: !type:AllSelector
     children:
       - !type:NestedSelector
-        tableId: StarcupCalmEventsTable
-      - !type:NestedSelector
-        tableId: CalmCritterEventsTable
-      - !type:NestedSelector
         tableId: StarcupDangerEventsTable
       - !type:NestedSelector
         tableId: HostileCritterEventsTable
-      - !type:NestedSelector
-        tableId: MeteorSwarmMildTable
-      - !type:NestedSelector
-        tableId: CargoGiftsTable
 
 - type: entityTable
   id: DangerGameRulesTable
@@ -73,6 +65,6 @@
       - !type:NestedSelector
         tableId: HostileCritterEventsTable
       - !type:NestedSelector
-        tableId: BasicMeteorSwarmEventsTable
+        tableId: StarcupAntagEventsTable
       - !type:NestedSelector
         tableId: CargoGiftsTable
