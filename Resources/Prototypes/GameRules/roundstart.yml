@@ -421,7 +421,7 @@
   parent: BaseGameRule
   components:
   - type: BasicStationEventScheduler
-    minimumTimeUntilFirstEvent: 1200 # 45 mins # starcup: 20 > 45 mins for parity with standard scheduler
+    minimumTimeUntilFirstEvent: 2700 # 45 mins # starcup: 20 > 45 mins for parity with standard scheduler
     minMaxEventTiming:
       min: 5400 # 90 mins # starcup: 10 > 90 mins for parity with standard scheduler
       max: 7200 # 120 mins # starcup: 30 > 120 mins for parity with standard scheduler
