@@ -1,0 +1,46 @@
+- type: gamePreset
+  id: Empty
+  alias:
+  - empty
+  - blank
+  name: empty-title
+  showInVote: false
+  description: empty-description
+  rules:
+  - BasicRoundstartVariation
+
+- type: gamePreset
+  id: Calm
+  alias:
+  - calm
+  name: calm-title
+  showInVote: true
+  description: calm-description
+  rules:
+  - CalmStationEventScheduler
+  - SpaceTrafficControlFriendlyEventScheduler
+  - BasicRoundstartVariation
+
+- type: gamePreset
+  id: Trouble
+  alias:
+  - trouble
+  name: trouble-title
+  showInVote: true
+  description: trouble-description
+  rules:
+  - TroubleStationEventScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
+
+- type: gamePreset
+  id: Danger
+  alias:
+  - danger
+  name: danger-title
+  showInVote: true
+  description: danger-description
+  rules:
+  - DangerStationEventScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation

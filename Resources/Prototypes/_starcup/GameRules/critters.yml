@@ -1,0 +1,18 @@
+# tables
+
+- type: entityTable
+  id: CalmCritterEventsTable
+  table: !type:AllSelector
+    children:
+    - id: SnailMigrationLowPop
+    - id: CockroachMigration
+    - id: MouseMigration
+
+- type: entityTable
+  id: HostileCritterEventsTable
+  table: !type:AllSelector
+    children:
+    - id: SlimesSpawn
+    - id: SnakeSpawn
+    - id: SpiderSpawn
+    - id: SpiderClownSpawn
