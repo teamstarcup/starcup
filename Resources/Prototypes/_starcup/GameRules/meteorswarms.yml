@@ -1,3 +1,18 @@
+# Event Schedulers
+
+- type: entity
+  parent: BaseGameRule
+  id: SlowMeteorSwarmScheduler
+  components:
+  - type: GameRule
+  - type: BasicStationEventScheduler
+    minimumTimeUntilFirstEvent: 800 # 13.33 min
+    minMaxEventTiming:
+      min: 2220 # 37 min
+      max: 2520 # 42 min
+    scheduledGameRules: !type:NestedSelector
+      tableId: BasicMeteorSwarmEventsTable
+
 # Game Rules
 
 - type: entity
