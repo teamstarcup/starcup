@@ -59,6 +59,18 @@
   - BasicRoundstartVariation
 
 - type: gamePreset
+  id: SecretCalm # runs Calm but shows "Secret" in lobby.
+  alias:
+    - secretcalm
+  name: secret-title
+  showInVote: false #Admin Use
+  description: secret-description
+  rules:
+  - CalmStationEventScheduler
+  - SpaceTrafficControlFriendlyEventScheduler
+  - BasicRoundstartVariation
+
+- type: gamePreset
   id: SecretTrouble # runs Trouble but shows "Secret" in lobby.
   alias:
     - secrettrouble
@@ -67,6 +79,7 @@
   description: secret-description
   rules:
   - TroubleStationEventScheduler
+  - SlowMeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
 
@@ -79,5 +92,6 @@
   description: secret-description
   rules:
   - DangerStationEventScheduler
+  - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
