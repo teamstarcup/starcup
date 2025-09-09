@@ -1,6 +1,6 @@
 id-card-access-level-psychologist = Psychologist
 
-id-card-access-brigmedic = Combat Medic
+id-card-access-level-brigmedic = Combat Medic
 
 id-card-access-level-boxer = Boxer
 id-card-access-level-clown = Clown
