@@ -710,9 +710,6 @@ namespace Content.Client.Lobby.UI
                 if (!antag.SetPreference)
                     continue;
 
-                if (!antag.VisiblePreference) // CD change
-                    continue;
-
                 var antagContainer = new BoxContainer()
                 {
                     Orientation = LayoutOrientation.Horizontal,
