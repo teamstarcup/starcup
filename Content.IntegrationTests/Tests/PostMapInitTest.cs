@@ -37,8 +37,6 @@ namespace Content.IntegrationTests.Tests
         {
             "CentComm",
             "Dart",
-            "EventFrigidPeril",  // starcup
-            "EventCruiseControl",  // starcup
         };
 
         private static readonly string[] Grids =
