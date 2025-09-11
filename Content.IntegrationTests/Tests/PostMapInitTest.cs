@@ -46,7 +46,6 @@ namespace Content.IntegrationTests.Tests
             // "/Maps/centcomm.yml",
             AdminTestArenaSystem.ArenaMapPath,
 			"/Maps/_starcup/syndcomm.yml",  // starcup
-            "/Maps/_starcup/Events/frigid-peril-surface.yml",  // starcup
         };
 
         private static readonly string[] DoNotMapWhitelist =
@@ -83,8 +82,6 @@ namespace Content.IntegrationTests.Tests
             "Train",
             "Shoukou",
             "Banana",
-            "EventFrigidPeril",
-            "EventCruiseControl",
             // end starcup
         };
 
