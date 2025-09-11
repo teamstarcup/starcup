@@ -37,8 +37,6 @@ namespace Content.IntegrationTests.Tests
         {
             "CentComm",
             "Dart",
-            "EventFrigidPeril",  // starcup
-            "EventCruiseControl",  // starcup
         };
 
         private static readonly string[] Grids =
@@ -46,7 +44,6 @@ namespace Content.IntegrationTests.Tests
             // "/Maps/centcomm.yml",
             AdminTestArenaSystem.ArenaMapPath,
 			"/Maps/_starcup/syndcomm.yml",  // starcup
-            "/Maps/_starcup/Events/frigid-peril-surface.yml",  // starcup
         };
 
         private static readonly string[] DoNotMapWhitelist =
@@ -60,9 +57,6 @@ namespace Content.IntegrationTests.Tests
             "/Maps/Shuttles/ShuttleEvent/instigator.yml", // Contains EXP-320g "Friendship"
             "/Maps/Shuttles/ShuttleEvent/syndie_evacpod.yml", // Contains syndicate rubber stamp
 			"/Maps/_starcup/syndcomm.yml",  // starcup: contains centcomm rubber stamp, centcomm folder, handheld crew monitor
-			"/Maps/_starcup/Events/frigid-peril-station.yml",  // starcup: this is an event and events do not play by the rules
-			"/Maps/_starcup/Events/frigid-peril-surface.yml",  // starcup: contains lots of key round-start gear; it's not feasible to place lockers
-            "/Maps/_starcup/Events/cruise-control.yml",  // starcup: this is an event and events do not play by the rules
         };
 
 
@@ -83,8 +77,6 @@ namespace Content.IntegrationTests.Tests
             "Train",
             "Shoukou",
             "Banana",
-            "EventFrigidPeril",
-            "EventCruiseControl",
             // end starcup
         };
 

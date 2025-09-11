@@ -16,7 +16,7 @@
     RDHardsuitStealObjective: 1
     NukeDiskStealObjective: 1
     MagbootsStealObjective: 1
-    CorgiMeatStealObjective: 1
+    #CorgiMeatStealObjective: 1 # starcup: don't make people murder the dog
     ClipboardStealObjective: 1
     CaptainGunStealObjective: 0.5
     CaptainJetpackStealObjective: 0.5
@@ -26,7 +26,8 @@
 - type: weightedRandom
   id: TraitorObjectiveGroupKill
   weights:
-    KillRandomPersonObjective: 1
+    # KillRandomPersonObjective: 1 # DeltaV Replaced for Teach Lesson
+    TeachLessonRandomPersonObjective: 1
     KillRandomHeadObjective: 0.25
 
 - type: weightedRandom
