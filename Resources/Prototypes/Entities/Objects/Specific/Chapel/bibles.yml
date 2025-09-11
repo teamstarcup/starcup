@@ -1,7 +1,11 @@
 - type: entity
-  name: holy book # starcup: genericize parent entity
-  description: A holy text for one of many interstellar faiths. # starcup: genericize parent entity
+  # begin starcup: genericize and abstract parent entity
+  # name: bible
+  # description: New Interstellar Version 2340.
+  abstract: true
+  # end starcup
   parent: BaseStorageItem
+  abstract: true
   id: Bible
   components:
   - type: UseDelay
