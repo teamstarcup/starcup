@@ -1,5 +1,9 @@
 - type: entity
+  # begin starcup: genericize and abstract parent entity
+  # name: bible
+  # description: New Interstellar Version 2340.
   abstract: true
+  # end starcup
   parent: BaseStorageItem
   id: Bible
   components:
