@@ -37,6 +37,11 @@
         hard: false
         layer:
         - LowImpassable
+  # begin starcup: tag for chef belt whitelist
+  - type: Tag
+    tags:
+    - Rehydratable
+  # end starcup
 
 - type: entity
   parent: RehydratableItem
@@ -98,11 +103,6 @@
   - type: Rehydratable
     possibleSpawns:
     - MobCow
-  # begin starcup: tag for chef belt whitelist
-  - type: Tag
-    tags:
-    - AnimalCube
-  # end starcup
 
 - type: entity
   parent: RehydratableAnimalCube
@@ -112,11 +112,6 @@
   - type: Rehydratable
     possibleSpawns:
     - MobGoat
-  # begin starcup: tag for chef belt whitelist
-  - type: Tag
-    tags:
-    - AnimalCube
-  # end starcup
 
 - type: entity
   parent: RehydratableAnimalCube
@@ -144,11 +139,6 @@
   - type: Rehydratable
     possibleSpawns:
     - MobMouse
-  # begin starcup: tag for chef belt whitelist
-  - type: Tag
-    tags:
-    - AnimalCube
-  # end starcup
 
 - type: entity
   parent: RehydratableAnimalCube
