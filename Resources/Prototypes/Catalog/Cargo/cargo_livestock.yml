@@ -118,15 +118,17 @@
   category: cargoproduct-category-name-livestock
   group: market
 
-- type: cargoProduct
-  id: LivestockMonkeyCube
-  icon:
-    sprite: Objects/Misc/monkeycube.rsi
-    state: box
-  product: CrateNPCMonkeyCube
-  cost: 2000
-  category: cargoproduct-category-name-livestock
-  group: market
+# begin starcup: monkeys are not for food
+# - type: cargoProduct
+#   id: LivestockMonkeyCube
+#   icon:
+#     sprite: Objects/Misc/monkeycube.rsi
+#     state: box
+#   product: CrateNPCMonkeyCube
+#   cost: 2000
+#   category: cargoproduct-category-name-livestock
+#   group: market
+# end starcup
 
 # starcup: remove non-sapient kobolds
 #- type: cargoProduct
