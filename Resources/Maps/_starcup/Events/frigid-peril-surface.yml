@@ -1,16 +1,16 @@
 meta:
   format: 7
-  category: Map
-  engineVersion: 265.0.0
+  category: Grid
+  engineVersion: 260.0.0
   forkId: ""
   forkVersion: ""
-  time: 09/11/2025 08:42:42
-  entityCount: 1823
-maps:
-- 4
+  time: 06/15/2025 17:33:11
+  entityCount: 1838
+maps: []
 grids:
 - 1
-orphans: []
+orphans:
+- 1
 nullspace: []
 tilemap:
   0: Space
@@ -45,7 +45,7 @@ entities:
     - type: MetaData
       name: Glacier Surface Outpost
     - type: Transform
-      parent: 4
+      parent: invalid
     - type: MapGrid
       chunks:
         0,0:
@@ -418,16 +418,6 @@ entities:
     - type: ContainedSolution
       containerName: food
       container: 2
-  - uid: 4
-    components:
-    - type: MetaData
-      name: Map Entity
-    - type: Transform
-    - type: Map
-      mapPaused: True
-    - type: GridTree
-    - type: Broadphase
-    - type: OccluderTree
   - uid: 7
     mapInit: true
     paused: true
@@ -2049,8 +2039,8 @@ entities:
       rot: -1.5707960248032986 rad
       pos: 10.473117,7.4415064
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -2077,8 +2067,6 @@ entities:
       - 286
       - 287
       - 875
-    - type: Fixtures
-      fixtures: {}
   - uid: 257
     components:
     - type: Transform
@@ -2089,8 +2077,6 @@ entities:
       devices:
       - 288
       - 871
-    - type: Fixtures
-      fixtures: {}
   - uid: 258
     components:
     - type: Transform
@@ -2101,16 +2087,12 @@ entities:
       devices:
       - 291
       - 872
-    - type: Fixtures
-      fixtures: {}
   - uid: 259
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 11.5,-7.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
   - uid: 260
     components:
     - type: MetaData
@@ -2129,8 +2111,6 @@ entities:
       - 874
       - 872
       - 871
-    - type: Fixtures
-      fixtures: {}
   - uid: 261
     components:
     - type: MetaData
@@ -2148,8 +2128,6 @@ entities:
       - 867
       - 873
       - 875
-    - type: Fixtures
-      fixtures: {}
   - uid: 262
     components:
     - type: MetaData
@@ -2162,8 +2140,6 @@ entities:
       devices:
       - 292
       - 876
-    - type: Fixtures
-      fixtures: {}
   - uid: 263
     components:
     - type: MetaData
@@ -2176,8 +2152,6 @@ entities:
       - 289
       - 290
       - 874
-    - type: Fixtures
-      fixtures: {}
 - proto: AirGrenade
   entities:
   - uid: 264
@@ -2188,13 +2162,10 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 13.198956,7.7265725
       parent: 1
-    - type: TimerTrigger
-      nextBeep: -31.53067
-      nextTrigger: -31.53067
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: ReleaseGasOnTrigger
       nextReleaseTime: -1973.8605011
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -2251,7 +2222,7 @@ entities:
       pos: 7.5,1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -28255.047
+      secondsUntilStateChange: -28240.51
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2513,8 +2484,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -7.5,1.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
   - uid: 300
     components:
     - type: MetaData
@@ -2522,8 +2491,6 @@ entities:
     - type: Transform
       pos: 10.5,-4.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
   - uid: 301
     components:
     - type: MetaData
@@ -2532,8 +2499,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 9.5,4.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
   - uid: 302
     components:
     - type: MetaData
@@ -2542,16 +2507,12 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 9.5,6.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
   - uid: 303
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 15.5,-8.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
   - uid: 304
     components:
     - type: MetaData
@@ -2560,8 +2521,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 25.5,-8.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
   - uid: 305
     components:
     - type: MetaData
@@ -2569,8 +2528,6 @@ entities:
     - type: Transform
       pos: -0.5,9.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
   - uid: 306
     components:
     - type: MetaData
@@ -2578,8 +2535,6 @@ entities:
     - type: Transform
       pos: 23.5,3.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
   - uid: 307
     components:
     - type: MetaData
@@ -2587,8 +2542,6 @@ entities:
     - type: Transform
       pos: 15.5,1.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
 - proto: AstroNavCartridge
   entities:
   - uid: 308
@@ -2599,8 +2552,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 20.57014,4.297383
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -2644,14 +2597,14 @@ entities:
     components:
     - type: Transform
       parent: 166
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -2879.4569677
     - type: SolutionContainerManager
       solutions: null
       containers:
       - beaker
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -2664,14 +2617,14 @@ entities:
     components:
     - type: Transform
       parent: 166
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -2879.4569677
     - type: SolutionContainerManager
       solutions: null
       containers:
       - beaker
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -2846,8 +2799,6 @@ entities:
     - type: Transform
       pos: 24.477095,-8.6228285
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Storage
       storedItems:
         167:
@@ -2872,6 +2823,8 @@ entities:
           - 169
           - 171
           - 173
+
+
     - type: UseDelay
       delays:
         default:
@@ -2907,8 +2860,6 @@ entities:
     - type: Transform
       pos: 24.33647,-8.5290785
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Storage
       storedItems:
         176:
@@ -2941,6 +2892,8 @@ entities:
           - 182
           - 184
           - 186
+
+
     - type: UseDelay
       delays:
         default:
@@ -2991,8 +2944,6 @@ entities:
           - AutoClose
         - - Timer
           - Open
-    - type: Fixtures
-      fixtures: {}
 - proto: BrokenBottle
   entities:
   - uid: 346
@@ -3102,8 +3053,8 @@ entities:
     components:
     - type: Transform
       parent: 58
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 377
@@ -4648,10 +4599,10 @@ entities:
     components:
     - type: Transform
       parent: 678
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -921.165806
+
+
     - type: Physics
       canCollide: False
 - proto: Catwalk
@@ -4902,14 +4853,14 @@ entities:
     components:
     - type: Transform
       parent: 175
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - drink
     - type: MeleeWeapon
       nextAttack: -2879.4569677
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -4922,14 +4873,14 @@ entities:
     components:
     - type: Transform
       parent: 175
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - drink
     - type: MeleeWeapon
       nextAttack: -2879.4569677
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -4942,14 +4893,14 @@ entities:
     components:
     - type: Transform
       parent: 175
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - drink
     - type: MeleeWeapon
       nextAttack: -2879.4569677
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -4962,14 +4913,14 @@ entities:
     components:
     - type: Transform
       parent: 175
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - drink
     - type: MeleeWeapon
       nextAttack: -2879.4569677
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -4982,14 +4933,14 @@ entities:
     components:
     - type: Transform
       parent: 175
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - drink
     - type: MeleeWeapon
       nextAttack: -2879.4569677
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -5002,14 +4953,14 @@ entities:
     components:
     - type: Transform
       parent: 175
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - drink
     - type: MeleeWeapon
       nextAttack: -2879.4569677
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -5294,8 +5245,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 10.477913,7.1560497
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Storage
       storedItems:
         15:
@@ -5332,6 +5281,8 @@ entities:
           - 11
           - 14
           - 18
+
+
     - type: UseDelay
       delays:
         default:
@@ -5354,8 +5305,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 9.557369,0.30008972
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Storage
       storedItems:
         723:
@@ -5412,6 +5361,8 @@ entities:
           - 717
           - 718
           - 719
+
+
     - type: UseDelay
       delays:
         default:
@@ -5436,8 +5387,6 @@ entities:
       rot: -1.5707960248032986 rad
       pos: -3.5287726,7.3633513
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Storage
       storedItems:
         34:
@@ -5466,6 +5415,8 @@ entities:
           - 40
           - 36
           - 41
+
+
     - type: GroupExamine
       group:
       - hoverMessage: ""
@@ -5501,8 +5452,6 @@ entities:
     - type: Transform
       pos: 0.4990194,7.6810884
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Storage
       storedItems:
         142:
@@ -5531,6 +5480,8 @@ entities:
           - 148
           - 144
           - 149
+
+
     - type: GroupExamine
       group:
       - hoverMessage: ""
@@ -5566,8 +5517,6 @@ entities:
     - type: Transform
       pos: -0.5999342,5.652388
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Storage
       storedItems:
         191:
@@ -5596,6 +5545,8 @@ entities:
           - 197
           - 193
           - 198
+
+
     - type: GroupExamine
       group:
       - hoverMessage: ""
@@ -5634,8 +5585,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 14.557918,-8.454084
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: ContainerContainer
       containers:
         item: !type:ContainerSlot
@@ -5665,8 +5616,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 14.5725765,-5.5500336
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Storage
       storedItems:
         28:
@@ -5699,6 +5648,8 @@ entities:
           - 31
           - 26
           - 29
+
+
     - type: UseDelay
       delays:
         default:
@@ -5732,12 +5683,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 28.60488,-9.659241
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: ContainerContainer
       containers:
         solution@food: !type:ContainerSlot
@@ -5757,8 +5708,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 14.703285,-8.457489
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -5774,8 +5725,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 10.588617,7.2883263
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -5791,8 +5742,8 @@ entities:
       rot: -1.5707960248032986 rad
       pos: -2.179008,6.8423877
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -5808,8 +5759,8 @@ entities:
       rot: -1.5707960248032986 rad
       pos: -3.4597032,7.527817
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -5822,8 +5773,8 @@ entities:
     - type: Transform
       pos: 0.5302694,7.511142
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -5836,8 +5787,8 @@ entities:
     - type: Transform
       pos: -0.38118422,5.652388
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -5853,8 +5804,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 13.385396,-3.310003
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -5870,8 +5821,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 28.589254,-9.502991
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -5885,8 +5836,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 26.628307,-9.324244
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -5902,12 +5853,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 10.706551,7.2628255
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: ContainerContainer
       containers:
         solution@food: !type:ContainerSlot
@@ -5925,12 +5876,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 13.636456,7.2265725
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: ContainerContainer
       containers:
         solution@food: !type:ContainerSlot
@@ -5948,12 +5899,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 8.293228,4.403302
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: ContainerContainer
       containers:
         solution@food: !type:ContainerSlot
@@ -5972,12 +5923,12 @@ entities:
     - type: Transform
       pos: 0.4208944,7.448642
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: ContainerContainer
       containers:
         solution@food: !type:ContainerSlot
@@ -5997,12 +5948,12 @@ entities:
       rot: -1.5707960248032986 rad
       pos: -2.304008,6.7173877
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: ContainerContainer
       containers:
         solution@food: !type:ContainerSlot
@@ -6022,12 +5973,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 26.549223,-10.703021
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: ContainerContainer
       containers:
         solution@food: !type:ContainerSlot
@@ -6047,12 +5998,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 9.199478,0.5043535
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: ContainerContainer
       containers:
         solution@food: !type:ContainerSlot
@@ -6072,14 +6023,14 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 20.585766,4.391133
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -118.9601321
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: ContainerContainer
       containers:
         solution@food: !type:ContainerSlot
@@ -6099,12 +6050,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 28.651754,-9.362366
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: ContainerContainer
       containers:
         solution@food: !type:ContainerSlot
@@ -6151,22 +6102,12 @@ entities:
       rot: -1.5707960248032986 rad
       pos: 13.859487,7.6328225
       parent: 1
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        solution@food: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -6187,8 +6128,8 @@ entities:
     components:
     - type: Transform
       parent: 90
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
 - proto: ClothingMaskGas
@@ -6201,8 +6142,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 8.277603,4.559552
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -6218,8 +6159,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 13.980206,7.7109475
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -6235,8 +6176,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 26.502348,-10.281146
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Forensics
       residues: []
       dnas: []
@@ -6259,8 +6198,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 13.088521,-3.6816576
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -6283,8 +6220,6 @@ entities:
     - type: Transform
       pos: -0.45930922,5.636763
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Forensics
       residues: []
       dnas: []
@@ -6300,8 +6235,6 @@ entities:
       rot: -1.5707960248032986 rad
       pos: 12.418225,-9.441864
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: GroupExamine
       group:
       - hoverMessage: ""
@@ -6343,8 +6276,6 @@ entities:
       rot: -1.5707960248032986 rad
       pos: -2.366508,6.5767627
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Storage
       storedItems:
         132:
@@ -6383,8 +6314,6 @@ entities:
       rot: -1.5707960248032986 rad
       pos: -3.3503282,7.527817
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: UseDelay
       delays:
         default:
@@ -6414,8 +6343,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 26.674223,-10.546771
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: GroupExamine
       group:
       - hoverMessage: ""
@@ -6462,8 +6389,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 13.636329,7.680218
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: GroupExamine
       group:
       - hoverMessage: ""
@@ -6504,8 +6429,6 @@ entities:
       rot: -1.5707960248032986 rad
       pos: -2.257133,6.5767627
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Forensics
       residues: []
       dnas: []
@@ -6600,8 +6523,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 26.549223,-10.265521
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: ContainerContainer
       containers:
         toggleable-clothing: !type:ContainerSlot
@@ -6668,8 +6589,6 @@ entities:
     - type: Transform
       pos: 0.5615194,7.636142
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: ContainerContainer
       containers:
         toggleable-clothing: !type:ContainerSlot
@@ -6709,8 +6628,6 @@ entities:
     - type: Transform
       pos: 0.3583944,7.464267
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -6782,8 +6699,6 @@ entities:
       rot: -1.5707960248032986 rad
       pos: 12.371869,-9.629364
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -6807,8 +6722,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 10.431057,7.6559725
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -6832,8 +6745,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 28.526754,-9.440491
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -6857,12 +6768,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 13.376771,-2.6102347
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: ContainerContainer
       containers:
         solution@food: !type:ContainerSlot
@@ -6882,12 +6793,12 @@ entities:
       rot: -1.5707960248032986 rad
       pos: -3.0065782,7.637192
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: ContainerContainer
       containers:
         item: !type:ContainerSlot
@@ -6913,12 +6824,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 20.57014,4.656758
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: ContainerContainer
       containers:
         solution@food: !type:ContainerSlot
@@ -6938,12 +6849,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 12.703418,-6.4147024
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: ContainerContainer
       containers:
         solution@food: !type:ContainerSlot
@@ -6963,12 +6874,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 26.502348,-10.575447
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: ContainerContainer
       containers:
         solution@food: !type:ContainerSlot
@@ -7237,10 +7148,10 @@ entities:
     components:
     - type: Transform
       parent: 25
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -1607.5586441
+
+
     - type: Physics
       canCollide: False
 - proto: DefibrillatorCabinetFilled
@@ -7250,15 +7161,11 @@ entities:
     - type: Transform
       pos: 20.5,-6.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
   - uid: 832
     components:
     - type: Transform
       pos: 23.5,-6.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
 - proto: DrinkBottleCognac
   entities:
   - uid: 833
@@ -7327,14 +7234,14 @@ entities:
       rot: -1.5707960248032986 rad
       pos: -2.319633,6.3267627
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - drink
     - type: MeleeWeapon
       nextAttack: -28.1957791
+
+
     - type: ContainerContainer
       containers:
         solution@drink: !type:ContainerSlot
@@ -7376,14 +7283,14 @@ entities:
       rot: -1.5707960248032986 rad
       pos: -3.4597032,7.730942
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - drink
     - type: MeleeWeapon
       nextAttack: -284.659966
+
+
     - type: ContainerContainer
       containers:
         solution@drink: !type:ContainerSlot
@@ -7455,16 +7362,16 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.6490266,-11.565028
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - drink
     - type: PressurizedSolution
-      sprayFizzinessThresholdRoll: 0.7842299
+      sprayFizzinessThresholdRoll: 0.79302573
     - type: MeleeWeapon
       nextAttack: -90.5333009
+
+
     - type: ContainerContainer
       containers:
         solution@drink: !type:ContainerSlot
@@ -7482,16 +7389,16 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.5865266,-11.533778
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - drink
     - type: PressurizedSolution
-      sprayFizzinessThresholdRoll: 0.41410607
+      sprayFizzinessThresholdRoll: 0.57753974
     - type: MeleeWeapon
       nextAttack: -92.0666327
+
+
     - type: ContainerContainer
       containers:
         solution@drink: !type:ContainerSlot
@@ -7519,16 +7426,16 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.4771516,-11.518153
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - drink
     - type: PressurizedSolution
-      sprayFizzinessThresholdRoll: 0.17108262
+      sprayFizzinessThresholdRoll: 0.8599707
     - type: MeleeWeapon
       nextAttack: -93.6999644
+
+
     - type: ContainerContainer
       containers:
         solution@drink: !type:ContainerSlot
@@ -7585,12 +7492,12 @@ entities:
     components:
     - type: Transform
       parent: 90
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - pen
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -7605,8 +7512,6 @@ entities:
     components:
     - type: Transform
       parent: 90
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -1973.8605011
     - type: UseDelay
@@ -7619,6 +7524,8 @@ entities:
           endTime: 0
           startTime: 0
           length: 1
+
+
     - type: Physics
       canCollide: False
 - proto: EmergencyRollerBed
@@ -7764,8 +7671,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 30.404284,-4.584153
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Forensics
       residues: []
       dnas: []
@@ -7779,8 +7684,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 11.944732,-3.593628
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -7806,8 +7711,6 @@ entities:
       rot: -1.5707960248032986 rad
       pos: -2.225883,6.2798877
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -20.9957863
     - type: Forensics
@@ -7822,10 +7725,10 @@ entities:
     - type: Transform
       pos: 0.5615194,7.495517
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -35.7598105
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -7849,10 +7752,6 @@ entities:
     components:
     - type: Transform
       parent: 131
-    - type: Welder
-      nextUpdate: -31.53067
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -8023,8 +7922,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.5709016,-11.596278
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Storage
       storedItems:
         200:
@@ -8071,8 +7968,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.5552766,-11.393153
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -8096,8 +7991,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.6021516,-11.549403
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -8119,8 +8012,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.7896516,-11.315028
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -8142,8 +8033,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.8052766,-11.393153
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -8167,8 +8056,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.6646516,-11.377528
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -8190,8 +8077,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.7271516,-11.377528
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -8213,8 +8098,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.6490266,-11.408778
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -8496,8 +8379,6 @@ entities:
       rot: -1.5707960248032986 rad
       pos: -2.225883,6.5611377
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Forensics
       residues: []
       dnas: []
@@ -8519,8 +8400,6 @@ entities:
     components:
     - type: Transform
       parent: 8
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Physics
       canCollide: False
   - uid: 927
@@ -8531,8 +8410,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 13.261456,7.2890725
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Forensics
       residues: []
       dnas: []
@@ -9740,8 +9617,6 @@ entities:
     components:
     - type: Transform
       parent: 58
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Physics
       canCollide: False
 - proto: GeneratorRTG
@@ -9886,12 +9761,12 @@ entities:
     components:
     - type: Transform
       parent: 132
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -9906,8 +9781,6 @@ entities:
     components:
     - type: Transform
       parent: 33
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -1607.5586441
     - type: UseDelay
@@ -9924,8 +9797,6 @@ entities:
     components:
     - type: Transform
       parent: 33
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -1607.5586441
     - type: UseDelay
@@ -9942,8 +9813,6 @@ entities:
     components:
     - type: Transform
       parent: 141
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -2879.4569677
     - type: UseDelay
@@ -9952,6 +9821,8 @@ entities:
           endTime: 0
           startTime: 0
           length: 3
+
+
     - type: Physics
       canCollide: False
   - uid: 148
@@ -9960,8 +9831,6 @@ entities:
     components:
     - type: Transform
       parent: 141
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -2879.4569677
     - type: UseDelay
@@ -9970,6 +9839,8 @@ entities:
           endTime: 0
           startTime: 0
           length: 3
+
+
     - type: Physics
       canCollide: False
   - uid: 196
@@ -9978,8 +9849,6 @@ entities:
     components:
     - type: Transform
       parent: 190
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -3930.1294623
     - type: UseDelay
@@ -9988,6 +9857,8 @@ entities:
           endTime: 0
           startTime: 0
           length: 3
+
+
     - type: Physics
       canCollide: False
   - uid: 197
@@ -9996,8 +9867,6 @@ entities:
     components:
     - type: Transform
       parent: 190
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -3930.1294623
     - type: UseDelay
@@ -10006,6 +9875,8 @@ entities:
           endTime: 0
           startTime: 0
           length: 3
+
+
     - type: Physics
       canCollide: False
   - uid: 1105
@@ -10023,8 +9894,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 28.526754,-9.440491
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: DeviceNetwork
       address: 14D1-9B56
       receiveFrequency: 1261
@@ -10033,6 +9902,8 @@ entities:
       enabled: False
       canUse: True
       canDraw: True
+
+
     - type: ContainerContainer
       containers:
         cell_slot: !type:ContainerSlot
@@ -10054,8 +9925,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 26.642973,-10.309822
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -10071,8 +9942,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 26.424223,-10.499896
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: PowerCellDraw
       nextUpdate: -4799.5835927
       enabled: False
@@ -10080,6 +9949,8 @@ entities:
       canDraw: True
     - type: HealthAnalyzer
       nextUpdate: -5430.5072461
+
+
     - type: ContainerContainer
       containers:
         cell_slot: !type:ContainerSlot
@@ -10101,8 +9972,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 14.625293,-5.6803274
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -10116,8 +9987,6 @@ entities:
     components:
     - type: Transform
       parent: 8
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: UseDelay
       delays:
         default:
@@ -10130,6 +9999,8 @@ entities:
           showEnts: False
           occludes: True
           ent: 12
+
+
     - type: Physics
       canCollide: False
   - uid: 87
@@ -10140,8 +10011,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 13.073956,7.6171975
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: UseDelay
       delays:
         default:
@@ -10154,6 +10023,8 @@ entities:
           showEnts: False
           occludes: True
           ent: 88
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -10167,8 +10038,6 @@ entities:
     components:
     - type: Transform
       parent: 33
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: UseDelay
       delays:
         default:
@@ -10181,6 +10050,8 @@ entities:
           showEnts: False
           occludes: True
           ent: 37
+
+
     - type: Physics
       canCollide: False
   - uid: 44
@@ -10191,8 +10062,6 @@ entities:
       rot: -1.5707960248032986 rad
       pos: -3.5690782,7.840317
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: UseDelay
       delays:
         default:
@@ -10205,6 +10074,8 @@ entities:
           showEnts: False
           occludes: True
           ent: 45
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -10218,8 +10089,6 @@ entities:
       rot: -1.5707960248032986 rad
       pos: -2.225883,6.5611377
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: UseDelay
       delays:
         default:
@@ -10232,6 +10101,8 @@ entities:
           showEnts: False
           occludes: True
           ent: 139
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -10243,8 +10114,6 @@ entities:
     components:
     - type: Transform
       parent: 141
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: UseDelay
       delays:
         default:
@@ -10257,6 +10126,8 @@ entities:
           showEnts: False
           occludes: True
           ent: 145
+
+
     - type: Physics
       canCollide: False
   - uid: 163
@@ -10266,8 +10137,6 @@ entities:
     - type: Transform
       pos: 0.4833944,7.589267
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: UseDelay
       delays:
         default:
@@ -10280,6 +10149,8 @@ entities:
           showEnts: False
           occludes: True
           ent: 164
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -10291,8 +10162,6 @@ entities:
     components:
     - type: Transform
       parent: 190
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: UseDelay
       delays:
         default:
@@ -10305,6 +10174,8 @@ entities:
           showEnts: False
           occludes: True
           ent: 194
+
+
     - type: Physics
       canCollide: False
 - proto: HospitalCurtainsOpen
@@ -10487,8 +10358,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 28.60488,-9.393616
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -10499,6 +10368,8 @@ entities:
           endTime: 0
           startTime: 0
           length: 0.5
+
+
     - type: ContainerContainer
       containers:
         solution@hypospray: !type:ContainerSlot
@@ -10516,10 +10387,10 @@ entities:
     components:
     - type: Transform
       parent: 8
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -921.165806
+
+
     - type: Physics
       canCollide: False
 - proto: JetpackVoidFilled
@@ -10596,6 +10467,48 @@ entities:
     - type: Transform
       pos: 26.5,-8.5
       parent: 1
+- proto: KoboldCubeWrapped
+  entities:
+  - uid: 1130
+    mapInit: true
+    paused: true
+    components:
+    - type: Transform
+      parent: 1129
+
+
+    - type: Physics
+      canCollide: False
+  - uid: 1131
+    mapInit: true
+    paused: true
+    components:
+    - type: Transform
+      parent: 1129
+
+
+    - type: Physics
+      canCollide: False
+  - uid: 1132
+    mapInit: true
+    paused: true
+    components:
+    - type: Transform
+      parent: 1129
+
+
+    - type: Physics
+      canCollide: False
+  - uid: 1133
+    mapInit: true
+    paused: true
+    components:
+    - type: Transform
+      parent: 1129
+
+
+    - type: Physics
+      canCollide: False
 - proto: LampBanana
   entities:
   - uid: 1138
@@ -10628,14 +10541,14 @@ entities:
     components:
     - type: Transform
       parent: 166
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - beaker
     - type: MeleeWeapon
       nextAttack: -2879.4569677
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -10648,14 +10561,14 @@ entities:
     components:
     - type: Transform
       parent: 166
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - beaker
     - type: MeleeWeapon
       nextAttack: -2879.4569677
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -10670,8 +10583,8 @@ entities:
     components:
     - type: Transform
       parent: 1142
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 1144
@@ -10680,8 +10593,8 @@ entities:
     components:
     - type: Transform
       parent: 1142
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 1145
@@ -10690,8 +10603,8 @@ entities:
     components:
     - type: Transform
       parent: 1142
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 1146
@@ -10700,8 +10613,8 @@ entities:
     components:
     - type: Transform
       parent: 1142
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 1147
@@ -10710,8 +10623,8 @@ entities:
     components:
     - type: Transform
       parent: 1142
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
 - proto: LightReplacer
@@ -10724,8 +10637,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 30.576159,-4.584153
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: ContainerContainer
       containers:
         light_replacer_storage: !type:Container
@@ -10745,6 +10656,8 @@ entities:
           - 1145
           - 1146
           - 1147
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -10758,8 +10671,8 @@ entities:
     components:
     - type: Transform
       parent: 1142
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 1149
@@ -10768,8 +10681,8 @@ entities:
     components:
     - type: Transform
       parent: 1142
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 1150
@@ -10778,8 +10691,8 @@ entities:
     components:
     - type: Transform
       parent: 1142
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 1151
@@ -10788,8 +10701,8 @@ entities:
     components:
     - type: Transform
       parent: 1142
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 1152
@@ -10798,8 +10711,8 @@ entities:
     components:
     - type: Transform
       parent: 1142
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 1153
@@ -10808,8 +10721,8 @@ entities:
     components:
     - type: Transform
       parent: 1142
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 1154
@@ -10818,8 +10731,8 @@ entities:
     components:
     - type: Transform
       parent: 1142
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 1155
@@ -10828,8 +10741,8 @@ entities:
     components:
     - type: Transform
       parent: 1142
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
 - proto: LightTubeBroken
@@ -11011,12 +10924,12 @@ entities:
     components:
     - type: Transform
       parent: 199
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -11172,8 +11085,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 28.69863,-9.737366
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Storage
       storedItems:
         70:
@@ -11198,6 +11109,8 @@ entities:
           - 72
           - 71
           - 59
+
+
     - type: UseDelay
       delays:
         default:
@@ -11232,8 +11145,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 14.69578,7.5078225
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Storage
       storedItems:
         111:
@@ -11262,6 +11173,8 @@ entities:
           - 91
           - 93
           - 95
+
+
     - type: UseDelay
       delays:
         default:
@@ -11284,8 +11197,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 28.57363,-9.596741
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -11301,11 +11214,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 10.604227,7.7122517
       parent: 1
-    - type: TimerTrigger
-      nextBeep: -31.53067
-      nextTrigger: -31.53067
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -11319,11 +11229,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 8.480728,4.715802
       parent: 1
-    - type: TimerTrigger
-      nextBeep: -31.53067
-      nextTrigger: -31.53067
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -11349,120 +11256,16 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 13.969727,0.01480785
       parent: 1
-- proto: MonkeyCubeBox
-  entities:
-  - uid: 1129
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 3.6334016,-11.346278
-      parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
-    - type: Storage
-      storedItems:
-        1130:
-          position: 0,0
-          _rotation: South
-        1131:
-          position: 1,0
-          _rotation: South
-        1132:
-          position: 2,0
-          _rotation: South
-        1133:
-          position: 0,1
-          _rotation: South
-        1134:
-          position: 1,1
-          _rotation: South
-        1135:
-          position: 2,1
-          _rotation: South
-        1136:
-          position: 0,2
-          _rotation: South
-        1137:
-          position: 1,2
-          _rotation: South
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 1130
-          - 1131
-          - 1132
-          - 1133
-          - 1134
-          - 1135
-          - 1136
-          - 1137
-    - type: UseDelay
-      delays:
-        default:
-          length: 1
-        quickInsert:
-          length: 0.5
-        storage: {}
-    - type: Forensics
-      residues: []
-      dnas: []
-      fibers: []
-      fingerprints: []
 - proto: MonkeyCubeWrapped
   entities:
-  - uid: 1130
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 1129
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
-    - type: Physics
-      canCollide: False
-  - uid: 1131
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 1129
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
-    - type: Physics
-      canCollide: False
-  - uid: 1132
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 1129
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
-    - type: Physics
-      canCollide: False
-  - uid: 1133
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 1129
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
-    - type: Physics
-      canCollide: False
   - uid: 1134
     mapInit: true
     paused: true
     components:
     - type: Transform
       parent: 1129
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 1135
@@ -11471,8 +11274,8 @@ entities:
     components:
     - type: Transform
       parent: 1129
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 1136
@@ -11481,8 +11284,8 @@ entities:
     components:
     - type: Transform
       parent: 1129
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 1137
@@ -11491,8 +11294,8 @@ entities:
     components:
     - type: Transform
       parent: 1129
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
 - proto: MopItem
@@ -11505,11 +11308,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 30.591784,-4.506028
       parent: 1
-    - type: Absorbent
-      progress:
-        '#A9A9A9FF': 100
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -43.8333476
     - type: SolutionContainerManager
@@ -11522,6 +11320,8 @@ entities:
           endTime: 0
           startTime: 0
           length: 1
+
+
     - type: ContainerContainer
       containers:
         solution@absorbed: !type:ContainerSlot
@@ -11539,11 +11339,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 30.544909,-4.533175
       parent: 1
-    - type: Absorbent
-      progress:
-        '#A9A9A9FF': 100
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -40.5666842
     - type: SolutionContainerManager
@@ -11556,6 +11351,8 @@ entities:
           endTime: 0
           startTime: 0
           length: 1
+
+
     - type: ContainerContainer
       containers:
         solution@absorbed: !type:ContainerSlot
@@ -11573,10 +11370,10 @@ entities:
     components:
     - type: Transform
       parent: 8
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: NetworkConfigurator
       lastUseAttempt: -921.165806
+
+
     - type: Physics
       canCollide: False
 - proto: MysteryFigureBoxTrash
@@ -11594,10 +11391,10 @@ entities:
     components:
     - type: Transform
       parent: 25
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: NetworkConfigurator
       lastUseAttempt: -1607.5586441
+
+
     - type: Physics
       canCollide: False
 - proto: NitrogenCanister
@@ -11622,8 +11419,8 @@ entities:
     components:
     - type: Transform
       parent: 58
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 1205
@@ -11714,8 +11511,6 @@ entities:
       name: pill canister (dexalin 10u)
     - type: Transform
       parent: 90
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Storage
       storedItems:
         96:
@@ -11752,6 +11547,8 @@ entities:
           - 104
           - 106
           - 108
+
+
     - type: Physics
       canCollide: False
     - type: NameModifier
@@ -11773,8 +11570,6 @@ entities:
       name: pill canister (tricordrazine 10u)
     - type: Transform
       parent: 58
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Storage
       storedItems:
         60:
@@ -11803,6 +11598,8 @@ entities:
           - 64
           - 66
           - 68
+
+
     - type: Physics
       canCollide: False
     - type: NameModifier
@@ -11824,12 +11621,12 @@ entities:
       name: pill (dexalin 10u)
     - type: Transform
       parent: 95
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: Physics
       canCollide: False
     - type: NameModifier
@@ -11846,12 +11643,12 @@ entities:
       name: pill (dexalin 10u)
     - type: Transform
       parent: 95
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: Physics
       canCollide: False
     - type: NameModifier
@@ -11868,12 +11665,12 @@ entities:
       name: pill (dexalin 10u)
     - type: Transform
       parent: 95
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: Physics
       canCollide: False
     - type: NameModifier
@@ -11890,12 +11687,12 @@ entities:
       name: pill (dexalin 10u)
     - type: Transform
       parent: 95
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: Physics
       canCollide: False
     - type: NameModifier
@@ -11912,12 +11709,12 @@ entities:
       name: pill (dexalin 10u)
     - type: Transform
       parent: 95
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: Physics
       canCollide: False
     - type: NameModifier
@@ -11934,12 +11731,12 @@ entities:
       name: pill (dexalin 10u)
     - type: Transform
       parent: 95
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: Physics
       canCollide: False
     - type: NameModifier
@@ -11956,12 +11753,12 @@ entities:
       name: pill (dexalin 10u)
     - type: Transform
       parent: 95
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: Physics
       canCollide: False
     - type: NameModifier
@@ -11980,12 +11777,12 @@ entities:
       name: pill (tricordrazine 10u)
     - type: Transform
       parent: 59
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: Physics
       canCollide: False
     - type: NameModifier
@@ -12002,12 +11799,12 @@ entities:
       name: pill (tricordrazine 10u)
     - type: Transform
       parent: 59
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: Physics
       canCollide: False
     - type: NameModifier
@@ -12024,12 +11821,12 @@ entities:
       name: pill (tricordrazine 10u)
     - type: Transform
       parent: 59
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: Physics
       canCollide: False
     - type: NameModifier
@@ -12046,12 +11843,12 @@ entities:
       name: pill (tricordrazine 10u)
     - type: Transform
       parent: 59
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: Physics
       canCollide: False
     - type: NameModifier
@@ -12068,12 +11865,12 @@ entities:
       name: pill (tricordrazine 10u)
     - type: Transform
       parent: 59
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
+
+
     - type: Physics
       canCollide: False
     - type: NameModifier
@@ -12091,8 +11888,8 @@ entities:
     - type: Transform
       pos: 14.40641,-8.629364
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -12108,8 +11905,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 9.627342,0.7387285
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: UseDelay
       delays:
         default:
@@ -12133,8 +11930,6 @@ entities:
     - type: Transform
       pos: 24.477095,-8.5290785
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Label
       currentLabel: plasma
     - type: SolutionContainerManager
@@ -12146,6 +11941,8 @@ entities:
       - CentrifugeCompatible
     - type: MeleeWeapon
       nextAttack: -80.9930986
+
+
     - type: NameModifier
       baseName: vial
     - type: ContainerContainer
@@ -12217,12 +12014,12 @@ entities:
     components:
     - type: Transform
       parent: 11
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - battery
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -12235,12 +12032,12 @@ entities:
     components:
     - type: Transform
       parent: 36
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - battery
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -12253,12 +12050,12 @@ entities:
     components:
     - type: Transform
       parent: 44
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - battery
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -12271,12 +12068,12 @@ entities:
     components:
     - type: Transform
       parent: 87
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - battery
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -12289,12 +12086,12 @@ entities:
     components:
     - type: Transform
       parent: 112
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - battery
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -12307,12 +12104,12 @@ entities:
     components:
     - type: Transform
       parent: 122
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - battery
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -12325,12 +12122,12 @@ entities:
     components:
     - type: Transform
       parent: 138
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - battery
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -12343,12 +12140,12 @@ entities:
     components:
     - type: Transform
       parent: 144
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - battery
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -12361,12 +12158,12 @@ entities:
     components:
     - type: Transform
       parent: 150
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - battery
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -12379,12 +12176,12 @@ entities:
     components:
     - type: Transform
       parent: 163
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - battery
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -12397,12 +12194,12 @@ entities:
     components:
     - type: Transform
       parent: 193
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - battery
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -12415,12 +12212,12 @@ entities:
     components:
     - type: Transform
       parent: 228
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - battery
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -12433,12 +12230,12 @@ entities:
     components:
     - type: Transform
       parent: 239
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - battery
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -12476,12 +12273,12 @@ entities:
     components:
     - type: Transform
       parent: 55
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - battery
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -12494,12 +12291,12 @@ entities:
     components:
     - type: Transform
       parent: 244
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - battery
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -12514,10 +12311,10 @@ entities:
     components:
     - type: Transform
       parent: 8
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -921.165806
+
+
     - type: Physics
       canCollide: False
 - proto: PoweredDimSmallLight
@@ -12770,8 +12567,8 @@ entities:
     components:
     - type: Transform
       parent: 33
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 149
@@ -12780,8 +12577,8 @@ entities:
     components:
     - type: Transform
       parent: 141
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 198
@@ -12790,8 +12587,8 @@ entities:
     components:
     - type: Transform
       parent: 190
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
 - proto: Railing
@@ -13332,13 +13129,13 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 10.784676,7.6536136
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: RCD
       protoId: WallSolid
     - type: LimitedCharges
       lastUpdate: -324.4731714
       lastCharges: 30
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -13352,13 +13149,13 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 14.027081,7.3203225
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: RCD
       protoId: WallSolid
     - type: LimitedCharges
       lastUpdate: -1466.5276151
       lastCharges: 30
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -13372,13 +13169,13 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 8.449478,4.262677
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: RCD
       protoId: WallSolid
     - type: LimitedCharges
       lastUpdate: -1404.2141806
       lastCharges: 30
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -13394,8 +13191,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 10.603888,7.491726
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -13409,8 +13206,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 13.292706,7.3828225
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -13424,8 +13221,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 8.496353,4.872052
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -13441,14 +13238,14 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.6802766,-11.408778
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
     - type: MeleeWeapon
       nextAttack: -71.0333203
+
+
     - type: ContainerContainer
       containers:
         solution@food: !type:ContainerSlot
@@ -13466,14 +13263,14 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.6802766,-11.549403
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
     - type: MeleeWeapon
       nextAttack: -73.9666508
+
+
     - type: ContainerContainer
       containers:
         solution@food: !type:ContainerSlot
@@ -13493,14 +13290,14 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.6959016,-11.346278
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - food
     - type: MeleeWeapon
       nextAttack: -77.6999804
+
+
     - type: ContainerContainer
       containers:
         solution@food: !type:ContainerSlot
@@ -13695,8 +13492,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 14.578285,-8.551239
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -13712,8 +13509,8 @@ entities:
       rot: -1.5707960248032986 rad
       pos: 10.473117,7.3633814
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -13729,8 +13526,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 28.47988,-9.440491
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -13746,8 +13543,8 @@ entities:
       rot: -1.5707960248032986 rad
       pos: -2.319633,6.5923877
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -13763,8 +13560,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 12.713521,-3.6504076
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -13780,8 +13577,8 @@ entities:
       rot: -1.5707960248032986 rad
       pos: -3.3972032,7.715317
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -13797,8 +13594,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 20.50764,4.594258
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -13814,8 +13611,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 14.719043,-5.3990774
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -13830,8 +13627,8 @@ entities:
     - type: Transform
       pos: 0.5458944,7.464267
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -13859,8 +13656,6 @@ entities:
     components:
     - type: Transform
       parent: 25
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -1607.5586441
     - type: RandomSprite
@@ -13868,6 +13663,8 @@ entities:
         enum.DamageStateVisualLayers.Base:
         - screwdriver
         - '#0E7F1BFF'
+
+
     - type: Physics
       canCollide: False
 - proto: SeedExtractorMachineCircuitboard
@@ -14041,8 +13838,6 @@ entities:
     - type: Transform
       pos: 13.5,1.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
 - proto: SignEngineering
   entities:
   - uid: 1414
@@ -14050,8 +13845,6 @@ entities:
     - type: Transform
       pos: 8.5,1.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
 - proto: SignKitchen
   entities:
   - uid: 1415
@@ -14059,8 +13852,6 @@ entities:
     - type: Transform
       pos: 9.5,-4.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
 - proto: SignMedical
   entities:
   - uid: 1416
@@ -14068,8 +13859,6 @@ entities:
     - type: Transform
       pos: 18.5,-8.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
 - proto: SignSalvage
   entities:
   - uid: 1417
@@ -14077,8 +13866,6 @@ entities:
     - type: Transform
       pos: 16.5,1.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
 - proto: SignSecurity
   entities:
   - uid: 1418
@@ -14086,8 +13873,6 @@ entities:
     - type: Transform
       pos: 1.5,4.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
 - proto: SignShipDock
   entities:
   - uid: 1419
@@ -14095,15 +13880,11 @@ entities:
     - type: Transform
       pos: -7.5,-5.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
   - uid: 1420
     components:
     - type: Transform
       pos: -7.5,-0.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
 - proto: SinkWide
   entities:
   - uid: 1421
@@ -14120,8 +13901,6 @@ entities:
     components:
     - type: Transform
       parent: 131
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: ContainerContainer
       containers:
         bowl_slot: !type:ContainerSlot
@@ -14136,6 +13915,8 @@ entities:
       solutions: null
       containers:
       - smokable
+
+
     - type: Physics
       canCollide: False
 - proto: SoapNT
@@ -14148,12 +13929,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 30.576159,-4.474778
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
       - soap
+
+
     - type: ContainerContainer
       containers:
         solution@soap: !type:ContainerSlot
@@ -14193,8 +13974,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 14.674101,-8.582489
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -14733,8 +14514,6 @@ entities:
     components:
     - type: Transform
       parent: 33
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -1607.5586441
     - type: UseDelay
@@ -14747,6 +14526,8 @@ entities:
       solutions: null
       containers:
       - battery
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -14759,8 +14540,6 @@ entities:
     components:
     - type: Transform
       parent: 141
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -2879.4569677
     - type: UseDelay
@@ -14773,6 +14552,8 @@ entities:
       solutions: null
       containers:
       - battery
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -14785,8 +14566,6 @@ entities:
     components:
     - type: Transform
       parent: 190
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -3930.1294623
     - type: UseDelay
@@ -14799,6 +14578,8 @@ entities:
       solutions: null
       containers:
       - battery
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -14851,8 +14632,6 @@ entities:
     - type: Transform
       pos: 11.5,1.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
 - proto: SyringeBicaridine
   entities:
   - uid: 1510
@@ -14880,14 +14659,14 @@ entities:
       name: syringe (inaprovaline)
     - type: Transform
       parent: 90
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Label
       currentLabel: inaprovaline
     - type: SolutionContainerManager
       solutions: null
       containers:
       - injector
+
+
     - type: Physics
       canCollide: False
     - type: NameModifier
@@ -15123,8 +14902,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 30.560534,-4.552903
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: UseDelay
       delays:
         default:
@@ -15139,6 +14916,8 @@ entities:
           endTime: 0
           startTime: 0
           length: 0
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -15152,8 +14931,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 30.593529,-4.499878
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: UseDelay
       delays:
         default:
@@ -15168,6 +14945,8 @@ entities:
           endTime: 0
           startTime: 0
           length: 0
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -15181,8 +14960,8 @@ entities:
     components:
     - type: Transform
       parent: 8
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Physics
       canCollide: False
   - uid: 1550
@@ -15193,8 +14972,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 8.527603,4.637677
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -15224,6 +15003,70 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 14.478779,-2.5728807
       parent: 1
+- proto: VariantCubeBox
+  entities:
+  - uid: 1129
+    mapInit: true
+    paused: true
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 3.6334016,-11.346278
+      parent: 1
+    - type: Storage
+      storedItems:
+        1130:
+          position: 0,0
+          _rotation: South
+        1131:
+          position: 1,0
+          _rotation: South
+        1132:
+          position: 2,0
+          _rotation: South
+        1133:
+          position: 0,1
+          _rotation: South
+        1134:
+          position: 1,1
+          _rotation: South
+        1135:
+          position: 2,1
+          _rotation: South
+        1136:
+          position: 0,2
+          _rotation: South
+        1137:
+          position: 1,2
+          _rotation: South
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 1130
+          - 1131
+          - 1132
+          - 1133
+          - 1134
+          - 1135
+          - 1136
+          - 1137
+
+
+    - type: UseDelay
+      delays:
+        default:
+          length: 1
+        quickInsert:
+          length: 0.5
+        storage: {}
+    - type: Forensics
+      residues: []
+      dnas: []
+      fibers: []
+      fingerprints: []
 - proto: VendingMachineChefvend
   entities:
   - uid: 1553
@@ -15252,8 +15095,6 @@ entities:
     - type: Transform
       pos: 21.5,-6.5
       parent: 1
-    - type: Fixtures
-      fixtures: {}
 - proto: VendingMachineWinter
   entities:
   - uid: 1557
@@ -16405,10 +16246,10 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 14.51572,-8.457489
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Gun
       nextFire: -78.8666478
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -16422,10 +16263,10 @@ entities:
       rot: -1.5707960248032986 rad
       pos: -3.5065782,7.809067
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Gun
       nextFire: -295.5266223
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -16439,10 +16280,10 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 12.229146,-3.4004076
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Gun
       nextFire: -314.49327
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -16455,10 +16296,10 @@ entities:
     - type: Transform
       pos: 0.6083944,7.698642
       parent: 1
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: Gun
       nextFire: -20.9264924
+
+
     - type: Forensics
       residues: []
       dnas: []
@@ -16564,10 +16405,6 @@ entities:
     components:
     - type: Transform
       parent: 25
-    - type: Welder
-      nextUpdate: -31.53067
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: UseDelay
       delays:
         default:
@@ -16580,6 +16417,8 @@ entities:
       solutions: null
       containers:
       - Welder
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -16594,10 +16433,6 @@ entities:
     components:
     - type: Transform
       parent: 8
-    - type: Welder
-      nextUpdate: -31.53067
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -16612,6 +16447,8 @@ entities:
           length: 1
     - type: MeleeWeapon
       nextAttack: -921.165806
+
+
     - type: Physics
       canCollide: False
     - type: ContainerContainer
@@ -16705,8 +16542,6 @@ entities:
     components:
     - type: Transform
       parent: 25
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -1607.5586441
     - type: RandomSprite
@@ -16714,6 +16549,8 @@ entities:
         enum.DamageStateVisualLayers.Base:
         - cutters
         - '#0E7F1BFF'
+
+
     - type: Physics
       canCollide: False
 - proto: Wrench
@@ -16724,10 +16561,10 @@ entities:
     components:
     - type: Transform
       parent: 25
-    - type: EmitSoundOnCollide
-      nextSound: -31.53067
     - type: MeleeWeapon
       nextAttack: -1607.5586441
+
+
     - type: Physics
       canCollide: False
 ...
