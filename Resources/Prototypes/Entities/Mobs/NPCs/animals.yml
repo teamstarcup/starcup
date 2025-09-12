@@ -1506,13 +1506,11 @@
       types:
         Blunt: 3
         Piercing: 3
-  # begin starcup: monkeys are not food
-  # - type: Butcherable
-  #   butcheringType: Spike
-  #   spawned:
-  #   - id: FoodMeat
-  #     amount: 3
-  # end starcup
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeat
+      amount: 3
   - type: Puller
     needsHands: false
   - type: CanHostGuardian
