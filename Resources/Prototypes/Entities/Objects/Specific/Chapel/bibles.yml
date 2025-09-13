@@ -1,6 +1,9 @@
 - type: entity
-  name: holy book # starcup: genericize parent entity
-  description: A holy text for one of many interstellar faiths. # starcup: genericize parent entity
+  # begin starcup: genericize and abstract parent entity
+  # name: bible
+  # description: New Interstellar Version 2340.
+  abstract: true
+  # end starcup
   parent: BaseStorageItem
   id: Bible
   components:
@@ -34,13 +37,11 @@
     reactionTypes:
     - Holy
   - type: Sprite
-  # begin starcup: genericize parent entity
-    sprite: Objects/Misc/books.rsi
-    state: book_icon
-  # end starcup
+    sprite: Objects/Specific/Chapel/bible.rsi
+    state: icon
   - type: Item
     size: Small
-#    sprite: Objects/Specific/Chapel/bible.rsi # starcup: remove inhand
+    sprite: Objects/Specific/Chapel/bible.rsi
   - type: Clothing
     slots:
     - Belt
@@ -82,7 +83,6 @@
     respawnTime: 300
   - type: Sprite
     sprite: Objects/Specific/Chapel/necronomicon.rsi
-    state: icon # starcup: necessary due to parent changes
   - type: Item
     sprite: Objects/Specific/Chapel/necronomicon.rsi
 
@@ -119,7 +119,6 @@
   components:
   - type: Sprite
     sprite: Objects/Specific/Chapel/mysteryofthedruids.rsi
-    state: icon # starcup: necessary due to parent changes
   - type: Item
     sprite: Objects/Specific/Chapel/mysteryofthedruids.rsi
 
@@ -131,7 +130,6 @@
   components:
   - type: Sprite
     sprite: Objects/Specific/Chapel/communistmanifesto.rsi
-    state: icon # starcup: necessary due to parent changes
   - type: Item
     sprite: Objects/Specific/Chapel/communistmanifesto.rsi
 
@@ -143,7 +141,6 @@
   components:
   - type: Sprite
     sprite: Objects/Specific/Chapel/satanicbible.rsi
-    state: icon # starcup: necessary due to parent changes
   - type: Item
     sprite: Objects/Specific/Chapel/satanicbible.rsi
 
@@ -155,6 +152,5 @@
   components:
   - type: Sprite
     sprite: Objects/Specific/Chapel/codexnanotrasimus.rsi
-    state: icon # starcup: necessary due to parent changes
   - type: Item
     sprite: Objects/Specific/Chapel/codexnanotrasimus.rsi
