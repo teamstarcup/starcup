@@ -4,8 +4,8 @@ meta:
   engineVersion: 265.0.0
   forkId: ""
   forkVersion: ""
-  time: 09/14/2025 00:29:51
-  entityCount: 1141
+  time: 09/14/2025 01:24:52
+  entityCount: 1142
 maps: []
 grids:
 - 1
@@ -530,6 +530,9 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 4.5,-1.5
       parent: 1
+    - type: AccessReader
+      access:
+      - - Maintenance
     - type: DeviceLinkSink
       invokeCounter: 1
     - type: DeviceLinkSource
@@ -2961,6 +2964,13 @@ entities:
           showEnts: False
           occludes: True
           ent: null
+- proto: CrateFunPlushie
+  entities:
+  - uid: 1142
+    components:
+    - type: Transform
+      pos: 5.5,0.5
+      parent: 1
 - proto: CrateGenericSteel
   entities:
   - uid: 2
@@ -5354,11 +5364,6 @@ entities:
       parent: 1
 - proto: PoweredDimSmallLight
   entities:
-  - uid: 748
-    components:
-    - type: Transform
-      pos: 3.5,-1.5
-      parent: 1
   - uid: 749
     components:
     - type: Transform
@@ -5490,6 +5495,12 @@ entities:
       parent: 1
 - proto: PoweredSmallLight
   entities:
+  - uid: 748
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 3.5,-1.5
+      parent: 1
   - uid: 771
     components:
     - type: Transform
