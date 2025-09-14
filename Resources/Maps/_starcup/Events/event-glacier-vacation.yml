@@ -4,7 +4,7 @@ meta:
   engineVersion: 265.0.0
   forkId: ""
   forkVersion: ""
-  time: 09/14/2025 00:36:46
+  time: 09/14/2025 02:01:22
   entityCount: 19239
 maps:
 - 1
@@ -17528,7 +17528,7 @@ entities:
       pos: 17.5,28.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -79620.375
+      secondsUntilStateChange: -81018.96
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -18118,7 +18118,7 @@ entities:
       pos: 0.5,-1.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -81469.51
+      secondsUntilStateChange: -82868.09
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -18439,7 +18439,7 @@ entities:
       pos: -16.5,32.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -65774.65
+      secondsUntilStateChange: -67173.234
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -18576,7 +18576,7 @@ entities:
       pos: 6.5,-6.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -66703.72
+      secondsUntilStateChange: -68102.305
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -86552,6 +86552,9 @@ entities:
     - type: Transform
       pos: 3.5,0.5
       parent: 2
+    - type: Door
+      secondsUntilStateChange: -66.855034
+      state: Closing
   - uid: 12500
     components:
     - type: Transform
@@ -111253,6 +111256,12 @@ entities:
       parent: 2
 - proto: SurveillanceCameraService
   entities:
+  - uid: 16571
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 56.5,41.5
+      parent: 2
   - uid: 16878
     components:
     - type: Transform
@@ -111285,17 +111294,6 @@ entities:
       - SurveillanceCameraService
       nameSet: True
       id: Hydroponics
-  - uid: 16881
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 55.5,41.5
-      parent: 2
-    - type: SurveillanceCamera
-      setupAvailableNetworks:
-      - SurveillanceCameraService
-      nameSet: True
-      id: Musician's Room
   - uid: 16882
     components:
     - type: Transform
@@ -123838,7 +123836,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -93132.055
+      secondsUntilStateChange: -94530.64
       state: Opening
     - type: Airlock
       autoClose: False
@@ -123857,7 +123855,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -93131.49
+      secondsUntilStateChange: -94530.08
       state: Opening
     - type: Airlock
       autoClose: False
@@ -123882,7 +123880,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -93131.02
+      secondsUntilStateChange: -94529.61
       state: Opening
     - type: Airlock
       autoClose: False
@@ -123898,7 +123896,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -93132.555
+      secondsUntilStateChange: -94531.14
       state: Opening
     - type: Airlock
       autoClose: False
