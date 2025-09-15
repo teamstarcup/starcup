@@ -83,6 +83,8 @@
       - !type:PlaySoundBehavior
         sound:
           collection: GlassBreak
+  - type: PlacementReplacement  # starcup
+    key: light
   placement:
     mode: SnapgridCenter
     snap:
@@ -441,8 +443,8 @@
   components:
   - type: PointLight
     enabled: false
-    radius: 5
-    energy: 0.6
+    radius: 15  # starcup: 5 -> 15
+    energy: 0.4  # starcup: 0.6 -> 0.4
     offset: "0, 0.4"
     color: "#7CFC00"
     mask: /Textures/Effects/LightMasks/double_cone.png
