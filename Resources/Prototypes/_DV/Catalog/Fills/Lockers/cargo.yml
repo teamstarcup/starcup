@@ -1,0 +1,13 @@
+# Added to LockerFillSalvageSpecialist with a nested selector
+- type: entityTable
+  id: LockerFillSalvageSpecialistDeltaV
+  table: !type:AllSelector
+    children:
+    - id: OreBag
+    - id: Pickaxe
+    - id: WeaponProtoKineticAccelerator
+    - id: FlashlightLantern # starcup: replaced seclite, those are sec contraband
+    #- id: ClothingEyesGlassesMeson # starcup: removed mesons, those are engineering contraband
+    # TODO: bluespace shelter capsule
+    - id: ClothingShoesBootsWinterMiner
+    - id: JetpackMiniFilled # replaces fire extinguisher

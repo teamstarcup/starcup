@@ -49,6 +49,13 @@
     price: 800
   - type: ResearchClient
   - type: TechnologyDatabase
+  # begin starcup: improve visuals
+  - type: PointLight
+    color: "#1b591b"
+    radius: 1.5
+    energy: 1.2
+  - type: LitOnPowered
+  # end starcup
 
 # a lathe that can be sped up with space lube / slowed down with glue
 - type: entity
@@ -216,13 +223,6 @@
     - SecurityExplosives
     - SecurityEquipment
     - SecurityWeapons
-  # begin starcup: improve visuals
-  - type: PointLight
-    color: "#1b591b"
-    radius: 1.5
-    energy: 1.2
-  - type: LitOnPowered
-  # end starcup
 
 - type: entity
   id: ProtolatheHyperConvection
@@ -632,6 +632,10 @@
       range: 0.30
     - type: PlaceableSurface # Allow ore bags to dump into it directly
       isPlaceable: false # but not place on it if you just click it with a random item
+    - type: MiningPoints # DeltaV - Source of mining points for miners
+      transferSound:
+        path: /Audio/Effects/Cargo/ping.ogg
+    - type: MiningPointsLathe
 # End DeltaV additions
 
 - type: entity
@@ -721,3 +725,7 @@
         - Plastic
         - Ingot # Frontier
   - type: OreSiloClient
+  # begin starcup
+  - type: PointLight
+    color: "#3d75c3"
+  # end starcup
