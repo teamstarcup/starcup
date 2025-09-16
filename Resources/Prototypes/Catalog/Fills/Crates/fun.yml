@@ -47,6 +47,8 @@
     - id: PlushieEikse
     - id: PlushieMort
     # end starcup
+    - id: PlushieMothRandom # Nyanotrasen Random Moth Plushies
+      amount: 2
 
 - type: entityTable
   id: AllPottedPlantsTable
@@ -97,7 +99,6 @@
   name: plushie crate
   description: A buncha soft plushies. Throw them around and then wonder how you're gonna explain this purchase to your rep at SyndComm. # starcup - NT-SC swap
   components:
-<<<<<<< HEAD
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
@@ -141,55 +142,6 @@
         - id: PlushieSharkGrey
           amount: !type:ConstantNumberSelector
             value: 2
-||||||| parent of 0face30eeed (Moth plushies (#14))
-  - type: StorageFill
-    contents:
-      - id: PlushieBee
-      - id: PlushieNar
-      - id: PlushieCarp
-      - id: PlushieNuke
-      - id: PlushieSlime
-      - id: PlushieSnake
-      - id: PlushieLizard
-      - id: PlushieSpaceLizard
-      - id: PlushieVox
-      - id: PlushieRouny
-      - id: PlushieRatvar
-      - id: PlushieSharkBlue
-        orGroup: PlushieShark
-      - id: PlushieSharkGrey
-        orGroup: PlushieShark
-      - id: PlushieAtmosian
-      - id: PlushieDiona
-      - id: PlushieXeno
-      - id: PlushieHampter
-      - id: PlushieMoth
-=======
-  - type: StorageFill
-    contents:
-      - id: PlushieBee
-      - id: PlushieNar
-      - id: PlushieCarp
-      - id: PlushieNuke
-      - id: PlushieSlime
-      - id: PlushieSnake
-      - id: PlushieLizard
-      - id: PlushieSpaceLizard
-      - id: PlushieVox
-      - id: PlushieRouny
-      - id: PlushieRatvar
-      - id: PlushieSharkBlue
-        orGroup: PlushieShark
-      - id: PlushieSharkGrey
-        orGroup: PlushieShark
-      - id: PlushieAtmosian
-      - id: PlushieDiona
-      - id: PlushieXeno
-      - id: PlushieHampter
-      - id: PlushieMoth
-      - id: PlushieMothRandom # Nyanotrasen Random Moth Plushies
-        amount: 2
->>>>>>> 0face30eeed (Moth plushies (#14))
 
 - type: entity
   id: CrateFunInstrumentsVariety
