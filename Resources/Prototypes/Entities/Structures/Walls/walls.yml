@@ -586,9 +586,9 @@
   name: reinforced wall
   components:
   - type: Sprite
-    sprite: Structures/Walls/solid.rsi
+    sprite: _starcup/Structures/Walls/solid.rsi # starcup:resprited
   - type: Icon
-    sprite: Structures/Walls/solid.rsi
+    sprite: _starcup/Structures/Walls/solid.rsi # starcup:resprited
     state: rgeneric
   - type: Construction
     graph: Girder
@@ -978,13 +978,13 @@
   name: solid wall
   components:
   - type: Sprite
-    sprite: Structures/Walls/solid.rsi
+    sprite: _starcup/Structures/Walls/solid.rsi # starcup:resprited
   - type: WallReplacementMarker
   - type: Construction
     graph: Girder
     node: wall
   - type: Icon
-    sprite: Structures/Walls/solid.rsi
+    sprite: _starcup/Structures/Walls/solid.rsi # starcup:resprited
   - type: RCDDeconstructable
     cost: 6
     delay: 8
@@ -1250,9 +1250,9 @@
   description: The traditional greytide defense.
   components:
   - type: Sprite
-    sprite: Structures/Walls/wood.rsi
+    sprite: _starcup/Structures/Walls/wood.rsi # starcup:resprited
   - type: Icon
-    sprite: Structures/Walls/wood.rsi
+    sprite: _starcup/Structures/Walls/wood.rsi # starcup:resprited
   - type: Construction
     graph: Barricade
     node: woodWall

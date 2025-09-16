@@ -16,7 +16,7 @@
     - type: CanBuildWindowOnTop
     - type: Sprite
       drawdepth: Walls
-      sprite: Structures/Walls/grille.rsi
+      sprite: _starcup/Structures/Walls/grille.rsi # starcup:resprited
       layers:
         - state: grille
         - state: electrified
@@ -25,7 +25,7 @@
           shader: unshaded
           visible: false
     - type: Icon
-      sprite: Structures/Walls/grille.rsi
+      sprite: _starcup/Structures/Walls/grille.rsi # starcup:resprited
       state: grille
     - type: Construction
       graph: Grille
@@ -114,10 +114,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/grille.rsi
+    sprite: _starcup/Structures/Walls/grille.rsi # starcup:resprited
     state: grille_broken
   - type: Icon
-    sprite: Structures/Walls/grille.rsi
+    sprite: _starcup/Structures/Walls/grille.rsi # starcup:resprited
     state: grille_broken
   - type: RCDDeconstructable
     cost: 6
