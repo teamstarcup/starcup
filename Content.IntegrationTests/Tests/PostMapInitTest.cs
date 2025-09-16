@@ -77,6 +77,7 @@ namespace Content.IntegrationTests.Tests
             "Train",
             "Shoukou",
             "Banana",
+            "EventGlacierVacation",
             // end starcup
         };
 

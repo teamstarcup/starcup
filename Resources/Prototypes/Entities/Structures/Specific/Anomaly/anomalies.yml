@@ -275,6 +275,24 @@
       - MobFleshClamp
       - MobFleshLover
       - FleshKudzu
+  # begin imp changes
+  - type: WallSpawnAnomaly
+    entries:
+    - settings:
+        spawnOnPulse: true
+        spawnOnStabilityChanged: true
+        spawnOnSeverityChanged: true
+        minAmount: 3
+        maxAmount: 7
+        maxRange: 4
+      wall: WallMeat
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 10
+        maxAmount: 30
+        maxRange: 10
+      wall: WallMeat
+  # end imp changes
 
 - type: entity
   id: AnomalyBluespace
@@ -380,6 +398,24 @@
     damage:
       types:
         Cold: 10
+  # begin imp changes
+  - type: WallSpawnAnomaly
+    entries:
+    - settings:
+        spawnOnPulse: true
+        spawnOnStabilityChanged: true
+        spawnOnSeverityChanged: true
+        minAmount: 3
+        maxAmount: 7
+        maxRange: 4
+      wall: WallIce
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 10
+        maxAmount: 30
+        maxRange: 10
+      wall: WallIce
+  # end imp changes
 
 - type: entity
   id: AnomalyRockBase
@@ -420,6 +456,24 @@
         maxAmount: 50
         maxRange: 12
       floor: FloorAsteroidTile
+  # begin imp changes
+  - type: WallSpawnAnomaly
+    entries:
+    - settings:
+        spawnOnPulse: true
+        spawnOnStabilityChanged: true
+        spawnOnSeverityChanged: true
+        minAmount: 3
+        maxAmount: 7
+        maxRange: 4
+      wall: AsteroidRock
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 10
+        maxAmount: 30
+        maxRange: 10
+      wall: AsteroidRock
+  # end imp changes
 
 - type: entity
   id: AnomalyRockUranium
