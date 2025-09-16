@@ -1,5 +1,6 @@
 - type: entity
-  name: sharkminnow blue
+  name: sharkminnow
+  suffix: blue
   parent: MobShark
   id: MobSharkBlue
   description: A dangerous shark from the blackness of endless space, who loves to drink blood.
@@ -15,6 +16,7 @@
 
 - type: entity
   name: sharkminnow
+  suffix: brown
   parent: MobShark
   id: MobSharkBrown
   description: A dangerous shark from the blackness of endless space, who loves to drink blood.
@@ -29,35 +31,20 @@
         shader: unshaded
 
 - type: entity
-  name: laser sharkminnow
+  name: sharkminnow
+  suffix: green
   parent: MobShark
-  id: MobSharkLaser
-  description: The execution method of choice for the sophisticated space villain.
+  id: MobSharkGreen
+  description: A dangerous shark from the blackness of endless space, who loves to drink blood.
   components:
-    - type: Sprite
-      sprite: _starcup/Mobs/Aliens/Carps/Sharkminnows/sharkminnowlaser.rsi
-      layers:
-      - map: [ "enum.DamageStateVisualLayers.Base" ]
-        state: alive
-      - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
-        state: mouth
-        shader: unshaded
-    - type: HitscanBatteryAmmoProvider
-      proto: RedLightLaser
-      fireCost: 50
-    - type: BatterySelfRecharger
-      autoRecharge: true
-      autoRechargeRate: 50
-    - type: Battery
-      maxCharge: 1000
-      startingCharge: 1000
-    - type: Gun
-      fireRate: 1
-      useKey: false
-      selectedMode: SemiAuto
-      availableModes:
-        - SemiAuto
-      soundGunshot: /Audio/Weapons/Guns/Gunshots/laser_cannon.oggç
+  - type: Sprite
+    sprite: _starcup/Mobs/Aliens/Carps/Sharkminnows/sharkminnowgreen.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: alive
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: mouth
+      shader: unshaded
 
 - type: entity
   name: shelled sharkminnow
@@ -77,9 +64,16 @@
       thresholds:
         0: Alive
         185: Dead
+    - type: Butcherable
+      spawned:
+      - id: FoodMeatFish
+        amount: 6
+      - id: MaterialToothSharkminnow1
+        amount: 3
 
 - type: entity
   name: shelled sharkminnow
+  suffix: blue
   parent: MobSharkShelled
   id: MobSharkShelledBlue
   components:
@@ -94,6 +88,7 @@
 
 - type: entity
   name: shelled sharkminnow
+  suffix: brown
   parent: MobSharkShelled
   id: MobSharkShelledBrown
   components:
@@ -105,6 +100,51 @@
       - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
         state: mouth
         shader: unshaded
+
+- type: entity
+  name: shelled sharkminnow
+  suffix: green
+  parent: MobSharkShelled
+  id: MobSharkShelledGreen
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Aliens/Carps/Sharkminnows/sharkminnowshelledgreen.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: alive
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: mouth
+      shader: unshaded
+
+- type: entity
+  name: vampire sharkminnow
+  parent: MobShark
+  id: MobSharkVampire
+  description: A terrifying shark from the blackness of endless space, with wicked long fangs.
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Aliens/Carps/Sharkminnows/sharkminnowvampire.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: alive
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: mouth
+      shader: unshaded
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      115: Dead
+      - type: MeleeWeapon
+        damage:
+          types:
+            Slash: 10
+            Bloodloss: 7
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatFish
+      amount: 4
+    - id: MaterialToothSharkminnow1
+      amount: 5
 
 - type: entity
   name: abyssal sharkminnow
@@ -129,26 +169,43 @@
         types:
           Slash: 12
           Bloodloss: 5
+    - type: Butcherable
+      spawned:
+      - id: FoodMeatAbyssalFish
+        amount: 4
+      - id: MaterialToothSharkminnow1
+        amount: 5
 
 - type: entity
-  name: jeliroid
+  name: laser sharkminnow
   parent: MobShark
-  id: MobJeliroid
-  description: A dangerous monster from deep space. Its tentacles are secrete an extremely caustic mucuous.
+  id: MobSharkLaser
+  description: The execution method of choice for the sophisticated space villain.
   components:
-    - type: Sprite
-      sprite: _starcup/Mobs/Aliens/jeliroid.rsi
-      layers:
-      - map: [ "enum.DamageStateVisualLayers.Base" ]
-        state: alive
-      - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
-        state: mouth
-        shader: unshaded
-    - type: MobThresholds
-      thresholds:
-        0: Alive
-        120: Dead
-    - type: MeleeWeapon
-      damage:
-        types:
-          Caustic: 10
+  - type: Sprite
+    sprite: _starcup/Mobs/Aliens/Carps/Sharkminnows/sharkminnowlaser.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: alive
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: mouth
+      shader: unshaded
+  - type: HitscanBatteryAmmoProvider
+    proto: RedLightLaser
+    fireCost: 50
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 50
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: Gun
+    fireRate: 1
+    useKey: false
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: HTN
+    rootTask:
+      task: SimpleRangedHostileCompound
