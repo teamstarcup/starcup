@@ -14,8 +14,8 @@ using Content.Shared.Chat;
 using Content.Shared.Radio.Components;
 using Content.Shared.UserInterface; // Nuclear-14
 using Content.Shared._NC.Radio; // Nuclear-14
-using Robust.Server.GameObjects;
-using Robust.Shared.Network;
+using Robust.Server.GameObjects; // Nuclear-14
+using Robust.Shared.Network; // Nuclear-14
 using Robust.Shared.Player; // Nuclear-14
 using Robust.Shared.Prototypes;
 
@@ -32,15 +32,15 @@ public sealed class RadioDeviceSystem : EntitySystem
     [Dependency] private readonly RadioSystem _radio = default!;
     [Dependency] private readonly InteractionSystem _interaction = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly UserInterfaceSystem _ui = default!;
-    [Dependency] private readonly INetManager _netMan = default!;
+    [Dependency] private readonly UserInterfaceSystem _ui = default!;  // NF14
+    [Dependency] private readonly INetManager _netMan = default!;  // NF14
 
     // Used to prevent a shitter from using a bunch of radios to spam chat.
     private HashSet<(string, EntityUid, RadioChannelPrototype)> _recentlySent = new();
 
     // Frontier: minimum, maximum radio frequencies
-    private const int MinRadioFrequency = 1000;
-    private const int MaxRadioFrequency = 3000;
+    private const int MinRadioFrequency = 1;  // starcup: 1000 -> 1
+    private const int MaxRadioFrequency = 3;  // starcup: 3000 -> 3
 
     public override void Initialize()
     {
@@ -61,10 +61,12 @@ public sealed class RadioDeviceSystem : EntitySystem
         SubscribeLocalEvent<IntercomComponent, ToggleIntercomSpeakerMessage>(OnToggleIntercomSpeaker);
         SubscribeLocalEvent<IntercomComponent, SelectIntercomChannelMessage>(OnSelectIntercomChannel);
 
+        // begin Frontier
         SubscribeLocalEvent<RadioMicrophoneComponent, BeforeActivatableUIOpenEvent>(OnBeforeHandheldRadioUiOpen);
         SubscribeLocalEvent<RadioMicrophoneComponent, ToggleHandheldRadioMicMessage>(OnToggleHandheldRadioMic);
         SubscribeLocalEvent<RadioMicrophoneComponent, ToggleHandheldRadioSpeakerMessage>(OnToggleHandheldRadioSpeaker);
         SubscribeLocalEvent<RadioMicrophoneComponent, SelectHandheldRadioFrequencyMessage>(OnChangeHandheldRadioFrequency);
+        // end Frontier
 
         SubscribeLocalEvent<IntercomComponent, MapInitEvent>(OnMapInit); // Frontier
     }
@@ -197,14 +199,16 @@ public sealed class RadioDeviceSystem : EntitySystem
 
         using (args.PushGroup(nameof(RadioMicrophoneComponent)))
         {
+            // begin Frontier
             args.PushMarkup(Loc.GetString(
-                "handheld-radio-component-on-examine",
+                "starcup-handheld-radio-component-on-examine", // starcup
                 ("frequency", component.Frequency),
                 ("color", proto.Color.ToHex())));
             args.PushMarkup(Loc.GetString(
-                "handheld-radio-component-channel-examine",
+                "starcup-handheld-radio-component-channel-examine", // starcup
                 ("channel", proto.LocalizedName),
                 ("color", proto.Color.ToHex())));
+            // end Frontier
         }
     }
 
