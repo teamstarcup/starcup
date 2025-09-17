@@ -39,6 +39,21 @@
   - type: Wires
     boardName: wires-board-name-barsign
     layoutId: BarSign
+  # begin starcup: bar signs emit light
+  - type: LitOnPowered
+  - type: PointLight
+#    color: "#882a55"
+    radius: 10
+    energy: 6
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    offset: "0, 0.3"
+    castShadows: false
+  # end starcup
+  - type: PlacementReplacement  # starcup
+    key: light
+
 
 - type: entity
   parent: BaseBarSign

@@ -91,6 +91,10 @@
     guides:
     - AtmosphericNetworkMonitor
     - DeviceMonitoringAndControl
+  # begin starcup
+  - type: PointLight
+    color: "#6db6c3"
+  # end starcup
 
 - type: entity
   parent: BaseComputer
@@ -111,8 +115,6 @@
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
   - type: PointLight
-    radius: 2.4 # starcup
-    energy: 1.6
     color: "#007500"
 
 - type: entity
@@ -135,8 +137,6 @@
   - type: WorldLoader
     radius: 256
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#43ccb5"
   - type: ItemSlots
     slots:
@@ -205,8 +205,6 @@
   - type: WorldLoader
     radius: 1536
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#c94242"
   - type: Computer
     board: SyndicateShuttleConsoleCircuitboard
@@ -235,8 +233,6 @@
   - type: RadarConsole
     maxRange: 256
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#43ccb5"
   - type: Computer
     board: CargoShuttleConsoleCircuitboard
@@ -317,8 +313,6 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#c9c042"
   - type: Computer
     board: PowerComputerCircuitboard
@@ -359,8 +353,6 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#1f8c28"
   - type: Computer
     board: MedicalRecordsComputerCircuitboard
@@ -409,8 +401,6 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#806666"
   - type: Computer
     board: CriminalRecordsComputerCircuitboard
@@ -442,8 +432,6 @@
     key: enum.CharacterRecordConsoleKey.Key
   # End CD - Character Records
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#1f8c28"
   - type: Computer
     board: StationRecordsComputerCircuitboard
@@ -470,8 +458,8 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
+    radius: 4.4  # starcup
+    energy: 0.4  # starcup
     color: "#4d8033"
   - type: Computer
     board: CrewMonitoringComputerCircuitboard
@@ -531,8 +519,6 @@
   - type: AccessReader
     access: [["Research"]]
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#b53ca1"
   - type: GuideHelp
     guides:
@@ -580,8 +566,6 @@
   - type: Computer
     board: AnalysisComputerCircuitboard
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#b53ca1"
   - type: GuideHelp
     guides:
@@ -640,8 +624,6 @@
   - type: Computer
     board: IDComputerCircuitboard
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#3c5eb5"
   - type: Tag
     tags:
@@ -664,8 +646,6 @@
   - type: Computer
     board: BodyScannerComputerCircuitboard
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#1f8c28"
 
 - type: entity
@@ -704,8 +684,6 @@
   - type: Computer
     board: CommsComputerCircuitboard
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#3c5eb5"
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -741,8 +719,6 @@
   - type: Computer
     board: SyndicateCommsComputerCircuitboard
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#f71713"
 
 - type: entity
@@ -775,8 +751,6 @@
   - type: Computer
     board: WizardCommsComputerCircuitboard
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#F317F3"
 
 - type: entity
@@ -807,8 +781,6 @@
   - type: Computer
     board: CentcommCommsComputerCircuitboard
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#00bf00"
 
 - type: entity
@@ -841,8 +813,6 @@
   - type: Computer
     board: SolarControlComputerCircuitboard
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#e6e227"
   - type: GuideHelp
     guides:
@@ -879,8 +849,6 @@
   - type: Computer
     board: RadarConsoleCircuitboard
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#e6e227"
 
 - type: entity
@@ -917,8 +885,6 @@
   - type: Computer
     board: CargoRequestComputerCircuitboard
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#b89f25"
   - type: AccessReader
     access: [["Cargo"]]
@@ -1131,8 +1097,6 @@
   - type: Computer
     board: CargoBountyComputerCircuitboard
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#b89f25"
   - type: AccessReader
     access: [["Quartermaster"]]
@@ -1174,8 +1138,8 @@
   - type: Computer
     board: FundingAllocationComputerCircuitboard
   - type: PointLight
-    radius: 1.5
-    energy: 1.6
+#    radius: 1.5  # starcup
+#    energy: 1.6  # starcup
     color: "#3c5eb5"
 
 - type: entity
@@ -1205,8 +1169,6 @@
   - type: Computer
     board: CloningConsoleComputerCircuitboard
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#1f8c28"
   - type: DeviceLinkSource
     range: 4
@@ -1312,8 +1274,6 @@
     - type: Computer
       board: SalvageExpeditionsComputerCircuitboard
     - type: PointLight
-      radius: 2.4 #imp
-      energy: 1.6
       color: "#b89f25"
     - type: AccessReader
       access: [["Salvage"]]
@@ -1435,8 +1395,6 @@
   - type: Computer
     board: CargoSaleComputerCircuitboard
   - type: PointLight
-    radius: 2.4 #imp
-    energy: 1.6
     color: "#b89f25"
   - type: GuideHelp
     guides:
@@ -1503,8 +1461,6 @@
         - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
           state: generic_panel_open
     - type: PointLight
-      radius: 2.4 #imp
-      energy: 1.6
       color: "#43ccb5"
     - type: Computer
       board: SensorConsoleCircuitboard
