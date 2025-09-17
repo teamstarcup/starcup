@@ -7,7 +7,10 @@
   - type: TelecomExempt
   - type: RadioMicrophone
     broadcastChannel: Handheld
+    toggleOnInteract: false # Frontier
+    frequency: 1 # Frontier # starcup: 1330 -> 11
   - type: RadioSpeaker
+    toggleOnInteract: false # Frontier
     channels:
     - Handheld
   - type: Speech
@@ -24,6 +27,14 @@
   - type: Tag
     tags:
     - Radio
+  # begin Frontier
+  - type: ActivatableUI
+    key: enum.HandheldRadioUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.HandheldRadioUiKey.Key:
+        type: HandheldRadioBoundUserInterface
+  # begin Frontier
 
 - type: entity
   name: security radio
