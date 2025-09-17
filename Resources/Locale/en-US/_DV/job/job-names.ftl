@@ -32,6 +32,8 @@ job-alt-title-hygiene-technician = Hygiene Technician
 job-alt-title-psychiatrist = Psychiatrist
 job-alt-title-social-worker = Social Worker
 job-alt-title-therapist = Therapist
+# starcup - counselor
+job-alt-title-counselor = Counselor
 
 # Role timers
 JobCourier = Courier
