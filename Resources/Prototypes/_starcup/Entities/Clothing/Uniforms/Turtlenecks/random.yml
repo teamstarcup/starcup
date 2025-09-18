@@ -1,0 +1,59 @@
+
+- type: entity
+  id: ClothingRandomSpawnerTurtleneckJumpsuit
+  name: random turtleneck jumpsuit
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Uniforms/Jumpsuit/color_turtle.rsi
+    layers:
+    - state: icon
+    - state: trousers-icon
+  - type: RandomSpawner
+    offset: 0
+    prototypes:
+    - ClothingUniformTurtleneckColorWhite
+    - ClothingUniformTurtleneckColorGrey
+    - ClothingUniformTurtleneckColorBlack
+    - ClothingUniformTurtleneckColorBlue
+    - ClothingUniformTurtleneckColorDarkBlue
+    - ClothingUniformTurtleneckColorTeal
+    - ClothingUniformTurtleneckColorGreen
+    - ClothingUniformTurtleneckColorDarkGreen
+    - ClothingUniformTurtleneckColorOrange
+    - ClothingUniformTurtleneckColorPink
+    - ClothingUniformTurtleneckColorRed
+    - ClothingUniformTurtleneckColorYellow
+    - ClothingUniformTurtleneckColorPurple
+    - ClothingUniformTurtleneckColorLightBrown
+    - ClothingUniformTurtleneckColorBrown
+    - ClothingUniformTurtleneckColorMaroon
+
+- type: entity
+  id: ClothingRandomSpawnerTurtleneckJumpskirt
+  parent: MarkerBase
+  name: random turtleneck jumpskirt
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Uniforms/Jumpskirt/color_turtle.rsi
+    layers:
+    - state: icon
+    - state: skirt-icon
+  - type: RandomSpawner
+    offset: 0
+    prototypes:
+    - ClothingUniformTurtleneckSkirtColorWhite
+    - ClothingUniformTurtleneckSkirtColorGrey
+    - ClothingUniformTurtleneckSkirtColorBlack
+    - ClothingUniformTurtleneckSkirtColorBlue
+    - ClothingUniformTurtleneckSkirtColorDarkBlue
+    - ClothingUniformTurtleneckSkirtColorTeal
+    - ClothingUniformTurtleneckSkirtColorGreen
+    - ClothingUniformTurtleneckSkirtColorDarkGreen
+    - ClothingUniformTurtleneckSkirtColorOrange
+    - ClothingUniformTurtleneckSkirtColorPink
+    - ClothingUniformTurtleneckSkirtColorRed
+    - ClothingUniformTurtleneckSkirtColorYellow
+    - ClothingUniformTurtleneckSkirtColorPurple
+    - ClothingUniformTurtleneckSkirtColorLightBrown
+    - ClothingUniformTurtleneckSkirtColorBrown
+    - ClothingUniformTurtleneckSkirtColorMaroon

@@ -32,6 +32,9 @@ job-alt-title-nurse-practitioner = Nurse Practitioner
 # Passenger
 job-alt-title-volunteer = Volunteer
 
+#  Psychologist
+job-alt-title-counselor = Counselor
+
 # Roboticist
 job-alt-title-toymaker = Toymaker
 job-alt-title-neuroroboticist = Neuroroboticist

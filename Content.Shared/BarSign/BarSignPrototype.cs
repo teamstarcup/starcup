@@ -20,4 +20,9 @@ public sealed partial class BarSignPrototype : IPrototype
 
     [DataField]
     public bool Hidden { get; private set; }
+
+    // begin starcup: bar signs emit light
+    [DataField]
+    public Color Color { get; private set; }
+    // end starcup
 }
