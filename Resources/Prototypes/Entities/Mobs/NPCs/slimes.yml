@@ -131,7 +131,12 @@
   - type: Speech
     speechVerb: Slime
     speechSounds: Slime
-    allowedEmotes: ['Squish']
+    allowedEmotes: ['Squish', 'SlimeFizz'] # starcup: added SlimeFizz
+  - type: Vocal
+    sounds:
+      Male: MaleSlime
+      Female: FemaleSlime
+      Unsexed: MaleSlime
   - type: TypingIndicator
     proto: slime
   - type: NpcFactionMember
