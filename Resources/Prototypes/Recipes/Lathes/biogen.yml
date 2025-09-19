@@ -1,23 +1,20 @@
-# begin starcup: monkeys are not for food
-# - type: latheRecipe
-#   id: BioGenMonkeyCube
-#   result: MonkeyCube
-#   categories:
-#   - Food
-#   completetime: 3
-#   materials:
-#     Biomass: 70
-# end starcup
+- type: latheRecipe
+  id: BioGenMonkeyCube
+  result: MonkeyCube
+  categories:
+  - General # starcup: monkeys are not food
+  completetime: 3
+  materials:
+    Biomass: 70
 
-# starcup: remove non-sapient kobolds
-#- type: latheRecipe
-#  id: BioGenKoboldCube
-#  result: KoboldCube
-#  categories:
-#  - Food
-#  completetime: 3
-#  materials:
-#    Biomass: 70
+- type: latheRecipe
+  id: BioGenKoboldCube
+  result: KoboldCube
+  categories:
+  - Food
+  completetime: 3
+  materials:
+    Biomass: 70
 
 - type: latheRecipe
   id: BioGenMaterialCloth1
