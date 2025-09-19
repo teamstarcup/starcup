@@ -1,7 +1,7 @@
 # starcup
 [![Static Badge](https://img.shields.io/badge/nightly-releases?label=releases)](https://builds.starcup.cc/fork/starcup)
 
-[Forum](https://forum.starcup.cc/) | [Wiki](https://wiki.starcup.cc/)
+[Forum](https://forum.starcup.cc/) | [Wiki](https://wiki.starcup.cc/) | [Discord](https://discord.gg/5pC525RYbw)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F31BQOU8)
 
