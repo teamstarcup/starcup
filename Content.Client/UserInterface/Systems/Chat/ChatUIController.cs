@@ -547,8 +547,9 @@ public sealed partial class ChatUIController : UIController
             }
         }
 
-        // Only ghosts and admins can send / see deadchat.
-        if (_admin.HasFlag(AdminFlags.Admin) || _ghost is {IsGhost: true})
+        // L5 - Admins in-game can't see dead chat since they can stay adminned while playing. This gives ghosts a channel suitable for spoilers.
+        //if (_admin.HasFlag(AdminFlags.Admin) || _ghost is {IsGhost: true})
+        if (_ghost is {IsGhost: true})
         {
             FilterableChannels |= ChatChannel.Dead;
             CanSendChannels |= ChatSelectChannel.Dead;

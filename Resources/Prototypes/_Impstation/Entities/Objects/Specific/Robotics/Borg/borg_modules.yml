@@ -1,0 +1,16 @@
+- type: entity
+  id: BorgModuleArtistic
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  name: artistic borg module
+  components:
+  - type: Sprite
+    layers:
+    - state: generic
+    - state: icon-pen
+  - type: ItemBorgModule
+    items:
+    - CrayonMagic # starcup: replace CrayonRainbowInfinite with magic crayon
+    - SprayPainter
+    - Pen
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: service-module }

@@ -1,7 +1,9 @@
+using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
 using Content.Server.Radio.Components; // starcup
 using Content.Server.Speech.Components;
 using Content.Shared._DV.AACTablet;
+using Content.Shared.Database;
 using Content.Shared.IdentityManagement;
 using Robust.Server.GameObjects; // starcup
 using Robust.Shared.Prototypes;
@@ -12,6 +14,7 @@ namespace Content.Server._DV.AACTablet;
 public sealed partial class AACTabletSystem : EntitySystem // starcup: made partial
 {
     [Dependency] private readonly ChatSystem _chat = default!;
+    [Dependency] private readonly IAdminLogManager _adminLogger = default!; // L5
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly UserInterfaceSystem _userInterface = default!; // starcup
@@ -64,11 +67,17 @@ public sealed partial class AACTabletSystem : EntitySystem // starcup: made part
         transmitter.Channels = GetAvailableChannels(message.Actor);
         // end starcup
 
+        // L5 — save the message for logging
+        var messageToSend = message.Prefix + string.Join(" ", _localisedPhrases);  // starcup: prefix
+
         _chat.TrySendInGameICMessage(ent,
-            message.Prefix + string.Join(" ", _localisedPhrases), // starcup: prefix
+            messageToSend, // L5
             InGameICChatType.Speak,
             hideChat: false,
             nameOverride: speakerName);
+
+        // L5 — log AAC chat message
+        _adminLogger.Add(LogType.Chat, LogImpact.Low, $"AAC tablet message from {ToPrettyString(message.Actor):user}: {messageToSend}");
 
         var curTime = _timing.CurTime;
         ent.Comp.NextPhrase = curTime + ent.Comp.Cooldown;

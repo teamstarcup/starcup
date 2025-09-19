@@ -1,0 +1,59 @@
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobChickenGeneric
+  name: Generic Chicken Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: RandomSpawner
+    prototypes:
+    - MobChicken
+    - MobChicken1
+    - MobChicken2
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobChicken
+  name: Chicken Spawner
+  suffix: Black
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: chicken-0
+      sprite: Mobs/Animals/chicken.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobChicken
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobChicken1
+  name: Chicken Spawner
+  suffix: Brown
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: chicken-1
+      sprite: Mobs/Animals/chicken.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobChicken1
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobChicken2
+  name: Chicken Spawner
+  suffix: White
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: chicken-2
+      sprite: Mobs/Animals/chicken.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobChicken2
