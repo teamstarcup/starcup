@@ -1,0 +1,14 @@
+
+- type: entity
+  id: AirAlarmVoxAutoLink
+  parent: AirAlarmVox
+  suffix: Autolink, Vox Atmosphere, auto mode disabled
+  components:
+  - type: AlarmAutoLink
+    autoLinkPrototypes:
+    - GasVentScrubberVox
+    - GasVentPumpVox
+    - AirSensorVox
+    - Firelock
+    - FirelockGlass
+    - FirelockEdge
