@@ -2,7 +2,7 @@
   name: space carp
   id: BaseMobCarp
   parent: [ SimpleSpaceMobBase, FlyingMobBase, MobCombat ]
-  description: It's a space carp.
+  description: A ravenous, dangerous fish from outer space. # expanded carp & sharkminnows
   abstract: true
   components:
     - type: InputMover
@@ -56,7 +56,8 @@
     - type: Butcherable
       spawned:
         - id: FoodMeatFish
-          amount: 2
+          amount: !type:RangeNumberSelector # expanded carp & sharkminnows
+            range: 1, 3
         - id: MaterialToothSpaceCarp1
           amount: 1
           maxAmount: 4
@@ -240,7 +241,8 @@
     - type: Butcherable
       spawned:
         - id: FoodMeatFish
-          amount: 4
+          amount: !type:RangeNumberSelector # expanded carp & sharkminnows
+            range: 3, 5
         - id: MaterialToothSharkminnow1
           amount: 3
     - type: MeleeWeapon
