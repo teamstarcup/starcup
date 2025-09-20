@@ -423,9 +423,24 @@
       children:
       - !type:AllSelector
         children:
-        - id: MobSharkSalvage
-        - id: MobCarpSalvage
-          amount: 2
+        - !type:GroupSelector # expanded carp & sharkminnows
+          children:
+          - id: MobSharkSalvage
+          - id: MobSharkSalvageBlue
+          - id: MobSharkSalvageBrown
+          - id: MobSharkSalvageGreen
+          - id: MobSharkSalvageShelled
+          - id: MobSharkSalvageShelledBlue
+          - id: MobSharkSalvageShelledBrown
+          - id: MobSharkSalvageShelledGreen
+        - !type:GroupSelector # expanded carp & sharkminnows
+          children:
+          - id: MobCarpSalvage
+          - id: MobCarpSalvageSplitfin
+          - id: MobCarpSalvageVampire
+          - id: MobCarpSalvageQueen
+          rolls: !type:RangeNumberSelector
+            range: 1, 3
         - !type:NestedSelector
           rolls: 1, 3
           tableId: SalvageTreasureSpawnerValuable
@@ -520,9 +535,26 @@
   - type: EntityTableSpawner
     table: !type:AllSelector
       children:
-      - id: MobSharkSalvage
-      - id: MobCarpSalvage
-        amount: 3
+      - !type:GroupSelector # expanded carp & sharkminnows
+        children:
+        - id: MobSharkSalvage
+        - id: MobSharkSalvageBlue
+        - id: MobSharkSalvageBrown
+        - id: MobSharkSalvageGreen
+        - id: MobSharkSalvageShelled
+        - id: MobSharkSalvageShelledBlue
+        - id: MobSharkSalvageShelledBrown
+        - id: MobSharkSalvageShelledGreen
+        - id: MobSharkSalvageAbyssal
+        - id: MobSharkSalvageVampire
+      - !type:GroupSelector # expanded carp & sharkminnows
+        children:
+        - id: MobCarpSalvage
+        - id: MobCarpSalvageSplitfin
+        - id: MobCarpSalvageVampire
+        - id: MobCarpSalvageQueen
+        rolls: !type:RangeNumberSelector
+          range: 3, 4
 
 - type: entity
   parent: MarkerBase
