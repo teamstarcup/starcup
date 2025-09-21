@@ -1,0 +1,79 @@
+- type: entity
+  name: Handheld Fax Machine
+  parent: BaseHandheldComputer
+  id: HandHeldFax
+  description: A hand-held fax machine.
+  components:
+  - type: Item
+    sprite: _starcup/Objects/Tools/handheld_fax.rsi
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/handheld_fax.rsi
+    state: icon
+    layers:
+      - state: icon
+      - state: screen
+        shader: unshaded
+        visible: false
+        map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+  - type: FaxMachine
+    paperSlot:
+      insertSound: /Audio/Machines/scanning.ogg
+      ejectSound: /Audio/Machines/tray_eject.ogg
+      whitelist:
+        components:
+          - FaxableObject #used to be PaperComponent - brainfood1183
+      blacklist:
+        components:
+          - CargoSlip
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerCellSlotVisuals.Enabled:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+  - type: PowerCellDraw
+    drawRate: 1.5
+  - type: ToggleCellDraw
+  - type: ActivatableUI
+    key: enum.FaxUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.FaxUiKey.Key:
+        type: FaxBoundUi
+  - type: ApcPowerReceiver
+    needsPower: false
+  - type: ContainerContainer
+    containers:
+      Paper: !type:ContainerSlot
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: Fax
+    transmitFrequencyId: Fax
+  - type: RequireProjectileTarget
+
+- type: entity
+  id: HandHeldFaxEmpty
+  parent: HandHeldFax
+  suffix: Empty
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+  - type: ContainerContainer
+    containers:
+      Paper: !type:ContainerSlot
+
+- type: entity
+  id: HandHeldFaxBorg
+  parent: HandHeldFax
+  suffix: Borg
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMicroreactor
+        disableEject: true
+        swap: false
