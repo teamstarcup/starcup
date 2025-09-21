@@ -56,8 +56,7 @@
     - type: Butcherable
       spawned:
         - id: FoodMeatFish
-          amount: !type:RangeNumberSelector # expanded carp & sharkminnows
-            range: 1, 3
+          amount: 2
         - id: MaterialToothSpaceCarp1
           amount: 1
           maxAmount: 4
@@ -241,8 +240,7 @@
     - type: Butcherable
       spawned:
         - id: FoodMeatFish
-          amount: !type:RangeNumberSelector # expanded carp & sharkminnows
-            range: 3, 5
+          amount: 4
         - id: MaterialToothSharkminnow1
           amount: 3
     - type: MeleeWeapon

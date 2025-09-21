@@ -20,8 +20,7 @@
   - type: Butcherable
     spawned:
     - id: FoodMeatBadFish
-      amount: !type:RangeNumberSelector
-        range: 1, 2
+      amount: 2
     - id: MaterialToothSpaceCarp1
       amount: 1
       maxAmount: 4
@@ -60,8 +59,7 @@
   - type: Butcherable
     spawned:
     - id: FoodMeatFish
-      amount: !type:RangeNumberSelector
-        range: 3, 5
+      amount: 5
 
 - type: entity
   suffix: blue
@@ -103,8 +101,7 @@
     - type: Butcherable
       spawned:
       - id: FoodMeatFish
-        amount: !type:RangeNumberSelector
-          range: 4, 6
+        amount: 6
       - id: MaterialToothSharkminnow1
         amount: 3
 
@@ -166,8 +163,7 @@
   - type: Butcherable
     spawned:
     - id: FoodMeatAbyssalFish
-      amount: !type:RangeNumberSelector
-        range: 2, 3
+      amount: 3
     - id: MaterialToothSharkminnow1
       amount: 5
 
@@ -192,8 +188,7 @@
     - type: Butcherable
       spawned:
       - id: FoodMeatAbyssalFish
-        amount: !type:RangeNumberSelector
-          range: 5, 6
+        amount: 6
       - id: MaterialToothSharkminnow1
         amount: 5
 
@@ -249,8 +244,7 @@
   - type: Butcherable
     spawned:
     - id: FoodMeatFish
-      amount: !type:RangeNumberSelector
-        range: 5, 6
+      amount: 6
     - id: MaterialToothSharkminnow1
       amount: 6
 
@@ -276,11 +270,9 @@
   - type: Butcherable
     spawned:
     - id: FoodMeatAbyssalFish
-      amount: !type:RangeNumberSelector
-        range: 10, 12
+      amount: 12
     - id: MaterialToothSharkminnow1
-      amount: !type:RangeNumberSelector
-        range: 10, 12
+      amount: 12
 
 - type: entity
   parent: MobCarpSplitfin
