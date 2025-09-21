@@ -1,0 +1,125 @@
+- type: entity
+  name: harpoon
+  parent: Spear
+  id: SpearHarpoon
+  description: A hooked spear that leaves loose prey bleeding.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/Harpoons/harpoon.rsi
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Piercing: 10
+        Bloodloss: 2
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 12
+        Bloodloss: 3
+
+- type: entity
+  name: reinforced harpoon
+  parent: SpearHarpoon
+  id: SpearHarpoonReinforced
+  description: A spear with a reinforced glass shard as a hook.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/Harpoons/reinforced_harpoon.rsi
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Piercing: 12
+        Bloodloss: 3
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 14
+        Bloodloss: 4
+  - type: Construction
+    graph: SpearHarpoonReinforced
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-harpoon-reinforced
+  # end starcup
+
+- type: entity
+  name: plasma harpoon
+  parent: SpearHarpoon
+  id: SpearHarpoonPlasma
+  description: A harpoon with a plasma shard as a hook.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/Harpoons/plasma_harpoon.rsi
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Piercing: 14
+        Bloodloss: 4
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 16
+        Bloodloss: 5
+  - type: Construction
+    graph: SpearPlasma
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-harpoon-plasma
+  # end starcup
+
+- type: entity
+  name: uranium harpoon
+  parent: SpearHarpoon
+  id: SpearHarpoonUranium
+  description: A harpoon with a uranium shard as a hook.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/Harpoons/uranium_harpoon.rsi
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Piercing: 6
+        Bloodloss: 4
+        Radiation: 8
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 7
+        Bloodloss: 5
+        Radiation: 9
+  - type: Construction
+    graph: SpearUranium
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-harpoon-uranium
+  # end starcup
+
+- type: entity
+  name: sharkminnow tooth harpoon
+  parent: SpearHarpoon
+  id: SpearHarpoonSharkMinnow
+  description: A harpoon with sharkminnow tooth as a hook.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/Harpoons/sharkminnow_harpoon.rsi
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Piercing: 14
+        Bloodloss: 4
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 18
+        Bloodloss: 7
+  - type: Construction
+    graph: SpearSharkMinnow
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-harpoon-sharkminnow
+  # end starcup

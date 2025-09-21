@@ -1,0 +1,127 @@
+- type: constructionGraph
+  id: SpearHarpoon
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: spearharpoon
+          completed:
+          - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
+            message: "Construction"
+            impact: High
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 2
+            - material: Cable
+              amount: 3
+              doAfter: 1
+            - tag: GlassShard
+              name: construction-graph-tag-glass-shard
+              icon:
+                sprite: Objects/Materials/Shards/shard.rsi
+                state: shard1
+              doAfter: 1
+    - node: spearharpoon
+      entity: SpearHarpoon
+
+- type: constructionGraph
+  id: SpearHarpoonReinforced
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: spearharpoon
+          completed:
+          - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
+            message: "Construction"
+            impact: High
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 2
+            - material: Cable
+              amount: 3
+              doAfter: 1
+            - tag: ReinforcedGlassShard
+              name: construction-graph-tag-reinforced-glass-shard
+              icon:
+                sprite: Objects/Materials/Shards/shard.rsi
+                state: shard1
+              doAfter: 1
+    - node: spearharpoon
+      entity: SpearHarpoonReinforced
+
+- type: constructionGraph
+  id: SpearHarpoonPlasma
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: spearharpoon
+          completed:
+          - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
+            message: "Construction"
+            impact: High
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 2
+            - material: Cable
+              amount: 3
+              doAfter: 1
+            - tag: PlasmaGlassShard
+              name: construction-graph-tag-plasma-glass-shard
+              icon:
+                sprite: Objects/Materials/Shards/shard.rsi
+                state: shard1
+              doAfter: 1
+    - node: spearharpoon
+      entity: SpearHarpoonPlasma
+
+- type: constructionGraph
+  id: SpearHarpoonUranium
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: spearharpoon
+          completed:
+          - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
+            message: "Construction"
+            impact: High
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 2
+            - material: Cable
+              amount: 3
+              doAfter: 1
+            - tag: UraniumGlassShard
+              name: construction-graph-tag-uranium-glass-shard
+              icon:
+                sprite: Objects/Materials/Shards/shard.rsi
+                state: shard1
+              doAfter: 1
+    - node: spearharpoon
+      entity: SpearHarpoonUranium
+
+- type: constructionGraph
+  id: SpearHarpoonSharkMinnow
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: spearharpoon
+      steps:
+      - material: MetalRod
+        amount: 2
+        doAfter: 2
+      - material: Cable
+        amount: 3
+        doAfter: 1
+      - material: SharkMinnowTooth
+        amount: 1
+        doAfter: 1
+  - node: spearharpoon
+    entity: SpearHarpoonSharkMinnow
