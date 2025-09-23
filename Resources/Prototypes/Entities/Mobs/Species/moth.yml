@@ -28,11 +28,13 @@
     allowedEmotes: ['Chitter', 'Squeak']
   - type: TypingIndicator
     proto: moth
-  - type: Butcherable
-    butcheringType: Spike
-    spawned:
-    - id: FoodMeat
-      amount: 5
+  # begin starcup: people are not food
+  # - type: Butcherable
+  #   butcheringType: Spike
+  #   spawned:
+  #   - id: FoodMeat
+  #     amount: 5
+  # end starcup
   - type: Bloodstream
     bloodReagent: InsectBlood
   - type: DamageVisuals

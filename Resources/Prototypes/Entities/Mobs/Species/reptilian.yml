@@ -24,11 +24,13 @@
   - type: Body
     prototype: Reptilian
     requiredLegs: 2
-  - type: Butcherable
-    butcheringType: Spike
-    spawned:
-    - id: FoodMeatLizard
-      amount: 5
+  # begin starcup: people are not food
+  # - type: Butcherable
+  #   butcheringType: Spike
+  #   spawned:
+  #   - id: FoodMeatLizard
+  #     amount: 5
+  # end starcup
   - type: LizardAccent
   - type: Speech
     speechSounds: Lizard
