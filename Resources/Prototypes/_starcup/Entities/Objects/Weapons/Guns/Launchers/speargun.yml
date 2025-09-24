@@ -21,6 +21,13 @@
     - state: base-unshaded
       map: [ "unshaded" ]
       visible: true
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.TetherVisualsStatus.Key:
+        unshaded:
+          True: { state: base-unshaded }
+          False: { state: base-unshaded-off }
 
 # Harpoon gun is a grappling gun that also hits mobs. Doesn't stop their movement or reel them in. Can be used to teleport the holder ot the hit mob. Unobtainable other than by admin spawn.
 - type: entity
