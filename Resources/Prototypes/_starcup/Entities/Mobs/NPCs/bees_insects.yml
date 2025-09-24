@@ -1,0 +1,390 @@
+- type: entity
+  name: passive flying insect
+  parent: [ SimpleMobBase, FlyingMobBase ]
+  id: MobFlyingInsect
+  description: Bees retaliate. These insects don't.
+  abstract: true
+  components:
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3
+    baseSprintSpeed : 7
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: 0
+      sprite: Mobs/Animals/bee.rsi
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.1
+        density: 30
+        mask:
+        - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      10: Dead
+  - type: Stamina
+    critThreshold: 10
+    animationThreshold: 1
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: 0
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: Item
+    size: Tiny
+  - type: Tag
+    tags:
+    - Trash
+  - type: Bloodstream
+    bloodReagent: InsectBlood
+    bloodMaxVolume: 0.1
+  - type: NpcFactionMember
+    factions:
+    - Bug
+  - type: ZombieImmune
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 20
+      behaviors:
+      - !type:GibBehavior
+        recursive: false
+
+- type: entity
+  name: giant flying insect
+  parent: [ SimpleMobBase, FlyingMobBase ]
+  id: MobGiantFlyingInsect
+  description: For those big buggers.
+  abstract: true
+  components:
+  - type: CombatMode
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3
+    baseSprintSpeed : 7
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: 0
+      sprite: _starcup/Mobs/Animals/giant_bee.rsi
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.30
+        density: 60
+        mask:
+        - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      35: Dead
+  - type: Stamina
+    critThreshold: 10
+    animationThreshold: 1
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: 0
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: Tag
+  - type: Bloodstream
+    bloodReagent: InsectBlood
+    bloodMaxVolume: 0.1
+  - type: NPCRetaliation
+  - type: FactionException
+  - type: NpcFactionMember
+    factions:
+    - Passive
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: ZombieImmune
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 20
+      behaviors:
+      - !type:GibBehavior
+        recursive: false
+  - type: InteractionPopup
+    successChance: 0.5
+    interactSuccessString: petting-success-generic
+    interactFailureString: petting-failure-generic
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/_starcup/Animals/Swarm/swarmpet.ogg
+
+- type: entity
+  name: bees
+  suffix: swarm
+  id: MobBeeSwarm
+  parent: MobBee
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: 0
+      sprite: _starcup/Mobs/Animals/bees.rsi
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.20
+        density: 40
+        mask:
+        - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: GroundBee
+          Quantity: 5
+      melee:
+        maxVol: 30
+  - type: SolutionRegeneration
+    solution: melee
+    generated:
+      reagents:
+      - ReagentId: Histamine
+        Quantity: 3
+  - type: MeleeChemicalInjector
+    transferAmount: 0.75
+    solution: melee
+
+- type: entity
+  name: wasps
+  suffix: swarm
+  id: MobWaspSwarm
+  description: They don't want any trouble.
+  parent: MobBeeSwarm
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: 0
+      sprite: _starcup/Mobs/Animals/wasps.rsi
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      20: Dead
+  - type: MeleeWeapon
+    soundHit:
+      collection: SwarmBuzzing
+    animation: WeaponArcSting
+    damage:
+      types:
+        Piercing: 2
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: GroundBee
+          Quantity: 5
+
+- type: entity
+  name: flies
+  suffix: swarm
+  id: MobFlySwarm
+  description: A person's trash is a fly's treasure.
+  parent: MobFlyingInsect
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Passive
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: 0
+      sprite: _starcup/Mobs/Animals/flies.rsi
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.20
+        density: 40
+        mask:
+        - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      15: Dead
+
+- type: entity
+  name: mosquitoes
+  suffix: swarm
+  id: MobMosquitoSwarm
+  description: That persistent buzzing on your ears...
+  parent: MobBeeSwarm
+  components:
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Sprite
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: 0
+      sprite: _starcup/Mobs/Animals/mosquitoes.rsi
+  - type: MeleeWeapon
+    animation: WeaponArcSting
+    soundHit:
+      collection: SwarmBuzzing
+    damage:
+      types:
+        Piercing: 1
+        Bloodloss: 1
+
+- type: entity
+  name: giant bee
+  id: MobGiantBee
+  description: A large and fluffy friend.
+  parent: MobGiantFlyingInsect
+  components:
+  - type: Sprite
+    scale: 1.1, 1.1
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: 0
+      sprite: _starcup/Mobs/Animals/giant_bee.rsi
+  - type: MeleeWeapon
+    animation: WeaponArcSting
+    soundHit:
+      collection: SwarmBuzzing
+    damage:
+      types:
+        Piercing: 4
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 30
+  - type: SolutionRegeneration
+    solution: melee
+    generated:
+      reagents:
+      - ReagentId: Histamine
+        Quantity: 3
+  - type: MeleeChemicalInjector
+    transferAmount: 0.75
+    solution: melee
+
+- type: entity
+  name: giant sand wasp
+  id: MobGiantSandwasp
+  description: A docile loner that wants no trouble.
+  parent: MobGiantBee
+  components:
+  - type: Sprite
+    scale: 0.9, 0.9
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: 0
+      sprite: _starcup/Mobs/Animals/giant_sandwasp.rsi
+
+- type: entity
+  name: giant wasp
+  suffix: hostile
+  id: MobGiantWasp
+  description: A temperamental, hostile predator.
+  parent: MobGiantBee
+  components:
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Sprite
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: 0
+      sprite: _starcup/Mobs/Animals/giant_wasp.rsi
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      35: Dead
+  - type: MeleeWeapon
+    animation: WeaponArcSting
+    soundHit:
+      collection: SwarmBuzzing
+    damage:
+      types:
+        Piercing: 5
+
+- type: entity
+  name: giant mosquito
+  id: MobGiantMosquito
+  description: A large and fluffy friend.
+  parent: MobGiantFlyingInsect
+  components:
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Sprite
+    scale: 0.8,0.8
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: 0
+      sprite: _starcup/Mobs/Animals/giant_mosquito.rsi
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      20: Dead
+  - type: MeleeWeapon
+    animation: WeaponArcSting
+    soundHit:
+      collection: SwarmBuzzing
+    damage:
+      types:
+        Piercing: 1
+        Bloodloss: 3
+
+- type: entity
+  name: beetle
+  id: MobBeetle
+  parent: MobCockroach
+  components:
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: _starcup/Mobs/Animals/beetle.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: beetle
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      2: Dead
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: beetle
+      Critical:
+        Base: beetle_dead
+      Dead:
+        Base: beetle_dead
