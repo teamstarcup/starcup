@@ -4,7 +4,7 @@
   name: plasteel harpoon
   parent: SalvageHarpoon
   id: SalvageHarpoonPlasteel
-  description: A harder, better quality harpoon.
+  description: A hardier, better quality harpoon.
   components:
   - type: Sprite
     sprite: _starcup/Objects/Weapons/Melee/Harpoons/plasteel_harpoon.rsi
@@ -18,6 +18,9 @@
     damage:
       types:
         Piercing: 18
+  - type: ExaminableClothing
+    examineText: clothing-plasteel-harpoon # starcup: examinable clothing
+
 
 - type: entity
   name: incendiary harpoon
@@ -39,6 +42,9 @@
         Piercing: 21
   - type: IgniteOnMeleeHit
     fireStacks: 1
+  - type: ExaminableClothing
+    examineText: clothing-plasma-harpoon # starcup: examinable clothing
+
 
 - type: entity
   name: uranium harpoon
@@ -60,3 +66,6 @@
       types:
         Piercing: 12
         Radiation: 9
+  - type: ExaminableClothing
+    examineText: clothing-uranium-harpoon # starcup: examinable clothing
+

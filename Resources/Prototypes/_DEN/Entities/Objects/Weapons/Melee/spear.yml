@@ -1,6 +1,6 @@
 - type: entity
   name: salvage harpoon
-  parent: BaseItem
+  parent: [BaseItem, BaseExaminableClothing]
   id: SalvageHarpoon
   description: A spear made of refined steel produced for salvage and hunting purposes. Hunters fancy it when it comes to hunting various carp species.
   components:
@@ -91,3 +91,5 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 1
     fillBaseName: spear
+  - type: ExaminableClothing
+    examineText: clothing-harpoon # starcup: examinable clothing
