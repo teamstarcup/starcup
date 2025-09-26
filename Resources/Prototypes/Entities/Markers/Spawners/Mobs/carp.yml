@@ -11,9 +11,11 @@
   - type: ConditionalSpawner
     prototypes:
     - MobCarp
-    - MobCarpSplitfin # expanded carp & sharkminnows
-    - MobCarpVampire # expanded carp & sharkminnows
-    - MobCarpQueen # expanded carp & sharkminnows
+    # begin starcup
+    - MobCarpSplitfin
+    - MobCarpVampire
+    - MobCarpQueen
+    # end starcup
 
 - type: entity
   parent: MarkerBase
@@ -56,12 +58,14 @@
   - type: ConditionalSpawner
     prototypes:
     - MobShark
-    - MobSharkBlue # expanded carp & sharkminnows
-    - MobSharkBrown # expanded carp & sharkminnows
-    - MobSharkGreen # expanded carp & sharkminnows
-    - MobSharkShelledBlue # expanded carp & sharkminnows
-    - MobSharkShelledBrown # expanded carp & sharkminnows
-    - MobSharkShelledGreen # expanded carp & sharkminnows
-    - MobSharkFat # expanded carp & sharkminnows
-    - MobSharkVampire # expanded carp & sharkminnows
-    - MobSharkAbyssal # expanded carp & sharkminnows
+    # begin starcup
+    - MobSharkBlue
+    - MobSharkBrown
+    - MobSharkGreen
+    - MobSharkShelledBlue
+    - MobSharkShelledBrown
+    - MobSharkShelledGreen
+    - MobSharkFat
+    - MobSharkVampire
+    - MobSharkAbyssal
+    # end starcup

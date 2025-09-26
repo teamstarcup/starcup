@@ -423,7 +423,8 @@
       children:
       - !type:AllSelector
         children:
-        - !type:GroupSelector # expanded carp & sharkminnows
+        # begin starcup
+        - !type:GroupSelector
           children:
           - id: MobSharkSalvage
           - id: MobSharkSalvageBlue
@@ -433,7 +434,7 @@
           - id: MobSharkSalvageShelledBlue
           - id: MobSharkSalvageShelledBrown
           - id: MobSharkSalvageShelledGreen
-        - !type:GroupSelector # expanded carp & sharkminnows
+        - !type:GroupSelector
           children:
           - id: MobCarpSalvage
           - id: MobCarpSalvageSplitfin
@@ -441,6 +442,7 @@
           - id: MobCarpSalvageQueen
           rolls: !type:RangeNumberSelector
             range: 1, 3
+           # end starcup
         - !type:NestedSelector
           rolls: 1, 3
           tableId: SalvageTreasureSpawnerValuable
@@ -535,7 +537,8 @@
   - type: EntityTableSpawner
     table: !type:AllSelector
       children:
-      - !type:GroupSelector # expanded carp & sharkminnows
+      # begin starcup
+      - !type:GroupSelector
         children:
         - id: MobSharkSalvage
         - id: MobSharkSalvageBlue
@@ -547,7 +550,7 @@
         - id: MobSharkSalvageShelledGreen
         - id: MobSharkSalvageAbyssal
         - id: MobSharkSalvageVampire
-      - !type:GroupSelector # expanded carp & sharkminnows
+      - !type:GroupSelector
         children:
         - id: MobCarpSalvage
         - id: MobCarpSalvageSplitfin
@@ -555,6 +558,7 @@
         - id: MobCarpSalvageQueen
         rolls: !type:RangeNumberSelector
           range: 3, 4
+      # end starcup
 
 - type: entity
   parent: MarkerBase
