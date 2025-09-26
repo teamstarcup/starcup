@@ -1,0 +1,101 @@
+- type: entity
+  parent: BaseTree
+  id: FloraTreeAutumn
+  name: tree
+  suffix: autumn
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_autumn_trees.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+        tree06: ""
+
+- type: entity
+  parent: BaseTree
+  id: FloraTreeVerdant
+  name: tree
+  suffix: verdant
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_verdant_trees.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+        tree06: ""
+
+- type: entity
+  parent: BaseTree
+  id: FloraTreeTemperate
+  name: tree
+  suffix: temperate
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_temperate_trees.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+        tree06: ""
+
+- type: entity
+  parent: BaseTree
+  id: FloraTreeDead
+  name: tree
+  suffix: dead
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_dry_trees.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+        tree06: ""
+
+- type: entity
+  parent: BaseTree
+  id: FloraTreeAspbirch
+  name: tree
+  suffix: aspen birch
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_aspen_birches.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
