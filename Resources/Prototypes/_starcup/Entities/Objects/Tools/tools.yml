@@ -1,0 +1,100 @@
+- type: entity
+  name: wrench
+  suffix: variant
+  parent: Wrench
+  id: WrenchVariantA
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/wrench.rsi
+    state: icon
+  - type: Item
+    sprite: _starcup/Objects/Tools/wrench.rsi
+    storedSprite:
+      sprite: _starcup/Objects/Tools/wrench.rsi
+      state: storage
+
+- type: entity
+  name: wrench
+  suffix: variant
+  parent: Wrench
+  id: WrenchVariantB
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/monkey_wrench.rsi
+    state: icon
+  - type: Item
+    sprite: _starcup/Objects/Tools/monkey_wrench.rsi
+    storedSprite:
+      sprite: _starcup/Objects/Tools/monkey_wrench.rsi
+      state: storage
+
+- type: entity
+  name: pipe wrench
+  parent: Wrench
+  id: PipeWrench
+  description: 'A heavier type of wrench. Remember: lefty latchy, righty removey.'
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/pipe_wrench.rsi
+    state: icon
+  - type: Item
+    sprite: _starcup/Objects/Tools/pipe_wrench.rsi
+    storedSprite:
+      sprite: _starcup/Objects/Tools/pipe_wrench.rsi
+      state: storage
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 7
+
+- type: entity
+  name: chopping axe
+  parent: [BaseItem, BaseEngineeringContraband, BaseExaminableClothing] # starcup: examinable clothing
+  id: ChoppingAxe
+  description: An axe for chopping down trees. On a space station. ...yeah.
+  components:
+  - type: Sharp
+  - type: Execution
+    doAfterDuration: 4.0
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/chopping_axe.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: 135
+    swingLeft: true
+    attackRate: 0.75
+    damage:
+      types:
+        Blunt: 3
+        Slash: 3
+        Structural: 3
+    soundHit:
+      collection: MetalThud
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Slash: 1
+        Structural: 5
+  - type: Item
+    size: Large
+  - type: Clothing
+    sprite: _starcup/Objects/Tools/chopping_axe.rsi
+    quickEquip: false
+    slots:
+    - back
+  - type: Tool
+    qualities:
+    - Axing
+  - type: ToolTileCompatible
+  - type: UseDelay
+    delay: 1
+
+- type: entity
+  name: Free Man's Crowbar
+  suffix: admeme
+  parent: CrowbarRed
+  id: FreemanCrowbar
+  components:
+  - type: MeleeWeapon
+    attackRate: 3
