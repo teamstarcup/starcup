@@ -1,3 +1,5 @@
+bounty-item-rehydratable-cube = Rehydratable cube
+
 bounty-description-cuban-carp-starcup = SyndComm has been studying the viability of space carp as a substitute for certain meat products. Ship a Cuban carp so they can perform rigorous taste testing.
 bounty-description-lung-starcup = When an employee raised concerns about having hacked up a lung, it took the doctors a bit too long to realize they were being literal. They'll need a replacement.
 bounty-description-banana-starcup = Hi station! They took away my bike horns when I tried honking ten of them at the same time! I need a new routine now! Bananas please?
@@ -8,3 +10,4 @@ bounty-description-torch-starcup = The chef made all the monkeys at once, and th
 bounty-description-labeler-starcup = Due to a bureaucratic error, our sorting center almost sent hundreds of crates of carrots to the unathi settlement. We urgently need additional labelers to restore order in the warehouse as a matter of urgency.
 bounty-description-warm-cloth-starcup = The unathi construction crew freezes and is unable to restore power to their station. They need to be sent a set of any clothing to protect them from the cold.
 bounty-description-food-starcup = After the rat king invasion, a neighboring unathi station was left completely without food. A large meat food shipment is needed.
+bounty-description-rehydratable-cube = Drymate has issued a small-scale product recall on their rehydratable cubes for inspection following complaints about "very angry fish". They'll need a small supply of any cubes the station has available.

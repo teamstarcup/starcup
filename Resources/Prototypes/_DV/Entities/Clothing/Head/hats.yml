@@ -32,3 +32,20 @@
   - type: Clothing
     sprite: _DV/Clothing/Head/Soft/couriersoft.rsi
     equippedPrefix: flipped
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretAtmospherics
+  name: atmospherics beret
+  description: Yellow beret that entices you to make canister bombs. Don't.
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Head/Hats/beret_atmospherics.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Head/Hats/beret_atmospherics.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - HamsterWearable
+    - WhitelistChameleon

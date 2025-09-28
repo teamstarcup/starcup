@@ -57,3 +57,17 @@
   - type: ConditionalSpawner
     prototypes:
     - MobChicken2
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobBunny
+  name: bunny spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: icon
+      sprite: _Umbra/Mobs/Animals/bunny.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobBunny

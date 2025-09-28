@@ -2,20 +2,21 @@
   id: BioGenMonkeyCube
   result: MonkeyCube
   categories:
-  - Food
+  - General # starcup: monkeys are not food
   completetime: 3
   materials:
     Biomass: 70
 
-# starcup: remove non-sapient kobolds
-#- type: latheRecipe
-#  id: BioGenKoboldCube
-#  result: KoboldCube
-#  categories:
-#  - Food
-#  completetime: 3
-#  materials:
-#    Biomass: 70
+# begin starcup: no non-sapient kobolds
+# - type: latheRecipe
+#   id: BioGenKoboldCube
+#   result: KoboldCube
+#   categories:
+#   - Food
+#   completetime: 3
+#   materials:
+#     Biomass: 70
+# end starcup: no non-sapient kobolds
 
 - type: latheRecipe
   id: BioGenMaterialCloth1
