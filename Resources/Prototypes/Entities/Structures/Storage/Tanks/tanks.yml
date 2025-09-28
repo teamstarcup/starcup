@@ -207,12 +207,12 @@
       sprite: _starcup/Structures/Storage/tanks.rsi # starcup: tauceti welding & water tank resprite
       layers:
         - state: generictank-1
-        - state: fueltank-2-1 # starcup: tauceti welding & water tank resprite
+        - state: watertank-2-1
           map: ["enum.SolutionContainerLayers.Fill"]
           visible: false
     - type: Appearance
     - type: SolutionContainerVisuals
       maxFillLevels: 5
-      fillBaseName: fueltank-2- # starcup: tauceti welding & water tank resprite
+      fillBaseName: watertank-2-
     - type: ExaminableSolution
       solution: tank
