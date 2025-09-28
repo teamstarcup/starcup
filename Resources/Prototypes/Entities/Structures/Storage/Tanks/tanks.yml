@@ -10,7 +10,7 @@
   - type: StaticPrice
     price: 750
   - type: Sprite
-    sprite: Structures/Storage/tanks.rsi
+    sprite: _starcup/Structures/Storage/tanks.rsi # starcup: tauceti welding & water tank resprite
     layers:
       - state: fueltank-2
       - state: fueltank-2-1
@@ -56,7 +56,7 @@
   - type: StaticPrice
     price: 2500
   - type: Sprite
-    sprite: Structures/Storage/tanks.rsi
+    sprite: _starcup/Structures/Storage/tanks.rsi # starcup: tauceti welding & water tank resprite
     layers:
       - state: highfueltank-2
       - state: highfueltank-2-1
@@ -88,7 +88,7 @@
   - type: StaticPrice
     price: 500
   - type: Sprite
-    sprite: Structures/Storage/tanks.rsi
+    sprite: _starcup/Structures/Storage/tanks.rsi # starcup: tauceti welding & water tank resprite
     layers:
       - state: watertank-2
       - state: watertank-2-1
@@ -172,7 +172,7 @@
   - type: StaticPrice
     price: 2500
   - type: Sprite
-    sprite: Structures/Storage/tanks.rsi
+    sprite: _starcup/Structures/Storage/tanks.rsi # starcup: tauceti welding & water tank resprite
     layers:
       - state: highwatertank-2
       - state: highwatertank-2-1
@@ -204,15 +204,15 @@
     - type: StaticPrice
       price: 500
     - type: Sprite
-      sprite: Structures/Storage/tanks.rsi
+      sprite: _starcup/Structures/Storage/tanks.rsi # starcup: tauceti welding & water tank resprite
       layers:
         - state: generictank-1
-        - state: watertank-2-1
+        - state: fueltank-2-1 # starcup: tauceti welding & water tank resprite
           map: ["enum.SolutionContainerLayers.Fill"]
           visible: false
     - type: Appearance
     - type: SolutionContainerVisuals
       maxFillLevels: 5
-      fillBaseName: watertank-2-
+      fillBaseName: fueltank-2- # starcup: tauceti welding & water tank resprite
     - type: ExaminableSolution
       solution: tank
