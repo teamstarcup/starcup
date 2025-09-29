@@ -49,46 +49,6 @@
         Blunt: 8
 
 - type: entity
-  name: chopping axe
-  parent: [BaseItem, BaseEngineeringContraband, BaseExaminableClothing] # starcup: examinable clothing
-  id: ChoppingAxe
-  description: An axe for chopping down trees. On a space station. ...yeah.
-  components:
-  - type: Sharp
-  - type: Execution
-    doAfterDuration: 4.0
-  - type: Sprite
-    sprite: _starcup/Objects/Tools/chopping_axe.rsi
-    state: icon
-  - type: MeleeWeapon
-    wideAnimationRotation: 135
-    swingLeft: true
-    damage:
-      types:
-        Blunt: 2
-        Slash: 5
-    soundHit:
-      collection: MetalThud
-  - type: Wieldable
-  - type: IncreaseDamageOnWield
-    damage:
-      types:
-        Slash: 4
-  - type: Item
-    size: Large
-  - type: Clothing
-    sprite: _starcup/Objects/Tools/chopping_axe.rsi
-    quickEquip: false
-    slots:
-    - back
-  - type: Tool
-    qualities:
-    - Axing
-  - type: ToolTileCompatible
-  - type: UseDelay
-    delay: 1
-
-- type: entity
   name: Free Man's Crowbar
   suffix: admeme
   parent: CrowbarRed
