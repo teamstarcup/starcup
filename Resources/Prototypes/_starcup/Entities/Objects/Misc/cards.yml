@@ -1,0 +1,765 @@
+- type: entity
+  parent: CardBoxBase
+  id: CardBoxSparot
+  name: tarot deck box
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: box
+    layers:
+    - state: copper_box # TODO
+    - state: copper_box_open # TODO
+      map: [ "openLayer" ]
+      visible: false
+  - type: OpenTriggeredStorageFill
+    contents:
+    - id: CardDeckSparot
+      amount: 1
+
+- type: entity
+  parent: CardDeckBase
+  id: CardDeckSparot
+  name: deck of cards
+  components:
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: deck_sparot_full # TODO
+  - type: CardStack
+    initialContent:
+    # Fantasia
+    - CardScTheDevil
+    - CardScTheClown
+    # Cables
+    - CardScAceOfCables
+    - CardScTwoOfCables
+    - CardScThreeOfCables
+    - CardScFourOfCables
+    - CardScFiveOfCables
+    - CardScSixOfCables
+    - CardScSevenOfCables
+    - CardScEightOfCables
+    - CardScNineOfCables
+    - CardScTenOfCables
+    - CardScKnightOfCables
+    - CardScPrincessOfCables
+    - CardScQueenOfCables
+    # Discs
+    - CardScAceOfDiscs
+    - CardScTwoOfDiscs
+    - CardScThreeOfDiscs
+    - CardScFourOfPDiscs
+    - CardScFiveOfDiscs
+    - CardScSixOfDiscs
+    - CardScSevenOfDiscs
+    - CardScEightOfDiscs
+    - CardScNineOfDiscs
+    - CardScTenOfDiscs
+    - CardScKnightOfDiscs
+    - CardScPrincessOfDiscs
+    - CardScQueenOfDiscs
+    # Knives
+    - CardScAceOfKnives
+    - CardScTwoOfKnives
+    - CardScThreeOfKnives
+    - CardScFourOfKnives
+    - CardScFiveOfKnives
+    - CardScSixOfKnives
+    - CardScSevenOfKnives
+    - CardScEightOfKnives
+    - CardScNineOfKnives
+    - CardScTenOfKnives
+    - CardScKnightOfKnives
+    - CardScPrincessOfKnives
+    - CardScQueenOfKnives
+    # Sparrows
+    - CardScAceOfSparrows
+    - CardScTwoOfSparrows
+    - CardScThreeOfSparrows
+    - CardScFourOfSparrows
+    - CardScFiveOfSparrows
+    - CardScSixOfSparrows
+    - CardScSevenOfSparrows
+    - CardScEightOfSparrows
+    - CardScNineOfSparrows
+    - CardScTenOfSparrows
+    - CardScKnightOfSparrows
+    - CardScPrincessOfSparrows
+    - CardScQueenOfSparrows
+
+- type: entity
+  parent: BaseItem
+  id: CardBaseSparot
+  name: card
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EmitSoundOnLand
+    sound:
+      collection: cardShove
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: singlecard_down_sparot # TODO
+  - type: Rotatable
+  - type: Item
+    size: Tiny
+  - type: UseDelay
+    delay: 0.5
+  - type: Card
+    backSprite:
+    - sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+      state: singlecard_down_sparot # TODO
+    flipped: true
+
+# Fantasia
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScDevil
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-devil # TODO
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Devil_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScClown
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-clown # TODO
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Clown_sparot # TODO
+
+# Cables
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScAceOfCables
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-ace-of-of-cables
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Ace_of_Cables_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScTwoOfCables
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-two-of-of-cables
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Two_of_Cables_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScThreeOfCables
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-three-of-of-cables
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Three_of_Cables_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScFourOfCables
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-four-of-of-cables
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Four_of_Cables_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScFiveOfCables
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-five-of-of-cables
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Five_of_Cables_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScSixOfCables
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-six-of-of-cables
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Six_of_Cables_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScSevenOfCables
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-seven-of-of-cables
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Seven_of_Cables_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScEightOfCables
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-eight-of-of-cables
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Eight_of_Cables_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScNineOfCables
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-nine-of-of-cables
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Nine_of_Cables_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScTenOfCables
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-ten-of-of-cables
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Ten_of_Cables_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScKnightOfCables
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-knight-of-of-cables
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Knight_of_Cables_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScPrincessOfCables
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-princess-of-of-cables
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Princess_of_Cables_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScQueenOfCables
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-queen-of-of-cables
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Queen_of_Cables_sparot # TODO
+
+# Discs
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScAceOfDiscs
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-ace-of-of-discs
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Ace_of_Discs_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScTwoOfDiscs
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-two-of-of-discs
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Two_of_Discs_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScThreeOfDiscs
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-three-of-of-discs
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Three_of_Discs_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScFourOfDiscs
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-four-of-of-discs
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Four_of_Discs_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScFiveOfDiscs
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-five-of-of-discs
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Five_of_Discs_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScSixOfDiscs
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-six-of-of-discs
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Six_of_Discs_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScSevenOfDiscs
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-seven-of-of-discs
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Seven_of_Discs_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScEightOfDiscs
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-eight-of-of-discs
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Eight_of_Discs_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScNineOfDiscs
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-nine-of-of-discs
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Nine_of_Discs_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScTenOfDiscs
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-ten-of-of-discs
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Ten_of_Discs_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScKnightOfDiscs
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-knight-of-of-discs
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Knight_of_Discs_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScPrincessOfDiscs
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-princess-of-of-discs
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Princess_of_Discs_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScQueenOfDiscs
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-queen-of-of-discs
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Queen_of_Discs_sparot # TODO
+
+# Knives
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScAceOfKnives
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-ace-of-of-knives
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Ace_of_Knives_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScTwoOfKnives
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-two-of-of-knives
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Two_of_Knives_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScThreeOfKnives
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-three-of-of-knives
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Three_of_Knives_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScFourOfKnives
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-four-of-of-knives
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Four_of_Knives_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScFiveOfKnives
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-five-of-of-knives
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Five_of_Knives_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScSixOfKnives
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-six-of-of-knives
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Six_of_Knives_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScSevenOfKnives
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-seven-of-of-knives
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Seven_of_Knives_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScEightOfKnives
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-eight-of-of-knives
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Eight_of_Knives_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScNineOfKnives
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-nine-of-of-knives
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Nine_of_Knives_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScTenOfKnives
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-ten-of-of-knives
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Ten_of_Knives_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScKnightOfKnives
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-knight-of-of-knives
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Knight_of_Knives_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScPrincessOfKnives
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-princess-of-of-knives
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Princess_of_Knives_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScQueenOfKnives
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-queen-of-of-knives
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Queen_of_Knives_sparot # TODO
+
+# Sparrows
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScAceOfSparrows
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-ace-of-sparrows
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Ace_of_Sparrows_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScTwoOfSparrows
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-two-of-sparrows
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Two_of_Sparrows_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScThreeOfSparrows
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-three-of-sparrows
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Three_of_Sparrows_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScFourOfSparrows
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-four-of-sparrows
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Four_of_Sparrows_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScFiveOfSparrows
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-five-of-sparrows
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Five_of_Sparrows_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScSixOfSparrows
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-six-of-sparrows
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Six_of_Sparrows_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScSevenOfSparrows
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-seven-of-sparrows
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Seven_of_Sparrows_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScEightOfSparrows
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-eight-of-sparrows
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Eight_of_Sparrows_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScNineOfSparrows
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-nine-of-sparrows
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Nine_of_Sparrows_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScTenOfSparrows
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-ten-of-sparrows
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Ten_of_Sparrows_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScKnightOfSparrows
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-knight-of-sparrows
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Knight_of_Sparrows_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScPrincessOfSparrows
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-princess-of-sparrows
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Princess_of_Sparrows_sparot # TODO
+
+- type: entity
+  parent: CardBaseSparot
+  categories: [ HideSpawnMenu ]
+  id: CardScQueenOfSparrows
+  description: # TODO
+  components:
+  - type: Card
+    name: card-sc-queen-of-sparrows
+  - type: Sprite
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    state: sc_Queen_of_Sparrows_sparot # TODO
