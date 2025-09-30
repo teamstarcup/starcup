@@ -13,6 +13,18 @@
       # Random lighting item orGroup
       - id: FlashlightLantern
         orGroup: LightingItem
+    # begin starcup: add misc tools & tweaks
+      - id: FlashlightLanternGreen
+        orGroup: LightingItem
+      - id: FlashlightLanternTeal
+        orGroup: LightingItem
+      - id: FlashlightLanternPurple
+        orGroup: LightingItem
+      - id: FlashlightLanternRed
+        orGroup: LightingItem
+      - id: FlashlightBig
+        orGroup: LightingItem
+    # end starcup: add misc tools & tweaks
       - id: Flare
         orGroup: LightingItem
       - id: GlowstickBase
@@ -98,12 +110,38 @@
     contents:
       - id: CrowbarOrange
       - id: Wrench
+        # begin starcup: add misc tools & tweaks
+        orGroup: Wrenches
+      - id: HeavyWrench
+        orGroup: Wrenches
+      - id: MonkeyWrench
+        orGroup: Wrenches
+      - id: PipeWrench
+        orGroup: Wrenches
+        # end starcup: add misc tools & tweaks
       - id: Welder
       - id: Wirecutter
       - id: Screwdriver
         prob: 0.5
       - id: FlashlightLantern
         prob: 0.7
+        # begin starcup: add misc tools & tweaks
+        orGroup: LightingItem
+      - id: FlashlightLanternGreen
+        orGroup: LightingItem
+      - id: FlashlightLanternTeal
+        prob: 0.7
+        orGroup: LightingItem
+      - id: FlashlightLanternPurple
+        prob: 0.7
+        orGroup: LightingItem
+      - id: FlashlightLanternRed
+        prob: 0.7
+        orGroup: LightingItem
+      - id: FlashlightBig
+        prob: 0.7
+        orGroup: LightingItem
+        # end starcup: add misc tools & tweaks
       - id: ClothingHeadHatHardhatBlue
         prob: 0.5
 
@@ -117,6 +155,15 @@
     contents:
     - id: Crowbar
     - id: Wrench
+      # begin starcup: add misc tools & tweaks
+      orGroup: Wrenches
+    - id: HeavyWrench
+      orGroup: Wrenches
+    - id: MonkeyWrench
+      orGroup: Wrenches
+    - id: PipeWrench
+      orGroup: Wrenches
+      # end starcup: add misc tools & tweaks
     - id: Screwdriver
     - id: Wirecutter
     - id: Welder
@@ -131,6 +178,15 @@
     contents:
     - id: Crowbar
     - id: Wrench
+      # begin starcup: add misc tools & tweaks
+      orGroup: Wrenches
+    - id: HeavyWrench
+      orGroup: Wrenches
+    - id: MonkeyWrench
+      orGroup: Wrenches
+    - id: PipeWrench
+      orGroup: Wrenches
+      # end starcup: add misc tools & tweaks
     - id: Screwdriver
     - id: Wirecutter
     - id: Welder

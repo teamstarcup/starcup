@@ -14,12 +14,27 @@
     children:
     - id: ClothingOuterVestHazard
       prob: 0.4
-    - id: FlashlightLantern
+    # begin starcup: add misc tools & tweaks
+    - id: !type:GroupSelector
       prob: 0.7
+      children:
+      - id: FlashlightLantern
+      - id: FlashlightLanternGreen
+      - id: FlashlightLanternPurple
+      - id: FlashlightLanternRed
+      - id: FlashlightLanternTeal
+    # end starcup: add misc tools & tweaks
     - id: Screwdriver
       prob: 0.7
-    - id: Wrench
+    # begin starcup: add misc tools & tweaks
+    - !type:GroupSelector
       prob: 0.7
+      children:
+      - id: Wrench
+      - id: HeavyWrench
+      - id: MonkeyWrench
+      - id: PipeWrench
+    # end starcup: add misc tools & tweaks
     - id: Welder
       prob: 0.7
     - id: Crowbar
