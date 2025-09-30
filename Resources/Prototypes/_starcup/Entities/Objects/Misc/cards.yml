@@ -7,11 +7,11 @@
   - type: Item
     size: Small
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
     state: box
     layers:
-    - state: copper_box # TODO
-    - state: copper_box_open # TODO
+    - state: copper_box
+    - state: copper_box_open
       map: [ "openLayer" ]
       visible: false
   - type: OpenTriggeredStorageFill
@@ -25,8 +25,8 @@
   name: deck of cards
   components:
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: deck_sparot_full # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: deck_sparot_full
   - type: CardStack
     initialContent:
     # Fantasia
@@ -99,8 +99,8 @@
     sound:
       collection: cardShove
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: singlecard_down_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: singlecard_down_sparot
   - type: Rotatable
   - type: Item
     size: Tiny
@@ -108,8 +108,8 @@
     delay: 0.5
   - type: Card
     backSprite:
-    - sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-      state: singlecard_down_sparot # TODO
+    - sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+      state: singlecard_down_sparot
     flipped: true
   - type: SparotCardRotation
 
@@ -121,10 +121,10 @@
   description: A pallid demonic figure lurks at the crossroads; both paths lead into darkness. Choice, Temptation, Cycles, The Unknown.
   components:
   - type: Card
-    name: card-sc-devil # TODO
+    name: card-sc-devil
   - type: Sprite
-    sprite: _stackPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Devil_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_The_Devil_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -133,10 +133,10 @@
   description: A merry harlequin dances above a raging inferno. Calamity, Drastic Change, Transformation.
   components:
   - type: Card
-    name: card-sc-clown # TODO
+    name: card-sc-clown
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Clown_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_The_Clown_sparot
 
 # Cables
 - type: entity
@@ -148,8 +148,8 @@
   - type: Card
     name: card-sc-ace-of-cables
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Ace_of_Cables_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Ace_of_Cables_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -160,8 +160,8 @@
   - type: Card
     name: card-sc-two-of-cables
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Two_of_Cables_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Two_of_Cables_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -172,8 +172,8 @@
   - type: Card
     name: card-sc-three-of-cables
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Three_of_Cables_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Three_of_Cables_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -184,8 +184,8 @@
   - type: Card
     name: card-sc-four-of-cables
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Four_of_Cables_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Four_of_Cables_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -196,8 +196,8 @@
   - type: Card
     name: card-sc-five-of-cables
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Five_of_Cables_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Five_of_Cables_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -208,8 +208,8 @@
   - type: Card
     name: card-sc-six-of-cables
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Six_of_Cables_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Six_of_Cables_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -220,8 +220,8 @@
   - type: Card
     name: card-sc-seven-of-cables
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Seven_of_Cables_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Seven_of_Cables_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -232,8 +232,8 @@
   - type: Card
     name: card-sc-eight-of-cables
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Eight_of_Cables_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Eight_of_Cables_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -244,8 +244,8 @@
   - type: Card
     name: card-sc-nine-of-cables
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Nine_of_Cables_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Nine_of_Cables_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -256,8 +256,8 @@
   - type: Card
     name: card-sc-ten-of-cables
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Ten_of_Cables_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Ten_of_Cables_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -268,8 +268,8 @@
   - type: Card
     name: card-sc-knight-of-cables
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Knight_of_Cables_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Knight_of_Cables_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -280,8 +280,8 @@
   - type: Card
     name: card-sc-princess-of-cables
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Princess_of_Cables_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Princess_of_Cables_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -292,8 +292,8 @@
   - type: Card
     name: card-sc-queen-of-cables
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Queen_of_Cables_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Queen_of_Cables_sparot
 
 # Discs
 - type: entity
@@ -305,8 +305,8 @@
   - type: Card
     name: card-sc-ace-of-discs
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Ace_of_Discs_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Ace_of_Discs_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -317,8 +317,8 @@
   - type: Card
     name: card-sc-two-of-discs
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Two_of_Discs_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Two_of_Discs_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -329,8 +329,8 @@
   - type: Card
     name: card-sc-three-of-discs
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Three_of_Discs_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Three_of_Discs_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -341,8 +341,8 @@
   - type: Card
     name: card-sc-four-of-discs
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Four_of_Discs_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Four_of_Discs_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -353,8 +353,8 @@
   - type: Card
     name: card-sc-five-of-discs
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Five_of_Discs_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Five_of_Discs_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -365,8 +365,8 @@
   - type: Card
     name: card-sc-six-of-discs
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Six_of_Discs_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Six_of_Discs_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -377,8 +377,8 @@
   - type: Card
     name: card-sc-seven-of-discs
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Seven_of_Discs_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Seven_of_Discs_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -389,8 +389,8 @@
   - type: Card
     name: card-sc-eight-of-discs
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Eight_of_Discs_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Eight_of_Discs_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -401,8 +401,8 @@
   - type: Card
     name: card-sc-nine-of-discs
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Nine_of_Discs_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Nine_of_Discs_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -413,8 +413,8 @@
   - type: Card
     name: card-sc-ten-of-discs
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Ten_of_Discs_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Ten_of_Discs_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -425,8 +425,8 @@
   - type: Card
     name: card-sc-knight-of-discs
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Knight_of_Discs_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Knight_of_Discs_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -437,8 +437,8 @@
   - type: Card
     name: card-sc-princess-of-discs
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Princess_of_Discs_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Princess_of_Discs_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -449,8 +449,8 @@
   - type: Card
     name: card-sc-queen-of-discs
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Queen_of_Discs_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Queen_of_Discs_sparot
 
 # Knives
 - type: entity
@@ -462,8 +462,8 @@
   - type: Card
     name: card-sc-ace-of-knives
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Ace_of_Knives_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Ace_of_Knives_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -474,8 +474,8 @@
   - type: Card
     name: card-sc-two-of-knives
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Two_of_Knives_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Two_of_Knives_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -486,8 +486,8 @@
   - type: Card
     name: card-sc-three-of-knives
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Three_of_Knives_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Three_of_Knives_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -498,8 +498,8 @@
   - type: Card
     name: card-sc-four-of-knives
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Four_of_Knives_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Four_of_Knives_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -510,8 +510,8 @@
   - type: Card
     name: card-sc-five-of-knives
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Five_of_Knives_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Five_of_Knives_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -522,8 +522,8 @@
   - type: Card
     name: card-sc-six-of-knives
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Six_of_Knives_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Six_of_Knives_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -534,8 +534,8 @@
   - type: Card
     name: card-sc-seven-of-knives
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Seven_of_Knives_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Seven_of_Knives_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -546,8 +546,8 @@
   - type: Card
     name: card-sc-eight-of-knives
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Eight_of_Knives_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Eight_of_Knives_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -558,8 +558,8 @@
   - type: Card
     name: card-sc-nine-of-knives
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Nine_of_Knives_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Nine_of_Knives_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -570,8 +570,8 @@
   - type: Card
     name: card-sc-ten-of-knives
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Ten_of_Knives_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Ten_of_Knives_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -582,8 +582,8 @@
   - type: Card
     name: card-sc-knight-of-knives
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Knight_of_Knives_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Knight_of_Knives_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -594,8 +594,8 @@
   - type: Card
     name: card-sc-princess-of-knives
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Princess_of_Knives_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Princess_of_Knives_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -606,8 +606,8 @@
   - type: Card
     name: card-sc-queen-of-knives
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Queen_of_Knives_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Queen_of_Knives_sparot
 
 # Sparrows
 - type: entity
@@ -619,8 +619,8 @@
   - type: Card
     name: card-sc-ace-of-sparrows
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Ace_of_Sparrows_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Ace_of_Sparrows_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -631,8 +631,8 @@
   - type: Card
     name: card-sc-two-of-sparrows
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Two_of_Sparrows_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Two_of_Sparrows_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -643,8 +643,8 @@
   - type: Card
     name: card-sc-three-of-sparrows
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Three_of_Sparrows_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Three_of_Sparrows_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -655,8 +655,8 @@
   - type: Card
     name: card-sc-four-of-sparrows
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Four_of_Sparrows_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Four_of_Sparrows_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -667,8 +667,8 @@
   - type: Card
     name: card-sc-five-of-sparrows
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Five_of_Sparrows_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Five_of_Sparrows_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -679,8 +679,8 @@
   - type: Card
     name: card-sc-six-of-sparrows
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Six_of_Sparrows_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Six_of_Sparrows_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -691,8 +691,8 @@
   - type: Card
     name: card-sc-seven-of-sparrows
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Seven_of_Sparrows_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Seven_of_Sparrows_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -703,8 +703,8 @@
   - type: Card
     name: card-sc-eight-of-sparrows
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Eight_of_Sparrows_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Eight_of_Sparrows_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -715,8 +715,8 @@
   - type: Card
     name: card-sc-nine-of-sparrows
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Nine_of_Sparrows_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Nine_of_Sparrows_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -727,8 +727,8 @@
   - type: Card
     name: card-sc-ten-of-sparrows
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Ten_of_Sparrows_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Ten_of_Sparrows_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -739,8 +739,8 @@
   - type: Card
     name: card-sc-knight-of-sparrows
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Knight_of_Sparrows_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Knight_of_Sparrows_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -751,8 +751,8 @@
   - type: Card
     name: card-sc-princess-of-sparrows
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Princess_of_Sparrows_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Princess_of_Sparrows_sparot
 
 - type: entity
   parent: CardBaseSparot
@@ -763,5 +763,5 @@
   - type: Card
     name: card-sc-queen-of-sparrows
   - type: Sprite
-    sprite: _EstacaoPirata/Objects/Misc/cards.rsi # TODO
-    state: sc_Queen_of_Sparrows_sparot # TODO
+    sprite: _EstacaoPirata/Objects/Misc/cards.rsi
+    state: sc_Queen_of_Sparrows_sparot
