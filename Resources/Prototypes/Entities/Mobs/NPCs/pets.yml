@@ -686,8 +686,10 @@
     spawned:
     - id: FoodMeat
       amount: 3
-    - id: Telecrystal5
-      amount: 1
+    # begin starcup: remove tc
+    # - id: Telecrystal5
+    #   amount: 1
+    # end starcup
     # begin starcup: butchering gives organs
     - id: OrganAnimalLungs
       amount: 1
@@ -710,6 +712,10 @@
     - VimPilot
   - type: StealTarget
     stealGroup: AnimalRenault
+  # begin starcup: add sentience target
+  - type: SentienceTarget
+    flavorKind: station-event-random-sentience-flavor-organic
+  # end starcup
 
 - type: entity
   name: Hamlet
@@ -977,13 +983,15 @@
     description: ghost-role-information-punpun-description
     rules: ghost-role-information-nonantagonist-rules
   - type: GhostTakeoverAvailable
-  - type: Butcherable
-    butcheringType: Spike
-    spawned:
-    - id: FoodMeat
-      amount: 3
-    - id: DrinkTequilaBottleFull
-      amount: 1
+  # begin starcup: monkeys are not food
+  # - type: Butcherable
+  #   butcheringType: Spike
+  #   spawned:
+  #   - id: FoodMeat
+  #     amount: 3
+  #   - id: DrinkTequilaBottleFull
+  #     amount: 1
+  # end starcup
   - type: Tag
     tags:
     - CannotSuicide

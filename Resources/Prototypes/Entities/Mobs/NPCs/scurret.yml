@@ -41,11 +41,13 @@
     currentTemperature: 310.15
     specificHeat: 42
   # Good eatin', you monster.
-  - type: Butcherable
-    butcheringType: Spike
-    spawned:
-    - id: FoodMeat
-      amount: 4
+  # begin starcup: scurrets are not food
+  # - type: Butcherable
+  #   butcheringType: Spike
+  #   spawned:
+  #   - id: FoodMeat
+  #     amount: 4
+  # end starcup
   # They wawa!
   - type: Vocal
     sounds:

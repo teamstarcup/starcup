@@ -144,6 +144,10 @@ public abstract partial class SharedStationAiSystem : EntitySystem
 
     private void OnAiAccessible(Entity<StationAiOverlayComponent> ent, ref AccessibleOverrideEvent args)
     {
+        // Begin DeltaV Additions
+        if (ent.Comp.Cosmetic)
+            return;
+        // End DeltaV Additions
         args.Handled = true;
 
         // Hopefully AI never needs storage
@@ -162,6 +166,10 @@ public abstract partial class SharedStationAiSystem : EntitySystem
 
     private void OnAiMenu(Entity<StationAiOverlayComponent> ent, ref MenuVisibilityEvent args)
     {
+        // Begin DeltaV Additions
+        if (ent.Comp.Cosmetic)
+            return;
+        // End DeltaV Additions
         args.Visibility &= ~MenuVisibility.NoFov;
     }
 
@@ -199,6 +207,10 @@ public abstract partial class SharedStationAiSystem : EntitySystem
 
     private void OnAiInRange(Entity<StationAiOverlayComponent> ent, ref InRangeOverrideEvent args)
     {
+        // Begin DeltaV Additions
+        if (ent.Comp.Cosmetic)
+            return;
+        // End DeltaV Additions
         args.Handled = true;
         var targetXform = Transform(args.Target);
 
@@ -395,7 +407,7 @@ public abstract partial class SharedStationAiSystem : EntitySystem
             _eye.SetDrawFov(user.Value, !isRemote);
     }
 
-    private bool SetupEye(Entity<StationAiCoreComponent> ent, EntityCoordinates? coords = null)
+    public bool SetupEye(Entity<StationAiCoreComponent> ent, EntityCoordinates? coords = null) // CD: Made Public
     {
         if (_net.IsClient)
             return false;
@@ -420,7 +432,7 @@ public abstract partial class SharedStationAiSystem : EntitySystem
         return true;
     }
 
-    private void ClearEye(Entity<StationAiCoreComponent> ent)
+    public void ClearEye(Entity<StationAiCoreComponent> ent) // CD: Made public
     {
         if (_net.IsClient)
             return;
@@ -430,7 +442,7 @@ public abstract partial class SharedStationAiSystem : EntitySystem
         Dirty(ent);
     }
 
-    private void AttachEye(Entity<StationAiCoreComponent> ent)
+    public void AttachEye(Entity<StationAiCoreComponent> ent) // CD: Made Public
     {
         if (ent.Comp.RemoteEntity == null)
             return;

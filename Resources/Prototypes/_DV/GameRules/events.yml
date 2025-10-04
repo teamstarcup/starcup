@@ -1,0 +1,44 @@
+- type: entity
+  id: XenoVentsLocalized # starcup: split DeltaV and upstream vent critter events
+  parent: BaseGameRule
+  components:
+  - type: StationEvent
+    #startAnnouncement: station-event-xeno-vent-start-announcement # starcup: use standard announcement
+    #startAudio: # starcup: use standard announcement
+    #  path: /Audio/Announcements/aliens.ogg
+    earliestStart: 45
+    minimumPlayers: 20
+    weight: 1
+    duration: 30
+  - type: VentCrittersRuleLocalized # starcup: split DeltaV and upstream vent critter events
+    table: !type:GroupSelector # DeltaV: EntityTable instead of spawn entries
+      children:
+      - id: MobXeno
+        weight: 0.55
+      - id: MobXenoRouny
+        weight: 0.01
+      - id: MobXenoDrone
+        weight: 0.25
+      - id: MobXenoSpitter
+        weight: 0.05
+      - id: MobXenoRunner
+        weight: 0.08
+      - id: MobXenoPraetorian
+        weight: 0.03
+      - id: MobXenoRavager
+        weight: 0.02
+      - id: MobXenoQueen
+        weight: 0.01
+
+- type: entity
+  id: MothroachSpawnLocalized # starcup: split DeltaV and upstream vent critter events
+  parent: BaseGameRule
+  components:
+  - type: StationEvent
+    earliestStart: 15
+    minimumPlayers: 5 # starcup: 15 -> 5
+    weight: 4
+    duration: 30
+  - type: VentCrittersRuleLocalized # starcup: split DeltaV and upstream vent critter events
+    table: # DeltaV: EntityTable instead of spawn entries
+      id: MobMothroach

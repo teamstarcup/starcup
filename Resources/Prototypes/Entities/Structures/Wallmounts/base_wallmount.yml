@@ -6,8 +6,22 @@
     snap:
     - Wallmount
   components:
+  # begin starcup: extend wallmount interact range
   - type: Physics
+    bodyType: Static
     canCollide: false
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.00"
+        density: 200
+        mask:
+        - WallmountMask
+        layer:
+        - WallmountLayer
+  # end starcup
   - type: Clickable
   - type: WallMount
   - type: InteractionOutline

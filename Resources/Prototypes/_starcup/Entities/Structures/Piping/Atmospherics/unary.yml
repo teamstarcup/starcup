@@ -1,0 +1,7 @@
+- type: entity
+  parent: GasVentPump
+  id: GasVentPumpNoSpawns
+  suffix: Pests Only
+  components:
+   - type: VentCritterSpawnLocation
+     canSpawn: false

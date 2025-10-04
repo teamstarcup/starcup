@@ -28,6 +28,9 @@ loadout-group-admin-assistant-outerclothing = Administrative Assistant outer clo
 loadout-group-admin-assistant-shoes = Administrative Assistant shoes
 loadout-group-admin-assistant-gloves = Administrative Assistant gloves
 
+# starcup: assistant -> passenger
+loadout-group-assistant-head = Passenger head
+
 # Logistics
 loadout-group-courier-head = Courier head
 loadout-group-courier-neck = Courier neck
@@ -51,6 +54,8 @@ loadout-group-salvage-specialist-neck = Salvage Specialist neck
 loadout-group-cargo-technician-neck = Cargo Technician neck
 
 loadout-group-cargo-id-delta = Cargo Technician PDA
+
+loadout-group-atmospheric-technician-head = Atmospheric Technician Head
 
 # Security
 loadout-group-head-of-security-shoes = Head of Security shoes
