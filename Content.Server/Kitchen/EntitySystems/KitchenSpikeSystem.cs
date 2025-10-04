@@ -173,7 +173,7 @@ namespace Content.Server.Kitchen.EntitySystems
             _transform.SetCoordinates(victimUid, Transform(uid).Coordinates);
             // THE WHAT?
             // TODO: Need to be able to leave them on the spike to do DoT, see ss13.
-            var gibs = _bodySystem.GibBody(victimUid, gibOrgans: true); // DeltaV: spawn organs
+            var gibs = _bodySystem.GibBody(victimUid, gibOrgans: butcherable.DropOrgansOnButcher); // starcup: drop organs if DropOrgansOnButcher is true
             foreach (var gib in gibs) {
                 // Begin DeltaV changes: Only delete limbs instead of organs
                 if (HasComp<BodyPartComponent>(gib))
