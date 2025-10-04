@@ -44,18 +44,7 @@
     - id: FoodMeatCorgi
       amount: 2
     - id: MaterialHideCorgi
-    # begin starcup: butchering gives organs
-    - id: OrganAnimalLungs
-      amount: 1
-    - id: OrganAnimalStomach
-      amount: 1
-    - id: OrganAnimalLiver
-      amount: 1
-    - id: OrganAnimalHeart
-      amount: 1
-    - id: OrganAnimalKidneys
-      amount: 1
-    # end starcup
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Tag
     tags:
     - CannotSuicide
@@ -87,18 +76,7 @@
       amount: 2
     - id: SheetSteel1
     - id: MaterialHideCorgi
-    # begin starcup: butchering gives organs
-    - id: OrganAnimalLungs
-      amount: 1
-    - id: OrganAnimalStomach
-      amount: 1
-    - id: OrganAnimalLiver
-      amount: 1
-    - id: OrganAnimalHeart
-      amount: 1
-    - id: OrganAnimalKidneys
-      amount: 1
-    # end starcup
+    dropOrgansOnButcher: true # starcup: butchering gives organs
 
 - type: entity
   name: Lisa
@@ -174,19 +152,7 @@
     spawned:
     - id: FoodMeatCorgi
       amount: 2
-    - id: MaterialHideCorgi
-    # begin starcup: butchering gives organs
-    - id: OrganAnimalLungs
-      amount: 1
-    - id: OrganAnimalStomach
-      amount: 1
-    - id: OrganAnimalLiver
-      amount: 1
-    - id: OrganAnimalHeart
-      amount: 1
-    - id: OrganAnimalKidneys
-      amount: 1
-    # end starcup
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: StealTarget
     stealGroup: AnimalIan
 
@@ -314,18 +280,7 @@
     spawned:
     - id: FoodMeat
       amount: 2
-    # begin starcup: butchering gives organs
-    - id: OrganAnimalLungs
-      amount: 1
-    - id: OrganAnimalStomach
-      amount: 1
-    - id: OrganAnimalLiver
-      amount: 1
-    - id: OrganAnimalHeart
-      amount: 1
-    - id: OrganAnimalKidneys
-      amount: 1
-    # end starcup
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.9
     interactSuccessString: petting-success-bingus
@@ -398,18 +353,7 @@
     spawned:
     - id: FoodMeat
       amount: 2
-    # begin starcup: butchering gives organs
-    - id: OrganAnimalLungs
-      amount: 1
-    - id: OrganAnimalStomach
-      amount: 1
-    - id: OrganAnimalLiver
-      amount: 1
-    - id: OrganAnimalHeart
-      amount: 1
-    - id: OrganAnimalKidneys
-      amount: 1
-    # end starcup
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
     accent: dog
   - type: InteractionPopup
@@ -459,18 +403,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
-    # begin starcup: butchering gives organs
-    - id: OrganAnimalLungs
-      amount: 1
-    - id: OrganAnimalStomach
-      amount: 1
-    - id: OrganAnimalLiver
-      amount: 1
-    - id: OrganAnimalHeart
-      amount: 1
-    - id: OrganAnimalKidneys
-      amount: 1
-    # end starcup
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 1
     interactSuccessString: petting-success-sloth
@@ -522,18 +455,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
-    # begin starcup: butchering gives organs
-    - id: OrganAnimalLungs
-      amount: 1
-    - id: OrganAnimalStomach
-      amount: 1
-    - id: OrganAnimalLiver
-      amount: 1
-    - id: OrganAnimalHeart
-      amount: 1
-    - id: OrganAnimalKidneys
-      amount: 1
-    # end starcup
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
     accent: dog
   - type: InteractionPopup
@@ -690,18 +612,7 @@
     # - id: Telecrystal5
     #   amount: 1
     # end starcup
-    # begin starcup: butchering gives organs
-    - id: OrganAnimalLungs
-      amount: 1
-    - id: OrganAnimalStomach
-      amount: 1
-    - id: OrganAnimalLiver
-      amount: 1
-    - id: OrganAnimalHeart
-      amount: 1
-    - id: OrganAnimalKidneys
-      amount: 1
-    # end starcup
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Grammar
     attributes:
       proper: true
@@ -755,18 +666,7 @@
     spawned:
     - id: FoodMeat
       amount: 1
-    # begin starcup: butchering gives organs
-    - id: OrganAnimalLungs
-      amount: 1
-    - id: OrganAnimalStomach
-      amount: 1
-    - id: OrganAnimalLiver
-      amount: 1
-    - id: OrganAnimalHeart
-      amount: 1
-    - id: OrganAnimalKidneys
-      amount: 1
-    # end starcup
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Grammar
     attributes:
       proper: true
@@ -929,12 +829,7 @@
       amount: 1
     - id: MaterialSmileExtract
       amount: 1
-    # begin starcup: butchering gives organs
-    - id: SentientSlimesCore
-      amount: 1
-    - id: OrganSlimesLungs
-      amount: 1
-    # end starcup
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Damageable
     damageModifierSet: SlimePet
   - type: Bloodstream

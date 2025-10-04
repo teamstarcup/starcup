@@ -128,7 +128,7 @@ public sealed class SharpSystem : EntitySystem
             popupEnt, args.Args.User, popupType);
 
         if (hasBody)
-            _bodySystem.GibBody(args.Args.Target.Value, body: body);
+            _bodySystem.GibBody(args.Args.Target.Value, body: body, gibOrgans: butcher.DropOrgansOnButcher); // starcup: drop organs if DropOrgansOnButcher is true
 
         _destructibleSystem.DestroyEntity(args.Args.Target.Value);
 

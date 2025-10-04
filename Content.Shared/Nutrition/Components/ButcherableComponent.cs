@@ -23,6 +23,11 @@ namespace Content.Shared.Nutrition.Components
         /// </summary>
         [ViewVariables]
         public bool BeingButchered;
+
+        // starcup: make butchering certain mobs yield organs
+        [ViewVariables(VVAccess.ReadWrite), DataField]
+        public bool DropOrgansOnButcher;
+        // end starcup
     }
 
     public enum ButcheringType : byte
