@@ -9,6 +9,7 @@
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
   - LateJoinAnomalySpawns
+  - RoundstartPowerOutageRule
 
 
 # game rules
@@ -91,3 +92,10 @@
       children:
         - !type:NestedSelector
           tableId: RandomStandardAnomalyTable
+
+- type: entity
+  parent: BaseVariationPass
+  id: RoundstartPowerOutageRule
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RoundstartPowerOutage
