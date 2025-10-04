@@ -35,6 +35,7 @@
     factions:
     - Xeno
   - type: Hands
+  - type: ItemOffer # starcup: item offering
   - type: ComplexInteraction
   - type: Sprite
     drawdepth: Mobs
@@ -79,7 +80,6 @@
       groups:
         Brute: 6
   - type: DamageStateVisuals
-    rotate: true
     states:
       Alive:
         Base: running
@@ -489,6 +489,7 @@
     factions:
     - Xeno
   - type: Hands
+  - type: ItemOffer # starcup: item offering
   - type: ComplexInteraction
   - type: MobState
   - type: Stamina
@@ -506,7 +507,6 @@
      groups:
        Brute: 5
   - type: DamageStateVisuals
-    rotate: true
     states:
       Alive:
         Base: running

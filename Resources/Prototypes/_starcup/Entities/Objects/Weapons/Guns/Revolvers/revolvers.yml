@@ -1,11 +1,17 @@
 # Antag
 - type: entity
-  parent: [BaseTraitorContraband, WeaponRevolverPython]
+  parent: [BaseTraitorContraband, WeaponRevolverPython, BaseExaminableClothing]
   id: WeaponRevolverPythonNT
   suffix: NanoTrasen
   description: A powerful double-action revolver manufactured by NanoTrasen. Loud and flashy, perfect for any agent looking to make a statement. Loads 6 rounds of .45 magnum.
+  components:
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-python
 
 - type: entity
-  parent: [BaseTraitorContraband, WeaponRevolverPythonAP]
+  parent: [BaseTraitorContraband, WeaponRevolverPythonAP, BaseExaminableClothing]
   id: WeaponRevolverPythonAPNT
   suffix: NanoTrasen, armor-piercing
+  components:
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-python

@@ -1,0 +1,19 @@
+- type: entity
+  parent: AmeJar
+  id: AmeJarExtended
+  name: condensed AME fuel jar
+  description: An industrial-sized jar of highly condensed antimatter for use in a reactor. Perfect for skeleton crews with cash to spare.
+  components:
+  - type: Item
+    size: Normal
+    sprite: _starcup/Objects/Power/AME/ame_jar_extended.rsi
+  - type: Sprite
+    sprite: _starcup/Objects/Power/AME/ame_jar_extended.rsi
+    state: jar
+  - type: AmeFuelContainer
+    fuelAmount: 2500 # roughly 70 minutes per jar
+    fuelCapacity: 2500
+  - type: StaticPrice
+    price: 2500
+  - type: GuideHelp
+    guides: [ AME, Power ]

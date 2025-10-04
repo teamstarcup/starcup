@@ -1,3 +1,4 @@
+using System.Linq; // DeltaV
 using Content.Server.Body.Systems;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
@@ -343,6 +344,15 @@ public sealed class InjectorSystem : SharedInjectorSystem
             }
             temporarilyRemovedSolution = applicableTargetSolution.SplitSolutionWithout(applicableTargetSolution.Volume, reagentPrototypeWhitelistArray);
         }
+        // Begin DeltaV Additions - skimmer functionality
+        else if (injector.Comp.TargetSmallest)
+        {
+            if (applicableTargetSolution.Count() > 0 && applicableTargetSolution.MinBy(soln => soln.Quantity) is {} smallest)
+            {
+                temporarilyRemovedSolution = applicableTargetSolution.SplitSolutionWithout(applicableTargetSolution.Volume, new string[] { smallest.Reagent.Prototype });
+            }
+        }
+        // End DeltaV Additions - skimmer functionality
 
         // Get transfer amount. May be smaller than _transferAmount if not enough room, also make sure there's room in the injector
         var realTransferAmount = FixedPoint2.Min(injector.Comp.TransferAmount, applicableTargetSolution.Volume,

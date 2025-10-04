@@ -54,7 +54,7 @@
 
 - type: entity
   name: AKMS
-  parent: [BaseWeaponRifle, BaseSecurityContraband]
+  parent: [BaseWeaponRifle, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponRifleAk
   description: A somewhat battered combat rifle of a design originating from old Earth. Favored by criminals, militias, and terrorists due to its famed reliability and easy-to-manufacture design. Feeds from .30 rifle magazines.
   components:
@@ -99,6 +99,10 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-akms
+  # end starcup
 
 - type: entity
   name: M-90gl
@@ -146,7 +150,7 @@
 
 - type: entity
   name: Lecter
-  parent: [BaseWeaponRifle, BaseSecurityContraband]
+  parent: [BaseWeaponRifle, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponRifleLecter
   description: A high end military grade assault rifle. Uses .20 rifle ammo.
   components:
@@ -190,6 +194,10 @@
     steps: 5
     zeroVisible: true
   - type: Appearance
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-lecter
+  # end starcup
 
 - type: entity
   name: Estoc DMR

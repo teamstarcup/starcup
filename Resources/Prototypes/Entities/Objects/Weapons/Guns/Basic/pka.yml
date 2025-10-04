@@ -1,7 +1,7 @@
 - type: entity
   name: proto-kinetic accelerator
   id: WeaponProtoKineticAccelerator
-  parent: [WeaponProtoKineticAcceleratorBase, BaseCargoContraband]
+  parent: [WeaponProtoKineticAcceleratorBase, BaseCargoContraband, BaseExaminableClothing] # starcup: examinable clothing
   description: Fires low-damage kinetic bolts at a short range.
   components:
   - type: Sprite
@@ -20,3 +20,7 @@
   - type: ContainerContainer
     containers:
       upgrades: !type:Container
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-pka
+  # end starcup

@@ -22,11 +22,13 @@
       Male: UnisexVox
       Female: UnisexVox
       Unsexed: UnisexVox
-  - type: Butcherable
-    butcheringType: Spike
-    spawned:
-    - id: FoodMeatChicken
-      amount: 5
+  # begin starcup: people are not food
+  # - type: Butcherable
+  #   butcheringType: Spike
+  #   spawned:
+  #   - id: FoodMeatChicken
+  #     amount: 5
+  # end starcup
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Vox
@@ -86,11 +88,11 @@
     - map: [ "outerClothing" ]
     - map: [ "back" ]
     - map: [ "neck" ]
+    - map: [ "suitstorage" ] # This is not in the default order
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
     - map: [ "enum.HumanoidVisualLayers.Hair" ]
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
     - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
-    - map: [ "suitstorage" ] # This is not in the default order
     - map: [ "enum.HumanoidVisualLayers.Tail" ]
     - map: [ "mask" ]
     - map: [ "head" ]
@@ -105,8 +107,11 @@
       sprite: "Effects/creampie.rsi"
       state: "creampie_vox" # Not default
       visible: false
-  - type: HumanoidAppearance
+  - type:  HumanoidAppearance
     species: Vox
+    hideLayersOnEquip: #imp
+    - HeadSide
+    - Hair
     undergarmentTop: UndergarmentTopTanktopVox
     undergarmentBottom: UndergarmentBottomBoxersVox
     markingsDisplacement:
@@ -138,6 +143,11 @@
           32:
             sprite: Mobs/Species/Vox/displacement.rsi
             state: head
+      neck:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: neck
       back:
         sizeMaps:
           32:
@@ -167,6 +177,7 @@
         32:
           sprite: Mobs/Species/Vox/displacement.rsi
           state: hand_r
+  - type: ItemOffer # starcup: item offering
 
 - type: entity
   parent: BaseSpeciesDummy
@@ -234,3 +245,4 @@
         32:
           sprite: Mobs/Species/Vox/displacement.rsi
           state: hand_r
+  - type: ItemOffer # starcup: item offering

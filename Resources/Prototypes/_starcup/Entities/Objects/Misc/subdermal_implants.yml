@@ -49,4 +49,43 @@
       mobState:
       - Critical
       - Dead
-    - type: Rattle
+    - type: RattleOnTrigger
+      targetUser: true
+
+# SyndComm
+
+- type: entity
+  parent: RadioImplantCentcomm
+  id: RadioImplantSyndComm
+  name: SyndComm radio implant
+  description: This implant grants access to the SyndComm channel without a headset. Only authorized for SyndComm employees.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+  - type: RadioImplant
+    radioChannels:
+    - SyndComm
+
+- type: entity
+  parent: DeathRattleImplant
+  id: DeathRattleImplantSyndComm
+  name: SyndComm death rattle implant
+  description: This implant will inform the SyndComm radio channel should the user fall into critical condition or die.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RattleOnTrigger
+    targetUser: true
+    radioChannel: SyndComm
+
+# Silly
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: PottymouthImplant
+  name: pottymouth implant
+  description: This implant renders the subject entirely incapable of using naughty language.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: GenericImplant
+    components:
+    - !type:PottyMouthComponent

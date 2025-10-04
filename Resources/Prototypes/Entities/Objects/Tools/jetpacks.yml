@@ -26,10 +26,10 @@
   description: It's a jetpack. It can hold 5 L of gas.
   components:
     - type: Sprite
-      sprite: _DeltaV/Objects/Tanks/Jetpacks/blue.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
+      sprite: _DV/Objects/Tanks/Jetpacks/blue.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
       state: icon
     - type: Item
-      sprite: _DeltaV/Objects/Tanks/Jetpacks/blue.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
+      sprite: _DV/Objects/Tanks/Jetpacks/blue.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
       size: Huge
     - type: UserInterface
       interfaces:
@@ -40,7 +40,7 @@
         gasTank:
           length: 1.0
     - type: Clothing
-      sprite: _DeltaV/Objects/Tanks/Jetpacks/blue.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
+      sprite: _DV/Objects/Tanks/Jetpacks/blue.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
       quickEquip: false
       slots:
         - Back
@@ -81,9 +81,9 @@
   suffix: Empty
   components:
   - type: Sprite
-    sprite: _DeltaV/Objects/Tanks/Jetpacks/blue.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
+    sprite: _DV/Objects/Tanks/Jetpacks/blue.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
   - type: Clothing
-    sprite: _DeltaV/Objects/Tanks/Jetpacks/blue.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
+    sprite: _DV/Objects/Tanks/Jetpacks/blue.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
     # DeltaV modifications - Covered by modifications on parent
     #slots:
     #  - Back
@@ -109,20 +109,24 @@
 #Empty black
 - type: entity
   id: JetpackBlack
-  parent: [BaseJetpack, BaseTraitorContraband] # starcup: shared contraband level with nt gear
+  parent: [BaseJetpack, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
   name: jetpack
   suffix: Empty
   components:
   - type: Item
-    sprite: _DeltaV/Objects/Tanks/Jetpacks/black.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
+    sprite: _DV/Objects/Tanks/Jetpacks/black.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
   - type: Sprite
-    sprite: _DeltaV/Objects/Tanks/Jetpacks/black.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
+    sprite: _DV/Objects/Tanks/Jetpacks/black.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
   - type: Clothing
-    sprite: _DeltaV/Objects/Tanks/Jetpacks/black.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
+    sprite: _DV/Objects/Tanks/Jetpacks/black.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
     # DeltaV modifications - Covered by modifications on parent
     #slots:
     #  - Back
     # End DeltaV modifications
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-black-jetpack
+  # end starcup
   - type: StaticPrice
     price: 1000
 
@@ -227,20 +231,24 @@
 #Empty security
 - type: entity
   id: JetpackSecurity
-  parent: [BaseJetpack, BaseSecurityContraband]
+  parent: [BaseJetpack, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   name: security jetpack
   suffix: Empty
   components:
   - type: Item
-    sprite: _DeltaV/Objects/Tanks/Jetpacks/security.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
+    sprite: _DV/Objects/Tanks/Jetpacks/security.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
   - type: Sprite
-    sprite: _DeltaV/Objects/Tanks/Jetpacks/security.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
+    sprite: _DV/Objects/Tanks/Jetpacks/security.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
   - type: Clothing
-    sprite: _DeltaV/Objects/Tanks/Jetpacks/security.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
+    sprite: _DV/Objects/Tanks/Jetpacks/security.rsi # DeltaV - Modified sprites to allow SUITSTORAGE use.
     # DeltaV modifications - Covered by modifications on parent
     #slots:
     #  - Back
     # End DeltaV modifications
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-security-jetpack
+  # end starcup
 
 #Filled security
 - type: entity

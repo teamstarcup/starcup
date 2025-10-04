@@ -36,7 +36,7 @@
   description: A massive beast that uses long tentacles to ensnare its prey, threatening them is not advised under any conditions.
   components:
   - type: Sprite
-    sprite: Mobs/Aliens/Asteroid/goliath.rsi
+    sprite: _DV/Mobs/Aliens/Asteroid/goliath.rsi # DeltaV - upstream uses ancient goliath sprites for some reason
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: goliath
@@ -66,6 +66,7 @@
       types:
         Slash: 10
         Piercing: 10
+    range: 1.12 # Goob - Allows kinetic crushers to fight them without taking guaranteed damage.
   - type: NpcFactionMember
     factions:
     - SimpleHostile

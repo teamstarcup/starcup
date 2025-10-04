@@ -116,8 +116,11 @@ namespace Content.Server.Chemistry.EntitySystems
 
                     // Check if the tile is a tile we've reacted with previously. If so, skip it.
                     // If we have no previous tile reference, we don't return so we can save one.
-                    if (vaporComp.PreviousTileRef != null && tile == vaporComp.PreviousTileRef)
+                    // begin starcup: track all previous tiles
+                    // if (vaporComp.PreviousTileRef != null && tile == vaporComp.PreviousTileRef)
+                    if (vaporComp.PreviousTileRefs.Contains(tile))
                         continue;
+                    // end starcup
 
                     // Enumerate over all the reagents in the vapor entity solution
                     foreach (var (_, soln) in _solutionContainerSystem.EnumerateSolutions((uid, container)))
@@ -161,7 +164,10 @@ namespace Content.Server.Chemistry.EntitySystems
                     }
 
                     // Set the previous tile reference to the current tile
-                    vaporComp.PreviousTileRef = tile;
+                    // begin starcup: track all previous tiles
+                    // vaporComp.PreviousTileRef = tile;
+                    vaporComp.PreviousTileRefs.Add(tile);
+                    // end starcup
                 }
             }
         }

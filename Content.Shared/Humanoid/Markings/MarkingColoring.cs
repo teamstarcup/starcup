@@ -31,7 +31,8 @@ public static class MarkingColoring
         MarkingPrototype prototype,
         Color? skinColor,
         Color? eyeColor,
-        MarkingSet markingSet
+        MarkingSet markingSet, // floof: layering fixes
+        List<string>? ignores = null // floof: layering fixes
     )
     {
         var colors = new List<Color>();

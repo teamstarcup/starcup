@@ -22,7 +22,7 @@
 
 - type: entity
   name: china lake
-  parent: [BaseWeaponLauncher, BaseGunWieldable, BaseTraitorContraband] # starcup: shared contraband level with nt gear
+  parent: [BaseWeaponLauncher, BaseGunWieldable, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
   id: WeaponLauncherChinaLake
   description: PLOOP.
   components:
@@ -53,6 +53,10 @@
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
   - type: GunRequiresWield
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-china-lake
+  # end starcup
   - type: StaticPrice
     price: 10000
 

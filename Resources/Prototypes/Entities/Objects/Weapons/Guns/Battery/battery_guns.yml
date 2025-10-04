@@ -103,7 +103,7 @@
 
 - type: entity
   name: svalinn laser pistol
-  parent: [ BaseWeaponPowerCellSmall, BaseSecurityContraband ]
+  parent: [BaseWeaponPowerCellSmall, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponLaserSvalinn
   description: A cheap and widely used laser pistol.
   components:
@@ -121,10 +121,14 @@
     magState: mag
     steps: 5
     zeroVisible: true
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-laser-pistol
+  # end starcup
 
 - type: entity
   name: retro laser blaster
-  parent: [ BaseWeaponBatterySmall, BaseMajorContraband ]
+  parent: [BaseWeaponBatterySmall, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponLaserGun
   description: A weapon using light amplified by the stimulated emission of radiation.
   components:
@@ -144,10 +148,14 @@
     steps: 5
     zeroVisible: true
   - type: Appearance
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-retro-laser-blaster
+  # end starcup
 
 - type: entity
   name: makeshift laser pistol
-  parent: BaseWeaponBatterySmall
+  parent: [BaseWeaponBatterySmall, BaseMinorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponMakeshiftLaser
   description: Better pray it won't burn your hands off.
   components:
@@ -172,10 +180,14 @@
   - type: Battery
     maxCharge: 500
     startingCharge: 500
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-makeshift-laser
+  # end starcup
 
 - type: entity
   name: tesla gun
-  parent: BaseWeaponBattery
+  parent: [BaseWeaponBattery, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponTeslaGun
   description: The power of the primordial element of lightning in your hands.
   components:
@@ -201,6 +213,10 @@
     steps: 5
     zeroVisible: true
   - type: Appearance
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-tesla-gun
+  # end starcup
 
 - type: entity
   name: practice laser rifle
@@ -235,19 +251,23 @@
 
 - type: entity
   name: laser rifle
-  parent: [WeaponLaserCarbinePractice, BaseGunWieldable, BaseSecurityContraband]
+  parent: [WeaponLaserCarbinePractice, BaseGunWieldable, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponLaserCarbine
-  description: Favoured by Nanotrasen Security for being cheap and easy to use.
+  description: Favoured by NanoTrasen for their affordability, some of these weapons have been helpfully procured by Hawkmoon Acquisitions for SyndComm's own use. # starcup - NT-SC swap
   components:
   - type: StaticPrice
     price: 420
   - type: HitscanBatteryAmmoProvider
     proto: RedLaser
     fireCost: 62.5
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-laser-rifle
+  # end starcup
 
 - type: entity
   name: pulse pistol
-  parent: BaseWeaponBatterySmall
+  parent: [BaseWeaponBatterySmall, BaseCentcommContraband]
   id: WeaponPulsePistol
   description: A state of the art energy pistol favoured as a sidearm by the NT operatives.
   components:
@@ -283,7 +303,7 @@
   name: pulse carbine
   parent: [BaseWeaponBattery, BaseGunWieldable, BaseCentcommContraband]
   id: WeaponPulseCarbine
-  description: A high tech energy carbine favoured by the NT-ERT operatives.
+  description: A high tech energy carbine favoured by the SC-ERT operatives. # starcup - NT-SC swap
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/pulse_carbine.rsi
@@ -317,7 +337,7 @@
 
 - type: entity
   name: pulse rifle
-  parent: [BaseWeaponBattery, BaseGunWieldable]
+  parent: [BaseWeaponBattery, BaseGunWieldable, BaseCentcommContraband]
   id: WeaponPulseRifle
   description: A weapon that is almost as infamous as its users.
   components:
@@ -349,7 +369,7 @@
 
 - type: entity
   name: laser cannon
-  parent: [BaseWeaponBattery, BaseGunWieldable, BaseSecurityContraband]
+  parent: [BaseWeaponBattery, BaseGunWieldable, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponLaserCannon
   description: A heavy duty, high powered laser weapon.
   components:
@@ -378,10 +398,14 @@
   - type: Tag
     tags:
     - TurretCompatibleWeapon
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-laser-cannon
+  # end starcup
 
 - type: entity
   name: portable particle decelerator
-  parent: BaseWeaponBattery
+  parent: [BaseWeaponBattery, BaseEngineeringContraband]
   id: WeaponParticleDecelerator
   description: A portable particle decelerator capable of decomposing a tesla or singularity.
   components:
@@ -412,7 +436,7 @@
 
 - type: entity
   name: x-ray cannon
-  parent: [BaseWeaponBattery, BaseGunWieldable, BaseSecurityContraband]
+  parent: [BaseWeaponBattery, BaseGunWieldable, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponXrayCannon
   description: An experimental weapon that uses concentrated x-ray energy against its target.
   components:
@@ -437,6 +461,10 @@
     steps: 5
     zeroVisible: true
   - type: Appearance
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-xray-cannon
+  # end starcup
 
 - type: entity
   name: practice disabler
@@ -480,7 +508,7 @@
 
 - type: entity
   name: disabler
-  parent: [ WeaponDisablerPractice, BaseSecurityCommandContraband ]
+  parent: [WeaponDisablerPractice, BaseSecurityCommandContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponDisabler
   description: A self-defense weapon that exhausts organic targets, weakening them until they collapse.
   components:
@@ -505,10 +533,14 @@
     guides:
     - Security
     - Antagonists
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-disabler
+  # end starcup
 
 - type: entity
   name: disabler SMG
-  parent: [ BaseWeaponBattery, BaseSecurityContraband ]
+  parent: [BaseWeaponBattery, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponDisablerSMG
   description: Advanced weapon that exhausts organic targets, weakening them until they collapse.
   components:
@@ -544,10 +576,14 @@
   - type: StaticPrice
     price: 260
   - type: PacifismAllowedGun # DeltaV - allow pacifist to use the disabler
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-disabler-smg
+  # end starcup
 
 - type: entity
   name: taser
-  parent: [ BaseWeaponBatterySmall, BaseSecurityContraband ]
+  parent: [BaseWeaponBatterySmall, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponTaser
   description: A low-capacity, energy-based stun gun used by security teams to subdue targets at close range.
   components:
@@ -580,6 +616,10 @@
     steps: 5
     zeroVisible: true
   - type: Appearance
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-taser
+  # end starcup
 
 - type: entity
   name: elite taser
@@ -600,7 +640,7 @@
 
 - type: entity
   name: antique laser pistol
-  parent: [BaseWeaponBatterySmall, BaseGrandTheftContraband]
+  parent: [BaseWeaponBatterySmall, BaseGrandTheftContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponAntiqueLaser
   description: This is an antique laser pistol. All craftsalienship is of the highest quality. It is decorated with a mahogany grip and chrome filigree. The object menaces with spikes of energy. On the item is a hastily scratched out marking. If you didn't know any better, you'd swear the marking resembles the NanoTrasen logo. # starcup: rewritten for tone
   components:
@@ -641,10 +681,14 @@
     flavorKind: station-event-random-sentience-flavor-inanimate
     weight: 0.0002 # 5,000 times less likely than 1 regular animal
     # not putting a BlockMovement component here cause that's funny.
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-antique-laser-pistol
+  # end starcup
 
 - type: entity
   name: advanced laser pistol
-  parent: [ BaseWeaponBatterySmall, BaseSecurityContraband]
+  parent: [BaseWeaponBatterySmall, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponAdvancedLaser
   description: An experimental high-energy laser pistol with a self-charging nuclear battery.
   components:
@@ -676,6 +720,10 @@
   - type: Appearance
   - type: StaticPrice
     price: 63
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-advanced-laser-pistol
+  # end starcup
 
 - type: entity
   name: C.H.I.M.P. handcannon
@@ -727,7 +775,7 @@
   name: experimental C.H.I.M.P. handcannon
   parent: [WeaponPistolCHIMP, BaseSyndicateContraband]
   id: WeaponPistolCHIMPUpgraded
-  description: This C.H.I.M.P. seems to have a greater punch than is usual...
+  description: This C.H.I.M.P. seems to have a greater punch than usual...
   components:
   - type: BatteryWeaponFireModes
     fireModes:
@@ -768,7 +816,7 @@
 
 - type: entity
   name: energy shotgun
-  parent: [BaseWeaponBattery, BaseGunWieldable, BaseGrandTheftContraband]
+  parent: [BaseWeaponBattery, BaseGunWieldable, BaseGrandTheftContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponEnergyShotgun
   description: A one-of-a-kind prototype energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon.
   components:
@@ -822,10 +870,14 @@
     autoRechargeRate: 24
     autoRechargePause: true
     autoRechargePauseTime: 30
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-energy-shotgun
+  # end starcup
 
 - type: entity
   name: temperature gun
-  parent: [BaseWeaponBattery, BaseGunWieldable]
+  parent: [BaseWeaponBattery, BaseGunWieldable, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponTemperatureGun
   description: An advanced gun that shoots body-temperature-changing beams. This probably constitutes as some kind of war crime.
   components:
@@ -866,15 +918,19 @@
     startingCharge: 1000
   - type: StaticPrice
     price: 100
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-temperature-gun
+  # end starcup
 
 - type: entity
   name: xenoborg laser gun
-  parent: [ WeaponAdvancedLaser, BaseXenoborgContraband ]
+  parent: [WeaponAdvancedLaser, BaseXenoborgContraband]
   id: XenoborgLaserGun
 
 - type: entity
   name: xenoborg heavy laser gun
-  parent: [ WeaponAdvancedLaser, BaseXenoborgContraband ]
+  parent: [WeaponAdvancedLaser, BaseXenoborgContraband]
   id: XenoborgHeavyLaserGun
   components:
   - type: HitscanBatteryAmmoProvider

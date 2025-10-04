@@ -1,5 +1,5 @@
 - type: entity
-  parent: [BaseTraitorContraband, ClothingShoesBootsMagSyndie]
+  parent: [BaseTraitorContraband, ClothingShoesBootsMagSyndie, BaseExaminableClothing]
   id: ClothingShoesBootsMagNT
   name: blueblood magboots
   components:
@@ -8,3 +8,5 @@
     state: icon
   - type: Clothing
     sprite: _starcup/Clothing/Shoes/Boots/magboots-nanotrasen.rsi
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-magboots

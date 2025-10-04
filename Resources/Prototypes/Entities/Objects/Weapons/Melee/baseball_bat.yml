@@ -1,6 +1,6 @@
 - type: entity
   name: baseball bat
-  parent: [BaseItem, BaseMinorContraband]
+  parent: [BaseItem, BaseMinorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: BaseBallBat
   description: A robust baseball bat.
   components:
@@ -23,6 +23,11 @@
         Structural: 10
   - type: Item
     size: Normal
+    shape:
+    - 0,0,0,3
+    storedSprite:
+      state: storage
+      sprite: Objects/Weapons/Melee/baseball_bat.rsi
   - type: Tool
     qualities:
     - Rolling
@@ -42,6 +47,10 @@
   - type: Tag
     tags:
     - BaseballBat
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-baseball-bat
+  # end starcup
 
 - type: entity
   name: incomplete baseball bat
@@ -54,6 +63,11 @@
     state: icon
   - type: Item
     size: Normal
+    shape:
+    - 0,0,0,3
+    storedSprite:
+      state: storage
+      sprite: Objects/Weapons/Melee/incomplete_bat.rsi
     sprite: Objects/Weapons/Melee/incomplete_bat.rsi
   - type: Construction
     graph: WoodenBat

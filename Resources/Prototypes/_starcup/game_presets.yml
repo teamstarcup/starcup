@@ -1,0 +1,97 @@
+- type: gamePreset
+  id: Empty
+  alias:
+  - empty
+  - blank
+  name: empty-title
+  showInVote: false
+  description: empty-description
+  rules:
+  - BasicRoundstartVariation
+
+- type: gamePreset
+  id: Calm
+  alias:
+  - calm
+  name: calm-title
+  showInVote: true
+  description: calm-description
+  rules:
+  - CalmStationEventScheduler
+  - SpaceTrafficControlFriendlyEventScheduler
+  - BasicRoundstartVariation
+
+- type: gamePreset
+  id: Trouble
+  alias:
+  - trouble
+  name: trouble-title
+  showInVote: true
+  description: trouble-description
+  rules:
+  - TroubleStationEventScheduler
+  - SlowMeteorSwarmScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
+
+- type: gamePreset
+  id: Danger
+  alias:
+  - danger
+  name: danger-title
+  showInVote: true
+  description: danger-description
+  rules:
+  - DangerStationEventScheduler
+  - MeteorSwarmScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
+
+## "False" Gamemodes, for Admin Use
+- type: gamePreset
+  id: SecretEmpty # runs Empty but shows "Secret" in lobby.
+  alias:
+    - secretempty
+  name: secret-title
+  showInVote: false #Admin Use
+  description: secret-description
+  rules:
+  - BasicRoundstartVariation
+
+- type: gamePreset
+  id: SecretCalm # runs Calm but shows "Secret" in lobby.
+  alias:
+    - secretcalm
+  name: secret-title
+  showInVote: false #Admin Use
+  description: secret-description
+  rules:
+  - CalmStationEventScheduler
+  - SpaceTrafficControlFriendlyEventScheduler
+  - BasicRoundstartVariation
+
+- type: gamePreset
+  id: SecretTrouble # runs Trouble but shows "Secret" in lobby.
+  alias:
+    - secrettrouble
+  name: secret-title
+  showInVote: false #Admin Use
+  description: secret-description
+  rules:
+  - TroubleStationEventScheduler
+  - SlowMeteorSwarmScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
+
+- type: gamePreset
+  id: SecretDanger # runs Danger but shows "Secret" in lobby.
+  alias:
+    - secretdanger
+  name: secret-title
+  showInVote: false #Admin Use
+  description: secret-description
+  rules:
+  - DangerStationEventScheduler
+  - MeteorSwarmScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation

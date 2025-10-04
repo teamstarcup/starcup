@@ -40,21 +40,64 @@
 
 - type: entity
   name: Kardashev-Mosin
-  parent: [BaseWeaponSniper, BaseGunWieldable, BaseMajorContraband]
+  parent: [BaseWeaponSniper, BaseGunWieldable, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponSniperMosin
   description: A true relic, the Kardashev-Mosin has served in nearly every armed conflict since its creation 670 years ago. The bolt-action design of the rifle remains virtually identical to its original design, whether used for hunting, sniping, or endless trench warfare. Loads 10 rounds of .30 rifle.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
+    layers:
+    - state: base
+    - state: base1
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+      visible: false
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    fillBaseName: base
+    inHandsFillBaseName: -fill-
+    inHandsMaxFillLevels: 1
+    equippedFillBaseName: -fill-
+    equippedMaxFillLevels: 1
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Piercing: 12
+    angle: 0
+    animation: WeaponArcThrust
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: MeleeRequiresWield
+  - type: AltFireMelee
+    attackType: Heavy
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 2
+  - type: MeleeChemicalInjector
+    solution: melee
+  - type: RefillableSolution
+    solution: melee
+  - type: InjectableSolution
+    solution: melee
+  - type: SolutionTransfer
+    maxTransferAmount: 2
+  - type: Sharp
+    butcherDelayModifier: 2 #It's a bayonet
   - type: GunRequiresWield
   - type: StaticPrice
     price: 500
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-mosin
+  # end starcup
 
 - type: entity
   name: Hristov
-  parent: [BaseWeaponSniper, BaseGunWieldable, BaseTraitorContraband] # starcup: shared contraband level with nt gear
+  parent: [BaseWeaponSniper, BaseGunWieldable, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
   id: WeaponSniperHristov
-  description: A portable anti-materiel rifle. Fires armor piercing 14.5mm shells. Uses .60 anti-materiel ammo.
+  description: For when you absolutely, positively need to make someone regret their life choices from a safe distance. Uses .60 anti-materiel ammo.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Snipers/heavy_sniper.rsi
@@ -81,12 +124,16 @@
   - type: EyeCursorOffset
     maxOffset: 3
     pvsIncrease: 0.3
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-hristov
+  # end starcup
   - type: StaticPrice
     price: 3500
 
 - type: entity
   name: musket
-  parent: [ BaseWeaponSniper, BaseGunWieldable, BaseMajorContraband ]
+  parent: [ BaseWeaponSniper, BaseGunWieldable, BaseMajorContraband, BaseExaminableClothing ] # starcup: examinable clothing
   id: Musket
   description: This should've been in a museum long before you were born. Uses .60 anti-materiel ammo.
   components:
@@ -122,10 +169,14 @@
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
   - type: GunRequiresWield
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-musket
+  # end starcup
 
 - type: entity
   name: flintlock pistol
-  parent: [BaseWeaponSniper, BaseMajorContraband]
+  parent: [BaseWeaponSniper, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponPistolFlintlock
   description: A pirate's companion. Yarrr! Uses .45 magnum ammo.
   components:
@@ -153,6 +204,10 @@
     proto: CartridgeMagnum
   - type: StaticPrice
     price: 0
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-flintlock-pistol
+  # end starcup
 
 - type: entity
   parent: WeaponPistolFlintlock

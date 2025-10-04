@@ -8,7 +8,7 @@
   desc: reagent-desc-absinthe
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: absinthe
-  color: "#33EE00"
+  color: "#8cd642" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/absintheglass.rsi
     state: icon_empty
@@ -52,7 +52,7 @@
   desc: reagent-desc-ale
   physicalDesc: reagent-physical-desc-bubbly
   flavor: ale
-  color: "#663100"
+  color: "#d07107" # starcup
   recognizable: true
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/aleglass.rsi
@@ -68,7 +68,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-beer
   physicalDesc: reagent-physical-desc-bubbly
-  flavor: beer
+  flavor: beer-starcup # starcup: rewritten
   color: "#e3e77b"
   recognizable: true
   metamorphicSprite:
@@ -108,7 +108,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-cognac
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: cognac
+  flavor: cognac-starcup # starcup: rewritten
   color: "#AB3C05"
   recognizable: true
   metamorphicSprite:
@@ -132,8 +132,8 @@
   parent: BaseAlcohol
   desc: reagent-desc-dead-rum
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: rum
-  color: "#664300"
+  flavor: deadrum-starcup # starcup: rewritten
+  color: "#f09f42" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/rumglass.rsi
     state: icon_empty
@@ -210,8 +210,8 @@
   parent: BaseAlcohol
   desc: reagent-desc-gin
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: gin
-  color: "#664300"
+  flavor: gin-starcup # starcup: rewritten
+  color: "#e4f2f5" # starcup
   recognizable: true
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/ginvodkaglass.rsi
@@ -234,7 +234,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-coffeeliqueur
   physicalDesc: reagent-physical-desc-cloudy
-  flavor: coffeeliquor
+  flavor: coffeeliquor-starcup # starcup: rewritten
   color: "#664300"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/coffeeliqueurglass.rsi
@@ -259,7 +259,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-melon-liquor
   physicalDesc: reagent-physical-desc-sweet
-  flavor: watermelon
+  flavor: melonliquor-starcup # starcup: rewritten
   color: "#00FF33"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/emeraldglass.rsi
@@ -328,7 +328,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-rum
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: rum
+  flavor: rum-starcup # starcup: rewritten
   color: "#f09f42"
   recognizable: true
   metamorphicSprite:
@@ -352,7 +352,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-sake
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: sake
+  flavor: sake-starcup # starcup: rewritten
   color: "#DDDDDD"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/sakeglass.rsi
@@ -373,10 +373,10 @@
   id: Tequila
   name: reagent-name-tequila
   parent: BaseAlcohol
-  desc: reagent-desc-tequila
+  desc: reagent-desc-tequila-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: tequila
-  color: "#d7d1d155"
+  flavor: tequila-starcup # starcup: rewritten
+  color: "#edfdfe55" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/tequillaglass.rsi
     state: icon_empty
@@ -399,7 +399,7 @@
   desc: reagent-desc-vermouth
   physicalDesc: reagent-physical-desc-aromatic
   flavor: vermouth
-  color: "#91FF91"
+  color: "#cfc897" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/vermouthglass.rsi
     state: icon_empty
@@ -421,9 +421,9 @@
   id: Vodka
   name: reagent-name-vodka
   parent: BaseAlcohol
-  desc: reagent-desc-vodka
+  desc: reagent-desc-vodka-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: vodka
+  flavor: vodka-starcup # starcup: rewritten
   color: "#d1d1d155"
   recognizable: true
   metamorphicSprite:
@@ -447,7 +447,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-whiskey
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: whiskey
+  flavor: whiskey-starcup # starcup: rewritten
   color: "#ee7732"
   recognizable: true
   metamorphicSprite:
@@ -487,8 +487,8 @@
   parent: BaseAlcohol
   desc: reagent-desc-champagne
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: champagne
-  color: "#FCFCEE"
+  flavor: champagne-starcup # starcup: rewritten
+  color: "#eded9a" # starcup
   recognizable: true
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/champagneglass.rsi
@@ -514,8 +514,8 @@
   parent: BaseAlcohol
   desc: reagent-desc-acid-spit
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: acidspit
-  color: "#365000"
+  flavor: acidspit-starcup # starcup: rewritten
+  color: "#8de45e" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/acidspitglass.rsi
     state: icon_empty
@@ -529,7 +529,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-alien-brain-hemorrhage
   physicalDesc: reagent-physical-desc-creamy
-  flavor: alienbrainhemorrhage
+  flavor: alienbrainhemorrhage-starcup # starcup: rewritten
   color: "#FFFDD0"
   metamorphicSprite:
       sprite: Objects/Consumable/Drinks/alienbrainhemorrhage.rsi
@@ -555,7 +555,7 @@
   desc: reagent-desc-allies-cocktail
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: alliescocktail
-  color: "#00664d"
+  color: "#33ffff" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/alliescocktail.rsi
     state: icon_empty
@@ -592,10 +592,10 @@
   id: Amasec
   name: reagent-name-amasec
   parent: BaseAlcohol
-  desc: reagent-desc-amasec
+  desc: reagent-desc-amasec-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: amasec
-  color: "#124da7"
+  flavor: amasec-starcup # starcup: rewritten
+  color: "#e3e45e" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/amasecglass.rsi
     state: icon_empty
@@ -620,7 +620,7 @@
   desc: reagent-desc-andalusia
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: andalusia
-  color: "#665700"
+  color: "#e2f866" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/andalusia.rsi
     state: icon_empty
@@ -648,7 +648,7 @@
   desc: reagent-desc-antifreeze
   physicalDesc: reagent-physical-desc-translucent
   flavor: antifreeze
-  color: "#ff7d63"
+  color: "#30f0ff" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/antifreeze.rsi
     state: icon_empty
@@ -696,8 +696,8 @@
   parent: BaseAlcohol
   desc: reagent-desc-b52
   physicalDesc: reagent-physical-desc-bubbly
-  flavor: b52
-  color: "#664300"
+  flavor: b52-starcup # starcup: rewritten
+  color: "#94292b" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/b52glass.rsi
     state: icon_empty
@@ -717,10 +717,10 @@
   id: BahamaMama
   name: reagent-name-bahama-mama
   parent: BaseAlcohol
-  desc: reagent-desc-bahama-mama
+  desc: reagent-desc-bahama-mama-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-tropical
-  flavor: bahamamama
-  color: "#FF7F3B"
+  flavor: bahamamama-starcup # starcup: rewritten
+  color: "#f53c06" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/bahama_mama.rsi
     state: icon_empty
@@ -742,7 +742,7 @@
   id: BananaHonk
   name: reagent-name-banana-honk
   parent: BaseAlcohol
-  desc: reagent-desc-banana-honk
+  desc: reagent-desc-banana-honk-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-creamy
   flavor: bananahonk
   color: "#ffff91"
@@ -781,8 +781,8 @@
   parent: BaseAlcohol
   desc: reagent-desc-beepsky-smash
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: beepsky
-  color: "#664300"
+  flavor: beepskysmash-starcup # starcup: rewritten
+  color: "#808000" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/beepskysmashglass.rsi
     state: icon_empty
@@ -803,7 +803,7 @@
   id: BlackRussian
   name: reagent-name-black-russian
   parent: BaseAlcohol
-  desc: reagent-desc-black-russian
+  desc: reagent-desc-black-russian-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: blackrussian
   color: "#360000"
@@ -828,7 +828,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-bloody-mary
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: bloodymary
+  flavor: bloodymary-starcup # starcup: rewritten
   color: "#df6a50"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/bloodymaryglass.rsi
@@ -850,11 +850,11 @@
 
 - type: reagent
   id:  Booger
-  name: reagent-name-booger
+  name: reagent-name-slimer-starcup # starcup: rewritten
   parent: BaseAlcohol
-  desc: reagent-desc-booger
+  desc: reagent-desc-slimer-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-slimy
-  flavor: booger
+  flavor: booger-starcup # starcup: rewritten
   color: "#99ff00"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/booger.rsi
@@ -867,10 +867,10 @@
   id: BraveBull
   name: reagent-name-brave-bull
   parent: BaseAlcohol
-  desc: reagent-desc-brave-bull
+  desc: reagent-desc-brave-bull-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: bravebull
-  color: "#664300"
+  flavor: bravebull-starcup # starcup: rewritten
+  color: "#9f9b94" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/bravebullglass.rsi
     state: icon_empty
@@ -917,7 +917,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-coconut-rum
   physicalDesc: reagent-physical-desc-milky
-  flavor: coconutrum
+  flavor: coconutrum-starcup # starcup: rewritten
   color: "#cccbc8"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/coconutrum.rsi
@@ -961,9 +961,9 @@
   id: CrushDepth
   name: reagent-name-crush-depth
   parent: BaseAlcohol
-  desc: reagent-desc-crush-depth
+  desc: reagent-desc-crush-depth-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-cloudy
-  flavor: crushdepth
+  flavor: crushdepth-starcup # starcup: rewritten
   color: "#0a0a33"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/crushdepth.rsi
@@ -986,10 +986,10 @@
   id: CubaLibre
   name: reagent-name-cuba-libre
   parent: BaseAlcohol
-  desc: reagent-desc-cuba-libre
+  desc: reagent-desc-cuba-libre-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-bubbly
   flavor: cubalibre
-  color: "#3E1B00"
+  color: "#91796f" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/cubalibreglass.rsi
     state: icon_empty
@@ -1012,7 +1012,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-dark-and-stormy
   physicalDesc: reagent-physical-desc-bubbly
-  flavor: darkandstormy
+  flavor: darkandstormy-starcup # starcup: rewritten
   color: "#cf7f17"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/dark&stormy.rsi
@@ -1110,7 +1110,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-driest-martini
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: driestmartini
+  flavor: driestmartini-starcup # starcup: rewritten
   color: "#2E6671"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/driestmartiniglass.rsi
@@ -1158,7 +1158,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-electric-shark
   physicalDesc: reagent-physical-desc-tropical
-  flavor: electricshark
+  flavor: electricshark-starcup # starcup: rewritten
   color: "#3097cf"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/electricshark.rsi
@@ -1183,7 +1183,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-erika-surprise
   physicalDesc: reagent-physical-desc-cloudy
-  flavor: erikasurprise
+  flavor: erikasurprise-starcup # starcup: rewritten
   color: "#67bc50"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/beerstein.rsi
@@ -1223,7 +1223,7 @@
   desc: reagent-desc-gin-fizz
   physicalDesc: reagent-physical-desc-fizzy
   flavor: ginfizz
-  color: "#664300"
+  color: "#ffffcc" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/ginfizzglass.rsi
     state: icon_empty
@@ -1247,7 +1247,7 @@
   desc: reagent-desc-gin-tonic
   physicalDesc: reagent-physical-desc-fizzy
   flavor: gintonic
-  color: "#004166"
+  color: "#cce7eb" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/gintonicglass.rsi
     state: icon_empty
@@ -1268,9 +1268,9 @@
   id: Gildlager
   name: reagent-name-gildlager
   parent: BaseAlcohol
-  desc: reagent-desc-gildlager
+  desc: reagent-desc-gildlager-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: gildlager
+  flavor: gildlager-starcup # starcup: rewritten
   color: "#FFFF91"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/gildlagerglass.rsi
@@ -1293,7 +1293,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-grog
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: grog
+  flavor: grog-starcup # starcup: rewritten
   color: "#e3e77b"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/beerstein.rsi
@@ -1342,8 +1342,8 @@
   parent: BaseAlcohol
   desc: reagent-desc-iced-beer
   physicalDesc: reagent-physical-desc-bubbly
-  flavor: icedbeer
-  color: "#664300"
+  flavor: icedbeer-starcup # starcup: rewritten
+  color: "#e3e77b" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/iced_beerglass.rsi
     state: icon_empty
@@ -1358,8 +1358,8 @@
   parent: BaseAlcohol
   desc: reagent-desc-irish-slammer
   physicalDesc: reagent-physical-desc-bubbly
-  flavor: irishslammer
-  color: "#2E6671"
+  flavor: grenadepenguin-starcup # starcup: rewritten
+  color: "#271607" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/irishslammer.rsi
     state: icon_empty
@@ -1379,10 +1379,10 @@
   id: IrishCream
   name: reagent-name-irish-cream
   parent: BaseAlcohol
-  desc: reagent-desc-irish-cream
+  desc: reagent-desc-irish-cream-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-creamy
-  flavor: creamy
-  color: "#664300"
+  flavor: irishcream-starcup # starcup: rewritten
+  color: "#e3d0b3" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/irishcreamglass.rsi
     state: icon_empty
@@ -1404,8 +1404,8 @@
   parent: BaseAlcohol
   desc: reagent-desc-irish-coffee
   physicalDesc: reagent-physical-desc-cloudy
-  flavor: irishcoffee
-  color: "#664300"
+  flavor: irishcoffee-starcup # starcup: rewritten
+  color: "#874010" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/irishcoffeeglass.rsi
     state: icon_empty
@@ -1430,9 +1430,9 @@
   id: JackRose
   name: reagent-name-jack-rose
   parent: BaseAlcohol
-  desc: reagent-desc-jack-rose
+  desc: reagent-desc-jack-rose-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-tart
-  flavor: jackrose
+  flavor: jackrose-starcup # starcup: rewritten
   color: "#f53b3b"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/jackrose.rsi
@@ -1445,9 +1445,9 @@
   id: JungleBird
   name: reagent-name-jungle-bird
   parent: BaseAlcohol
-  desc: reagent-desc-jungle-bird
+  desc: reagent-desc-jungle-bird-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-tropical
-  flavor: junglebird
+  flavor: junglebird-starcup # starcup: rewritten
   color: "#f27c3d"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/junglebird.rsi
@@ -1470,9 +1470,9 @@
   id: Kalimotxo
   name: reagent-name-kalimotxo
   parent: BaseAlcohol
-  desc: reagent-desc-kalimotxo
+  desc: reagent-desc-kalimotxo-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-bubbly
-  flavor: kalimotxo
+  flavor: kalimotxo-starcup # starcup: rewritten
   color: "#360606"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/kalimotxo.rsi
@@ -1485,10 +1485,10 @@
   id: LongIslandIcedTea
   name: reagent-name-long-island-iced-tea
   parent: BaseAlcohol
-  desc: reagent-desc-long-island-iced-tea
+  desc: reagent-desc-long-island-iced-tea-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: longisland
-  color: "#664300"
+  flavor: longisland-starcup # starcup: rewritten
+  color: "#ff6633" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/longislandicedteaglass.rsi
     state: icon_empty
@@ -1508,10 +1508,10 @@
   id: Manhattan
   name: reagent-name-manhattan
   parent: BaseAlcohol
-  desc: reagent-desc-manhattan
+  desc: reagent-desc-manhattan-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: manhattan
-  color: "#664300"
+  flavor: manhattan-starcup # starcup: rewritten
+  color: "#ff3333" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/manhattanglass.rsi
     state: icon_empty
@@ -1533,10 +1533,10 @@
   id: ManhattanProject
   name: reagent-name-manhattan-project
   parent: BaseAlcohol
-  desc: reagent-desc-manhattan-project
+  desc: reagent-desc-manhattan-project-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-overpowering
-  flavor: manhattanproject
-  color: "#664300"
+  flavor: manhattanproject-starcup # starcup: rewritten
+  color: "#ff3333" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/proj_manhattanglass.rsi
     state: icon_empty
@@ -1556,12 +1556,12 @@
 
 - type: reagent
   id: ManlyDorf
-  name: reagent-name-manly-dorf
+  name: reagent-name-rock-and-stone-starcup # starcup: rewritten
   parent: BaseAlcohol
-  desc: reagent-desc-manly-dorf
+  desc: reagent-desc-rock-and-stone-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-fizzy-and-creamy
-  flavor: rocksandstones
-  color: "#664300"
+  flavor: rockandstone-starcup # starcup: rewritten
+  color: "#906d28" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/manlydorfglass.rsi
     state: icon_empty
@@ -1574,10 +1574,10 @@
   id: Margarita
   name: reagent-name-margarita
   parent: BaseAlcohol
-  desc: reagent-desc-margarita
+  desc: reagent-desc-margarita-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: margarita
-  color: "#8CFF8C"
+  flavor: margarita-starcup # starcup: rewritten
+  color: "#dcdcdc" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/margaritaglass.rsi
     state: icon_empty
@@ -1599,10 +1599,10 @@
   id: Martini
   name: reagent-name-martini
   parent: BaseAlcohol
-  desc: reagent-desc-martini
+  desc: reagent-desc-martini-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: martini
-  color: "#664300"
+  flavor: martini-starcup # starcup: rewritten
+  color: "#ceddad" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/martiniglass.rsi
     state: icon_empty
@@ -1622,10 +1622,10 @@
   id: Mead
   name: reagent-name-mead
   parent: BaseAlcohol
-  desc: reagent-desc-mead
+  desc: reagent-desc-mead-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: mead
-  color: "#664300"
+  flavor: mead-starcup # starcup: rewritten
+  color: "#e4c35e" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/beerstein.rsi
     state: icon_empty
@@ -1641,7 +1641,7 @@
   desc: reagent-desc-mojito
   physicalDesc: reagent-physical-desc-refreshing
   flavor: mojito
-  color: "#3ea99888"
+  color: "#dffad9" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/mojito.rsi
     state: icon_empty
@@ -1666,8 +1666,8 @@
   parent: BaseAlcohol
   desc: reagent-desc-monkey-business
   physicalDesc: reagent-physical-desc-tart
-  flavor: monkeybusiness
-  color: "#d6b929"
+  flavor: monkeybusiness-starcup # starcup: rewritten
+  color: "#ff5349" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/monkeybusiness.rsi
     state: icon_empty
@@ -1682,7 +1682,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.13 # increased from 0.06
+        amount: 0.14 # increased from 0.06
   # end starcup
 
 - type: reagent
@@ -1743,7 +1743,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-painkiller
   physicalDesc: reagent-physical-desc-refreshing
-  flavor: painkiller
+  flavor: painkiller-starcup # starcup: rewritten
   color: "#e6cb47"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/painkiller.rsi
@@ -1764,9 +1764,9 @@
   id: Patron
   name: reagent-name-patron
   parent: BaseAlcohol
-  desc: reagent-desc-patron
+  desc: reagent-desc-patron-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-metallic
-  flavor: patron
+  flavor: patron-starcup # starcup: rewritten
   color: "#585840"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/patronglass.rsi
@@ -1787,9 +1787,9 @@
   id: RedMead
   name: reagent-name-red-mead
   parent: BaseAlcohol
-  desc: reagent-desc-red-mead
+  desc: reagent-desc-red-mead-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-ferrous
-  flavor: redmead
+  flavor: redmead-starcup # starcup: rewritten
   color: "#bc5550"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/red_meadglass.rsi
@@ -1833,9 +1833,9 @@
   id: Radler
   name: reagent-name-radler
   parent: BaseAlcohol
-  desc: reagent-desc-radler
+  desc: reagent-desc-radler-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-citric
-  flavor: radler
+  flavor: radler-starcup # starcup: rewritten
   color: "#edff2b"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/radler.rsi
@@ -1848,25 +1848,22 @@
   id: Sbiten
   name: reagent-name-sbiten
   parent: BaseAlcohol
-  desc: reagent-desc-sbiten
-  physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: sbiten
-  color: "#004166"
+  desc: reagent-desc-sbiten-starcup # starcup: rewritten
+  physicalDesc: reagent-physical-desc-thick # starcup
+  flavor: sbiten-starcup # starcup: rewritten
+  color: "#5A0717" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/sbitenglass.rsi
     state: icon_empty
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
-  # begin starcup additions
+  # begin starcup additions (removed alcohol content)
   metabolisms:
     Drink:
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.1 # increased from 0.06
   # end starcup
 
 - type: reagent
@@ -1875,7 +1872,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-screwdriver-cocktail
   physicalDesc: reagent-physical-desc-citric
-  flavor: screwdriver
+  flavor: screwdriver-starcup # starcup: rewritten
   color: "#A68310"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/screwdriverglass.rsi
@@ -1922,9 +1919,9 @@
   id: Silencer
   name: reagent-name-silencer
   parent: BaseAlcohol
-  desc: reagent-desc-silencer
+  desc: reagent-desc-silencer-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: nothing
+  flavor: silencer-starcup # starcup: rewritten
   color: "#878787"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/silencerglass.rsi
@@ -1963,7 +1960,7 @@
   desc: reagent-desc-snow-white
   physicalDesc: reagent-physical-desc-bubbly
   flavor: snowwhite
-  color: "#FFFFFF"
+  color: "#dfdfdf" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/snowwhite.rsi
     state: icon_empty
@@ -1978,7 +1975,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-sui-dream
   physicalDesc: reagent-physical-desc-sweet
-  flavor: suidream
+  flavor: suidream-starcup # starcup: rewritten
   color: "#00A86B"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/sdreamglass.rsi
@@ -1992,7 +1989,7 @@
   id: SyndicateBomb
   name: reagent-name-syndicate-bomb
   parent: BaseAlcohol
-  desc: reagent-desc-syndicate-bomb
+  desc: reagent-desc-syndicate-bomb-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-opaque
   flavor: syndiebomb
   color: "#e3e77b"
@@ -2008,9 +2005,9 @@
   id: TequilaSunrise
   name: reagent-name-tequila-sunrise
   parent: BaseAlcohol
-  desc: reagent-desc-tequila-sunrise
+  desc: reagent-desc-tequila-sunrise-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-citric
-  flavor: tequilasunrise
+  flavor: tequilasunrise-starcup # starcup: rewritten
   color: "#FFE48C"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/tequillasunriseglass.rsi
@@ -2059,7 +2056,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-three-mile-island-starcup # starcup: rewritten for tone
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: threemileisland
+  flavor: threemileisland-starcup # starcup: rewritten
   color: "#666340"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/threemileislandglass.rsi
@@ -2085,8 +2082,8 @@
   parent: BaseAlcohol
   desc: reagent-desc-toxins-special
   physicalDesc: reagent-physical-desc-pungent
-  flavor: toxinsspecial
-  color: "#665c00"
+  flavor: toxinsspecial-starcup # starcup: rewritten
+  color: "#9679a3" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/toxinsspecialglass.rsi
     state: icon_empty
@@ -2108,10 +2105,10 @@
   id: Vampiro
   name: reagent-name-vampiro
   parent: BaseAlcohol
-  desc: reagent-desc-vampiro
+  desc: reagent-desc-vampiro-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-spicy
   flavor: vampiro
-  color: "#b51b1b"
+  color: "#d25d68" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/vampiro.rsi
     state: icon_empty
@@ -2133,10 +2130,10 @@
   id: VodkaMartini
   name: reagent-name-vodka-martini
   parent: BaseAlcohol
-  desc: reagent-desc-vodka-martini
+  desc: reagent-desc-vodka-martini-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: vodkamartini
-  color: "#004666"
+  flavor: vodkamartini-starcup # starcup: rewritten
+  color: "#CEDDAD" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/martiniglass.rsi
     state: icon_empty
@@ -2156,10 +2153,10 @@
   id: VodkaTonic
   name: reagent-name-vodka-tonic
   parent: BaseAlcohol
-  desc: reagent-desc-vodka-tonic
+  desc: reagent-desc-vodka-tonic-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: vodkatonic
-  color: "#0064C8"
+  color: "#d1ebf2" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/vodkatonicglass.rsi
     state: icon_empty
@@ -2182,7 +2179,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-whiskey-cola
   physicalDesc: reagent-physical-desc-bubbly
-  flavor: whiskeycola
+  flavor: whiskeycola-starcup # starcup: rewritten
   color: "#3E1B00"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/whiskeycolaglass.rsi
@@ -2204,9 +2201,9 @@
   id: WhiskeySoda
   name: reagent-name-whiskey-soda
   parent: BaseAlcohol
-  desc: reagent-desc-whiskey-soda
+  desc: reagent-desc-whiskey-soda-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-fizzy
-  flavor: whiskeycola
+  flavor: whiskeysoda-starcup # starcup: rewritten
   color: "#533600"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/whiskeysodaglass.rsi
@@ -2249,7 +2246,7 @@
   desc: reagent-desc-white-russian
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: whiterussian
-  color: "#A68340"
+  color: "#dbdccc" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/whiterussianglass.rsi
     state: icon_empty
@@ -2302,7 +2299,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-xeno-basher
   physicalDesc: reagent-physical-desc-fizzy-and-creamy
-  flavor: xenobasher
+  flavor: xenobasher-starcup # starcup: rewritten
   color: "#4d6600"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/xenobasher.rsi
@@ -2331,9 +2328,9 @@
   id: IrishBool
   name: reagent-name-irish-bool
   parent: BaseAlcohol
-  desc: reagent-desc-irish-bool
+  desc: reagent-desc-irish-bool-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-bubbly
-  flavor: irishbool
+  flavor: irishbool-starcup # starcup: rewritten
   color: "#71672e99"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/beerglass.rsi
@@ -2362,9 +2359,9 @@
   id: BudgetInsulsDrink
   name: reagent-name-budget-insuls
   parent: BaseAlcohol
-  desc: reagent-desc-budget-insuls
+  desc: reagent-desc-budget-insuls-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: budgetinsulsdrink
+  flavor: budgetinsulsdrink-starcup # starcup: rewritten
   color: "#dede73"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/budgetinsulsdrink.rsi
@@ -2455,7 +2452,7 @@
   id: BlueHawaiian
   name: reagent-name-blue-hawaiian
   parent: BaseAlcohol
-  desc: reagent-desc-blue-hawaiian
+  desc: reagent-desc-blue-hawaiian-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-tropical
   flavor: bluehawaiian
   color: "#47687b"
@@ -2478,9 +2475,9 @@
   id: Caipirinha
   name: reagent-name-caipirinha
   parent: BaseAlcohol
-  desc: reagent-desc-caipirinha
+  desc: reagent-desc-caipirinha-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: caipirinha
+  flavor: caipirinha-starcup # starcup: rewritten
   color: "#E6EE9C"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/caipirinha.rsi
@@ -2503,7 +2500,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-moscow-mule
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: moscowmule
+  flavor: moscowmule-starcup # starcup: rewritten
   color: "#CECBAD"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/moscowmule.rsi
@@ -2529,7 +2526,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-mimeosa
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: mimeosa
+  flavor: mimeosa-starcup # starcup: rewritten
   color: "#939393"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/mimeosa.rsi
@@ -2553,9 +2550,9 @@
   id: Mimosa
   name: reagent-name-mimosa
   parent: BaseAlcohol
-  desc: reagent-desc-mimosa
+  desc: reagent-desc-mimosa-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: mimosa
+  flavor: mimosa-starcup # starcup: rewritten
   color: "#FFCA48"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/mimosa.rsi
@@ -2570,16 +2567,16 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.07
+        amount: 0.06 # starcup: decreased from 0.07
 
 - type: reagent
   id: Mayojito
   name: reagent-name-mayojito
   parent: BaseAlcohol
-  desc: reagent-desc-mayojito
+  desc: reagent-desc-mayojito-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: mayojito
-  color: "#6FBE44"
+  color: "#78ae85" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/mayojito.rsi
     state: icon_empty
@@ -2608,9 +2605,9 @@
   id: DeathInTheAfternoon
   name: reagent-name-death-in-the-afternoon
   parent: BaseAlcohol
-  desc: reagent-desc-death-in-the-afternoon
+  desc: reagent-desc-death-in-the-afternoon-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: deathintheafternoon
+  flavor: deathintheafternoon-starcup # starcup: rewritten
   color: "#57A87D"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/deathintheafternoon.rsi
@@ -2625,13 +2622,13 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.22 # starcup: decreased from 0.3
+        amount: 0.25 # starcup: decreased from 0.3
 
 - type: reagent
   id: Empress75
   name: reagent-name-empress-75
   parent: BaseAlcohol
-  desc: reagent-desc-empress-75
+  desc: reagent-desc-empress-75-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: empress75
   color: "#900296"
@@ -2656,7 +2653,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-espresso-martini
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: espressomartini
+  flavor: espressomartini-starcup # starcup: rewritten
   color: "#170a0c"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/espressomartini.rsi
@@ -2684,7 +2681,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-daiquiri
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: daiquiri
+  flavor: daiquiri-starcup # starcup: rewritten
   color: "#DAC865"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/daiquiri.rsi
@@ -2707,7 +2704,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-the-sun-also-rises
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: thesunalsorises
+  flavor: thesunalsorises-starcup # starcup: rewritten
   color: "#DCE2DE"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/thesunalsorises.rsi
@@ -2722,7 +2719,7 @@
         factor: 2
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.16 # starcup: decreased from 0.3
+        amount: 0.17 # starcup: decreased from 0.3
 
 - type: reagent
   id: WhiskeySour
@@ -2730,7 +2727,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-whiskey-sour
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: whiskeysour
+  flavor: whiskeysour-starcup # starcup: rewritten
   color: "#8B7941"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/whiskeysour.rsi
@@ -2753,7 +2750,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-zombiecocktail
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: zombiecocktail
+  flavor: zombiecocktail-starcup # starcup: rewritten
   color: "#d17844"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/zombiecocktail.rsi

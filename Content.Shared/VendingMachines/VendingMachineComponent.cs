@@ -199,6 +199,7 @@ namespace Content.Shared.VendingMachines
         public InventoryType Type;
         public string Id;
         public uint Amount;
+
         public VendingMachineInventoryEntry(InventoryType type, string id, uint amount)
         {
             Type = type;

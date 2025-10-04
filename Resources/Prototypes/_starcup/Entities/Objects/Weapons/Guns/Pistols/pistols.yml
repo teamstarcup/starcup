@@ -26,14 +26,20 @@
 
 # Antag
 - type: entity
-  parent: [BaseTraitorContraband, WeaponPistolViper]
+  parent: [BaseTraitorContraband, WeaponPistolViper, BaseExaminableClothing]
   id: WeaponPistolViperNT
   suffix: NanoTrasen
   description: A common handgun illegally modified by NanoTrasen. The Viper sports a selector switch between semi-auto and ‘rock and roll’. The standard sidearm for any soldier who fights under the cobalt flag. Feeds from .35 pistol magazines.
+  components:
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-viper
 
 - type: entity
   name: cobra
-  parent: [ BaseTraitorContraband, WeaponPistolCobra ]
+  parent: [ BaseTraitorContraband, WeaponPistolCobra, BaseExaminableClothing ]
   id: WeaponPistolCobraNT
   suffix: NanoTrasen
   description: Integrally suppressed semi-automatic pistol used by NanoTrasen, firing caseless subsonic rounds. Favored by any agent who likes to keep things quiet and leave no evidence behind. Feeds from .25 pistol magazines.
+  components:
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-cobra

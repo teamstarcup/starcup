@@ -24,11 +24,13 @@
     - DoorBumpOpener
     - SpiderCraft
     - AnomalyHost
-  - type: Butcherable
-    butcheringType: Spike
-    spawned:
-      - id: FoodMeatSpider
-        amount: 5
+  # begin starcup: people are not food
+  # - type: Butcherable
+  #   butcheringType: Spike
+  #   spawned:
+  #     - id: FoodMeatSpider
+  #       amount: 5
+  # end starcup
   - type: Reactive
     reactions:
     - reagents: [Water]
@@ -73,6 +75,7 @@
     proto: spider
   - type: Sprite # I'd prefer if these maps were better. Insert map pun here.
     layers:
+      - map: [ "enum.HumanoidVisualLayers.TailBehind" ] # floof
       - map: [ "enum.HumanoidVisualLayers.Chest" ]
       - map: [ "enum.HumanoidVisualLayers.Head" ]
       - map: [ "enum.HumanoidVisualLayers.Snout" ]
@@ -94,6 +97,7 @@
       - map: [ "id" ]
       - map: [ "outerClothing" ]
       - map: [ "enum.HumanoidVisualLayers.Tail" ] # Mentioned in moth code: This needs renaming lol.
+      - map: [ "enum.HumanoidVisualLayers.TailOversuit" ] # floof
       - map: [ "back" ]
       - map: [ "neck" ]
       - map: [ "enum.HumanoidVisualLayers.FacialHair" ]

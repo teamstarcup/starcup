@@ -1,22 +1,36 @@
-- type: marking
-  id: VoxHairAfro
-  bodyPart: Hair
-  markingCategory: Hair
-  canBeDisplaced: false
-  speciesRestriction: [Vox]
-  sprites:
-    - sprite: Mobs/Customization/vox_hair.rsi
-      state: afro_s
+# starcup - we have removed a number from this document to better-align vox to our vision for the species.
+# These removals aren't necessarily final, it's just easier to add them in later.
+# begin starcup removals
+#- type: marking
+#  id: VoxHairAfro
+#  bodyPart: Hair
+#  markingCategory: Hair
+#  canBeDisplaced: false
+#  speciesRestriction: [Vox]
+#  sprites:
+#    - sprite: Mobs/Customization/vox_hair.rsi
+#      state: afro_s
+
+#- type: marking
+#  id: VoxHairBraids
+#  bodyPart: Hair
+#  markingCategory: Hair
+#  canBeDisplaced: false
+#  speciesRestriction: [Vox]
+#  sprites:
+#    - sprite: Mobs/Customization/vox_hair.rsi
+#      state: braid_s
+# end starcup removals
 
 - type: marking
-  id: VoxHairBraids
+  id: VoxHairBushy
   bodyPart: Hair
   markingCategory: Hair
   canBeDisplaced: false
   speciesRestriction: [Vox]
   sprites:
     - sprite: Mobs/Customization/vox_hair.rsi
-      state: braid_s
+      state: bushy_s
 
 - type: marking
   id: VoxHairCrestedQuills
@@ -38,15 +52,15 @@
     - sprite: Mobs/Customization/vox_hair.rsi
       state: emperorquills_s
 
-- type: marking
-  id: VoxHairFlowing
-  bodyPart: Hair
-  markingCategory: Hair
-  canBeDisplaced: false
-  speciesRestriction: [Vox]
-  sprites:
-    - sprite: Mobs/Customization/vox_hair.rsi
-      state: flowing_s
+#- type: marking # starcup removal - might give it back later, what we really want is vulture shoulder feathers
+#  id: VoxHairFlowing
+#  bodyPart: Hair
+#  markingCategory: Hair
+#  canBeDisplaced: false
+#  speciesRestriction: [Vox]
+#  sprites:
+#    - sprite: Mobs/Customization/vox_hair.rsi
+#      state: flowing_s
 
 - type: marking
   id: VoxHairHawk
@@ -59,24 +73,36 @@
       state: hawk_s
 
 - type: marking
-  id: VoxHairHorns
+  id: VoxHairHedgehog
   bodyPart: Hair
   markingCategory: Hair
   canBeDisplaced: false
   speciesRestriction: [Vox]
   sprites:
     - sprite: Mobs/Customization/vox_hair.rsi
-      state: horns_s
+      state: hedgehog_s
 
-- type: marking
-  id: VoxHairKeelQuills
-  bodyPart: Hair
-  markingCategory: Hair
-  canBeDisplaced: false
-  speciesRestriction: [Vox]
-  sprites:
-    - sprite: Mobs/Customization/vox_hair.rsi
-      state: keelquills_s
+# begin starcup removals
+#- type: marking
+#  id: VoxHairHorns
+#  bodyPart: Hair
+#  markingCategory: Hair
+#  canBeDisplaced: false
+#  speciesRestriction: [Vox]
+#  sprites:
+#    - sprite: Mobs/Customization/vox_hair.rsi
+#      state: horns_s
+
+#- type: marking
+#  id: VoxHairKeelQuills
+#  bodyPart: Hair
+#  markingCategory: Hair
+#  canBeDisplaced: false
+#  speciesRestriction: [Vox]
+#  sprites:
+#    - sprite: Mobs/Customization/vox_hair.rsi
+#      state: keelquills_s
+# end starcup removals
 
 - type: marking
   id: VoxHairKeetQuills
@@ -109,6 +135,16 @@
       state: long_braid_s
 
 - type: marking
+  id: VoxHairMadScientist
+  bodyPart: Hair
+  markingCategory: Hair
+  canBeDisplaced: false
+  speciesRestriction: [Vox]
+  sprites:
+    - sprite: Mobs/Customization/vox_hair.rsi
+      state: mad_scientist_s
+
+- type: marking
   id: VoxHairMange
   bodyPart: Hair
   markingCategory: Hair
@@ -117,7 +153,7 @@
   sprites:
     - sprite: Mobs/Customization/vox_hair.rsi
       state: mange_s
-      
+
 - type: marking
   id: VoxHairMohawk
   bodyPart: Hair
@@ -138,15 +174,15 @@
     - sprite: Mobs/Customization/vox_hair.rsi
       state: nights_s
 
-- type: marking
-  id: VoxHairPony
-  bodyPart: Hair
-  markingCategory: Hair
-  canBeDisplaced: false
-  speciesRestriction: [Vox]
-  sprites:
-    - sprite: Mobs/Customization/vox_hair.rsi
-      state: ponytail_s
+#- type: marking # starcup removal - too much like hair
+#  id: VoxHairPony
+#  bodyPart: Hair
+#  markingCategory: Hair
+#  canBeDisplaced: false
+#  speciesRestriction: [Vox]
+#  sprites:
+#    - sprite: Mobs/Customization/vox_hair.rsi
+#      state: ponytail_s
 
 - type: marking
   id: VoxHairRazorClipped
@@ -168,15 +204,15 @@
     - sprite: Mobs/Customization/vox_hair.rsi
       state: razor_s
 
-- type: marking
-  id: VoxHairSortBraid
-  bodyPart: Hair
-  markingCategory: Hair
-  canBeDisplaced: false
-  speciesRestriction: [Vox]
-  sprites:
-    - sprite: Mobs/Customization/vox_hair.rsi
-      state: short_braid_s
+#- type: marking # starcup removal - too much like hair
+#  id: VoxHairSortBraid
+#  bodyPart: Hair
+#  markingCategory: Hair
+#  canBeDisplaced: false
+#  speciesRestriction: [Vox]
+#  sprites:
+#    - sprite: Mobs/Customization/vox_hair.rsi
+#      state: short_braid_s
 
 - type: marking
   id: VoxHairShortQuills
@@ -189,24 +225,36 @@
       state: shortquills_s
 
 - type: marking
-  id: VoxHairSpotty
+  id: VoxHairSlick
   bodyPart: Hair
   markingCategory: Hair
   canBeDisplaced: false
   speciesRestriction: [Vox]
   sprites:
     - sprite: Mobs/Customization/vox_hair.rsi
-      state: spotty_s
+      state: slick_s
 
-- type: marking
-  id: VoxHairSurf
-  bodyPart: Hair
-  markingCategory: Hair
-  canBeDisplaced: false
-  speciesRestriction: [Vox]
-  sprites:
-    - sprite: Mobs/Customization/vox_hair.rsi
-      state: surf_s
+# begin starcup removals
+#- type: marking
+#  id: VoxHairSpotty
+#  bodyPart: Hair
+#  markingCategory: Hair
+#  canBeDisplaced: false
+#  speciesRestriction: [Vox]
+#  sprites:
+#    - sprite: Mobs/Customization/vox_hair.rsi
+#      state: spotty_s
+#
+#- type: marking
+#  id: VoxHairSurf
+#  bodyPart: Hair
+#  markingCategory: Hair
+#  canBeDisplaced: false
+#  speciesRestriction: [Vox]
+#  sprites:
+#    - sprite: Mobs/Customization/vox_hair.rsi
+#      state: surf_s
+# end starcup
 
 - type: marking
   id: VoxHairTielQuills
@@ -227,13 +275,13 @@
   sprites:
     - sprite: Mobs/Customization/vox_hair.rsi
       state: wise_braid_s
-      
-- type: marking
-  id: VoxHairYasu
-  bodyPart: Hair
-  markingCategory: Hair
-  canBeDisplaced: false
-  speciesRestriction: [Vox]
-  sprites:
-    - sprite: Mobs/Customization/vox_hair.rsi
-      state: yasu_s
+
+#- type: marking # starcup removal - too much like hair, also cmon man
+#  id: VoxHairYasu
+#  bodyPart: Hair
+#  markingCategory: Hair
+#  canBeDisplaced: false
+#  speciesRestriction: [Vox]
+#  sprites:
+#    - sprite: Mobs/Customization/vox_hair.rsi
+#      state: yasu_s

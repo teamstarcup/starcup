@@ -41,7 +41,7 @@
   - type: Speech
     speechVerb: Slime
     speechSounds: Slime
-    allowedEmotes: ['Squish']
+    allowedEmotes: ['Squish', 'Bubble', 'Pop', 'SlimeFizz'] # imp: added bubble, pop # starcup: added SlimeFizz
   - type: TypingIndicator
     proto: slime
   - type: Vocal
@@ -91,17 +91,19 @@
         scaleByQuantity: true
         damage:
           types:
-            Heat: 0.1
+            Caustic: 0.1 # starcup: changed damage type from heat
       - !type:PopupMessage
         type: Local
         visualType: Large
         messages: [ "slime-hurt-by-water-popup" ]
         probability: 0.25
-  - type: Butcherable
-    butcheringType: Spike
-    spawned:
-    - id: FoodMeatSlime
-      amount: 5
+  # begin starcup: people are not food
+  # - type: Butcherable
+  #   butcheringType: Spike
+  #   spawned:
+  #   - id: FoodMeatSlime
+  #     amount: 5
+  # end starcup
   - type: Respirator
     damage:
       types:

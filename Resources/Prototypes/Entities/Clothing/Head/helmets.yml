@@ -29,7 +29,7 @@
 
 #Basic Helmet (Security Helmet)
 - type: entity
-  parent: [ClothingHeadHelmetArmoredBase, BaseSecurityContraband]
+  parent: [ClothingHeadHelmetArmoredBase, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingHeadHelmetBasic
   name: helmet
   description: Standard security gear. Protects the head from impacts.
@@ -45,6 +45,10 @@
   - type: HideLayerClothing
     layers:
       Hair: HEAD
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-helmet
+  # end starcup
 
 #Mercenary Helmet
 - type: entity
@@ -63,7 +67,7 @@
 
 #SWAT Helmet
 - type: entity
-  parent: [ClothingHeadHelmetBase, BaseSecurityContraband]
+  parent: [ClothingHeadHelmetBase, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingHeadHelmetSwat
   name: SWAT helmet
   description: An extremely robust helmet, commonly used by paramilitary forces. This one has the Nanotrasen logo emblazoned on the top.
@@ -86,6 +90,10 @@
   - type: HideLayerClothing
     layers:
       Hair: HEAD
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-swat-helmet
+  # end starcup
 
 #Syndicate SWAT Helmet
 - type: entity
@@ -105,7 +113,7 @@
 
 #Light Riot Helmet
 - type: entity
-  parent: [ClothingHeadHelmetBase, BaseSecurityContraband]
+  parent: [ClothingHeadHelmetBase, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingHeadHelmetRiot
   name: light riot helmet
   description: It's a helmet specifically designed to protect against close range attacks.
@@ -124,6 +132,10 @@
   - type: HideLayerClothing
     layers:
       Hair: HEAD
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-riot-helmet
+  # end starcup
 
 #Bombsuit Helmet
 - type: entity
@@ -191,7 +203,7 @@
 
 #Space Ninja Helmet
 - type: entity
-  parent: [ClothingHeadEVAHelmetBase, BaseMajorContraband]
+  parent: [ClothingHeadEVAHelmetBase, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingHeadHelmetSpaceNinja
   name: space ninja helmet
   description: What may appear to be a simple black garment is in fact a highly sophisticated nano-weave helmet. Standard issue ninja gear.
@@ -209,6 +221,10 @@
     layers:
       Hair: HEAD
       Snout: HEAD
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-ninja-helmet
+  # end starcup
 
 #Knight Helmet
 - type: entity
@@ -289,7 +305,7 @@
 
 #Atmos Fire Helmet
 - type: entity
-  parent: [ClothingHeadLightBase, BaseEngineeringContraband]
+  parent: [ClothingHeadLightBase, BaseEngineeringContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingHeadHelmetAtmosFire
   name: atmos fire helmet
   description: An atmos fire helmet, able to keep the user cool in any situation.
@@ -319,6 +335,10 @@
       Hair: HEAD
       Snout: HEAD
   - type: BreathMask
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-atmos-fire-helmet
+  # end starcup
 
 #Chitinous Helmet
 - type: entity
@@ -442,7 +462,7 @@
 #Bone Helmet
 #No need to hide the hair on this one
 - type: entity
-  parent: [ ClothingHeadHelmetArmoredBase, BaseMinorContraband ]
+  parent: [ ClothingHeadHelmetArmoredBase, BaseMinorContraband, BaseExaminableClothing ] # starcup: examinable clothing
   id: ClothingHeadHelmetBone
   name: bone helmet
   description: Cool-looking helmet made of skull of your enemies.
@@ -454,10 +474,14 @@
   - type: Construction
     graph: BoneHelmet
     node: helmet
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-bone-helmet
+  # end starcup
 
 #Ironclad II Helmet
 - type: entity
-  parent: [ ClothingHeadHelmetArmoredBase, BaseMinorContraband ]
+  parent: [ ClothingHeadHelmetArmoredBase, BaseMinorContraband]
   id: ClothingHeadHelmetPodWars
   name: ironclad II helmet
   description: An ironclad II helmet, a relic of the pod wars.

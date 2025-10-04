@@ -32,8 +32,15 @@
   - AACTablet # Delta-V
   - HandheldStationMap # starcup
   - TapeRecorder # Delta-V
+  - NoviceMark # imp
   - ThreeCandles
+  # Lighters
   - Lighter
+  - CybersunFlippo
+  - DonkcoLighter
+  - GorlexMatchbox
+  - InterdyneFlippo
+  - SyndicateFlippo
   # Smokeables
   - CigPackGreen
   - CigPackRed
@@ -79,6 +86,13 @@
   - ClothingNeckScarfStripedRainbow
   - ClothingNeckScarfStripedTrans
   - TowelColorWhite # sorry, alphabetization, the top option should be one you usually have access to
+  - OffsetCane
+  - OffsetCaneWood
+  - OffsetCaneClown
+  - OffsetCaneMime
+  - OffsetCaneNT
+  - Cane
+  - WhiteCane # Delta-V
   - TowelColorBlack
   - TowelColorDarkBlue
   - TowelColorDarkGreen
@@ -97,8 +111,6 @@
   # Misc Cosmetics
   - GoldRing # Delta-V
   - SilverRing # Delta-V
-  - Cane # Delta-V
-  - WhiteCane # Delta-V
 
 - type: loadoutGroup
   id: Glasses
@@ -106,6 +118,7 @@
   minLimit: 0
   loadouts:
   - Glasses
+  - Eyepatch # starcup
   - GlassesJamjar
   - GlassesJensen
 
@@ -201,14 +214,16 @@
   minLimit: 0
   loadouts:
   - HoPHead
-  - HoPBeret
+  - HoPBellhop # starcup
 
 - type: loadoutGroup
   id: HoPJumpsuit
   name: loadout-group-hop-jumpsuit
   loadouts:
   - HoPJumpsuit
+  - HoPJumpsuitTurtle # starcup
   - HoPJumpskirt
+  - HoPJumpskirtTurtle # starcup
 
 - type: loadoutGroup
   id: HoPNeck
@@ -248,6 +263,62 @@
   - ElegantDressBlue
   - ElegantDressPurple
   # end starcup
+  # Begin DeltaV additions
+  - WhiteJumpsuit
+  - WhiteJumpskirt
+  - BlackJumpsuit
+  - BlackJumpskirt
+  - BlueJumpsuit
+  - BlueJumpskirt
+  - DarkBlueJumpsuit
+  - DarkBlueJumpskirt
+  - TealJumpsuit
+  - TealJumpskirt
+  - GreenJumpsuit
+  - GreenJumpskirt
+  - DarkGreenJumpsuit
+  - DarkGreenJumpskirt
+  - OrangeJumpsuit
+  - OrangeJumpskirt
+  - PinkJumpsuit
+  - PinkJumpskirt
+  - RedJumpsuit
+  - RedJumpskirt
+  - YellowJumpsuit
+  - YellowJumpskirt
+  - PurpleJumpsuit
+  - PurpleJumpskirt
+  - LightBrownJumpsuit
+  - LightBrownJumpskirt
+  - BrownJumpsuit
+  - BrownJumpskirt
+  - MaroonJumpsuit
+  - MaroonJumpskirt
+#  - MioSkirt  # starcup
+#  - NaotaHoodie  # starcup
+  - CasualBlueSkirt
+  - CasualBlueSuit
+  - CasualRedSkirt
+  - CasualRedSuit
+  - CasualPurpleSkirt
+  - CasualPurpleSuit
+  - BlackElegantDress
+  - RedElegantDress
+  - GreenElegantDress
+  - BlueElegantDress
+  - PurpleElegantDress
+  - CyanStripedDress
+  - RedStripedDress
+  - GreenStripedDress
+  - PinkStripedDress
+  - OrangeStripedDress
+  - PurpleTurtleneckDress
+  - RedTurtleneckDress
+  - GreenTurtleneckDress
+  - BlueTurtleneckDress
+  - YellowTurtleneckDress
+  - OldYellowDress
+  # End DeltaV additions
   - AncientJumpsuit
   - RainbowJumpsuit
   - RainbowJumpskirt
@@ -258,6 +329,15 @@
   minLimit: 0
   loadouts:
   - PassengerFace
+  # Begin DeltaV additions
+  - BlackBandanaMask
+  - GoldBandanaMask
+  - GreenBandanaMask
+  - GreyBandanaMask
+  - RedBandanaMask
+  - SkullBandanaMask
+  - BrownBandanaMask
+  # End DeltaV additions
 
 - type: loadoutGroup
   id: PassengerGloves
@@ -265,6 +345,20 @@
   minLimit: 0
   loadouts:
   - PassengerGloves
+  # Begin DeltaV additions
+  - PurpleGloves
+  - RedGloves
+  - BlueGloves
+  - TealGloves
+  - BrownGloves
+  - LightBrownGloves
+  - GreyGloves
+  - GreenGloves
+  - OrangeGloves
+  - WhiteGloves
+  - BlackGloves
+  - FingerlessGloves
+  # End DeltaV additions
 
 - type: loadoutGroup
   id: CommonBackpack
@@ -287,6 +381,24 @@
   minLimit: 0
   loadouts:
   - PassengerWintercoat
+  # Begin DeltaV additions
+  - BlackWinterCoat
+  - PurpleWinterCoat
+  - RedWinterCoat
+  - BlueWinterCoat
+  - BrownWinterCoat
+  - LightBrownWinterCoat
+  - GrayWinterCoat
+  - GreenWinterCoat
+  - OrangeWinterCoat
+  - WhiteWinterCoat
+  - YellowWinterCoat
+  - BlackHoodie
+  - GrayHoodie
+  - FlannelRed
+  - FlannelBlue
+  - FlannelGreen
+  # End DeltaV additions
 
 - type: loadoutGroup
   id: PassengerShoes
@@ -294,6 +406,20 @@
   loadouts:
   - BlackShoes
   - WinterBoots
+  # Begin DeltaV additions
+  - WhiteShoes
+  - BlueShoes
+  - BrownShoes
+  - GreenShoes
+  - OrangeShoes
+  - RedShoes
+  - YellowShoes
+  - PurpleShoes
+  - HighHeels
+  - BrownCowboyBoots
+  - BlackCowboyBoots
+  - WhiteCowboyBoots
+  # End DeltaV additions
 
 - type: loadoutGroup
   id: BartenderHead
@@ -445,6 +571,17 @@
   minLimit: 0
   loadouts:
   - ChaplainNeck
+
+- type: loadoutGroup
+  id: ChaplainBible
+  name: loadout-group-chaplain-bible
+  minLimit: 1
+  loadouts:
+  - BibleGoshan # starcup: replaced bible with goshan bible
+  - BibleDruid
+#  - BibleNanoTrasen # starcup
+  - BibleSatanic
+#  - BibleTanakh # starcup
 
 - type: loadoutGroup
   id: JanitorHead
@@ -1413,6 +1550,7 @@
   - MedicalHud
   - MedicalEyePatchHud
   - Glasses
+  - Eyepatch # starcup
   - GlassesJamjar
   - GlassesJensen
 

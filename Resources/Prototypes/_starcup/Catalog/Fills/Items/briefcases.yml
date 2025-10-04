@@ -37,3 +37,18 @@
       - id: ClothingHandsGlovesCombat
       - id: ClothingMaskNeckGaiter
       - id: NTHandyFlag
+
+- type: entity
+  id: BriefcaseSyndCommSpecialFilled
+  parent: BriefcaseSyndComm
+  suffix: Filled, Special
+  components:
+  - type: StorageFill
+    contents:
+    - id: BoxFolderSyndCommClipboard
+    - id: BoxFolderSyndComm
+    - id: DiskCaseSyndComm
+    - id: NotebookSpiralCybersun
+    - id: PaperStickyNoteStackFilledPink
+    - id: LuxuryPen
+    - id: RubberStampSyndComm

@@ -3,6 +3,10 @@
   name: job-name-prisoner
   description: job-description-prisoner
   playTimeTracker: JobPrisoner
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 7200 #2 hr
   startingGear: PrisonerGear
   icon: JobIconPermaPrisoner
   supervisors: job-supervisors-security
@@ -62,9 +66,9 @@
           - EncryptionKeyPrison
           - EncryptionKeyCommon
     - type: Sprite
-      sprite: _DeltaV/Clothing/Ears/Headsets/prisoner.rsi
+      sprite: _DV/Clothing/Ears/Headsets/prisoner.rsi
     - type: Clothing
-      sprite: _DeltaV/Clothing/Ears/Headsets/prisoner.rsi
+      sprite: _DV/Clothing/Ears/Headsets/prisoner.rsi
 
 - type: entity
   parent: EncryptionKey
@@ -79,7 +83,7 @@
     - type: Sprite
       layers:
       - state: crypt_orange
-      - sprite: _starcup/Objects/Devices/encryption_keys.rsi
+      - sprite: _starcup/Objects/Devices/EncryptionKeys/prisoner.rsi
         state: prisoner_label
 
 - type: entity
@@ -107,7 +111,6 @@
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyCommon
       - EncryptionKeyPrison
 
 - type: entity
@@ -197,4 +200,3 @@
       containerId: storage
       spawnType: Job
       job: Prisoner
-

@@ -1,5 +1,20 @@
 - type: entity
-  parent: [BaseTraitorContraband, ClothingMaskGasSyndicate]
+  parent: [ClothingMaskGasCaptain, BaseExaminableClothing]
+  id: ClothingMaskGasCaptainSyndie
+  description: The Syndicate cut corners and repainted a spare atmospheric gas mask, but don't tell anyone.
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Mask/gascaptain_syndi.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Mask/gascaptain_syndi.rsi
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-captain-gas-mask
+  # end starcup
+
+- type: entity
+  parent: [BaseTraitorContraband, ClothingMaskGasSyndicate, BaseExaminableClothing]
   id: ClothingMaskGasNanotrasen
   name: NanoTrasen gas mask
   components:
@@ -7,3 +22,16 @@
     sprite: _starcup/Clothing/Mask/gasnanotrasen.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Mask/gasnanotrasen.rsi
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-gas-mask
+
+- type: entity
+  parent: [ ClothingMaskGasCentcom, BaseSyndCommContraband ]
+  id: ClothingMaskGasSyndComm
+  name: SyndComm gas mask
+  description: Oooh, black and gold. Fancy! This should help as you sit in your office.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Mask/gassyndcomm.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Mask/gassyndcomm.rsi

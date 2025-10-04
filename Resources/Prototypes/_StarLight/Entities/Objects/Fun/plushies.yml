@@ -1,0 +1,47 @@
+
+- type: entity
+  parent: PlushieMoth
+  id: PlushieKoni
+  name: koni plushie
+  description: A plushie of some sort of moth-cat hybrid.  # starcup
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Fun/Plushies/koni_plush.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: _Starlight/Objects/Fun/Plushies/koni_plush.rsi
+# begin starcup
+#  - type: EmitSoundOnUse
+#    sound:
+#      collection: ToySqueak
+#  - type: EmitSoundOnActivate
+#    sound:
+#      collection: ToySqueak
+#  - type: EmitSoundOnCollide
+#    sound:
+#      collection: ToySqueak
+#  - type: EmitSoundOnLand
+#    sound:
+#      collection: ToySqueak
+#  - type: EmitSoundOnTrigger
+#    sound:
+#      collection: ToySqueak
+#  - type: MeleeWeapon
+#    soundHit:
+#      collection: ToySqueak
+#  - type: Food
+#    useSound:
+#      collection: ToySqueak
+# end starcup
+  - type: Clothing
+    quickEquip: false
+    sprite: _Starlight/Objects/Fun/Plushies/koni_plush.rsi
+    slots:
+    - HEAD
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+  - type: FoodSequenceElement  # starcup
+    entries:
+      CottonBurger: MothPlushie

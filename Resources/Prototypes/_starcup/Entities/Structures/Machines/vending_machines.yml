@@ -1,0 +1,28 @@
+
+- type: entity
+  parent: VendingMachineCentDrobe
+  id: VendingMachineSyndCommDrobe
+  name: SyndCommDrobe
+  description: A one-of-a-kind vending machine for all your SyndComm aesthetic needs!
+  components:
+  - type: VendingMachine
+    pack: SyndCommDrobeInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: Sprite
+    sprite: _starcup/Structures/Machines/VendingMachines/syndcommdrobe.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#D9A336"
+  - type: AccessReader
+    access: [["CentralCommand"]]

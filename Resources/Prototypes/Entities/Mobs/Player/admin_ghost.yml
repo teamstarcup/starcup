@@ -30,6 +30,7 @@
     sortedHands:
     - hand_right
     - hand_left
+  - type: ItemOffer # starcup: item offering
   - type: ComplexInteraction
   - type: Puller
     needsHands: false
@@ -120,6 +121,8 @@
   - type: Loadout
     prototypes: [ MobAghostGear ]
   - type: BypassInteractionChecks
+  - type: ExplosionResistance
+    damageCoefficient: 0
 
 - type: entity
   abstract: true

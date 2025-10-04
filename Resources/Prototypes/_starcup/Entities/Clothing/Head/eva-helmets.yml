@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ BaseTraitorContraband, ClothingHeadHelmetSyndicate ]
+  parent: [ BaseTraitorContraband, ClothingHeadHelmetSyndicate, BaseExaminableClothing ]
   id: ClothingHeadHelmetNanotrasen
   name: NanoTrasen EVA helmet
   components:
@@ -7,3 +7,5 @@
     sprite: _starcup/Clothing/Head/Helmets/eva_nanotrasen.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Head/Helmets/eva_nanotrasen.rsi
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-eva-helmet

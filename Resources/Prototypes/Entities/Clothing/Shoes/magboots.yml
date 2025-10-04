@@ -44,7 +44,7 @@
   id: ClothingShoesBootsMag
 
 - type: entity
-  parent: [ClothingShoesBootsMagBase, BaseGrandTheftContraband]
+  parent: [ClothingShoesBootsMagBase, BaseGrandTheftContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingShoesBootsMagAdv
   name: advanced magboots
   description: State-of-the-art magnetic boots that do not slow down their wearer.
@@ -65,6 +65,10 @@
     price: 750
   - type: StealTarget
     stealGroup: ClothingShoesBootsMagAdv
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-advanced-magboots
+  # end starcup
 
 - type: entity
   parent: [ClothingShoesBootsMagBase]

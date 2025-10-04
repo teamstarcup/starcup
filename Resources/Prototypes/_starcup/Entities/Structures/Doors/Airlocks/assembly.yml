@@ -1,0 +1,18 @@
+#Command
+- type: entity
+  parent: AirlockAssemblyCommand
+  id: AirlockAssemblyCommandSyndie
+  suffix: Command, Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
+    state: "assembly"
+
+- type: entity
+  parent: AirlockAssemblyCommandGlass
+  id: AirlockAssemblyCommandGlassSyndie
+  suffix: Command, Glass, Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
+    state: "assembly"

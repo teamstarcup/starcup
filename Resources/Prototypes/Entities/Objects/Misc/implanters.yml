@@ -51,6 +51,7 @@
       - RadioImplantNT
       - UplinkImplantNT
       - DeathRattleImplantNT
+      - PottymouthImplant
       # end starcup
       deimplantFailureDamage:
         types:
@@ -316,7 +317,7 @@
 
 - type: entity
   id: RadioImplanterCentcomm
-  name: centcomm radio implanter
+  name: centcom radio implanter
   parent: BaseImplantOnlyImplanter
   components:
   - type: Implanter
@@ -324,7 +325,7 @@
 
 - type: entity
   id: DeathRattleImplanterCentcomm
-  name: centcomm death rattle implanter
+  name: centcom death rattle implanter
   parent: BaseImplantOnlyImplanter
   components:
   - type: Implanter

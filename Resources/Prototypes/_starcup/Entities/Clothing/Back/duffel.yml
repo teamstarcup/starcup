@@ -1,10 +1,20 @@
 - type: entity
-  parent: [BaseTraitorContraband, ClothingBackpackDuffelSyndicate]
+  parent: ClothingBackpackDuffelCaptain
+  id: ClothingBackpackDuffelCaptainSyndie
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/captain_syndi.rsi
+
+- type: entity
+  parent: [BaseTraitorContraband, ClothingBackpackDuffelSyndicate, BaseExaminableClothing]
   id: ClothingBackpackDuffelNanotrasen
   name: NanoTrasen duffel bag
   components:
   - type: Sprite
     sprite: _starcup/Clothing/Back/Duffels/nanotrasen.rsi
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-duffel-bag
 
 - type: entity
   parent: ClothingBackpackDuffelNanotrasen
@@ -53,3 +63,14 @@
   components:
     - type: Tag
       tags: [] # ignore "WhitelistChameleon" tag
+
+- type: entity
+  parent: [ ClothingBackpackDuffel, BaseSyndCommContraband ]
+  id: ClothingBackpackDuffelSyndComm
+  name: SyndComm duffel bag
+  description: A stylish SyndComm-branded duffel bag.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/syndcomm.rsi
+  - type: ClothingSpeedModifier
+    sprintModifier: 1  # no penalty

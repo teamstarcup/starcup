@@ -1,4 +1,23 @@
-# Syndicate
+# Security
+- type: loadout
+  id: EmergencyOxygenBrigmedic
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OxygenBreather
+  storage:
+    back:
+    - BoxSurvivalBrigmedic
+
+- type: loadout
+  id: EmergencyNitrogenBrigmedic
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: NitrogenBreather
+  storage:
+    back:
+    - BoxSurvivalBrigmedicNitrogen
+
+# NanoTrasen
 - type: loadout
   id: EmergencyOxygenNanotrasen
   effects:
@@ -16,3 +35,12 @@
   storage:
     back:
     - BoxSurvivalNanotrasenNitrogen
+
+# Breath Tool on Face
+- type: loadout
+  id: LoadoutSpeciesBreathToolBrigmedic
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesVox
+  equipment:
+    mask: ClothingMaskBreathMedicalSecurity

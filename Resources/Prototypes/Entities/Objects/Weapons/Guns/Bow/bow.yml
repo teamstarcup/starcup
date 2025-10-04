@@ -1,6 +1,6 @@
 - type: entity
   name: bow
-  parent: [BaseItem, BaseMinorContraband]
+  parent: [BaseItem, BaseMinorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: BaseBow
   description: The original rooty tooty point and shooty.
   abstract: true
@@ -45,6 +45,10 @@
       projectiles: !type:ContainerSlot
   - type: ContainerAmmoProvider
     container: projectiles
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-bow
+  # end starcup
 
 - type: entity
   id: BowImprovised

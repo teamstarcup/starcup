@@ -90,3 +90,6 @@ uplink-clothing-shoes-boots-mag-nanotrasen-desc = A pair of boots that prevent s
 
 uplink-balloon-name-starcup = NanoTrasen Balloon
 uplink-balloon-desc-starcup = Specially designed to inflict maximum psychological damage to Syndicate operatives.
+
+uplink-nanotrasen-lighter-name = NanoTrasen lighter
+uplink-nanotrasen-lighter-desc = A navy blue luxury lighter. Fueled by liquid plasma, to show just how much of it NanoTrasen has to go around.

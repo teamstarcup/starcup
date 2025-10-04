@@ -1,0 +1,34 @@
+- type: entityTable
+  id: StarcupCalmEventsTable # these are the ones that almost certainly can't kill you
+  table: !type:AllSelector
+    children:
+    - id: BluespaceArtifact
+    - id: BluespaceLocker
+    - id: BreakerFlip
+    - id: BureaucraticError
+    - id: KudzuGrowth
+    - id: IonStorm
+    - id: MassHallucinations
+    - id: PowerGridCheck
+    - id: RandomSentience
+    - id: SolarFlare
+    - id: VentClog
+
+- type: entityTable
+  id: StarcupDangerEventsTable # these are the ones that can probably kill you
+  table: !type:AllSelector
+    children:
+    - id: AnomalySpawn
+    - id: GasLeak
+    - id: GreytideVirus
+
+- type: entityTable
+  id: StarcupAntagEventsTable
+  table: !type:AllSelector
+    children:
+    - id: ClosetSkeleton
+    - id: DragonSpawn
+    - id: KingRatMigration
+    - id: ParadoxCloneSpawn
+    - id: SleeperAgents
+    - id: DerelictCyborgSpawn

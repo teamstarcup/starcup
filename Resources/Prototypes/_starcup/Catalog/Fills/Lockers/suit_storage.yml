@@ -1,3 +1,16 @@
+#Captain's hardsuit
+- type: entity
+  id: SuitStorageCaptainSyndie
+  parent: SuitStorageBase
+  suffix: Captain, Syndicate
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillCaptainHardsuitSyndie
+  - type: AccessReader
+    access: [["Captain"]]
+
 #NanoTrasen EVA
 - type: entity
   id: SuitStorageEVANanotrasen

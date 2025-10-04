@@ -1,5 +1,5 @@
 - type: entity
-  parent: [BaseTraitorContraband, ClothingBeltSyndieHolster]
+  parent: [BaseTraitorContraband, ClothingBeltSyndieHolster, BaseExaminableClothing]
   id: ClothingBeltNTHolster
   name: NanoTrasen shoulder holster
   components:
@@ -7,12 +7,17 @@
     sprite: _starcup/Clothing/Belt/nanotrasenholster.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Belt/nanotrasenholster.rsi
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-shoulder-holster
 
 - type: entity
-  parent: [BaseTraitorContraband, ClothingBeltMilitaryWebbing]
+  parent: [BaseTraitorContraband, ClothingBeltMilitaryWebbing, BaseExaminableClothing]
   id: ClothingBeltMilitaryWebbingNT
   suffix: NanoTrasen
   description: A set of tactical webbing worn by NanoTrasen boarding parties.
+  components:
+  - type: ExaminableClothing
+    examineText: clothing-nanotrasen-chest-rig
 
 - type: entity
   parent: ClothingBeltJanitor

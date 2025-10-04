@@ -148,7 +148,7 @@
   parent: BaseVendingMachineRestock
   id: VendingMachineRestockCostumes
   name: TheaterDrobe restock box # starcup: renamed for consistency
-  description: A panoply of NanoTrasen employees are prancing about a colorful theater in a tragicomedy. You can join them too! Load this into your nearest TheaterDrobe vending machine. # starcup: renamed for consistency
+  description: A panoply of SyndComm employees are prancing about a colorful theater in a tragicomedy. You can join them too! Load this into your nearest TheaterDrobe vending machine. # starcup: renamed for consistency
   components:
   - type: VendingMachineRestock
     canRestock:
@@ -363,6 +363,7 @@
     - state: refill_sec
 
 - type: entity
+  abstract: true # DeltaV: Salvage vendor doesn't have stock anymore
   parent: BaseVendingMachineRestock
   id: VendingMachineRestockSalvageEquipment
   name: Salvage Vendor restock box

@@ -66,5 +66,10 @@ public sealed partial class ParallaxLayerConfig
     [DataField("scrolling")] public Vector2 Scrolling = Vector2.Zero;
 
     [DataField("shader")] public string? Shader = "unshaded";
+
+    // begin starcup: map-lit parallaxes
+    [DataField]
+    public bool UseMapLighting;
+    // end starcup
 }
 

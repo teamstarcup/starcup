@@ -1,5 +1,6 @@
 name: 'Lint pull request title'
 on:
+  merge_group:
   pull_request:
     types: [opened, edited, synchronize, reopened]
 

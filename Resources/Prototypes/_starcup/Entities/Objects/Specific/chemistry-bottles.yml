@@ -1,0 +1,14 @@
+- type: entity
+  id: ChemistryBottleAmmonia # just for prisoners and similar limited scenarios
+  suffix: ammonia
+  parent: BaseChemistryBottleFilled
+  components:
+  - type: Label
+    currentLabel: reagent-name-ammonia
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Ammonia
+          Quantity: 30

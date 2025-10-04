@@ -24,9 +24,7 @@
   - type: WorldLoader
     radius: 1536
   - type: PointLight
-    radius: 1.5
-    energy: 1.6
-    color: "#c94242"
+    color: "#007ed9"
   - type: Computer
     board: NanotrasenShuttleConsoleCircuitboard
 
@@ -53,7 +51,7 @@
     board: ComputerIFFNanotrasenCircuitboard
 
 - type: entity
-  parent: ComputerComms
+  parent: SyndicateComputerComms
   id: NanotrasenComputerComms
   name: NanoTrasen communications computer
   description: A computer capable of remotely hacking into the station's communications systems. Using this to make an announcement will alert the station to your presence.
@@ -74,7 +72,7 @@
     access: [[ "NuclearOperative" ]]
   - type: CommunicationsConsole
     title: comms-console-announcement-title-nukie-starcup
-    color: "#ff0000"
+    color: "#007ed9"
     canShuttle: false
     global: true #announce to everyone they're about to fuck shit up
     announceSentBy: false # The title already says who they are.
@@ -82,6 +80,4 @@
   - type: Computer
     board: NanotrasenCommsComputerCircuitboard
   - type: PointLight
-    radius: 1.5
-    energy: 1.6
-    color: "#f71713"
+    color: "#007ed9"

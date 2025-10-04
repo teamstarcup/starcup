@@ -1,0 +1,52 @@
+- type: entity
+  parent: BaseWallmountCabinet
+  id: InsulsCabinet
+  name: insulated gloves cabinet
+  description: There is a small label that reads "For Emergency use only" with some fine print about the hazards of improper use of engineering equipment.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/insuls_cabinet.rsi
+    layers:
+    - state: frame
+    - state: fill
+      map: ["enum.ItemCabinetVisuals.Layer"]
+      visible: true
+    - state: closed
+      map: ["enum.OpenableVisuals.Layer"]
+  - type: ItemSlots
+    slots:
+      ItemCabinet:
+        ejectOnInteract: true
+        whitelist:
+          tags:
+          - InsulatedGloves
+  - type: Lock
+  - type: AccessReader
+    access: [["Maintenance"]]
+
+- type: entity
+  parent: InsulsCabinet
+  id: InsulsCabinetOpen
+  suffix: Open
+  components:
+  - type: Openable
+    opened: true
+  - type: Lock
+    locked: false
+
+- type: entity
+  parent: InsulsCabinet
+  id: InsulsCabinetFilled
+  suffix: Filled
+  components:
+  - type: ContainerFill
+    containers:
+      ItemCabinet:
+      - ClothingHandsGlovesColorYellow
+
+- type: entity
+  parent: [InsulsCabinetFilled, InsulsCabinetOpen]
+  id: InsulsCabinetFilledOpen
+  suffix: Filled, Open

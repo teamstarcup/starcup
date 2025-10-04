@@ -1,4 +1,32 @@
 - type: entity
+  parent: RubberStampHop
+  id: RubberStampHopSyndie
+  categories: [ DoNotMap ]
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-hop
+    stampedColor: "#D363A7"
+    stampState: "paper_stamp-hop-syndie"
+    stampLargeIcon: "large_stamp-hop-syndie" # starcup
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/stamps.rsi
+    state: stamp-hop-syndi
+
+- type: entity
+  parent: RubberStampCaptain
+  id: RubberStampCaptainSyndie
+  categories: [ DoNotMap ]
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-captain
+    stampedColor: "#A81962"
+    stampState: "paper_stamp-cap-syndie"
+    stampLargeIcon: "large_stamp-cap-syndie" # starcup
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/stamps.rsi
+    state: stamp-cap-syndi
+
+- type: entity
   name: NanoTrasen rubber stamp
   parent: [BaseTraitorContraband, RubberStampSyndicate]
   id: RubberStampNanotrasen
@@ -10,3 +38,17 @@
     stampState: "paper_stamp-admin-assistant"
   - type: Sprite
     state: stamp-cap
+
+- type: entity
+  name: SyndComm rubber stamp
+  parent: [RubberStampBase, BaseSyndCommContraband]
+  id: RubberStampSyndComm
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-syndcomm
+    stampedColor: "#664400"
+    stampState: "paper_stamp-syndicate"
+    stampLargeIcon: "large_stamp-syndcomm"
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/stamps.rsi
+    state: stamp-syndcomm

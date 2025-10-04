@@ -11,7 +11,7 @@
   startingGear: MedicalInternGear
   icon: "JobIconMedicalIntern"
   supervisors: job-supervisors-medicine
-  canBeAntag: false
+#  canBeAntag: false # starcup
   access:
   - Medical
   - Maintenance
@@ -21,6 +21,7 @@
   equipment:
 #    shoes: ClothingShoesColorWhite # starcup: replaced with loadout
 #    id: MedicalInternPDA # DeltaV: different PDAs in loadouts
+    neck: ClothingNeckNoviceMark # imp
     ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalFilled
     pocket2: BookMedicalReferenceBook

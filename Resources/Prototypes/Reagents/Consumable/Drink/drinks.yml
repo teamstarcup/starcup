@@ -4,7 +4,7 @@
   parent: BaseDrink
   desc: reagent-desc-coffee
   physicalDesc: reagent-physical-desc-aromatic
-  flavor: coffee
+  flavor: coffee-starcup # starcup: rewritten
   color: "#664300"
   recognizable: true
   metabolisms:
@@ -90,7 +90,7 @@
   id: CafeLatte
   name: reagent-name-cafe-latte
   parent: BaseDrink
-  desc: reagent-desc-cafe-latte
+  desc: reagent-desc-cafe-latte-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-creamy
   flavor: creamy
   color: "#664300"
@@ -121,7 +121,7 @@
   parent: BaseDrink
   desc: reagent-desc-green-tea
   physicalDesc: reagent-physical-desc-aromatic
-  flavor: tea
+  flavor: greentea-starcup # starcup: rewritten
   color: "#7EB626"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/greenteaglass.rsi
@@ -144,7 +144,7 @@
   parent: BaseDrink
   desc: reagent-desc-grenadine
   physicalDesc: reagent-physical-desc-dark-red
-  flavor: bitter
+  flavor: grenadine-starcup # starcup: rewritten
   color: "#EA1D26"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/grenadineglass.rsi
@@ -161,8 +161,8 @@
   parent: BaseDrink
   desc: reagent-desc-iced-coffee
   physicalDesc: reagent-physical-desc-aromatic
-  flavor: coffee
-  color: "#102838"
+  flavor: icedcoffee-starcup # starcup: rewritten
+  color: "#908982" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/icedcoffeeglass.rsi
     state: icon_empty
@@ -190,7 +190,7 @@
   parent: BaseDrink
   desc: reagent-desc-iced-green-tea
   physicalDesc: reagent-physical-desc-aromatic
-  flavor: icedtea
+  flavor: icedgreentea-starcup # starcup: rewritten
   color: "#5B821B"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/icedgreenteaglass.rsi
@@ -211,10 +211,10 @@
   id: IcedTea
   name: reagent-name-iced-tea
   parent: BaseDrink
-  desc: reagent-desc-iced-tea
+  desc: reagent-desc-iced-tea-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-aromatic
-  flavor: icedtea
-  color: "#6C3916"
+  flavor: icedtea-starcup # starcup: rewritten
+  color: "#ae5107" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/icedteaglass.rsi
     state: icon_empty
@@ -258,7 +258,7 @@
   desc: reagent-desc-lemonade
   physicalDesc: reagent-physical-desc-tart
   flavor: sweet
-  color: "#FFFF00"
+  color: "#ffff66" # starcup
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/lemonadeglass.rsi
     state: icon_empty
@@ -355,7 +355,7 @@
   group: Drinks
   desc: reagent-desc-nuclear-cola
   physicalDesc: reagent-physical-desc-fizzy
-  flavor: atomiccola
+  flavor: nuclearcola-starcup # starcup: rewritten
   color: "#100800"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/nuclear_colaglass.rsi
@@ -420,7 +420,7 @@
   parent: BaseDrink
   desc: reagent-desc-tea
   physicalDesc: reagent-physical-desc-aromatic
-  flavor: tea
+  flavor: tea-starcup # starcup: rewritten
   color: "#8a5a3a"
   recognizable: true
   metabolisms:
@@ -442,10 +442,10 @@
   id: TonicWater
   name: reagent-name-tonic-water
   parent: BaseDrink
-  desc: reagent-desc-tonic-water
+  desc: reagent-desc-tonic-water-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-fizzy
   flavor: tonicwater
-  color: "#0064C8"
+  color: "#DCE2DE" # starcup
   fizziness: 0.4
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/tonicglass.rsi
@@ -458,7 +458,7 @@
   id: Water
   name: reagent-name-water
   parent: BaseDrink
-  desc: reagent-desc-water
+  desc: reagent-desc-water-starcup # starcup: rewritten
   evaporationSpeed: 0.3
   absorbent: true
   physicalDesc: reagent-physical-desc-translucent
@@ -484,7 +484,7 @@
           shouldHave: true
         damage:
           types:
-            Heat: 3
+            Caustic: 3 # starcup: changed damage type from heat
 
 - type: reagent
   id: Ice
@@ -541,9 +541,9 @@
   id: ArnoldPalmer
   name: reagent-name-arnold-palmer
   parent: BaseAlcohol
-  desc: reagent-desc-arnold-palmer
+  desc: reagent-desc-arnold-palmer-starcup # starcup: rewritten
   physicalDesc: reagent-physical-desc-sweet
-  flavor: arnoldpalmer
+  flavor: arnoldpalmer-starcup # starcup: rewritten
   color: "#d8cc5d"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/arnoldpalmer.rsi
@@ -590,7 +590,7 @@
   parent: BaseDrink
   desc: reagent-desc-kira-special
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: sweet
+  flavor: kiraspecial-starcup # starcup: rewritten
   color: "#CCCC99"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/kiraspecial.rsi
@@ -606,7 +606,7 @@
   parent: BaseDrink
   desc: reagent-desc-rewriter
   physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: sweet
+  flavor: rewriter-starcup # starcup: rewritten
   color: "#485000"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/rewriter.rsi
@@ -644,7 +644,7 @@
   parent: BaseDrink
   desc: reagent-desc-tortuga
   physicalDesc: reagent-physical-desc-sweet
-  flavor: tortuga
+  flavor: tortuga-starcup # starcup: rewritten
   color: "#1c8c40"
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/tortuga.rsi

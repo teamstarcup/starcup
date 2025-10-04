@@ -51,7 +51,7 @@
 
 # The armor itself
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseMajorContraband]
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingOuterArmorScrap
   name: scrap armor
   description: A tider's gleaming plate mail. Bail up, or you're a dead man.
@@ -83,3 +83,7 @@
   - type: Construction
     graph: scraparmor
     node: scraparmorfinished
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-scrap-armor
+  # end starcup

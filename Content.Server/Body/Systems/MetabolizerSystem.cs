@@ -2,6 +2,7 @@ using Content.Server.Body.Components;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Body.Events;
 using Content.Shared.Body.Organ;
+using Content.Shared.Body.Systems;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
@@ -18,7 +19,8 @@ using Robust.Shared.Timing;
 
 namespace Content.Server.Body.Systems
 {
-    public sealed class MetabolizerSystem : EntitySystem
+    /// <inheritdoc/>
+    public sealed class MetabolizerSystem : SharedMetabolizerSystem
     {
         [Dependency] private readonly IGameTiming _gameTiming = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
@@ -45,7 +47,7 @@ namespace Content.Server.Body.Systems
 
         private void OnMapInit(Entity<MetabolizerComponent> ent, ref MapInitEvent args)
         {
-            ent.Comp.NextUpdate = _gameTiming.CurTime + ent.Comp.UpdateInterval;
+            ent.Comp.NextUpdate = _gameTiming.CurTime + ent.Comp.AdjustedUpdateInterval;
         }
 
         private void OnUnpaused(Entity<MetabolizerComponent> ent, ref EntityUnpausedEvent args)
@@ -65,20 +67,9 @@ namespace Content.Server.Body.Systems
             }
         }
 
-        private void OnApplyMetabolicMultiplier(
-            Entity<MetabolizerComponent> ent,
-            ref ApplyMetabolicMultiplierEvent args)
+        private void OnApplyMetabolicMultiplier(Entity<MetabolizerComponent> ent, ref ApplyMetabolicMultiplierEvent args)
         {
-            // TODO REFACTOR THIS
-            // This will slowly drift over time due to floating point errors.
-            // Instead, raise an event with the base rates and allow modifiers to get applied to it.
-            if (args.Apply)
-            {
-                ent.Comp.UpdateInterval *= args.Multiplier;
-                return;
-            }
-
-            ent.Comp.UpdateInterval /= args.Multiplier;
+            ent.Comp.UpdateIntervalMultiplier = args.Multiplier;
         }
 
         public override void Update(float frameTime)
@@ -99,7 +90,7 @@ namespace Content.Server.Body.Systems
                 if (_gameTiming.CurTime < metab.NextUpdate)
                     continue;
 
-                metab.NextUpdate += metab.UpdateInterval;
+                metab.NextUpdate += metab.AdjustedUpdateInterval;
                 TryMetabolize((uid, metab));
             }
         }
@@ -180,10 +171,16 @@ namespace Content.Server.Body.Systems
 
                     var rate = entry.MetabolismRate * group.MetabolismRateModifier;
 
-                    // Remove $rate, as long as there's enough reagent there to actually remove that much
-                    mostToRemove = FixedPoint2.Clamp(rate, 0, quantity);
+                    var processedQuantity = FixedPoint2.Clamp(rate, 0, quantity);
+                    var scale = processedQuantity / rate;
 
-                    float scale = (float) mostToRemove / (float) rate;
+                    // If all conditions fail (say it's just a reagent threshold
+                    // effect) we need to make sure we still remove something.
+                    // Ideally there'd be a distinction between "this effect
+                    // will never succeed for this organ" and "this effect COULD
+                    // apply to this organ."
+                    if (mostToRemove == FixedPoint2.Zero)
+                        mostToRemove = processedQuantity;
 
                     // if it's possible for them to be dead, and they are,
                     // then we shouldn't process any effects, but should probably
@@ -195,12 +192,27 @@ namespace Content.Server.Body.Systems
                     }
 
                     var actualEntity = ent.Comp2?.Body ?? solutionEntityUid.Value;
-                    var args = new EntityEffectReagentArgs(actualEntity, EntityManager, ent, solution, mostToRemove, proto, null, scale);
+                    var args = new EntityEffectReagentArgs(actualEntity,
+                        EntityManager,
+                        ent,
+                        solution,
+                        processedQuantity,
+                        proto,
+                        null,
+                        scale);
 
                     // do all effects, if conditions apply
                     foreach (var effect in entry.Effects)
                     {
-                        if (!effect.ShouldApply(args, _random))
+                        if (!effect.CheckEffectConditions(args))
+                            continue;
+
+                        // We met the conditions for this metabolic group, so
+                        // this counts towards getting the highest quantity used
+                        // of this reagent by any metabolic group.
+                        mostToRemove = FixedPoint2.Max(mostToRemove, processedQuantity);
+
+                        if (!effect.RollEffectProbability(_random))
                             continue;
 
                         if (effect.ShouldLog)

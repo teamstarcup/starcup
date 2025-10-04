@@ -77,7 +77,7 @@
 
 - type: entity
   name: combat knife
-  parent: [BaseKnife, BaseSecurityContraband]
+  parent: [BaseKnife, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: CombatKnife
   description: A deadly knife intended for melee confrontations.
   components:
@@ -111,6 +111,25 @@
     malus: 0.225
   - type: ThrowingAngle
     angle: 225
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PolygonShape
+          radius: 0.01
+          vertices:
+          - -0.4,-0.2
+          - -0.2,-0.4
+          - 0.4,0.2
+          - 0.2,0.4
+        density: 20 # derived from base_item
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-combat-knife
+  # end starcup
 
 - type: entity
   name: survival knife
@@ -126,6 +145,10 @@
     storedSprite:
       state: storage
       sprite: Objects/Weapons/Melee/survival_knife.rsi
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-survival-knife
+  # end starcup
 
 - type: entity
   name: kukri knife
@@ -144,6 +167,10 @@
   - type: Item
     sprite: Objects/Weapons/Melee/kukri_knife.rsi
     storedSprite: null
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-kukri-knife
+  # end starcup
 
 - type: entity
   parent: [ClothingHeadHatGreyFlatcap, BaseMinorContraband]
@@ -186,7 +213,7 @@
 
 - type: entity
   name: shiv
-  parent: [BaseKnife, BaseMinorContraband]
+  parent: [BaseKnife, BaseMinorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: Shiv
   description: A crude weapon fashioned from a piece of cloth and a glass shard.
   components:
@@ -210,6 +237,10 @@
     sprite: Objects/Weapons/Melee/shiv.rsi
   - type: DisarmMalus
     malus: 0.225
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-shiv
+  # end starcup
 
 - type: entity
   name: reinforced shiv
@@ -229,6 +260,10 @@
     sprite: Objects/Weapons/Melee/reinforced_shiv.rsi
   - type: Sprite
     sprite: Objects/Weapons/Melee/reinforced_shiv.rsi
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-shiv-reinforced
+  # end starcup
 
 - type: entity
   name: plasma shiv
@@ -248,6 +283,10 @@
     sprite: Objects/Weapons/Melee/plasma_shiv.rsi
   - type: Sprite
     sprite: Objects/Weapons/Melee/plasma_shiv.rsi
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-shiv-plasma
+  # end starcup
 
 - type: entity
   name: uranium shiv
@@ -268,6 +307,10 @@
     sprite: Objects/Weapons/Melee/uranium_shiv.rsi
   - type: Sprite
     sprite: Objects/Weapons/Melee/uranium_shiv.rsi
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-shiv-uranium
+  # end starcup
 
 - type: entity
   name: throwing knife
@@ -304,3 +347,18 @@
     angle: 225
   - type: StaticPrice
     price: 500 # 2000 for a set of 4
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PolygonShape
+          radius: 0.01
+          vertices:
+          - -0.475,-0.225
+          - -0.225,-0.475
+          - 0.525,0.275
+          - 0.275,0.525
+        density: 20 # derived from base_item
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2

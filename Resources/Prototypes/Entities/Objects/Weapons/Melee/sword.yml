@@ -76,7 +76,7 @@
 #Longswords
 - type: entity
   name: captain's sabre
-  parent: [ BaseSword, BaseCommandContraband ]
+  parent: [ BaseSword, BaseCommandContraband, BaseExaminableClothing ] # starcup: examinable clothing
   id: CaptainSabre
   description: A ceremonial weapon belonging to the captain of the station.
   components:
@@ -107,6 +107,10 @@
     weight: 0.0002 # 5,000 times less likely than 1 regular animal
   - type: PirateAccent
     # not putting a BlockMovement component here cause that's funny.
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-captain-sabre
+  # end starcup
 
 - type: entity
   name: katana

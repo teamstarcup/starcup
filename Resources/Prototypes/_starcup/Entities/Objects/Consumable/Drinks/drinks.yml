@@ -74,6 +74,29 @@
     fillBaseName: fill
 
 - type: entity
+  name: maritime mug
+  description: For sailors of the great river. Holds up to 30 units.
+  parent: DrinkGlassBase
+  id: DrinkGlassFeltmanLanger
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Consumable/Drinks/mug_feltman_langer.rsi
+    layers:
+    - state: icon_empty
+      map: [ "enum.SolutionContainerLayers.Base" ]
+    - state: fill-1
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+      visible: false
+  - type: Appearance
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    fillBaseName: fill-
+
+- type: entity
   parent: DrinkGlass
   id: DrinkChocolateGlassImitation
   suffix: imitation chocolate

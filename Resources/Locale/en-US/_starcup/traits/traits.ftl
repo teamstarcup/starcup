@@ -12,3 +12,6 @@ trait-irish-accent-desc = Ye're naht sure wot they say yah hae an accent fer! Ya
 
 trait-southern-name = Drawl
 trait-southern-desc = You ain't got any accent, an' you woulda known if you did. Y'all just ain't prone to fanciful speakin' where you're from.
+
+trait-pottymouth-name = Potty mouth
+trait-pottymouth-desc = You're quite above improper language, sometimes even prone to minced oaths.

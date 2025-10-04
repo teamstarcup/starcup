@@ -1,0 +1,31 @@
+- type: job
+  id: CargoAssistant
+  name: job-name-cargo-assistant
+  description: job-description-cargo-assistant
+  startingGear: CargoAssistantGear
+  playTimeTracker: JobCargoAssistant
+  icon: "JobIconCargoAssistant"
+  supervisors: job-supervisors-qm
+  access:
+  - Cargo
+  - Maintenance
+
+- type: startingGear
+  id: CargoAssistantGear
+  equipment:
+    id: CargoAssistantPDA
+    neck: ClothingNeckNoviceMark # imp
+    ears: ClothingHeadsetCargo
+
+# begin starcup: add chameleon outfit
+- type: chameleonOutfit
+  id: CargoAssistantChameleonOutfit
+  job: CargoAssistant
+  equipment:
+    Head: ClothingHeadHatCargosoft
+    Eyes: ClothingEyesGlasses
+    Mask: ClothingMaskBreath
+    Neck: ClothingNeckScarfStripedBrown
+    OuterClothing: ClothingOuterWinterColorYellow
+    Gloves: ClothingHandsGlovesFingerless
+# end starcup

@@ -25,7 +25,7 @@
     TriggerTimer: 0.25
     TriggerBlood: 1
     TriggerThrow: 1
-    TriggerDeath: 1
+    #TriggerDeath: 1 #IMP This one is commented out because you have to kill so many things and time their deaths perfectly
     TriggerMagnet: 1
 
 - type: xenoArchTrigger
@@ -148,7 +148,7 @@
   components:
   - type: XATDamageThresholdReached
     typesNeeded:
-      Radiation: 20
+      Radiation: 5 # starcup: was 20, easier to time with radiation sources
   # TODO: legendary microwave trigger
 
 - type: xenoArchTrigger

@@ -370,7 +370,7 @@
 
 ##########################################################
 - type: entity
-  parent: [ClothingOuterArmorHoS, ClothingOuterArmoredWinterCoatToggleable, BaseSecurityCommandContraband] # DeltaV - Replaced ClothingOuterWinterCoatToggleable with ClothingOuterArmoredWinterCoatToggleable
+  parent: [ClothingOuterArmorHoS, ClothingOuterArmoredWinterCoatToggleable, BaseSecurityCommandContraband, BaseExaminableClothing] # DeltaV - Replaced ClothingOuterWinterCoatToggleable with ClothingOuterArmoredWinterCoatToggleable # starcup: examinable clothing
   id: ClothingOuterWinterHoS
   name: head of security's armored winter coat
   description: A sturdy, utilitarian winter coat designed to protect a head of security from any brig-bound threats and hypothermic events.
@@ -381,6 +381,10 @@
     sprite: Clothing/OuterClothing/WinterCoats/coathosarmored.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterHOS
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-hos-winter-coat
+  # end starcup
 ##########################################################
 
 - type: entity
@@ -675,7 +679,7 @@
     clothingPrototype: ClothingHeadHatHoodWinterSci
 
 - type: entity
-  parent: [ClothingOuterWinterCoatToggleable, BaseSecurityContraband]
+  parent: [ClothingOuterWinterCoatToggleable, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingOuterWinterSec
   name: security winter coat
   components:
@@ -703,6 +707,10 @@
         Slash: 0.85
         Piercing: 0.85 # DeltaV - not as resistant as pre-rebase, but still better than nothing
         Heat: 0.75
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-security-winter-coat
+  # end starcup
 
 - type: entity
   parent: ClothingOuterWinterCoatToggleable
@@ -736,7 +744,7 @@
 
 ################################################################
 - type: entity
-  parent: [ClothingOuterArmorWarden, ClothingOuterArmoredWinterCoatToggleable, BaseSecurityContraband] # DeltaV - Replaced ClothingOuterWinterCoatToggleable with ClothingOuterArmoredWinterCoatToggleable
+  parent: [ClothingOuterArmorWarden, ClothingOuterArmoredWinterCoatToggleable, BaseSecurityContraband, BaseExaminableClothing] # DeltaV - Replaced ClothingOuterWinterCoatToggleable with ClothingOuterArmoredWinterCoatToggleable # starcup: examinable clothing
   id: ClothingOuterWinterWarden
   name: warden's armored winter coat
   description: A sturdy, utilitarian winter coat designed to protect a warden from any brig-bound threats and hypothermic events.
@@ -747,6 +755,10 @@
     sprite: Clothing/OuterClothing/WinterCoats/coatwardenarmored.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterWarden
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-warden-winter-coat
+  # end starcup
 ################################################################
 
 - type: entity

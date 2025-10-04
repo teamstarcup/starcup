@@ -91,7 +91,7 @@
     damageCoefficient: 0.9
 
 - type: entity
-  parent: [ClothingOuterArmorHoS, ClothingOuterStorageBase, BaseSecurityCommandContraband]
+  parent: [ClothingOuterArmorHoS, ClothingOuterStorageBase, BaseSecurityCommandContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingOuterCoatHoSTrench
   name: head of security's armored trenchcoat
   description: A greatcoat enhanced with a special alloy for some extra protection and style for those with a commanding presence.
@@ -100,6 +100,10 @@
     sprite: Clothing/OuterClothing/Coats/hos_trenchcoat.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/hos_trenchcoat.rsi
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-hos-coat
+  # end starcup
 
 - type: entity
   parent: ClothingOuterStorageToggleableBase
@@ -316,7 +320,7 @@
     sprite: Clothing/OuterClothing/Coats/pirate.rsi
 
 - type: entity
-  parent: [ClothingOuterArmorWarden, ClothingOuterStorageBase, BaseSecurityContraband]
+  parent: [ClothingOuterArmorWarden, ClothingOuterStorageBase, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingOuterCoatWarden
   name: warden's armored jacket
   description: A sturdy, utilitarian jacket designed to protect a warden from any brig-bound threats.
@@ -325,6 +329,10 @@
     sprite: Clothing/OuterClothing/Coats/warden.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/warden.rsi
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-warden-jacket
+  # end starcup
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -349,7 +357,7 @@
     sprite: Clothing/OuterClothing/Coats/clownpriest.rsi
 
 - type: entity
-  parent: [ClothingOuterStorageBase, BaseMajorContraband]
+  parent: [ClothingOuterStorageBase, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingOuterDogi
   name: samurai dogi
   description: Dogi is a type of traditional Japanese clothing. The dogi is made of heavy, durable fabric, it is practical in combat and stylish in appearance. It is decorated with intricate patterns and embroidery on the back.
@@ -364,6 +372,10 @@
         Blunt: 0.8
         Slash: 0.65
         Piercing: 0.85
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-samurai-dogi
+  # end starcup
 
 - type: entity
   parent: ClothingOuterStorageBase

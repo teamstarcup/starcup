@@ -336,39 +336,122 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         HumanoidAppearanceComponent humanoid,
         SpriteComponent sprite)
     {
-        if (!sprite.LayerMapTryGet(markingPrototype.BodyPart, out int targetLayer))
-        {
-            return;
-        }
+        // begin floof: code replacements for tail layering fixes
+        // if (!sprite.LayerMapTryGet(markingPrototype.BodyPart, out int targetLayer))
+        // {
+        //     return;
+        // }
 
-        visible &= !IsHidden(humanoid, markingPrototype.BodyPart);
-        visible &= humanoid.BaseLayers.TryGetValue(markingPrototype.BodyPart, out var setting)
-           && setting.AllowsMarkings;
+        // visible &= !IsHidden(humanoid, markingPrototype.BodyPart);
+        // visible &= humanoid.BaseLayers.TryGetValue(markingPrototype.BodyPart, out var setting)
+        //    && setting.AllowsMarkings;
+        // end floof
+
+        // begin floof: tail layering fixes
+        // make a handy dict of filename -> colors
+        // cus we might need to access it by filename to link
+        // one sprite's colors to another
+
+        var colorDict = new Dictionary<string, Color>();
+        for (var i = 0; i < markingPrototype.Sprites.Count; i++)
+        {
+            var spriteName = markingPrototype.Sprites[i] switch
+            {
+                SpriteSpecifier.Rsi rsi => rsi.RsiState,
+                SpriteSpecifier.Texture texture => texture.TexturePath.Filename,
+                _ => null
+            };
+
+            if (spriteName != null)
+            {
+                if (colors != null && i < colors.Count)
+                    colorDict.Add(spriteName, colors[i]);
+                else
+                    colorDict.Add(spriteName, Color.White);
+            }
+        }
+        // now, rearrange them, copying any parented colors to children set to
+        // inherit them
+        if (markingPrototype.ColorLinks != null)
+        {
+            foreach (var (child, parent) in markingPrototype.ColorLinks)
+            {
+                if (colorDict.TryGetValue(parent, out var color))
+                {
+                    colorDict[child] = color;
+                }
+            }
+        }
+        // and, since we can't rely on the iterator knowing where the heck to put
+        // each sprite when we have one marking setting multiple layers,
+        // lets just kinda sorta do that ourselves
+        var layerDict = new Dictionary<string, int>();
+        // end floof
 
         for (var j = 0; j < markingPrototype.Sprites.Count; j++)
         {
+            // begin floof: tail layering fixes
             var markingSprite = markingPrototype.Sprites[j];
-
             if (markingSprite is not SpriteSpecifier.Rsi rsi)
             {
                 continue;
             }
 
+            var layerSlot = markingPrototype.BodyPart;
+            // first, try to see if there are any custom layers for this marking
+            if (markingPrototype.Layering != null)
+            {
+                var name = rsi.RsiState;
+                if (markingPrototype.Layering.TryGetValue(name, out var layerName))
+                {
+                    layerSlot = Enum.Parse<HumanoidVisualLayers>(layerName);
+                }
+            }
+            // update the layerDict
+            // if it doesnt have this, add it at 0, otherwise increment it
+            if (layerDict.TryGetValue(layerSlot.ToString(), out var layerIndex))
+            {
+                layerDict[layerSlot.ToString()] = layerIndex + 1;
+            }
+            else
+            {
+                layerDict.Add(layerSlot.ToString(), 0);
+            }
+
+            if (!sprite.LayerMapTryGet(layerSlot, out var targetLayer))
+            {
+                continue;
+            }
+
+            visible &= !IsHidden(humanoid, markingPrototype.BodyPart);
+            visible &= humanoid.BaseLayers.TryGetValue(markingPrototype.BodyPart, out var setting)
+               && setting.AllowsMarkings;
+            // end floof
+
             var layerId = $"{markingPrototype.ID}-{rsi.RsiState}";
 
             if (!sprite.LayerMapTryGet(layerId, out _))
             {
-                var layer = sprite.AddLayer(markingSprite, targetLayer + j + 1);
+                // var targLayerAdj = targetLayer == 0 ? 0 + j : targetLayer + j + 1; // floof: code replacement
+
+                // begin floof: tail layering fixes
+                // for layers that are supposed to be behind everything,
+                // adding 1 to the layer index makes it not be behind
+                // everything. fun!
+                var targLayerAdj = targetLayer + layerDict[layerSlot.ToString()] + 1;
+                var layer = sprite.AddLayer(markingSprite, targLayerAdj);
+                // end floof
+
                 sprite.LayerMapSet(layerId, layer);
                 sprite.LayerSetSprite(layerId, rsi);
             }
-		    // impstation edit begin - check if there's a shader defined in the markingPrototype's shader datafield, and if there is...
-			if (markingPrototype.Shader != null)
-			{
-			// use spriteComponent's layersetshader function to set the layer's shader to that which is specified.
-				sprite.LayerSetShader(layerId, markingPrototype.Shader);
-			}
-			// impstation edit end
+            // impstation edit begin - check if there's a shader defined in the markingPrototype's shader datafield, and if there is...
+            if (markingPrototype.Shader != null)
+            {
+                // use spriteComponent's layersetshader function to set the layer's shader to that which is specified.
+                sprite.LayerSetShader(layerId, markingPrototype.Shader);
+            }
+            // impstation edit end
             sprite.LayerSetVisible(layerId, visible);
 
             if (!visible || setting == null) // this is kinda implied
@@ -379,19 +462,25 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             // Okay so if the marking prototype is modified but we load old marking data this may no longer be valid
             // and we need to check the index is correct.
             // So if that happens just default to white?
-            if (colors != null && j < colors.Count)
-            {
-                sprite.LayerSetColor(layerId, colors[j]);
-            }
-            else
-            {
-                sprite.LayerSetColor(layerId, Color.White);
-            }
 
-            if (humanoid.MarkingsDisplacement.TryGetValue(markingPrototype.BodyPart, out var displacementData) && markingPrototype.CanBeDisplaced)
-            {
-                _displacement.TryAddDisplacement(displacementData, sprite, targetLayer + j + 1, layerId, out _);
-            }
+            // begin floof: code replacement for tail layering fixes
+            // if (colors != null && j < colors.Count)
+            // {
+            //     sprite.LayerSetColor(layerId, colors[j]);
+            // }
+            // else
+            // {
+            //     sprite.LayerSetColor(layerId, Color.White);
+            // }
+            // if (humanoid.MarkingsDisplacement.TryGetValue(markingPrototype.BodyPart, out var displacementData) && markingPrototype.CanBeDisplaced)
+            // {
+            //    _displacement.TryAddDisplacement(displacementData, sprite, targetLayer + j + 1, layerId, out _);
+            // }
+            // end floof
+
+            // begin floof: tail layering fixes
+            sprite.LayerSetColor(layerId, colorDict.TryGetValue(rsi.RsiState, out var color) ? color : Color.White);
+            // end floof
         }
     }
 

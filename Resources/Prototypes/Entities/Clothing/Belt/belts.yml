@@ -12,7 +12,9 @@
     sprite: Clothing/Belt/utility.rsi
   - type: Storage
     maxItemSize: Normal
-    # TODO: Fill this out more.
+    # Don't add more than absolutely needed to this whitelist!
+    # Utility belts shouldn't just be free extra storage.
+    # This is only intended for basic engineering equipment.
     whitelist:
       tags:
         - Powerdrill
@@ -32,9 +34,11 @@
         - JawsOfLife
         - GPS
         - WeldingMask
+        - RemoteSignaller
       components:
         - StationMap
         - SprayPainter
+        - SprayPainterAmmo
         - NetworkConfigurator
         - RCD
         - RCDAmmo
@@ -119,6 +123,7 @@
       components:
         - StationMap
         - SprayPainter
+        - SprayPainterAmmo
         - NetworkConfigurator
         - RCD
         - RCDAmmo
@@ -229,6 +234,7 @@
         - WetFloorSign
         - HolosignProjector
         - Plunger
+        - GoldenPlunger
         - WireBrush
       components:
         - LightReplacer
@@ -341,7 +347,7 @@
   - type: Storage
     whitelist:
       tags:
-        # - PlantAnalyzer
+        - PlantAnalyzer # Den
         - PlantSampleTaker
         - BotanyShovel
         - BotanyHoe
@@ -362,10 +368,11 @@
         whitelist:
           tags:
           - BotanyHatchet
-      # hydro:
-      #   whitelist:
-      #     tags:
-      #     - PlantAnalyzer # Dunno what to put here, should be aight.
+      # Den
+      hydro:
+        whitelist:
+          tags:
+          - PlantAnalyzer
       hoe:
         whitelist:
           tags:
@@ -411,10 +418,11 @@
         - CigPack
         - Packet
         - Skewer
-        - MonkeyCube
+        # - MonkeyCube # starcup: monkeys are not for food
         - Mayo
       components:
         - Mousetrap
+        - Rehydratable # starcup: expand cube whitelist
         - Smokable
         - Utensil
   - type: ItemMapper
@@ -463,7 +471,7 @@
   - type: Appearance
 
 - type: entity
-  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseSecurityContraband]
+  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingBeltSecurity
   name: security belt
   description: Can hold security gear like handcuffs and flashes.
@@ -514,9 +522,13 @@
           - SmokeOnTrigger
     sprite: Clothing/Belt/belt_overlay.rsi
   - type: Appearance
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-security-belt
+  # end starcup
 
 - type: entity
-  parent: [ClothingBeltBase, ClothingSlotBase, BaseCommandContraband]
+  parent: [ClothingBeltBase, ClothingSlotBase, BaseCommandContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingBeltSheath
   name: sabre sheath
   description: An ornate sheath designed to hold an officer's blade.
@@ -546,11 +558,15 @@
           tags:
           - CaptainSabre
   - type: Appearance
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-sabre-sheath
+  # end starcup
 
 # Belts without visualizers
 
 - type: entity
-  parent: [ClothingBeltAmmoProviderBase, BaseSecurityBartenderContraband]
+  parent: [ClothingBeltAmmoProviderBase, BaseSecurityBartenderContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingBeltBandolier
   name: bandolier
   description: A bandolier for holding shotgun ammunition.
@@ -566,6 +582,10 @@
       tags:
         - ShellShotgun
     capacity: 14
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-bandolier
+  # end starcup
 
 - type: entity
   parent: ClothingBeltBase

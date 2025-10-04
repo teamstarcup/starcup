@@ -408,12 +408,43 @@ public sealed partial class MarkingPicker : Control
         List<ColorSelectorSliders> colorSliders = new();
         for (int i = 0; i < prototype.Sprites.Count; i++)
         {
+            // begin floof: tail layering fixes
+            // first, check if the coloration is parented to another marking
+            // and if so, just kinda sorta dont display it
+            var skipdraw = false;
+            if (prototype.ColorLinks?.Count > 0)
+            {
+                var name = prototype.Sprites[i] switch
+                {
+                    SpriteSpecifier.Rsi rsi => rsi.RsiState,
+                    SpriteSpecifier.Texture texture => texture.TexturePath.Filename,
+                    _ => null
+                };
+
+                if (name != null && prototype.ColorLinks.ContainsKey(name))
+                {
+                    // dont show it, cus its parented to another marking
+                    skipdraw = true;
+                }
+            }
+            // end floof
             var colorContainer = new BoxContainer
             {
                 Orientation = LayoutOrientation.Vertical,
             };
 
-            CMarkingColors.AddChild(colorContainer);
+            // CMarkingColors.AddChild(colorContainer); // floof: code replacement for tail layering fixes
+
+            // begin floof: tail layering fixes
+            // so.
+            // the color selector sliders decide which destination color to modify
+            // based on its index in the list of color selectors.
+            // this is a problem if we, say, want to *not* show a certain slider
+            // cus then it'll modify the wrong color, unless the color happened to
+            // be in index 0.
+            if(!skipdraw)
+                CMarkingColors.AddChild(colorContainer);
+            // end floof
 
             ColorSelectorSliders colorSelector = new ColorSelectorSliders();
             colorSelector.SelectorType = ColorSelectorSliders.ColorSelectorType.Hsv; // defaults color selector to HSV

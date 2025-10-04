@@ -92,6 +92,8 @@
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
     Laugh:
       path: /Audio/Animals/lizard_happy.ogg
+    LizardHiss: # Imp edit
+      collection: ReptilianHiss
     Honk:
       collection: BikeHorn
     Whistle:
@@ -126,6 +128,8 @@
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
     Laugh:
       path: /Audio/Animals/lizard_happy.ogg
+    LizardHiss: # Imp edit
+      collection: ReptilianHiss
     Honk:
       collection: BikeHorn
     Whistle:
@@ -156,6 +160,10 @@
   sounds:
     Squish:
       collection: Squishes
+    Bubble:
+      collection: Bubbles # Imp addition
+    Pop:
+      collection: Pops # Imp addition
     Scream:
       collection: MaleScreams
     Laugh:
@@ -190,6 +198,13 @@
       collection: Hew
     Gasp:
       collection: MaleGasp
+    # begin starcup
+    SlimeFizz:
+      collection: SlimeFizz
+      params:
+        volume: 0
+        variation: 0.05
+    # end starcup
     DefaultDeathgasp:
       collection: MaleDeathGasp
   params:
@@ -200,6 +215,10 @@
   sounds:
     Squish:
       collection: Squishes
+    Bubble:
+      collection: Bubbles # Imp addition
+    Pop:
+        collection: Pops # Imp addition
     Scream:
       collection: FemaleScreams
     Laugh:
@@ -234,6 +253,10 @@
       collection: Hew
     Gasp:
       collection: FemaleGasp
+    # begin starcup
+    SlimeFizz:
+      collection: SlimeFizz
+    # end starcup
     DefaultDeathgasp:
       collection: FemaleDeathGasp
   params:
@@ -256,7 +279,7 @@
     Gasp:
       collection: VoxGasp
     DefaultDeathgasp:
-      path: /Audio/_DeltaV/Effects/Gasp/vox_deathgasp_1.ogg
+      path: /Audio/_DV/Effects/Gasp/vox_deathgasp_1.ogg
     # End DeltaV Additions
   params:
     variation: 0.125
@@ -467,6 +490,8 @@
   params:
     variation: 0.05
   sounds:
+    Scream:
+      collection: XenoborgScream
     Laugh:
       collection: XenoborgLaugh
     Beep:
@@ -496,6 +521,13 @@
         volume: -6
     Salute:
       collection: Salutes
+    Blink: # Imp addition
+      collection: Blinks
+      params:
+        volume: -3
+        variation: 0.1 # DEN
+    Crack: # Imp addition
+      collection: Cracks
 
 - type: emoteSounds
   id: DionaBodyEmotes
@@ -513,6 +545,13 @@
       path: /Audio/Voice/Diona/diona_salute.ogg
       params:
        volume: -5
+    Blink: # Imp addition
+      collection: Blinks
+      params:
+        volume: -3
+        variation: 0.1 # DEN
+    Crack: # Imp addition
+      collection: Cracks
 
 - type: emoteSounds
   id: ReptilianBodyEmotes
@@ -531,6 +570,15 @@
         volume: -6
     Salute:
       collection: Salutes
+    Crack: # Imp addition
+      collection: Cracks
+
+# mobs
+    Blink: # Imp addition
+      collection: Blinks
+      params:
+        volume: -3
+        variation: 0.1 # DEN
 
 # mobs
 - type: emoteSounds

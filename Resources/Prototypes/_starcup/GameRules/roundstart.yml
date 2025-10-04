@@ -1,0 +1,76 @@
+- type: entity
+  id: CalmStationEventScheduler
+  parent: BaseGameRule
+  components:
+  - type: BasicStationEventScheduler
+    minimumTimeUntilFirstEvent: 1200 # 20 min
+    minMaxEventTiming:
+      min: 1950 # 32.5 min
+      max: 2250 # 37.5 min
+    scheduledGameRules: !type:NestedSelector
+      tableId: CalmGameRulesTable
+
+- type: entity
+  id: TroubleStationEventScheduler
+  parent: BaseGameRule
+  components:
+  - type: BasicStationEventScheduler
+    minimumTimeUntilFirstEvent: 1200 # 20 min
+    minMaxEventTiming:
+      min: 1650 # 27.5 min
+      max: 1950 # 32.5 min
+    scheduledGameRules: !type:NestedSelector
+      tableId: TroubleGameRulesTable
+
+- type: entity
+  id: DangerStationEventScheduler
+  parent: BaseGameRule
+  components:
+  - type: BasicStationEventScheduler
+    scheduledGameRules: !type:NestedSelector
+      tableId: DangerGameRulesTable
+
+# event schedulers
+
+- type: entityTable
+  id: CalmGameRulesTable
+  table: !type:AllSelector
+    children:
+      - !type:NestedSelector
+        tableId: StarcupCalmEventsTable
+      - !type:NestedSelector
+        tableId: CalmCritterEventsTable
+      - !type:NestedSelector
+        tableId: CargoGiftsTable
+
+- type: entityTable
+  id: TroubleGameRulesTable
+  table: !type:AllSelector
+    children:
+      - !type:NestedSelector
+        tableId: StarcupCalmEventsTable
+      - !type:NestedSelector
+        tableId: CalmCritterEventsTable
+      - !type:NestedSelector
+        tableId: CargoGiftsTable
+      - !type:NestedSelector
+        tableId: StarcupDangerEventsTable
+      - !type:NestedSelector
+        tableId: HostileCritterEventsTable
+
+- type: entityTable
+  id: DangerGameRulesTable
+  table: !type:AllSelector
+    children:
+      - !type:NestedSelector
+        tableId: StarcupCalmEventsTable
+      - !type:NestedSelector
+        tableId: CalmCritterEventsTable
+      - !type:NestedSelector
+        tableId: CargoGiftsTable
+      - !type:NestedSelector
+        tableId: StarcupDangerEventsTable
+      - !type:NestedSelector
+        tableId: HostileCritterEventsTable
+      - !type:NestedSelector
+        tableId: StarcupAntagEventsTable

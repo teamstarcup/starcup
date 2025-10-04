@@ -22,8 +22,8 @@ using Robust.Shared.Enums;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
-using Content.Server._CosmaticDrift.Records; // CD - Character Records
-using Content.Shared._CosmaticDrift.Records; // CD - Character Records
+using Content.Server._CD.Records; // CD - Character Records
+using Content.Shared._CD.Records; // CD - Character Records
 
 namespace Content.Server.Database
 {

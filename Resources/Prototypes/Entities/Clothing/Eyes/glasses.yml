@@ -69,7 +69,7 @@
     correctionPower: 1.7
   - type: Tag
     tags:
-    - CorgiWearable
+    - PetWearable
     - WhitelistChameleon
 
 - type: entity
@@ -146,7 +146,7 @@
   - type: Tag
     tags:
     - HamsterWearable
-    - CorgiWearable
+    - PetWearable
     - WhitelistChameleon
   - type: IdentityBlocker
     coverage: EYES
@@ -163,7 +163,7 @@
   - type: Tag
     tags:
     - Sunglasses
-    - CorgiWearable
+    - PetWearable
     - HamsterWearable
     - WhitelistChameleon
 
@@ -186,7 +186,7 @@
   - type: Tag
     tags:
     - HamsterWearable
-    - CorgiWearable
+    - PetWearable
     - WhitelistChameleon
   - type: GuideHelp
     guides:
@@ -211,7 +211,7 @@
   - type: Tag
     tags:
     - HamsterWearable
-    - CorgiWearable
+    - PetWearable
     - WhitelistChameleon
   - type: IdentityBlocker
     coverage: EYES
@@ -267,11 +267,11 @@
       coverage: EYES
     - type: Tag
       tags:
-      - CorgiWearable
+      - PetWearable
       - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingEyesBase, BaseMajorContraband]
+  parent: [ClothingEyesBase, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingEyesVisorNinja
   name: ninja visor
   description: An advanced visor protecting a ninja's eyes from flashing lights.
@@ -281,6 +281,10 @@
   - type: Clothing
     sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
   - type: FlashImmunity
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-ninja-visor
+  # end starcup
 
 - type: entity
   parent: ClothingEyesBase

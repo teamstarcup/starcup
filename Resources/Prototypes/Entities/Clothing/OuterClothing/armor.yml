@@ -26,13 +26,17 @@
 
 #Standard armor vest, allowed for security and bartenders
 - type: entity
-  parent: [ BaseSecurityBartenderContraband, ClothingOuterArmorBase]
+  parent: [ BaseSecurityBartenderContraband, ClothingOuterArmorBase, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingOuterArmorBasic
   components:
   - type: Tag
     tags:
     - CorgiWearable
     - WhitelistChameleon
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-armor-vest
+  # end starcup
 
 #Alternate / slim basic armor vest
 - type: entity
@@ -48,7 +52,7 @@
     sprite: Clothing/OuterClothing/Armor/security_slim.rsi
 
 - type: entity
-  parent: ClothingOuterArmorBase
+  parent: [ClothingOuterArmorBase, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingOuterArmorBulletproof
   name: bulletproof vest
   description: A Type III heavy bulletproof vest that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent.
@@ -66,9 +70,13 @@
         Heat: 0.9
   - type: ExplosionResistance
     damageCoefficient: 0.80
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-bulletproof-vest
+  # end starcup
 
 - type: entity
-  parent: ClothingOuterArmorBase
+  parent: [ClothingOuterArmorBase, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingOuterArmorReflective
   name: reflective vest
   description: An armored vest with advanced shielding to protect against energy weapons.
@@ -89,6 +97,10 @@
     reflects:
       - Energy
     reflectingInHands: false
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-reflective-vest
+  # end starcup
 
 #Detective's vest
 - type: entity
@@ -101,6 +113,10 @@
     sprite: Clothing/OuterClothing/Vests/detvest.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Vests/detvest.rsi
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-detective-vest
+  # end starcup
 
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
@@ -151,7 +167,7 @@
 
 #Web vest
 - type: entity
-  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, BaseTraitorContraband] # starcup: shared contraband level with nt gear
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
   id: ClothingOuterVestWeb
   name: web vest
   description: A synthetic armor vest. This one has added webbing and ballistic plates.
@@ -169,6 +185,10 @@
         Heat: 0.9
   - type: ExplosionResistance
     damageCoefficient: 0.9
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-web-vest
+  # end starcup
   - type: StaticPrice
     price: 1500
 
@@ -293,8 +313,8 @@
         id: blinking
         interpolate: Nearest
         maxDuration: 1.0
-        minValue: 0.1
-        maxValue: 2.0
+        startValue: 0.1
+        endValue: 2.0
         isLooped: true
   - type: Battery
     maxCharge: 600
@@ -306,7 +326,7 @@
     size: Normal
 
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseSecurityContraband]
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingOuterArmorRiot
   name: riot suit
   description: A suit of semi-flexible polycarbonate body armor with heavy padding to protect against melee attacks. Perfect for fighting delinquents around the station.
@@ -326,6 +346,10 @@
   - type: ExplosionResistance
     damageCoefficient: 0.9
   - type: GroupExamine
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-riot-suit
+  # end starcup
 
 - type: entity
   parent: [ ClothingOuterBaseLarge, BaseMajorContraband, AllowSuitStorageClothing ]
@@ -342,7 +366,7 @@
       coefficients:
         Blunt: 0.5
         Slash: 0.5
-        Piercing: 0.6
+        Piercing: 0.5
         Heat: 0.5
   - type: GroupExamine
 
@@ -442,7 +466,7 @@
     slots: WITHOUT_POCKET
 
 - type: entity
-  parent: [ ClothingOuterBaseLarge, BaseMajorContraband, AllowSuitStorageClothing ]
+  parent: [ ClothingOuterBaseLarge, BaseMajorContraband, AllowSuitStorageClothing, BaseExaminableClothing ] # starcup: examinable clothing
   id: ClothingOuterArmorBone
   name: bone armor
   description: Sits on you like a second skin.
@@ -469,6 +493,10 @@
     node: armor
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-bone-armor
+  # end starcup
 
 - type: entity
   parent: [ ClothingOuterBaseLarge, BaseMajorContraband, AllowSuitStorageClothing ]

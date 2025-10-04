@@ -58,6 +58,9 @@
     damage:
       types:
         Radiation: 10
+  - type: WarpPoint # imp addition
+  - type: NameIdentifier # imp addition
+    group: Anomaly
 
 - type: entity
   id: AnomalyPyroclastic
@@ -72,6 +75,8 @@
   - type: Anomaly
     corePrototype: AnomalyCorePyroclastic
     coreInertPrototype: AnomalyCorePyroclasticInert
+    supercriticalSoundAtAnimationStart:
+      collection: AnomalyPyroSupercritical
   - type: Sprite
     sprite: Structures/Specific/Anomalies/pyro_anom.rsi
     layers:
@@ -124,6 +129,9 @@
   - type: Anomaly
     corePrototype: AnomalyCoreGravity
     coreInertPrototype: AnomalyCoreGravityInert
+    supercriticalSoundAtAnimationStart:
+      collection: AnomalyGravitySupercritical
+    supercriticalDuration: 15s
   - type: Sprite
     layers:
     - state: anom2
@@ -156,6 +164,8 @@
   - type: Anomaly
     corePrototype: AnomalyCoreElectricity
     coreInertPrototype: AnomalyCoreElectricityInert
+    supercriticalSoundAtAnimationStart:
+      collection: AnomalyElectricitySupercritical
   - type: Sprite
     layers:
     - state: anom3
@@ -181,6 +191,8 @@
     coreInertPrototype: AnomalyCoreFleshInert
     minPulseLength: 180
     maxPulseLength: 300
+    supercriticalSoundAtAnimationStart:
+      collection: AnomalyFleshSupercritical
   - type: Sprite
     layers:
     - state: anom5
@@ -263,6 +275,24 @@
       - MobFleshClamp
       - MobFleshLover
       - FleshKudzu
+  # begin imp changes
+  - type: WallSpawnAnomaly
+    entries:
+    - settings:
+        spawnOnPulse: true
+        spawnOnStabilityChanged: true
+        spawnOnSeverityChanged: true
+        minAmount: 3
+        maxAmount: 7
+        maxRange: 4
+      wall: WallMeat
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 10
+        maxAmount: 30
+        maxRange: 10
+      wall: WallMeat
+  # end imp changes
 
 - type: entity
   id: AnomalyBluespace
@@ -306,6 +336,8 @@
   - type: Anomaly
     corePrototype: AnomalyCoreBluespace
     coreInertPrototype: AnomalyCoreBluespaceInert
+    supercriticalSoundAtAnimationStart:
+      collection: AnomalyBluespaceSupercritical
     pulseSound:
       collection: RadiationPulse
       params:
@@ -332,6 +364,8 @@
   - type: Anomaly
     corePrototype: AnomalyCoreIce
     coreInertPrototype: AnomalyCoreIceInert
+    supercriticalSoundAtAnimationStart:
+      collection: AnomalyIceSupercritical
   - type: ExplosionAnomaly
     supercriticalExplosion: Cryo
     explosionTotalIntensity: 300
@@ -364,6 +398,24 @@
     damage:
       types:
         Cold: 10
+  # begin imp changes
+  - type: WallSpawnAnomaly
+    entries:
+    - settings:
+        spawnOnPulse: true
+        spawnOnStabilityChanged: true
+        spawnOnSeverityChanged: true
+        minAmount: 3
+        maxAmount: 7
+        maxRange: 4
+      wall: WallIce
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 10
+        maxAmount: 30
+        maxRange: 10
+      wall: WallIce
+  # end imp changes
 
 - type: entity
   id: AnomalyRockBase
@@ -376,6 +428,8 @@
     coreInertPrototype: AnomalyCoreRockInert
     minPulseLength: 180
     maxPulseLength: 300
+    supercriticalSoundAtAnimationStart:
+      collection: AnomalyRockSupercritical
   - type: Sprite
     layers:
     - state: anom6
@@ -402,6 +456,24 @@
         maxAmount: 50
         maxRange: 12
       floor: FloorAsteroidTile
+  # begin imp changes
+  - type: WallSpawnAnomaly
+    entries:
+    - settings:
+        spawnOnPulse: true
+        spawnOnStabilityChanged: true
+        spawnOnSeverityChanged: true
+        minAmount: 3
+        maxAmount: 7
+        maxRange: 4
+      wall: AsteroidRock
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 10
+        maxAmount: 30
+        maxRange: 10
+      wall: AsteroidRock
+  # end imp changes
 
 - type: entity
   id: AnomalyRockUranium
@@ -778,6 +850,8 @@
     coreInertPrototype: AnomalyCoreFloraInert
     minPulseLength: 60
     maxPulseLength: 120
+    supercriticalSoundAtAnimationStart:
+      collection: AnomalyFloraSupercritical
   - type: TileSpawnAnomaly
     entries:
     - settings:
@@ -881,6 +955,8 @@
     coreInertPrototype: AnomalyCoreLiquidInert
     minPulseLength: 60
     maxPulseLength: 120
+    supercriticalSoundAtAnimationStart:
+      collection: AnomalyFluidSupercritical
   - type: EntitySpawnAnomaly
     entries:
     - settings:
@@ -994,6 +1070,8 @@
     maxPulseLength: 120
     animationTime: 4
     offset: "-0.1,0.1"
+    supercriticalSoundAtAnimationStart:
+      collection: AnomalyShadowSupercritical
   - type: EntitySpawnAnomaly
     entries:
     - settings:
@@ -1054,6 +1132,8 @@
     coreInertPrototype: AnomalyCoreTechInert
     minPulseLength: 60
     maxPulseLength: 120
+    supercriticalSoundAtAnimationStart:
+      collection: AnomalyTechSupercritical
   - type: TechAnomaly
   - type: DeviceLinkSource
     ports:
@@ -1112,6 +1192,8 @@
     coreInertPrototype: AnomalyCoreSantaInert
     minPulseLength: 60
     maxPulseLength: 120
+    supercriticalSoundAtAnimationStart:
+      collection: AnomalyPresentSupercritical
   - type: EntitySpawnAnomaly
     entries:
     - settings:
