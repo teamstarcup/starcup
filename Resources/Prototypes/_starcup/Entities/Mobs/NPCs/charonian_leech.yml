@@ -1,0 +1,77 @@
+- type: entity
+  name: Charonian leech
+  id: MobCharonianLeech
+  parent: [ SimpleSpaceMobBase, FlyingMobBase, MobCombat ]
+  description: A digusting, bloated, flying leech.
+  components:
+    - type: InputMover
+    - type: MobMover
+    - type: HTN
+      rootTask:
+        task: SimpleHostileCompound
+      blackboard:
+        NavSmash: !type:Bool
+          true
+    - type: NpcFactionMember
+      factions:
+      - SimpleHostile
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: _starcup/Mobs/Aliens/charonian_leech.rsi
+      layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: alive
+    - type: CombatMode
+    - type: Physics
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.40
+          density: 80
+          mask:
+            - FlyingMobMask
+          layer:
+            - FlyingMobLayer
+    - type: MobState
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        30: Dead
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 2.5
+      baseSprintSpeed: 3.5
+    - type: Stamina
+      critThreshold: 100
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: alive
+        Dead:
+          Base: dead
+    - type: MeleeWeapon
+      altDisarm: false
+      angle: 0
+      animation: WeaponArcBite
+      soundHit:
+        collection: LeechBite
+      damage:
+        types:
+          Piercing: 8
+    - type: TypingIndicator
+      proto: alien
+    - type: Tag
+      tags:
+        - DoorBumpOpener
+        - CannotSuicide
+    - type: ReplacementAccent
+      accent: genericAggressive
+    - type: Speech
+      speechVerb: LargeMob
+    - type: InteractionPopup
+      interactSuccessString: petting-success-frog
+      interactFailureString: petting-failure-carp
+      interactFailureSound:
+        path: /Audio/_starcup/Animals/leechbite1.ogg
+    - type: FloatingVisuals
