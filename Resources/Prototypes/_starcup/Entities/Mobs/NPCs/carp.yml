@@ -51,7 +51,6 @@
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Aliens/Carps/queen.rsi
-    scale: 1.1, 1.1
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -93,7 +92,6 @@
   components:
     - type: Sprite
       sprite: _starcup/Mobs/Aliens/Carps/Sharkminnows/sharkminnowshelled.rsi
-      scale: 1, 1
     - type: MobThresholds
       thresholds:
         0: Alive
@@ -141,6 +139,10 @@
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Aliens/Carps/Sharkminnows/sharkminnowfat.rsi
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      175: Dead
 
 - type: entity
   name: vampire sharkminnow
@@ -150,7 +152,6 @@
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Aliens/Carps/Sharkminnows/sharkminnowvampire.rsi
-    scale: 1, 1
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -175,11 +176,10 @@
   components:
     - type: Sprite
       sprite: _starcup/Mobs/Aliens/Carps/Sharkminnows/sharkminnowabyssal.rsi
-      scale: 1.125, 1.125
     - type: MobThresholds
       thresholds:
         0: Alive
-        215: Dead
+        250: Dead
     - type: MeleeWeapon
       damage:
         types:
@@ -231,11 +231,10 @@
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Aliens/Carps/Sharkminnows/sharkminnowdire.rsi
-    scale: 1.25, 1.25
   - type: MobThresholds
     thresholds:
       0: Alive
-      250: Dead
+      200: Dead
   - type: MeleeWeapon
     damage:
       types:
@@ -253,15 +252,14 @@
   suffix: "sharkminnow boss"
   parent: MobSharkDire
   id: MobSharkTiburadon
-  description: An ancient, near mythical species of sharkminnow.
+  description: An ancient bred of sharkminnow from the deepest confines of space.
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Aliens/Carps/Sharkminnows/tiburadon.rsi
-    scale: 1.8, 1.8
   - type: MobThresholds
     thresholds:
       0: Alive
-      500: Dead
+      250: Dead
   - type: MeleeWeapon
     damage:
       types:
