@@ -90,15 +90,19 @@
       - !type:GroupSelector
         weight: 0.5
         children:
-        - id: FoodMeatHuman
-          amount: !type:RangeNumberSelector
-            range: 1, 3
+        # begin starcup: removed for tone
+        # - id: FoodMeatHuman
+        #   amount: !type:RangeNumberSelector
+        #     range: 1, 3
+        # end starcup
         - id: FoodMeatLizard
           amount: !type:RangeNumberSelector
             range: 1, 3
-        - id: FoodMeatPlant
-          amount: !type:RangeNumberSelector
-            range: 1, 3
+        # begin starcup: removed for tone
+        # - id: FoodMeatPlant
+        #   amount: !type:RangeNumberSelector
+        #     range: 1, 3
+        # end starcup
         - id: FoodMeatSpider
           amount: !type:RangeNumberSelector
             range: 1, 3

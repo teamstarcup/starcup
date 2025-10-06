@@ -6,7 +6,7 @@
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
-        tableId: FillLockerBooze
+        tableId: FillLockerBartender # starcup: new fill
 
 - type: entityTable
   id: FillLockerBooze
@@ -45,7 +45,7 @@
   id: FillClosetChef
   table: !type:AllSelector
     children:
-    - id: MonkeyCubeBox # starcup: replaces VariantCubeBox, no non-sapient kobolds
+    - id: ChefCubeBox # starcup: replaces VariantCubeBox, no non-sapient kobolds and monkeys are not for food
     - id: SprayBottleWater
     - id: FoodBoxCloth
     - id: ReagentContainerSugar
@@ -134,6 +134,7 @@
       prob: 0.3
     - id: ClothingBeltPlant
     - id: PlantBag ##Some maps don't have nutrivend
+    - id: PlantAnalyzer # Den
     - id: BoxMouthSwab
     - id: Dropper
     - id: HandLabeler

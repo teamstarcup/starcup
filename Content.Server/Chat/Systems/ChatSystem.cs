@@ -808,7 +808,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         return Filter.Empty()
             .AddWhereAttachedEntity(HasComp<GhostComponent>)
             .Recipients
-            .Union(_adminManager.ActiveAdmins)
+            // .Union(_adminManager.ActiveAdmins) // L5 - admins can't see dead chat while living
             .Select(p => p.Channel);
     }
 

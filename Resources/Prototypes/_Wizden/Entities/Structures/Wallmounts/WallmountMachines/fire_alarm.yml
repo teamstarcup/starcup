@@ -1,0 +1,12 @@
+
+- type: entity
+  id: FireAlarmAutoLink
+  parent: FireAlarm
+  suffix: Autolink
+  components:
+  - type: AlarmAutoLink
+    autoLinkPrototypes:
+    - AirSensor
+    - Firelock
+    - FirelockGlass
+    - FirelockEdge

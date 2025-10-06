@@ -7,10 +7,12 @@
   markingLimits: MobOniMarkingLimits
   sprites: MobHumanSprites
   skinColoration: Hues
-  maleFirstNames: NamesOniMale
-  femaleFirstNames: NamesOniFemale
-  lastNames: NamesOniLocation
-  naming: LastNoFirst
+  # begin starcup: new naming scheme
+  maleFirstNames: NamesOniFirst
+  femaleFirstNames: NamesOniFirst
+  lastNames: NamesOniLast
+  naming: FirstOTheLast
+  # end starcup
   baseScale: "1.2, 1.2"
 
 - type: markingPoints

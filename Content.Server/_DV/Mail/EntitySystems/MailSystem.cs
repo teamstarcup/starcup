@@ -660,7 +660,7 @@ namespace Content.Server._DV.Mail.EntitySystems
 
             if (candidateList.Count <= 0)
             {
-                _sawmill.Error("List of mail candidates was empty!");
+                // _sawmill.Error("List of mail candidates was empty!"); // starcup
                 return;
             }
 

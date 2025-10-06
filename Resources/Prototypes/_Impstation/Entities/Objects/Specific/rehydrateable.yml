@@ -1,0 +1,67 @@
+#  id: RehydratableAnimalCube
+- type: entity
+  parent: RehydratableAnimalCube
+  id: PigCube
+  name: pig cube
+  components:
+  - type: Rehydratable
+    possibleSpawns:
+    - MobPig
+
+- type: entity
+  parent: RehydratableAnimalCube
+  id: ChickenCube
+  name: chicken cube
+  components:
+  - type: Rehydratable
+    possibleSpawns:
+    - MobChicken
+
+- type: entity
+  parent: RehydratableAnimalCube
+  id: DuckCube
+  name: duck cube
+  components:
+  - type: Rehydratable
+    possibleSpawns:
+    - MobDuckWhite
+    # begin starcup
+    - MobDuckBrown
+    - MobDuckMallard
+    # end starcup
+
+- type: entity
+  parent: RehydratableAnimalCube
+  id: CrabCube
+  name: crab cube
+  components:
+  - type: Rehydratable
+    possibleSpawns:
+    - MobCrab
+
+- type: entity
+  parent: RehydratableAnimalCube
+  id: SnailCube
+  name: snail cube
+  components:
+  - type: Rehydratable
+    possibleSpawns:
+    - MobSnail
+
+- type: entity
+  parent: RehydratableAnimalCube
+  id: LizardCube
+  name: lizard cube
+  components:
+  - type: Rehydratable
+    possibleSpawns:
+    - MobLizard
+
+- type: entity
+  parent: RehydratableAnimalCube
+  id: PenguinCube
+  name: penguin cube
+  components:
+  - type: Rehydratable
+    possibleSpawns:
+    - MobPenguin

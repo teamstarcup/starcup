@@ -24,11 +24,13 @@
     - DoorBumpOpener
     - SpiderCraft
     - AnomalyHost
-  - type: Butcherable
-    butcheringType: Spike
-    spawned:
-      - id: FoodMeatSpider
-        amount: 5
+  # begin starcup: people are not food
+  # - type: Butcherable
+  #   butcheringType: Spike
+  #   spawned:
+  #     - id: FoodMeatSpider
+  #       amount: 5
+  # end starcup
   - type: Reactive
     reactions:
     - reagents: [Water]

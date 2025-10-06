@@ -1,59 +1,26 @@
-<div class="header" align="center">
-<img alt="Space Station 14" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg">
-</div>
+# starcup
+[![Static Badge](https://img.shields.io/badge/nightly-releases?label=releases)](https://builds.starcup.cc/fork/starcup)
 
-Space Station 14 is a remake of SS13 that runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), our homegrown engine written in C#.
+[Forum](https://forum.starcup.cc/) | [Wiki](https://wiki.starcup.cc/) | [Discord](https://discord.gg/5pC525RYbw)
 
-This is the primary repo for Space Station 14. To prevent people forking RobustToolbox, a "content" pack is loaded by the client and server. This content pack contains everything needed to play the game on one specific server.
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F31BQOU8)
 
-If you want to host or create content for SS14, this is the repo you need. It contains both RobustToolbox and the content pack for development of new content packs.
-
-## Links
-
-<div class="header" align="center">
-
-[Website](https://spacestation14.com/) | [Discord](https://discord.ss14.io/) | [Forum](https://forum.spacestation14.com/) | [Mastodon](https://mastodon.gamedev.place/@spacestation14) | [Lemmy](https://lemmy.spacestation14.com/) | [Patreon](https://www.patreon.com/spacestation14) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Standalone Download](https://spacestation14.com/about/nightlies/)
-
-</div>
-
-## Documentation/Wiki
-
-Our [docs site](https://docs.spacestation14.com/) has documentation on SS14's content, engine, game design, and more.
-Additionally, see these resources for license and attribution information:
-- [Robust Generic Attribution](https://docs.spacestation14.com/en/specifications/robust-generic-attribution.html)
-- [Robust Station Image](https://docs.spacestation14.com/en/specifications/robust-station-image.html)
-
-We also have lots of resources for new contributors to the project.
+starcup is a fork of Space Station 14 with an emphasis on role play. Our setting focuses on Syndicate-controlled stations and neo-corporate drama.
 
 ## Contributing
 
-We are happy to accept contributions from anybody. Get in Discord if you want to help. We've got a [list of issues](https://github.com/teamstarcup/space-station-14-content/issues) that need to be done and anybody can pick them up. Don't be afraid to ask for help either!
-Just make sure your changes and pull requests are in accordance with the [contribution guidelines](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html).
+We are community-powered, so we greatly appreciate contributions. Check out [CONTRIBUTING.md](/CONTRIBUTING.md) for information about how to get started.
 
-We are not currently accepting translations of the game on our main repository. If you would like to translate the game into another language, consider creating a fork or contributing to a fork.
+If you're not sure how to help, please reach out to us! We'll be glad to get you on the right track. Our Discord server is the best place to get a quick response, but our forum is preferred when asking about complicated topics.
 
-## Building
+## Attributions
+When we pull content from other forks, we try to organize their content to their own subfolders in each of the projects to keep track of attribution and try to prevent merge conflicts.
 
-1. Clone this repo:
-```shell
-git clone https://github.com/space-wizards/space-station-14.git
-```
-2. Go to the project folder and run `RUN_THIS.py` to initialize the submodules and load the engine:
-```shell
-cd space-station-14
-python RUN_THIS.py
-```
-3. Compile the solution:
-
-Build the server using `dotnet build`.
-
-[More detailed instructions on building the project.](https://docs.spacestation14.com/en/general-development/setup.html)
+Content under these subdirectories either originate from their respective fork, or are modifications related to content from their respective fork.
 
 ## License
 
-All code for the content repository, unless specified otherwise, is licensed under the [GNU Affero General Public License version 3.0](https://www.gnu.org/licenses/agpl-3.0.en.html), unless otherwise stated. See `LICENSE-AGPLv3.txt`.
+For license information, please refer to [LEGAL.md](/LEGAL.md).
 
-Most assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. Assets have their license and the copyright in the metadata file. [Example](https://github.com/teamstarcup/space-station-14/blob/7479bd40594555482486be1e2afa94827b7ffb43/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
-
-> [!NOTE]
-> Some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) or similar non-commercial licenses and will need to be removed if you wish to use this project commercially.
+If you're seeking to port changes to a non-GPL repository, please reach out to us. We will be happy to assist with
+arranging written permission from the relevant authors.

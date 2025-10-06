@@ -1,0 +1,34 @@
+- type: entity
+  parent: ShotGunCabinet
+  id: ShotGunCabinetBartender
+  suffix: Bartender
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/shotgun_cabinet_bartender.rsi
+  - type: AccessReader
+    access: [["Security"], ["Command"], ["Bar"]]
+
+- type: entity
+  parent: ShotGunCabinetBartender
+  id: ShotGunCabinetBartenderOpen
+  suffix: Bartender, Open
+  components:
+  - type: Openable
+    opened: true
+  - type: Lock
+    locked: false
+
+- type: entity
+  parent: ShotGunCabinetBartender
+  id: ShotGunCabinetBartenderFilled
+  suffix: Bartender, Filled
+  components:
+  - type: ContainerFill
+    containers:
+      ItemCabinet:
+      - WeaponShotgunDoubleBarreledRubber
+
+- type: entity
+  parent: [ShotGunCabinetBartenderFilled, ShotGunCabinetBartenderOpen]
+  id: ShotGunCabinetBartenderFilledOpen
+  suffix: Bartender, Filled, Open

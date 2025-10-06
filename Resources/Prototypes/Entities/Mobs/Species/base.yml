@@ -269,11 +269,13 @@
     normalBodyTemperature: 310.15
     thermalRegulationTemperatureThreshold: 2
   - type: Perishable
-  - type: Butcherable
-    butcheringType: Spike # TODO human.
-    spawned:
-      - id: FoodMeat
-        amount: 5
+  # begin starcup: people are not food
+  # - type: Butcherable
+  #   butcheringType: Spike # TODO human.
+  #   spawned:
+  #     - id: FoodMeat
+  #       amount: 5
+  # end starcup
   - type: Respirator
     damage:
       types:
