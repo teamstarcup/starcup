@@ -10,8 +10,11 @@
   icon: _DV/Interface/Emotes/ecg.png # DeltaV - Added icon
   category: Vocal
   whitelist:
+    requireAll: true
     components:
-    - Silicon
+    - Vocal
+    tags:
+    - SiliconEmotes
   chatMessages: [ boops ]
   chatTriggers:
     - boops
@@ -19,8 +22,11 @@
 - type: emote
   id: Whirr # uncategorized as it is generic
   whitelist:
+    requireAll: true
     components:
-    - Silicon
+    - Vocal
+    tags:
+    - SiliconEmotes
   name: chat-emote-name-whirr
   chatMessages: [ whirrs ]
   chatTriggers:
