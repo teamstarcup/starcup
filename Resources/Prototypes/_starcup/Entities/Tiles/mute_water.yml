@@ -15,6 +15,7 @@
         - Catwalk
   - type: TileEntityEffect
     effects:
+    - !type:ExtinguishReaction
     - !type:GenericStatusEffect
       key: Muted
       component: Muted
@@ -76,6 +77,3 @@
       collection: FootstepWater
       params:
         volume: 8
-  - type: TileEntityEffect
-    effects:
-    - !type:ExtinguishReaction
