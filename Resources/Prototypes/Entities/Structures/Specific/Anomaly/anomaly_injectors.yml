@@ -62,7 +62,8 @@
         # begin starcup: supercrit damage
         supercriticalDamage:
           types:
-            Heat: 25 # you're already going to be stunned in the middle of a tritium fire
+            Radiation: 100
+            Heat: 100 # reduced compared to the others since you're going to be in the middle of a plasma fire
         # end starcup
 
 - type: entity
@@ -99,6 +100,7 @@
         # begin starcup: supercrit damage
         supercriticalDamage:
           types:
+            Radiation: 100
             Shock: 200
         # end starcup
 
@@ -136,7 +138,8 @@
         # begin starcup: supercrit damage
         supercriticalDamage:
           types:
-            Asphyxiation: 190 # not quite instant so you can gasp for breath in the shadow fog for a little bit
+            Radiation: 100
+            Asphyxiation: 200
         # end starcup
 
 - type: entity
@@ -173,6 +176,7 @@
         # begin starcup: supercrit damage
         supercriticalDamage:
           types:
+            Radiation: 100
             Cold: 200
         # end starcup
 
@@ -210,6 +214,7 @@
         # begin starcup: supercrit damage
         supercriticalDamage:
           types:
+            Radiation: 100
             Piercing: 75
             Heat: 125
         # end starcup
@@ -248,6 +253,7 @@
         # begin starcup: supercrit damage
         supercriticalDamage:
           types:
+            Radiation: 100
             Blunt: 50
             Slash: 75
             Piercing: 75
@@ -287,6 +293,7 @@
         # begin starcup: supercrit damage
         supercriticalDamage:
           types:
+            Radiation: 100
             Slash: 200
         # end starcup
 
@@ -325,6 +332,7 @@
         # begin starcup: supercrit damage
         supercriticalDamage:
           types:
+            Radiation: 100
             Blunt: 200
         # end starcup
 
@@ -362,8 +370,8 @@
         # begin starcup: supercrit damage
         supercriticalDamage:
           types:
-            Radiation: 50
-            Shock: 150
+            Radiation: 100
+            Shock: 200
         # end starcup
 
 - type: entity
@@ -401,6 +409,7 @@
         # begin starcup: supercrit damage
         supercriticalDamage:
           types:
+            Radiation: 100
             Blunt: 200
         # end starcup
 
@@ -434,5 +443,6 @@
         # begin starcup: supercrit damage
         supercriticalDamage:
           types:
+            Radiation: 100
             Blunt: 200
         # end starcup
