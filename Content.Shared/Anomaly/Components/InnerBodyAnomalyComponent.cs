@@ -1,5 +1,6 @@
 ﻿using Content.Shared.Anomaly.Effects;
 using Content.Shared.Body.Prototypes;
+using Content.Shared.Damage; // starcup
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
@@ -69,6 +70,12 @@ public sealed partial class InnerBodyAnomalyComponent : Component
     /// </summary>
     [DataField]
     public string LayerMap = "inner_anomaly_layer";
+
+    /// <summary>
+    /// starcup: Defines the damage values applied to the host when the anomaly goes supercritical
+    /// </summary>
+    [DataField(required: true)]
+    public DamageSpecifier SupercriticalDamage = default!;
 }
 
 /// <summary>
