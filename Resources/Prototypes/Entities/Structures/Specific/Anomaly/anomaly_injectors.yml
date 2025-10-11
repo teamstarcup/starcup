@@ -59,6 +59,11 @@
           Vox:
             sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi
             state: fire_VOX
+        # begin starcup: supercrit damage
+        supercriticalDamage:
+          types:
+            Heat: 25 # you're already going to be stunned in the middle of a tritium fire
+        # end starcup
 
 - type: entity
   parent: BaseAnomalyInjector
@@ -91,6 +96,11 @@
           Vox:
             sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi
             state: shock_VOX
+        # begin starcup: supercrit damage
+        supercriticalDamage:
+          types:
+            Shock: 200
+        # end starcup
 
 - type: entity
   parent: BaseAnomalyInjector
@@ -123,6 +133,11 @@
           Vox:
             sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi
             state: shadow_VOX
+        # begin starcup: supercrit damage
+        supercriticalDamage:
+          types:
+            Asphyxiation: 190 # not quite instant so you can gasp for breath in the shadow fog for a little bit
+        # end starcup
 
 - type: entity
   parent: BaseAnomalyInjector
@@ -155,6 +170,11 @@
           Vox:
             sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi
             state: frost_VOX
+        # begin starcup: supercrit damage
+        supercriticalDamage:
+          types:
+            Cold: 200
+        # end starcup
 
 - type: entity
   parent: BaseAnomalyInjector
@@ -187,6 +207,12 @@
           Vox:
             sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi
             state: flora_VOX
+        # begin starcup: supercrit damage
+        supercriticalDamage:
+          types:
+            Piercing: 75
+            Heat: 125
+        # end starcup
 
 - type: entity
   parent: BaseAnomalyInjector
@@ -219,6 +245,13 @@
           Vox:
             sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi
             state: bluespace_VOX
+        # begin starcup: supercrit damage
+        supercriticalDamage:
+          types:
+            Blunt: 50
+            Slash: 75
+            Piercing: 75
+        # end starcup
 
 - type: entity
   parent: BaseAnomalyInjector
@@ -251,6 +284,11 @@
           Vox:
             sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi
             state: flesh_VOX
+        # begin starcup: supercrit damage
+        supercriticalDamage:
+          types:
+            Slash: 200
+        # end starcup
 
 - type: entity
   parent: BaseAnomalyInjector
@@ -284,6 +322,11 @@
           Vox:
             sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi
             state: grav_VOX
+        # begin starcup: supercrit damage
+        supercriticalDamage:
+          types:
+            Blunt: 200
+        # end starcup
 
 - type: entity
   parent: BaseAnomalyInjector
@@ -316,6 +359,12 @@
           Vox:
             sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi
             state: tech_VOX
+        # begin starcup: supercrit damage
+        supercriticalDamage:
+          types:
+            Radiation: 50
+            Shock: 150
+        # end starcup
 
 - type: entity
   parent: BaseAnomalyInjector
@@ -349,6 +398,11 @@
           Vox:
             sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi
             state: rock_VOX
+        # begin starcup: supercrit damage
+        supercriticalDamage:
+          types:
+            Blunt: 200
+        # end starcup
 
 - type: entity
   parent: BaseAnomalyInjector
@@ -377,3 +431,8 @@
         fallbackSprite:
           sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi
           state: santa
+        # begin starcup: supercrit damage
+        supercriticalDamage:
+          types:
+            Blunt: 200
+        # end starcup
