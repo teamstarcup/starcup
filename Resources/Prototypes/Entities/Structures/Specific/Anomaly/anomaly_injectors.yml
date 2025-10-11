@@ -63,7 +63,7 @@
         supercriticalDamage:
           types:
             Radiation: 100
-            Heat: 100 # reduced compared to the others since you're going to be in the middle of a plasma fire
+            Heat: 100
         # end starcup
 
 - type: entity
@@ -101,7 +101,7 @@
         supercriticalDamage:
           types:
             Radiation: 100
-            Shock: 200
+            Shock: 100
         # end starcup
 
 - type: entity
@@ -139,7 +139,7 @@
         supercriticalDamage:
           types:
             Radiation: 100
-            Asphyxiation: 200
+            Asphyxiation: 100
         # end starcup
 
 - type: entity
@@ -177,7 +177,7 @@
         supercriticalDamage:
           types:
             Radiation: 100
-            Cold: 200
+            Cold: 100
         # end starcup
 
 - type: entity
@@ -215,8 +215,8 @@
         supercriticalDamage:
           types:
             Radiation: 100
-            Piercing: 75
-            Heat: 125
+            Poison: 75
+            Piercing: 25
         # end starcup
 
 - type: entity
@@ -254,9 +254,9 @@
         supercriticalDamage:
           types:
             Radiation: 100
-            Blunt: 50
-            Slash: 75
-            Piercing: 75
+            Blunt: 30
+            Slash: 40
+            Piercing: 40
         # end starcup
 
 - type: entity
@@ -294,7 +294,8 @@
         supercriticalDamage:
           types:
             Radiation: 100
-            Slash: 200
+            Genetic: 25
+            Slash: 75
         # end starcup
 
 - type: entity
@@ -332,8 +333,8 @@
         # begin starcup: supercrit damage
         supercriticalDamage:
           types:
-            Radiation: 100
-            Blunt: 200
+            Radiation: 125
+            Blunt: 75
         # end starcup
 
 - type: entity
@@ -371,7 +372,7 @@
         supercriticalDamage:
           types:
             Radiation: 100
-            Shock: 200
+            Shock: 100
         # end starcup
 
 - type: entity
@@ -410,7 +411,7 @@
         supercriticalDamage:
           types:
             Radiation: 100
-            Blunt: 200
+            Blunt: 100
         # end starcup
 
 - type: entity
@@ -444,5 +445,5 @@
         supercriticalDamage:
           types:
             Radiation: 100
-            Blunt: 200
+            Blunt: 100
         # end starcup
