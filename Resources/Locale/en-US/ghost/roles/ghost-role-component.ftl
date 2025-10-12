@@ -215,7 +215,9 @@ ghost-role-information-space-ninja-name = Space Ninja
 ghost-role-information-space-ninja-description = Use stealth and deception to sabotage the station.
 
 ghost-role-information-paradox-clone-name = Paradox Clone
-ghost-role-information-paradox-clone-description = A freak space-time anomaly has teleported you into another reality! Now you have to find your counterpart and kill and replace them.
+ghost-role-information-paradox-clone-description = A glitch in reality has led to the birth of you, a near-perfect copy—give or take some possible emotional corruption. There is a 1 in 2 chance that you will cease to exist if your counterpart is not dead by the end of today. It's your choice whether to act on that.
+# starcup - replaced paradox clone description.
+# ghost-role-information-paradox-clone-description = A freak space-time anomaly has teleported you into another reality! Now you have to find your counterpart and kill and replace them.
 
 ghost-role-information-syndicate-reinforcement-name = Syndicate Agent
 ghost-role-information-syndicate-reinforcement-description = Someone needs reinforcements. You, the first person the syndicate could find, will help them.

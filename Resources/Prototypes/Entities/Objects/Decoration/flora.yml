@@ -58,7 +58,7 @@
         - WallLayer
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: Wood
+    damageModifierSet: WoodenStructure # The wood set seems better suited to represent furniture. Shouldn't chop a tree down with three quick smacks of a hatchet. starcup: feat more trees and flora
   - type: MeleeSound
     soundGroups:
       Brute:
@@ -215,6 +215,7 @@
   parent: BaseTree
   id: FloraTree
   name: tree
+  suffix: jungle/swamp # Added for clarity, as there's more variation in trees now. starcup: feat. more tress & flora
   components:
   - type: Sprite
     layers:
@@ -261,6 +262,7 @@
   parent: BaseTreeLarge
   id: FloraTreeLarge
   name: large tree
+  suffix: jungle/swamp # Added for clarity, as there's more variation in trees now. starcup: feat. more tress & flora
   components:
   - type: Sprite
     layers:
