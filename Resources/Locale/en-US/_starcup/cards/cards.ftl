@@ -3,8 +3,8 @@ card-hand-contains = This hand contains: {$cards}
 
 # THE SPAROT
 # Fantasia
-card-sc-devil
-card-sc-clown
+card-sc-devil = the devil
+card-sc-clown = the clown
 
 # Cables
 card-sc-ace-of-cables = ace of cables
