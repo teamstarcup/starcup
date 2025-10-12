@@ -13,3 +13,16 @@
   id: PlasmaScientistPDA
   equipment:
     id: PlasmaScientistPDA
+
+# Head
+- type: loadout
+  id: AtmosBeret
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobAtmosphericTechnician
+      time: 72000 # 60hr # starcup: 216000 (60hr) -> 72000 (20hr)
+  equipment:
+    head: ClothingHeadHatBeretAtmospherics
+

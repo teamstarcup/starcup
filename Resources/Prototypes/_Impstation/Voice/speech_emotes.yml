@@ -1,0 +1,84 @@
+# vocal emotes
+
+# begin starcup: removed
+#- type: emote
+#  id: Wuhey
+#  name: chat-emote-name-wuhey
+#  category: Vocal
+#  icon: _Impstation/Interface/Emotes/wuhey.png
+#  chatMessages: ["chat-emote-msg-wuhey"]
+#
+#- type: emote
+#  id: Ungh
+#  name: chat-emote-name-weh
+#  category: Vocal
+#  chatMessages: [UNGHs!]
+# end starcup
+
+- type: emote
+  id: Bubble
+  name: chat-emote-name-bubble
+  category: Vocal
+  available: false
+  icon: _Impstation/Interface/Emotes/bubble.png
+  whitelist:
+    components:
+    - Vocal
+    - Slime
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: ["chat-emote-msg-bubble"]
+  chatTriggers:
+    - bubbles
+    - bubbling
+
+- type: emote
+  id: Pop
+  name: chat-emote-name-pop
+  category: Vocal
+  available: false
+  icon: _Impstation/Interface/Emotes/pop.png
+  whitelist:
+    components:
+    - Vocal
+    - Slime
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: ["chat-emote-msg-pop"]
+  chatTriggers:
+    - pops
+    - popping
+
+- type: emote
+  id: LizardHiss # starcup: Hiss -> LizardHiss
+  name: chat-emote-name-hiss
+  category: Vocal
+  available: false
+  icon: _Impstation/Interface/Emotes/hiss.png
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: ["chat-emote-msg-hiss"]
+  chatTriggers:
+    - hiss
+    - hiss.
+    - hiss!
+    - hisses
+    - hisses.
+    - hisses!
+
+- type: emote
+  id: Blink
+  name: chat-emote-name-blink
+  category: General
+  icon: _Impstation/Interface/Emotes/blink.png #imp
+  chatMessages: ["chat-emote-msg-blink"]
+  chatTriggers:
+    - blink
+    - blinks
+    - blinked

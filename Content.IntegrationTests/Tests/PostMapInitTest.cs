@@ -60,7 +60,7 @@ namespace Content.IntegrationTests.Tests
         };
 
 
-        private static readonly string[] GameMaps =
+        public static readonly string[] GameMaps =  // starcup: made public
         {
             "Dev",
             "TestTeg",
