@@ -67,3 +67,4 @@ loadout-group-prisoner-jumpsuit = Prisoner jumpsuit
 # Misc
 loadout-group-plushies = Plushies
 loadout-group-survival-brigmedic = Combat Medic Survival Box
+loadout-group-accessibility = Accessibility
