@@ -72,8 +72,12 @@
     # - Genderfluid
     # - JuiceThatMakesYouUngh
     # end starcup
-  - type: Drink
+  # begin starcup: rewritten for edible refactor
+  - type: Edible
+    edible: Drink
     solution: anomaly
+    destroyOnEmpty: false
+  # end starcup
   - type: DrainableSolution
     solution: anomaly
   - type: DrawableSolution
