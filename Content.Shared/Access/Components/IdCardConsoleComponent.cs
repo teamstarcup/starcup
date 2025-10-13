@@ -68,6 +68,7 @@ public sealed partial class IdCardConsoleComponent : Component
         "Library", // starcup
         "Cargo",
         "Quartermaster",
+        "Mail", // DeltaV
         "Maintenance",
         "Medical",
         "Mime", // starcup
