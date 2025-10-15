@@ -295,8 +295,8 @@
     - VimPilot
   - type: StealTarget
     stealGroup: AnimalNamedCat
-  - type: Puller
-    needsHands: false # starcup - basically a cat
+  - type: Puller # starcup - basically a cat
+    needsHands: false
 
 - type: entity
   name: McGriff
@@ -372,8 +372,9 @@
     - VimPilot
   - type: StealTarget
     stealGroup: AnimalMcGriff
-  - type: Puller
-    needsHands: false # starcup - go fetch!
+  - type: MessyDrinker
+  - type: Puller # starcup - go fetch!
+    needsHands: false
 
 - type: entity
   name: Paperwork
@@ -408,8 +409,8 @@
     attributes:
       proper: true
       gender: male
-  - type: Puller
-    needsHands: false # starcup - Paperwork likes helping retrieve random books and papers for his librarian caretaker
+  - type: Puller # starcup - Paperwork likes helping retrieve random books and papers for his librarian caretaker
+    needsHands: false
 
 - type: entity
   name: Walter
@@ -472,8 +473,9 @@
   - type: Speech
     speechVerb: Canine
     speechSounds: Dog
-  - type: Puller
-    needsHands: false # starcup - go fetch!
+  - type: MessyDrinker
+  - type: Puller # starcup - go fetch!
+    needsHands: false
 
 - type: entity
   name: Morty
@@ -675,6 +677,22 @@
     - sadness
 
 - type: entity
+  parent: MobHamsterHamlet
+  id: MobHamsterHamletSlippery
+  suffix: Slippery
+  components:
+  - type: Slippery
+  - type: StepTrigger
+    requiredTriggeredSpeed: 1
+  - type: TriggerOnStepTrigger
+  # - type: GibOnTrigger # starcup: don't make the hamster explode
+  - type: EmitSoundOnTrigger
+    sound:
+      path: "/Audio/Animals/mouse_squeak.ogg"
+    positional: true
+    predicted: true
+
+- type: entity
   name: Shiva
   parent: MobGiantSpider
   id: MobSpiderShiva
@@ -840,8 +858,6 @@
   - type: Item
     sprite: Mobs/Pets/Smile/smile.rsi
     size: Huge
-  - type: SentienceTarget
-    flavorKind: station-event-random-sentience-flavor-slime
   - type: MobPrice
     price: 3000 # it is a truly valuable creature
   - type: GhostRole

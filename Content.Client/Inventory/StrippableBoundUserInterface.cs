@@ -204,7 +204,6 @@ namespace Content.Client.Inventory
             // End Goobstation/starcup
 
             UpdateEntityIcon(button, heldEntity);
-
             _strippingMenu!.HandsContainer.AddChild(button);
             LayoutContainer.SetPosition(button, new Vector2i(_handCount, 0) * (SlotControl.DefaultButtonSize + ButtonSeparation));
             _handCount++;

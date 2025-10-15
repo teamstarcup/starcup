@@ -1,10 +1,9 @@
-using Content.Server.Power.Components;
 using Content.Shared._EE.Silicon.Systems;
 using Content.Shared.Bed.Sleep;
 using Content.Server._EE.Silicon.Charge;
-using Content.Server._EE.Power.Components;
 using Content.Server.Humanoid;
 using Content.Shared.Humanoid;
+using Content.Shared.Power.Components;
 using Content.Shared.StatusEffectNew; // starcup
 
 namespace Content.Server._EE.Silicon.Death;
