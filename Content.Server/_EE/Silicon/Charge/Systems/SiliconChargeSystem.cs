@@ -22,8 +22,10 @@ using Content.Shared.Mind;
 using Content.Shared.Alert;
 using Content.Server._EE.Silicon.Death;
 using Content.Server._EE.Power.Components;
+using Content.Shared.Atmos.Components;
 // Begin TheDen - IPC Dynamic Power draw
 using Content.Shared.Movement.Components;
+using Content.Shared.Power.Components;
 using Robust.Shared.Physics.Components;
 // End TheDen
 

@@ -5,8 +5,10 @@
   setPreference: true
   objective: roles-antag-initial-infected-objective
   guides: [ Zombies ]
-# begin starcup: mkc
   requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 3600 # 1h
+# begin starcup: mkc
   - !type:SpeciesRequirement
     inverted: true
     species:

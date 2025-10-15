@@ -94,7 +94,7 @@ public abstract partial class SharedStaminaSystem : EntitySystem
         {
             RemCompDeferred<ActiveStaminaComponent>(entity);
         }
-        _alerts.ClearAlert(entity, entity.Comp.StaminaAlert);
+        _alerts.ClearAlert(entity.Owner, entity.Comp.StaminaAlert);
     }
 
     private void OnStartup(Entity<StaminaComponent> entity, ref ComponentStartup args)
@@ -176,11 +176,6 @@ public abstract partial class SharedStaminaSystem : EntitySystem
 
         if (hitEvent.Handled)
             return;
-
-        // Begin DeltaV additions
-        // Allow users to modifier stamina damage as well, this part of the event is not handle-able by listeners.
-        RaiseLocalEvent(args.User, hitEvent);
-        // End DeltaV additions
 
         var damage = component.Damage;
 

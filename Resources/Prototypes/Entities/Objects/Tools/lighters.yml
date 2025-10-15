@@ -475,7 +475,7 @@
     sprite: Objects/Tools/Lighters/centcomm.rsi
   - type: ItemToggleRequiresLock
     requireLocked: false
-  - type: Welder
+  - type: Welder #
     fuelConsumption: 0.0
     fuelLitCost: 10
     fuelReagent: Plasma
@@ -583,7 +583,7 @@
           density: 10
           mask:
           - ItemMask
-  - type: Welder
+  - type: Welder #
     fuelConsumption: 0.1
     fuelLitCost: 1
     tankSafe: true
@@ -627,9 +627,9 @@
         #  Quantity: 10
   - type: FlavorProfile
     flavors:
-      - bread
-      - meaty
-      - cheap
+    - bread
+    - meaty
+    - cheap
   - type: ComponentToggler
     components:
     - type: Food

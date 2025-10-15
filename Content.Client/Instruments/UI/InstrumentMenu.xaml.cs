@@ -26,12 +26,12 @@ namespace Content.Client.Instruments.UI
 
         private bool _isMidiFileDialogueWindowOpen;
 
+        public EntityUid Entity;
+
         public event Action? OnOpenBand;
         public event Action? OnOpenChannels;
         public event Action? OnCloseBands;
         public event Action? OnCloseChannels;
-
-        public EntityUid Entity;
 
         public InstrumentMenu()
         {
@@ -129,7 +129,7 @@ namespace Content.Client.Instruments.UI
             // or focus the previously-opened window.
             _isMidiFileDialogueWindowOpen = true;
 
-            await using var file = await _dialogs.OpenFile(filters);
+            await using var file = await _dialogs.OpenFile(filters, FileAccess.Read);
 
             _isMidiFileDialogueWindowOpen = false;
 
