@@ -344,7 +344,7 @@
   - type: TimedDespawn #delete the egg after the chicken spawns
     lifetime: 21
 
-- type: entity # TODO: figure out how to make these guys gib when stepped on
+- type: entity
   name: cockroach
   parent: SimpleMobBase
   id: MobCockroach
@@ -447,8 +447,13 @@
       - !type:GibBehavior
         recursive: false
   - type: NonSpreaderZombie
-  - type: SentienceTarget
-    flavorKind: station-event-random-sentience-flavor-organic
+  - type: StepTrigger
+    requiredTriggeredSpeed: 1
+  - type: TriggerOnStepTrigger
+  - type: RandomChanceTriggerCondition
+    successChance: 0.2
+  - type: GibOnTrigger
+  - type: ProtectedFromStepTriggers
   - type: MeleeWeapon
     soundHit:
       path: /Audio/Effects/bite.ogg
@@ -862,6 +867,7 @@
       behaviors:
       - !type:GibBehavior
         recursive: false
+  - type: ZombieImmune
 
 - type: entity
   name: cow
@@ -1077,10 +1083,10 @@
     growthDelay: 20
   - type: ExaminableHunger
   - type: Wooly
-  - type: Food
+  - type: Edible
+    destroyOnEmpty: false
     solution: wool
     requiresSpecialDigestion: true
-    # Wooly prevents eating wool deleting the goat so its fine
     requireDead: false
   - type: FlavorProfile
     flavors:
@@ -1246,8 +1252,6 @@
       0: Alive
       200: Critical
       250: Dead
-  - type: StaminaResistance
-    damageCoefficient: 0.40
 
 - type: entity
   name: kangaroo
@@ -1463,6 +1467,7 @@
       methods: [ Touch ]
       effects:
       - !type:WashCreamPieReaction
+  - type: Crawler
 
 
 
@@ -1665,24 +1670,24 @@
 #    description: ghost-role-information-kobold-description
 #    rules: ghost-role-information-nonantagonist-rules
 
-#- type: entity
-#  name: kobold
-#  id: MobKobold
-#  parent: MobBaseKobold
-#  description: Cousins to the sentient race of lizard people, kobolds blend in with their natural habitat and are as nasty as monkeys; ready to pull out your hair and stab you to death.
-#  components:
-#  - type: Clumsy
-#    gunShootFailDamage:
-#      types:
-#        Blunt: 2
-#        Piercing: 7
-#      groups:
-#        Burn: 3
-#    catchingFailDamage:
-#      types:
-#        Blunt: 1
-#    clumsySound:
-#      path: /Audio/Voice/Reptilian/reptilian_scream.ogg
+# - type: entity
+#   name: kobold
+#   id: MobKobold
+#   parent: MobBaseKobold
+#   description: Cousins to the sentient race of lizard people, kobolds blend in with their natural habitat and are as nasty as monkeys; ready to pull out your hair and stab you to death.
+#   components:
+#   - type: Clumsy
+#     gunShootFailDamage:
+#       types:
+#         Blunt: 2
+#         Piercing: 7
+#       groups:
+#         Burn: 3
+#     catchingFailDamage:
+#       types:
+#         Blunt: 1
+#     clumsySound:
+#       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
 
 #- type: entity
 #  id: MobBaseSyndicateKobold
@@ -1899,7 +1904,6 @@
       Taco: RatTaco
       Burger: RatBurger
       Skewer: RatSkewer
-  - type: FelinidFood # Nyanotrasen - Felinid, ability to eat mice, see Content.Server/Nyanotrasen/Abilities/Felinid/FelinidSystem.cs
   - type: Destructible
     thresholds:
     - trigger:
@@ -1909,6 +1913,7 @@
       behaviors:
       - !type:GibBehavior
         recursive: false
+  - type: FelinidFood # Nyanotrasen - Felinid, ability to eat mice, see Content.Server/Nyanotrasen/Abilities/Felinid/FelinidSystem.cs
   - type: Puller # starcup
     needsHands: false # starcup - let the rat drag the pizza slice (improves ghostrole gameplay and makes sense)
 
@@ -2366,6 +2371,7 @@
       types:
         Heat : 0.2 #per second, scales with temperature & other constants
 
+# TODO: Make grenade penguin voice activated like the rest of the stealth items.
 - type: entity
   name: grenade penguin
   parent: [ MobPenguin, MobCombat, BaseSyndicateContraband ]
@@ -2543,6 +2549,8 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/snake_hiss.ogg
+  - type: Puller
+    needsHands: false
   - type: NoSlip
   - type: Spider
   - type: IgnoreSpiderWeb
@@ -2915,6 +2923,7 @@
   - type: HTN
     rootTask:
       task: RuminantHostileCompound
+  - type: MessyDrinker
   - type: Tag
     tags:
     - VimPilot
@@ -2963,6 +2972,7 @@
       gender: epicene
   - type: MobPrice
     price: 200
+  - type: MessyDrinker
   - type: Puller
     needsHands: false # starcup - gives ghostrole corgis something to do. go fetch!
 
@@ -2985,8 +2995,6 @@
     dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
     accent: dog
-  - type: SentienceTarget
-    flavorKind: station-event-random-sentience-flavor-corgi
   - type: Tag
     tags:
     - VimPilot
@@ -3883,7 +3891,6 @@
             sprite: Mobs/Pets/displacements.rsi
             state: corgi_head_displacement
   - type: Hands # HANDS!
-  - type: ItemOffer # starcup: item offering
   - type: Puller
   - type: Cuffable # bad dog!
   - type: BlockWriting # dogs can't write, paws unwieldy; mouth-writing is a myth
@@ -3909,3 +3916,5 @@
   - type: NpcFactionMember
     factions:
     - NanoTrasen
+  - type: ItemOffer # starcup: item offering
+

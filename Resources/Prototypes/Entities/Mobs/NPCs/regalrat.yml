@@ -102,10 +102,10 @@
       - CannotSuicide
       - FootstepSound
   - type: NoSlip
+  - type: Rummager
   - type: RatKing
     hungerPerArmyUse: 25
     hungerPerDomainUse: 50
-  - type: Rummager # DeltaV: Make rummaging a generic component
   - type: MobsterAccent
   - type: Speech
     speechVerb: SmallMob
@@ -308,13 +308,20 @@
     sprite: Mobs/Effects/onfire.rsi
     normalState: Mouse_burning
 
-- type: weightedRandomEntity
+- type: entityTable
   id: RatKingLoot
-  weights: # DeltaV: Rebalanced for Rodentia rummaging because we don't have Rat King
-    RandomSpawner100: 70 #garbage
-    FoodCheeseSlice: 15 #food
-    RandomSnacks: 10
-    RandomFoodSingle: 5
+  # begin DeltaV: Rebalanced for Rodentia rummaging because we don't have Rat King
+  table: !type:GroupSelector
+    children:
+    - id: RandomSpawner100
+      weight: 70
+    - id: FoodCheeseSlice
+      weight: 15
+    - id: RandomSnacks
+      weight: 10
+    - id: RandomFoodSingle
+      weight: 5
+  # end DeltaV
 
 - type: entity
   parent: BaseAction

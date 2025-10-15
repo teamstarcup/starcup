@@ -1,0 +1,319 @@
+- type: entity
+  parent: BaseTree
+  id: FloraTreeAutumn
+  name: tree
+  suffix: autumn
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_autumn_trees.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+        tree06: ""
+
+- type: entity
+  parent: BaseTree
+  id: FloraTreeVerdant
+  name: tree
+  suffix: verdant
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_verdant_trees.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+        tree06: ""
+
+- type: entity
+  parent: BaseTree
+  id: FloraTreeTemperate
+  name: tree
+  suffix: temperate
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_temperate_trees.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+        tree06: ""
+
+- type: entity
+  parent: BaseTree
+  id: FloraTreeDead
+  name: tree
+  suffix: dead
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_dead_trees.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+        tree06: ""
+
+- type: entity
+  parent: BaseTree
+  id: FloraTreeAspbirch
+  name: tree
+  suffix: aspen birch
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_aspen_birches.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+
+- type: entity
+  parent: BaseTreeConifer
+  id: FloraTreeConiferDead
+  name: conifer
+  suffix: dead
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_dead_conifers.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+
+
+- type: entity
+  parent: BaseTree
+  id: FloraTreeTeal
+  name: tree
+  suffix: teal
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_trees_teal.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+
+- type: entity
+  parent: BaseTreeLarge
+  id: FloraTreeLargeDark
+  name: dark wood
+  suffix: large
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_treeslarge_dark.rsi
+    layers:
+    - state: treelarge01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treelarge01: ""
+        treelarge02: ""
+        treelarge03: ""
+        treelarge04: ""
+        treelarge05: ""
+        treelarge06: ""
+
+- type: entity
+  parent: BaseTreeLarge
+  id: FloraTreeLargeTeal
+  name: large tree
+  suffix: teal
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_treeslarge_teal.rsi
+    layers:
+    - state: treelarge01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treelarge01: ""
+
+- type: entity
+  id: BaseMound
+  name: mound
+  description: A rising mass of earthy material.
+  abstract: true
+  components:
+  - type: Clickable
+  - type: Sprite
+    noRot: true
+    sprite: _starcup/Objects/Decoration/Flora/flora_shroom_mound.rsi
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        density: 1000
+        layer:
+        - HalfWallLayer
+        - Opaque
+  - type: Climbable
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseMound
+  id: FloraGeyser
+  name: geyser
+  description: Windows into the earth. You won't like it when they look back.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_geyser.rsi
+    layers:
+    - state: rocksolid01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        rocksolid01: ""
+        rocksolid02: ""
+        rocksolid03: ""
+
+- type: entity
+  parent: BaseMound
+  id: FloraShroomMound
+  name: fungal mound
+  description: Gummy tendrils reach out from the top.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_shroom_mound.rsi
+    layers:
+    - state: rocksolid01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        rocksolid01: ""
+        rocksolid02: ""
+        rocksolid03: ""
+        rocksolid04: ""
+
+- type: entity
+  parent: BaseMound
+  id: FloraShroomRock
+  name: fungal rock
+  description: Large mushrooms have made this clump of earth their home.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_shroom_rock.rsi
+    layers:
+    - state: rocksolid01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        rocksolid01: ""
+        rocksolid02: ""
+        rocksolid03: ""
+
+- type: entity
+  id: BaseShroomSolid
+  name: mushrooms
+  description: Now that's one BIG mushroom.
+  abstract: true
+  components:
+  - type: Clickable
+  - type: Sprite
+    noRot: true
+    sprite: _starcup/Objects/Decoration/Flora/flora_solid_shrooms.rsi
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        density: 1000
+        layer:
+        - HalfWallLayer
+        - Opaque
+  - type: Climbable
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Wood
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseShroomSolid
+  id: FloraMushroom
+  components:
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_solid_shrooms.rsi
+    layers:
+    - state: shroomsolid1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        shroomsolid1: ""
+        shroomsolid2: ""

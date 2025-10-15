@@ -78,7 +78,7 @@
     - Tail
   - type: Tag
     tags:
-      - HidesHarpyWings
+      - HidesHarpyWings # Delta-V
 
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
@@ -113,9 +113,9 @@
     slots: WITHOUT_POCKET
   - type: Tag
     tags:
-      - HidesHarpyWings
-      - CorgiWearable
-      - WhitelistChameleon
+    - CorgiWearable
+    - WhitelistChameleon
+    - HidesHarpyWings # Delta-V
   - type: HideLayerClothing
     slots:
     - Tail
@@ -149,10 +149,10 @@
     - Tail
   - type: Tag
     tags:
-      - HidesHarpyWings
+      - HidesHarpyWings # Delta-V
 
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseToggleClothing, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseToggleClothing, BaseHighlyIllegalContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingOuterSuitSpaceNinja
   name: space ninja suit
   description: This black technologically advanced, cybernetically-enhanced suit provides many abilities like invisibility or teleportation.

@@ -14,7 +14,6 @@ namespace Content.Server.Ghost.Roles
     public sealed partial class GhostRoleSystem
     {
         [Dependency] private readonly IServerPreferencesManager _prefs = default!;
-        [Dependency] private readonly IEntityManager _entityManager = default!;
         [Dependency] private readonly OutfitSystem _outfitSystem = default!; // starcup - SetOutfit is in outfitSystem instead of SetOutfitCommand
 
         private void OnSpawnerTakeCharacter(Entity<GhostRoleCharacterSpawnerComponent> ent,
@@ -32,7 +31,7 @@ namespace Content.Server.Ghost.Roles
 
             var character = (HumanoidCharacterProfile) _prefs.GetPreferences(args.Player.UserId).SelectedCharacter;
 
-            var mob = _entityManager.System<StationSpawningSystem>()
+            var mob = EntityManager.System<StationSpawningSystem>()
                 .SpawnPlayerMob(Transform(uid).Coordinates, null, character, null);
             _transform.AttachToGridOrMap(mob);
 

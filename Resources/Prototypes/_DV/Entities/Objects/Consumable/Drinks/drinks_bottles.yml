@@ -14,7 +14,7 @@
     sprite: _DV/Objects/Consumable/Drinks/sojubottle.rsi
 
 - type: entity
-  parent: DrinkGlassBase
+  parent: DrinkBase
   id: DrinkTokkuri
   name: tokkuri
   description: Floral and full of osake!
@@ -44,7 +44,7 @@
   - type: Sprite
     sprite: _DV/Objects/Consumable/Drinks/flaskholywater.rsi
 - type: entity
-  parent: [DrinkBottleVisualsOpenable, DrinkBottleGlassBaseFull]
+  parent: [DrinkVisualsOpenable, DrinkBottleGlassBaseFull]
   id: DrinkAngobittersBottleFull
   name: angobitters bottle
   description: Commonly used for mixed drinks, not drunk neat.

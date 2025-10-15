@@ -21,18 +21,18 @@ public sealed class GenericImplantSystem : EntitySystem
 
     private void OnImplantImplanted(Entity<GenericImplantComponent> entity, ref ImplantImplantedEvent ev)
     {
-        if (ev.Implanted is not { } implantedEntity || ev.Implanted == EntityUid.Invalid)
+        if (ev.Implanted == EntityUid.Invalid)
         {
             return;
         }
 
         foreach (var component in entity.Comp.Components)
         {
-            if (HasComp(implantedEntity, component.GetType()))
+            if (HasComp(ev.Implanted, component.GetType()))
                 continue;
 
             var comp = _componentFactory.GetComponent(component.GetType());
-            AddComp(implantedEntity, comp);
+            AddComp(ev.Implanted, comp);
             entity.Comp.RemoveOnExtract.Add(comp);
         }
     }

@@ -22,8 +22,10 @@
       reagents:
       - ReagentId: Water
         Quantity: 100
-  - type: Drink
+  - type: Edible
+    edible: Drink
     solution: fountain
+    destroyOnEmpty: false
   - type: DrawableSolution
     solution: fountain
   - type: DrainableSolution

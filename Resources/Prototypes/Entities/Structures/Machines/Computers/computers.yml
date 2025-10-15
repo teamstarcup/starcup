@@ -115,7 +115,7 @@
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
   - type: PointLight
-    color: "#007500"
+    color: "#007500" # imp
 
 - type: entity
   parent: BaseComputer
@@ -137,6 +137,8 @@
   - type: WorldLoader
     radius: 256
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#43ccb5"
   - type: ItemSlots
     slots:
@@ -205,6 +207,8 @@
   - type: WorldLoader
     radius: 1536
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#c94242"
   - type: Computer
     board: SyndicateShuttleConsoleCircuitboard
@@ -233,6 +237,8 @@
   - type: RadarConsole
     maxRange: 256
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#43ccb5"
   - type: Computer
     board: CargoShuttleConsoleCircuitboard
@@ -313,6 +319,8 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#c9c042"
   - type: Computer
     board: PowerComputerCircuitboard
@@ -353,6 +361,8 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#1f8c28"
   - type: Computer
     board: MedicalRecordsComputerCircuitboard
@@ -401,7 +411,9 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: PointLight
-    color: "#806666"
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
+    color: "#1f8c28" # imp
   - type: Computer
     board: CriminalRecordsComputerCircuitboard
   - type: AccessReader
@@ -432,6 +444,8 @@
     key: enum.CharacterRecordConsoleKey.Key
   # End CD - Character Records
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#1f8c28"
   - type: Computer
     board: StationRecordsComputerCircuitboard
@@ -458,9 +472,9 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: PointLight
-    radius: 4.4  # starcup
-    energy: 0.4  # starcup
-    color: "#4d8033"
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
+    color: "#006400" # starcup
   - type: Computer
     board: CrewMonitoringComputerCircuitboard
   - type: ActivatableUI
@@ -519,6 +533,8 @@
   - type: AccessReader
     access: [["Research"]]
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#b53ca1"
   - type: GuideHelp
     guides:
@@ -566,6 +582,8 @@
   - type: Computer
     board: AnalysisComputerCircuitboard
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#b53ca1"
   - type: GuideHelp
     guides:
@@ -624,6 +642,8 @@
   - type: Computer
     board: IDComputerCircuitboard
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#3c5eb5"
   - type: Tag
     tags:
@@ -646,6 +666,8 @@
   - type: Computer
     board: BodyScannerComputerCircuitboard
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#1f8c28"
 
 - type: entity
@@ -684,6 +706,8 @@
   - type: Computer
     board: CommsComputerCircuitboard
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#3c5eb5"
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -719,6 +743,8 @@
   - type: Computer
     board: SyndicateCommsComputerCircuitboard
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#f71713"
 
 - type: entity
@@ -751,6 +777,8 @@
   - type: Computer
     board: WizardCommsComputerCircuitboard
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#F317F3"
 
 - type: entity
@@ -781,7 +809,9 @@
   - type: Computer
     board: CentcommCommsComputerCircuitboard
   - type: PointLight
-    color: "#00bf00"
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
+    color: "#00FF00" # starcup
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -813,6 +843,8 @@
   - type: Computer
     board: SolarControlComputerCircuitboard
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#e6e227"
   - type: GuideHelp
     guides:
@@ -849,6 +881,8 @@
   - type: Computer
     board: RadarConsoleCircuitboard
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#e6e227"
 
 - type: entity
@@ -885,6 +919,8 @@
   - type: Computer
     board: CargoRequestComputerCircuitboard
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#b89f25"
   - type: AccessReader
     access: [["Cargo"]]
@@ -1097,6 +1133,8 @@
   - type: Computer
     board: CargoBountyComputerCircuitboard
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#b89f25"
   - type: AccessReader
     access: [["Quartermaster"]]
@@ -1169,6 +1207,8 @@
   - type: Computer
     board: CloningConsoleComputerCircuitboard
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#1f8c28"
   - type: DeviceLinkSource
     range: 4
@@ -1227,7 +1267,7 @@
   - type: PointLight
 #    radius: 1.5  # starcup
 #    energy: 1.6  # starcup
-    color: "#6142a5"
+    color: "#6142a5" # starcup
 
 - type: entity
   id: ComputerSalvageExpedition
@@ -1274,6 +1314,8 @@
     - type: Computer
       board: SalvageExpeditionsComputerCircuitboard
     - type: PointLight
+      #radius: 1.5 # starcup
+      #energy: 1.6 # starcup
       color: "#b89f25"
     - type: AccessReader
       access: [["Salvage"]]
@@ -1363,6 +1405,21 @@
           type: WiresBoundUserInterface
 
 - type: entity
+  parent: ComputerSurveillanceWirelessCameraMonitor
+  id: ComputerSurveillanceWirelessXenoborgCameraMonitor
+  name: xenoborg camera monitor
+  description: A wireless xenoborg camera monitor. You're watching them. Maybe.
+  components:
+  - type: Computer
+    board: XenoborgCameraMonitorCircuitboard
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: Mothership
+    transmitFrequencyId: Mothership
+  - type: WirelessNetworkConnection
+    range: 2000
+
+- type: entity
   id: ComputerPalletConsole
   parent: BaseComputerAiAccess
   name: cargo sale computer
@@ -1395,6 +1452,8 @@
   - type: Computer
     board: CargoSaleComputerCircuitboard
   - type: PointLight
+    #radius: 1.5 # starcup
+    #energy: 1.6 # starcup
     color: "#b89f25"
   - type: GuideHelp
     guides:
@@ -1461,6 +1520,8 @@
         - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
           state: generic_panel_open
     - type: PointLight
+      #radius: 1.5 # starcup
+      #energy: 1.6 # starcup
       color: "#43ccb5"
     - type: Computer
       board: SensorConsoleCircuitboard
@@ -1531,6 +1592,39 @@
     color: "#b386b3"
 
 - type: entity
+  parent: ComputerRoboticsControl
+  id: ComputerXenoborgsControl
+  name: xenoborgs control console
+  description: Used to remotely monitor all xenoborgs.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: xenorobot
+    - map: ["computerLayerKeys"]
+      state: rd_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: RoboticsConsole
+    allowBorgControl: false
+    radioChannel: Xenoborg
+  - type: ActiveRadio
+    channels:
+    - Xenoborg
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: Mothership
+    transmitFrequencyId: Xenoborg
+  - type: Computer
+    board: ComputerXenoborgsControlCircuitboard
+  - type: AccessReader # only used for dangerous things
+    access: [["Xenoborg"]]
+
+- type: entity
   id: StationAiUploadComputer
   parent: BaseComputer
   name: AI upload console
@@ -1579,3 +1673,86 @@
       board: !type:Container
   - type: PointLight # starcup
     color: "#3300ff"
+
+- type: entity
+  id: StationAiFixerComputer
+  parent: BaseComputer
+  name: AI restoration console
+  description: Used to repair damaged artifical intelligences.
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "computerLayerBody" ]
+      state: computer
+    - map: [ "computerLayerKeyboard" ]
+      state: generic_keyboard
+    - map: [ "computerLayerScreen" ]
+      state: ai-fixer-empty
+    - map: [ "computerLayerKeys" ]
+      state: rd_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ComputerVisuals.Powered:
+        computerLayerScreen:
+          True: { visible: true, shader: unshaded }
+          False: { visible: false }
+        computerLayerKeys:
+          True: { visible: true, shader: unshaded }
+          False: { visible: true, shader: shaded }
+      enum.StationAiFixerConsoleVisuals.Key:
+        computerLayerScreen:
+          Repair0: { state: ai-fixer-progress-0 }
+          Repair1: { state: ai-fixer-progress-1 }
+          Repair2: { state: ai-fixer-progress-2 }
+          Repair3: { state: ai-fixer-progress-3 }
+          Purge0: { state: ai-fixer-purge-0 }
+          Purge1: { state: ai-fixer-purge-1 }
+          Purge2: { state: ai-fixer-purge-2 }
+          Purge3: { state: ai-fixer-purge-3 }
+          Empty: { state: ai-fixer-empty }
+          Occupied: { state: ai-fixer-full }
+          Rebooting: { state: ai-fixer-404 }
+          Dead: { state: ai-fixer-404 }
+      enum.WiresVisuals.MaintenancePanelState:
+        enum.WiresVisualLayers.MaintenancePanel:
+          True: { visible: false }
+          False: { visible: true }
+  - type: ApcPowerReceiver
+    powerLoad: 1000
+  - type: Computer
+    board: StationAiFixerCircuitboard
+  - type: AccessReader
+    access: [ [ "ResearchDirector" ] ]
+  - type: Lock
+    unlockOnClick: false
+  - type: StationAiFixerConsole
+  - type: ItemSlotsLock
+    slots:
+    - station_ai_holder
+  - type: ItemSlotRequiresPower
+  - type: ItemSlots
+    slots:
+      station_ai_holder:
+        ejectOnBreak: true
+        lockedFailPopup: station-ai-fixer-console-is-locked
+        whitelistFailPopup: station-ai-fixer-console-station-ai-holder-required
+        whitelist:
+          requireAll: true
+          components:
+          - StationAiHolder
+          - Item
+  - type: ContainerContainer
+    containers:
+      station_ai_holder: !type:ContainerSlot
+      board: !type:Container
+  - type: ActivatableUI
+    key: enum.StationAiFixerConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.StationAiFixerConsoleUiKey.Key:
+        type: StationAiFixerConsoleBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface

@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using System.Numerics;
 using Content.Client.Administration.Managers;
 using Content.Client.ContextMenu.UI;
@@ -861,7 +861,7 @@ public sealed class MappingState : GameplayStateBase
         }
         else
         {
-            button.ChildrenPrototypes.DisposeAllChildren();
+            button.ChildrenPrototypes.RemoveAllChildren();
             button.CollapseButton.Label.Text = "▶";
         }
     }

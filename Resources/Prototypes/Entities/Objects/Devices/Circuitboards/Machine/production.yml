@@ -7,9 +7,11 @@
     - type: MachineBoard
       prototype: Autolathe
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         MatterBin: 3
         Manipulator: 1
         Glass: 1
+        # end starcup
 
 - type: entity
   parent: BaseMachineCircuitboard
@@ -20,8 +22,10 @@
   - type: MachineBoard
     prototype: AutolatheHyperConvection
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 3
       Glass: 1
+      # end starcup
     tagRequirements:
       Igniter:
         amount: 1
@@ -38,8 +42,10 @@
   - type: MachineBoard
     prototype: Protolathe
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 2
       Manipulator: 2
+      # end starcup
     tagRequirements:
       GlassBeaker:
         amount: 2
@@ -56,7 +62,9 @@
   - type: MachineBoard
     prototype: ProtolatheHyperConvection
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 2
+      # end starcup
     tagRequirements:
       GlassBeaker:
         amount: 2
@@ -76,7 +84,9 @@
   - type: MachineBoard
     prototype: Biofabricator
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 4
+      # end starcup
       Glass: 1
 
 - type: entity
@@ -90,8 +100,10 @@
     - type: MachineBoard
       prototype: SecurityTechFab
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         MatterBin: 2
         Manipulator: 2
+        # end starcup
       tagRequirements:
         GlassBeaker:
           amount: 2
@@ -108,8 +120,10 @@
     - type: MachineBoard
       prototype: AmmoTechFab
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         MatterBin: 1
         Manipulator: 1
+        # end starcup
 
 - type: entity
   id: MedicalTechFabCircuitboard
@@ -122,8 +136,10 @@
     - type: MachineBoard
       prototype: MedicalTechFab
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         MatterBin: 2
         Manipulator: 2
+        # end starcup
       tagRequirements:
         GlassBeaker:
           amount: 2
@@ -141,8 +157,10 @@
   - type: MachineBoard
     prototype: CircuitImprinter
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 1
       Manipulator: 1
+      # end starcup
     tagRequirements:
       GlassBeaker:
         amount: 2
@@ -159,7 +177,9 @@
   - type: MachineBoard
     prototype: CircuitImprinterHyperConvection
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 2
+      # end starcup
     tagRequirements:
       GlassBeaker:
         amount: 2
@@ -178,8 +198,10 @@
   - type: MachineBoard
     prototype: ExosuitFabricator
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 1
       Manipulator: 3
+      # end starcup
       Glass: 5
   - type: GuideHelp
     guides:
@@ -210,7 +232,9 @@
   - type: MachineBoard
     prototype: Biogenerator
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 2
+      # end starcup
     tagRequirements:
       GlassBeaker:
         amount: 1
@@ -224,8 +248,10 @@
   - type: MachineBoard
     prototype: UniformPrinter
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 1
       Manipulator: 2
+      # end starcup
 
 - type: entity
   id: VaccinatorMachineCircuitboard
@@ -237,9 +263,11 @@
   - type: MachineBoard
     prototype: Vaccinator
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 1
       Manipulator: 1
       Cable: 5
+      # end starcup
     tagRequirements:
         GlassBeaker:
           amount: 1
@@ -276,9 +304,11 @@
     - type: MachineBoard
       prototype: MachineArtifactAnalyzer
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Manipulator: 3
         Capacitor: 1
         Glass: 5
+        # end starcup
 
 - type: entity
   id: ArtifactCrusherMachineCircuitboard
@@ -306,9 +336,11 @@
     - type: MachineBoard
       prototype: MachineAnomalyVessel
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 3
         Cable: 1
         PlasmaGlass: 10
+        # end starcup
 
 - type: entity
   parent: BaseMachineCircuitboard
@@ -321,10 +353,12 @@
   - type: MachineBoard
     prototype: MachineAnomalyVesselExperimental
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       Capacitor: 3
       Cable: 5
       PlasmaGlass: 15
       MetalRod: 4
+      # end starcup
 
 - type: entity
   parent: BaseMachineCircuitboard
@@ -337,10 +371,12 @@
     - type: MachineBoard
       prototype: MachineAnomalySynchronizer
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Manipulator: 2
         Capacitor: 5
         PlasmaGlass: 5
         Cable: 5
+        # end starcup
 
 - type: entity
   parent: BaseMachineCircuitboard
@@ -353,9 +389,11 @@
     - type: MachineBoard
       prototype: MachineAPE
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 2
         Cable: 1
         Glass: 1
+        # end starcup
 
 - type: entity
   id: ThermomachineFreezerMachineCircuitBoard
@@ -368,9 +406,11 @@
   - type: MachineBoard
     prototype: GasThermoMachineFreezer
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 2
       Capacitor: 2
       Cable: 5
+      # end starcup
   - type: Construction
     deconstructionTarget: null
     graph: ThermomachineBoard
@@ -387,9 +427,11 @@
   - type: MachineBoard
     prototype: GasThermoMachineHeater
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 2
       Capacitor: 2
       Cable: 5
+      # end starcup
   - type: Construction
     graph: ThermomachineBoard
     deconstructionTarget: null
@@ -406,9 +448,11 @@
   - type: MachineBoard
     prototype: GasThermoMachineHellfireFreezer
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 2
       Capacitor: 2
       Plasma: 1
+      # end starcup
   - type: Construction
     deconstructionTarget: null
     graph: ThermomachineBoard
@@ -425,9 +469,11 @@
   - type: MachineBoard
     prototype: GasThermoMachineHellfireHeater
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 2
       Capacitor: 2
       Plasma: 1
+      # end starcup
   - type: Construction
     graph: ThermomachineBoard
     deconstructionTarget: null
@@ -444,8 +490,10 @@
   - type: MachineBoard
     prototype: BaseGasCondenser
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 1
       Glass: 1
+      # end starcup
 
 - type: entity
   id: PortableScrubberMachineCircuitBoard
@@ -458,10 +506,12 @@
   - type: MachineBoard
     prototype: PortableScrubber
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 1
       Manipulator: 2
       Cable: 5
       Glass: 2
+      # end starcup
 
 - type: entity
   id: SpaceHeaterMachineCircuitBoard
@@ -474,9 +524,11 @@
   - type: MachineBoard
     prototype: SpaceHeater
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 1
       Capacitor: 2
       Cable: 5
+      # end starcup
 
 - type: entity
   id: CloningPodMachineCircuitboard
@@ -489,10 +541,12 @@
     - type: MachineBoard
       prototype: CloningPod
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         MatterBin: 2
         Manipulator: 2
         Glass: 1
         Cable: 1
+        # end starcup
 
 - type: entity
   id: MedicalScannerMachineCircuitboard
@@ -505,9 +559,11 @@
     - type: MachineBoard
       prototype: MedicalScanner
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 1
         Glass: 5
         Cable: 1
+        # end starcup
 
 - type: entity
   id: CrewMonitoringServerMachineCircuitboard
@@ -546,9 +602,11 @@
     - type: MachineBoard
       prototype: ChemMaster
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 1
         Glass: 1
         Cable: 1
+        # end starcup
       tagRequirements:
         GlassBeaker:
           amount: 2
@@ -565,9 +623,11 @@
     - type: MachineBoard
       prototype: ChemDispenserEmpty
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 1
         Glass: 1
         Steel: 3
+        # end starcup
       tagRequirements:
         GlassBeaker:
           amount: 2
@@ -584,9 +644,11 @@
   - type: MachineBoard
     prototype: BiomassReclaimer
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 2
       Manipulator: 1
       Steel: 5
+      # end starcup
     tagRequirements:
       Knife:
         amount: 2
@@ -623,11 +685,13 @@
     - type: MachineBoard
       prototype: SeedExtractor
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Manipulator: 2
         Capacitor: 1
         # replacing the console screen
         Glass: 1
         Cable: 2
+        # end starcup
 
 - type: entity
   id: SMESMachineCircuitboard
@@ -641,8 +705,10 @@
     - type: MachineBoard
       prototype: SMESBasicEmpty
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 1
         CableHV: 10
+        # end starcup
       componentRequirements:
         PowerCell:
           amount: 4
@@ -660,8 +726,10 @@
   - type: MachineBoard
     prototype: SMESAdvancedEmpty
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       Capacitor: 2
       CableHV: 20
+      # end starcup
     componentRequirements:
       PowerCell:
         amount: 4
@@ -679,8 +747,10 @@
     - type: MachineBoard
       prototype: PowerCellRecharger
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 2
         Cable: 5
+        # end starcup
     - type: PhysicalComposition
       materialComposition:
         Steel: 30
@@ -700,9 +770,11 @@
     - type: MachineBoard
       prototype: PowerCageRecharger
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 4
         Steel: 5
         Cable: 10
+        # end starcup
     - type: PhysicalComposition
       materialComposition:
         Steel: 30
@@ -722,8 +794,10 @@
     - type: MachineBoard
       prototype: BorgCharger
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 2
         Cable: 5
+        # end starcup
     - type: PhysicalComposition
       materialComposition:
         Steel: 30
@@ -743,8 +817,10 @@
     - type: MachineBoard
       prototype: WeaponCapacitorRecharger
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 2
         CableMV: 5
+        # end starcup
     - type: PhysicalComposition
       materialComposition:
         Steel: 30
@@ -764,8 +840,10 @@
   - type: MachineBoard
     prototype: TurboItemRecharger
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       Capacitor: 2
       CableMV: 5
+      # end starcup
   - type: PhysicalComposition
     materialComposition:
       Steel: 30
@@ -780,9 +858,11 @@
     - type: MachineBoard
       prototype: SubstationBasicEmpty
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 1
         CableMV: 5
         CableHV: 5
+        # end starcup
       componentRequirements:
         PowerCell:
           amount: 1
@@ -840,8 +920,10 @@
     - type: MachineBoard
       prototype: PortableGeneratorPacman
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 1
         CableHV: 5
+        # end starcup
     - type: PhysicalComposition
       materialComposition:
         Glass: 200
@@ -860,8 +942,10 @@
   - type: MachineBoard
     prototype: Thruster
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       Capacitor: 4
       Steel: 5
+      # end starcup
 
 - type: entity
   id: GyroscopeMachineCircuitboard
@@ -873,9 +957,11 @@
   - type: MachineBoard
     prototype: Gyroscope
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       Manipulator: 2
       Capacitor: 1
       Glass: 2
+      # end starcup
 
 - type: entity
   id: PortableGeneratorSuperPacmanMachineCircuitboard
@@ -887,8 +973,10 @@
     - type: MachineBoard
       prototype: PortableGeneratorSuperPacman
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 2
         CableHV: 10
+        # end starcup
     - type: PhysicalComposition
       materialComposition:
         Glass: 200
@@ -907,8 +995,10 @@
     - type: MachineBoard
       prototype: PortableGeneratorJrPacman
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 1
         Cable: 10
+        # end starcup
     - type: PhysicalComposition
       materialComposition:
         Glass: 200
@@ -926,8 +1016,10 @@
     - type: MachineBoard
       prototype: KitchenReagentGrinder
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         MatterBin: 2
         Manipulator: 2
+        # end starcup
       tagRequirements:
         GlassBeaker:
           amount: 1
@@ -944,8 +1036,10 @@
   - type: MachineBoard
     prototype: ChemistryHotplate
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       Capacitor: 2
       Glass: 1
+      # end starcup
 
 - type: entity
   parent: BaseMachineCircuitboard
@@ -958,9 +1052,11 @@
   - type: MachineBoard
     prototype: KitchenElectricGrill
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       Capacitor: 4
       Glass: 2
       Cable: 5
+      # end starcup
 
 - type: entity
   id: StasisBedMachineCircuitboard
@@ -972,10 +1068,12 @@
     - type: MachineBoard
       prototype: StasisBed
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 1
         Manipulator: 1
         Cable: 3
         Steel: 2
+        # end starcup
 
 - type: entity
   id: ElectrolysisUnitMachineCircuitboard
@@ -988,8 +1086,10 @@
   - type: MachineBoard
     prototype: MachineElectrolysisUnit
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       Capacitor: 2
       Cable: 1
+      # end starcup
 
 - type: entity
   id: CentrifugeMachineCircuitboard
@@ -1015,8 +1115,10 @@
   - type: MachineBoard
     prototype: MachineMaterialSilo
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 4
       Cable: 1
+      # end starcup
 
 - type: entity
   id: OreProcessorMachineCircuitboard
@@ -1028,9 +1130,11 @@
     - type: MachineBoard
       prototype: OreProcessor
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         MatterBin: 1
         Manipulator: 3
         Glass: 1
+        # end starcup
 
 - type: entity
   parent: BaseMachineCircuitboard
@@ -1042,9 +1146,11 @@
   - type: MachineBoard
     prototype: OreProcessorIndustrial
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 1
       Manipulator: 3
       Glass: 1
+      # end starcup
 
 - type: entity
   id: SheetifierMachineCircuitboard
@@ -1054,8 +1160,10 @@
   - type: MachineBoard
     prototype: Sheetifier
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 1
       Manipulator: 1
+      # end starcup
 
 - type: entity
   id: MicrowaveMachineCircuitboard
@@ -1067,9 +1175,11 @@
     - type: MachineBoard
       prototype: KitchenMicrowave
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 1
         Glass: 2
         Cable: 2
+        # end starcup
     - type: Tag
       tags:
       - MicrowaveMachineBoard
@@ -1084,9 +1194,11 @@
     - type: MachineBoard
       prototype: SyndicateMicrowave
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 1
         Glass: 2
         Cable: 2
+        # end starcup
 
 - type: entity
   id: FatExtractorMachineCircuitboard
@@ -1113,9 +1225,11 @@
   - type: MachineBoard
     prototype: MachineFlatpacker
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       Manipulator: 2
       MatterBin: 1
       Steel: 1
+      # end starcup
 
 - type: entity
   id: EmitterCircuitboard
@@ -1127,9 +1241,11 @@
     - type: MachineBoard
       prototype: Emitter
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 2
         CableHV: 5
         Glass: 2
+        # end starcup
 
 - type: entity
   id: SurveillanceCameraRouterCircuitboard
@@ -1154,6 +1270,20 @@
     state: service
   - type: MachineBoard
     prototype: SurveillanceCameraWirelessRouterConstructed
+    stackRequirements:
+      Cable: 2
+      Glass: 1
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: SurveillanceCameraWirelessRouterXenoborgCircuitboard
+  name: xenoborg camera wireless router
+  description: A machine printed circuit board for a xenoborg camera wireless router.
+  components:
+  - type: Sprite
+    state: generic
+  - type: MachineBoard
+    prototype: SurveillanceCameraWirelessRouterXenoborg
     stackRequirements:
       Cable: 2
       Glass: 1
@@ -1197,10 +1327,12 @@
   - type: MachineBoard
     prototype: GasRecycler
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       Capacitor: 1
       Manipulator: 1
       Steel: 10
       Plasma: 5
+      # end starcup
 
 - type: entity
   id: BoozeDispenserMachineCircuitboard
@@ -1230,8 +1362,28 @@
     - type: MachineBoard
       prototype: CargoTelepad
       stackRequirements:
+        # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 2
         Steel: 5
+        # end starcup
+
+- type: entity
+  id: MailTeleporterMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: mail teleporter machine board
+  description: A machine printed circuit board for a mail teleporter.
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: MailTeleporter # starcup: replace with delta-v version
+    stackRequirements:
+      # begin starcup: use delta-v's materials
+      Steel: 4
+      Cable: 4
+      Capacitor: 1
+      MatterBin: 1
+      # end starcup
 
 - type: entity
   id: SodaDispenserMachineCircuitboard
@@ -1275,10 +1427,12 @@
   - type: MachineBoard
     prototype: SalvageMagnet
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       Capacitor: 4
       Steel: 5
       CableHV: 5
       Cable: 2
+      # end starcup
 
 - type: entity
   parent: BaseMachineCircuitboard
@@ -1291,11 +1445,13 @@
   - type: MachineBoard
     prototype: GravityGeneratorMini
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       Capacitor: 4
       MatterBin: 3
       Steel: 5
       CableHV: 5
       Uranium: 2
+      # end starcup
 
 - type: entity
   parent: BaseMachineCircuitboard
@@ -1306,12 +1462,14 @@
   - type: MachineBoard
     prototype: StationAnchor
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       Capacitor: 4
       MatterBin: 3
       Steel: 10
       Glass: 5
       CableHV: 8
       Uranium: 2
+      # end starcup
 
 - type: entity
   parent: BaseMachineCircuitboard
@@ -1321,9 +1479,11 @@
   - type: MachineBoard
     prototype: ReagentGrinderIndustrial
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       MatterBin: 1
       Manipulator: 3
       Glass: 1
+      # end starcup
 
 - type: entity
   parent: BaseMachineCircuitboard
@@ -1349,7 +1509,27 @@
   - type: MachineBoard
     prototype: CutterMachine
     stackRequirements:
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       Steel: 2
       Capacitor: 1
       Manipulator: 1
       Cable: 1
+      # end starcup
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: SmartFridgeCircuitboard
+  name: SmartFridge machine board
+  description: A machine printed circuit board for a SmartFridge.
+  components:
+  - type: Sprite
+    state: service
+  - type: MachineBoard
+    prototype: SmartFridge
+    stackRequirements:
+      Glass: 5
+      Manipulator: 2
+    tagRequirements:
+        GlassBeaker:
+          amount: 2
+          defaultPrototype: Beaker

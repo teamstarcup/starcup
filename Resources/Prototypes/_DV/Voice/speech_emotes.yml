@@ -62,25 +62,6 @@
     - mewed
 
 - type: emote
-  id: Growl
-  name: chat-emote-name-growl
-  category: Vocal
-  icon: _DV/Interface/Emotes/growl.png
-  available: false
-  whitelist:
-    components:
-    - Vocal
-  blacklist:
-    components:
-    - BorgChasis
-  chatMessages: [growls.]
-  chatTriggers:
-    - growl
-    - growls
-    - growling
-    - growled
-
-- type: emote
   id: Purr
   name: chat-emote-name-purr
   category: Vocal
@@ -142,7 +123,7 @@
 - type: emote
   id: HarpyPew
   name: delta-chat-emote-name-pew
-  icon: Objects/Weapons/Guns/Battery/antiquelasergun.rsi/base.png
+  icon: { sprite: Objects/Weapons/Guns/Battery/antiquelasergun.rsi, state: base }
   category: Vocal
   available: false
   whitelist:
@@ -160,7 +141,7 @@
 - type: emote
   id: HarpyBang
   name: delta-chat-emote-name-bang
-  icon: Objects/Weapons/Grenades/grenade.rsi/icon.png
+  icon: { sprite: Objects/Weapons/Grenades/grenade.rsi, state: icon }
   category: Vocal
   available: false
   whitelist:
@@ -198,7 +179,7 @@
 - type: emote
   id: HarpyRev
   name: delta-chat-emote-name-rev
-  icon: Structures/Machines/grinder.rsi/grinder_beaker_attached.png
+  icon: { sprite: Structures/Machines/grinder.rsi, state: grinder_beaker_attached }
   category: Vocal
   available: false
   whitelist:
@@ -252,82 +233,6 @@
     - squishes
 
 #Vulpkanin
-- type: emote
-  id: Bark
-  name: delta-chat-emote-name-bark
-  icon: _DV/Interface/Emotes/bark.png
-  category: Vocal
-  available: false
-  whitelist:
-    components:
-    - Vocal
-  blacklist:
-    components:
-    - BorgChassis
-  chatMessages: [barks.]
-  chatTriggers:
-    - bark
-    - barks
-    - barked
-    - barking
-
-- type: emote
-  id: Snarl
-  name: delta-chat-emote-name-snarl
-  icon: _DV/Interface/Emotes/snarl.png
-  category: Vocal
-  available: false
-  whitelist:
-    components:
-    - Vocal
-  blacklist:
-    components:
-    - BorgChassis
-  chatMessages: [snarls.]
-  chatTriggers:
-    - snarl
-    - snarls
-    - snarled
-    - snarling
-
-- type: emote
-  id: Whine
-  name: delta-chat-emote-name-whine
-  icon: _DV/Interface/Emotes/whine.png
-  category: Vocal
-  available: false
-  whitelist:
-    components:
-    - Vocal
-  blacklist:
-    components:
-    - BorgChassis
-  chatMessages: [whines.]
-  chatTriggers:
-    - whine
-    - whines
-    - whined
-    - whining
-
-- type: emote
-  id: Howl
-  name: delta-chat-emote-name-howl
-  icon: _DV/Interface/Emotes/howl.png
-  category: Vocal
-  available: false
-  whitelist:
-    components:
-    - Vocal
-  blacklist:
-    components:
-    - BorgChassis
-  chatMessages: [howls.]
-  chatTriggers:
-    - howl
-    - howls
-    - howling
-    - howled
-
 - type: emote
   id: Awoo
   name: delta-chat-emote-name-awoo
