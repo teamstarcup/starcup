@@ -8,13 +8,15 @@
   id: BaseMobSpeciesSilicon
   abstract: true
   components:
-  # everything in this section is meant to mirror BaseMobSpeciesOrganic
+  # begin mirrored components from BaseMobSpeciesOrganic
+  # if any components are changed there, they should also be changed here.
+  # excluded components: Perishable, Respirator
   - type: Barotrauma
     damage:
       types:
-        Blunt: 0.50 #per second, scales with pressure and other constants.
+        Blunt: 0.50
         Heat: 0.1
-  - type: PassiveDamage # Slight passive regen. Assuming one damage type, comes out to about 4 damage a minute.
+  - type: PassiveDamage
     allowedStates:
     - Alive
     damageCap: 20
@@ -52,3 +54,42 @@
   - type: FireVisuals
     alternateState: Standing
   - type: StunVisuals
+  # end mirrored components from BaseMobSpeciesOrganic
+  - type: Damageable
+    damageContainer: HumanoidSilicon
+  - type: ZombieImmune
+  - type: Deathgasp
+    prototype: SiliconDeathgasp
+  - type: RangedDamageSound
+    soundGroups:
+      Brute:
+        collection: MetalBulletImpact
+    soundTypes:
+      Heat:
+        collection: MetalLaserImpact
+  - type: Tag
+    tags:
+    - SiliconEmotes
+  - type: Speech
+    speechSounds: Pai
+  - type: Vocal
+    wilhelm: "/Audio/_EE/Voice/IPC/wilhelm.ogg"
+    sounds:
+      Male: UnisexIPC
+      Female: UnisexIPC
+      Unsexed: UnisexIPC
+  - type: TypingIndicator
+    proto: robot
+  - type: Bloodstream
+    bloodReagent: Oil
+  - type: DamageVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#DD8822"
+      Burn:
+        sprite: Mobs/Effects/burn_damage.rsi
+  - type: LightningTarget
+    priority: 1
+    lightningExplode: false
+  - type: Carriable

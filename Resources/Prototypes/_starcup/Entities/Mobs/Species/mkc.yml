@@ -1,0 +1,23 @@
+- type: entity
+  id: BaseMobMKC
+  parent: PlayerSiliconHumanoidBase
+  name: Urist McSilicon
+  components:
+  - type: Icon
+    sprite: _EE/Mobs/Species/IPC/parts.rsi
+    state: full
+  - type: HumanoidAppearance
+    species: IPC
+  - type: Inventory
+    speciesId: mkc
+
+- type: entity
+  name: Urist McSilicon
+  parent: BaseSpeciesDummy
+  id: MobMKCDummy
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HumanoidAppearance
+    species: MKC
+  - type: Inventory
+    speciesId: mkc
