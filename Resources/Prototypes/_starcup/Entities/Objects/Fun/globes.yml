@@ -14,8 +14,6 @@
   - type: InteractionOutline
   - type: Physics
     bodyType: Dynamic
-    mask:
-      - HighImpassable
   - type: Sprite
     drawdepth: LargeObjects
     sprite: _starcup/Objects/Fun/globes.rsi
@@ -26,6 +24,8 @@
         shape:
           !type:PhysShapeCircle
           radius: 0.2
+        mask:
+          - HighImpassable
         density: 100
   - type: Pullable
   - type: StaticPrice
