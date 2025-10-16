@@ -12,8 +12,6 @@ using Content.Shared.Roles;
 using Content.Shared.Station;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-using Content.Shared._DV.Silicon.IPC; // DeltaV
-using Content.Shared.Radio.Components; // Goobstation
 
 namespace Content.Server.Clothing.Systems;
 
@@ -24,7 +22,6 @@ public sealed class OutfitSystem : EntitySystem
     [Dependency] private readonly HandsSystem _handSystem = default!;
     [Dependency] private readonly InventorySystem _invSystem = default!;
     [Dependency] private readonly SharedStationSpawningSystem _spawningSystem = default!;
-    [Dependency] private readonly InternalEncryptionKeySpawner _internalEncryption = default!; // starcup
 
     public bool SetOutfit(EntityUid target, string gear, Action<EntityUid, EntityUid>? onEquipped = null)
     {
@@ -107,12 +104,6 @@ public sealed class OutfitSystem : EntitySystem
             _spawningSystem.EquipRoleLoadout(target, roleLoadout, jobProto);
         }
 
-        // Begin DeltaV/Goob Additions
-        if (EntityManager.HasComponent<EncryptionKeyHolderComponent>(target))
-        {
-            _internalEncryption.TryInsertEncryptionKey(target, startingGear);  // starcup: fix null reference
-        }
-        // End DeltaV/Goob Additions
         return true;
     }
 }
