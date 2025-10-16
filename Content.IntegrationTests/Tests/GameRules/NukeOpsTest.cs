@@ -24,7 +24,6 @@ using Content.Shared.Station.Components;
 using Robust.Server.GameObjects;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Map.Components;
-using Content.Shared._EE.Silicon.Components; // Goobstation
 using Robust.Shared.Prototypes;
 
 namespace Content.IntegrationTests.Tests.GameRules;

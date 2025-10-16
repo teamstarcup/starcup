@@ -1,11 +1,9 @@
-
 using Content.Shared.Bed;
 using Content.Shared.Bed.Components;
 using Content.Shared.Bed.Sleep;
 using Content.Shared.Buckle.Components;
 using Content.Shared.Damage;
 using Content.Shared.Mobs.Systems;
-using Content.Shared._EE.Silicon.Components;
 
 namespace Content.Server.Bed
 {
@@ -40,8 +38,7 @@ namespace Content.Server.Bed
 
                 foreach (var healedEntity in strapComponent.BuckledEntities)
                 {
-                    if (_mobStateSystem.IsDead(healedEntity)
-                        || HasComp<SiliconComponent>(healedEntity)) // Goobstation
+                    if (_mobStateSystem.IsDead(healedEntity))
                         continue;
 
                     var damage = bedComponent.Damage;
