@@ -1,0 +1,35 @@
+- type: entity
+  name: glowing object
+  id: CharonWisp
+  parent:
+  - BaseSimpleMob
+  - MobAtmosExposed
+  description: It reflects a strange, otherworldly light.
+  components:
+    - type: Damageable
+      damageContainer: Inorganic
+    - type: InputMover
+    - type: NpcFactionMember
+      factions:
+      - SimpleHostile
+    - type: NPCImprintingOnSpawnBehaviour
+      spawnFriendsSearchRadius: 10
+    - type: HTN
+      rootTask:
+        task: FollowCompound
+      blackboard:
+        FollowCloseRange: !type:Single
+          1.0
+        FollowRange: !type:Single
+          2.0
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: _starcup/Mobs/Aliens/charonwisp.rsi
+      state: charonwisp
+    - type: Icon
+      sprite: _Impstation/Mobs/Anomalites/fire.rsi
+      state: icon
+    - type: Climbing
+    - type: RadiationSource
+      intensity: 3
+      slope: 1
