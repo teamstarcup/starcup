@@ -54,6 +54,13 @@
   - type: FireVisuals
     alternateState: Standing
   - type: StunVisuals
+  - type: Tag
+    tags:
+    - CanPilot
+    - FootstepSound
+    - DoorBumpOpener
+    - AnomalyHost
+    - SiliconEmotes # added
   # end mirrored components from BaseMobSpeciesOrganic
   - type: Damageable
     damageContainer: HumanoidSilicon
@@ -67,9 +74,6 @@
     soundTypes:
       Heat:
         collection: MetalLaserImpact
-  - type: Tag
-    tags:
-    - SiliconEmotes
   - type: Speech
     speechSounds: Pai
   - type: Vocal
