@@ -90,11 +90,13 @@
       1: 0.45
       0: 0.00
   - type: BatteryDrinker
-  - type: EncryptionKeyHolder
-    keySlots: 4
-    examineWhileLocked: false
-    keysExtractionMethod: Cutting
-    keysUnlocked: false
+  # begin starcup: removed
+  # - type: EncryptionKeyHolder
+  #   keySlots: 4
+  #   examineWhileLocked: false
+  #   keysExtractionMethod: Cutting
+  #   keysUnlocked: false
+  # end starcup
   - type: ActiveRadio
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
