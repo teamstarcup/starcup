@@ -30,7 +30,7 @@ public abstract class SharedMouthStorageSystem : EntitySystem
         SubscribeLocalEvent<MouthStorageComponent, DisarmedEvent>(DropAllContents);
         SubscribeLocalEvent<MouthStorageComponent, DamageChangedEvent>(OnDamageModified);
         SubscribeLocalEvent<MouthStorageComponent, ExaminedEvent>(OnExamined);
-        SubscribeLocalEvent<MouthStorageComponent, IngestionAttemptEvent>(OnIngestAttempt);
+        SubscribeLocalEvent<MouthStorageComponent, BeforeIngestedEvent>(OnIngestAttempt);
     }
 
     protected bool IsMouthBlocked(MouthStorageComponent component)
@@ -89,7 +89,7 @@ public abstract class SharedMouthStorageSystem : EntitySystem
     }
 
     // Attempting to eat or drink anything with items in your mouth won't work
-    private void OnIngestAttempt(EntityUid uid, MouthStorageComponent component, IngestionAttemptEvent args)
+    private void OnIngestAttempt(EntityUid uid, MouthStorageComponent component, BeforeIngestedEvent args)
     {
         if (!IsMouthBlocked(component))
             return;
@@ -98,7 +98,6 @@ public abstract class SharedMouthStorageSystem : EntitySystem
             return;
 
         var firstItem = storage.Container.ContainedEntities[0];
-        args.Blocker = firstItem;
-        args.Cancel();
+        args.Cancelled = true;
     }
 }

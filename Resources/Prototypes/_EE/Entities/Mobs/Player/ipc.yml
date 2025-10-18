@@ -15,7 +15,7 @@
         startingItem: PowerCellMedium
   - type: BatterySlotRequiresLock
     itemSlot: cell_slot
-  - type: EncryptionHolderRequiresLock
+  # - type: EncryptionHolderRequiresLock # starcup: removed
   - type: SiliconEmitSoundOnDrained
     sound: "/Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg" # SOMEONE PLEASE FIND A BETTER SOUND FOR THIS.
     minInterval: 15
@@ -90,11 +90,13 @@
       1: 0.45
       0: 0.00
   - type: BatteryDrinker
-  - type: EncryptionKeyHolder
-    keySlots: 4
-    examineWhileLocked: false
-    keysExtractionMethod: Cutting
-    keysUnlocked: false
+  # begin starcup: removed
+  # - type: EncryptionKeyHolder
+  #   keySlots: 4
+  #   examineWhileLocked: false
+  #   keysExtractionMethod: Cutting
+  #   keysUnlocked: false
+  # end starcup
   - type: ActiveRadio
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter

@@ -2,12 +2,11 @@
   id: RandomPlantMutations
   mutations:
     # disabled until 50 morbillion point lights don't cause the renderer to die
-    # starcup: reenabled since it doesn't seem to kill the renderer anymore
-    - name: Bioluminescent
-      description: mutation-plant-bioluminescent
-      baseOdds: 1
-      appliesToPlant: false
-      effect: !type:Glow
+    #- name: Bioluminescent
+    #  description: mutation-plant-bioluminescent
+    #  baseOdds: 0.036
+    #  appliesToPlant: false
+    #  effect: !type:Glow
     - name: Sentient
       description: mutation-plant-sentient
       baseOdds: 0.0072

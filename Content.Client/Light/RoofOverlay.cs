@@ -24,9 +24,9 @@ public sealed class RoofOverlay : Overlay
 
     private List<Entity<MapGridComponent>> _grids = new();
 
-    public override OverlaySpace Space => OverlaySpace.BeforeLighting;
-
     public const int ContentZIndex = BeforeLightTargetOverlay.ContentZIndex + 1;
+
+    public override OverlaySpace Space => OverlaySpace.BeforeLighting;
 
     public RoofOverlay(IEntityManager entManager)
     {
@@ -51,8 +51,9 @@ public sealed class RoofOverlay : Overlay
 
         var worldHandle = args.WorldHandle;
         var lightoverlay = _overlay.GetOverlay<BeforeLightTargetOverlay>();
+        var lightRes = lightoverlay.GetCachedForViewport(args.Viewport);
         var bounds = lightoverlay.EnlargedBounds;
-        var target = lightoverlay.EnlargedLightTarget;
+        var target = lightRes.EnlargedLightTarget;
 
         _grids.Clear();
         _mapManager.FindGridsIntersecting(args.MapId, bounds, ref _grids, approx: true, includeMap: true);

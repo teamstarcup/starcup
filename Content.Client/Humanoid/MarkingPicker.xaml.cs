@@ -47,6 +47,8 @@ public sealed partial class MarkingPicker : Control
 
     private readonly HashSet<MarkingCategories> _ignoreCategories = new();
 
+    private bool _ignoreSpecies;
+
     public string IgnoreCategories
     {
         get => string.Join(',',  _ignoreCategories);
@@ -69,8 +71,6 @@ public sealed partial class MarkingPicker : Control
     }
 
     public bool Forced { get; set; }
-
-    private bool _ignoreSpecies;
 
     public bool IgnoreSpecies
     {
@@ -404,7 +404,7 @@ public sealed partial class MarkingPicker : Control
 
         var stateNames = GetMarkingStateNames(prototype);
         _currentMarkingColors.Clear();
-        CMarkingColors.DisposeAllChildren();
+        CMarkingColors.RemoveAllChildren();
         List<ColorSelectorSliders> colorSliders = new();
         for (int i = 0; i < prototype.Sprites.Count; i++)
         {

@@ -1,3 +1,8 @@
+# items
+stack-capacitor = capacitor
+stack-micro-manipulator-starcup = micro manipulator
+stack-matter-bin = matter bin
+
 # brick
 stack-starcup-floor-brick-horizontal = horizontal astro-brick
 stack-starcup-floor-brick-vertical = vertical astro-brick

@@ -284,7 +284,7 @@
   graph: GasPipeSensor
   startNode: start
   targetNode: sensorAlt1
-  category: construction-category-structures
+  category: construction-category-atmospherics # DeltaV - Moving Atmos Recipes to Atmospherics Category
   placementMode: AlignAtmosPipeLayers
   objectType: Structure
   canRotate: true
@@ -299,7 +299,7 @@
   graph: GasPipeSensor
   startNode: start
   targetNode: sensorAlt2
-  category: construction-category-structures
+  category: construction-category-atmospherics # DeltaV - Moving Atmos Recipes to Atmospherics Category
   placementMode: AlignAtmosPipeLayers
   objectType: Structure
   canRotate: true
@@ -594,7 +594,7 @@
   graph: GasBinary
   startNode: start
   targetNode: pressurepumpAlt1
-  category: construction-category-utilities
+  category: construction-category-atmospherics # DeltaV - Moving Atmos Recipes to Atmospherics Category
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: false
   conditions:
@@ -610,7 +610,7 @@
   graph: GasBinary
   startNode: start
   targetNode: pressurepumpAlt2
-  category: construction-category-utilities
+  category: construction-category-atmospherics # DeltaV - Moving Atmos Recipes to Atmospherics Category
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: false
   conditions:
@@ -641,7 +641,7 @@
   graph: GasBinary
   startNode: start
   targetNode: volumepumpAlt1
-  category: construction-category-utilities
+  category: construction-category-atmospherics # DeltaV - Moving Atmos Recipes to Atmospherics Category
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: false
   conditions:
@@ -657,7 +657,7 @@
   graph: GasBinary
   startNode: start
   targetNode: volumepumpAlt2
-  category: construction-category-utilities
+  category: construction-category-atmospherics # DeltaV - Moving Atmos Recipes to Atmospherics Category
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: false
   conditions:
@@ -688,7 +688,7 @@
   graph: GasBinary
   startNode: start
   targetNode: passivegateAlt1
-  category: construction-category-utilities
+  category: construction-category-atmospherics # DeltaV - Moving Atmos Recipes to Atmospherics Category
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: false
   conditions:
@@ -704,7 +704,7 @@
   graph: GasBinary
   startNode: start
   targetNode: passivegateAlt2
-  category: construction-category-utilities
+  category: construction-category-atmospherics # DeltaV - Moving Atmos Recipes to Atmospherics Category
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: false
   conditions:
@@ -719,7 +719,7 @@
   graph: GasBinary
   startNode: start
   targetNode: pressureregulator
-  category: construction-category-utilities
+  category: construction-category-atmospherics # DeltaV - Moving Atmos Recipes to Atmospherics Category
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: false
   conditions:
@@ -735,7 +735,7 @@
   graph: GasBinary
   startNode: start
   targetNode: pressureregulatorAlt1
-  category: construction-category-utilities
+  category: construction-category-atmospherics # DeltaV - Moving Atmos Recipes to Atmospherics Category
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: false
   conditions:
@@ -751,7 +751,7 @@
   graph: GasBinary
   startNode: start
   targetNode: pressureregulatorAlt2
-  category: construction-category-utilities
+  category: construction-category-atmospherics # DeltaV - Moving Atmos Recipes to Atmospherics Category
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: false
   conditions:
@@ -782,7 +782,7 @@
   graph: GasBinary
   startNode: start
   targetNode: valveAlt1
-  category: construction-category-utilities
+  category: construction-category-atmospherics # DeltaV - Moving Atmos Recipes to Atmospherics Category
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: false
   conditions:
@@ -798,7 +798,7 @@
   graph: GasBinary
   startNode: start
   targetNode: valveAlt2
-  category: construction-category-utilities
+  category: construction-category-atmospherics # DeltaV - Moving Atmos Recipes to Atmospherics Category
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: false
   conditions:
@@ -828,7 +828,7 @@
   graph: GasBinary
   startNode: start
   targetNode: signalvalveAlt1
-  category: construction-category-utilities
+  category: construction-category-atmospherics # DeltaV - Moving Atmos Recipes to Atmospherics Category
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: false
   conditions:
@@ -843,7 +843,7 @@
   graph: GasBinary
   startNode: start
   targetNode: signalvalveAlt2
-  category: construction-category-utilities
+  category: construction-category-atmospherics # DeltaV - Moving Atmos Recipes to Atmospherics Category
   placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: false
   conditions:
@@ -1002,6 +1002,20 @@
   category: construction-category-utilities
   objectType: Structure
   canRotate: false
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+  conditions:
+  - !type:WallmountCondition
+
+# DEFENSES
+- type: construction
+  id: WeaponEnergyTurretControlPanel
+  graph: WeaponEnergyTurretControlPanel
+  startNode: start
+  targetNode: finish
+  category: construction-category-utilities
+  objectType: Structure
+  canRotate: true
   placementMode: SnapgridCenter
   canBuildInImpassable: true
   conditions:

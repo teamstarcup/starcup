@@ -8,9 +8,9 @@
     - state: generic
     - state: icon-pen
   - type: ItemBorgModule
-    items:
-    - CrayonMagic # starcup: replace CrayonRainbowInfinite with magic crayon
-    - SprayPainter
-    - Pen
+    hands:
+    - item: CrayonMagic # starcup: replace CrayonRainbowInfinite with magic crayon
+    - item: SprayPainter
+    - item: Pen
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: service-module }

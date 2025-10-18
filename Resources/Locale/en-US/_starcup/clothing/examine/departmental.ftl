@@ -35,6 +35,12 @@ clothing-crusher = [color=#bd8e37]crusher[/color]
 clothing-crusher-dagger = [color=#bd8e37]crusher dagger[/color]
 clothing-crusher-glaive = [color=#bd8e37]crusher glaive[/color]
 clothing-pka = [color=#bd8e37]proto-kinetic accelerator[/color]
+clothing-harpoon = [color=#bd8e37]salvage harpoon[/color]
+clothing-plasteel-harpoon = [color=#bd8e37]plasteel harpoon[/color]
+clothing-uranium-harpoon = [color=#bd8e37]uranium harpoon[/color]
+clothing-plasma-harpoon = [color=#bd8e37]incendiary harpoon[/color]
+clothing-speargun = [color=#bd8e37]speargun[/color]
+clothing-harpoon-gun = [color=#bd8e37]harpoon gun[/color]
 
 # Medical
 clothing-paramedic-void-suit = [color=#94daff]paramedic void suit[/color]

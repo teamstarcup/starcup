@@ -1,11 +1,8 @@
-using Content.Server.Electrocution;
 using Content.Server.Popups;
-using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Shared.Electrocution;
 using Robust.Shared.Random;
-using Robust.Shared.Timing;
-using Content.Server._EE.Power.Components;
+using Content.Shared.Power.Components;
 
 namespace Content.Server._EE.Power.Systems;
 

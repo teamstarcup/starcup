@@ -1,7 +1,7 @@
 - type: entity
   name: old fashioned glass
   description: For stronger, meaner drinks. Holds up to 20 units.
-  parent: DrinkGlassBase
+  parent: [DrinkBaseMaterialGlass, DrinkBaseCup]
   id: DrinkGlassOldFashioned
   components:
   - type: Sprite
@@ -22,11 +22,17 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 6
     fillBaseName: fill
+    inHandsMaxFillLevels: 2
+    inHandsFillBaseName: -fill-
+  - type: Tag
+    tags:
+    - DrinkCup
+    - DrinkGlass
 
 - type: entity
   name: cocktail glass
   description: For drinks meant to be slowly savored. Holds up to 15 units.
-  parent: DrinkGlassBase
+  parent: [DrinkBaseMaterialGlass, DrinkBaseCup]
   id: DrinkGlassCocktail
   components:
   - type: Sprite
@@ -47,11 +53,17 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 3
     fillBaseName: fill
+    inHandsMaxFillLevels: 1
+    inHandsFillBaseName: -fill-
+  - type: Tag
+    tags:
+    - DrinkCup
+    - DrinkGlass
 
 - type: entity
   name: highball glass
   description: For light drinks and having a good time. Holds up to 30 units.
-  parent: DrinkGlassBase
+  parent: [DrinkBaseMaterialGlass, DrinkBaseCup]
   id: DrinkGlassHighball
   components:
   - type: Sprite
@@ -72,11 +84,17 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 9
     fillBaseName: fill
+    inHandsMaxFillLevels: 3
+    inHandsFillBaseName: -fill-
+  - type: Tag
+    tags:
+    - DrinkCup
+    - DrinkGlass
 
 - type: entity
   name: maritime mug
   description: For sailors of the great river. Holds up to 30 units.
-  parent: DrinkGlassBase
+  parent: [DrinkBaseMaterialGlass, DrinkBaseCup]
   id: DrinkGlassFeltmanLanger
   components:
   - type: Sprite
@@ -95,6 +113,10 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 1
     fillBaseName: fill-
+  - type: Tag
+    tags:
+    - DrinkCup
+    - DrinkGlass
 
 - type: entity
   parent: DrinkGlass

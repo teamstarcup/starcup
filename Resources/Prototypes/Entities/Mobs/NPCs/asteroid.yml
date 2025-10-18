@@ -19,7 +19,6 @@
     group: GenericNumber
   - type: StatusEffects
     allowed:
-    - Stutter
     - Electrocution
     - TemporaryBlindness
     - RadiationProtection
@@ -55,7 +54,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      250: Dead
+      250: Dead # starcup: revert salvage damage nerf (150 > 250)
   - type: MeleeWeapon
     soundHit:
       path: "/Audio/Weapons/smash.ogg"
@@ -377,7 +376,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      75: Dead
+      75: Dead # starcup: revert salvage damage nerf (45 > 75)
   - type: MeleeWeapon
     angle: 0
     animation: WeaponArcBite
@@ -427,3 +426,4 @@
     - id: DiamondOre1
       amount: 1
       maxAmount: 3
+

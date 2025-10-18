@@ -63,6 +63,7 @@
     proto: moth
   - type: InteractionPopup
     successChance: 0.99 # Imagine not being allowed to headpat a scurret, chat
+    interactDelay: 2.25
     interactSuccessString: petting-success-scurret
     interactFailureString: petting-failure-scurret
     interactSuccessSpawn: EffectHearts
@@ -137,7 +138,6 @@
         32:
           sprite: Mobs/Animals/scurret/displacement.rsi
           state: hand
-  - type: ItemOffer # starcup: item offering
 
   - type: InventorySlots
   - type: Food
@@ -213,3 +213,4 @@
   id: MobEmotionalSupportScurret
   parent: [MobScurret, MobBaseEmotionalSupportScurret]
   description: Commonly known as Wawa, from the wetlands of Planet Wawa, these critters make up the bulk of Arnold's Pizza's "loyal workforce". This one is here as a temp.
+

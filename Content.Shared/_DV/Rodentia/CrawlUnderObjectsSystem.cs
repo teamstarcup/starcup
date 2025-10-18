@@ -122,7 +122,7 @@ public sealed class CrawlUnderObjectsSystem : EntitySystem
     /// </summary>
     public bool TrySetEnabled(Entity<CrawlUnderObjectsComponent> ent, bool enabled)
     {
-        if (ent.Comp.Enabled == enabled || IsOnCollidingTile(ent) || _standing.IsDown(ent))
+        if (ent.Comp.Enabled == enabled || IsOnCollidingTile(ent) || _standing.IsDown(ent.Owner))
             return false;
 
         if (TryComp<ClimbingComponent>(ent, out var climbing) && climbing.IsClimbing)

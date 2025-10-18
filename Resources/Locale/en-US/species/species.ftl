@@ -11,6 +11,8 @@ species-name-moth = Doptera
 species-name-skeleton = Skeleton
 species-name-vox = Vox
 species-name-gingerbread = delicious baked good
+# starcup: rename vulpkanin to vulpekin
+species-name-vulpkanin = Vulpekin
 
 ## Misc species things
 

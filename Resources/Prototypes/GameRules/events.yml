@@ -14,7 +14,7 @@
     - id: IonStorm # its calm like 90% of the time smh
     - id: KudzuGrowth
     - id: MassHallucinations
-   # - id: MimicVendorRule # starcup: disabled
+    - id: MimicVendorRule
     - id: MouseMigration
     - id: PowerGridCheck
     - id: RandomSentience
@@ -30,16 +30,41 @@
   table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
     children:
     - id: ClosetSkeleton
-    - id: DragonSpawn
     - id: KingRatMigration
-   # - id: NinjaSpawn # starcup: disabled pending rework
-    - id: ParadoxCloneSpawn
     - id: RevenantSpawn
-    - id: SleeperAgents # starcup: will be removing from extended / survival at a later date
-   # - id: ZombieOutbreak # starcup: disabled
-   # - id: LoneOpsSpawn # starcup: disabled
-    - id: DerelictCyborgSpawn
-   # - id: WizardSpawn # starcup: disabled pending quality control
+    - !type:NestedSelector
+      tableId: DerelictBorgEventTable
+
+- type: entityTable
+  id: ModerateAntagEventsTable
+  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+    children:
+    - id: DragonSpawn
+    - id: NinjaSpawn
+    - id: ParadoxCloneSpawn
+    - id: SleeperAgents
+    - id: ZombieOutbreak
+    - id: LoneOpsSpawn
+    - id: WizardSpawn
+    - !type:NestedSelector
+      tableId: DerelictBorgEventTable
+
+- type: entityTable
+  id: DerelictBorgEventTable #For Derelict Borg spawns
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector # Standard NT Borgs
+      weight: 85
+      children:
+        - id: DerelictEngineerCyborgSpawn
+        - id: DerelictGenericCyborgSpawn
+        - id: DerelictJanitorCyborgSpawn
+        - id: DerelictMedicalCyborgSpawn
+        - id: DerelictMiningCyborgSpawn
+    - !type:GroupSelector # Other Borgs
+      weight: 15
+      children:
+        - id: DerelictSyndicateAssaultCyborgSpawn
 
 - type: entity
   id: BaseStationEvent
@@ -80,7 +105,6 @@
     startAudio:
       path: /Audio/Announcements/announce.ogg
     weight: 8
-    reoccurrenceDelay: 5 # starcup: prevents anomaly event spamming on lowpop survival
     duration: 35
   - type: AnomalySpawnRule
 
@@ -106,7 +130,7 @@
   components:
   - type: StationEvent
     weight: 2
-    reoccurrenceDelay: 15 # starcup: 5 -> 15 to prevent lowpop survival spam
+    reoccurrenceDelay: 5
     earliestStart: 1
     duration: 1
   - type: BluespaceLockerRule
@@ -128,11 +152,15 @@
   - type: StationEvent
     startAnnouncement: station-event-bureaucratic-error-announcement
     minimumPlayers: 25
-    weight: 5 # starcup: 3 -> 5
+    weight: 3
     duration: 1
   - type: BureaucraticErrorRule
     ignoredJobs:
     - StationAi
+    - ResearchAssistant
+    - MedicalIntern
+    - SecurityCadet
+    - TechnicalAssistant
 
 - type: entity
   id: ClericalError
@@ -141,7 +169,7 @@
   - type: StationEvent
     startAnnouncement: station-event-clerical-error-announcement
     minimumPlayers: 15
-    weight: 3 # starcup: 5 -> 3
+    weight: 5
     duration: 1
   - type: ClericalErrorRule
 
@@ -152,7 +180,7 @@
   - type: StationEvent
     weight: 5
     duration: 1
-    minimumPlayers: 0 # starcup: 15 -> 0, closet skeletons aren't antags here
+    minimumPlayers: 10
   - type: RandomEntityStorageSpawnRule
     prototype: MobSkeletonCloset
 
@@ -161,10 +189,10 @@
   id: DragonSpawn
   components:
   - type: StationEvent
-    weight: 2 # starcup: 6.5 -> 2, dragons are too dangerous to be that common
-    earliestStart: 60
+    weight: 6.5
+    earliestStart: 40
     reoccurrenceDelay: 20
-    minimumPlayers: 35 # starcup: 20 -> 35, may need to increase further pending tests
+    minimumPlayers: 20
     duration: null
   - type: SpaceSpawnRule
     spawnDistance: 0
@@ -184,16 +212,18 @@
       pickPlayer: false
       mindRoles:
       - MindRoleDragon
+  - type: DynamicRuleCost
+    cost: 75
 
 - type: entity
   parent: BaseGameRule
   id: NinjaSpawn
   components:
   - type: StationEvent
-    weight: 4.5 # starcup: 6 -> 4.5, reduced chance compared to standard events
+    weight: 6
     duration: null
-    earliestStart: 45 # starcup: 30 -> 45, later spawns for antags
-    reoccurrenceDelay: 60 # starcup: 20 -> 60
+    earliestStart: 30
+    reoccurrenceDelay: 20
     minimumPlayers: 30
   - type: SpaceSpawnRule
   - type: AntagLoadProfileRule
@@ -234,6 +264,8 @@
         nameFormat: name-format-ninja
       mindRoles:
       - MindRoleNinja
+  - type: DynamicRuleCost
+    cost: 75
 
 - type: entity
   parent: BaseGameRule
@@ -270,13 +302,15 @@
         sound: /Audio/Misc/paradox_clone_greeting.ogg
       mindRoles:
       - MindRoleParadoxClone
+  - type: DynamicRuleCost
+    cost: 50
 
 - type: entity
   parent: BaseGameRule
   id: RevenantSpawn
   components:
   - type: StationEvent
-    weight: 6 # starcup: 7.5 -> 6, reduced antag spawn chance
+    weight: 7.5
     duration: 1
     earliestStart: 45
     minimumPlayers: 20
@@ -292,7 +326,7 @@
     duration: 1
     earliestStart: 30
     reoccurrenceDelay: 60
-    minimumPlayers: 10
+    minimumPlayers: 30
   - type: AntagSelection
     agentName: wizard-round-end-name
     definitions:
@@ -350,8 +384,7 @@
   components:
   - type: StationEvent
     earliestStart: 15
-    minimumPlayers: 10 # starcup: 15 -> 10, kudzu is annoying but not dangerous. we need more lowpop events.
-    reoccurrenceDelay: 5 # starcup: added. hopefully will prevent the station from being overrun by kudzy in lowpop survival.
+    minimumPlayers: 15
     weight: 7
     duration: 240
   - type: KudzuGrowthRule
@@ -370,7 +403,6 @@
         volume: -4
     duration: 60
     maxDuration: 120
-    reoccurrenceDelay: 9 # starcup: added to prevent constant power outages on lowpop survival
   - type: PowerGridCheckRule
 
 - type: entity
@@ -383,8 +415,8 @@
     endAnnouncement: station-event-solar-flare-end-announcement
     startAudio:
       path: /Audio/Announcements/attention.ogg
-    duration: 90 # starcup: 120 -> 90, don't want to reduce the low end too much
-    maxDuration: 180 # starcup: 240 -> 180, cut the high end by a minute to reduce lengthy outages (this + powergridcheck is a nightmare for comms)
+    duration: 120
+    maxDuration: 240
   - type: SolarFlareRule
     onlyJamHeadsets: true
     affectedChannels:
@@ -410,7 +442,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 15
-    minimumPlayers: 10 # starcup: 15 -> 10
+    minimumPlayers: 15
     weight: 5
     duration: 60
   - type: VentClogRule
@@ -430,11 +462,11 @@
   - type: VentCrittersRule
     entries:
     - id: MobAdultSlimesBlueAngry
-      prob: 0.01 # starcup: 0.02 -> 0.01 to reduce the number of hostile creatures spawned
+      prob: 0.02
     - id: MobAdultSlimesGreenAngry
-      prob: 0.01 # starcup: 0.02 -> 0.01 to reduce the number of hostile creatures spawned
+      prob: 0.02
     - id: MobAdultSlimesYellowAngry
-      prob: 0.01 # starcup: 0.02 -> 0.01 to reduce the number of hostile creatures spawned
+      prob: 0.02
 
 - type: entity
   id: SnakeSpawn
@@ -451,11 +483,11 @@
   - type: VentCrittersRule
     entries:
     - id: MobPurpleSnake
-      prob: 0.01 # starcup: 0.02 -> 0.01 to reduce the number of hostile creatures spawned
+      prob: 0.02
     - id: MobSmallPurpleSnake
-      prob: 0.01 # starcup: 0.02 -> 0.01 to reduce the number of hostile creatures spawned
+      prob: 0.02
     - id: MobCobraSpace
-      prob: 0.01 # starcup: 0.02 -> 0.01 to reduce the number of hostile creatures spawned
+      prob: 0.02
 
 - type: entity
   id: SpiderSpawn
@@ -472,7 +504,7 @@
   - type: VentCrittersRule
     entries:
     - id: MobGiantSpiderAngry
-      prob: 0.025 # starcup: 0.05 -> 0.025 to reduce the number of hostile creatures spawned
+      prob: 0.05
 
 - type: entity
   id: SpiderClownSpawn
@@ -489,7 +521,7 @@
   - type: VentCrittersRule
     entries:
     - id: MobClownSpider
-      prob: 0.025 # starcup: 0.05 -> 0.025 to reduce the number of hostile creatures spawned
+      prob: 0.05
 
 - type: entity
   id: ZombieOutbreak
@@ -523,17 +555,18 @@
       - type: InitialInfected
       mindRoles:
       - MindRoleInitialInfected
+  - type: DynamicRuleCost
+    cost: 200
 
 - type: entity
   parent: BaseNukeopsRule
   id: LoneOpsSpawn
   components:
   - type: StationEvent
-    earliestStart: 45 # starcup: 35 -> 45, give the crew a little more time before random loneop spawns
-    weight: 3.5 # starcup: 5.5 -> 3.5, don't want loneops being a very common event
+    earliestStart: 35
+    weight: 5.5
     minimumPlayers: 20
-    maxOccurrences: 3 # starcup: added, don't want a revolving door of loneop events on survival
-    duration: null # LoneOpsSpawn needs an infinite duration so that it inherits the NukeOpsRule things of an actually appropriate end scrreen (not always "Neutral outcome!") and... ending the game if the station is nuked.
+    duration: null # LoneOpsSpawn needs an infinite duration so that it inherits the NukeOpsRule things of an actually appropriate end screen (not always "Neutral outcome!") and... ending the game if the station is nuked.
   - type: RuleGrids
   - type: LoadMapRule
     gridPath: /Maps/Shuttles/ShuttleEvent/striker.yml
@@ -559,7 +592,9 @@
         factions:
         - Syndicate
       mindRoles:
-      - MindRoleNukeops
+      - MindRoleLoneops
+  - type: DynamicRuleCost
+    cost: 75
 
 - type: entity
   parent: BaseTraitorRule
@@ -567,8 +602,8 @@
   components:
   - type: StationEvent
     earliestStart: 30
-    weight: 6 # starcup: 8 -> 6
-    minimumPlayers: 25 # starcup: 15 -> 25, lowpop sleeper agents just aren't as engaging
+    weight: 8
+    minimumPlayers: 15
     maxOccurrences: 1 # can only happen once per round
     startAnnouncement: station-event-communication-interception
     startAudio:
@@ -634,7 +669,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     weight: 5
-    minimumPlayers: 15 # starcup: 25 -> 15, this event isn't disruptive enough to require 25 players and gives command/engi more work
+    minimumPlayers: 25
     reoccurrenceDelay: 20
   - type: GreytideVirusRule
     accessGroups:
@@ -662,21 +697,126 @@
 
 - type: entity
   parent: BaseGameRule
-  id: DerelictCyborgSpawn
+  id: DerelictEngineerCyborgSpawn
   components:
   - type: StationEvent
-    weight: 5
+    weight: 2.5
     earliestStart: 15
     reoccurrenceDelay: 20
-    minimumPlayers: 0 # starcup: 4 -> 0, these are barely antagonists already and a limit of 4 is too low to realistically matter
+    minimumPlayers: 4
     duration: null
   - type: SpaceSpawnRule
     spawnDistance: 0
   - type: AntagSpawner
-    prototype: PlayerBorgDerelict
+    prototype: PlayerEngineeringBorgDerelictGhostRole
+  - type: AntagSelection
+    definitions:
+    - spawnerPrototype: SpawnPointGhostDerelictEngineeringCyborg
+      min: 1
+      max: 1
+      pickPlayer: false
+
+- type: entity
+  parent: BaseGameRule
+  id: DerelictGenericCyborgSpawn
+  components:
+  - type: StationEvent
+    weight: 2.5
+    earliestStart: 15
+    reoccurrenceDelay: 20
+    minimumPlayers: 4
+    duration: null
+  - type: SpaceSpawnRule
+    spawnDistance: 0
+  - type: AntagSpawner
+    prototype: PlayerBorgDerelictGhostRole
   - type: AntagSelection
     definitions:
     - spawnerPrototype: SpawnPointGhostDerelictCyborg
+      min: 1
+      max: 1
+      pickPlayer: false
+
+- type: entity
+  parent: BaseGameRule
+  id: DerelictJanitorCyborgSpawn
+  components:
+  - type: StationEvent
+    weight: 2.5
+    earliestStart: 15
+    reoccurrenceDelay: 20
+    minimumPlayers: 4
+    duration: null
+  - type: SpaceSpawnRule
+    spawnDistance: 0
+  - type: AntagSpawner
+    prototype: PlayerJanitorBorgDerelictGhostRole
+  - type: AntagSelection
+    definitions:
+    - spawnerPrototype: SpawnPointGhostDerelictJanitorCyborg
+      min: 1
+      max: 1
+      pickPlayer: false
+
+- type: entity
+  parent: BaseGameRule
+  id: DerelictMedicalCyborgSpawn
+  components:
+  - type: StationEvent
+    weight: 2.5
+    earliestStart: 15
+    reoccurrenceDelay: 20
+    minimumPlayers: 4
+    duration: null
+  - type: SpaceSpawnRule
+    spawnDistance: 0
+  - type: AntagSpawner
+    prototype: PlayerMedicalBorgDerelictGhostRole
+  - type: AntagSelection
+    definitions:
+    - spawnerPrototype: SpawnPointGhostDerelictMedicalCyborg
+      min: 1
+      max: 1
+      pickPlayer: false
+
+- type: entity
+  parent: BaseGameRule
+  id: DerelictMiningCyborgSpawn
+  components:
+  - type: StationEvent
+    weight: 2.5
+    earliestStart: 15
+    reoccurrenceDelay: 20
+    minimumPlayers: 4
+    duration: null
+  - type: SpaceSpawnRule
+    spawnDistance: 0
+  - type: AntagSpawner
+    prototype: PlayerMiningBorgDerelictGhostRole
+  - type: AntagSelection
+    definitions:
+    - spawnerPrototype: SpawnPointGhostDerelictMiningCyborg
+      min: 1
+      max: 1
+      pickPlayer: false
+
+- type: entity
+  parent: BaseGameRule
+  id: DerelictSyndicateAssaultCyborgSpawn
+  components:
+  - type: StationEvent
+    weight: 2.5
+    earliestStart: 25
+    reoccurrenceDelay: 20
+    minimumPlayers: 15
+    duration: null
+  - type: SpaceSpawnRule
+    spawnDistance: 0
+  - type: AntagSpawner
+    prototype: PlayerBorgSyndicateDerelictGhostRole
+  - type: AntagSelection
+    definitions:
+    - spawnerPrototype: SpawnPointGhostDerelictSyndicateAssaultCyborg
       min: 1
       max: 1
       pickPlayer: false

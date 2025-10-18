@@ -19,7 +19,8 @@ humanoid-profile-editor-cd-records-drug-allergies = Drug Allergies:
 humanoid-profile-editor-cd-records-postmortem = Postmortem Instructions:
 
 # Admin
-humanoid-profile-editor-cd-records-admin = Admin
+# starcup: change name from admin to ooc
+humanoid-profile-editor-cd-records-admin = OOC
 
 # Entries
 humanoid-profile-editor-cd-records-add-entry = Add Entry
