@@ -20,36 +20,35 @@ namespace Content.Server.Destructible.Thresholds.Behaviors;
 public sealed partial class WeightedSpawnEntityBehavior : IThresholdBehavior
 {
     private static readonly EntProtoId TempEntityProtoId = "TemporaryEntityForTimedDespawnSpawners";
-
+    [DataField(required: true)]
+    public ProtoId<WeightedRandomEntityPrototype> WeightedEntityTable;
+    [DataField]
+    public float SpawnOffset = 1;
+    [DataField]
+    public int MinSpawn = 1;
+    [DataField]
+    public int MaxSpawn = 1;
+    [DataField]
+    public float SpawnAfter;
     /// <summary>
     /// A table of entities with assigned weights to randomly pick from
     /// </summary>
-    [DataField(required: true)]
-    public ProtoId<WeightedRandomEntityPrototype> WeightedEntityTable;
 
     /// <summary>
     /// How far away to spawn the entity from the parent position
     /// </summary>
-    [DataField]
-    public float SpawnOffset = 1;
 
     /// <summary>
     /// The mininum number of entities to spawn randomly
     /// </summary>
-    [DataField]
-    public int MinSpawn = 1;
 
     /// <summary>
     /// The max number of entities to spawn randomly
     /// </summary>
-    [DataField]
-    public int MaxSpawn = 1;
 
     /// <summary>
     /// Time in seconds to wait before spawning entities
     /// </summary>
-    [DataField]
-    public float SpawnAfter;
 
     public void Execute(EntityUid uid, DestructibleSystem system, EntityUid? cause = null)
     {
@@ -66,7 +65,7 @@ public sealed partial class WeightedSpawnEntityBehavior : IThresholdBehavior
         if (SpawnAfter != 0)
         {
             // if it fails to get the spawner, this won't ever work so just return
-            if (!system.PrototypeManager.TryIndex(TempEntityProtoId, out var tempSpawnerProto))
+            if (!system.PrototypeManager.Resolve(TempEntityProtoId, out var tempSpawnerProto))
                 return;
 
             // spawn the spawner, assign it a lifetime, and assign the entity that it will spawn when despawned

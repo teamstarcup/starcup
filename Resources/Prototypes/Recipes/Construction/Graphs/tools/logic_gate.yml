@@ -51,7 +51,7 @@
           sprite: Objects/Misc/stock_parts.rsi
           state: capacitor
         name: construction-graph-tag-capacitor
-      - material: Capacitor
+      - material: Capacitor # starcup: preserve capacitors, matter bins, and manipulators
         amount: 1
       - material: Cable
         amount: 2
@@ -103,7 +103,7 @@
         doAfter: 2
       completed:
       - !type:SpawnPrototype
-        prototype: CapacitorStockPart
+        prototype: CapacitorStockPart # starcup: preserve capacitors, matter bins, and manipulators
       - !type:SpawnPrototype
         prototype: CableApcStack1
         amount: 2

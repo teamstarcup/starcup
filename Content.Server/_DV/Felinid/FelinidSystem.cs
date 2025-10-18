@@ -1,5 +1,3 @@
-using Content.Server.Body.Components;
-using Content.Server.Medical;
 using Content.Shared._DV.Abilities;
 using Content.Shared._DV.Felinid;
 using Content.Shared.Chemistry.EntitySystems;
@@ -7,7 +5,8 @@ using Content.Shared.Item;
 using Content.Shared.StatusEffect;
 using Content.Shared.Throwing;
 using Robust.Shared.Random;
-using Content.Shared.Body.Components; // starcup
+using Content.Shared.Body.Components;
+using Content.Shared.Medical; // starcup
 
 namespace Content.Server._DV.Felinid;
 

@@ -17,11 +17,11 @@ public sealed partial class ChameleonMenu : DefaultWindow
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
     private readonly SpriteSystem _sprite;
-    public event Action<string>? OnIdSelected;
 
     private IEnumerable<EntProtoId> _possibleIds = [];
     private EntProtoId? _selectedId;
     private string _searchFilter = "";
+    public event Action<string>? OnIdSelected;
 
     public ChameleonMenu()
     {
@@ -54,7 +54,7 @@ public sealed partial class ChameleonMenu : DefaultWindow
 
         foreach (var id in _possibleIds)
         {
-            if (!_prototypeManager.TryIndex(id, out EntityPrototype? proto))
+            if (!_prototypeManager.Resolve(id, out EntityPrototype? proto))
                 continue;
 
             var lowId = id.Id.ToLowerInvariant();

@@ -55,6 +55,8 @@ loadout-group-cargo-technician-neck = Cargo Technician neck
 
 loadout-group-cargo-id-delta = Cargo Technician PDA
 
+loadout-group-atmospheric-technician-head = Atmospheric Technician Head
+
 # Security
 loadout-group-head-of-security-shoes = Head of Security shoes
 

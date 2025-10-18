@@ -1,5 +1,4 @@
 using Content.Server.Administration.Logs;
-using Content.Server.Light.Components;
 using Content.Server.NodeContainer;
 using Content.Server.NodeContainer.EntitySystems;
 using Content.Server.NodeContainer.NodeGroups;
@@ -16,6 +15,7 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
 using Content.Shared.Inventory;
 using Content.Shared.Jittering;
+using Content.Shared.Light.Components;
 using Content.Shared.Maps;
 using Content.Shared.NodeContainer;
 using Content.Shared.NodeContainer.NodeGroups;
@@ -61,8 +61,6 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
     private static readonly ProtoId<StatusEffectPrototype> StatusKeyIn = "Electrocution";
     private static readonly ProtoId<DamageTypePrototype> DamageType = "Shock";
     private static readonly ProtoId<TagPrototype> WindowTag = "Window";
-
-    // Multiply and shift the log scale for shock damage.
     private const float RecursiveDamageMultiplier = 0.75f;
     private const float RecursiveTimeMultiplier = 0.8f;
 
@@ -73,6 +71,8 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
     private const float JitterTimeMultiplier = 0.75f;
     private const float JitterAmplitude = 80f;
     private const float JitterFrequency = 8f;
+
+    // Multiply and shift the log scale for shock damage.
 
     public override void Initialize()
     {
@@ -418,7 +418,7 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
             }
         }
 
-        _stuttering.DoStutter(uid, time * StutteringTimeMultiplier, refresh, statusEffects);
+        _stuttering.DoStutter(uid, time * StutteringTimeMultiplier, refresh);
         _jittering.DoJitter(uid, time * JitterTimeMultiplier, refresh, JitterAmplitude, JitterFrequency, true, statusEffects);
 
         _popup.PopupEntity(Loc.GetString("electrocuted-component-mob-shocked-popup-player"), uid, uid);

@@ -1,0 +1,295 @@
+- type: entity
+  id: AlwaysPoweredFloorLight
+  name: floor light
+  description: An always powered floor light.
+  suffix: Always Powered
+  parent: AlwaysPoweredWallLight
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Lighting/floorlights.rsi
+    drawdepth: HighFloorObjects
+    layers:
+    - map: ["enum.PoweredLightLayers.Base"]
+      state: base
+    - map: ["enum.PoweredLightLayers.Glow"]
+      state: glow
+      shader: unshaded
+  - type: Construction
+    graph: FloorLightFixture
+    node: floorLight
+  - type: PointLight
+    offset: "0, 0"
+  - type: DamageOnInteract
+    damage:
+      types:
+        Heat: 2
+    popupText: powered-light-component-burn-hand
+  # TODO: burn people who aren't wearing shoes
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.25
+        mask:
+        - Impassable
+
+- type: entity
+  name: floor light
+  description: A standard light, embedded in the floor.
+  id: PoweredFloorLightEmpty
+  suffix: Empty
+  parent: AlwaysPoweredFloorLight
+  components:
+  - type: PointLight
+    enabled: false
+  - type: PoweredLight
+    bulb: Tube
+  - type: ContainerContainer
+    containers:
+      light_bulb: !type:ContainerSlot
+  - type: ApcPowerReceiver
+  - type: ExtensionCableReceiver
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: SmartLight
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - On
+      - Off
+      - Toggle
+  - type: Appearance
+  - type: PoweredLightVisuals
+    blinkingSound:
+      path: "/Audio/Machines/light_tube_on.ogg"
+    spriteStateMap:
+      empty: empty
+      off: base
+      on: base
+      broken: broken
+      burned: burned
+
+- type: entity
+  id: PoweredFloorLight
+  suffix: ""
+  parent: PoweredFloorLightEmpty
+  components:
+  - type: PointLight
+    enabled: true
+  - type: PoweredLight
+    hasLampOnSpawn: LightTube
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -15
+    range: 2
+    sound:
+      path: /Audio/Ambience/Objects/light_hum.ogg
+
+# warm
+- type: entity
+  id: PoweredFloorLightWarm
+  suffix: Warm
+  parent: PoweredFloorLight
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeWarm
+  - type: PointLight
+    radius: 10
+    energy: 2
+    softness: 2
+    color: "#FF8A0C"
+
+# cold
+- type: entity
+  id: PoweredFloorLightCold
+  suffix: Cold
+  parent: PoweredFloorLight
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCold
+  - type: PointLight
+    radius: 10
+    energy: 2
+    softness: 2
+    color: "#BFD3FF" # 12000K
+
+# violet
+- type: entity
+  id: PoweredFloorLightViolet
+  suffix: Violet
+  parent: PoweredFloorLight
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeViolet
+  - type: PointLight
+    radius: 8
+    energy: 2
+    softness: 2
+    color: "#5D0CED"
+
+# LED
+- type: entity
+  id: PoweredFloorLightLED
+  suffix: LED
+  parent: PoweredFloorLight
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LedLightTube
+  - type: PointLight
+    radius: 15
+    energy: 1
+    softness: 0.9
+    color: "#EEEEFF"
+  - type: DamageOnInteract
+    damage:
+      types:
+        Heat: 1 # LEDs don't get as hot
+    popupText: powered-light-component-burn-hand
+
+# exterior
+- type: entity
+  id: PoweredFloorLightExterior
+  suffix: Exterior
+  parent: PoweredFloorLight
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: ExteriorLightTube
+  - type: PointLight
+    radius: 15
+    energy: 1
+    softness: 0.9
+    color: "#EEEEFF"
+  - type: DamageOnInteract
+    damage:
+      types:
+        Heat: 4 # brighter light gets hotter
+    popupText: powered-light-component-burn-hand
+
+# sodium
+- type: entity
+  id: PoweredFloorLightSodium
+  suffix: Sodium
+  parent: PoweredFloorLight
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: SodiumLightTube
+  - type: PointLight
+    radius: 10
+    energy: 2.5
+    softness: 0.9
+    color: "#FFAF38"
+  - type: DamageOnInteract
+    damage:
+      types:
+        Heat: 3 # brighter light gets hotter
+    popupText: powered-light-component-burn-hand
+
+# colored
+- type: entity
+  id: PoweredFloorLightCyan
+  suffix: Cyan
+  parent: PoweredFloorLight
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCrystalCyan
+  - type: PointLight
+    radius: 8
+    energy: 3
+    softness: 0.5
+    color: "#47f8ff"
+
+- type: entity
+  id: PoweredFloorLightBlue
+  suffix: Blue
+  parent: PoweredFloorLight
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCrystalBlue
+  - type: PointLight
+    radius: 8
+    energy: 3
+    softness: 0.5
+    color: "#47f8ff"
+
+- type: entity
+  id: PoweredFloorLightYellow
+  suffix: Yellow
+  parent: PoweredFloorLight
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCrystalYellow
+  - type: PointLight
+    radius: 8
+    energy: 3
+    softness: 0.5
+    color: "#ffde46"
+
+- type: entity
+  id: PoweredFloorLightPink
+  suffix: Pink
+  parent: PoweredFloorLight
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCrystalPink
+  - type: PointLight
+    radius: 8
+    energy: 3
+    softness: 0.5
+    color: "#ff66cc"
+
+- type: entity
+  id: PoweredFloorLightOrange
+  suffix: Orange
+  parent: PoweredFloorLight
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCrystalOrange
+  - type: PointLight
+    radius: 8
+    energy: 3
+    softness: 0.5
+    color: "#ff8227"
+
+# uncomment if literal black lights are needed
+#- type: entity
+#  id: PoweredFloorLightBlack
+#  suffix: Black
+#  parent: PoweredFloorLight
+#  components:
+#  - type: PoweredLight
+#    hasLampOnSpawn: LightTubeCrystalBlack
+#  - type: PointLight
+#    radius: 8
+#    energy: 1
+#    softness: 0.5
+#    color: "#363636"
+
+- type: entity
+  id: PoweredFloorLightRed
+  suffix: Red
+  parent: PoweredFloorLight
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCrystalRed
+  - type: PointLight
+    radius: 8
+    energy: 3
+    softness: 0.5
+    color: "#fb4747"
+
+- type: entity
+  id: PoweredFloorLightGreen
+  suffix: Green
+  parent: PoweredFloorLight
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCrystalGreen
+  - type: PointLight
+    radius: 8
+    energy: 3
+    softness: 0.5
+    color: "#52ff39"

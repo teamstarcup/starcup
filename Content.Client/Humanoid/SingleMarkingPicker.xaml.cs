@@ -15,32 +15,41 @@ public sealed partial class SingleMarkingPicker : BoxContainer
     [Dependency] private readonly IEntityManager _entityManager = default!;
 
     private readonly SpriteSystem _sprite;
+    public Action<(int slot, string id)>? OnMarkingSelect;
+    public Action<int>? OnSlotRemove;
+    public Action? OnSlotAdd;
+    public Action<(int slot, Marking marking)>? OnColorChanged;
+    private int _slot = -1;
+    private int _totalPoints;
+
+    private bool _ignoreItemSelected;
+
+    private MarkingCategories _category;
+    private IReadOnlyDictionary<string, MarkingPrototype>? _markingPrototypeCache;
+
+    private string? _species;
+    private List<Marking>? _markings;
 
     /// <summary>
     ///     What happens if a marking is selected.
     ///     It will send the 'slot' (marking index)
     ///     and the selected marking's ID.
     /// </summary>
-    public Action<(int slot, string id)>? OnMarkingSelect;
     /// <summary>
     ///     What happens if a slot is removed.
     ///     This will send the 'slot' (marking index).
     /// </summary>
-    public Action<int>? OnSlotRemove;
 
     /// <summary>
     ///     What happens when a slot is added.
     /// </summary>
-    public Action? OnSlotAdd;
 
     /// <summary>
     ///     What happens if a marking's color is changed.
     ///     Sends a 'slot' number, and the marking in question.
     /// </summary>
-    public Action<(int slot, Marking marking)>? OnColorChanged;
 
     // current selected slot
-    private int _slot = -1;
     private int Slot
     {
         get
@@ -78,11 +87,6 @@ public sealed partial class SingleMarkingPicker : BoxContainer
     }
 
     // amount of slots to show
-    private int _totalPoints;
-
-    private bool _ignoreItemSelected;
-
-    private MarkingCategories _category;
     public MarkingCategories Category
     {
         get => _category;
@@ -97,10 +101,6 @@ public sealed partial class SingleMarkingPicker : BoxContainer
             }
         }
     }
-    private IReadOnlyDictionary<string, MarkingPrototype>? _markingPrototypeCache;
-
-    private string? _species;
-    private List<Marking>? _markings;
 
     private int PointsLeft
     {
@@ -216,7 +216,6 @@ public sealed partial class SingleMarkingPicker : BoxContainer
 
         var marking = _markings[Slot];
 
-        ColorSelectorContainer.DisposeAllChildren();
         ColorSelectorContainer.RemoveAllChildren();
 
         if (marking.MarkingColors.Count != proto.Sprites.Count)

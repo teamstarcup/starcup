@@ -12,7 +12,7 @@ public sealed partial class PaperBoundUserInterface
     private void OnTyping()
     {
         _typing ??= EntMan.System<TypingIndicatorSystem>();
-        _typing?.ClientAlternateTyping(TypingIndicator);
+        _typing?.ClientAlternateTyping(TypingIndicatorState.Typing, TypingIndicator);
     }
 
     private void OnSubmit()

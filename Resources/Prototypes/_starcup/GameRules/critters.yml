@@ -1,4 +1,5 @@
 # tables
+# localized events spawn from a single event, otherwise they spawn across the station. pests should be widespread while dangerous ones should be localized
 
 - type: entityTable
   id: CalmCritterEventsTable
@@ -7,12 +8,194 @@
     - id: SnailMigrationLowPop
     - id: CockroachMigration
     - id: MouseMigration
+    - id: MothroachSpawn
 
 - type: entityTable
   id: HostileCritterEventsTable
   table: !type:AllSelector
     children:
-    - id: SlimesSpawn
-    - id: SnakeSpawn
-    - id: SpiderSpawn
-    - id: SpiderClownSpawn
+    - id: SlimesSpawnLocalized
+    - id: SnakeSpawnLocalized
+    - id: SpiderSpawnLocalized
+    - id: SpiderClownSpawnLocalized
+
+# pests
+
+- type: entity
+  id: MouseMigrationLocalized
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 15
+    weight: 6
+    duration: 30
+  - type: VentCrittersRuleLocalized
+    table: !type:GroupSelector
+      children:
+      - id: MobMouse
+      - id: MobMouse1
+      - id: MobMouse2
+
+- type: entity
+  id: CockroachMigrationLocalized
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    weight: 6
+    duration: 30
+  - type: VentCrittersRuleLocalized
+    table: !type:GroupSelector
+      children:
+      - id: MobCockroach
+        weight: 0.9
+      - id: MobMothroach
+        weight: 0.1
+
+- type: entity
+  id: SnailMigrationLowPopLocalized
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    weight: 6
+    duration: 50
+  - type: VentCrittersRuleLocalized
+    table: !type:GroupSelector
+      children:
+      - id: MobSnail
+        weight: 0.9
+      - id: MobSnailSpeed
+        weight: 0.05
+      - id: MobSnailMoth
+        weight: 0.05
+
+- type: entity
+  id: MothroachSpawn
+  parent: BaseGameRule
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 15
+    minimumPlayers: 5 # starcup: 15 -> 5
+    weight: 4
+    duration: 50
+  - type: VentCrittersRule
+    entries:
+    - id: MobMothroach
+      prob: 0.02
+    - id: MobMoproach
+      prob: 0.0005
+
+# hostiles
+
+- type: entity
+  id: SlimesSpawnLocalized
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 20
+    minimumPlayers: 15
+    weight: 5
+    duration: 30
+  - type: VentCrittersRuleLocalized
+    table: !type:GroupSelector
+      children:
+      - id: MobAdultSlimesBlueAngry
+      - id: MobAdultSlimesGreenAngry
+      - id: MobAdultSlimesYellowAngry
+
+- type: entity
+  id: SnakeSpawnLocalized
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 20
+    minimumPlayers: 15
+    weight: 5
+    duration: 30
+  - type: VentCrittersRuleLocalized
+    table: !type:GroupSelector
+      children:
+      - id: MobPurpleSnake
+      - id: MobSmallPurpleSnake
+      - id: MobCobraSpace
+
+- type: entity
+  id: SpiderSpawnLocalized
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 20
+    minimumPlayers: 15
+    weight: 5
+    duration: 30
+  - type: VentCrittersRuleLocalized
+    table:
+      id: MobGiantSpiderAngry
+
+- type: entity
+  id: SpiderClownSpawnLocalized
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 20
+    minimumPlayers: 20
+    weight: 1.5
+    duration: 30
+  - type: VentCrittersRuleLocalized
+    playerRatio: 25
+    table:
+      id: MobClownSpider
+
+- type: entity
+  id: XenoVents
+  parent: BaseGameRule
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 45
+    minimumPlayers: 20
+    weight: 1
+    duration: 30
+  - type: VentCrittersRule
+    entries: # probabilities add up to 0.03
+    - id: MobXeno
+      prob: 0.0165
+    - id: MobXenoRouny
+      prob: 0.0003
+    - id: MobXenoDrone
+      prob: 0.0075
+    - id: MobXenoSpitter
+      prob: 0.0015
+    - id: MobXenoRunner
+      prob: 0.0024
+    - id: MobXenoPraetorian
+      prob: 0.0009
+    - id: MobXenoRavager
+      prob: 0.0006
+    - id: MobXenoQueen
+      prob: 0.0003

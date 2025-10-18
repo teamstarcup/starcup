@@ -1,6 +1,6 @@
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
-using Content.Server.Radio.Components; // starcup
+using Content.Shared.Radio.Components; // starcup
 using Content.Server.Speech.Components;
 using Content.Shared._DV.AACTablet;
 using Content.Shared.Database;
