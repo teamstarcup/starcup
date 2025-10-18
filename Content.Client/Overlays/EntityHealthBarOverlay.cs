@@ -30,11 +30,11 @@ public sealed class EntityHealthBarOverlay : Overlay
     private readonly StatusIconSystem _statusIconSystem;
     private readonly SpriteSystem _spriteSystem;
     private readonly ProgressColorSystem _progressColor;
+    public HashSet<string> DamageContainers = new();
+    public ProtoId<HealthIconPrototype>? StatusIcon;
 
 
     public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowFOV;
-    public HashSet<string> DamageContainers = new();
-    public ProtoId<HealthIconPrototype>? StatusIcon;
 
     public EntityHealthBarOverlay(IEntityManager entManager, IPrototypeManager prototype)
     {
@@ -57,7 +57,7 @@ public sealed class EntityHealthBarOverlay : Overlay
         const float scale = 1f;
         var scaleMatrix = Matrix3Helpers.CreateScale(new Vector2(scale, scale));
         var rotationMatrix = Matrix3Helpers.CreateRotation(-rotation);
-        _prototype.TryIndex(StatusIcon, out var statusIcon);
+        _prototype.Resolve(StatusIcon, out var statusIcon);
 
         var query = _entManager.AllEntityQueryEnumerator<MobThresholdsComponent, MobStateComponent, DamageableComponent, SpriteComponent>();
         while (query.MoveNext(out var uid,

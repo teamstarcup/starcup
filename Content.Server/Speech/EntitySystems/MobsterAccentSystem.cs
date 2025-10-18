@@ -13,9 +13,11 @@ public sealed class MobsterAccentSystem : EntitySystem
     private static readonly Regex RegexUpperOr = new(@"(?<=\w)O[Rr](?=\w)");
     private static readonly Regex RegexLowerAr = new(@"(?<=\w)a[Rr](?=\w)");
     private static readonly Regex RegexUpperAr = new(@"(?<=\w)A[Rr](?=\w)");
-    // private static readonly Regex RegexFirstWord = new(@"^(\S+)");  // starcup: removed prefixes
-    // private static readonly Regex RegexLastWord = new(@"(\S+)$");  // starcup: removed suffixes
-
+    // begin starcup: removed
+    // private static readonly Regex RegexFirstWord = new(@"^(\S+)");
+    // private static readonly Regex RegexLastWord = new(@"(\S+)$");
+    // private static readonly Regex RegexLastPunctuation = new(@"([.!?]+$)(?!.*[.!?])|(?<![.!?])$");
+    // end starcup
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ReplacementAccentSystem _replacement = default!;
 
@@ -88,7 +90,7 @@ public sealed class MobsterAccentSystem : EntitySystem
         //     }
         //     if (lastWordAllCaps)
         //         suffix = suffix.ToUpper();
-        //     msg += suffix;
+        //     msg += RegexLastPunctuation.Replace(msg, suffix);
         // }
         // end starcup
 

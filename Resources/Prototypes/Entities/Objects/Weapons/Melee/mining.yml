@@ -106,6 +106,7 @@
     enabled: false
     radius: 4
 
+# Very high burst damage if you land a mark, while also providing a small amount of healing.
 - type: entity
   parent: [BaseWeaponCrusher, BaseSecurityCargoContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: WeaponCrusher
@@ -132,7 +133,7 @@
   - type: LeechOnMarker
     leech:
       groups:
-        Brute: -10
+        Brute: -10 # # starcup: revert salvage damage nerf (6 > 10)
   - type: Gun
     soundGunshot: /Audio/Weapons/plasma_cutter.ogg
     fireRate: 1
@@ -146,20 +147,20 @@
     capacity: 1
     count: 1
   - type: MeleeWeapon
-    attackRate: 1.5
+    attackRate: 1.5 # starcup: revert salvage damage nerf (1 > 1.5)
     wideAnimationRotation: -135
     damage:
       types:
-        Blunt: 10
-        Slash: 5
+        Blunt: 10 # starcup: revert salvage damage nerf (6 > 10)
+        Slash: 5 # starcup: revert salvage damage nerf (4 > 5)
     soundHit:
       collection: MetalThud
   - type: Wieldable
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 2.5
-        Slash: 2.5
+        Blunt: 2.5 # starcup: revert salvage damage nerf (6 > 2.5)
+        Slash: 2.5 # starcup: revert salvage damage nerf (2 > 2.5)
         Structural: 30
   - type: GunRequiresWield
   - type: DisarmMalus
@@ -169,6 +170,7 @@
     examineText: clothing-crusher
   # end starcup
 
+# No mark ability in exchange for wideswing, autoattack, and being one-handed
 - type: entity
   parent: [ BaseKnife, BaseWeaponCrusher, BaseSecurityCargoContraband]
   id: WeaponCrusherDagger
@@ -222,7 +224,7 @@
   parent: [ WeaponCrusher, BaseSecurityCargoContraband]
   id: WeaponCrusherGlaive
   name: crusher glaive
-  description: An early design of the proto-kinetic accelerator, in glaive form.
+  description: An early design of the proto-kinetic accelerator, in glaive form. # starcup: no longer has less charged damage
   components:
   - type: Sprite
     sprite: Objects/Weapons/Melee/crusher_glaive.rsi
@@ -238,14 +240,34 @@
     - suitStorage
   - type: UseDelay
     delay: 1.9
+  # begin starcup: use standard crusher projectile
+  # - type: BasicEntityAmmoProvider
+  #   proto: BulletChargeGlaive
+  #   capacity: 1
+  #   count: 1
+  # end starcup
   - type: LeechOnMarker
     leech:
       groups:
         Brute: -21
-  - type: MeleeWeapon
   - type: Tag
     tags:
       - Pickaxe
+  - type: MeleeWeapon
+  # begin starcup: revert salvage damage nerf
+  #   attackRate: 1
+  #   wideAnimationRotation: -135
+  #   damage:
+  #     types:
+  #       Blunt: 3
+  #       Slash: 7
+  # - type: IncreaseDamageOnWield
+  #   damage:
+  #     types:
+  #       Blunt: 2
+  #       Slash: 6
+  #       Structural: 20
+  # end starcup
   # begin starcup: examinable clothing
   - type: ExaminableClothing
     examineText: clothing-crusher-glaive

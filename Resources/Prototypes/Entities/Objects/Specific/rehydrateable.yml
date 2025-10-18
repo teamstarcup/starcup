@@ -80,15 +80,20 @@
     - Meat
     - MonkeyCube
 
-# starcup: remove non-sapient kobolds
-#- type: entity
-#  parent: RehydratableAnimalCube
-#  id: KoboldCube
-#  name: kobold cube
-#  components:
-#  - type: Rehydratable
-#    possibleSpawns:
-#    - MobKobold
+# begin starcup: remove non-sapient kobolds
+# - type: entity
+#   parent: RehydratableAnimalCube
+#   id: KoboldCube
+#   name: kobold cube
+#   components:
+#   - type: Rehydratable
+#     possibleSpawns:
+#     - MobMonkey
+#   - type: Tag
+#     tags:
+#     - Meat
+#     - MonkeyCube
+# end starcup
 
 - type: entity
   parent: RehydratableAnimalCube
@@ -206,6 +211,8 @@
     solutions:
       cube:
         maxVol: 1 # needs room for water
+  - type: Edible
+    solution: cube
   - type: Fixtures # BaseItem from PlushieCarp overrides fixtures, making carp not react to extinguishers
     fixtures:
       fix1:

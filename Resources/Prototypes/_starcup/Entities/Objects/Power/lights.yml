@@ -1,0 +1,92 @@
+# warm/cold lights
+# TODO: add these to lathes once upstream fixes light recipes causing arbitrage
+- type: entity
+  parent: BaseLightTube
+  name: warm light tube
+  id: LightTubeWarm
+  description: A light fixture.
+  components:
+  - type: LightBulb
+    color: "#ff9833" # 2200k color temp
+    lightEnergy: 0.8
+    lightRadius: 10
+    lightSoftness: 2.5
+
+- type: entity
+  parent: BaseLightTube
+  name: cold light tube
+  id: LightTubeCold
+  description: A light fixture.
+  components:
+  - type: LightBulb
+    color: "#BFD3FF" # 12000K color temp
+    lightEnergy: 2
+    lightRadius: 10
+    lightSoftness: 1
+
+- type: entity
+  parent: BaseLightbulb
+  name: cold light bulb
+  id: ColdLightBulb
+  description: A light bulb.
+  components:
+  - type: LightBulb
+    bulb: Bulb
+    color: "#BFD3FF" # 12000K color temp
+    lightEnergy: 1.0
+    lightRadius: 6
+    lightSoftness: 1
+  - type: Tag
+    tags:
+    - LightBulb
+    - Trash
+
+# colored
+- type: entity
+  parent: BaseLightTube
+  name: violet light tube
+  id: LightTubeViolet
+  description: A light fixture.
+  components:
+  - type: LightBulb
+    color: "#5D0CED"
+    lightEnergy: 0.8
+    lightRadius: 8
+    lightSoftness: 2
+
+# ambient
+- type: entity
+  parent: BaseLightTube
+  name: red light tube
+  id: LightTubeRedAmbient
+  description: A light fixture.
+  components:
+  - type: LightBulb
+    color: "#FF4040"
+    lightEnergy: 0.5
+    lightRadius: 6
+    lightSoftness: 2
+
+- type: entity
+  parent: BaseLightTube
+  name: green light tube
+  id: LightTubeGreenAmbient
+  description: A light fixture.
+  components:
+  - type: LightBulb
+    color: "#40FF40"
+    lightEnergy: 0.5
+    lightRadius: 6
+    lightSoftness: 2
+
+- type: entity
+  parent: BaseLightTube
+  name: blue light tube
+  id: LightTubeBlueAmbient
+  description: A light fixture.
+  components:
+  - type: LightBulb
+    color: "#4040FF"
+    lightEnergy: 0.5
+    lightRadius: 6
+    lightSoftness: 2

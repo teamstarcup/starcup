@@ -26,10 +26,10 @@
     - PowerCellSmall
     - PowerCellMedium
     - FlashlightLantern
-    - MatterBinStockPart
-    - CapacitorStockPart
     - MicroManipulatorStockPart
     - Beaker
+    - MatterBinStockPart # starcup: preserve capacitors, matter bins, and manipulators
+    - CapacitorStockPart # starcup: preserve capacitors, matter bins, and manipulators
     chance: 0.8
     offset: 0.2
 
@@ -63,9 +63,9 @@
       - id: SheetGlass10
       - id: ToolboxElectricalFilled
       - id: ToolboxMechanicalFilled
-      - id: MatterBinStockPart
-      - id: CapacitorStockPart
       - id: MicroManipulatorStockPart
+      - id: MatterBinStockPart # starcup: preserve capacitors, matter bins, and manipulators
+      - id: CapacitorStockPart # starcup: preserve capacitors, matter bins, and manipulators
     # Rare Group
     - !type:GroupSelector
       weight: 10

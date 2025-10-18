@@ -1,0 +1,79 @@
+# Snout Markings
+
+- type: marking
+  id: VulpSnout
+  bodyPart: Snout
+  markingCategory: Snout
+  speciesRestriction: [ Vulpkanin ]
+  sprites:
+    # begin starcup: use delta-v sprite
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: muzzle
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: nose
+    # end starcup
+
+- type: marking
+  id: VulpSnoutNose
+  bodyPart: Snout
+  markingCategory: SnoutCover
+  speciesRestriction: [ Vulpkanin ]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi # starcup: use delta-v sprite
+      state: nose
+
+- type: marking
+  id: VulpSnoutVulpine
+  bodyPart: Snout
+  markingCategory: SnoutCover
+  speciesRestriction: [ Vulpkanin ]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi # starcup: use delta-v sprite
+      state: vulpine
+
+- type: marking
+  id: VulpSnoutVulpineLines
+  bodyPart: Snout
+  markingCategory: SnoutCover
+  speciesRestriction: [ Vulpkanin ]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi # starcup: use delta-v sprite
+      state: vulpine-lines
+
+- type: marking
+  id: VulpSnoutBlaze
+  bodyPart: Snout
+  markingCategory: SnoutCover
+  speciesRestriction: [ Vulpkanin ]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi # starcup: use delta-v sprite
+      state: blaze
+
+- type: marking
+  id: VulpSnoutMask
+  bodyPart: Snout
+  markingCategory: SnoutCover
+  speciesRestriction: [ Vulpkanin ]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi # starcup: use delta-v sprite
+      state: mask
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi # starcup: use delta-v sprite
+      state: nose
+
+- type: marking
+  id: VulpSnoutTop
+  bodyPart: Snout
+  markingCategory: SnoutCover
+  speciesRestriction: [ Vulpkanin ]
+  sprites:
+    - sprite: Mobs/Customization/Vulpkanin/snout_markings.rsi
+      state: snout-top
+
+- type: marking
+  id: VulpSnoutPatch
+  bodyPart: Snout
+  markingCategory: SnoutCover
+  speciesRestriction: [ Vulpkanin ]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi # starcup: use delta-v sprite
+      state: patch

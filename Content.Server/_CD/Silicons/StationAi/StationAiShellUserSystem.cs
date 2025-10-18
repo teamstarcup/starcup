@@ -1,4 +1,4 @@
-using Content.Server.Radio.Components;
+using Content.Shared.Radio.Components;
 using Content.Server.Silicons.Laws;
 using Content.Shared._CD.Silicons.StationAi;
 using Content.Shared.Silicons.Borgs.Components;

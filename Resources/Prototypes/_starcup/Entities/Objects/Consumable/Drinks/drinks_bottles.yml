@@ -1,5 +1,5 @@
 - type: entity
-  parent: [DrinkBottleVisualsOpenable, DrinkBottlePlasticBaseFull]
+  parent: [DrinkVisualsOpenable, DrinkBottlePlasticBaseFull]
   id: DrinkCoffeeJugDecaf
   name: decaf coffee jug
   description: Wake up juice, of the heated kind.
@@ -11,12 +11,11 @@
         reagents:
         - ReagentId: CoffeeDecaf
           Quantity: 300
-  - type: Drink
   - type: Label
     currentLabel: reagent-name-coffee-decaf
 
 - type: entity
-  parent: [DrinkBottleVisualsAll, DrinkBottlePlasticBaseFull]
+  parent: [DrinkVisualsAllFilled, DrinkBottlePlasticBaseFull]
   id: DrinkSolDryBottleFull
   name: Sol Dry bottle
   description: Sweet ginger soda from outer space!

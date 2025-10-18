@@ -1,0 +1,95 @@
+- type: entity
+  name: speargun
+  parent: [BaseWeaponLauncher, BaseGunWieldable, BaseCargoContraband, BaseExaminableClothing]
+  id: WeaponSpearGun
+  description: A speargun for when your arm just won't cut it. The spear is not attached!
+  components:
+  - type: AmmoCounter
+  - type: Gun
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/harpoon.ogg
+    fireRate: 0.5
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - Spear
+    capacity: 1
+    proto: Spear
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Guns/Launchers/speargun.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible:
+      false
+  - type: Appearance
+  - type: ExaminableClothing
+    examineText: clothing-speargun # starcup: examinable clothing
+
+
+# Harpoon gun is a grappling gun that also hits mobs. Doesn't stop their movement or reel them in. Can be used to teleport the holder ot the hit mob. Unobtainable other than by admin spawn.
+- type: entity
+  name: harpoon gun
+  parent: [BaseItem, BaseCargoContraband, BaseExaminableClothing]
+  id: WeaponHarpoonGun
+  description: A speargun for when your arm just won't cut it.
+  components:
+  - type: AmmoCounter
+  - type: GrapplingGun
+  - type: Gun
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/harpoon.ogg
+    fireRate: 0.5
+    clumsyProof: true
+  - type: BasicEntityAmmoProvider
+    proto: HarpoonProjectile
+    capacity: 1
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Guns/Launchers/harpoongun.rsi
+    layers:
+    - state: base
+    - state: base-unshaded
+      map: [ "unshaded" ]
+      visible: true
+  - type: UseDelay
+    delay: 1.5
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.TetherVisualsStatus.Key:
+        unshaded:
+          True: { state: base-unshaded }
+          False: { state: base-unshaded-off }
+  - type: ExaminableClothing
+    examineText: clothing-harpoon-gun # starcup: examinable clothing
+
+
+- type: entity
+  name: harpoon head
+  parent: GrapplingHook
+  id: HarpoonProjectile
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    noRot: false
+    sprite: _starcup/Objects/Weapons/Guns/Launchers/harpoongun.rsi
+    layers:
+    - state: hook
+  - type: Projectile
+    deleteOnCollide: false
+    damage:
+      types:
+        Piercing: 8
+        Bloodloss: 2
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.1,0.1,0.1"
+        hard: false
+        mask:
+        - BulletImpassable

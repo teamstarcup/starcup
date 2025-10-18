@@ -6,6 +6,6 @@
   components:
   - type: Action # starcup: rewritten for action refactor
     useDelay: 2 # starcup: rewritten for action refactor
-    icon: _DV/Actions/escapeinventory.rsi/cancel-escape.png
+    icon: { sprite: _DV/Actions/escapeinventory.rsi, state: cancel-escape }
   - type: InstantAction # starcup: rewritten for action refactor
     event: !type:EscapeInventoryCancelActionEvent
