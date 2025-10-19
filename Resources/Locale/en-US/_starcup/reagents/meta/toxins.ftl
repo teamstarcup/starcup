@@ -1,5 +1,5 @@
 # Rewritten Chemicals
-reagent-name-chloral-hydrate-starcup = Somnerine
+reagent-name-chloral-hydrate-starcup = somnerine
 reagent-desc-chloral-hydrate-starcup = A slow-acting, simplistic sedative from early stages of Interdyne's stealth operations initiative.
 
 # New Chemicals
