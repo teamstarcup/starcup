@@ -17,10 +17,11 @@
   - Brig
   - Armory
   - Maintenance
-  - Service
+  # - Service # starcup: remove service access from non-service jobs
   - External
-  - Detective
   - Cryogenics
+  extendedAccess:
+  - Detective # starcup: moved to extended access
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

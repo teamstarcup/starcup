@@ -504,6 +504,13 @@
     - sprite: _starcup/Objects/Misc/id_cards.rsi # starcup: syndicate rebranding
       state: default
     - state: idbrigmedic
+  # begin starcup: implement combat medic
+  - type: IdCard
+    jobTitle: job-name-brigmedic
+    jobIcon: JobIconBrigmedic
+  - type: PresetIdCard
+    job: Brigmedic
+  # end starcup
 
 - type: entity
   parent: IDCardStandard
