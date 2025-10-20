@@ -18,10 +18,8 @@ public sealed class SizeTag : IMarkupTagHandler
         if (!node.Value.TryGetLong(out var levelParam))
             return;
 
-        var level = Math.Min(Math.Max((int)levelParam, 1), 30);
-        node.Attributes["size"] = new MarkupParameter(
-            (int)Math.Ceiling(FontTag.DefaultSize * 2 / Math.Sqrt(level))
-        );
+        var size = Math.Clamp((long)levelParam, 4, 20);
+        node.Attributes["size"] = new MarkupParameter(size);
 
         var font = FontTag.CreateFont(context.Font, node, _resourceCache, _prototypeManager, FontTag.DefaultFont);
         context.Font.Push(font);
