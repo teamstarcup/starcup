@@ -48,6 +48,8 @@ namespace Content.Client.Paper.UI
             typeof(ItalicTag),
             typeof(MonoTag),
             typeof(SizeTag), // starcup
+            typeof(FontTag), // starcup
+            typeof(EmojiTag), // starcup
         };
 
         public event Action<string>? OnSaved;
