@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 10/21/2025 08:06:05
-  entityCount: 11678
+  time: 10/21/2025 08:13:34
+  entityCount: 11679
 maps:
 - 1
 grids:
@@ -2768,7 +2768,7 @@ entities:
       pos: -21.5,-22.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -130473.01
+      secondsUntilStateChange: -130487.24
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -14311,6 +14311,11 @@ entities:
     components:
     - type: Transform
       pos: -27.5,-12.5
+      parent: 2
+  - uid: 11679
+    components:
+    - type: Transform
+      pos: -10.5,34.5
       parent: 2
 - proto: CableHV
   entities:
