@@ -23,6 +23,7 @@ public sealed partial class RecordEntryViewPopup : FancyWindow
         typeof(HeadingTag),
         typeof(ItalicTag),
         typeof(MonoTag), // starcup
+        typeof(SizeTag), // starcup
         typeof(FontTag), // starcup
         typeof(EmojiTag), // starcup
     ];
