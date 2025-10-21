@@ -102,3 +102,13 @@
     containers:
       storagebase: !type:NestedSelector
         tableId: NoticeBoardFillServiceLibrary
+
+- type: entity
+  parent: NoticeBoardDepartmentalBase
+  id: NoticeBoardServiceBotany
+  suffix: Service, Botany
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: NoticeBoardFillServiceBotany

@@ -1,0 +1,18 @@
+# Each board can hold a maximum of 12 notices
+# New notices should be inserted at the top of their respective table, placing fresh news at the front.
+
+- type: entityTable
+  id: NoticeBoardFillMedical
+  table: !type:AllSelector
+    children:
+    - id: Paper # cannot have an empty list here
+
+- type: entity
+  parent: NoticeBoardDepartmentalBase
+  id: NoticeBoardMedical
+  suffix: Medical
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: NoticeBoardFillMedical
