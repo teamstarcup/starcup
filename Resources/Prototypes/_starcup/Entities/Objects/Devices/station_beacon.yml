@@ -165,6 +165,14 @@
   - type: NavMapBeacon
     defaultText: station-beacon-musician
 
+- type: entity
+  parent: DefaultStationBeaconService
+  id: DefaultStationBeaconServiceBreakroom
+  suffix: Service Breakroom
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-breakroom
+
 # General
 - type: entity
   parent: DefaultStationBeacon
