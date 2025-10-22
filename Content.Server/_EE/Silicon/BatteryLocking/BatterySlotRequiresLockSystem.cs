@@ -32,7 +32,7 @@ public sealed class BatterySlotRequiresLockSystem : EntitySystem
 
     private void LockToggleAttempted(EntityUid uid, BatterySlotRequiresLockComponent component, LockToggleAttemptEvent args)
     {
-        if (args.User == uid || !HasComp<SiliconComponent>(uid))
+        if (args.User == uid || !HasComp<SiliconComponent>(uid) || args.Silent) // starcup: don't pop up on silent checks
             return;
 
         _popupSystem.PopupEntity(Loc.GetString("batteryslotrequireslock-component-alert-owner", ("user", Identity.Entity(args.User, EntityManager))), uid, uid, PopupType.Large);
