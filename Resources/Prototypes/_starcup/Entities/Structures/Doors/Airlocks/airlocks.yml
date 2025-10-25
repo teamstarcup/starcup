@@ -57,7 +57,7 @@
 - type: entity
   parent: Airlock
   id: AirlockMedicalScience
-  suffix: Medical/Epistemics
+  suffix: Medical/Science
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/medical.rsi
@@ -67,7 +67,7 @@
 - type: entity
   parent: AirlockGlass
   id: AirlockMedicalScienceGlass
-  suffix: Medical/Epistemics
+  suffix: Medical/Science
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Glass/medical.rsi
@@ -183,7 +183,7 @@
 - type: entity
   parent: AirlockSecurity
   id: AirlockArmory
-  suffix: Corpsman
+  suffix: Armory
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/armory.rsi
@@ -193,7 +193,7 @@
 - type: entity
   parent: AirlockSecurityGlass
   id: AirlockArmoryGlass
-  suffix: Corpsman
+  suffix: Armory
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Glass/armory.rsi
@@ -269,16 +269,6 @@
       sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_engineering.rsi
     - type: Wires
       layoutId: AirlockEngineering
-
-- type: entity
-  parent: AirlockMaint
-  id: AirlockMaintJustice
-  name: justice maintenance access
-  components:
-    - type: Sprite
-      sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_justice.rsi
-    - type: Wires
-      layoutId: AirlockService
 
 - type: entity
   parent: AirlockMaint
