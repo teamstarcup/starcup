@@ -1,6 +1,7 @@
 using Content.Shared.Damage;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
+using Content.Shared.StatusEffectNew; // starcup
 using Content.Shared.Weather;
 using Content.Shared.Whitelist;
 using Robust.Shared.Map.Components;
@@ -20,6 +21,7 @@ public sealed partial class WeatherEffectsSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly SharedMapSystem _map = default!;
     [Dependency] private readonly SharedWeatherSystem _weather = default!;
+    [Dependency] private readonly StatusEffectsSystem _statusEffects = default!; // starcup
 
     private EntityQuery<MapGridComponent> _gridQuery;
 
@@ -50,6 +52,7 @@ public sealed partial class WeatherEffectsSystem : EntitySystem
                     continue;
 
                 UpdateDamage(map, id);
+                UpdateEffects(map, id); // starcup
             }
         }
     }
@@ -77,6 +80,37 @@ public sealed partial class WeatherEffectsSystem : EntitySystem
 
             if (_whitelist.IsBlacklistFailOrNull(weather.DamageBlacklist, uid))
                 _damageable.TryChangeDamage(uid, damage, interruptsDoAfters: false);
+        }
+    }
+
+    // starcup - allows weather to inflict status effects
+    private void UpdateEffects(EntityUid map, ProtoId<WeatherPrototype> id)
+    {
+        var weather = _proto.Index(id);
+        if (weather.StatusEffect is not {} statusEffectId)
+            return;
+
+        var statusEffect = _proto.Index(statusEffectId);
+
+        var query = EntityQueryEnumerator<MobStateComponent, TransformComponent>();
+        while (query.MoveNext(out var uid, out var mob, out var xform))
+        {
+            if (xform.MapUid != map || mob.CurrentState == MobState.Dead)
+                continue;
+
+            // if not in space, check for being indoors
+            if (xform.GridUid is {} gridUid && _gridQuery.TryComp(gridUid, out var grid))
+            {
+                var tile = _map.GetTileRef((gridUid, grid), xform.Coordinates);
+                if (!_weather.CanWeatherAffect(gridUid, grid, tile))
+                    continue;
+            }
+
+            if (weather.Refresh)
+                _statusEffects.TryUpdateStatusEffectDuration(uid, statusEffectId, TimeSpan.FromSeconds(10));
+            else
+                _statusEffects.TryAddStatusEffectDuration(uid, statusEffectId, TimeSpan.FromSeconds(10));
+
         }
     }
 }
