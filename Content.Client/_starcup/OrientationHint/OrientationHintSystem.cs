@@ -24,6 +24,6 @@ public sealed class OrientationHintSystem : EntitySystem
         if (!Resolve<TransformComponent>(arrowEntity, ref arrowTransform))
             return;
 
-        _transform.SetLocalRotation(arrowEntity, ent.Comp.Direction, arrowTransform);
+        _transform.SetLocalRotationNoLerp(arrowEntity, ent.Comp.Direction, arrowTransform);
     }
 }
