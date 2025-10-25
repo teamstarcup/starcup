@@ -1,8 +1,8 @@
 - type: entity
-  name: Charonian leech
-  id: MobCharonianLeech
-  parent: [ SimpleSpaceMobBase, FlyingMobBase, MobCombat ]
-  description: A digusting, bloated, flying leech.
+  name: Charonic leech
+  id: MobCharonicLeech
+  parent: [ SimpleMobBase, FlyingMobBase, MobCombat ]
+  description: There is no life on Charon Epsilon.
   components:
     - type: InputMover
     - type: MobMover
@@ -17,7 +17,7 @@
       - SimpleHostile
     - type: Sprite
       drawdepth: Mobs
-      sprite: _starcup/Mobs/Aliens/charonian_leech.rsi
+      sprite: _starcup/Mobs/Aliens/charonic_leech.rsi
       layers:
       - map: [ "enum.DamageStateVisualLayers.Base" ]
         state: alive
@@ -49,7 +49,7 @@
         Alive:
           Base: alive
         Dead:
-          Base: dead
+          Base: gib
     - type: MeleeWeapon
       altDisarm: false
       angle: 0
@@ -75,3 +75,14 @@
       interactFailureSound:
         path: /Audio/_starcup/Animals/leechbite1.ogg
     - type: FloatingVisuals
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 29
+        behaviors:
+        - !type:GibBehavior
+          recursive: false
+    - type: Bloodstream
+      bloodReagent: VentCrud
+      bloodMaxVolume: 300
