@@ -66,9 +66,7 @@ public sealed class AlarmAutoLinkSystem : EntitySystem
                 continue;
 
             var blockedDirections = AtmosDirection.Invalid;
-            var worldCoord = _mapSystem.LocalToWorld(grid.Owner, grid.Comp, tileRef.GridIndices);
-            var worldAABB = new Box2(worldCoord, worldCoord + grid.Comp.TileSizeVector).Enlarged(-0.05f);
-            var entities = _entityLookupSystem.GetEntitiesIntersecting(gridUid, worldAABB, LookupFlags.StaticSundries);
+            var entities = _entityLookupSystem.GetLocalEntitiesIntersecting(tileRef);
 
             foreach (var entity in entities)
             {
