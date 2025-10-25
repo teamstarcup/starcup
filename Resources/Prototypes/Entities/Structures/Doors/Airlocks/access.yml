@@ -1,6 +1,6 @@
 # Airlocks
 - type: entity
-  parent: Airlock
+  parent: AirlockService # Starcup - airlock resprite
   id: AirlockServiceLocked
   suffix: Service, Locked
   components:
@@ -47,7 +47,7 @@
       board: [ DoorElectronicsChapel ]
 
 - type: entity
-  parent: AirlockServiceLocked
+  parent: AirlockJanitor # Starcup - airlock resprite
   id: AirlockJanitorLocked
   suffix: Janitor, Locked
   components:
@@ -56,7 +56,7 @@
       board: [ DoorElectronicsJanitor ]
 
 - type: entity
-  parent: AirlockServiceLocked
+  parent: AirlockKitchen # Starcup - airlock resprite
   id: AirlockKitchenLocked
   suffix: Kitchen, Locked
   components:
@@ -65,7 +65,7 @@
       board: [ DoorElectronicsKitchen ]
 
 - type: entity
-  parent: AirlockServiceLocked
+  parent: AirlockBartender # Starcup - airlock resprite
   id: AirlockBarLocked
   suffix: Bar, Locked
   components:
@@ -74,7 +74,7 @@
       board: [ DoorElectronicsBar ]
 
 - type: entity
-  parent: AirlockServiceLocked
+  parent: AirlockBartender # Starcup - airlock resprite
   id: AirlockBarKitchenLocked
   suffix: Bar&Kitchen, Locked
   components:
@@ -421,7 +421,7 @@
       board: [ DoorElectronicsSecurityLawyer ]
 
 - type: entity
-  parent: AirlockSecurity
+  parent: AirlockArmory # Starcup - airlock resprite
   id: AirlockArmoryLocked
   suffix: Armory, Locked
   components:
@@ -835,7 +835,7 @@
       board: [ DoorElectronicsSecurityLawyer ]
 
 - type: entity
-  parent: AirlockSecurityGlass
+  parent: AirlockArmoryGlass # Starcup - airlock resprite
   id: AirlockArmoryGlassLocked
   suffix: Armory, Locked
   components:
@@ -903,7 +903,7 @@
   id: AirlockMaintSalvageLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_cargo.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockCargoLocked
@@ -911,210 +911,210 @@
   suffix: Logistics, Locked # DeltaV - Logistics Department replacing Cargo
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_cargo.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockCommandLocked
   id: AirlockMaintCommandLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_command.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockEngineeringLocked
   id: AirlockMaintEngiLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_engineering.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockAtmosphericsLocked
   id: AirlockMaintAtmoLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_engineering.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockBarLocked
   id: AirlockMaintBarLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockBarKitchenLocked
   id: AirlockMaintBarKitchenLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockChapelLocked
   id: AirlockMaintChapelLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockHydroponicsLocked
   id: AirlockMaintHydroLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockJanitorLocked
   id: AirlockMaintJanitorLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockLawyerLocked
   id: AirlockMaintLawyerLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_justice.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockServiceLocked
   id: AirlockMaintServiceLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockTheatreLocked
   id: AirlockMaintTheatreLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockServiceTheatreLocked
   id: AirlockMaintServiceTheatreLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockKitchenLocked
   id: AirlockMaintKitchenLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockFreezerKitchenHydroLocked
   id: AirlockMaintKitchenHydroLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockMedicalLocked
   id: AirlockMaintMedLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_medical.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockMedicalMorgueLocked
   id: AirlockMedicalMorgueMaintLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_medical.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockChemistryLocked
   id: AirlockMaintChemLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_medical.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockScienceLocked
   id: AirlockMaintRnDLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_science.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockMedicalScienceLocked
   id: AirlockMaintRnDMedLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_medical.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockSecurityLocked
   id: AirlockMaintSecLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_security.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockDetectiveLocked
   id: AirlockMaintDetectiveLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_security.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockHeadOfPersonnelLocked
   id: AirlockMaintHOPLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockCaptainLocked
   id: AirlockMaintCaptainLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_command.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockChiefEngineerLocked
   id: AirlockMaintChiefEngineerLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockChiefMedicalOfficerLocked
   id: AirlockMaintChiefMedicalOfficerLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_medical.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockHeadOfSecurityLocked
   id: AirlockMaintHeadOfSecurityLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_security.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockResearchDirectorLocked
   id: AirlockMaintResearchDirectorLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_science.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockQuartermasterLocked
   id: AirlockMaintQuartermasterLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_cargo.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockArmoryLocked
   id: AirlockMaintArmoryLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_security.rsi # Starcup - airlock resprite
 
 - type: entity
   parent: AirlockSyndicate
