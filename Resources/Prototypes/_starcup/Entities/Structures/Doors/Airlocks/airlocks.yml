@@ -216,6 +216,27 @@
     - type: Wires
       layoutId: AirlockSecurity
 
+# Armory
+- type: entity
+  parent: Airlock
+  id: AirlockJustice
+  suffix: Justice
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/justice.rsi
+    - type: Wires
+      layoutId: AirlockSecurity
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockJusticeGlass
+  suffix: Justice
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/justice.rsi
+    - type: Wires
+      layoutId: AirlockSecurity
+
 # Combat Medic
 - type: entity
   parent: AirlockSecurity
@@ -323,6 +344,16 @@
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi
+    - type: Wires
+      layoutId: AirlockSecurity
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintJustice
+  name: justice maintenance access
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_justice.rsi
     - type: Wires
       layoutId: AirlockSecurity
 
