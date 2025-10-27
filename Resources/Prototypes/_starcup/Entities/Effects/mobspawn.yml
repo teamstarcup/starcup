@@ -1,0 +1,46 @@
+- type: entity
+  id: EffectHollowTree
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedDespawn
+    lifetime: 0.4
+  - type: Sprite
+    drawdepth: Effects
+    noRot: true
+    layers:
+      - shader: unshaded
+        map: ["enum.EffectLayers.Unshaded"]
+        sprite: /Textures/Effects/acidifier.rsi # TODO: let's see how this looks
+        state: acid
+  - type: EffectVisuals
+  - type: Tag
+    tags:
+      - HideContextMenu
+  - type: AnimationPlayer
+  - type: EntityTableSpawner
+    deleteSpawnerAfterSpawn: false
+    table: !type:NestedSelector
+      tableId: HollowTreeLootTable
+
+- type: entityTable
+  id: HollowTreeLootTable
+  table: !type:GroupSelector #TODO: Later we can look into making this mining-optimized
+    children: # ideally we make a nice set of tables
+    - id: Coal5
+    - id: PlasmaOre5
+    - id: IronOreOre5
+    - id: UraniumOre5
+    - id: DiamondOre1
+    - id: OrganHumanHeart
+    - id: OrganHumanStomach
+    - id: OrganHumanLiver
+    - id: OrganAnimalStomach
+    - id: OrganAnimalLiver
+    - id: MobRandomScienceCorpse
+      weight: 0.10
+    - id: MobCharonicLeech # a bit rough to not have a spawning visual
+      weight: 0.10
+    - id: AnomalyShadow
+      weight: 0.05
+    - id: AnomalyFlora
+      weight: 0.01
