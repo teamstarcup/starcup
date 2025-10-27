@@ -1,12 +1,13 @@
 using Content.Shared._starcup.OrientationHint;
 using Content.Shared.Examine;
+using Robust.Client.GameObjects;
 using Robust.Shared.Map;
 
 namespace Content.Client._starcup.OrientationHint;
 
 public sealed class OrientationHintSystem : EntitySystem
 {
-    [Dependency] private readonly EntityManager _entityManager = null!;
+    [Dependency] private readonly TransformSystem _transform = default!;
 
     public override void Initialize()
     {
@@ -17,6 +18,12 @@ public sealed class OrientationHintSystem : EntitySystem
 
     private void OnExamined(Entity<OrientationHintComponent> ent, ref ExaminedEvent args)
     {
-        _entityManager.SpawnEntity(ent.Comp.ExamineArrow, new EntityCoordinates(ent, 0, 0));
+        var arrowEntity = EntityManager.SpawnEntity(ent.Comp.ExamineArrow, new EntityCoordinates(ent, 0, 0));
+
+        TransformComponent? arrowTransform = default!;
+        if (!Resolve<TransformComponent>(arrowEntity, ref arrowTransform))
+            return;
+
+        _transform.SetLocalRotationNoLerp(arrowEntity, ent.Comp.Direction, arrowTransform);
     }
 }

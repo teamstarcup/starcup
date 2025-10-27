@@ -81,6 +81,8 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsParamedic ]
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/paramedic.rsi
 
 - type: entity
   parent: AirlockMedicalLocked
@@ -113,7 +115,7 @@
   suffix: ChiefMedicalOfficer, Syndicate, Locked
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_cmo.rsi
 
 - type: entity
   parent: AirlockChiefEngineerLocked
@@ -121,7 +123,7 @@
   suffix: ChiefEngineer, Syndicate, Locked
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_ce.rsi
 
 - type: entity
   parent: AirlockHeadOfSecurityLocked
@@ -129,7 +131,7 @@
   suffix: HeadOfSecurity, Syndicate, Locked
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_hos.rsi
 
 - type: entity
   parent: AirlockResearchDirectorLocked
@@ -137,7 +139,7 @@
   suffix: ResearchDirector, Syndicate, Locked
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_rd.rsi
 
 - type: entity
   parent: AirlockHeadOfPersonnelLocked
@@ -145,7 +147,7 @@
   suffix: HeadOfPersonnel, Syndicate, Locked
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_hop.rsi
 
 - type: entity
   parent: AirlockQuartermasterLocked
@@ -153,7 +155,7 @@
   suffix: Logistics Officer, Syndicate, Locked # DeltaV - Logistics Department replacing Cargo
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/command_qm.rsi
 
 - type: entity
   parent: AirlockEVALocked
@@ -257,6 +259,8 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsParamedic ]
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/paramedic.rsi
 
 - type: entity
   parent: AirlockMedicalGlassLocked
@@ -289,7 +293,7 @@
   suffix: ChiefMedicalOfficer, Syndicate, Locked
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_cmo.rsi
 
 - type: entity
   parent: AirlockChiefEngineerGlassLocked
@@ -297,7 +301,7 @@
   suffix: ChiefEngineer, Syndicate, Locked
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_ce.rsi
 
 - type: entity
   parent: AirlockHeadOfSecurityGlassLocked
@@ -305,7 +309,7 @@
   suffix: HeadOfSecurity, Syndicate, Locked
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_hos.rsi
 
 - type: entity
   parent: AirlockResearchDirectorGlassLocked
@@ -313,7 +317,7 @@
   suffix: ResearchDirector, Syndicate, Locked
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_rd.rsi
 
 - type: entity
   parent: AirlockHeadOfPersonnelGlassLocked
@@ -321,7 +325,7 @@
   suffix: HeadOfPersonnel, Syndicate, Locked
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_hop.rsi
 
 - type: entity
   parent: AirlockQuartermasterGlassLocked
@@ -329,7 +333,7 @@
   suffix: Logistics Officer, Syndicate, Locked # DeltaV - Logistics Department replacing Cargo
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/command_qm.rsi
 
 - type: entity
   parent: AirlockEVAGlassLocked
@@ -356,7 +360,7 @@
   id: AirlockMaintBoxerLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi
 
 - type: entity
   parent: AirlockBrigmedicLocked
@@ -364,63 +368,63 @@
   suffix: Combat Medic, Locked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_security.rsi
 
 - type: entity
   parent: AirlockClownLocked
   id: AirlockMaintClownLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi
 
 - type: entity
   parent: AirlockLibraryLocked
   id: AirlockMaintLibraryocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint.rsi
 
 - type: entity
   parent: AirlockMimeLocked
   id: AirlockMaintMimeLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi
 
 - type: entity
   parent: AirlockMusicianLocked
   id: AirlockMaintMusicianLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi
 
 - type: entity
   parent: AirlockReporterLocked
   id: AirlockMaintReporterLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi
 
 - type: entity
   parent: AirlockZookeeperLocked
   id: AirlockMaintZookeeperLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi
 
 - type: entity
   parent: AirlockPsychologistLocked
   id: AirlockMaintPsychologistLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_medical.rsi
 
 - type: entity
   parent: AirlockParamedicLocked
   id: AirlockMaintParamedicLocked
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_medical.rsi
 
 # HighSecDoors
 
