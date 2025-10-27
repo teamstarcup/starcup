@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 10/27/2025 13:11:01
-  entityCount: 12926
+  time: 10/27/2025 13:34:39
+  entityCount: 12929
 maps:
 - 1
 grids:
@@ -3039,6 +3039,71 @@ entities:
     - type: Transform
       pos: 1.5,7.5
       parent: 2
+  - uid: 330
+    components:
+    - type: MetaData
+      name: Vox Lounge
+    - type: Transform
+      pos: 2.5,-29.5
+      parent: 2
+  - uid: 331
+    components:
+    - type: Transform
+      pos: -17.5,-18.5
+      parent: 2
+  - uid: 332
+    components:
+    - type: Transform
+      pos: -18.5,-18.5
+      parent: 2
+  - uid: 333
+    components:
+    - type: Transform
+      pos: -16.5,-18.5
+      parent: 2
+  - uid: 334
+    components:
+    - type: Transform
+      pos: -21.5,-15.5
+      parent: 2
+  - uid: 335
+    components:
+    - type: Transform
+      pos: -21.5,-14.5
+      parent: 2
+  - uid: 336
+    components:
+    - type: Transform
+      pos: -21.5,-13.5
+      parent: 2
+  - uid: 337
+    components:
+    - type: MetaData
+      name: Restroom
+    - type: Transform
+      pos: 24.5,-37.5
+      parent: 2
+  - uid: 341
+    components:
+    - type: MetaData
+      name: Dorm
+    - type: Transform
+      pos: 4.5,-34.5
+      parent: 2
+  - uid: 342
+    components:
+    - type: MetaData
+      name: Dorm
+    - type: Transform
+      pos: 8.5,-34.5
+      parent: 2
+  - uid: 343
+    components:
+    - type: MetaData
+      name: Dorm
+    - type: Transform
+      pos: 16.5,-34.5
+      parent: 2
 - proto: AirlockArmoryLocked
   entities:
   - uid: 94
@@ -3198,28 +3263,6 @@ entities:
       parent: 2
 - proto: AirlockCargoGlassLocked
   entities:
-  - uid: 113
-    components:
-    - type: MetaData
-      name: Mailroom
-    - type: Transform
-      pos: -21.5,-22.5
-      parent: 2
-  - uid: 114
-    components:
-    - type: MetaData
-      name: Mailroom
-    - type: Transform
-      pos: -22.5,-22.5
-      parent: 2
-  - uid: 115
-    components:
-    - type: MetaData
-      name: Cargo Bay
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -21.5,-27.5
-      parent: 2
   - uid: 116
     components:
     - type: MetaData
@@ -3343,6 +3386,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 10.5,42.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal: []
   - uid: 131
     components:
     - type: MetaData
@@ -3403,6 +3448,23 @@ entities:
     - type: Transform
       pos: 10.5,47.5
       parent: 2
+- proto: AirlockCourierGlass
+  entities:
+  - uid: 113
+    components:
+    - type: Transform
+      pos: -22.5,-22.5
+      parent: 2
+  - uid: 114
+    components:
+    - type: Transform
+      pos: -21.5,-22.5
+      parent: 2
+  - uid: 115
+    components:
+    - type: Transform
+      pos: -21.5,-27.5
+      parent: 2
 - proto: AirlockDetectiveGlassLocked
   entities:
   - uid: 139
@@ -3420,6 +3482,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 5.5,24.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal: []
   - uid: 141
     components:
     - type: MetaData
@@ -3675,6 +3739,8 @@ entities:
     - type: Transform
       pos: 8.5,35.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal: []
   - uid: 177
     components:
     - type: MetaData
@@ -3682,6 +3748,8 @@ entities:
     - type: Transform
       pos: 6.5,35.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal: []
   - uid: 178
     components:
     - type: Transform
@@ -3716,18 +3784,6 @@ entities:
       parent: 2
 - proto: AirlockExternalGlass
   entities:
-  - uid: 184
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -17.5,-39.5
-      parent: 2
-  - uid: 185
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -19.5,-39.5
-      parent: 2
   - uid: 186
     components:
     - type: Transform
@@ -3775,6 +3831,18 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 4.5,-47.5
+      parent: 2
+- proto: AirlockExternalGlassCargoLocked
+  entities:
+  - uid: 184
+    components:
+    - type: Transform
+      pos: -17.5,-39.5
+      parent: 2
+  - uid: 185
+    components:
+    - type: Transform
+      pos: -19.5,-39.5
       parent: 2
 - proto: AirlockExternalGlassShuttleArrivals
   entities:
@@ -4102,28 +4170,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -24.5,-25.5
       parent: 2
-  - uid: 239
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -27.5,-26.5
-      parent: 2
-  - uid: 240
-    components:
-    - type: MetaData
-      name: Salvage Dock
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -33.5,-30.5
-      parent: 2
-  - uid: 241
-    components:
-    - type: MetaData
-      name: Salvage Dock
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -35.5,-30.5
-      parent: 2
 - proto: AirlockMaintCommandLocked
   entities:
   - uid: 242
@@ -4145,6 +4191,13 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 4.5,29.5
+      parent: 2
+- proto: AirlockMaintEngiLocked
+  entities:
+  - uid: 263
+    components:
+    - type: Transform
+      pos: -27.5,11.5
       parent: 2
 - proto: AirlockMaintHOPLocked
   entities:
@@ -4245,11 +4298,6 @@ entities:
     components:
     - type: Transform
       pos: -12.5,-10.5
-      parent: 2
-  - uid: 263
-    components:
-    - type: Transform
-      pos: -27.5,11.5
       parent: 2
   - uid: 264
     components:
@@ -4372,6 +4420,26 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 3.5,36.5
+      parent: 2
+- proto: AirlockMaintSalvageLocked
+  entities:
+  - uid: 239
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -27.5,-26.5
+      parent: 2
+  - uid: 240
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -35.5,-30.5
+      parent: 2
+  - uid: 241
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -33.5,-30.5
       parent: 2
 - proto: AirlockMaintSecLocked
   entities:
@@ -4498,6 +4566,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -17.5,2.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal: []
 - proto: AirlockPsychologistLocked
   entities:
   - uid: 299
@@ -4773,62 +4843,6 @@ entities:
       parent: 2
 - proto: AirlockServiceLocked
   entities:
-  - uid: 330
-    components:
-    - type: MetaData
-      name: Vox Lounge
-    - type: Transform
-      pos: 2.5,-29.5
-      parent: 2
-  - uid: 331
-    components:
-    - type: MetaData
-      name: Arena
-    - type: Transform
-      pos: -21.5,-14.5
-      parent: 2
-  - uid: 332
-    components:
-    - type: MetaData
-      name: Arena
-    - type: Transform
-      pos: -21.5,-15.5
-      parent: 2
-  - uid: 333
-    components:
-    - type: MetaData
-      name: Arena
-    - type: Transform
-      pos: -21.5,-13.5
-      parent: 2
-  - uid: 334
-    components:
-    - type: MetaData
-      name: Arena
-    - type: Transform
-      pos: -18.5,-18.5
-      parent: 2
-  - uid: 335
-    components:
-    - type: MetaData
-      name: Arena
-    - type: Transform
-      pos: -17.5,-18.5
-      parent: 2
-  - uid: 336
-    components:
-    - type: MetaData
-      name: Arena
-    - type: Transform
-      pos: -16.5,-18.5
-      parent: 2
-  - uid: 337
-    components:
-    - type: MetaData
-      name: Restroom
-    - type: Transform
-      pos: 24.5,-37.5
-      parent: 2
   - uid: 338
     components:
     - type: Transform
@@ -4843,27 +4857,6 @@ entities:
     components:
     - type: Transform
       pos: 15.5,4.5
-      parent: 2
-  - uid: 341
-    components:
-    - type: MetaData
-      name: Dorm
-    - type: Transform
-      pos: 16.5,-34.5
-      parent: 2
-  - uid: 342
-    components:
-    - type: MetaData
-      name: Dorm
-    - type: Transform
-      pos: 8.5,-34.5
-      parent: 2
-  - uid: 343
-    components:
-    - type: MetaData
-      name: Dorm
-    - type: Transform
-      pos: 4.5,-34.5
       parent: 2
   - uid: 344
     components:
@@ -28097,6 +28090,28 @@ entities:
     components:
     - type: Transform
       pos: 25.5,-38.5
+      parent: 2
+  - uid: 12795
+    components:
+    - type: Transform
+      pos: 26.5,1.5
+      parent: 2
+  - uid: 12927
+    components:
+    - type: Transform
+      pos: 27.5,1.5
+      parent: 2
+  - uid: 12928
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 26.5,-0.5
+      parent: 2
+  - uid: 12929
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 27.5,-0.5
       parent: 2
 - proto: ChairFolding
   entities:
@@ -62530,6 +62545,11 @@ entities:
     - type: Transform
       pos: 13.5,-14.5
       parent: 2
+  - uid: 12197
+    components:
+    - type: Transform
+      pos: 24.5,0.5
+      parent: 2
   - uid: 12792
     components:
     - type: Transform
@@ -64900,18 +64920,6 @@ entities:
     components:
     - type: Transform
       pos: 2.5,15.5
-      parent: 2
-- proto: RandomVending
-  entities:
-  - uid: 12795
-    components:
-    - type: Transform
-      pos: -24.5,1.5
-      parent: 2
-  - uid: 12796
-    components:
-    - type: Transform
-      pos: -25.5,-9.5
       parent: 2
 - proto: RandomVendingSnacks
   entities:
@@ -71560,10 +71568,10 @@ entities:
       parent: 2
 - proto: VendingMachineCigs
   entities:
-  - uid: 10145
+  - uid: 12152
     components:
     - type: Transform
-      pos: -24.5,-9.5
+      pos: -25.5,-9.5
       parent: 2
 - proto: VendingMachineClothing
   entities:
@@ -71574,10 +71582,10 @@ entities:
       parent: 2
 - proto: VendingMachineCoffee
   entities:
-  - uid: 12152
+  - uid: 10145
     components:
     - type: Transform
-      pos: -23.5,0.5
+      pos: -24.5,1.5
       parent: 2
 - proto: VendingMachineCondiments
   entities:
@@ -81559,6 +81567,16 @@ entities:
       parent: 2
     - type: DeltaPressure
       gridUid: 2
+- proto: WindoorMailLocked
+  entities:
+  - uid: 12796
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -19.5,-25.5
+      parent: 2
+    - type: DeltaPressure
+      gridUid: 2
 - proto: WindoorSecureBrigLocked
   entities:
   - uid: 12183
@@ -81673,18 +81691,6 @@ entities:
     components:
     - type: Transform
       pos: -3.5,-5.5
-      parent: 2
-    - type: DeltaPressure
-      gridUid: 2
-- proto: WindoorSecureMailLocked
-  entities:
-  - uid: 12197
-    components:
-    - type: MetaData
-      name: Mailroom
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -19.5,-25.5
       parent: 2
     - type: DeltaPressure
       gridUid: 2
