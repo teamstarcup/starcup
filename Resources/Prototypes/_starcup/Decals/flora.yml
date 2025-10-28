@@ -124,13 +124,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 120 #TODO, gotta finetune this number
+        damage: 400
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 50 #TODO, gotta finetune this number
+        damage: 135 # two hits with axes, three hits with picks
       behaviors:
       - !type:PlaySoundBehavior
         sound:
