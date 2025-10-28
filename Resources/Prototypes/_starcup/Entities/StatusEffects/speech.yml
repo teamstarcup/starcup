@@ -1,0 +1,17 @@
+- type: entity
+  parent: SpeechStatusEffectBase
+  id: StatusEffectMuted
+  name: muted effect
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ComponentStatusEffect
+    component: Muted
+
+- type: entity
+  parent: SpeechStatusEffectBase
+  id: StatusEffectHushed
+  name: hushed effect
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ComponentStatusEffect
+    component: Hushed

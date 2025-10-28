@@ -218,7 +218,7 @@ public sealed class SiliconChargeSystem : EntitySystem
             !TryComp(silicon, out InputMoverComponent? input))
             return 0;
 
-        if (input.HeldMoveButtons == MoveButtons.None || _jetpack.IsUserFlying(silicon)) // If nothing is being held or jet packing
+        if (input.HeldMoveButtons == MoveButtons.None || _jetpack.IsUserFlying(silicon) || movement.CurrentSprintSpeed == 0) // If nothing is being held or jet packing. starcup: Or speed is 0, which will cause a NaN and instantly drain the battery
         {
             return siliconComp.DrainPerSecond * siliconComp.IdleDrainReduction * (-1); // Reduces draw by idle drain reduction
         }

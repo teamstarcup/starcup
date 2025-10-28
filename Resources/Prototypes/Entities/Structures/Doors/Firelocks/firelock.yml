@@ -39,7 +39,7 @@
         - !type:DoActsBehavior
           acts: ["Destruction"]
     - type: Sprite
-      sprite: Structures/Doors/Airlocks/Standard/firelock.rsi
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/firelock.rsi # Starcup - airlock resprite
       snapCardinals: true
       layers:
         - state: closed
@@ -173,7 +173,7 @@
   components:
     - type: StationAiWhitelist
     - type: Sprite
-      sprite: Structures/Doors/Airlocks/Glass/firelock.rsi
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/firelock.rsi # STarcup - airlock resprite
     - type: Occluder
       enabled: false
     - type: Fixtures

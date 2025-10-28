@@ -64,7 +64,8 @@ holopad-command-lounge = Command - Lounge
 holopad-command-captain = Command - Captain
 holopad-command-hop = Command - HoP
 holopad-command-cmo = Command - CMO
-holopad-command-qm = Command - QM
+# starcup: rename QM to LO
+holopad-command-qm = Command - LO
 holopad-command-ce = Command - CE
 holopad-command-rd = Command - RD
 holopad-command-hos = Command - HoS
@@ -92,13 +93,15 @@ holopad-medical-breakroom = Medical - Breakroom
 holopad-medical-clinic = Medical - Clinic
 
 # Cargo
-holopad-cargo-front = Cargo - Front
-holopad-cargo-bay = Cargo - Cargo Bay
-holopad-cargo-salvage-bay = Cargo - Salvage Bay
-holopad-cargo-breakroom  = Cargo - Breakroom
-holopad-cargo-ats = Cargo - ATS
-holopad-cargo-shuttle = Cargo - Shuttle
-holopad-cargo-mailroom = Cargo - Mailroom
+# begin starcup: rename cargo to logistics
+holopad-cargo-front = Logistics - Front
+holopad-cargo-bay = Logistics - Cargo Bay
+holopad-cargo-salvage-bay = Logistics - Salvage Bay
+holopad-cargo-breakroom  = Logistics - Breakroom
+holopad-cargo-ats = Logistics - ATS
+holopad-cargo-shuttle = Logistics - Shuttle
+holopad-cargo-mailroom = Logistics - Mailroom
+# end starcup
 
 # Engineering
 holopad-engineering-atmos-front = Atmos - Front
@@ -125,7 +128,8 @@ holopad-security-courtroom = Security - Courtroom
 holopad-security-lawyer = Security - Lawyer
 holopad-security-armory = Security - Armory
 holopad-security-locker-room = Security - Locker Room
-holopad-security-brig-med = Security - Brig Med
+# starcup: rename brigmedic to combat medic
+holopad-security-brig-med = Security - Combat Medic
 holopad-security-evac-checkpoint = Security - Evac Checkpoint
 holopad-security-arrivals-checkpoint = Security - Arrivals Checkpoint
 

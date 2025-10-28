@@ -16,3 +16,193 @@
   - type: Sprite
     sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
     state: "assembly"
+
+# Courier
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyCourier
+  suffix: Courier
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/courier.rsi
+      state: "assembly"
+
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyCourierGlass
+  suffix: Courier, Glass
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/courier.rsi
+      state: "assembly"
+
+# Epi/sci
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyMedicalScience
+  suffix: Medical/Science
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/medical.rsi
+      state: "assembly"
+
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyMedicalScienceGlass
+  suffix: Medical/Science, Glass
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/medical.rsi
+      state: "assembly"
+
+# Paramedic
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyParamedic
+  suffix: Paramedic
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/paramedic.rsi
+      state: "assembly"
+
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyParamedicGlass
+  suffix: Paramedic, Glass
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/paramedic.rsi
+      state: "assembly"
+
+# Service
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyService
+  suffix: Service
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/service.rsi
+      state: "assembly"
+
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyServiceGlass
+  suffix: Service, Glass
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/service.rsi
+      state: "assembly"
+
+# Hydroponics
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyKitchen
+  suffix: Kitchen
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/kitchen.rsi
+      state: "assembly"
+
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyKitchenGlass
+  suffix: Kitchen, Glass
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/kitchen.rsi
+      state: "assembly"
+
+# Bartender
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyBartender
+  suffix: Kitchen
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/bartender.rsi
+      state: "assembly"
+
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyBartenderGlass
+  suffix: Kitchen, Glass
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/bartender.rsi
+      state: "assembly"
+
+# Janitor
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyJanitor
+  suffix: Janitor
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/janitor.rsi
+      state: "assembly"
+
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyJanitorGlass
+  suffix: Janitor, Glass
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/janitor.rsi
+      state: "assembly"
+
+# Armory
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyArmory
+  suffix: Armory
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/armory.rsi
+      state: "assembly"
+
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyArmoryGlass
+  suffix: Armory, Glass
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/armory.rsi
+      state: "assembly"
+
+# Combat Medic
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyMedSec
+  suffix: Combat Medic
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/medsec.rsi
+      state: "assembly"
+
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyMedSecGlass
+  suffix: Combat Medic, Glass
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/medsec.rsi
+      state: "assembly"
+
+# Unpainted
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyUnpainted
+  suffix: Unpainted
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/unpainted.rsi
+      state: "assembly"
+
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyUnpaintedGlass
+  suffix: Unpainted, Glass
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/unpainted.rsi
+      state: "assembly"
