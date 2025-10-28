@@ -4,6 +4,7 @@
   parent:
   - BaseSimpleMob
   - MobAtmosExposed
+  - FlyingMobBase
   description: It reflects a strange, otherworldly light.
   components:
     - type: Damageable
@@ -25,9 +26,16 @@
       sprite: _starcup/Mobs/Aliens/charonwisp.rsi
       state: charonwisp
     - type: Icon
-      sprite: _Impstation/Mobs/Anomalites/fire.rsi
+      sprite: _starcup/Mobs/Aliens/charonwisp.rsi
       state: icon
     - type: Climbing
     - type: RadiationSource
       intensity: 3
       slope: 1.5
+    - type: IntrinsicRadioReceiver
+    - type: IntrinsicRadioTransmitter
+      channels:
+      - Common
+    - type: ActiveRadio
+      channels:
+      - Common
