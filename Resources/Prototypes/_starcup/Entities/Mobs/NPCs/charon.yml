@@ -12,11 +12,9 @@
     - type: NpcFactionMember
       factions:
       - SimpleHostile
-    - type: NPCImprintingOnSpawnBehaviour
-      spawnFriendsSearchRadius: 10
     - type: HTN
       rootTask:
-        task: FollowCompound
+        task: TargetFollowCompound
       blackboard:
         FollowCloseRange: !type:Single
           1.0
