@@ -24,23 +24,154 @@
 
 - type: entityTable
   id: HollowTreeLootTable
-  table: !type:GroupSelector #TODO: Later we can look into making this mining-optimized
-    children: # ideally we make a nice set of tables
-    - id: Coal5
-    - id: PlasmaOre5
-    - id: IronOreOre5
-    - id: UraniumOre5
-    - id: DiamondOre1
-    - id: OrganHumanHeart
-    - id: OrganHumanStomach
-    - id: OrganHumanLiver
-    - id: OrganAnimalStomach
-    - id: OrganAnimalLiver
-    - id: MobRandomScienceCorpse
-      weight: 0.10
-    - id: MobCharonicLeech # a bit rough to not have a spawning visual
-      weight: 0.10
-    - id: AnomalyShadow
+  table: !type:GroupSelector
+    children:
+    # standard ore/wood drop
+    - !type:GroupSelector
+      weight: 0.3
+      children:
+      - !type:NestedSelector
+        weight: 0.75
+        tableId: RandomOreTable
+      - id: MaterialWoodPlank1
+        weight: 0.25
+        amount: !type:RangeNumberSelector
+          range: 3, 6
+
+    # beneficial effects
+    - !type:GroupSelector
+      weight: 0.2
+      children:
+      - id: ShardCrystalBlack
+        amount: !type:RangeNumberSelector
+          range: 2, 5
+      - id: ShardCrystalPurple
+        amount: !type:RangeNumberSelector
+          range: 2, 5
+
+    - !type:GroupSelector
+      weight: 0.15
+      children:
+      - id: FoodPumpkin
+      - id: FoodAmbrosiaVulgaris
+      - id: FoodMushroom
+      - id: FoodMimana
+        weight: 0.1
+      - id: FoodFlyAmanita
+        weight: 0.1
+
+    # dubious/benign effects
+    - id: HollowTreeRandomPuddle
+      weight: 0.1
+
+    - id: ShadowKudzuWeak
+      weight: 0.1
+
+    - !type:GroupSelector
       weight: 0.05
-    - id: AnomalyFlora
+      children:
+      - id: MobCockroach
+        weight: 0.9
+        amount: !type:RangeNumberSelector
+          range: 2, 3
+      - id: MobCockroach
+        weight: 0.1
+        amount: !type:RangeNumberSelector
+          range: 5, 6
+
+    - !type:GroupSelector
+      weight: 0.05
+      children:
+      - !type:NestedSelector
+        rolls: !type:RangeNumberSelector
+          range: 1, 2
+        tableId: RandomHumanOrganTable
+      - !type:NestedSelector
+        rolls: !type:RangeNumberSelector
+          range: 1, 2
+        tableId: RandomAnimalOrganTable
+
+    - !type:GroupSelector
+      weight: 0.02
+      children:
+      - id: MobRandomScienceCorpse
+      - id: MobRandomEngineerCorpse
+      - id: MobRandomCargoCorpse
+
+    # dangerous effects
+    - id: Kudzu
+      weight: 0.05
+
+    - id: MobSpawnMuteSlime
+      weight: 0.05
+
+    - !type:GroupSelector
       weight: 0.01
+      children:
+      - id: ComplexXenoArtifact
+      - id: ComplexXenoArtifactItem
+        weight: 0.3
+
+    - !type:GroupSelector
+      weight: 0.005
+      children:
+      - id: AnomalyShadow
+      - id: AnomalyFlora
+        weight: 0.2
+
+- type: entity
+  id: HollowTreeRandomPuddle
+  parent: PuddleTemporary
+  suffix: Random, Hollow Tree
+  components:
+  - type: RandomFillSolution
+    solution: puddle
+    weightedRandomId: RandomFillPuddleHollowTree
+
+- type: weightedRandomFillSolution
+  id: RandomFillPuddleHollowTree
+  fills:
+  - quantity: 10
+    reagents:
+    - Blood
+    - Oil
+    - InsectBlood
+    - MuteToxin
+    - Aluminium
+    - Lead
+    - Plasma
+    - Stellibinin
+    - Necrosol
+    - Opporozidone
+    - VentCrud
+    - Ammonia
+    - ChloralHydrate
+
+- type: entity
+  id: MobSpawnMuteSlime
+  name: mobspawner mute slime
+  categories: [ HideSpawnMenu, Spawner ]
+  components:
+  - type: Transform
+    anchored: True
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    sprite: #TODO
+    state: #TODO
+  - type: Fixtures
+    fixtures:
+      portalFixture:
+        shape:
+          !type:PhysShapeAabb
+          bounds: #TODO
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        hard: false
+  - type: TimedDespawn
+    lifetime: 2.1
+  - type: SpawnOnDespawn
+    prototype: ReagentSlimeMuteToxin #TODO: replace with charonic slime
