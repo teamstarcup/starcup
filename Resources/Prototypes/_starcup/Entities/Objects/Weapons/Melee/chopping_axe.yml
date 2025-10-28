@@ -4,16 +4,18 @@
   id: Chopping_Axe
   description: Don't forget your plaid shirt.
   components:
+  - type: Sharp
+  - type: Execution
+    doAfterDuration: 4.0
   - type: Sprite
     sprite: _starcup/Objects/Weapons/Melee/chopping_axe.rsi
     state: icon
   - type: MeleeWeapon
     attackRate: 0.7
-    wideAnimationRotation: -135
+    wideAnimationRotation: 135
+    swingLeft: true
     soundHit:
-      path: "/Audio/Weapons/slash.ogg"
-      params:
-        volume: -3
+      collection: MetalThud
     damage:
       types:
         Slash: 5
@@ -28,8 +30,13 @@
     shape:
     - 0,0,2,0
     - 1,1,1,2
-    sprite: Objects/Weapons/Melee/pickaxe.rsi
+    sprite: _starcup/Objects/Weapons/Melee/chopping_axe.rsi
     storedRotation: -45
+  - type: Clothing
+    sprite: _starcup/Objects/Weapons/Melee/chopping_axe.rsi
+    quickEquip: false
+    slots:
+    - back
   - type: UseDelay
   - type: PhysicalComposition
     materialComposition:
