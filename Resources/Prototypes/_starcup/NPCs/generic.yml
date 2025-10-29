@@ -30,14 +30,6 @@
       operator: !type:UnPullOperator
         shutdownState: TaskFinished
 
-# TODO: determine if wisps should have a melee attack for the exclusive purpose of escaping containers
-#  - preconditions:
-#    - !type:InContainerPrecondition
-#      isInContainer: true
-#    tasks:
-#    - !type:HTNCompoundTask
-#      task: EscapeCompound
-
   - tasks:
     - !type:HTNCompoundTask
       task: FollowTargetCompound
