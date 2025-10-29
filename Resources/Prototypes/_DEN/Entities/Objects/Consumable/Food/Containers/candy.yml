@@ -29,10 +29,14 @@
     maxItemSize: Small
     grid:
     - 0,0,5,3
-  - type: StorageFill
-    contents:
-    - id: FoodGumball
-      amount: 12
+  # begin starcup: replace with entity table
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: RandomGumball
+        rolls: !type:ConstantNumberSelector
+          value: 12
+  # end starcup
 
 - type: entity
   parent: CandyBagBase
@@ -59,10 +63,14 @@
     maxItemSize: Small
     grid:
     - 0,0,5,3
-  - type: StorageFill
-    contents:
-    - id: FoodLollipop
-      amount: 12
+  # begin starcup: replace with entity table
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: RandomLollipop
+        rolls: !type:ConstantNumberSelector
+          value: 12
+  # end starcup
 
 - type: entity
   parent: CandyBagBase
