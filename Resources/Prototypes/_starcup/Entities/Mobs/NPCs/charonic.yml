@@ -124,7 +124,7 @@
       thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 50
+          damage: 40
         behaviors:
         - !type:PlaySoundBehavior
           sound:
@@ -132,8 +132,8 @@
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
     - type: RadiationSource
-      intensity: 5
-      slope: 2.5
+      intensity: 4
+      slope: 2
     - type: StatusEffects
       allowed:
       - Electrocution
