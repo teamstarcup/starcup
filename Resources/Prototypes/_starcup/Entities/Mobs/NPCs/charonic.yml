@@ -92,13 +92,13 @@
   id: MobCharonicWisp
   parent:
   - BaseSimpleMob
-  - MobAtmosExposed
   - FlyingMobBase
   description: It reflects a strange, otherworldly light.
   components:
     - type: Damageable
       damageContainer: Inorganic
     - type: InputMover
+    - type: MobMover
     - type: NpcFactionMember
       factions:
       - SimpleHostile
@@ -106,10 +106,23 @@
       rootTask:
         task: TargetedFollowCompound
       blackboard:
+        AggroVisionRadius: !type:Single
+          7.0
         FollowCloseRange: !type:Single
           1.0
         FollowRange: !type:Single
           2.0
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 40
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Magic/Eldritch/voidblink.ogg
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
     - type: Sprite
       drawdepth: Mobs
       sprite: _starcup/Mobs/Aliens/charonic_wisp.rsi
@@ -117,7 +130,6 @@
     - type: Icon
       sprite: _starcup/Mobs/Aliens/charonic_wisp.rsi
       state: icon
-    - type: Climbing
     - type: RadiationSource
       intensity: 3
       slope: 1.5
@@ -128,3 +140,11 @@
     - type: ActiveRadio
       channels:
       - Common
+    - type: FloatingVisuals
+    - type: Tag
+      tags:
+      - DoorBumpOpener
+      - CannotSuicide
+    - type: Speech
+      speechVerb: Wisp
+      speechSounds: Alto
