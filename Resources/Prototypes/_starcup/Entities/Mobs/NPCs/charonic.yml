@@ -95,10 +95,16 @@
   - FlyingMobBase
   description: It reflects a strange, otherworldly light.
   components:
-    - type: Damageable
-      damageContainer: Inorganic
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: _starcup/Mobs/Aliens/charonic_wisp.rsi
+      state: charonwisp
+    - type: Icon
+      sprite: _starcup/Mobs/Aliens/charonic_wisp.rsi
+      state: icon
     - type: InputMover
     - type: MobMover
+    - type: FloatingVisuals
     - type: NpcFactionMember
       factions:
       - SimpleHostile
@@ -112,6 +118,8 @@
           1.0
         FollowRange: !type:Single
           2.0
+    - type: Damageable
+      damageContainer: Inorganic
     - type: Destructible
       thresholds:
       - trigger:
@@ -123,16 +131,17 @@
             path: /Audio/Magic/Eldritch/voidblink.ogg
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
-    - type: Sprite
-      drawdepth: Mobs
-      sprite: _starcup/Mobs/Aliens/charonic_wisp.rsi
-      state: charonwisp
-    - type: Icon
-      sprite: _starcup/Mobs/Aliens/charonic_wisp.rsi
-      state: icon
     - type: RadiationSource
       intensity: 3
       slope: 1.5
+    - type: StatusEffects
+      allowed:
+      - Electrocution
+      - RadiationProtection
+      - Adrenaline
+    - type: Speech
+      speechVerb: Wisp
+      speechSounds: Alto
     - type: IntrinsicRadioReceiver
     - type: IntrinsicRadioTransmitter
       channels:
@@ -140,11 +149,7 @@
     - type: ActiveRadio
       channels:
       - Common
-    - type: FloatingVisuals
     - type: Tag
       tags:
       - DoorBumpOpener
       - CannotSuicide
-    - type: Speech
-      speechVerb: Wisp
-      speechSounds: Alto
