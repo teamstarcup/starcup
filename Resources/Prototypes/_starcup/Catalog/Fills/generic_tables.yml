@@ -2,20 +2,34 @@
   id: RandomOreTable
   table: !type:GroupSelector
     children:
-    - id: Coal5
+    - id: Coal1
       weight: 10
-    - id: SteelOre5
+      amount: !type:ConstantNumberSelector
+        value: 5
+    - id: SteelOre1
       weight: 10
-    - id: SpaceQuartz5
+      amount: !type:ConstantNumberSelector
+        value: 5
+    - id: SpaceQuartz1
       weight: 8
-    - id: PlasmaOre5
+      amount: !type:ConstantNumberSelector
+        value: 5
+    - id: PlasmaOre1
       weight: 4
-    - id: SilverOre5
+      amount: !type:ConstantNumberSelector
+        value: 5
+    - id: SilverOre1
       weight: 2
-    - id: GoldOre5
+      amount: !type:ConstantNumberSelector
+        value: 5
+    - id: GoldOre1
       weight: 1
-    - id: UraniumOre5
+      amount: !type:ConstantNumberSelector
+        value: 5
+    - id: UraniumOre1
       weight: 1
+      amount: !type:ConstantNumberSelector
+        value: 5
     - id: BananiumOre1
       weight: 0.5
     - id: DiamondOre1
