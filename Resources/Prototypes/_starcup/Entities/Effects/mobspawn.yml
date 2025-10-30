@@ -102,9 +102,6 @@
     - id: Kudzu
       weight: 0.05
 
-    - id: MobSpawnMuteSlime
-      weight: 0.05
-
     - !type:GroupSelector
       weight: 0.01
       children:
@@ -146,32 +143,3 @@
     - VentCrud
     - Ammonia
     - ChloralHydrate
-
-- type: entity
-  id: MobSpawnMuteSlime
-  name: mobspawner mute slime
-  categories: [ HideSpawnMenu, Spawner ]
-  components:
-  - type: Transform
-    anchored: True
-  - type: InteractionOutline
-  - type: Physics
-    bodyType: Static
-  - type: Sprite
-    sprite: #TODO
-    state: #TODO
-  - type: Fixtures
-    fixtures:
-      portalFixture:
-        shape:
-          !type:PhysShapeAabb
-          bounds: #TODO
-        mask:
-        - FullTileMask
-        layer:
-        - WallLayer
-        hard: false
-  - type: TimedDespawn
-    lifetime: 2.1
-  - type: SpawnOnDespawn
-    prototype: ReagentSlimeMuteToxin #TODO: replace with charonic slime
