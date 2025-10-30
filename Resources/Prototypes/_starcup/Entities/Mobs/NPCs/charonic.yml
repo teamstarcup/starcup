@@ -112,8 +112,6 @@
       rootTask:
         task: TargetedFollowCompound
       blackboard:
-        AggroVisionRadius: !type:Single
-          7.0
         FollowCloseRange: !type:Single
           1.0
         FollowRange: !type:Single
@@ -175,3 +173,6 @@
       tags:
       - DoorBumpOpener
       - CannotSuicide
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 2
+      baseSprintSpeed: 3
