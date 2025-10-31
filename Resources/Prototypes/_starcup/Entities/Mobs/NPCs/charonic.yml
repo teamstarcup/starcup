@@ -178,3 +178,35 @@
       tags:
       - DoorBumpOpener
       - CannotSuicide
+
+- type: entity
+  name: ink-black sludge
+  id: MobCharonicSlime
+  parent: ReagentSlimeMuteToxin
+  description: It oozes like tar and drips like a slavering maw.
+  components:
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: _starcup/Mobs/Aliens/alt_reagent_slime.rsi
+      layers:
+        - map: [ "enum.DamageStateVisualLayers.Base" ]
+          state: alive
+          color: "#1f2e2c"
+    - type: Damageable
+      damageContainer: Inorganic
+      damageModifierSet: Slime
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        150: Dead
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        50: 0.4
+    - type: Bloodstream
+      bloodReagent: MuteToxin
+      chemicalMaxVolume: 100
+    - type: MeleeWeapon
+      damage:
+        types:
+          Slash: 3
+          Caustic: 5
