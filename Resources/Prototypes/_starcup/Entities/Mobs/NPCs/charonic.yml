@@ -90,6 +90,7 @@
 - type: entity
   name: glowing object
   id: MobCharonicWisp
+  suffix: Charonic wisp
   parent:
   - BaseSimpleMob
   - FlyingMobBase
@@ -183,6 +184,7 @@
   name: ink-black sludge
   id: MobCharonicSlime
   parent: ReagentSlimeMuteToxin
+  suffix: Charonic slime
   description: It oozes like tar and drips like a slavering maw.
   components:
     - type: Sprite
@@ -193,20 +195,49 @@
           state: alive
           color: "#1f2e2c"
     - type: Damageable
-      damageContainer: Inorganic
+      damageContainer: Inorganic # to make it immune to caustic/radiation
       damageModifierSet: Slime
-    - type: MobThresholds
-      thresholds:
-        0: Alive
-        150: Dead
-    - type: SlowOnDamage
-      speedModifierThresholds:
-        50: 0.4
-    - type: Bloodstream
-      bloodReagent: MuteToxin
-      chemicalMaxVolume: 100
     - type: MeleeWeapon
       damage:
         types:
           Slash: 3
           Caustic: 5
+
+- type: entity
+  id: MobSpawnCharonicSlime
+  name: ink-black sludge
+  suffix: Spawner
+  categories: [ Spawner ]
+  components:
+    - type: Transform
+      anchored: True
+    - type: InteractionOutline
+    - type: Physics
+      bodyType: Static
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: _starcup/Mobs/Aliens/alt_reagent_slime.rsi
+      state: spawn
+      color: "#1f2e2c"
+    - type: Fixtures
+      fixtures:
+        portalFixture:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.3
+          density: 80
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+    - type: TriggerOnSpawn
+    - type: EmitSoundOnTrigger
+      sound:
+        path: /Audio/_starcup/Effects/Fluids/emerge.ogg
+        params:
+          pitch: 0.92
+          volume: 0.75
+    - type: TimedDespawn
+      lifetime: 2.1
+    - type: SpawnOnDespawn
+      prototype: MobCharonicSlime
