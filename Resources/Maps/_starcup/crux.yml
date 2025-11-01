@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 11/01/2025 11:36:19
-  entityCount: 13625
+  time: 11/01/2025 11:52:44
+  entityCount: 13626
 maps:
 - 1
 grids:
@@ -4064,12 +4064,19 @@ entities:
       parent: 2
   - uid: 8573
     components:
+    - type: MetaData
+      name: AI Upload Air Alarm
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 12.5,46.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal:
+      - - Atmospherics
   - uid: 12267
     components:
+    - type: MetaData
+      name: Pavilion Air Alarm
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -5.5,-3.5
@@ -6540,13 +6547,6 @@ entities:
     - type: AccessReader
       accessListsOriginal:
       - - Engineering
-  - uid: 433
-    components:
-    - type: MetaData
-      name: Kitchen & Service Breakroom APC
-    - type: Transform
-      pos: 16.5,-11.5
-      parent: 2
   - uid: 434
     components:
     - type: MetaData
@@ -17396,6 +17396,16 @@ entities:
     components:
     - type: Transform
       pos: 19.5,24.5
+      parent: 2
+  - uid: 13132
+    components:
+    - type: Transform
+      pos: 10.5,47.5
+      parent: 2
+  - uid: 13626
+    components:
+    - type: Transform
+      pos: 10.5,46.5
       parent: 2
 - proto: CableApcStack
   entities:
@@ -32454,7 +32464,7 @@ entities:
       pos: -1.5,17.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -531.5117
+      secondsUntilStateChange: -914.9094
       state: Closing
   - uid: 13033
     components:
@@ -59282,6 +59292,8 @@ entities:
       rot: 3.141592653589793 rad
       pos: 5.5,-30.5
       parent: 2
+    - type: AtmosPipeColor
+      color: '#3AB334FF'
 - proto: GasVentScrubber
   entities:
   - uid: 8308
@@ -60073,6 +60085,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 9.5,-33.5
       parent: 2
+    - type: AtmosPipeColor
+      color: '#990000FF'
     - type: AtmosPipeLayers
       pipeLayer: Tertiary
   - uid: 8395
@@ -60708,6 +60722,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 4.5,-29.5
       parent: 2
+    - type: AtmosPipeColor
+      color: '#990000FF'
     - type: AtmosPipeLayers
       pipeLayer: Tertiary
 - proto: GasVolumePump
@@ -66417,12 +66433,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -16.5,-24.5
-      parent: 2
-  - uid: 13132
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 13.5,-14.5
       parent: 2
 - proto: PoweredColdSmallLight
   entities:
@@ -72926,6 +72936,8 @@ entities:
   entities:
   - uid: 8980
     components:
+    - type: MetaData
+      name: Logistics Substation
     - type: Transform
       pos: -11.5,-24.5
       parent: 2
@@ -72938,6 +72950,8 @@ entities:
       parent: 2
   - uid: 9918
     components:
+    - type: MetaData
+      name: Northeast Solars Substation
     - type: Transform
       pos: 22.5,23.5
       parent: 2
@@ -80394,6 +80408,12 @@ entities:
       parent: 2
 - proto: WallShuttle
   entities:
+  - uid: 8576
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 12.5,42.5
+      parent: 2
   - uid: 8580
     components:
     - type: Transform
@@ -80438,6 +80458,12 @@ entities:
     components:
     - type: Transform
       pos: 8.5,43.5
+      parent: 2
+  - uid: 10626
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 8.5,42.5
       parent: 2
   - uid: 10628
     components:
@@ -80748,20 +80774,6 @@ entities:
     components:
     - type: Transform
       pos: 6.5,47.5
-      parent: 2
-- proto: WallShuttleDiagonal
-  entities:
-  - uid: 8576
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 12.5,42.5
-      parent: 2
-  - uid: 10626
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 8.5,42.5
       parent: 2
 - proto: WallSolid
   entities:
@@ -85584,6 +85596,11 @@ entities:
       parent: 2
 - proto: WeaponCapacitorRecharger
   entities:
+  - uid: 433
+    components:
+    - type: Transform
+      pos: 13.5,-14.5
+      parent: 2
   - uid: 12134
     components:
     - type: Transform
