@@ -1,0 +1,22 @@
+# Airlocks
+spray-painter-style-airlockstandard-armory = Armory
+spray-painter-style-airlockstandard-bartender = Bartender
+spray-painter-style-airlockstandard-chief-engineer = Chief Engineer
+spray-painter-style-airlockstandard-combat-medic = Combat Medic
+spray-painter-style-airlockstandard-command-maintenance = Command Maintenance
+spray-painter-style-airlockstandard-courier = Courier
+spray-painter-style-airlockstandard-head-of-personnel = Head of Personnel
+spray-painter-style-airlockstandard-head-of-security = Head of Security
+spray-painter-style-airlockstandard-janitorial = Janitorial
+spray-painter-style-airlockstandard-kitchen = Kitchen
+spray-painter-style-airlockstandard-logistics = Logistics
+spray-painter-style-airlockstandard-logistics-maintenance = Logistics Maintenance
+spray-painter-style-airlockstandard-logistics-officer = Logistics Officer
+spray-painter-style-airlockstandard-medical-maintenance = Medical Maintenance
+spray-painter-style-airlockstandard-paramedic = Paramedic
+spray-painter-style-airlockstandard-research-director = Research Director
+spray-painter-style-airlockstandard-robotics = Robotics
+spray-painter-style-airlockstandard-science-maintenance = Science Maintenance
+spray-painter-style-airlockstandard-security-maintenance = Security Maintenance
+spray-painter-style-airlockstandard-service = Service
+spray-painter-style-airlockstandard-service-maintenance = Service Maintenance

@@ -130,6 +130,8 @@ namespace Content.Server.Nuke
 
             if (!codesMessage.IsEmpty)
                 nukeCode = Loc.GetString("nuke-codes-message")+codesMessage;
+
+            nukeCode = $"[font=\"Bitcount\"]{nukeCode}[/font]"; // starcup: style auth code page as dot matrix
             return !codesMessage.IsEmpty;
         }
     }

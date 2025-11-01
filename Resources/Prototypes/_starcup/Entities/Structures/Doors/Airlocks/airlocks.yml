@@ -1,3 +1,4 @@
+# Syndie Command
 - type: entity
   parent: AirlockCommand
   id: AirlockCommandSyndie
@@ -7,15 +8,6 @@
     sprite: _starcup/Structures/Doors/Airlocks/Standard/command_syndi.rsi
 
 - type: entity
-  parent: AirlockCentralCommand
-  id: AirlockSyndComm
-  suffix: Syndicate Communications
-  components:
-  - type: Sprite
-    sprite: _starcup/Structures/Doors/Airlocks/Standard/syndcomm.rsi
-
-# Glass
-- type: entity
   parent: AirlockCommandGlass
   id: AirlockCommandGlassSyndie
   suffix: Command, Syndicate
@@ -23,6 +15,7 @@
   - type: Sprite
     sprite: _starcup/Structures/Doors/Airlocks/Glass/command_syndi.rsi
 
+# Syndiecomm
 - type: entity
   parent: AirlockCentralCommandGlass
   id: AirlockSyndCommGlass
@@ -30,3 +23,440 @@
   components:
   - type: Sprite
     sprite: _starcup/Structures/Doors/Airlocks/Glass/syndcomm.rsi
+
+- type: entity
+  parent: AirlockCentralCommand
+  id: AirlockSyndComm
+  suffix: Syndicate Communications
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/syndcomm.rsi
+
+# Courier
+- type: entity
+  parent: Airlock
+  id: AirlockCourier
+  suffix: Courier
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/courier.rsi
+    - type: Wires
+      layoutId: AirlockCargo
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockCourierGlass
+  suffix: Courier
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/courier.rsi
+    - type: Wires
+      layoutId: AirlockCargo
+
+# Epi/sci
+- type: entity
+  parent: AirlockScience
+  id: AirlockRobotics
+  suffix: Robotics
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/roboticist.rsi
+
+- type: entity
+  parent: AirlockScienceGlass
+  id: AirlockRoboticsGlass
+  suffix: Robotics
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/roboticist.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMedicalScience
+  suffix: Medical/Science
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/medical.rsi
+    - type: Wires
+      layoutId: AirlockScience
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockMedicalScienceGlass
+  suffix: Medical/Science
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/medical.rsi
+    - type: Wires
+      layoutId: AirlockScience
+
+# Paramedic
+- type: entity
+  parent: AirlockMedical
+  id: AirlockParamedic
+  suffix: Paramedic
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/paramedic.rsi
+    - type: Wires
+      layoutId: AirlockMedical
+
+- type: entity
+  parent: AirlockMedicalGlass
+  id: AirlockParamedicGlass
+  suffix: Paramedic
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/paramedic.rsi
+    - type: Wires
+      layoutId: AirlockMedical
+
+# Service
+- type: entity
+  parent: Airlock
+  id: AirlockService
+  suffix: Service
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/service.rsi
+    - type: Wires
+      layoutId: AirlockService
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockServiceGlass
+  suffix: Service
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/service.rsi
+    - type: Wires
+      layoutId: AirlockService
+
+# Kitchen
+- type: entity
+  parent: Airlock
+  id: AirlockKitchen
+  suffix: Kitchen
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/kitchen.rsi
+    - type: Wires
+      layoutId: AirlockService
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockKitchenGlass
+  suffix: Kitchen
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/kitchen.rsi
+    - type: Wires
+      layoutId: AirlockService
+
+# Bartender
+- type: entity
+  parent: Airlock
+  id: AirlockBartender
+  suffix: Bartender
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/bartender.rsi
+    - type: Wires
+      layoutId: AirlockService
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockBartenderGlass
+  suffix: Bartender
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/bartender.rsi
+    - type: Wires
+      layoutId: AirlockService
+
+# Janitor
+- type: entity
+  parent: Airlock
+  id: AirlockJanitor
+  suffix: Janitor
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/janitor.rsi
+    - type: Wires
+      layoutId: AirlockService
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockJanitorGlass
+  suffix: Janitor
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/janitor.rsi
+    - type: Wires
+      layoutId: AirlockService
+
+# Armory
+- type: entity
+  parent: AirlockSecurity
+  id: AirlockArmory
+  suffix: Armory
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/armory.rsi
+    - type: Wires
+      layoutId: AirlockSecurity
+
+- type: entity
+  parent: AirlockSecurityGlass
+  id: AirlockArmoryGlass
+  suffix: Armory
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/armory.rsi
+    - type: Wires
+      layoutId: AirlockSecurity
+
+# Justice
+- type: entity
+  parent: Airlock
+  id: AirlockJustice
+  suffix: Justice
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/justice.rsi
+    - type: Wires
+      layoutId: AirlockSecurity
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockJusticeGlass
+  suffix: Justice
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/justice.rsi
+    - type: Wires
+      layoutId: AirlockSecurity
+
+# Combat Medic
+- type: entity
+  parent: AirlockSecurity
+  id: AirlockBrigmedic
+  suffix: Combat Medic
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/medsec.rsi
+    - type: Wires
+      layoutId: AirlockSecurity
+
+- type: entity
+  parent: AirlockSecurityGlass
+  id: AirlockBrigmedicGlass
+  suffix: Combat Medic
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/armory.rsi
+    - type: Wires
+      layoutId: AirlockSecurity
+
+# Unpainted
+- type: entity
+  parent: Airlock
+  id: AirlockUnpainted
+  suffix: Unpainted
+  description: It opens, it closes, and maybe crushes you. This one seems to be unpainted.
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/unpainted.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockUnpaintedGlass
+  suffix: Unpainted
+  description: It opens, it closes, and maybe crushes you. This one seems to be unpainted.
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/unpainted.rsi
+
+# Department Maints
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintCargo
+  name: logistics maintenance access
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_cargo.rsi
+    - type: Wires
+      layoutId: AirlockCargo
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintCommand
+  name: command maintenance access
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_command.rsi
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintEngineering
+  name: engineering maintenance access
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_engineering.rsi
+    - type: Wires
+      layoutId: AirlockEngineering
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintMedical
+  name: medical maintenance access
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_medical.rsi
+    - type: Wires
+      layoutId: AirlockMedical
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintScience
+  name: science maintenance access
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_science.rsi
+    - type: Wires
+      layoutId: AirlockScience
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintSecurity
+  name: security maintenance access
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_security.rsi
+    - type: Wires
+      layoutId: AirlockSecurity
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintService
+  name: service maintenance access
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi
+    - type: Wires
+      layoutId: AirlockSecurity
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintJustice
+  name: justice maintenance access
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_justice.rsi
+    - type: Wires
+      layoutId: AirlockSecurity
+
+- type: entity
+  parent: AirlockSyndicate
+  id: AirlockMaintSyndicate
+  name: syndicate maintenance access
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_syndicate.rsi
+
+- type: entity
+  parent: AirlockMaintScience
+  id: AirlockMaintRnDMed
+  name: RD/medical maintenance access
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_medical.rsi
+
+# Department Heads
+
+- type: entity
+  parent: AirlockCommand
+  id: AirlockChiefMedicalOfficer
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/command_cmo.rsi
+
+- type: entity
+  parent: AirlockCommand
+  id: AirlockChiefEngineer
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/command_ce.rsi
+
+- type: entity
+  parent: AirlockCommand
+  id: AirlockHeadOfSecurity
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/command_hos.rsi
+
+- type: entity
+  parent: AirlockCommand
+  id: AirlockResearchDirector
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/command_rd.rsi
+
+- type: entity
+  parent: AirlockCommand
+  id: AirlockHeadOfPersonnel
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/command_hop.rsi
+
+- type: entity
+  parent: AirlockCommand
+  id: AirlockQuartermaster
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/command_qm.rsi
+
+# Department Heads Glass
+
+- type: entity
+  parent: AirlockCommandGlass
+  id: AirlockChiefMedicalOfficerGlass
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/command_cmo.rsi
+
+- type: entity
+  parent: AirlockCommandGlass
+  id: AirlockChiefEngineerGlass
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/command_ce.rsi
+
+- type: entity
+  parent: AirlockCommandGlass
+  id: AirlockHeadOfSecurityGlass
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/command_hos.rsi
+
+- type: entity
+  parent: AirlockCommandGlass
+  id: AirlockResearchDirectorGlass
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/command_rd.rsi
+
+- type: entity
+  parent: AirlockCommandGlass
+  id: AirlockHeadOfPersonnelGlass
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/command_hop.rsi
+
+- type: entity
+  parent: AirlockCommandGlass
+  id: AirlockQuartermasterGlass
+  components:
+    - type: Sprite
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/command_qm.rsi

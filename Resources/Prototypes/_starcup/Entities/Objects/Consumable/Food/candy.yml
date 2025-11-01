@@ -1,0 +1,382 @@
+# Base Prototypes
+- type: entity
+  parent: FoodBase
+  id: FoodLollipop
+  abstract: true
+  name: lollipop
+  description: Little stick candies in a dizzyingly wide variety of flavors.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 3
+        - ReagentId: Nutriment
+          Quantity: 2
+  - type: Sprite
+    sprite: _DV/Objects/Consumable/Food/candy.rsi
+    layers:
+    - state: lollipop-ball
+    - state: lollipop-stickandshine
+  - type: Clothing
+    sprite: _DV/Objects/Consumable/Food/candy.rsi
+    slots: [ mask ]
+    equippedPrefix: lollipop
+    quickEquip: false
+  - type: Appearance
+  - type: Tag
+    tags:
+    - FoodSnack
+    - Candy
+
+- type: entity
+  parent: FoodBase
+  id: FoodGumball
+  abstract: true
+  name: gumball
+  description: A perennial favorite of standoffish cartoon characters.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 3
+        - ReagentId: Nutriment
+          Quantity: 2
+  - type: Sprite
+    sprite: _DV/Objects/Consumable/Food/candy.rsi
+    layers:
+    - state: gumball
+    - state: gumball-shine
+  - type: Appearance
+  - type: Tag
+    tags:
+    - FoodSnack
+    - Candy
+
+# Lollipops
+- type: entity
+  parent: FoodLollipop
+  id: FoodLollipopBlueRaspberry
+  name: blue raspberry lollipop
+  components:
+    - type: Sprite
+      layers:
+        - state: lollipop-ball
+          color: '#6fc6ec'
+        - state: lollipop-stickandshine
+    - type: FlavorProfile
+      flavors:
+        - blueraspberry
+
+- type: entity
+  parent: FoodLollipop
+  id: FoodLollipopBubblegum
+  name: bubblegum lollipop
+  components:
+    - type: Sprite
+      layers:
+        - state: lollipop-ball
+          color: '#e997c0'
+        - state: lollipop-stickandshine
+    - type: FlavorProfile
+      flavors:
+        - candybubblegum
+
+- type: entity
+  parent: FoodLollipop
+  id: FoodLollipopButterscotch
+  name: butterscotch lollipop
+  components:
+    - type: Sprite
+      layers:
+        - state: lollipop-ball
+          color: '#dfa337'
+        - state: lollipop-stickandshine
+    - type: FlavorProfile
+      flavors:
+        - butterscotch
+
+- type: entity
+  parent: FoodLollipop
+  id: FoodLollipopCottonCandy
+  name: cotton candy lollipop
+  components:
+    - type: Sprite
+      layers:
+        - state: lollipop-ball
+          color: '#00aeef'
+        - state: lollipop-stickandshine
+    - type: FlavorProfile
+      flavors:
+        - cottoncandy
+
+- type: entity
+  parent: FoodLollipop
+  id: FoodLollipopCherry
+  name: cherry lollipop
+  components:
+  - type: Sprite
+    layers:
+    - state: lollipop-ball
+      color: '#bd000a'
+    - state: lollipop-stickandshine
+  - type: FlavorProfile
+    flavors:
+      - cherry
+
+- type: entity
+  parent: FoodLollipop
+  id: FoodLollipopGrape
+  name: grape lollipop
+  components:
+    - type: Sprite
+      layers:
+        - state: lollipop-ball
+          color: '#823192'
+        - state: lollipop-stickandshine
+    - type: FlavorProfile
+      flavors:
+        - grape
+
+- type: entity
+  parent: FoodLollipop
+  id: FoodLollipopLemonLime
+  name: lemon-lime lollipop
+  components:
+    - type: Sprite
+      layers:
+        - state: lollipop-ball
+          color: '#faff87'
+        - state: lollipop-stickandshine
+    - type: FlavorProfile
+      flavors:
+        - lemonlimesoda
+
+- type: entity
+  parent: FoodLollipop
+  id: FoodLollipopMango
+  name: mango lollipop
+  components:
+    - type: Sprite
+      layers:
+        - state: lollipop-ball
+          color: '#ffd95e'
+        - state: lollipop-stickandshine
+    - type: FlavorProfile
+      flavors:
+        - mango
+
+- type: entity
+  parent: FoodLollipop
+  id: FoodLollipopOrange
+  name: orange lollipop
+  components:
+    - type: Sprite
+      layers:
+        - state: lollipop-ball
+          color: '#ff5a13'
+        - state: lollipop-stickandshine
+    - type: FlavorProfile
+      flavors:
+        - orange
+
+- type: entity
+  parent: FoodLollipop
+  id: FoodLollipopPineapple
+  name: pineapple lollipop
+  components:
+    - type: Sprite
+      layers:
+        - state: lollipop-ball
+          color: '#faca60'
+        - state: lollipop-stickandshine
+    - type: FlavorProfile
+      flavors:
+        - pineapple
+
+- type: entity
+  parent: FoodLollipop
+  id: FoodLollipopRootBeer
+  name: root beer lollipop
+  components:
+    - type: Sprite
+      layers:
+        - state: lollipop-ball
+          color: '#aa6d00'
+        - state: lollipop-stickandshine
+    - type: FlavorProfile
+      flavors:
+        - rootbeersoda
+
+- type: entity
+  parent: FoodLollipop
+  id: FoodLollipopSourApple
+  name: sour apple lollipop
+  components:
+    - type: Sprite
+      layers:
+        - state: lollipop-ball
+          color: '#7ec243'
+        - state: lollipop-stickandshine
+    - type: FlavorProfile
+      flavors:
+        - sourapple
+
+- type: entity
+  parent: FoodLollipop
+  id: FoodLollipopStrawberry
+  name: strawberry lollipop
+  components:
+    - type: Sprite
+      layers:
+        - state: lollipop-ball
+          color: '#ea1b2c'
+        - state: lollipop-stickandshine
+    - type: FlavorProfile
+      flavors:
+        - candystrawberry
+
+- type: entity
+  parent: FoodLollipop
+  id: FoodLollipopWatermelon
+  name: watermelon lollipop
+  components:
+    - type: Sprite
+      layers:
+        - state: lollipop-ball
+          color: '#ff7685'
+        - state: lollipop-stickandshine
+    - type: FlavorProfile
+      flavors:
+        - watermelon
+
+# Gumballs
+- type: entity
+  parent: FoodGumball
+  id: FoodGumballBasic
+  components:
+    - type: Sprite
+      layers:
+        - state: gumball
+          color: '#ff7cb1'
+        - state: gumball-shine
+    - type: FlavorProfile
+      flavors:
+        - candybubblegum
+
+- type: entity
+  parent: FoodGumball
+  id: FoodGumballBanana
+  name: banana gumball
+  components:
+    - type: Sprite
+      layers:
+        - state: gumball
+          color: '#f6f557'
+        - state: gumball-shine
+    - type: FlavorProfile
+      flavors:
+        - banana
+
+- type: entity
+  parent: FoodGumball
+  id: FoodGumballBlueRaspberry
+  name: blue raspberry gumball
+  components:
+    - type: Sprite
+      layers:
+        - state: gumball
+          color: '#007ed9'
+        - state: gumball-shine
+    - type: FlavorProfile
+      flavors:
+        - blueraspberry
+
+- type: entity
+  parent: FoodGumball
+  id: FoodGumballCherry
+  name: cherry gumball
+  components:
+    - type: Sprite
+      layers:
+        - state: gumball
+          color: '#fb0018'
+        - state: gumball-shine
+    - type: FlavorProfile
+      flavors:
+        - cherry
+
+- type: entity
+  parent: FoodGumball
+  id: FoodGumballGrape
+  name: grape gumball
+  components:
+    - type: Sprite
+      layers:
+        - state: gumball
+          color: '#5100aa'
+        - state: gumball-shine
+    - type: FlavorProfile
+      flavors:
+        - grape
+
+- type: entity
+  parent: FoodGumball
+  id: FoodGumballLemonLime
+  name: lemon-lime gumball
+  components:
+    - type: Sprite
+      layers:
+        - state: gumball
+          color: '#00cf37'
+        - state: gumball-shine
+    - type: FlavorProfile
+      flavors:
+        - lemonlimesoda
+
+- type: entity
+  parent: FoodGumball
+  id: FoodGumballOrange
+  name: orange gumball
+  components:
+    - type: Sprite
+      layers:
+        - state: gumball
+          color: '#ff8e31'
+        - state: gumball-shine
+    - type: FlavorProfile
+      flavors:
+        - orange
+
+- type: entity
+  parent: FoodGumball
+  id: FoodGumballPineapple
+  name: pineapple gumball
+  components:
+    - type: Sprite
+      layers:
+        - state: gumball
+          color: '#ebf0f3' # did you know that the white ones are pineapple?
+        - state: gumball-shine
+    - type: FlavorProfile
+      flavors:
+        - pineapple
+
+- type: entity
+  parent: FoodGumball
+  id: FoodGumballStrawberry
+  name: strawberry gumball
+  components:
+    - type: Sprite
+      layers:
+        - state: gumball
+          color: "#f72d78"
+        - state: gumball-shine
+    - type: FlavorProfile
+      flavors:
+        - candystrawberry

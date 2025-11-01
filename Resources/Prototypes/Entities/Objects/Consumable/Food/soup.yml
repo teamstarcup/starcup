@@ -670,31 +670,33 @@
     - Fruit
     - Soup
 
-- type: entity
-  name: wing fang chu
-  parent: FoodBowlBase
-  id: FoodSoupWingFangChu
-  description: A savory dish of alien wing wang in soy.
-  components:
-  - type: FlavorProfile
-    flavors:
-      - meaty
-      - salty
-  - type: Sprite
-    layers:
-    - state: bowl
-    - state: wingfangchu
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 40
-        reagents:
-        - ReagentId: Protein
-          Quantity: 15
-        - ReagentId: Soysauce
-          Quantity: 10
-        - ReagentId: Vitamin
-          Quantity: 10
+# begin starcup: removed for tone
+#- type: entity
+#  name: wing fang chu
+#  parent: FoodBowlBase
+#  id: FoodSoupWingFangChu
+#  description: A savory dish of alien wing wang in soy.
+#  components:
+#  - type: FlavorProfile
+#    flavors:
+#      - meaty
+#      - salty
+#  - type: Sprite
+#    layers:
+#    - state: bowl
+#    - state: wingfangchu
+#  - type: SolutionContainerManager
+#    solutions:
+#      food:
+#        maxVol: 40
+#        reagents:
+#        - ReagentId: Protein
+#          Quantity: 15
+#        - ReagentId: Soysauce
+#          Quantity: 10
+#        - ReagentId: Vitamin
+#          Quantity: 10
+# end starcup
 
 - type: entity
   name: clown's tears
