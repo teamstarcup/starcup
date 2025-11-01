@@ -23,6 +23,27 @@
 # Grass
 
 - type: tile
+  id: FloorPlanetGrassGolden
+  name: golden grass planet floor
+  parent: FloorPlanetGrass
+  sprite: /Textures/_starcup/Tiles/Planet/grass_golden/grass.png
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Planet/grass_golden/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/grass_golden/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/grass_golden/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/grass_golden/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/grass_golden/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/grass_golden/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/grass_golden/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/grass_golden/double_edge.png
+
+- type: tile
   id: FloorPlanetGrassCold # It's really just desaturated.
   name: cold grass planet floor
   parent: FloorPlanetGrass
