@@ -27,7 +27,6 @@ entities:
       name: Medical Outpost
     - type: Transform
       pos: 3,7
-      parent: invalid
     - type: MapGrid
       chunks:
         0,0:
@@ -379,11 +378,6 @@ entities:
       parent: 1
     - type: Paper
       content: savegrid 2021561 /silent-moon-foxcul-med-outpost
-    - type: UserInterface
-      actors:
-        enum.PaperUiKey.Key:
-        - invalid
-    - type: ActiveUserInterface
 - proto: PaperDyedRed
   entities:
   - uid: 42

@@ -27,7 +27,6 @@ entities:
       name: hatch
     - type: Transform
       pos: 9,9
-      parent: invalid
     - type: MapGrid
       chunks:
         -1,0:
@@ -161,48 +160,6 @@ entities:
     - type: Transform
       pos: -5.12072,-3.1488917
       parent: 1
-    - type: Physics
-      bodyStatus: InAir
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape: !type:PolygonShape
-            radius: 0.01
-            vertices:
-            - -0.25,-0.25
-            - 0.25,-0.25
-            - 0.25,0.25
-            - -0.25,0.25
-          mask:
-          - Impassable
-          - HighImpassable
-          layer: []
-          density: 20
-          hard: True
-          restitution: 0.3
-          friction: 0.2
-        throw-fixture:
-          shape: !type:PolygonShape
-            radius: 0.01
-            vertices:
-            - -0.25,-0.25
-            - 0.25,-0.25
-            - 0.25,0.25
-            - -0.25,0.25
-          mask:
-          - Impassable
-          - HighImpassable
-          - BulletImpassable
-          layer: []
-          density: 1
-          hard: False
-          restitution: 0
-          friction: 0.4
-    - type: ThrownItem
-      playLandSound: True
-      landTime: 77348.9691025
-      thrownTime: 77348.922651
-      thrower: invalid
 - proto: ScrapFireExtinguisher
   entities:
   - uid: 9

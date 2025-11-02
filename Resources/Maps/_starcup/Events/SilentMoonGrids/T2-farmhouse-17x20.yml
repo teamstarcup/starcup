@@ -29,7 +29,6 @@ entities:
       name: Acid Enterprise Farmhouse
     - type: Transform
       pos: 21,16
-      parent: invalid
     - type: MapGrid
       chunks:
         -1,0:
@@ -756,11 +755,6 @@ entities:
           - 5
           - 10
           - 6
-    - type: UserInterface
-      actors:
-        enum.StorageUiKey.Key:
-        - invalid
-    - type: ActiveUserInterface
 - proto: FenceWoodHighCorner
   entities:
   - uid: 104
