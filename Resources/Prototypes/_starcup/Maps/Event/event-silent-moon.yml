@@ -1,22 +1,20 @@
 - type: gameMap
   id: EventCharonEpsilon
-  mapName: 'Charon-Epsilon Orbital Transit Station'
-  mapPath: /Maps/_starcup/Events/silent_moon_orbital_station.yml
+  mapName: 'Charon-Epsilon Surface Outpost'
+  mapPath: /Maps/_starcup/Events/silent_moon_surface_station.yml
   maxRandomOffset: 0
   randomRotation: false
   minPlayers: 0
   maxPlayers: 60
   stations:
     EventSilentMoon:
-      stationProto: StandardNanotrasenStation
+      stationProto: StandardTerrestrialStationNoEvac
       components:
       - type: StationNameSetup
-        mapNameTemplate: 'Charon-Epsilon Orbital Transit Station'
-      - type: StationEmergencyShuttle
-        emergencyShuttlePath: /Maps/_starcup/Shuttles/SYND_EvacShip.yml
-      - type: StationPlanetSpawner
-        planet: SilentMoon
-        gridPath: /Maps/_starcup/Events/silent_moon_surface_station.yml
+        mapNameTemplate: 'Charon-Epsilon Surface Outpost'
+      - type: StationBiome
+        biome: Charonic
+        mapLightColor: "#2B3153"
       - type: StationJobs
         availableJobs:
           #Command
