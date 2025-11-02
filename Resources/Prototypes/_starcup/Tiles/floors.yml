@@ -302,3 +302,86 @@
     collection: FootstepFloor
   itemDrop: FloorTileItemOrnate
   heatCapacity: 10000
+
+# Faux sci tiles
+
+- type: tile
+  id: FloorAstroGrassGolden
+  name: golden astro-grass
+  parent: FloorAstroGrass
+  sprite: /Textures/_starcup/Tiles/Planet/grass_golden/grass.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Planet/grass_golden/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/grass_golden/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/grass_golden/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/grass_golden/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/grass_golden/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/grass_golden/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/grass_golden/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/grass_golden/double_edge.png
+  deconstructTools: [ Cutting ]
+  itemDrop: FloorTileItemAstroGrassGolden
+
+- type: tile
+  id: FloorAstroGrassCold
+  name: cold astro-grass
+  parent: FloorAstroGrass
+  sprite: /Textures/_starcup/Tiles/Planet/grass_cold/grass.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Planet/grass_cold/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/grass_cold/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/grass_cold/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/grass_cold/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/grass_cold/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/grass_cold/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/grass_cold/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/grass_cold/double_edge.png
+  deconstructTools: [ Cutting ]
+  itemDrop: FloorTileItemAstroGrassCold
+
+- type: tile
+  id: FloorAstroGrassSnowy
+  name: snowy astro-grass
+  parent: FloorAstroGrass
+  sprite: /Textures/_starcup/Tiles/Planet/grass_snowy/grass.png
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Planet/grass_snowy/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/grass_snowy/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/grass_snowy/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/grass_snowy/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/grass_snowy/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/grass_snowy/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/grass_snowy/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/grass_snowy/double_edge.png
+  deconstructTools: [ Cutting ]
+  itemDrop: FloorTileItemAstroGrassSnowy
+
+# Ice
+- type: tile
+  id: FloorAstroSnowGrassy
+  name: grassy astro-snow
+  parent: FloorSnowGrassy
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  itemDrop: FloorTileItemAstroSnowGrassy

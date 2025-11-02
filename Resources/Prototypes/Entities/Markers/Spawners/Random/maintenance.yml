@@ -161,6 +161,17 @@
         - id: ClothingNeckTransPin
         - id: ClothingNeckAutismPin
         - id: ClothingNeckGoldAutismPin
+      # begin starcup: candy buckets
+      - !type:GroupSelector
+        children:
+        - id: CandyBucketPailPlainRandom
+        - id: CandyBucketPailSmileyRandom
+        - id: CandyBucketPailCat
+        - id: CandyBucketPailClown
+        - id: CandyBucketPailGhost
+        - id: CandyBucketPailPumpkin
+        - id: CandyBucketPailSkeleton
+      # end starcup
     # Rare Group
     - !type:GroupSelector
       weight: 2
@@ -236,6 +247,7 @@
       - id: Crowbar
       - id: Multitool
       - id: Shovel
+      - id: ChoppingAxe # starcup: add chopping axes & fireaxe resprite
       - id: Welder
       - id: GasAnalyzer
       - id: SprayPainter
