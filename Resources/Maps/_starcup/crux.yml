@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 11/02/2025 01:58:27
-  entityCount: 13646
+  time: 11/02/2025 02:49:08
+  entityCount: 13649
 maps:
 - 1
 grids:
@@ -32464,7 +32464,7 @@ entities:
       pos: -1.5,17.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -3009.4849
+      secondsUntilStateChange: -3042.023
       state: Closing
   - uid: 5382
     components:
@@ -72700,6 +72700,23 @@ entities:
     components:
     - type: Transform
       pos: 0.5,37.5
+      parent: 2
+- proto: SpawnPointSalvageSpecialist
+  entities:
+  - uid: 13647
+    components:
+    - type: Transform
+      pos: -30.5,-31.5
+      parent: 2
+  - uid: 13648
+    components:
+    - type: Transform
+      pos: -26.5,-29.5
+      parent: 2
+  - uid: 13649
+    components:
+    - type: Transform
+      pos: -31.5,-28.5
       parent: 2
 - proto: SpawnPointScientist
   entities:
