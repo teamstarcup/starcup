@@ -77,6 +77,20 @@ entities:
     - type: GridTree
     - type: Broadphase
     - type: OccluderTree
+#    - type: WeatherScheduler
+#      stages:
+#      - weather: CharonHush
+#        duration:
+#          min: 2700
+#          max: 3600
+    - type: MapAtmosphere
+      mixture:
+        volume: 2500
+        temperature: 273.15
+        moles:
+        - 35.66759
+        - 63.40905
+        space: false
   - uid: 2
     components:
     - type: MetaData
@@ -1192,6 +1206,8 @@ entities:
             Nitrogen: 102.419266
         chunkSize: 4
     - type: GasTileOverlay
+    - type: BecomesStation
+      id: EventSilentMoon
     - type: RadiationGridResistance
     - type: Roof
       weatherOcclusionData:
