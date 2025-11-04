@@ -137,7 +137,8 @@
 - type: weightedRandomFillSolution
   id: RandomFillPuddleHollowTree
   fills:
-  - quantity: 40
+  - quantity: 60
+    weight: 1
     reagents:
     - Blood
     - Oil
@@ -146,12 +147,14 @@
     - VentCrud
     - Ammonia
   - quantity: 20
+    weight: 1
     reagents:
     - Plasma
     - Stellibinin
     - ChloralHydrate
     - MuteToxin
   - quantity: 10
+    weight: 1
     reagents:
     - Lead
     - Necrosol
