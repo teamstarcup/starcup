@@ -4,7 +4,7 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 11/04/2025 10:07:31
+  time: 11/04/2025 10:20:14
   entityCount: 2630
 maps:
 - 1
@@ -2523,6 +2523,13 @@ entities:
     components:
     - type: Transform
       pos: 28.5,-5.5
+      parent: 2
+- proto: BotanistIDCard
+  entities:
+  - uid: 2628
+    components:
+    - type: Transform
+      pos: 19.49081,-15.775076
       parent: 2
 - proto: BoxAgrichem
   entities:
@@ -6492,6 +6499,14 @@ entities:
     - type: Transform
       pos: 23.5,-15.5
       parent: 2
+- proto: ChemistIDCard
+  entities:
+  - uid: 2630
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 10.76737,-21.819317
+      parent: 2
 - proto: ChemistryBottleNecrosol
   entities:
   - uid: 954
@@ -7242,60 +7257,6 @@ entities:
     - type: Transform
       pos: 10.612579,11.692545
       parent: 2
-- proto: DoorRemoteCargo
-  entities:
-  - uid: 2628
-    components:
-    - type: Transform
-      pos: 1.3507885,5.4680057
-      parent: 2
-    missingComponents:
-    - Contraband
-- proto: DoorRemoteEngineering
-  entities:
-  - uid: 2210
-    components:
-    - type: Transform
-      pos: 24.461246,-3.813538
-      parent: 2
-    missingComponents:
-    - Contraband
-- proto: DoorRemoteMedical
-  entities:
-  - uid: 2629
-    components:
-    - type: Transform
-      pos: 13.31021,-22.240482
-      parent: 2
-    missingComponents:
-    - Contraband
-- proto: DoorRemoteResearch
-  entities:
-  - uid: 2624
-    components:
-    - type: Transform
-      pos: 9.418469,2.6371174
-      parent: 2
-    missingComponents:
-    - Contraband
-- proto: DoorRemoteSecurity
-  entities:
-  - uid: 2627
-    components:
-    - type: Transform
-      pos: 31.74061,9.866049
-      parent: 2
-    missingComponents:
-    - Contraband
-- proto: DoorRemoteService
-  entities:
-  - uid: 2630
-    components:
-    - type: Transform
-      pos: 26.810318,-9.813089
-      parent: 2
-    missingComponents:
-    - Contraband
 - proto: DrinkBeerBottleFull
   entities:
   - uid: 1071
@@ -7479,6 +7440,13 @@ entities:
     components:
     - type: Transform
       pos: 28.475197,-10.484018
+      parent: 2
+- proto: EngineeringIDCard
+  entities:
+  - uid: 2198
+    components:
+    - type: Transform
+      pos: 24.359478,-3.925809
       parent: 2
 - proto: ExosuitFabricator
   entities:
@@ -7807,7 +7775,7 @@ entities:
       pos: 16.5,-16.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -94259.336
+      secondsUntilStateChange: -94685.87
       state: Closing
   - uid: 1154
     components:
@@ -7843,7 +7811,7 @@ entities:
       pos: 17.5,-16.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -81746.62
+      secondsUntilStateChange: -82173.15
       state: Closing
   - uid: 1160
     components:
@@ -13881,6 +13849,13 @@ entities:
     - type: Transform
       pos: 23.5,0.5
       parent: 2
+- proto: ResearchIDCard
+  entities:
+  - uid: 2624
+    components:
+    - type: Transform
+      pos: 9.323008,2.672104
+      parent: 2
 - proto: RipleyHarness
   entities:
   - uid: 2048
@@ -13902,6 +13877,13 @@ entities:
     components:
     - type: Transform
       pos: 30.5,-2.5
+      parent: 2
+- proto: SalvageIDCard
+  entities:
+  - uid: 1814
+    components:
+    - type: Transform
+      pos: 1.4662694,5.3999906
       parent: 2
 - proto: ScrapBucket
   entities:
@@ -13955,6 +13937,13 @@ entities:
     components:
     - type: Transform
       pos: 31.471676,-23.94947
+      parent: 2
+- proto: SecurityIDCard
+  entities:
+  - uid: 2627
+    components:
+    - type: Transform
+      pos: 31.731739,9.79579
       parent: 2
 - proto: SeedExtractorMachineCircuitboard
   entities:
@@ -15469,10 +15458,10 @@ entities:
       - - Chemistry
 - proto: VendingMachineClothing
   entities:
-  - uid: 2198
+  - uid: 2210
     components:
     - type: Transform
-      pos: 7.5,-2.5
+      pos: 6.5,0.5
       parent: 2
 - proto: VendingMachineCondiments
   entities:
@@ -15556,10 +15545,10 @@ entities:
       parent: 2
 - proto: VendingMachineWinter
   entities:
-  - uid: 1814
+  - uid: 2629
     components:
     - type: Transform
-      pos: 10.5,-2.5
+      pos: 15.5,0.5
       parent: 2
 - proto: VendingMachineYouTool
   entities:
