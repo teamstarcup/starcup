@@ -82,14 +82,18 @@
     - !type:GroupSelector
       weight: 0.03
       children:
-      - !type:NestedSelector
-        rolls: !type:RangeNumberSelector
-          range: 1, 2
-        tableId: RandomHumanOrganTable
-      - !type:NestedSelector
-        rolls: !type:RangeNumberSelector
-          range: 1, 2
-        tableId: RandomAnimalOrganTable
+      - !type:AllSelector
+        - id: PuddleBlood
+        - !type:NestedSelector
+          rolls: !type:RangeNumberSelector
+            range: 1, 2
+          tableId: RandomHumanOrganTable
+      - !type:AllSelector
+        - id: PuddleBlood
+        - !type:NestedSelector
+          rolls: !type:RangeNumberSelector
+            range: 1, 2
+          tableId: RandomAnimalOrganTable
 
     - !type:GroupSelector
       weight: 0.005
