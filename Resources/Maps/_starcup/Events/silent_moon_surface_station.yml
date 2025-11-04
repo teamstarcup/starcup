@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 11/02/2025 20:09:48
-  entityCount: 2623
+  time: 11/04/2025 10:07:31
+  entityCount: 2630
 maps:
 - 1
 grids:
@@ -77,20 +77,14 @@ entities:
     - type: GridTree
     - type: Broadphase
     - type: OccluderTree
-#    - type: WeatherScheduler
-#      stages:
-#      - weather: CharonHush
-#        duration:
-#          min: 2700
-#          max: 3600
     - type: MapAtmosphere
       mixture:
         volume: 2500
+        immutable: True
         temperature: 273.15
         moles:
-        - 35.66759
-        - 63.40905
-        space: false
+          Oxygen: 35.66759
+          Nitrogen: 63.40905
   - uid: 2
     components:
     - type: MetaData
@@ -1418,13 +1412,6 @@ entities:
     - type: Transform
       pos: 17.5,7.5
       parent: 2
-- proto: AirlockArmoryGlassLocked
-  entities:
-  - uid: 19
-    components:
-    - type: Transform
-      pos: -1.5,7.5
-      parent: 2
 - proto: AirlockCargoGlassLocked
   entities:
   - uid: 20
@@ -1643,6 +1630,11 @@ entities:
       parent: 2
 - proto: AirlockSecurityGlassLocked
   entities:
+  - uid: 19
+    components:
+    - type: Transform
+      pos: -1.5,7.5
+      parent: 2
   - uid: 51
     components:
     - type: MetaData
@@ -2020,17 +2012,23 @@ entities:
       parent: 2
 - proto: Autolathe
   entities:
-  - uid: 106
+  - uid: 2081
     components:
     - type: Transform
-      pos: 9.5,2.5
+      pos: 10.5,0.5
       parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
 - proto: AutolatheMachineCircuitboard
   entities:
   - uid: 107
     components:
     - type: Transform
-      pos: 24.568314,-4.474493
+      pos: 24.497324,-4.4021144
       parent: 2
 - proto: BannerScience
   entities:
@@ -2460,7 +2458,7 @@ entities:
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 13.187611,-24.543606
+      pos: 13.445927,-26.872509
       parent: 2
 - proto: Bookshelf
   entities:
@@ -6521,7 +6519,7 @@ entities:
   - uid: 957
     components:
     - type: Transform
-      pos: 14.15744,-23.836872
+      pos: 12.014113,-26.08629
       parent: 2
 - proto: ChemistryHotplate
   entities:
@@ -6731,7 +6729,7 @@ entities:
   - uid: 988
     components:
     - type: Transform
-      pos: 1.385582,5.697687
+      pos: 1.3225273,5.8210454
       parent: 2
 - proto: ClothingOuterWinterMed
   entities:
@@ -7244,6 +7242,60 @@ entities:
     - type: Transform
       pos: 10.612579,11.692545
       parent: 2
+- proto: DoorRemoteCargo
+  entities:
+  - uid: 2628
+    components:
+    - type: Transform
+      pos: 1.3507885,5.4680057
+      parent: 2
+    missingComponents:
+    - Contraband
+- proto: DoorRemoteEngineering
+  entities:
+  - uid: 2210
+    components:
+    - type: Transform
+      pos: 24.461246,-3.813538
+      parent: 2
+    missingComponents:
+    - Contraband
+- proto: DoorRemoteMedical
+  entities:
+  - uid: 2629
+    components:
+    - type: Transform
+      pos: 13.31021,-22.240482
+      parent: 2
+    missingComponents:
+    - Contraband
+- proto: DoorRemoteResearch
+  entities:
+  - uid: 2624
+    components:
+    - type: Transform
+      pos: 9.418469,2.6371174
+      parent: 2
+    missingComponents:
+    - Contraband
+- proto: DoorRemoteSecurity
+  entities:
+  - uid: 2627
+    components:
+    - type: Transform
+      pos: 31.74061,9.866049
+      parent: 2
+    missingComponents:
+    - Contraband
+- proto: DoorRemoteService
+  entities:
+  - uid: 2630
+    components:
+    - type: Transform
+      pos: 26.810318,-9.813089
+      parent: 2
+    missingComponents:
+    - Contraband
 - proto: DrinkBeerBottleFull
   entities:
   - uid: 1071
@@ -7755,7 +7807,7 @@ entities:
       pos: 16.5,-16.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -92644.63
+      secondsUntilStateChange: -94259.336
       state: Closing
   - uid: 1154
     components:
@@ -7791,7 +7843,7 @@ entities:
       pos: 17.5,-16.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -80131.914
+      secondsUntilStateChange: -81746.62
       state: Closing
   - uid: 1160
     components:
@@ -8129,22 +8181,22 @@ entities:
   - uid: 1222
     components:
     - type: Transform
-      pos: 13.5,-24.5
+      pos: 13.5,-26.5
       parent: 2
   - uid: 1223
     components:
     - type: Transform
-      pos: 13.5,-23.5
+      pos: 13.5,-27.5
       parent: 2
   - uid: 1224
     components:
     - type: Transform
-      pos: 12.5,-23.5
+      pos: 14.5,-27.5
       parent: 2
   - uid: 1225
     components:
     - type: Transform
-      pos: 12.5,-24.5
+      pos: 12.5,-26.5
       parent: 2
   - uid: 1226
     components:
@@ -8159,17 +8211,17 @@ entities:
   - uid: 1228
     components:
     - type: Transform
-      pos: 14.5,-23.5
+      pos: 14.5,-26.5
       parent: 2
   - uid: 1229
     components:
     - type: Transform
-      pos: 14.5,-24.5
+      pos: 11.5,-26.5
       parent: 2
   - uid: 1230
     components:
     - type: Transform
-      pos: 13.5,-22.5
+      pos: 12.5,-27.5
       parent: 2
   - uid: 1231
     components:
@@ -11453,7 +11505,7 @@ entities:
   - uid: 1703
     components:
     - type: Transform
-      pos: 1.5797825,5.503455
+      pos: 1.60784,5.7186427
       parent: 2
 - proto: HandheldHealthAnalyzerEmpty
   entities:
@@ -12139,6 +12191,14 @@ entities:
     - type: Transform
       pos: 26.63514,-9.384268
       parent: 2
+- proto: MicroManipulatorStockPart
+  entities:
+  - uid: 2625
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 11.687464,0.49052668
+      parent: 2
 - proto: MopBucketFull
   entities:
   - uid: 1798
@@ -12232,16 +12292,6 @@ entities:
       parent: 2
 - proto: PaperNanoTaskItem
   entities:
-  - uid: 1811
-    components:
-    - type: Transform
-      pos: 21.916893,-8.40846
-      parent: 2
-    - type: Paper
-      content: >-
-        things it's lacking:
-
-        - stasis bed
   - uid: 1812
     components:
     - type: Transform
@@ -12252,66 +12302,8 @@ entities:
       content: >+
         Scavenger Hunt:
 
-  - uid: 1813
-    components:
-    - type: Transform
-      pos: 8.603458,-7.410784
-      parent: 2
-    - type: Paper
-      content: >-
-        Scavenger Hunt:
-
-        Jukebox
-
-        boozeomat
-
-        a second keg
-
-        dishes and ingredients
-
-        more instruments
 - proto: PaperOffice
   entities:
-  - uid: 1814
-    components:
-    - type: Transform
-      pos: 25.089642,-0.5654865
-      parent: 2
-    - type: Paper
-      content: >-
-        Science Requirements:
-
-
-        X Signage
-
-
-        X R&D Server (researchanddevelopmentserver)
-             - Note: not even sure if this will work. needs testing
-        X A.P.E.s (possibly two)
-
-        X Anomaly Vessel (possibly two?)
-
-        X Scientist Lockers (2-3)
-
-        X Development Area:
-             - X Autolathe
-             - X Protolathe
-             - X Circuit Imprinter
-             - X Raw Materials (1-2 stacks of each basic)
-        X Artifact Chamber:
-             - X Analysis Console
-             - X Artifact Analyzer
-             - X Airlock
-             - X Blast Doors? (what's ambient atmos?)
-             - X Tools (needs to be able to provide triggers)
-  - uid: 1815
-    components:
-    - type: Transform
-      pos: 10.7020035,-0.50829476
-      parent: 2
-    - type: Paper
-      content: savegrid 128104 /silent-moon-deadmoon-outpost
-    - type: ActiveUserInterface
   - uid: 1816
     components:
     - type: Transform
@@ -12973,6 +12965,16 @@ entities:
       parent: 2
 - proto: Rack
   entities:
+  - uid: 106
+    components:
+    - type: Transform
+      pos: 9.5,2.5
+      parent: 2
+  - uid: 1813
+    components:
+    - type: Transform
+      pos: 9.5,0.5
+      parent: 2
   - uid: 1902
     components:
     - type: Transform
@@ -12982,11 +12984,6 @@ entities:
     components:
     - type: Transform
       pos: -0.5,11.5
-      parent: 2
-  - uid: 1904
-    components:
-    - type: Transform
-      pos: 9.5,3.5
       parent: 2
   - uid: 1905
     components:
@@ -14086,6 +14083,11 @@ entities:
       parent: 2
 - proto: SheetGlass10
   entities:
+  - uid: 1811
+    components:
+    - type: Transform
+      pos: 9.254287,0.40520072
+      parent: 2
   - uid: 2077
     components:
     - type: Transform
@@ -14110,13 +14112,6 @@ entities:
     - type: Transform
       pos: 11.644684,8.532428
       parent: 2
-- proto: SheetSteel
-  entities:
-  - uid: 2081
-    components:
-    - type: Transform
-      pos: 9.453758,3.5979552
-      parent: 2
 - proto: SheetSteel1
   entities:
   - uid: 1033
@@ -14126,6 +14121,13 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+- proto: SheetSteel10
+  entities:
+  - uid: 1815
+    components:
+    - type: Transform
+      pos: 9.61357,0.49461246
+      parent: 2
 - proto: SheetUranium
   entities:
   - uid: 2082
@@ -15096,6 +15098,12 @@ entities:
     - type: Transform
       pos: 24.5,-4.5
       parent: 2
+  - uid: 2626
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 11.5,0.5
+      parent: 2
 - proto: TableCounterMetal
   entities:
   - uid: 2143
@@ -15367,6 +15375,11 @@ entities:
       parent: 2
 - proto: ToolboxMechanicalFilled
   entities:
+  - uid: 1904
+    components:
+    - type: Transform
+      pos: 11.393075,0.7871635
+      parent: 2
   - uid: 2191
     components:
     - type: Transform
@@ -15459,7 +15472,7 @@ entities:
   - uid: 2198
     components:
     - type: Transform
-      pos: 10.5,0.5
+      pos: 7.5,-2.5
       parent: 2
 - proto: VendingMachineCondiments
   entities:
@@ -15543,10 +15556,10 @@ entities:
       parent: 2
 - proto: VendingMachineWinter
   entities:
-  - uid: 2210
+  - uid: 1814
     components:
     - type: Transform
-      pos: 9.5,0.5
+      pos: 10.5,-2.5
       parent: 2
 - proto: VendingMachineYouTool
   entities:
