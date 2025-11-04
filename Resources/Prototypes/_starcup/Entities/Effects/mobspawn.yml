@@ -135,18 +135,22 @@
 - type: weightedRandomFillSolution
   id: RandomFillPuddleHollowTree
   fills:
-  - quantity: 10
+  - quantity: 40
     reagents:
     - Blood
     - Oil
     - InsectBlood
-    - MuteToxin
     - Aluminium
-    - Lead
-    - Plasma
-    - Stellibinin
-    - Necrosol
-    - Opporozidone
     - VentCrud
     - Ammonia
+  - quantity: 20
+    reagents:
+    - Plasma
+    - Stellibinin
     - ChloralHydrate
+    - MuteToxin
+  - quantity: 10
+    reagents:
+    - Lead
+    - Necrosol
+    - Opporozidone
