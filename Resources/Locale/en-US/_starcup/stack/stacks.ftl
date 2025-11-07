@@ -7,6 +7,7 @@ stack-matter-bin = matter bin
 stack-starcup-floor-brick-horizontal = horizontal astro-brick
 stack-starcup-floor-brick-vertical = vertical astro-brick
 stack-starcup-floor-gray-brick = gray bricks
+stack-starcup-floor-dark-gray-brick = dark gray bricks
 
 # carpet
 stack-starcup-carpet-blue = blue carpet floor

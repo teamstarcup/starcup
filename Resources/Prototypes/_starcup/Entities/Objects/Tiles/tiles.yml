@@ -61,6 +61,18 @@
   - type: Stack
     stackType: FloorTileGrayBrick
 
+- type: entity
+  parent: FloorTileItemGrayBrick
+  id: FloorTileItemDarkGrayBrick
+  name: dark gray brick
+  components:
+  - type: Sprite
+    state: darkgraybricks
+  - type: Item
+    heldPrefix: darkgraybricks
+  - type: Stack
+    stackType: FloorTileDarkGrayBrick
+
 # Wood
 - type: entity
   parent: FloorTileItemBase

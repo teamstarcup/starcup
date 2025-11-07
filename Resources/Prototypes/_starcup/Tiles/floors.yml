@@ -66,7 +66,7 @@
 
 - type: tile
   id: FloorStarcupGrayBrick01
-  name: gray brick floor 01
+  name: gray brick floor
   sprite: /Textures/_starcup/Tiles/Stone/gray_brick01/base.png
   edgeSpritePriority: 3
   edgeSprites:
@@ -85,6 +85,23 @@
     collection: FootstepFloor
   itemDrop: FloorTileItemGrayBrick
   heatCapacity: 10000
+
+- type: tile
+  id: FloorStarcupDarkGrayBrick
+  name: dark gray brick floor
+  parent: FloorStarcupGrayBrick01
+  sprite: /Textures/_starcup/Tiles/Stone/dark_gray_brick/base.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Stone/dark_gray_brick/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Stone/dark_gray_brick/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Stone/dark_gray_brick/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Stone/dark_gray_brick/single_edge.png
+    South: /Textures/_starcup/Tiles/Stone/dark_gray_brick/double_edge_south.png
+    East: /Textures/_starcup/Tiles/Stone/dark_gray_brick/double_edge_east.png
+    North: /Textures/_starcup/Tiles/Stone/dark_gray_brick/double_edge_north.png
+    West: /Textures/_starcup/Tiles/Stone/dark_gray_brick/double_edge_west.png
+  itemDrop: FloorTileItemDarkGrayBrick
 
 # Carpet
 - type: tile
@@ -205,7 +222,7 @@
   id: FloorStarcupCarpetGingham
   name: gingham carpet
   sprite: /Textures/_starcup/Tiles/Interior/gingham_carpet/base.png
-  edgeSpritePriority: 3
+  edgeSpritePriority: 4
   edgeSprites:
     SouthEast: /Textures/_starcup/Tiles/Interior/gingham_carpet/single_edge.png
     NorthEast: /Textures/_starcup/Tiles/Interior/gingham_carpet/single_edge.png
@@ -228,7 +245,7 @@
   id: FloorStarcupCarpetShagWhite
   name: white shag carpet
   sprite: /Textures/_starcup/Tiles/Interior/white_shag_carpet/base.png
-  edgeSpritePriority: 3
+  edgeSpritePriority: 4
   edgeSprites:
     SouthEast: /Textures/_starcup/Tiles/Interior/white_shag_carpet/single_edge.png
     NorthEast: /Textures/_starcup/Tiles/Interior/white_shag_carpet/single_edge.png
@@ -406,7 +423,7 @@
   id: FloorAstroGrassGolden
   name: golden astro-grass
   parent: FloorAstroGrass
-  sprite: /Textures/_starcup/Tiles/Planet/grass_golden/grass.png
+  sprite: /Textures/_starcup/Tiles/Planet/astro_grass_golden/grass.png
   variants: 4
   placementVariants:
   - 1.0
@@ -415,14 +432,14 @@
   - 1.0
   edgeSpritePriority: 1
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/grass_golden/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/grass_golden/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/grass_golden/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/grass_golden/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/grass_golden/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/grass_golden/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/grass_golden/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/grass_golden/double_edge.png
+    SouthEast: /Textures/_starcup/Tiles/Planet/astro_grass_golden/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/astro_grass_golden/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/astro_grass_golden/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/astro_grass_golden/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/astro_grass_golden/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/astro_grass_golden/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/astro_grass_golden/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/astro_grass_golden/double_edge.png
   deconstructTools: [ Cutting ]
   itemDrop: FloorTileItemAstroGrassGolden
 
@@ -430,7 +447,7 @@
   id: FloorAstroGrassCold
   name: cold astro-grass
   parent: FloorAstroGrass
-  sprite: /Textures/_starcup/Tiles/Planet/grass_cold/grass.png
+  sprite: /Textures/_starcup/Tiles/Planet/astro_grass_cold/grass.png
   variants: 4
   placementVariants:
   - 1.0
@@ -439,14 +456,14 @@
   - 1.0
   edgeSpritePriority: 1
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/grass_cold/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/grass_cold/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/grass_cold/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/grass_cold/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/grass_cold/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/grass_cold/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/grass_cold/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/grass_cold/double_edge.png
+    SouthEast: /Textures/_starcup/Tiles/Planet/astro_grass_cold/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/astro_grass_cold/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/astro_grass_cold/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/astro_grass_cold/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/astro_grass_cold/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/astro_grass_cold/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/astro_grass_cold/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/astro_grass_cold/double_edge.png
   deconstructTools: [ Cutting ]
   itemDrop: FloorTileItemAstroGrassCold
 
