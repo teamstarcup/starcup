@@ -94,6 +94,15 @@
       board: [ DoorElectronicsPsychologist ]
 
 - type: entity
+  parent: AirlockCourier
+  id: AirlockCourierLocked
+  suffix: Mail, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMail ]
+
+- type: entity
   parent: AirlockCommandLocked
   id: AirlockCommandLockedSyndie
   suffix: Command, Syndicate, Locked
@@ -270,6 +279,15 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsPsychologist ]
+
+- type: entity
+  parent: AirlockCourierGlass
+  id: AirlockCourierGlassLocked
+  suffix: Mail, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMail ]
 
 - type: entity
   parent: AirlockCommandGlassLocked
