@@ -436,3 +436,12 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsSyndicateCommunications ]
+
+# Charon-epsilon only (spawns the C-E surface shuttle)
+- type: entity
+  parent: AirlockExternalGlassShuttleMining
+  id: AirlockExternalGlassShuttleCharonEpsilonFilled
+  suffix: Charon-Epsilon, Filled, Locked
+  components:
+  - type: GridFill
+    path: /Maps/_starcup/Shuttles/silent_moon_surface_shuttle.yml

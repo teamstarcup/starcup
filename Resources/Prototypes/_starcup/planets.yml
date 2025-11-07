@@ -1,0 +1,27 @@
+- type: planet
+  id: SilentMoon
+  biome: Charonic
+  mapName: shuttle-destination-charon-epsilon
+  mapLight: "#2B3153"
+  addedComponents:
+  - type: FTLDestination
+    whitelist:
+      components:
+      - MiningShuttle
+  - type: WeatherScheduler # occasional mute oil storms
+    stages:
+    - weather: CharonHush # 45-60 minutes of hushed
+      duration:
+        min: 2700
+        max: 3600
+#    - weather: CharonOilfall # 5-10 minutes of mute oil # commenting so curators have control 4 events
+#      message: mute-oil-alert
+#      duration:
+#        min: 60
+#        max: 120
+  atmosphere:
+    volume: 2500
+    temperature: 273.15 # 0C
+    moles: # 90kPa, 36% O2
+    - 35.66759
+    - 63.40905

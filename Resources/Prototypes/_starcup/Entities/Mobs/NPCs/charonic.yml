@@ -184,7 +184,7 @@
   name: ink-black sludge
   id: MobCharonicSlime
   suffix: AI
-  parent: ReagentSlimeMuteToxin
+  parent: [ MobAdultSlimes, MobCombat ]
   description: It oozes like tar and drips like a slavering maw.
   components:
     - type: Sprite
@@ -197,11 +197,54 @@
     - type: Damageable
       damageContainer: Inorganic # to make it immune to caustic/radiation
       damageModifierSet: Slime
+    - type: MobState
+      allowedStates:
+      - Alive
+      - Dead
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        75: Dead
+    - type: Bloodstream
+      bloodReagent: MuteToxin
+      chemicalMaxVolume: 100
+    - type: ExaminableSolution
+      solution: bloodstream
+    - type: InjectableSolution
+      solution: bloodstream
+    - type: DrainableSolution
+      solution: bloodstream
     - type: MeleeWeapon
+      soundHit:
+        collection: AlienClaw
+      animation: WeaponArcBite
       damage:
         types:
           Slash: 3
-          Caustic: 5
+          Caustic: 3
+    - type: MeleeChemicalInjector
+      solution: bloodstream
+      transferAmount: 5
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: alive
+        Dead:
+          Base: dead
+    - type: NoSlip
+    - type: ZombieImmune
+    - type: StatusEffects
+      allowed:
+      - Electrocution
+    - type: NpcFactionMember
+      factions:
+      - SimpleHostile
+    - type: Tag
+      tags:
+      - FootstepSound
+      - CannotSuicide
+      - DoorBumpOpener
+      - StunImmune
 
 - type: entity
   id: MobSpawnCharonicSlime
