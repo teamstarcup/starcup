@@ -20,6 +20,21 @@
     collection: FootstepPlating
   heatCapacity: 10000
 
+# Wood
+
+- type: tile
+  id: FloorStarcupWoodBrick
+  name: brick-pattern wood floor
+  sprite: /Textures/_starcup/Tiles/Interior/brick_wood/wood01.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepWood
+  barestepSounds:
+    collection: BarestepWood
+  itemDrop: FloorTileItemStarcupWoodBrick
+
 # Bricks
 - type: tile
   id: FloorTileBrickHorizontal
@@ -46,7 +61,29 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepAsteroid
-  itemDrop: FloorTileItemBrickHorizontal
+  itemDrop: FloorTileItemBrickVertical
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorStarcupGrayBrick01
+  name: gray brick floor 01
+  sprite: /Textures/_starcup/Tiles/Stone/gray_brick01/base.png
+  edgeSpritePriority: 3
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Stone/gray_brick01/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Stone/gray_brick01/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Stone/gray_brick01/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Stone/gray_brick01/single_edge.png
+    South: /Textures/_starcup/Tiles/Stone/gray_brick01/double_edge.png
+    East: /Textures/_starcup/Tiles/Stone/gray_brick01/double_edge.png
+    North: /Textures/_starcup/Tiles/Stone/gray_brick01/double_edge.png
+    West: /Textures/_starcup/Tiles/Stone/gray_brick01/double_edge.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemGrayBrick
   heatCapacity: 10000
 
 # Carpet
@@ -150,6 +187,66 @@
   name: fancy violet carpet
   sprite: /Textures/_starcup/Tiles/carpet_fancy_violet.png
   itemDrop: FloorTileItemStarcupCarpetFancyViolet
+
+- type: tile
+  id: FloorStarcupCarpetMemphis
+  name: memphis carpet
+  sprite: /Textures/_starcup/Tiles/Interior/arcade_carpet.rsi/arcade.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepCarpet
+  barestepSounds:
+    collection: BarestepCarpet
+  itemDrop: FloorTileItemStarcupCarpetMemphis
+
+- type: tile
+  id: FloorStarcupCarpetGingham
+  name: gingham carpet
+  sprite: /Textures/_starcup/Tiles/Interior/gingham_carpet/base.png
+  edgeSpritePriority: 3
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Interior/gingham_carpet/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Interior/gingham_carpet/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Interior/gingham_carpet/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Interior/gingham_carpet/single_edge.png
+    South: /Textures/_starcup/Tiles/Interior/gingham_carpet/double_edge.png
+    East: /Textures/_starcup/Tiles/Interior/gingham_carpet/double_edge.png
+    North: /Textures/_starcup/Tiles/Interior/gingham_carpet/double_edge.png
+    West: /Textures/_starcup/Tiles/Interior/gingham_carpet/double_edge.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepCarpet
+  barestepSounds:
+    collection: BarestepCarpet
+  itemDrop: FloorTileItemStarcupCarpetGingham
+
+- type: tile
+  id: FloorStarcupCarpetShagWhite
+  name: white shag carpet
+  sprite: /Textures/_starcup/Tiles/Interior/white_shag_carpet/base.png
+  edgeSpritePriority: 3
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Interior/white_shag_carpet/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Interior/white_shag_carpet/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Interior/white_shag_carpet/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Interior/white_shag_carpet/single_edge.png
+    South: /Textures/_starcup/Tiles/Interior/white_shag_carpet/double_edge.png
+    East: /Textures/_starcup/Tiles/Interior/white_shag_carpet/double_edge.png
+    North: /Textures/_starcup/Tiles/Interior/white_shag_carpet/double_edge.png
+    West: /Textures/_starcup/Tiles/Interior/white_shag_carpet/double_edge.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepCarpet
+  barestepSounds:
+    collection: BarestepCarpet
+  itemDrop: FloorTileItemStarcupCarpetShagWhite
+
 
 # Metal Tiles
 - type: tile
@@ -303,7 +400,7 @@
   itemDrop: FloorTileItemOrnate
   heatCapacity: 10000
 
-# Faux sci tiles
+# Faux sci fi tiles
 
 - type: tile
   id: FloorAstroGrassGolden
@@ -365,14 +462,14 @@
   - 1.0
   edgeSpritePriority: 1
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/grass_snowy/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/grass_snowy/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/grass_snowy/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/grass_snowy/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/grass_snowy/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/grass_snowy/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/grass_snowy/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/grass_snowy/double_edge.png
+    SouthEast: /Textures/_starcup/Tiles/Planet/grass_cold/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/grass_cold/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/grass_cold/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/grass_cold/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/grass_cold/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/grass_cold/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/grass_cold/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/grass_cold/double_edge.png
   deconstructTools: [ Cutting ]
   itemDrop: FloorTileItemAstroGrassSnowy
 

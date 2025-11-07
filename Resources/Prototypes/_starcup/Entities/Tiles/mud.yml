@@ -1,0 +1,56 @@
+- type: entity
+  id: FloorStarcupMudEntity
+  name: mud
+  description: For when you want to make your home into a real pigsty.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: StepTrigger
+    requiredTriggeredSpeed: 0
+    intersectRatio: 0.1
+    blacklist:
+      tags:
+      - Catwalk
+  - type: TileEntityEffect
+    effects:
+    - !type:ExtinguishReaction
+  - type: SyncSprite
+  - type: Clickable
+  - type: Sprite
+    sprite: _starcup/Tiles/Planet/mud.rsi
+    drawdepth: BelowFloor
+  - type: Icon
+    sprite: _starcup/Tiles/Planet/mud.rsi
+    state: base_preview
+  - type: Transform
+    anchored: true
+  - type: IconSmooth
+    key: base
+    base: base_
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+        - SlipLayer
+        mask:
+        - ItemMask
+        density: 1000
+        hard: false
+  - type: Tag
+    tags:
+    - HideContextMenu
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.7
+    sprintSpeedModifier: 0.7
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepWater
+      params:
+        volume: 8

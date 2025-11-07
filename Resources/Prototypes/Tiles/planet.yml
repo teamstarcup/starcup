@@ -58,7 +58,7 @@
 - type: tile
   id: FloorPlanetGrass
   name: tiles-grass-planet-floor
-  sprite: /Textures/Tiles/Planet/Grass/grass.png
+  sprite: /Textures/_starcup/Tiles/Planet/Grass/grass.png # starcup: add new and transitional tiles
   variants: 4
   placementVariants:
   - 1.0
@@ -67,14 +67,16 @@
   - 1.0
   edgeSpritePriority: 1
   edgeSprites:
-    SouthEast: /Textures/Tiles/Planet/Grass/single_edge.png
-    NorthEast: /Textures/Tiles/Planet/Grass/single_edge.png
-    NorthWest: /Textures/Tiles/Planet/Grass/single_edge.png
-    SouthWest: /Textures/Tiles/Planet/Grass/single_edge.png
-    South: /Textures/Tiles/Planet/Grass/double_edge.png
-    East: /Textures/Tiles/Planet/Grass/double_edge.png
-    North: /Textures/Tiles/Planet/Grass/double_edge.png
-    West: /Textures/Tiles/Planet/Grass/double_edge.png
+    # begin starcup: add new and transitional tiles
+    SouthEast: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
+    # end starcup
   baseTurf: FloorPlanetDirt
   isSubfloor: true
   footstepSounds:
@@ -100,7 +102,7 @@
 - type: tile
   id: FloorSnow
   name: tiles-snow
-  sprite: /Textures/Tiles/Planet/Snow/snow.png
+  sprite: /Textures/_starcup/Tiles/Planet/Snow/snow.png # starcup: add new and transitional tiles
   variants: 13
   placementVariants:
   - 0.8
@@ -118,10 +120,12 @@
   - 0.0116
   edgeSpritePriority: 2
   edgeSprites:
-    South: /Textures/Tiles/Planet/Snow/snow_double_edge_south.png
-    East: /Textures/Tiles/Planet/Snow/snow_double_edge_east.png
-    North: /Textures/Tiles/Planet/Snow/snow_double_edge_north.png
-    West: /Textures/Tiles/Planet/Snow/snow_double_edge_west.png
+    # begin starcup: add new and transitional tiles
+    South: /Textures/_starcup/Tiles/Planet/Snow/snow_double_edge_south.png
+    East: /Textures/_starcup/Tiles/Planet/Snow/snow_double_edge_east.png
+    North: /Textures/_starcup/Tiles/Planet/Snow/snow_double_edge_north.png
+    West: /Textures/_starcup/Tiles/Planet/Snow/snow_double_edge_west.png
+    # end starcup
   isSubfloor: true
   footstepSounds:
     collection: FootstepSnow
@@ -145,13 +149,15 @@
 - type: tile
   id: FloorSnowDug
   name: tiles-snow-dug
-  sprite: /Textures/Tiles/Planet/Snow/snow_dug.png
+  sprite: /Textures/_starcup/Tiles/Planet/Snow/snow_dug.png # starcup: add new and transitional tiles
   edgeSpritePriority: 1
   edgeSprites:
-    South: /Textures/Tiles/Planet/Snow/snow_dug_double_edge_south.png
-    East: /Textures/Tiles/Planet/Snow/snow_dug_double_edge_east.png
-    North: /Textures/Tiles/Planet/Snow/snow_dug_double_edge_north.png
-    West: /Textures/Tiles/Planet/Snow/snow_dug_double_edge_west.png
+    # begin starcup: add new and transitional tiles
+    South: /Textures/_starcup/Tiles/Planet/Snow/snow_dug_double_edge_south.png
+    East: /Textures/_starcup/Tiles/Planet/Snow/snow_dug_double_edge_east.png
+    North: /Textures/_starcup/Tiles/Planet/Snow/snow_dug_double_edge_north.png
+    West: /Textures/_starcup/Tiles/Planet/Snow/snow_dug_double_edge_west.png
+    # end starcup
   isSubfloor: true
   footstepSounds:
     collection: FootstepSnow

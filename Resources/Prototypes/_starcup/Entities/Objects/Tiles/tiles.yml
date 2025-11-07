@@ -43,6 +43,43 @@
   - type: Stack
     stackType: FloorTileBrickVertical
 
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemGrayBrick
+  name: gray brick
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Interior/piiixl.rsi
+    state: graybricks
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Interior/piiixl.rsi
+    heldPrefix: graybricks
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupGrayBrick01
+  - type: Stack
+    stackType: FloorTileGrayBrick
+
+# Wood
+- type: entity
+  parent: FloorTileItemBase
+  id: FloorTileItemStarcupWoodBrick
+  name: brick-pattern wood floor
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Interior/piiixl.rsi
+    state: wood01
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Interior/piiixl.rsi
+    heldPrefix: wood01
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupWoodBrick
+  - type: Stack
+    stackType: FloorTileStarcupWoodBrick
+
 # Carpets
 - type: entity
   parent: FloorTileItemBaseStarcup
@@ -253,6 +290,60 @@
       - FloorStarcupCarpetDiamondViolet
   - type: Stack
     stackType: FloorTileStarcupCarpetDiamondViolet
+
+- type: entity
+  parent: FloorTileItemBase
+  id: FloorTileItemStarcupCarpetMemphis
+  name: memphis carpet
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Interior/arcade_carpet.rsi
+    state: arcade
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Interior/arcade_carpet.rsi
+    heldPrefix:  arcade
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetMemphis
+  - type: Stack
+    stackType: FloorTileStarcupCarpetMemphis
+
+- type: entity
+  parent: FloorTileItemBase
+  id: FloorTileItemStarcupCarpetGingham
+  name: gingham carpet
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Interior/piiixl.rsi
+    state: carpet26
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Interior/piiixl.rsi
+    heldPrefix: carpet26
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetGingham
+  - type: Stack
+    stackType: FloorTileStarcupCarpetGingham
+
+- type: entity
+  parent: FloorTileItemBase
+  id: FloorTileItemStarcupCarpetShagWhite
+  name: white shag carpet
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Interior/piiixl.rsi
+    state: carpet28
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Interior/piiixl.rsi
+    heldPrefix:  carpet28
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetShagWhite
+  - type: Stack
+    stackType: FloorTileStarcupCarpetShagWhite
 
 # Metal Tiles
 - type: entity

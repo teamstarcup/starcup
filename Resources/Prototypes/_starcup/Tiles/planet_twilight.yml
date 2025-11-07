@@ -22,8 +22,11 @@
   id: grassy-dirt-twilight-planet-floor
   name: grassy twilight dirt planet floor
   sprite: /Textures/_starcup/Tiles/Planet/dirt_twilight_grassy.rsi/dirt.png
-  variants: 5
+  variants: 8
   placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
   - 1.0
   - 1.0
   - 1.0
@@ -33,7 +36,6 @@
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
-  # weather: true  # starcup: early merge of #38638
   indestructible: true
 
 - type: tile
@@ -61,5 +63,4 @@
     collection: FootstepGrass
   itemDrop: FloorTileItemGrass
   heatCapacity: 10000
-  # weather: true  # starcup: early merge of #38638
   indestructible: true
