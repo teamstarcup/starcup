@@ -451,7 +451,7 @@
 
 # Glass Airlocks
 - type: entity
-  parent: AirlockGlass
+  parent: AirlockServiceGlass # starcup: airlock resprite
   id: AirlockServiceGlassLocked
   suffix: Service, Locked
   components:
@@ -489,7 +489,7 @@
       board: [ DoorElectronicsServiceTheatre ]
 
 - type: entity
-  parent: AirlockServiceGlassLocked
+  parent: AirlockBartenderGlass # starcup: airlock resprite
   id: AirlockBarGlassLocked
   suffix: Bar, Locked
   components:
@@ -498,7 +498,7 @@
       board: [ DoorElectronicsBar ]
 
 - type: entity
-  parent: AirlockServiceGlassLocked
+  parent: AirlockBartenderGlass # starcup: airlock resprite
   id: AirlockBarKitchenGlassLocked
   suffix: Bar&Kitchen, Locked
   components:
@@ -572,7 +572,7 @@
     layoutId: AirlockEngineering
 
 - type: entity
-  parent: AirlockServiceGlassLocked
+  parent: AirlockKitchenGlass # starcup: airlock resprite
   id: AirlockKitchenGlassLocked
   suffix: Kitchen, Locked
   components:
@@ -581,7 +581,7 @@
       board: [ DoorElectronicsKitchen ]
 
 - type: entity
-  parent: AirlockServiceGlassLocked
+  parent: AirlockJanitorGlass # starcup: airlock resprite
   id: AirlockJanitorGlassLocked
   suffix: Janitor, Locked
   components:
