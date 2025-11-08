@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 11/07/2025 20:43:44
-  entityCount: 13666
+  time: 11/08/2025 01:39:43
+  entityCount: 13668
 maps:
 - 1
 grids:
@@ -4609,35 +4609,23 @@ entities:
     - type: Transform
       pos: 10.5,47.5
       parent: 2
-- proto: AirlockCourierGlass
+- proto: AirlockCourierGlassLocked
   entities:
   - uid: 164
     components:
-    - type: MetaData
-      name: Mailroom
-    - type: Transform
-      pos: -22.5,-22.5
-      parent: 2
-    - type: AccessReader
-      accessListsOriginal: []
-  - uid: 165
-    components:
-    - type: MetaData
-      name: Mailroom
-    - type: Transform
-      pos: -21.5,-22.5
-      parent: 2
-    - type: AccessReader
-      accessListsOriginal: []
-  - uid: 166
-    components:
-    - type: MetaData
-      name: Mailroom
     - type: Transform
       pos: -21.5,-27.5
       parent: 2
-    - type: AccessReader
-      accessListsOriginal: []
+  - uid: 165
+    components:
+    - type: Transform
+      pos: -21.5,-22.5
+      parent: 2
+  - uid: 166
+    components:
+    - type: Transform
+      pos: -22.5,-22.5
+      parent: 2
 - proto: AirlockDetectiveGlassLocked
   entities:
   - uid: 167
@@ -7510,6 +7498,18 @@ entities:
       - Arsenal
       - Experimental
       - CivilianServices
+- proto: BarberScissors
+  entities:
+  - uid: 13667
+    components:
+    - type: Transform
+      pos: -19.49999,14.601259
+      parent: 2
+  - uid: 13668
+    components:
+    - type: Transform
+      pos: 24.782742,-35.283836
+      parent: 2
 - proto: Barricade
   entities:
   - uid: 609
@@ -32534,7 +32534,7 @@ entities:
       pos: -1.5,17.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -4254.5527
+      secondsUntilStateChange: -4591.1973
       state: Closing
   - uid: 5382
     components:
