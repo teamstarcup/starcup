@@ -28,7 +28,7 @@
     children:
     # standard ore/wood drop
     - !type:GroupSelector
-      weight: 0.75
+      weight: 0.5
       children:
       - !type:NestedSelector
         weight: 0.80
@@ -40,7 +40,7 @@
 
     # beneficial effects
     - !type:GroupSelector
-      weight: 0.2
+      weight: 0.135
       children:
       - id: ShardCrystalBlack
         amount: !type:RangeNumberSelector
@@ -50,7 +50,7 @@
           range: 1, 3
 
     - !type:GroupSelector
-      weight: 0.125
+      weight: 0.09
       children:
       - id: FoodPumpkin
       - id: FoodAmbrosiaVulgaris
@@ -62,13 +62,13 @@
 
     # dubious/benign effects
     - id: HollowTreeRandomPuddle
-      weight: 0.1
+      weight: 0.06
 
     - id: ShadowKudzuWeak
-      weight: 0.1
+      weight: 0.06
 
     - !type:GroupSelector
-      weight: 0.05
+      weight: 0.03
       children:
       - id: MobCockroach
         weight: 0.9
@@ -80,19 +80,25 @@
           range: 5, 6
 
     - !type:GroupSelector
-      weight: 0.05
+      weight: 0.03
       children:
-      - !type:NestedSelector
-        rolls: !type:RangeNumberSelector
-          range: 1, 2
-        tableId: RandomHumanOrganTable
-      - !type:NestedSelector
-        rolls: !type:RangeNumberSelector
-          range: 1, 2
-        tableId: RandomAnimalOrganTable
+      - !type:AllSelector
+        children:
+        - id: PuddleBlood
+        - !type:NestedSelector
+          rolls: !type:RangeNumberSelector
+            range: 1, 2
+          tableId: RandomHumanOrganTable
+      - !type:AllSelector
+        children:
+        - id: PuddleBlood
+        - !type:NestedSelector
+          rolls: !type:RangeNumberSelector
+            range: 1, 2
+          tableId: RandomAnimalOrganTable
 
     - !type:GroupSelector
-      weight: 0.02
+      weight: 0.005
       children:
       - id: MobRandomScienceCorpse
       - id: MobRandomEngineerCorpse
@@ -100,20 +106,20 @@
 
     # dangerous effects
     - id: Kudzu
-      weight: 0.05
+      weight: 0.03
 
     - id: MobSpawnCharonicSlime
-      weight: 0.05
+      weight: 0.02
 
     - !type:GroupSelector
-      weight: 0.01
+      weight: 0.006
       children:
       - id: ComplexXenoArtifact
       - id: ComplexXenoArtifactItem
         weight: 0.3
 
     - !type:GroupSelector
-      weight: 0.005
+      weight: 0.004
       children:
       - id: AnomalyShadow
       - id: AnomalyFlora
@@ -131,18 +137,25 @@
 - type: weightedRandomFillSolution
   id: RandomFillPuddleHollowTree
   fills:
-  - quantity: 10
+  - quantity: 60
+    weight: 1
     reagents:
     - Blood
     - Oil
     - InsectBlood
-    - MuteToxin
     - Aluminium
-    - Lead
-    - Plasma
-    - Stellibinin
-    - Necrosol
-    - Opporozidone
     - VentCrud
     - Ammonia
+  - quantity: 20
+    weight: 1
+    reagents:
+    - Plasma
+    - Stellibinin
     - ChloralHydrate
+    - MuteToxin
+  - quantity: 10
+    weight: 1
+    reagents:
+    - Lead
+    - Necrosol
+    - Opporozidone
