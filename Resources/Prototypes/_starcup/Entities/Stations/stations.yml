@@ -1,0 +1,27 @@
+# like a space station, but on a terrestrial surface
+# lacks salvage jobs, magnet, debris spawning, evacuation etc.
+- type: entity
+  id: StandardTerrestrialStationNoEvac
+  parent:
+  - BaseStation
+  - BaseStationNews
+  - BaseStationCargo
+  - BaseStationJobsSpawning
+  - BaseStationRecords
+#  - BaseStationArrivals
+  - BaseStationGateway
+  - BaseStationCentcomm
+  - BaseStationAlertLevels
+  - BaseStationSiliconLawCrewsimov
+  - BaseStationAllEventsEligible
+  - BaseStationNanotrasen
+  - BaseStationMail # Nyano component, required for station mail to function
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform
+
+- type: entity
+  id: StandardTerrestrialStation
+  parent:
+  - StandardTerrestrialStationNoEvac
+  - BaseStationEvacuation

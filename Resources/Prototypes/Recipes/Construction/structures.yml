@@ -659,11 +659,7 @@
   conditions:
     - !type:TileNotBlocked
       failIfSpace: false
-    - !type:TileType
-      targets:
-        - Lattice
-        - Plating
-        - FloorBasalt  # starcup: build catwalks over lava
+    - !type:TileSubfloorCondition  # starcup: replaced TileType condition with TileSubfloorCondition
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false

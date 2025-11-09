@@ -1,8 +1,8 @@
 - type: entity
   name: chopping axe
-  parent: [BaseItem, BaseExaminableClothing] # starcup: examinable clothing
+  parent: BaseItem
   id: ChoppingAxe
-  description: An axe for chopping down trees. On a space station. ...yeah.
+  description: Don't forget your plaid shirt.
   components:
   - type: Sharp
   - type: Execution
@@ -11,58 +11,34 @@
     sprite: _starcup/Objects/Weapons/Melee/chopping_axe.rsi
     state: icon
   - type: MeleeWeapon
+    attackRate: 0.7
     wideAnimationRotation: 135
     swingLeft: true
-    damage:
-      types:
-        Blunt: 2
-        Slash: 3
     soundHit:
       collection: MetalThud
-  - type: Wieldable
-  - type: IncreaseDamageOnWield
     damage:
       types:
-        Slash: 10
-        Structural: 15
-  - type: Item
-    size: Large
-  - type: Clothing
-    sprite: _starcup/Objects/Weapons/Melee/chopping_axe.rsi
-    quickEquip: false
-    slots:
-    - back
-  - type: Tool
-    qualities:
-    - Axing
-  - type: ToolTileCompatible
-  - type: UseDelay
-    delay: 1
-
-- type: entity
-  name: power axe
-  parent: ChoppingAxe
-  id: PowerAxe
-  description: A now illegal Electra Dynamics model, used by combat engineers in the Neocorporate wars. Don't let the blade get close to your face!
-  components:
-  - type: Sharp
-  - type: Execution
-    doAfterDuration: 4.0
-  - type: Sprite
-    sprite: _starcup/Objects/Weapons/Melee/power_axe.rsi
-    state: icon
-  - type: MeleeWeapon
-    wideAnimationRotation: 135
-    swingLeft: true
-    damage:
-      types:
-        Blunt: 3
         Slash: 5
-    soundHit:
-      collection: MetalThud
   - type: Wieldable
   - type: IncreaseDamageOnWield
     damage:
       types:
         Slash: 10
         Structural: 30
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,2,0
+    - 1,1,1,2
+    sprite: _starcup/Objects/Weapons/Melee/chopping_axe.rsi
+    storedRotation: -45
+  - type: Clothing
+    sprite: _starcup/Objects/Weapons/Melee/chopping_axe.rsi
+    quickEquip: false
+    slots:
+    - back
+  - type: UseDelay
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+      Wood: 100
