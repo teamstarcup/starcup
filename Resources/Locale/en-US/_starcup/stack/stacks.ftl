@@ -27,6 +27,16 @@ stack-starcup-carpet-violet-diamond = diamond-pattern violet carpet floor
 stack-starcup-carpet-violet-fancy = fancy violet carpet floor
 stack-starcup-carpet-shag-white = white shag carpet floor
 
+# stone
+stack-starcup-floor-blackstone01 = black stone floor
+stack-starcup-floor-blackstone02 = black stone floor
+stack-starcup-floor-blackstone08 = black stone floor
+stack-starcup-floor-blackstone10 = black stone floor
+stack-starcup-floor-blackstone14 = black stone floor
+stack-starcup-floor-blue-stone-02 = blue stone floor
+stack-starcup-floor-blue-stone-06 = blue stone floor
+stack-starcup-floor-blue-stone-10 = blue stone floor
+
 # wood
 stack-starcup-floor-wood-brick = brick-pattern wood floor
 

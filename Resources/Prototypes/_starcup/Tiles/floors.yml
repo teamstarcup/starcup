@@ -51,9 +51,12 @@
     East: /Textures/_starcup/Tiles/Stone/blackstone01/double_edge.png
     North: /Textures/_starcup/Tiles/Stone/blackstone01/double_edge.png
     West: /Textures/_starcup/Tiles/Stone/blackstone01/double_edge.png
+  baseTurf: Plating
   isSubfloor: false
+  deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
+  itemDrop: FloorTileItemBlackstone01
   heatCapacity: 10000
 
 - type: tile
@@ -70,6 +73,7 @@
     East: /Textures/_starcup/Tiles/Stone/blackstone02/double_edge.png
     North: /Textures/_starcup/Tiles/Stone/blackstone02/double_edge.png
     West: /Textures/_starcup/Tiles/Stone/blackstone02/double_edge.png
+  itemDrop: FloorTileItemBlackstone02
 
 - type: tile
   id: FloorStarcupBlackstone08
@@ -85,6 +89,7 @@
     East: /Textures/_starcup/Tiles/Stone/blackstone08/double_edge.png
     North: /Textures/_starcup/Tiles/Stone/blackstone08/double_edge.png
     West: /Textures/_starcup/Tiles/Stone/blackstone08/double_edge.png
+  itemDrop: FloorTileItemBlackstone08
 
 - type: tile
   id: FloorStarcupBlackstone10
@@ -100,6 +105,7 @@
     East: /Textures/_starcup/Tiles/Stone/blackstone10/double_edge.png
     North: /Textures/_starcup/Tiles/Stone/blackstone10/double_edge.png
     West: /Textures/_starcup/Tiles/Stone/blackstone10/double_edge.png
+  itemDrop: FloorTileItemBlackstone10
 
 - type: tile
   id: FloorStarcupBlackstone14
@@ -115,6 +121,7 @@
     East: /Textures/_starcup/Tiles/Stone/blackstone14/double_edge.png
     North: /Textures/_starcup/Tiles/Stone/blackstone14/double_edge.png
     West: /Textures/_starcup/Tiles/Stone/blackstone14/double_edge.png
+  itemDrop: FloorTileItemBlackstone14
 
 - type: tile
   id: FloorStarcupBlueStone02
@@ -130,6 +137,10 @@
     East: /Textures/_starcup/Tiles/Stone/blue_stone02/double_edge.png
     North: /Textures/_starcup/Tiles/Stone/blue_stone02/double_edge.png
     West: /Textures/_starcup/Tiles/Stone/blue_stone02/double_edge.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  itemDrop: FloorTileItemBlueStone02
 
 - type: tile
   id: FloorStarcupBlueStone06
@@ -145,6 +156,7 @@
     East: /Textures/_starcup/Tiles/Stone/blue_stone06/double_edge.png
     North: /Textures/_starcup/Tiles/Stone/blue_stone06/double_edge.png
     West: /Textures/_starcup/Tiles/Stone/blue_stone06/double_edge.png
+  itemDrop: FloorTileItemBlueStone06
 
 - type: tile
   id: FloorStarcupBlueStone10
@@ -160,6 +172,7 @@
     East: /Textures/_starcup/Tiles/Stone/blue_stone10/double_edge.png
     North: /Textures/_starcup/Tiles/Stone/blue_stone10/double_edge.png
     West: /Textures/_starcup/Tiles/Stone/blue_stone10/double_edge.png
+  itemDrop: FloorTileItemBlueStone10
 
 # Bricks
 - type: tile
@@ -660,7 +673,7 @@
 
 - type: tile
   id: FloorAstroDirt
-  name: dirt
+  name: astro-dirt
   sprite: /Textures/Tiles/Planet/dirt.rsi/dirt.png
   variants: 4
   placementVariants:
@@ -687,7 +700,7 @@
 
 - type: tile
   id: FloorAstroCave
-  name: cave dirt
+  name: cave astro-dirt
   parent: FloorAstroDirt
   sprite: /Textures/Tiles/cave.png
   variants: 7
@@ -712,7 +725,7 @@
 
 - type: tile
   id: FloorAstroCaveDrought
-  name: cave dirt
+  name: drought cave astro-dirt
   parent: FloorAstroDirt
   sprite: /Textures/Tiles/cavedrought.png
   variants: 8
@@ -738,7 +751,7 @@
 
 - type: tile
   id: FloorAstroDirtPale
-  name: pale dirt
+  name: pale astro-dirt
   parent: FloorAstroDirt
   sprite: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/dirt.png
   variants: 5
@@ -761,7 +774,7 @@
 
 - type: tile
   id: FloorAstroDirtTwilight
-  name: twilight dirt
+  name: twilight astro-dirt
   parent: FloorAstroDirt
   sprite: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/dirt.png
   variants: 8
