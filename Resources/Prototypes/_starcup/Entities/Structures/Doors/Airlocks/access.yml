@@ -94,6 +94,15 @@
       board: [ DoorElectronicsPsychologist ]
 
 - type: entity
+  parent: AirlockCourier
+  id: AirlockCourierLocked
+  suffix: Mail, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMail ]
+
+- type: entity
   parent: AirlockCommandLocked
   id: AirlockCommandLockedSyndie
   suffix: Command, Syndicate, Locked
@@ -272,6 +281,15 @@
       board: [ DoorElectronicsPsychologist ]
 
 - type: entity
+  parent: AirlockCourierGlass
+  id: AirlockCourierGlassLocked
+  suffix: Mail, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMail ]
+
+- type: entity
   parent: AirlockCommandGlassLocked
   id: AirlockCommandGlassLockedSyndie
   suffix: Command, Syndicate, Locked
@@ -436,3 +454,12 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsSyndicateCommunications ]
+
+# Charon-epsilon only (spawns the C-E surface shuttle)
+- type: entity
+  parent: AirlockExternalGlassShuttleMining
+  id: AirlockExternalGlassShuttleCharonEpsilonFilled
+  suffix: Charon-Epsilon, Filled, Locked
+  components:
+  - type: GridFill
+    path: /Maps/_starcup/Shuttles/silent_moon_surface_shuttle.yml

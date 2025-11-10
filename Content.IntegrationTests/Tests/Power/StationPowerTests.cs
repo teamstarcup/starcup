@@ -50,6 +50,7 @@ public sealed class StationPowerTests
         "Saltern",
         "Byoin",
         "Train",
+        "Crux",
         // end starcup
     ];
 
