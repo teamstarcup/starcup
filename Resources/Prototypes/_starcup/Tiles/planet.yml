@@ -1,19 +1,25 @@
 # Dirt
 
 - type: tile
-  id: FloorPlanetDirtCave
-  name: dirt planet floor
-  sprite: /Textures/_starcup/Tiles/Planet/dirt_cave.rsi/dirt.png
-  variants: 8
+  id: FloorPlanetDirtPale
+  name: pale dirt
+  sprite: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/dirt.png
+  variants: 5
   placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
+  - 0.8
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge.png
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
@@ -21,54 +27,83 @@
   indestructible: true
 
 - type: tile
-  id: FloorPlanetDirtCaveGrassy
-  name: grassy dirt planet floor
-  parent: FloorPlanetDirtCave
-  sprite: /Textures/_starcup/Tiles/Planet/dirt_cave_grassy.rsi/dirt.png
+  id: FloorPlanetDirtPaleGrassy
+  name: grassy pale dirt
+  parent: FloorPlanetDirtPale
+  sprite: /Textures/_starcup/Tiles/Planet/dirt_pale_grassy.rsi/dirt.png
+  variants: 8
+  placementVariants:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
   footstepSounds:
     collection: FootstepGrass
 
 - type: tile
-  id: FloorPlanetDirtCaveGrassyCold
-  name: grassy dirt planet floor
-  parent: FloorPlanetDirtCaveGrassy
-  sprite: /Textures/_starcup/Tiles/Planet/dirt_cave_grassy_cold.rsi/dirt.png
+  id: FloorPlanetDirtPaleGrassyCold
+  name: cold grassy pale dirt
+  parent: FloorPlanetDirtPaleGrassy
+  sprite: /Textures/_starcup/Tiles/Planet/dirt_pale_grassy_cold.rsi/dirt.png
 
 - type: tile
-  id: FloorPlanetDirtCaveGrassyGolden
-  name: grassy dirt planet floor
-  parent: FloorPlanetDirtCaveGrassy
-  sprite: /Textures/_starcup/Tiles/Planet/dirt_cave_grassy_golden.rsi/dirt.png
+  id: FloorPlanetDirtPaleeGrassyGolden
+  name: golden grassy pale dirt
+  parent: FloorPlanetDirtPaleGrassy
+  sprite: /Textures/_starcup/Tiles/Planet/dirt_pale_grassy_golden.rsi/dirt.png
 
 - type: tile
-  id: FloorPlanetDirtCaveSnowy
-  name: snowy dirt planet floor
-  parent: FloorPlanetDirtCave
-  sprite: /Textures/_starcup/Tiles/Planet/dirt_cave_snow.rsi/dirt.png
+  id: FloorPlanetDirtPaleSnowy
+  name: snowy pale dirt
+  parent: FloorPlanetDirtPale
+  sprite: /Textures/_starcup/Tiles/Planet/dirt_pale_snow.rsi/dirt.png
+  variants: 8
+  placementVariants:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
   footstepSounds:
     collection: FootstepSnow
 
 - type: tile
   id: FloorPlanetDirtGrassy
-  name: grassy dirt planet floor
-  parent: FloorPlanetDirtCaveGrassy
+  name: grassy dirt
+  parent: FloorPlanetDirtPaleGrassy
   sprite: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/dirt.png
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
 
 - type: tile
   id: FloorPlanetDirtGrassyCold
-  name: grassy dirt planet floor
-  parent: FloorPlanetDirtCaveGrassy
+  name: cold grassy dirt
+  parent: FloorPlanetDirtGrassy
   sprite: /Textures/_starcup/Tiles/Planet/dirt_grassy_cold.rsi/dirt.png
 
 - type: tile
   id: FloorPlanetDirtGrassyGolden
-  name: grassy dirt planet floor
-  parent: FloorPlanetDirtCaveGrassy
+  name: cold grassy dirt
+  parent: FloorPlanetDirtGrassy
   sprite: /Textures/_starcup/Tiles/Planet/dirt_grassy_golden.rsi/dirt.png
 
 - type: tile
   id: FloorPlanetDirtSnowy
-  name: snowy dirt planet floor
+  name: snowy dirt
   sprite: /Textures/_starcup/Tiles/Planet/dirt_snowy.rsi/dirt.png
   variants: 8
   placementVariants:
@@ -90,7 +125,7 @@
 
 - type: tile
   id: FloorPlanetGrassCold # It's really just desaturated.
-  name: cold grass planet floor
+  name: cold grass
   parent: FloorPlanetGrass
   sprite: /Textures/_starcup/Tiles/Planet/grass_cold/grass.png
   variants: 4
@@ -112,7 +147,7 @@
 
 - type: tile
   id: FloorPlanetGrassSnowy
-  name: snowy grass planet floor
+  name: snowy grass
   parent: FloorPlanetGrassCold
   sprite: /Textures/_starcup/Tiles/Planet/grass_snowy/grass.png
   variants: 8
@@ -128,7 +163,7 @@
 
 - type: tile
   id: FloorPlanetGrassGolden
-  name: golden grass planet floor
+  name: golden grass
   parent: FloorPlanetGrass
   sprite: /Textures/_starcup/Tiles/Planet/grass_golden/grass.png
   placementVariants:
@@ -151,7 +186,7 @@
 
 - type: tile
   id: FloorSnowGrassy
-  name: grassy snow planet floor
+  name: grassy snow
   parent: FloorSnow
   sprite: /Textures/_starcup/Tiles/Planet/snow_grassy/snow.png
   variants: 8
@@ -164,157 +199,3 @@
   - 1.0
   - 1.0
   - 1.0
-
-# Stone
-
-- type: tile
-  id: FloorStarcupBlackstone01
-  name: blackstone floor 01
-  sprite: /Textures/_starcup/Tiles/Planet/blackstone01/base.png
-  edgeSpritePriority: 3
-  edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/blackstone01/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/blackstone01/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/blackstone01/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/blackstone01/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/blackstone01/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/blackstone01/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/blackstone01/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/blackstone01/double_edge.png
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepFloor
-  heatCapacity: 10000
-
-- type: tile
-  id: FloorStarcupBlackstone02
-  name: blackstone floor 02
-  sprite: /Textures/_starcup/Tiles/Planet/blackstone02/base.png
-  edgeSpritePriority: 3
-  edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/blackstone02/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/blackstone02/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/blackstone02/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/blackstone02/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/blackstone02/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/blackstone02/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/blackstone02/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/blackstone02/double_edge.png
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepFloor
-  heatCapacity: 10000
-
-- type: tile
-  id: FloorStarcupBlackstone08
-  name: blackstone floor 08
-  sprite: /Textures/_starcup/Tiles/Planet/blackstone08/base.png
-  edgeSpritePriority: 3
-  edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/blackstone08/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/blackstone08/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/blackstone08/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/blackstone08/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/blackstone08/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/blackstone08/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/blackstone08/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/blackstone08/double_edge.png
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepFloor
-  heatCapacity: 10000
-
-- type: tile
-  id: FloorStarcupBlackstone10
-  name: blackstone floor 10
-  sprite: /Textures/_starcup/Tiles/Planet/blackstone10/base.png
-  edgeSpritePriority: 3
-  edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/blackstone10/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/blackstone10/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/blackstone10/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/blackstone10/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/blackstone10/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/blackstone10/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/blackstone10/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/blackstone10/double_edge.png
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepFloor
-  heatCapacity: 10000
-
-- type: tile
-  id: FloorStarcupBlackstone14
-  name: blackstone floor 14
-  sprite: /Textures/_starcup/Tiles/Planet/blackstone14/base.png
-  edgeSpritePriority: 3
-  edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/blackstone14/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/blackstone14/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/blackstone14/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/blackstone14/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/blackstone14/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/blackstone14/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/blackstone14/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/blackstone14/double_edge.png
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepFloor
-  heatCapacity: 10000
-
-- type: tile
-  id: FloorStarcupBlueStone02
-  name: blue stone floor 02
-  sprite: /Textures/_starcup/Tiles/Planet/blue_stone02/base.png
-  edgeSpritePriority: 3
-  edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/blue_stone02/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/blue_stone02/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/blue_stone02/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/blue_stone02/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/blue_stone02/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/blue_stone02/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/blue_stone02/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/blue_stone02/double_edge.png
-  isSubfloor: false
-  footstepSounds:
-    collection: FootstepFloor
-  heatCapacity: 10000
-
-- type: tile
-  id: FloorStarcupBlueStone06
-  name: blue stone floor 06
-  sprite: /Textures/_starcup/Tiles/Planet/blue_stone06/base.png
-  edgeSpritePriority: 3
-  edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/blue_stone06/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/blue_stone06/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/blue_stone06/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/blue_stone06/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/blue_stone06/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/blue_stone06/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/blue_stone06/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/blue_stone06/double_edge.png
-  isSubfloor: false
-  footstepSounds:
-    collection: FootstepFloor
-  heatCapacity: 10000
-
-- type: tile
-  id: FloorStarcupBlueStone10
-  name: blue stone floor 10
-  sprite: /Textures/_starcup/Tiles/Planet/blue_stone10/base.png
-  edgeSpritePriority: 3
-  edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/blue_stone10/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/blue_stone10/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/blue_stone10/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/blue_stone10/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/blue_stone10/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/blue_stone10/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/blue_stone10/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/blue_stone10/double_edge.png
-  isSubfloor: false
-  footstepSounds:
-    collection: FootstepFloor
-  heatCapacity: 10000

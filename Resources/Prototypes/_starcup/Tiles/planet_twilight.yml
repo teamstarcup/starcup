@@ -1,17 +1,26 @@
 - type: tile
   id: FloorPlanetDirtTwilight
-  name: twilight dirt planet floor
+  name: twilight dirt
   sprite: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/dirt.png
   variants: 8
   placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
+  - 0.8
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge.png
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
@@ -20,7 +29,8 @@
 
 - type: tile
   id: FloorPlanetGrassyDirtTwilight
-  name: grassy twilight dirt planet floor
+  parent: FloorPlanetDirtTwilight
+  name: grassy twilight dirt
   sprite: /Textures/_starcup/Tiles/Planet/dirt_twilight_grassy.rsi/dirt.png
   variants: 8
   placementVariants:
@@ -32,15 +42,12 @@
   - 1.0
   - 1.0
   - 1.0
-  isSubfloor: true
   footstepSounds:
-    collection: FootstepAsteroid
-  heatCapacity: 10000
-  indestructible: true
+    collection: FootstepGrass
 
 - type: tile
   id: FloorPlanetGrassBlue
-  name: twilight grass planet floor
+  name: twilight grass
   sprite: /Textures/_starcup/Tiles/Planet/grass_twilight/grass.png
   variants: 4
   placementVariants:
@@ -61,6 +68,5 @@
   isSubfloor: true
   footstepSounds:
     collection: FootstepGrass
-  itemDrop: FloorTileItemGrass
   heatCapacity: 10000
   indestructible: true

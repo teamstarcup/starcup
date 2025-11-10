@@ -54,7 +54,13 @@ stack-starcup-tile-ornate = ornate tile
 stack-starcup-tile-sierra = sierra tile
 
 # faux sci fi floors
-stack-astro-grass-golden-floor = golden astro-grass
 stack-astro-grass-cold-floor = cold astro-grass
 stack-astro-grass-snowy-floor = snowy astro-grass
-stack-astro-snow-grassy-floor = grassy snow floor
+stack-astro-grass-twilight-floor = twilight astro-grass
+stack-astro-grass-golden-floor = golden astro-grass
+stack-astro-snow-grassy-floor = grassy snow
+stack-astro-dirt-floor = dirt
+stack-astro-cave-floor = cave dirt
+stack-astro-cavedrought-floor = cave dirt
+stack-astro-dirt-pale-floor = pale dirt
+stack-astro-dirt-twilight-floor = twilight dirt
