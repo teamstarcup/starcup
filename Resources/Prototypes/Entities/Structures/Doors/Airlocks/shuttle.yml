@@ -22,6 +22,7 @@
           - FullTileMask
         layer:
           - AirlockLayer
+          - LowImpassable # starcup: dded to block mice
       docking:
         shape:
           !type:PhysShapeCircle
@@ -76,6 +77,7 @@
       fix1:
         layer:     #removed opaque from the layer, allowing lasers to pass through glass airlocks
         - GlassAirlockLayer
+        - LowImpassable # starcup: added to block mice
 
 - type: entity
   id: AirlockShuttleAssembly
