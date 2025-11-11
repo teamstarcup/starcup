@@ -12,7 +12,7 @@
     sprite: _Impstation/Objects/Specific/Medical/medical.rsi # starcup
     state: simple-suture
   - type: Item
-    heldPrefix: simple-suture
+    heldPrefix: gauze # starcup: placeholder inhand
     storedRotation: 90
   - type: Healing
     damageContainers:
@@ -43,7 +43,7 @@
 
 - type: entity
   name: shock gel
-  description: Easily the most creative rebranding you've ever seen.
+  description: A viscous gel that soothes burns caused by electrical shocks. Smells wet. # starcup: rewrite for clarity
   parent: BaseHealingItem
   id: ShockGel
   suffix: Full
@@ -55,7 +55,7 @@
     sprite: _Impstation/Objects/Specific/Medical/medical.rsi # starcup
     state: shock-gel
   - type: Item
-    heldPrefix: shock-gel
+    heldPrefix: medicated-suture # starcup: placeholder inhand
   - type: Healing
     damageContainers:
       - Biological
@@ -84,7 +84,7 @@
 
 - type: entity
   name: electrode pad
-  description: A miniature one-time-use electrical device that reverses blunt force trauma via electrotherapy. Not strong enough to wake the dead, but damn near close.
+  description: A small, one-time-use electrical device that accelerates bruise healing and increases circulation. Will leave minor electrical burns. # starcup: rewrite for clarity
   parent: BaseHealingItem
   id: ElectrodePad
   suffix: Full
@@ -96,7 +96,7 @@
     sprite: _Impstation/Objects/Specific/Medical/medical.rsi # starcup
     state: electrode-pad
   - type: Item
-    heldPrefix: electrode-pad
+    heldPrefix: brutepack # starcup: placeholder inhand
   - type: Healing
     damageContainers:
       - Biological
@@ -104,7 +104,7 @@
       types:
         Blunt: -10
         Asphyxiation: -5
-    applyWrithe: true # I am channeling all my growing pains that I have ever experienced in my life through this one variable.
+        Shock: 1 # starcup
     healingBeginSound:
       path: "/Audio/Items/appraiser.ogg"
     healingEndSound:
@@ -126,7 +126,7 @@
 
 - type: entity
   name: tincture
-  description: A simple blend of weak, broad spectrum chemicals turned into a gel. Be careful not to break the bottle!
+  description: A simple blend of weak, broad spectrum topical chemicals turned into a gel. Be careful not to break the bottle! # starcup: rewrite for clarity
   parent: BaseHealingItem
   id: Tincture
   suffix: Full
@@ -139,7 +139,7 @@
     sprite: _Impstation/Objects/Specific/Medical/medical.rsi # starcup
     state: tincture
   - type: Item
-    heldPrefix: tincture
+    heldPrefix: regenerative-mesh # starcup: placeholder inhand
   - type: Healing
     damageContainers:
     - Biological
@@ -187,7 +187,7 @@
 
 - type: entity
   name: EZ Graft
-  description: "There's a scratched up instructional sticker on the bottom. It reads:\nStep 1.) Locate Cau####d Wound.\nStep 2.) Roll EZ-Gr###t on the burn.\nStep 3.) Treat any ###aining cuts.\nStep 4.) Enjoy your###w skin!\nWARNING: Do NOT ove##pply!"
+  description: A small packet of ready-to-apply synthetic skin to replace that lost by caustic burns. Will leave incisions. # starcup: rewrite for clarity
   parent: BaseHealingItem
   id: EZGraft
   suffix: Full
@@ -199,7 +199,7 @@
     sprite: _Impstation/Objects/Specific/Medical/medical.rsi # starcup
     state: ez-graft
   - type: Item
-    heldPrefix: ez-graft
+    heldPrefix: ointment # starcup: placeholder inhand
   - type: Healing
     damageContainers:
       - Biological
@@ -240,7 +240,7 @@
     sprite: _Impstation/Objects/Specific/Medical/medical.rsi # starcup
     state: cold-pack
   - type: Item
-    heldPrefix: cold-pack
+    heldPrefix: regenerative-mesh # starcup: placeholder inhand
   - type: Healing
     damageContainers:
       - Biological
