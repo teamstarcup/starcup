@@ -333,12 +333,27 @@
 - type: entity
   name: aloe cream
   description: A topical cream for burns.
-  parent: Ointment ##Yes it's a direct reskin
+  parent: BaseHealingItem # IMP: make distinct from ointment
   id: AloeCream
   components:
+  # begin IMP changes
+  - type: Healing
+    damageContainers:
+      - Biological
+    damage:
+      types:
+        Heat: -10
+    healingBeginSound:
+      path: "/Audio/Items/Toys/ToyFall2.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/ointment_end.ogg"
+  - type: EmitSoundOnLand
+    sound:
+      path: "/Audio/Voice/Slime/slime_squish.ogg"
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/aloe.rsi
     state: cream
+  # end IMP
   - type: Stack
     stackType: AloeCream
     count: 10
