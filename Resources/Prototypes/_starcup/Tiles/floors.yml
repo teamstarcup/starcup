@@ -658,6 +658,36 @@
   deconstructTools: [ Cutting ]
   itemDrop: FloorTileItemAstroGrassGolden
 
+  - type: tile
+    id: FloorAstroGrassDarkEdges
+    name: dark astro-grass with edges
+    parent: FloorAstroGrassDark
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Astro/grass_dark/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Astro/grass_dark/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Astro/grass_dark/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Astro/grass_dark/single_edge.png
+    South: /Textures/_starcup/Tiles/Astro/grass_dark/double_edge.png
+    East: /Textures/_starcup/Tiles/Astro/grass_dark/double_edge.png
+    North: /Textures/_starcup/Tiles/Astro/grass_dark/double_edge.png
+    West: /Textures/_starcup/Tiles/Astro/grass_dark/double_edge.png
+
+  - type: tile
+    id: FloorAstroGrassLightEdges
+    name: light astro-grass with edges
+    parent: FloorAstroGrassLight
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Astro/grass_light/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Astro/grass_light/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Astro/grass_light/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Astro/grass_light/single_edge.png
+    South: /Textures/_starcup/Tiles/Astro/grass_light/double_edge.png
+    East: /Textures/_starcup/Tiles/Astro/grass_light/double_edge.png
+    North: /Textures/_starcup/Tiles/Astro/grass_light/double_edge.png
+    West: /Textures/_starcup/Tiles/Astro/grass_light/double_edge.png
+
 # Ice
 
 - type: tile
