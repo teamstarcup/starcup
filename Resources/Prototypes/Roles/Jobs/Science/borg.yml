@@ -9,7 +9,7 @@
 #  requirements:
 #  - !type:RoleTimeRequirement
 #    role: JobBorg
-#    time: 54000  # 15 hrs
+#    time: 5h
 # end starcup
   whitelisted: true # starcup
   canBeAntag: false
@@ -26,7 +26,7 @@
   playTimeTracker: JobBorg
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 7200 # starcup: 2 hrs
+      time: 2h # starcup
   canBeAntag: false
   icon: JobIconBorg
   supervisors: job-supervisors-rd

@@ -6,7 +6,7 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 7200 # starcup: 2 hrs
+      time: 2h # starcup
   startingGear: SecurityOfficerGear
   icon: "JobIconSecurityOfficer"
   supervisors: job-supervisors-hos
@@ -18,6 +18,8 @@
   # - Service # starcup: remove service access from non-service jobs
   - External
   - Cryogenics
+  - GenpopEnter
+  - GenpopLeave
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

@@ -4,9 +4,14 @@
   description: job-description-warden
   playTimeTracker: JobWarden
   requirements:
-    - !type:DepartmentTimeRequirement # starcup: RoleTimeRequirement -> DepartmentTimeRequirement
+  # begin starcup
+  #   - !type:RoleTimeRequirement
+  #     role: JobSecurityOfficer
+  #     time: 5h
+    - !type:DepartmentTimeRequirement
       department: Security
-      time: 7200 # starcup: 2 hrs
+      time: 2h # starcup: 10h > 2h
+  # end starcup
   weight: 5
   startingGear: WardenGear
   icon: "JobIconWarden"
@@ -20,6 +25,8 @@
   # - Service # starcup: remove service access from non-service jobs
   - External
   - Cryogenics
+  - GenpopEnter
+  - GenpopLeave
   extendedAccess:
   - Detective # starcup: moved to extended access
   special:

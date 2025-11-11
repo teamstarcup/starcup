@@ -6,7 +6,7 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 7200 # starcup: 2 hrs
+      time: 2h # starcup
   startingGear: DetectiveGear
   icon: "JobIconDetective"
   supervisors: job-supervisors-hos
@@ -19,6 +19,8 @@
   - Detective
   - Cryogenics
   - External
+  - GenpopEnter
+  - GenpopLeave
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
