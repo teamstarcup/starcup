@@ -9,6 +9,7 @@
     tags:
     - Brutepack
   - type: Sprite
+    sprite: _Impstation/Objects/Specific/Medical/medical.rsi # starcup
     state: simple-suture
   - type: Item
     heldPrefix: simple-suture
@@ -21,11 +22,11 @@
         Slash: -10
         Piercing: -5
     bloodlossModifier: -10
-    healingBeginSound: 
+    healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
-    healingEndSound: 
+    healingEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
-  - type: Stack 
+  - type: Stack
     stackType: SimpleSuture
     count: 10
   - type: StackPrice
@@ -51,6 +52,7 @@
     tags:
     - Ointment
   - type: Sprite
+    sprite: _Impstation/Objects/Specific/Medical/medical.rsi # starcup
     state: shock-gel
   - type: Item
     heldPrefix: shock-gel
@@ -61,11 +63,11 @@
       types:
         Shock: -10
         Heat: -5
-    healingBeginSound: 
+    healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
-    healingEndSound: 
+    healingEndSound:
       path: "/Audio/Items/Medical/ointment_end.ogg"
-  - type: Stack 
+  - type: Stack
     stackType: ShockGel
     count: 10
   - type: StackPrice
@@ -91,6 +93,7 @@
     tags:
     - Brutepack
   - type: Sprite
+    sprite: _Impstation/Objects/Specific/Medical/medical.rsi # starcup
     state: electrode-pad
   - type: Item
     heldPrefix: electrode-pad
@@ -104,9 +107,9 @@
     applyWrithe: true # I am channeling all my growing pains that I have ever experienced in my life through this one variable.
     healingBeginSound:
       path: "/Audio/Items/appraiser.ogg"
-    healingEndSound: 
+    healingEndSound:
       path: "/Audio/Effects/sparks4.ogg"
-  - type: Stack 
+  - type: Stack
     stackType: ElectrodePad
     count: 10
   - type: StackPrice
@@ -133,6 +136,7 @@
     - Brutepack
     - Ointment
   - type: Sprite
+    sprite: _Impstation/Objects/Specific/Medical/medical.rsi # starcup
     state: tincture
   - type: Item
     heldPrefix: tincture
@@ -145,9 +149,9 @@
         Burn: -8 #2 of each
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
-    healingEndSound: 
+    healingEndSound:
       path: "/Audio/Items/Medical/ointment_end.ogg"
-  - type: Stack 
+  - type: Stack
     stackType: Tincture
     count: 10
   - type: StackPrice
@@ -192,6 +196,7 @@
     tags:
     - Ointment
   - type: Sprite
+    sprite: _Impstation/Objects/Specific/Medical/medical.rsi # starcup
     state: ez-graft
   - type: Item
     heldPrefix: ez-graft
@@ -204,9 +209,9 @@
         Slash: 3
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
-    healingEndSound: 
+    healingEndSound:
       path: "/Audio/Items/Medical/ointment_end.ogg"
-  - type: Stack 
+  - type: Stack
     stackType: EZGraft
     count: 10
   - type: StackPrice
@@ -232,6 +237,7 @@
     tags:
     - Ointment
   - type: Sprite
+    sprite: _Impstation/Objects/Specific/Medical/medical.rsi # starcup
     state: cold-pack
   - type: Item
     heldPrefix: cold-pack
@@ -243,12 +249,12 @@
         Cold: -10
     healingBeginSound:
       path: "/Audio/Items/Toys/ToyFall2.ogg" #the logic is flawless.
-    healingEndSound: 
+    healingEndSound:
       path: "/Audio/Items/Medical/ointment_end.ogg"
   - type: EmitSoundOnLand
     sound:
       path: "/Audio/Voice/Slime/slime_squish.ogg" # Added Immersion.
-  - type: Stack 
+  - type: Stack
     stackType: ColdPack
     count: 10
   - type: StackPrice
