@@ -5,6 +5,9 @@
   description: Bees retaliate. These insects don't.
   abstract: true
   components:
+  - type: NpcFactionMember
+    factions:
+    - Bug
   - type: MovementSpeedModifier
     baseWalkSpeed : 3
     baseSprintSpeed : 7
@@ -23,9 +26,9 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      10: Dead
+      6: Dead
   - type: Stamina
-    critThreshold: 10
+    critThreshold: 6
     animationThreshold: 1
   - type: DamageStateVisuals
     states:
@@ -43,16 +46,13 @@
   - type: Bloodstream
     bloodReagent: InsectBlood
     bloodMaxVolume: 0.1
-  - type: NpcFactionMember
-    factions:
-    - Bug
   - type: ZombieImmune
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTypeTrigger
         damageType: Blunt
-        damage: 20
+        damage: 10
       behaviors:
       - !type:GibBehavior
         recursive: false
@@ -64,6 +64,10 @@
   description: For those big buggers.
   abstract: true
   components:
+  - type: NpcFactionMember
+    factions:
+    - SimpleNeutral
+    - GiantBug
   - type: CombatMode
   - type: MovementSpeedModifier
     baseWalkSpeed : 3
@@ -73,7 +77,7 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: 0
-      sprite: _starcup/Mobs/Animals/giant_bee.rsi
+      sprite: _starcup/Mobs/Animals/Insects/giant_bee.rsi
   - type: Physics
   - type: Fixtures
     fixtures:
@@ -108,9 +112,6 @@
     bloodMaxVolume: 0.1
   - type: NPCRetaliation
   - type: FactionException
-  - type: NpcFactionMember
-    factions:
-    - Passive
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
@@ -142,7 +143,7 @@
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: 0
-      sprite: _starcup/Mobs/Animals/bees.rsi
+      sprite: _starcup/Mobs/Animals/Insects/bees.rsi
   - type: Fixtures
     fixtures:
       fix1:
@@ -171,6 +172,11 @@
   - type: MeleeChemicalInjector
     transferAmount: 0.75
     solution: melee
+  - type: NPCRetaliation
+  - type: FactionException
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
 
 - type: entity
   name: wasps
@@ -183,7 +189,7 @@
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: 0
-      sprite: _starcup/Mobs/Animals/wasps.rsi
+      sprite: _starcup/Mobs/Animals/Insects/wasps.rsi
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -209,15 +215,12 @@
   description: A person's trash is a fly's treasure.
   parent: MobFlyingInsect
   components:
-  - type: NpcFactionMember
-    factions:
-    - Passive
   - type: Sprite
     drawdepth: Mobs
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: 0
-      sprite: _starcup/Mobs/Animals/flies.rsi
+      sprite: _starcup/Mobs/Animals/Insects/flies.rsi
   - type: Fixtures
     fixtures:
       fix1:
@@ -229,6 +232,13 @@
         - FlyingMobMask
         layer:
         - FlyingMobLayer
+  - type: Reproductive
+    makeOffspringInfant: false
+    partnerWhitelist:
+      tags:
+      - TrashPile
+    offspring:
+    - id: MobFlySwarm
 
 - type: entity
   name: mosquitoes
@@ -239,12 +249,13 @@
   components:
   - type: NpcFactionMember
     factions:
-    - SimpleHostile
+    - Bug
+    - Bloodsucker
   - type: Sprite
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: 0
-      sprite: _starcup/Mobs/Animals/mosquitoes.rsi
+      sprite: _starcup/Mobs/Animals/Insects/mosquitoes.rsi
   - type: MeleeWeapon
     animation: WeaponArcSting
     soundHit:
@@ -260,15 +271,12 @@
   description: Beautiful lights in the night.
   parent: MobFlyingInsect
   components:
-  - type: NpcFactionMember
-    factions:
-    - Passive
   - type: Sprite
     drawdepth: Mobs
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: 0
-      sprite: _starcup/Mobs/Animals/fireflies.rsi
+      sprite: _starcup/Mobs/Animals/Insects/fireflies.rsi
   - type: Fixtures
     fixtures:
       fix1:
@@ -318,8 +326,11 @@
   description: Its whip-like tail moves with surprising dexteirty.
   parent: MobFlyingInsect
   components:
+  - type: NpcFactionMember
+    factions:
+    - BugHunter
   - type: Sprite
-    sprite: _starcup/Mobs/Animals/dragonfly.rsi
+    sprite: _starcup/Mobs/Animals/Insects/dragonfly.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: dragonfly
@@ -331,13 +342,22 @@
         Base: dragonfly_dead
       Dead:
         Base: dragonfly_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      10: Dead
+  - type: NPCRetaliation
+  - type: FactionException
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
   - type: MeleeWeapon
     animation: WeaponArcBite
     soundHit:
       collection: SwarmBuzzing
     damage:
       types:
-        Brute: 1
+        Piercing: 2
 
 - type: entity
   name: giant bee
@@ -347,11 +367,10 @@
   parent: MobGiantFlyingInsect
   components:
   - type: Sprite
-    scale: 1.1, 1.1
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: 0
-      sprite: _starcup/Mobs/Animals/giant_bee.rsi
+      sprite: _starcup/Mobs/Animals/Insects/giant_bee.rsi
   - type: MeleeWeapon
     animation: WeaponArcSting
     soundHit:
@@ -381,11 +400,10 @@
   parent: MobGiantBee
   components:
   - type: Sprite
-    scale: 0.9, 0.9
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: 0
-      sprite: _starcup/Mobs/Animals/giant_sandwasp.rsi
+      sprite: _starcup/Mobs/Animals/Insects/giant_sandwasp.rsi
 
 - type: entity
   name: giant wasp
@@ -396,16 +414,17 @@
   components:
   - type: NpcFactionMember
     factions:
+    - GiantBug
     - SimpleHostile
   - type: Sprite
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: 0
-      sprite: _starcup/Mobs/Animals/giant_wasp.rsi
+      sprite: _starcup/Mobs/Animals/Insects/giant_wasp.rsi
   - type: MobThresholds
     thresholds:
       0: Alive
-      35: Dead
+      25: Dead
   - type: MeleeWeapon
     animation: WeaponArcSting
     soundHit:
@@ -423,25 +442,25 @@
   components:
   - type: NpcFactionMember
     factions:
-    - SimpleHostile
+    - GiantBug
+    - Bloodsucker
   - type: Sprite
-    scale: 0.8,0.8
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: 0
-      sprite: _starcup/Mobs/Animals/giant_mosquito.rsi
+      sprite: _starcup/Mobs/Animals/Insects/giant_mosquito.rsi
   - type: MobThresholds
     thresholds:
       0: Alive
-      20: Dead
+      15: Dead
   - type: MeleeWeapon
     animation: WeaponArcSting
     soundHit:
       collection: SwarmBuzzing
     damage:
       types:
-        Piercing: 1
-        Bloodloss: 3
+        Piercing: 3
+        Bloodloss: 1
 
 - type: entity
   name: beetle
@@ -451,7 +470,7 @@
   components:
   - type: Sprite
     drawdepth: SmallMobs
-    sprite: _starcup/Mobs/Animals/beetle.rsi
+    sprite: _starcup/Mobs/Animals/Insects/beetle.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: beetle
@@ -467,3 +486,29 @@
         Base: beetle_dead
       Dead:
         Base: beetle_dead
+
+- type: entity
+  name: beetle
+  suffix: AI
+  id: MobBeetleRhino
+  parent: MobBeetle
+  components:
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: _starcup/Mobs/Animals/Insects/beetle_rhino.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: beetle
+
+- type: entity
+  name: ladybug
+  suffix: AI
+  id: MobLadybug
+  parent: MobBeetle
+  components:
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: _starcup/Mobs/Animals/Insects/ladybug.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: beetle
