@@ -1,0 +1,88 @@
+[net]
+tickrate = 30
+
+[status]
+# The status server is the TCP side, used by the launcher to determine engine version, etc.
+# To be clear: Disabling it makes the launcher unable to connect!
+enabled = true
+
+[game]
+hostname = "[EN][RP] starcup"
+soft_max_players = 30
+map_pool = "StarcupDefaultMapPool"
+defaultpreset = "Calm"
+
+# time after docking at syndcomm before returning to lobby
+round_restart_time = 1200
+
+# time in lobby before the next game starts
+lobbyduration = 300
+
+[server]
+id = "starcup"
+rules_file = "starcupRuleset"
+uptime_restart_minutes = 1440
+
+[infolinks]
+discord = "https://discord.gg/5pC525RYbw"
+forum = "https://forum.starcup.cc/"
+github = "https://github.com/teamstarcup/starcup/"
+patreon = "https://ko-fi.com/teamstarcup"
+website = "https://starcup.cc/"
+
+[hub]
+# Set to true to show this server on the public server list
+# Before enabling this, read: https://docs.spacestation14.io/hosts/hub-rules
+advertise = false
+tags = "lang:en,region:am_n_w"
+server_url = "ss14s://ss14.starcup.cc/"
+hub_urls = "https://hub.spacestation14.com/"
+
+[atmos]
+space_wind = true
+
+[shuttle]
+arrivals = false
+emergency_early_launch_allowed = true
+
+# the percentage of time passed from the initial call to when the shuttle can no longer be recalled
+recall_turning_point = 0.2
+
+# time before the evac shuttle leaves after docking
+emergency_dock_time = 300
+
+# time before the evac shuttle is automatically called
+auto_call_time = 120
+
+[admin]
+see_own_notes   = true
+deadmin_on_join = true
+admins_count_in_playercount = true
+
+[adminlogs]
+server_name = "starcup"
+
+[ooc]
+enable_during_round = true
+
+[ic]
+flavor_text = true
+punctuation = true
+
+[vote]
+map_enabled = true
+preset_enabled = true
+
+[tips]
+out_of_game_frequency = 300
+
+[replay]
+auto_record = true
+auto_record_temp_dir = "replays_tmp/"
+max_compressed_size = 999999999999
+max_uncompressed_size = 999999999999
+
+[metrics]
+enabled = true
+host = "0.0.0.0"
+port = 44880
