@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 11/14/2025 09:57:33
-  entityCount: 14167
+  time: 11/14/2025 10:12:18
+  entityCount: 14165
 maps:
 - 1
 grids:
@@ -33669,18 +33669,6 @@ entities:
     components:
     - type: Transform
       pos: 35.73948,-17.41444
-      parent: 2
-- proto: ClothingOuterArmorReflective
-  entities:
-  - uid: 5209
-    components:
-    - type: Transform
-      pos: 10.630554,24.552505
-      parent: 2
-  - uid: 5216
-    components:
-    - type: Transform
-      pos: 10.344873,24.42501
       parent: 2
 - proto: ClothingOuterCoatMNKBlackTopCoat
   entities:
@@ -69682,6 +69670,13 @@ entities:
     - type: Transform
       pos: 31.318815,-18.488987
       parent: 2
+- proto: PortableFlasher
+  entities:
+  - uid: 5209
+    components:
+    - type: Transform
+      pos: 10.5,24.5
+      parent: 2
 - proto: PortableGeneratorJrPacman
   entities:
   - uid: 10141
@@ -71575,11 +71570,6 @@ entities:
       - CivilianServices
 - proto: Rack
   entities:
-  - uid: 9327
-    components:
-    - type: Transform
-      pos: 10.5,24.5
-      parent: 2
   - uid: 10443
     components:
     - type: Transform
