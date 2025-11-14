@@ -463,21 +463,59 @@
         Bloodloss: 1
 
 - type: entity
-  name: beetle
+  name: cockroach
   suffix: AI
-  id: MobBeetle
+  id: MobCockRoachHL
   parent: MobCockroach
   components:
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: _starcup/Mobs/Animals/Insects/cockroach_dorito.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: cockroach
+
+- type: entity
+  name: hercules beetle
+  parent: SimpleMobBase
+  id: MobBeetle
+  description: A little friend with a tough shell and a valiant heart.
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Bug
   - type: Sprite
     drawdepth: SmallMobs
     sprite: _starcup/Mobs/Animals/Insects/beetle.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: beetle
+  - type: Item
+    size: Tiny
+  - type: HTN
+    constantlyReplan: false
+    rootTask:
+      task: MouseCompound
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: MobState
   - type: MobThresholds
     thresholds:
       0: Alive
       2: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.5
+    baseSprintSpeed : 5
   - type: DamageStateVisuals
     states:
       Alive:
@@ -486,9 +524,76 @@
         Base: beetle_dead
       Dead:
         Base: beetle_dead
+  - type: Bloodstream
+    bloodReagent: InsectBlood
+    bloodMaxVolume: 20
+  - type: Edible
+  - type: FlavorProfile
+    flavors:
+    - chewy
+  - type: Thirst
+    startingThirst: 25
+    thresholds:
+      OverHydrated: 30
+      Okay: 20
+      Thirsty: 10
+      Parched: 5
+      Dead: 0
+  - type: Hunger
+    thresholds:
+      Overfed: 30
+      Okay: 20
+      Peckish: 10
+      Starving: 5
+      Dead: 0
+    baseDecayRate: 0.1
+  - type: Body
+    prototype: Mouse
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Slime
+          Quantity: 5
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatSlime
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Cockroach
+  - type: Tag
+    tags:
+    - Trash
+    - VimPilot
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 10
+      behaviors:
+      - !type:GibBehavior
+        recursive: false
+  - type: StepTrigger
+    requiredTriggeredSpeed: 1
+  - type: TriggerOnStepTrigger
+  - type: RandomChanceTriggerCondition
+    successChance: 0.1
+  - type: GibOnTrigger
+  - type: ProtectedFromStepTriggers
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 0
 
 - type: entity
-  name: beetle
+  name: rhinoceros beetle
   suffix: AI
   id: MobBeetleRhino
   parent: MobBeetle
@@ -496,6 +601,19 @@
   - type: Sprite
     drawdepth: SmallMobs
     sprite: _starcup/Mobs/Animals/Insects/beetle_rhino.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: beetle
+
+- type: entity
+  name: june beetle
+  suffix: AI
+  id: MobBeetleJune
+  parent: MobBeetle
+  components:
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: _starcup/Mobs/Animals/Insects/beetle_june.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: beetle
