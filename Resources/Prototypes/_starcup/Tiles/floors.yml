@@ -139,7 +139,7 @@
     West: /Textures/_starcup/Tiles/Stone/blue_stone02/double_edge.png
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [ Mining ]
   itemDrop: FloorTileItemBlueStone02
 
 - type: tile
@@ -579,7 +579,8 @@
     East: /Textures/_starcup/Tiles/Astro/astro_grass_cold/double_edge.png
     North: /Textures/_starcup/Tiles/Astro/astro_grass_cold/double_edge.png
     West: /Textures/_starcup/Tiles/Astro/astro_grass_cold/double_edge.png
-  deconstructTools: [ Cutting ]
+  baseTurf: Plating
+  deconstructTools: [ Digging ]
   itemDrop: FloorTileItemAstroGrassCold
 
 - type: tile
@@ -607,7 +608,8 @@
     East: /Textures/_starcup/Tiles/Astro/astro_grass_cold/double_edge.png
     North: /Textures/_starcup/Tiles/Astro/astro_grass_cold/double_edge.png
     West: /Textures/_starcup/Tiles/Astro/astro_grass_cold/double_edge.png
-  deconstructTools: [ Cutting ]
+  baseTurf: Plating
+  deconstructTools: [ Digging ]
   itemDrop: FloorTileItemAstroGrassSnowy
 
 - type: tile
@@ -631,7 +633,8 @@
     East: /Textures/_starcup/Tiles/Astro/astro_grass_twilight/double_edge.png
     North: /Textures/_starcup/Tiles/Astro/astro_grass_twilight/double_edge.png
     West: /Textures/_starcup/Tiles/Astro/astro_grass_twilight/double_edge.png
-  deconstructTools: [ Cutting ]
+  baseTurf: Plating
+  deconstructTools: [ Digging ]
   itemDrop: FloorTileItemAstroGrassTwilight
 
 - type: tile
@@ -659,34 +662,34 @@
   itemDrop: FloorTileItemAstroGrassGolden
 
 - type: tile
-  id: FloorAstroGrassDarkEdges
+  id: FloorAstroDarkGrassEdges
   name: dark astro-grass with edges
-  parent: FloorAstroGrassDark
+  parent: FloorGrassDark
   edgeSpritePriority: 1
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Astro/grass_dark/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Astro/grass_dark/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Astro/grass_dark/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Astro/grass_dark/single_edge.png
-    South: /Textures/_starcup/Tiles/Astro/grass_dark/double_edge.png
-    East: /Textures/_starcup/Tiles/Astro/grass_dark/double_edge.png
-    North: /Textures/_starcup/Tiles/Astro/grass_dark/double_edge.png
-    West: /Textures/_starcup/Tiles/Astro/grass_dark/double_edge.png
+    SouthEast: /Textures/_starcup/Tiles/Astro/astro_grass_dark/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Astro/astro_grass_dark/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Astro/astro_grass_dark/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Astro/astro_grass_dark/single_edge.png
+    South: /Textures/_starcup/Tiles/Astro/astro_grass_dark/double_edge.png
+    East: /Textures/_starcup/Tiles/Astro/astro_grass_dark/double_edge.png
+    North: /Textures/_starcup/Tiles/Astro/astro_grass_dark/double_edge.png
+    West: /Textures/_starcup/Tiles/Astro/astro_grass_dark/double_edge.png
 
 - type: tile
-  id: FloorAstroGrassLightEdges
+  id: FloorLightAstroGrassEdges
   name: light astro-grass with edges
-  parent: FloorAstroGrassLight
+  parent: FloorGrassLight
   edgeSpritePriority: 1
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Astro/grass_light/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Astro/grass_light/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Astro/grass_light/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Astro/grass_light/single_edge.png
-    South: /Textures/_starcup/Tiles/Astro/grass_light/double_edge.png
-    East: /Textures/_starcup/Tiles/Astro/grass_light/double_edge.png
-    North: /Textures/_starcup/Tiles/Astro/grass_light/double_edge.png
-    West: /Textures/_starcup/Tiles/Astro/grass_light/double_edge.png
+    SouthEast: /Textures/_starcup/Tiles/Astro/astro_grass_light/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Astro/astro_grass_light/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Astro/astro_grass_light/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Astro/astro_grass_light/single_edge.png
+    South: /Textures/_starcup/Tiles/Astro/astro_grass_light/double_edge.png
+    East: /Textures/_starcup/Tiles/Astro/astro_grass_light/double_edge.png
+    North: /Textures/_starcup/Tiles/Astro/astro_grass_light/double_edge.png
+    West: /Textures/_starcup/Tiles/Astro/astro_grass_light/double_edge.png
 
 # Ice
 
@@ -696,7 +699,7 @@
   parent: FloorSnowGrassy
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [ Digging ]
   itemDrop: FloorTileItemAstroSnowGrassy
 
 # Dirt & caves
@@ -722,7 +725,7 @@
     West: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [ Digging ]
   footstepSounds:
     collection: FootstepAsteroid
   itemDrop: FloorTileItemAstroDirt
@@ -751,12 +754,13 @@
     East: /Textures/_starcup/Tiles/Planet/cave.rsi/double_edge.png
     North: /Textures/_starcup/Tiles/Planet/cave.rsi/double_edge.png
     West: /Textures/_starcup/Tiles/Planet/cave.rsi/double_edge.png
+  deconstructTools: [ Mining ]
   itemDrop: FloorTileItemAstroCave
 
 - type: tile
   id: FloorAstroCaveDrought
   name: drought cave astro-dirt
-  parent: FloorAstroDirt
+  parent: FloorAstroCave
   sprite: /Textures/Tiles/cavedrought.png
   variants: 8
   placementVariants:
