@@ -1,6 +1,3 @@
-## hey this is carousel
-## in service of vox being somewhat in line with impstation species design standards
-## i have rearranged the furniture in here quite severely
 - type: species
   id: Vox
   name: species-name-vox
@@ -15,8 +12,8 @@
   femaleFirstNames: NamesVox
   naming: First
   sexes:
-  - Male
-  - Female
+  - Male # imp
+  - Female # imp
   - Unsexed
 
 - type: speciesBaseSprites
@@ -54,15 +51,14 @@
       points: 1
       required: false
     Head:
-      points: 4 # starcup: 2 -> 4
-      required: false #imp
+      points: 4
+      required: false # imp
     HeadSide: #imp
       points: 2
       required: false
-    Snout:
+    SnoutCover:
       points: 1
-      required: false #imp
-      #defaultMarkings: [ VoxBeak ]
+      required: false # imp
     Arms:
       points: 6
       required: false #imp
@@ -86,7 +82,7 @@
     Tail:
       points: 1
       required: true
-      defaultMarkings: [ VoxTailBack ]
+      defaultMarkings: [ VoxTailBack ] # imp
 
 - type: humanoidBaseSprite
   id: MobVoxEyes

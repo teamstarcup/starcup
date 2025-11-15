@@ -3,15 +3,16 @@
   name: job-name-rd
   description: job-description-rd
   playTimeTracker: JobResearchDirector
-# begin starcup: command roles are whitelisted
-#  requirements:
-#    - !type:DepartmentTimeRequirement
-#      department: Science
-#      time: 36000 #10 hrs
-#    - !type:OverallPlaytimeRequirement
-#      time: 144000 #40 hrs
-# end starcup
-  whitelisted: true # starcup
+  # begin starcup: command roles are whitelisted
+  # requirements:
+  # - !type:RoleTimeRequirement
+  #   role: JobScientist
+  #   time: 5h
+  # - !type:DepartmentTimeRequirement
+  #   department: Science
+  #   time: 10h
+  whitelisted: true
+  # end starcup
   weight: 10
   startingGear: ResearchDirectorGear
   icon: "JobIconResearchDirector"

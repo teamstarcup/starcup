@@ -83,15 +83,15 @@
     - reagents: [ Water, SpaceCleaner ]
       methods: [ Touch ]
       effects:
-      - !type:WashCreamPieReaction
+      - !type:WashCreamPie
     - reagents: [ Water ]
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
+        scaling: true
         damage:
           types:
-            Caustic: 0.1 # starcup: changed damage type from heat
+            Caustic: 0.05 # starcup: changed damage type from heat
       - !type:PopupMessage
         type: Local
         visualType: Large

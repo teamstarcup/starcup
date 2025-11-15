@@ -7,7 +7,7 @@
 # begin starcup
 #  requirements:
 #  - !type:OverallPlaytimeRequirement
-#    time: 18000 # 5h
+#    time: 5h
 # end starcup
   guides: [ NuclearOperatives ]
 
@@ -20,10 +20,10 @@
   requirements:
 # begin starcup
 #  - !type:OverallPlaytimeRequirement
-#    time: 18000 # 5h
+#    time: 5h
 #  - !type:RoleTimeRequirement
 #    role: JobChemist
-#    time: 10800 # 3h
+#    time: 3h
 # end starcup
   guides: [ NuclearOperatives ]
 
@@ -36,12 +36,11 @@
   requirements:
 # begin starcup
 #  - !type:OverallPlaytimeRequirement
-#    time: 18000 # 5h
+#    time: 5h
 #  - !type:DepartmentTimeRequirement
 #    department: Security
-#    time: 18000 # 5h
+#    time: 5h
 # end starcup
-  - !type:WhitelistRequirement # DeltaV - Commander is an "hrp" role
   # should be changed to nukie playtime when thats tracked (wyci)
   guides: [ NuclearOperatives ]
 

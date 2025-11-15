@@ -22,6 +22,7 @@
           - FullTileMask
         layer:
           - AirlockLayer
+          - LowImpassable # starcup: dded to block mice
       docking:
         shape:
           !type:PhysShapeCircle
@@ -31,6 +32,33 @@
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/shuttle.rsi
     snapCardinals: false
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+    - state: closed_unlit
+      shader: unshaded
+      map: ["enum.DoorVisualLayers.BaseUnlit"]
+      visible: false
+    - state: welded
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: bolted_unlit
+      shader: unshaded
+      map: ["enum.DoorVisualLayers.BaseBolted"]
+    - state: emergency_unlit
+      map: ["enum.DoorVisualLayers.BaseEmergencyAccess"]
+      shader: unshaded
+    - state: panel_open
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - state: electrified_ai
+      sprite: Interface/Misc/ai_hud.rsi
+      shader: unshaded
+      visible: false
+      map: ["enum.ElectrifiedLayers.HUD"]
+    - state: electrified
+      sprite: Effects/electricity.rsi
+      shader: unshaded
+      visible: false
+      map: ["enum.ElectrifiedLayers.Sparks"]
   - type: Wires
     layoutId: Docking
   - type: Door
@@ -76,6 +104,7 @@
       fix1:
         layer:     #removed opaque from the layer, allowing lasers to pass through glass airlocks
         - GlassAirlockLayer
+        - LowImpassable # starcup: added to block mice
 
 - type: entity
   id: AirlockShuttleAssembly

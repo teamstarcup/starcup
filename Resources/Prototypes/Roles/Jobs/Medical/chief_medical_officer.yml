@@ -9,16 +9,14 @@
 #  requirements:
 #    - !type:RoleTimeRequirement
 #      role: JobChemist
-#      time: 10800 #3 hrs
+#      time: 2.5h
 #    - !type:RoleTimeRequirement
 #      role: JobMedicalDoctor
-#      time: 21600 #6 hrs
+#      time: 5h
 #    - !type:DepartmentTimeRequirement
 #      department: Medical
-#      time: 36000 #10 hrs
-#    - !type:OverallPlaytimeRequirement
-#      time: 144000 #40 hrs
-  whitelisted: true # starcup
+#      time: 10h
+  whitelisted: true
 # end starcup
   weight: 10
   startingGear: CMOGear

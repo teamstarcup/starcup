@@ -1,19 +1,11 @@
 - type: entity
   name: old fashioned glass
   description: For stronger, meaner drinks. Holds up to 20 units.
-  parent: [DrinkBaseMaterialGlass, DrinkBaseCup]
+  parent: [DrinkBaseMaterialGlass, DrinkBaseCup, DrinkVisualsFillOverlay]
   id: DrinkGlassOldFashioned
   components:
   - type: Sprite
     sprite: _starcup/Objects/Consumable/Drinks/glass_oldfashioned.rsi
-    layers:
-      - state: icon
-        map: [ "enum.SolutionContainerLayers.Base" ]
-      - state: fill1
-        map: [ "enum.SolutionContainerLayers.Fill" ]
-        visible: false
-      - state: icon-front
-        map: [ "enum.SolutionContainerLayers.Overlay" ]
   - type: Appearance
   - type: SolutionContainerManager
     solutions:
@@ -21,7 +13,7 @@
         maxVol: 20
   - type: SolutionContainerVisuals
     maxFillLevels: 6
-    fillBaseName: fill
+    fillBaseName: fill-
     inHandsMaxFillLevels: 2
     inHandsFillBaseName: -fill-
   - type: Tag
@@ -32,19 +24,11 @@
 - type: entity
   name: cocktail glass
   description: For drinks meant to be slowly savored. Holds up to 15 units.
-  parent: [DrinkBaseMaterialGlass, DrinkBaseCup]
+  parent: [DrinkBaseMaterialGlass, DrinkBaseCup, DrinkVisualsFillOverlay]
   id: DrinkGlassCocktail
   components:
   - type: Sprite
     sprite: _starcup/Objects/Consumable/Drinks/glass_cocktail.rsi
-    layers:
-      - state: icon
-        map: [ "enum.SolutionContainerLayers.Base" ]
-      - state: fill1
-        map: [ "enum.SolutionContainerLayers.Fill" ]
-        visible: false
-      - state: icon-front
-        map: [ "enum.SolutionContainerLayers.Overlay" ]
   - type: Appearance
   - type: SolutionContainerManager
     solutions:
@@ -52,7 +36,7 @@
         maxVol: 15
   - type: SolutionContainerVisuals
     maxFillLevels: 3
-    fillBaseName: fill
+    fillBaseName: fill-
     inHandsMaxFillLevels: 1
     inHandsFillBaseName: -fill-
   - type: Tag
@@ -63,19 +47,11 @@
 - type: entity
   name: highball glass
   description: For light drinks and having a good time. Holds up to 30 units.
-  parent: [DrinkBaseMaterialGlass, DrinkBaseCup]
+  parent: [DrinkBaseMaterialGlass, DrinkBaseCup, DrinkVisualsFillOverlay]
   id: DrinkGlassHighball
   components:
   - type: Sprite
     sprite: Objects/Consumable/Drinks/glass_clear.rsi
-    layers:
-      - state: icon
-        map: [ "enum.SolutionContainerLayers.Base" ]
-      - state: fill1
-        map: [ "enum.SolutionContainerLayers.Fill" ]
-        visible: false
-      - state: icon-front
-        map: [ "enum.SolutionContainerLayers.Overlay" ]
   - type: Appearance
   - type: SolutionContainerManager
     solutions:
@@ -83,7 +59,7 @@
         maxVol: 30
   - type: SolutionContainerVisuals
     maxFillLevels: 9
-    fillBaseName: fill
+    fillBaseName: fill-
     inHandsMaxFillLevels: 3
     inHandsFillBaseName: -fill-
   - type: Tag
