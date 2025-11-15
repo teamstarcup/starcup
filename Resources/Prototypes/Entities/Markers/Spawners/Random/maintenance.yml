@@ -212,7 +212,15 @@
     - !type:GroupSelector
       weight: 75
       children:
-      - id: FlashlightLantern
+      # begin starcup: add misc tools & tweaks
+      - !type:GroupSelector
+        children:
+        - id: FlashlightLantern
+        - id: FlashlightLanternGreen
+        - id: FlashlightLanternPurple
+        - id: FlashlightLanternTeal
+        - id: FlashlightLanternRed
+        - id: FlashlightBig
       - id: ToolboxEmergencyFilled
       - !type:GroupSelector
         children:
@@ -243,7 +251,15 @@
       - id: Soap
       - id: Wirecutter
       - id: Screwdriver
-      - id: Wrench
+      # begin starcup: add misc tools & tweaks
+      - !type:GroupSelector
+        children:
+        - id: Wrench
+        - id: HeavyWrench
+        - id: MonkeyWrench
+        - id: PipeWrench
+      - id: BroomItemBrown
+      # end starcup
       - id: Crowbar
       - id: Multitool
       - id: Shovel
