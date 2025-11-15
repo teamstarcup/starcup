@@ -228,7 +228,13 @@
 
 - type: wireLayout
   id: APC
-  dummyWires: 3
+  # begin DeltaV: add APC power wires
+  # dummyWires: 3
   wires:
-  - !type:AccessWireAction
+  - !type:PowerWireAction
+    pulseTimeout: 60 # double the times of airlock wires so it's more useful
+  - !type:PowerWireAction
+    pulseTimeout: 30
   - !type:AiInteractWireAction
+  - !type:AccessWireAction
+  # end DeltaV

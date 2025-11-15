@@ -1,0 +1,207 @@
+
+- type: entityTable
+  id: LunchboxFillEntreHealthy
+  table: !type:GroupSelector
+    children:
+    - id: FoodSoupPea
+    - id: FoodSoupMeatball
+    - id: FoodSoupSlime
+    - id: FoodSoupVegetable
+    - id: FoodSoupTomato
+    - id: FoodSoupMiso
+    - id: FoodSoupMushroom
+    - id: FoodSoupBeet
+    - id: FoodSoupStew
+    - id: FoodSoupPotato
+    - id: FoodSoupBisque
+    - id: FoodSaladCaesar
+    - id: FoodSaladFruit
+    - id: FoodSaladJungle
+    - id: FoodSaladCitrus
+    - id: FoodSaladEden
+      weight: 0.5
+    - id: FoodRiceEgg
+    - id: FoodRicePork
+    - id: FoodRiceGumbo
+    - id: FoodOatmeal
+    - id: FoodBakedGrilledCheeseSandwich
+
+- type: entityTable
+  id: LunchboxFillEntreTreat
+  table: !type:GroupSelector
+    rolls: !type:RangeNumberSelector
+      range: 2, 3
+    children:
+    - id: FoodPizzaMargheritaSlice
+    - id: FoodPizzaMeatSlice
+    - id: FoodPizzaMushroomSlice
+    - id: FoodPizzaVegetableSlice
+    - id: FoodPizzaDonkpocketSlice
+    - id: FoodPizzaDankSlice
+    - id: FoodPizzaSassysageSlice
+    - id: FoodPizzaPineappleSlice
+    - id: FoodPizzaArnoldSlice
+      weight: 0.5
+    - id: FoodPizzaWorldpeasSlice
+      weight: 0.1
+
+- type: entityTable
+  id: LunchboxFillEntreMoth
+  table: !type:GroupSelector
+    children:
+    - id: FoodBagelCotton
+    - id: FoodBakedGrilledCheeseSandwichCotton
+    - id: FoodBreadCottonSlice
+    - id: FoodBakedCroissantCotton
+    - id: FoodPizzaCottonSlice
+
+- type: entityTable
+  id: LunchboxFillSnackHealthy
+  table: !type:GroupSelector
+    children:
+    - id: FoodCarrot
+    - id: FoodEggBoiled
+    - id: FoodApple
+    - id: FoodBanana
+    - id: FoodGrape
+    - id: FoodWatermelonSlice
+    - id: FoodBerries
+
+- type: entityTable
+  id: LunchboxFillSnackTreat
+  table: !type:GroupSelector
+    children:
+    - id: FoodSnackCheesie
+    - id: FoodSnackBoritos
+    - id: FoodSnackChips
+    - id: FoodSnackPistachios
+    - id: FoodSnackChocolateImitation
+    - id: FoodSnackSus
+    - id: FoodBakedCookieOatmeal
+    - id: FoodBakedCookieRaisin
+    - id: FoodBakedCookieSugar
+    - id: FoodBakedMuffin
+    - id: FoodBakedMuffinBerry
+    - id: FoodBakedMuffinCherry
+    - id: FoodBakedMuffinBluecherry
+    - id: FoodBakedMuffinBanana
+    - id: FoodCakeBlueberrySlice
+    - id: FoodCakePlainSlice
+    - id: FoodCakeCarrotSlice
+    - id: FoodCakeBrainSlice
+    - id: FoodCakeCheeseSlice
+    - id: FoodCakeOrangeSlice
+    - id: FoodCakeLimeSlice
+    - id: FoodCakeLemonSlice
+    - id: FoodCakeLemoonSlice
+    - id: FoodCakeAppleSlice
+    - id: FoodCakeSlimeSlice
+    - id: FoodCakePumpkinSlice
+    - id: FoodCakeChristmasSlice
+    - id: FoodCakeBirthdaySlice
+    - id: FoodCakeVanillaSlice
+    - id: FoodCakeClownSlice
+    - id: FoodCakeSpacemanSlice
+      weight: 0.25
+    - id: FoodCakeBerryDelightSlice
+    - id: FoodTartGrape
+    - id: FoodTartMime
+    - id: FoodTartGapple
+    - id: FoodDonkpocket
+    - id: FoodDonkpocketDank
+    - id: FoodDonkpocketSpicy
+    - id: FoodDonkpocketTeriyaki
+    - id: FoodDonkpocketPizza
+    - id: FoodDonkpocketHonk
+    - id: FoodDonkpocketBerry
+    - id: FoodBakedCannabisBrownie
+
+- type: entityTable
+  id: LunchboxFillSnackMoth
+  table: !type:GroupSelector
+    rolls: 2
+    children:
+    - id: FoodCakeCottonSlice
+    - id: FoodDonkpocketMoth
+    - id: FoodBreadBaguetteCottonSlice
+    - id: FoodBakedChevreChaudCotton
+
+- type: entityTable
+  id: LunchboxFillDrinkHealthy
+  table: !type:GroupSelector
+    children:
+    - id: DrinkWaterBottleFull
+    - id: DrinkJuiceMilkJuicebox
+
+- type: entityTable
+  id: LunchboxFillDrinkTreat
+  table: !type:GroupSelector
+    children:
+    - id: DrinkJuiceOrangeJuicebox
+    - id: DrinkJuicePineappleJuicebox
+    - id: DrinkJuiceAppleJuicebox
+    - id: DrinkJuiceGrapeJuicebox
+    - id: DrinkChocolateJuicebox
+
+- type: entityTable
+  id: LunchboxFillDrinkRandom
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: LunchboxFillDrinkHealthy
+      weight: 2
+    - !type:NestedSelector
+      tableId: LunchboxFillDrinkTreat
+
+- type: entityTable
+  id: LunchboxFillHealthy
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: LunchboxFillEntreHealthy
+    - !type:NestedSelector
+      tableId: LunchboxFillSnackHealthy
+    - !type:NestedSelector
+      tableId: LunchboxFillDrinkHealthy
+    - id: PaperWrittenNoteFromMumHealthy
+      prob: 0.1
+
+- type: entityTable
+  id: LunchboxFillTreat
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: LunchboxFillEntreTreat
+    - !type:NestedSelector
+      tableId: LunchboxFillSnackTreat
+    - !type:NestedSelector
+      tableId: LunchboxFillDrinkTreat
+    - id: PaperWrittenNoteFromMumUnhealthy
+      prob: 0.1
+
+- type: entityTable
+  id: LunchboxFillMoth
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: LunchboxFillEntreMoth
+    - !type:NestedSelector
+      tableId: LunchboxFillSnackMoth
+    - !type:NestedSelector
+      tableId: LunchboxFillDrinkRandom
+    - id: PaperWrittenNoteFromMumGeneric
+      prob: 0.1
+
+- type: entityTable
+  id: LunchboxFillRandom
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: LunchboxFillHealthy
+      weight: 3
+    - !type:NestedSelector
+      tableId: LunchboxFillTreat
+      weight: 3
+    - !type:NestedSelector
+      tableId: LunchboxFillMoth
+      weight: 1  # 9% of characters, but we give them 14% of the share

@@ -9,7 +9,8 @@ using Content.Shared.Anomaly.Components;
 using Content.Shared.Anomaly.Effects;
 using Content.Shared.Body.Components;
 using Content.Shared.Chat;
-using Content.Shared.Damage; // starcup
+using Content.Shared.Damage.Components;
+using Content.Shared.Damage.Systems; // starcup
 using Content.Shared.Database;
 using Content.Shared.Mobs;
 using Content.Shared.Popups;
@@ -142,7 +143,7 @@ public sealed class InnerBodyAnomalySystem : SharedInnerBodyAnomalySystem
 
         // begin starcup: replace supercrit gib with definable damage type
         // _body.GibBody(ent, true, body, splatModifier: 5f);
-        _damageableSystem.TryChangeDamage(ent, ent.Comp.SupercriticalDamage, true);
+        _damageableSystem.ChangeDamage(ent.Owner, ent.Comp.SupercriticalDamage, true);
         // end starcup
     }
 

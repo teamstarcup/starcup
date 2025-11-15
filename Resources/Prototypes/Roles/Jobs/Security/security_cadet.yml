@@ -6,10 +6,10 @@
 # begin starcup
 #  requirements:
 #    - !type:OverallPlaytimeRequirement
-#      time: 36000 #10 hrs
+#      time: 10h
 #    - !type:DepartmentTimeRequirement # starcup: remove intern lockout
 #      department: Security
-#      time: 54000 #15 hrs
+#      time: 5h
 #      inverted: true # stop playing intern if you're good at security!
 # end starcup
   startingGear: SecurityCadetGear
@@ -23,6 +23,8 @@
   # - Service # starcup: remove service access from non-service jobs
   - External
   - Cryogenics
+  - GenpopEnter
+  - GenpopLeave
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
