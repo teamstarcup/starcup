@@ -6,14 +6,19 @@
   components:
   - type: StorageFill
     contents:
+      # begin starcup: add misc tools & tweaks, random pryting item orGroup
       - id: CrowbarRed
+        orGroup: PryingItem
+      - id: CrashAxe
+        orGroup: PryingItem
+      # end starcup
       - id: RadioHandheld
       - id: WelderMini
       - id: FireExtinguisherMini
       # Random lighting item orGroup
       - id: FlashlightLantern
         orGroup: LightingItem
-    # begin starcup: add misc tools & tweaks
+      # begin starcup: add misc tools & tweaks
       - id: FlashlightLanternGreen
         orGroup: LightingItem
       - id: FlashlightLanternTeal
@@ -24,7 +29,7 @@
         orGroup: LightingItem
       - id: FlashlightBig
         orGroup: LightingItem
-    # end starcup: add misc tools & tweaks
+      # end starcup
       - id: Flare
         orGroup: LightingItem
       - id: GlowstickBase

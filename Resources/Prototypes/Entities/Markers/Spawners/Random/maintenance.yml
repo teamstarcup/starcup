@@ -212,7 +212,7 @@
     - !type:GroupSelector
       weight: 75
       children:
-      # begin starcup: add misc tools & tweaks
+      # begin starcup: add misc. tools & tweaks
       - !type:GroupSelector
         children:
         - id: FlashlightLantern
@@ -221,6 +221,7 @@
         - id: FlashlightLanternTeal
         - id: FlashlightLanternRed
         - id: FlashlightBig
+      # end starcup
       - id: ToolboxEmergencyFilled
       - !type:GroupSelector
         children:
@@ -251,7 +252,7 @@
       - id: Soap
       - id: Wirecutter
       - id: Screwdriver
-      # begin starcup: add misc tools & tweaks
+      # begin starcup: add misc. tools & tweaks
       - !type:GroupSelector
         children:
         - id: Wrench
@@ -365,6 +366,10 @@
       - id: RifleStock
       - id: ModularReceiver
       - id: HydroponicsToolScythe
+      # begin starcup: add misc. tools & tweaks
+      - id: CrashAxe
+      - id: BrushAxe
+      # end starcup
     # Rare Group
     - !type:GroupSelector
       weight: 5

@@ -62,6 +62,10 @@
     damage:
       types:
         Slash: 10
+    # begin starcup: adding missing/fitting sounds
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+    # end starcup
   - type: Item
     size: Normal
   - type: Clothing
@@ -95,6 +99,10 @@
       types:
         Slash: 8
         # Piercing: 2 # starcup: It deals slashing damage already, it doesn't need piercing. You're not stabbing people with it.
+    # begin starcup: adding missing/fitting sounds
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+    # end starcup
   - type: Item
     sprite: Objects/Tools/Hydroponics/hatchet.rsi
   - type: PhysicalComposition
