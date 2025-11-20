@@ -58,3 +58,38 @@
     attackRate: 4
     soundHit:
       collection: FreemanClang
+
+- type: entity
+  name: hammer
+  parent: BaseItem
+  id: ItemHammer
+  description: Hammer things down, pull them back out.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/hammer.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: 135
+    swingLeft: true
+    damage:
+      types:
+        Blunt: 8
+        Structural: 10
+    soundHit:
+      collection: MetalThud
+  - type: Item
+    sprite: _starcup/Objects/Tools/hammer.rsi
+    storedSprite:
+      sprite: _starcup/Objects/Tools/hammer.rsi
+      state: storage
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+  - type: Tool
+    qualities:
+    - Prying
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: ToolTileCompatible
+    delay: 1.5 # slower than a crowbar
+  - type: Prying
