@@ -4,6 +4,7 @@ using Content.Server.GameTicking.Rules;
 using Content.Server.GameTicking.Rules.VariationPass;
 using Content.Server.Station.Systems;
 using Content.Shared.EntityTable;
+using Content.Shared.Station.Components;
 using Robust.Shared.Random;
 
 namespace Content.Server._starcup.StationEvents.Events;
@@ -22,7 +23,7 @@ public sealed class LateJoinAnomalySpawnRule : VariationPassSystem<LateJoinAnoma
 
     protected override void ApplyVariation(Entity<LateJoinAnomalySpawnComponent> entity, ref StationVariationPassEvent args)
     {
-        var stationGrid = _station.GetLargestGrid(args.Station.Comp);
+        var stationGrid = _station.GetLargestGrid(new Entity<StationDataComponent?>(args.Station.Owner, args.Station.Comp));
 
         if (!stationGrid.HasValue)
         {
