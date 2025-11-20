@@ -4,6 +4,7 @@ using Content.Server.GameTicking.Rules.VariationPass;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Station.Systems;
+using Content.Shared.Power.Components;
 
 namespace Content.Server._starcup.StationEvents.Events;
 
