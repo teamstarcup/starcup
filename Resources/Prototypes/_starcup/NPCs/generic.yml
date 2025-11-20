@@ -1,0 +1,95 @@
+- type: htnCompound
+  id: TargetedFollowCompound
+  branches:
+  - tasks:
+    - !type:HTNPrimitiveTask
+      operator: !type:UtilityOperator
+        proto: NearbyMeleeTargets
+    - !type:HTNCompoundTask
+      task: BeforeFollowTargetCompound
+  - tasks:
+    - !type:HTNCompoundTask
+      task: IdleCompound
+
+- type: htnCompound
+  id: BeforeFollowTargetCompound
+  branches:
+  - preconditions:
+    - !type:BuckledPrecondition
+      isBuckled: true
+    tasks:
+    - !type:HTNPrimitiveTask
+      operator: !type:UnbuckleOperator
+        shutdownState: TaskFinished
+
+  - preconditions:
+    - !type:PulledPrecondition
+      isPulled: true
+    tasks:
+    - !type:HTNPrimitiveTask
+      operator: !type:UnPullOperator
+        shutdownState: TaskFinished
+
+  - tasks:
+    - !type:HTNCompoundTask
+      task: FollowTargetCompound
+
+# this is currently just a copy of FollowCompound from Prototypes/NPCs/follow.yml
+# but with targetKey set to TargetCoordinates for compatibility with the NearbyMeleeTargets operator.
+# very hacky, some extra work (or refactoring of the base FollowCompound) is probably desired, but it gets the job done
+
+- type: htnCompound
+  id: FollowTargetCompound
+  branches:
+  # Head to follow target
+  - tasks:
+    - !type:HTNPrimitiveTask
+      preconditions:
+      - !type:CoordinatesNotInRangePrecondition
+        targetKey: TargetCoordinates
+        rangeKey: FollowRange
+      operator: !type:MoveToOperator
+        pathfindInPlanning: true
+        targetKey: TargetCoordinates
+        rangeKey: FollowCloseRange
+        removeKeyOnFinish: false
+
+  # Keep idling near follow target
+  - tasks:
+    - !type:HTNPrimitiveTask
+      preconditions:
+      - !type:KeyExistsPrecondition
+        key: IdleTime
+      - !type:CoordinatesInRangePrecondition
+        targetKey: TargetCoordinates
+        rangeKey: FollowRange
+      operator: !type:WaitOperator
+        key: IdleTime
+
+  # Pick a new idle spot near the follow target
+  - tasks:
+    - !type:HTNPrimitiveTask
+      operator: !type:PickAccessibleOperator
+        # originKey: FollowTarget
+        rangeKey: FollowCloseRange
+        targetCoordinates: FollowIdleTarget
+
+    - !type:HTNPrimitiveTask
+      operator: !type:MoveToOperator
+        targetKey: FollowIdleTarget
+
+    - !type:HTNPrimitiveTask
+      operator: !type:RandomOperator
+        targetKey: IdleTime
+        minKey: MinimumIdleTime
+        maxKey: MaximumIdleTime
+
+    - !type:HTNPrimitiveTask
+      preconditions:
+      - !type:KeyExistsPrecondition
+        key: IdleTime
+      - !type:CoordinatesInRangePrecondition
+        targetKey: TargetCoordinates
+        rangeKey: FollowRange
+      operator: !type:WaitOperator
+        key: IdleTime

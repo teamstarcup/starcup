@@ -9,7 +9,10 @@
   access:
   - Maintenance # TODO Remove maint access for all gimmick jobs once access work is completed
   - Theatre
-  - Musician # starcup: added unique access level
+  # begin starcup
+  - Musician
+  - Service
+  # end starcup
   special:
   - !type:GiveItemOnHolidaySpecial
     holiday: MikuDay

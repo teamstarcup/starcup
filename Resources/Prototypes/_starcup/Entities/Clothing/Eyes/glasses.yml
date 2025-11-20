@@ -7,3 +7,19 @@
     sprite: _starcup/Clothing/Eyes/Glasses/commandglasses_syndi.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Eyes/Glasses/commandglasses_syndi.rsi
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesMirrorshades
+  name: mirrorshades
+  description: "'Round here we wear our—"
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Glasses/mirrorshades.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Glasses/mirrorshades.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 3
+  - type: IdentityBlocker
+    coverage: EYES

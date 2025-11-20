@@ -165,7 +165,7 @@ public sealed partial class AnomalySynchronizerSystem : EntitySystem
         var targetXform = _transform.GetWorldPosition(ent);
         _transform.SetWorldPosition(anomaly, targetXform);
 
-        if (ent.Comp.PulseOnConnect)
+        if (ent.Comp.PulseOnConnect && !anomaly.Comp.CannotRandomPulse) // imp - added cannotrandompulse
             _anomaly.DoAnomalyPulse(anomaly, anomaly);
 
         _popup.PopupPredicted(Loc.GetString("anomaly-sync-connected"), ent, user, PopupType.Medium);
@@ -181,7 +181,8 @@ public sealed partial class AnomalySynchronizerSystem : EntitySystem
 
         if (ent.Comp.PulseOnDisconnect && TryComp<AnomalyComponent>(ent.Comp.ConnectedAnomaly, out var anomaly))
         {
-            _anomaly.DoAnomalyPulse(ent.Comp.ConnectedAnomaly.Value, anomaly);
+            if (!anomaly.CannotRandomPulse) // imp - added cannotrandompulse
+                _anomaly.DoAnomalyPulse(ent.Comp.ConnectedAnomaly.Value, anomaly);
         }
 
         _popup.PopupPredicted(Loc.GetString("anomaly-sync-disconnected"), ent, user, PopupType.Large);

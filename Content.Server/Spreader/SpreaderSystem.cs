@@ -24,16 +24,7 @@ public sealed class SpreaderSystem : EntitySystem
     [Dependency] private readonly SharedMapSystem _map = default!;
     [Dependency] private readonly TagSystem _tag = default!;
     [Dependency] private readonly TurfSystem _turf = default!;
-
-    /// <summary>
-    /// Cached maximum number of updates per spreader prototype. This is applied per-grid.
-    /// </summary>
     private Dictionary<string, int> _prototypeUpdates = default!;
-
-    /// <summary>
-    /// Remaining number of updates per grid & prototype.
-    /// </summary>
-    // TODO PERFORMANCE Assign each prototype to an index and convert dictionary to array
     private readonly Dictionary<EntityUid, Dictionary<string, int>> _gridUpdates = [];
 
     private EntityQuery<EdgeSpreaderComponent> _query;
@@ -41,6 +32,15 @@ public sealed class SpreaderSystem : EntitySystem
     public const float SpreadCooldownSeconds = 1;
 
     private static readonly ProtoId<TagPrototype> IgnoredTag = "SpreaderIgnore";
+
+    /// <summary>
+    /// Cached maximum number of updates per spreader prototype. This is applied per-grid.
+    /// </summary>
+
+    /// <summary>
+    /// Remaining number of updates per grid & prototype.
+    /// </summary>
+    // TODO PERFORMANCE Assign each prototype to an index and convert dictionary to array
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -181,7 +181,7 @@ public sealed class SpreaderSystem : EntitySystem
         occupiedTiles = [];
         neighbors = [];
         // TODO remove occupiedTiles -- its currently unused and just slows this method down.
-        if (!_prototype.TryIndex(prototype, out var spreaderPrototype))
+        if (!_prototype.Resolve(prototype, out var spreaderPrototype))
             return;
 
         if (!TryComp<MapGridComponent>(comp.GridUid, out var grid))

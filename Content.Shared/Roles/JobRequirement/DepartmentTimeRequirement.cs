@@ -17,12 +17,12 @@ public sealed partial class DepartmentTimeRequirement : JobRequirement
     /// </summary>
     [DataField(required: true)]
     public ProtoId<DepartmentPrototype> Department;
+    [DataField(required: true)]
+    public TimeSpan Time;
 
     /// <summary>
     /// How long (in seconds) this requirement is.
     /// </summary>
-    [DataField(required: true)]
-    public TimeSpan Time;
 
     public override bool Check(IEntityManager entManager,
         IPrototypeManager protoManager,
@@ -54,7 +54,7 @@ public sealed partial class DepartmentTimeRequirement : JobRequirement
         var formattedDeptDiff = ContentLocalizationManager.FormatPlaytime(deptDiffSpan);
         var nameDepartment = "role-timer-department-unknown";
 
-        if (protoManager.TryIndex(Department, out var departmentIndexed))
+        if (protoManager.Resolve(Department, out var departmentIndexed))
         {
             nameDepartment = departmentIndexed.Name;
         }

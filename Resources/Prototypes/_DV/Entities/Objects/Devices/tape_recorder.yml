@@ -14,8 +14,9 @@
   - type: Item
     size: Small
   - type: TapeRecorder
+    rewindSpeed: 10 # starcup
   - type: ActiveListener
-    range: 4
+    range: 6 # starcup: was 4
   - type: UseDelay
     delay: 1
   - type: Speech
@@ -79,7 +80,7 @@
     size: Tiny
   - type: Damageable
   - type: TapeCassette
-    maxCapacity: 180
+    maxCapacity: 600 # starcup: 180 (3 minutes) -> 600 (10 minutes)
     repairWhitelist:
       tags:
       - Screwdriver

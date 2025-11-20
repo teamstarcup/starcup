@@ -23,20 +23,23 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
     [Dependency] private readonly IMapManager _mapManager = default!;
     private readonly SharedShuttleSystem _shuttles;
     private readonly SharedTransformSystem _transform;
-
-    /// <summary>
-    /// Used to transform all of the radar objects. Typically is a shuttle console parented to a grid.
-    /// </summary>
     private EntityCoordinates? _coordinates;
-
-    /// <summary>
-    /// Entity of controlling console
-    /// </summary>
     private EntityUid? _consoleEntity;
 
     private Angle? _rotation;
 
     private Dictionary<NetEntity, List<DockingPortState>> _docks = new();
+    public Action<EntityCoordinates>? OnRadarClick;
+
+    private List<Entity<MapGridComponent>> _grids = new();
+
+    /// <summary>
+    /// Used to transform all of the radar objects. Typically is a shuttle console parented to a grid.
+    /// </summary>
+
+    /// <summary>
+    /// Entity of controlling console
+    /// </summary>
 
     public bool ShowIFF { get; set; } = true;
     public bool ShowDocks { get; set; } = true;
@@ -45,9 +48,6 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
     /// <summary>
     /// Raised if the user left-clicks on the radar control with the relevant entitycoordinates.
     /// </summary>
-    public Action<EntityCoordinates>? OnRadarClick;
-
-    private List<Entity<MapGridComponent>> _grids = new();
 
     public ShuttleNavControl() : base(64f, 256f, 256f)
     {
@@ -321,7 +321,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
                     continue;
                 }
 
-                var color = Color.ToSrgb(Color.Magenta);
+                var color = Color.ToSrgb(state.HighlightedColor);
 
                 var verts = new[]
                 {

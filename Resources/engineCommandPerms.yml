@@ -8,7 +8,6 @@
   - vvread
   - vvwrite
   - vvinvoke
-  - scale
   - spin
 
 - Flags: DEBUG
@@ -17,7 +16,6 @@
   - inrangeunoccluded
   - lsgrid
   - lsmap
-  - listplayers
   - loc
   - mem
   - netaudit
@@ -75,7 +73,6 @@
   - pos
   # end starcup
 
-
 - Flags: MAPPING
   Commands:
   - addmap
@@ -95,9 +92,12 @@
 
 - Flags: ADMIN
   Commands:
-  - listplayers
   - tp
   - tpto
+
+- Flags: PII
+  Commands:
+  - listplayers
 
 - Flags: FUN
   Commands:

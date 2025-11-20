@@ -1,0 +1,72 @@
+
+- type: entity
+  parent: LunchboxGeneric
+  id: LunchboxGenericFilledMoth
+  suffix: Filled, Moth
+  name: pre-packed lunchbox
+  description: Packed with love.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: LunchboxFillMoth
+
+- type: entity
+  parent: LunchboxGeneric
+  id: LunchboxCommandSyndie
+  suffix: Command, Syndie
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Storage/lunchbox.rsi
+    layers:
+    - state: command-syndie
+    - state: command-syndie-open
+      map: [ "openLayer" ]
+  - type: Item
+    sprite: _starcup/Objects/Storage/lunchbox.rsi
+    heldPrefix: command-syndie
+
+- type: entity
+  parent: LunchboxGenericFilledRandom
+  id: LunchboxCommandSyndieFilledRandom
+  suffix: Command, Syndicate, Filled, Random
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Storage/lunchbox.rsi
+    layers:
+    - state: command-syndie
+    - state: command-syndie-open
+      map: [ "openLayer" ]
+  - type: Item
+    sprite: _starcup/Objects/Storage/lunchbox.rsi
+    heldPrefix: command-syndie
+
+- type: entity
+  parent: LunchboxGeneric
+  id: LunchboxSyndcomm
+  suffix: Syndcomm
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Storage/lunchbox.rsi
+    layers:
+    - state: syndcomm
+    - state: syndcomm-open
+      map: [ "openLayer" ]
+  - type: Item
+    sprite: _starcup/Objects/Storage/lunchbox.rsi
+    heldPrefix: syndcomm
+
+- type: entity
+  parent: LunchboxGenericFilledRandom
+  id: LunchboxSyndcommFilledRandom
+  suffix: Syndcomm, Filled, Random
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Storage/lunchbox.rsi
+    layers:
+    - state: syndcomm
+    - state: syndcomm-open
+      map: [ "openLayer" ]
+  - type: Item
+    sprite: _starcup/Objects/Storage/lunchbox.rsi
+    heldPrefix: syndcomm

@@ -1,14 +1,16 @@
-using Content.Server.Radio.Components;
+using Content.Shared.Radio.Components;
 using Content.Shared._DV.AACTablet;
 using Content.Shared._starcup.AACTablet;
+using Content.Shared.Radio;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server._DV.AACTablet;
 
 public sealed partial class AACTabletSystem
 {
-    private HashSet<string> GetAvailableChannels(EntityUid entity)
+    private HashSet<ProtoId<RadioChannelPrototype>> GetAvailableChannels(EntityUid entity)
     {
-        var channels = new HashSet<string>();
+        var channels = new HashSet<ProtoId<RadioChannelPrototype>>();
 
         // Get all the intrinsic radio channels (IPCs, implants)
         if (TryComp(entity, out ActiveRadioComponent? intrinsicRadio))

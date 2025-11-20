@@ -396,6 +396,7 @@
   - type: NpcFactionMember
     factions:
     - Xeno
+    - SimpleHostile
   - type: MeleeWeapon
     angle: 0
     animation: WeaponArcBite
@@ -489,7 +490,6 @@
     factions:
     - Xeno
   - type: Hands
-  - type: ItemOffer # starcup: item offering
   - type: ComplexInteraction
   - type: MobState
   - type: Stamina
@@ -574,3 +574,4 @@
     transferAmount: 1
     solution: bite
     pierceArmor: true
+  - type: ItemOffer # starcup: item offering

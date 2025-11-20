@@ -1,5 +1,5 @@
 - type: entity
-  parent: DrinkBaseCup
+  parent: DrinkBaseMug
   id: DrinkCoffeeDecaf
   name: decaf coffee
   description: The process of decaffeination was a collaborative achivement across many species throughout the galaxy. Now, thanks to their efforts, everyone can enjoy the taste of a hellish morning at work!
@@ -12,22 +12,18 @@
           Quantity: 20
   - type: Icon
     sprite: Objects/Consumable/Drinks/mug_red.rsi
-    state: icon-0
+    state: icon
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug_red.rsi
     layers:
-      - state: icon-0
-      - map: ["enum.SolutionContainerLayers.Fill"]
-        state: icon-3
-  - type: Appearance
-  - type: SolutionContainerVisuals
-    maxFillLevels: 3
-    fillBaseName: icon-
+      - state: icon
+      - state: fill-3
+        map: ["enum.SolutionContainerLayers.Fill"]
   - type: TrashOnSolutionEmpty
     solution: drink
 
 - type: entity
-  parent: DrinkBaseCup
+  parent: DrinkBaseMug
   id: DrinkHotCocoImitation
   name: imitation hot chocolate
   description: Smells like fond memories of caroling catgirls.
@@ -40,16 +36,12 @@
           Quantity: 20
   - type: Icon
     sprite: Objects/Consumable/Drinks/mug_blue.rsi
-    state: icon-0
+    state: icon
   - type: Sprite
     sprite: Objects/Consumable/Drinks/mug_blue.rsi
     layers:
-      - state: icon-0
-      - map: ["enum.SolutionContainerLayers.Fill"]
-        state: icon-3
-  - type: Appearance
-  - type: SolutionContainerVisuals
-    maxFillLevels: 3
-    fillBaseName: icon-
+    - state: icon
+    - state: fill-3
+      map: ["enum.SolutionContainerLayers.Fill"]
   - type: TrashOnSolutionEmpty
     solution: drink

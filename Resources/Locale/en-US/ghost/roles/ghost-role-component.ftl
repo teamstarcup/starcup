@@ -32,6 +32,9 @@ ghost-role-information-silicon-rules = You are a [color={role-type-silicon-color
 ghost-role-information-mouse-name = Mouse
 ghost-role-information-mouse-description = A hungry and mischievous mouse.
 
+ghost-role-information-cancer-mouse-name = Cancer Mouse
+ghost-role-information-cancer-mouse-description = An irradiated mouse, spread your affliction and seek food.
+
 ghost-role-information-mothroach-name = Mothroach
 ghost-role-information-mothroach-description = A cute but mischievous mothroach.
 
@@ -215,7 +218,9 @@ ghost-role-information-space-ninja-name = Space Ninja
 ghost-role-information-space-ninja-description = Use stealth and deception to sabotage the station.
 
 ghost-role-information-paradox-clone-name = Paradox Clone
-ghost-role-information-paradox-clone-description = A freak space-time anomaly has teleported you into another reality! Now you have to find your counterpart and kill and replace them.
+ghost-role-information-paradox-clone-description = A glitch in reality has led to the birth of you, a near-perfect copy—give or take some possible emotional corruption. There is a 1 in 2 chance that you will cease to exist if your counterpart is not dead by the end of today. It's your choice whether to act on that.
+# starcup - replaced paradox clone description.
+# ghost-role-information-paradox-clone-description = A freak space-time anomaly has teleported you into another reality! Now you have to find your counterpart and kill and replace them.
 
 ghost-role-information-syndicate-reinforcement-name = Syndicate Agent
 ghost-role-information-syndicate-reinforcement-description = Someone needs reinforcements. You, the first person the syndicate could find, will help them.
@@ -244,8 +249,23 @@ ghost-role-information-syndicate-cyborg-assault-name = Syndicate Assault Cyborg
 ghost-role-information-syndicate-cyborg-saboteur-name = Syndicate Saboteur Cyborg
 ghost-role-information-syndicate-cyborg-description = The Syndicate needs reinforcements. You, a cold silicon killing machine, will help them.
 
-ghost-role-information-derelict-cyborg-name = Derelict Cyborg
+ghost-role-information-derelict-engineering-cyborg-name = Derelict Engineer Cyborg
+ghost-role-information-derelict-engineering-cyborg-description = You are an engineer cyborg that got lost in space. After years of exposure to ion storms you find yourself near a space station.
+
+ghost-role-information-derelict-cyborg-name = Derelict Generic Cyborg
 ghost-role-information-derelict-cyborg-description = You are a regular cyborg that got lost in space. After years of exposure to ion storms you find yourself near a space station.
+
+ghost-role-information-derelict-janitor-cyborg-name = Derelict Janitor Cyborg
+ghost-role-information-derelict-janitor-cyborg-description = You are a janitor cyborg that got lost in space. After years of exposure to ion storms you find yourself near a space station.
+
+ghost-role-information-derelict-medical-cyborg-name = Derelict Medical Cyborg
+ghost-role-information-derelict-medical-cyborg-description = You are a medical cyborg that got lost in space. After years of exposure to ion storms you find yourself near a space station.
+
+ghost-role-information-derelict-mining-cyborg-name = Derelict Salvage Cyborg
+ghost-role-information-derelict-mining-cyborg-description = You are a salvage cyborg that got lost in space. After years of exposure to ion storms you find yourself near a space station.
+
+ghost-role-information-derelict-syndicate-assault-cyborg-name = Derelict Syndicate Assault Cyborg
+ghost-role-information-derelict-syndicate-assault-cyborg-description = You are an early model syndicate assault cyborg that got lost in space. After years of exposure to ion storms you find yourself near a space station.
 
 ghost-role-information-security-name = Security
 ghost-role-information-security-description = You are part of a security task force, but seem to have found yourself in a strange situation...

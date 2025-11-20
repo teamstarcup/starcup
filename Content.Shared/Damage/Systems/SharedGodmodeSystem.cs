@@ -8,6 +8,7 @@ using Content.Shared.StatusEffect;
 using Content.Shared.StatusEffectNew;
 using Content.Shared.StatusEffectNew.Components;
 using Robust.Shared.Prototypes;
+using Content.Shared.Nutrition;
 
 namespace Content.Shared.Damage.Systems;
 
@@ -24,6 +25,7 @@ public abstract class SharedGodmodeSystem : EntitySystem
         SubscribeLocalEvent<GodmodeComponent, BeforeStatusEffectAddedEvent>(OnBeforeStatusEffect);
         SubscribeLocalEvent<GodmodeComponent, BeforeOldStatusEffectAddedEvent>(OnBeforeOldStatusEffect);
         SubscribeLocalEvent<GodmodeComponent, BeforeStaminaDamageEvent>(OnBeforeStaminaDamage);
+        SubscribeLocalEvent<GodmodeComponent, IngestibleEvent>(BeforeEdible);
         SubscribeLocalEvent<GodmodeComponent, SlipAttemptEvent>(OnSlipAttempt);
         SubscribeLocalEvent<GodmodeComponent, DestructionAttemptEvent>(OnDestruction);
     }
@@ -55,6 +57,11 @@ public abstract class SharedGodmodeSystem : EntitySystem
         args.Cancelled = true;
     }
 
+    private void BeforeEdible(Entity<GodmodeComponent> ent, ref IngestibleEvent args)
+    {
+        args.Cancelled = true;
+    }
+
     private void OnDestruction(Entity<GodmodeComponent> ent, ref DestructionAttemptEvent args)
     {
         args.Cancel();
@@ -78,9 +85,9 @@ public abstract class SharedGodmodeSystem : EntitySystem
         if (!Resolve(uid, ref godmode, false))
             return;
 
-        if (TryComp<DamageableComponent>(uid, out var damageable) && godmode.OldDamage != null)
+        if (godmode.OldDamage != null)
         {
-            _damageable.SetDamage(uid, damageable, godmode.OldDamage);
+            _damageable.SetDamage(uid, godmode.OldDamage);
         }
 
         RemComp<GodmodeComponent>(uid);

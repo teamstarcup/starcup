@@ -10,8 +10,13 @@
   icon: _DV/Interface/Emotes/ecg.png # DeltaV - Added icon
   category: Vocal
   whitelist:
+  # begin starcup: allow cyborgs to use mkc emotes
+    requireAll: true
     components:
-    - Silicon
+    - Vocal
+    tags:
+    - SiliconEmotes
+  # end starcup
   chatMessages: [ boops ]
   chatTriggers:
     - boops
@@ -19,8 +24,13 @@
 - type: emote
   id: Whirr # uncategorized as it is generic
   whitelist:
+  # begin starcup: allow cyborgs to use mkc emotes
+    requireAll: true
     components:
-    - Silicon
+    - Vocal
+    tags:
+    - SiliconEmotes
+  # end starcup
   name: chat-emote-name-whirr
   chatMessages: [ whirrs ]
   chatTriggers:

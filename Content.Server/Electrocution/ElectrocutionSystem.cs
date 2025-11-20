@@ -1,21 +1,19 @@
 using Content.Server.Administration.Logs;
-using Content.Server.Light.Components;
-using Content.Server.NodeContainer;
 using Content.Server.NodeContainer.EntitySystems;
-using Content.Server.NodeContainer.NodeGroups;
-using Content.Server.NodeContainer.Nodes;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Power.NodeGroups;
 using Content.Server.Weapons.Melee;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
+using Content.Shared.Damage.Systems;
 using Content.Shared.Database;
 using Content.Shared.Electrocution;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
 using Content.Shared.Inventory;
 using Content.Shared.Jittering;
+using Content.Shared.Light.Components;
 using Content.Shared.Maps;
 using Content.Shared.NodeContainer;
 using Content.Shared.NodeContainer.NodeGroups;
@@ -27,7 +25,6 @@ using Content.Shared.Tag;
 using Content.Shared.Weapons.Melee.Events;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
-using Robust.Shared.Map;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -61,8 +58,6 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
     private static readonly ProtoId<StatusEffectPrototype> StatusKeyIn = "Electrocution";
     private static readonly ProtoId<DamageTypePrototype> DamageType = "Shock";
     private static readonly ProtoId<TagPrototype> WindowTag = "Window";
-
-    // Multiply and shift the log scale for shock damage.
     private const float RecursiveDamageMultiplier = 0.75f;
     private const float RecursiveTimeMultiplier = 0.8f;
 
@@ -73,6 +68,8 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
     private const float JitterTimeMultiplier = 0.75f;
     private const float JitterAmplitude = 80f;
     private const float JitterFrequency = 8f;
+
+    // Multiply and shift the log scale for shock damage.
 
     public override void Initialize()
     {
@@ -408,17 +405,14 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
 
         if (shockDamage is { } dmg)
         {
-            var actual = _damageable.TryChangeDamage(uid,
-                new DamageSpecifier(_prototypeManager.Index(DamageType), dmg), origin: sourceUid);
-
-            if (actual != null)
+            if (_damageable.TryChangeDamage(uid, new DamageSpecifier(_prototypeManager.Index(DamageType), dmg), out var damage, origin: sourceUid))
             {
                 _adminLogger.Add(LogType.Electrocution,
-                    $"{ToPrettyString(uid):entity} received {actual.GetTotal():damage} powered electrocution damage{(sourceUid != null ? " from " + ToPrettyString(sourceUid.Value) : ""):source}");
+                    $"{ToPrettyString(uid):entity} received {damage:damage} powered electrocution damage{(sourceUid != null ? " from " + ToPrettyString(sourceUid.Value) : ""):source}");
             }
         }
 
-        _stuttering.DoStutter(uid, time * StutteringTimeMultiplier, refresh, statusEffects);
+        _stuttering.DoStutter(uid, time * StutteringTimeMultiplier, refresh);
         _jittering.DoJitter(uid, time * JitterTimeMultiplier, refresh, JitterAmplitude, JitterFrequency, true, statusEffects);
 
         _popup.PopupEntity(Loc.GetString("electrocuted-component-mob-shocked-popup-player"), uid, uid);

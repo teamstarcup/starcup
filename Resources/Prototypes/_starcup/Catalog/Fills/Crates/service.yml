@@ -1,0 +1,20 @@
+- type: entity
+  parent: CrateGenericSteel
+  id: CrateServiceMixedLights
+  name: mixed lights crate
+  description: An assortment of lights of various temperature ratings; perfect for the aspiring brutalist or just making a room cozy.
+  components:
+  - type: StorageFill
+    contents:
+    - id: BoxLightsWarm
+    - id: BoxLightsCold
+
+- type: entity
+  parent: CrateGenericSteel
+  id: CrateServiceVioletLights
+  name: ultraviolet lighttubes crate
+  description: A box of near-ultraviolet lights for the parties that really want to go all-out.
+  components:
+  - type: StorageFill
+    contents:
+    - id: BoxLightsViolet

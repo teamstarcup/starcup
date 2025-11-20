@@ -21,6 +21,8 @@
     - id: AnomalySpawn
     - id: GasLeak
     - id: GreytideVirus
+    - !type:NestedSelector
+      tableId: DerelictBorgEventTableNoAssault
 
 - type: entityTable
   id: StarcupAntagEventsTable
@@ -31,4 +33,17 @@
     - id: KingRatMigration
     - id: ParadoxCloneSpawn
     - id: SleeperAgents
-    - id: DerelictCyborgSpawn
+    - !type:NestedSelector
+      tableId: DerelictBorgEventTable
+
+- type: entityTable
+  id: DerelictBorgEventTableNoAssault
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      children:
+        - id: DerelictEngineerCyborgSpawn
+        - id: DerelictGenericCyborgSpawn
+        - id: DerelictJanitorCyborgSpawn
+        - id: DerelictMedicalCyborgSpawn
+        - id: DerelictMiningCyborgSpawn

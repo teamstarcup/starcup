@@ -1,0 +1,15 @@
+
+- type: entity
+  parent: DrinkJuiceBoxBaseFull
+  id: DrinkJuiceMilkJuicebox
+  name: milk juice box
+  description: Bone-building milk in a juice box.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Milk
+          Quantity: 20
+  - type: Sprite
+    sprite: _starcup/Objects/Consumable/Drinks/juicebox_milk.rsi

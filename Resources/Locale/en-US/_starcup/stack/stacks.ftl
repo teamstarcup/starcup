@@ -1,3 +1,8 @@
+# items
+stack-capacitor = capacitor
+stack-micro-manipulator-starcup = micro manipulator
+stack-matter-bin = matter bin
+
 # brick
 stack-starcup-floor-brick-horizontal = horizontal astro-brick
 stack-starcup-floor-brick-vertical = vertical astro-brick
@@ -45,3 +50,9 @@ stack-starcup-tile-metal-white-solid = solid white metal tile
 stack-starcup-tile-fancy = fancy tile
 stack-starcup-tile-ornate = ornate tile
 stack-starcup-tile-sierra = sierra tile
+
+# faux sci fi floors
+stack-astro-grass-golden-floor = golden astro-grass
+stack-astro-grass-cold-floor = cold astro-grass
+stack-astro-grass-snowy-floor = snowy astro-grass
+stack-astro-snow-grassy-floor = grassy snow floor

@@ -1,0 +1,35 @@
+# Command
+- type: entity
+  parent: Holopad
+  id: HolopadCommandOffice
+  suffix: Admin Office
+  components:
+  - type: Label
+    currentLabel: holopad-command-office
+
+# Engineering
+- type: entity
+  parent: Holopad
+  id: HolopadEngineeringPA
+  suffix: PA Control
+  components:
+  - type: Label
+    currentLabel: holopad-engineering-pa
+
+# Service
+- type: entity
+  parent: Holopad
+  id: HolopadServiceBreakroom
+  suffix: Service Breakroom
+  components:
+  - type: Label
+    currentLabel: holopad-service-breakroom
+
+# General
+- type: entity
+  parent: Holopad
+  id: HolopadGeneralPavilion
+  suffix: Pavilion
+  components:
+  - type: Label
+    currentLabel: holopad-general-pavilion

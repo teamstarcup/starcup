@@ -9,6 +9,8 @@ using Content.Shared.Anomaly.Components;
 using Content.Shared.Anomaly.Effects;
 using Content.Shared.Body.Components;
 using Content.Shared.Chat;
+using Content.Shared.Damage.Components;
+using Content.Shared.Damage.Systems; // starcup
 using Content.Shared.Database;
 using Content.Shared.Mobs;
 using Content.Shared.Popups;
@@ -34,6 +36,7 @@ public sealed class InnerBodyAnomalySystem : SharedInnerBodyAnomalySystem
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly StunSystem _stun = default!;
+    [Dependency] private readonly DamageableSystem _damageableSystem = default!; // starcup
 
     private readonly Color _messageColor = Color.FromSrgb(new Color(201, 22, 94));
 
@@ -86,7 +89,7 @@ public sealed class InnerBodyAnomalySystem : SharedInnerBodyAnomalySystem
 
     private void AddAnomalyToBody(Entity<InnerBodyAnomalyComponent> ent)
     {
-        if (!_proto.TryIndex(ent.Comp.InjectionProto, out var injectedAnom))
+        if (!_proto.Resolve(ent.Comp.InjectionProto, out var injectedAnom))
             return;
 
         if (ent.Comp.Injected)
@@ -96,8 +99,11 @@ public sealed class InnerBodyAnomalySystem : SharedInnerBodyAnomalySystem
 
         EntityManager.AddComponents(ent, injectedAnom.Components);
 
-        _stun.TryUpdateParalyzeDuration(ent, TimeSpan.FromSeconds(ent.Comp.StunDuration));
-        _jitter.DoJitter(ent, TimeSpan.FromSeconds(ent.Comp.StunDuration), true);
+        if (!ent.Comp.SkipStun) // imp. added this check for anomalites
+        {
+            _stun.TryUpdateParalyzeDuration(ent, TimeSpan.FromSeconds(ent.Comp.StunDuration));
+            _jitter.DoJitter(ent, TimeSpan.FromSeconds(ent.Comp.StunDuration), true);
+        }
 
         if (ent.Comp.StartSound is not null)
             _audio.PlayPvs(ent.Comp.StartSound, ent);
@@ -125,16 +131,20 @@ public sealed class InnerBodyAnomalySystem : SharedInnerBodyAnomalySystem
 
     private void OnAnomalyPulse(Entity<InnerBodyAnomalyComponent> ent, ref AnomalyPulseEvent args)
     {
-        _stun.TryUpdateParalyzeDuration(ent, TimeSpan.FromSeconds(ent.Comp.StunDuration / 2 * args.Severity));
+        if (!ent.Comp.SkipStun) // imp. added this check for anomalites
+            _stun.TryUpdateParalyzeDuration(ent, TimeSpan.FromSeconds(ent.Comp.StunDuration / 2 * args.Severity));
         _jitter.DoJitter(ent, TimeSpan.FromSeconds(ent.Comp.StunDuration / 2 * args.Severity), true);
     }
 
     private void OnAnomalySupercritical(Entity<InnerBodyAnomalyComponent> ent, ref AnomalySupercriticalEvent args)
     {
-        if (!TryComp<BodyComponent>(ent, out var body))
+        if (!TryComp<DamageableComponent>(ent, out _)) // starcup: change check to DamageableComponent
             return;
 
-        _body.GibBody(ent, true, body, splatModifier: 5f);
+        // begin starcup: replace supercrit gib with definable damage type
+        // _body.GibBody(ent, true, body, splatModifier: 5f);
+        _damageableSystem.ChangeDamage(ent.Owner, ent.Comp.SupercriticalDamage, true);
+        // end starcup
     }
 
     private void OnSeverityChanged(Entity<InnerBodyAnomalyComponent> ent, ref AnomalySeverityChangedEvent args)
@@ -210,10 +220,11 @@ public sealed class InnerBodyAnomalySystem : SharedInnerBodyAnomalySystem
         if (!ent.Comp.Injected)
             return;
 
-        if (_proto.TryIndex(ent.Comp.InjectionProto, out var injectedAnom))
+        if (_proto.Resolve(ent.Comp.InjectionProto, out var injectedAnom))
             EntityManager.RemoveComponents(ent, injectedAnom.Components);
 
-        _stun.TryUpdateParalyzeDuration(ent, TimeSpan.FromSeconds(ent.Comp.StunDuration));
+        if (!ent.Comp.SkipStun) // imp. added this check for anomalites
+            _stun.TryUpdateParalyzeDuration(ent, TimeSpan.FromSeconds(ent.Comp.StunDuration));
 
         if (ent.Comp.EndMessage is not null &&
             _mind.TryGetMind(ent, out _, out var mindComponent) &&

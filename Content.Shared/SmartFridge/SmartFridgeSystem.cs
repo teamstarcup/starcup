@@ -1,4 +1,3 @@
-using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Construction.EntitySystems;
 using Content.Shared.Hands.EntitySystems;
@@ -10,7 +9,6 @@ using Content.Shared.Verbs;
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
-using Robust.Shared.GameObjects;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
@@ -30,12 +28,10 @@ public sealed class SmartFridgeSystem : EntitySystem
     {
         base.Initialize();
 
-        // L5 - add after anchorable system
         SubscribeLocalEvent<SmartFridgeComponent, InteractUsingEvent>(OnInteractUsing, after: [typeof(AnchorableSystem)]);
         SubscribeLocalEvent<SmartFridgeComponent, EntRemovedFromContainerMessage>(OnItemRemoved);
 
-        SubscribeLocalEvent<SmartFridgeComponent, GetVerbsEvent<AlternativeVerb>>(OnGetAltVerb); // L5
-
+        SubscribeLocalEvent<SmartFridgeComponent, GetVerbsEvent<AlternativeVerb>>(OnGetAltVerb);
         SubscribeLocalEvent<SmartFridgeComponent, GetDumpableVerbEvent>(OnGetDumpableVerb);
         SubscribeLocalEvent<SmartFridgeComponent, DumpEvent>(OnDump);
 
@@ -44,25 +40,6 @@ public sealed class SmartFridgeSystem : EntitySystem
             {
                 sub.Event<SmartFridgeDispenseItemMessage>(OnDispenseItem);
             });
-    }
-
-    /// <summary>
-    /// L5 - whitelist shenanigans; to be upstreamed
-    /// </summary>
-    private void OnGetAltVerb(Entity<SmartFridgeComponent> ent, ref GetVerbsEvent<AlternativeVerb> args)
-    {
-        if (!args.CanInteract
-            || args.Using is not { } item
-            || !_hands.CanDrop(args.User, item))
-            return;
-
-        var user = args.User;
-        args.Verbs.Add(new AlternativeVerb
-        {
-            Act = () => DoInsert(ent, user, [item], true),
-            Text = Loc.GetString("verb-categories-insert"),
-            Icon = new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/VerbIcons/insert.svg.192dpi.png")),
-        });
     }
 
     private bool DoInsert(Entity<SmartFridgeComponent> ent, EntityUid user, IEnumerable<EntityUid> usedItems, bool playSound)
@@ -103,7 +80,7 @@ public sealed class SmartFridgeSystem : EntitySystem
 
     private void OnInteractUsing(Entity<SmartFridgeComponent> ent, ref InteractUsingEvent args)
     {
-        if (args.Handled || !_hands.CanDrop(args.User, args.Used)) // L5 - check handled
+        if (args.Handled || !_hands.CanDrop(args.User, args.Used))
             return;
 
         args.Handled = DoInsert(ent, args.User, [args.Used], true);
@@ -159,6 +136,24 @@ public sealed class SmartFridgeSystem : EntitySystem
 
         _audio.PlayPredicted(ent.Comp.SoundDeny, ent, args.Actor);
         _popup.PopupPredicted(Loc.GetString("smart-fridge-component-try-eject-out-of-stock"), ent, args.Actor);
+    }
+
+    private void OnGetAltVerb(Entity<SmartFridgeComponent> ent, ref GetVerbsEvent<AlternativeVerb> args)
+    {
+        var user = args.User;
+
+        if (!args.CanInteract
+            || args.Using is not { } item
+            || !_hands.CanDrop(user, item)
+            || !_whitelist.CheckBoth(item, ent.Comp.Blacklist, ent.Comp.Whitelist))
+            return;
+
+        args.Verbs.Add(new AlternativeVerb
+        {
+            Act = () => DoInsert(ent, user, [item], true),
+            Text = Loc.GetString("verb-categories-insert"),
+            Icon = new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/VerbIcons/insert.svg.192dpi.png")),
+        });
     }
 
     private void OnGetDumpableVerb(Entity<SmartFridgeComponent> ent, ref GetDumpableVerbEvent args)
