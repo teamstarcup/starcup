@@ -9,76 +9,6 @@
   - ServiceWorkerCapFlip
   - ServiceWorkerBandana
 
-# begin starcup
-#- type: loadoutGroup
-#  id: ServiceWorkerJumpsuit
-#  name: loadout-group-serviceworker-jumpsuit
-#  loadouts:
-#  - GreenJumpsuit
-#  - GreenJumpskirt
-#  - DarkGreenJumpsuit
-#  - DarkGreenJumpskirt
-#  - BartenderJumpsuit
-#  - BartenderJumpskirt
-#  - BartenderJumpsuitPurple
-# end starcup
-
-## Bartender
-- type: loadoutGroup
-  id: BartenderNeck
-  name: loadout-group-bartender-neck
-  minLimit: 0
-  loadouts:
-  - ScarfBlack
-  - ScarfPurple
-
-## Librarian
-- type: loadoutGroup
-  id: LibrarianNeck
-  name: loadout-group-librarian-neck
-  minLimit: 0
-  loadouts:
-  - ScarfGreen
-  - ScarfRed
-
-## Janitor
-- type: loadoutGroup
-  id: JanitorNeck
-  name: loadout-group-janitor-neck
-  minLimit: 0
-  loadouts:
-  - ScarfPurple
-
-## Botanist
-- type: loadoutGroup
-  id: BotanistNeck
-  name: loadout-group-botanist-neck
-  minLimit: 0
-  loadouts:
-  - ScarfGreen
-  - ScarfBrown
-  - ScarfSyndieGreen #starcup
-
-## Mime
-- type: loadoutGroup
-  id: MimeNeck
-  name: loadout-group-mime-neck
-  minLimit: 0
-  loadouts:
-  - ScarfBlack
-  - ScarfZebra
-
-## Musician
-- type: loadoutGroup
-  id: MusicianNeck
-  name: loadout-group-musician-neck
-  minLimit: 0
-  loadouts:
-  - ScarfBlack
-  - ScarfPurple
-  - ScarfZebra
-  - ScarfRainbow #starcup
-
 ## Assistants
 - type: loadoutGroup
   id: AssistantHead
@@ -127,14 +57,6 @@
   - MailCarrierHead
 
 - type: loadoutGroup
-  id: CourierNeck
-  name: loadout-group-courier-neck
-  minLimit: 0
-  loadouts:
-  - ScarfBrown
-  - ScarfBlue
-
-- type: loadoutGroup
   id: CourierJumpsuit
   name: loadout-group-courier-jumpsuit
   loadouts:
@@ -158,14 +80,6 @@
   - CargoTechnicianBackpack
   - CargoTechnicianSatchel
   - CargoTechnicianDuffel
-
-  ## Cargo Technician
-- type: loadoutGroup
-  id: CargoTechnicianNeck
-  name: loadout-group-cargo-technician-neck
-  minLimit: 0
-  loadouts:
-  - ScarfBrown
 
 - type: loadoutGroup
   id: CourierShoes
@@ -218,16 +132,6 @@
   loadouts:
   - BlackShoes
   - CargoWinterBoots
-
-## Salvage Specialist
-- type: loadoutGroup
-  id: SalvageSpecialistNeck
-  name: loadout-group-salvage-specialist-neck
-  minLimit: 0
-  loadouts:
-  - ScarfBrown
-  - ScarfLesbian # starcup
-  - ScarfBi # starcup - it's the axes is the thing
 
 # Epistemics
 ## Roboticist
@@ -425,15 +329,6 @@
  # - SecurityFirearmSpeedLoaderSpecialRubber # starcup - we don't have this yet
  # - SecurityFirearmSpeedLoaderSpecial # starcup - we don't have this yet
 
-## Security Officer
-- type: loadoutGroup
-  id: SecurityNeck
-  name: loadout-group-security-neck
-  minLimit: 0
-  loadouts:
-  - ScarfRed
-  - ScarfSyndieRed # starcup
-
 # Medical
 ##Psychologist
 - type: loadoutGroup
@@ -465,14 +360,6 @@
 
 ## Chemist
 - type: loadoutGroup
-  id: ChemistNeck
-  name: loadout-group-chemist-neck
-  minLimit: 0
-  loadouts:
-  - ScarfOrange
-  - ScarfBlue
-
-- type: loadoutGroup
   id: ChemistShoes
   name: loadout-group-chemist-shoes
   loadouts:
@@ -480,23 +367,7 @@
   - ChemistWinterBoots
 
 # Engineering
-## Station Engineer
-- type: loadoutGroup
-  id: StationEngineerNeck
-  name: loadout-group-station-engineer-neck
-  minLimit: 0
-  loadouts:
-  - ScarfOrange
-
 ## Atmospheric Technician
-- type: loadoutGroup
-  id: AtmosphericTechnicianNeck
-  name: loadout-group-atmospheric-technician-neck
-  minLimit: 0
-  loadouts:
-  - ScarfLightBlue
-  - ScarfOrange
-
 - type: loadoutGroup
   id: AtmosphericTechnicianHead
   name: loadout-group-atmospheric-technician-head
@@ -617,10 +488,11 @@
   # begin starcup additions
   - ScarfSyndieRed
   - ScarfSyndieGreen
-  - ScarfAce # passengers are dressup dolls. they can keep their loadout scarf previews.
+  - ScarfAce
   - ScarfAro
   - ScarfAroAce
   - ScarfBi
+  - ScarfGay
   - ScarfInter
   - ScarfLesbian
   - ScarfLesbianLong
