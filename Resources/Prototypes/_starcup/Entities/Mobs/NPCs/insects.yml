@@ -177,6 +177,14 @@
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
+  - type: Reproductive
+    makeOffspringInfant: false
+    birthPopup: "reproductive-honey-popup"
+    partnerWhitelist:
+      tags:
+      - Beehive
+    offspring:
+    - id: DrinkHoneyJarFull
 
 - type: entity
   name: wasps
@@ -476,7 +484,7 @@
       state: cockroach
 
 - type: entity
-  name: hercules beetle
+  name: stag beetle
   parent: SimpleMobBase
   id: MobBeetle
   description: A little friend with a tough shell and a valiant heart.
