@@ -307,6 +307,7 @@
   - EmergencyIPCBox # DeltaV
 
 - type: loadoutGroup
+  parent: [ Glasses ]
   id: BartenderEyewear
   name: loadout-group-bartender-glasses
   minLimit: 0
@@ -314,13 +315,9 @@
   - BeerGlasses
   - BeerEyePatchHud
   - Sunglasses
-  - Glasses
-  - Eyepatch
-  - EyepatchFlipped
-  - GlassesJamjar
-  - GlassesJensen
 
 - type: loadoutGroup
+  parent: [ Glasses ]
   id: CommandEyewear
   name: loadout-group-command-glasses
   minLimit: 0
@@ -328,38 +325,26 @@
   - CommandGlasses
   - CommandHud
   - Sunglasses
-  - Glasses
-  - Eyepatch
-  - EyepatchFlipped
-  - GlassesJamjar
-  - GlassesJensen
 
 - type: loadoutGroup
+  parent: [ Glasses ]
   id: MusicianEyewear
   name: loadout-group-musician-glasses
   minLimit: 0
   loadouts:
   - Sunglasses
-  - Glasses
-  - Eyepatch
-  - EyepatchFlipped
-  - GlassesJamjar
-  - GlassesJensen
 
 - type: loadoutGroup
+  parent: [ Glasses ]
   id: RoboticsEyewear
   name: loadout-group-robotics-glasses
   minLimit: 0
   loadouts:
   - DiagnosticHud
   - DiagnosticEyePatchHud
-  - Glasses
-  - Eyepatch
-  - EyepatchFlipped
-  - GlassesJamjar
-  - GlassesJensen
 
 - type: loadoutGroup
+  parent: [ Glasses ]
   id: SecurityEyewear
   name: loadout-group-security-glasses
   minLimit: 0
@@ -367,11 +352,6 @@
   - SecurityGlasses
   - SecurityHud
   - SecurityEyePatchHud
-  - Glasses
-  - Eyepatch
-  - EyepatchFlipped
-  - GlassesJamjar
-  - GlassesJensen
 
 - type: loadoutGroup
   id: GroupSpeciesBreathToolBrigmedic

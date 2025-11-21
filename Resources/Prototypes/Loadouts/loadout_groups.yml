@@ -111,6 +111,7 @@
   loadouts:
   - Glasses
   - Eyepatch # starcup
+  - EyepatchFlipped # starcup
   - GlassesJamjar
   - GlassesJensen
 
@@ -1008,7 +1009,9 @@
   name: loadout-group-cargo-technician-id
   loadouts:
   - CargoTechnicianPDA
-  - SeniorCourierPDA
+  # - SeniorCourierPDA # starcup: moved to courier
+  - DeckWorkerPDA
+  - InventoryAssociatePDA
 
 - type: loadoutGroup
   id: CargoTechnicianJobTrinkets
@@ -1612,6 +1615,7 @@
   loadouts:
   - ChiefMedicalOfficerCloak
   - ChiefMedicalOfficerMantle
+  - Stethoscope # starcup
 
 - type: loadoutGroup
   id: ChiefMedicalOfficerShoes
@@ -1792,16 +1796,13 @@
   - LizardPlushieParamedic
 
 - type: loadoutGroup
+  parent: [ Glasses ] # starcup
   id: MedicalEyewear
   name: loadout-group-medical-glasses
   minLimit: 0
   loadouts:
   - MedicalHud
   - MedicalEyePatchHud
-  - Glasses
-  - Eyepatch # starcup
-  - GlassesJamjar
-  - GlassesJensen
 
 - type: loadoutGroup
   id: SurvivalMedical
