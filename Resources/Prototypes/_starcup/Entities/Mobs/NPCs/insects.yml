@@ -178,6 +178,7 @@
     rootTask:
       task: SimpleHostileCompound
   - type: Reproductive
+    gestationDuration: 0
     makeOffspringInfant: false
     birthPopup: "reproductive-honey-popup"
     partnerWhitelist:
@@ -482,6 +483,9 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: cockroach
+  - type: Reproductive
+    offspring:
+    - id: MobCockroachHL
 
 - type: entity
   name: stag beetle
