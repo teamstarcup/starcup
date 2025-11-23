@@ -67,14 +67,16 @@
   - 1.0
   edgeSpritePriority: 1
   edgeSprites:
-    SouthEast: /Textures/Tiles/Planet/Grass/single_edge.png
-    NorthEast: /Textures/Tiles/Planet/Grass/single_edge.png
-    NorthWest: /Textures/Tiles/Planet/Grass/single_edge.png
-    SouthWest: /Textures/Tiles/Planet/Grass/single_edge.png
-    South: /Textures/Tiles/Planet/Grass/double_edge.png
-    East: /Textures/Tiles/Planet/Grass/double_edge.png
-    North: /Textures/Tiles/Planet/Grass/double_edge.png
-    West: /Textures/Tiles/Planet/Grass/double_edge.png
+    # begin starcup: Rounded edges for a more natural look
+    SouthEast: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
+    # end starcup
   baseTurf: FloorPlanetDirt
   isSubfloor: true
   footstepSounds:
@@ -118,10 +120,12 @@
   - 0.0116
   edgeSpritePriority: 2
   edgeSprites:
-    South: /Textures/Tiles/Planet/Snow/snow_double_edge_south.png
-    East: /Textures/Tiles/Planet/Snow/snow_double_edge_east.png
-    North: /Textures/Tiles/Planet/Snow/snow_double_edge_north.png
-    West: /Textures/Tiles/Planet/Snow/snow_double_edge_west.png
+    # begin starcup: rounded edges for a more natural look
+    South: /Textures/_starcup/Tiles/Planet/Snow/snow_double_edge_south.png
+    East: /Textures/_starcup/Tiles/Planet/Snow/snow_double_edge_east.png
+    North: /Textures/_starcup/Tiles/Planet/Snow/snow_double_edge_north.png
+    West: /Textures/_starcup/Tiles/Planet/Snow/snow_double_edge_west.png
+    # end starcup
   isSubfloor: true
   footstepSounds:
     collection: FootstepSnow
@@ -148,10 +152,12 @@
   sprite: /Textures/Tiles/Planet/Snow/snow_dug.png
   edgeSpritePriority: 1
   edgeSprites:
-    South: /Textures/Tiles/Planet/Snow/snow_dug_double_edge_south.png
-    East: /Textures/Tiles/Planet/Snow/snow_dug_double_edge_east.png
-    North: /Textures/Tiles/Planet/Snow/snow_dug_double_edge_north.png
-    West: /Textures/Tiles/Planet/Snow/snow_dug_double_edge_west.png
+    # begin starcup. Rounded edges for a more natural look
+    South: /Textures/_starcup/Tiles/Planet/Snow/snow_dug_double_edge_south.png
+    East: /Textures/_starcup/Tiles/Planet/Snow/snow_dug_double_edge_east.png
+    North: /Textures/_starcup/Tiles/Planet/Snow/snow_dug_double_edge_north.png
+    West: /Textures/_starcup/Tiles/Planet/Snow/snow_dug_double_edge_west.png
+    # end starcup
   isSubfloor: true
   footstepSounds:
     collection: FootstepSnow
