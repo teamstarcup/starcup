@@ -1,0 +1,17 @@
+- type: entity
+  parent: FloorTileItemBase
+  id: FloorTileItemStarcupWoodBrick
+  name: brick-pattern wood floor
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Interior/piiixl.rsi
+    state: wood01
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Interior/piiixl.rsi
+    heldPrefix: wood01
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupWoodBrick
+  - type: Stack
+    stackType: FloorTileStarcupWoodBrick
