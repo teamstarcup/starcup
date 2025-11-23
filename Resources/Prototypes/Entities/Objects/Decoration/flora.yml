@@ -30,8 +30,16 @@
           !type:DamageTrigger
           damage: 200
         behaviors:
-          - !type:DoActsBehavior
-            acts: [ "Destruction" ]
+        # begin starcup: give it a sound
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/_starcup/Effects/rock_break.ogg
+            params:
+              volume: 5
+              variation: 0.05
+        # end starcup
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
 
 - type: entity
   id: BaseTree

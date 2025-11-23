@@ -1,30 +1,52 @@
 - type: entity
   abstract: true
-  parent: CMBaseStructure
+  parent: BaseStructure # starcup: Originally used a different, RMC-only prototype.
   id: RMCGrassTallBase
-  name: tallgrass
-  suffix: Centre
+  name: tall grass # starcup: added a space
+  suffix: centre # starcup: removed capitalization for style
   components:
-  # make this slashable by only machete
+  # begin starcup
+  - type: FloorOccluder
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.5
+    sprintSpeedModifier: 0.5
+  # end starcup
   - type: Sprite
     sprite: _RMC14/Structures/Flora/tallgrass.rsi
     state: tallgrass
   - type: Physics
-    canCollide: false
+    bodyType: Static
+  # begin starcup
   - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+        - SlipLayer
+        mask:
+        - ItemMask
+        density: 1000
+        hard: false
+  # end starcup
   - type: Damageable
     damageContainer: Inorganic
   - type: MeleeSound
     soundGroups:
       Brute:
-        path: /Audio/Effects/chop.ogg
+        path:
+          "/Audio/Weapons/slash.ogg"
         params:
           variation: 0.05
   - type: Destructible
     thresholds:
     - trigger:
-        !type:DamageTrigger
-        damage: 100
+        # begin starcup: make it slashable
+        !type:DamageTypeTrigger
+        damageType: Slash
+        damage: 10
+        # end starcup
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
