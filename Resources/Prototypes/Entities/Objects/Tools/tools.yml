@@ -490,6 +490,15 @@
   - type: StaticPrice
     price: 25
   - type: Shovel
+  # begin starcup: digging quality to remove dirt and grass floors
+  - type: Tool
+    qualities:
+    - Digging
+    useSound:
+      path: "/Audio/_starcup/Tools/shovel.ogg"
+  - type: ToolTileCompatible
+  - type: Prying
+  # end starcup
 
 - type: entity
   parent: BaseItem

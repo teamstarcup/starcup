@@ -128,6 +128,16 @@
   - type: PhysicalComposition
     materialComposition:
       Steel: 100
+  # begin starcup: digging quality to remove dirt and grass floors
+  - type: Tool
+    qualities:
+    - Digging
+    useSound:
+      path: "/Audio/_starcup/Tools/shovel.ogg"
+  - type: ToolTileCompatible
+    delay: 1.75
+  - type: Prying
+  # end starcup
 
 - type: entity
   name: plant bag

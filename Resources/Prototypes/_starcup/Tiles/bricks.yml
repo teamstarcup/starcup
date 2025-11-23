@@ -1,0 +1,66 @@
+- type: tile
+  id: FloorTileBrickHorizontal
+  name: horizontal astro-brick
+  sprite: /Textures/_starcup/Tiles/brickhorizontal.png
+  variants: 9
+  placementVariants: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepAsteroid
+  itemDrop: FloorTileItemBrickHorizontal
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorTileBrickVertical
+  name: vertical astro-brick
+  sprite: /Textures/_starcup/Tiles/brickvertical.png
+  variants: 9
+  placementVariants: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepAsteroid
+  itemDrop: FloorTileItemBrickVertical
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorStarcupGrayBrick01
+  name: gray brick floor
+  sprite: /Textures/_starcup/Tiles/Stone/gray_brick01/base.png
+  edgeSpritePriority: 3
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Stone/gray_brick01/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Stone/gray_brick01/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Stone/gray_brick01/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Stone/gray_brick01/single_edge.png
+    South: /Textures/_starcup/Tiles/Stone/gray_brick01/double_edge.png
+    East: /Textures/_starcup/Tiles/Stone/gray_brick01/double_edge.png
+    North: /Textures/_starcup/Tiles/Stone/gray_brick01/double_edge.png
+    West: /Textures/_starcup/Tiles/Stone/gray_brick01/double_edge.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemGrayBrick
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorStarcupDarkGrayBrick
+  name: dark gray brick floor
+  parent: FloorStarcupGrayBrick01
+  sprite: /Textures/_starcup/Tiles/Stone/dark_gray_brick/base.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Stone/dark_gray_brick/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Stone/dark_gray_brick/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Stone/dark_gray_brick/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Stone/dark_gray_brick/single_edge.png
+    South: /Textures/_starcup/Tiles/Stone/dark_gray_brick/double_edge_south.png
+    East: /Textures/_starcup/Tiles/Stone/dark_gray_brick/double_edge_east.png
+    North: /Textures/_starcup/Tiles/Stone/dark_gray_brick/double_edge_north.png
+    West: /Textures/_starcup/Tiles/Stone/dark_gray_brick/double_edge_west.png
+  itemDrop: FloorTileItemDarkGrayBrick
