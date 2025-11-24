@@ -260,70 +260,49 @@
 
 # Civilian
 - type: loadoutGroup
+  parent: [ ColoredJumpsuits, Turtlenecks ]
   id: PassengerJumpsuit
   name: loadout-group-passenger-jumpsuit
   loadouts:
   - GreyJumpsuit
   - GreyJumpskirt
-  # Begin DeltaV additions
-  - WhiteJumpsuit
-  - WhiteJumpskirt
-  - BlackJumpsuit
-  - BlackJumpskirt
-  - BlueJumpsuit
-  - BlueJumpskirt
-  - DarkBlueJumpsuit
-  - DarkBlueJumpskirt
-  - TealJumpsuit
-  - TealJumpskirt
-  - GreenJumpsuit
-  - GreenJumpskirt
-  - DarkGreenJumpsuit
-  - DarkGreenJumpskirt
-  - OrangeJumpsuit
-  - OrangeJumpskirt
-  - PinkJumpsuit
-  - PinkJumpskirt
-  - RedJumpsuit
-  - RedJumpskirt
-  - YellowJumpsuit
-  - YellowJumpskirt
-  - PurpleJumpsuit
-  - PurpleJumpskirt
-  - LightBrownJumpsuit
-  - LightBrownJumpskirt
-  - BrownJumpsuit
-  - BrownJumpskirt
-  - MaroonJumpsuit
-  - MaroonJumpskirt
-#  - MioSkirt  # starcup
-#  - NaotaHoodie  # starcup
-  - CasualBlueSkirt
-  - CasualBlueSuit
-  - CasualRedSkirt
-  - CasualRedSuit
-  - CasualPurpleSkirt
-  - CasualPurpleSuit
-  - BlackElegantDress
-  - RedElegantDress
-  - GreenElegantDress
-  - BlueElegantDress
-  - PurpleElegantDress
-  - CyanStripedDress
-  - RedStripedDress
-  - GreenStripedDress
-  - PinkStripedDress
-  - OrangeStripedDress
-  - PurpleTurtleneckDress
-  - RedTurtleneckDress
-  - GreenTurtleneckDress
-  - BlueTurtleneckDress
-  - YellowTurtleneckDress
-  - OldYellowDress
-  # End DeltaV additions
   - AncientJumpsuit
   - RainbowJumpsuit
   - RainbowJumpskirt
+  - CasualBlueSuit # Delta-V
+  - CasualBlueSkirt # Delta-V
+  - CasualRedSuit # Delta-V
+  - CasualRedSkirt # Delta-V
+  - CasualPurpleSuit # Delta-V
+  - CasualPurpleSkirt # Delta-V
+  - CasualGreenSuit # starcup
+  - CasualGreenSkirt # starcup
+  - Loungewear # starcup
+  - MNKExposedShoulders # starcup
+  - MNKGymBra # starcup
+  - MNKOfficeSkirt # starcup
+  - BlackElegantDress # Delta-V
+  - RedElegantDress # Delta-V
+  - GreenElegantDress # Delta-V
+  - BlueElegantDress # Delta-V
+  - PurpleElegantDress # Delta-V
+  - CyanStripedDress # Delta-V
+  - RedStripedDress # Delta-V
+  - GreenStripedDress # Delta-V
+  - PinkStripedDress # Delta-V
+  - OrangeStripedDress # Delta-V
+  - PurpleTurtleneckDress # Delta-V
+  - RedTurtleneckDress # Delta-V
+  - GreenTurtleneckDress # Delta-V
+  - BlueTurtleneckDress # Delta-V
+  - YellowTurtleneckDress # Delta-V
+  - OldYellowDress # Delta-V
+  - MNKBlackDress # starcup
+  - BlueKimono # starcup
+  - GreenKimono # starcup
+  - PinkKimono # starcup
+  - PurpleKimono # starcup
+  - SkyKimono # starcup
 
 - type: loadoutGroup
   id: PassengerFace
@@ -368,6 +347,7 @@
   loadouts:
   - CommonBackpack
   - CommonSatchel
+  - LeatherSatchel # starcup
   - CommonDuffel
 
 - type: loadoutGroup
@@ -383,25 +363,31 @@
   name: loadout-group-passenger-outerclothing
   minLimit: 0
   loadouts:
+  - BlackHoodie # Delta-V
+  - GrayHoodie # Delta-V
+  - MNKWhiteHoodie # starcup
+  - MNKBlackJacket # starcup
+  - FlannelRed # Delta-V
+  - FlannelBlue # Delta-V
+  - FlannelGreen # Delta-V
+  - MNKBlackTopCoat # starcup
+  - GentleCoat # starcup
+  - JensenCoat # starcup
+  - Poncho # starcup
   - PassengerWintercoat
-  # Begin DeltaV additions
-  - BlackWinterCoat
-  - PurpleWinterCoat
-  - RedWinterCoat
-  - BlueWinterCoat
-  - BrownWinterCoat
-  - LightBrownWinterCoat
-  - GrayWinterCoat
-  - GreenWinterCoat
-  - OrangeWinterCoat
-  - WhiteWinterCoat
-  - YellowWinterCoat
-  - BlackHoodie
-  - GrayHoodie
-  - FlannelRed
-  - FlannelBlue
-  - FlannelGreen
-  # End DeltaV additions
+  - LongWinterCoat # starcup
+  - BlackWinterCoat # Delta-V
+  - PurpleWinterCoat # Delta-V
+  - RedWinterCoat # Delta-V
+  - BlueWinterCoat # Delta-V
+  - BrownWinterCoat # Delta-V
+  - LightBrownWinterCoat # Delta-V
+  - GrayWinterCoat # Delta-V
+  - GreenWinterCoat # Delta-V
+  - OrangeWinterCoat # Delta-V
+  - WhiteWinterCoat # Delta-V
+  - YellowWinterCoat # Delta-V
+  - TrenchCoat # starcup
 
 - type: loadoutGroup
   id: PassengerShoes
@@ -409,20 +395,25 @@
   loadouts:
   - BlackShoes
   - WinterBoots
-  # Begin DeltaV additions
-  - WhiteShoes
-  - BlueShoes
-  - BrownShoes
-  - GreenShoes
-  - OrangeShoes
-  - RedShoes
-  - YellowShoes
-  - PurpleShoes
-  - HighHeels
-  - BrownCowboyBoots
-  - BlackCowboyBoots
-  - WhiteCowboyBoots
-  # End DeltaV additions
+  - WhiteShoes # Delta-V
+  - BlueShoes # Delta-V
+  - BrownShoes # Delta-V
+  - GreenShoes # Delta-V
+  - OrangeShoes # Delta-V
+  - RedShoes # Delta-V
+  - YellowShoes # Delta-V
+  - PurpleShoes # Delta-V
+  - BrownLeatherShoes # starcup
+  - LaceupShoes # starcup
+  - BlackHighHeels # starcup
+  - BlueHighHeels # starcup
+  - BrownHighHeels # starcup
+  - GreenHighHeels # starcup
+  - RedHighHeels # starcup
+  - HighHeels # Delta-V
+  - BrownCowboyBoots # Delta-V
+  - BlackCowboyBoots # Delta-V
+  - WhiteCowboyBoots # Delta-V
 
 - type: loadoutGroup
   id: PassengerJobTrinkets
