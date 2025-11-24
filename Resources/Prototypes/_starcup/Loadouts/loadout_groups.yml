@@ -7,6 +7,15 @@
   loadouts:
   - WinterCoatYellow
 
+# Logistics
+## Courier
+- type: loadoutGroup
+  parent: [ CargoTechnicianBackpack ]
+  id: CourierBackpack
+  name: loadout-group-courier-backpack
+  loadouts:
+  - LeatherSatchel
+
 # Medical
 ## Medical Intern
 - type: loadoutGroup
@@ -24,6 +33,12 @@
   - ChemistPDA
   - PharmacistPDA
 
+## Psychologist
+- type: loadoutGroup
+  parent: [ CommonBackpack, MedicalBackpack ]
+  id: PsychologistBackpack
+  name: loadout-group-psychologist-backpack
+
 # Science
 ## Research Assistant
 - type: loadoutGroup
@@ -32,6 +47,14 @@
   minLimit: 0
   loadouts:
   - WinterCoatPurple
+
+## Research Director
+- type: loadoutGroup
+  parent: [ ScientistBackpack ]
+  id: ResearchDirectorBackpack
+  name: loadout-group-research-director-backpack
+  loadouts:
+  - LeatherSatchel
 
 ## Roboticist
 - type: loadoutGroup
@@ -94,6 +117,14 @@
   - EmergencyOxygenBrigmedic
   - LoadoutSpeciesVoxNitrogen
   - EmergencyIPCBox # DeltaV
+
+## Detective
+- type: loadoutGroup
+  parent: [ SecurityBackpack ]
+  id: DetectiveBackpack
+  name: loadout-group-detective-backpack
+  loadouts:
+  - LeatherSatchel
 
 ## Security Cadet
 - type: loadoutGroup

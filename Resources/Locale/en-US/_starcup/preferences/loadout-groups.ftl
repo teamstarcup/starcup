@@ -4,13 +4,20 @@ loadout-group-command-glasses = Command glasses
 # Engineering
 loadout-group-technical-assistant-outerclothing = Technical assistant outer clothing
 
+# Logistics
+loadout-group-courier-backpack = Courier backpack
+
 # Medical
 loadout-group-medical-intern-outerclothing = Medical intern outer clothing
 
 loadout-group-chemist-id = Chemist ID
 
+loadout-group-psychologist-backpack = Psychologist backpack
+
 # Science
 loadout-group-research-assistant-outerclothing = Research assistant outer clothing
+
+loadout-group-research-director-backpack = Research Director backpack
 
 loadout-group-robotics-glasses = Roboticist glasses
 loadout-group-roboticist-id = Roboticist ID
@@ -23,6 +30,8 @@ loadout-group-brigmedic-jumpsuit = Combat Medic jumpsuit
 loadout-group-brigmedic-outerclothing = Combat Medic outer clothing
 loadout-group-brigmedic-shoes = Combat Medic shoes
 loadout-group-brigmedic-backpack = Combat Medic backpack
+
+loadout-group-detective-backpack = Detective backpack
 
 loadout-group-security-cadet-outerclothing = Security cadet outer clothing
 
