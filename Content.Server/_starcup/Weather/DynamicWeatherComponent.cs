@@ -45,11 +45,14 @@ public sealed partial class DynamicWeatherComponent : Component
     [DataField]
     public TimeSpan StepFrequency = TimeSpan.FromMinutes(1);
 
+    /// <summary>
+    /// When true, DynamicWeatherSystem will simulate weather transitions for <see cref="Content.Server._starcup.Weather.DynamicWeatherSystem.MaximumExpectedRoundLength"/> upon round start.
+    /// </summary>
     [DataField]
     public bool RandomInitialState = true;
 
     [ViewVariables]
-    public ProtoId<WeatherPrototype>? CurrentState;
+    public WeatherPrototype? CurrentState;
 
     [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan NextUpdate;

@@ -15,6 +15,13 @@ public sealed class DynamicWeatherSystem : EntitySystem
     [Dependency] private readonly SharedWeatherSystem _weather = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
 
+    /// <summary>
+    /// The meta-weather type that functions as a stand-in for no active weather event.
+    /// </summary>
+    public static readonly ProtoId<WeatherPrototype> WeatherClear = "Clear";
+
+    private static readonly TimeSpan MaximumExpectedRoundLength = TimeSpan.FromHours(6);
+
     public override void Initialize()
     {
         base.Initialize();
@@ -27,19 +34,18 @@ public sealed class DynamicWeatherSystem : EntitySystem
         ProtoId<WeatherPrototype>? initialStateProtoId = dynamicWeather.States.First().Key;
         if (dynamicWeather.RandomInitialState)
         {
-            var states = dynamicWeather.States.Keys.ToArray();
-            initialStateProtoId = states[_robustRandom.Next(states.Length)];
+            for (var i = 0; i < MaximumExpectedRoundLength / dynamicWeather.StepFrequency; i++)
+            {
+                initialStateProtoId = NextState(dynamicWeather);
+                _proto.Resolve(initialStateProtoId, out dynamicWeather.CurrentState);
+                Log.Debug($"Shuffling weather to {initialStateProtoId}");
+            }
         }
 
-        if (initialStateProtoId == "Clear")
+        if (initialStateProtoId == WeatherClear)
             initialStateProtoId = null;
 
-        WeatherPrototype? initialState = null;
-        if (initialStateProtoId != null && !_proto.Resolve(initialStateProtoId, out initialState))
-            return;
-
-        var mapId = Transform(entity).MapID;
-        _weather.SetWeather(mapId, initialState, dynamicWeather.NextUpdate + WeatherComponent.ShutdownTime);
+        SetWeather(entity, dynamicWeather, initialStateProtoId);
     }
 
     public override void Update(float frameTime)
@@ -55,32 +61,40 @@ public sealed class DynamicWeatherSystem : EntitySystem
 
             dynamicWeather.NextUpdate = now + dynamicWeather.StepFrequency;
 
-            var previousStateProtoId = dynamicWeather.CurrentState;
-            NextState(dynamicWeather);
-
-            WeatherPrototype? nextState = null;
-            if (dynamicWeather.CurrentState != null && !_proto.Resolve(dynamicWeather.CurrentState, out nextState))
-                return;
-
-            WeatherPrototype? previousState = null;
-            if (previousStateProtoId != null)
-            {
-                _proto.Resolve(previousStateProtoId, out previousState);
-            }
-
-            var ev = new DynamicWeatherUpdateEvent(entity, previousState, nextState);
-            RaiseLocalEvent(entity, ref ev, true);
-
-            _weather.SetWeather(map.MapId, nextState, dynamicWeather.NextUpdate + WeatherComponent.ShutdownTime);
+            SetWeather(entity, dynamicWeather, NextState(dynamicWeather));
         }
     }
 
-    private void NextState(DynamicWeatherComponent dynamicWeather)
+    private ProtoId<WeatherPrototype>? NextState(DynamicWeatherComponent dynamicWeather)
     {
         var previousState = dynamicWeather.CurrentState ?? dynamicWeather.States.First().Key;
-        var pick = SharedRandomExtensions.Pick(dynamicWeather.States[previousState], _robustRandom.GetRandom());
+        return SharedRandomExtensions.Pick(dynamicWeather.States[previousState], _robustRandom.GetRandom());
+    }
 
-        dynamicWeather.CurrentState = pick != "Clear" ? pick : (ProtoId<WeatherPrototype>?) null;
+    private void SetWeather(EntityUid map, DynamicWeatherComponent dynamicWeather, WeatherPrototype? weather)
+    {
+        if (weather != null && weather.ID == WeatherClear)
+            weather = null;
+
+        var previousState = dynamicWeather.CurrentState;
+        dynamicWeather.CurrentState = weather;
+
+        var mapId = Transform(map).MapID;
+        _weather.SetWeather(mapId, weather, dynamicWeather.NextUpdate + WeatherComponent.ShutdownTime);
+
+        var ev = new DynamicWeatherUpdateEvent(map, previousState, weather);
+        RaiseLocalEvent(map, ref ev, true);
+    }
+
+    private void SetWeather(EntityUid map, DynamicWeatherComponent dynamicWeather, ProtoId<WeatherPrototype>? weatherProtoId)
+    {
+        WeatherPrototype? weather = null;
+        if (weatherProtoId != null && weatherProtoId != WeatherClear)
+        {
+            _proto.Resolve(weatherProtoId, out weather);
+        }
+
+        SetWeather(map, dynamicWeather, weather);
     }
 }
 
