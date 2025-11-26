@@ -97,21 +97,29 @@ spray-painter-style-locker-basic = Basic
 spray-painter-style-locker-botanist = Botanist
 spray-painter-style-locker-brigmedic = Brigmedic
 spray-painter-style-locker-captain = Captain
-spray-painter-style-locker-ce = CE
+# begin starcup: acronyms to full titles for stylistic consistency
+spray-painter-style-locker-ce = Chief Engineer
+# end starcup
 spray-painter-style-locker-chemical = Chemical
 spray-painter-style-locker-clown = Clown
-spray-painter-style-locker-cmo = CMO
+# begin starcup
+spray-painter-style-locker-cmo = Chief Medical Officer
+# end starcup
 spray-painter-style-locker-doctor = Doctor
 spray-painter-style-locker-electrical = Electrical
 spray-painter-style-locker-engineer = Engineer
-spray-painter-style-locker-evac = Evac repair
-spray-painter-style-locker-hop = HOP
-spray-painter-style-locker-hos = HOS
+# begin starcup
+spray-painter-style-locker-evac = Evacuation Repair
+spray-painter-style-locker-hop = Head of Personnel
+spray-painter-style-locker-hos = Head of Security
+# end starcup
 spray-painter-style-locker-medicine = Medicine
 spray-painter-style-locker-mime = Mime
 spray-painter-style-locker-paramedic = Paramedic
 spray-painter-style-locker-quartermaster = Quartermaster
-spray-painter-style-locker-rd = RD
+# begin starcup
+spray-painter-style-locker-rd = Research Director
+# end starcup
 spray-painter-style-locker-representative = Representative
 spray-painter-style-locker-salvage = Salvage
 spray-painter-style-locker-scientist = Scientist
@@ -150,7 +158,9 @@ spray-painter-style-wallcloset-pink = Pink
 spray-painter-style-wallcloset-white = White
 spray-painter-style-wallcloset-yellow = Yellow
 
-spray-painter-style-walllocker-evac = Evac repair
+# begin starcup
+spray-painter-style-walllocker-evac = Evacuation repair
+# end starcup
 spray-painter-style-walllocker-medical = Medical
 
 # Crates
