@@ -38,7 +38,6 @@ public sealed class DynamicWeatherSystem : EntitySystem
             {
                 initialStateProtoId = NextState(dynamicWeather);
                 _proto.Resolve(initialStateProtoId, out dynamicWeather.CurrentState);
-                Log.Debug($"Shuffling weather to {initialStateProtoId}");
             }
         }
 
