@@ -25,6 +25,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="_Nyanotrasen\" />
+    <Folder Include="_starcup\Cards\Rotation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="_starcup\Cards\Rotation\SparotCardRotationComponent.cs" />
   </ItemGroup>
   <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />
   <Import Project="..\RobustToolbox\MSBuild\Robust.CompNetworkGenerator.targets" />

@@ -25,7 +25,7 @@ public sealed class PainSystem : SharedPainSystem
         ent.Comp.NextPopupTime = _timing.CurTime;
     }
 
-    protected override void UpdatePainSuppression(Entity<PainComponent> ent, float duration, PainSuppressionLevel level)
+    protected void UpdatePainSuppression(Entity<PainComponent> ent, float duration, PainSuppressionLevel level)
     {
         var curTime = _timing.CurTime;
         var newEndTime = curTime + TimeSpan.FromSeconds(duration);
@@ -55,7 +55,7 @@ public sealed class PainSystem : SharedPainSystem
             return;
 
         var effect = _random.Pick(effects);
-        _popup.PopupEntity(Loc.GetString(effect), ent.Owner);
+        _popup.PopupEntity(Loc.GetString(effect), ent, ent);
 
         // Set next popup time
         var delay = _random.NextFloat(ent.Comp.MinimumPopupDelay, ent.Comp.MaximumPopupDelay);

@@ -1,0 +1,21 @@
+
+- type: entity
+  parent: Paper
+  id: PaperNoticeBoardBaseSyndcomm
+  name: official notice
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Paper
+    stampState: paper_stamp-syndicate
+    stampedBy:
+    - stampedColor: '#664400'
+      stampedName: stamp-component-stamped-name-syndcomm
+      stampLargeIcon: large_stamp-syndcomm
+    content: |2
+      [head=1]HydroCo - Hydrate Tastefully[/head]
+      This is a demonstration multi-line string. The symbols at the
+      start of the string indicate how many space indent characters
+      to remove from the string when parsing. This allows you to
+      comply with YAML indentation standards without compromising on
+      unwanted indentation in your text.

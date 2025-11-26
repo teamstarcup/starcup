@@ -1460,7 +1460,7 @@
   id: FloorTileItemAstroGrass
   parent: FloorTileItemBase
   name: astro-grass
-  description: Fake grass that covers up wires and even comes with realistic NanoTrimmings!
+  description: Fake grass that covers up wires and even comes with realistic trimmings! # starcup: removed Nanotrasen reference.
   components:
   - type: Sprite
     state: astrograss
@@ -1477,7 +1477,7 @@
   id: FloorTileItemMowedAstroGrass
   parent: FloorTileItemBase
   name: mowed astro-grass
-  description: Fake grass that covers up wires and even comes with realistic NanoTrimmings!
+  description: Fake grass that covers up wires and even comes with realistic trimmings! # starcup: removed Nanotrasen reference.
   components:
   - type: Sprite
     state: grass
@@ -1494,7 +1494,7 @@
   id: FloorTileItemJungleAstroGrass
   parent: FloorTileItemBase
   name: jungle astro-grass
-  description: Fake grass that covers up wires and even comes with realistic NanoTrimmings!
+  description: Fake grass that covers up wires and even comes with realistic trimmings! # starcup: removed Nanotrasen reference.
   components:
   - type: Sprite
     state: grassjungle
@@ -1511,12 +1511,12 @@
   parent: FloorTileItemBase
   id: FloorTileItemDarkAstroGrass
   name: dark astro-grass
-  description: Fake grass that covers up wires and even comes with realistic NanoTrimmings!
+  description: Fake grass that covers up wires and even comes with realistic trimmings! # starcup: removed Nanotrasen reference.
   components:
   - type: Sprite
     state: grassdark
   - type: Item
-    heldPrefix: darkgrass
+    heldPrefix: grassdark # starcup: fixed wrong prefix
   - type: FloorTile
     outputs:
     - Plating
@@ -1528,12 +1528,12 @@
   parent: FloorTileItemBase
   id: FloorTileItemLightAstroGrass
   name: light astro-grass
-  description: Fake grass that covers up wires and even comes with realistic NanoTrimmings!
+  description: Fake grass that covers up wires and even comes with realistic trimmings! # starcup: removed Nanotrasen reference.
   components:
   - type: Sprite
     state: grasslight
   - type: Item
-    heldPrefix: lightgrass
+    heldPrefix: grasslight # starcup: fixed wrong prefix
   - type: FloorTile
     outputs:
     - Plating

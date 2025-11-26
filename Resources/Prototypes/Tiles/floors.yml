@@ -1975,7 +1975,7 @@
     West: /Textures/Tiles/Planet/Grass/double_edge.png
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Cutting ]
+  deconstructTools: [ Digging ] # starcup
   footstepSounds:
     collection: FootstepGrass
   itemDrop: FloorTileItemAstroGrass
@@ -1987,7 +1987,7 @@
   parent: FloorGrass
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Cutting ]
+  deconstructTools: [ Digging ] # starcup
   itemDrop: FloorTileItemMowedAstroGrass
 
 - type: tile
@@ -1996,7 +1996,7 @@
   parent: FloorGrassJungle
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Cutting ]
+  deconstructTools: [ Digging ] # starcup
   itemDrop: FloorTileItemJungleAstroGrass
 
 - type: tile
@@ -2005,7 +2005,7 @@
   name: tiles-dark-astro-grass
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Cutting ]
+  deconstructTools: [ Digging ] # starcup
   itemDrop: FloorTileItemDarkAstroGrass
 
 - type: tile
@@ -2014,7 +2014,7 @@
   name: tiles-light-astro-grass
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Cutting ]
+  deconstructTools: [ Digging ] # starcup
   itemDrop: FloorTileItemLightAstroGrass
 
 # Ice
@@ -2024,7 +2024,7 @@
   sprite: /Textures/Tiles/Planet/Snow/ice.png
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [ Mining ] # starcup
   friction: 0.05
   heatCapacity: 10000
   mobFriction: 0.05
@@ -2037,7 +2037,7 @@
   parent: FloorSnow
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [ Digging ] # starcup
   itemDrop: FloorTileItemAstroSnow
 
 # Asteroid Sand
@@ -2047,7 +2047,7 @@
   parent: FloorAsteroidSand
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [ Digging ] # starcup
   itemDrop: FloorTileItemAstroAsteroidSand
 # weather: false  # starcup: early merge of #38638
 
@@ -2057,7 +2057,7 @@
   parent: FloorAsteroidSandBorderless
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [ Digging ] # starcup
   itemDrop: FloorTileItemAstroAsteroidSand
 # weather: false  # starcup: early merge of #38638
 
@@ -2067,7 +2067,7 @@
   name: tiles-desert-astro-sand
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [ Digging ] # starcup
   itemDrop: FloorTileItemDesertAstroSand
 #  weather: false  # starcup: early merge of #38638
 

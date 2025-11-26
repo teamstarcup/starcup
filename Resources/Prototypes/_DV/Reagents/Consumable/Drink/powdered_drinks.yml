@@ -3,18 +3,6 @@
   abstract: true
   physicalDesc: reagent-physical-desc-powdery
   flavor: terrible
-  metabolisms:
-    Poison:
-      effects:
-      - !type:Emote
-        emote: Cough
-        showInChat: true
-        probability: 0.33
-      - !type:ChemVomit
-        probability: 0.1
-        conditions:
-        - !type:ReagentThreshold
-          min: 15
 
 - type: reagent
   parent: BasePowderedBeverage
@@ -24,6 +12,19 @@
   desc: reagent-desc-powdered-milk
   flavor: sweet
   color: "#FAFAFA"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Emote
+        emote: Cough
+        showInChat: true
+        probability: 0.33
+      - !type:Vomit
+        probability: 0.1
+        conditions:
+        - !type:ReagentCondition
+          reagent: PowderedMilk
+          min: 15
 
 - type: reagent
   parent: BasePowderedBeverage
@@ -33,6 +34,19 @@
   desc: reagent-desc-powdered-milk-soy
   flavor: soy
   color: "#FFFCE3"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Emote
+        emote: Cough
+        showInChat: true
+        probability: 0.33
+      - !type:Vomit
+        probability: 0.1
+        conditions:
+        - !type:ReagentCondition
+          reagent: PowderedMilkSoy
+          min: 15
 
 - type: reagent
   parent: BasePowderedBeverage
@@ -42,6 +56,19 @@
   desc: reagent-desc-powdered-juice-orange
   flavor: sour
   color: "#FFC420"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Emote
+        emote: Cough
+        showInChat: true
+        probability: 0.33
+      - !type:Vomit
+        probability: 0.1
+        conditions:
+        - !type:ReagentCondition
+          reagent: PowderedJuiceOrange
+          min: 15
 
 - type: reagent
   parent: BasePowderedBeverage
@@ -62,10 +89,11 @@
         emote: Cough
         showInChat: true
         probability: 0.33
-      - !type:ChemVomit
+      - !type:Vomit
         probability: 0.1
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: PowderedJuiceLime
           min: 15
 
 - type: reagent
@@ -87,10 +115,11 @@
         emote: Cough
         showInChat: true
         probability: 0.33
-      - !type:ChemVomit
+      - !type:Vomit
         probability: 0.1
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: PowderedJuiceLemon
           min: 15
 
 - type: reagent
@@ -112,10 +141,11 @@
         emote: Cough
         showInChat: true
         probability: 0.33
-      - !type:ChemVomit
+      - !type:Vomit
         probability: 0.1
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: PowderedJuicePineapple
           min: 15
 
 - type: reagent
@@ -126,6 +156,19 @@
   desc: reagent-desc-powdered-juice-banana
   flavor: terrible
   color: "#FFFEBF"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Emote
+        emote: Cough
+        showInChat: true
+        probability: 0.33
+      - !type:Vomit
+        probability: 0.1
+        conditions:
+        - !type:ReagentCondition
+          reagent: PowderedJuiceBanana
+          min: 15
 
 - type: reagent
   parent: BasePowderedBeverage
@@ -135,6 +178,19 @@
   desc: reagent-desc-powdered-juice-berry
   flavor: bitter
   color: "#D366FF"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Emote
+        emote: Cough
+        showInChat: true
+        probability: 0.33
+      - !type:Vomit
+        probability: 0.1
+        conditions:
+        - !type:ReagentCondition
+          reagent: PowderedJuiceBerry
+          min: 15
 
 - type: reagent
   parent: BasePowderedBeverage
@@ -144,6 +200,19 @@
   desc: reagent-desc-powdered-juice-watermelon
   flavor: terrible
   color: "#FFBCDB"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Emote
+        emote: Cough
+        showInChat: true
+        probability: 0.33
+      - !type:Vomit
+        probability: 0.1
+        conditions:
+        - !type:ReagentCondition
+          reagent: PowderedJuiceWatermelon
+          min: 15
 
 - type: reagent
   parent: BasePowderedBeverage
@@ -153,6 +222,19 @@
   desc: reagent-desc-powdered-juice-grape
   flavor: sour
   color: "#E57DFF"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Emote
+        emote: Cough
+        showInChat: true
+        probability: 0.33
+      - !type:Vomit
+        probability: 0.1
+        conditions:
+        - !type:ReagentCondition
+          reagent: PowderedJuiceGrape
+          min: 15
 
 - type: reagent
   parent: BasePowderedBeverage
@@ -162,6 +244,19 @@
   desc: reagent-desc-powdered-juice-apple
   flavor: sour
   color: "#FFC67E"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Emote
+        emote: Cough
+        showInChat: true
+        probability: 0.33
+      - !type:Vomit
+        probability: 0.1
+        conditions:
+        - !type:ReagentCondition
+          reagent: PowderedJuiceApple
+          min: 15
 
 - type: reagent
   parent: BasePowderedBeverage
@@ -171,6 +266,19 @@
   desc: reagent-desc-powdered-juice-cherry
   flavor: sour
   color: "#A9536C"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Emote
+        emote: Cough
+        showInChat: true
+        probability: 0.33
+      - !type:Vomit
+        probability: 0.1
+        conditions:
+        - !type:ReagentCondition
+          reagent: PowderedJuiceCherry
+          min: 15
 
 - type: reagent
   parent: BasePowderedBeverage
@@ -180,6 +288,19 @@
   desc: reagent-desc-powdered-juice-carrot
   flavor: bitter
   color: "#FFA06B"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Emote
+        emote: Cough
+        showInChat: true
+        probability: 0.33
+      - !type:Vomit
+        probability: 0.1
+        conditions:
+        - !type:ReagentCondition
+          reagent: PowderedJuiceCarrot
+          min: 15
 
 - type: reagent
   parent: BasePowderedBeverage
@@ -189,3 +310,16 @@
   desc: reagent-desc-powdered-juice-tomato
   flavor: bitter
   color: "#D85553"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Emote
+        emote: Cough
+        showInChat: true
+        probability: 0.33
+      - !type:Vomit
+        probability: 0.1
+        conditions:
+        - !type:ReagentCondition
+          reagent: PowderedJuiceTomato
+          min: 15

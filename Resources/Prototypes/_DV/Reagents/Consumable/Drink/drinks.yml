@@ -96,15 +96,17 @@
         amount: 0.3
       - !type:PopupMessage
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: HealthViolation
           min: 30
         type: Local
         visualType: Medium
         messages: [ "generic-reagent-effect-damnation" ]
         probability: 0.2
-      - !type:ChemVomit
+      - !type:Vomit
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: HealthViolation
           min: 30
         probability: 0.02
 
@@ -209,7 +211,7 @@
         damage:
           types:
             Heat: 2
-      - !type:FlammableReaction
+      - !type:Flammable
         multiplier: 0.5
       - !type:Ignite
       - !type:Emote

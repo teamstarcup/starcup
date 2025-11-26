@@ -3,13 +3,15 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._DV.Pain;
 
-public abstract class SharedPainSystem : EntitySystem
+public class SharedPainSystem : EntitySystem
 {
     [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
 
     public ProtoId<StatusEffectPrototype> StatusEffectKey = "InPain";
 
-    protected abstract void UpdatePainSuppression(Entity<PainComponent> ent, float duration, PainSuppressionLevel level);
+    protected void UpdatePainSuppression(Entity<PainComponent> ent, float duration, PainSuppressionLevel level)
+    {
+    }
 
     public virtual void TryApplyPain(EntityUid uid, float painTime, StatusEffectsComponent? status = null)
     {

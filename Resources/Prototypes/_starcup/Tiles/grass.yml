@@ -1,0 +1,114 @@
+- type: tile
+  id: FloorPlanetGrassCold # It's really just desaturated.
+  name: cold grass
+  parent: FloorPlanetGrass
+  sprite: /Textures/_starcup/Tiles/Planet/grass_cold/grass.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Planet/grass_cold/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/grass_cold/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/grass_cold/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/grass_cold/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/grass_cold/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/grass_cold/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/grass_cold/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/grass_cold/double_edge.png
+
+- type: tile
+  id: FloorPlanetGrassSnowy
+  name: snowy grass
+  parent: FloorPlanetGrassCold
+  sprite: /Textures/_starcup/Tiles/Planet/grass_snowy/grass.png
+  variants: 8
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+
+- type: tile
+  id: FloorPlanetGrassGolden
+  name: golden grass
+  parent: FloorPlanetGrass
+  sprite: /Textures/_starcup/Tiles/Planet/grass_golden/grass.png
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Planet/grass_golden/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/grass_golden/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/grass_golden/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/grass_golden/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/grass_golden/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/grass_golden/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/grass_golden/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/grass_golden/double_edge.png
+
+- type: tile
+  id: FloorPlanetGrassBlue
+  name: twilight grass
+  sprite: /Textures/_starcup/Tiles/Planet/grass_twilight/grass.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Planet/grass_twilight/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/grass_twilight/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/grass_twilight/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/grass_twilight/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/grass_twilight/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/grass_twilight/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/grass_twilight/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/grass_twilight/double_edge.png
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepGrass
+  heatCapacity: 10000
+  indestructible: true
+
+- type: tile
+  id: FloorPlanetGrassDarkEdges
+  name: dark grass with edges
+  parent: FloorGrassDark
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Planet/grass_dark/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/grass_dark/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/grass_dark/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/grass_dark/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/grass_dark/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/grass_dark/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/grass_dark/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/grass_dark/double_edge.png
+
+- type: tile
+  id: FloorPlanetGrassLightEdges
+  name: light grass with edges
+  parent: FloorGrassLight
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Planet/grass_light/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/grass_light/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/grass_light/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/grass_light/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/grass_light/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/grass_light/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/grass_light/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/grass_light/double_edge.png

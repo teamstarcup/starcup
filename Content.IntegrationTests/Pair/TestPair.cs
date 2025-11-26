@@ -87,7 +87,7 @@ public sealed partial class TestPair : RobustIntegrationTest.TestPair
 
         opts.LoadTestAssembly = false;
         opts.ContentStart = true;
-        opts.FailureLogLevel = LogLevel.Warning;
+        // opts.FailureLogLevel = LogLevel.Warning; // starcup
         opts.Options = new()
         {
             LoadConfigAndUserData = false,

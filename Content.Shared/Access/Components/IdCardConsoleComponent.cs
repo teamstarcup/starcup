@@ -42,19 +42,22 @@ public sealed partial class IdCardConsoleComponent : Component
     [DataField, AutoNetworkedField]
     public List<ProtoId<AccessLevelPrototype>> AccessLevels = new()
     {
+        // starcup: reorganized for alphabetization, new entries marked with comments
         "Armory",
         "Atmospherics",
         "Bar",
+        "Boxer", // starcup
         "Brig",
-        "Detective",
         "Captain",
-        "Cargo",
         "Chapel",
         "Chemistry",
         "ChiefEngineer",
         "ChiefMedicalOfficer",
+        "Clown", // starcup
+        "Brigmedic", // starcup
         "Command",
         "Cryogenics",
+        "Detective",
         "Engineering",
         "External",
         "HeadOfPersonnel",
@@ -63,27 +66,24 @@ public sealed partial class IdCardConsoleComponent : Component
         "Janitor",
         "Kitchen",
         "Lawyer",
+        "Library", // starcup
+        "Cargo",
+        "Quartermaster",
+        "Mail", // DeltaV
         "Maintenance",
         "Medical",
-        "Quartermaster",
+        "Mime", // starcup
+        "Musician", // starcup
+        "Paramedic", // starcup
+        "Psychologist", // starcup
+        "Reporter", // starcup
         "Research",
         "ResearchDirector",
+        "Robotics", // DeltaV
         "Salvage",
         "Security",
         "Service",
-        "Theatre",
-        "Robotics", // DeltaV
-        // begin starcup additions
-        "Boxer",
-        "Clown",
-        "Library",
-        "Mime",
-        "Musician",
-        "Paramedic",
-        "Psychologist",
-        "Reporter",
-        "Zookeeper",
-        // end starcup
+        "Theatre"
     };
 
     [Serializable, NetSerializable]
