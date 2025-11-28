@@ -506,6 +506,7 @@
   - BeerGlasses
   - BeerEyePatchHud
   - Sunglasses
+  - Mirrorshades
 
 - type: loadoutGroup
   parent: [ Glasses ]
@@ -524,6 +525,7 @@
   minLimit: 0
   loadouts:
   - Sunglasses
+  - Mirrorshades
 
 - type: loadoutGroup
   parent: [ Glasses ]
@@ -543,6 +545,22 @@
   - SecurityGlasses
   - SecurityHud
   - SecurityEyePatchHud
+
+- type: loadoutGroup
+  parent: [ Glasses ]
+  id: ReporterEyewear
+  name: loadout-group-reporter-glasses
+  minLimit: 0
+  loadouts:
+  - Mirrorshades
+
+- type: loadoutGroup
+  parent: [ Glasses ]
+  id: ServiceWorkerEyewear
+  name: loadout-group-service-worker-glasses
+  minLimit: 0
+  loadouts:
+  - Mirrorshades
 
 - type: loadoutGroup
   id: GroupSpeciesBreathToolBrigmedic
