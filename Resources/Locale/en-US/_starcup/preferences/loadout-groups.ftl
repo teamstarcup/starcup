@@ -32,16 +32,19 @@ loadout-group-brigmedic-shoes = Combat Medic shoes
 loadout-group-brigmedic-backpack = Combat Medic backpack
 
 loadout-group-detective-backpack = Detective backpack
+loadout-group-detective-shoes = Detective shoes
 
 loadout-group-security-cadet-outerclothing = Security cadet outer clothing
 
 loadout-group-warden-shoes = Warden shoes
 
 # Service
-loadout-group-botanist-shoes = Botanist shoes
-
 loadout-group-bartender-glasses = Bartender glasses
 loadout-group-bartender-shoes = Bartender shoes
+
+loadout-group-botanist-shoes = Botanist shoes
+
+loadout-group-boxer-shoes = Boxer shoes
 
 loadout-group-chaplain-shoes = Chaplain shoes
 loadout-group-chaplain-id-starcup = Chaplain ID

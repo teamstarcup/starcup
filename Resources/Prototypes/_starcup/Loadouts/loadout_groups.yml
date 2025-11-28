@@ -126,6 +126,17 @@
   loadouts:
   - LeatherSatchel
 
+- type: loadoutGroup
+  parent: [ SecurityShoes ]
+  id: DetectiveShoes
+  name: loadout-group-detective-shoes
+  loadouts:
+  - RedHeels
+  - BlackHeels
+  - BrownHeels
+  - BrownLeatherShoes
+  - LaceupShoes
+
 ## Security Cadet
 - type: loadoutGroup
   id: SecurityCadetOuterClothing
@@ -152,6 +163,13 @@
   name: loadout-group-bartender-shoes
   loadouts:
   - BlackShoes
+  - BrownLeatherShoes
+  - LaceupShoes
+  - RedHeels
+  - BlackHeels
+  - BlueHeels
+  - GreenHeels
+  - BrownHeels
   - WinterBoots
 
 ## Botanist
@@ -159,7 +177,21 @@
   id: BotanistShoes
   name: loadout-group-botanist-shoes
   loadouts:
+  - BlueShoes
   - BrownShoes
+  - GreenShoes
+  - BotanistWinterBoots
+
+## Boxer
+- type: loadoutGroup
+  id: BoxerShoes
+  name: loadout-group-boxer-shoes
+  loadouts:
+  - BlackShoes
+  - BlueShoes
+  - GreenShoes
+  - RedShoes
+  - YellowShoes
   - BotanistWinterBoots
 
 ## Chaplain
@@ -168,6 +200,10 @@
   name: loadout-group-chaplain-shoes
   loadouts:
   - BlackShoes
+  - WhiteShoes
+  - LaceupShoes
+  - RedHeels
+  - BlackHeels
   - WinterBoots
 
 - type: loadoutGroup
@@ -189,6 +225,11 @@
   name: loadout-group-chef-shoes
   loadouts:
   - BlackShoes
+  - BrownShoes
+  - RedShoes
+  - WhiteShoes
+  - RedHeels
+  - BlackHeels
   - ChefWinterBoots
 
 ## Clown
@@ -221,8 +262,11 @@
   name: loadout-group-janitor-shoes
   loadouts:
   - JanitorGaloshes
+  - WhiteShoes
+  - BlackShoes
+  - LaceupShoes
+  - BlackHeels
   - JanitorWinterBoots
-  - JanitorWhiteShoes
 
 - type: loadoutGroup
   id: JanitorLight
@@ -245,7 +289,12 @@
   id: LawyerShoes
   name: loadout-group-lawyer-shoes
   loadouts:
+  - BrownLeatherShoes
   - LaceupShoes
+  - RedHeels
+  - BlackHeels
+  - BlueHeels
+  - BrownHeels
   - WinterBoots
 
 ## Librarian
@@ -261,7 +310,13 @@
   id: LibrarianShoes
   name: loadout-group-librarian-shoes
   loadouts:
+  - BlackShoes
+  - BrownLeatherShoes
   - LaceupShoes
+  - RedHeels
+  - BlackHeels
+  - GreenHeels
+  - BrownHeels
   - WinterBoots
 
 ## Mime
@@ -269,7 +324,11 @@
   id: MimeShoes
   name: loadout-group-mime-shoes
   loadouts:
+  - BlackShoes
+  - RedShoes
   - WhiteShoes
+  - BrownLeatherShoes
+  - LaceupShoes
   - MimeWinterBoots
 
 ## Musician
@@ -277,7 +336,11 @@
   id: MusicianShoes
   name: loadout-group-musician-shoes
   loadouts:
+  - BlackShoes
+  - WhiteShoes
+  - BrownLeatherShoes
   - LaceupShoes
+  - BlackHeels
   - WinterBoots
 
 ## Reporter
@@ -287,6 +350,21 @@
   minLimit: 0
   loadouts:
   - TrenchCoat
+
+- type: loadoutGroup
+  id: ReporterShoes
+  name: loadout-group-reporter-shoes
+  loadouts:
+  - BlackShoes
+  - BrownShoes
+  - WhiteShoes
+  - BrownLeatherShoes
+  - LaceupShoes
+  - RedHeels
+  - BlackHeels
+  - BlueHeels
+  - BrownHeels
+  - WinterBoots
 
 ## Service Worker
 - type: loadoutGroup
@@ -312,6 +390,10 @@
   name: loadout-group-service-worker-shoes
   loadouts:
   - BlackShoes
+  - BrownLeatherShoes
+  - LaceupShoes
+  - BlackHeels
+  - GreenHeels
   - WinterBoots
 
 ## Passenger
