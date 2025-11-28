@@ -1,4 +1,10 @@
-# Drinks
+flavor-complex-butterscotch = like butterscotch
+flavor-complex-cotton-candy = like cotton candy
+flavor-complex-mango = like mangoes
+flavor-complex-sour-apple = like sour apples
+flavor-complex-imitation-chocolate = sort of like chocolate
+
+# Drinks (Rewrites)
 flavor-complex-acidspit-starcup = like your tongue is on fire
 flavor-complex-alien-brain-hemorrhage-starcup = like a sweet migraine
 flavor-complex-amasec-starcup = dark and astringent

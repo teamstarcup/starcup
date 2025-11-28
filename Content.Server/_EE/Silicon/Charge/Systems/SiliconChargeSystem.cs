@@ -2,7 +2,7 @@ using Robust.Shared.Random;
 using Content.Shared._EE.Silicon.Components;
 using Content.Server.Power.Components;
 using Content.Shared.Mobs.Systems;
-using Content.Server.Temperature.Components;
+using Content.Shared.Temperature.Components;
 using Content.Server.Atmos.Components;
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Popups;
@@ -22,8 +22,10 @@ using Content.Shared.Mind;
 using Content.Shared.Alert;
 using Content.Server._EE.Silicon.Death;
 using Content.Server._EE.Power.Components;
+using Content.Shared.Atmos.Components;
 // Begin TheDen - IPC Dynamic Power draw
 using Content.Shared.Movement.Components;
+using Content.Shared.Power.Components;
 using Robust.Shared.Physics.Components;
 // End TheDen
 
@@ -216,7 +218,7 @@ public sealed class SiliconChargeSystem : EntitySystem
             !TryComp(silicon, out InputMoverComponent? input))
             return 0;
 
-        if (input.HeldMoveButtons == MoveButtons.None || _jetpack.IsUserFlying(silicon)) // If nothing is being held or jet packing
+        if (input.HeldMoveButtons == MoveButtons.None || _jetpack.IsUserFlying(silicon) || movement.CurrentSprintSpeed == 0) // If nothing is being held or jet packing. starcup: Or speed is 0, which will cause a NaN and instantly drain the battery
         {
             return siliconComp.DrainPerSecond * siliconComp.IdleDrainReduction * (-1); // Reduces draw by idle drain reduction
         }

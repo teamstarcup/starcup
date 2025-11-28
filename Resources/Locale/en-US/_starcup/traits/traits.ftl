@@ -15,3 +15,6 @@ trait-southern-desc = You ain't got any accent, an' you woulda known if you did.
 
 trait-pottymouth-name = Potty mouth
 trait-pottymouth-desc = You're quite above improper language, sometimes even prone to minced oaths.
+
+trait-vowed-name = Vow of Silence
+trait-vowed-desc = You're serious about your vow, and uphold it outside of jobs that require one.

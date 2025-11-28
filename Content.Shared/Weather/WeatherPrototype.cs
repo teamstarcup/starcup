@@ -1,4 +1,5 @@
-using Content.Shared.Damage;  // DeltaV
+using Content.Shared.Damage;
+using Content.Shared.StatusEffect; // DeltaV
 using Content.Shared.Whitelist;  // DeltaV
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
@@ -35,4 +36,16 @@ public sealed partial class WeatherPrototype : IPrototype
     /// </summary>
     [DataField]
     public EntityWhitelist? DamageBlacklist;
+
+    /// <summary>
+    /// starcup: Status effect that's applied to entities exposed to this weather.
+    /// </summary>
+    [DataField]
+    public EntProtoId? StatusEffect;
+
+    /// <summary>
+    /// starcup: Should the status effect refresh?
+    /// </summary>
+    [DataField]
+    public bool Refresh = true;
 }

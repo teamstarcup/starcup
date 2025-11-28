@@ -41,11 +41,13 @@
     currentTemperature: 310.15
     specificHeat: 42
   # Good eatin', you monster.
-  - type: Butcherable
-    butcheringType: Spike
-    spawned:
-    - id: FoodMeat
-      amount: 4
+  # begin starcup: scurrets are not food
+  # - type: Butcherable
+  #   butcheringType: Spike
+  #   spawned:
+  #   - id: FoodMeat
+  #     amount: 4
+  # end starcup
   # They wawa!
   - type: Vocal
     sounds:
@@ -61,6 +63,7 @@
     proto: moth
   - type: InteractionPopup
     successChance: 0.99 # Imagine not being allowed to headpat a scurret, chat
+    interactDelay: 2.25
     interactSuccessString: petting-success-scurret
     interactFailureString: petting-failure-scurret
     interactSuccessSpawn: EffectHearts
@@ -135,10 +138,9 @@
         32:
           sprite: Mobs/Animals/scurret/displacement.rsi
           state: hand
-  - type: ItemOffer # starcup: item offering
 
   - type: InventorySlots
-  - type: Food
+  - type: Edible # Why? I'm not sure but I also am afraid of the answer.
   - type: Hunger
     baseDecayRate: 0.05 # They get a lil' hungy
   - type: BodyEmotes # Grants them clapping and so on.
@@ -211,3 +213,4 @@
   id: MobEmotionalSupportScurret
   parent: [MobScurret, MobBaseEmotionalSupportScurret]
   description: Commonly known as Wawa, from the wetlands of Planet Wawa, these critters make up the bulk of Arnold's Pizza's "loyal workforce". This one is here as a temp.
+

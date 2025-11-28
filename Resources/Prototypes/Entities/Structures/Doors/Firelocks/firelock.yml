@@ -5,6 +5,10 @@
   name: firelock
   description: Apply crowbar.
   components:
+    - type: Anchorable
+      flags:
+      - Anchorable
+    - type: Rotatable
     - type: AtmosAlarmable
       syncWith:
         - FireAlarm
@@ -35,7 +39,7 @@
         - !type:DoActsBehavior
           acts: ["Destruction"]
     - type: Sprite
-      sprite: Structures/Doors/Airlocks/Standard/firelock.rsi
+      sprite: _starcup/Structures/Doors/Airlocks/Standard/firelock.rsi # Starcup - airlock resprite
       snapCardinals: true
       layers:
         - state: closed
@@ -128,6 +132,7 @@
       price: 150
     - type: AccessReader
       access: [ [ "Engineering" ] ]
+      examinationText: access-reader-examination-functionality-restricted
     - type: PryUnpowered
       pryModifier: 0.5
     - type: PointLight
@@ -168,7 +173,7 @@
   components:
     - type: StationAiWhitelist
     - type: Sprite
-      sprite: Structures/Doors/Airlocks/Glass/firelock.rsi
+      sprite: _starcup/Structures/Doors/Airlocks/Glass/firelock.rsi # STarcup - airlock resprite
     - type: Occluder
       enabled: false
     - type: Fixtures

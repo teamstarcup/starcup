@@ -1,0 +1,42 @@
+- type: entity
+  parent: Paper
+  id: PaperNoticeBoardAtmosDeltaP
+  name: atmos notice - delta pressure
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Paper
+    stampState: paper_stamp-syndicate
+    stampedBy:
+    - stampedColor: '#664400'
+      stampedName: stamp-component-stamped-name-syndcomm
+      stampLargeIcon: large_stamp-syndcomm
+    content: |2
+      [italic][size=14][color=#8668e1]Safety Moth[/color] says...[/size][/italic]             [italic][size=16]“If it cracks, call evac!”[/size][/italic]
+      [size=11]───────────────────────────────────────────[/size]
+      [size=12][bold]Delta Pressure[/bold] refers to a pressure differential between
+      two environments. When delta pressure becomes too high,
+      containment barriers separating the spaces may experience
+      [bold]sudden and catastrophic structural failure.[/bold]
+
+      [size=14]Know The Signs[/size]
+      [size=6]─────────────────────────────────────────────────────────────────────────────────[/size]
+      If you witness...
+          • spontaneous window damage
+          • audible glass rupturing
+      [bold]... take immediate action![/bold] You may have only moments to
+      prevent a mass workplace safety incident.
+
+      [head=3]Safety Ratings[/head]
+      [size=6]─────────────────────────────────────────────────────────────────────────────────[/size]
+      The [italic]maximum[/italic] pressure differential tolerance for various structural materials are listed below.
+
+      [size=8][mono]         Structural Material           Maximum Pressure   Maximum ΔP
+      ──────────────────────────────────── ────────────────── ─────────────
+      Reinforced plasma window (full)      150,000 kPa        100,000 kPa
+      Reinforced plasma window (quarter)   37,500 kPa         25,000 kPa
+      Plasma window (full)                 75,000 kPa         50,000 kPa
+      Plasma window (quarter)              18,750 kPa         12,500 kPa
+      Reinforced glass window (full)       15,000 kPa         10,000 kPa
+      Reinforced glass window (quarter)    3,750 kPa          2,500 kPa
+      Glass window (full)                  1,000 kPa          750 kPa
+      Glass window (quarter)               250 kPa            187.5 kPa[/mono][/size][/size]

@@ -44,6 +44,7 @@
     - id: FoodMeatCorgi
       amount: 2
     - id: MaterialHideCorgi
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Tag
     tags:
     - CannotSuicide
@@ -75,6 +76,7 @@
       amount: 2
     - id: SheetSteel1
     - id: MaterialHideCorgi
+    dropOrgansOnButcher: true # starcup: butchering gives organs
 
 - type: entity
   name: Lisa
@@ -135,6 +137,7 @@
     attributes:
       proper: true
       gender: female
+  - type: Godmode # starcup
 
 - type: entity
   name: Puppy Ian
@@ -151,6 +154,7 @@
     - id: FoodMeatCorgi
       amount: 2
     - id: MaterialHideCorgi
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: StealTarget
     stealGroup: AnimalIan
 
@@ -278,6 +282,7 @@
     spawned:
     - id: FoodMeat
       amount: 2
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.9
     interactSuccessString: petting-success-bingus
@@ -295,8 +300,8 @@
     - VimPilot
   - type: StealTarget
     stealGroup: AnimalNamedCat
-  - type: Puller
-    needsHands: false # starcup - basically a cat
+  - type: Puller # starcup - basically a cat
+    needsHands: false
 
 - type: entity
   name: McGriff
@@ -350,6 +355,7 @@
     spawned:
     - id: FoodMeat
       amount: 2
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
     accent: dog
   - type: InteractionPopup
@@ -372,8 +378,9 @@
     - VimPilot
   - type: StealTarget
     stealGroup: AnimalMcGriff
-  - type: Puller
-    needsHands: false # starcup - go fetch!
+  - type: MessyDrinker
+  - type: Puller # starcup - go fetch!
+    needsHands: false
 
 - type: entity
   name: Paperwork
@@ -399,6 +406,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 1
     interactSuccessString: petting-success-sloth
@@ -408,8 +416,8 @@
     attributes:
       proper: true
       gender: male
-  - type: Puller
-    needsHands: false # starcup - Paperwork likes helping retrieve random books and papers for his librarian caretaker
+  - type: Puller # starcup - Paperwork likes helping retrieve random books and papers for his librarian caretaker
+    needsHands: false
 
 - type: entity
   name: Walter
@@ -450,6 +458,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
     accent: dog
   - type: InteractionPopup
@@ -472,8 +481,9 @@
   - type: Speech
     speechVerb: Canine
     speechSounds: Dog
-  - type: Puller
-    needsHands: false # starcup - go fetch!
+  - type: MessyDrinker
+  - type: Puller # starcup - go fetch!
+    needsHands: false
 
 - type: entity
   name: Morty
@@ -602,8 +612,11 @@
     spawned:
     - id: FoodMeat
       amount: 3
-    - id: Telecrystal5
-      amount: 1
+    # begin starcup: remove tc
+    # - id: Telecrystal5
+    #   amount: 1
+    # end starcup
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Grammar
     attributes:
       proper: true
@@ -614,6 +627,10 @@
     - VimPilot
   - type: StealTarget
     stealGroup: AnimalRenault
+  # begin starcup: add sentience target
+  - type: SentienceTarget
+    flavorKind: station-event-random-sentience-flavor-organic
+  # end starcup
 
 - type: entity
   name: Hamlet
@@ -653,6 +670,7 @@
     spawned:
     - id: FoodMeat
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Grammar
     attributes:
       proper: true
@@ -667,6 +685,22 @@
     flavors:
     - meaty
     - sadness
+
+- type: entity
+  parent: MobHamsterHamlet
+  id: MobHamsterHamletSlippery
+  suffix: Slippery
+  components:
+  - type: Slippery
+  - type: StepTrigger
+    requiredTriggeredSpeed: 1
+  - type: TriggerOnStepTrigger
+  # - type: GibOnTrigger # starcup: don't make the hamster explode
+  - type: EmitSoundOnTrigger
+    sound:
+      path: "/Audio/Animals/mouse_squeak.ogg"
+    positional: true
+    predicted: true
 
 - type: entity
   name: Shiva
@@ -815,6 +849,7 @@
       amount: 1
     - id: MaterialSmileExtract
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Damageable
     damageModifierSet: SlimePet
   - type: Bloodstream
@@ -834,8 +869,6 @@
   - type: Item
     sprite: Mobs/Pets/Smile/smile.rsi
     size: Huge
-  - type: SentienceTarget
-    flavorKind: station-event-random-sentience-flavor-slime
   - type: MobPrice
     price: 3000 # it is a truly valuable creature
   - type: GhostRole
@@ -863,13 +896,15 @@
     description: ghost-role-information-punpun-description
     rules: ghost-role-information-nonantagonist-rules
   - type: GhostTakeoverAvailable
-  - type: Butcherable
-    butcheringType: Spike
-    spawned:
-    - id: FoodMeat
-      amount: 3
-    - id: DrinkTequilaBottleFull
-      amount: 1
+  # begin starcup: monkeys are not food
+  # - type: Butcherable
+  #   butcheringType: Spike
+  #   spawned:
+  #   - id: FoodMeat
+  #     amount: 3
+  #   - id: DrinkTequilaBottleFull
+  #     amount: 1
+  # end starcup
   - type: Tag
     tags:
     - CannotSuicide

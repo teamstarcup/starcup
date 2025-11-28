@@ -21,45 +21,41 @@ public sealed partial class StationBankAccountComponent : Component
     /// When giving funds to a particular account, the proportion of funds they should receive compared to remaining accounts.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public double PrimaryCut = 1; // starcup: disable departmental economy
+    public double PrimaryCut = 0.50;
 
     /// <summary>
     /// When giving funds to a particular account from an override sell, the proportion of funds they should receive compared to remaining accounts.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public double LockboxCut = 0; // starcup: disable departmental economy
+    public double LockboxCut = 0.75;
 
     /// <summary>
     /// A dictionary corresponding to the money held by each cargo account.
     /// </summary>
     [DataField, AutoNetworkedField]
     public Dictionary<ProtoId<CargoAccountPrototype>, int> Accounts = new()
-    // begin starcup: disable departmental economy
     {
-        { "Cargo",       7000 },
-        { "Engineering", 0 },
-        { "Medical",     0 },
-        { "Science",     0 },
-        { "Security",    0 },
-        { "Service",     0 },
+        { "Cargo",       2000 },
+        { "Engineering", 1000 },
+        { "Medical",     1000 },
+        { "Science",     1000 },
+        { "Security",    1000 },
+        { "Service",     1000 },
     };
-    // end starcup
 
     /// <summary>
     /// A baseline distribution used for income and dispersing leftovers after sale.
     /// </summary>
     [DataField, AutoNetworkedField]
     public Dictionary<ProtoId<CargoAccountPrototype>, double> RevenueDistribution = new()
-    // begin starcup: disable departmental economy
     {
-        { "Cargo",       1.00 },
-        { "Engineering", 0.00 },
-        { "Medical",     0.00 },
-        { "Science",     0.00 },
-        { "Security",    0.00 },
-        { "Service",     0.00 },
+        { "Cargo",       0.00 },
+        { "Engineering", 0.20 },
+        { "Medical",     0.20 },
+        { "Science",     0.20 },
+        { "Security",    0.20 },
+        { "Service",     0.20 },
     };
-    // end starcup
 
     /// <summary>
     /// How much the bank balance goes up per second, every Delay period. Rounded down when multiplied.

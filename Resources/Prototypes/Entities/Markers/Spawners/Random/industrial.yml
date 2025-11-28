@@ -45,14 +45,14 @@
           state: icon
     - type: RandomSpawner
       rarePrototypes:
-        - CapacitorStockPart
         - MicroManipulatorStockPart
-        - MatterBinStockPart
         - CableHVStack10
         - WelderIndustrial
         - PowerCellHigh
         - PowerCellSmall
         - ClothingHandsGlovesColorYellowBudget
+        - CapacitorStockPart # starcup: preserve capacitors, matter bins, and manipulators
+        - MatterBinStockPart # starcup: preserve capacitors, matter bins, and manipulators
       rareChance: 0.2
       prototypes:
         - ClothingHeadHatWelding

@@ -9,9 +9,9 @@ using Content.Shared.DeviceNetwork;
 using Content.Shared.DeviceNetwork.Components;
 using Content.Shared.Popups;
 using Content.Shared.Shuttles.BUIStates;
+using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Events;
 using Content.Shared.Shuttles.Systems;
-using Content.Shared.UserInterface;
 using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -38,11 +38,21 @@ public sealed partial class EmergencyShuttleSystem
     /// How much time remaining until the shuttle consoles for emergency shuttles are unlocked?
     /// </summary>
     private float _consoleAccumulator = float.MinValue;
+    private readonly TimeSpan _bufferTime = TimeSpan.FromSeconds(5);
+    public float TransitTime;
+    private float _authorizeTime;
+
+    private CancellationTokenSource? _roundEndCancelToken;
+
+    private static readonly ProtoId<AccessLevelPrototype> EmergencyRepealAllAccess = "EmergencyShuttleRepealAll";
+    private static readonly Color DangerColor = Color.Red;
+    private bool _launchedShuttles;
+    public bool ShuttlesLeft;
+    private bool _announced;
 
     /// <summary>
     /// How long after the transit is over to end the round.
     /// </summary>
-    private readonly TimeSpan _bufferTime = TimeSpan.FromSeconds(5);
 
     /// <summary>
     /// <see cref="CCVars.EmergencyShuttleMinTransitTime"/>
@@ -57,53 +67,32 @@ public sealed partial class EmergencyShuttleSystem
     /// <summary>
     /// How long it will take for the emergency shuttle to arrive at CentComm.
     /// </summary>
-    public float TransitTime;
 
     /// <summary>
     /// <see cref="CCVars.EmergencyShuttleAuthorizeTime"/>
     /// </summary>
-    private float _authorizeTime;
-
-    private CancellationTokenSource? _roundEndCancelToken;
-
-    private static readonly ProtoId<AccessLevelPrototype> EmergencyRepealAllAccess = "EmergencyShuttleRepealAll";
-    private static readonly Color DangerColor = Color.Red;
 
     /// <summary>
     /// Have the emergency shuttles been authorised to launch at CentCom?
     /// </summary>
-    private bool _launchedShuttles;
 
     /// <summary>
     /// Have the emergency shuttles left for CentCom?
     /// </summary>
-    public bool ShuttlesLeft;
 
     /// <summary>
     /// Have we announced the launch?
     /// </summary>
-    private bool _announced;
 
     private void InitializeEmergencyConsole()
     {
-        Subs.CVar(_configManager, CCVars.EmergencyShuttleMinTransitTime, SetMinTransitTime, true);
-        Subs.CVar(_configManager, CCVars.EmergencyShuttleMaxTransitTime, SetMaxTransitTime, true);
-        Subs.CVar(_configManager, CCVars.EmergencyShuttleAuthorizeTime, SetAuthorizeTime, true);
+        Subs.CVar(ConfigManager, CCVars.EmergencyShuttleMinTransitTime, SetMinTransitTime, true);
+        Subs.CVar(ConfigManager, CCVars.EmergencyShuttleMaxTransitTime, SetMaxTransitTime, true);
+        Subs.CVar(ConfigManager, CCVars.EmergencyShuttleAuthorizeTime, SetAuthorizeTime, true);
         SubscribeLocalEvent<EmergencyShuttleConsoleComponent, ComponentStartup>(OnEmergencyStartup);
         SubscribeLocalEvent<EmergencyShuttleConsoleComponent, EmergencyShuttleAuthorizeMessage>(OnEmergencyAuthorize);
         SubscribeLocalEvent<EmergencyShuttleConsoleComponent, EmergencyShuttleRepealMessage>(OnEmergencyRepeal);
         SubscribeLocalEvent<EmergencyShuttleConsoleComponent, EmergencyShuttleRepealAllMessage>(OnEmergencyRepealAll);
-        SubscribeLocalEvent<EmergencyShuttleConsoleComponent, ActivatableUIOpenAttemptEvent>(OnEmergencyOpenAttempt);
-    }
-
-    private void OnEmergencyOpenAttempt(EntityUid uid, EmergencyShuttleConsoleComponent component, ActivatableUIOpenAttemptEvent args)
-    {
-        // I'm hoping ActivatableUI checks it's open before allowing these messages.
-        if (!_configManager.GetCVar(CCVars.EmergencyEarlyLaunchAllowed))
-        {
-            args.Cancel();
-            _popup.PopupEntity(Loc.GetString("emergency-shuttle-console-no-early-launches"), uid, args.User);
-        }
     }
 
     private void SetAuthorizeTime(float obj)
@@ -248,7 +237,7 @@ public sealed partial class EmergencyShuttleSystem
 
         if (!_reader.FindAccessTags(player).Contains(EmergencyRepealAllAccess))
         {
-            _popup.PopupCursor(Loc.GetString("emergency-shuttle-console-denied"), player, PopupType.Medium);
+            Popup.PopupCursor(Loc.GetString("emergency-shuttle-console-denied"), player, PopupType.Medium);
             return;
         }
 
@@ -267,7 +256,7 @@ public sealed partial class EmergencyShuttleSystem
 
         if (!_idSystem.TryFindIdCard(player, out var idCard) || !_reader.IsAllowed(idCard, uid))
         {
-            _popup.PopupCursor(Loc.GetString("emergency-shuttle-console-denied"), player, PopupType.Medium);
+            Popup.PopupCursor(Loc.GetString("emergency-shuttle-console-denied"), player, PopupType.Medium);
             return;
         }
 
@@ -288,7 +277,7 @@ public sealed partial class EmergencyShuttleSystem
 
         if (!_idSystem.TryFindIdCard(player, out var idCard) || !_reader.IsAllowed(idCard, uid))
         {
-            _popup.PopupCursor(Loc.GetString("emergency-shuttle-console-denied"), args.Actor, PopupType.Medium);
+            Popup.PopupCursor(Loc.GetString("emergency-shuttle-console-denied"), args.Actor, PopupType.Medium);
             return;
         }
 

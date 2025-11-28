@@ -1,0 +1,137 @@
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemBlackstone01
+  name: black stone
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Stone/blackstone01.rsi
+    state: base
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Stone/blackstone01.rsi
+    heldPrefix: base
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupBlackstone01
+  - type: Stack
+    stackType: FloorTileBlackstone01
+
+- type: entity
+  parent: FloorTileItemBlackstone01
+  id: FloorTileItemBlackstone02
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Stone/blackstone02.rsi
+    state: base
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Stone/blackstone02.rsi
+    heldPrefix: base
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupBlackstone02
+  - type: Stack
+    stackType: FloorTileBlackstone02
+
+- type: entity
+  parent: FloorTileItemBlackstone01
+  id: FloorTileItemBlackstone08
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Stone/blackstone08.rsi
+    state: base
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Stone/blackstone08.rsi
+    heldPrefix: base
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupBlackstone08
+  - type: Stack
+    stackType: FloorTileBlackstone08
+
+- type: entity
+  parent: FloorTileItemBlackstone01
+  id: FloorTileItemBlackstone10
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Stone/blackstone10.rsi
+    state: base
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Stone/blackstone10.rsi
+    heldPrefix: base
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupBlackstone10
+  - type: Stack
+    stackType: FloorTileBlackstone10
+
+- type: entity
+  parent: FloorTileItemBlackstone01
+  id: FloorTileItemBlackstone14
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Stone/blackstone14.rsi
+    state: base
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Stone/blackstone14.rsi
+    heldPrefix: base
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupBlackstone14
+  - type: Stack
+    stackType: FloorTileBlackstone14
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemBlueStone02
+  name: blue stone
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Stone/blue_stone02.rsi
+    state: base
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Stone/blue_stone02.rsi
+    heldPrefix: base
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupBlueStone02
+  - type: Stack
+    stackType: FloorTileBlueStone02
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemBlueStone06
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Stone/blue_stone06.rsi
+    state: base
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Stone/blue_stone06.rsi
+    heldPrefix: base
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupBlueStone06
+  - type: Stack
+    stackType: FloorTileBlueStone06
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemBlueStone10
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Stone/blue_stone10.rsi
+    state: base
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Stone/blue_stone10.rsi
+    heldPrefix: base
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupBlueStone10
+  - type: Stack
+    stackType: FloorTileBlueStone10

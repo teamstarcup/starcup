@@ -69,5 +69,12 @@ namespace Content.Shared.Research.Prototypes
         /// </summary>
         [DataField]
         public List<ProtoId<LatheCategoryPrototype>> Categories = new();
+
+        /// <summary>
+        /// DeltaV: Number of mining points this recipe adds to an oreproc when printed.
+        /// Scales with stack count.
+        /// </summary>
+        [DataField]
+        public uint MiningPoints;
     }
 }

@@ -1,0 +1,196 @@
+# warm
+- type: entity
+  id: PoweredlightWarm
+  description: "A light fixture. Draws power and produces light when equipped with a light tube."
+  suffix: Warm
+  parent: Poweredlight
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeWarm
+  - type: PointLight
+    radius: 10
+    energy: 2
+    softness: 2
+    color: "#FF8A0C"
+
+- type: entity
+  parent: AlwaysPoweredWallLight
+  id: AlwaysPoweredLightWarm
+  suffix: Always Powered, Warm
+  components:
+  - type: PointLight
+    radius: 10
+    energy: 2
+    softness: 2
+    color: "#FF8A0C"
+
+# cold
+- type: entity
+  id: PoweredlightCold
+  description: "A light fixture. Draws power and produces light when equipped with a light tube."
+  suffix: Cold
+  parent: Poweredlight
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCold
+  - type: PointLight
+    radius: 10
+    energy: 2
+    softness: 2
+    color: "#BFD3FF" # 12000K
+
+- type: entity
+  parent: AlwaysPoweredWallLight
+  id: AlwaysPoweredLightCold
+  suffix: Always Powered, Cold
+  components:
+  - type: PointLight
+    radius: 10
+    energy: 2
+    softness: 2
+    color: "#BFD3FF" # 12000K
+
+- type: entity
+  id: PoweredColdSmallLight
+  suffix: Cold
+  parent: PoweredSmallLightEmpty
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: ColdLightBulb
+  - type: PointLight
+    radius: 6
+    energy: 1
+    softness: 2
+    color: "#BFD3FF" # 12000K
+
+# colored
+- type: entity
+  id: PoweredCyanSmallLight
+  suffix: Cyan
+  parent: PoweredSmallLightEmpty
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightBulbCrystalCyan
+  - type: PointLight
+    radius: 6
+    energy: 1
+    softness: 0.5
+    color: "#47f8ff"
+
+- type: entity
+  id: PoweredBlueSmallLight
+  suffix: Blue
+  parent: PoweredSmallLightEmpty
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightBulbCrystalBlue
+  - type: PointLight
+    radius: 6
+    energy: 1
+    softness: 0.5
+    color: "#39a1ff"
+
+- type: entity
+  id: PoweredYellowSmallLight
+  suffix: Yellow
+  parent: PoweredSmallLightEmpty
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightBulbCrystalYellow
+  - type: PointLight
+    radius: 6
+    energy: 1
+    softness: 0.5
+    color: "#ffde46"
+
+- type: entity
+  id: PoweredPinkSmallLight
+  suffix: Pink
+  parent: PoweredSmallLightEmpty
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightBulbCrystalPink
+  - type: PointLight
+    radius: 6
+    energy: 1
+    softness: 0.5
+    color: "#ff66cc"
+
+- type: entity
+  id: PoweredOrangeSmallLight
+  suffix: Orange
+  parent: PoweredSmallLightEmpty
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightBulbCrystalOrange
+  - type: PointLight
+    radius: 6
+    energy: 1
+    softness: 0.5
+    color: "#ff8227"
+
+# commented in case we ever decide to use literally black lights
+#- type: entity
+#  id: PoweredBlackSmallLight
+#  suffix: Black
+#  parent: PoweredSmallLightEmpty
+#  components:
+#  - type: PoweredLight
+#    hasLampOnSpawn: LightBulbCrystalBlack
+#  - type: PointLight
+#    radius: 6
+#    energy: 1
+#    softness: 0.5
+#    color: "#363636"
+
+- type: entity
+  id: PoweredRedSmallLight
+  suffix: Red
+  parent: PoweredSmallLightEmpty
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightBulbCrystalRed
+  - type: PointLight
+    radius: 6
+    energy: 1
+    softness: 0.5
+    color: "#fb4747"
+
+- type: entity
+  id: PoweredGreenSmallLight
+  suffix: Green
+  parent: PoweredSmallLightEmpty
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightBulbCrystalGreen
+  - type: PointLight
+    radius: 6
+    energy: 1
+    softness: 0.5
+    color: "#52ff39"
+
+# violet
+- type: entity
+  id: PoweredlightViolet
+  description: "A light fixture. Draws power and produces light when equipped with a light tube."
+  suffix: Violet
+  parent: Poweredlight
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeViolet
+  - type: PointLight
+    radius: 8
+    energy: 2
+    softness: 2
+    color: "#5D0CED"
+
+- type: entity
+  parent: AlwaysPoweredWallLight
+  id: AlwaysPoweredLightViolet
+  suffix: Always Powered, Violet
+  components:
+  - type: PointLight
+    radius: 8
+    energy: 2
+    softness: 2
+    color: "#5D0CED"

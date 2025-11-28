@@ -7,8 +7,13 @@
     layers:
     - sprite: _starcup/Objects/Misc/id_cards.rsi # starcup: syndicate rebranding
       state: default
-    - sprite: _DV/Objects/Misc/id_cards.rsi
-      state: nyanomailcarrier
+    - state: stripe_top
+      color: "#b18644"
+    - state: stripe_bottom
+      color: "#5b4523"
+    - sprite: _DV/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: nyanoMailCarrier
   - type: PresetIdCard
     job: Courier
 
@@ -21,7 +26,13 @@
     layers:
     - sprite: _starcup/Objects/Misc/id_cards.rsi # starcup: syndicate rebranding
       state: default
-    - state: idroboticist
+    - state: stripe_top
+      color: "#a53aaa"
+    - state: stripe_bottom
+      color: "#652368"
+    - sprite: Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: Roboticist
   - type: PresetIdCard
     job: Roboticist
 
@@ -34,8 +45,13 @@
     layers:
     - sprite: _starcup/Objects/Misc/id_cards.rsi # starcup: syndicate rebranding
       state: default
-    - sprite: _DV/Objects/Misc/id_cards.rsi
-      state: idcargoassistant
+    - state: stripe_top
+      color: "#b18644"
+    - state: stripe_bottom
+      color: "#5b4523"
+    - sprite: _DV/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: CargoAssistant
   - type: PresetIdCard
     job: CargoAssistant
 
@@ -48,8 +64,13 @@
     layers:
     - sprite: _starcup/Objects/Misc/id_cards.rsi # starcup: syndicate rebranding
       state: silver
-    - sprite: _starcup/Objects/Misc/id_cards.rsi # starcup: syndicate rebranding
-      state: idadminassistant
+    - state: stripe_top
+      color: "#95004a" # starcup: syndicate rebranding
+    - state: stripe_bottom
+      color: "#5f002f" # starcup: syndicate rebranding
+    - sprite: _starcup/Interface/Misc/job_icons.rsi # starcup: syndicate rebranding
+      offset: -0.09375, 0.0625
+      state: AdminAssistantSyndi
   - type: Item
     heldPrefix: silver
   - type: PresetIdCard
@@ -62,12 +83,6 @@
   id: MailCarrierIDCard
   name: mail carrier ID card
   components:
-  - type: Sprite
-    layers:
-    - sprite: _starcup/Objects/Misc/id_cards.rsi # starcup: syndicate rebranding
-      state: default
-    - sprite: _DV/Objects/Misc/id_cards.rsi
-      state: nyanomailcarrier
   - type: IdCard
     jobTitle: job-alt-title-mail-carrier
 

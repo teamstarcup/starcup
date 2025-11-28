@@ -2,20 +2,21 @@
   id: BioGenMonkeyCube
   result: MonkeyCube
   categories:
-  - Food
+  - General # starcup: monkeys are not food
   completetime: 3
   materials:
     Biomass: 70
 
-# starcup: remove non-sapient kobolds
-#- type: latheRecipe
-#  id: BioGenKoboldCube
-#  result: KoboldCube
-#  categories:
-#  - Food
-#  completetime: 3
-#  materials:
-#    Biomass: 70
+# begin starcup: no non-sapient kobolds
+# - type: latheRecipe
+#   id: BioGenKoboldCube
+#   result: KoboldCube
+#   categories:
+#   - Food
+#   completetime: 3
+#   materials:
+#     Biomass: 70
+# end starcup: no non-sapient kobolds
 
 - type: latheRecipe
   id: BioGenMaterialCloth1
@@ -250,5 +251,24 @@
   materials:
     Biomass: 18
 
+- type: latheRecipe
+  id: BioGenDiseaseSwab
+  result: DiseaseSwab
+  categories:
+  - Materials
+  completetime: 3
+  materials:
+    Biomass: 2
 
-
+- type: latheRecipe
+  id: BioGenUnstableMutagen
+  resultReagents:
+    UnstableMutagen: 10
+  categories:
+  - Chemicals
+  icon:
+    sprite: Objects/Specific/Chemistry/bottle.rsi
+    state: bottle-1
+  completetime: 5
+  materials:
+    Biomass: 20

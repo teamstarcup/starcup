@@ -1,0 +1,61 @@
+- type: entity
+  parent: FloorTileItemBase
+  id: FloorTileItemBaseStarcup
+  description: These could work as a pretty decent throwing weapon.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/tile.rsi
+  - type: Item
+    sprite: _starcup/Objects/Tiles/tile.rsi
+    size: Normal
+
+# Misc
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemFancy
+  name: fancy tile
+  components:
+  - type: Sprite
+    state: fancy
+  - type: Item
+    heldPrefix: fancy
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorTileFancy
+  - type: Stack
+    stackType: FloorTileFancy
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemOrnate
+  name: ornate tile
+  components:
+  - type: Sprite
+    state: ornate
+  - type: Item
+    heldPrefix: ornate
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorTileOrnate
+  - type: Stack
+    stackType: FloorTileOrnate
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemSierra
+  name: sierra tile
+  components:
+  - type: Sprite
+    state: sierra
+  - type: Item
+    heldPrefix: sierra
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorTileSierra
+  - type: Stack
+    stackType: FloorTileSierra

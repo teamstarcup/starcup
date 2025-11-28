@@ -1,0 +1,60 @@
+# Base Prototypes
+
+- type: tile
+  id: FloorStarcupCarpetBase
+  abstract: true
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepCarpet
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorMetalBase
+  abstract: true
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepPlating
+  heatCapacity: 10000
+
+# Misc
+- type: tile
+  id: FloorTileFancy
+  name: fancy tile
+  sprite: /Textures/_starcup/Tiles/fancy.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemFancy
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorTileSierra
+  name: sierra tile
+  sprite: /Textures/_starcup/Tiles/sierra.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSierra
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorTileOrnate
+  name: ornate tile
+  sprite: /Textures/_starcup/Tiles/tileornate.png
+  variants: 4
+  placementVariants: [0, 1, 2, 3]
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemOrnate
+  heatCapacity: 10000

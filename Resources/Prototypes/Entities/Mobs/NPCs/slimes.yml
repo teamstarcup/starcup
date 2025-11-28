@@ -41,6 +41,7 @@
     spawned:
     - id: FoodMeatSlime
       amount: 2
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Respirator
     damage:
       types:
@@ -74,15 +75,15 @@
     - reagents: [ Water, SpaceCleaner ]
       methods: [ Touch ]
       effects:
-      - !type:WashCreamPieReaction
+      - !type:WashCreamPie
     - reagents: [ Water ]
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
+        scaling: true
         damage:
           types:
-            Caustic: 0.15 # starcup: changed damage type from heat
+            Caustic: 0.05 # starcup: changed damage type from heat
       - !type:PopupMessage
         type: Local
         messages: [ "slime-hurt-by-water-popup" ]
@@ -131,9 +132,14 @@
   - type: Speech
     speechVerb: Slime
     speechSounds: Slime
-    allowedEmotes: ['Squish']
+    allowedEmotes: ['Squish', 'Bubble', 'Pop', 'SlimeFizz'] # imp: added bubble and pop # starcup: added SlimeFizz
   - type: TypingIndicator
     proto: slime
+  - type: Vocal
+    sounds: # starcup
+      Male: AnimalSlime
+      Female: AnimalSlime
+      Unsexed: AnimalSlime
   - type: NpcFactionMember
     factions:
     - SimpleNeutral

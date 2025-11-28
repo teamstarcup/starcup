@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Anomaly.Components;
 using Content.Shared.Anomaly.Prototypes;
@@ -124,6 +125,9 @@ public abstract class SharedAnomalySystem : EntitySystem
     /// <param name="ent">Entity to go supercritical</param>
     public void StartSupercriticalEvent(Entity<AnomalyComponent?> ent)
     {
+        if (!TryComp<AnomalyComponent>(ent, out var anomComp) || anomComp.CannotSupercrit) // imp
+            return;
+
         // don't restart it if it's already begun
         if (HasComp<AnomalySupercriticalComponent>(ent))
             return;
@@ -140,6 +144,7 @@ public abstract class SharedAnomalySystem : EntitySystem
         var super = AddComp<AnomalySupercriticalComponent>(ent);
         super.EndTime = Timing.CurTime + ent.Comp.SupercriticalDuration;
         Appearance.SetData(ent, AnomalyVisuals.Supercritical, true);
+        SetScannerSupercritical((ent, ent.Comp), true);
         Dirty(ent, super);
     }
 
@@ -333,6 +338,9 @@ public abstract class SharedAnomalySystem : EntitySystem
         var anomalyQuery = EntityQueryEnumerator<AnomalyComponent>();
         while (anomalyQuery.MoveNext(out var ent, out var anomaly))
         {
+            if (anomaly.CannotRandomPulse) // imp
+                continue;
+
             // if the stability is under the death threshold,
             // update it every second to start killing it slowly.
             if (anomaly.Stability < anomaly.DecayThreshold)
@@ -340,7 +348,8 @@ public abstract class SharedAnomalySystem : EntitySystem
                 ChangeAnomalyHealth(ent, anomaly.HealthChangePerSecond * frameTime, anomaly);
             }
 
-            if (Timing.CurTime > anomaly.NextPulseTime)
+            var secondsUntilNextPulse = (anomaly.NextPulseTime - Timing.CurTime).TotalSeconds;
+            if (secondsUntilNextPulse < 0)
             {
                 DoAnomalyPulse(ent, anomaly);
             }
@@ -359,10 +368,25 @@ public abstract class SharedAnomalySystem : EntitySystem
         var supercriticalQuery = EntityQueryEnumerator<AnomalySupercriticalComponent, AnomalyComponent>();
         while (supercriticalQuery.MoveNext(out var ent, out var super, out var anom))
         {
+            if (anom.CannotSupercrit) // imp
+                continue;
+
             if (Timing.CurTime <= super.EndTime)
                 continue;
             DoAnomalySupercriticalEvent(ent, anom);
             // Removal of the supercritical component is handled by DoAnomalySupercriticalEvent
+        }
+    }
+
+    private void SetScannerSupercritical(Entity<AnomalyComponent> anomalyEnt, bool value)
+    {
+        var scannerQuery = EntityQueryEnumerator<AnomalyScannerComponent>();
+        while (scannerQuery.MoveNext(out var scannerUid, out var scanner))
+        {
+            if (scanner.ScannedAnomaly != anomalyEnt)
+                continue;
+
+            Appearance.SetData(scannerUid, AnomalyScannerVisuals.AnomalyIsSupercritical, value);
         }
     }
 
@@ -440,6 +464,33 @@ public abstract class SharedAnomalySystem : EntitySystem
             resultList.Add(tileref);
         }
         return resultList;
+    }
+
+    public bool TryGetStabilityVisual(Entity<AnomalyComponent?> ent, [NotNullWhen(true)] out AnomalyStabilityVisuals? visual)
+    {
+        visual = null;
+        if (!Resolve(ent, ref ent.Comp, logMissing: false))
+            return false;
+
+        visual = AnomalyStabilityVisuals.Stable;
+        if (ent.Comp.Stability <= ent.Comp.DecayThreshold)
+        {
+            visual = AnomalyStabilityVisuals.Decaying;
+        }
+        else if (ent.Comp.Stability >= ent.Comp.GrowthThreshold)
+        {
+            visual = AnomalyStabilityVisuals.Growing;
+        }
+
+        return true;
+    }
+
+    public AnomalyStabilityVisuals GetStabilityVisualOrStable(Entity<AnomalyComponent?> ent)
+    {
+        if(TryGetStabilityVisual(ent, out var visual))
+            return visual.Value;
+
+        return AnomalyStabilityVisuals.Stable;
     }
 }
 

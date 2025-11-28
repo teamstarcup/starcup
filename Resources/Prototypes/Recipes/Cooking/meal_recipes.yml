@@ -12,7 +12,7 @@
   name: cotton bun recipe
   result: FoodCottonBun
   time: 5
-  group: Breads
+  group: Moth
   solids:
     FoodDoughCottonSlice: 1
 
@@ -326,7 +326,7 @@
   group: Savory
   solids:
     FoodBreadBun: 1
-    CapacitorStockPart: 2
+    CapacitorStockPart: 2 # starcup: preserve capacitors, matter bins, and manipulators
     # i would add steel to this recipe but the microwave explodes
 
 - type: microwaveMealRecipe
@@ -401,7 +401,7 @@
   name: banana bread recipe
   result: FoodBreadBanana
   time: 15
-  group: LoafCakes
+  group: Breads
   solids:
     FoodDough: 1
     FoodBanana: 1
@@ -1008,29 +1008,31 @@
     FoodBowlBig: 1
     FoodBloodTomato: 2
 
-- type: microwaveMealRecipe
-  id: RecipeWingFangChuSoup
-  name: wing fang chu recipe
-  result: FoodSoupWingFangChu
-  time: 10
-  group: Soup
-  reagents:
-    Soysauce: 5
-  solids:
-    FoodBowlBig: 1
-    FoodMeatXenoCutlet: 2
+# begin starcup: removed for tone
+#- type: microwaveMealRecipe
+#  id: RecipeWingFangChuSoup
+#  name: wing fang chu recipe
+#  result: FoodSoupWingFangChu
+#  time: 10
+#  group: Soup
+#  reagents:
+#    Soysauce: 5
+#  solids:
+#    FoodBowlBig: 1
+#    FoodMeatXenoCutlet: 2
 
-- type: microwaveMealRecipe
-  id: RecipeWingFangChuSoupSpider
-  name: wing fang chu recipe
-  result: FoodSoupWingFangChu
-  time: 10
-  group: Soup
-  reagents:
-    Soysauce: 5
-  solids:
-    FoodBowlBig: 1
-    FoodMeatSpider: 2
+#- type: microwaveMealRecipe
+#  id: RecipeWingFangChuSoupSpider
+#  name: wing fang chu recipe
+#  result: FoodSoupWingFangChu
+#  time: 10
+#  group: Soup
+#  reagents:
+#    Soysauce: 5
+#  solids:
+#    FoodBowlBig: 1
+#    FoodMeatSpider: 2
+# end starcup
 
 - type: microwaveMealRecipe
   id: RecipeVegetableSoup
@@ -1074,7 +1076,7 @@
   solids:
     FoodBowlBig: 1
     FoodBanana: 1
-    MonkeyCube: 1
+    FoodMeat: 1 # starcup: replace MonkeyCube, monkeys are not for food
 
 - type: microwaveMealRecipe
   id: RecipeBungoSoup
@@ -1707,8 +1709,8 @@
   time: 5
   group: Cake
   solids:
-    FoodCakePlain: 1
-    FoodBerries: 5
+    FoodCakeBlueberry: 1
+    FoodBerries: 2
   reagents:
     Milk: 10
 
@@ -2393,6 +2395,7 @@
   name: grilled cheese sandwich recipe
   result: FoodBakedGrilledCheeseSandwich
   time: 10
+  group: Savory
   solids:
     FoodBreadPlainSlice: 2
     FoodCheeseSlice: 1
@@ -2403,6 +2406,7 @@
   name: cotton grilled cheese sandwich recipe
   result: FoodBakedGrilledCheeseSandwichCotton
   time: 10
+  group: Moth
   solids:
     FoodBreadCottonSlice: 2
     FoodCheeseSlice: 1
@@ -2453,9 +2457,8 @@
   name: cotton cake recipe
   result: FoodCakeCotton
   time: 5
-  group: Cake
+  group: Moth
   reagents:
     Fiber: 10
   solids:
     FoodCakePlain: 1
-    

@@ -9,7 +9,8 @@ station-beacon-hop = HOP
 
 station-beacon-security = Security
 station-beacon-brig = Brig
-station-beacon-brig-med = Brig Med
+# starcup: rename brigmedic to combat medic
+station-beacon-brig-med = Combat Medic
 station-beacon-warden = Warden
 station-beacon-hos = HOS
 station-beacon-armory = Armory
@@ -37,10 +38,13 @@ station-beacon-robotics = Robotics
 station-beacon-artifact-lab = Artifact
 station-beacon-anomaly-gen = Anomaly
 
-station-beacon-supply = Supply
-station-beacon-cargo = Cargo
+# begin starcup: rename cargo to logistics
+station-beacon-supply = Logistics
+station-beacon-cargo = Logi Front
+# end starcup
 station-beacon-cargo-bay = Cargo Bay
-station-beacon-qm = QM
+# starcup: rename cargo to logistics
+station-beacon-qm = LO
 station-beacon-salvage = Salvage
 
 station-beacon-engineering = Engineering
@@ -97,4 +101,5 @@ station-beacon-escape-pod-S = Escape Pod S
 station-beacon-escape-pod-SW = Escape Pod SW
 station-beacon-escape-pod-W = Escape Pod W
 station-beacon-escape-pod-NW = Escape Pod NW
-station-beacon-vox = Vox Break Room
+# starcup: shortened for visibility
+station-beacon-vox = Vox

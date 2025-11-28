@@ -1,8 +1,8 @@
 - type: entity
   id: LockerBooze
   parent: LockerBase
-  name: booze storage
-  description: This is where the bartender keeps the booze.
+  name: bartender's cabinet # starcup: renamed for clarity
+  description: This is where the bartender keeps their personal equipment. # starcup: rewritten for clarity
   components:
   - type: Appearance
   - type: EntityStorageVisuals
@@ -259,7 +259,7 @@
     stateDoorOpen: paramed_open
     stateDoorClosed: paramed_door
   - type: AccessReader
-    access: [ [ "Medical" ] ]
+    access: [ [ "Paramedic" ] ]  # starcup: Medical -> Paramedic
 
 
 # Chemical
@@ -416,6 +416,7 @@
         type: GenpopLockerBoundUserInterface
   - type: AccessReader # note! this access is for the UI, not the door. door access is handled on GenpopLocker
     access: [["Security"]]
+    examinationText: access-reader-examination-functionality-restricted
   - type: Lock
     locked: false
     useAccess: false

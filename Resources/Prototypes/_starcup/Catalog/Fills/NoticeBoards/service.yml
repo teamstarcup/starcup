@@ -1,0 +1,114 @@
+# Each board can hold a maximum of 12 notices
+# New notices should be inserted at the top of their respective table, placing fresh news at the front.
+
+- type: entityTable
+  id: NoticeBoardFillServiceJanitor
+  table: !type:AllSelector
+    children:
+    - id: Paper # cannot have an empty list here
+
+- type: entityTable
+  id: NoticeBoardFillServiceKitchen
+  table: !type:AllSelector
+    children:
+    - id: Paper # cannot have an empty list here
+
+- type: entityTable
+  id: NoticeBoardFillServiceBar
+  table: !type:AllSelector
+    children:
+    - id: Paper # cannot have an empty list here
+
+- type: entityTable
+  id: NoticeBoardFillServicePerformer
+  table: !type:AllSelector
+    children:
+    - id: Paper # cannot have an empty list here
+
+- type: entityTable
+  id: NoticeBoardFillServiceLibrary
+  table: !type:AllSelector
+    children:
+    - id: Paper # cannot have an empty list here
+
+- type: entityTable
+  id: NoticeBoardFillServiceBotany
+  table: !type:AllSelector
+    children:
+    - id: Paper # cannot have an empty list here
+
+- type: entity
+  parent: NoticeBoardDepartmentalBase
+  id: NoticeBoardServiceAll
+  suffix: Service, All
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - !type:NestedSelector
+          tableId: NoticeBoardFillServiceJanitor
+        - !type:NestedSelector
+          tableId: NoticeBoardFillServiceKitchen
+        - !type:NestedSelector
+          tableId: NoticeBoardFillServiceBar
+        - !type:NestedSelector
+          tableId: NoticeBoardFillServicePerformer
+        - !type:NestedSelector
+          tableId: NoticeBoardFillServiceLibrary
+        - !type:NestedSelector
+          tableId: NoticeBoardFillServiceBotany
+
+- type: entity
+  parent: NoticeBoardDepartmentalBase
+  id: NoticeBoardServiceJanitor
+  suffix: Service, Janitor
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: NoticeBoardFillServiceJanitor
+
+- type: entity
+  parent: NoticeBoardDepartmentalBase
+  id: NoticeBoardServiceKitchenBar
+  suffix: Service, Kitchen & Bar
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - !type:NestedSelector
+          tableId: NoticeBoardFillServiceKitchen
+        - !type:NestedSelector
+          tableId: NoticeBoardFillServiceBar
+
+- type: entity
+  parent: NoticeBoardDepartmentalBase
+  id: NoticeBoardServicePerformer
+  suffix: Service, Performer
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: NoticeBoardFillServicePerformer
+
+- type: entity
+  parent: NoticeBoardDepartmentalBase
+  id: NoticeBoardServiceLibrary
+  suffix: Service, Library
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: NoticeBoardFillServiceLibrary
+
+- type: entity
+  parent: NoticeBoardDepartmentalBase
+  id: NoticeBoardServiceBotany
+  suffix: Service, Botany
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: NoticeBoardFillServiceBotany

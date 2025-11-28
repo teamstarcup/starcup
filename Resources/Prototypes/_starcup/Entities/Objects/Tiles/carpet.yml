@@ -1,4 +1,214 @@
 - type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemStarcupCarpetBlue
+  name: blue carpet floor
+  components:
+  - type: Sprite
+    state: carpet-blue
+  - type: Item
+    heldPrefix: carpet-blue
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetBlue
+  - type: Stack
+    stackType: FloorTileStarcupCarpetBlue
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemStarcupCarpetFancyBlue
+  name: fancy blue carpet floor
+  components:
+  - type: Sprite
+    state: carpet-fancy-blue
+  - type: Item
+    heldPrefix: carpet-blue
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetFancyBlue
+  - type: Stack
+    stackType: FloorTileStarcupCarpetFancyBlue
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemStarcupCarpetDiamondBlue
+  name: diamond-pattern blue carpet floor
+  components:
+  - type: Sprite
+    state: carpet-diamond-blue
+  - type: Item
+    heldPrefix: carpet-blue
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetDiamondBlue
+  - type: Stack
+    stackType: FloorTileStarcupCarpetDiamondBlue
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemStarcupCarpetGreen
+  name: green carpet floor
+  components:
+  - type: Sprite
+    state: carpet-green
+  - type: Item
+    heldPrefix: carpet-green
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetGreen
+  - type: Stack
+    stackType: FloorTileStarcupCarpetGreen
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemStarcupCarpetDiamondGreen
+  name: diamond-pattern green carpet floor
+  components:
+  - type: Sprite
+    state: carpet-diamond-green
+  - type: Item
+    heldPrefix: carpet-green
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetDiamondGreen
+  - type: Stack
+    stackType: FloorTileStarcupCarpetDiamondGreen
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemStarcupCarpetOrange
+  name: amber carpet floor
+  components:
+  - type: Sprite
+    state: carpet-amber
+  - type: Item
+    heldPrefix: carpet-amber
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetOrange
+  - type: Stack
+    stackType: FloorTileStarcupCarpetOrange
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemStarcupCarpetDiamondOrange
+  name: diamond-pattern amber carpet floor
+  components:
+  - type: Sprite
+    state: carpet-diamond-amber
+  - type: Item
+    heldPrefix: carpet-amber
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetDiamondOrange
+  - type: Stack
+    stackType: FloorTileStarcupCarpetDiamondOrange
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemStarcupCarpetRed
+  name: red carpet floor
+  description: For the stars.
+  components:
+  - type: Sprite
+    state: carpet-red
+  - type: Item
+    heldPrefix: carpet-red
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetRed
+  - type: Stack
+    stackType: FloorTileStarcupCarpetRed
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemStarcupCarpetFancyRed
+  name: fancy red carpet floor
+  description: For the real stars.
+  components:
+  - type: Sprite
+    state: carpet-fancy-red
+  - type: Item
+    heldPrefix: carpet-red
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetFancyRed
+  - type: Stack
+    stackType: FloorTileStarcupCarpetFancyRed
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemStarcupCarpetDiamondRed
+  name: diamond-pattern red carpet floor
+  components:
+  - type: Sprite
+    state: carpet-diamond-red
+  - type: Item
+    heldPrefix: carpet-red
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetDiamondRed
+  - type: Stack
+    stackType: FloorTileStarcupCarpetDiamondRed
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemStarcupCarpetViolet
+  name: violet carpet floor
+  components:
+  - type: Sprite
+    state: carpet-violet
+  - type: Item
+    heldPrefix: carpet-violet
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetViolet
+  - type: Stack
+    stackType: FloorTileStarcupCarpetViolet
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemStarcupCarpetFancyViolet
+  name: fancy violet carpet floor
+  components:
+  - type: Sprite
+    state: carpet-fancy-violet
+  - type: Item
+    heldPrefix: carpet-violet
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetFancyViolet
+  - type: Stack
+    stackType: FloorTileStarcupCarpetFancyViolet
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemStarcupCarpetDiamondViolet
+  name: diamond-pattern violet carpet floor
+  components:
+  - type: Sprite
+    state: carpet-diamond-violet
+  - type: Item
+    heldPrefix: carpet-violet
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupCarpetDiamondViolet
+  - type: Stack
+    stackType: FloorTileStarcupCarpetDiamondViolet
+
+- type: entity
   parent: FloorTileItemBase
   id: FloorTileItemStarcupCarpetMemphis
   name: memphis carpet
@@ -7,7 +217,8 @@
     sprite: _starcup/Objects/Tiles/Interior/arcade_carpet.rsi
     state: arcade
   - type: Item
-    heldPrefix: generic
+    sprite: _starcup/Objects/Tiles/Interior/arcade_carpet.rsi
+    heldPrefix:  arcade
   - type: FloorTile
     outputs:
     - Plating
@@ -24,7 +235,8 @@
     sprite: _starcup/Objects/Tiles/Interior/piiixl.rsi
     state: carpet26
   - type: Item
-    heldPrefix: generic
+    sprite: _starcup/Objects/Tiles/Interior/piiixl.rsi
+    heldPrefix: carpet26
   - type: FloorTile
     outputs:
     - Plating
@@ -41,7 +253,8 @@
     sprite: _starcup/Objects/Tiles/Interior/piiixl.rsi
     state: carpet28
   - type: Item
-    heldPrefix: generic
+    sprite: _starcup/Objects/Tiles/Interior/piiixl.rsi
+    heldPrefix:  carpet28
   - type: FloorTile
     outputs:
     - Plating

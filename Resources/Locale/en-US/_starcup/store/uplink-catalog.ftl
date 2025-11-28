@@ -14,6 +14,9 @@ uplink-exploding-nanotrasen-bomb-fake-desc = A training bomb carefully made to l
 
 uplink-emag-desc-starcup = The business card of NanoTrasen black ops, this sequencer is able to tamper with a variety of station devices. Recharges automatically.
 
+uplink-nanotrasen-id-card-name = NanoTrasen ID Card
+uplink-nanotrasen-id-card-desc = A NanoTrasen ID card, with NanoTrasen access. Unlikely to be useful on its own, but goes great with reconfigured doors. Does not come with access-copying functionality.
+
 uplink-reinforcement-radio-ancestor-desc-starcup =  Call in a trained ancestor of your choosing to assist you. Comes with a single NanoTrasen cigarette.
 
 uplink-reinforcement-radio-cyborg-assault-name-starcup = NanoTrasen Assault Cyborg Teleporter

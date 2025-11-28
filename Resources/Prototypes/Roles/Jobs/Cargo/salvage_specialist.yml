@@ -3,14 +3,12 @@
   name: job-name-salvagespec
   description: job-description-salvagespec
   playTimeTracker: JobSalvageSpecialist
-# begin starcup
-#  requirements:
-#    - !type:DepartmentTimeRequirement
-#      department: Cargo
-#      time: 10800 # 3 hrs
-#    - !type:OverallPlaytimeRequirement
-#      time: 36000 #10 hrs
-# end starcup
+  # begin starcup
+  #  requirements:
+  #    - !type:DepartmentTimeRequirement
+  #      department: Cargo
+  #      time: 2.5h
+  # end starcup
   icon: "JobIconShaftMiner"
   startingGear: SalvageSpecialistGear
   supervisors: job-supervisors-qm
@@ -26,9 +24,9 @@
     jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
 #    id: SalvagePDA # DeltaV: different PDAs in loadouts
     ears: ClothingHeadsetCargo
-  #storage:
-    #back:
-    #- Stuff
+  storage: # DeltaV: Add mining voucher
+    back:
+    - MiningVoucher
 
 - type: chameleonOutfit
   id: SalvageSpecialistChameleonOutfit
@@ -40,4 +38,3 @@
     outerClothing: ClothingOuterWinterMiner
     neck: ClothingNeckScarfStripedBrown
     gloves: ClothingHandsGlovesColorBlack
-

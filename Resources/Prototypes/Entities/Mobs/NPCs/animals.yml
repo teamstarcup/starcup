@@ -255,6 +255,7 @@
     spawned:
     - id: FoodMeatChicken
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.8
     interactSuccessString: petting-success-bird
@@ -343,7 +344,7 @@
   - type: TimedDespawn #delete the egg after the chicken spawns
     lifetime: 21
 
-- type: entity # TODO: figure out how to make these guys gib when stepped on
+- type: entity
   name: cockroach
   parent: SimpleMobBase
   id: MobCockroach
@@ -392,7 +393,7 @@
   - type: Bloodstream
     bloodReagent: InsectBlood
     bloodMaxVolume: 20
-  - type: Food
+  - type: Edible
   - type: FlavorProfile
     flavors:
     - horrible
@@ -446,8 +447,13 @@
       - !type:GibBehavior
         recursive: false
   - type: NonSpreaderZombie
-  - type: SentienceTarget
-    flavorKind: station-event-random-sentience-flavor-organic
+  - type: StepTrigger
+    requiredTriggeredSpeed: 1
+  - type: TriggerOnStepTrigger
+  - type: RandomChanceTriggerCondition
+    successChance: 0.2
+  - type: GibOnTrigger
+  - type: ProtectedFromStepTriggers
   - type: MeleeWeapon
     soundHit:
       path: /Audio/Effects/bite.ogg
@@ -711,6 +717,7 @@
     spawned:
     - id: FoodMeatDuck
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.9
     interactSuccessString: petting-success-bird
@@ -860,6 +867,7 @@
       behaviors:
       - !type:GibBehavior
         recursive: false
+  - type: ZombieImmune
 
 - type: entity
   name: cow
@@ -920,6 +928,7 @@
     spawned:
     - id: FoodMeat
       amount: 5
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Grammar
     attributes:
       gender: female # Here because of UdderComponent
@@ -1074,10 +1083,10 @@
     growthDelay: 20
   - type: ExaminableHunger
   - type: Wooly
-  - type: Food
+  - type: Edible
+    destroyOnEmpty: false
     solution: wool
     requiresSpecialDigestion: true
-    # Wooly prevents eating wool deleting the goat so its fine
     requireDead: false
   - type: FlavorProfile
     flavors:
@@ -1086,6 +1095,7 @@
     spawned:
     - id: FoodMeat
       amount: 4
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Grammar
     attributes:
       gender: female # Here because of UdderComponent
@@ -1153,6 +1163,7 @@
     spawned:
     - id: FoodMeatChicken
       amount: 2
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup # TODO: Make it so there's a separate chance to make certain animals outright hostile towards you.
     successChance: 0.1 # Yeah, good luck with that.
     interactSuccessString: petting-success-goose
@@ -1202,6 +1213,7 @@
     spawned:
     - id: FoodMeat
       amount: 4
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Bloodstream
     bloodMaxVolume: 300
     # if you fuck with the gorilla he will harambe you
@@ -1229,6 +1241,8 @@
         true
       NavSmash: !type:Bool
         true
+  - type: Puller
+    needsHands: false
   - type: Prying
     pryPowered: true
     force: true
@@ -1240,8 +1254,6 @@
       0: Alive
       200: Critical
       250: Dead
-  - type: StaminaResistance
-    damageCoefficient: 0.40
 
 - type: entity
   name: kangaroo
@@ -1281,6 +1293,7 @@
   - type: Butcherable
     spawned:
     - id: FoodMeat
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: DamageStateVisuals
     states:
       Alive:
@@ -1346,6 +1359,7 @@
   abstract: true
   components:
   - type: CombatMode
+    canDisarm: true
   - type: Inventory
     templateId: monkey
     speciesId: monkey
@@ -1422,11 +1436,13 @@
       types:
         Blunt: 3
         Piercing: 3
-  - type: Butcherable
-    butcheringType: Spike
-    spawned:
-    - id: FoodMeat
-      amount: 3
+  # begin starcup: monkeys are not food
+  # - type: Butcherable
+  #   butcheringType: Spike
+  #   spawned:
+  #   - id: FoodMeat
+  #     amount: 3
+  # end starcup
   - type: Puller
     needsHands: false
   - type: CanHostGuardian
@@ -1453,7 +1469,8 @@
     - reagents: [ Water, SpaceCleaner ]
       methods: [ Touch ]
       effects:
-      - !type:WashCreamPieReaction
+      - !type:WashCreamPie
+  - type: Crawler
 
 
 
@@ -1558,7 +1575,7 @@
 #  - type: Speech
 #    speechSounds: Lizard
 #    speechVerb: Reptilian
-#    allowedEmotes: ['Thump']
+#    allowedEmotes: ['Thump', 'LizardHiss'] # impstation: added hiss # starcup: Hiss -> LizardHiss
 #  - type: Vocal
 #    sounds:
 #      Male: MaleReptilian
@@ -1656,24 +1673,24 @@
 #    description: ghost-role-information-kobold-description
 #    rules: ghost-role-information-nonantagonist-rules
 
-#- type: entity
-#  name: kobold
-#  id: MobKobold
-#  parent: MobBaseKobold
-#  description: Cousins to the sentient race of lizard people, kobolds blend in with their natural habitat and are as nasty as monkeys; ready to pull out your hair and stab you to death.
-#  components:
-#  - type: Clumsy
-#    gunShootFailDamage:
-#      types:
-#        Blunt: 2
-#        Piercing: 7
-#      groups:
-#        Burn: 3
-#    catchingFailDamage:
-#      types:
-#        Blunt: 1
-#    clumsySound:
-#      path: /Audio/Voice/Reptilian/reptilian_scream.ogg
+# - type: entity
+#   name: kobold
+#   id: MobKobold
+#   parent: MobBaseKobold
+#   description: Cousins to the sentient race of lizard people, kobolds blend in with their natural habitat and are as nasty as monkeys; ready to pull out your hair and stab you to death.
+#   components:
+#   - type: Clumsy
+#     gunShootFailDamage:
+#       types:
+#         Blunt: 2
+#         Piercing: 7
+#       groups:
+#         Burn: 3
+#     catchingFailDamage:
+#       types:
+#         Blunt: 1
+#     clumsySound:
+#       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
 
 #- type: entity
 #  id: MobBaseSyndicateKobold
@@ -1806,7 +1823,7 @@
         Base: dead-0
       Dead:
         Base: splat-0
-  - type: Food
+  - type: Edible
   - type: FlavorProfile
     flavors:
     - meaty
@@ -1890,7 +1907,6 @@
       Taco: RatTaco
       Burger: RatBurger
       Skewer: RatSkewer
-  - type: FelinidFood # Nyanotrasen - Felinid, ability to eat mice, see Content.Server/Nyanotrasen/Abilities/Felinid/FelinidSystem.cs
   - type: Destructible
     thresholds:
     - trigger:
@@ -1900,6 +1916,7 @@
       behaviors:
       - !type:GibBehavior
         recursive: false
+  - type: FelinidFood # Nyanotrasen - Felinid, ability to eat mice, see Content.Server/Nyanotrasen/Abilities/Felinid/FelinidSystem.cs
   - type: Puller # starcup
     needsHands: false # starcup - let the rat drag the pizza slice (improves ghostrole gameplay and makes sense)
 
@@ -1999,6 +2016,12 @@
   parent: MobMouse
   id: MobMouseCancer
   components:
+  - type: GhostRole
+    name: ghost-role-information-cancer-mouse-name
+    description: ghost-role-information-cancer-mouse-description
+    rules: ghost-role-information-freeagent-rules
+    mindRoles:
+    - MindRoleGhostRoleFreeAgent
   - type: Sprite
     color: LightGreen
   - type: PointLight
@@ -2034,6 +2057,15 @@
   id: MobLizard
   description: A harmless dragon.
   components:
+  - type: Speech # Imp edit
+    speechSounds: Lizard
+    speechVerb: Reptilian
+    allowedEmotes: ['LizardHiss'] # Can't thump tail because no body component  # starcup: Hiss -> LizardHiss
+  - type: Vocal # Imp edit
+    sounds:
+      Male: MaleReptilian
+      Female: FemaleReptilian
+      Unsexed: MaleReptilian
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
     baseSprintSpeed: 3
@@ -2067,6 +2099,7 @@
     spawned:
     - id: FoodMeatLizard
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.3
     interactSuccessString: petting-success-reptile
@@ -2239,6 +2272,7 @@
     spawned:
     - id: FoodMeat
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Speech
     speechSounds: Parrot
     speechVerb: Parrot
@@ -2320,6 +2354,7 @@
     spawned:
     - id: FoodMeatPenguin
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-bird
@@ -2345,6 +2380,7 @@
       types:
         Heat : 0.2 #per second, scales with temperature & other constants
 
+# TODO: Make grenade penguin voice activated like the rest of the stealth items.
 - type: entity
   name: grenade penguin
   parent: [ MobPenguin, MobCombat, BaseSyndicateContraband ]
@@ -2358,7 +2394,7 @@
   - type: MobMover
   - type: HTN
     rootTask:
-      task: SimpleHostileCompound
+      task: GrenadePenguinCompound
   - type: NpcFactionMember
     factions:
     - Syndicate
@@ -2406,9 +2442,9 @@
     beepInterval: 1
   - type: Explosive
     explosionType: Default
-    maxIntensity: 20
-    intensitySlope: 20
-    totalIntensity: 225
+    maxIntensity: 10
+    intensitySlope: 3
+    totalIntensity: 150
   - type: ExplodeOnTrigger
     keysIn:
     - timer
@@ -2457,6 +2493,7 @@
     spawned:
     - id: FoodMeatSnake
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.6
     interactSuccessString: petting-success-reptile
@@ -2491,6 +2528,7 @@
     spawned:
     - id: FoodMeatSpider
       amount: 2
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: CombatMode
   - type: Body
     prototype: AnimalHemocyanin
@@ -2520,6 +2558,8 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/snake_hiss.ogg
+  - type: Puller
+    needsHands: false
   - type: NoSlip
   - type: Spider
   - type: IgnoreSpiderWeb
@@ -2726,6 +2766,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.2 # Low when undomesticated.
     interactSuccessString: petting-success-possum # Possums don't really make much noise when they're happy. They make clicking noises as a mating call, but that is NOT the same thing!
@@ -2799,6 +2840,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.2 # Low when undomesticated.
     interactSuccessString: petting-success-soft-floofy
@@ -2861,6 +2903,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-soft-floofy
@@ -2889,6 +2932,7 @@
   - type: HTN
     rootTask:
       task: RuminantHostileCompound
+  - type: MessyDrinker
   - type: Tag
     tags:
     - VimPilot
@@ -2937,6 +2981,7 @@
       gender: epicene
   - type: MobPrice
     price: 200
+  - type: MessyDrinker
   - type: Puller
     needsHands: false # starcup - gives ghostrole corgis something to do. go fetch!
 
@@ -2956,10 +3001,9 @@
     spawned:
     - id: FoodMeat
       amount: 2
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
     accent: dog
-  - type: SentienceTarget
-    flavorKind: station-event-random-sentience-flavor-corgi
   - type: Tag
     tags:
     - VimPilot
@@ -3094,6 +3138,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
     accent: cat
   - type: InteractionPopup
@@ -3278,6 +3323,7 @@
     spawned:
     - id: FoodMeat
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: MobPrice
     price: 100
   - type: MeleeWeapon
@@ -3331,6 +3377,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.9
     interactSuccessString: petting-success-sloth
@@ -3385,6 +3432,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.8
     interactDelay: 1.5 # Avoids overlapping SFX due to spam - these SFX are a little longer than the typical 1 second.
@@ -3474,7 +3522,7 @@
         Base: dead-0
       Dead:
         Base: splat-0
-  - type: Food
+  - type: Edible
   - type: FlavorProfile
     flavors:
     - meaty
@@ -3496,6 +3544,7 @@
     spawned:
     - id: FoodMeat
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
     accent: mouse
   - type: Tag
@@ -3602,6 +3651,7 @@
     spawned:
     - id: FoodMeatBacon
       amount: 6
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Grammar
     attributes:
       gender: epicene
@@ -3755,6 +3805,7 @@
     spawned:
     - id: FoodMeat
       amount: 4
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Bloodstream
     bloodMaxVolume: 300
     # Horns though
@@ -3849,7 +3900,6 @@
             sprite: Mobs/Pets/displacements.rsi
             state: corgi_head_displacement
   - type: Hands # HANDS!
-  - type: ItemOffer # starcup: item offering
   - type: Puller
   - type: Cuffable # bad dog!
   - type: BlockWriting # dogs can't write, paws unwieldy; mouth-writing is a myth
@@ -3875,3 +3925,5 @@
   - type: NpcFactionMember
     factions:
     - NanoTrasen
+  - type: ItemOffer # starcup: item offering
+

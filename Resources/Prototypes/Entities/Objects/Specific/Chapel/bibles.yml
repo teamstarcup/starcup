@@ -1,6 +1,9 @@
 - type: entity
-  name: holy book # starcup: genericize parent entity
-  description: A holy text for one of many interstellar faiths. # starcup: genericize parent entity
+  # begin starcup: genericize and abstract parent entity
+  # name: space bible
+  # description: New Interstellar Version 2340.
+  abstract: true
+  # end starcup
   parent: BaseStorageItem
   id: Bible
   components:
@@ -34,13 +37,11 @@
     reactionTypes:
     - Holy
   - type: Sprite
-  # begin starcup: genericize parent entity
-    sprite: Objects/Misc/books.rsi
-    state: book_icon
-  # end starcup
+    sprite: Objects/Specific/Chapel/bible.rsi
+    state: icon
   - type: Item
     size: Small
-#    sprite: Objects/Specific/Chapel/bible.rsi # starcup: remove inhand
+    sprite: Objects/Specific/Chapel/bible.rsi
   - type: Clothing
     slots:
     - Belt
@@ -82,7 +83,6 @@
     respawnTime: 300
   - type: Sprite
     sprite: Objects/Specific/Chapel/necronomicon.rsi
-    state: icon # starcup: necessary due to parent changes
   - type: Item
     sprite: Objects/Specific/Chapel/necronomicon.rsi
 
@@ -98,63 +98,70 @@
   - type: InstantAction
     event: !type:SummonActionEvent
 
-# begin starcup: remove real-world religion references
+- type: entity
+  id: BibleDruid
+  name: druidic tablet
+  parent: Bible
+  description: Texts of the Broken Stones faith are painstakingly etched into these moss-eaten, crumbling tablets. # starcup: rewritten for setting lore
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chapel/mysteryofthedruids.rsi
+  - type: Item
+    sprite: Objects/Specific/Chapel/mysteryofthedruids.rsi
+
+- type: entity
+  id: BibleCommunistManifesto
+  name: communist manifesto
+  parent: Bible
+  description: "Remove the mask of humanity from Capital."
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chapel/communistmanifesto.rsi
+  - type: Item
+    sprite: Objects/Specific/Chapel/communistmanifesto.rsi
+
+- type: entity
+  id: BibleNarsie
+  name: gothic bible # starcup: renamed for setting lore
+  parent: Bible
+  description: A copy of an ancient text dedicated to the dark goddess Visigoth. You can't read any of the words, but the pictures are probably goffick enough to base a religion around. # starcup: rewritten for setting lore
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chapel/tomeofnarsie.rsi
+  - type: Item
+    sprite: Objects/Specific/Chapel/tomeofnarsie.rsi
+
+- type: entity
+  id: BibleNanoTrasen
+  name: codex nanotrasimus
+  parent: Bible
+  description: "A familiar book containing the Sacred Operating Procedures."
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chapel/codexnanotrasimus.rsi
+  - type: Item
+    sprite: Objects/Specific/Chapel/codexnanotrasimus.rsi
+
+# begin starcup: removed for tone
 #- type: entity
+#  id: BibleHonk
+#  name: mirth of the honkmother
 #  parent: Bible
-#  name: tanakh
-#  description: "For God's chosen crewmembers"
-#  id: BibleTanakh
+#  description: "Oh great and glorious Mother, Mistress of Mirth, Matron of Mask and Merriments, Blessed is she amongst us jesters."
 #  components:
 #  - type: Sprite
-#    sprite: Objects/Specific/Chapel/tanakh.rsi
+#    sprite: Objects/Specific/Chapel/honk.rsi
 #  - type: Item
-#    sprite: Objects/Specific/Chapel/tanakh.rsi
+#    sprite: Objects/Specific/Chapel/honk.rsi
 # end starcup
 
 - type: entity
+  id: BibleRatvar
+  name: tablet of ratvar
   parent: Bible
-  name: druidic tablet
-  description: Texts of the Broken Stones faith are painstakingly etched into these moss-eaten, crumbling tablets. # starcup: rewritten for setting lore
-  id: BibleDruid
+  description: "A holy relic of the Clockwork Cult, blessed by the Clockwork Justice, Ratvar."
   components:
   - type: Sprite
-    sprite: Objects/Specific/Chapel/mysteryofthedruids.rsi
-    state: icon # starcup: necessary due to parent changes
+    sprite: Objects/Specific/Chapel/ratvartablet.rsi
   - type: Item
-    sprite: Objects/Specific/Chapel/mysteryofthedruids.rsi
-
-- type: entity
-  parent: Bible
-  name: communist manifesto
-  description: "Remove the mask of humanity from Capital."
-  id: BibleCommunistManifesto
-  components:
-  - type: Sprite
-    sprite: Objects/Specific/Chapel/communistmanifesto.rsi
-    state: icon # starcup: necessary due to parent changes
-  - type: Item
-    sprite: Objects/Specific/Chapel/communistmanifesto.rsi
-
-- type: entity
-  parent: Bible
-  name: Gothic Bible # starcup: renamed for setting lore
-  description: A copy of an ancient text dedicated to the dark goddess Visigoth. You can't read any of the words, but the pictures are probably goffick enough to base a religion around. # starcup: rewritten for setting lore
-  id: BibleSatanic
-  components:
-  - type: Sprite
-    sprite: Objects/Specific/Chapel/satanicbible.rsi
-    state: icon # starcup: necessary due to parent changes
-  - type: Item
-    sprite: Objects/Specific/Chapel/satanicbible.rsi
-
-- type: entity
-  parent: Bible
-  name: codex nanotrasimus
-  description: "A familiar book containing the Sacred Operating Procedures."
-  id: BibleNanoTrasen
-  components:
-  - type: Sprite
-    sprite: Objects/Specific/Chapel/codexnanotrasimus.rsi
-    state: icon # starcup: necessary due to parent changes
-  - type: Item
-    sprite: Objects/Specific/Chapel/codexnanotrasimus.rsi
+    sprite: Objects/Specific/Chapel/ratvartablet.rsi

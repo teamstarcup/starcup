@@ -1,10 +1,3 @@
-# starcup: rename vulpkanin to vulpekin
-chat-speech-verb-name-vulpkanin = Vulpekin
-chat-speech-verb-vulpkanin-1 = rawrs
-chat-speech-verb-vulpkanin-2 = barks
-chat-speech-verb-vulpkanin-3 = rurs
-chat-speech-verb-vulpkanin-4 = yaps
-
 chat-speech-verb-name-felinid = Felinid
 chat-speech-verb-felinid-1 = mraows
 chat-speech-verb-felinid-2 = mews

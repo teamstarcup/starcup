@@ -20,21 +20,8 @@ namespace Content.Client.ContextMenu.UI
     public sealed class ContextMenuUIController : UIController, IOnStateEntered<GameplayState>, IOnStateExited<GameplayState>, IOnSystemChanged<CombatModeSystem>, IOnStateEntered<MappingState>, IOnStateExited<MappingState>
     {
         public static readonly TimeSpan HoverDelay = TimeSpan.FromSeconds(0.2);
-
-        /// <summary>
-        ///     Root menu of the entire context menu.
-        /// </summary>
         public ContextMenuPopup RootMenu = default!;
-        public Stack<ContextMenuPopup> Menus { get; } = new();
-
-        /// <summary>
-        ///     Used to cancel the timer that opens menus.
-        /// </summary>
         public CancellationTokenSource? CancelOpen;
-
-        /// <summary>
-        ///     Used to cancel the timer that closes menus.
-        /// </summary>
         public CancellationTokenSource? CancelClose;
 
         public Action? OnContextClosed;
@@ -44,6 +31,19 @@ namespace Content.Client.ContextMenu.UI
         public Action<ContextMenuElement, GUIBoundKeyEventArgs>? OnContextKeyEvent;
 
         private bool _setup;
+
+        /// <summary>
+        ///     Root menu of the entire context menu.
+        /// </summary>
+        public Stack<ContextMenuPopup> Menus { get; } = new();
+
+        /// <summary>
+        ///     Used to cancel the timer that opens menus.
+        /// </summary>
+
+        /// <summary>
+        ///     Used to cancel the timer that closes menus.
+        /// </summary>
 
         public void OnStateEntered(GameplayState state)
         {
@@ -95,7 +95,7 @@ namespace Content.Client.ContextMenu.UI
         /// </summary>
         public void Close()
         {
-            RootMenu.MenuBody.DisposeAllChildren();
+            RootMenu.MenuBody.RemoveAllChildren();
             CancelOpen?.Cancel();
             CancelClose?.Cancel();
             OnContextClosed?.Invoke();

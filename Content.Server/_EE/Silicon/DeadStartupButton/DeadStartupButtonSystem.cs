@@ -5,7 +5,7 @@ using Content.Server.PowerCell;
 using Content.Server._EE.Silicon.Charge;
 using Content.Shared._EE.Silicon.DeadStartupButton;
 using Content.Shared.Audio;
-using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
 using Content.Shared.Electrocution;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;

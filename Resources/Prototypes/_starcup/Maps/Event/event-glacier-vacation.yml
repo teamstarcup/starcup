@@ -1,0 +1,34 @@
+- type: gameMap
+  id: EventGlacierVacation
+  mapName: Glacier Vacation Day
+  mapPath: /Maps/_starcup/Events/event-glacier-vacation.yml
+  maxRandomOffset: 0
+  randomRotation: false
+  minPlayers: 0
+  maxPlayers: 60
+  stations:
+    Glacier:
+      stationProto: StandardNanotrasenStation
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: '{0} Glacier Station {1}'
+        nameGenerator:
+          !type:SyndicateNameGenerator
+          prefixCreator: 'NY'
+      - type: StationEmergencyShuttle
+        emergencyShuttlePath: /Maps/_starcup/Shuttles/SYND_EvacShip.yml
+      - type: StationPlanetSpawner
+        planet: GlacierSurface
+        gridPath: /Maps/_starcup/Events/event-glacier-vacation-surface.yml
+      - type: StationJobs
+        availableJobs:
+          Captain: [ 1, 1 ]
+          AtmosphericTechnician: [ 1, 1 ]
+          Bartender: [ 1, 1 ]
+          Chaplain: [ 1, 1 ]
+          Chef: [ 1, 1 ]
+          Clown: [ 2, 2 ]
+          Librarian: [ 1, 1 ]
+          Mime: [ 2, 2 ]
+          Musician: [ 2, 2 ]
+          Passenger: [ -1, -1 ]

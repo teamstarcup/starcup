@@ -62,15 +62,6 @@
     count: 1
 
 - type: entity
-  id: Ointment10Lingering
-  parent: Ointment
-  suffix: 10, Lingering
-  components:
-  - type: Stack
-    lingering: true
-    count: 10
-
-- type: entity
   name: regenerative mesh
   description: Used to treat even the nastiest burns. Also effective against caustic burns.
   parent: BaseHealingItem
@@ -119,15 +110,6 @@
     count: 1
 
 - type: entity
-  parent: RegenerativeMesh
-  id: RegenerativeMeshLingering0
-  suffix: 0, Lingering
-  components:
-  - type: Stack
-    lingering: true
-    count: 0
-
-- type: entity
   name: bruise pack
   description: A therapeutic gel pack and bandages designed to treat blunt-force trauma.
   parent: BaseHealingItem
@@ -173,15 +155,6 @@
     count: 1
 
 - type: entity
-  id: Brutepack10Lingering
-  parent: Brutepack
-  suffix: 10, Lingering
-  components:
-  - type: Stack
-    lingering: true
-    count: 10
-
-- type: entity
   name: medicated suture
   description: A suture soaked in medicine, treats blunt-force trauma effectively and closes wounds.
   parent: BaseHealingItem
@@ -192,6 +165,7 @@
     tags:
     - Brutepack
   - type: Sprite
+    sprite: _Impstation/Objects/Specific/Medical/medical.rsi # starcup
     state: medicated-suture
   - type: Item
     heldPrefix: medicated-suture
@@ -227,15 +201,6 @@
   - type: Stack
     stackType: MedicatedSuture
     count: 1
-
-- type: entity
-  parent: MedicatedSuture
-  id: MedicatedSutureLingering0
-  suffix: 0, Lingering
-  components:
-  - type: Stack
-    lingering: true
-    count: 0
 
 - type: entity
   name: blood pack
@@ -282,15 +247,6 @@
   - type: Stack
     stackType: Bloodpack
     count: 1
-
-- type: entity
-  parent: Bloodpack
-  id: Bloodpack10Lingering
-  suffix: 10, Lingering
-  components:
-  - type: Stack
-    lingering: true
-    count: 10
 
 - type: entity
   parent: BaseHealingItem
@@ -365,7 +321,7 @@
     stackType: Gauze
     count: 10
   - type: StackPrice
-    price: 10
+    price: 5 # starcup: 10 -> 5 for recipe cost decrease
 
 - type: entity
   id: Gauze1
@@ -376,20 +332,26 @@
     count: 1
 
 - type: entity
-  id: Gauze10Lingering
-  parent: Gauze
-  suffix: 10, Lingering
-  components:
-  - type: Stack
-    lingering: true
-    count: 10
-
-- type: entity
   name: aloe cream
   description: A topical cream for burns.
-  parent: Ointment ##Yes it's a direct reskin
+  parent: BaseHealingItem # IMP: make distinct from ointment
   id: AloeCream
   components:
+  # begin IMP changes
+  - type: Healing
+    damageContainers:
+      - Biological
+    damage:
+      types:
+        Heat: -10
+    healingBeginSound:
+      path: "/Audio/Items/Toys/ToyFall2.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/ointment_end.ogg"
+  - type: EmitSoundOnLand
+    sound:
+      path: "/Audio/Voice/Slime/slime_squish.ogg"
+  # end IMP
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/aloe.rsi
     state: cream

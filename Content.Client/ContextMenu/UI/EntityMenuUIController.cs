@@ -53,6 +53,7 @@ namespace Content.Client.ContextMenu.UI
         [UISystemDependency] private readonly CombatModeSystem _combatMode = default!;
 
         private bool _updating;
+        public Dictionary<EntityUid, EntityMenuElement> Elements = new();
 
         /// <summary>
         ///     This maps the currently displayed entities to the actual GUI elements.
@@ -60,7 +61,6 @@ namespace Content.Client.ContextMenu.UI
         /// <remarks>
         ///     This is used remove GUI elements when the entities are deleted. or leave the LOS.
         /// </remarks>
-        public Dictionary<EntityUid, EntityMenuElement> Elements = new();
 
         public void OnStateEntered(GameplayState state)
         {
@@ -293,7 +293,7 @@ namespace Content.Client.ContextMenu.UI
             var element = new EntityMenuElement(entity);
             element.SubMenu = new ContextMenuPopup(_context, element);
             element.SubMenu.OnPopupOpen += () => _verb.OpenVerbMenu(entity, popup: element.SubMenu);
-            element.SubMenu.OnPopupHide += element.SubMenu.MenuBody.DisposeAllChildren;
+            element.SubMenu.OnPopupHide += element.SubMenu.MenuBody.RemoveAllChildren;
             _context.AddElement(menu, element);
             Elements.TryAdd(entity, element);
         }

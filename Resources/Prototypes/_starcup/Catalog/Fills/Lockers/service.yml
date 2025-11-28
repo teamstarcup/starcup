@@ -1,0 +1,26 @@
+- type: entity
+  id: LockerBoozeFilledNoGun
+  suffix: Filled, No Gun
+  parent: LockerBooze
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillLockerBartenderNoGun # starcup: new fill
+
+- type: entityTable
+  id: FillLockerBartenderNoGun
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterArmorBasicSlim
+    - id: BoxBeanbag
+      amount: 2
+    - id: ClothingBeltBandolier
+
+- type: entityTable
+  id: FillLockerBartender
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: FillLockerBartenderNoGun
+    - id: WeaponShotgunDoubleBarreledRubber

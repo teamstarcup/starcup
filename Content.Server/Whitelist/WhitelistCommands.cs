@@ -1,9 +1,7 @@
 using Content.Server.Administration;
 using Content.Server.Database;
-using Content.Server.Players.PlayTimeTracking;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
-using Content.Shared.Players;
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Console;
@@ -26,9 +24,6 @@ public sealed class AddWhitelistCommand : LocalizedCommands
             shell.WriteLine(Help);
             return;
         }
-
-        var player = IoCManager.Resolve<IPlayerManager>();
-        var playtime = IoCManager.Resolve<PlayTimeTrackingManager>();
 
         var name = string.Join(' ', args).Trim();
         var data = await _locator.LookupIdByNameOrIdAsync(name);
@@ -78,9 +73,6 @@ public sealed class RemoveWhitelistCommand : LocalizedCommands
             shell.WriteLine(Help);
             return;
         }
-
-        var player = IoCManager.Resolve<IPlayerManager>();
-        var playtime = IoCManager.Resolve<PlayTimeTrackingManager>();
 
         var name = string.Join(' ', args).Trim();
         var data = await _locator.LookupIdByNameOrIdAsync(name);

@@ -15,8 +15,8 @@
     sound:
       path: /Audio/Ambience/Objects/hdd_buzz.ogg
   - type: PointLight
-    radius: 1.8  # starcup: 1.5 -> 1.8
-    energy: 0.8  # starcup: 1.6 -> 0.8
+    radius: 3  # starcup: 1.5 -> 3
+    energy: 0.2  # starcup: 1.6 -> 0.2
     color: "#3db83b"
     castShadows: false
     netsync: false
@@ -250,3 +250,14 @@
     startingCharge: 200000
   - type: BatteryDrinkerSource # EinsteinEngines: IPCs
     maxAmount: 26000
+
+- type: entity
+  parent: BaseAPC
+  id: APCXenoborg
+  suffix: Basic, 50kJ, Xenoborg
+  components:
+  - type: Battery
+    maxCharge: 50000
+    startingCharge: 50000
+  - type: AccessReader
+    access: [["Xenoborg"]]
