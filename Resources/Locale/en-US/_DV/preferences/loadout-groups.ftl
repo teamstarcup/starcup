@@ -37,10 +37,6 @@ loadout-group-cargo-assistant-jumpsuit = Cargo Assistant jumpsuit
 loadout-group-cargo-assistant-outerclothing = Cargo Assistant outer clothing
 loadout-group-cargo-assistant-shoes = Cargo Assistant shoes
 
-loadout-group-salvage-specialist-neck = Salvage Specialist neck
-
-loadout-group-cargo-technician-neck = Cargo Technician neck
-
 loadout-group-atmospheric-technician-head = Atmospheric Technician Head
 
 # Security

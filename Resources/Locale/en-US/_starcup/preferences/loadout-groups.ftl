@@ -82,6 +82,7 @@ loadout-group-service-worker-head = Service worker head
 loadout-group-service-worker-jumpsuit = Service worker jumpsuit
 loadout-group-service-worker-outerclothing = Service worker outer clothing
 loadout-group-service-worker-shoes = Service worker shoes
+loadout-group-service-worker-glasses = Service worker eyewear
 
 # Wildcards
 loadout-group-prisoner-jumpsuit = Prisoner jumpsuit
