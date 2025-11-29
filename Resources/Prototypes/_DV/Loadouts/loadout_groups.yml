@@ -134,6 +134,7 @@
   - NeuroroboticistHelmet # starcup
 
 - type: loadoutGroup
+  parent: ScientistJumpsuit # starcup
   id: RoboticistJumpsuit
   name: loadout-group-roboticist-jumpsuit
   loadouts:
@@ -141,18 +142,21 @@
   - RoboticistJumpskirt
   - NeuroroboticistJumpsuit # starcup
   - NeuroroboticistJumpskirt # starcup
-  - ScientistJumpsuit
-  - ScientistJumpskirt
+#  - ScientistJumpsuit # starcup: provided by parent
+#  - ScientistJumpskirt # starcup: provided by parent
+  - TacticoolJumpsuit # starcup
+  - TacticoolJumpskirt # starcup
 
 - type: loadoutGroup
+  parent: ScientistOuterClothing # starcup
   id: RoboticistOuterClothing
   name: loadout-group-roboticist-outerclothing
   minLimit: 0
   loadouts:
   - RoboticistLabCoat
   - RoboticistWintercoat
-  - RegularLabCoat
-  - ScienceLabCoat
+#  - RegularLabCoat # starcup: provided by parent
+#  - ScienceLabCoat # starcup: provided by parent
   - CardborgCostume
   - NeuroroboticistSuit # starcup
 
@@ -166,14 +170,14 @@
   - RobohandsGloves
 
 - type: loadoutGroup
+  parent: ScientistShoes # starcup
   id: RoboticistShoes
   name: loadout-group-roboticist-shoes
   loadouts:
-  - BlackShoes
-  - WhiteShoes
-  - PurpleShoes # starcup
+  # - BlackShoes # starcup: provided by parent
+  # - WhiteShoes # starcup: provided by parent
   - RedShoes # starcup
-  - ScienceWinterBoots
+  # - ScienceWinterBoots # starcup: provided by parent
   - RoboticsWinterBoots
 
 # Command
@@ -371,6 +375,7 @@
   id: ChemistShoes
   name: loadout-group-chemist-shoes
   loadouts:
+  - OrangeShoes # starcup
   - WhiteShoes
   - ChemistWinterBoots
 
@@ -384,6 +389,7 @@
   - StationEngineerHardhatYellow
   - StationEngineerHardhatOrange
   - StationEngineerHardhatRed
+  - AtmosHardhatBlue # starcup
   - AtmosBeret
 
 # PDAs

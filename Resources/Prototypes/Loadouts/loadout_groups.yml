@@ -948,16 +948,16 @@
   - TrenchCoat # starcup
 
 - type: loadoutGroup
+  parent: CargoTechnicianShoes # starcup
   id: QuartermasterShoes
   name: loadout-group-quartermaster-shoes
   loadouts:
-  - BlackShoes # starcup
-  - BrownShoes
+  # - BrownShoes # starcup: provided by parent
   - BrownLeatherShoes # starcup
   - LaceupShoes # starcup
   - BlackHeels # starcup
   - BlackCommandHeels # starcup
-  - CargoWinterBoots
+  # - CargoWinterBoots # starcup: provided by parent
   - QuartermasterWinterBoots # starcup
 
 - type: loadoutGroup
@@ -1004,6 +1004,7 @@
   name: loadout-group-cargo-technician-shoes
   loadouts:
   - BlackShoes
+  - BrownShoes # starcup
   - CargoWinterBoots
 
 - type: loadoutGroup
@@ -1038,11 +1039,13 @@
   - SalvageSpecialistWintercoat
 
 - type: loadoutGroup
+  parent: CargoTechnicianShoes # starcup
   id: SalvageSpecialistShoes
   name: loadout-group-salvage-specialist-shoes
   loadouts:
   - SalvageBoots
-  - CargoWinterBoots
+#  - CargoWinterBoots # starcup: provided by parent
+  - PurpleShoes # starcup
   - SalvageWinterBoots # DeltaV
 
 - type: loadoutGroup
@@ -1087,17 +1090,17 @@
   - ChiefEngineerWintercoat
 
 - type: loadoutGroup
+  parent: StationEngineerShoes # starcup
   id: ChiefEngineerShoes
   name: loadout-group-chief-engineer-shoes
   loadouts:
-  - BlackShoes # starcup
-  - BrownShoes
-  - WorkBoots # starcup
+#  - BrownShoes # starcup: provided by parent
+  - GreenShoes # starcup
   - BrownLeatherShoes # starcup
   - LaceupShoes # starcup
   - BlackHeels # starcup
   - BlackCommandHeels # starcup
-  - EngineeringWinterBoots
+#  - EngineeringWinterBoots # starcup: provided by parent
   - ChiefEngineerWinterBoots # DeltaV
 
 - type: loadoutGroup
@@ -1163,6 +1166,10 @@
   loadouts:
   - WorkBoots
   - BlackShoes # starcup
+  - BrownShoes # starcup
+  - OrangeShoes # starcup
+  - RedShoes # starcup
+  - YellowShoes # starcup
   - EngineeringWinterBoots
 
 - type: loadoutGroup
@@ -1206,14 +1213,13 @@
   - AtmosphericTechnicianDuffel
 
 - type: loadoutGroup
+  parent: StationEngineerShoes # starcup
   id: AtmosphericTechnicianShoes
   name: loadout-group-atmospheric-technician-shoes
   loadouts:
-  - BlackShoes # starcup
   - BlueShoes # starcup
   - WhiteShoes
-  - WorkBoots # starcup
-  - EngineeringWinterBoots
+  #- EngineeringWinterBoots # starcup: provided by parent
   - AtmosTechWinterBoots # starcup
 
 - type: loadoutGroup
@@ -1309,6 +1315,7 @@
   loadouts:
   - ScientistJumpsuit
   - ScientistJumpskirt
+  - ScientistFormalJumpsuit # starcup
   #- RoboticistJumpsuit # DeltaV: Moved to RoboticistJumpsuit
   #- RoboticistJumpskirt # DeltaV: Moved to RoboticistJumpsuit
   - SeniorResearcherJumpsuit
@@ -1639,20 +1646,18 @@
   - ChiefMedicalOfficerMantle
 
 - type: loadoutGroup
+  parent: MedicalShoes # starcup
   id: ChiefMedicalOfficerShoes
   name: loadout-group-chief-medical-officer-shoes
   loadouts:
-  - BlackShoes # starcup
-  - BlueShoes # starcup
   - BrownShoes
-  - WhiteShoes # starcup
   - BrownLeatherShoes # starcup
   - LaceupShoes # starcup
   - BlackHeels # starcup
   - BlueHeels # starcup
   - BlackCommandHeels # starcup
   - BlueCommandHeels # starcup
-  - MedicalWinterBoots
+  # - MedicalWinterBoots # starcup: provided by parent
   - ChiefMedicalOfficerWinterBoots # DeltaV
 
 - type: loadoutGroup
@@ -1708,6 +1713,8 @@
   id: MedicalShoes
   name: loadout-group-medical-doctor-shoes
   loadouts:
+  - BlackShoes # starcup
+  - BlueShoes # starcup
   - WhiteShoes
   - MedicalWinterBoots
 
@@ -1810,12 +1817,15 @@
   - ParamedicWintercoat
 
 - type: loadoutGroup
+  parent: MedicalShoes # starcup
   id: ParamedicShoes
   name: loadout-group-paramedic-shoes
   loadouts:
-  - BlueShoes
-  - WhiteShoes
-  - MedicalWinterBoots
+  # begin starcup: provided by parent
+  # - BlueShoes
+  # - WhiteShoes
+  # - MedicalWinterBoots
+  # end starcup
   - ParamedicWinterBoots # DeltaV
 
 - type: loadoutGroup
