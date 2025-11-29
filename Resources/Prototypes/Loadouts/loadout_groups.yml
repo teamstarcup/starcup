@@ -408,6 +408,7 @@
   - RedShoes # Delta-V
   - YellowShoes # Delta-V
   - PurpleShoes # Delta-V
+  - CombatBoots # starcup
   - BrownLeatherShoes # starcup
   - LaceupShoes # starcup
   - BlackHighHeels # starcup
@@ -1005,6 +1006,7 @@
   loadouts:
   - BlackShoes
   - BrownShoes # starcup
+  - CombatBoots # starcup
   - CargoWinterBoots
 
 - type: loadoutGroup
@@ -1170,6 +1172,7 @@
   - OrangeShoes # starcup
   - RedShoes # starcup
   - YellowShoes # starcup
+  - CombatBoots # starcup
   - EngineeringWinterBoots
 
 - type: loadoutGroup
@@ -1273,16 +1276,16 @@
   - ResearchDirectorWintercoat
 
 - type: loadoutGroup
+  parent: ScientistShoes # starcup
   id: ResearchDirectorShoes
   name: loadout-group-research-director-shoes
   loadouts:
-  - BlackShoes # starcup
   - BrownShoes
-  - PurpleShoes # starcup
   - BrownLeatherShoes # starcup
+  - CombatBoots # starcup
   - LaceupShoes # starcup
   - BlackHeels # starcup
-  - ScienceWinterBoots
+  # - ScienceWinterBoots # starcup: provided by parent
   - ResearchDirectorWinterBoots # DeltaV
 
 - type: loadoutGroup
@@ -1826,6 +1829,7 @@
   # - WhiteShoes
   # - MedicalWinterBoots
   # end starcup
+  - CombatBoots # starcup
   - ParamedicWinterBoots # DeltaV
 
 - type: loadoutGroup
