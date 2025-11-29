@@ -132,7 +132,7 @@ public sealed class SharpSystem : EntitySystem
         _popupSystem.PopupEntity(Loc.GetString("butcherable-knife-butchered-success", ("target", args.Args.Target.Value), ("knife", Identity.Entity(uid, EntityManager))),
             popupEnt, args.Args.User, popupType);
 
-        _bodySystem.GibBody(args.Args.Target.Value); // does nothing if ent can't be gibbed
+        _bodySystem.GibBody(args.Args.Target.Value, gibOrgans: butcher.DropOrgansOnButcher); // does nothing if ent can't be gibbed // starcup: drop organs on butcher
         _destructibleSystem.DestroyEntity(args.Args.Target.Value);
 
         args.Handled = true;

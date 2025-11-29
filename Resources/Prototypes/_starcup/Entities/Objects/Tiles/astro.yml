@@ -1,0 +1,186 @@
+# Grass
+
+- type: entity
+  id: FloorTileItemAstroGrassCold
+  parent: FloorTileItemBaseStarcup
+  name: cold grass
+  description: Fake grass that covers up wires and even comes with realistic trimmings!
+  components:
+  - type: Sprite
+    state: astrograsscold
+  - type: Item
+    heldPrefix: grasscold
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorAstroGrassCold
+  - type: Stack
+    stackType: FloorTileAstroGrassCold
+
+- type: entity
+  id: FloorTileItemAstroGrassSnowy
+  parent: FloorTileItemBaseStarcup
+  name: snowy grass
+  description: Fake grass that covers up wires and even comes with realistic trimmings!
+  components:
+  - type: Sprite
+    state: astrograsssnowy
+  - type: Item
+    heldPrefix: grasssnowy
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorAstroGrassSnowy
+  - type: Stack
+    stackType: FloorTileAstroGrassSnowy
+
+- type: entity
+  id: FloorTileItemAstroGrassGolden
+  parent: FloorTileItemBaseStarcup
+  name: golden grass
+  description: Fake grass that covers up wires and even comes with realistic trimmings!
+  components:
+  - type: Sprite
+    state: astrograssgolden
+  - type: Item
+    heldPrefix: grass
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorAstroGrassGolden
+  - type: Stack
+    stackType: FloorTileAstroGrassGolden
+
+- type: entity
+  id: FloorTileItemAstroGrassTwilight
+  parent: FloorTileItemBaseStarcup
+  name: twilight grass
+  description: Fake grass that covers up wires and even comes with realistic trimmings!
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Planetary/grass_blue.rsi
+    state: base
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Planetary/grass_blue.rsi
+    heldPrefix: base
+    size: Normal
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorAstroGrassTwilight
+  - type: Stack
+    stackType: FloorTileAstroGrassTwilight
+
+- type: entity
+  name: grassy snow
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemAstroSnowGrassy
+  components:
+  - type: Sprite
+    state: snowgrassy
+  - type: Item
+    heldPrefix: snow
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorAstroSnowGrassy
+  - type: Stack
+    stackType: FloorTileAstroSnowGrassy
+
+# Dirt & caves
+
+- type: entity
+  id: FloorTileItemAstroDirt
+  parent: FloorTileItemBaseStarcup
+  name: dirt
+  description: I've got a tile of dirt, and guess what's inside it!
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Planetary/dirt.rsi
+    state: base
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Planetary/dirt.rsi
+    heldPrefix: base
+    size: Normal
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorAstroDirt
+  - type: Stack
+    stackType: FloorTileAstroDirt
+
+- type: entity
+  id: FloorTileItemAstroCave
+  parent: FloorTileItemAstroDirt
+  name: cave dirt
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Planetary/cave.rsi
+    state: base
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Planetary/cave.rsi
+    heldPrefix: base
+    size: Normal
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorAstroCave
+  - type: Stack
+    stackType: FloorTileAstroCave
+
+- type: entity
+  id: FloorTileItemAstroCaveDrought
+  parent: FloorTileItemAstroDirt
+  name: cave dirt
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Planetary/cavedrought.rsi
+    state: base
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Planetary/cavedrought.rsi
+    heldPrefix: base
+    size: Normal
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorAstroCaveDrought
+  - type: Stack
+    stackType: FloorTileAstroCaveDrought
+
+- type: entity
+  id: FloorTileItemAstroDirtPale
+  parent: FloorTileItemAstroDirt
+  name: pale dirt
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Planetary/dirt_pale.rsi
+    state: base
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Planetary/dirt_pale.rsi
+    heldPrefix: base
+    size: Normal
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorAstroDirtPale
+  - type: Stack
+    stackType: FloorTileAstroDirtPale
+
+- type: entity
+  id: FloorTileItemAstroDirtTwilight
+  parent: FloorTileItemAstroDirt
+  name: twilight dirt
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Planetary/dirt_twilight.rsi
+    state: base
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Planetary/dirt_twilight.rsi
+    heldPrefix: base
+    size: Normal
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorAstroDirtTwilight
+  - type: Stack
+    stackType: FloorTileAstroDirtTwilight

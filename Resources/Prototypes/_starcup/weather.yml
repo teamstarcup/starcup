@@ -24,3 +24,10 @@
       volume: -25 # should be barely audible, if that, this will be playing constantly
   statusEffect: StatusEffectHushed
   refresh: true
+
+# NOTE: This isn't intended to be used directly! DynamicWeatherSystem secretly swaps this for `null`.
+- type: weather
+  id: Clear
+  sprite:
+    sprite: /Textures/Effects/weather.rsi
+    state: storm
