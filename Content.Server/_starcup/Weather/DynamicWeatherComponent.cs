@@ -34,7 +34,7 @@ namespace Content.Server._starcup.Weather;
 public sealed partial class DynamicWeatherComponent : Component
 {
     [DataField(required: true)]
-    public Dictionary<ProtoId<WeatherPrototype>, Dictionary<ProtoId<WeatherPrototype>, float>> States;
+    public ProtoId<WeatherSchedulerPrototype> Scheduler;
 
     /// <summary>
     /// Wait this long before determining the next (random) weather state.
@@ -51,7 +51,7 @@ public sealed partial class DynamicWeatherComponent : Component
     [DataField]
     public bool RandomInitialState = true;
 
-    [ViewVariables]
+    [ViewVariables(VVAccess.ReadWrite)]
     public WeatherPrototype? CurrentState;
 
     [ViewVariables(VVAccess.ReadWrite)]
