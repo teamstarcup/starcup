@@ -7,6 +7,7 @@ loadout-group-technical-assistant-outerclothing = Technical assistant outer clot
 # Logistics
 loadout-group-cargo-technician-neck = Cargo technician neck
 
+loadout-group-courier-belt = Courier belt
 loadout-group-courier-backpack = Courier backpack
 
 loadout-group-salvage-specialist-neck = Salvage specialist neck
