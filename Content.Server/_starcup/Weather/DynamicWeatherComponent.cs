@@ -5,27 +5,6 @@ namespace Content.Server._starcup.Weather;
 
 /// <summary>
 /// Add this to a *map entity* to enable randomized weather.
-///
-/// Example:
-/// <code>
-///    - type: DynamicWeather
-///      states:
-///        Clear:
-///          Clear: 162
-///          SnowfallLight: 1
-///          SnowfallHeavy: 0.05
-///        SnowfallLight:
-///          Clear: 1
-///          SnowfallLight: 100
-///          SnowfallMedium: 2
-///        SnowfallMedium:
-///          SnowfallLight: 3
-///          SnowfallMedium: 150
-///          SnowfallHeavy: 1
-///        SnowfallHeavy:
-///          SnowfallLight: 1
-///          SnowfallMedium: 3
-///          SnowfallHeavy: 36
 /// </code>
 ///
 /// Each state is a weather prototype ID, and lists the next possible weather states and their weighted chance.
