@@ -1,10 +1,11 @@
 # Hacky for the stress test so don't even consider adding to this
+
 - type: entity
   name: base exomorph # starcup - splitting burrower off
   id: MobXeno
   abstract: true # starcup
   parent: SimpleSpaceMobBase
-#  description: They mostly come at night. Mostly. # starcup
+  description: They mostly come at night. Mostly.
   components:
   - type: Insulated
   - type: CombatMode
@@ -130,15 +131,15 @@
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: Mobs/Aliens/Xenos/praetorian.rsi
+    sprite: _RMC14/Mobs/OldXenonids/Praetorian/praetorian.rsi # starcup
     offset: 0,0.4
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      state: running
+      state: alive # starcup
   - type: MobThresholds
     thresholds:
       0: Alive
-      150: Dead # starcup
+      200: Dead # starcup
   - type: Stamina
     critThreshold: 300
   - type: MovementSpeedModifier # starcup
@@ -157,20 +158,29 @@
         - MobMask
         layer:
         - MobLayer
+  # begin starcup: immune to electrocution so they can mess with lights
+  - type: StatusEffects
+    allowed:
+    - TemporaryBlindness
+    - Pacified
+    - Flashed
+    - RadiationProtection
+    - Adrenaline
+  # end starcup
 
 - type: entity
   name: drone
   parent: MobXeno
   id: MobXenoDrone
-  description: Exomorph laborer. Stocky and resistant. # starcup
+  description: Exomorph laborer. Stocky and resistant. # starcup: exomorph reworks
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: Mobs/Aliens/Xenos/drone.rsi
+    sprite: _RMC14/Mobs/OldXenonids/Drone/drone.rsi # starcup
     offset: 0,0.2
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      state: running
+      state: alive # starcup
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -182,6 +192,16 @@
     damage:
       groups:
         Brute: 6
+  # begin starcup
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  # end starcup
   - type: MovementSpeedModifier
     baseSprintSpeed: 4
   - type: Fixtures
@@ -204,25 +224,24 @@
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: Mobs/Aliens/Xenos/queen.rsi
+    sprite: _RMC14/Mobs/OldXenonids/Queen/queen.rsi # starcup
     offset: 0,0.4
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      state: running
+      state: alive # starcup
   - type: MobThresholds
     thresholds:
       0: Alive
-      450: Dead # the queen is a boss monster
+      450: Dead # starcup: the queen is a boss monster
   - type: SlowOnDamage
     speedModifierThresholds:
       150: 0.7
-  - type: MovementSpeedModifier
   - type: MeleeWeapon
     damage:
      groups:
        Brute: 12
   - type: MovementSpeedModifier
-    baseSprintSpeed: 5 # starcup - Queen should be hard to outrun
+    baseSprintSpeed: 5 # starcup: Queen should be hard to outrun
   - type: Fixtures
     fixtures:
       fix1:
@@ -237,6 +256,15 @@
   - type: Tag
     tags:
     - CannotSuicide
+  # begin starcup: immune to electrocution so they can mess with lights
+  - type: StatusEffects
+    allowed:
+    - TemporaryBlindness
+    - Pacified
+    - Flashed
+    - RadiationProtection
+    - Adrenaline
+  # end starcup
 
 - type: entity
   name: ravager
@@ -275,6 +303,15 @@
         - MobMask
         layer:
         - MobLayer
+  # begin starcup: immune to electrocution so they can mess with lights
+  - type: StatusEffects
+    allowed:
+    - TemporaryBlindness
+    - Pacified
+    - Flashed
+    - RadiationProtection
+    - Adrenaline
+  # end starcup
 
 - type: entity
   name: runner
@@ -339,7 +376,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      50: Dead
+      80: Dead # starcup: exomorph reworks
   - type: SlowOnDamage
     speedModifierThresholds:
       25: 0.7

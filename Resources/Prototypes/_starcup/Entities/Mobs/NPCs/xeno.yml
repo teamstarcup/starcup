@@ -1,8 +1,10 @@
+# Tier 1
+
 - type: entity # Burrower. Copied from the original. Has Puller component.
   name: burrower
   parent: MobXeno
   id: MobXenoBurrower
-  description: Breacher exomorph. Walls won't stop it. # Changed from the default.
+  description: Breacher exomorph. Walls won't stop it. # starcup
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -15,29 +17,31 @@
     angle: 0
     soundHit:
       collection: AlienClaw
-    animation: WeaponArcBite
+    animation: WeaponArcSlash # starcup
     damage:
       types:
-        Blunt: 4
-        Structural: 7
+        Brute: 8 # starcup: big claws
+        Structural: 10 # starcup: see above
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 3
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      80: Dead # armor plates on back, but frailer than a drone
   - type: Puller
-    needsHands: false # starcup - allows for creepy ghostrole "dragging away the body" behavior
+    needsHands: false # starcup: allows for creepy ghostrole "dragging away the body" behavior
 
 - type: entity
-  name: skulker # let's give them felinid's silent footsteps when felinid's footsteps are fixed
+  name: skulker
   parent: MobXeno
   id: MobXenoSkulker
-  description: Common exomorph. Its kind mostly comes at night. Mostly. # starcup
+  description: Common juvenile exomorph. Usually hunts in packs. # starcup
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Aliens/Xenos/skulker.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: running
-  - type: MobThresholds
-    thresholds:
-      0: Alive
-      80: Dead # a bit frailer than drones as an ambusher
   - type: SlowOnDamage
     speedModifierThresholds:
       40: 0.7
@@ -46,7 +50,7 @@
       groups:
         Brute: 6
   - type: MovementSpeedModifier
-    baseSprintSpeed: 4.5 # starcup - ambushers need a bit more nyoom
+    baseSprintSpeed: 4.5
   - type: Fixtures
     fixtures:
       fix1:
@@ -60,3 +64,54 @@
         - MobLayer
   - type: Puller
     needsHands: false
+
+- type: entity
+  name: lesser drone
+  parent: MobXeno
+  id: MobXenoDroneLesser
+  description: Smaller exomorph laborer. Rapidly hatched and expendable. # starcup
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _RMC14/Mobs/OldXenonids/LesserDrone/lesser_drone.rsi
+    offset: 0,0.2
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: alive
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      70: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      40: 0.7
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 4
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 4
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 450
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+# Tier 2
+
+
+# Tier 3
