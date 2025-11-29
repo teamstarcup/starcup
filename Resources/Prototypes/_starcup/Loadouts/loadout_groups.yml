@@ -8,6 +8,15 @@
   - WinterCoatYellow
 
 # Logistics
+## Cargo Technician
+- type: loadoutGroup
+  parent: [ Scarfs ]
+  id: CargoTechnicianNeck
+  name: loadout-group-cargo-technician-neck
+  minLimit: 0
+  loadouts:
+  - GoliathCloak
+
 ## Courier
 - type: loadoutGroup
   parent: [ CargoTechnicianBackpack ]
@@ -15,6 +24,15 @@
   name: loadout-group-courier-backpack
   loadouts:
   - LeatherSatchel
+
+## Salvage Specialist
+- type: loadoutGroup
+  parent: [ Scarfs ]
+  id: SalvageSpecialistNeck
+  name: loadout-group-salvage-specialist-neck
+  minLimit: 0
+  loadouts:
+  - GoliathCloak
 
 # Medical
 ## Medical Intern
@@ -393,21 +411,54 @@
 
 ## Passenger
 - type: loadoutGroup
-  id: Plushies
-  name: loadout-group-plushies
+  parent: [ Glasses ]
+  id: PassengerEyewear
+  name: loadout-group-passenger-glasses
   minLimit: 0
-  maxLimit: 1
   loadouts:
-    - PlushieLizardExtra
-    - PlushieSpaceLizardExtra
-    - PlushieLizardInversedExtra
-    - PlushieBeeExtra
-    - PlushieSnakeExtra
-    - PlushieCarpExtra
-    - PlushieExperimentExtra
-    - PlushieSharkBlueExtra
-    - PlushieSharkPinkExtra
-    - PlushieSharkGreyExtra
+  - CheapSunglasses
+
+- type: loadoutGroup
+  abstract: true
+  id: Plushies
+  loadouts:
+  - PlushieLizardInversed
+  - PlushieBee
+  - PlushieSnake
+  - PlushieCarp
+  - PlushieHolocarp
+  - PlushieExperiment
+  - PlushieSharkBlue
+  - PlushieSharkPink
+  - PlushieSharkGrey
+  - PlushieHampter
+  - PlushiePenguin
+  - PlushieArachnid
+  - PlushieDiona
+  - PlushieMoth
+  - PlushieSlime
+  - PlushieVox
+  - PlushieRouny
+  - PlushieXeno
+
+- type: loadoutGroup
+  abstract: true
+  id: PlushiesWorn
+  loadouts:
+  - PlushieLizardWorn
+  - PlushieSpaceLizardWorn
+  - PlushieLizardInversedWorn
+  - PlushieBeeWorn
+  - PlushieExperimentWorn
+  - PlushieHampterWorn
+  - PlushiePenguinWorn
+  - PlushieArachnidWorn
+  - PlushieDionaWorn
+  - PlushieMothWorn
+  - PlushieSlimeWorn
+  - PlushieVoxWorn
+  - PlushieRounyWorn
+  - PlushieXenoWorn
 
 - type: loadoutGroup
   abstract: true

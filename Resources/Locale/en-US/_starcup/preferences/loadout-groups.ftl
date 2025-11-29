@@ -5,7 +5,11 @@ loadout-group-command-glasses = Command glasses
 loadout-group-technical-assistant-outerclothing = Technical assistant outer clothing
 
 # Logistics
+loadout-group-cargo-technician-neck = Cargo technician neck
+
 loadout-group-courier-backpack = Courier backpack
+
+loadout-group-salvage-specialist-neck = Salvage specialist neck
 
 # Medical
 loadout-group-medical-intern-outerclothing = Medical intern outer clothing
@@ -68,7 +72,11 @@ loadout-group-mime-shoes = Mime shoes
 loadout-group-musician-glasses = Musician glasses
 loadout-group-musician-shoes = Musician shoes
 
+loadout-group-passenger-glasses = Passenger eyewear
+
 loadout-group-reporter-outer-clothing = Reporter outer clothing
+loadout-group-reporter-shoes = Reporter shoes
+loadout-group-reporter-glasses = Reporter eyewear
 
 loadout-group-service-worker-head = Service worker head
 loadout-group-service-worker-jumpsuit = Service worker jumpsuit
