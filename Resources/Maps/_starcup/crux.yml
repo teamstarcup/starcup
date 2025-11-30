@@ -4,7 +4,7 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 11/30/2025 00:46:45
+  time: 11/30/2025 00:54:40
   entityCount: 14198
 maps:
 - 1
@@ -89792,8 +89792,8 @@ entities:
       parent: 2
     - type: DeviceNetwork
       deviceLists:
-      - 13564
-      - 13561
+      - 11245
+      - 11246
   - uid: 13556
     components:
     - type: Transform
@@ -89802,8 +89802,8 @@ entities:
       parent: 2
     - type: DeviceNetwork
       deviceLists:
-      - 13564
-      - 13561
+      - 11245
+      - 11246
   - uid: 13557
     components:
     - type: Transform
@@ -89811,8 +89811,8 @@ entities:
       parent: 2
     - type: DeviceNetwork
       deviceLists:
-      - 13564
-      - 13561
+      - 11245
+      - 11246
   - uid: 13558
     components:
     - type: Transform
@@ -89820,31 +89820,11 @@ entities:
       parent: 2
     - type: DeviceNetwork
       deviceLists:
-      - 13564
-      - 13561
-  - uid: 13559
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 11.5,43.5
-      parent: 2
-    - type: DeviceNetwork
-      deviceLists:
-      - 13565
-      - 13564
-  - uid: 13560
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 9.5,46.5
-      parent: 2
-    - type: DeviceNetwork
-      deviceLists:
-      - 13565
-      - 13564
+      - 11245
+      - 11246
 - proto: WeaponEnergyTurretAIControlPanel
   entities:
-  - uid: 13561
+  - uid: 11245
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
@@ -89852,12 +89832,39 @@ entities:
       parent: 2
     - type: DeviceList
       devices:
-      - 13555
       - 13557
-      - 13558
+      - 13555
       - 13556
+      - 13558
+  - uid: 11246
+    components:
+    - type: Transform
+      pos: 11.5,47.5
+      parent: 2
+    - type: DeviceList
+      devices:
+      - 13557
+      - 13555
+      - 13556
+      - 13558
 - proto: WeaponEnergyTurretCommand
   entities:
+  - uid: 11239
+    components:
+    - type: Transform
+      pos: 9.5,46.5
+      parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 11248
+  - uid: 11240
+    components:
+    - type: Transform
+      pos: 11.5,43.5
+      parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 11248
   - uid: 13562
     components:
     - type: Transform
@@ -89865,25 +89872,7 @@ entities:
       parent: 2
 - proto: WeaponEnergyTurretCommandControlPanel
   entities:
-  - uid: 13563
-    components:
-    - type: Transform
-      pos: 32.5,5.5
-      parent: 2
-  - uid: 13564
-    components:
-    - type: Transform
-      pos: 11.5,47.5
-      parent: 2
-    - type: DeviceList
-      devices:
-      - 13560
-      - 13559
-      - 13557
-      - 13555
-      - 13556
-      - 13558
-  - uid: 13565
+  - uid: 11248
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -89891,8 +89880,13 @@ entities:
       parent: 2
     - type: DeviceList
       devices:
-      - 13560
-      - 13559
+      - 11239
+      - 11240
+  - uid: 13563
+    components:
+    - type: Transform
+      pos: 32.5,5.5
+      parent: 2
 - proto: WeaponRifleFoam
   entities:
   - uid: 13566
