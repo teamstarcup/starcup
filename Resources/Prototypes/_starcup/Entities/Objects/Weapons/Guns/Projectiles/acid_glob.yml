@@ -1,0 +1,38 @@
+- type: entity
+  id: AcidGlob
+  name: acid spit
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Projectile
+      impactEffect: AcidGlobImpactEffect
+      damage:
+        types:
+          Caustic: 5
+          Structural: 7
+      soundHit:
+        path: "/Audio/_starcup/Weapons/Guns/Hits/acid_bullet_hit.ogg"
+    - type: Sprite
+      sprite: _starcup/Objects/Weapons/Guns/Projectiles/acid_glob.rsi
+      layers:
+        - state: xeno_toxic
+    - type: Ammo
+      muzzleFlash: null
+
+- type: entity
+  id: AcidGlobImpactEffect
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedDespawn
+    lifetime: 0.25
+  - type: Sprite
+    drawdepth: Effects
+    layers:
+    - shader: unshaded
+      map: ["enum.EffectLayers.Unshaded"]
+      sprite: _starcup/Objects/Weapons/Guns/Projectiles/acid_glob.rsi
+      state: impact_toxic
+  - type: EffectVisuals
+  - type: Tag
+    tags:
+    - HideContextMenu

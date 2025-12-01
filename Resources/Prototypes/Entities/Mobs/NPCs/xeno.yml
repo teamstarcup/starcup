@@ -158,15 +158,6 @@
         - MobMask
         layer:
         - MobLayer
-  # begin starcup: immune to electrocution so they can mess with lights
-  - type: StatusEffects
-    allowed:
-    - TemporaryBlindness
-    - Pacified
-    - Flashed
-    - RadiationProtection
-    - Adrenaline
-  # end starcup
 
 - type: entity
   name: drone
@@ -187,12 +178,15 @@
       100: Dead # starcup
   - type: SlowOnDamage
     speedModifierThresholds:
+# begin starcup
       40: 0.7
   - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    animation: WeaponArcPunch
     damage:
-      groups:
-        Brute: 6
-  # begin starcup
+      types:
+        Blunt: 6 # headbutter
   - type: DamageStateVisuals
     states:
       Alive:
@@ -286,9 +280,11 @@
   - type: MovementSpeedModifier
     baseSprintSpeed: 4
   - type: MeleeWeapon
+    animation: WeaponArcPunch
+    attackRate: 1.5 # starcup: they are remarkably ferocious
     damage:
      types:
-       Slash: 8
+       Slash: 6 # starcup: small damage nerf to offset the faster attack rate
   - type: SlowOnDamage
     speedModifierThresholds:
       50: 0.7
@@ -303,15 +299,6 @@
         - MobMask
         layer:
         - MobLayer
-  # begin starcup: immune to electrocution so they can mess with lights
-  - type: StatusEffects
-    allowed:
-    - TemporaryBlindness
-    - Pacified
-    - Flashed
-    - RadiationProtection
-    - Adrenaline
-  # end starcup
 
 - type: entity
   name: runner
@@ -377,6 +364,8 @@
     thresholds:
       0: Alive
       80: Dead # starcup: exomorph reworks
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 3 # starcup: making them slower to offset ranged attack
   - type: SlowOnDamage
     speedModifierThresholds:
       25: 0.7
