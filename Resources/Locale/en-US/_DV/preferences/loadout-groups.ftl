@@ -54,7 +54,7 @@ loadout-group-all-ammo = Ammunition
 
 # Medical
 # starcup: rename from medical doctor neck to generic medical neck
-loadout-group-medical-doctor-neck = Medical Doctor neck
+loadout-group-medical-doctor-neck = Medical neck
 
 # starcup: PDA > ID for parity with upstream
 loadout-group-medical-intern-id-delta = Medical Intern ID
