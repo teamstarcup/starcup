@@ -1,0 +1,64 @@
+- type: entity
+  id: MappingBelt
+  parent: ClothingBeltUtility
+  name: mapping toolbelt
+  description: A belt with everything a mapper could ever need.
+  suffix: Admin
+  components:
+  - type: StorageFill
+    contents:
+    - id: Multitool
+    - id: SprayPainterRecharging
+    - id: PowerDrill
+    - id: JawsOfLife
+    - id: WelderExperimental
+    - id: AccessConfiguratorUniversal
+  - type: Storage
+    grid:
+    - 0,0,7,5
+    whitelist: null
+    maxItemSize: Huge
+
+- type: entity
+  id: AdminMaterialBox
+  parent: BoxCardboard
+  name: admin material box
+  description: A box of all the materials an admin or mapper could ever need.
+  suffix: Admin
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,1
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,7,5
+  - type: StorageFill
+    contents:
+    - id: SheetSteel
+    - id: SheetGlass
+    - id: SheetPlastic
+    - id: SheetRGlass
+    - id: SheetPlasteel
+    - id: SheetPlasma
+    - id: SheetUranium
+    - id: MaterialWoodPlank
+    - id: MaterialCloth
+    - id: PartRodMetal
+
+- type: entity
+  id: AdminMedkit
+  parent: MedkitCombatFilled
+  name: admin medkit
+  description:
+  suffix: Admin
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,1
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,7,5

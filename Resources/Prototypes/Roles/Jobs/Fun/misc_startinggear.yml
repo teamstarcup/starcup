@@ -125,7 +125,7 @@
     ears: ClothingHeadsetGrey
     gloves: ClothingHandsGlovesFingerless
   inhand:
-    - WeaponMeleeToolboxRobust
+  - WeaponMeleeToolboxRobust
 
 #Brigmedic
 
@@ -151,13 +151,23 @@
   id: MobAghostGear
   equipment:
     back: ClothingBackpackSatchelAdmin
+    belt: MappingBelt # starcup
     id: AdminPDA
-    belt: AdminToolbelt
   storage:
     back:
+    # begin starcup: tools moved to toolbelt, new things in satchel
     - AdminMaterialBox
-    - PowerCellMicroreactor
-    - PowerCellMicroreactor
+    - HolofanProjector
+    - GasAnalyzer
+    - DoorRemoteAll
+    - HandTeleporterAdmeme
+    - RCDExperimental
+    - AdminHypo
+    - BluespaceBeaker
+    - BluespaceSyringe
+    - AnomalyScanner
+    - BoxFolderSyndCommClipboard
+    # end starcup
 
 #Gladiator with spear
 - type: startingGear
