@@ -14,10 +14,10 @@
     - id: WelderExperimental
     - id: AccessConfiguratorUniversal
   - type: Storage
-    grid:
-    - 0,0,6,3
-    whitelist: null
     maxItemSize: Huge
+    whitelist: null
+    grid:
+      - 0,0,6,3
 
 - type: entity
   id: AdminMaterialBox
@@ -32,6 +32,7 @@
     - 0,0,0,0
   - type: Storage
     maxItemSize: Normal
+    whitelist: null
     grid:
     - 0,0,7,5
   - type: StorageFill
@@ -55,11 +56,12 @@
   suffix: Admin
   components:
   - type: Item
-    size: Large
+    size: Small
     shape:
     - 0,0,0,0
   - type: Storage
     maxItemSize: Large
+    whitelist: null
     grid:
     - 0,0,5,3
   - type: StorageFill
