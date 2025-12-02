@@ -15,7 +15,7 @@
     - id: AccessConfiguratorUniversal
   - type: Storage
     grid:
-    - 0,0,7,5
+    - 0,0,6,3
     whitelist: null
     maxItemSize: Huge
 
@@ -27,11 +27,11 @@
   suffix: Admin
   components:
   - type: Item
-    size: Normal
+    size: Small
     shape:
-    - 0,0,1,1
+    - 0,0,0,0
   - type: Storage
-    maxItemSize: Huge
+    maxItemSize: Normal
     grid:
     - 0,0,7,5
   - type: StorageFill
@@ -49,16 +49,29 @@
 
 - type: entity
   id: AdminMedkit
-  parent: MedkitCombatFilled
+  parent: MedkitCombat
   name: admin medkit
   description:
   suffix: Admin
   components:
   - type: Item
-    size: Normal
+    size: Small
     shape:
-    - 0,0,1,1
+    - 0,0,0,0
   - type: Storage
-    maxItemSize: Huge
+    maxItemSize: Large
     grid:
-    - 0,0,7,5
+    - 0,0,5,3
+  - type: StorageFill
+    contents:
+    - id: DefibrillatorOneHandedUnpowered
+    - id: MedicatedSuture
+    - id: RegenerativeMesh
+    - id: CombatMedipen
+    - id: CombatMedipen
+    - id: CombatMedipen
+    - id: CombatMedipen
+    - id: Bloodpack
+    - id: Bloodpack
+    - id: Oilpack
+    - id: Oilpack
