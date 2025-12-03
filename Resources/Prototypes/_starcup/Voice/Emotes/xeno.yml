@@ -12,7 +12,7 @@
   params:
     variation: 0.125
   sounds:
-    Scream:
+    XenoScreech:
       collection: AlienScream
     XenoHiss:
       collection: AlienHiss
@@ -52,9 +52,8 @@
   id: XenoHiss
   name: chat-emote-name-xeno-hiss
   category: Vocal
-  icon: _DV/Interface/Emotes/hiss.png
-  available: false
-  chatMessages: ["chat-emote-msg-xeno-hiss"]
+  icon: _RMC14/Actions/xeno_emotes.rsi/hiss.png
+  chatMessages: ["chat-emote-msg-hiss"]
   chatTriggers:
   - hiss
   - hisses
@@ -67,9 +66,8 @@
   id: XenoGrowl
   name: chat-emote-name-xeno-growl
   category: Vocal
-  icon: _DV/Interface/Emotes/hiss.png
-  available: false
-  chatMessages: ["chat-emote-msg-xeno-growl"]
+  icon: _RMC14/Actions/xeno_emotes.rsi/growl.png
+  chatMessages: ["chat-emote-msg-growl"]
   chatTriggers:
   - growl
   - growls
@@ -82,9 +80,8 @@
   id: XenoRoar
   name: chat-emote-name-xeno-roar
   category: Vocal
-  icon: _DV/Interface/Emotes/hiss.png
-  available: false
-  chatMessages: ["chat-emote-msg-xeno-roar"]
+  icon: _RMC14/Actions/xeno_emotes.rsi/roar.png
+  chatMessages: ["chat-emote-msg-roar"]
   chatTriggers:
   - roar
   - roars
@@ -94,3 +91,30 @@
   - raah
   - raahh
   - raaahhh
+
+- type: emote
+  id: XenoScreech
+  name: chat-emote-name-screech
+  category: Vocal
+  icon: _RMC14/Actions/xeno_emotes.rsi/help.png
+  whitelist:
+    components:
+    - Vocal
+  chatMessages: ["chat-emote-msg-screech"]
+  chatTriggers:
+  - scream
+  - screams
+  - screaming
+  - screamed
+  - shriek
+  - shrieks
+  - shrieking
+  - shrieked
+  - screech
+  - screeches
+  - screeching
+  - screeched
+  - yell
+  - yells
+  - yelled
+  - yelling
