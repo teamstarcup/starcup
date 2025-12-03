@@ -92,7 +92,7 @@ spray-painter-style-airlockglass-security = Security
 spray-painter-style-airlockglass-virology = Virology
 
 # Lockers
-# starcup: changed acronyms to titles for stylistic consistency (CE, CMO, Evac, HoP, HoS, RD, Evacuation repair)
+# starcup: renamed Quartermaster and changed acronyms to titles for stylistic consistency (CE, CMO, Evac, HoP, HoS, RD, Evacuation repair).
 spray-painter-style-locker-atmospherics = Atmospherics
 spray-painter-style-locker-basic = Basic
 spray-painter-style-locker-botanist = Botanist
