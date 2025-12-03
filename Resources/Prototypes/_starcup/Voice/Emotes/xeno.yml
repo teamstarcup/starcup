@@ -1,0 +1,96 @@
+- type: speechSounds
+  id: Xeno
+  saySound:
+    collection: AlienTalk
+  askSound:
+    collection: AlienTalk
+  exclaimSound:
+    collection: AlienTalk
+
+- type: emoteSounds
+  id: Xeno
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: AlienScream
+    XenoHiss:
+      collection: AlienHiss
+    XenoGrowl:
+      collection: AlienGrowl
+    XenoRoar:
+      collection: AlienRoar
+    DefaultDeathgasp:
+      path: /Audio/_RMC14/Xeno/alien_death2.ogg
+
+- type: speechSounds
+  id: XenoLarge
+  saySound:
+    collection: AlienTalk
+  askSound:
+    collection: AlienTalk
+  exclaimSound:
+    collection: AlienTalk
+
+- type: emoteSounds
+  id: XenoLarge
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: AlienScream
+    XenoHiss:
+      collection: AlienHissLarge
+    XenoGrowl:
+      collection: AlienGrowlLarge
+    XenoRoar:
+      collection: AlienRoar
+    DefaultDeathgasp:
+      path: /Audio/_RMC14/Xeno/alien_death.ogg
+
+- type: emote
+  id: XenoHiss
+  name: chat-emote-name-xeno-hiss
+  category: Vocal
+  icon: _DV/Interface/Emotes/hiss.png
+  available: false
+  chatMessages: ["chat-emote-msg-xeno-hiss"]
+  chatTriggers:
+  - hiss
+  - hisses
+  - hissing
+  - hissed
+  - hss
+  - hsss
+
+- type: emote
+  id: XenoGrowl
+  name: chat-emote-name-xeno-growl
+  category: Vocal
+  icon: _DV/Interface/Emotes/hiss.png
+  available: false
+  chatMessages: ["chat-emote-msg-xeno-growl"]
+  chatTriggers:
+  - growl
+  - growls
+  - growling
+  - growled
+  - grr
+  - grrr
+
+- type: emote
+  id: XenoRoar
+  name: chat-emote-name-xeno-roar
+  category: Vocal
+  icon: _DV/Interface/Emotes/hiss.png
+  available: false
+  chatMessages: ["chat-emote-msg-xeno-roar"]
+  chatTriggers:
+  - roar
+  - roars
+  - roaring
+  - roared
+  - rargh
+  - raah
+  - raahh
+  - raaahhh

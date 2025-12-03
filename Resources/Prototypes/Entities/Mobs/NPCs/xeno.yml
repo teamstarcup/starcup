@@ -117,11 +117,21 @@
       - CannotSuicide
       - DoorBumpOpener
       - FootstepSound
+      - XenoEmotes # starcup: exomorph reworks
   - type: NoSlip
   - type: Perishable #Ummmm the acid kills a lot of the bacteria or something
     molsPerSecondPerUnitMass: 0.0005
+  # begin starcup: give exomorphs a voice
   - type: Speech
-    speechVerb: LargeMob
+    speechVerb: Xeno
+    speechSounds: Xeno
+    allowedEmotes: ['Scream', 'XenoHiss', 'XenoGrowl', 'XenoRoar']
+  - type: Vocal
+    sounds:
+      Male: Xeno
+      Female: Xeno
+      Unsexed: Xeno
+  # end starcup
 
 - type: entity
   name: praetorian
@@ -158,6 +168,17 @@
         - MobMask
         layer:
         - MobLayer
+  # begin starcup: give exomorphs a voice
+  - type: Speech
+    speechVerb: Xeno
+    speechSounds: XenoLarge
+    allowedEmotes: ['Scream', 'XenoHiss', 'XenoGrowl', 'XenoRoar']
+  - type: Vocal
+    sounds:
+      Male: Xeno
+      Female: Xeno
+      Unsexed: Xeno
+  # end starcup
 
 - type: entity
   name: drone
@@ -250,14 +271,16 @@
   - type: Tag
     tags:
     - CannotSuicide
-  # begin starcup: immune to electrocution so they can mess with lights
-  - type: StatusEffects
-    allowed:
-    - TemporaryBlindness
-    - Pacified
-    - Flashed
-    - RadiationProtection
-    - Adrenaline
+  # begin starcup: give exomorphs a voice
+  - type: Speech
+    speechVerb: Xeno
+    speechSounds: XenoLarge
+    allowedEmotes: ['Scream', 'XenoHiss', 'XenoGrowl', 'XenoRoar']
+  - type: Vocal
+    sounds:
+      Male: Xeno
+      Female: Xeno
+      Unsexed: Xeno
   # end starcup
 
 - type: entity
@@ -299,6 +322,17 @@
         - MobMask
         layer:
         - MobLayer
+  # begin starcup: give exomorphs a voice
+  - type: Speech
+    speechVerb: Xeno
+    speechSounds: XenoLarge
+    allowedEmotes: ['Scream', 'XenoHiss', 'XenoGrowl', 'XenoRoar']
+  - type: Vocal
+    sounds:
+      Male: Xeno
+      Female: Xeno
+      Unsexed: Xeno
+  # end starcup
 
 - type: entity
   name: runner

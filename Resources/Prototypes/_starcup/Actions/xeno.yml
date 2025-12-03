@@ -1,0 +1,36 @@
+- type: entity
+  parent: BaseAction
+  id: ActionXenoResin
+  name: Secrete resin
+  description: Vomit resin to slow the hive's enemies down.
+  components:
+  - type: Action
+    icon: Interface/Actions/web.png
+    useDelay: 25
+  - type: InstantAction
+    event: !type:SpiderWebActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionXenoSnot
+  name: Produce mucuous
+  description: Secret semi-solid mucuous for construction.
+  components:
+  - type: Action
+    icon: Interface/Actions/web.png
+    useDelay: 1
+  - type: InstantAction
+    event: !type:SericultureActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionXenoPounce
+  name: Pounce
+  description: Leap forward towards your prey.
+  components:
+  - type: Action
+    useDelay: 1
+    icon: _RMC14/Actions/xeno_actions.rsi/lunge.png
+  - type: InstantAction
+    event: !type:GravityJumpEvent {}
+    collideKnockdown: 1

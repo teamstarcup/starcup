@@ -107,11 +107,19 @@
     - CannotSuicide
     - DoorBumpOpener
     - FootstepSound
+    - XenoEmotes
   - type: NoSlip
   - type: Perishable
     molsPerSecondPerUnitMass: 0.0005
   - type: Speech
-    speechVerb: LargeMob
+    speechVerb: Xeno
+    speechSounds: Xeno
+    allowedEmotes: [ "AlienHiss", "AlienGrowl", "AlienRoar", "AlienScream" ]
+  - type: Vocal
+    sounds:
+      Male: Xeno
+      Female: Xeno
+      Unsexed: Xeno
 
 - type: entity
   name: parasite
@@ -138,7 +146,7 @@
     attackRate: 0.5
     damage:
       groups:
-        Brute: 4
+        Brute: 3
   - type: DamageStateVisuals
     states:
       Alive:
@@ -162,6 +170,13 @@
         - MobLayer
   - type: Ammo
     muzzleFlash: null
+  - type: JumpAbility
+    jumpThrowSpeed: 16
+    action: ActionXenoPounce
+    canCollide: true
+    jumpDistance: 3
+    jumpSound:
+      path: /Audio/_starcup/Animals/Xenos/parasitepounce.ogg
 
 # Tier 1
 
@@ -274,6 +289,13 @@
         - MobLayer
   - type: Puller
     needsHands: false
+  - type: JumpAbility
+    useDelay: 12
+    action: ActionXenoPounce
+    canCollide: true
+    jumpDistance: 3
+    jumpSound:
+      collection: AlienPounce
 
 # Tier 2
 
@@ -350,7 +372,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      120: Dead
+      100: Dead
   - type: Stamina
     critThreshold: 300
   - type: SlowOnDamage
@@ -384,7 +406,7 @@
     soundGunshot: /Audio/_starcup/Animals/Xenos/parasitepounce.ogg
   - type: RechargeBasicEntityAmmo
     showExamineText: false
-    rechargeCooldown: 8
+    rechargeCooldown: 20
     rechargeSound: null
   - type: BasicEntityAmmoProvider
     proto: MobXenoParasite
