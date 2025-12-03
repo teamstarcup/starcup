@@ -753,6 +753,7 @@ public sealed partial class AdminVerbSystem
 
             args.Verbs.Add(pauseRotting);
         }
+        // Den end
     }
 
     private void RefillEquippedTanks(EntityUid target, Gas gasType)
