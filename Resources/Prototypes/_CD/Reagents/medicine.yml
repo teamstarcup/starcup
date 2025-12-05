@@ -432,28 +432,28 @@
         walkSpeedModifier: 0.55
         sprintSpeedModifier: 0.55
         conditions:
-        - !type:ReagentCondition
-          reagent: Serenitol # wildly incompatable with antidepressants
-          min: 5
-      - !type:Paralyze
-        conditions:
-        - !type:ReagentCondition
-          reagent: Neurozenium # wildly incompatable with antidepressants
-          min: 5
-      - !type:Paralyze
-        conditions:
-        - !type:ReagentCondition
-          reagent: Blissifylovene # wildly incompatable with antidepressants
-          min: 3
-      - !type:AdjustReagent
-        reagent: Neurozenium # purges Neurozenium so paralysis isn't too long
-        amount: -0.5
-      - !type:AdjustReagent
-        reagent: Blissifylovene # purges Blissifylovene so paralysis isn't too long
-        amount: -0.2
-      - !type:AdjustReagent
-        reagent: Tranquinase # purges Tranquinase
-        amount: -1.5
+#      - !type:ReagentCondition
+#          reagent: Serenitol # wildly incompatable with antidepressants
+#          min: 5
+#      - !type:Paralyze
+#        conditions:
+#        - !type:ReagentCondition
+#          reagent: Neurozenium # wildly incompatable with antidepressants
+#          min: 5
+#      - !type:Paralyze
+#        conditions:
+#        - !type:ReagentCondition
+#          reagent: Blissifylovene # wildly incompatable with antidepressants
+#          min: 3
+#      - !type:AdjustReagent
+#        reagent: Neurozenium # purges Neurozenium so paralysis isn't too long
+#        amount: -0.5
+#      - !type:AdjustReagent
+#        reagent: Blissifylovene # purges Blissifylovene so paralysis isn't too long
+#        amount: -0.2
+#      - !type:AdjustReagent
+#        reagent: Tranquinase # purges Tranquinase
+#        amount: -1.5
       - !type:PopupMessage
         type: Local
         visualType: Small
