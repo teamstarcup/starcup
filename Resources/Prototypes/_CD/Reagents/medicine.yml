@@ -201,9 +201,6 @@
           min: 10
         reagent: Neurozenium
         amount: -7.5
-      - !type:AdjustReagent
-        probability: 0.5 # Chance of Addiction rising per tick
-        conditions:
       - !type:HealthChange
         conditions:
           - !type:ReagentCondition
