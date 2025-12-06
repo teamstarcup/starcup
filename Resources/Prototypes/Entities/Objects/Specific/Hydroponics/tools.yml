@@ -62,6 +62,10 @@
     damage:
       types:
         Slash: 10
+    # begin starcup: adding missing/fitting sounds
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+    # end starcup
   - type: Item
     size: Normal
   - type: Clothing
@@ -94,7 +98,11 @@
     damage:
       types:
         Slash: 8
-        Piercing: 2
+        # Piercing: 2 # starcup: It deals slashing damage already, it doesn't need piercing. You're not stabbing people with it.
+    # begin starcup: adding missing/fitting sounds
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+    # end starcup
   - type: Item
     sprite: Objects/Tools/Hydroponics/hatchet.rsi
   - type: PhysicalComposition
@@ -117,7 +125,7 @@
     wideAnimationRotation: 45
     damage:
       types:
-        Blunt: 8
+        Blunt: 6 # starcup: Reduced blunt damage, you're apparently stabbing people with it and it hits hard enough like this.
         Piercing: 2 # I guess you can stab it into them?
     soundHit:
       collection: MetalThud

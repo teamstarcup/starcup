@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 11/21/2025 11:51:08
-  entityCount: 14204
+  time: 11/30/2025 00:54:40
+  entityCount: 14198
 maps:
 - 1
 grids:
@@ -4201,6 +4201,9 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 2.5,-13.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal:
+      - - Atmospherics
   - uid: 58
     components:
     - type: MetaData
@@ -4235,6 +4238,9 @@ entities:
     - type: Transform
       pos: 10.5,-18.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal:
+      - - Atmospherics
   - uid: 62
     components:
     - type: MetaData
@@ -4393,6 +4399,9 @@ entities:
       rot: 3.141592653589793 rad
       pos: 5.5,-38.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal:
+      - - Atmospherics
   - uid: 80
     components:
     - type: MetaData
@@ -4591,6 +4600,9 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -1.5,18.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal:
+      - - Atmospherics
   - uid: 104
     components:
     - type: MetaData
@@ -4924,6 +4936,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -15.5,-36.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal: []
 - proto: AirlockChapelLocked
   entities:
   - uid: 147
@@ -5032,6 +5046,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 8.5,45.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal: []
   - uid: 160
     components:
     - type: MetaData
@@ -5725,6 +5741,8 @@ entities:
     - type: Transform
       pos: 23.5,1.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal: []
   - uid: 240
     components:
     - type: Transform
@@ -6187,14 +6205,22 @@ entities:
       parent: 2
   - uid: 316
     components:
+    - type: MetaData
+      name: Shuttle Dock
     - type: Transform
       pos: -35.5,-30.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal: []
   - uid: 317
     components:
+    - type: MetaData
+      name: Shuttle Docking
     - type: Transform
       pos: -33.5,-30.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal: []
 - proto: AirlockMaintSecLocked
   entities:
   - uid: 318
@@ -6258,6 +6284,8 @@ entities:
     - type: Transform
       pos: -8.5,18.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal: []
   - uid: 327
     components:
     - type: MetaData
@@ -6547,6 +6575,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 6.5,12.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal: []
   - uid: 360
     components:
     - type: Transform
@@ -7665,6 +7695,18 @@ entities:
     components:
     - type: Transform
       pos: -29.40273,11.534381
+      parent: 2
+- proto: AppraisalTool
+  entities:
+  - uid: 14206
+    components:
+    - type: Transform
+      pos: -21.681557,-33.38099
+      parent: 2
+  - uid: 14207
+    components:
+    - type: Transform
+      pos: -21.349998,-33.508377
       parent: 2
 - proto: ArtifactAnalyzerMachineCircuitboard
   entities:
@@ -34831,15 +34873,15 @@ entities:
       parent: 2
 - proto: CrateFilledSpawner
   entities:
-  - uid: 5374
-    components:
-    - type: Transform
-      pos: -21.5,-33.5
-      parent: 2
   - uid: 5375
     components:
     - type: Transform
       pos: -20.5,-35.5
+      parent: 2
+  - uid: 14205
+    components:
+    - type: Transform
+      pos: -21.5,-34.5
       parent: 2
 - proto: CrateFreezer
   entities:
@@ -71774,6 +71816,11 @@ entities:
       - CivilianServices
 - proto: Rack
   entities:
+  - uid: 5374
+    components:
+    - type: Transform
+      pos: -21.5,-33.5
+      parent: 2
   - uid: 9749
     components:
     - type: Transform
@@ -76756,103 +76803,193 @@ entities:
       rot: 3.141592653589793 rad
       pos: 14.5,26.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: "Security: HoS's Office"
   - uid: 11215
     components:
     - type: Transform
       pos: -18.5,16.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: "Medical: CMO's Office"
   - uid: 11216
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -5.5,42.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: "Science: RD's Office"
   - uid: 11217
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 27.5,3.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: 'Bridge: Admin Office'
   - uid: 11218
     components:
     - type: Transform
       pos: 34.5,6.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: 'Bridge: Vault'
   - uid: 11219
     components:
     - type: Transform
       pos: 36.5,-2.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: 'Bridge: Main Area'
   - uid: 11220
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 38.5,-5.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: "Bridge: Captain's Office"
   - uid: 11221
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 31.5,-2.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: 'Bridge: Conference Room'
   - uid: 11222
     components:
     - type: Transform
       pos: -5.5,-9.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: "General: HoP's Office"
   - uid: 11223
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -2.5,-23.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: 'General: EVA Storage'
   - uid: 11224
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -10.5,-30.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: "Logistics: LO's Office"
   - uid: 11225
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -35.5,-4.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: "Engineering: CE's Office"
   - uid: 11226
     components:
     - type: Transform
       pos: 10.5,39.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: 'AI Shuttle: Hallway'
   - uid: 11227
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 11.5,46.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: 'AI Shuttle: Lobby'
   - uid: 11228
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 17.5,45.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: 'AI Shuttle: Upload'
   - uid: 11229
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 3.5,45.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: 'AI Shuttle: Secure Tech Storage'
   - uid: 11230
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 8.5,51.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: 'AI Shuttle: Core Chamber 1'
   - uid: 11231
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 12.5,51.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraCommand
+      nameSet: True
+      id: 'AI Shuttle: Core Chamber 2'
 - proto: SurveillanceCameraEngineering
   entities:
   - uid: 11232
@@ -76861,275 +76998,451 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -31.5,0.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraEngineering
+      nameSet: True
+      id: 'Engineering: Main Hall'
   - uid: 11233
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -35.5,7.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraEngineering
+      nameSet: True
+      id: 'Engineering: Locker Room'
   - uid: 11234
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -42.5,3.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraEngineering
+      nameSet: True
+      id: 'Engineering: Power Storage'
   - uid: 11235
     components:
     - type: Transform
       pos: -46.5,5.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraEngineering
+      nameSet: True
+      id: 'Engineering: PA Chamber'
   - uid: 11236
     components:
     - type: Transform
       pos: -28.5,6.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraEngineering
+      nameSet: True
+      id: 'Engineering: Storage'
   - uid: 11237
     components:
     - type: Transform
       pos: -32.5,15.5
       parent: 2
-  - uid: 11238
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -24.5,18.5
-      parent: 2
-  - uid: 11239
-    components:
-    - type: Transform
-      pos: -46.5,-25.5
-      parent: 2
-  - uid: 11240
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 22.5,23.5
-      parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraEngineering
+      nameSet: True
+      id: 'Engineering: Telecoms'
   - uid: 11241
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -41.5,-7.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraEngineering
+      nameSet: True
+      id: 'Engineering: TEG Chamber 2'
   - uid: 11242
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -45.5,-16.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraEngineering
+      nameSet: True
+      id: 'Engineering: TEG Chamber 1'
   - uid: 11243
     components:
     - type: Transform
       pos: -30.5,-9.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraEngineering
+      nameSet: True
+      id: 'Engineering: Atmos Storage'
   - uid: 11244
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -30.5,-11.5
       parent: 2
-  - uid: 11245
-    components:
-    - type: Transform
-      pos: -27.5,23.5
-      parent: 2
-  - uid: 11246
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -53.5,-23.5
-      parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraEngineering
+      nameSet: True
+      id: 'Engineering: TEG Chamber 3'
   - uid: 11247
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -49.5,-4.5
       parent: 2
-  - uid: 11248
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 29.5,24.5
-      parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraEngineering
+      nameSet: True
+      id: 'Engineering: Burn Chamber'
 - proto: SurveillanceCameraGeneral
   entities:
+  - uid: 11238
+    components:
+    - type: Transform
+      pos: -4.5,28.5
+      parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'Science: Lobby'
   - uid: 11249
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 6.5,-35.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Hall SE 4'
   - uid: 11250
     components:
     - type: Transform
       pos: -26.5,-3.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'Engineering: Lobby'
   - uid: 11251
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -6.5,5.5
       parent: 2
-  - uid: 11252
-    components:
-    - type: Transform
-      pos: -4.5,28.5
-      parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'Medical: Lobby'
   - uid: 11253
     components:
     - type: Transform
       pos: -16.5,-26.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'Logistics: Lobby'
   - uid: 11254
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -24.5,-17.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Hall W 1'
   - uid: 11255
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 2.5,5.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Pavilion 1'
   - uid: 11256
     components:
     - type: Transform
       pos: -1.5,-4.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Pavilion 2'
   - uid: 11257
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 12.5,-3.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Bar 1'
   - uid: 11258
     components:
     - type: Transform
       pos: 16.5,-0.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Hall E 1'
   - uid: 11259
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 27.5,1.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'Bridge: Lobby'
   - uid: 11260
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -0.5,27.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Hall N 2'
   - uid: 11261
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 1.5,12.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Hall N 1'
   - uid: 11262
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 1.5,-15.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Hall S 1'
   - uid: 11263
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -8.5,-19.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Hall SW'
   - uid: 11264
     components:
     - type: Transform
       pos: 10.5,-21.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Hall SE 1'
   - uid: 11265
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -24.5,-7.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Hall W 2'
   - uid: 11266
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -14.5,-13.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Arena'
   - uid: 11267
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 19.5,-19.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Hall SE 2'
   - uid: 11268
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 19.5,-33.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Hall SE 3'
   - uid: 11269
     components:
     - type: Transform
       pos: 13.5,-41.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Cryosleep'
   - uid: 11270
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -4.5,-35.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Hall S 3'
   - uid: 11271
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -14.5,-34.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Terminal'
   - uid: 11272
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 0.5,-44.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Arrivals'
   - uid: 11273
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 1.5,-27.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Hall S 2'
   - uid: 11274
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -6.5,-4.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Library 1'
   - uid: 11275
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -15.5,-6.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Library 2'
   - uid: 11276
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 5.5,-28.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Vox Lounge'
   - uid: 11277
     components:
     - type: Transform
       pos: -28.5,-14.5
       parent: 2
-  - uid: 11278
-    components:
-    - type: Transform
-      pos: 26.5,-47.5
-      parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Tools Room'
   - uid: 11279
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 27.5,-35.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Evac'
+  - uid: 11295
+    components:
+    - type: Transform
+      pos: 11.5,-13.5
+      parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraGeneral
+      nameSet: True
+      id: 'General: Bar 2'
 - proto: SurveillanceCameraMedical
   entities:
   - uid: 11280
@@ -77138,42 +77451,77 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -8.5,12.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraMedical
+      nameSet: True
+      id: 'Medical: Medbay'
   - uid: 11281
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -11.5,5.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraMedical
+      nameSet: True
+      id: 'Medical: Chemistry Lab'
   - uid: 11282
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -17.5,7.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraMedical
+      nameSet: True
+      id: "Medical: Paramedic's Office"
   - uid: 11283
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -14.5,19.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraMedical
+      nameSet: True
+      id: 'Medical: Morgue'
   - uid: 11284
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -9.5,21.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraMedical
+      nameSet: True
+      id: 'Medical: Cloning Bay'
   - uid: 11285
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -5.5,22.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraMedical
+      nameSet: True
+      id: 'Medical: Cryogenics'
   - uid: 11286
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 23.5,-30.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraMedical
+      nameSet: True
+      id: "General: Psychologist's Office"
 - proto: SurveillanceCameraRouterCommand
   entities:
   - uid: 11287
@@ -77232,109 +77580,187 @@ entities:
       parent: 2
 - proto: SurveillanceCameraScience
   entities:
-  - uid: 11295
-    components:
-    - type: Transform
-      pos: 11.5,-13.5
-      parent: 2
   - uid: 11296
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -0.5,40.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraScience
+      id: 'Science: Robotics Lab'
   - uid: 11297
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -2.5,38.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraScience
+      nameSet: True
+      id: 'Science: R&D'
   - uid: 11298
     components:
     - type: Transform
       pos: -11.5,35.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraScience
+      nameSet: True
+      id: 'Science: Artifact Lab'
   - uid: 11299
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -13.5,42.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraScience
+      nameSet: True
+      id: 'Science: Anomaly Lab'
   - uid: 11300
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -7.5,33.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraScience
+      nameSet: True
+      id: 'Science: Break Room'
   - uid: 11301
     components:
     - type: Transform
       pos: 5.5,38.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraScience
+      nameSet: True
+      id: 'Science: AI Shuttle Entrance'
 - proto: SurveillanceCameraSecurity
   entities:
+  - uid: 11278
+    components:
+    - type: Transform
+      pos: 26.5,-47.5
+      parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSecurity
+      nameSet: True
+      id: 'General: Security Checkpoint'
   - uid: 11302
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 7.5,28.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSecurity
+      nameSet: True
+      id: "Security: Detective's Office"
   - uid: 11303
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 6.5,20.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSecurity
+      nameSet: True
+      id: 'Security: Interrogation Room'
   - uid: 11304
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 8.5,18.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSecurity
+      nameSet: True
+      id: 'Security: Lobby'
   - uid: 11305
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 3.5,11.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSecurity
+      nameSet: True
+      id: 'Security: Prisoner Processing'
   - uid: 11306
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 17.5,11.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSecurity
+      nameSet: True
+      id: 'Security: Brig 2'
   - uid: 11307
     components:
     - type: Transform
       pos: 9.5,7.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSecurity
+      nameSet: True
+      id: 'Security: Brig 1'
   - uid: 11308
     components:
     - type: Transform
       pos: 17.5,13.5
       parent: 2
-  - uid: 11309
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 21.5,16.5
-      parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSecurity
+      nameSet: True
+      id: 'Security: Break Room'
   - uid: 11310
     components:
     - type: Transform
       pos: 11.5,17.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSecurity
+      nameSet: True
+      id: 'Security: Locker Room'
   - uid: 11311
     components:
     - type: Transform
       pos: 10.5,20.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSecurity
+      nameSet: True
+      id: 'Security: Storage'
   - uid: 11312
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 11.5,28.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSecurity
+      nameSet: True
+      id: 'Security: Armory'
 - proto: SurveillanceCameraService
   entities:
   - uid: 11313
@@ -77343,35 +77769,43 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 13.5,-14.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraService
+      nameSet: True
+      id: 'Service: Break Room'
   - uid: 11314
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 23.5,-4.5
       parent: 2
-  - uid: 11315
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 14.5,-3.5
-      parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraService
+      nameSet: True
+      id: 'Service: Hydroponics'
   - uid: 11316
     components:
     - type: Transform
       pos: 17.5,-10.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraService
+      nameSet: True
+      id: 'Service: Kitchen'
   - uid: 11317
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 24.5,-11.5
       parent: 2
-  - uid: 11318
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -17.5,-5.5
-      parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraService
+      nameSet: True
+      id: 'Service: Animal Enclosure'
 - proto: SurveillanceCameraSupply
   entities:
   - uid: 11319
@@ -77380,23 +77814,43 @@ entities:
       rot: 3.141592653589793 rad
       pos: -15.5,-29.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSupply
+      nameSet: True
+      id: 'Logistics: Cargo Bay'
   - uid: 11320
     components:
     - type: Transform
       pos: -28.5,-31.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSupply
+      nameSet: True
+      id: 'Logistics: Salvage'
   - uid: 11321
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -36.5,-28.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSupply
+      nameSet: True
+      id: 'Logistics: Surface Shuttle Dock'
   - uid: 11322
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -41.5,-35.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSupply
+      nameSet: True
+      id: 'Logistics: Salvage Arm'
 - proto: SurveillanceCameraWirelessRouterEntertainment
   entities:
   - uid: 11323
@@ -89336,44 +89790,81 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 13.5,53.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 11245
+      - 11246
   - uid: 13556
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 7.5,53.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 11245
+      - 11246
   - uid: 13557
     components:
     - type: Transform
       pos: 15.5,48.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 11245
+      - 11246
   - uid: 13558
     components:
     - type: Transform
       pos: 5.5,48.5
       parent: 2
-  - uid: 13559
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 11.5,43.5
-      parent: 2
-  - uid: 13560
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 9.5,46.5
-      parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 11245
+      - 11246
 - proto: WeaponEnergyTurretAIControlPanel
   entities:
-  - uid: 13561
+  - uid: 11245
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 11.5,51.5
       parent: 2
+    - type: DeviceList
+      devices:
+      - 13557
+      - 13555
+      - 13556
+      - 13558
+  - uid: 11246
+    components:
+    - type: Transform
+      pos: 11.5,47.5
+      parent: 2
+    - type: DeviceList
+      devices:
+      - 13557
+      - 13555
+      - 13556
+      - 13558
 - proto: WeaponEnergyTurretCommand
   entities:
+  - uid: 11239
+    components:
+    - type: Transform
+      pos: 9.5,46.5
+      parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 11248
+  - uid: 11240
+    components:
+    - type: Transform
+      pos: 11.5,43.5
+      parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 11248
   - uid: 13562
     components:
     - type: Transform
@@ -89381,21 +89872,20 @@ entities:
       parent: 2
 - proto: WeaponEnergyTurretCommandControlPanel
   entities:
-  - uid: 13563
-    components:
-    - type: Transform
-      pos: 32.5,5.5
-      parent: 2
-  - uid: 13564
-    components:
-    - type: Transform
-      pos: 11.5,47.5
-      parent: 2
-  - uid: 13565
+  - uid: 11248
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 9.5,41.5
+      parent: 2
+    - type: DeviceList
+      devices:
+      - 11239
+      - 11240
+  - uid: 13563
+    components:
+    - type: Transform
+      pos: 32.5,5.5
       parent: 2
 - proto: WeaponRifleFoam
   entities:

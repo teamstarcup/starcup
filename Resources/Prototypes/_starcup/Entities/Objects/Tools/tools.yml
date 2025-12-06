@@ -1,0 +1,93 @@
+- type: entity
+  name: wrench
+  parent: Wrench
+  id: HeavyWrench
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/heavy_wrench.rsi
+    state: icon
+  - type: Item
+    sprite: _starcup/Objects/Tools/heavy_wrench.rsi
+    storedSprite:
+      sprite: _starcup/Objects/Tools/heavy_wrench.rsi
+      state: storage
+  - type: MeleeWeapon
+    wideAnimationRotation: 135
+
+- type: entity
+  name: wrench
+  parent: Wrench
+  id: MonkeyWrench
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/monkey_wrench.rsi
+    state: icon
+  - type: Item
+    sprite: _starcup/Objects/Tools/monkey_wrench.rsi
+    storedSprite:
+      sprite: _starcup/Objects/Tools/monkey_wrench.rsi
+      state: storage
+
+- type: entity
+  name: pipe wrench
+  parent: Wrench
+  id: PipeWrench
+  description: 'A heavier type of wrench. Remember: lefty latchy, righty removey.'
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/pipe_wrench.rsi
+    state: icon
+  - type: Item
+    sprite: _starcup/Objects/Tools/pipe_wrench.rsi
+    storedSprite:
+      sprite: _starcup/Objects/Tools/pipe_wrench.rsi
+      state: storage
+  - type: MeleeWeapon
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 8
+
+- type: entity
+  name: free man's crowbar
+  suffix: admeme
+  parent: CrowbarRed
+  id: FreemanCrowbar
+  components:
+  - type: MeleeWeapon
+    attackRate: 4
+
+- type: entity
+  name: hammer
+  parent: BaseItem
+  id: ItemHammer
+  description: Hammer things down, pull them back out.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/hammer.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: 135
+    swingLeft: true
+    damage:
+      types:
+        Blunt: 8
+        Structural: 10
+    soundHit:
+      collection: MetalThud
+  - type: Item
+    sprite: _starcup/Objects/Tools/hammer.rsi
+    storedSprite:
+      sprite: _starcup/Objects/Tools/hammer.rsi
+      state: storage
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+  - type: Tool
+    qualities:
+    - Prying
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: ToolTileCompatible
+    delay: 1.5 # slower than a crowbar
+  - type: Prying

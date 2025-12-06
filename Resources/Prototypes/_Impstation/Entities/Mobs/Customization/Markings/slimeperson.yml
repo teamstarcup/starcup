@@ -48,22 +48,20 @@
   - sprite: _Impstation/Mobs/Customization/SlimePerson/chest.rsi
     state: core
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: SlimeCoreGlowing
-#   bodyPart: Chest
-#   markingCategory: Chest
-#   speciesRestriction: [ SlimePerson ]
-#   followSkinColor: false
-#   coloring:
-#     default:
-#       type:
-#         !type:EyeColoring
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/SlimePerson/chest.rsi
-#     state: core
-#   shader: unshaded
-# end starcup
+- type: marking
+  id: SlimeCoreGlowing
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [ SlimePerson ]
+  followSkinColor: false
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/SlimePerson/chest.rsi
+    state: core
+  shader: unshaded
 
 - type: marking
   id: SlimeLungs
@@ -149,26 +147,24 @@
 
 # Eyes
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: SlimeEyesDefault
-#   bodyPart: Eyes
-#   markingCategory: Eyes
-#   speciesRestriction: [ SlimePerson ]
-#   forcedColoring: true
-#   coloring:
-#     default:
-#       type:
-#         !type:EyeColoring
-#   sprites:
-#   - sprite: _Impstation/Mobs/Species/Slime/parts.rsi
-#     state: eyes
-# end starcup
+- type: marking
+  id: SlimeEyesDefault
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ SlimePerson ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Species/Slime/parts.rsi # starcup
+    state: eyes
 
 - type: marking
   id: SlimeEyeglow
   bodyPart: Eyes
-  markingCategory: Head # Frontier: changed from Eyes
+  markingCategory: Eyes
   speciesRestriction: [ SlimePerson ]
   coloring:
     default:
@@ -180,65 +176,63 @@
     state: glow
   shader: unshaded
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: SlimeEyesDroopy
-#   bodyPart: Eyes
-#   markingCategory: Eyes
-#   speciesRestriction: [ SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:EyeColoring
-#         negative: false
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
-#     state: droopy
+- type: marking
+  id: SlimeEyesDroopy
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ SlimePerson ]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+        negative: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
+    state: droopy
 
-# - type: marking
-#   id: SlimeEyesDroopyGlowing
-#   bodyPart: Eyes
-#   markingCategory: Eyes
-#   speciesRestriction: [ SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:EyeColoring
-#         negative: false
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
-#     state: droopyglow
-#   shader: unshaded
+- type: marking
+  id: SlimeEyesDroopyGlowing
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ SlimePerson ]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+        negative: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
+    state: droopyglow
+  shader: unshaded
 
-# - type: marking
-#   id: SlimeEyesCyclops
-#   bodyPart: Eyes
-#   markingCategory: Eyes
-#   speciesRestriction: [ SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:EyeColoring
-#         negative: false
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
-#     state: cyclops
+- type: marking
+  id: SlimeEyesCyclops
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ SlimePerson ]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+        negative: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
+    state: cyclops
 
-# - type: marking
-#   id: SlimeEyesCyclopsGlowing
-#   bodyPart: Eyes
-#   markingCategory: Eyes
-#   speciesRestriction: [ SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:EyeColoring
-#         negative: false
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
-#     state: cyclopsglow
-#   shader: unshaded
-# end starcup
+- type: marking
+  id: SlimeEyesCyclopsGlowing
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ SlimePerson ]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+        negative: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
+    state: cyclopsglow
+  shader: unshaded
 
 # RArm
 

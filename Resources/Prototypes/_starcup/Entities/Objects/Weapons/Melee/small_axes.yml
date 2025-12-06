@@ -1,0 +1,65 @@
+- type: entity
+  name: crash axe
+  parent: BaseItem
+  id: CrashAxe
+  description: A serviceable blade with a prying tip.
+  components:
+  - type: Sharp
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/crash_axe.rsi
+    state: icon
+  - type: MeleeWeapon
+    attackRate: 1.3
+    wideAnimationRotation: 135
+    swingLeft: true
+    damage:
+      types:
+        Slash: 4
+        Structural: 6
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: Item
+    sprite: _starcup/Objects/Weapons/Melee/crash_axe.rsi
+    storedSprite:
+      sprite: _starcup/Objects/Weapons/Melee/crash_axe.rsi
+      state: storage
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+  - type: Tool
+    qualities:
+    - Prying
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: ToolTileCompatible
+    delay: 1.5 # slower than a crowbar
+  - type: Prying
+
+- type: entity
+  name: climbing axe
+  parent: BaseItem
+  id: ClimbingAxe
+  description: Also called an ice axe. It has a sharp tip to chip and cling to hard surfaces.
+  components:
+  - type: Sharp
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/climbing_axe.rsi
+    state: icon
+  - type: MeleeWeapon
+    attackRate: 1.3
+    wideAnimationRotation: 135
+    swingLeft: true
+    damage:
+      types:
+        Piercing: 4
+        Structural: 6
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: Item
+    sprite: _starcup/Objects/Weapons/Melee/climbing_axe.rsi
+    storedSprite:
+      sprite: _starcup/Objects/Weapons/Melee/climbing_axe.rsi
+      state: storage
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100

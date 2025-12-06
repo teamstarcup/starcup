@@ -3,11 +3,18 @@
   id: DiagnosticHud
   equipment:
     eyes: ClothingEyesHudDiagnostic
+  groupBy: "hud"
 
 - type: loadout
   id: DiagnosticEyePatchHud
   equipment:
     eyes: ClothingEyesEyepatchHudDiag
+  groupBy: "hud"
+
+- type: loadout
+  id: EngineeringGoggles
+  equipment:
+    eyes: ClothingEyesGlassesMeson
 
 # OuterClothing
 - type: loadout
@@ -17,17 +24,20 @@
     proto: SeniorRoboticist
   equipment:
     head: ClothingOuterSuitNeuroroboticist
+  groupBy: "labcoat" # starcup
 
 # Jumpsuits
 - type: loadout
   id: NeuroroboticistJumpsuit
   equipment:
     jumpsuit: ClothingUniformJumpsuitRoboNeuroticist
+  groupBy: "jumpsuit" # starcup
 
 - type: loadout
   id: NeuroroboticistJumpskirt
   equipment:
     jumpsuit: ClothingUniformJumpskirtRoboNeuroticist
+  groupBy: "jumpskirt" # starcup
 
 # Head
 - type: loadout

@@ -1,0 +1,30 @@
+- type: entity
+  parent: Pill
+  id: PillCaramexinin
+  suffix: Caramexinin 10u
+  components:
+  - type: Sprite
+    state: pill9
+  - type: Pill
+    pillType: 7
+  - type: Label
+    currentLabel: caramexinin 10u
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Caramexinin
+          Quantity: 10
+
+- type: entity
+  parent: PillCanister
+  id: PillCanisterCaramexinin
+  suffix: Caramexinin 10u, 5
+  components:
+  - type: Label
+    currentLabel: caramexinin 10u
+  - type: StorageFill
+    contents:
+    - id: PillCaramexinin
+      amount: 5

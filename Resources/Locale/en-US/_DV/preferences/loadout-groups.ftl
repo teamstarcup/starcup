@@ -1,22 +1,10 @@
 # Service
-loadout-group-bartender-neck = Bartender neck
-
-loadout-group-librarian-neck = Librarian neck
-
-loadout-group-janitor-neck = Janitor neck
-
-loadout-group-botanist-neck = Botanist neck
-
-loadout-group-mime-neck = Mime neck
-
-loadout-group-musician-neck = Musician neck
-
-loadout-group-passenger-id-delta = Passenger PDA
-loadout-group-bartender-id-delta = Bartender PDA
-loadout-group-chef-id-delta = Chef PDA
-loadout-group-clown-id-delta = Clown PDA
-
-loadout-group-janitor-id-delta = Janitor PDA
+# starcup: PDA > ID for parity with upstream
+loadout-group-passenger-id-delta = Passenger ID
+loadout-group-bartender-id-delta = Bartender ID
+loadout-group-chef-id-delta = Chef ID
+loadout-group-clown-id-delta = Clown ID
+loadout-group-janitor-id-delta = Janitor ID
 
 # Command
 loadout-group-captain-shoes = Captain shoes
@@ -37,23 +25,17 @@ loadout-group-courier-neck = Courier neck
 loadout-group-courier-jumpsuit = Courier jumpsuit
 loadout-group-courier-shoes = Courier shoes
 loadout-group-courier-outerclothing = Courier outer clothing
-loadout-group-courier-backpack = Courier backpack
-loadout-group-courier-id = Courier PDA
+# starcup: PDA > ID for parity with upstream
+loadout-group-courier-id = Courier ID
 
-loadout-group-salvage-id-delta = Salvage Specialist PDA
+# starcup: PDA > ID for parity with upstream
+loadout-group-salvage-id-delta = Salvage Specialist ID
 
 loadout-group-cargo-assistant-head = Cargo Assistant head
 loadout-group-cargo-assistant-neck = Cargo Assistant neck
 loadout-group-cargo-assistant-jumpsuit = Cargo Assistant jumpsuit
-loadout-group-cargo-assistant-backpack = Cargo Assistant backpack
 loadout-group-cargo-assistant-outerclothing = Cargo Assistant outer clothing
 loadout-group-cargo-assistant-shoes = Cargo Assistant shoes
-
-loadout-group-salvage-specialist-neck = Salvage Specialist neck
-
-loadout-group-cargo-technician-neck = Cargo Technician neck
-
-loadout-group-cargo-id-delta = Cargo Technician PDA
 
 loadout-group-atmospheric-technician-head = Atmospheric Technician Head
 
@@ -71,17 +53,19 @@ loadout-group-revolver-ammo = Ammunition
 loadout-group-all-ammo = Ammunition
 
 # Medical
-loadout-group-medical-doctor-neck = Medical Doctor neck
+# starcup: rename from medical doctor neck to generic medical neck
+loadout-group-medical-doctor-neck = Medical neck
 
-loadout-group-medical-intern-id-delta = Medical Intern PDA
+# starcup: PDA > ID for parity with upstream
+loadout-group-medical-intern-id-delta = Medical Intern ID
 
-loadout-group-chemist-neck = Chemist neck
 loadout-group-chemist-shoes = Chemist shoes
 
 loadout-group-psychologist-outerclothing = Psychologist outer clothing
 loadout-group-psychologist-shoes = Psychologist shoes
 
-loadout-group-psychologist-id-delta = Psychologist PDA
+# starcup: PDA > ID for parity with upstream
+loadout-group-psychologist-id-delta = Psychologist ID
 
 # Epistemics
 loadout-group-roboticist-head = Roboticist head
@@ -89,14 +73,14 @@ loadout-group-roboticist-jumpsuit = Roboticist jumpsuit
 loadout-group-roboticist-gloves = Roboticist gloves
 loadout-group-roboticist-shoes = Roboticist shoes
 loadout-group-roboticist-outerclothing = Roboticist outer clothing
-loadout-group-roboticist-id = Roboticist PDA
 
 # Engineering
 loadout-group-station-engineer-neck = Station Engineer neck
 
 loadout-group-atmospheric-technician-neck = Atmospheric Technician neck
 
-loadout-group-atmos-id-delta = Atmospheric Technician PDA
+# starcup: PDA > ID for parity with upstream
+loadout-group-atmos-id-delta = Atmospheric Technician ID
 
 # Species
 loadout-group-humanoid-silicon = Silicon-friendly survival box

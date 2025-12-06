@@ -10,16 +10,22 @@
 
 - type: loadout
   id: BlackCommandHeels
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: Command10Hr
+  # begin starcup: remove playtime restriction
+  # effects:
+  # - !type:GroupLoadoutEffect
+  #   proto: Command10Hr
+  # end starcup
   equipment:
     shoes: ClothingShoesHeelsCommandBlack
+  groupBy: "heelsgilded" # starcup
 
 - type: loadout
   id: BlueCommandHeels
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: Command10Hr
+  # begin starcup: remove playtime restriction
+  # effects:
+  # - !type:GroupLoadoutEffect
+  #   proto: Command10Hr
+  # end starcup
   equipment:
-    shoes: ClothingShoesHeelsCommandPurple # starcup: command recolors
+    shoes: ClothingShoesHeelsCommandBlue
+  groupBy: "heelsgilded" # starcup
