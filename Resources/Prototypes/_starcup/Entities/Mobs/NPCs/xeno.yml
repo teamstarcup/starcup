@@ -125,6 +125,36 @@
 # Tier 0
 
 - type: entity
+  name: larva
+  parent: MobXenoNoCombat
+  id: MobXenoLarva
+  description: Third stage of the exomorph life cycle. Eats its way out of a host.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _RMC14/Mobs/OldXenonids/Larva/larva.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: alive
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 1
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Dead
+  - type: Puller
+    needsHands: false
+  - type: Speech
+    speechVerb: Xeno
+    speechSounds: XenoLarva
+    allowedEmotes: [ "Tailwhip", "Drool", "CreatureScream" ]
+  - type: Vocal
+    sounds:
+      Male: XenoLarva
+      Female: XenoLarva
+      Unsexed: XenoLarva
+
+- type: entity
   name: parasite
   parent: MobXeno
   id: MobXenoParasite
@@ -181,6 +211,15 @@
     jumpDistance: 3
     jumpSound:
       path: /Audio/_starcup/Weapons/Xeno/parasitepounce.ogg
+  - type: Speech
+    speechVerb: Xeno
+    speechSounds: XenoParasite
+    allowedEmotes: [ "Drool" ]
+  - type: Vocal
+    sounds:
+      Male: XenoParasite
+      Female: XenoParasite
+      Unsexed: XenoParasite
 
 - type: entity
   name: lesser parasite
@@ -230,7 +269,7 @@
 
 - type: entity
   name: lesser drone
-  parent: MobXeno
+  parent: MobXenoDrone
   id: MobXenoDroneLesser
   description: Exomorph labor fodder. Weak, rapidly hatched and expendable.
   components:
@@ -244,23 +283,10 @@
     thresholds:
       0: Alive
       70: Dead
-  - type: SlowOnDamage
-    speedModifierThresholds:
-      40: 0.7
   - type: MeleeWeapon
     damage:
       groups:
         Brute: 4
-  - type: DamageStateVisuals
-    states:
-      Alive:
-        Base: alive
-      Critical:
-        Base: crit
-      Dead:
-        Base: dead
-  - type: MovementSpeedModifier
-    baseSprintSpeed: 4
   - type: Fixtures
     fixtures:
       fix1:
