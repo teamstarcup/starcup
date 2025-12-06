@@ -117,7 +117,7 @@
       - CannotSuicide
       - DoorBumpOpener
       - FootstepSound
-      - XenoEmotes # starcup: exomorph reworks
+      - CreatureEmotes # starcup: exomorph reworks
   - type: NoSlip
   - type: Perishable #Ummmm the acid kills a lot of the bacteria or something
     molsPerSecondPerUnitMass: 0.0005
@@ -125,12 +125,13 @@
   - type: Speech
     speechVerb: Xeno
     speechSounds: Xeno
-    allowedEmotes: ['Scream', 'XenoHiss', 'XenoGrowl', 'XenoRoar']
+    allowedEmotes: [ "Tailwhip", "Drool", "CreatureHiss", "CreatureGrowl", "CreatureRoar", "CreatureScream" ]
   - type: Vocal
     sounds:
       Male: Xeno
       Female: Xeno
       Unsexed: Xeno
+  - type: Deathgasp
   # end starcup
 
 - type: entity
@@ -168,16 +169,14 @@
         - MobMask
         layer:
         - MobLayer
-  # begin starcup: give exomorphs a voice
+  # begin starcup: exomorph reworks
   - type: Speech
     speechVerb: Xeno
     speechSounds: XenoLarge
-    allowedEmotes: ['Scream', 'XenoHiss', 'XenoGrowl', 'XenoRoar']
-  - type: Vocal
-    sounds:
-      Male: Xeno
-      Female: Xeno
-      Unsexed: Xeno
+    allowedEmotes: [ "Tailwhip", "Drool", "CreatureHiss", "CreatureGrowl", "CreatureRoar", "CreatureScream" ]
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: AlienFootstepLarge
   # end starcup
 
 - type: entity
@@ -271,16 +270,14 @@
   - type: Tag
     tags:
     - CannotSuicide
-  # begin starcup: give exomorphs a voice
+  # begin starcup: exomorph reworks
   - type: Speech
     speechVerb: Xeno
     speechSounds: XenoLarge
-    allowedEmotes: ['Scream', 'XenoHiss', 'XenoGrowl', 'XenoRoar']
-  - type: Vocal
-    sounds:
-      Male: Xeno
-      Female: Xeno
-      Unsexed: Xeno
+    allowedEmotes: [ "Tailwhip", "Drool", "CreatureHiss", "CreatureGrowl", "CreatureRoar", "CreatureScream" ]
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: AlienFootstepLarge
   # end starcup
 
 - type: entity
@@ -326,12 +323,7 @@
   - type: Speech
     speechVerb: Xeno
     speechSounds: XenoLarge
-    allowedEmotes: ['Scream', 'XenoHiss', 'XenoGrowl', 'XenoRoar']
-  - type: Vocal
-    sounds:
-      Male: Xeno
-      Female: Xeno
-      Unsexed: Xeno
+    allowedEmotes: [ "Tailwhip", "Drool", "CreatureHiss", "CreatureGrowl", "CreatureRoar", "CreatureScream" ]
   # end starcup
 
 - type: entity
@@ -380,6 +372,15 @@
     spawned:
     - id: FoodMeatRouny
       amount: 3
+  - type: Speech
+    speechVerb: Xeno
+    speechSounds: XenoRouny
+    allowedEmotes: [ "Tailwhip", "Drool", "CreatureHiss", "CreatureGrowl", "CreatureRoar", "CreatureScream" ]
+  - type: Vocal
+    sounds:
+      Male: XenoRouny
+      Female: XenoRouny
+      Unsexed: XenoRouny
 
 - type: entity
   name: spitter

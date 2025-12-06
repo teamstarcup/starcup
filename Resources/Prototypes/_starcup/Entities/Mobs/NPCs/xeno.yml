@@ -107,19 +107,22 @@
     - CannotSuicide
     - DoorBumpOpener
     - FootstepSound
-    - XenoEmotes
+    - CreatureEmotes
   - type: NoSlip
   - type: Perishable
     molsPerSecondPerUnitMass: 0.0005
   - type: Speech
     speechVerb: Xeno
     speechSounds: Xeno
-    allowedEmotes: [ "AlienHiss", "AlienGrowl", "AlienRoar", "AlienScream" ]
+    allowedEmotes: [ "Tailwhip", "Drool", "CreatureHiss", "CreatureGrowl", "CreatureRoar", "CreatureScream" ]
   - type: Vocal
     sounds:
       Male: Xeno
       Female: Xeno
       Unsexed: Xeno
+  - type: Deathgasp
+
+# Tier 0
 
 - type: entity
   name: parasite
@@ -142,7 +145,8 @@
       40: 0.7
   - type: MeleeWeapon
     soundHit:
-      collection: AlienParasite
+      collection: AlienClaw
+    animation: WeaponArcPunch
     attackRate: 0.5
     damage:
       groups:
@@ -461,6 +465,9 @@
   - type: MovementSpeedModifier
     baseSprintSpeed: 3
   - type: MeleeWeapon
+    soundHit:
+      collection: MetalThud
+    animation: WeaponArcPunch
     attackRate: 0.5
     damage:
       types:
@@ -490,6 +497,9 @@
         - MobMask
         layer:
         - MobLayer
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: AlienFootstepLarge
 
 - type: entity
   name: warrior
@@ -557,6 +567,7 @@
   - type: MovementSpeedModifier
     baseSprintSpeed: 4.5
   - type: MeleeWeapon
+    animation: WeaponArcPunch
     soundHit:
       collection: MetalThud
     attackRate: 0.7

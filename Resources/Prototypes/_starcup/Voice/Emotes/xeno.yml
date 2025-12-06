@@ -12,14 +12,17 @@
   params:
     variation: 0.125
   sounds:
-    XenoScreech:
-      icon: _RMC14/Actions/xeno_emotes.rsi/hiss.png
+    Drool:
+      collection: AlienDrool
+    Tailwhip:
+      collection: AlienTail
+    CreatureScream:
       collection: AlienScream
-    XenoHiss:
+    CreatureHiss:
       collection: AlienHiss
-    XenoGrowl:
+    CreatureGrowl:
       collection: AlienGrowl
-    XenoRoar:
+    CreatureRoar:
       collection: AlienRoar
     DefaultDeathgasp:
       path: /Audio/_RMC14/Xeno/alien_death2.ogg
@@ -38,84 +41,72 @@
   params:
     variation: 0.125
   sounds:
-    Scream:
+    Drool:
+      collection: AlienDrool
+    Tailwhip:
+      collection: AlienTailLarge
+    CreatureScream:
       collection: AlienScream
-    XenoHiss:
+    CreatureHiss:
       collection: AlienHissLarge
-    XenoGrowl:
+    CreatureGrowl:
       collection: AlienGrowlLarge
-    XenoRoar:
+    CreatureRoar:
       collection: AlienRoar
     DefaultDeathgasp:
       path: /Audio/_RMC14/Xeno/alien_death.ogg
 
-- type: emote
-  id: XenoHiss
-  name: chat-emote-name-xeno-hiss
-  category: Vocal
-  icon: _RMC14/Actions/xeno_emotes.rsi/hiss.png
-  chatMessages: ["chat-emote-msg-hiss"]
-  chatTriggers:
-  - hiss
-  - hisses
-  - hissing
-  - hissed
-  - hss
-  - hsss
+- type: speechSounds
+  id: XenoParasite
+  saySound:
+    collection: AlienParasite
+  askSound:
+    collection: AlienParasite
+  exclaimSound:
+    collection: AlienParasite
 
-- type: emote
-  id: XenoGrowl
-  name: chat-emote-name-xeno-growl
-  category: Vocal
-  icon: _RMC14/Actions/xeno_emotes.rsi/growl.png
-  chatMessages: ["chat-emote-msg-growl"]
-  chatTriggers:
-  - growl
-  - growls
-  - growling
-  - growled
-  - grr
-  - grrr
+- type: speechSounds
+  id: XenoLarva
+  saySound:
+    collection: AlienLarvaTalk
+  askSound:
+    collection: AlienLarvaTalk
+  exclaimSound:
+    collection: AlienLarvaTalk
 
-- type: emote
-  id: XenoRoar
-  name: chat-emote-name-xeno-roar
-  category: Vocal
-  icon: _RMC14/Actions/xeno_emotes.rsi/roar.png
-  chatMessages: ["chat-emote-msg-roar"]
-  chatTriggers:
-  - roar
-  - roars
-  - roaring
-  - roared
-  - rargh
-  - raah
-  - raahh
-  - raaahhh
+- type: emoteSounds
+  id: XenoLarva
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      collection: AlienLarvaScream
 
-- type: emote
-  id: XenoScreech
-  name: chat-emote-name-screech
-  category: Vocal
-  icon: _RMC14/Actions/xeno_emotes.rsi/help.png
-  whitelist:
-    components:
-    - Vocal
-  chatMessages: ["chat-emote-msg-screech"]
-  chatTriggers:
-  - scream
-  - screams
-  - screaming
-  - screamed
-  - shriek
-  - shrieks
-  - shrieking
-  - shrieked
-  - screech
-  - screeches
-  - screeching
-  - screeched
-  - yell
-  - yells
-  - yelled
-  - yelling
+- type: speechSounds
+  id: XenoRouny
+  saySound:
+    collection: RounyTalk
+  askSound:
+    collection: RounyTalk
+  exclaimSound:
+    collection: RounyTalk
+
+- type: emoteSounds
+  id: XenoRouny
+  params:
+    variation: 0.125
+  sounds:
+    Drool:
+      collection: AlienDrool
+    Tailwhip:
+      collection: AlienTail
+    CreatureScream:
+      collection: RounyScream
+    CreatureHiss:
+      collection: AlienHiss
+    CreatureGrowl:
+      collection: RounyGrowl
+    CreatureRoar:
+      collection: RounyRoar
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Xeno/rouny_death.ogg
