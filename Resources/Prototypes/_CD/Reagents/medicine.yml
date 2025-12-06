@@ -429,8 +429,68 @@
         walkSpeedModifier: 0.55
         sprintSpeedModifier: 0.55
         conditions:
+      - !type:Drunk # starcup - mixing with antidepressants makes you drunk, slowed, and poisoned
+        conditions:
+        - !type:ReagentCondition
+          reagent: Serenitol
+          min: 5
+      - !type:Drunk # starcup - mixing with antidepressants makes you drunk, slowed, and poisoned
+        conditions:
+        - !type:ReagentCondition
+          reagent: Neurozenium
+          min: 5
+      - !type:Drunk # starcup - mixing with antidepressants makes you drunk, slowed, and poisoned
+        conditions:
+        - !type:ReagentCondition
+          reagent: Blissifylovene
+          min: 5
+      - !type:MovementSpeedModifier # starcup - mixing with antidepressants makes you drunk, slowed, and poisoned
+        walkSpeedModifier: 0.65
+        sprintSpeedModifier: 0.65
+        conditions:
+        - !type:ReagentCondition
+          reagent: Serenitol
+          min: 5
+      - !type:MovementSpeedModifier # starcup - mixing with antidepressants makes you drunk, slowed, and poisoned
+        walkSpeedModifier: 0.65
+        sprintSpeedModifier: 0.65
+        conditions:
+        - !type:ReagentCondition # starcup - mixing with antidepressants makes you drunk, slowed, and poisoned
+          reagent: Neurozenium
+          min: 5
+      - !type:MovementSpeedModifier # starcup - mixing with antidepressants makes you drunk, slowed, and poisoned
+        walkSpeedModifier: 0.65
+        sprintSpeedModifier: 0.65
+        conditions:
+        - !type:ReagentCondition
+          reagent: Blissifylovene
+          min: 5
+      - !type:HealthChange # starcup - mixing with antidepressants makes you drunk+slowed and causes lungs to seize up
+        conditions:
+        - !type:ReagentCondition
+          reagent: Serenitol
+          min: 5
+        damage:
+          types:
+            Asphyxiation: 0.75
+      - !type:HealthChange # starcup - mixing with antidepressants makes you drunk+slowed and causes lungs to seize up
+        conditions:
+        - !type:ReagentCondition
+          reagent: Neurozenium
+          min: 5
+        damage:
+          types:
+            Asphyxiation: 0.75
+      - !type:HealthChange # starcup - mixing with antidepressants makes you drunk+slowed and causes lungs to seize up
+        conditions:
+        - !type:ReagentCondition
+          reagent: Blissifylovene
+          min: 5
+        damage:
+          types:
+            Asphyxiation: 0.75
 #      - !type:ReagentCondition
-#          reagent: Serenitol # wildly incompatable with antidepressants
+#          reagent:
 #          min: 5
 #      - !type:Paralyze
 #        conditions:

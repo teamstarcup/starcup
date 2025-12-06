@@ -14,7 +14,7 @@ reagent-name-tranquinase = Tranquinase
 reagent-desc-tranquinase = Run-of-the-mill anxiety medication. Derived from an old recipe for space bear tranquilizer, it causes tranquility and motivation. Causes intense grogginess during overdose. Do not take with alcohol.
 
 reagent-name-equilibrazine = Equilibrazine
-reagent-desc-equilibrazine = A chemical derived by Interdyne using compounds extracted from Charon-Epsilon ruins. Makes a potent treatment for anxiety and panic attacks. Can be taken fine with alcohol, but is wildly incompatible with most antidepressants.
+reagent-desc-equilibrazine = A chemical derived by Interdyne using compounds extracted from Charon-Epsilon ruins. Makes a potent treatment for anxiety and panic attacks. Can be taken fine with alcohol, but causes partial neural paralysis when mixed with most antidepressants.
 
 reagent-name-addictine = addictine
 reagent-desc-addictine = A chemical produced by the body when metabolizing certain medications. Causes symptoms of withdrawl. Neutralizes bloodstream cleansers like charcoal and ipecac.
