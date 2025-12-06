@@ -26,10 +26,12 @@
   - MailBag
 
 - type: loadoutGroup
-  parent: [ CargoTechnicianBackpack ]
   id: CourierBackpack
   name: loadout-group-courier-backpack
   loadouts:
+  - CargoTechnicianBackpack
+  - CargoTechnicianSatchel
+  - CargoTechnicianDuffel
   - LeatherSatchel
 
 ## Salvage Specialist
@@ -145,10 +147,12 @@
 
 ## Detective
 - type: loadoutGroup
-  parent: [ SecurityBackpack ]
   id: DetectiveBackpack
   name: loadout-group-detective-backpack
   loadouts:
+  - SecurityBackpack
+  - SecuritySatchel
+  - SecurityDuffel
   - LeatherSatchel
 
 - type: loadoutGroup
