@@ -6,8 +6,9 @@ job-description-borg = Half-human, Half-machine. Follow your laws, serve the cre
 # begin starcup
 # job-description-boxer = Fight your way to the top! Challenge the head of personnel and get brigged when you win. Currently available on Core and Convex.
 # job-description-brigmedic = Fight in the rear of the security service, for the lives of your comrades! You are the first and last hope of your squad. Hippocrates bless you.
-job-description-boxer = Put on exciting performances and spar with the crew. Currently available on Byoin, Glacier, and Loop.
+job-description-boxer = Put on exciting performances and spar with the crew. Currently available on Byoin, Crux, Glacier, Loop, and Saltern.
 job-description-brigmedic = Provide medical support during hostile encounters, and make sure that the prisoners are kept healthy.
+# end starcup
 job-description-cadet = Learn the basics of arresting criminals and managing the brig. Listen to your supervisors and feel free to ask them for any help.
 job-description-captain = Keep the station running, delegate work to the other heads of staff, and exert your will.
 # begin starcup
@@ -52,7 +53,7 @@ job-description-rd = Manage the Science department, unlocking technologies, acqu
 job-description-research-assistant = Learn the basics of robotics and how to research various artifacts & anomalies.
 # begin starcup
 # job-description-reporter = Entertain & inform the crew with your vibrant journalism through wireless cameras, the radio and the news. Currently available on Bagel Station, Convex, Core, Train and Oasis.
-job-description-reporter = Entertain & inform the crew with your vibrant journalism through wireless cameras, the radio and the news. Currently available on Byoin, Glacier, Loop, and Train.
+job-description-reporter = Entertain & inform the crew with your vibrant journalism through wireless cameras, the radio and the news. Currently available on Byoin, Crux, Glacier, Loop, Saltern, and Train.
 # end starcup
 job-description-salvagespec = Use the salvage magnet to draw in detached scraps & asteroids to loot and enrich the station, build a salvage ship and then travel to new planets, while fighting off any space fauna along the way.
 job-description-scientist = Research alien artifacts, unlock new technologies, build newer and better machines around the station, and make everything run more efficiently.
