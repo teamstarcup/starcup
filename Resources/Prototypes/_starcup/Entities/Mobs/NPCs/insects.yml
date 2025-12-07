@@ -116,15 +116,6 @@
     rootTask:
       task: SimpleHostileCompound
   - type: ZombieImmune
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTypeTrigger
-        damageType: Blunt
-        damage: 20
-      behaviors:
-      - !type:GibBehavior
-        recursive: false
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-generic
