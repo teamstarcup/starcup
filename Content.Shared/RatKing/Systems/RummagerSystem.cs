@@ -5,6 +5,7 @@ using Content.Shared.Verbs;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Serialization;
+using Robust.Shared.Timing;  // DeltaV
 
 namespace Content.Shared.RatKing.Systems;
 
@@ -14,6 +15,7 @@ public sealed class RummagerSystem : EntitySystem
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
+    [Dependency] private readonly IGameTiming _gameTiming = default!; // DeltaV: Used for rummage cooldown
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -26,7 +28,9 @@ public sealed class RummagerSystem : EntitySystem
 
     private void OnGetVerb(Entity<RummageableComponent> ent, ref GetVerbsEvent<AlternativeVerb> args)
     {
-        if (!HasComp<RummagerComponent>(args.User) || ent.Comp.Looted)
+        if (!HasComp<RummagerComponent>(args.User)
+            || ent.Comp.Looted
+            || _gameTiming.CurTime < ent.Comp.LastLooted + ent.Comp.RummageCooldown)  // DeltaV
             return;
 
         var user = args.User;
@@ -55,8 +59,19 @@ public sealed class RummagerSystem : EntitySystem
 
     private void OnDoAfterComplete(Entity<RummageableComponent> ent, ref RummageDoAfterEvent args)
     {
-        if (args.Cancelled || ent.Comp.Looted)
+        // DeltaV - Rummaging an object updates the looting cooldown rather than a "previously looted" check.
+        // Note that the "Looted" boolean can still be checked (by mappers/admins)
+        // to disable rummaging on the object indefinitely, but rummaging will no
+        // longer permanently prevent future rummaging.
+        var time = _gameTiming.CurTime;
+        if (args.Cancelled
+            || ent.Comp.Looted
+            || time < ent.Comp.LastLooted + ent.Comp.RummageCooldown)
             return;
+
+        ent.Comp.Looted = true;
+        ent.Comp.LastLooted = time;
+        // End DeltaV change
 
         ent.Comp.Looted = true;
         Dirty(ent, ent.Comp);
