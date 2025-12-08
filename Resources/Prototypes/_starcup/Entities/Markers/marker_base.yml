@@ -16,6 +16,7 @@
     drawdepth: Overdoors
     sprite: _starcup/Markers/arrow_cross.rsi
     layers:
+    - state: shadow
     - state: green
     - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi # replace as needed
       state: crawling_insects # replace as needed
@@ -29,6 +30,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadow
     - state: blue
     - sprite: Mobs/Animals/mouse.rsi # replace as needed
       state: icon-2 # replace as needed

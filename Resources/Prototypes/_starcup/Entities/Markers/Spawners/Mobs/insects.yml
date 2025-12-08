@@ -5,6 +5,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: base
       sprite: _starcup/Mobs/Animals/Insects/bees.rsi
@@ -19,6 +20,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: base
       sprite: _starcup/Mobs/Animals/Insects/wasps.rsi
@@ -33,6 +35,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: base
       sprite: _starcup/Mobs/Animals/Insects/flies.rsi
@@ -47,6 +50,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: base
       sprite: _starcup/Mobs/Animals/Insects/mosquitoes.rsi
@@ -61,6 +65,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: base
       sprite: _starcup/Mobs/Animals/Insects/fireflies.rsi
@@ -75,6 +80,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: dragonfly
       sprite: _starcup/Mobs/Animals/Insects/dragonfly.rsi
@@ -89,6 +95,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: base
       sprite: _starcup/Mobs/Animals/Insects/giant_bee.rsi
@@ -103,6 +110,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: base
       sprite: _starcup/Mobs/Animals/Insects/giant_sandwasp.rsi
@@ -117,6 +125,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: base
       sprite: _starcup/Mobs/Animals/Insects/giant_wasp.rsi
@@ -131,6 +140,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: base
       sprite: _starcup/Mobs/Animals/Insects/giant_mosquito.rsi
@@ -146,6 +156,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: cockroach
       sprite: _starcup/Mobs/Animals/Insects/cockroach_dorito.rsi
@@ -160,6 +171,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: beetle
       sprite: _starcup/Mobs/Animals/Insects/beetle.rsi
@@ -174,6 +186,8 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
+    - state: shadow
     - state: green
     - state: beetle
       sprite: _starcup/Mobs/Animals/Insects/beetle_rhino.rsi
@@ -188,6 +202,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: beetle
       sprite: _starcup/Mobs/Animals/Insects/beetle_june.rsi
@@ -202,6 +217,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: beetle
       sprite: _starcup/Mobs/Animals/Insects/ladybug.rsi
@@ -218,6 +234,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi
       state: flying_insects
@@ -238,6 +255,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi
       state: giant_flying_insects
@@ -256,6 +274,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi
       state: crawling_insects
@@ -274,6 +293,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi
       state: trash_vermin
@@ -281,7 +301,7 @@
   - type: RandomSpawner
     prototypes:
     - MobCockroach
-    - MobCockroachHL1
+    - MobCockroachHL
     - MobFlySwarm
 
 # timed spawners
@@ -293,6 +313,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowblue
     - state: blue
     - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi
       state: flying_insects
@@ -314,6 +335,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowblue
     - state: blue
     - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi
       state: giant_flying_insects
@@ -333,6 +355,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowblue
     - state: blue
     - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi
       state: crawling_insects
@@ -352,6 +375,7 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowblue
     - state: blue
     - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi
       state: trash_vermin
@@ -360,5 +384,5 @@
   - type: TimedSpawner
     prototypes:
     - MobCockroach
-    - MobCockroachHL1
+    - MobCockroachHL
     - MobFlySwarm
