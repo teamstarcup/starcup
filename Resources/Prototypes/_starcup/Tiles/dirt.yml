@@ -1,0 +1,167 @@
+- type: tile
+  id: FloorPlanetDirtPale
+  name: pale dirt
+  sprite: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/dirt.png
+  variants: 5
+  placementVariants:
+  - 0.8
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge.png
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepAsteroid
+  heatCapacity: 10000
+  indestructible: true
+
+- type: tile
+  id: FloorPlanetDirtPaleGrassy
+  name: grassy pale dirt
+  parent: FloorPlanetDirtPale
+  sprite: /Textures/_starcup/Tiles/Planet/dirt_pale_grassy.rsi/dirt.png
+  variants: 8
+  placementVariants:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  footstepSounds:
+    collection: FootstepGrass
+
+- type: tile
+  id: FloorPlanetDirtPaleGrassyCold
+  name: cold grassy pale dirt
+  parent: FloorPlanetDirtPaleGrassy
+  sprite: /Textures/_starcup/Tiles/Planet/dirt_pale_grassy_cold.rsi/dirt.png
+
+- type: tile
+  id: FloorPlanetDirtPaleeGrassyGolden
+  name: golden grassy pale dirt
+  parent: FloorPlanetDirtPaleGrassy
+  sprite: /Textures/_starcup/Tiles/Planet/dirt_pale_grassy_golden.rsi/dirt.png
+
+- type: tile
+  id: FloorPlanetDirtPaleSnowy
+  name: snowy pale dirt
+  parent: FloorPlanetDirtPale
+  sprite: /Textures/_starcup/Tiles/Planet/dirt_pale_snow.rsi/dirt.png
+  variants: 8
+  placementVariants:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  footstepSounds:
+    collection: FootstepSnow
+
+- type: tile
+  id: FloorPlanetDirtGrassy
+  name: grassy dirt
+  parent: FloorPlanetDirtPaleGrassy
+  sprite: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/dirt.png
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
+
+- type: tile
+  id: FloorPlanetDirtGrassyCold
+  name: cold grassy dirt
+  parent: FloorPlanetDirtGrassy
+  sprite: /Textures/_starcup/Tiles/Planet/dirt_grassy_cold.rsi/dirt.png
+
+- type: tile
+  id: FloorPlanetDirtGrassyGolden
+  name: cold grassy dirt
+  parent: FloorPlanetDirtGrassy
+  sprite: /Textures/_starcup/Tiles/Planet/dirt_grassy_golden.rsi/dirt.png
+
+- type: tile
+  id: FloorPlanetDirtTwilight
+  name: twilight dirt
+  sprite: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/dirt.png
+  variants: 8
+  placementVariants:
+  - 0.8
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge.png
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepAsteroid
+  heatCapacity: 10000
+  indestructible: true
+
+- type: tile
+  id: FloorPlanetGrassyDirtTwilight
+  parent: FloorPlanetDirtTwilight
+  name: grassy twilight dirt
+  sprite: /Textures/_starcup/Tiles/Planet/dirt_twilight_grassy.rsi/dirt.png
+  variants: 8
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  footstepSounds:
+    collection: FootstepGrass
+
+- type: tile
+  id: FloorPlanetDirtSnowy
+  name: snowy dirt
+  sprite: /Textures/_starcup/Tiles/Planet/dirt_snowy.rsi/dirt.png
+  variants: 8
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  isSubfloor: true
+  heatCapacity: 10000
+  indestructible: true
+  footstepSounds:
+    collection: FootstepSnow

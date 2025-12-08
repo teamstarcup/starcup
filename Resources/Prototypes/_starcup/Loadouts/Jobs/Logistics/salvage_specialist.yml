@@ -1,0 +1,16 @@
+- type: loadoutEffectGroup
+  id: SalvageVeteran
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSalvageSpecialist
+      time: 10h
+
+- type: loadout
+  id: GoliathCloak
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SalvageVeteran
+  equipment:
+    neck: ClothingNeckCloakGoliathCloak

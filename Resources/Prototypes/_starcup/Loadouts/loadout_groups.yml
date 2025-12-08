@@ -7,6 +7,42 @@
   loadouts:
   - WinterCoatYellow
 
+# Logistics
+## Cargo Technician
+- type: loadoutGroup
+  parent: [ Scarfs ]
+  id: CargoTechnicianNeck
+  name: loadout-group-cargo-technician-neck
+  minLimit: 0
+  loadouts:
+  - GoliathCloak
+
+## Courier
+- type: loadoutGroup
+  id: CourierBelt
+  name: loadout-group-courier-belt
+  loadouts:
+  - CourierBag
+  - MailBag
+
+- type: loadoutGroup
+  id: CourierBackpack
+  name: loadout-group-courier-backpack
+  loadouts:
+  - CargoTechnicianBackpack
+  - CargoTechnicianSatchel
+  - CargoTechnicianDuffel
+  - LeatherSatchel
+
+## Salvage Specialist
+- type: loadoutGroup
+  parent: [ Scarfs ]
+  id: SalvageSpecialistNeck
+  name: loadout-group-salvage-specialist-neck
+  minLimit: 0
+  loadouts:
+  - GoliathCloak
+
 # Medical
 ## Medical Intern
 - type: loadoutGroup
@@ -18,11 +54,17 @@
 
 ## Chemist
 - type: loadoutGroup
-  id: ChemistPDAstarcup
-  name: loadout-group-chemist-id-starcup
+  id: ChemistPDA
+  name: loadout-group-chemist-id
   loadouts:
   - ChemistPDA
   - PharmacistPDA
+
+## Psychologist
+- type: loadoutGroup
+  parent: [ CommonBackpack, MedicalBackpack ]
+  id: PsychologistBackpack
+  name: loadout-group-psychologist-backpack
 
 # Science
 ## Research Assistant
@@ -33,10 +75,20 @@
   loadouts:
   - WinterCoatPurple
 
+## Research Director
+- type: loadoutGroup
+  id: ResearchDirectorBackpack
+  name: loadout-group-research-director-backpack
+  loadouts:
+  - ScientistBackpack
+  - ScientistSatchel
+  - ScientistDuffel
+  - LeatherSatchel
+
 ## Roboticist
 - type: loadoutGroup
-  id: RoboticistPDAstarcup
-  name: loadout-group-roboticist-id-starcup
+  id: RoboticistPDA
+  name: loadout-group-roboticist-id
   loadouts:
   - RoboticistPDA
   - ToymakerPDA
@@ -95,6 +147,27 @@
   - LoadoutSpeciesVoxNitrogen
   - EmergencyIPCBox # DeltaV
 
+## Detective
+- type: loadoutGroup
+  id: DetectiveBackpack
+  name: loadout-group-detective-backpack
+  loadouts:
+  - SecurityBackpack
+  - SecuritySatchel
+  - SecurityDuffel
+  - LeatherSatchel
+
+- type: loadoutGroup
+  id: DetectiveShoes
+  name: loadout-group-detective-shoes
+  loadouts:
+  - JackBoots
+  - BrownLeatherShoes
+  - LaceupShoes
+  - RedHeels
+  - BlackHeels
+  - SecurityWinterBoots
+
 ## Security Cadet
 - type: loadoutGroup
   id: SecurityCadetOuterClothing
@@ -121,6 +194,14 @@
   name: loadout-group-bartender-shoes
   loadouts:
   - BlackShoes
+  - CombatBoots
+  - BrownLeatherShoes
+  - LaceupShoes
+  - RedHeels
+  - BlackHeels
+  - BlueHeels
+  - GreenHeels
+  - HighHeels
   - WinterBoots
 
 ## Botanist
@@ -128,8 +209,23 @@
   id: BotanistShoes
   name: loadout-group-botanist-shoes
   loadouts:
+  - BlueShoes
   - BrownShoes
+  - GreenShoes
+  - CombatBoots
   - BotanistWinterBoots
+
+## Boxer
+- type: loadoutGroup
+  id: BoxerShoes
+  name: loadout-group-boxer-shoes
+  loadouts:
+  - BlackShoes
+  - BlueShoes
+  - GreenShoes
+  - RedShoes
+  - YellowShoes
+  - CombatBoots
 
 ## Chaplain
 - type: loadoutGroup
@@ -137,6 +233,12 @@
   name: loadout-group-chaplain-shoes
   loadouts:
   - BlackShoes
+  - WhiteShoes
+  - CombatBoots
+  - LaceupShoes
+  - RedHeels
+  - BlackHeels
+  - HighHeels
   - WinterBoots
 
 - type: loadoutGroup
@@ -158,6 +260,13 @@
   name: loadout-group-chef-shoes
   loadouts:
   - BlackShoes
+  - BrownShoes
+  - RedShoes
+  - WhiteShoes
+  - BrownLeatherShoes
+  - LaceupShoes
+  - RedHeels
+  - BlackHeels
   - ChefWinterBoots
 
 ## Clown
@@ -190,8 +299,11 @@
   name: loadout-group-janitor-shoes
   loadouts:
   - JanitorGaloshes
+  - WhiteShoes
+  - BlackShoes
+  - LaceupShoes
+  - BlackHeels
   - JanitorWinterBoots
-  - JanitorWhiteShoes
 
 - type: loadoutGroup
   id: JanitorLight
@@ -214,7 +326,11 @@
   id: LawyerShoes
   name: loadout-group-lawyer-shoes
   loadouts:
+  - BrownLeatherShoes
   - LaceupShoes
+  - RedHeels
+  - BlackHeels
+  - BlueHeels
   - WinterBoots
 
 ## Librarian
@@ -230,7 +346,12 @@
   id: LibrarianShoes
   name: loadout-group-librarian-shoes
   loadouts:
+  - BlackShoes
+  - BrownLeatherShoes
   - LaceupShoes
+  - RedHeels
+  - BlackHeels
+  - GreenHeels
   - WinterBoots
 
 ## Mime
@@ -238,7 +359,12 @@
   id: MimeShoes
   name: loadout-group-mime-shoes
   loadouts:
+  - BlackShoes
+  - RedShoes
   - WhiteShoes
+  - CombatBoots
+  - BrownLeatherShoes
+  - LaceupShoes
   - MimeWinterBoots
 
 ## Musician
@@ -246,7 +372,33 @@
   id: MusicianShoes
   name: loadout-group-musician-shoes
   loadouts:
+  - BlackShoes
+  - WhiteShoes
+  - BrownLeatherShoes
   - LaceupShoes
+  - BlackHeels
+  - HighHeels
+  - WinterBoots
+
+## Reporter
+- type: loadoutGroup
+  id: ReporterOuterClothing
+  name: loadout-group-reporter-outer-clothing
+  minLimit: 0
+  loadouts:
+  - TrenchCoat
+
+- type: loadoutGroup
+  id: ReporterShoes
+  name: loadout-group-reporter-shoes
+  loadouts:
+  - BlackShoes
+  - BrownShoes
+  - WhiteShoes
+  - BrownLeatherShoes
+  - LaceupShoes
+  - RedHeels
+  - BlackHeels
   - WinterBoots
 
 ## Service Worker
@@ -256,9 +408,9 @@
   loadouts:
   - BartenderJumpsuit
   - BartenderJumpskirt
-  - ElegantDressBlack
-  - ElegantDressGreen
-  - ElegantDressPurple
+  - BlackElegantDress
+  - GreenElegantDress
+  - PurpleElegantDress
 
 - type: loadoutGroup
   id: ServiceWorkerOuterClothing
@@ -273,25 +425,138 @@
   name: loadout-group-service-worker-shoes
   loadouts:
   - BlackShoes
+  - CombatBoots
+  - BrownLeatherShoes
+  - LaceupShoes
+  - BlackHeels
+  - GreenHeels
+  - HighHeels
   - WinterBoots
 
 ## Passenger
 - type: loadoutGroup
-  id: Plushies
-  name: loadout-group-plushies
+  parent: [ Glasses ]
+  id: PassengerEyewear
+  name: loadout-group-passenger-glasses
   minLimit: 0
-  maxLimit: 1
   loadouts:
-    - PlushieLizardExtra
-    - PlushieSpaceLizardExtra
-    - PlushieLizardInversedExtra
-    - PlushieBeeExtra
-    - PlushieSnakeExtra
-    - PlushieCarpExtra
-    - PlushieExperimentExtra
-    - PlushieSharkBlueExtra
-    - PlushieSharkPinkExtra
-    - PlushieSharkGreyExtra
+  - CheapSunglasses
+
+- type: loadoutGroup
+  abstract: true
+  id: Plushies
+  loadouts:
+  - PlushieLizardInversed
+  - PlushieBee
+  - PlushieSnake
+  - PlushieCarp
+  - PlushieHolocarp
+  - PlushieExperiment
+  - PlushieSharkBlue
+  - PlushieSharkPink
+  - PlushieSharkGrey
+  - PlushieHampter
+  - PlushiePenguin
+  - PlushieArachnid
+  - PlushieDiona
+  - PlushieMoth
+  - PlushieSlime
+  - PlushieVox
+  - PlushieVulp
+  - PlushieRouny
+  - PlushieXeno
+  - PlushieZetan
+
+- type: loadoutGroup
+  abstract: true
+  id: PlushiesWorn
+  loadouts:
+  - PlushieLizardWorn
+  - PlushieSpaceLizardWorn
+  - PlushieLizardInversedWorn
+  - PlushieBeeWorn
+  - PlushieExperimentWorn
+  - PlushieHampterWorn
+  - PlushiePenguinWorn
+  - PlushieArachnidWorn
+  - PlushieDionaWorn
+  - PlushieMothWorn
+  - PlushieSlimeWorn
+  - PlushieVoxWorn
+  - PlushieVulpWorn
+  - PlushieRounyWorn
+  - PlushieXenoWorn
+  - PlushieZetan
+
+- type: loadoutGroup
+  abstract: true
+  id: ColoredJumpsuits
+  loadouts:
+  - WhiteJumpsuit
+  - WhiteJumpskirt
+  - BlackJumpsuit
+  - BlackJumpskirt
+  - BlueJumpsuit
+  - BlueJumpskirt
+  - DarkBlueJumpsuit
+  - DarkBlueJumpskirt
+  - TealJumpsuit
+  - TealJumpskirt
+  - GreenJumpsuit
+  - GreenJumpskirt
+  - DarkGreenJumpsuit
+  - DarkGreenJumpskirt
+  - OrangeJumpsuit
+  - OrangeJumpskirt
+  - PinkJumpsuit
+  - PinkJumpskirt
+  - RedJumpsuit
+  - RedJumpskirt
+  - YellowJumpsuit
+  - YellowJumpskirt
+  - PurpleJumpsuit
+  - PurpleJumpskirt
+  - LightBrownJumpsuit
+  - LightBrownJumpskirt
+  - BrownJumpsuit
+  - BrownJumpskirt
+  - MaroonJumpsuit
+  - MaroonJumpskirt
+
+- type: loadoutGroup
+  abstract: true
+  id: Turtlenecks
+  loadouts:
+  - WhiteTurtleneckSuit
+  - WhiteTurtleneckSkirt
+  - BlackTurtleneckSuit
+  - BlackTurtleneckSkirt
+  - BlueTurtleneckSuit
+  - BlueTurtleneckSkirt
+  - DarkBlueTurtleneckSuit
+  - DarkBlueTurtleneckSkirt
+  - TealTurtleneckSuit
+  - TealTurtleneckSkirt
+  - GreenTurtleneckSuit
+  - GreenTurtleneckSkirt
+  - DarkGreenTurtleneckSuit
+  - DarkGreenTurtleneckSkirt
+  - OrangeTurtleneckSuit
+  - OrangeTurtleneckSkirt
+  - PinkTurtleneckSuit
+  - PinkTurtleneckSkirt
+  - RedTurtleneckSuit
+  - RedTurtleneckSkirt
+  - YellowTurtleneckSuit
+  - YellowTurtleneckSkirt
+  - PurpleTurtleneckSuit
+  - PurpleTurtleneckSkirt
+  - LightBrownTurtleneckSuit
+  - LightBrownTurtleneckSkirt
+  - BrownTurtleneckSuit
+  - BrownTurtleneckSkirt
+  - MaroonTurtleneckSuit
+  - MaroonTurtleneckSkirt
 
 # Other
 
@@ -307,6 +572,7 @@
   - EmergencyIPCBox # DeltaV
 
 - type: loadoutGroup
+  parent: [ Glasses ]
   id: BartenderEyewear
   name: loadout-group-bartender-glasses
   minLimit: 0
@@ -314,13 +580,10 @@
   - BeerGlasses
   - BeerEyePatchHud
   - Sunglasses
-  - Glasses
-  - Eyepatch
-  - EyepatchFlipped
-  - GlassesJamjar
-  - GlassesJensen
+  - Mirrorshades
 
 - type: loadoutGroup
+  parent: [ Glasses ]
   id: CommandEyewear
   name: loadout-group-command-glasses
   minLimit: 0
@@ -328,38 +591,28 @@
   - CommandGlasses
   - CommandHud
   - Sunglasses
-  - Glasses
-  - Eyepatch
-  - EyepatchFlipped
-  - GlassesJamjar
-  - GlassesJensen
 
 - type: loadoutGroup
+  parent: [ Glasses ]
   id: MusicianEyewear
   name: loadout-group-musician-glasses
   minLimit: 0
   loadouts:
   - Sunglasses
-  - Glasses
-  - Eyepatch
-  - EyepatchFlipped
-  - GlassesJamjar
-  - GlassesJensen
+  - Mirrorshades
 
 - type: loadoutGroup
+  parent: [ Glasses ]
   id: RoboticsEyewear
   name: loadout-group-robotics-glasses
   minLimit: 0
   loadouts:
   - DiagnosticHud
   - DiagnosticEyePatchHud
-  - Glasses
-  - Eyepatch
-  - EyepatchFlipped
-  - GlassesJamjar
-  - GlassesJensen
+  - EngineeringGoggles
 
 - type: loadoutGroup
+  parent: [ Glasses ]
   id: SecurityEyewear
   name: loadout-group-security-glasses
   minLimit: 0
@@ -367,11 +620,24 @@
   - SecurityGlasses
   - SecurityHud
   - SecurityEyePatchHud
-  - Glasses
-  - Eyepatch
-  - EyepatchFlipped
-  - GlassesJamjar
-  - GlassesJensen
+
+- type: loadoutGroup
+  parent: [ Glasses ]
+  id: ReporterEyewear
+  name: loadout-group-reporter-glasses
+  minLimit: 0
+  loadouts:
+  - Sunglasses
+  - Mirrorshades
+
+- type: loadoutGroup
+  parent: [ Glasses ]
+  id: ServiceWorkerEyewear
+  name: loadout-group-service-worker-glasses
+  minLimit: 0
+  loadouts:
+  - Sunglasses
+  - Mirrorshades
 
 - type: loadoutGroup
   id: GroupSpeciesBreathToolBrigmedic
@@ -381,6 +647,19 @@
   hidden: true
   loadouts:
   - LoadoutSpeciesBreathToolBrigmedic
+
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsInstrument
+  loadouts:
+  - AcousticGuitar
+  - Flute
+  - PanFlute
+  - Ocarina
+  - Harmonica
+  - MusicBox
+  - Kalimba
+  - Woodblock
 
 # General
 - type: loadoutGroup
@@ -395,6 +674,6 @@
   - OffsetCaneWood
   - OffsetCaneClown
   - OffsetCaneMime
-  - OffsetCaneNT
+  - OffsetCaneSyndie # starcup: reflavor ops
   - Cane
   - WhiteCane

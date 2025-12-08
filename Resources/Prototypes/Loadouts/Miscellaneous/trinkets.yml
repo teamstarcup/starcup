@@ -34,12 +34,14 @@
   storage:
     back:
     - PlushieLizard
+  groupBy: "plushie" # starcup
 
 - type: loadout
   id: PlushieSpaceLizard
   storage:
     back:
     - PlushieSpaceLizard
+  groupBy: "plushie" # starcup
 
 - type: loadout
   id: ThreeCandles
@@ -301,7 +303,7 @@
   groupBy: "canes"
 
 - type: loadout
-  id: OffsetCaneNT
+  id: OffsetCaneSyndie # starcup: reflavor ops
   effects:
   - !type:JobRequirementLoadoutEffect
     requirement:
@@ -310,7 +312,7 @@
       time: 18000 # 5hr
   storage:
     back:
-    - OffsetCaneNT
+    - OffsetCaneSyndie # starcup: reflavor ops
   groupBy: "canes"
 
 - type: loadout

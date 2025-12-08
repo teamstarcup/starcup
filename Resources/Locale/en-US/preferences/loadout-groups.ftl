@@ -91,15 +91,18 @@ loadout-group-musician-jumpsuit = Musician jumpsuit
 loadout-group-musician-outerclothing = Musician outer clothing
 
 # Cargo
-loadout-group-quartermaster-head = Quartermaster head
-loadout-group-quartermaster-jumpsuit = Quartermaster jumpsuit
-loadout-group-quartermaster-neck = Quartermaster neck
-loadout-group-quartermaster-outerclothing = Quartermaster outer clothing
-loadout-group-quartermaster-shoes = Quartermaster shoes
+# begin starcup: rename quartermaster to logistics officer
+loadout-group-quartermaster-head = Logistics Officer head
+loadout-group-quartermaster-jumpsuit = Logistics Officer jumpsuit
+loadout-group-quartermaster-neck = Logistics Officer neck
+loadout-group-quartermaster-outerclothing = Logistics Officer outer clothing
+loadout-group-quartermaster-shoes = Logistics Officer shoes
+# end starcup
 
 loadout-group-cargo-technician-head = Cargo Technician head
 loadout-group-cargo-technician-jumpsuit = Cargo Technician jumpsuit
-loadout-group-cargo-technician-backpack = Cargo Technician backpack
+# starcup: rename from cargo tech backpack to generic logistics backpack
+loadout-group-cargo-technician-backpack = Logistics backpack
 loadout-group-cargo-technician-outerclothing = Cargo Technician outer clothing
 loadout-group-cargo-technician-shoes = Cargo Technician shoes
 loadout-group-cargo-technician-id = Cargo Technician ID
@@ -119,7 +122,8 @@ loadout-group-technical-assistant-jumpsuit = Technical Assistant jumpsuit
 
 loadout-group-station-engineer-head = Station Engineer head
 loadout-group-station-engineer-jumpsuit = Station Engineer jumpsuit
-loadout-group-station-engineer-backpack = Station Engineer backpack
+# starcup: rename from station engineer backpack to generic engineering backpack
+loadout-group-station-engineer-backpack = Engineering backpack
 loadout-group-station-engineer-outerclothing = Station Engineer outer clothing
 loadout-group-station-engineer-shoes = Station Engineer shoes
 loadout-group-station-engineer-id = Station Engineer ID
@@ -139,7 +143,8 @@ loadout-group-research-director-shoes = Research Director shoes
 loadout-group-scientist-head = Scientist head
 loadout-group-scientist-neck = Scientist neck
 loadout-group-scientist-jumpsuit = Scientist jumpsuit
-loadout-group-scientist-backpack = Scientist backpack
+# starcup: rename from scientist backpack to generic science backpack
+loadout-group-scientist-backpack = Science backpack
 loadout-group-scientist-outerclothing = Scientist outer clothing
 loadout-group-scientist-gloves = Scientist gloves
 loadout-group-scientist-shoes = Scientist shoes
@@ -186,7 +191,8 @@ loadout-group-chief-medical-officer-neck = Chief Medical Officer neck
 loadout-group-medical-doctor-head = Medical Doctor head
 loadout-group-medical-doctor-jumpsuit = Medical Doctor jumpsuit
 loadout-group-medical-doctor-outerclothing = Medical Doctor outer clothing
-loadout-group-medical-doctor-backpack = Medical Doctor backpack
+# starcup: rename from medical doctor backpack to generic medical backpack
+loadout-group-medical-doctor-backpack = Medical backpack
 loadout-group-medical-doctor-shoes = Medical Doctor shoes
 loadout-group-medical-doctor-id = Medical Doctor ID
 

@@ -51,19 +51,15 @@
     sprite: Clothing/Shoes/Boots/performer.rsi
 
 - type: entity
-  parent: [ClothingShoesMilitaryBase, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
+  parent: ClothingShoesMilitaryBase # starcup: removed contraband label
   id: ClothingShoesBootsCombat
   name: combat boots
-  description: Robust combat boots for combat scenarios or combat situations. It's in the name, after all. # starcup: rewritten for tone
+  description: Big, stompy lace-up boots that are a fashion sensation with the Goths. # starcup: make combat boots cosmetic
   components:
   - type: Sprite
     sprite: Clothing/Shoes/Boots/combatboots.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Boots/combatboots.rsi
-  # begin starcup: examinable clothing
-  - type: ExaminableClothing
-    examineText: clothing-combat-boots
-  # end starcup
 
 - type: entity
   parent: ClothingShoesMilitaryBase

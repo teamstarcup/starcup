@@ -255,6 +255,7 @@
     spawned:
     - id: FoodMeatChicken
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.8
     interactSuccessString: petting-success-bird
@@ -716,6 +717,7 @@
     spawned:
     - id: FoodMeatDuck
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.9
     interactSuccessString: petting-success-bird
@@ -926,6 +928,7 @@
     spawned:
     - id: FoodMeat
       amount: 5
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Grammar
     attributes:
       gender: female # Here because of UdderComponent
@@ -1092,6 +1095,7 @@
     spawned:
     - id: FoodMeat
       amount: 4
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Grammar
     attributes:
       gender: female # Here because of UdderComponent
@@ -1159,6 +1163,7 @@
     spawned:
     - id: FoodMeatChicken
       amount: 2
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup # TODO: Make it so there's a separate chance to make certain animals outright hostile towards you.
     successChance: 0.1 # Yeah, good luck with that.
     interactSuccessString: petting-success-goose
@@ -1208,6 +1213,7 @@
     spawned:
     - id: FoodMeat
       amount: 4
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Bloodstream
     bloodMaxVolume: 300
     # if you fuck with the gorilla he will harambe you
@@ -1287,6 +1293,7 @@
   - type: Butcherable
     spawned:
     - id: FoodMeat
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: DamageStateVisuals
     states:
       Alive:
@@ -2092,6 +2099,7 @@
     spawned:
     - id: FoodMeatLizard
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.3
     interactSuccessString: petting-success-reptile
@@ -2264,6 +2272,7 @@
     spawned:
     - id: FoodMeat
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Speech
     speechSounds: Parrot
     speechVerb: Parrot
@@ -2345,6 +2354,7 @@
     spawned:
     - id: FoodMeatPenguin
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-bird
@@ -2483,6 +2493,7 @@
     spawned:
     - id: FoodMeatSnake
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.6
     interactSuccessString: petting-success-reptile
@@ -2517,6 +2528,7 @@
     spawned:
     - id: FoodMeatSpider
       amount: 2
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: CombatMode
   - type: Body
     prototype: AnimalHemocyanin
@@ -2754,6 +2766,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.2 # Low when undomesticated.
     interactSuccessString: petting-success-possum # Possums don't really make much noise when they're happy. They make clicking noises as a mating call, but that is NOT the same thing!
@@ -2827,6 +2840,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.2 # Low when undomesticated.
     interactSuccessString: petting-success-soft-floofy
@@ -2889,6 +2903,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-soft-floofy
@@ -2986,6 +3001,7 @@
     spawned:
     - id: FoodMeat
       amount: 2
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
     accent: dog
   - type: Tag
@@ -3122,6 +3138,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
     accent: cat
   - type: InteractionPopup
@@ -3306,6 +3323,7 @@
     spawned:
     - id: FoodMeat
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: MobPrice
     price: 100
   - type: MeleeWeapon
@@ -3359,6 +3377,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.9
     interactSuccessString: petting-success-sloth
@@ -3413,6 +3432,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.8
     interactDelay: 1.5 # Avoids overlapping SFX due to spam - these SFX are a little longer than the typical 1 second.
@@ -3524,6 +3544,7 @@
     spawned:
     - id: FoodMeat
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
     accent: mouse
   - type: Tag
@@ -3630,6 +3651,7 @@
     spawned:
     - id: FoodMeatBacon
       amount: 6
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Grammar
     attributes:
       gender: epicene
@@ -3783,6 +3805,7 @@
     spawned:
     - id: FoodMeat
       amount: 4
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Bloodstream
     bloodMaxVolume: 300
     # Horns though

@@ -8,13 +8,12 @@
     stateDoorOpen: cap_open_syndi
     stateDoorClosed: cap_door_syndi
   - type: Sprite
+    sprite: _starcup/Structures/Storage/closet.rsi
     layers:
     - state: cap_syndi
       map: [ "enum.StorageVisualLayers.Base" ]
-      sprite: _starcup/Structures/Storage/closet.rsi
     - state: cap_door_syndi
       map: [ "enum.StorageVisualLayers.Door" ]
-      sprite: _starcup/Structures/Storage/closet.rsi
     - state: locked
       map: [ "enum.LockVisualLayers.Lock" ]
       shader: unshaded
@@ -37,6 +36,7 @@
     stateDoorOpen: hop_open_syndi
     stateDoorClosed: hop_door_syndi
   - type: Sprite
+    sprite: _starcup/Structures/Storage/closet.rsi
     layers:
     - state: hop_syndi
       map: [ "enum.StorageVisualLayers.Base" ]
@@ -66,11 +66,42 @@
     stateDoorOpen: admin_assist_open_syndi
     stateDoorClosed: admin_assist_door_syndi
   - type: Sprite
+    sprite: _starcup/Structures/Storage/closet.rsi
     layers:
     - state: admin_assist_syndi
       map: [ "enum.StorageVisualLayers.Base" ]
       sprite: _starcup/Structures/Storage/closet.rsi
     - state: admin_assist_door_syndi
+      map: [ "enum.StorageVisualLayers.Door" ]
+      sprite: _starcup/Structures/Storage/closet.rsi
+    - state: locked
+      map: [ "enum.LockVisualLayers.Lock" ]
+      shader: unshaded
+    - state: welded
+      visible: false
+      map: [ "enum.WeldableLayers.BaseWelded" ]
+    - state: paper
+      visible: false
+      sprite: Structures/Storage/closet_labels.rsi
+      offset: "-0.065,0"
+      map: [ "enum.PaperLabelVisuals.Layer" ]
+
+- type: entity
+  id: LockerRepresentativeSyndie
+  parent: LockerRepresentative
+  suffix: Syndicate
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: rep_syndi
+    stateDoorOpen: rep_open_syndi
+    stateDoorClosed: rep_door_syndi
+  - type: Sprite
+    sprite: _starcup/Structures/Storage/closet.rsi
+    layers:
+    - state: hop_syndi
+      map: [ "enum.StorageVisualLayers.Base" ]
+      sprite: _starcup/Structures/Storage/closet.rsi
+    - state: rep_door_syndi
       map: [ "enum.StorageVisualLayers.Door" ]
       sprite: _starcup/Structures/Storage/closet.rsi
     - state: locked

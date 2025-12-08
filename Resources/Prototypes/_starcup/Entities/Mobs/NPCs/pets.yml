@@ -1,0 +1,22 @@
+- type: entity
+  name: Mimelet
+  parent: MobHamsterHamlet
+  id: MobHamsterHamletMime
+  description: A grumpy, cute, and soft-spoken hamster.
+  components:
+  - type: Loadout
+    prototypes: [ MobMimeletGear ]
+  - type: InteractionPopup
+    successChance: 1
+    interactSuccessString: petting-success-hamster
+    interactFailureString: petting-failure-hamster
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/_starcup/silence.ogg
+
+- type: entity
+  parent: MobMonkeyPunpun
+  id: MobMonkeyPunpunCold
+  components:
+  - type: Loadout
+    prototypes: [ MobMonkeyGearCold ]
