@@ -266,7 +266,6 @@
   - type: Puller
     needsHands: false
   - type: JumpAbility
-    useDelay: 1
     action: ActionBurrow
     canCollide: false
     jumpDistance: 0
@@ -597,7 +596,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      165: Dead
+      170: Dead
   - type: MovementSpeedModifier
     baseSprintSpeed: 4.5
   - type: MeleeWeapon
@@ -701,6 +700,7 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: alive
+  - type: MobThresholds
     thresholds:
       0: Alive
       170: Dead
