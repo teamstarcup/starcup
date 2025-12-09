@@ -38,7 +38,7 @@
 
 - type: entity
   parent: BaseActionPolymorph
-  id: ActionBurrow
+  id: ActionBurrowMedium
   name: Burrow
   description: Burrows into the ground.
   components:
@@ -48,13 +48,19 @@
       state: burrow
   - type: InstantAction
     event: !type:PolymorphActionEvent
-      protoId: Burrowed
+      protoId: BurrowedMedium
 
 - type: polymorph
-  id: Burrowed
+  id: BurrowedMedium
   configuration:
     entity: BurrowedCreatureMedium
     transferName: false
     inventory: None
     revertOnDeath: true
     revertOnCrit: true
+    polymorphPopup: "burrowing-popup-generic"
+    exitPolymorphPopup: "burrowing-revert-popup-generic"
+    polymorphSound:
+      path: /Audio/_starcup/Effects/Xeno/burrow_on.ogg
+    exitPolymorphSound:
+      path: /Audio/_starcup/Effects/Xeno/burrow_off.ogg
