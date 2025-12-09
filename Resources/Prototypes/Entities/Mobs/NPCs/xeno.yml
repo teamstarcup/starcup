@@ -138,7 +138,7 @@
   name: praetorian
   parent: MobXeno
   id: MobXenoPraetorian
-  description: Brutish exomorph. Swift and powerful guardian of the lair. # starcup
+  description: Exomorph brute. Swift and powerful guardian of the lair. # starcup
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -174,9 +174,6 @@
     speechVerb: Xeno
     speechSounds: XenoLarge
     allowedEmotes: [ "Tailwhip", "Drool", "CreatureHiss", "CreatureGrowl", "CreatureRoar", "CreatureScream" ]
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: AlienFootstepLarge
   # end starcup
 
 - type: entity
@@ -284,7 +281,7 @@
   name: ravager
   parent: MobXeno
   id: MobXenoRavager
-  description: Striker exomorph. Hacks their enemies apart. # starcup
+  description: Ferocious exomorph striker. Hacks their enemies apart. # starcup
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -300,7 +297,7 @@
   - type: MovementSpeedModifier
     baseSprintSpeed: 4
   - type: MeleeWeapon
-    animation: WeaponArcPunch
+    animation: WeaponArcSlash
     attackRate: 1.5 # starcup: they are remarkably ferocious
     damage:
      types:
@@ -330,7 +327,7 @@
   name: runner
   parent: MobXeno
   id: MobXenoRunner
-  description: Skirmisher exomorph. Fast, albeit less imposing. # starcup
+  description: Fast exomorph skirmisher. Can quickly catch up to and pounce prey. # starcup
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -361,7 +358,7 @@
   name: rouny
   parent: MobXenoRunner
   id: MobXenoRouny
-  description: Skirmisher exomorph. Fast, albiet less imposng. # starcup
+  description: Curious exomorph strain. Not very imposing. # starcup
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -393,7 +390,7 @@
   name: spitter
   parent: MobXeno
   id: MobXenoSpitter
-  description: Ranged exomorph. Spits acid from a distance. # starcup
+  description: Ranged exomorph soldier. Spits acid from a distance. # starcup
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -405,7 +402,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      80: Dead # starcup: exomorph reworks
+      100: Dead # starcup: exomorph reworks
   - type: MovementSpeedModifier
     baseSprintSpeed: 3 # starcup: making them slower to offset ranged attack
   - type: SlowOnDamage
@@ -417,7 +414,7 @@
   - type: RechargeBasicEntityAmmo
     rechargeCooldown: 0.75
   - type: BasicEntityAmmoProvider
-    proto: BulletAcid
+    proto: AcidSpittle # starcup: exomorph reworks
     capacity: 1
     count: 1
   - type: Gun

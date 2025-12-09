@@ -1,0 +1,19 @@
+- type: entity
+  id: BurrowedCreatureMedium
+  name: burrow
+  description: Something hides underground.
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _starcup/Effects/Xeno/burrowed.rsi
+    drawdepth: FloorObjects
+    layers:
+    - state: burrowed
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.25
+        mask:
+        - Impassable

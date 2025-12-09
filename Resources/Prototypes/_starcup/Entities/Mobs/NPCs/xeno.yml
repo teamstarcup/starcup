@@ -158,7 +158,7 @@
   name: parasite
   parent: MobXeno
   id: MobXenoParasite
-  description: First stage of exomorph life cycle. Will try and impregnate a host with an alien larva.
+  description: Second stage of exomorph life cycle. Crawls out of an egg to impregnate a host with an alien larva.
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -225,7 +225,6 @@
   name: lesser parasite
   parent: MobXenoParasite
   id: MobXenoParasiteLesser
-  description: First stage of exomorph life cycle. Harasses potential hosts, then impregnates downed victims with an alien larva.
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -239,7 +238,7 @@
   name: burrower
   parent: MobXeno
   id: MobXenoBurrower
-  description: Exomorph lurker that waits in ambush. Its large claws can tear through earth and rock.
+  description: Exomorph lurker that waits in ambush. Uses its claws to tear through solid material.
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -266,6 +265,11 @@
       80: Dead
   - type: Puller
     needsHands: false
+  - type: JumpAbility
+    useDelay: 1
+    action: ActionBurrow
+    canCollide: false
+    jumpDistance: 0
 
 - type: entity
   name: lesser drone
@@ -298,6 +302,54 @@
         - MobMask
         layer:
         - MobLayer
+
+- type: entity
+  name: lurker
+  parent: MobXeno
+  id: MobXenoLurker
+  description: Fast exomorph skirmisher. Small but ferocious.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Mobs/OldXenonids/Lurker/lurker.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: alive
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      40: 0.7
+  - type: MeleeWeapon
+    animation: WeaponArcSlash
+    attackRate: 1.1
+    damage:
+      types:
+        Slash: 6
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 450
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Puller
+    needsHands: false
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
 
 - type: entity
   name: skulker
@@ -340,25 +392,25 @@
     jumpSound:
       collection: AlienPounce
 
-# Tier 2
-
 - type: entity
-  name: boiler
+  name: sentinel
   parent: MobXeno
-  id: MobXenoBoiler
-  description: Heavy exomorph artillery. Spits acid from a distance.
+  id: MobXenoSentinel
+  description: Ranged exomorph skirmisher. Spits acid from a distance.
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: _RMC14/Mobs/OldXenonids/Boiler/boiler.rsi
+    sprite: _RMC14/Mobs/OldXenonids/Sentinel/sentinel.rsi
+    offset: 0,0.3
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: alive
+  - type: MobThresholds
     thresholds:
       0: Alive
-      120: Dead
+      50: Dead
   - type: MovementSpeedModifier
-    baseSprintSpeed: 3
+    baseSprintSpeed: 4
   - type: SlowOnDamage
     speedModifierThresholds:
       25: 0.7
@@ -368,7 +420,7 @@
   - type: RechargeBasicEntityAmmo
     rechargeCooldown: 0.75
   - type: BasicEntityAmmoProvider
-    proto: AcidGlob
+    proto: AcidSpittle
     capacity: 1
     count: 1
   - type: Gun
@@ -377,15 +429,8 @@
     selectedMode: FullAuto
     availableModes:
     - FullAuto
-    soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
-  - type: DamageStateVisuals
-    states:
-      Alive:
-        Base: alive
-      Critical:
-        Base: crit
-      Dead:
-        Base: dead
+    soundGunshot:
+      collection: AlienSpitAttack
   - type: Fixtures
     fixtures:
       fix1:
@@ -397,6 +442,16 @@
         - MobMask
         layer:
         - MobLayer
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+
+# Tier 2
 
 - type: entity
   name: carrier
@@ -633,3 +688,63 @@
         - MobLayer
 
 # Tier 3
+
+- type: entity
+  name: boiler
+  parent: MobXeno
+  id: MobXenoBoiler
+  description: Ranged exomorph brute. Spits acid from a distance that can melt holes into walls.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _RMC14/Mobs/OldXenonids/Boiler/boiler.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: alive
+    thresholds:
+      0: Alive
+      170: Dead
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 3
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      25: 0.7
+  - type: HTN
+    rootTask:
+      task: SimpleRangedHostileCompound
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 0.75
+  - type: BasicEntityAmmoProvider
+    proto: AcidGlob
+    capacity: 1
+    count: 1
+  - type: Gun
+    fireRate: 0.5
+    useKey: false
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      collection: AlienSpitAttack
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 235
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: AlienFootstepLarge

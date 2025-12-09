@@ -29,8 +29,33 @@
   description: Leap forward towards your prey.
   components:
   - type: Action
-    useDelay: 1
-    icon: _RMC14/Actions/xeno_actions.rsi/lunge.png
+    useDelay: 12
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: lunge
   - type: InstantAction
     event: !type:GravityJumpEvent {}
     collideKnockdown: 1
+
+- type: entity
+  parent: BaseActionPolymorph
+  id: ActionBurrow
+  name: Burrow
+  description: Burrows into the ground.
+  components:
+  - type: Action
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: burrow
+  - type: InstantAction
+    event: !type:PolymorphActionEvent
+      protoId: Burrowed
+
+- type: polymorph
+  id: Burrowed
+  configuration:
+    entity: BurrowedCreatureMedium
+    transferName: false
+    inventory: None
+    revertOnDeath: true
+    revertOnCrit: true
