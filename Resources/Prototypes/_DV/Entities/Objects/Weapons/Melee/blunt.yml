@@ -6,23 +6,23 @@
   description: A bamboo sword, commonly used in kendo. Made some time after the realization that wooden swords hurt a lot.
   components:
   - type: Sprite
-    sprite: Nyanotrasen/Objects/Weapons/Melee/shinai.rsi
+    sprite: _DV/Objects/Weapons/Melee/shinai.rsi
     state: icon
   - type: MeleeWeapon
     attackRate: 1.25
-    range: 1.75
+    range: 1.5 # -starcup 0.25 range
     bluntStaminaDamageFactor: 2.0
     damage:
       types:
-        Blunt: 4
+        Blunt: 2.5 # starcup -1.5 damage
     soundHit:
-      path: /Audio/Effects/woodhit.ogg
-  - type: MeleeStaminaCost
-    swing: 5
+      path: /Audio/Effects/woodenclosetclose.ogg
+#  - type: MeleeStaminaCost # starcup (we don't have this)
+#    swing: 5 # starcup
   - type: StaminaDamageOnHit
     damage: 10
   - type: Item
-    size: 15
-    sprite: Nyanotrasen/Objects/Weapons/Melee/shinai.rsi
+    size: Large
+    sprite: _DV/Objects/Weapons/Melee/shinai.rsi
   - type: DisarmMalus
 # end nyano
