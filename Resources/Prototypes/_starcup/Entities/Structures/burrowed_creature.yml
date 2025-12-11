@@ -1,14 +1,27 @@
 - type: entity
-  id: BurrowedCreatureMedium
-  name: burrow
+  id: BurrowedCreatureSmall
+  name: burrowed creature
+  suffix: small
+  parent:
+    - BaseMob
+    - MobDamageable
   description: Something hides underground.
   components:
   - type: Sprite
     noRot: true
-    sprite: _starcup/Effects/Xeno/burrowed.rsi
+    sprite: _starcup/Mobs/Special/burrowed_small.rsi
     drawdepth: FloorObjects
     layers:
-    - state: burrowed
+    - map: ["enum.DamageStateVisualLayers.Base", "movement"]
+      state: burrowed
+      sprite: _starcup/Mobs/Special/burrowed_small.rsi
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: burrowed-moving
+    noMovementLayers:
+      movement:
+        state: burrowed
   - type: Fixtures
     fixtures:
       fix1:
@@ -17,3 +30,40 @@
           radius: 0.25
         mask:
         - Impassable
+  - type: Insulated
+  - type: Temperature
+    heatDamageThreshold: 360
+    coldDamageThreshold: -150
+    currentTemperature: 310.15
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - FootstepSound
+  - type: InputMover
+  - type: MobMover
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 0.3
+    baseSprintSpeed : 0.4
+  - type: NoSlip
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: Burrowing
+
+- type: entity
+  id: BurrowedCreatureMedium
+  name: burrowed creature
+  suffix: medium
+  parent: BurrowedCreatureSmall
+  description: Something hides underground.
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _starcup/Mobs/Special/burrowed_medium.rsi
+    drawdepth: FloorObjects
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base", "movement"]
+      state: burrowed
+      sprite: _starcup/Mobs/Special/burrowed_medium.rsi
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: BurrowingLarge
