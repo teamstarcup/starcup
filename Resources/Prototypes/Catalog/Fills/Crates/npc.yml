@@ -2,12 +2,14 @@
   id: CrateNPCBee
   parent: CrateLivestock
   name: crate of bees
-  description: A crate containing a swarm of eight bees.
+  description: A crate containing three small swarms of bees. # starcup: add insects, honey, roach resprite
   components:
   - type: StorageFill
     contents:
-      - id: MobBee
-        amount: 8
+      # begin starcup: add insects, honey, roach resprite
+      - id: MobBeeSwarm
+        amount: 3
+      # end starcup
 
 - type: entity
   id: CrateNPCButterflies

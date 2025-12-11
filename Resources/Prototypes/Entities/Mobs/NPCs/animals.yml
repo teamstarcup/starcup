@@ -350,9 +350,14 @@
   id: MobCockroach
   description: This station is just crawling with bugs.
   components:
+  # begin starcup: Bug faction to not be attacked by bloodsuckers
+  - type: NpcFactionMember
+    factions:
+    - Bug
+  # end starcup
   - type: Sprite
     drawdepth: SmallMobs
-    sprite: Mobs/Animals/cockroach.rsi
+    sprite: _starcup/Mobs/Animals/Insects/cockroach.rsi # starcup
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: cockroach
@@ -462,6 +467,18 @@
     damage:
       types:
         Piercing: 0
+  # begin starcup: spreads with trash
+  - type: Reproductive
+    hungerPerBirth: 0
+    gestationDuration: 0
+    makeOffspringInfant: false
+    birthPopup: "reproductive-vermin-singular-popup"
+    partnerWhitelist:
+      tags:
+      - TrashPile
+    offspring:
+    - id: MobCockroach
+  # end starcup
 
 - type: entity
   name: glockroach
@@ -2512,6 +2529,13 @@
   id: MobSpiderBase
   abstract: true
   components:
+  # begin starcup: bug politics real
+  - type: NpcFactionMember
+    factions:
+      - SimpleNeutral
+      - BugHunter
+      - GiantBugHunter
+  # end starcup
   - type: Physics
   - type: Fixtures
     fixtures:
@@ -2597,6 +2621,13 @@
       groups:
         Brute: -0.07
         Burn: -0.07
+  # begin starcup: make spiders defend themselves and attack bugs
+  - type: NPCRetaliation
+  - type: FactionException
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  # end starcup
 
 - type: entity
   parent: MobSpiderBase
@@ -2606,6 +2637,10 @@
   - type: NpcFactionMember
     factions:
       - Xeno
+    # begin starcup: bug politics real
+      - BugHunter
+      - GiantBugHunter
+    # end starcup
   - type: InputMover
   - type: MobMover
   - type: HTN

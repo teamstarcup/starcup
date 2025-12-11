@@ -1,0 +1,27 @@
+- type: npcFaction
+  id: Bug
+
+- type: npcFaction
+  id: GiantBug
+
+- type: npcFaction
+  id: BugHunter
+  hostile:
+  - Bug
+
+- type: npcFaction
+  id: GiantBugHunter
+  hostile:
+  - GiantBug
+
+- type: npcFaction
+  id: Bloodsucker # Does not target bugs, xenos or xenoborgs
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Passive
+  - PetsNT
+  - Revolutionary
+  - Dragon
+  - SimpleNeutral
+  - Wizard

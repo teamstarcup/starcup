@@ -1,0 +1,44 @@
+- type: entity
+  parent: BaseStructureDynamic
+  id: Beehive
+  name: beehive
+  description: A solid wooden beehive for your bees to hive to their heart's content.
+  components:
+  - type: Hunger # starcup: added for reproductive purposes
+  - type: Animateable
+  - type: InteractionOutline
+  - type: Sprite
+    noRot: true
+    sprite: _starcup/Structures/Farming/beehive.rsi
+    layers:
+    - state: beehive-0
+      map: ["enum.StorageVisualLayers.Base"]
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Wood
+  - type: StaticPrice
+    price: 50
+  - type: Construction
+    graph: Beehive
+    node: beehive
+    containers:
+    - entity_storage
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.3,0.2,0.4"
+        density: 200
+        mask:
+        - SmallMobMask #this is so they can go under plastic flaps
+        layer:
+        - MachineLayer
+        - InteractImpassable
+  - type: Transform
+    noRot: false
+  - type: Tag
+    tags:
+    - Beehive
+  - type: ReproductivePartner

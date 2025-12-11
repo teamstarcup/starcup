@@ -68,14 +68,19 @@
 - type: entity
   name: Cockroach Timed Spawner
   id: CockroachTimedSpawner
-  parent: MouseTimedSpawner
+  # begin starcup: add bees, insects, roach resprite
+  parent: TimedSpawnerBaseStarcup
   components:
     - type: Sprite
       layers:
+        - state: shadowblue
         - state: blue
-        - sprite: Mobs/Animals/cockroach.rsi
-          state: cockroach_icon
-        - state: timed
+        - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi
+          state: cockroaches
+        - sprite: Markers/cross.rsi
+          state: timed
     - type: TimedSpawner
       prototypes:
         - MobCockroach
+        - MobCockroachHL
+  # end starcup

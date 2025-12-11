@@ -1,0 +1,392 @@
+# individual spawners
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobBeeSwarm
+  name: bee swarm spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: base
+      sprite: _starcup/Mobs/Animals/Insects/bees.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobBeeSwarm
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobWaspSwarm
+  name: wasp swarm spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: base
+      sprite: _starcup/Mobs/Animals/Insects/wasps.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobWaspSwarm
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobFlySwarm
+  name: fly swarm spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: base
+      sprite: _starcup/Mobs/Animals/Insects/flies.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobFlySwarm
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobMosquitoSwarm
+  name: mosquito swarm spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: base
+      sprite: _starcup/Mobs/Animals/Insects/mosquitoes.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobMosquitoSwarm
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobFireflySwarm
+  name: firefly swarm spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: base
+      sprite: _starcup/Mobs/Animals/Insects/fireflies.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobFireflySwarm
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobDragonfly
+  name: dragonfly spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: dragonfly
+      sprite: _starcup/Mobs/Animals/Insects/dragonfly.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobDragonfly
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobGiantBee
+  name: giant bee spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: base
+      sprite: _starcup/Mobs/Animals/Insects/giant_bee.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobGiantBee
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobGiantSandwasp
+  name: giant sandwasp spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: base
+      sprite: _starcup/Mobs/Animals/Insects/giant_sandwasp.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobGiantSandwasp
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobGiantWasp
+  name: giant wasp spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: base
+      sprite: _starcup/Mobs/Animals/Insects/giant_wasp.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobGiantWasp
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobGiantMosquito
+  name: giant mosquito spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: base
+      sprite: _starcup/Mobs/Animals/Insects/giant_mosquito.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobGiantMosquito
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobCockroachHL
+  name: cockroach spawner
+  suffix: borderworld
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: cockroach
+      sprite: _starcup/Mobs/Animals/Insects/cockroach_dorito.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobCockroachHL
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobBeetle
+  name: stag beetle spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: beetle
+      sprite: _starcup/Mobs/Animals/Insects/beetle.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobBeetle
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobBeetleRhino
+  name: rhinoceros beetle spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: shadow
+    - state: green
+    - state: beetle
+      sprite: _starcup/Mobs/Animals/Insects/beetle_rhino.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobBeetleRhino
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobBeetleJune
+  name: rhinoceros beetle spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: beetle
+      sprite: _starcup/Mobs/Animals/Insects/beetle_june.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobBeetleJune
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobLadybug
+  name: ladybug spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: beetle
+      sprite: _starcup/Mobs/Animals/Insects/ladybug.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobLadybug
+
+# generic spawners
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnFlyingInsect
+  name: Flying Insect Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi
+      state: flying_insects
+    - state: ai
+  - type: RandomSpawner
+    prototypes:
+    - MobBeeSwarm
+    - MobWaspSwarm
+    - MobFlySwarm
+    - MobFireflySwarm
+    - MobMosquitoSwarm
+    - MobDragonfly
+    - MobButterfly
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnGiantFlyingInsect
+  name: Giant Flying Insect Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi
+      state: giant_flying_insects
+    - state: ai
+  - type: RandomSpawner
+    prototypes:
+    - MobGiantBee
+    - MobGiantSandwasp
+    - MobGiantWasp
+    - MobGiantMosquito
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnCrawlingInsect
+  name: Crawling Insect Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi
+      state: crawling_insects
+    - state: ai
+  - type: RandomSpawner
+    prototypes:
+    - MobBeetle
+    - MobBeetleRhino
+    - MobBeetleJune
+    - MobLadybug
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnTrashVermin
+  name: Trash Vermin Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi
+      state: trash_vermin
+    - state: ai
+  - type: RandomSpawner
+    prototypes:
+    - MobCockroach
+    - MobCockroachHL
+    - MobFlySwarm
+
+# timed spawners
+
+- type: entity
+  name: Timed Flying Insect Spawner
+  id: FlyingInsectTimedSpawner
+  parent: TimedSpawnerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowblue
+    - state: blue
+    - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi
+      state: flying_insects
+    - sprite: Markers/cross.rsi
+      state: timed
+  - type: TimedSpawner
+    prototypes:
+    - MobBeeSwarm
+    - MobWaspSwarm
+    - MobFlySwarm
+    - MobFireflySwarm
+    - MobMosquitoSwarm
+    - MobDragonfly
+    - MobButterfly
+
+- type: entity
+  name: Timed Giant Insect Spawner
+  id: GiantInsectTimedSpawner
+  parent: TimedSpawnerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowblue
+    - state: blue
+    - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi
+      state: giant_flying_insects
+    - sprite: Markers/cross.rsi
+      state: timed
+  - type: TimedSpawner
+    prototypes:
+    - MobGiantBee
+    - MobGiantSandwasp
+    - MobGiantWasp
+    - MobGiantMosquito
+
+- type: entity
+  name: Timed Crawling Insect Spawner
+  id: CrawlingInsectTimedSpawner
+  parent: TimedSpawnerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowblue
+    - state: blue
+    - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi
+      state: crawling_insects
+    - sprite: Markers/cross.rsi
+      state: timed
+  - type: TimedSpawner
+    prototypes:
+    - MobBeetle
+    - MobBeetleRhino
+    - MobBeetleJune
+    - MobLadybug
+
+- type: entity
+  name: Timed Trash Vermin Spawner
+  id: TrashVerminTimedSpawner
+  parent: TimedSpawnerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowblue
+    - state: blue
+    - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi
+      state: trash_vermin
+    - sprite: Markers/cross.rsi
+      state: timed
+  - type: TimedSpawner
+    prototypes:
+    - MobCockroach
+    - MobCockroachHL
+    - MobFlySwarm

@@ -1,0 +1,52 @@
+- type: entity
+  id: MarkerBaseStarcup
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Marker
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Tag
+    tags:
+    - ForceFixRotations
+  - type: Sprite
+    drawdepth: Overdoors
+    sprite: _starcup/Markers/arrow_cross.rsi
+    layers:
+    - state: shadow
+    - state: green
+    - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi # replace as needed
+      state: crawling_insects # replace as needed
+    - state: ai
+
+- type: entity
+  name: Mob Timed Spawner
+  id: TimedSpawnerBaseStarcup
+  parent: MarkerBaseStarcup
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: shadow
+    - state: blue
+    - sprite: Mobs/Animals/mouse.rsi # replace as needed
+      state: icon-2 # replace as needed
+    - sprite: Markers/cross.rsi
+      state: timed
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobMouse # replace as needed
+    - MobMouse1 # replace as needed
+    - MobMouse2 # replace as needed
+    # round ~90m
+    # one spawner should only spawn ~5 mobs for sanity reasons
+    # therefore 18m
+    # use 50% chance for randomness and balance with halved interval
+    chance: 0.5
+    intervalSeconds: 540
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 1

@@ -835,6 +835,7 @@
   id: CrateTrashCart
   name: trash cart
   components:
+  - type: Hunger # starcup: added for reproductive purposes
   - type: Icon
     sprite: Structures/Storage/Crates/trashcart.rsi
   - type: Sprite
@@ -852,6 +853,12 @@
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: Paintable
     group: null
+  # begin starcup: Reproductive with flies and cockroaches
+  - type: Tag
+    tags:
+    - TrashPile
+  - type: ReproductivePartner
+  # end starcup
 
 - type: entity
   parent: CrateBaseSecure
