@@ -1,1 +1,1 @@
-reproductive-honey-popup = {CAPITALIZE(THE($parent))} made some honey!
+reproductive-honey-popup = {CAPITALIZE(THE($parent))} has yielded honey!
