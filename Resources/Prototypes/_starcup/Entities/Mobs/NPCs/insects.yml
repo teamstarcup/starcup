@@ -168,6 +168,10 @@
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
+  - type: ReproductivePartner
+  - type: Tag
+    tags:
+    - HoneyProducer
 
 - type: entity
   name: wasps
@@ -198,10 +202,6 @@
         reagents:
         - ReagentId: GroundBee
           Quantity: 5
-  - type: ReproductivePartner
-  - type: Tag
-    tags:
-    - HoneyProducer
 
 - type: entity
   name: flies
@@ -462,9 +462,6 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: cockroach
-  - type: Reproductive
-    offspring:
-    - id: MobCockroachHL
 
 - type: entity
   name: stag beetle
