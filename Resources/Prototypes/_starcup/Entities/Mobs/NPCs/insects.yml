@@ -168,16 +168,10 @@
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
-  - type: Reproductive
-    hungerPerBirth: 0
-    gestationDuration: 0
-    makeOffspringInfant: false
-    birthPopup: "reproductive-honey-popup"
-    partnerWhitelist:
-      tags:
-      - Beehive
-    offspring:
-    - id: DrinkHoneyJarFull
+  - type: ReproductivePartner
+  - type: Tag
+    tags:
+    - HoneyProducer
 
 - type: entity
   name: wasps
@@ -233,16 +227,6 @@
         - FlyingMobMask
         layer:
         - FlyingMobLayer
-  - type: Reproductive
-    hungerPerBirth: 0
-    gestationDuration: 0
-    makeOffspringInfant: false
-    birthPopup: "reproductive-vermin-plural-popup"
-    partnerWhitelist:
-      tags:
-      - TrashPile
-    offspring:
-    - id: MobFlySwarm
 
 - type: entity
   name: mosquitoes
@@ -478,9 +462,6 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: cockroach
-  - type: Reproductive
-    offspring:
-    - id: MobCockroachHL
 
 - type: entity
   name: stag beetle

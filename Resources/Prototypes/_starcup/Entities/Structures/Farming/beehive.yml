@@ -38,7 +38,14 @@
         - InteractImpassable
   - type: Transform
     noRot: false
-  - type: Tag
-    tags:
-    - Beehive
-  - type: ReproductivePartner
+  - type: Reproductive
+    breedChance: 1.0
+    hungerPerBirth: 0
+    gestationDuration: 300
+    makeOffspringInfant: false
+    birthPopup: "reproductive-honey-popup"
+    partnerWhitelist:
+      tags:
+      - HoneyProducer
+    offspring:
+    - id: DrinkHoneyJarFull
