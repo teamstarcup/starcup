@@ -469,8 +469,10 @@
     layers:
     - state: shadowpink # starcup
     - state: pink
-    - sprite: Mobs/Aliens/Carps/space.rsi
-      state: alive
+    # begin starcup
+    - sprite: _starcup/Markers/generic_salvage_spawners.rsi
+      state: salvage_sharkminnow
+    # end starcup
   - type: EntityTableSpawner
     table: !type:NestedSelector
       prob: 0.5
@@ -542,8 +544,10 @@
     layers:
     - state: shadowpink # starcup
     - state: pink
-    - sprite: Mobs/Aliens/Carps/sharkminnow.rsi
-      state: alive
+    # begin starcup
+    - sprite: _starcup/Markers/generic_salvage_spawners.rsi
+      state: salvage_sharkminnow
+    # end starcup
   - type: EntityTableSpawner
     table: !type:AllSelector
       children:
@@ -579,8 +583,11 @@
     layers:
     - state: shadowgreen # starcup
     - state: green
-    - sprite: Mobs/Aliens/Asteroid/goliath.rsi
-      state: goliath
+    # begin starcup
+    - sprite: _starcup/Markers/generic_salvage_spawners.rsi
+      state: salvage_asteroid
+    - state: ai
+    # end starcup
   - type: EntityTableSpawner
     table: !type:GroupSelector
       children:

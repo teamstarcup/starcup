@@ -57,7 +57,7 @@
       amount: 1
       maxAmount: 4
   - type: MeleeWeapon
-    attackRate: 0.75
+    attackRate: 1.2
     altDisarm: false
     angle: 0
     animation: WeaponArcBite
@@ -65,7 +65,7 @@
       path: /Audio/Effects/bite.ogg
     damage:
       types:
-        Slash: 10
+        Slash: 12
   - type: TypingIndicator
     proto: alien
   - type: Tag
@@ -82,4 +82,11 @@
     interactFailureString: petting-failure-carp
     interactFailureSound:
       path: /Audio/Effects/bite.ogg
+
+- type: entity
+  id: MobPikeSalvage
+  parent: MobPike
+  suffix: "Salvage Ruleset"
+  components:
+  - type: SalvageMobRestrictions
 

@@ -76,9 +76,11 @@
       layers:
       - state: shadowred # starcup
       - state: red
-      - sprite: Mobs/Aliens/Carps/space.rsi
-        state: icon
-      - state: ai # starcup
+      # begin starcup
+      - sprite: _starcup/Markers/generic_salvage_spawners.rsi
+        state: salvage_sharkminnow
+      - state: ai
+      # end starcup
     - type: RandomSpawner
       rarePrototypes:
       - MobSharkSalvage
@@ -92,6 +94,7 @@
       - MobSharkSalvageShelledGreen
       - MobSharkSalvageAbyssal
       - MobSharkSalvageVampire
+      - MobPikeSalvage
       # end starcup
       rareChance: 0.1 # starcup: Used to be 0.2. Having more minnows seems to stack spawn odds in their favor?
       prototypes:
@@ -176,6 +179,7 @@
     - MobSharkSalvageShelledGreen
     - MobSharkSalvageAbyssal
     - MobSharkSalvageVampire
+    - MobPikeSalvage
     # end starcup
     rareChance: 0.1 # starcup: Used to be 0.2. Having more minnows seems to stack spawn odds in their favor?
     prototypes:
@@ -265,6 +269,7 @@
   components:
     - type: Sprite
       layers:
+      - state: shadowred # starcup
       - state: red
       - sprite: Mobs/Aliens/flesh.rsi
         state: jared
@@ -272,6 +277,7 @@
     - type: RandomSpawner
       rarePrototypes:
       - MobSharkSalvage
+      - MobPikeSalvage
       rareChance: 0
       prototypes:
       - MobFleshJaredSalvage
