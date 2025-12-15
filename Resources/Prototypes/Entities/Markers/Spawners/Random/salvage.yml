@@ -269,11 +269,13 @@
   components:
     - type: Sprite
       layers:
-      - state: shadowred # starcup
+      # begin starcup
+      - state: shadowred
       - state: red
-      - sprite: Mobs/Aliens/flesh.rsi
-        state: jared
-      - state: ai # starcup
+      - sprite: _starcup/Markers/generic_salvage_spawners.rsi
+        state: salvage_flesh
+      - state: ai
+      # end starcup
     - type: RandomSpawner
       rarePrototypes:
       - MobSharkSalvage
