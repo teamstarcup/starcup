@@ -39,12 +39,12 @@
   - type: Hands
   - type: ItemOffer # starcup - item offering
   - type: ComplexInteraction
-#  - type: Sprite # starcup - splitting burrower off
-#    drawdepth: Mobs
-#    sprite: Mobs/Aliens/Xenos/burrower.rsi
-#    layers:
-#    - map: ["enum.DamageStateVisualLayers.Base"]
-#      state: running
+  - type: Sprite # starcup - splitting burrower off
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/burrower.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base", "resting"] # starcup: added resting mapping
+      state: running
   - type: Fixtures
     fixtures:
       fix1:
@@ -132,6 +132,12 @@
       Female: Xeno
       Unsexed: Xeno
   - type: Deathgasp
+  - type: Rest
+    actionIds:
+    - ActionRest
+    restingLayers:
+      resting:
+        state: sleeping
   # end starcup
 
 - type: entity

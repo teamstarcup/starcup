@@ -1,0 +1,12 @@
+﻿# This is modified code taken from old RMC14 commits from 2023.
+- type: entity
+  id: ActionRest
+  parent: BaseAction
+  name: Rest
+  components:
+  - type: Action
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: resting
+  - type: InstantAction
+    event: !type:RestEvent
