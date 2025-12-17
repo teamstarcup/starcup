@@ -78,6 +78,7 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
 
 - type: entity
   name: bee
@@ -231,6 +232,7 @@
     - DoorBumpOpener
     - Chicken
     - VimPilot
+    - CreatureEmotes # starcup
   - type: Reproductive
     breedChance: 0.05
     birthPopup: reproductive-laid-egg-popup
@@ -698,6 +700,7 @@
     - DoorBumpOpener
     - Duck
     - VimPilot
+    - CreatureEmotes # starcup
   - type: Reproductive
     breedChance: 0.05
     birthPopup: reproductive-laid-egg-popup
@@ -890,6 +893,7 @@
     tags:
     - DoorBumpOpener
     - Cow
+    - CreatureEmotes # starcup
   - type: Reproductive
     partnerWhitelist:
       tags:
@@ -1022,6 +1026,7 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
   - type: HTN
     rootTask:
       task: RuminantCompound
@@ -1057,6 +1062,7 @@
     - ClothMade
     - DoorBumpOpener
     - Goat
+    - CreatureEmotes # starcup
   - type: Reproductive
     partnerWhitelist:
       tags:
@@ -1181,6 +1187,11 @@
   - type: NpcFactionMember
     factions:
     - Passive
+  # begin starcup
+  - type: Tag
+    tags:
+    - CreatureEmotes
+  # end starcup
 
 - type: entity
   name: gorilla
@@ -1259,6 +1270,11 @@
       0: Alive
       200: Critical
       250: Dead
+  # begin starcup
+  - type: Tag
+    tags:
+    - CreatureEmotes
+  # end starcup
 
 - type: entity
   name: kangaroo
@@ -1312,6 +1328,7 @@
     tags:
     - DoorBumpOpener
     - FootstepSound
+    - CreatureEmotes # starcup
   - type: GhostRole
     prob: 0.25
     name: ghost-role-information-kangaroo-name
@@ -1466,6 +1483,7 @@
     - VimPilot
     - DoorBumpOpener
     - AnomalyHost
+    - CreatureEmotes # starcup
   - type: Reactive
     groups:
       Flammable: [ Touch ]
@@ -1870,6 +1888,7 @@
     - ChefPilot
     - Mouse
     - Meat
+    - CreatureEmotes # starcup
   - type: Respirator
     damage:
       types:
@@ -2120,6 +2139,7 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
 
 
 - type: entity
@@ -2227,6 +2247,7 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
   - type: Destructible
     thresholds:
     - trigger:
@@ -2370,6 +2391,7 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
   - type: NpcFactionMember
     factions:
     - Passive
@@ -2509,6 +2531,11 @@
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Scale
+  # behind starcup
+  - type: Tag
+    tags:
+    - CreatureEmotes
+# starcup
 
 # Code unique spider prototypes or combine them all into one spider and get a
 # random sprite state when you spawn it.
@@ -2593,6 +2620,7 @@
     tags:
     - DoorBumpOpener
     - FootstepSound
+    - CreatureEmotes # starcup
   - type: Prying # Open door from xeno.yml.
     pryPowered: true
     force: true
@@ -2802,6 +2830,7 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
 
 - type: entity
   name: possum
@@ -2877,6 +2906,7 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
   - type: Puller # starcup
     needsHands: false # starcup - "THEY CAN GRASP!!!"
 
@@ -2959,6 +2989,7 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
   - type: Puller
     needsHands: false # starcup - ability to carry emeralds important for niche Minecraft challenge modes
 
@@ -3007,6 +3038,11 @@
   - type: MessyDrinker
   - type: Puller
     needsHands: false # starcup - gives ghostrole corgis something to do. go fetch!
+  # behind starcup
+  - type: Tag
+    tags:
+    - CreatureEmotes
+  # end starcup
 
 - type: entity
   parent: MobCorgiBase
@@ -3188,6 +3224,7 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
     baseSprintSpeed: 4
@@ -3415,6 +3452,7 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
 
 - type: entity
   name: ferret
@@ -3470,6 +3508,7 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
 
 - type: entity
   name: hamster
@@ -3577,6 +3616,7 @@
     - Trash
     - Hamster
     - Meat
+    - CreatureEmotes # starcup
   - type: Respirator
     damage:
       types:
@@ -3655,6 +3695,7 @@
     - DoorBumpOpener
     - Pig
     - VimPilot
+    - CreatureEmotes # starcup
   - type: Reproductive
     partnerWhitelist:
       tags:
@@ -3768,6 +3809,7 @@
     tags:
     - DoorBumpOpener
     - VimPilot
+    - CreatureEmotes # starcup
   - type: Emoting
   - type: BodyEmotes
     soundsId: Nymph
@@ -3847,6 +3889,11 @@
       task: SimpleHostileCompound
   - type: Puller
     needsHands: false
+  # begin starcup
+  - type: Tag
+    tags:
+    - CreatureEmotes
+  # end starcup
 
 - type: entity
   name: reindeer doe
@@ -3943,6 +3990,7 @@
     - VimPilot
     - CanPilot
     - DoorBumpOpener
+    - CreatureEmotes # starcup
   - type: StatusIcon # marks them as crew
     bounds: -0.5,-0.5,0.5,0.5
   - type: NpcFactionMember

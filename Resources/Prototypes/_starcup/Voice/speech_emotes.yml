@@ -1,0 +1,143 @@
+# vocal emotes
+- type: emote
+  id: Roar
+  name: chat-emote-name-roar
+  category: Vocal
+  icon: _starcup/Interface/Emotes/roar.png
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  chatMessages: ["chat-emote-msg-roar"]
+  chatTriggers:
+  - roar
+  - roars
+  - roaring
+  - roared
+  - rargh
+  - raah
+  - raahh
+  - raaahhh
+
+- type: emote
+  id: Tailwhip
+  name: chat-emote-name-tailwhip
+  category: General
+  available: false
+  icon: _starcup/Interface/Emotes/tailswipe.png
+  chatMessages: ["chat-emote-msg-tailwhip"]
+  chatTriggers:
+  - whip
+  - whips
+  - whippping
+  - whipped
+  - whip tail
+  - whips tail
+  - whips their tail
+  - whips her tail
+  - whips his tail
+  - whips its tail
+
+- type: emote
+  id: Drool
+  name: chat-emote-name-drool
+  category: General
+  available: false
+  icon: _starcup/Interface/Emotes/drops.png
+  chatMessages: ["chat-emote-msg-drool"]
+  chatTriggers:
+  - drool
+  - drools
+  - drooling
+  - drooled
+
+# creature vocal emotes. they have their own icons
+- type: emote
+  id: CreatureHiss
+  name: chat-emote-name-hiss
+  category: Vocal
+  available: false
+  icon:
+    sprite: _RMC14/Actions/xeno_emotes.rsi
+    state: hiss
+  whitelist:
+    components:
+    - Vocal
+  chatMessages: ["chat-emote-msg-hiss"]
+  chatTriggers:
+  - hiss
+  - hisses
+  - hissing
+  - hissed
+  - hss
+  - hsss
+
+- type: emote
+  id: CreatureGrowl
+  name: chat-emote-name-growl
+  category: Vocal
+  available: false
+  icon:
+    sprite: _RMC14/Actions/xeno_emotes.rsi
+    state: growl
+  whitelist:
+    components:
+    - Vocal
+  chatMessages: ["chat-emote-msg-growl"]
+  chatTriggers:
+  - growl
+  - growls
+  - growling
+  - growled
+  - grr
+  - grrr
+
+- type: emote
+  id: CreatureRoar
+  name: chat-emote-name-roar
+  category: Vocal
+  available: false
+  icon:
+    sprite: _RMC14/Actions/xeno_emotes.rsi
+    state: roar
+  whitelist:
+    components:
+    - Vocal
+  chatMessages: ["chat-emote-msg-roar"]
+  chatTriggers:
+  - roar
+  - roars
+  - roaring
+  - roared
+  - rargh
+  - raah
+  - raahh
+  - raaahhh
+
+- type: emote
+  id: CreatureScream
+  name: chat-emote-name-scream
+  category: Vocal
+  available: false
+  icon: _starcup/Interface/Emotes/warning.png
+  whitelist:
+    components:
+    - Vocal
+  chatMessages: ["chat-emote-msg-scream"]
+  chatTriggers:
+  - scream
+  - screams
+  - screaming
+  - screamed
+  - shriek
+  - shrieks
+  - shrieking
+  - shrieked
+  - screech
+  - screeches
+  - screeching
+  - screeched
+  - yell
+  - yells
+  - yelled
+  - yelling
