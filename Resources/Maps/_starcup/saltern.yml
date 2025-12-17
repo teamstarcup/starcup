@@ -4857,8 +4857,6 @@ entities:
       pos: -11.5,-19.5
       parent: 2
     - type: DeviceList
-      configurators:
-      - invalid
       devices:
       - 275
       - 8811
@@ -75480,10 +75478,6 @@ entities:
     - type: Transform
       pos: 30.5,-11.5
       parent: 2
-    - type: UserInterface
-      actors:
-        enum.StorageUiKey.Key:
-        - invalid
     - type: Storage
       storedItems:
         6489:
@@ -82362,6 +82356,7 @@ entities:
   - uid: 12522
     components:
     - type: Transform
+      anchored: true
       rot: -1.5707963267948966 rad
       pos: 5.5,-41.5
       parent: 2
