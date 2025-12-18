@@ -10,6 +10,8 @@
   - BasicRoundstartVariation
   - LateJoinAnomalySpawns
   - RoundstartPowerOutageRule
+  - SpawnOnShiftChangeShuttleUntilArrivalRule
+  - ReturnShiftChangeShuttle
 
 
 # game rules
@@ -99,3 +101,32 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: RoundstartPowerOutage
+
+# spawns a shift change shuttle at centcomm and FTLs it to the station
+# players will spawn on the shuttle (instead of the usual behavior)
+- type: entity
+  parent: BaseGameRule
+  id: SpawnOnShiftChangeShuttleRule
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SpawnOnShiftChangeShuttleRule
+    shuttleGrid: /Maps/_starcup/Shuttles/SYND_EvacShip.yml
+
+# spawns a shift change shuttle at centcomm and FTLs it to the station
+# players will spawn on the shuttle until it arrives
+# after which, they will spawn on the station as usual
+- type: entity
+  parent: BaseGameRule
+  id: SpawnOnShiftChangeShuttleUntilArrivalRule
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SpawnOnShiftChangeShuttleRule
+    shuttleGrid: /Maps/_starcup/Shuttles/SYND_EvacShip.yml
+    stopAfterArrival: true
+
+- type: entity
+  parent: BaseGameRule
+  id: ReturnShiftChangeShuttle
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ReturnShiftChangeShuttleRule
