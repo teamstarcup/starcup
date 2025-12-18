@@ -1,0 +1,132 @@
+- type: gamePreset
+  id: LateStart
+  name: late-start-title
+  showInVote: true
+  description: late-start-description
+  rules:
+  - BasicStationEventScheduler
+  - MeteorSwarmScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
+  - LateJoinAnomalySpawns
+  - RoundstartPowerOutageRule
+  - SpawnOnShiftChangeShuttleUntilArrivalRule
+  - ReturnShiftChangeShuttle
+
+
+# game rules
+
+- type: entityTable
+  id: RandomRockAnomalyTable
+  table: !type:GroupSelector
+    children:
+    - id: AnomalyRockIron
+    - id: AnomalyRockCoal
+    - id: AnomalyRockSilver
+    - id: AnomalyRockGold
+    - id: AnomalyRockQuartz
+    - id: AnomalyRockUranium
+      weight: 0.5
+    - id: AnomalyRockBananium
+      weight: 0.25
+
+- type: entityTable
+  id: RandomStandardAnomalyTable
+  table: !type:GroupSelector
+    children:
+    - id: AnomalyPyroclastic
+    - id: AnomalyGravity
+    - id: AnomalyElectricity
+    - id: AnomalyFlesh
+    - id: AnomalyBluespace
+    - id: AnomalyIce
+    - !type:NestedSelector
+      tableId: RandomRockAnomalyTable
+    - id: AnomalyLiquid
+    - id: AnomalyFlora
+    - id: AnomalyShadow
+    - id: AnomalyTech
+#    - id: AnomalySanta
+#      conditions:
+#      - !type:HolidayCondition
+#        holiday: Christmas
+
+- type: entityTable
+  id: RandomInfectionAnomalyTable
+  table: !type:GroupSelector
+    children:
+    - id: AnomalyTrapPyroclastic
+    - id: AnomalyTrapElectricity
+    - id: AnomalyTrapShadow
+    - id: AnomalyTrapIce
+    - id: AnomalyTrapFlora
+    - id: AnomalyTrapBluespace
+    - id: AnomalyTrapFlesh
+    - id: AnomalyTrapGravity
+    - id: AnomalyTrapTech
+    - id: AnomalyTrapRock
+#    - id: AnomalyTrapSanta
+#      conditions:
+#      - !type:HolidayCondition
+#        holiday: Christmas
+
+- type: entityTable
+  id: RandomAnomalyTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomStandardAnomalyTable
+      weight: 0.7
+    - !type:NestedSelector
+      tableId: RandomInfectionAnomalyTable
+      weight: 0.3
+
+- type: entity
+  parent: BaseVariationPass
+  id: LateJoinAnomalySpawns
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: LateJoinAnomalySpawn
+    anomalyTable: !type:AllSelector
+      rolls: !type:BinomialNumberSelector
+        trials: 8
+        chance: 0.6
+      children:
+        - !type:NestedSelector
+          tableId: RandomStandardAnomalyTable
+
+- type: entity
+  parent: BaseVariationPass
+  id: RoundstartPowerOutageRule
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RoundstartPowerOutage
+
+# spawns a shift change shuttle at centcomm and FTLs it to the station
+# players will spawn on the shuttle (instead of the usual behavior)
+- type: entity
+  parent: BaseGameRule
+  id: SpawnOnShiftChangeShuttleRule
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SpawnOnShiftChangeShuttleRule
+    shuttleGrid: /Maps/_starcup/Shuttles/SYND_EvacShip.yml
+
+# spawns a shift change shuttle at centcomm and FTLs it to the station
+# players will spawn on the shuttle until it arrives
+# after which, they will spawn on the station as usual
+- type: entity
+  parent: BaseGameRule
+  id: SpawnOnShiftChangeShuttleUntilArrivalRule
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SpawnOnShiftChangeShuttleRule
+    shuttleGrid: /Maps/_starcup/Shuttles/SYND_EvacShip.yml
+    stopAfterArrival: true
+
+- type: entity
+  parent: BaseGameRule
+  id: ReturnShiftChangeShuttle
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ReturnShiftChangeShuttleRule
