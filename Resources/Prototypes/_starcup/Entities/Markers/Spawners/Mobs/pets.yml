@@ -1,0 +1,30 @@
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobMonkeyPunpunCold
+  name: Pun Pun Spawner
+  suffix: Bartender Pet, Cold
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: monkey
+      sprite: Mobs/Animals/monkey.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobMonkeyPunpunCold
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobHamsterHamletMime
+  name: Hamster Mimelet Spawner
+  suffix: Bridge Pet (crate)
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: icon-0
+      sprite: Mobs/Animals/hamster.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - CrateNPCHamletMime

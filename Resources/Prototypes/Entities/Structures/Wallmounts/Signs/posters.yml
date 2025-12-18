@@ -1073,11 +1073,14 @@
 - type: entity
   parent: PosterBase
   id: PosterLegitVacation
-  name: "Nanotrasen Corporate Perks: Vacation"
-  description: "This informational poster provides information on some of the prizes available via the NT Corporate Perks program, including a two-week vacation for two on the resort world Idyllus."
+  # begin starcup: reflavor ops
+  name: "SyndComm Corporate Perks: Vacation"
+  description: "This poster provides information on some of the prizes available via the SyndComm Corporate Perks program, including a two-week vacation on the finest resorts of planet Elysion and all manner of Donk Co. prizes!"
   components:
     - type: Sprite
-      state: poster48_legit
+      sprite: _starcup/Structures/Wallmounts/posters.rsi
+      state: postervacation_legit
+  # end starcup
 
 - type: entity
   parent: PosterBase

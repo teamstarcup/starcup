@@ -9,78 +9,9 @@
   - ServiceWorkerCapFlip
   - ServiceWorkerBandana
 
-# begin starcup
-#- type: loadoutGroup
-#  id: ServiceWorkerJumpsuit
-#  name: loadout-group-serviceworker-jumpsuit
-#  loadouts:
-#  - GreenJumpsuit
-#  - GreenJumpskirt
-#  - DarkGreenJumpsuit
-#  - DarkGreenJumpskirt
-#  - BartenderJumpsuit
-#  - BartenderJumpskirt
-#  - BartenderJumpsuitPurple
-# end starcup
-
-## Bartender
-- type: loadoutGroup
-  id: BartenderNeck
-  name: loadout-group-bartender-neck
-  minLimit: 0
-  loadouts:
-  - ScarfBlack
-  - ScarfPurple
-
-## Librarian
-- type: loadoutGroup
-  id: LibrarianNeck
-  name: loadout-group-librarian-neck
-  minLimit: 0
-  loadouts:
-  - ScarfGreen
-  - ScarfRed
-
-## Janitor
-- type: loadoutGroup
-  id: JanitorNeck
-  name: loadout-group-janitor-neck
-  minLimit: 0
-  loadouts:
-  - ScarfPurple
-
-## Botanist
-- type: loadoutGroup
-  id: BotanistNeck
-  name: loadout-group-botanist-neck
-  minLimit: 0
-  loadouts:
-  - ScarfGreen
-  - ScarfBrown
-  - ScarfSyndieGreen #starcup
-
-## Mime
-- type: loadoutGroup
-  id: MimeNeck
-  name: loadout-group-mime-neck
-  minLimit: 0
-  loadouts:
-  - ScarfBlack
-  - ScarfZebra
-
-## Musician
-- type: loadoutGroup
-  id: MusicianNeck
-  name: loadout-group-musician-neck
-  minLimit: 0
-  loadouts:
-  - ScarfBlack
-  - ScarfPurple
-  - ScarfZebra
-  - ScarfRainbow #starcup
-
 ## Assistants
 - type: loadoutGroup
+  parent: PlushiesWorn # starcup
   id: AssistantHead
   name: loadout-group-assistant-head
   minLimit: 0
@@ -93,6 +24,7 @@
   - RedBandana
   - BrownBandana
   - SkullBandana
+  - Beanie # starcup
   - BartenderHead
   - BartenderBowler
   - RedBeret
@@ -115,6 +47,7 @@
   - OutlawHat
   - WitchHat
   - PirateHat
+  - WarningCone # starcup
 
 # Logistics
 ## Courier
@@ -125,14 +58,6 @@
   loadouts:
   - CourierHead
   - MailCarrierHead
-
-- type: loadoutGroup
-  id: CourierNeck
-  name: loadout-group-courier-neck
-  minLimit: 0
-  loadouts:
-  - ScarfBrown
-  - ScarfBlue
 
 - type: loadoutGroup
   id: CourierJumpsuit
@@ -152,26 +77,12 @@
   - MailCarrierWintercoat
 
 - type: loadoutGroup
-  id: CourierBackpack
-  name: loadout-group-courier-backpack
-  loadouts:
-  - CargoTechnicianBackpack
-  - CargoTechnicianSatchel
-  - CargoTechnicianDuffel
-
-  ## Cargo Technician
-- type: loadoutGroup
-  id: CargoTechnicianNeck
-  name: loadout-group-cargo-technician-neck
-  minLimit: 0
-  loadouts:
-  - ScarfBrown
-
-- type: loadoutGroup
   id: CourierShoes
   name: loadout-group-courier-shoes
   loadouts:
   - BlackShoes
+  - BlueShoes # starcup
+  - BrownShoes # starcup
   - CargoWinterBoots
   - RollerSkates
 
@@ -181,6 +92,7 @@
   loadouts:
   - CourierPDA
   - MailCarrierPDA
+  - SeniorCourierPDA # starcup
 
 ## Cargo Assistant
 - type: loadoutGroup
@@ -198,14 +110,6 @@
   - CargoTechnicianJumpskirt
 
 - type: loadoutGroup
-  id: CargoAssistantBackpack
-  name: loadout-group-cargo-assistant-backpack
-  loadouts:
-  - CargoTechnicianBackpack
-  - CargoTechnicianSatchel
-  - CargoTechnicianDuffel
-
-- type: loadoutGroup
   id: CargoAssistantOuterClothing
   name: loadout-group-cargo-assistant-outerclothing
   minLimit: 0
@@ -218,16 +122,6 @@
   loadouts:
   - BlackShoes
   - CargoWinterBoots
-
-## Salvage Specialist
-- type: loadoutGroup
-  id: SalvageSpecialistNeck
-  name: loadout-group-salvage-specialist-neck
-  minLimit: 0
-  loadouts:
-  - ScarfBrown
-  - ScarfLesbian # starcup
-  - ScarfBi # starcup - it's the axes is the thing
 
 # Epistemics
 ## Roboticist
@@ -243,6 +137,7 @@
   - NeuroroboticistHelmet # starcup
 
 - type: loadoutGroup
+  parent: ScientistJumpsuit # starcup
   id: RoboticistJumpsuit
   name: loadout-group-roboticist-jumpsuit
   loadouts:
@@ -250,18 +145,21 @@
   - RoboticistJumpskirt
   - NeuroroboticistJumpsuit # starcup
   - NeuroroboticistJumpskirt # starcup
-  - ScientistJumpsuit
-  - ScientistJumpskirt
+#  - ScientistJumpsuit # starcup: provided by parent
+#  - ScientistJumpskirt # starcup: provided by parent
+  - TacticoolJumpsuit # starcup
+  - TacticoolJumpskirt # starcup
 
 - type: loadoutGroup
+  parent: ScientistOuterClothing # starcup
   id: RoboticistOuterClothing
   name: loadout-group-roboticist-outerclothing
   minLimit: 0
   loadouts:
   - RoboticistLabCoat
   - RoboticistWintercoat
-  - RegularLabCoat
-  - ScienceLabCoat
+#  - RegularLabCoat # starcup: provided by parent
+#  - ScienceLabCoat # starcup: provided by parent
   - CardborgCostume
   - NeuroroboticistSuit # starcup
 
@@ -275,12 +173,15 @@
   - RobohandsGloves
 
 - type: loadoutGroup
+  parent: ScientistShoes # starcup
   id: RoboticistShoes
   name: loadout-group-roboticist-shoes
   loadouts:
-  - BlackShoes
-  - WhiteShoes
-  - ScienceWinterBoots
+  # - BlackShoes # starcup: provided by parent
+  # - WhiteShoes # starcup: provided by parent
+  - RedShoes # starcup
+  - CombatBoots # starcup
+  # - ScienceWinterBoots # starcup: provided by parent
   - RoboticsWinterBoots
 
 # Command
@@ -291,7 +192,9 @@
   loadouts:
   - AdminAssistantJumpsuit
   - AdminAssistantJumpskirt
-  - ElegantDressPurple # starcup
+  - CommandJumpsuit # starcup
+  - CommandJumpskirt # starcup
+  - PurpleElegantDress # starcup
 
 - type: loadoutGroup
   id: AdminAssistantShoes
@@ -299,11 +202,13 @@
   loadouts:
   - BrownLeatherShoes
   - LaceupShoes
+  - BlackHeels # starcup
   - WinterBoots # starcup
 
 - type: loadoutGroup
   id: AdminAssistantOuter
   name: loadout-group-admin-assistant-outerclothing
+  minLimit: 0 # starcup
   loadouts:
   - BartenderVest
   - WinterCoatBlack
@@ -324,6 +229,11 @@
   loadouts:
   - BrownLeatherShoes
   - LaceupShoes
+  - CombatBoots # starcup
+  - BlackHeels # starcup
+  - BlackCommandHeels # starcup
+  - PurpleCommandHeels # starcup
+  - HighHeels # starcup
   - CaptainWinterBoots
 
 # Head of Personnel
@@ -333,6 +243,11 @@
   loadouts:
   - BrownLeatherShoes
   - LaceupShoes
+  - CombatBoots # starcup
+  - BlackHeels # starcup
+  - BlackCommandHeels # starcup
+  - PurpleCommandHeels # starcup
+  - HighHeels # starcup
   - HoPWinterBoots
 
 # Security
@@ -342,6 +257,10 @@
   name: loadout-group-head-of-security-shoes
   loadouts:
   - JackBoots
+  - BrownLeatherShoes # starcup
+  - LaceupShoes # starcup
+  - BlackHeels # starcup
+  - BlackCommandHeels # starcup
   - SecurityWinterBoots
   - HeadOfSecurityWinterBoots
 
@@ -425,15 +344,6 @@
  # - SecurityFirearmSpeedLoaderSpecialRubber # starcup - we don't have this yet
  # - SecurityFirearmSpeedLoaderSpecial # starcup - we don't have this yet
 
-## Security Officer
-- type: loadoutGroup
-  id: SecurityNeck
-  name: loadout-group-security-neck
-  minLimit: 0
-  loadouts:
-  - ScarfRed
-  - ScarfSyndieRed # starcup
-
 # Medical
 ##Psychologist
 - type: loadoutGroup
@@ -451,52 +361,34 @@
   loadouts:
   - BrownLeatherShoes
   - LaceupShoes
+  - RedHeels # starcup
+  - BlackHeels # starcup
+  - BlueHeels # starcup
+  - GreenHeels # starcup
   - MedicalWinterBoots
   - WinterBoots
 
 ## Medical Doctor
 - type: loadoutGroup
   id: MedicalDoctorNeck
+  parent: [ Scarfs ] # starcup
   name: loadout-group-medical-doctor-neck
   minLimit: 0
   loadouts:
   - Stethoscope
-  - ScarfBlue
+  # - ScarfBlue # starcup
 
 ## Chemist
-- type: loadoutGroup
-  id: ChemistNeck
-  name: loadout-group-chemist-neck
-  minLimit: 0
-  loadouts:
-  - ScarfOrange
-  - ScarfBlue
-
 - type: loadoutGroup
   id: ChemistShoes
   name: loadout-group-chemist-shoes
   loadouts:
+  - OrangeShoes # starcup
   - WhiteShoes
   - ChemistWinterBoots
 
 # Engineering
-## Station Engineer
-- type: loadoutGroup
-  id: StationEngineerNeck
-  name: loadout-group-station-engineer-neck
-  minLimit: 0
-  loadouts:
-  - ScarfOrange
-
 ## Atmospheric Technician
-- type: loadoutGroup
-  id: AtmosphericTechnicianNeck
-  name: loadout-group-atmospheric-technician-neck
-  minLimit: 0
-  loadouts:
-  - ScarfLightBlue
-  - ScarfOrange
-
 - type: loadoutGroup
   id: AtmosphericTechnicianHead
   name: loadout-group-atmospheric-technician-head
@@ -505,6 +397,7 @@
   - StationEngineerHardhatYellow
   - StationEngineerHardhatOrange
   - StationEngineerHardhatRed
+  - AtmosHardhatBlue # starcup
   - AtmosBeret
 
 # PDAs
@@ -554,14 +447,6 @@
   - AtmosPDA
   - LifeSupportTechPDA
   - PlasmaScientistPDA
-
-- type: loadoutGroup
-  id: CargoPDADelta
-  name: loadout-group-cargo-id-delta
-  loadouts:
-  - CargoPDA
-  - DeckWorkerPDA
-  - InventoryAssociatePDA
 
 - type: loadoutGroup
   id: SalvagePDADelta
@@ -617,10 +502,11 @@
   # begin starcup additions
   - ScarfSyndieRed
   - ScarfSyndieGreen
-  - ScarfAce # passengers are dressup dolls. they can keep their loadout scarf previews.
+  - ScarfAce
   - ScarfAro
   - ScarfAroAce
   - ScarfBi
+  - ScarfGay
   - ScarfInter
   - ScarfLesbian
   - ScarfLesbianLong

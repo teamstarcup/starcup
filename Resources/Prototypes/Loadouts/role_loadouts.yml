@@ -1,3 +1,22 @@
+# starcup: reorganized all loadout listings to a standardized order as follows:
+# - Head
+# - Mask
+# - Neck/Scarves
+# - Jumpsuit
+# - Belt
+# - Backpack
+# - Outer Clothing
+# - Shoes
+# - Eyewear/Glasses
+# - PDA
+# - Accessibility
+# - Trinkets
+# - Job Trinkets
+# - Other Job Items (golden plunger, instruments, janitor flashlight, etc)
+# - Survival
+# - GroupSpeciesBreathTool
+# - GroupTankHarness
+
 # Command
 - type: roleLoadout
   id: JobCaptain
@@ -9,16 +28,15 @@
   - CaptainOuterClothing
   - CaptainShoes # DeltaV
   - CommandEyewear # starcup
-  - Survival
+  - Accessibility # starcup
   - Trinkets
   - CaptainJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
   id: JobHeadOfPersonnel
   groups:
-  - GroupTankHarness
   - HoPHead
   - HoPNeck
   - HoPJumpsuit
@@ -26,11 +44,12 @@
   - HoPOuterClothing
   - HoPShoes # DeltaV
   - CommandEyewear # starcup
-  - Survival
+  - Accessibility # starcup
   - Trinkets
   - HoPJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 # Silicons
 - type: roleLoadout
@@ -47,230 +66,227 @@
 - type: roleLoadout
   id: JobPassenger
   groups:
-  - Scarfs # DeltaV
-  - GroupTankHarness
   - AssistantHead # DeltaV
+  - PassengerFace
+  - PassengerNeck
   - PassengerJumpsuit
   - CommonBackpack
-  - PassengerNeck
-  - PassengerFace
-  - PassengerGloves
   - PassengerOuterClothing
-  - PassengerPDADelta # DeltaV
+  - PassengerGloves
   - PassengerShoes
-  - Glasses
-  - Survival
-  - Plushies # starcup
+  - PassengerEyewear # starcup
+  - PassengerPDADelta # DeltaV
+  - Accessibility # starcup
   - Trinkets
   - PassengerJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
+  # - GroupTankHarness # starcup: removed for conflicting with new outer clothing options
 
 - type: roleLoadout
   id: JobBartender
   groups:
-  - GroupTankHarness
   - BartenderHead
-  - BartenderNeck # DeltaV
+  - Scarfs # starcup
   - BartenderJumpsuit
   - CommonBackpack
   - BartenderOuterClothing
   - BartenderShoes # starcup
   - BartenderEyewear # starcup
   - BartenderPDADelta # DeltaV
-  - Glasses
-  - Survival
-# starcup - DV took away bartenders' glasses and survival kit in the PDA change. not sure why. maybe we'll find out.
+  - Accessibility # starcup
   - Trinkets
   - BartenderJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobServiceWorker
   groups:
   - Scarfs # DeltaV
-  - GroupTankHarness
   - ServiceWorkerJumpsuit # starcup, replaces BartenderJumpsuit
-  - ServiceWorkerOuterClothing # starcup
   - CommonBackpack
+  - ServiceWorkerOuterClothing # starcup
   - ServiceWorkerShoes # starcup
-  - Glasses
-  - Survival
+  - ServiceWorkerEyewear # starcup
+  - Accessibility # starcup
   - Trinkets
   - ServiceWorkerJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobChef
   groups:
-  - GroupTankHarness
   - ChefHead
   #- ChefMask # starcup: removed for tone
+  - Scarfs # starcup
   - ChefJumpsuit
   - CommonBackpack
   - ChefOuterClothing
   - ChefShoes # starcup
-  - ChefPDADelta # DeltaV
   - Glasses
-  - Survival
+  - ChefPDADelta # DeltaV
+  - Accessibility # starcup
   - Trinkets
   - ChefJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobLibrarian
   groups:
-  - LibrarianNeck # DeltaV
-  - GroupTankHarness
+  - Scarfs # starcup
   - LibrarianJumpsuit
-  - LibrarianOuterClothing # starcup
   - CommonBackpack
+  - LibrarianOuterClothing # starcup
   - LibrarianShoes # starcup
   - Glasses
-  - Survival
+  - Accessibility # starcup
   - Trinkets
   - LibrarianJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobLawyer
   groups:
-  - GroupTankHarness
   - LawyerNeck
   - LawyerJumpsuit
-  - LawyerOuterClothing # starcup
   - CommonBackpack
+  - LawyerOuterClothing # starcup
   - LawyerShoes # starcup
   - Glasses
-  - Survival
+  - Accessibility # starcup
   - Trinkets
   - LawyerJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobChaplain
   groups:
-  - GroupTankHarness
   - ChaplainHead
   - ChaplainMask
   - ChaplainNeck
   - ChaplainJumpsuit
-  - ChaplainShoes # starcup
   - CommonBackpack
-  - ChaplainPDAstarcup
   - ChaplainOuterClothing
-  - ChaplainBible
+  - ChaplainShoes # starcup
+  - ChaplainPDAstarcup
   - Glasses
-  - Survival
+  - Accessibility # starcup
   - Trinkets
   - ChaplainJobTrinkets
-  - Accessibility # starcup
+  - ChaplainBible
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobJanitor
   groups:
-  - GroupTankHarness
   - JanitorHead
-  - JanitorNeck # DeltaV
+  - Scarfs # starcup
   - JanitorJumpsuit
-  - JanitorGloves
   - JanitorBeltstarcup # starcup
-  - JanitorPDADelta # DeltaV
   - CommonBackpack
   - JanitorOuterClothing
+  - JanitorGloves
   - JanitorShoes # starcup
   - Glasses
-  - Survival
+  - JanitorPDADelta # DeltaV
+  - Accessibility # starcup
   - Trinkets
   - JanitorJobTrinkets
-  - Accessibility # starcup
   - JanitorPlunger
   - JanitorLight # starcup: adds a choice between flashlights/lanterns. who goers there
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobBotanist
   groups:
-  - GroupTankHarness
   - BotanistHead
-  - BotanistNeck # DeltaV
+  - Scarfs # starcup
   - BotanistJumpsuit
   - BotanistBackpack
   - BotanistOuterClothing
   - BotanistShoes # starcup
   - Glasses
-  - Survival
+  - Accessibility # starcup
   - Trinkets
   - BotanistJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobClown
   canCustomizeName: true
   groups:
-  - GroupTankHarness
   - ClownHead
   - ClownMask # starcup
   - Scarfs # DeltaV
   - ClownJumpsuit
   - ClownBackpack
   - ClownOuterClothing
-  - ClownPDADelta # DeltaV
   - ClownShoes
   - Glasses
-  - SurvivalClown
+  - ClownPDADelta # DeltaV
+  - Accessibility # starcup
   - Trinkets
   - ClownJobTrinkets
-  - Accessibility # starcup
+  - SurvivalClown
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobMime
   canCustomizeName: true
   groups:
-  - GroupTankHarness
   - MimeHead
   - MimeMask
-  - MimeNeck # DeltaV
+  - Scarfs # starcup
   - MimeJumpsuit
+  - MimeBelt
   - MimeBackpack
   - MimeOuterClothing
-  - MimeBelt
   - MimeShoes # starcup
   - Glasses
-  - SurvivalMime
+  - Accessibility # starcup
   - Trinkets
   - MimeJobTrinkets
-  - Accessibility # starcup
+  - SurvivalMime
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobMusician
   canCustomizeName: true
   groups:
-  - GroupTankHarness
+  - Scarfs # starcup
   - MusicianJumpsuit
   - CommonBackpack
   - MusicianOuterClothing
   - MusicianShoes # starcup
   - MusicianEyewear # starcup
-  - Survival
+  - Accessibility # starcup
   - Trinkets
   - MusicianJobTrinkets
-  - Accessibility # starcup
   - Instruments
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 # Cargo
 - type: roleLoadout
   id: JobQuartermaster
   groups:
-  - GroupTankHarness
   - QuartermasterHead
   - QuartermasterNeck
   - QuartermasterJumpsuit
@@ -278,136 +294,136 @@
   - QuartermasterOuterClothing
   - QuartermasterShoes
   - Glasses
-  - Survival
+  - Accessibility # starcup
   - Trinkets
   - QuartermasterJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobCargoTechnician
   groups:
-  - GroupTankHarness
   - CargoTechnicianHead
-  - CargoTechnicianNeck # DeltaV
+  - CargoTechnicianNeck # starcup
   - CargoTechnicianJumpsuit
   - CargoTechnicianBackpack
   - CargoTechnicianOuterClothing
-  - CargoPDADelta # DeltaV
   - CargoTechnicianShoes
-  - CargoTechnicianID
   - Glasses
-  - Survival
+  - CargoTechnicianID
+  - Accessibility # starcup
   - Trinkets
   - CargoTechnicianJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobSalvageSpecialist
   groups:
-  - GroupTankHarness
-  - SalvageSpecialistNeck # DeltaV
+  - SalvageSpecialistNeck # starcup
   - SalvageSpecialistBackpack
   - SalvageSpecialistOuterClothing
-  - SalvagePDADelta # DeltaV
   - SalvageSpecialistShoes
   - Glasses
-  - Survival
+  - SalvagePDADelta # DeltaV
+  - Accessibility # starcup
   - Trinkets
   - SalvageSpecialistJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 # Engineering
 - type: roleLoadout
   id: JobChiefEngineer
   groups:
-  - GroupTankHarness
   - ChiefEngineerHead
+  - ChiefEngineerNeck
   - ChiefEngineerJumpsuit
   - StationEngineerBackpack
-  - ChiefEngineerNeck
   - ChiefEngineerOuterClothing
   - ChiefEngineerShoes
-  - SurvivalExtended
+  - Accessibility # starcup
   - Trinkets
   - ChiefEngineerJobTrinkets
-  - Accessibility # starcup
+  - SurvivalExtended
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobTechnicalAssistant
   groups:
-  - GroupTankHarness
+  - Scarfs # starcup
   - TechnicalAssistantJumpsuit
   - TechnicalAssistantOuterClothing # starcup
   - StationEngineerBackpack
   - StationEngineerShoes # starcup
   - Glasses # starcup
-  - SurvivalExtended
+  - Accessibility # starcup
   - Trinkets
   - TechnicalAssistantJobTrinkets
-  - Accessibility # starcup
+  - SurvivalExtended
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobStationEngineer
   groups:
-  - GroupTankHarness
   - StationEngineerHead
-  - StationEngineerNeck # DeltaV
+  - Scarfs # starcup
   - StationEngineerJumpsuit
   - StationEngineerBackpack
   - StationEngineerOuterClothing
   - StationEngineerShoes
   - StationEngineerID
-  - SurvivalExtended
+  - Accessibility # starcup
   - Trinkets
   - StationEngineerJobTrinkets
-  - Accessibility # starcup
+  - SurvivalExtended
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobAtmosphericTechnician
   groups:
-  - GroupTankHarness
   - AtmosphericTechnicianHead # DeltaV
-  - AtmosphericTechnicianNeck # DeltaV
+  - Scarfs # starcup
   - AtmosphericTechnicianJumpsuit
   - AtmosphericTechnicianBackpack
   - AtmosphericTechnicianOuterClothing
-  - AtmosPDADelta # DeltaV
   - AtmosphericTechnicianShoes
-  - SurvivalExtended
+  - AtmosPDADelta # DeltaV
+  - Accessibility # starcup
   - Trinkets
   - AtmosphericTechnicianJobTrinkets
-  - Accessibility # starcup
+  - SurvivalExtended
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 # Science
 - type: roleLoadout
   id: JobResearchDirector
   groups:
-  - GroupTankHarness
   - ResearchDirectorHead
   - ResearchDirectorNeck
   - ResearchDirectorJumpsuit
-  - ScientistBackpack
+  - ResearchDirectorBackpack # starcup
   - ResearchDirectorOuterClothing
   - ScientistGloves
   - ResearchDirectorShoes
   - Glasses
-  - Survival
+  - Accessibility # starcup
   - Trinkets
   - ResearchDirectorJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobScientist
   groups:
-  - GroupTankHarness
   - ScientistHead
   - ScientistNeck
   - ScientistJumpsuit
@@ -415,28 +431,30 @@
   - ScientistOuterClothing
   - ScientistGloves
   - ScientistShoes
-  - ScientistPDA
   - Glasses
-  - Survival
+  - ScientistPDA
+  - Accessibility # starcup
   - Trinkets
   - ScientistJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobResearchAssistant
   groups:
-  - GroupTankHarness
+  - Scarfs # starcup
   - ResearchAssistantJumpsuit
-  - ResearchAssistantOuterClothing # starcup
   - ScientistBackpack
-  - Glasses
+  - ResearchAssistantOuterClothing # starcup
   - ScientistShoes # starcup
-  - Survival
+  - Glasses
+  - Accessibility # starcup
   - Trinkets
   - ResearchAssistantJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 # Security
 - type: roleLoadout
@@ -445,61 +463,61 @@
   - HeadofSecurityHead
   - HeadofSecurityNeck
   - HeadofSecurityJumpsuit
-  - SecurityBackpack
   - SecurityBelt
+  - SecurityBackpack
   - HeadofSecurityOuterClothing
   - HeadofSecurityShoes # DeltaV - winter boots
 #  - SecurityShoes # DeltaV
   - SecurityEyewear # starcup
-  - SurvivalSecurity
+  - Accessibility # starcup
   - Trinkets
   - HeadofSecurityJobTrinkets
-  - Accessibility # starcup
   - SecurityStar
-  - GroupSpeciesBreathToolSecurity
   - SecurityAllFirearm # DeltaV - loadouts
   - SecurityAllAmmo # DeltaV - loadouts
+  - SurvivalSecurity
+  - GroupSpeciesBreathToolSecurity
 
 - type: roleLoadout
   id: JobWarden
   groups:
   - WardenHead
-  - SecurityNeck # DeltaV
+  - Scarfs # starcup
   - WardenJumpsuit
-  - SecurityBackpack
   - SecurityBelt
+  - SecurityBackpack
   - WardenOuterClothing
   - WardenShoes # starcup, replaces SecurityShoes
   - SecurityEyewear # starcup
-  - SurvivalSecurity
+  - Accessibility # starcup
   - Trinkets
   - WardenJobTrinkets
-  - Accessibility # starcup
   - SecurityStar
-  - GroupSpeciesBreathToolSecurity
   - SecurityAllFirearm # DeltaV - loadouts
   - SecurityAllAmmo # DeltaV - loadouts
+  - SurvivalSecurity
+  - GroupSpeciesBreathToolSecurity
 
 - type: roleLoadout
   id: JobSecurityOfficer
   groups:
   - SecurityHead
-  - SecurityNeck # DeltaV
+  - Scarfs # starcup
   - SecurityJumpsuit
+  - SecurityBelt
   - SecurityBackpack
   - SecurityOuterClothing
   - SecurityShoes
   - SecurityEyewear # starcup
-  - SecurityPDA
-  - SecurityBelt
   - SurvivalSecurity
+  - SecurityPDA
+  - Accessibility # starcup
   - Trinkets
   - SecurityJobTrinkets
-  - Accessibility # starcup
   - SecurityStar
-  - GroupSpeciesBreathToolSecurity
   - SecurityFirearm # DeltaV - loadouts
   - SecurityFirearmAmmo # DeltaV - loadouts
+  - GroupSpeciesBreathToolSecurity
 
 - type: roleLoadout
   id: JobDetective
@@ -507,184 +525,189 @@
   - DetectiveHead
   - DetectiveNeck
   - DetectiveJumpsuit
-  - SecurityBackpack
+  - DetectiveBackpack # starcup
   - DetectiveOuterClothing
-  - SecurityShoes
+  - DetectiveShoes # starcup
   - SecurityEyewear # starcup
-  - SurvivalSecurity
+  - Accessibility # starcup
   - Trinkets
   - DetectiveJobTrinkets
-  - Accessibility # starcup
   - SecurityStar
-  - GroupSpeciesBreathToolSecurity
   - SecurityRevolverFirearm # DeltaV - loadouts
   - SecurityRevolverAmmo # DeltaV - loadouts
+  - SurvivalSecurity
+  - GroupSpeciesBreathToolSecurity
 
 - type: roleLoadout
   id: JobSecurityCadet
   groups:
   - SecurityCadetHead # DeltaV
-  - SecurityNeck # DeltaV
+  - Scarfs # starcup
   - SecurityCadetJumpsuit
-  - SecurityCadetOuterClothing # starcup
   - SecurityBackpack
+  - SecurityCadetOuterClothing # starcup
   - SecurityShoes # starcup
   - SecurityEyewear # starcup
-  - SurvivalSecurity
+  - Accessibility # starcup
   - Trinkets
   - SecurityCadetJobTrinkets
-  - Accessibility # starcup
+  - SurvivalSecurity
   - GroupSpeciesBreathToolSecurity
 
 # Medical
 - type: roleLoadout
   id: JobChiefMedicalOfficer
   groups:
-  - GroupTankHarness
+
   - ChiefMedicalOfficerHead
   - MedicalMask
-  - ChiefMedicalOfficerJumpsuit
-  - MedicalGloves
-  - MedicalBackpack
-  - ChiefMedicalOfficerOuterClothing
   - ChiefMedicalOfficerNeck
+  - ChiefMedicalOfficerJumpsuit
+  - ChiefMedicalOfficerOuterClothing
+  - MedicalBackpack
+  - MedicalGloves
   - ChiefMedicalOfficerShoes
   - MedicalEyewear
-  - SurvivalMedical
+  - Accessibility # starcup
   - Trinkets
   - ChiefMedicalOfficerJobTrinkets
-  - Accessibility # starcup
+  - SurvivalMedical
   - GroupSpeciesBreathToolMedical
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobMedicalDoctor
   groups:
-  - GroupTankHarness
   - MedicalDoctorHead
-  - MedicalDoctorNeck # DeltaV
   - MedicalMask
+  - MedicalDoctorNeck # DeltaV
   - MedicalDoctorJumpsuit
-  - MedicalGloves
   - MedicalBackpack
   - MedicalDoctorOuterClothing
+  - MedicalGloves
   - MedicalShoes
-  - MedicalDoctorPDA
   - MedicalEyewear
-  - SurvivalMedical
+  - MedicalDoctorPDA
+  - Accessibility # starcup
   - Trinkets
   - MedicalDoctorJobTrinkets
-  - Accessibility # starcup
+  - SurvivalMedical
   - GroupSpeciesBreathToolMedical
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobMedicalIntern
   groups:
-  - GroupTankHarness
+  - Scarfs # starcup
   - MedicalInternJumpsuit
-  - MedicalInternOuterClothing # starcup
   - MedicalBackpack
-  - MedicalInternPDADelta # DeltaV
+  - MedicalInternOuterClothing # starcup
   - MedicalEyewear
   - MedicalShoes # starcup
-  # starcup - deltaV coupled the PDA addition with confiscating intern's medsurvival kit and eyewear; feels like scope creep so we're leaving it out
-  - SurvivalMedical
+  - MedicalInternPDADelta # DeltaV
+  - Accessibility # starcup
   - Trinkets
   - MedicalInternJobTrinkets
-  - Accessibility # starcup
+  - SurvivalMedical
   - GroupSpeciesBreathToolMedical
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobChemist
   groups:
-  - GroupTankHarness
-  - ChemistNeck # DeltaV
   - MedicalMask
+  - Scarfs # starcup
   - ChemistJumpsuit
-  - MedicalGloves
   - ChemistBackpack
-  - ChemistPDAstarcup
   - ChemistOuterClothing
+  - MedicalGloves
   - ChemistShoes # DeltaV, replaces MedicalShoes
-  - SurvivalMedical
+  - ChemistPDA # starcup
+  - Accessibility # starcup
   - Trinkets
   - ChemistJobTrinkets
-  - Accessibility # starcup
+  - SurvivalMedical
   - GroupSpeciesBreathToolMedical
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobParamedic
   groups:
-  - GroupTankHarness
   - ParamedicHead
   - MedicalMask
   - MedicalDoctorNeck # DeltaV
   - ParamedicJumpsuit
-  - MedicalGloves
   - MedicalBackpack
   - ParamedicOuterClothing
+  - MedicalGloves
   - ParamedicShoes
   - MedicalEyewear
-  - SurvivalMedical
+  - Accessibility # starcup
   - Trinkets
   - ParamedicJobTrinkets
-  - Accessibility # starcup
+  - SurvivalMedical
   - GroupSpeciesBreathToolMedical
+  - GroupTankHarness
 
 # Wildcards
 - type: roleLoadout
   id: JobZookeeper
   groups:
-  - GroupTankHarness
   - CommonBackpack
   - Glasses
-  - Survival
+  - Accessibility # starcup
   - Trinkets
   - ZookeeperJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobReporter
   groups:
-  - GroupTankHarness
+  - Scarfs # starcup
   - ReporterJumpsuit
   - CommonBackpack
-  - Glasses
-  - Survival
+  - ReporterShoes # starcup
+  - ReporterEyewear # starcup
+  - Accessibility # starcup
   - Trinkets
   - ReporterJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobPsychologist
   groups:
   - Scarfs # DeltaV
-  - GroupTankHarness
   - PsychologistJumpsuit
-  - MedicalBackpack
+  - PsychologistBackpack # starcup
   - PsychologistShoes # DeltaV
-  - PsychologistPDADelta # DeltaV
   - Glasses
-  - Survival
+  - PsychologistPDADelta # DeltaV
+  - Accessibility # starcup
   - Trinkets
   - PsychologistJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobBoxer
   groups:
-  - GroupTankHarness
+  - Scarfs # starcup
   - BoxerJumpsuit
-  - BoxerGloves
   - CommonBackpack
+  - BoxerGloves
+  - BoxerShoes # starcup
   - Glasses
-  - Survival
+  - Accessibility # starcup
   - Trinkets
   - BoxerJobTrinkets
-  - Accessibility # starcup
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 # These loadouts are used for non-crew spawns, like off-station antags and event mobs
 # They will be used without player configuration, thus they will only ever apply what is forced by MinLimit

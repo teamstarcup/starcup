@@ -1,0 +1,27 @@
+- type: reagent
+  id: Honey # Cloned sugar
+  name: reagent-name-honey
+  group: Foods
+  desc: reagent-desc-honey
+  physicalDesc: reagent-physical-desc-sweet
+  flavor: sweet
+  color: gold
+  meltingPoint: 65.0
+  metabolisms:
+    Food:
+      effects:
+      - !type:SatiateHunger
+        factor: 1 # Removed nutriment requirement
+  plantMetabolism:
+  - !type:PlantAdjustNutrition
+    amount: 0.1
+  - !type:PlantAdjustWeeds
+    amount: 2
+  - !type:PlantAdjustPests
+    amount: 2
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/honey_jar.rsi
+    state: icon
+  metamorphicMaxFillLevels: 5
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: true

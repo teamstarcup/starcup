@@ -925,14 +925,39 @@
         - id: MobCat
           amount: !type:RangeNumberSelector
             range: 1, 2
-        - id: MobBee
+        # begin starcup: replace individual bees with groups
+        - id: MobBeeSwarm
           amount: !type:RangeNumberSelector
-            range: 2, 5
+            range: 2, 3
+        # end starcup
         - id: MobGoat
           amount: !type:RangeNumberSelector
             range: 1, 3
         - id: MobMonkeySyndicateAgent #so lucky
           prob: 0.03
+        # begin starcup: add new bugs
+        - id: MobGiantBee
+          amount: !type:RangeNumberSelector
+            range: 1, 2
+        - id: MobGiantSandwasp
+          amount: !type:RangeNumberSelector
+            range: 1, 2
+        - id: MobDragonfly
+          amount: !type:RangeNumberSelector
+            range: 1, 3
+        - id: MobBeetle
+          amount: !type:RangeNumberSelector
+            range: 2, 5
+        - id: MobBeetleRhino
+          amount: !type:RangeNumberSelector
+            range: 2, 5
+        - id: MobFlySwarm
+          amount: !type:RangeNumberSelector
+            range: 2, 3
+        - id: MobFireflySwarm
+          amount: !type:RangeNumberSelector
+            range: 2, 3
+        # end starcup
         # begin starcup: add hostile fauna back into node
         - id: MobAdultSlimesYellowAngry
         - id: MobAngryBee
@@ -942,6 +967,15 @@
         - id: MobSpiderSpace
         - id: MobPurpleSnake
         - id: MobKangarooSpace
+        - id: MobMosquitoSwarm
+          amount: !type:RangeNumberSelector
+            range: 2, 3
+        - id: MobGiantWasp
+          amount: !type:RangeNumberSelector
+            range: 1, 2
+        - id: MobGiantMosquito
+          amount: !type:RangeNumberSelector
+            range: 1, 2
         # end starcup
 
 - type: entity
