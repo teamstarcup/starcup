@@ -1,0 +1,15 @@
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobPike
+  name: Space Pike Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: icon
+      sprite: _starcup/Mobs/Aliens/space_pike.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobPike
