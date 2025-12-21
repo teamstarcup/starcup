@@ -152,6 +152,12 @@
 #      collection: BikeHorn
     Weh:
       collection: Weh
+    # begin starcup
+    Crow:
+      path: /Audio/_starcup/Animals/rooster_crow.ogg
+    Ruffle:
+      collection: WingRuffle
+    # end starcup
     Gasp:
       collection: HarpyGasp
     DefaultDeathgasp:
@@ -163,13 +169,13 @@
     variation: 0.125
   sounds:
     Scream:
-      path: /Audio/Animals/mouse_squeak.ogg
+      path: /Audio/_starcup/Animals/Mouse/mouse_scream.ogg # starcup
     Laugh:
       collection: MaleLaugh
     Sneeze:
-      collection: MaleSneezes
+      collection: MouseSneezes # starcup
     Cough:
-      collection: MaleCoughs
+      collection: MouseSneezes # starcup
     Yawn:
       collection: MaleYawn
     Snore:
@@ -197,13 +203,13 @@
     variation: 0.125
   sounds:
     Scream:
-      path: /Audio/Animals/mouse_squeak.ogg
+      path: /Audio/_starcup/Animals/Mouse/mouse_scream.ogg # starcup
     Laugh:
       collection: FemaleLaugh
     Sneeze:
-      collection: FemaleSneezes
+      collection: MouseSneezes # starcup
     Cough:
-      collection: FemaleCoughs
+      collection: MouseSneezes # starcup
     Yawn:
       collection: FemaleYawn
     Snore:

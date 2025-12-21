@@ -37,11 +37,13 @@
 - type: speechSounds
   id: Squeak
   saySound:
-    path: /Audio/Animals/mouse_squeak.ogg
+  # begin starcup
+    collection: MouseSqueak
   askSound:
-    path: /Audio/Animals/mouse_squeak.ogg
+    path: /Audio/_starcup/Animals/Mouse/mouse_question.ogg
   exclaimSound:
-    path: /Audio/Animals/mouse_squeak.ogg
+    path: /Audio/_starcup/Animals/Mouse/mouse_agitated.ogg
+  # end starcup
 
 - type: speechSounds
   id: Vending
@@ -163,11 +165,13 @@
 - type: speechSounds
   id: Cluck
   saySound:
-    path: /Audio/Animals/chicken_cluck_happy.ogg
+  # begin starcup
+    collection: ChickenClucks
   askSound:
-    path: /Audio/Animals/chicken_cluck_happy.ogg
+    collection: ChickenClucks
   exclaimSound:
-    path: /Audio/Animals/chicken_cluck_happy.ogg
+    collection: ChickenClucks
+  # end starcup
 
 - type: speechSounds
   id: Goat

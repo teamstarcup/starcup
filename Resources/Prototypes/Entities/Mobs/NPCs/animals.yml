@@ -14,9 +14,9 @@
       state: bat
       sprite: Mobs/Animals/bat.rsi
   - type: Speech
-    speechSounds: Squeak
+    speechSounds: BatSpeechSounds
     speechVerb: SmallMob
-    allowedEmotes: ['Squeak']
+    allowedEmotes: ['CreatureSqueak', 'CreatureScream']
   - type: Fixtures
     fixtures:
       fix1:
@@ -46,7 +46,7 @@
     interactFailureString: petting-failure-bat
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
-      path: /Audio/Animals/fox_squeak.ogg
+      collection: BatSqueaks
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-organic
   - type: Bloodstream
@@ -79,6 +79,13 @@
     tags:
     - VimPilot
     - CreatureEmotes # starcup
+  # begin starcup: give animals a voice
+  - type: Vocal
+    sounds:
+      Unsexed: BatSpeechEmotes
+  - type: TypingIndicator
+    proto: rodentia
+  # end starcup
 
 - type: entity
   name: bee
@@ -193,7 +200,6 @@
     bloodMaxVolume: 0.1
   - type: ZombieImmune
 
-
 - type: entity
   name: chicken
   parent: SimpleMobBase
@@ -227,6 +233,7 @@
   - type: Speech
     speechVerb: SmallMob
     speechSounds: Cluck
+    allowedEmotes: ['Crow', 'Ruffle'] # starcup
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -264,7 +271,7 @@
     interactFailureString: petting-failure-generic
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
-      path: /Audio/Animals/chicken_cluck_happy.ogg
+      collection: ChickenClucks # starcup
   - type: Bloodstream
     bloodMaxVolume: 100
   - type: EggLayer
@@ -278,6 +285,11 @@
   - type: NpcFactionMember
     factions:
     - Passive
+  # begin starcup: give animals a voice
+  - type: Vocal
+    sounds:
+      Unsexed: CluckSpeechEmotes
+  # end starcup
 
 - type: entity
   parent: MobChicken
@@ -1778,7 +1790,7 @@
   - type: Speech
     speechSounds: Squeak
     speechVerb: SmallMob
-    allowedEmotes: ['Squeak']
+    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureLaugh']
   - type: Sprite
     drawdepth: SmallMobs
     sprite: Mobs/Animals/mouse.rsi
@@ -1900,11 +1912,13 @@
     damage:
       types:
         Blunt: 0.1
+  # begin starcup: give animals a voice
   - type: Vocal
     sounds:
-      Male: Mouse
-      Female: Mouse
-      Unsexed: Mouse
+      Unsexed: SqueakEmotes
+  - type: TypingIndicator
+    proto: rodentia
+    # end starcup
     wilhelmProbability: 0.001
   # TODO: Remove CombatMode when Prototype Composition is added
   - type: CombatMode

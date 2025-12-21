@@ -15,13 +15,14 @@ accent-words-dog-4 = Arf.
 accent-words-dog-5 = Grrr.
 
 # Mouse
+# starcup: Changed 2, 4, 5, 6 and 7 to make use of the expanded squeaks.
 accent-words-mouse-1 = Squeak!
-accent-words-mouse-2 = Piep!
+accent-words-mouse-2 = Piep.
 accent-words-mouse-3 = Chuu!
-accent-words-mouse-4 = Eeee!
-accent-words-mouse-5 = Pip!
-accent-words-mouse-6 = Fwiep!
-accent-words-mouse-7 = Heep!
+accent-words-mouse-4 = Queek.
+accent-words-mouse-5 = Pip.
+accent-words-mouse-6 = Fwiep.
+accent-words-mouse-7 = Heep?
 
 # Mumble
 accent-words-mumble-1 = Mmfph!

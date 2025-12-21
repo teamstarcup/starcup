@@ -20,6 +20,23 @@
   - raaahhh
 
 - type: emote
+  id: Crow
+  name: chat-emote-name-crow
+  category: Vocal
+  icon: _starcup/Interface/Emotes/crow.png
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  chatMessages: ["chat-emote-msg-crow"]
+  chatTriggers:
+  - crow
+  - crowed
+  - crowing
+  - crows
+
+# general emotes
+- type: emote
   id: Tailwhip
   name: chat-emote-name-tailwhip
   category: General
@@ -51,18 +68,41 @@
   - drooling
   - drooled
 
+- type: emote
+  id: Ruffle
+  name: chat-emote-name-ruffle
+  category: General
+  available: false
+  icon: _starcup/Interface/Emotes/wingflap.png
+  chatMessages: ["chat-emote-msg-ruffle"]
+  chatTriggers:
+  - ruffle
+  - ruffled
+
 # creature vocal emotes. they have their own icons
 - type: emote
+  id: CreatureEmote
+  name: chat-emote-name-creatureemote
+  category: Vocal
+  available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
+
+- type: emote
   id: CreatureHiss
+  parent: CreatureEmote
   name: chat-emote-name-hiss
   category: Vocal
   available: false
   icon:
     sprite: _RMC14/Actions/xeno_emotes.rsi
     state: hiss
-  whitelist:
-    components:
-    - Vocal
   chatMessages: ["chat-emote-msg-hiss"]
   chatTriggers:
   - hiss
@@ -74,15 +114,13 @@
 
 - type: emote
   id: CreatureGrowl
+  parent: CreatureEmote
   name: chat-emote-name-growl
   category: Vocal
   available: false
   icon:
     sprite: _RMC14/Actions/xeno_emotes.rsi
     state: growl
-  whitelist:
-    components:
-    - Vocal
   chatMessages: ["chat-emote-msg-growl"]
   chatTriggers:
   - growl
@@ -94,15 +132,13 @@
 
 - type: emote
   id: CreatureRoar
+  parent: CreatureEmote
   name: chat-emote-name-roar
   category: Vocal
   available: false
   icon:
     sprite: _RMC14/Actions/xeno_emotes.rsi
     state: roar
-  whitelist:
-    components:
-    - Vocal
   chatMessages: ["chat-emote-msg-roar"]
   chatTriggers:
   - roar
@@ -116,13 +152,10 @@
 
 - type: emote
   id: CreatureScream
+  parent: CreatureEmote
   name: chat-emote-name-scream
   category: Vocal
-  available: false
   icon: _starcup/Interface/Emotes/warning.png
-  whitelist:
-    components:
-    - Vocal
   chatMessages: ["chat-emote-msg-scream"]
   chatTriggers:
   - scream
@@ -141,3 +174,54 @@
   - yells
   - yelled
   - yelling
+
+- type: emote
+  id: CreatureSqueak
+  parent: CreatureEmote
+  name: chat-emote-name-squeak
+  category: Vocal
+  available: false
+  icon: _starcup/Interface/Emotes/squeak.png
+  chatMessages: ["chat-emote-msg-squeak"]
+  chatTriggers:
+  - squeak
+  - squeaks
+  - squeaked
+
+- type: emote
+  id: CreatureLaugh
+  parent: CreatureEmote
+  name: chat-emote-name-laugh
+  category: Vocal
+  available: false
+  icon: _starcup/Interface/Emotes/laugh.png
+  chatMessages: ["chat-emote-msg-laugh"]
+  chatTriggers:
+  - laugh
+  - laughs
+  - laughing
+  - laughed
+  - chuckle
+  - chuckles
+  - chuckled
+  - chuckling
+  - giggle
+  - giggles
+  - giggling
+  - giggled
+  - chortle
+  - chortles
+  - chortling
+
+- type: emote
+  id: CreatureChitter
+  parent: CreatureEmote
+  name: chat-emote-name-chitter
+  category: Vocal
+  available: false
+  icon: _starcup/Interface/Emotes/chitter.png
+  chatMessages: ["chat-emote-msg-chitter"]
+  chatTriggers:
+  - chitter
+  - chitters
+  - chittered
