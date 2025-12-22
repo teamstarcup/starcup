@@ -537,8 +537,29 @@ public sealed partial class AdminLogsControl : Control
 
     public void AddLogs(List<SharedAdminLog> logs)
     {
+        // begin den: sortable admin logs
+        // var span = CollectionsMarshal.AsSpan(logs);
+        // for (var i = 0; i < span.Length; i++)
+        // {
+        //     ref var log = ref span[i];
+        //     var separator = new HSeparator();
+        //     var label = new AdminLogLabel(ref log, separator);
+        //     label.Visible = ShouldShowLog(label);
+        //
+        //     TotalLogs++;
+        //     if (label.Visible)
+        //     {
+        //         ShownLogs++;
+        //     }
+        //
+        //     LogsContainer.AddChild(label);
+        //     LogsContainer.AddChild(separator);
+        // }
+        //
+        // UpdateCount();
         RawAdminLogs.AddRange(logs); // THE DEN - Admin Log Sorting - Logs will be sent in descending order
         RedrawLogs(); // Drawing the logs has been encaspulated to its own function
+        // end den
     }
 
     public void SetLogs(List<SharedAdminLog> logs)
