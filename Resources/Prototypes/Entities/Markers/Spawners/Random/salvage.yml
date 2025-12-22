@@ -135,8 +135,10 @@
   components:
     - type: Sprite
       layers:
-      - state: shadowgreen # starcup
+      # begin starcup: changed it from red, don't know why it was red when all other spawners of this type are green?
+      - state: shadowgreen
       - state: green
+      # end starcup
       - sprite: Mobs/Aliens/Xenos/spacetick.rsi
         state: icon
       - state: ai # starcup
