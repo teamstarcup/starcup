@@ -146,9 +146,9 @@
   rules:
   - DummyNonAntagChance
   - Traitor
-  - SubGamemodesRuleNoWizard
-  - BasicStationEventScheduler
-  - MeteorSwarmScheduler
+  # - SubGamemodesRuleNoWizard # starcup: put thieves in their own gamemode
+  - TroubleStationEventScheduler # starcup: change to trouble scheduler
+  - SlowMeteorSwarmScheduler # starcup: change to slow meteor scheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
 
