@@ -1,2 +1,2 @@
 late-start-title = Late Start
-late-start-description = Simulates joining a station with multiple devastating events having already taken place.
+late-start-description = Arrive via shuttle to repair a station that's been devastated by multiple destructive incidents.
