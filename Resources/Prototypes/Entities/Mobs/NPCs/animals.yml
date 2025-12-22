@@ -233,7 +233,7 @@
   - type: Speech
     speechVerb: SmallMob
     speechSounds: Cluck
-    allowedEmotes: ['Crow', 'Ruffle'] # starcup
+    allowedEmotes: ['Crow', 'Ruffle', 'CreatureScream'] # starcup
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -542,9 +542,9 @@
         - SmallMobLayer
   - type: GhostTakeoverAvailable
   - type: Speech
-    speechSounds: MothSpeechEmotes # starcup
+    speechSounds: MothSpeechSounds # starcup
     speechVerb: Moth
-    allowedEmotes: ['CreatureChitter', 'CreatureSqueak', 'CreatureLaugh'] # starcup
+    allowedEmotes: ['CreatureChitter', 'CreatureSqueak', 'CreatureLaugh', 'CreatureScream'] # starcup
   - type: FaxableObject
     insertingState: inserting_mothroach
   - type: MothAccent
@@ -613,9 +613,9 @@
     accent: zombieMoth
   - type: Vocal
     sounds:
-      Male: UnisexMoth
-      Female: UnisexMoth
-      Unsexed: UnisexMoth
+      Male: MothroachSpeechEmotes
+      Female: MothroachSpeechEmotes
+      Unsexed: MothroachSpeechEmotes
     wilhelmProbability: 0.001
   - type: MobPrice
     price: 150
@@ -759,6 +759,15 @@
   - type: NpcFactionMember
     factions:
     - Passive
+  # begin starcup
+  - type: Speech
+    speechVerb: SmallMob
+    speechSounds: DuckSpeechSounds
+    allowedEmotes: ['Ruffle', 'CreatureLaugh', 'CreatureScream']
+  - type: Vocal
+    sounds:
+      Unsexed: DuckSpeechEmotes
+  # end starcup
 
 - type: entity
   name: white duck #Quack

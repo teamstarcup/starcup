@@ -81,6 +81,7 @@
 
 # creature vocal emotes. they have their own icons
 - type: emote
+  abstract: true
   id: CreatureEmote
   name: chat-emote-name-creatureemote
   category: Vocal
@@ -155,6 +156,7 @@
   parent: CreatureEmote
   name: chat-emote-name-scream
   category: Vocal
+  available: false
   icon: _starcup/Interface/Emotes/warning.png
   chatMessages: ["chat-emote-msg-scream"]
   chatTriggers:

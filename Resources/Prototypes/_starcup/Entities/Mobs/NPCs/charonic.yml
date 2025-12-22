@@ -65,15 +65,21 @@
     tags:
     - DoorBumpOpener
     - CannotSuicide
+    - CreatureEmotes
   - type: ReplacementAccent
     accent: genericAggressive
   - type: Speech
     speechVerb: LargeMob
+    speechSounds: LeechSpeechSounds
+    allowedEmotes: ['CreatureGrowl', 'CreatureScream']
+  - type: Vocal
+    sounds:
+      Unsexed: LeechSpeechEmotes
   - type: InteractionPopup
     interactSuccessString: petting-success-frog
     interactFailureString: petting-failure-carp
     interactFailureSound:
-      path: /Audio/_starcup/Animals/leechbite1.ogg
+      path: /Audio/_starcup/Animals/leech_scream.ogg
   - type: FloatingVisuals
   - type: Destructible
     thresholds:
