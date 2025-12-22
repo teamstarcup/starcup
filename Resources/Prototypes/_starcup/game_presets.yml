@@ -48,19 +48,19 @@
   - BasicRoundstartVariation
 
 - type: gamePreset
-  id: LateStart
-  name: late-start-title
-  showInVote: true
-  description: late-start-description
+  id: Thief
+  alias:
+  - thief
+  name: thief-title
+  description: thief-description
+  showInVote: false
   rules:
+  - DummyNonAntagChance
+  - Thief
   - TroubleStationEventScheduler
   - SlowMeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
-  - LateJoinAnomalySpawns
-  - RoundstartPowerOutageRule
-  - SpawnOnShiftChangeShuttleUntilArrivalRule
-  - ReturnShiftChangeShuttle
 
 - type: gamePreset
   id: LateStart
