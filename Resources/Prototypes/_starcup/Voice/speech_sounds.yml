@@ -8,6 +8,15 @@
   exclaimSound:
     path: /Audio/_starcup/Animals/Bat/bat_exclamation.ogg
 
+- type: speechSounds
+  id: MothSpeechSounds
+  saySound:
+    collection: MothSpeech
+  askSound:
+    path: /Audio/_starcup/Voice/Moth/moth_question.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Voice/Moth/moth_exclamation.ogg
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -65,3 +74,19 @@
       collection: WingRuffle
     DefaultDeathgasp:
       path: /Audio/_starcup/Animals/chicken_scream.ogg
+
+- type: emoteSounds
+  id: MothroachpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      path: /Audio/Voice/Moth/moth_scream.ogg
+    CreatureLaugh:
+      path: /Audio/Voice/Moth/moth_laugh.ogg
+    CreatureChitter:
+      path: /Audio/Voice/Moth/moth_chitter.ogg
+    CreatureSqueak:
+      path: /Audio/Voice/Moth/moth_squeak.ogg
+    DefaultDeathgasp:
+      collection: MothDeathGasp

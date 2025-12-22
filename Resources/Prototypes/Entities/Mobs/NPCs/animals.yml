@@ -542,9 +542,9 @@
         - SmallMobLayer
   - type: GhostTakeoverAvailable
   - type: Speech
+    speechSounds: MothSpeechEmotes # starcup
     speechVerb: Moth
-    speechSounds: Squeak
-    allowedEmotes: ['Chitter', 'Squeak']
+    allowedEmotes: ['CreatureChitter', 'CreatureSqueak', 'CreatureLaugh'] # starcup
   - type: FaxableObject
     insertingState: inserting_mothroach
   - type: MothAccent
@@ -624,6 +624,7 @@
     - Trash
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes
   - type: CanEscapeInventory
   - type: NpcFactionMember
     factions:
