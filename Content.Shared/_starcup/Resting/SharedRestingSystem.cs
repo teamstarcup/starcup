@@ -10,10 +10,10 @@ public abstract partial class SharedRestingSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<RestComponent, ComponentInit>(OnComponentInit);
+        SubscribeLocalEvent<RestComponent, MapInitEvent>(OnMapInit);
     }
 
-    private void OnComponentInit(Entity<RestComponent> ent, ref ComponentInit args)
+    private void OnMapInit(Entity<RestComponent> ent, ref MapInitEvent args)
     {
         _actionsSystem.AddAction(ent, ref ent.Comp.RestActionEntity, ent.Comp.RestAction);
     }
