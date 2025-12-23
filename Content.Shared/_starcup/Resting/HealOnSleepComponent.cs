@@ -29,4 +29,3 @@ public sealed partial class HealOnSleepComponent : Component
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoPausedField, AutoNetworkedField]
     public TimeSpan NextHealTime = TimeSpan.Zero;
 }
-
