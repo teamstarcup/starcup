@@ -64,14 +64,14 @@
     containers:
       board: [ DoorElectronicsReporter ]
 
-- type: entity
-  parent: AirlockServiceLocked
-  id: AirlockZookeeperLocked
-  suffix: Zookeeper, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsZookeeper ]
+#- type: entity
+#  parent: AirlockServiceLocked
+#  id: AirlockZookeeperLocked
+#  suffix: Zookeeper, Locked
+#  components:
+#  - type: ContainerFill
+#    containers:
+#      board: [ DoorElectronicsZookeeper ]
 
 - type: entity
   parent: AirlockMedicalLocked
@@ -251,14 +251,14 @@
     containers:
       board: [ DoorElectronicsReporter ]
 
-- type: entity
-  parent: AirlockServiceGlassLocked
-  id: AirlockZookeeperGlassLocked
-  suffix: Zookeeper, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsZookeeper ]
+#- type: entity
+#  parent: AirlockServiceGlassLocked
+#  id: AirlockZookeeperGlassLocked
+#  suffix: Zookeeper, Locked
+#  components:
+#  - type: ContainerFill
+#    containers:
+#      board: [ DoorElectronicsZookeeper ]
 
 - type: entity
   parent: AirlockMedicalGlassLocked
@@ -423,12 +423,12 @@
   - type: Sprite
     sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi
 
-- type: entity
-  parent: AirlockZookeeperLocked
-  id: AirlockMaintZookeeperLocked
-  components:
-  - type: Sprite
-    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi
+#- type: entity
+#  parent: AirlockZookeeperLocked
+#  id: AirlockMaintZookeeperLocked
+#  components:
+#  - type: Sprite
+#    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi
 
 - type: entity
   parent: AirlockPsychologistLocked
