@@ -74,3 +74,18 @@
         tableId: HostileCritterEventsTable
       - !type:NestedSelector
         tableId: StarcupAntagEventsTable
+
+- type: entityTable
+  id: SurvivalGameRulesTable
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: StarcupCalmEventsTable
+    - !type:NestedSelector
+      tableId: CalmCritterEventsTable
+    - !type:NestedSelector
+      tableId: CargoGiftsTable
+    - !type:NestedSelector
+      tableId: StarcupDangerEventsTable
+    - !type:NestedSelector
+      tableId: HostileCritterEventsTable

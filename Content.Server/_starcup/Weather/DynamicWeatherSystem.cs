@@ -18,7 +18,7 @@ public sealed class DynamicWeatherSystem : EntitySystem
     /// <summary>
     /// The meta-weather type that functions as a stand-in for no active weather event.
     /// </summary>
-    public static readonly ProtoId<WeatherPrototype> WeatherClear = "Clear";
+    private static readonly ProtoId<WeatherPrototype> WeatherClear = "Clear";
 
     private static readonly TimeSpan MaximumExpectedRoundLength = TimeSpan.FromHours(6);
 
@@ -31,12 +31,15 @@ public sealed class DynamicWeatherSystem : EntitySystem
 
     private void OnMapInit(EntityUid entity, DynamicWeatherComponent dynamicWeather, MapInitEvent args)
     {
-        ProtoId<WeatherPrototype>? initialStateProtoId = dynamicWeather.States.First().Key;
+        if (!_proto.Resolve(dynamicWeather.Scheduler, out var weatherScheduler))
+            return;
+
+        ProtoId<WeatherPrototype>? initialStateProtoId = weatherScheduler.States.First().Key;
         if (dynamicWeather.RandomInitialState)
         {
             for (var i = 0; i < MaximumExpectedRoundLength / dynamicWeather.StepFrequency; i++)
             {
-                initialStateProtoId = NextState(dynamicWeather);
+                initialStateProtoId = NextState(dynamicWeather, weatherScheduler);
                 _proto.Resolve(initialStateProtoId, out dynamicWeather.CurrentState);
             }
         }
@@ -60,14 +63,17 @@ public sealed class DynamicWeatherSystem : EntitySystem
 
             dynamicWeather.NextUpdate = now + dynamicWeather.StepFrequency;
 
-            SetWeather(entity, dynamicWeather, NextState(dynamicWeather));
+            if (!_proto.Resolve(dynamicWeather.Scheduler, out var weatherScheduler))
+                continue;
+
+            SetWeather(entity, dynamicWeather, NextState(dynamicWeather, weatherScheduler));
         }
     }
 
-    private ProtoId<WeatherPrototype>? NextState(DynamicWeatherComponent dynamicWeather)
+    private ProtoId<WeatherPrototype>? NextState(DynamicWeatherComponent dynamicWeather, WeatherSchedulerPrototype weatherScheduler)
     {
-        var previousState = dynamicWeather.CurrentState ?? dynamicWeather.States.First().Key;
-        return SharedRandomExtensions.Pick(dynamicWeather.States[previousState], _robustRandom.GetRandom());
+        var currentStateProto = dynamicWeather.CurrentState?.ID ?? WeatherClear;
+        return SharedRandomExtensions.Pick(weatherScheduler.States[currentStateProto].Transitions, _robustRandom.GetRandom());
     }
 
     private void SetWeather(EntityUid map, DynamicWeatherComponent dynamicWeather, WeatherPrototype? weather)
@@ -80,6 +86,12 @@ public sealed class DynamicWeatherSystem : EntitySystem
 
         var mapId = Transform(map).MapID;
         _weather.SetWeather(mapId, weather, dynamicWeather.NextUpdate + WeatherComponent.ShutdownTime);
+
+        if (!_proto.Resolve(dynamicWeather.Scheduler, out var weatherScheduler))
+            return;
+
+        if (previousState == weather)
+            return;
 
         var ev = new DynamicWeatherUpdateEvent(map, previousState, weather);
         RaiseLocalEvent(map, ref ev, true);

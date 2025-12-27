@@ -65,15 +65,6 @@
       board: [ DoorElectronicsReporter ]
 
 - type: entity
-  parent: AirlockServiceLocked
-  id: AirlockZookeeperLocked
-  suffix: Zookeeper, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsZookeeper ]
-
-- type: entity
   parent: AirlockMedicalLocked
   id: AirlockParamedicLocked
   suffix: Paramedic, Locked
@@ -252,15 +243,6 @@
       board: [ DoorElectronicsReporter ]
 
 - type: entity
-  parent: AirlockServiceGlassLocked
-  id: AirlockZookeeperGlassLocked
-  suffix: Zookeeper, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsZookeeper ]
-
-- type: entity
   parent: AirlockMedicalGlassLocked
   id: AirlockParamedicGlassLocked
   suffix: Paramedic, Locked
@@ -419,13 +401,6 @@
 - type: entity
   parent: AirlockReporterLocked
   id: AirlockMaintReporterLocked
-  components:
-  - type: Sprite
-    sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi
-
-- type: entity
-  parent: AirlockZookeeperLocked
-  id: AirlockMaintZookeeperLocked
   components:
   - type: Sprite
     sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi

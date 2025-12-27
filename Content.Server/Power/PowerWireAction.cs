@@ -207,8 +207,7 @@ public sealed partial class PowerWireAction : BaseWireAction
     public override bool Cut(EntityUid user, Wire wire)
     {
         base.Cut(user, wire);
-        if (!TrySetElectrocution(user, wire))
-            return false;
+        TrySetElectrocution(user, wire); // starcup: don't return false after electrocuting
 
         SetWireCuts(wire.Owner, true);
 
@@ -220,8 +219,7 @@ public sealed partial class PowerWireAction : BaseWireAction
     public override bool Mend(EntityUid user, Wire wire)
     {
         base.Mend(user, wire);
-        if (!TrySetElectrocution(user, wire))
-            return false;
+        TrySetElectrocution(user, wire); // starcup: don't return false after electrocuting
 
         // Mending any power wire restores shorts.
         WiresSystem.TryCancelWireAction(wire.Owner, PowerWireActionKey.PulseCancel);
@@ -239,7 +237,7 @@ public sealed partial class PowerWireAction : BaseWireAction
         base.Pulse(user, wire);
         WiresSystem.TryCancelWireAction(wire.Owner, PowerWireActionKey.ElectrifiedCancel);
 
-        var electrocuted = !TrySetElectrocution(user, wire, true);
+        // var electrocuted = !TrySetElectrocution(user, wire, true); // starcup: variable goes unused, comment it out
 
         if (WiresSystem.TryGetData<bool>(wire.Owner, PowerWireActionKey.Pulsed, out var pulsedKey) && pulsedKey)
             return;
@@ -247,8 +245,7 @@ public sealed partial class PowerWireAction : BaseWireAction
         WiresSystem.SetData(wire.Owner, PowerWireActionKey.Pulsed, true);
         WiresSystem.StartWireAction(wire.Owner, _pulseTimeout, PowerWireActionKey.PulseCancel, new TimedWireEvent(AwaitPulseCancel, wire));
 
-        if (electrocuted)
-            return;
+        TrySetElectrocution(user, wire, true); // starcup: don't return after electrocuting
 
         SetPower(wire.Owner, true);
     }

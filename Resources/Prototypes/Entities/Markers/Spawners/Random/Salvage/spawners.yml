@@ -33,13 +33,14 @@
         tableId: MaintToolsTable
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SalvageSpawnerScrapCommon
   name: Salvage Scrap Spawner
   suffix: Common, 50%
   components:
   - type: Sprite
     layers:
+    - state: shadowpink # starcup
     - state: pink
     - sprite: Objects/Materials/Scrap/generic.rsi
       state: metal-1
@@ -94,13 +95,14 @@
         weight: 0.25
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SalvageSpawnerScrapValuable
   name: Salvage Scrap Spawner
   suffix: Valuable, 50%
   components:
   - type: Sprite
     layers:
+    - state: shadowpink # starcup
     - state: pink
     - sprite: Objects/Materials/Scrap/generic.rsi
       state: junk-airlock-1
@@ -170,13 +172,14 @@
       weight: 5
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SalvageSpawnerTreasure
   name: Salvage Treasure Spawner
   suffix: Common, 75%
   components:
   - type: Sprite
     layers:
+    - state: shadowpink # starcup
     - state: pink
     - sprite: Objects/Materials/materials.rsi
       state: diamond
@@ -239,13 +242,14 @@
       rolls: 1, 2
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SalvageSpawnerTreasureValuable
   name: Salvage Treasure Spawner
   suffix: Valuable, 75%
   components:
   - type: Sprite
     layers:
+    - state: shadowpink # starcup
     - state: pink
     - sprite: Objects/Materials/materials.rsi
       state: diamond
@@ -298,13 +302,14 @@
         tableId: MaintFluffTable
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SalvageSpawnerEquipment
   name: Salvage Equipment Spawner
   suffix: Common, 75%
   components:
   - type: Sprite
     layers:
+    - state: shadowpink # starcup
     - state: pink
     - sprite: Objects/Devices/communication.rsi
       state: walkietalkie
@@ -363,13 +368,14 @@
         tableId: SyndieMaintLoot
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SalvageSpawnerEquipmentValuable
   name: Salvage Equipment Spawner
   suffix: Valuable, 75%
   components:
   - type: Sprite
     layers:
+    - state: shadowpink # starcup
     - state: pink
     - sprite: Objects/Devices/communication.rsi
       state: walkietalkie
@@ -382,10 +388,11 @@
 - type: entity
   name: Salvage Canister Spawner
   id: SalvageCanisterSpawner
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   components:
   - type: Sprite
     layers:
+    - state: shadowpink # starcup
     - state: pink
     - sprite: Structures/Storage/canister.rsi
       state: blue
@@ -453,16 +460,19 @@
 
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SalvageSpawnerMobMagnet
   name: Salvage Magnet Mob Spawner
   suffix: 50%
   components:
   - type: Sprite
     layers:
+    - state: shadowpink # starcup
     - state: pink
-    - sprite: Mobs/Aliens/Carps/space.rsi
-      state: alive
+    # begin starcup
+    - sprite: _starcup/Markers/generic_salvage_spawners.rsi
+      state: salvage_sharkminnow
+    # end starcup
   - type: EntityTableSpawner
     table: !type:NestedSelector
       prob: 0.5
@@ -489,12 +499,13 @@
       tableId: SalvageMagnetMobTable
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SalvageSpawnerStructuresVarious
   name: Space Debris Structure Spawner
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
     - sprite: Structures/Storage/tanks.rsi
       state: fueltank-2
@@ -525,15 +536,18 @@
         - id: Gyroscope
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SalvageSpawnerMobShark
   name: Salvage Sharkminnow Spawner
   components:
   - type: Sprite
     layers:
+    - state: shadowpink # starcup
     - state: pink
-    - sprite: Mobs/Aliens/Carps/sharkminnow.rsi
-      state: alive
+    # begin starcup
+    - sprite: _starcup/Markers/generic_salvage_spawners.rsi
+      state: salvage_sharkminnow
+    # end starcup
   - type: EntityTableSpawner
     table: !type:AllSelector
       children:
@@ -561,15 +575,19 @@
       # end starcup: expanded carp and sharkminnows
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SalvageSpawnerMobMiningAsteroid
   name: Mining Asteroid Mob Spawner
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
-    - sprite: Mobs/Aliens/Asteroid/goliath.rsi
-      state: goliath
+    # begin starcup
+    - sprite: _starcup/Markers/generic_salvage_spawners.rsi
+      state: salvage_asteroid
+    - state: ai
+    # end starcup
   - type: EntityTableSpawner
     table: !type:GroupSelector
       children:

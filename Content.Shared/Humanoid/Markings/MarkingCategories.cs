@@ -8,6 +8,7 @@ namespace Content.Shared.Humanoid.Markings
         Special,
         Hair,
         FacialHair,
+        Eyes, // imp
         Head,
         HeadTop,
         HeadSide,
@@ -31,6 +32,7 @@ namespace Content.Shared.Humanoid.Markings
                 HumanoidVisualLayers.Special => MarkingCategories.Special,
                 HumanoidVisualLayers.Hair => MarkingCategories.Hair,
                 HumanoidVisualLayers.FacialHair => MarkingCategories.FacialHair,
+                HumanoidVisualLayers.Eyes => MarkingCategories.Eyes, // imp
                 HumanoidVisualLayers.Head => MarkingCategories.Head,
                 HumanoidVisualLayers.HeadTop => MarkingCategories.HeadTop,
                 HumanoidVisualLayers.HeadSide => MarkingCategories.HeadSide,

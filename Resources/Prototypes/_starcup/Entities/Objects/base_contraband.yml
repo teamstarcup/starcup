@@ -14,3 +14,13 @@
   components:
   - type: Contraband
     allowedDepartments: [ SyndicateCommunications ]
+
+# department restricted contraband with single-job exceptions
+- type: entity
+  id: BaseEngineeringRoboticsContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    allowedDepartments: [ Engineering ]
+    allowedJobs: [ Roboticist ]

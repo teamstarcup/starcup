@@ -10,12 +10,14 @@ using Content.Server.Power.EntitySystems;
 using Content.Server.Stack;
 using Content.Server.Station.Systems;
 using Content.Server.Weapons.Ranged.Systems;
+using Content.Shared._DEN.Unrotting; // DEN
 using Content.Shared.Access;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Administration;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Components;
+using Content.Shared.Atmos.Rotting; // DEN
 using Content.Shared.Construction.Components;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Components;
@@ -732,6 +734,26 @@ public sealed partial class AdminVerbSystem
             };
             args.Verbs.Add(setCapacity);
         }
+        // Den start
+        if (TryComp<PerishableComponent>(args.Target, out var perishable))
+        {
+            Verb pauseRotting = new()
+            {
+                Text = "Pause Decay",
+                Category = VerbCategory.Tricks,
+                Icon = new SpriteSpecifier.Rsi(new ResPath("Interface/Alerts/human_dead.rsi"), "dead"),
+                Act = () =>
+                {
+                    EnsureComp<RottingImmuneComponent>(args.Target);
+                },
+                Impact = LogImpact.Medium,
+                Message = Loc.GetString("admin-trick-pause-rotting-description"),
+                Priority = (int) TricksVerbPriorities.PauseRotting
+            };
+
+            args.Verbs.Add(pauseRotting);
+        }
+        // Den end
     }
 
     private void RefillEquippedTanks(EntityUid target, Gas gasType)
@@ -877,5 +899,6 @@ public sealed partial class AdminVerbSystem
         SnapJoints = -27,
         MakeMinigun = -28,
         SetBulletAmount = -29,
+        PauseRotting = -30, // DEN
     }
 }

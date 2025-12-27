@@ -49,21 +49,25 @@
   id: SecurityJumpsuit
   equipment:
     jumpsuit: ClothingUniformJumpsuitSec
+  groupBy: "jumpsuit" # starcup
 
 - type: loadout
   id: SecurityJumpskirt
   equipment:
     jumpsuit: ClothingUniformJumpskirtSec
+  groupBy: "jumpskirt" # starcup
 
 - type: loadout
   id: SecurityJumpsuitGrey
   equipment:
     jumpsuit: ClothingUniformJumpsuitSecGrey
+  groupBy: "jumpsuit" # starcup
 
 - type: loadout
   id: SecurityJumpskirtGrey
   equipment:
     jumpsuit: ClothingUniformJumpskirtSecGrey
+  groupBy: "jumpskirt" # starcup
 
 - type: loadout
   id: TrooperUniform
@@ -77,6 +81,7 @@
     proto: SeniorOfficer
   equipment:
     jumpsuit: ClothingUniformJumpsuitSeniorOfficer
+  groupBy: "jumpsuit" # starcup
 
 - type: loadout
   id: SeniorOfficerJumpskirt
@@ -85,6 +90,7 @@
     proto: SeniorOfficer
   equipment:
     jumpsuit: ClothingUniformJumpskirtSeniorOfficer
+  groupBy: "jumpskirt" # starcup
 
 # Back
 - type: loadout
@@ -133,7 +139,7 @@
 - type: loadout
   id: CombatBoots
   equipment:
-    shoes: ClothingShoesBootsCombatFilled
+    shoes: ClothingShoesBootsCombat # starcup: combat boots are cosmetic now
 
 - type: loadout
   id: JackBoots

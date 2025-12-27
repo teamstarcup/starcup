@@ -42,3 +42,25 @@
     materialComposition:
       Steel: 100
       Wood: 100
+
+- type: entity
+  name: brush axe
+  parent: ChoppingAxe
+  id: BrushAxe
+  description: A machete on a stick. Difficult to use with one hand, destructive when held with both.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/brush_axe.rsi
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Slash: 10
+        Structural: 15
+  - type: Item
+    sprite: _starcup/Objects/Weapons/Melee/brush_axe.rsi
+  - type: Clothing
+    sprite: _starcup/Objects/Weapons/Melee/brush_axe.rsi

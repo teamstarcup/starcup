@@ -72,19 +72,22 @@
     - MobCatSpace
 
 - type: entity
-  parent: MarkerBase
+  # begin starcup: add bees, insects, roach resprite
+  parent: MarkerBaseStarcup
   id: SpawnMobCockroach
   name: Cockroach Spawner
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
-    - sprite: Mobs/Animals/cockroach.rsi
+    - sprite: _starcup/Mobs/Animals/Insects/cockroach.rsi
       state: cockroach_icon
     - state: ai
   - type: ConditionalSpawner
     prototypes:
     - MobCockroach
+  # end starcup
 
 - type: entity
   parent: MarkerBase

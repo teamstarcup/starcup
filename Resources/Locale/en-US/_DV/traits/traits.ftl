@@ -17,3 +17,6 @@ trait-inpain-desc = You’re constantly in discomfort. You need painkillers to f
 
 trait-dysgraphia-name = Dysgraphia
 trait-dysgraphia-desc = You are unable to write, whether because of a disability, your history, or by choice.
+
+trait-depression-name = Depression
+trait-depression-desc = No mechanical effect. The world is dark but there is a light somewhere, calling to you.

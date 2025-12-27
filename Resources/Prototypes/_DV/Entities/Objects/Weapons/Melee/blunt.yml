@@ -1,0 +1,28 @@
+# nyano
+- type: entity
+  name: shinai
+  parent: BaseItem
+  id: Shinai
+  description: A bamboo sword, commonly used in kendo. Made some time after the realization that wooden swords hurt a lot.
+  components:
+  - type: Sprite
+    sprite: _DV/Objects/Weapons/Melee/shinai.rsi
+    state: icon
+  - type: MeleeWeapon
+    attackRate: 1.25
+    range: 1.5 # -starcup 0.25 range
+    bluntStaminaDamageFactor: 2.0
+    damage:
+      types:
+        Blunt: 2.5 # starcup -1.5 damage
+    soundHit:
+      path: /Audio/Effects/woodenclosetclose.ogg
+#  - type: MeleeStaminaCost # starcup (we don't have this)
+#    swing: 5 # starcup
+  - type: StaminaDamageOnHit
+    damage: 10
+  - type: Item
+    size: Large
+    sprite: _DV/Objects/Weapons/Melee/shinai.rsi
+  - type: DisarmMalus
+# end nyano

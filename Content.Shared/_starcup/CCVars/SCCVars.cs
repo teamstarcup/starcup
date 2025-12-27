@@ -3,7 +3,7 @@ using Robust.Shared.Configuration;
 namespace Content.Shared._starcup.CCVars;
 
 [CVarDefs]
-public sealed class SCCVars
+public sealed partial class SCCVars
 {
     ///<summary>
     ///    Toggles whether the player sprints or walks by default.

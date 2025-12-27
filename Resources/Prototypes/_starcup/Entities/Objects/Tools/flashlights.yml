@@ -1,0 +1,59 @@
+- type: entity
+  name: big flashlight
+  parent: FlashlightLantern
+  id: FlashlightBig
+  description: It lights the way to freedom even brighter.
+  components:
+  - type: PointLight
+    enabled: false
+    radius: 8
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/biglight.rsi
+  - type: Item
+    sprite: _starcup/Objects/Tools/biglight.rsi
+  - type: StaticPrice
+    price: 65
+
+- type: entity
+  name: flashlight
+  suffix: green
+  parent: FlashlightLantern
+  id: FlashlightLanternGreen
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/flashlight_green.rsi
+  - type: Item
+    sprite: _starcup/Objects/Tools/flashlight_green.rsi
+
+- type: entity
+  name: flashlight
+  suffix: purple
+  parent: FlashlightLantern
+  id: FlashlightLanternPurple
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/flashlight_purple.rsi
+  - type: Item
+    sprite: _starcup/Objects/Tools/flashlight_purple.rsi
+
+- type: entity
+  name: flashlight
+  suffix: teal
+  parent: FlashlightLantern
+  id: FlashlightLanternTeal
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/flashlight_teal.rsi
+  - type: Item
+    sprite: _starcup/Objects/Tools/flashlight_teal.rsi
+
+- type: entity
+  name: flashlight
+  suffix: red
+  parent: FlashlightLantern
+  id: FlashlightLanternRed
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tools/flashlight_red.rsi
+  - type: Item
+    sprite: _starcup/Objects/Tools/flashlight_red.rsi

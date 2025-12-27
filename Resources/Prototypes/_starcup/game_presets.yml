@@ -47,51 +47,32 @@
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
 
-## "False" Gamemodes, for Admin Use
 - type: gamePreset
-  id: SecretEmpty # runs Empty but shows "Secret" in lobby.
+  id: Thief
   alias:
-    - secretempty
-  name: secret-title
-  showInVote: false #Admin Use
-  description: secret-description
+  - thief
+  name: thief-title
+  description: thief-description
+  showInVote: false
   rules:
-  - BasicRoundstartVariation
-
-- type: gamePreset
-  id: SecretCalm # runs Calm but shows "Secret" in lobby.
-  alias:
-    - secretcalm
-  name: secret-title
-  showInVote: false #Admin Use
-  description: secret-description
-  rules:
-  - CalmStationEventScheduler
-  - SpaceTrafficControlFriendlyEventScheduler
-  - BasicRoundstartVariation
-
-- type: gamePreset
-  id: SecretTrouble # runs Trouble but shows "Secret" in lobby.
-  alias:
-    - secrettrouble
-  name: secret-title
-  showInVote: false #Admin Use
-  description: secret-description
-  rules:
+  - DummyNonAntagChance
+  - Thief
   - TroubleStationEventScheduler
   - SlowMeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
 
 - type: gamePreset
-  id: SecretDanger # runs Danger but shows "Secret" in lobby.
-  alias:
-    - secretdanger
-  name: secret-title
-  showInVote: false #Admin Use
-  description: secret-description
+  id: LateStart
+  name: late-start-title
+  showInVote: true
+  description: late-start-description
   rules:
-  - DangerStationEventScheduler
-  - MeteorSwarmScheduler
+  - TroubleStationEventScheduler
+  - SlowMeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
+  - LateJoinAnomalySpawns
+  - RoundstartPowerOutageRule
+  - SpawnOnShiftChangeShuttleUntilArrivalRule
+  - ReturnShiftChangeShuttle

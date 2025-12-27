@@ -200,7 +200,16 @@
         weight: 0.5
     - id: Shovel
     - id: ChoppingAxe # starcup: add chopping axes & fireaxe resprite
-    - id: FlashlightLantern
+    # begin starcup: add misc. tools & tweawks
+    - id: ItemHammer
+    - id: CrashAxe
+    - !type:GroupSelector
+      children:
+      - id: FlashlightLantern
+      - id: FlashlightLanternRed
+      - id: FlashlightLanternGreen
+      - id: FlashlightLanternTeal
+    # end starcup
     - id: FireExtinguisher
     - id: SurvivalKnife
 
