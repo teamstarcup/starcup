@@ -1,0 +1,20 @@
+# nyano
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterArmorKendoBogu
+  name: kendo armor # starcup bogu->kendo armor
+  description: A set of armor used in kendo. It covers the waist, torso, and hands.
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/OuterClothing/Armor/bogu.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/OuterClothing/Armor/bogu.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85 # starcup +0.15, a bit too good for non-contraband
+#        Slash: 0.9 # starcup
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.85
+# end nyano
