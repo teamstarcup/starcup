@@ -1,20 +1,3 @@
-# Eyes
-
-- type: marking # also maybe this should just be a general glow eyes marking added to most species
-  id: FelinidEyeGlow
-  bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Felinid]
-  coloring:
-    default:
-      type:
-        !type:EyeColoring
-        negative: false
-  sprites:
-  - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi # THIS IS BUGGED DO NOT MERGE UNLESS THIS COMMENT IS GONE
-    state: glow
-  shader: unshaded
-
 # Tajaran Markings
 
 # Head
