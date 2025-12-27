@@ -989,6 +989,8 @@
     - Chef
     - FoodRecipes
   # begin starcup
+  - type: ReplacementAccent
+    accent: cow
   - type: Speech
     speechVerb: LargeMob
     speechSounds: CowSpeechSounds
@@ -1196,6 +1198,8 @@
     rootTask:
       task: RuminantHostileCompound
   # begin starcup
+  - type: ReplacementAccent
+    accent: goat
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepGeneric
@@ -1251,9 +1255,27 @@
     factions:
     - Passive
   # begin starcup
+  - type: HTN
+    rootTask:
+      task: RuminantHostileCompound
+  - type: NPCRetaliation
+    attackMemoryLength: 5
+  - type: FactionException
   - type: Tag
     tags:
+    - FootstepSound
     - CreatureEmotes
+  - type: ReplacementAccent
+    accent: goose
+  - type: Speech
+    speechVerb: Harpy
+    speechSounds: GooseSpeechSounds
+    allowedEmotes: ['CreatureScream', 'Flutter']
+  - type: Vocal
+    sounds:
+      Male: GooseSpeechEmotes
+      Female: GooseSpeechEmotes
+      Unsexed: GooseSpeechEmotes
   # end starcup
 
 - type: entity

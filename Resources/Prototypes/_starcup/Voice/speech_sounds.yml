@@ -27,6 +27,15 @@
     path: /Audio/_starcup/Animals/Duck/duck_quack_exclamation.ogg
 
 - type: speechSounds
+  id: GooseSpeechSounds
+  saySound:
+    collection: GooseHonks
+  askSound:
+    path: /Audio/_starcup/Animals/Goose/goose_askogg
+  exclaimSound:
+    path: /Audio/_starcup/Animals/Goose/goose_exclaim.ogg
+
+- type: speechSounds
   id: LeechSpeechSounds
   saySound:
     collection: LeechSpeech
@@ -190,3 +199,17 @@
       path: /Audio/_starcup/Animals/Crab/crab_gasp.ogg
     DefaultDeathgasp:
       path: /Audio/_starcup/Animals/Crab/crab_death.ogg
+
+- type: emoteSounds
+  id: GooseSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      collection: GooseScreams
+    Flutter:
+      collection: WingRuffleSmall
+    Gasp:
+      path: /Audio/_starcup/Animals/Goose/goose_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Goose/goose_death.ogg
