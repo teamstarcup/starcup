@@ -915,7 +915,10 @@
     tags:
     - DoorBumpOpener
     - Cow
-    - CreatureEmotes # starcup
+    # begin starcup
+    - FootstepSound
+    - CreatureEmotes
+    # end starcup
   - type: Reproductive
     partnerWhitelist:
       tags:
@@ -985,6 +988,17 @@
     guides:
     - Chef
     - FoodRecipes
+  # begin starcup
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: CowSpeechSounds
+    allowedEmotes: ['CreatureScream']
+  - type: Vocal
+    sounds:
+      Male: CowSpeechEmotes
+      Female: CowSpeechEmotes
+      Unsexed: CowSpeechEmotes
+  # end starcup
 
 - type: entity
   name: crab
@@ -1019,8 +1033,10 @@
         - MobLayer
   - type: Speech
     speechVerb: Arachnid
-    speechSounds: Arachnid
-    allowedEmotes: ['Click', 'Chitter']
+    # begin starcup
+    speechSounds: CrabSpeechSounds
+    allowedEmotes: ['CreatureClick', 'ClawSnap']
+    # end starcup
   - type: DamageStateVisuals
     states:
       Alive:
@@ -1039,7 +1055,7 @@
     interactFailureString: petting-failure-crab
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
-      path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
+      path: /Audio/Voice/Arachnid/arachnid_click.ogg # starcup
   - type: ReplacementAccent
     accent: crab
   - type: Bloodstream
@@ -1048,12 +1064,25 @@
   - type: Tag
     tags:
     - VimPilot
-    - CreatureEmotes # starcup
+  # begin starcup
+    - FootstepSound
+    - CreatureEmotes
+  # end starcup
   - type: HTN
     rootTask:
       task: RuminantCompound
   - type: Body
     prototype: AnimalHemocyanin
+  # begin starcup
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBug
+  - type: Vocal
+    sounds:
+      Male: CrabSpeechEmotes
+      Female: CrabSpeechEmotes
+      Unsexed: CrabSpeechEmotes
+  # end starcup
 
 - type: entity
   name: goat

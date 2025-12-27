@@ -35,6 +35,24 @@
   exclaimSound:
     path: /Audio/_starcup/Animals/CharonicLeech/leech_exclaim.ogg
 
+- type: speechSounds
+  id: CowSpeechSounds
+  saySound:
+    collection: CowMoos
+  askSound:
+    collection: CowMoos
+  exclaimSound:
+    collection: CowMoos
+
+- type: speechSounds
+  id: CrabSpeechSounds
+  saySound:
+    collection: CrabSpeech
+  askSound:
+    path: /Audio/_starcup/Animals/Crab/crab_ask.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Animals/Crab/crab_exclaim.ogg
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -88,8 +106,8 @@
       path: /Audio/_starcup/Animals/Chicken/chicken_scream.ogg
     Crow:
       path: /Audio/_starcup/Animals/Chicken/rooster_crow.ogg
-    Ruffle:
-      collection: WingRuffle
+    Flutter:
+      collection: WingRuffleSmall
     DefaultDeathgasp:
       path: /Audio/_starcup/Animals/Chicken/chicken_scream.ogg
 
@@ -106,6 +124,16 @@
       path: /Audio/Voice/Moth/moth_chitter.ogg
     CreatureSqueak:
       path: /Audio/Voice/Moth/moth_squeak.ogg
+    Gasp:
+      path: /Audio/_starcup/Voice/Moth/moth_gasp.ogg
+    Sneeze:
+      path: /Audio/_starcup/Voice/Moth/moth_sneeze.ogg
+    Cough:
+      path: /Audio/_starcup/Voice/Moth/moth_sneeze.ogg
+    Yawn:
+      path: /Audio/_starcup/Voice/Moth/moth_yawn.ogg
+    Sigh:
+      path: /Audio/_starcup/Voice/Moth/moth_sigh.ogg
     DefaultDeathgasp:
       collection: MothDeathGasp
 
@@ -118,8 +146,8 @@
       collection: DuckScreams
     CreatureLaugh:
       path: /Audio/_starcup/Animals/Duck/duck_laugh.ogg
-    Ruffle:
-      collection: WingRuffle
+    Flutter:
+      collection: WingRuffleSmall
     DefaultDeathgasp:
       collection: DuckScreams
 
@@ -134,3 +162,29 @@
       path: /Audio/_starcup/Animals/CharonicLeech/leech_growl.ogg
     DefaultDeathgasp:
       path: /Audio/_starcup/Animals/CharonicLeech/leech_death.ogg
+
+- type: emoteSounds
+  id: CowSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      path: /Audio/_starcup/Animals/Cow/cow_scream.ogg
+    Gasp:
+      path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Cow/cow_death.ogg
+
+- type: emoteSounds
+  id: CrabSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureClick:
+      path: /Audio/Voice/Arachnid/arachnid_click.ogg
+    ClawSnap:
+      path: /Audio/_starcup/Animals/claw_snap.ogg
+    Gasp:
+      path: /Audio/_starcup/Animals/Crab/crab_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Crab/crab_death.ogg

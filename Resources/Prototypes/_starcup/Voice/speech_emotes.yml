@@ -69,15 +69,26 @@
   - drooled
 
 - type: emote
-  id: Ruffle
-  name: chat-emote-name-ruffle
+  id: Flutter
+  name: chat-emote-name-flutter
   category: General
   available: false
   icon: _starcup/Interface/Emotes/wingflap.png
-  chatMessages: ["chat-emote-msg-ruffle"]
+  chatMessages: ["chat-emote-msg-flutter"]
   chatTriggers:
-  - ruffle
-  - ruffled
+  - flutters
+  - fluttered
+
+- type: emote
+  id: ClawSnap
+  name: chat-emote-name-claw-snap
+  category: General
+  available: false
+  icon: _starcup/Interface/Emotes/clawsnap.png
+  chatMessages: ["chat-emote-msg-claw-snap"]
+  chatTriggers:
+  - snaps
+  - snapped
 
 # creature vocal emotes. they have their own icons
 - type: emote
@@ -157,7 +168,7 @@
   name: chat-emote-name-scream
   category: Vocal
   available: false
-  icon: _starcup/Interface/Emotes/warning.png
+  icon: _starcup/Interface/Emotes/scream.png
   chatMessages: ["chat-emote-msg-scream"]
   chatTriggers:
   - scream
