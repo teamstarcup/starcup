@@ -728,10 +728,25 @@
 
 - type: emoteSounds
   id: Goat
-  sound:
-    path: /Audio/Animals/goat_bah.ogg
-    params:
-      variation: 0.125
+  # begin starcup
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      collection: GoatScream
+    CreatureLaugh:
+      path: /Audio/_starcup/Animals/Goat/goat_laugh.ogg
+    Sneeze:
+      path: /Audio/_starcup/Animals/Goat/goat_sneeze.ogg
+    Gasp:
+      path: /Audio/_starcup/Animals/Goat/goat_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Goat/goat_death.ogg
+  # end scarup
+  #sound:
+    #path: /Audio/Animals/goat_bah.ogg
+    #params:
+      #variation: 0.125
 
 - type: emoteSounds
   id: Scurret

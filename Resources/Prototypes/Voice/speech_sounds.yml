@@ -176,11 +176,13 @@
 - type: speechSounds
   id: Goat
   saySound:
-    path: /Audio/Animals/goat_bah.ogg
+  # begin starcup
+    collection: GoatSpeech
   askSound:
-    path: /Audio/Animals/goat_bah.ogg
+    path: /Audio/_starcup/Animals/Goat/goat_ask.ogg
   exclaimSound:
-    path: /Audio/Animals/goat_bah.ogg
+    path: /Audio/_starcup/Animals/Goat/goat_exclaim.ogg
+  # end starcup
 
 - type: speechSounds
   id: Vulpkanin

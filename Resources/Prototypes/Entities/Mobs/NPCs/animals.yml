@@ -998,6 +998,9 @@
       Male: CowSpeechEmotes
       Female: CowSpeechEmotes
       Unsexed: CowSpeechEmotes
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepGeneric
   # end starcup
 
 - type: entity
@@ -1113,7 +1116,10 @@
     - ClothMade
     - DoorBumpOpener
     - Goat
-    - CreatureEmotes # starcup
+    # begin starcup
+    - FootstepSound
+    - CreatureEmotes
+    # end starcup
   - type: Reproductive
     partnerWhitelist:
       tags:
@@ -1164,6 +1170,7 @@
   - type: Speech
     speechSounds: Goat
     speechVerb: Goat
+    allowedEmotes: ['CreatureScream', 'CreatureLaugh'] # starcup
   - type: Vocal
     sounds:
       Female: Goat
@@ -1188,6 +1195,11 @@
   - type: HTN
     rootTask:
       task: RuminantHostileCompound
+  # begin starcup
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepGeneric
+  # end starcup
 
 # Note that we gotta make this bitch vomit someday when you feed it anthrax or sumthin. Needs to be a small item thief too and aggressive if attacked.
 - type: entity
