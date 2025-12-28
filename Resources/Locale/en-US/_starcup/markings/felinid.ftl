@@ -1,4 +1,5 @@
-marking-FelinidEyeGlow = Glowing Eyes
+marking-FelinidHeadMale = Felinid Head (Male)
+marking-FelinidHeadFemale = Felinid Head (Female)
 
 marking-TajaranHeadMale = Tajaran Head (Male)
 marking-TajaranHeadFemale = Tajaran Head (Female)
@@ -11,4 +12,4 @@ marking-TajaranRightHand = Tajaran Right Hand
 marking-TajaranLeftLeg = Tajaran Left Leg
 marking-TajaranRightLeg = Tajaran Right Leg
 marking-TajaranLeftFoot = Tajaran Left Foot
-marking-TajaranRightFoot = Tajaran Right TajaranLeftFoot
+marking-TajaranRightFoot = Tajaran Right Foot

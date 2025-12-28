@@ -10,6 +10,7 @@ namespace Content.Shared.Humanoid.Markings
         FacialHair,
         Eyes, // imp
         Head,
+        HeadBase, // starcup
         HeadTop,
         HeadSide,
         Snout,
@@ -30,6 +31,7 @@ namespace Content.Shared.Humanoid.Markings
             return layer switch
             {
                 HumanoidVisualLayers.Special => MarkingCategories.Special,
+                HumanoidVisualLayers.HeadBase => MarkingCategories.HeadBase, // starcup
                 HumanoidVisualLayers.Hair => MarkingCategories.Hair,
                 HumanoidVisualLayers.FacialHair => MarkingCategories.FacialHair,
                 HumanoidVisualLayers.Eyes => MarkingCategories.Eyes, // imp

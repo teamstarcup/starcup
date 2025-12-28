@@ -1,11 +1,31 @@
+# Head
+
+- type: marking
+  id: FelinidHeadMale # needs localization + the category loc
+  bodyPart: HeadBase
+  markingCategory: HeadBase
+  speciesRestriction: [Felinid]
+  sprites:
+  - sprite: Mobs/Species/Human/parts.rsi
+    state: head_m
+
+- type: marking
+  id: FelinidHeadFemale
+  bodyPart: HeadBase
+  markingCategory: HeadBase
+  speciesRestriction: [Felinid]
+  sprites:
+  - sprite: Mobs/Species/Human/parts.rsi
+    state: head_f
+
 # Tajaran Markings
 
 # Head
 
 - type: marking
   id: TajaranHeadMale
-  bodyPart: Head
-  markingCategory: Head
+  bodyPart: HeadBase
+  markingCategory: HeadBase
   speciesRestriction: [Felinid]
   sprites:
   - sprite: _starcup/Mobs/Customization/Felinid/parts.rsi
@@ -13,8 +33,8 @@
 
 - type: marking
   id: TajaranHeadFemale
-  bodyPart: Head
-  markingCategory: Head
+  bodyPart: HeadBase
+  markingCategory: HeadBase
   speciesRestriction: [Felinid]
   sprites:
   - sprite: _starcup/Mobs/Customization/Felinid/parts.rsi
