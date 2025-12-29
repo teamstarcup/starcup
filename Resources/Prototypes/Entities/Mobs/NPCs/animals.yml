@@ -989,6 +989,13 @@
     - Chef
     - FoodRecipes
   # begin starcup
+  - type: MeleeWeapon
+    soundHit:
+      collection: MetalThud
+    damage:
+      types:
+        Blunt: 15
+    animation: WeaponArcPunch
   - type: ReplacementAccent
     accent: cow
   - type: Speech
@@ -1079,6 +1086,14 @@
   - type: Body
     prototype: AnimalHemocyanin
   # begin starcup
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    damage:
+      types:
+        Piercing: 2
+        Slash: 2
+    animation: WeaponArcPincer
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepBug
@@ -1198,6 +1213,13 @@
     rootTask:
       task: RuminantHostileCompound
   # begin starcup
+  - type: MeleeWeapon
+    soundHit:
+      collection: MetalThud
+    damage:
+      types:
+        Blunt: 10
+    animation: WeaponArcPunch
   - type: ReplacementAccent
     accent: goat
   - type: FootstepModifier
@@ -1359,6 +1381,17 @@
   - type: Tag
     tags:
     - CreatureEmotes
+  - type: ReplacementAccent
+    accent: gorilla
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: GorillaSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureGrowl', 'ChestBeating']
+  - type: Vocal
+    sounds:
+      Male: GorillaSpeechEmotes
+      Female: GorillaSpeechEmotes
+      Unsexed: GorillaSpeechEmotes
   # end starcup
 
 - type: entity

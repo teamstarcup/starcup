@@ -31,7 +31,7 @@
   saySound:
     collection: GooseHonks
   askSound:
-    path: /Audio/_starcup/Animals/Goose/goose_askogg
+    path: /Audio/_starcup/Animals/Goose/goose_ask.ogg
   exclaimSound:
     path: /Audio/_starcup/Animals/Goose/goose_exclaim.ogg
 
@@ -61,6 +61,15 @@
     path: /Audio/_starcup/Animals/Crab/crab_ask.ogg
   exclaimSound:
     path: /Audio/_starcup/Animals/Crab/crab_exclaim.ogg
+
+- type: speechSounds
+  id: GorillaSpeechSounds
+  saySound:
+    collection: GorillaHoops
+  askSound:
+    path: /Audio/_starcup/Animals/Gorilla/gorilla_ask.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Animals/Gorilla/gorilla_exclaim.ogg
 
 # speech sound emotes
 
@@ -213,3 +222,19 @@
       path: /Audio/_starcup/Animals/Goose/goose_gasp.ogg
     DefaultDeathgasp:
       path: /Audio/_starcup/Animals/Goose/goose_death.ogg
+
+- type: emoteSounds
+  id: GorillaSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      path: /Audio/_starcup/Animals/Gorilla/gorilla_scream.ogg
+    CreatureGrowl:
+      collection: GorillaGrowls
+    ChestBeating:
+      path: /Audio/_starcup/Animals/Gorilla/chest_beating.ogg
+    Gasp:
+      collection: GorillaGasps
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Gorilla/gorilla_death.ogg

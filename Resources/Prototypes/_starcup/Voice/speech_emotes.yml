@@ -87,8 +87,18 @@
   icon: _starcup/Interface/Emotes/clawsnap.png
   chatMessages: ["chat-emote-msg-claw-snap"]
   chatTriggers:
-  - snaps
-  - snapped
+  - snaps their claws
+  - snapped their claws
+
+- type: emote
+  id: ChestBeating
+  name: chat-emote-name-chest-beating
+  category: General
+  icon: _starcup/Interface/Emotes/chestbeating.png
+  available: false
+  chatMessages: ["chat-emote-msg-chest-beating"]
+  chatTriggers:
+  - beats their chest
 
 # creature vocal emotes. they have their own icons
 - type: emote

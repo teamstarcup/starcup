@@ -6,11 +6,13 @@ chat-emote-name-tailwhip = Tail whip
 chat-emote-name-drool = Drool
 chat-emote-name-flutter = Wing flutter
 chat-emote-name-claw-snap = Claw snap
+chat-emote-name-claw-chest-beating = Chest beating
 
 # Message
 chat-emote-msg-roar = roars!
 chat-emote-msg-crow = crows loudly.
 chat-emote-msg-flutter = flutters their wings.
-chat-emote-msg-claw-snap = snaps their claws.
 chat-emote-msg-tailwhip = whips their tail.
 chat-emote-msg-drool = drools.
+chat-emote-msg-claw-snap = snaps their claws.
+chat-emote-msg-chest-beating = beats their chest.

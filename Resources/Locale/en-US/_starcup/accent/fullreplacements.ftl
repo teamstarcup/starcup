@@ -20,3 +20,9 @@ accent-words-goose-2 = Honnnk.
 accent-words-goose-3 = Honk?
 accent-words-goose-4 = Honk.
 accent-words-goose-5 = Honk honk!
+
+# Gorilla
+accent-words-gorilla-1 = Hooh. Hooh. Hooh. Hoop.
+accent-words-gorilla-2 = Hooh hooh. Hoop.
+accent-words-gorilla-3 = Hooh hooh?
+accent-words-gorilla-4 = Grah!
