@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 11/30/2025 00:54:40
-  entityCount: 14198
+  time: 12/29/2025 09:02:38
+  entityCount: 14183
 maps:
 - 1
 grids:
@@ -9468,18 +9468,9 @@ entities:
       - Arsenal
       - Experimental
       - CivilianServices
+- proto: AutolatheFilled
+  entities:
   - uid: 605
-    components:
-    - type: Transform
-      pos: -27.5,-11.5
-      parent: 2
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
-  - uid: 606
     components:
     - type: Transform
       pos: -16.5,-28.5
@@ -9490,10 +9481,21 @@ entities:
       - Arsenal
       - Experimental
       - CivilianServices
-  - uid: 607
+  - uid: 606
     components:
     - type: Transform
       pos: -29.5,4.5
+      parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
+  - uid: 10722
+    components:
+    - type: Transform
+      pos: -27.5,-11.5
       parent: 2
     - type: TechnologyDatabase
       supportedDisciplines:
@@ -10463,12 +10465,6 @@ entities:
     components:
     - type: Transform
       pos: -34.03353,-2.7413595
-      parent: 2
-  - uid: 14204
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -5.271229,34.111946
       parent: 2
 - proto: BoxZiptie
   entities:
@@ -68613,9 +68609,9 @@ entities:
     - type: Transform
       pos: -46.5,9.5
       parent: 2
-- proto: MachineMaterialSilo
+- proto: MachineMaterialSiloFilled
   entities:
-  - uid: 9982
+  - uid: 607
     components:
     - type: Transform
       pos: -6.5,38.5
@@ -68732,17 +68728,12 @@ entities:
       parent: 626
     - type: Physics
       canCollide: False
-  - uid: 9999
-    components:
-    - type: Transform
-      pos: -5.3776274,-9.310223
-      parent: 2
-- proto: MaterialDurathread
+- proto: MaterialWoodPlank
   entities:
-  - uid: 10000
+  - uid: 9982
     components:
     - type: Transform
-      pos: -4.2891045,-9.212276
+      pos: -28.49387,-11.493032
       parent: 2
 - proto: MatterBinStockPart
   entities:
@@ -68783,9 +68774,16 @@ entities:
     - type: Transform
       pos: -2.5,14.5
       parent: 2
-- proto: MedicalTechFab
+- proto: MedicalTechFabCircuitboard
   entities:
-  - uid: 10007
+  - uid: 10008
+    components:
+    - type: Transform
+      pos: 7.50316,46.491535
+      parent: 2
+- proto: MedicalTechFabFilled
+  entities:
+  - uid: 6878
     components:
     - type: Transform
       pos: -10.5,12.5
@@ -68796,13 +68794,6 @@ entities:
       - Arsenal
       - Experimental
       - CivilianServices
-- proto: MedicalTechFabCircuitboard
-  entities:
-  - uid: 10008
-    components:
-    - type: Transform
-      pos: 7.50316,46.491535
-      parent: 2
 - proto: MedkitBruteFilled
   entities:
   - uid: 10009
@@ -71873,12 +71864,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -30.5,-5.5
       parent: 2
-  - uid: 10453
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -28.5,-11.5
-      parent: 2
   - uid: 10454
     components:
     - type: Transform
@@ -72063,10 +72048,10 @@ entities:
     - type: Transform
       pos: 10.5,30.5
       parent: 2
-  - uid: 10722
+  - uid: 10585
     components:
     - type: Transform
-      pos: -15.5,-29.5
+      pos: -28.5,-11.5
       parent: 2
   - uid: 10895
     components:
@@ -72598,15 +72583,15 @@ entities:
       parent: 2
 - proto: RandomPosterLegitSyndie
   entities:
+  - uid: 9999
+    components:
+    - type: Transform
+      pos: -25.5,-11.5
+      parent: 2
   - uid: 10211
     components:
     - type: Transform
       pos: -15.5,15.5
-      parent: 2
-  - uid: 10585
-    components:
-    - type: Transform
-      pos: -25.5,-7.5
       parent: 2
   - uid: 10586
     components:
@@ -73664,9 +73649,16 @@ entities:
     - type: Transform
       pos: 30.5,2.5
       parent: 2
-- proto: SecurityTechFab
+- proto: SecurityTechFabCircuitboard
   entities:
-  - uid: 10767
+  - uid: 10768
+    components:
+    - type: Transform
+      pos: 7.56566,46.647785
+      parent: 2
+- proto: SecurityTechFabFilled
+  entities:
+  - uid: 10000
     components:
     - type: Transform
       pos: 11.5,27.5
@@ -73677,13 +73669,6 @@ entities:
       - Arsenal
       - Experimental
       - CivilianServices
-- proto: SecurityTechFabCircuitboard
-  entities:
-  - uid: 10768
-    components:
-    - type: Transform
-      pos: 7.56566,46.647785
-      parent: 2
 - proto: SeedExtractor
   entities:
   - uid: 10770
@@ -73713,40 +73698,15 @@ entities:
       parent: 2
 - proto: SheetGlass
   entities:
-  - uid: 10773
-    components:
-    - type: Transform
-      pos: -33.802147,7.301519
-      parent: 2
   - uid: 10774
     components:
     - type: Transform
-      pos: -33.411522,7.304695
-      parent: 2
-  - uid: 10775
-    components:
-    - type: Transform
-      pos: -5.480041,34.53377
+      pos: -33.448578,7.1556134
       parent: 2
   - uid: 10776
     components:
     - type: Transform
       pos: -29.512295,23.550402
-      parent: 2
-  - uid: 10777
-    components:
-    - type: Transform
-      pos: 11.715898,26.955776
-      parent: 2
-  - uid: 10778
-    components:
-    - type: Transform
-      pos: -28.403011,-11.482794
-      parent: 2
-  - uid: 14122
-    components:
-    - type: Transform
-      pos: -15.310623,-29.545198
       parent: 2
   - uid: 14137
     components:
@@ -73755,10 +73715,10 @@ entities:
       parent: 2
 - proto: SheetPlasma
   entities:
-  - uid: 6878
+  - uid: 10453
     components:
     - type: Transform
-      pos: -47.75753,3.5047574
+      pos: -47.646088,3.528997
       parent: 2
   - uid: 10779
     components:
@@ -73774,25 +73734,10 @@ entities:
       parent: 2
 - proto: SheetPlastic
   entities:
-  - uid: 10781
-    components:
-    - type: Transform
-      pos: -33.739647,6.754644
-      parent: 2
   - uid: 10782
     components:
     - type: Transform
-      pos: -33.270897,6.679695
-      parent: 2
-  - uid: 10783
-    components:
-    - type: Transform
-      pos: -5.651916,34.424397
-      parent: 2
-  - uid: 14101
-    components:
-    - type: Transform
-      pos: -28.54779,-11.457518
+      pos: -33.526703,6.671572
       parent: 2
 - proto: SheetRGlass
   entities:
@@ -73803,11 +73748,6 @@ entities:
       parent: 2
 - proto: SheetSteel
   entities:
-  - uid: 10785
-    components:
-    - type: Transform
-      pos: 11.216094,26.940592
-      parent: 2
   - uid: 10786
     components:
     - type: Transform
@@ -73818,35 +73758,15 @@ entities:
     - type: Transform
       pos: -39.472195,-9.466633
       parent: 2
-  - uid: 10788
-    components:
-    - type: Transform
-      pos: -33.739647,7.817144
-      parent: 2
   - uid: 10789
     components:
     - type: Transform
-      pos: -33.317772,7.82032
-      parent: 2
-  - uid: 10790
-    components:
-    - type: Transform
-      pos: -5.261291,34.62752
-      parent: 2
-  - uid: 10791
-    components:
-    - type: Transform
-      pos: -28.714062,-11.351026
+      pos: -33.512325,7.688874
       parent: 2
   - uid: 10792
     components:
     - type: Transform
       pos: 10.411946,30.455856
-      parent: 2
-  - uid: 14121
-    components:
-    - type: Transform
-      pos: -15.696003,-29.51163
       parent: 2
   - uid: 14139
     components:
@@ -79215,6 +79135,11 @@ entities:
       parent: 2
 - proto: ToolboxArtisticFilled
   entities:
+  - uid: 10007
+    components:
+    - type: Transform
+      pos: -28.487305,-11.529761
+      parent: 2
   - uid: 11565
     components:
     - type: Transform
@@ -79230,7 +79155,7 @@ entities:
   - uid: 11567
     components:
     - type: Transform
-      pos: -28.39706,-13.508395
+      pos: -28.26345,-13.580316
       parent: 2
   - uid: 11568
     components:
@@ -79286,7 +79211,7 @@ entities:
   - uid: 11577
     components:
     - type: Transform
-      pos: -28.559164,-13.308493
+      pos: -28.47329,-13.371494
       parent: 2
   - uid: 11578
     components:
@@ -79821,9 +79746,9 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -15.5,22.5
       parent: 2
-- proto: UniformPrinter
+- proto: UniformPrinterFilled
   entities:
-  - uid: 11607
+  - uid: 10767
     components:
     - type: Transform
       pos: -5.5,-9.5
@@ -89686,6 +89611,11 @@ entities:
       parent: 2
 - proto: WeaponCapacitorRecharger
   entities:
+  - uid: 10773
+    components:
+    - type: Transform
+      pos: -28.5,-12.5
+      parent: 2
   - uid: 13537
     components:
     - type: Transform
@@ -89741,11 +89671,6 @@ entities:
     components:
     - type: Transform
       pos: -4.5,-9.5
-      parent: 2
-  - uid: 13548
-    components:
-    - type: Transform
-      pos: -28.5,-12.5
       parent: 2
   - uid: 13549
     components:
