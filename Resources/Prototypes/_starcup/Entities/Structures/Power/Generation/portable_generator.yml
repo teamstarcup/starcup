@@ -1,0 +1,34 @@
+- type: entity
+  parent: PortableGeneratorPacman
+  id: PortableGeneratorPacmanFilled
+  suffix: Plasma, 30 kW, Filled
+  components:
+  - type: MaterialStorage
+    storage:
+      Plasma: 3000
+    storageLimit: 3000
+    materialWhiteList: [Plasma]
+
+- type: entity
+  parent: PortableGeneratorSuperPacman
+  id: PortableGeneratorSuperPacmanFilled
+  suffix: Uranium, 50 kW, Filled
+  components:
+  - type: MaterialStorage
+    storage:
+      Uranium: 3000
+    storageLimit: 3000
+    materialWhiteList: [Uranium]
+
+- type: entity
+  parent: PortableGeneratorJrPacman
+  id: PortableGeneratorJrPacmanFilled
+  suffix: Welding Fuel, 8 kW, Filled
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        maxVol: 50
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 50

@@ -47,6 +47,13 @@
                 <BoxContainer Name="TopRightContainer">
                     <BoxContainer Name="LogImpactContainer" Orientation="Horizontal"/>
                     <Control HorizontalExpand="True"/>
+                    <!-- begin den, admin log sorting -->
+                    <BoxContainer Name="LogOrderContainer" Orientation="Horizontal">
+                        <Button Name="AscendingOrderButton" Access="Public" Text="{Loc admin-logs-order-ascending}" StyleClasses="OpenRight" />
+                        <Button Name="DescendingOrderButton" Access="Public" Text="{Loc admin-logs-order-descending}" StyleClasses="OpenLeft" />
+                    </BoxContainer>
+                    <Control HorizontalExpand="True"/>
+                    <!-- end den -->
                     <Label Name="Count" Access="Public"/>
                     <Control HorizontalExpand="True"/>
                     <Button Name="ExportLogs" Access="Public" Text="{Loc admin-logs-export}"/>

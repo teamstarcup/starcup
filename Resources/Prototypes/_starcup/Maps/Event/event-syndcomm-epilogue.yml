@@ -1,0 +1,74 @@
+- type: gameMap
+  id: EventSyndcommEpilogue
+  mapName: 'Syndicate Communications'
+  mapPath: /Maps/_starcup/Events/event-syndcomm-epilogue.yml
+  maxRandomOffset: 0
+  randomRotation: false
+  minPlayers: 0
+  maxPlayers: 70
+  stations:
+    EventSyndcommEpilogue:
+      stationProto: StandardEpilogueStationNoEvacNoEvents
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Syndicate Communications {1}'
+          nameGenerator:
+            !type:SyndicateNameGenerator  # starcup: death to nanotrasen
+            prefixCreator: 'TG'
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/_starcup/Shuttles/SYND_EvacShip.yml # starcup: added SYND_EvacShip.yml
+        - type: StationJobs
+          availableJobs: # jobs are effectively infinite for the purposes of this event
+            # command (8)
+            Captain: [ 1, 1 ] # command should still be limited
+            HeadOfPersonnel: [ 1, 1 ] # command should still be limited
+            HeadOfSecurity: [ 1, 1 ] # command should still be limited
+            ChiefMedicalOfficer: [ 1, 1 ] # command should still be limited
+            ChiefEngineer: [ 1, 1 ] # command should still be limited
+            ResearchDirector: [ 1, 1 ] # command should still be limited
+            Quartermaster: [ 1, 1 ] # command should still be limited
+            AdministrativeAssistant: [ 1, 1 ] # command should still be limited
+            # service
+            Bartender: [ -1, -1 ]
+            Botanist: [ -1, -1 ]
+            Chef: [ -1, -1 ]
+            Janitor: [ -1, -1 ]
+            Chaplain: [ -1, -1 ]
+            Librarian: [ -1, -1 ]
+            ServiceWorker: [ -1, -1 ]
+            Reporter: [ -1, -1 ]
+            Clown: [ -1, -1 ]
+            Mime: [ -1, -1 ]
+            Musician: [ -1, -1 ]
+            # engineering
+            AtmosphericTechnician: [ -1, -1 ]
+            StationEngineer: [ -1, -1 ]
+            TechnicalAssistant: [ -1, -1 ]
+            # medical
+            Chemist: [ -1, -1 ]
+            MedicalDoctor: [ -1, -1 ]
+            MedicalIntern: [ -1, -1 ]
+            Paramedic: [ -1, -1 ]
+            Psychologist: [ -1, -1 ]
+            # science
+            Scientist: [ -1, -1 ]
+            Roboticist: [ -1, -1 ]
+            ResearchAssistant: [ -1, -1 ]
+            # security
+            Warden: [ -1, -1 ]
+            SecurityOfficer: [ -1, -1 ]
+            SecurityCadet: [ -1, -1 ]
+            Brigmedic: [ -1, -1 ]
+            Lawyer: [ -1, -1 ]
+            Detective: [ -1, -1 ]
+            Prisoner: [ -1, -1 ]
+            # supply
+            SalvageSpecialist: [ -1, -1 ]
+            Courier: [ -1, -1 ]
+            CargoTechnician: [ -1, -1 ]
+            CargoAssistant: [ -1, -1 ]
+            # civilian
+            Passenger: [ -1, -1 ]
+            # silicon (1)
+            StationAi: [ 1, 1 ] # command should still be limited
+            Borg: [ -1, -1 ]

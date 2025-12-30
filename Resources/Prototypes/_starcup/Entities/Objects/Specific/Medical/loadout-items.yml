@@ -1,0 +1,57 @@
+# If pill canisters are going to be moving into loadouts, they need to be clearer in what their items actually do.
+# Failing a bigger coding change to how loadout items display, this is the best way to get that information across.
+
+- type: entity
+  parent: PillCanister
+  id: PillCanisterEthyloxyephedrineLoadout
+  name: narcolepsy medication
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: PillEthyloxyephedrine
+      amount: 5
+
+- type: entity
+  parent: PillCanister
+  id: PillCanisterSoretizoneLoadout
+  name: painkiller medication
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: PillSoretizone
+      amount: 5
+
+- type: entity
+  parent: PillCanister
+  id: PillCanisterAgonolexyneLoadout
+  name: strong painkiller medication
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: PillAgonolexyne
+      amount: 5
+
+- type: entity
+  parent: PillCanister
+  id: PillCanisterNeurozeniumLoadout
+  name: antidepressant medication
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: PillNeurozenium
+      amount: 5
+
+- type: entity
+  parent: PillCanister
+  id: PillCanisterCalmafluxineLoadout
+  name: anxiety medication
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: PillCalmafluxine
+      amount: 5
