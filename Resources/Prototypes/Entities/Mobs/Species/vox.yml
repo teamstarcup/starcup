@@ -41,21 +41,23 @@
         damage: 400
       behaviors:
       - !type:GibBehavior { }
-    - trigger:
-        !type:DamageTypeTrigger
-        damageType: Heat
-        damage: 1500
-      behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawnInContainer: true
-        spawn:
-          FoodMeatChickenFriedVox:
-            min: 3
-            max: 5
-      - !type:BurnBodyBehavior { }
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MeatLaserImpact
+# begin starcup: remove ashing
+#    - trigger:
+#        !type:DamageTypeTrigger
+#        damageType: Heat
+#        damage: 1500
+#      behaviors:
+#      - !type:SpawnEntitiesBehavior
+#        spawnInContainer: true
+#        spawn:
+#          FoodMeatChickenFriedVox:
+#            min: 3
+#            max: 5
+#      - !type:BurnBodyBehavior { }
+#      - !type:PlaySoundBehavior
+#        sound:
+#          collection: MeatLaserImpact
+# end starcup
     - trigger:
         !type:DamageTypeTrigger
         damageType: Radiation

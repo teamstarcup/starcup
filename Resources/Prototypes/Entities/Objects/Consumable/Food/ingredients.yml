@@ -680,6 +680,10 @@
   - type: SliceableFood
     count: 3
     slice: FoodButterSlice
+  # begin starcup: allow normal butter to be extracetd
+  - type: Extractable
+    grindableSolutionName: food
+  # end starcup
 
 - type: entity
   parent: FoodBakingBase
@@ -701,6 +705,10 @@
   - type: Tag
     tags:
     - Slice
+  # begin starcup: allow normal butter to be extracetd
+  - type: Extractable
+    grindableSolutionName: food
+  # end starcup
 
 - type: entity
   name: stick of cannabis butter

@@ -26,3 +26,32 @@
   - StandardTerrestrialStationNoEvac
   - BaseStationEvacuation
   categories: [ HideSpawnMenu ]
+
+# like a basic station, but no evac, no salvage stuff, no trash, etc. epilogue station is meant for syndcomm, generally.
+- type: entity
+  id: StandardEpilogueStationNoEvacNoEvents
+  parent:
+  - BaseStation
+#  - BaseStationNews
+#  - BaseStationCargo
+  - BaseStationJobsSpawning
+  - BaseStationRecords
+  #  - BaseStationArrivals
+  - BaseStationGateway
+  - BaseStationCentcomm
+  - BaseStationAlertLevels
+  - BaseStationSiliconLawCrewsimov
+#  - BaseStationAllEventsEligible # we don't want any interruptions
+  - BaseStationNanotrasen
+  - BaseStationMail # Nyano component, required for station mail to function
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform
+
+- type: entity
+  id: StandardEpilogueStation
+  parent:
+  - StandardEpilogueStationNoEvacNoEvents
+  - BaseStationEvacuation
+  - BaseStationAllEventsEligible
+  categories: [ HideSpawnMenu ]
