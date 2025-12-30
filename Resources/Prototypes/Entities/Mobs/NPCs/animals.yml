@@ -3129,7 +3129,7 @@
     drawdepth: Mobs
     sprite: Mobs/Pets/cat.rsi
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
+    - map: ["enum.DamageStateVisualLayers.Base", "sleeping"] # starcup: add sleeping layer for Rest
       state: cat
   - type: Physics
   - type: Fixtures
@@ -3193,6 +3193,21 @@
     baseSprintSpeed: 4
   - type: Puller
     needsHands: false # starcup - gives ghostrole cats more to do, lets them drag mice around to leave on their keepers' beds
+  # begin starcup
+  - type: Rest
+    sleepingLayers:
+      sleeping:
+        state: cat_rest
+    awakeLayers:
+      sleeping:
+        state: cat
+  - type: HealOnSleep
+    damage:
+      types:
+        Poison: -0.2
+        Cold: -0.4
+        Blunt: -0.2
+  # end starcup
 
 - type: entity
   name: calico cat
@@ -3202,7 +3217,7 @@
   components:
   - type: Sprite
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
+    - map: ["enum.DamageStateVisualLayers.Base", "sleeping"] # starcup: add sleeping
       state: cat2
   - type: DamageStateVisuals
     states:
@@ -3212,6 +3227,15 @@
         Base: cat2_dead
       Dead:
         Base: cat2_dead
+  # begin starcup
+  - type: Rest
+    sleepingLayers:
+      sleeping:
+        state: cat2_rest
+    awakeLayers:
+      sleeping:
+        state: cat2
+  # end starcup
 
 - type: entity
   name: syndicat
@@ -3274,7 +3298,7 @@
   components:
   - type: Sprite
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
+    - map: ["enum.DamageStateVisualLayers.Base", "sleeping"] # starcup: add sleeping
       state: spacecat
   - type: DamageStateVisuals
     states:
@@ -3303,6 +3327,15 @@
       path: /Audio/Animals/cat_meow.ogg
   - type: Respirator #It just works?
     minSaturation: 5.0
+  # begin starcup
+  - type: Rest
+    sleepingLayers:
+      sleeping:
+        state: spacecat_rest
+    awakeLayers:
+      sleeping:
+        state: spacecat
+  # end starcup
 
 - type: entity
   name: caracal cat
@@ -3323,6 +3356,11 @@
         Base: caracal_dead
       Dead:
         Base: caracal_dead
+  # begin starcup: disable sprite change as there is not a resting sprite for caracal cats
+  - type: Rest
+    sleepingLayers: {}
+    awakeLayers: {}
+  # end starcup
 
 - type: entity
   name: kitten
@@ -3332,7 +3370,7 @@
   components:
   - type: Sprite
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
+    - map: ["enum.DamageStateVisualLayers.Base", "sleeping"] # starcup: add sleeping
       state: kitten
   - type: DamageStateVisuals
     states:
@@ -3357,6 +3395,15 @@
     thresholds:
       0: Alive
       25: Dead
+  # begin starcup
+  - type: Rest
+    sleepingLayers:
+      sleeping:
+        state: kitten_rest
+    awakeLayers:
+      sleeping:
+        state: kitten
+  # end starcup
 
 - type: entity
   name: sloth

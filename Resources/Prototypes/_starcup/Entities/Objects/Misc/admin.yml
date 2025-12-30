@@ -1,0 +1,79 @@
+- type: entity
+  id: MappingBelt
+  parent: ClothingBeltUtility
+  name: mapping toolbelt
+  description: A belt with everything a mapper could ever need.
+  suffix: Admin
+  components:
+  - type: StorageFill
+    contents:
+    - id: Multitool
+    - id: SprayPainterRecharging
+    - id: PowerDrill
+    - id: JawsOfLife
+    - id: WelderExperimental
+    - id: AccessConfiguratorUniversal
+  - type: Storage
+    maxItemSize: Huge
+    whitelist: null
+    grid:
+      - 0,0,6,3
+
+- type: entity
+  id: AdminMaterialBox
+  parent: BoxCardboard
+  name: admin material box
+  description: A box of standard resources.
+  suffix: Admin
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,0,1
+  - type: Storage
+    maxItemSize: Normal
+    whitelist: null
+    grid:
+    - 0,0,7,5
+  - type: StorageFill
+    contents:
+    - id: SheetSteel
+    - id: SheetGlass
+    - id: SheetPlastic
+    - id: SheetRGlass
+    - id: SheetPlasteel
+    - id: SheetPlasma
+    - id: SheetUranium
+    - id: MaterialWoodPlank
+    - id: MaterialCloth
+    - id: PartRodMetal
+
+- type: entity
+  id: AdminMedkit
+  parent: MedkitCombat
+  name: admin medkit
+  description:
+  suffix: Admin
+  components:
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,0,0
+  - type: Storage
+    maxItemSize: Large
+    whitelist: null
+    grid:
+    - 0,0,5,3
+  - type: StorageFill
+    contents:
+    - id: DefibrillatorOneHandedUnpowered
+    - id: MedicatedSuture
+    - id: RegenerativeMesh
+    - id: CombatMedipen
+    - id: CombatMedipen
+    - id: CombatMedipen
+    - id: CombatMedipen
+    - id: Bloodpack
+    - id: Bloodpack
+    - id: Oilpack
+    - id: Oilpack

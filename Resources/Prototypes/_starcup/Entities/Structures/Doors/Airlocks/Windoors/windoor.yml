@@ -89,15 +89,6 @@
       board: [ DoorElectronicsReporter ]
 
 - type: entity
-  parent: WindoorSecureServiceLocked
-  id: WindoorSecureZookeeperLocked
-  suffix: Zookeeper, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsZookeeper ]
-
-- type: entity
   parent: WindoorSecureCommandLocked
   id: WindoorSecureSyndicateCommunicationsLocked
   suffix: Syndicate Communications, Locked
