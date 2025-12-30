@@ -20,7 +20,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
 
     [UISystemDependency] private readonly GhostSystem? _system = default;
 
-    // Updated when get death time from the server.
+    // DeltaV: Updated when get death time from the server.
     private TimeSpan? DeathTime;
 
     private GhostGui? Gui => UIManager.GetActiveUIWidgetOrNull<GhostGui>();
