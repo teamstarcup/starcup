@@ -233,7 +233,7 @@
   - type: Speech
     speechVerb: SmallMob
     speechSounds: Cluck
-    allowedEmotes: ['Crow', 'Ruffle', 'CreatureScream'] # starcup
+    allowedEmotes: ['Crow', 'Flutter', 'CreatureScream'] # starcup
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -763,7 +763,7 @@
   - type: Speech
     speechVerb: SmallMob
     speechSounds: DuckSpeechSounds
-    allowedEmotes: ['Ruffle', 'CreatureLaugh', 'CreatureScream']
+    allowedEmotes: ['Flutter', 'CreatureLaugh', 'CreatureScream']
   - type: Vocal
     sounds:
       Unsexed: DuckSpeechEmotes
@@ -1455,7 +1455,15 @@
   - type: GhostTakeoverAvailable
   - type: Vocal
     sounds:
-      Unsexed: Kangaroo
+  # begin starcup
+      Male: KangarooSpeechEmotes
+      Female: KangarooSpeechEmotes
+      Unsexed: KangarooSpeechEmotes
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: KangarooSpeechSounds
+    allowedEmotes: ['CreatureGrowl']
+  # end starcup
   - type: Puller
     needsHands: false
   - type: StaminaDamageOnHit
@@ -2021,7 +2029,9 @@
   # begin starcup: give animals a voice
   - type: Vocal
     sounds:
-      Unsexed: SqueakEmotes
+      Male: SqueakSpeechEmotes
+      Female: SqueakSpeechEmotes
+      Unsexed: SqueakSpeechEmotes
   - type: TypingIndicator
     proto: rodentia
     # end starcup

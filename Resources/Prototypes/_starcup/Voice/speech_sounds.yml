@@ -71,6 +71,15 @@
   exclaimSound:
     path: /Audio/_starcup/Animals/Gorilla/gorilla_exclaim.ogg
 
+- type: speechSounds
+  id: KangarooSpeechSounds
+  saySound:
+    collection: KangarooGrunts
+  askSound:
+    collection: KangarooGrunts
+  exclaimSound:
+    collection: KangarooGrunts
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -238,3 +247,15 @@
       collection: GorillaGasps
     DefaultDeathgasp:
       path: /Audio/_starcup/Animals/Gorilla/gorilla_death.ogg
+
+- type: emoteSounds
+  id: KangarooSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureGrowl:
+      collection: KangarooGrowls
+    Gasp:
+      path: /Audio/Animals/kangaroo_grunt.ogg
+    DefaultDeathgasp:
+      path: /Audio/Animals/kangaroo_grunt.ogg
