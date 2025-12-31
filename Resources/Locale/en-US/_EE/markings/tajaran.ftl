@@ -1,3 +1,5 @@
+# starcup: Tajaran specifiers added to ears
+
 marking-TajaranTorsoBelly = Chest Fur
 marking-TajaranTorsoBelly-belly = Fur
 marking-TajaranTorsoCrest = Chest Fur (Crest)

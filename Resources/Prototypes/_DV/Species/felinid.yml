@@ -10,6 +10,7 @@
   baseScale: "0.85, 0.85"
   minHeight: 0.9 # starcup: height adjustments
 
+# begin starcup
 - type: speciesBaseSprites
   id: MobFelinidSprites
   sprites:
@@ -35,6 +36,7 @@
     RFoot: MobFelinidRFoot
     Tail: MobHumanoidAnyMarking # Nyanotrasen - Felinid
     HeadSide: MobHumanoidAnyMarking # Einstein Engines - Oni
+# end starcup
 
 - type: markingPoints
   id: MobFelinidMarkingLimits
@@ -49,11 +51,13 @@
       points: 1
       required: true
       defaultMarkings: [ FelinidTailBasic ]
-    HeadBase: # starcup
+    # begin starcup: allow tajaran heads
+    HeadBase:
       points: 1
       required: true
       # this makes both male and female felinids have the female head by default. not ideal but neither HasSexMorph nor sex restrictions on head markings work
       defaultMarkings: [ FelinidHeadFemale ]
+    # end starcup
     HeadTop:
       points: 1
       required: true
@@ -76,6 +80,7 @@
       points: 8 # Frontier 2<8
       required: false
 
+# begin starcup
 # ideally there is a better way to do the heads but the Head layer is hardcoded to be sexed.
 # if that changes then this should be updated to not use null sexed heads with markings on top.
 - type: humanoidBaseSprite
@@ -131,3 +136,4 @@
   baseSprite:
     sprite: _starcup/Mobs/Species/Felinid/parts.rsi
     state: r_foot
+# end starcup
