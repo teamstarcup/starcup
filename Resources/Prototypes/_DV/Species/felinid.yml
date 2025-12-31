@@ -52,7 +52,8 @@
     HeadBase: # starcup
       points: 1
       required: true
-      defaultMarkings: [ FelinidHeadFemale ] # i expect we have more/more consistent catgirls than catboys
+      # this makes both male and female felinids have the female head by default. not ideal but neither HasSexMorph nor sex restrictions on head markings work
+      defaultMarkings: [ FelinidHeadFemale ]
     HeadTop:
       points: 1
       required: true

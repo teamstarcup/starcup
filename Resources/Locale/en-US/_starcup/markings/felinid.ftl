@@ -1,8 +1,12 @@
 marking-FelinidHeadMale = Felinid Head (Male)
 marking-FelinidHeadFemale = Felinid Head (Female)
+marking-FelinidHeadMale-head_m = Head
+marking-FelinidHeadFemale-head_f = Head
 
 marking-TajaranHeadMale = Tajaran Head (Male)
+marking-TajaranHeadMale-head_m = Head
 marking-TajaranHeadFemale = Tajaran Head (Female)
+marking-TajaranHeadFemale-head_f = Head
 marking-TajaranTorsoMale = Tajaran Torso (Male)
 marking-TajaranTorsoFemale = Tajaran Torso (Female)
 marking-TajaranLeftArm = Tajaran Left Arm
