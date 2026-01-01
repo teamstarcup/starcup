@@ -1,6 +1,6 @@
 # This is modified code taken from old RMC14 commits from 2023.
 - type: entity
-  id: ActionRest
+  id: RestActionXeno
   parent: BaseAction
   name: Rest
   components:
@@ -9,4 +9,4 @@
       sprite: _RMC14/Actions/xeno_actions.rsi
       state: resting
   - type: InstantAction
-    event: !type:RestEvent
+    event: !type:SleepActionEvent

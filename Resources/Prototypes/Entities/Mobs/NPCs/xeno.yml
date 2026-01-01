@@ -39,12 +39,14 @@
   - type: Hands
   - type: ItemOffer # starcup - item offering
   - type: ComplexInteraction
-  - type: Sprite # starcup - splitting burrower off
+  - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Aliens/Xenos/burrower.rsi
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base", "resting"] # starcup: added resting mapping
-      state: running
+  # begin starcup: add sleeping, change sprites to RMC14 versions
+    - map: ["enum.DamageStateVisualLayers.Base", "sleeping" ]
+      state: alive
+  # end starcup
   - type: Fixtures
     fixtures:
       fix1:
@@ -84,7 +86,7 @@
   - type: DamageStateVisuals
     states:
       Alive:
-        Base: running
+        Base: alive # starcup
       Critical:
         Base: crit
       Dead:
@@ -121,7 +123,7 @@
   - type: NoSlip
   - type: Perishable #Ummmm the acid kills a lot of the bacteria or something
     molsPerSecondPerUnitMass: 0.0005
-  # begin starcup: give exomorphs a voice
+  # begin starcup: exomorph reworks
   - type: Speech
     speechVerb: Xeno
     speechSounds: Xeno
@@ -133,11 +135,18 @@
       Unsexed: Xeno
   - type: Deathgasp
   - type: Rest
-    actionIds:
-    - ActionRest
-    restingLayers:
-      resting:
+    restAction: RestActionXeno
+    sleepingLayers:
+      sleeping:
         state: sleeping
+    awakeLayers:
+      sleeping:
+        state: alive
+  - type: HealOnSleep
+    damage:
+      groups:
+        Brute: -0.3
+        Burn: -0.1
   # end starcup
 
 - type: entity
@@ -150,9 +159,6 @@
     drawdepth: Mobs
     sprite: _RMC14/Mobs/OldXenonids/Praetorian/praetorian.rsi # starcup
     offset: 0,0.4
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: alive # starcup
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -180,6 +186,10 @@
     speechVerb: Xeno
     speechSounds: XenoLarge
     allowedEmotes: [ "Tailwhip", "Drool", "CreatureHiss", "CreatureGrowl", "CreatureRoar", "CreatureScream" ]
+  - type: Rest
+    awakeLayers:
+      sleeping:
+        state: alive
   # end starcup
 
 - type: entity
@@ -192,9 +202,6 @@
     drawdepth: Mobs
     sprite: _RMC14/Mobs/OldXenonids/Drone/drone.rsi # starcup
     offset: 0,0.2
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: alive # starcup
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -206,10 +213,10 @@
   - type: MeleeWeapon
     soundHit:
       collection: AlienClaw
-    animation: WeaponArcPunch
+    animation: WeaponArcPunch # headbutter
     damage:
       types:
-        Blunt: 6 # headbutter
+        Blunt: 6
   - type: DamageStateVisuals
     states:
       Alive:
@@ -243,9 +250,6 @@
     drawdepth: Mobs
     sprite: _RMC14/Mobs/OldXenonids/Queen/queen.rsi # starcup
     offset: 0,0.4
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: alive # starcup
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -291,11 +295,8 @@
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: Mobs/Aliens/Xenos/ravager.rsi
+    sprite: _RMC14/Mobs/OldXenonids/Ravager/ravager.rsi
     offset: 0,0.5
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: running
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -337,11 +338,8 @@
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: Mobs/Aliens/Xenos/runner.rsi
+    sprite: _RMC14/Mobs/OldXenonids/Runner/runner.rsi # starcup
     offset: 0,0.6
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: running
   - type: MovementSpeedModifier
     baseSprintSpeed: 6.0
   - type: MeleeWeapon
@@ -399,11 +397,8 @@
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: Mobs/Aliens/Xenos/spitter.rsi
+    sprite: _RMC14/Mobs/OldXenonids/Spitter/spitter.rsi
     offset: 0,0.3
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: running
   - type: MobThresholds
     thresholds:
       0: Alive

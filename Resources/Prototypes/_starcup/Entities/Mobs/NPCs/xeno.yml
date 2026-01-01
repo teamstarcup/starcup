@@ -12,6 +12,12 @@
   - MobFlammable
   description: They mostly come at night. Mostly.
   components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _RMC14/Mobs/OldXenonids/Larva/larva.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base", "sleeping" ]
+      state: alive
   - type: Insulated
   - type: CombatMode
   - type: InputMover
@@ -74,7 +80,7 @@
   - type: DamageStateVisuals
     states:
       Alive:
-        Base: running
+        Base: alive
       Critical:
         Base: crit
       Dead:
@@ -121,6 +127,18 @@
       Female: Xeno
       Unsexed: Xeno
   - type: Deathgasp
+  - type: Rest
+    sleepingLayers:
+      sleeping:
+        state: sleeping
+    awakeLayers:
+      sleeping:
+        state: alive
+  - type: HealOnSleep
+    damage:
+      groups:
+        Brute: -0.3
+        Burn: -0.1
 
 # Tier 0
 
@@ -130,14 +148,8 @@
   id: MobXenoLarva
   description: Third stage of the exomorph life cycle. Eats its way out of a host.
   components:
-  - type: Sprite
-    drawdepth: Mobs
-    sprite: _RMC14/Mobs/OldXenonids/Larva/larva.rsi
-    layers:
-    - map: [ "enum.DamageStateVisualLayers.Base" ]
-      state: alive
   - type: MovementSpeedModifier
-    baseSprintSpeed: 1
+    baseSprintSpeed: 4
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -163,9 +175,6 @@
   - type: Sprite
     drawdepth: Mobs
     sprite: _RMC14/Mobs/OldXenonids/Parasite/parasite.rsi
-    layers:
-    - map: [ "enum.DamageStateVisualLayers.Base" ]
-      state: alive
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -242,10 +251,7 @@
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: Mobs/Aliens/Xenos/burrower.rsi
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: running
+    sprite: _RMC14/Mobs/OldXenonids/Burrower/burrower.rsi
   - type: MeleeWeapon
     altDisarm: false
     angle: 0
@@ -279,9 +285,6 @@
   - type: Sprite
     drawdepth: Mobs
     sprite: _RMC14/Mobs/OldXenonids/LesserDrone/lesser_drone.rsi
-    layers:
-    - map: [ "enum.DamageStateVisualLayers.Base" ]
-      state: alive
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -310,9 +313,6 @@
   components:
   - type: Sprite
     sprite: _RMC14/Mobs/OldXenonids/Lurker/lurker.rsi
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: alive
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -358,9 +358,6 @@
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Aliens/Xenos/skulker.rsi
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: running
   - type: SlowOnDamage
     speedModifierThresholds:
       40: 0.7
@@ -401,9 +398,6 @@
     drawdepth: Mobs
     sprite: _RMC14/Mobs/OldXenonids/Sentinel/sentinel.rsi
     offset: 0,0.3
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: alive
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -463,7 +457,7 @@
     sprite: _RMC14/Mobs/OldXenonids/Carrier/carrier.rsi
     offset: 0,0.4
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
+    - map: ["enum.DamageStateVisualLayers.Base", "sleeping" ]
       state: alive
     - state: para-0
       map: [ "enum.GunVisualLayers.Mag" ]
@@ -525,6 +519,13 @@
     steps: 4
     zeroVisible:
       false
+  - type: Rest
+    sleepingLayers:
+      sleeping:
+        state: sleeping
+    awakeLayers:
+      sleeping:
+        state: alive
 
 - type: entity
   name: crusher
@@ -535,9 +536,6 @@
   - type: Sprite
     drawdepth: Mobs
     sprite: _RMC14/Mobs/OldXenonids/Crusher/crusher.rsi
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: alive
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -590,9 +588,6 @@
   - type: Sprite
     drawdepth: Mobs
     sprite: _RMC14/Mobs/OldXenonids/Warrior/warrior.rsi
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: alive
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -637,9 +632,6 @@
   - type: Sprite
     drawdepth: Mobs
     sprite: _RMC14/Mobs/OldXenonids/Defender/defender.rsi
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: alive
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -697,9 +689,6 @@
   - type: Sprite
     drawdepth: Mobs
     sprite: _RMC14/Mobs/OldXenonids/Boiler/boiler.rsi
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: alive
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -726,14 +715,6 @@
     - FullAuto
     soundGunshot:
       collection: AlienSpitAttack
-  - type: DamageStateVisuals
-    states:
-      Alive:
-        Base: alive
-      Critical:
-        Base: crit
-      Dead:
-        Base: dead
   - type: Fixtures
     fixtures:
       fix1:
