@@ -5,7 +5,8 @@ namespace Content.Shared.EntityTable.ValueSelector;
 /// <summary>
 /// Picks a value based on a Binomial Distribution of N Trials given P Chance
 /// </summary>
-public sealed partial class BinomialNumberSelector : NumberSelector
+[Virtual]  // starcup: unsealed
+public partial class BinomialNumberSelector : NumberSelector
 {
     /// <summary>
     /// How many times to try including an entry. i.e. the Max.

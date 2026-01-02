@@ -21,6 +21,11 @@
       tableId: AllToyWeaponsTable
     - !type:NestedSelector
       tableId: RandomInstrumentTable
+    - !type:GroupSelector
+      weight: 0.1 # weighted low because the other tables have way more options
+      children:
+      - id: ClothingShoesBootsMoon
+      - id: RGBStaff
 
 - type: entityTable
   id: RandomCollectibleTable

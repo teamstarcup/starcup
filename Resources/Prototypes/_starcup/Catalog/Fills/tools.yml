@@ -11,12 +11,22 @@
     - !type:NestedSelector
       tableId: RandomStandardPowerCellTable
     - !type:NestedSelector
-      tableId: RandomSignalTechTable
-    - !type:NestedSelector
       tableId: BasicReagentBottlesTable
     - !type:GroupSelector
+      children:
       - id: ResearchDisk5000
       - id: TechnologyDisk
+
+- type: entityTable
+  id: RandomUsablePracticalTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomMaterialsTable
+      rolls: !type:RangeNumberSelector
+        range: 2, 3
+    - !type:NestedSelector
+      tableId: RandomLargeToolTable
 
 - type: entityTable
   id: RandomUsableDangerousSmallTable
@@ -26,6 +36,32 @@
       tableId: RandomHudTable
     - !type:NestedSelector
       tableId: RandomSecurityToolTable
+
+- type: entityTable
+  id: RandomUsableDangerousTable
+  table: !type:GroupSelector
+    children:
+    - id: WeaponForceGun
+    - id: WeaponTetherGun
+    - id: HoloprojectorField
+    - id: DeviceQuantumSpinInverter
+      amount: 2
+    - id: DeviceDesynchronizer
+    - id: ClothingShoesBootsSpeed
+    - id: LauncherSyringe
+
+- type: entityTable
+  id: RandomMaterialsTable
+  table: !type:GroupSelector
+    children:
+    - id: SheetSteel10
+    - id: SheetPlastic10
+    - id: SheetGlass10
+    - id: MaterialCardboard10
+    - id: MaterialCloth10
+    - id: MaterialWoodPlank10
+    - id: SheetPlasma10
+    - id: MaterialBones
 
 - type: entityTable
   id: RandomSmallToolTable
@@ -47,7 +83,6 @@
     - id: GlowstickBase
     - id: RadioHandheld
     - id: AppraisalTool
-    - id: ModularReceiver
     - !type:NestedSelector
       tableId: InsulsTable
     - !type:GroupSelector
@@ -70,13 +105,35 @@
         - id: FlashlightLanternRed
 
 - type: entityTable
+  id: RandomLargeToolTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      children:
+      - id: ToolboxEmergencyFilled
+      - id: ToolboxMechanicalFilled
+      - id: ToolboxElectricalFilled
+      - id: CowToolboxFilled
+        weight: 0.1
+    - id: Bucket
+    - id: Shovel
+    - id: ChoppingAxe
+    - id: BroomItemBrown
+    - id: Pickaxe
+    - id: BoxInflatable
+    - id: JawsOfLife
+
+- type: entityTable
   id: RandomStandardPowerCellTable # excludes anything that could be considered a straightforward improvement over the medium cell
   table: !type:GroupSelector
     children:
     - id: PowerCellPotato
+      weight: 0.5
     - id: PowerCellSmall
     - id: PowerCellSmallNuclear
+      weight: 0.5
     - id: PowerCellMedium
+      weight: 2
 
 - type: entityTable
   id: RandomHudTable

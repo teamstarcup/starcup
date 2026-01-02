@@ -31,8 +31,11 @@
       children:
       - !type:NestedSelector
         tableId: RandomBulkCandyTable
+        weight: 0.7
       - id: FoodSnackGummyWormLarge
+        weight: 0.15
       - id: FoodSnackChocolateBarLarjWrapped
+        weight: 0.15
     - !type:NestedSelector
       tableId: RandomFoodSliceableTable
 

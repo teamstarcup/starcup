@@ -79,10 +79,13 @@
     children:
     - !type:NestedSelector
       tableId: RandomUsablePracticalSmallTable
+      weight: 0.35
     - !type:NestedSelector
       tableId: RandomPrankHarmlessSmallTable
+      weight: 0.35
     - !type:NestedSelector
       tableId: RandomAccessoryTable
+      weight: 0.30
 
 - type: entityTable
   id: LetterRareEntityTable
@@ -90,10 +93,13 @@
     children:
     - !type:NestedSelector
       tableId: RandomCombatGearSmallTable
+      weight: 0.4
     - !type:NestedSelector
       tableId: RandomPrankDangerousSmallTable
+      weight: 0.2
     - !type:NestedSelector
       tableId: RandomUsableDangerousSmallTable
+      weight: 0.4
 
 # Packages
 - type: entityTable
@@ -122,11 +128,15 @@
     children:
     - !type:NestedSelector
       tableId: RandomPrankDangerousTable
+      weight: 0.1
     - !type:NestedSelector
       tableId: RandomCombatGearTable
+      weight: 0.55
     - !type:NestedSelector
       tableId: RandomUsableDangerousTable
+      weight: 0.15
     - !type:NestedSelector
-      tableId: SyndieMaintLoot
+      tableId: RandomTraitorGearTable
+      weight: 0.2
 
 # end starcup

@@ -4,10 +4,13 @@
     children:
     - !type:NestedSelector
       tableId: RandomCommonBoardTable
+      weight: 0.6
     - !type:NestedSelector
       tableId: RandomDepartmentalBoardTable
+      weight: 0.3
     - !type:NestedSelector
       tableId: RandomRestrictedBoardTable
+      weight: 0.1
 
 - type: entityTable
   id: RandomCommonBoardTable
@@ -46,10 +49,8 @@
     - !type:NestedSelector
       tableId: RandomSecurityBoardTable
     - id: CargoShuttleConsoleCircuitboard
-    - id: SolarControlComputerCircuitboard
     - id: MedicalTechFabCircuitboard
     - id: ResearchComputerCircuitboard
-    - id: RoboticsConsoleCircuitboard
     - id: MedicalRecordsComputerCircuitboard
 
 # Departmental

@@ -3,15 +3,43 @@
   table: !type:GroupSelector
     children:
     - id: SmallCritterHarmlessTable
-    - !type:GroupSelector
-      children:
-      - id: AdminInstantEffectSmoke10
-      - id: AdminInstantEffectBluespace
-      - id: AdminInstantEffectFlash
+      weight: 0.6
+    # TODO: put these back in once we reinvent delta's delayed activations
+#    - !type:GroupSelector
+#      weight: 0.4
+#      children:
+#      - id: AdminInstantEffectSmoke10
+#      - id: AdminInstantEffectBluespace
+#      - id: AdminInstantEffectFlash
+
+- type: entityTable
+  id: RandomPrankHarmlessTable
+  table: !type:GroupSelector
+    children:
+    - id: CritterHarmlessTable
+      weight: 0.7
+    - id: SmallCritterSwarmHarmlessTable
+      weight: 0.3
 
 - type: entityTable
   id: RandomPrankDangerousSmallTable
   table: !type:GroupSelector
     children:
     - id: SmallCritterDangerousTable
-    - id: AdminInstantEffectEMP
+      weight: 0.4
+    # TODO: put these back in once we reinvent delta's delayed activations
+#    - id: AdminInstantEffectEMP
+#      weight: 0.6
+
+- type: entityTable
+  id: RandomPrankDangerousTable
+  table: !type:GroupSelector
+    children:
+    - id: CritterDangerousTable
+      weight: 0.4
+    # TODO: put these back in once we reinvent delta's delayed activations
+#    - !type:GroupSelector
+#      weight: 0.6
+#      children:
+#      - id: AdminInstantEffectTearGas
+#      - id: AdminInstantEffectGravityWell
