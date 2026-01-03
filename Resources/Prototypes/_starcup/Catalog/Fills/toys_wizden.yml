@@ -3,51 +3,51 @@
 - type: entityTable # copied from upstream pr #41840
   id: AllMiscToysTable
   table: !type:GroupSelector
-  children:
-  - !type:NestedSelector
-    tableId: AllCrayonsTable
-  - id: CrayonBox
-  - id: PlasticBanana
-  - id: NukeDiskFake
-  - id: DiceBag
-  - id: SpectralLocator
-  - id: BarberScissors
-  #- id: SprayFlowerPin # this doesn't exist yet
-  - id: ClothingShoesSkates
-  - id: CrazyGlue
-  - id: CrazyLube
-  - !type:NestedSelector
-    tableId: AllBoardGamesTable
-  - !type:GroupSelector # Where there's Chips there's Dips
     children:
-    - id: MrChips
-    - id: MrDips
-  - !type:GroupSelector # Ballons
-    children:
-    - id: BalloonNT
-      weight: 5 # NT bias
-    - id: BalloonCorgi
-    - id: BalloonSyn
-  - !type:GroupSelector # Sports ball
-    children:
-    - id: Basketball
-    - id: Football
-    - id: BeachBall
-    - id: TennisBall
-      amount: 2
-  - !type:GroupSelector # PAIs are basically toys
-    children:
-    - id: PersonalAI
-      weight: 8
-    - id: PotatoAI
-    - id: GoldenPersonalAI
-      weight: 0.1 # 1 in 1,456. A truly rare item
-  - !type:GroupSelector # Orbs of "power"
-    weight: 0.05 # 1 in 320
-    children:
-    - id: SingularityToy
-    - id: TeslaToy
-    - id: PonderingOrb
+    - !type:NestedSelector
+      tableId: AllCrayonsTable
+    - id: CrayonBox
+    - id: PlasticBanana
+    - id: NukeDiskFake
+    - id: DiceBag
+    - id: SpectralLocator
+    - id: BarberScissors
+    #- id: SprayFlowerPin # this doesn't exist yet
+    - id: ClothingShoesSkates
+    - id: CrazyGlue
+    - id: CrazyLube
+    - !type:NestedSelector
+      tableId: AllBoardGamesTable
+    - !type:GroupSelector # Where there's Chips there's Dips
+      children:
+      - id: MrChips
+      - id: MrDips
+    - !type:GroupSelector # Ballons
+      children:
+      - id: BalloonNT
+        weight: 5 # NT bias
+      - id: BalloonCorgi
+      - id: BalloonSyn
+    - !type:GroupSelector # Sports ball
+      children:
+      - id: Basketball
+      - id: Football
+      - id: BeachBall
+      - id: TennisBall
+        amount: 2
+    - !type:GroupSelector # PAIs are basically toys
+      children:
+      - id: PersonalAI
+        weight: 8
+      - id: PotatoAI
+      - id: GoldenPersonalAI
+        weight: 0.1 # 1 in 1,456. A truly rare item
+    - !type:GroupSelector # Orbs of "power"
+      weight: 0.05 # 1 in 320
+      children:
+      - id: SingularityToy
+      - id: TeslaToy
+      - id: PonderingOrb
 
 # Entities that don't do much more than make a unique sound. Plushies excluded.
 - type: entityTable # copied from upstream pr #41840
@@ -72,6 +72,19 @@
         weight: 0.5 # 1 in 143
     - !type:NestedSelector # The original
       tableId: RandomBikeHornTable
+
+- type: entityTable # copied from upstream pr #41840
+  id: RandomBikeHornTable
+  table: !type:GroupSelector
+    children:
+    - id: BikeHorn
+    - !type:GroupSelector # Usually get the normal horn
+      weight: .005 # 1 in 200
+      children:
+      - id: CluwneHorn # you lose, clown >:o)
+      - id: BananiumHorn
+      - id: PushHorn
+      - id: GoldenBikeHorn
 
 - type: entityTable # copied from upstream pr #41840
   id: AllBoardGamesTable
@@ -194,7 +207,7 @@
         - id: SyndieTrickyBomb
     - !type:GroupSelector # Guns type group
       children:
-      - id: WeaponStickyHand
+#      - id: WeaponStickyHand # does not exist yet
       - !type:GroupSelector # Water subgroup
         children:
         - id: WeaponWaterBlaster

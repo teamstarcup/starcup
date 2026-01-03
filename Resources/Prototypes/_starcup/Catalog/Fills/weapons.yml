@@ -126,22 +126,22 @@
       children:
       - id: ShellShotgun
         amount: !type:RangeNumberSelector
-          value: 2, 3
+          range: 2, 3
       - id: ShellShotgunBeanbag
         amount: !type:RangeNumberSelector
-          value: 2, 3
+          range: 2, 3
       - id: ShellShotgunSlug
         amount: !type:RangeNumberSelector
-          value: 2, 3
+          range: 2, 3
       - id: ShellShotgunFlare
         amount: !type:RangeNumberSelector
-          value: 2, 3
+          range: 2, 3
       - id: ShellShotgunIncendiary
         amount: !type:RangeNumberSelector
-          value: 2, 3
+          range: 2, 3
       - id: ShellTranquilizer
         amount: !type:RangeNumberSelector
-          value: 2, 3
+          range: 2, 3
 
 - type: entityTable
   id: RandomGrenadeTable
@@ -158,7 +158,7 @@
         children:
         - id: ChemicalPayload
         - id: FlashPayload
-    - id: GrenadeFlashbang
+    - id: GrenadeFlashBang
     - id: SmokeGrenade
     - id: TearGasGrenade
     - id: GrenadeStinger
