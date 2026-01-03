@@ -6,7 +6,7 @@
   - type: Sprite
     state: pill9
   - type: Pill
-    pillType: 7
+    pillType: 8
   - type: Label
     currentLabel: caramexinin 10u
   - type: SolutionContainerManager
@@ -27,4 +27,35 @@
   - type: StorageFill
     contents:
     - id: PillCaramexinin
+      amount: 5
+
+- type: entity
+  parent: Pill
+  id: PillEthyloxyephedrine
+  suffix: Ethyloxyephedrine 10u
+  components:
+  - type: Sprite
+    state: pill3
+  - type: Pill
+    pillType: 2
+  - type: Label
+    currentLabel: ethyloxyephedrine 10u
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Ethyloxyephedrine
+          Quantity: 10
+
+- type: entity
+  parent: PillCanister
+  id: PillCanisterEthyloxyephedrine
+  suffix: Ethyloxyephedrine 10u, 5
+  components:
+  - type: Label
+    currentLabel: ethyloxyephedrine 10u
+  - type: StorageFill
+    contents:
+    - id: PillEthyloxyephedrine
       amount: 5
