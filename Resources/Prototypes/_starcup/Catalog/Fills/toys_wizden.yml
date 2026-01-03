@@ -87,6 +87,21 @@
       - id: GoldenBikeHorn
 
 - type: entityTable # copied from upstream pr #41840
+  id: AllCrayonsTable
+  table: !type:GroupSelector
+    children:
+    - id: CrayonMime
+    - id: CrayonRainbow
+    - id: CrayonWhite
+    - id: CrayonBlack
+    - id: CrayonRed
+    - id: CrayonOrange
+    - id: CrayonYellow
+    - id: CrayonGreen
+    - id: CrayonBlue
+    - id: CrayonPurple
+
+- type: entityTable # copied from upstream pr #41840
   id: AllBoardGamesTable
   table: !type:GroupSelector
     children:
