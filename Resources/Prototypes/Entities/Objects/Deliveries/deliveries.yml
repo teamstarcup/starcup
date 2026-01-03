@@ -40,7 +40,6 @@
     examinable: false
   - type: FingerprintReader
     ignoreGloves: true  # starcup
-
   - type: Delivery
   - type: DeliveryRandomMultiplier
   - type: ContainerContainer
@@ -63,7 +62,7 @@
   - type: Sprite
     sprite: Objects/Specific/Cargo/mail_large.rsi
     layers:
-    - state: icon
+    - state: icon-syndie # starcup: syndicate rebranding
       map: [ "enum.DeliveryVisualLayers.Icon" ]
     - state: trash
       map: [ "enum.DeliveryVisualLayers.Trash" ]
@@ -75,10 +74,10 @@
     - state: fragile
       map: [ "enum.DeliveryVisualLayers.FragileStamp" ]
       visible: false
-    - state: postmark
+    - state: postmark-syndie # starcup: syndicate rebranding
     - map: [ "enum.DeliveryVisualLayers.JobStamp" ]
       offset: -0.21875, -0.25
-    - state: locked
+    - state: locked-syndie # starcup: syndicate rebranding
       map: [ "enum.DeliveryVisualLayers.Lock" ]
     - state: broken
       map: [ "enum.DeliveryVisualLayers.Breakage" ]
@@ -93,6 +92,13 @@
   - type: MultiHandedItem
   - type: Item
     size: Huge
+  # begin starcup: syndicate rebranding
+    inhandVisuals:
+      left:
+      - state: inhand-left-syndie
+      right:
+      - state: inhand-right-syndie
+  # end starcup
   - type: Delivery
     baseSpesoReward: 1000
     baseSpesoPenalty: 250 # So low due to dept economy splitting all the earnings, but not splitting the penalty.
@@ -125,10 +131,10 @@
     - state: fragile
       map: [ "enum.DeliveryVisualLayers.FragileStamp" ]
       visible: false
-    - state: postmark
+    - state: postmark-syndie # starcup: syndicate rebranding
     - map: [ "enum.DeliveryVisualLayers.JobStamp" ]
       offset: -0.125, -0.0625
-    - state: locked
+    - state: locked-syndie # starcup: syndicate rebranding
       map: [ "enum.DeliveryVisualLayers.Lock" ]
     - state: broken
       map: [ "enum.DeliveryVisualLayers.Breakage" ]
