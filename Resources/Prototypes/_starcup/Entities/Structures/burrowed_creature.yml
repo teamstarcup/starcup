@@ -1,3 +1,78 @@
+# These are the action buttons, actions, and mobs, to represent burrowing, all packed together for convenience.
+# This works by using the polymorph system to polymorh the mob into a burrowed mob, either medium or small.
+
+# Actions that go on the user bar
+
+- type: entity
+  parent: [BaseActionPolymorph, BaseDoAfterAction]
+  id: ActionBurrowSmall
+  name: Burrow
+  description: Burrows into the ground.
+  components:
+  - type: Action
+    useDelay: 3
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: burrow
+      delay: 2.5
+  - type: InstantAction
+    event: !type:PolymorphActionEvent
+      protoId: BurrowedSmall
+
+- type: entity
+  parent: [BaseActionPolymorph, BaseDoAfterAction]
+  id: ActionBurrowMedium
+  name: Burrow
+  description: Burrows into the ground.
+  components:
+  - type: Action
+    useDelay: 3
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: burrow
+      delay: 2.5
+  - type: InstantAction
+    event: !type:PolymorphActionEvent
+      protoId: BurrowedMedium
+
+# Action events
+
+- type: polymorph
+  id: BurrowedSmall
+  configuration:
+    entity: BurrowedCreatureSmall
+    transferName: false
+    inventory: None
+    revertOnDeath: true
+    revertOnCrit: true
+    polymorphPopup: "burrowing-popup-generic"
+    exitPolymorphPopup: "burrowing-revert-popup-generic"
+    polymorphSound:
+      path: /Audio/_starcup/Effects/Burrowing/burrow_on.ogg
+      params:
+        volume: 0.1
+    exitPolymorphSound:
+      path: /Audio/_starcup/Effects/Burrowing/burrow_off.ogg
+
+- type: polymorph
+  id: BurrowedMedium
+  configuration:
+    entity: BurrowedCreatureMedium
+    transferName: false
+    inventory: None
+    revertOnDeath: true
+    revertOnCrit: true
+    polymorphPopup: "burrowing-popup-generic"
+    exitPolymorphPopup: "burrowing-revert-popup-generic"
+    polymorphSound:
+      path: /Audio/_starcup/Effects/Burrowing/burrow_on.ogg
+      params:
+        volume: 0.1
+    exitPolymorphSound:
+      path: /Audio/_starcup/Effects/Burrowing/burrow_off.ogg
+
+# Burrowed mobs
+
 - type: entity
   id: BurrowedCreatureSmall
   name: burrowed creature
@@ -39,11 +114,9 @@
     tags:
     - CannotSuicide
     - FootstepSound
-  - type: InputMover
-  - type: MobMover
   - type: MovementSpeedModifier
-    baseWalkSpeed : 0.3
-    baseSprintSpeed : 0.4
+    baseWalkSpeed : 0
+    baseSprintSpeed : 0
   - type: NoSlip
   - type: FootstepModifier
     footstepSoundCollection:

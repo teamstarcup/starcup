@@ -127,24 +127,14 @@
       Female: Xeno
       Unsexed: Xeno
   - type: Deathgasp
-  - type: Rest
-    sleepingLayers:
-      sleeping:
-        state: sleeping
-    awakeLayers:
-      sleeping:
-        state: alive
-  - type: HealOnSleep
-    damage:
-      groups:
-        Brute: -0.3
-        Burn: -0.1
 
 # Tier 0
 
 - type: entity
   name: larva
-  parent: MobXenoNoCombat
+  parent:
+  - MobXenoNoCombat
+  - MobXenoRest
   id: MobXenoLarva
   description: Third stage of the exomorph life cycle. Eats its way out of a host.
   components:
@@ -165,6 +155,10 @@
       Male: XenoLarva
       Female: XenoLarva
       Unsexed: XenoLarva
+  - type: JumpAbility
+    action: ActionXenoBurrowSmall
+    canCollide: false
+    jumpDistance: 0
 
 - type: entity
   name: parasite
@@ -245,7 +239,9 @@
 
 - type: entity
   name: burrower
-  parent: MobXeno
+  parent:
+  - MobXeno
+  - MobXenoRest
   id: MobXenoBurrower
   description: Exomorph lurker that waits in ambush. Uses its claws to tear through solid material.
   components:
@@ -272,7 +268,7 @@
   - type: Puller
     needsHands: false
   - type: JumpAbility
-    action: ActionBurrowMedium
+    action: ActionXenoBurrowMedium
     canCollide: false
     jumpDistance: 0
 
@@ -307,7 +303,9 @@
 
 - type: entity
   name: lurker
-  parent: MobXeno
+  parent:
+  - MobXeno
+  - MobXenoRest
   id: MobXenoLurker
   description: Fast exomorph skirmisher. Small but ferocious.
   components:
@@ -352,10 +350,17 @@
 
 - type: entity
   name: skulker
-  parent: MobXeno
+  parent:
+  - MobXeno
+  - MobXenoRest
   id: MobXenoSkulker
   description: Exomorph skirmisher. Can pounce and is rarely seen alone.
   components:
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+    - CreatureEmotes # starcup
   - type: Sprite
     sprite: _starcup/Mobs/Aliens/Xenos/skulker.rsi
   - type: SlowOnDamage
@@ -390,7 +395,9 @@
 
 - type: entity
   name: sentinel
-  parent: MobXeno
+  parent:
+  - MobXeno
+  - MobXenoRest
   id: MobXenoSentinel
   description: Ranged exomorph skirmisher. Spits acid from a distance.
   components:
@@ -448,9 +455,11 @@
 
 - type: entity
   name: carrier
-  parent: MobXenoNoCombat
+  parent:
+    - MobXeno
+    - MobXenoRest
   id: MobXenoCarrier
-  description: Exomorph controller, caretaker of the hive. Delivers parasites to where victims may be found.
+  description: Exomorph caretaker of the hive. Delivers parasites to where victims may be found.
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -528,60 +537,10 @@
         state: alive
 
 - type: entity
-  name: crusher
-  parent: MobXeno
-  id: MobXenoCrusher
-  description: Exomorph brute. Slow but very hardy, able to tear down walls.
-  components:
-  - type: Sprite
-    drawdepth: Mobs
-    sprite: _RMC14/Mobs/OldXenonids/Crusher/crusher.rsi
-  - type: MobThresholds
-    thresholds:
-      0: Alive
-      220: Dead
-  - type: MovementSpeedModifier
-    baseSprintSpeed: 3
-  - type: MeleeWeapon
-    soundHit:
-      collection: MetalThud
-    animation: WeaponArcPunch
-    attackRate: 0.5
-    damage:
-      types:
-        Blunt: 8
-        Structural: 35
-  - type: Stamina
-    critThreshold: 300
-  - type: SlowOnDamage
-    speedModifierThresholds:
-      50: 0.9
-  - type: DamageStateVisuals
-    states:
-      Alive:
-        Base: alive
-      Critical:
-        Base: crit
-      Dead:
-        Base: dead
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.45
-        density: 400
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: AlienFootstepLarge
-
-- type: entity
   name: warrior
-  parent: MobXeno
+  parent:
+  - MobXeno
+  - MobXenoRest
   id: MobXenoWarrior
   description: Exomorph soldier. First line of attack and defense for the hive.
   components:
@@ -625,7 +584,9 @@
 
 - type: entity
   name: defender
-  parent: MobXeno
+  parent:
+  - MobXeno
+  - MobXenoRest
   id: MobXenoDefender
   description: Exomorph controller. Knocks enemies away from vulnerable allies with its mace-like tail.
   components:
@@ -677,12 +638,66 @@
         - MobMask
         layer:
         - MobLayer
+  - type: JumpAbility
+    action: ActionXenoCrestDefender
+    canCollide: false
+    jumpDistance: 0
+
+- type: entity
+  name: defender
+  suffix: blocking
+  parent: MobXeno
+  id: MobXenoDefenderBlocking
+  hideSpawnMenu: true
+  description: Exomorph controller. Knocks enemies away from vulnerable allies with its mace-like tail.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _RMC14/Mobs/OldXenonids/Defender/defender.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base" ]
+      state: crest
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      190: Dead
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 0.5
+  - type: Stamina
+    critThreshold: 300
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      50: 0.9
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: crest
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 400
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: XenoCrest
 
 # Tier 3
 
 - type: entity
   name: boiler
-  parent: MobXeno
+  parent:
+  - MobXeno
+  - MobXenoRest
   id: MobXenoBoiler
   description: Ranged exomorph brute. Spits acid from a distance that can melt holes into walls.
   components:
@@ -729,3 +744,119 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: AlienFootstepLarge
+
+- type: entity
+  name: crusher
+  parent:
+  - MobXeno
+  - MobXenoRest
+  id: MobXenoCrusher
+  description: Exomorph brute. Slow but very hardy, able to tear down walls.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _RMC14/Mobs/OldXenonids/Crusher/crusher.rsi
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      220: Dead
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 3
+  - type: MeleeWeapon
+    soundHit:
+      collection: MetalThud
+    animation: WeaponArcPunch
+    attackRate: 0.5
+    damage:
+      types:
+        Blunt: 8
+        Structural: 35
+  - type: Stamina
+    critThreshold: 300
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      50: 0.9
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 400
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: AlienFootstepLarge
+  - type: JumpAbility
+    action: ActionXenoChargeCrusher
+    canCollide: false
+    jumpDistance: 0
+
+- type: entity
+  name: crusher
+  suffix: charging
+  parent: MobXenoNoCombat
+  id: MobXenoCrusherCharging
+  description: Exomorph brute. Slow but very hardy, able to tear down walls.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _RMC14/Mobs/OldXenonids/Crusher/crusher.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base" ]
+      state: charge
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      220: Dead
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 7
+  - type: Stamina
+    critThreshold: 300
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      50: 1
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 400
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+        restitution: 0.2 # not bouncy
+        friction: 0.2
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: AlienFootstepCharge
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: XenoCrest
+  - type: StunOnCollide
+    stunAmount: 0
+    knockdownAmount: 3
+    fixture: fix1
+    drop: true
+    refresh: false

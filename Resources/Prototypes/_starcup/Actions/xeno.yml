@@ -14,7 +14,7 @@
   parent: BaseAction
   id: ActionXenoSnot
   name: Produce mucuous
-  description: Secret semi-solid mucuous for construction.
+  description: Secrete semi-solid mucuous for construction.
   components:
   - type: Action
     icon: Interface/Actions/web.png
@@ -38,7 +38,23 @@
 
 - type: entity
   parent: [BaseActionPolymorph, BaseDoAfterAction]
-  id: ActionBurrowMedium
+  id: ActionXenoBurrowSmall
+  name: Burrow
+  description: Burrows into the ground.
+  components:
+  - type: Action
+    useDelay: 2
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: burrow
+      delay: 1
+  - type: InstantAction
+    event: !type:PolymorphActionEvent
+      protoId: BurrowedSmall
+
+- type: entity
+  parent: [BaseActionPolymorph, BaseDoAfterAction]
+  id: ActionXenoBurrowMedium
   name: Burrow
   description: Burrows into the ground.
   components:
@@ -52,19 +68,63 @@
     event: !type:PolymorphActionEvent
       protoId: BurrowedMedium
 
+- type: entity
+  parent: [BaseActionPolymorph]
+  id: ActionXenoCrestDefender
+  name: Block
+  description: Block attacks with your crest.
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: crest_defense
+  - type: InstantAction
+    event: !type:PolymorphActionEvent
+      protoId: XenoCrestDefenderMorph
+
 - type: polymorph
-  id: BurrowedMedium
+  id: XenoCrestDefenderMorph
   configuration:
-    entity: BurrowedCreatureMedium
-    transferName: false
+    entity: MobXenoDefenderBlocking
+    transferName: true
     inventory: None
-    revertOnDeath: true
-    revertOnCrit: true
-    polymorphPopup: "burrowing-popup-generic"
-    exitPolymorphPopup: "burrowing-revert-popup-generic"
+    revertOnDeath: false
+    revertOnCrit: false
+    polymorphPopup: "crest-popup-exo"
+    exitPolymorphPopup: "crest-revert-popup-exo"
     polymorphSound:
-      path: /Audio/_starcup/Effects/Burrowing/burrow_on.ogg
+      collection: AlienSnarl
       params:
-        volume: 0.1
-    exitPolymorphSound:
-      path: /Audio/_starcup/Effects/Burrowing/burrow_off.ogg
+        volume: 0.5
+
+- type: entity
+  parent: [BaseActionPolymorph]
+  id: ActionXenoChargeCrusher
+  name: Charge
+  description: Lower your head and plow through your enemies.
+  components:
+  - type: Action
+    useDelay: 1 # test purposes, make 30
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: charge
+  - type: InstantAction
+    event: !type:PolymorphActionEvent
+      protoId: XenoChargeCrusherMorph
+
+- type: polymorph
+  id: XenoChargeCrusherMorph
+  configuration:
+    entity: MobXenoCrusherCharging
+    transferName: true
+    inventory: None
+    revertOnDeath: false
+    revertOnCrit: false
+    polymorphPopup: "crest-popup-exo"
+    exitPolymorphPopup: "crest-revert-popup-exo"
+    polymorphSound:
+      collection: AlienRoar
+      params:
+        volume: 0.5
+    duration: 3
