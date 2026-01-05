@@ -5,7 +5,7 @@ namespace Content.Shared._starcup.CCVars;
 public sealed partial class SCCVars
 {
     ///<summary>
-    ///    Toggles whether the player sprints or walks by default.
+    ///    Provides the time it takes for the shift change shuttle to arrive at the station.
     ///</summary>
-    public static readonly CVarDef<int> ShiftChangeShuttleTravelTime = CVarDef.Create("shift_change_shuttle.travel_time", 60, CVar.SERVER | CVar.REPLICATED);
+    public static readonly CVarDef<int> ShiftChangeShuttleTravelTime = CVarDef.Create("shift_change_shuttle.travel_time", 240, CVar.SERVER | CVar.REPLICATED);
 }
