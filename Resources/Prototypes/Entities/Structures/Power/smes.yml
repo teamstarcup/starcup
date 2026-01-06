@@ -116,11 +116,11 @@
 - type: entity
   parent: BaseSMES
   id: SMESBasic
-  suffix: Basic, 8MJ
+  suffix: Basic, 40MJ # starcup: 8MJ > 40MJ
   components:
   - type: Battery
-    maxCharge: 8000000
-    startingCharge: 8000000
+    maxCharge: 40000000 # starcup: 8MJ > 40MJ
+    startingCharge: 40000000 # starcup: 8MJ > 40MJ
 
 - type: entity
   parent: SMESBasic
@@ -133,7 +133,7 @@
 - type: entity
   parent: BaseSMES
   id: SMESAdvanced
-  suffix: Advanced, 16MJ
+  suffix: Advanced, 80MJ # starcup: 16MJ > 80MJ
   name: advanced SMES
   description: An even-higher-capacity superconducting magnetic energy storage (SMES) unit.
   components:
