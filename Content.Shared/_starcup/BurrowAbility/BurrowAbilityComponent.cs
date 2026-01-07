@@ -17,8 +17,8 @@ public sealed partial class BurrowAbilityComponent : Component
     /// BurrowedLarge.
     /// </summary>
     [DataField]
-    public EntProtoId BurrowAbilityAction = "YourActionIdHere";
+    public EntProtoId Action = "ActionBurrowSmall";
 
     [DataField, AutoNetworkedField]
-    public EntityUid? BurrowAbilityActionEntity;
+    public EntityUid? ActionEntity;
 }

@@ -9,14 +9,15 @@
   description: Burrows into the ground.
   components:
   - type: Action
-    useDelay: 3
+    useDelay: 2
     icon:
-      sprite: _RMC14/Actions/xeno_actions.rsi
+      sprite: _starcup/Interface/Actions/actions_general.rsi
       state: burrow
-      delay: 2.5
   - type: InstantAction
     event: !type:PolymorphActionEvent
       protoId: BurrowedSmall
+  - type: DoAfterArgs
+    delay: 2
 
 - type: entity
   parent: [BaseActionPolymorph, BaseDoAfterAction]
@@ -27,12 +28,13 @@
   - type: Action
     useDelay: 3
     icon:
-      sprite: _RMC14/Actions/xeno_actions.rsi
+      sprite: _starcup/Interface/Actions/actions_general.rsi
       state: burrow
-      delay: 2.5
   - type: InstantAction
     event: !type:PolymorphActionEvent
       protoId: BurrowedLarge
+  - type: DoAfterArgs
+    delay: 3
 
 # Action events/protoIDs
 - type: polymorph
@@ -84,9 +86,15 @@
     sprite: _starcup/Mobs/Special/burrowed_small.rsi
     drawdepth: FloorObjects
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: burrowed
-      sprite: _starcup/Mobs/Special/burrowed_small.rsi
+    - state: burrowed1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        burrowed1: ""
+        burrowed2: ""
+        burrowed3: ""
+        burrowed4: ""
   - type: Fixtures
     fixtures:
       fix1:

@@ -103,10 +103,11 @@
     icon:
       sprite: _RMC14/Actions/xeno_actions.rsi
       state: burrow
-      delay: 1
   - type: InstantAction
     event: !type:PolymorphActionEvent
       protoId: BurrowedSmall
+  - type: DoAfterArgs
+    delay: 2
 
 - type: entity
   parent: [BaseActionPolymorph, BaseDoAfterAction]
@@ -115,11 +116,10 @@
   description: Burrows into the ground.
   components:
   - type: Action
-    useDelay: 3
+    useDelay: 4
     icon:
       sprite: _RMC14/Actions/xeno_actions.rsi
       state: burrow
-      delay: 2.5
   - type: InstantAction
     event: !type:PolymorphActionEvent
       protoId: BurrowedLarge
