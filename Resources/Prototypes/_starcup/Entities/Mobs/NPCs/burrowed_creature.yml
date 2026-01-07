@@ -1,8 +1,7 @@
 # These are the action buttons, actions, and mobs, to represent burrowing, all packed together for convenience.
-# This works by using the polymorph system to polymorh the mob into a burrowed mob, either medium or small.
+# This works by using the polymorph system to polymorh the mob into a burrowed mob, either Large or small.
 
-# Actions that go on the user bar
-
+# Actions that go on the BurrowAbility component
 - type: entity
   parent: [BaseActionPolymorph, BaseDoAfterAction]
   id: ActionBurrowSmall
@@ -21,7 +20,7 @@
 
 - type: entity
   parent: [BaseActionPolymorph, BaseDoAfterAction]
-  id: ActionBurrowMedium
+  id: ActionBurrowLarge
   name: Burrow
   description: Burrows into the ground.
   components:
@@ -33,10 +32,9 @@
       delay: 2.5
   - type: InstantAction
     event: !type:PolymorphActionEvent
-      protoId: BurrowedMedium
+      protoId: BurrowedLarge
 
-# Action events
-
+# Action events/protoIDs
 - type: polymorph
   id: BurrowedSmall
   configuration:
@@ -55,9 +53,9 @@
       path: /Audio/_starcup/Effects/Burrowing/burrow_off.ogg
 
 - type: polymorph
-  id: BurrowedMedium
+  id: BurrowedLarge
   configuration:
-    entity: BurrowedCreatureMedium
+    entity: BurrowedCreatureLarge
     transferName: false
     inventory: None
     revertOnDeath: true
@@ -71,8 +69,7 @@
     exitPolymorphSound:
       path: /Audio/_starcup/Effects/Burrowing/burrow_off.ogg
 
-# Burrowed mobs
-
+# Entities resulting from the protoIDs
 - type: entity
   id: BurrowedCreatureSmall
   name: burrowed creature
@@ -87,16 +84,9 @@
     sprite: _starcup/Mobs/Special/burrowed_small.rsi
     drawdepth: FloorObjects
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base", "movement"]
+    - map: ["enum.DamageStateVisualLayers.Base"]
       state: burrowed
       sprite: _starcup/Mobs/Special/burrowed_small.rsi
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: burrowed-moving
-    noMovementLayers:
-      movement:
-        state: burrowed
   - type: Fixtures
     fixtures:
       fix1:
@@ -113,30 +103,26 @@
   - type: Tag
     tags:
     - CannotSuicide
-    - FootstepSound
   - type: MovementSpeedModifier
     baseWalkSpeed : 0
     baseSprintSpeed : 0
   - type: NoSlip
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: Burrowing
 
 - type: entity
-  id: BurrowedCreatureMedium
+  id: BurrowedCreatureLarge
   name: burrowed creature
-  suffix: medium
+  suffix: large
   parent: BurrowedCreatureSmall
   description: Something hides underground.
   components:
   - type: Sprite
     noRot: true
-    sprite: _starcup/Mobs/Special/burrowed_medium.rsi
-    drawdepth: FloorObjects
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base", "movement"]
-      state: burrowed
-      sprite: _starcup/Mobs/Special/burrowed_medium.rsi
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: BurrowingLarge
+    sprite: _starcup/Mobs/Special/burrowed_large.rsi
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.5
+        mask:
+        - Impassable

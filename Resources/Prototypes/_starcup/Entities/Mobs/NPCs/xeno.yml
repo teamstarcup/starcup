@@ -65,6 +65,12 @@
     allowedStates:
     - Alive
     - Dead
+  - type: MobStateActions
+    actions:
+      Critical:
+      - ActionCritSuccumb
+      - ActionCritFakeDeath
+      - ActionCritLastWords
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -127,6 +133,7 @@
       Female: Xeno
       Unsexed: Xeno
   - type: Deathgasp
+  - type: IgnoreSpiderWeb
 
 # Tier 0
 
@@ -860,3 +867,58 @@
     fixture: fix1
     drop: true
     refresh: false
+
+- type: entity
+  name: hivelord
+  parent:
+  - MobXeno
+  - MobXenoRest
+  id: MobXenoHivelord
+  description: Heavy duty exomorph laborer. Apt and durable nest builder, but a poor fighter.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _RMC14/Mobs/OldXenonids/Hivelord/hivelord.rsi
+    offset: 0,0.2
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      170: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      100: 0.7
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Blunt: 4
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: Spider
+    webAction: ActionXenoWeedsRoyal
+    webPrototype: XenoWeeds
+  - type: JumpAbility
+    action: ActionResinWallRoyal
+    canCollide: false
+    jumpDistance: 0
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 4
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 450
+        mask:
+        - MobMask
+        layer:
+        - MobLayer

@@ -62,6 +62,14 @@
     allowedStates:
     - Alive
     - Dead
+  # begin starcup
+  - type: MobStateActions
+    actions:
+      Critical:
+      - ActionCritSuccumb
+      - ActionCritFakeDeath
+      - ActionCritLastWords
+  # end starcup
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -134,6 +142,7 @@
       Female: Xeno
       Unsexed: Xeno
   - type: Deathgasp
+  - type: IgnoreSpiderWeb
   # end starcup
 
   # begin starcup: exomorph reworks
@@ -241,6 +250,13 @@
         Base: crit
       Dead:
         Base: dead
+  - type: Spider
+    webAction: ActionXenoWeeds
+    webPrototype: XenoWeeds
+  - type: JumpAbility
+    action: ActionResinWall
+    canCollide: false
+    jumpDistance: 0
   # end starcup
   - type: MovementSpeedModifier
     baseSprintSpeed: 4

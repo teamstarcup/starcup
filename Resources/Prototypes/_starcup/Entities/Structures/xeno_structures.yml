@@ -1,0 +1,119 @@
+- type: entity
+  id: XenoWeedsBase
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: PlacementReplacement
+    key: web
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Weapons/slash.ogg"
+  - type: Sprite
+    sprite: _starcup/Structures/xeno_weeds.rsi
+    drawdepth: LowFloors
+  - type: Appearance
+  - type: Clickable
+  - type: Transform
+    anchored: true
+  - type: Physics
+  - type: Damageable
+    damageModifierSet: XenoCrest
+  - type: Temperature
+    heatDamage:
+      types:
+        Heat: 10
+    coldDamage: {}
+    coldDamageThreshold: 0
+  - type: Flammable
+    fireSpread: true
+    damage:
+      types:
+        Heat: 10
+  - type: Reactive
+    groups:
+      Flammable: [Touch]
+      Extinguish: [Touch]
+  - type: SpiderWebObject
+  - type: IconSmooth
+    key: weeds
+    additionalKeys:
+    - walls
+    base: weeds_
+
+- type: entity
+  id: XenoWeeds
+  parent: XenoWeedsBase
+  name: exomorph weeds
+  description: Slimy and sticky alien secretions.
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        hard: false
+        density: 10
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+        - MidImpassable
+  - type: Destructible
+    thresholds:
+    - trigger: # Excess damage, don't spawn entities
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialWebSilk:
+            min: 0
+            max: 1
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.5
+    sprintSpeedModifier: 0.5
+    ignoreWhitelist:
+      components:
+      - IgnoreSpiderWeb
+
+- type: entity
+  parent: BaseWall
+  id: WallResin
+  name: resin wall
+  description: Hardened shell of the exomorph hive.
+  components:
+  - type: Tag
+    tags:
+    - Wall
+    - Structure
+  - type: Sprite
+    sprite: _starcup/Structures/xeno_wall.rsi
+  - type: Icon
+    sprite: _starcup/Structures/xeno_wall.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100 # weak
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Girder:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: IconSmooth
+    key: walls
+    base: resin

@@ -1,12 +1,26 @@
 - type: entity
   parent: BaseAction
-  id: ActionXenoResin
-  name: Secrete resin
-  description: Vomit resin to slow the hive's enemies down.
+  id: ActionXenoWeeds
+  name: Plant weeds
+  description: Expand the hive, and slow assailants down.
   components:
   - type: Action
-    icon: Interface/Actions/web.png
-    useDelay: 25
+    icon: _RMC14/Actions/xeno_actions.rsi/plant_weeds.png
+    useDelay: 30
+    sound: !type:SoundCollectionSpecifier
+      collection: AlienDrool
+  - type: InstantAction
+    event: !type:SpiderWebActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionXenoWeedsRoyal
+  name: Plant weeds
+  description: Expand the hive and slow assailants down.
+  components:
+  - type: Action
+    icon: _RMC14/Actions/xeno_actions.rsi/plant_weeds.png
+    useDelay: 20
   - type: InstantAction
     event: !type:SpiderWebActionEvent
 
@@ -18,9 +32,51 @@
   components:
   - type: Action
     icon: Interface/Actions/web.png
-    useDelay: 1
+    useDelay: 20
   - type: InstantAction
     event: !type:SericultureActionEvent
+
+- type: entity
+  parent: [BaseAction, BaseDoAfterAction]
+  id: ActionResinWall
+  name: resin wall
+  description: Fortify the hive.
+  components:
+  - type: Action
+    useDelay: 23
+    sound: !type:SoundCollectionSpecifier
+      collection: AlienBuild
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: resin_wall
+  - type: InstantAction
+    event: !type:InstantSpawnSpellEvent
+      prototype: WallResin
+      preventCollideWithCaster: false
+      posData: !type:TargetInFrontSingle
+  - type: DoAfterArgs
+    delay: 7
+
+- type: entity
+  parent: [BaseAction, BaseDoAfterAction]
+  id: ActionResinWallRoyal
+  name: resin wall
+  description: Fortify the hive.
+  components:
+  - type: Action
+    useDelay: 35
+    sound: !type:SoundCollectionSpecifier
+      collection: AlienBuild
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: resin_wall
+  - type: InstantAction
+    event: !type:InstantSpawnSpellEvent
+      prototype: WallResin
+      preventCollideWithCaster: false
+      posData: !type:TargetInFront
+  - type: DoAfterArgs
+    delay: 10
 
 - type: entity
   parent: BaseAction
@@ -54,7 +110,7 @@
 
 - type: entity
   parent: [BaseActionPolymorph, BaseDoAfterAction]
-  id: ActionXenoBurrowMedium
+  id: ActionXenoBurrowLarge
   name: Burrow
   description: Burrows into the ground.
   components:
@@ -66,7 +122,7 @@
       delay: 2.5
   - type: InstantAction
     event: !type:PolymorphActionEvent
-      protoId: BurrowedMedium
+      protoId: BurrowedLarge
 
 - type: entity
   parent: [BaseActionPolymorph]
@@ -105,7 +161,7 @@
   description: Lower your head and plow through your enemies.
   components:
   - type: Action
-    useDelay: 1 # test purposes, make 30
+    useDelay: 30
     icon:
       sprite: _RMC14/Actions/xeno_actions.rsi
       state: charge
@@ -127,4 +183,4 @@
       collection: AlienRoar
       params:
         volume: 0.5
-    duration: 3
+    duration: 6

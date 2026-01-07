@@ -65,7 +65,7 @@ public sealed partial class DoAfterArgsComponent : Component
     /// <inheritdoc cref="DoAfterArgs.BreakOnMove"/>
     /// </summary>
     [DataField]
-    public bool BreakOnMove;
+    public bool BreakOnMove = true; // starcup: added = true. Impossible to use otherwise!
 
     /// <summary>
     /// <inheritdoc cref="DoAfterArgs.BreakOnWeightlessMove"/>
