@@ -32,6 +32,14 @@
   name: trait-narcolepsy-name
   description: trait-narcolepsy-desc
   category: Disabilities
+  # begin starcup: exclude MKCs
+  blacklist:
+    components:
+      - Silicon
+      - BorgChassis
+  excludedSpecies:
+    - IPC
+  # end starcup
   components:
     - type: Narcolepsy
       maxTimeBetweenIncidents: 600
