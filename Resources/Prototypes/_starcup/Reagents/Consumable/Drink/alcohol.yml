@@ -63,9 +63,23 @@
       effects:
       - !type:SatiateThirst
         factor: 2
+      - !type:ModifyBloodLevel
+        amount: 3
+      - !type:EvenHealthChange
+        damage:
+          Burn: -3
+          Brute: -3
+          Toxin: -2
+      - !type:HealthChange
+        damage:
+          types:
+            Bloodloss: -3
+      - !type:ModifyBleedAmount
+        amount: -1.5
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.06
+        amount: 0.4
+
 
 - type: reagent
   id: Appletini
@@ -415,6 +429,14 @@
       effects:
       - !type:SatiateThirst
         factor: 2
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 2
+        type: Remove
+      - !type:GenericStatusEffect
+        key: Stutter
+        component: StutteringAccent
+      - !type:Jitter
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.08
@@ -456,6 +478,29 @@
   metamorphicMaxFillLevels: 6
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:SatiateHunger
+        factor: 1
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+        type: Local
+        visualType: Medium
+        messages: [ "generic-reagent-effect-nauseous" ]
+        probability: 0.2
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+        probability: 0.05
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1
 
 - type: reagent
   id: Necropolitan
