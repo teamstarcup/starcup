@@ -167,7 +167,7 @@
 
 - type: entity
   name: bee
-  suffix: Angry
+  suffix: hostile # starcup: changed Angry to hostile
   parent: [ MobBee, MobCombat ]
   id: MobAngryBee
   description: How nice a bee. Oh no, it looks angry and wants my pizza.
@@ -2620,6 +2620,7 @@
 - type: entity
   parent: MobSpiderBase
   id: MobSpiderAngryBase
+  suffix: AI, hostile
   abstract: true
   components:
   - type: NpcFactionMember
