@@ -18,6 +18,7 @@
       protoId: BurrowedSmall
   - type: DoAfterArgs
     delay: 2
+    breakOnMove: true
 
 - type: entity
   parent: [BaseActionPolymorph, BaseDoAfterAction]
@@ -35,6 +36,7 @@
       protoId: BurrowedLarge
   - type: DoAfterArgs
     delay: 3
+    breakOnMove: true
 
 # Action events/protoIDs
 - type: polymorph
@@ -115,6 +117,8 @@
     baseWalkSpeed : 0
     baseSprintSpeed : 0
   - type: NoSlip
+  - type: Damageable
+    damageModifierSet: burrowed
 
 - type: entity
   id: BurrowedCreatureLarge
