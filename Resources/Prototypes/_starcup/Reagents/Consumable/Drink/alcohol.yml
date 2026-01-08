@@ -396,29 +396,28 @@
         reagent: Ethanol
         amount: 0.1
 
-# TODO: needs sprite
-# - type: reagent
-#   id: GoblinsBrew
-#   name: reagent-name-goblins-brew
-#   parent: BaseAlcohol
-#   desc: reagent-desc-goblins-brew
-#   physicalDesc: reagent-physical-desc-bubbling
-#   flavor: goblinsbrew
-#   color: "#XXXXXX"
-#   metamorphicSprite:
-#     sprite: _starcup/Objects/Consumable/Drinks/goblinsbrew.rsi
-#     state: icon_empty
-#   metamorphicMaxFillLevels: ?
-#   metamorphicFillBaseName: fill-
-#   metamorphicChangeColor: ?
-#   metabolisms:
-#     Drink:
-#       effects:
-#       - !type:SatiateThirst
-#         factor: 2
-#       - !type:AdjustReagent
-#         reagent: Ethanol
-#         amount: 0.08
+- type: reagent
+  id: GoblinsBrew
+  name: reagent-name-goblins-brew
+  parent: BaseAlcohol
+  desc: reagent-desc-goblins-brew
+  physicalDesc: reagent-physical-desc-bubbling
+  flavor: goblinsbrew
+  color: "#7CED1F"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/goblinsbrew.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 3
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.08
 
 - type: reagent
   id: MoonMist
@@ -443,45 +442,43 @@
         reagent: Ethanol
         amount: 0.1
 
-# TODO: needs sprite
-# - type: reagent
-#   id: Mushburger
-#   name: reagent-name-mushburger
-#   parent: BaseAlcohol
-#   desc: reagent-desc-mushburger
-#   physicalDesc: reagent-physical-desc-murky
-#   flavor: mushburger
-#   color: "#XXXXXX"
-#   metamorphicSprite:
-#     sprite: _starcup/Objects/Consumable/Drinks/mushburger.rsi
-#     state: icon_empty
-#   metamorphicMaxFillLevels: ?
-#   metamorphicFillBaseName: fill-
-#   metamorphicChangeColor: ?
+- type: reagent
+  id: Mushburger
+  name: reagent-name-mushburger
+  parent: BaseAlcohol
+  desc: reagent-desc-mushburger
+  physicalDesc: reagent-physical-desc-murky
+  flavor: mushburger
+  color: "#741E0B"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/mushburger.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 6
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
 
-# TODO: needs sprite
-# - type: reagent
-#   id: Necropolitan
-#   name: reagent-name-necropolitan
-#   parent: BaseAlcohol
-#   desc: reagent-desc-necropolitan
-#   physicalDesc: reagent-physical-desc-necrotic
-#   flavor: necropolitan
-#   color: "#XXXXXX"
-#   metamorphicSprite:
-#     sprite: _starcup/Objects/Consumable/Drinks/necropolitan.rsi
-#     state: icon_empty
-#   metamorphicMaxFillLevels: ?
-#   metamorphicFillBaseName: fill-
-#   metamorphicChangeColor: ?
-#   metabolisms:
-#     Drink:
-#       effects:
-#       - !type:SatiateThirst
-#         factor: 2
-#       - !type:AdjustReagent
-#         reagent: Ethanol
-#         amount: 0.1
+- type: reagent
+  id: Necropolitan
+  name: reagent-name-necropolitan
+  parent: BaseAlcohol
+  desc: reagent-desc-necropolitan
+  physicalDesc: reagent-physical-desc-necrotic
+  flavor: necropolitan
+  color: "#D6155F"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/necropolitan.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 3
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1
 
 - type: reagent
   id: ParadiseLost
