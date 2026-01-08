@@ -44,29 +44,28 @@
         reagent: Ethanol
         amount: 0.1
 
-# TODO: needs sprite
-# - type: reagent
-#   id: Ambrosia
-#   name: reagent-name-ambrosia
-#   parent: BaseAlcohol
-#   desc: reagent-desc-ambrosia
-#   physicalDesc: reagent-physical-desc-exhilarating
-#   flavor: ambrosia
-#   color: "#XXXXXX"
-#   metamorphicSprite:
-#     sprite: _starcup/Objects/Consumable/Drinks/ambrosia.rsi
-#     state: icon_empty
-#   metamorphicMaxFillLevels: ?
-#   metamorphicFillBaseName: fill-
-#   metamorphicChangeColor: ?
-#   metabolisms:
-#     Drink:
-#       effects:
-#       - !type:SatiateThirst
-#         factor: 2
-#       - !type:AdjustReagent
-#         reagent: Ethanol
-#         amount: 0.06
+- type: reagent
+  id: Ambrosia
+  name: reagent-name-ambrosia
+  parent: BaseAlcohol
+  desc: reagent-desc-ambrosia
+  physicalDesc: reagent-physical-desc-exhilarating
+  flavor: ambrosia
+  color: "#A41659"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/ambrosia.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.06
 
 - type: reagent
   id: Appletini
@@ -152,29 +151,28 @@
         reagent: Ethanol
         amount: 0.08
 
-# TODO: needs sprite
-# - type: reagent
-#   id: BrainScrambler
-#   name: reagent-name-brain-scrambler
-#   parent: BaseAlcohol
-#   desc: reagent-desc-brain-scrambler
-#   physicalDesc: reagent-physical-desc-opaque
-#   flavor: brainscrambler
-#   color: "#XXXXXX"
-#   metamorphicSprite:
-#     sprite: _starcup/Objects/Consumable/Drinks/brainscrambler.rsi
-#     state: icon_empty
-#   metamorphicMaxFillLevels: ?
-#   metamorphicFillBaseName: fill-
-#   metamorphicChangeColor: ?
-#   metabolisms:
-#     Drink:
-#       effects:
-#       - !type:SatiateThirst
-#         factor: 2
-#       - !type:AdjustReagent
-#         reagent: Ethanol
-#         amount: 0.09
+- type: reagent
+  id: BrainScrambler
+  name: reagent-name-brain-scrambler
+  parent: BaseAlcohol
+  desc: reagent-desc-brain-scrambler
+  physicalDesc: reagent-physical-desc-opaque
+  flavor: brainscrambler
+  color: "#DD7B4D"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/brainscrambler.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.09
 
 - type: reagent
   id: Bramble
@@ -375,29 +373,28 @@
         reagent: Ethanol
         amount: 0.12
 
-# TODO: needs sprite
-# - type: reagent
-#   id: FaeriesCheer
-#   name: reagent-name-faeries-cheer
-#   parent: BaseAlcohol
-#   desc: reagent-desc-faeries-cheer
-#   physicalDesc: reagent-physical-desc-exotic-smelling
-#   flavor: faeriescheer
-#   color: "#XXXXXX"
-#   metamorphicSprite:
-#     sprite: _starcup/Objects/Consumable/Drinks/faeriescheer.rsi
-#     state: icon_empty
-#   metamorphicMaxFillLevels: ?
-#   metamorphicFillBaseName: fill-
-#   metamorphicChangeColor: ?
-#   metabolisms:
-#     Drink:
-#       effects:
-#       - !type:SatiateThirst
-#         factor: 2
-#       - !type:AdjustReagent
-#         reagent: Ethanol
-#         amount: 0.1
+- type: reagent
+  id: FaeriesCheer
+  name: reagent-name-faeries-cheer
+  parent: BaseAlcohol
+  desc: reagent-desc-faeries-cheer
+  physicalDesc: reagent-physical-desc-exotic-smelling
+  flavor: faeriescheer
+  color: "#80FB62"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/faeriescheer.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1
 
 # TODO: needs sprite
 # - type: reagent
