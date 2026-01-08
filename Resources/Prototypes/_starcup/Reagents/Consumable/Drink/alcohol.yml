@@ -74,7 +74,7 @@
         damage:
           types:
             Bloodloss: -3
-      - !type:ModifyBleedAmount
+      - !type:ModifyBleed
         amount: -1.5
       - !type:AdjustReagent
         reagent: Ethanol
@@ -487,15 +487,17 @@
         factor: 1
       - !type:PopupMessage
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Mushburger
           min: 5
         type: Local
         visualType: Medium
         messages: [ "generic-reagent-effect-nauseous" ]
         probability: 0.2
-      - !type:ChemVomit
+      - !type:Vomit
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Mushburger
           min: 5
         probability: 0.05
       - !type:AdjustReagent
