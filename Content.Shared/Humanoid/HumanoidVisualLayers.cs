@@ -20,6 +20,7 @@ namespace Content.Shared.Humanoid
         UndergarmentBottom,
         Chest,
         Head,
+        HeadBase, // starcup: base head shapes
         Snout,
         SnoutCover, // things layered over snouts (i.e. noses)
         HeadSide, // side parts (i.e., frills)

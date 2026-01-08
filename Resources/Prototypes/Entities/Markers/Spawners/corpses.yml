@@ -1,11 +1,16 @@
 - type: entity
   name: Human Corpse Spawner
   id: SalvageHumanCorpseSpawner
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   components:
   - type: Sprite
-    sprite: Markers/jobs.rsi
+    sprite: _starcup/Markers/arrow_cross.rsi # starcup
     layers:
+    # begin starcup
+      - state: shadowgreen
+      - sprite: _starcup/Markers/generic_salvage_spawners.rsi
+        state: corpse
+    # end starcup
       - state: green
   - type: ConditionalSpawner
     prototypes:
@@ -18,7 +23,11 @@
   components:
   - type: Sprite
     layers:
-      - state: botanist
+    # begin starcup
+      - state: shadowgreen
+      - sprite: Markers/jobs.rsi
+        state: botanist
+    # end starcup
       - state: green
   - type: ConditionalSpawner
     prototypes:
@@ -31,7 +40,11 @@
   components:
   - type: Sprite
     layers:
-      - state: engineer
+    # begin starcup
+      - state: shadowgreen
+      - sprite: Markers/jobs.rsi
+        state: engineer
+    # end starcup
       - state: green
   - type: ConditionalSpawner
     prototypes:
@@ -44,7 +57,11 @@
   components:
   - type: Sprite
     layers:
-      - state: cargo_tech
+    # begin starcup
+      - state: shadowgreen
+      - sprite: Markers/jobs.rsi
+        state: cargo_tech
+    # end starcup
       - state: green
   - type: ConditionalSpawner
     prototypes:
@@ -57,7 +74,11 @@
   components:
   - type: Sprite
     layers:
-      - state: doctor
+    # begin starcup
+      - state: shadowgreen
+      - sprite: Markers/jobs.rsi
+        state: doctor
+    # end starcup
       - state: green
   - type: ConditionalSpawner
     prototypes:
@@ -70,7 +91,11 @@
   components:
   - type: Sprite
     layers:
-      - state: scientist
+    # begin starcup
+      - state: shadowgreen
+      - sprite: Markers/jobs.rsi
+        state: scientist
+    # end starcup
       - state: green
   - type: ConditionalSpawner
     prototypes:
@@ -83,7 +108,11 @@
   components:
   - type: Sprite
     layers:
-      - state: security_officer
+    # begin starcup
+      - state: shadowgreen
+      - sprite: Markers/jobs.rsi
+        state: security_officer
+    # end starcup
       - state: green
   - type: ConditionalSpawner
     prototypes:
@@ -96,7 +125,11 @@
   components:
   - type: Sprite
     layers:
-      - state: captain
+    # begin starcup
+      - state: shadowgreen
+      - sprite: Markers/jobs.rsi
+        state: captain
+    # end starcup
       - state: green
   - type: ConditionalSpawner
     prototypes:

@@ -91,9 +91,14 @@
       - id: BoxMousetrap
       - id: TrashBag
       - id: SoapNT
-      - id: FlashlightLantern
+      #- id: FlashlightLantern # starcup: replaced it with another one further down
       - id: Plunger
       - id: WireBrush
+      # begin starcup: add misc tools & tweaks
+      - id: BroomItem
+      - id: FlashlightLanternPurple
+      - id: FeatherDuster
+      # end starcup
 
 - type: entity
   id: ClosetLegalFilled
@@ -165,9 +170,11 @@
       prob: 0.5
     - id: NettleSeeds
       prob: 0.7
-    # begin starcup: add chopping axes & fireaxe resprite
+    # begin starcup
     - id: ChoppingAxe
       prob: 0.3
+    - id: BrushAxe
+      prob: 0.2
     # end starcup
 
 - type: entity

@@ -1,90 +1,138 @@
+# Stone
+
 - type: tile
   id: FloorStarcupBlackstone01
-  name: blackstone 01
-  sprite: /Textures/_starcup/Tiles/Stone/piiixl.rsi/blackstone01.png
-  isSubfloor: true
+  name: blackstone floor 01
+  sprite: /Textures/_starcup/Tiles/Stone/blackstone01/base.png
+  edgeSpritePriority: 3
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Stone/blackstone01/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Stone/blackstone01/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Stone/blackstone01/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Stone/blackstone01/single_edge.png
+    South: /Textures/_starcup/Tiles/Stone/blackstone01/double_edge.png
+    East: /Textures/_starcup/Tiles/Stone/blackstone01/double_edge.png
+    North: /Textures/_starcup/Tiles/Stone/blackstone01/double_edge.png
+    West: /Textures/_starcup/Tiles/Stone/blackstone01/double_edge.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Mining ]
   footstepSounds:
     collection: FootstepFloor
+  itemDrop: FloorTileItemBlackstone01
   heatCapacity: 10000
 
 - type: tile
   id: FloorStarcupBlackstone02
-  name: blackstone 02
-  sprite: /Textures/_starcup/Tiles/Stone/piiixl.rsi/blackstone02.png
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepFloor
-  heatCapacity: 10000
+  name: blackstone floor 02
+  parent: FloorStarcupBlackstone01
+  sprite: /Textures/_starcup/Tiles/Stone/blackstone02/base.png
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Stone/blackstone02/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Stone/blackstone02/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Stone/blackstone02/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Stone/blackstone02/single_edge.png
+    South: /Textures/_starcup/Tiles/Stone/blackstone02/double_edge.png
+    East: /Textures/_starcup/Tiles/Stone/blackstone02/double_edge.png
+    North: /Textures/_starcup/Tiles/Stone/blackstone02/double_edge.png
+    West: /Textures/_starcup/Tiles/Stone/blackstone02/double_edge.png
+  itemDrop: FloorTileItemBlackstone02
 
 - type: tile
   id: FloorStarcupBlackstone08
-  name: blackstone 08
-  sprite: /Textures/_starcup/Tiles/Stone/piiixl.rsi/blackstone08.png
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepFloor
-  heatCapacity: 10000
+  name: blackstone floor 08
+  parent: FloorStarcupBlackstone01
+  sprite: /Textures/_starcup/Tiles/Stone/blackstone08/base.png
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Stone/blackstone08/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Stone/blackstone08/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Stone/blackstone08/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Stone/blackstone08/single_edge.png
+    South: /Textures/_starcup/Tiles/Stone/blackstone08/double_edge.png
+    East: /Textures/_starcup/Tiles/Stone/blackstone08/double_edge.png
+    North: /Textures/_starcup/Tiles/Stone/blackstone08/double_edge.png
+    West: /Textures/_starcup/Tiles/Stone/blackstone08/double_edge.png
+  itemDrop: FloorTileItemBlackstone08
 
 - type: tile
   id: FloorStarcupBlackstone10
-  name: blackstone 10
-  sprite: /Textures/_starcup/Tiles/Stone/piiixl.rsi/blackstone10.png
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepFloor
-  heatCapacity: 10000
+  name: blackstone floor 10
+  parent: FloorStarcupBlackstone01
+  sprite: /Textures/_starcup/Tiles/Stone/blackstone10/base.png
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Stone/blackstone10/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Stone/blackstone10/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Stone/blackstone10/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Stone/blackstone10/single_edge.png
+    South: /Textures/_starcup/Tiles/Stone/blackstone10/double_edge.png
+    East: /Textures/_starcup/Tiles/Stone/blackstone10/double_edge.png
+    North: /Textures/_starcup/Tiles/Stone/blackstone10/double_edge.png
+    West: /Textures/_starcup/Tiles/Stone/blackstone10/double_edge.png
+  itemDrop: FloorTileItemBlackstone10
 
 - type: tile
   id: FloorStarcupBlackstone14
-  name: blackstone 14
-  sprite: /Textures/_starcup/Tiles/Stone/piiixl.rsi/blackstone14.png
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepFloor
-  heatCapacity: 10000
-
-- type: tile
-  id: FloorStarcupGrayBrick01
-  name: gray brick 01
-  sprite: /Textures/_starcup/Tiles/Stone/piiixl.rsi/gray_brick01.png
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepFloor
-  heatCapacity: 10000
+  name: blackstone floor 14
+  parent: FloorStarcupBlackstone01
+  sprite: /Textures/_starcup/Tiles/Stone/blackstone14/base.png
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Stone/blackstone14/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Stone/blackstone14/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Stone/blackstone14/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Stone/blackstone14/single_edge.png
+    South: /Textures/_starcup/Tiles/Stone/blackstone14/double_edge.png
+    East: /Textures/_starcup/Tiles/Stone/blackstone14/double_edge.png
+    North: /Textures/_starcup/Tiles/Stone/blackstone14/double_edge.png
+    West: /Textures/_starcup/Tiles/Stone/blackstone14/double_edge.png
+  itemDrop: FloorTileItemBlackstone14
 
 - type: tile
   id: FloorStarcupBlueStone02
-  name: blue stone 02
-  sprite: /Textures/_starcup/Tiles/Stone/piiixl.rsi/blue_stone02.png
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepFloor
-  heatCapacity: 10000
+  name: blue stone floor 02
+  parent: FloorStarcupBlackstone01
+  sprite: /Textures/_starcup/Tiles/Stone/blue_stone02/base.png
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Stone/blue_stone02/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Stone/blue_stone02/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Stone/blue_stone02/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Stone/blue_stone02/single_edge.png
+    South: /Textures/_starcup/Tiles/Stone/blue_stone02/double_edge.png
+    East: /Textures/_starcup/Tiles/Stone/blue_stone02/double_edge.png
+    North: /Textures/_starcup/Tiles/Stone/blue_stone02/double_edge.png
+    West: /Textures/_starcup/Tiles/Stone/blue_stone02/double_edge.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Mining ]
+  itemDrop: FloorTileItemBlueStone02
 
 - type: tile
   id: FloorStarcupBlueStone06
-  name: blue stone 06
-  sprite: /Textures/_starcup/Tiles/Stone/piiixl.rsi/blue_stone06.png
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepFloor
-  heatCapacity: 10000
+  name: blue stone floor 06
+  parent: FloorStarcupBlackstone01
+  sprite: /Textures/_starcup/Tiles/Stone/blue_stone06/base.png
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Stone/blue_stone06/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Stone/blue_stone06/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Stone/blue_stone06/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Stone/blue_stone06/single_edge.png
+    South: /Textures/_starcup/Tiles/Stone/blue_stone06/double_edge.png
+    East: /Textures/_starcup/Tiles/Stone/blue_stone06/double_edge.png
+    North: /Textures/_starcup/Tiles/Stone/blue_stone06/double_edge.png
+    West: /Textures/_starcup/Tiles/Stone/blue_stone06/double_edge.png
+  itemDrop: FloorTileItemBlueStone06
 
 - type: tile
   id: FloorStarcupBlueStone10
-  name: blue stone 10
-  sprite: /Textures/_starcup/Tiles/Stone/piiixl.rsi/blue_stone10.png
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepFloor
-  heatCapacity: 10000
-
-- type: tile
-  id: FloorStarcupMagma
-  name: magma
-  sprite: /Textures/_starcup/Tiles/Stone/piiixl.rsi/magma.png
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepAsteroid
-  heatCapacity: 10000
-  indestructible: true
+  name: blue stone floor 10
+  parent: FloorStarcupBlackstone01
+  sprite: /Textures/_starcup/Tiles/Stone/blue_stone10/base.png
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Stone/blue_stone10/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Stone/blue_stone10/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Stone/blue_stone10/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Stone/blue_stone10/single_edge.png
+    South: /Textures/_starcup/Tiles/Stone/blue_stone10/double_edge.png
+    East: /Textures/_starcup/Tiles/Stone/blue_stone10/double_edge.png
+    North: /Textures/_starcup/Tiles/Stone/blue_stone10/double_edge.png
+    West: /Textures/_starcup/Tiles/Stone/blue_stone10/double_edge.png
+  itemDrop: FloorTileItemBlueStone10

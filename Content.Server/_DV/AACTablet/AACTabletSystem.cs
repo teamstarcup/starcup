@@ -3,6 +3,7 @@ using Content.Server.Chat.Systems;
 using Content.Shared.Radio.Components; // starcup
 using Content.Server.Speech.Components;
 using Content.Shared._DV.AACTablet;
+using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.IdentityManagement;
 using Robust.Server.GameObjects; // starcup

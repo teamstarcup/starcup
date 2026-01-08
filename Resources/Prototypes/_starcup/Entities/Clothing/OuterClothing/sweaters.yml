@@ -1,0 +1,179 @@
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterSweaterBase
+  abstract: true
+  components:
+  - type: TemperatureProtection
+    heatingCoefficient: 1.1
+    coolingCoefficient: 0.6
+  - type: Item
+    size: Normal
+  - type: Edible
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 30
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+  - type: StaticPrice
+    price: 50
+
+- type: entity
+  parent: ClothingOuterSweaterBase
+  id: ClothingOuterSweaterBrown
+  name: brown sweater
+  description: A big, fluffy sweater for keeping you warm.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_brown.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_brown.rsi
+
+- type: entity
+  parent: ClothingOuterSweaterBase
+  id: ClothingOuterSweaterCommand
+  name: command sweater
+  description: A big, fluffy sweater styled for the Command department.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_command.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_command.rsi
+
+- type: entity
+  parent: ClothingOuterSweaterBase
+  id: ClothingOuterSweaterEngineering
+  name: engineering sweater
+  description: A big, fluffy sweater styled for the Engineering department.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_engineering.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_engineering.rsi
+
+- type: entity
+  parent: ClothingOuterSweaterBase
+  id: ClothingOuterSweaterLogistics
+  name: logistics sweater
+  description: A big, fluffy sweater styled for the Logistics department.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_logistics.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_logistics.rsi
+
+- type: entity
+  parent: ClothingOuterSweaterBase
+  id: ClothingOuterSweaterMedical
+  name: medical sweater
+  description: A big, fluffy sweater styled for the Medical department.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_medical.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_medical.rsi
+
+- type: entity
+  parent: ClothingOuterSweaterBase
+  id: ClothingOuterSweaterScience
+  name: science sweater
+  description: A big, fluffy sweater styled for the Science department.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_science.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_science.rsi
+
+- type: entity
+  parent: ClothingOuterSweaterBase
+  id: ClothingOuterSweaterSecurity
+  name: security sweater
+  description: A big, fluffy sweater styled for the Security department.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_security.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_security.rsi
+
+- type: entity
+  parent: ClothingOuterSweaterBase
+  id: ClothingOuterSweaterClown
+  name: clown sweater
+  description: A big, fluffy sweater with garish colors suited for the clown.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_clown.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_clown.rsi
+
+- type: entity
+  parent: ClothingOuterSweaterBase
+  id: ClothingOuterSweaterMime
+  name: mime sweater
+  description: A big, fluffy sweater in the mime's traditional black and white.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_mime.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_mime.rsi
+
+- type: entity
+  parent: ClothingOuterSweaterBase
+  id: ClothingOuterSweaterHoliday
+  name: holiday sweater
+  description: A big, fluffy sweater with a popular combination of colors for the festive season.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_holiday.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_holiday.rsi
+
+- type: entity
+  parent: ClothingOuterSweaterBase
+  id: ClothingOuterSweaterReindeer
+  name: reindeer sweater
+  description: A big, fluffy sweater depicting a reindeer's antlers.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_reindeer.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_reindeer.rsi
+
+- type: entity
+  parent: ClothingOuterSweaterBase
+  id: ClothingOuterSweaterSnowman
+  name: snowman sweater
+  description:  A big, fluffy sweater depicting a snow-based effigy of supposed folkloric significance.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_snowman.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_snowman.rsi
+
+- type: entity
+  parent: ClothingOuterSweaterBase
+  id: ClothingOuterSweaterTree
+  name: tree sweater
+  description: A big, fluffy sweater depicting a pine tree laden with colorful baubles and wrapped presents.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_tree.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_tree.rsi
+
+- type: entity
+  parent: ClothingOuterSweaterBase
+  id: ClothingOuterSweaterHalloween
+  name: other holiday sweater
+  description: A big, fluffy sweater with a combination of colors popular during an unusual, spooky time of year...though most people prefer to wear a costume.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_halloween.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Sweaters/sweater_halloween.rsi

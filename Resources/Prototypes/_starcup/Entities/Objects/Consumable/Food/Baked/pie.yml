@@ -1,0 +1,16 @@
+- type: entity
+  name: imitation chocolate lava tart
+  parent: FoodTartCoco
+  id: FoodTartCocoImitation
+  description: A tasty dessert made of imitation chocolate, with a liquid core.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - imitationchocolate
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 35
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 25

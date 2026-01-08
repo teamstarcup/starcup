@@ -1,15 +1,24 @@
+# Outer Clothing
+- type: loadout
+  id: SecuritySweater
+  equipment:
+    outerClothing: ClothingOuterSweaterSecurity
+
 #Eyewear
 - type: loadout
   id: SecurityGlasses
   equipment:
     eyes: ClothingEyesGlassesSecurity
+  groupBy: "hud"
 
 - type: loadout
   id: SecurityHud
   equipment:
     eyes: ClothingEyesHudSecurity
+  groupBy: "hud"
 
 - type: loadout
   id: SecurityEyePatchHud
   equipment:
     eyes: ClothingEyesEyepatchHudSecurity
+  groupBy: "hud"

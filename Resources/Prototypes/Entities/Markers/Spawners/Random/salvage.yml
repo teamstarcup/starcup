@@ -4,13 +4,14 @@
 - type: entity
   name: Salvage Material Crate Spawner
   id: SalvageMaterialCrateSpawner
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   components:
     - type: Sprite
       layers:
-        - state: red
-        - sprite: Structures/Storage/Crates/generic.rsi
-          state: icon
+      - state: shadowred # starcup
+      - state: red
+      - sprite: Structures/Storage/Crates/generic.rsi
+        state: icon
     - type: RandomSpawner
       rarePrototypes:
         - SalvageHumanCorpse
@@ -42,61 +43,105 @@
 - type: entity
   name: salvage loot spawner
   id: SalvageLootSpawner
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   components:
     - type: Sprite
       layers:
-        - state: red
-        - sprite: Objects/Weapons/Melee/crusher.rsi
-          state: icon
+      - state: shadowred # starcup
+      - state: red
+      - sprite: Objects/Weapons/Melee/crusher.rsi
+        state: icon
     - type: RandomSpawner
       prototypes:
       - WeaponCrusher
       - WeaponCrusherDagger
       - WeaponCrusherGlaive
       - MiningDrill
+      # begin starcup
+      - SalvageHarpoon
+      - SalvageHarpoonPlasteel
+      - SalvageHarpoonPlasma
+      - SalvageHarpoonUranium
+      - WeaponHarpoonGun
+      # end starcup
       offset: 0.0
 
 - type: entity
   name: Salvage Mob Spawner
   id: SalvageMobSpawner
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   suffix: 25
   components:
     - type: Sprite
       layers:
-        - state: red
-        - sprite: Mobs/Aliens/Carps/space.rsi
-          state: icon
+      - state: shadowred # starcup
+      - state: red
+      # begin starcup
+      - sprite: _starcup/Markers/generic_salvage_spawners.rsi
+        state: salvage_sharkminnow
+      - state: ai
+      # end starcup
     - type: RandomSpawner
       rarePrototypes:
       - MobSharkSalvage
-      rareChance: 0.2
+      # begin starcup
+      - MobSharkSalvageBlue
+      - MobSharkSalvageBrown
+      - MobSharkSalvageGreen
+      - MobSharkSalvageShelled
+      - MobSharkSalvageShelledBlue
+      - MobSharkSalvageShelledBrown
+      - MobSharkSalvageShelledGreen
+      - MobSharkSalvageAbyssal
+      - MobSharkSalvageVampire
+      # end starcup
+      rareChance: 0.1 # starcup: Used to be 0.2. Having more minnows seems to stack spawn odds in their favor?
       prototypes:
-        - MobCarpSalvage
-        - MobCarpSalvage
-        - MobCarpSalvage
-        - MobCarpSalvage
-        - MobCarpSalvage
-        - MobTickSalvage
-        - MobTickSalvage
-        - MobTickSalvage
-        - PlushieCarp
-        - DehydratedSpaceCarp
+      - MobCarpSalvage
+      - MobCarpSalvage
+      - MobCarpSalvage
+      - MobCarpSalvage
+      - MobCarpSalvage
+      # begin starcup
+      - MobCarpSalvageSplitfin
+      - MobCarpSalvageSplitfin
+      - MobCarpSalvageSplitfin
+      - MobCarpSalvageSplitfin
+      - MobCarpSalvageSplitfin
+      - MobCarpSalvageVampire
+      - MobCarpSalvageVampire
+      - MobCarpSalvageVampire
+      - MobCarpSalvageVampire
+      - MobCarpSalvageVampire
+      - MobCarpSalvageQueen
+      - MobCarpSalvageQueen
+      - MobCarpSalvageQueen
+      - MobCarpSalvageQueen
+      - MobCarpSalvageQueen
+      # end starcup
+      - MobTickSalvage
+      - MobTickSalvage
+      - MobTickSalvage
+      - PlushieCarp
+      - DehydratedSpaceCarp
       chance: 0.25
       offset: 0.2
 
 - type: entity #I made this in case someone decided to make a terrifying space tick swarm for salvage. that someone may be me -EG404
   name: Salvage Space Tick Spawner
   id: SpaceTickSpawner
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   suffix: 100
   components:
     - type: Sprite
       layers:
-        - state: red
-        - sprite: Mobs/Aliens/Xenos/spacetick.rsi
-          state: icon
+      # begin starcup: changed it from red, don't know why it was red when all other spawners of this type are green?
+      - state: shadowgreen
+      - state: green
+      # end starcup
+      - sprite: Mobs/Aliens/Xenos/spacetick.rsi
+        state: icon
+      - state: ai # starcup
     - type: ConditionalSpawner
       prototypes:
         - MobTickSalvage
@@ -104,13 +149,15 @@
 - type: entity
   name: Salvage Space Bear Spawner
   id: SpawnMobBearSalvage
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
     - state: bear
       sprite: Mobs/Animals/bear.rsi
+    - state: ai # starcup
   - type: ConditionalSpawner
     prototypes:
     - MobBearSpaceSalvage
@@ -123,13 +170,41 @@
   - type: RandomSpawner
     rarePrototypes:
     - MobSharkSalvage
-    rareChance: 0.2
+    # begin starcup
+    - MobSharkSalvageBlue
+    - MobSharkSalvageBrown
+    - MobSharkSalvageGreen
+    - MobSharkSalvageShelled
+    - MobSharkSalvageShelledBlue
+    - MobSharkSalvageShelledBrown
+    - MobSharkSalvageShelledGreen
+    - MobSharkSalvageAbyssal
+    - MobSharkSalvageVampire
+    # end starcup
+    rareChance: 0.1 # starcup: Used to be 0.2. Having more minnows seems to stack spawn odds in their favor?
     prototypes:
     - MobCarpSalvage
     - MobCarpSalvage
     - MobCarpSalvage
     - MobCarpSalvage
     - MobCarpSalvage
+    # begin starcup
+    - MobCarpSalvageSplitfin
+    - MobCarpSalvageSplitfin
+    - MobCarpSalvageSplitfin
+    - MobCarpSalvageSplitfin
+    - MobCarpSalvageSplitfin
+    - MobCarpSalvageVampire
+    - MobCarpSalvageVampire
+    - MobCarpSalvageVampire
+    - MobCarpSalvageVampire
+    - MobCarpSalvageVampire
+    - MobCarpSalvageQueen
+    - MobCarpSalvageQueen
+    - MobCarpSalvageQueen
+    - MobCarpSalvageQueen
+    - MobCarpSalvageQueen
+    # end starcup
     - MobTickSalvage
     - MobTickSalvage
     - MobTickSalvage
@@ -141,13 +216,15 @@
 - type: entity
   name: Salvage Space Kangaroo Spawner
   id: SpawnMobKangarooSalvage
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
     - state: kangaroo-space
       sprite: Mobs/Animals/kangaroo.rsi
+    - state: ai # starcup
   - type: ConditionalSpawner
     prototypes:
     - MobKangarooSpaceSalvage
@@ -155,13 +232,15 @@
 - type: entity
   name: Salvage Space Spider Spawner
   id: SpawnMobSpiderSalvage
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
     - state: spacespider
       sprite: Mobs/Animals/spacespider.rsi
+    - state: ai # starcup
   - type: ConditionalSpawner
     prototypes:
     - MobSpiderSpaceSalvage
@@ -169,13 +248,15 @@
 - type: entity
   name: Salvage Space Cobra Spawner
   id: SpawnMobCobraSalvage
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   components:
   - type: Sprite
     layers:
-      - state: green
-      - state: spacecobra
-        sprite: Mobs/Animals/spacecobra.rsi
+    - state: shadowgreen # starcup
+    - state: green
+    - state: spacecobra
+      sprite: Mobs/Animals/spacecobra.rsi
+    - state: ai # starcup
   - type: ConditionalSpawner
     prototypes:
     - MobCobraSpaceSalvage
@@ -188,9 +269,13 @@
   components:
     - type: Sprite
       layers:
-        - state: red
-        - sprite: Mobs/Aliens/flesh.rsi
-          state: jared
+      # begin starcup
+      - state: shadowred
+      - state: red
+      - sprite: _starcup/Markers/generic_salvage_spawners.rsi
+        state: salvage_flesh
+      - state: ai
+      # end starcup
     - type: RandomSpawner
       rarePrototypes:
       - MobSharkSalvage

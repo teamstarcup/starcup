@@ -3,21 +3,22 @@
   name: job-name-hos
   description: job-description-hos
   playTimeTracker: JobHeadOfSecurity
-# begin starcup: command roles are whitelisted
-#  requirements:
-#    - !type:RoleTimeRequirement
-#      role: JobWarden
-#      time: 10800 #3 hrs
-#    - !type:RoleTimeRequirement
-#      role: JobSecurityOfficer
-#      time: 36000 #10 hrs
-#    - !type:DepartmentTimeRequirement
-#      department: Security
-#      time: 108000 # 30 hrs
-#    - !type:OverallPlaytimeRequirement
-#      time: 144000 #40 hrs
-# end starcup
-  whitelisted: true # starcup
+  # begin starcup: command roles are whitelisted
+  # requirements:
+  #   - !type:RoleTimeRequirement
+  #     role: JobWarden
+  #     time: 1h
+  #   - !type:RoleTimeRequirement
+  #     role: JobDetective
+  #     time: 1h # knowing how to use the tools is important
+  #   - !type:RoleTimeRequirement
+  #     role: JobSecurityOfficer
+  #     time: 5h
+  #   - !type:DepartmentTimeRequirement
+  #     department: Security
+  #     time: 10h
+  whitelisted: true
+  # end starcup
   weight: 10
   startingGear: HoSGear
   icon: "JobIconHeadOfSecurity"

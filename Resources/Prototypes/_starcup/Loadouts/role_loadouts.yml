@@ -1,20 +1,39 @@
+# reorganized all loadout listings to a standardized order as follows:
+# - Head
+# - Mask
+# - Neck/Scarves
+# - Jumpsuit
+# - Belt
+# - Backpack
+# - Outer Clothing
+# - Shoes
+# - Eyewear/Glasses
+# - PDA
+# - Accessibility
+# - Trinkets
+# - Job Trinkets
+# - Other Job Items (golden plunger, instruments, janitor flashlight, etc)
+# - Survival
+# - GroupSpeciesBreathTool
+# - GroupTankHarness
+
 # Security
 - type: roleLoadout
   id: JobBrigmedic
   groups:
   - BrigmedicHead
-  - SecurityNeck
+  - Scarfs
   - BrigmedicJumpsuit
   - BrigmedicBackpack
   - BrigmedicOuterClothing
   - BrigmedicShoes
-  - SurvivalBrigmedic
-  - Trinkets
   - Accessibility
+  - Trinkets
   - SecurityStar
-  - GroupSpeciesBreathToolBrigmedic
   - SecurityFirearm
   - SecurityFirearmAmmo
+  - SurvivalBrigmedic
+  - GroupSpeciesBreathToolBrigmedic
 
 # Misc
 - type: roleLoadout

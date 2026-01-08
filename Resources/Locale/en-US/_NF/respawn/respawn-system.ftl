@@ -3,12 +3,16 @@ ghost-respawn-rules-window-title = Ghost Respawn Rules
 ghost-respawn-rules-window-confirm-button = I understand, respawn me
 ghost-gui-respawn-button-denied = Respawn ({$time}s)
 ghost-gui-respawn-button-allowed = Respawn
-# DeltaV - we have our own rules for respawning
-ghost-respawn-rules-window-rules = Respawning follows our rule B1.3: Follow the new life 
+# starcup: rewrote respawn rules
+ghost-respawn-rules-window-rules =
+    You'll be brought back to the lobby, where you can pick a
+    character and join the round again!
 
-    You MAY NOT respawn as a character who has died this round. This applies to variants of that same character; the character you choose must be entirely new to the station's shift.
+    Be sure to pick a different character, and don't act on things
+    you learned as the previous one!
 
-    Your newly spawned character is treated as if they are a fresh arrival to the station.
+    And note that after respawning, you'll be locked out of
+    respawning again for {$minutes} minutes.
 
 ## COMMMANDS
 ghost-respawn-command-desc = Respawns you if you're an eligible ghost.

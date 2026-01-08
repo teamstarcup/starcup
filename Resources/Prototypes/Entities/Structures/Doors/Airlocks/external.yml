@@ -20,6 +20,14 @@
     layoutId: AirlockExternal
   - type: Paintable
     group: null
+  # begin starcup
+  - type: Fixtures
+    fixtures:
+      fix1:
+        layer:
+        - AirlockLayer
+        - LowImpassable # starcup: added to block mice
+  # end starcup
 
 - type: entity
   parent: AirlockExternal
@@ -43,3 +51,4 @@
         - FullTileMask
         layer:     #removed opaque from the layer, allowing lasers to pass through glass airlocks
         - GlassAirlockLayer
+        - LowImpassable # starcup: added to block mice

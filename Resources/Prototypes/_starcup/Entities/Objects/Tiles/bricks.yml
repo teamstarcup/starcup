@@ -1,0 +1,67 @@
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemBrickHorizontal
+  name: horizontal astro-brick
+  components:
+  - type: Sprite
+    state: brick-horizontal
+  - type: Item
+    heldPrefix: brick
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorTileBrickHorizontal
+  - type: Stack
+    stackType: FloorTileBrickHorizontal
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemBrickVertical
+  name: vertical astro-brick
+  components:
+  - type: Sprite
+    state: brick-vertical
+  - type: Item
+    heldPrefix: brick
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorTileBrickVertical
+  - type: Stack
+    stackType: FloorTileBrickVertical
+
+- type: entity
+  parent: FloorTileItemBaseStarcup
+  id: FloorTileItemGrayBrick
+  name: gray brick
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Stone/gray_brick01.rsi
+    state: base
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Stone/gray_brick01.rsi
+    heldPrefix: base
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupGrayBrick01
+  - type: Stack
+    stackType: FloorTileGrayBrick
+
+- type: entity
+  parent: FloorTileItemGrayBrick
+  id: FloorTileItemDarkGrayBrick
+  name: dark gray brick
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Tiles/Stone/dark_gray_brick.rsi
+    state: base
+  - type: Item
+    sprite: _starcup/Objects/Tiles/Stone/dark_gray_brick.rsi
+    heldPrefix: base
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorStarcupDarkGrayBrick
+  - type: Stack
+    stackType: FloorTileDarkGrayBrick

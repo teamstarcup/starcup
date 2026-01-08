@@ -587,7 +587,7 @@
     color: "#b53ca1"
   - type: GuideHelp
     guides:
-    - Xenoarchaeology
+    - AnalysisConsole
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -645,9 +645,6 @@
     #radius: 1.5 # starcup
     #energy: 1.6 # starcup
     color: "#3c5eb5"
-  - type: Tag
-    tags:
-    - AccessBreakerImmune
   - type: ItemSlots
   - type: ContainerContainer
     containers:
@@ -1549,7 +1546,7 @@
   parent: BaseComputerAiAccess
   id: ComputerRoboticsControl
   name: robotics control console
-  description: Used to remotely monitor, disable and destroy the station's cyborgs.
+  description: Used to remotely monitor the status and wellbeing of the station's cyborgs. # starcup - removed inaccurate disable/destroy language
   components:
   - type: Sprite
     layers:
@@ -1584,10 +1581,11 @@
     transmitFrequencyId: CyborgControl
   - type: Computer
     board: RoboticsConsoleCircuitboard
-  - type: AccessReader # only used for dangerous things
-    access: [["ResearchDirector"]]
-  - type: Lock
-    unlockOnClick: false
+# starcup - there's no dangerous things to lock off, so the access lock stuff is misleading
+#  - type: AccessReader # only used for dangerous things
+#    access: [["ResearchDirector"]]
+#  - type: Lock
+#    unlockOnClick: false
   - type: PointLight # starcup
     color: "#b386b3"
 

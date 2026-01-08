@@ -1,4 +1,105 @@
 - type: tile
+  parent: FloorStarcupCarpetBase
+  id: FloorStarcupCarpetBlue
+  name: blue carpet
+  sprite: /Textures/_starcup/Tiles/carpet_blue.png
+  variants: 4
+  placementVariants: [0, 1, 2, 3]
+  itemDrop: FloorTileItemStarcupCarpetBlue
+
+- type: tile
+  parent: FloorStarcupCarpetBase
+  id: FloorStarcupCarpetDiamondBlue
+  name: diamond-pattern blue carpet
+  sprite: /Textures/_starcup/Tiles/carpet_diamond_blue.png
+  itemDrop: FloorTileItemStarcupCarpetDiamondBlue
+
+- type: tile
+  parent: FloorStarcupCarpetBase
+  id: FloorStarcupCarpetFancyBlue
+  name: fancy blue carpet
+  sprite: /Textures/_starcup/Tiles/carpet_fancy_blue.png
+  itemDrop: FloorTileItemStarcupCarpetFancyBlue
+
+- type: tile
+  parent: FloorStarcupCarpetBase
+  id: FloorStarcupCarpetGreen
+  name: green carpet
+  sprite: /Textures/_starcup/Tiles/carpet_green.png
+  variants: 4
+  placementVariants: [0, 1, 2, 3]
+  itemDrop: FloorTileItemStarcupCarpetGreen
+
+- type: tile
+  parent: FloorStarcupCarpetBase
+  id: FloorStarcupCarpetDiamondGreen
+  name: diamond-pattern green carpet
+  sprite: /Textures/_starcup/Tiles/carpet_diamond_green.png
+  itemDrop: FloorTileItemStarcupCarpetDiamondGreen
+
+- type: tile
+  parent: FloorStarcupCarpetBase
+  id: FloorStarcupCarpetOrange
+  name: amber carpet
+  sprite: /Textures/_starcup/Tiles/carpet_amber.png
+  variants: 4
+  placementVariants: [0, 1, 2, 3]
+  itemDrop: FloorTileItemStarcupCarpetOrange
+
+- type: tile
+  parent: FloorStarcupCarpetBase
+  id: FloorStarcupCarpetDiamondOrange
+  name: diamond-pattern amber carpet
+  sprite: /Textures/_starcup/Tiles/carpet_diamond_amber.png
+  itemDrop: FloorTileItemStarcupCarpetDiamondOrange
+
+- type: tile
+  parent: FloorStarcupCarpetBase
+  id: FloorStarcupCarpetRed
+  name: red carpet
+  sprite: /Textures/_starcup/Tiles/carpet_red.png
+  variants: 4
+  placementVariants: [0, 1, 2, 3]
+  itemDrop: FloorTileItemStarcupCarpetRed
+
+- type: tile
+  parent: FloorStarcupCarpetBase
+  id: FloorStarcupCarpetDiamondRed
+  name: diamond-pattern red carpet
+  sprite: /Textures/_starcup/Tiles/carpet_diamond_red.png
+  itemDrop: FloorTileItemStarcupCarpetDiamondRed
+
+- type: tile
+  parent: FloorStarcupCarpetBase
+  id: FloorStarcupCarpetFancyRed
+  name: fancy red carpet
+  sprite: /Textures/_starcup/Tiles/carpet_fancy_red.png
+  itemDrop: FloorTileItemStarcupCarpetFancyRed
+
+- type: tile
+  parent: FloorStarcupCarpetBase
+  id: FloorStarcupCarpetViolet
+  name: violet carpet
+  sprite: /Textures/_starcup/Tiles/carpet_violet.png
+  variants: 4
+  placementVariants: [0, 1, 2, 3]
+  itemDrop: FloorTileItemStarcupCarpetViolet
+
+- type: tile
+  parent: FloorStarcupCarpetBase
+  id: FloorStarcupCarpetDiamondViolet
+  name: diamond-pattern violet carpet
+  sprite: /Textures/_starcup/Tiles/carpet_diamond_violet.png
+  itemDrop: FloorTileItemStarcupCarpetDiamondViolet
+
+- type: tile
+  parent: FloorStarcupCarpetBase
+  id: FloorStarcupCarpetFancyViolet
+  name: fancy violet carpet
+  sprite: /Textures/_starcup/Tiles/carpet_fancy_violet.png
+  itemDrop: FloorTileItemStarcupCarpetFancyViolet
+
+- type: tile
   id: FloorStarcupCarpetMemphis
   name: memphis carpet
   sprite: /Textures/_starcup/Tiles/Interior/arcade_carpet.rsi/arcade.png
@@ -14,7 +115,17 @@
 - type: tile
   id: FloorStarcupCarpetGingham
   name: gingham carpet
-  sprite: /Textures/_starcup/Tiles/Interior/piiixl.rsi/carpet26.png
+  sprite: /Textures/_starcup/Tiles/Interior/gingham_carpet/base.png
+  edgeSpritePriority: 4
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Interior/gingham_carpet/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Interior/gingham_carpet/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Interior/gingham_carpet/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Interior/gingham_carpet/single_edge.png
+    South: /Textures/_starcup/Tiles/Interior/gingham_carpet/double_edge.png
+    East: /Textures/_starcup/Tiles/Interior/gingham_carpet/double_edge.png
+    North: /Textures/_starcup/Tiles/Interior/gingham_carpet/double_edge.png
+    West: /Textures/_starcup/Tiles/Interior/gingham_carpet/double_edge.png
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -27,7 +138,17 @@
 - type: tile
   id: FloorStarcupCarpetShagWhite
   name: white shag carpet
-  sprite: /Textures/_starcup/Tiles/Interior/piiixl.rsi/carpet28.png
+  sprite: /Textures/_starcup/Tiles/Interior/white_shag_carpet/base.png
+  edgeSpritePriority: 4
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Interior/white_shag_carpet/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Interior/white_shag_carpet/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Interior/white_shag_carpet/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Interior/white_shag_carpet/single_edge.png
+    South: /Textures/_starcup/Tiles/Interior/white_shag_carpet/double_edge.png
+    East: /Textures/_starcup/Tiles/Interior/white_shag_carpet/double_edge.png
+    North: /Textures/_starcup/Tiles/Interior/white_shag_carpet/double_edge.png
+    West: /Textures/_starcup/Tiles/Interior/white_shag_carpet/double_edge.png
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]

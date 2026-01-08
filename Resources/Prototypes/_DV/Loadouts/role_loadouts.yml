@@ -1,41 +1,61 @@
+# starcup: reorganized all loadout listings to a standardized order as follows:
+# - Head
+# - Mask
+# - Neck/Scarves
+# - Jumpsuit
+# - Belt
+# - Backpack
+# - Outer Clothing
+# - Shoes
+# - Eyewear/Glasses
+# - PDA
+# - Accessibility
+# - Trinkets
+# - Job Trinkets
+# - Other Job Items (golden plunger, instruments, janitor flashlight, etc)
+# - Survival
+# - GroupSpeciesBreathTool
+# - GroupTankHarness
+
 # Logistics
 - type: roleLoadout
   id: JobCourier
   groups:
-  - GroupTankHarness
   - CourierHead
-  - CourierNeck
+  - Scarfs # starcup
   - CourierJumpsuit
+  - CourierBelt # starcup
+  - CourierBackpack # starcup
   - CourierOuterClothing
-  - CourierPDA
-  - CourierBackpack
   - CourierShoes
   - Glasses # starcup
-  - Survival
-  - Trinkets
+  - CourierPDA
   - Accessibility # starcup
+  - Trinkets
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobCargoAssistant
   groups:
-  - GroupTankHarness
   - CargoAssistantHead
+  - Scarfs # starcup
   - CargoAssistantJumpsuit
-  - CargoAssistantBackpack
+  - CargoTechnicianBackpack # starcup
   - CargoAssistantOuterClothing
   - CargoAssistantShoes
   - Glasses
   - Survival
-  - Trinkets
   - Accessibility # starcup
+  - Trinkets
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 # Epistemics
 - type: roleLoadout
   id: JobRoboticist
   groups:
-  - GroupTankHarness
   - RoboticistHead
   - ScientistNeck
   - RoboticistJumpsuit
@@ -43,24 +63,26 @@
   - RoboticistOuterClothing
   - RoboticistGloves
   - RoboticistShoes
-  - RoboticistPDAstarcup # starcup
   - RoboticsEyewear # starcup
-  - Survival
-  - Trinkets
+  - RoboticistPDA # starcup
   - Accessibility # starcup
+  - Trinkets
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 # Command
 - type: roleLoadout
   id: JobAdministrativeAssistant
   groups:
+  - Scarfs # starcup
   - AdminAssistantJumpsuit
-  - AdminAssistantOuter
-  - AdminAssistantShoes
-  - AdminAssistantGloves
   - CommonBackpack
+  - AdminAssistantOuter
+  - AdminAssistantGloves
+  - AdminAssistantShoes
   - CommandEyewear # starcup
-  - Survival
-  - Trinkets
   - Accessibility # starcup
+  - Trinkets
+  - Survival
   - GroupSpeciesBreathTool

@@ -101,12 +101,12 @@
     tags:
     - Wrench
   - type: Sprite
-    sprite: Objects/Tools/wrench.rsi
+    sprite: _starcup/Objects/Tools/wrench.rsi
     state: icon
   - type: Item
-    sprite: Objects/Tools/wrench.rsi
+    sprite: _starcup/Objects/Tools/wrench.rsi
     storedSprite:
-      sprite: Objects/Tools/wrench.rsi
+      sprite: _starcup/Objects/Tools/wrench.rsi
       state: storage
   - type: MeleeWeapon
     wideAnimationRotation: 135
@@ -490,6 +490,15 @@
   - type: StaticPrice
     price: 25
   - type: Shovel
+  # begin starcup: digging quality to remove dirt and grass floors
+  - type: Tool
+    qualities:
+    - Digging
+    useSound:
+      path: "/Audio/_starcup/Tools/shovel.ogg"
+  - type: ToolTileCompatible
+  - type: Prying
+  # end starcup
 
 - type: entity
   parent: BaseItem
