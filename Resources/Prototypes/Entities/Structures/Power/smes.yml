@@ -34,7 +34,7 @@
     - type: Appearance
     - type: Battery
       startingCharge: 0
-      maxCharge: 8000000
+      maxCharge: 24000000 # starcup: 8MJ > 24MJ
     - type: ExaminableBattery
     - type: NodeContainer
       examinable: true
@@ -116,11 +116,11 @@
 - type: entity
   parent: BaseSMES
   id: SMESBasic
-  suffix: Basic, 8MJ
+  suffix: Basic, 24MJ # starcup: 8MJ > 24MJ
   components:
   - type: Battery
-    maxCharge: 8000000
-    startingCharge: 8000000
+    maxCharge: 24000000 # starcup: 8MJ > 24MJ
+    startingCharge: 24000000 # starcup: 8MJ > 24MJ
 
 - type: entity
   parent: SMESBasic
@@ -133,7 +133,7 @@
 - type: entity
   parent: BaseSMES
   id: SMESAdvanced
-  suffix: Advanced, 16MJ
+  suffix: Advanced, 48MJ # starcup: 16MJ > 48MJ
   name: advanced SMES
   description: An even-higher-capacity superconducting magnetic energy storage (SMES) unit.
   components:
@@ -157,8 +157,8 @@
   - type: Machine
     board: SMESAdvancedMachineCircuitboard
   - type: Battery
-    maxCharge: 16000000
-    startingCharge: 16000000
+    maxCharge: 48000000 # starcup: 16MJ > 48MJ
+    startingCharge: 48000000 # starcup: 16MJ > 48MJ
   - type: PowerMonitoringDevice
     group: SMES
     sourceNode: input

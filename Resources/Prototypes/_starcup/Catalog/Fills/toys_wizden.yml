@@ -1,0 +1,305 @@
+#TODO: remove these once we merge the noted wizden pull requests
+
+- type: entityTable # copied from upstream pr #41840
+  id: AllMiscToysTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: AllCrayonsTable
+    - id: CrayonBox
+    - id: PlasticBanana
+    - id: NukeDiskFake
+    - id: DiceBag
+    - id: SpectralLocator
+    - id: BarberScissors
+    #- id: SprayFlowerPin # this doesn't exist yet
+    - id: ClothingShoesSkates
+    - id: CrazyGlue
+    - id: CrazyLube
+    - !type:NestedSelector
+      tableId: AllBoardGamesTable
+    - !type:GroupSelector # Where there's Chips there's Dips
+      children:
+      - id: MrChips
+      - id: MrDips
+    - !type:GroupSelector # Ballons
+      children:
+      - id: BalloonNT
+        weight: 5 # NT bias
+      - id: BalloonCorgi
+      - id: BalloonSyn
+    - !type:GroupSelector # Sports ball
+      children:
+      - id: Basketball
+      - id: Football
+      - id: BeachBall
+      - id: TennisBall
+        amount: 2
+    - !type:GroupSelector # PAIs are basically toys
+      children:
+      - id: PersonalAI
+        weight: 8
+      - id: PotatoAI
+      - id: GoldenPersonalAI
+        weight: 0.1 # 1 in 1,456. A truly rare item
+    - !type:GroupSelector # Orbs of "power"
+      weight: 0.05 # 1 in 320
+      children:
+      - id: SingularityToy
+      - id: TeslaToy
+      - id: PonderingOrb
+
+# Entities that don't do much more than make a unique sound. Plushies excluded.
+- type: entityTable # copied from upstream pr #41840
+  id: AllToySoundMakerTable
+  table: !type:GroupSelector
+    children:
+    - id: ToyRubberDuck
+    - id: RubberChicken
+    - id: ClownRecorder
+    - id: WhoopieCushion
+    - id: NewtonCradle
+    - id: Skub
+    - id: DeskBell
+    - id: BikeHornImplanter
+    - id: SadTromboneImplanter
+    - !type:GroupSelector
+      children:
+      - id: Whistle
+        weight: 5
+      - id: SecurityWhistle
+      - id: SyndicateWhistle
+        weight: 0.5 # 1 in 143
+    - !type:NestedSelector # The original
+      tableId: RandomBikeHornTable
+
+- type: entityTable # copied from upstream pr #41840
+  id: RandomBikeHornTable
+  table: !type:GroupSelector
+    children:
+    - id: BikeHorn
+    - !type:GroupSelector # Usually get the normal horn
+      weight: .005 # 1 in 200
+      children:
+      - id: CluwneHorn # you lose, clown >:o)
+      - id: BananiumHorn
+      - id: PushHorn
+      - id: GoldenBikeHorn
+
+- type: entityTable # copied from upstream pr #41840
+  id: AllCrayonsTable
+  table: !type:GroupSelector
+    children:
+    - id: CrayonMime
+    - id: CrayonRainbow
+    - id: CrayonWhite
+    - id: CrayonBlack
+    - id: CrayonRed
+    - id: CrayonOrange
+    - id: CrayonYellow
+    - id: CrayonGreen
+    - id: CrayonBlue
+    - id: CrayonPurple
+
+- type: entityTable # copied from upstream pr #41840
+  id: AllBoardGamesTable
+  table: !type:GroupSelector
+    children:
+    - id: BackgammonBoard
+    - id: ChessBoard
+    - id: ParchisBoard
+    - id: CheckerBoard
+
+- type: entityTable # copied from upstream pr #41840
+  id: AllFigurinesTable
+  table: !type:GroupSelector
+    children:
+    # Cargo
+    - id: ToyFigurineQuartermaster
+    - id: ToyFigurineCargoTech
+    - id: ToyFigurineSalvage
+    # Command
+    - id: ToyFigurineCaptain
+    # Engineering
+    - id: ToyFigurineChiefEngineer
+    - id: ToyFigurineEngineer
+    - id: ToyFigurineAtmosTech
+    # Medical
+    - id: ToyFigurineChiefMedicalOfficer
+    - id: ToyFigurineChemist
+    - id: ToyFigurineParamedic
+    - id: ToyFigurineMedicalDoctor
+    # Science
+    - id: ToyFigurineResearchDirector
+    - id: ToyFigurineScientist
+    # Security
+    - id: ToyFigurineHeadOfSecurity
+    - id: ToyFigurineWarden
+    - id: ToyFigurineDetective
+    - id: ToyFigurineSecurity
+    # Service
+    - id: ToyFigurineHeadOfPersonnel
+    - id: ToyFigurinePassenger
+    - id: ToyFigurineGreytider
+    - id: ToyFigurineClown # :o)
+    - id: ToyFigurineMime #
+    - id: ToyFigurineMusician
+    - id: ToyFigurineBoxer
+    - id: ToyFigurineLibrarian
+    - id: ToyFigurineChaplain
+    - id: ToyFigurineChef
+    - id: ToyFigurineBartender
+    - id: ToyFigurineBotanist
+    - id: ToyFigurineJanitor
+    - id: ToyFigurineLawyer
+    # Silicon
+    - id: ToyAi
+    # Syndicate
+    - id: ToyFigurineNukie
+    - id: ToyFigurineNukieElite
+    - id: ToyFigurineNukieCommander
+    - id: ToyFigurineFootsoldier
+    - id: ToyFigurineHoloClown # >:o)
+    # Antagonists
+    - id: ToyFigurineWizard
+    - id: ToyFigurineSpaceDragon
+    - id: ToyFigurineThief
+    - id: ToyFigurineQueen
+    - id: ToyFigurineRatKing
+    - id: ToyFigurineRatServant
+    - id: ToyFigurineGriffin
+    # Animals
+    - id: ToyFigurineMouse
+    - id: ToyFigurineSlime
+    - id: ToyFigurineHamlet
+    # Other
+    - id: MysteryFigureBox # More suspense
+      weight: 10
+    - id: ToyFigurineWizardFake
+    - id: ToyFigurineSkeleton
+    - id: ToyNuke
+    - id: ToyFigurineOwlman
+    - !type:NestedSelector
+      tableId: AllFigurineMechsTable
+
+- type: entityTable # copied from upstream pr #41840
+  id: AllFigurineMechsTable
+  table: !type:GroupSelector
+    children:
+    - id: ToyRipley
+    - id: ToyFireRipley
+    - id: ToyDeathRipley
+    - id: ToyGygax
+    - id: ToyDurand
+    - id: ToyMarauder
+    - id: ToySeraph
+    - id: ToyMauler
+    - id: ToyOdysseus
+    - id: ToyPhazon
+    - id: ToyReticence
+
+- type: entityTable # copied from upstream pr #41840
+  id: AllToyWeaponsTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector # Swords type group
+      children:
+      - id: ToyHammer
+      - id: ToySword
+      - id: FoamBlade
+      - id: FoamCutlass
+      - id: CardSword
+    - !type:GroupSelector # Throwing type group
+      rolls: 2 # Expendables need restocks
+      children:
+      - id: SnapPopBox
+      - id: BoxDarts
+      - id: GrenadeFoamDart
+      - !type:GroupSelector # REAL fake grenades
+        weight: 0.05 # 2 in 186. Rare in order to not spoil the surprise
+        children:
+        - id: GrenadeDummy
+        - id: SyndieTrickyBomb
+    - !type:GroupSelector # Guns type group
+      children:
+#      - id: WeaponStickyHand # does not exist yet
+      - !type:GroupSelector # Water subgroup
+        children:
+        - id: WeaponWaterBlaster
+        - id: WeaponWaterPistol
+      - !type:NestedSelector
+        tableId: RandomFoamGunTable
+      - !type:NestedSelector
+        tableId: RandomCapGunTable
+
+- type: entityTable # copied from upstream pr #41840
+  id: RandomFoamGunTable
+  table: !type:AllSelector # Need to spawn with ammo
+    children:
+    - !type:GroupSelector
+      children:
+      - id: FoamCrossbow
+      - id: WeaponRifleFoam
+    - id: BoxDonkSoftBox
+
+- type: entityTable # copied from upstream pr #41840
+  id: RandomCapGunTable
+  table: !type:AllSelector
+    children:
+    - !type:GroupSelector # real or fake?
+      children:
+      - id: RevolverCapGun
+      - id: RevolverCapGunFake
+        weight: 0.01 # 1 in 101
+    - !type:GroupSelector # ready for reload
+      prob: 0.9
+      children:
+      - id: SpeedLoaderCap
+      - id: BoxCartridgeCap
+
+- type: entityTable # copied from upstream pr #41783
+  id: SlipTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: AllBananaPeelsTable
+    - !type:NestedSelector
+      tableId: AllSoapsTable
+    - !type:GroupSelector # Other
+      weight: 0.02 # 1 in 100
+      children:
+      - id: FoodButter
+      - id: FoodCannabisButter
+        weight: 0.5
+      - id: BananaPhoneInstrument
+        weight: 0.2
+
+- type: entityTable # copied from upstream pr #41783
+  id: AllSoapsTable
+  table: !type:GroupSelector
+    children:
+    - id: SoapNT
+      weight: 2
+    - id: Soap
+    - id: SoapHomemade
+    - id: SoapDeluxe
+    - !type:GroupSelector # Rare soaps
+      weight: 0.02 # 1 in 250
+      children:
+      - id: SoapSyndie
+      - id: SlipocalypseClusterSoap
+      - id: SoapOmega
+
+- type: entityTable # copied from upstream pr #41783
+  id: AllBananaPeelsTable
+  table: !type:GroupSelector
+    children:
+    - id: TrashBananaPeel
+      weight: 3
+    - id: TrashBakedBananaPeel
+      weight: 2
+    - id: TrashMimanaPeel
+    - id: TrashBananiumPeel
+      weight: 0.5
+    - id: TrashBananaPeelExplosive
+      weight: 0.001 # 1 in 6,500

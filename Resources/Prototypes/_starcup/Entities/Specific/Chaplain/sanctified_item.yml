@@ -1,0 +1,21 @@
+# archetypal holy item from which to base sanctified items on
+- type: entity
+  id: BaseSanctifiedItem
+  name: base sanctified item
+  description: You shouldn't see this.
+  categories: [HideSpawnMenu]
+  components:
+  - type: Bible
+  - type: Prayable
+    bibleUserOnly: true
+  - type: Summonable
+    specialItem: SpawnPointGhostRemilia
+  - type: ReactionMixer
+    mixMessage: "bible-mixing-success"
+    reactionTypes:
+    - Holy
+  - type: Sanctified
+    damage:
+      groups:
+        Brute: -15
+        Burn: -15

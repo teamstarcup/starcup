@@ -3,6 +3,7 @@ using Content.Server.Administration.Logs;
 using Content.Server.Bible.Components;
 using Content.Server.Chat.Managers;
 using Content.Server.Popups;
+using Content.Shared.Bible.Components; // starcup
 using Content.Shared.Database;
 using Content.Shared.Popups;
 using Content.Shared.Chat;

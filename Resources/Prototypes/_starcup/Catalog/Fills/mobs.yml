@@ -1,0 +1,230 @@
+# Harmless
+
+- type: entityTable
+  id: SmallCritterHarmlessTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      children:
+      - id: MobMothroach
+        weight: 0.9
+      - id: MobMoproach
+        weight: 0.1
+    - !type:GroupSelector
+      children:
+      - id: MobCockroach
+        weight: 0.75
+      - id: MobCockroachHL
+        weight: 0.25
+    - !type:GroupSelector
+      children:
+      - id: MobMouse
+      - id: MobMouse1
+      - id: MobMouse2
+    - !type:GroupSelector
+      children:
+      - id: MobSnail
+        weight: 0.5
+      - id: MobSnailSpeed
+        weight: 0.25
+      - id: MobSnailMoth
+        weight: 0.25
+    - id: MobFlySwarm
+    - id: MobBeeSwarm
+    - id: MobFireflySwarm
+    - id: MobButterfly
+    - id: MobDragonfly
+    - !type:GroupSelector
+      children:
+      - id: MobBeetle
+      - id: MobBeetleRhino
+      - id: MobBeetleJune
+      - id: MobLadybug
+    - id: MobLizard
+    - id: MobFrog
+    - id: MobSnake
+    - id: MobArgocyteSlurva
+      weight: 0.5
+    - id: MobHamster
+
+- type: entityTable
+  id: SmallCritterSwarmHarmlessTable
+  table: !type:GroupSelector
+    children:
+    - id: MobMothroach
+      amount: !type:LimitedBinomialNumberSelector
+        trials: 6
+        chance: 0.55
+    - !type:GroupSelector
+      rolls: !type:LimitedBinomialNumberSelector
+        trials: 6
+        chance: 0.55
+      children:
+      - id: MobCockroach
+      - id: MobCockroachHL
+        weight: 0.25
+    - !type:GroupSelector
+      rolls: !type:LimitedBinomialNumberSelector
+        trials: 6
+        chance: 0.55
+      children:
+      - id: MobMouse
+      - id: MobMouse1
+      - id: MobMouse2
+    - !type:GroupSelector
+      rolls: !type:LimitedBinomialNumberSelector
+        trials: 6
+        chance: 0.55
+      children:
+      - id: MobSnail
+        weight: 0.5
+      - id: MobSnailSpeed
+        weight: 0.25
+      - id: MobSnailMoth
+        weight: 0.25
+    - id: MobFlySwarm
+      amount: !type:LimitedBinomialNumberSelector
+        trials: 6
+        chance: 0.55
+    - id: MobBeeSwarm
+      amount: !type:LimitedBinomialNumberSelector
+        trials: 6
+        chance: 0.55
+    - id: MobFireflySwarm
+      amount: !type:LimitedBinomialNumberSelector
+        trials: 6
+        chance: 0.55
+    - id: MobButterfly
+      amount: !type:LimitedBinomialNumberSelector
+        trials: 6
+        chance: 0.55
+    - id: MobDragonfly
+      amount: !type:LimitedBinomialNumberSelector
+        trials: 6
+        chance: 0.55
+    - !type:GroupSelector
+      rolls: !type:LimitedBinomialNumberSelector
+        trials: 6
+        chance: 0.55
+      children:
+      - id: MobBeetle
+      - id: MobBeetleRhino
+      - id: MobBeetleJune
+      - id: MobLadybug
+    - id: MobLizard
+      amount: !type:LimitedBinomialNumberSelector
+        trials: 6
+        chance: 0.55
+    - id: MobFrog
+      amount: !type:LimitedBinomialNumberSelector
+        trials: 6
+        chance: 0.55
+    - id: MobSnake
+      amount: !type:LimitedBinomialNumberSelector
+        trials: 6
+        chance: 0.55
+    - id: MobArgocyteSlurva
+      weight: 0.5
+      amount: !type:LimitedBinomialNumberSelector
+        trials: 6
+        chance: 0.55
+
+- type: entityTable
+  id: CritterHarmlessTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      children:
+      - id: MobChicken
+      - id: MobChicken1
+      - id: MobChicken2
+    - !type:GroupSelector
+      children:
+      - id: MobGiantBee
+      - id: MobGiantSandwasp
+    - !type:GroupSelector
+      children:
+      - id: MobDuckMallard
+      - id: MobDuckWhite
+      - id: MobDuckBrown
+    - !type:GroupSelector
+      children:
+      - id: MobCorgi
+        weight: 0.45
+      - id: MobCorgiPuppy
+        weight: 0.45
+      - id: MobCorgiSmart
+        weight: 0.1
+    - !type:GroupSelector
+      children:
+      - id: MobCat
+      - id: MobCatCalico
+      - id: MobCatSpace
+      - id: MobCatCaracal
+      - id: MobCatKitten
+      - id: MobCatShadow
+        weight: 0.05 # ~1% chance
+    - !type:AllSelector
+      children:
+      - !type:NestedSelector # a little trash nest for the little trash creatures
+        tableId: GenericTrashItems
+        rolls: 5
+      - !type:GroupSelector
+        children:
+        - id: MobRaccoon
+        - id: MobPossum
+    - id: MobCrab
+    - id: MobGoose
+    - id: MobMonkey
+    - id: MobParrot
+    - id: MobPenguin
+    - id: MobPossum
+    - id: MobFox
+    - id: MobFerret
+
+# Dangerous
+
+- type: entityTable
+  id: SmallCritterDangerousTable
+  table: !type:GroupSelector
+    children:
+    - id: MobMosquitoSwarm
+    - id: MobTick
+    - !type:GroupSelector
+      weight: 0.5
+      children:
+      - id: MobArgocyteSkitter
+      - id: MobArgocyteBarrier
+
+- type: entityTable
+  id: CritterDangerousTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 0.5
+      children:
+      - id: MobArgocyteSwiper
+      - id: MobArgocyteMolder
+    - !type:GroupSelector
+      children:
+      - id: MobCarp
+      - id: MobCarpSplitfin
+      - id: MobCarpVampire
+        weight: 0.5
+      - id: MobCarpMagic
+        weight: 0.5
+      - id: MobCarpHolo
+        weight: 0.5
+    - !type:GroupSelector
+      children:
+      - id: MobGiantSpiderAngry
+      - id: MobSpiderSpace
+    - !type:GroupSelector
+      children:
+      - id: MobAdultSlimesBlueAngry
+      - id: MobAdultSlimesGreenAngry
+      - id: MobAdultSlimesYellowAngry
+    - !type:GroupSelector
+      children:
+      - id: MobPurpleSnake
+      - id: MobCobraSpace

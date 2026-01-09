@@ -4,6 +4,7 @@ using Content.Server.Popups;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Actions;
 using Content.Shared.Bible;
+using Content.Shared.Bible.Components; // starcup
 using Content.Shared.Damage.Systems;
 using Content.Shared.Ghost.Roles.Components;
 using Content.Shared.IdentityManagement;
@@ -37,7 +38,7 @@ namespace Content.Server.Bible
         {
             base.Initialize();
 
-            SubscribeLocalEvent<BibleComponent, AfterInteractEvent>(OnAfterInteract);
+            // SubscribeLocalEvent<BibleComponent, AfterInteractEvent>(OnAfterInteract); // starcup
             SubscribeLocalEvent<SummonableComponent, GetVerbsEvent<AlternativeVerb>>(AddSummonVerb);
             SubscribeLocalEvent<SummonableComponent, GetItemActionsEvent>(GetSummonAction);
             SubscribeLocalEvent<SummonableComponent, SummonActionEvent>(OnSummon);
@@ -90,67 +91,69 @@ namespace Content.Server.Bible
             }
         }
 
-        private void OnAfterInteract(EntityUid uid, BibleComponent component, AfterInteractEvent args)
-        {
-            if (!args.CanReach)
-                return;
-
-            if (!TryComp(uid, out UseDelayComponent? useDelay) || _delay.IsDelayed((uid, useDelay)))
-                return;
-
-            if (args.Target == null || args.Target == args.User || !_mobStateSystem.IsAlive(args.Target.Value))
-            {
-                return;
-            }
-
-            if (!HasComp<BibleUserComponent>(args.User))
-            {
-                _popupSystem.PopupEntity(Loc.GetString("bible-sizzle"), args.User, args.User);
-
-                _audio.PlayPvs(component.SizzleSoundPath, args.User);
-                _damageableSystem.TryChangeDamage(args.User, component.DamageOnUntrainedUse, true, origin: uid);
-                _delay.TryResetDelay((uid, useDelay));
-
-                return;
-            }
-
-            // This only has a chance to fail if the target is not wearing anything on their head and is not a familiar.
-            if (!_invSystem.TryGetSlotEntity(args.Target.Value, "head", out var _) && !HasComp<FamiliarComponent>(args.Target.Value))
-            {
-                if (_random.Prob(component.FailChance))
-                {
-                    var othersFailMessage = Loc.GetString(component.LocPrefix + "-heal-fail-others", ("user", Identity.Entity(args.User, EntityManager)), ("target", Identity.Entity(args.Target.Value, EntityManager)), ("bible", uid));
-                    _popupSystem.PopupEntity(othersFailMessage, args.User, Filter.PvsExcept(args.User), true, PopupType.SmallCaution);
-
-                    var selfFailMessage = Loc.GetString(component.LocPrefix + "-heal-fail-self", ("target", Identity.Entity(args.Target.Value, EntityManager)), ("bible", uid));
-                    _popupSystem.PopupEntity(selfFailMessage, args.User, args.User, PopupType.MediumCaution);
-
-                    _audio.PlayPvs(component.BibleHitSound, args.User);
-                    _damageableSystem.TryChangeDamage(args.Target.Value, component.DamageOnFail, true, origin: uid);
-                    _delay.TryResetDelay((uid, useDelay));
-                    return;
-                }
-            }
-
-            if (_damageableSystem.TryChangeDamage(args.Target.Value, component.Damage, true, origin: uid))
-            {
-                var othersMessage = Loc.GetString(component.LocPrefix + "-heal-success-none-others", ("user", Identity.Entity(args.User, EntityManager)), ("target", Identity.Entity(args.Target.Value, EntityManager)), ("bible", uid));
-                _popupSystem.PopupEntity(othersMessage, args.User, Filter.PvsExcept(args.User), true, PopupType.Medium);
-
-                var selfMessage = Loc.GetString(component.LocPrefix + "-heal-success-none-self", ("target", Identity.Entity(args.Target.Value, EntityManager)), ("bible", uid));
-                _popupSystem.PopupEntity(selfMessage, args.User, args.User, PopupType.Large);
-            }
-            else
-            {
-                var othersMessage = Loc.GetString(component.LocPrefix + "-heal-success-others", ("user", Identity.Entity(args.User, EntityManager)), ("target", Identity.Entity(args.Target.Value, EntityManager)), ("bible", uid));
-                _popupSystem.PopupEntity(othersMessage, args.User, Filter.PvsExcept(args.User), true, PopupType.Medium);
-
-                var selfMessage = Loc.GetString(component.LocPrefix + "-heal-success-self", ("target", Identity.Entity(args.Target.Value, EntityManager)), ("bible", uid));
-                _popupSystem.PopupEntity(selfMessage, args.User, args.User, PopupType.Large);
-                _audio.PlayPvs(component.HealSoundPath, args.User);
-                _delay.TryResetDelay((uid, useDelay));
-            }
-        }
+        // begin starcup: replaced with blessed healing action (needs to be commented out because damage specifiers are required)
+        // private void OnAfterInteract(EntityUid uid, BibleComponent component, AfterInteractEvent args)
+        // {
+        //     if (!args.CanReach)
+        //         return;
+        //
+        //     if (!TryComp(uid, out UseDelayComponent? useDelay) || _delay.IsDelayed((uid, useDelay)))
+        //         return;
+        //
+        //     if (args.Target == null || args.Target == args.User || !_mobStateSystem.IsAlive(args.Target.Value))
+        //     {
+        //         return;
+        //     }
+        //
+        //     if (!HasComp<BibleUserComponent>(args.User))
+        //     {
+        //         _popupSystem.PopupEntity(Loc.GetString("bible-sizzle"), args.User, args.User);
+        //
+        //         _audio.PlayPvs(component.SizzleSoundPath, args.User);
+        //         _damageableSystem.TryChangeDamage(args.User, component.DamageOnUntrainedUse, true, origin: uid);
+        //         _delay.TryResetDelay((uid, useDelay));
+        //
+        //         return;
+        //     }
+        //
+        //     // This only has a chance to fail if the target is not wearing anything on their head and is not a familiar.
+        //     if (!_invSystem.TryGetSlotEntity(args.Target.Value, "head", out var _) && !HasComp<FamiliarComponent>(args.Target.Value))
+        //     {
+        //         if (_random.Prob(component.FailChance))
+        //         {
+        //             var othersFailMessage = Loc.GetString(component.LocPrefix + "-heal-fail-others", ("user", Identity.Entity(args.User, EntityManager)), ("target", Identity.Entity(args.Target.Value, EntityManager)), ("bible", uid));
+        //             _popupSystem.PopupEntity(othersFailMessage, args.User, Filter.PvsExcept(args.User), true, PopupType.SmallCaution);
+        //
+        //             var selfFailMessage = Loc.GetString(component.LocPrefix + "-heal-fail-self", ("target", Identity.Entity(args.Target.Value, EntityManager)), ("bible", uid));
+        //             _popupSystem.PopupEntity(selfFailMessage, args.User, args.User, PopupType.MediumCaution);
+        //
+        //             _audio.PlayPvs(component.BibleHitSound, args.User);
+        //             _damageableSystem.TryChangeDamage(args.Target.Value, component.DamageOnFail, true, origin: uid);
+        //             _delay.TryResetDelay((uid, useDelay));
+        //             return;
+        //         }
+        //     }
+        //
+        //     if (_damageableSystem.TryChangeDamage(args.Target.Value, component.Damage, true, origin: uid))
+        //     {
+        //         var othersMessage = Loc.GetString(component.LocPrefix + "-heal-success-none-others", ("user", Identity.Entity(args.User, EntityManager)), ("target", Identity.Entity(args.Target.Value, EntityManager)), ("bible", uid));
+        //         _popupSystem.PopupEntity(othersMessage, args.User, Filter.PvsExcept(args.User), true, PopupType.Medium);
+        //
+        //         var selfMessage = Loc.GetString(component.LocPrefix + "-heal-success-none-self", ("target", Identity.Entity(args.Target.Value, EntityManager)), ("bible", uid));
+        //         _popupSystem.PopupEntity(selfMessage, args.User, args.User, PopupType.Large);
+        //     }
+        //     else
+        //     {
+        //         var othersMessage = Loc.GetString(component.LocPrefix + "-heal-success-others", ("user", Identity.Entity(args.User, EntityManager)), ("target", Identity.Entity(args.Target.Value, EntityManager)), ("bible", uid));
+        //         _popupSystem.PopupEntity(othersMessage, args.User, Filter.PvsExcept(args.User), true, PopupType.Medium);
+        //
+        //         var selfMessage = Loc.GetString(component.LocPrefix + "-heal-success-self", ("target", Identity.Entity(args.Target.Value, EntityManager)), ("bible", uid));
+        //         _popupSystem.PopupEntity(selfMessage, args.User, args.User, PopupType.Large);
+        //         _audio.PlayPvs(component.HealSoundPath, args.User);
+        //         _delay.TryResetDelay((uid, useDelay));
+        //     }
+        // }
+        // end starcup
 
         private void AddSummonVerb(EntityUid uid, SummonableComponent component, GetVerbsEvent<AlternativeVerb> args)
         {

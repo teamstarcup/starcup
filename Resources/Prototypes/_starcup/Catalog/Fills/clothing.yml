@@ -1,0 +1,83 @@
+- type: entityTable
+  id: RandomAccessoryTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      children:
+      - id: FoodPoppy
+      - id: FoodLily
+      - id: ClothingHeadHatHairflower
+      - id: ClothingHeadHatFlowerWreath
+    - id: ClothingEyesGlassesSunglasses
+    - id: ClothingEyesGlassesMirrorshades
+    - id: ClothingEyesGlassesMercenary
+    - id: ClothingEyesGlassesJensen
+    - id: ClothingEyesGlassesJamjar
+    - id: ClothingEyesGlassesGar
+    - id: ClothingEyesGlassesGarOrange
+    - id: ClothingEyesGlassesGarGiga
+    - id: ClothingEyesEyepatch
+    - id: ClothingEyesGlassesNoir
+    - id: ClothingEyesGlassesOutlawGlasses
+    - id: ClothingHeadHatBunny
+    - id: ClothingHeadHatCatEars
+    - id: ClothingHeadHatDogEars
+    - id: ClothingMaskItalianMoustache
+    - id: ClothingHeadHatAnimalHeadslime
+    - id: ClothingHandsGlovesFingerless
+    - id: ClothingHandsGlovesMercFingerless
+    - id: ClothingShoeSlippersDuck
+    - id: ClothingShoeSlippersLizard
+    - id: ClothingShoesSlippers
+    - id: ClothingShoesFlippers
+
+- type: entityTable
+  id: RandomCostumeTable
+  table: !type:GroupSelector
+    children:
+    - !type:AllSelector
+      children:
+      - id: ClothingShoesBootsPerformer
+      - id: ClothingUniformJumpskirtPerformer
+      - id: ClothingHeadPerformerWig
+    - !type:AllSelector
+      children:
+      - id: ClothingHeadHatWizardFake
+      - id: ClothingShoesWizard
+      - id: PonderingOrb
+    - !type:AllSelector
+      children:
+      - id: ClothingHeadHatWitch1
+      - id: ClothingOuterSuitWitchRobes
+      - id: BroomItemBrown
+    - !type:AllSelector
+      children:
+      - id: ClothingHeadHatHoodCulthood
+      - id: ClothingOuterRobesCult
+      - id: ClothingShoesCult
+    - !type:AllSelector
+      children:
+      - id: ClothingHeadHatShrineMaidenWig
+      - id: ClothingOuterSuitShrineMaiden
+    - !type:AllSelector
+      children:
+      - id: ClothingOuterCoatPirate
+      - id: ClothingHeadHatPirate
+      - id: ClothingUniformJumpsuitPirate
+    - !type:AllSelector
+      children:
+      - !type:GroupSelector
+        children:
+        - id: ClothingUniformJumpskirtJanimaid
+        - id: ClothingUniformJumpskirtJanimaidmini
+      - id: ClothingShoesHeelsBlack
+      - id: FeatherDuster
+    - !type:AllSelector
+      children:
+      - id: ClothingHeadSafari
+      - id: ClothingUniformJumpsuitSafari
+    - id: ClothingNeckCloakVoid
+    - id: ClothingNeckCloakAdmin
+    - id: ClothingNeckCloakHerald
+    - id: ClothingHeadHelmetTemplar
+    - id: ClothingOuterSuitCarp
