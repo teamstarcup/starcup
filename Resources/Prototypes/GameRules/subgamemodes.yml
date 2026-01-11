@@ -36,6 +36,12 @@
         sound: "/Audio/Misc/thief_greeting.ogg"
   - type: DynamicRuleCost
     cost: 75
+  # begin starcup: added so thief can be a standalone gamemode
+  - type: GameRule
+    delay:
+      min: 240
+      max: 420
+  # end starcup
 
 # Needs testing
 - type: entity

@@ -1,0 +1,140 @@
+# These are the action buttons, actions, and mobs, to represent burrowing, all packed together for convenience.
+# This works by using the polymorph system to polymorh the mob into a burrowed mob, either Large or small.
+
+# Actions that go on the BurrowAbility component
+- type: entity
+  parent: [BaseActionPolymorph, BaseDoAfterAction]
+  id: ActionBurrowSmall
+  name: Burrow
+  description: Burrows into the ground.
+  components:
+  - type: Action
+    useDelay: 2
+    icon:
+      sprite: _starcup/Interface/Actions/actions_general.rsi
+      state: burrow
+  - type: InstantAction
+    event: !type:PolymorphActionEvent
+      protoId: BurrowedSmall
+  - type: DoAfterArgs
+    delay: 2
+    breakOnMove: true
+
+- type: entity
+  parent: [BaseActionPolymorph, BaseDoAfterAction]
+  id: ActionBurrowLarge
+  name: Burrow
+  description: Burrows into the ground.
+  components:
+  - type: Action
+    useDelay: 3
+    icon:
+      sprite: _starcup/Interface/Actions/actions_general.rsi
+      state: burrow
+  - type: InstantAction
+    event: !type:PolymorphActionEvent
+      protoId: BurrowedLarge
+  - type: DoAfterArgs
+    delay: 3
+    breakOnMove: true
+
+# Action events/protoIDs
+- type: polymorph
+  id: BurrowedSmall
+  configuration:
+    entity: BurrowedCreatureSmall
+    transferName: false
+    inventory: None
+    revertOnDeath: true
+    revertOnCrit: true
+    polymorphPopup: "burrowing-popup-generic"
+    exitPolymorphPopup: "burrowing-revert-popup-generic"
+    polymorphSound:
+      path: /Audio/_starcup/Effects/Burrowing/burrow_on_small.ogg
+      params:
+        volume: 0.1
+    exitPolymorphSound:
+      path: /Audio/_starcup/Effects/Burrowing/burrow_off_small.ogg
+
+- type: polymorph
+  id: BurrowedLarge
+  configuration:
+    entity: BurrowedCreatureLarge
+    transferName: false
+    inventory: None
+    revertOnDeath: true
+    revertOnCrit: true
+    polymorphPopup: "burrowing-popup-generic"
+    exitPolymorphPopup: "burrowing-revert-popup-generic"
+    polymorphSound:
+      path: /Audio/_starcup/Effects/Burrowing/burrow_on_large.ogg
+      params:
+        volume: 0.1
+    exitPolymorphSound:
+      path: /Audio/_starcup/Effects/Burrowing/burrow_off_large.ogg
+
+# Entities resulting from the protoIDs
+- type: entity
+  id: BurrowedCreatureSmall
+  name: burrowed creature
+  suffix: small
+  parent:
+    - BaseMob
+    - MobDamageable
+  description: Something hides underground.
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _starcup/Mobs/Special/burrowed_small.rsi
+    drawdepth: FloorObjects
+    layers:
+    - state: burrowed1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        burrowed1: ""
+        burrowed2: ""
+        burrowed3: ""
+        burrowed4: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.25
+        mask:
+        - Impassable
+  - type: Insulated
+  - type: Temperature
+    heatDamageThreshold: 360
+    coldDamageThreshold: -150
+    currentTemperature: 310.15
+  - type: Tag
+    tags:
+    - CannotSuicide
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 0
+    baseSprintSpeed : 0
+  - type: NoSlip
+  - type: Damageable
+    damageModifierSet: burrowed
+
+- type: entity
+  id: BurrowedCreatureLarge
+  name: burrowed creature
+  suffix: large
+  parent: BurrowedCreatureSmall
+  description: Something hides underground.
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _starcup/Mobs/Special/burrowed_large.rsi
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.5
+        mask:
+        - Impassable

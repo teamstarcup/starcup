@@ -1,0 +1,23 @@
+- type: entityTable
+  id: RandomHumanOrganTable
+  table: !type:GroupSelector
+    children:
+    - id: OrganHumanEyes
+    - id: OrganHumanTongue
+    - id: OrganHumanAppendix
+    - id: OrganHumanEars
+    - id: OrganHumanLungs
+    - id: OrganHumanKidneys
+    - id: OrganHumanHeart
+    - id: OrganHumanStomach
+    - id: OrganHumanLiver
+
+- type: entityTable
+  id: RandomAnimalOrganTable
+  table: !type:GroupSelector
+    children:
+    - id: OrganAnimalLungs
+    - id: OrganAnimalStomach
+    - id: OrganAnimalLiver
+    - id: OrganAnimalHeart
+    - id: OrganAnimalKidneys

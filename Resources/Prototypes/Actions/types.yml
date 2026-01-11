@@ -307,7 +307,7 @@
   description: Go to sleep.
   components:
   - type: Action
-    icon: { sprite: Clothing/Head/Hats/pyjamasyndicatered.rsi, state: icon }
+    icon: { sprite: _starcup/Interface/Actions/actions_general.rsi, state: sleep } # starcup
   - type: InstantAction
     event: !type:SleepActionEvent
 
@@ -320,7 +320,7 @@
   - type: Action
     startDelay: true
     useDelay: 2
-    icon: { sprite: Clothing/Head/Hats/pyjamasyndicatered.rsi, state: icon }
+    icon: { sprite: _starcup/Interface/Actions/actions_general.rsi, state: wake } # starcup
   - type: InstantAction
     event: !type:WakeActionEvent
 

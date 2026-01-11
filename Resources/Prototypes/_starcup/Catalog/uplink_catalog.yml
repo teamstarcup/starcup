@@ -1982,27 +1982,6 @@
         - Boxer
 
 - type: listing
-  id: uplinkNecronomiconNT
-  name: uplink-necronomicon-name
-  description: uplink-necronomicon-desc
-  productEntity: BibleNecronomicon
-  discountCategory: usualDiscounts
-  discountDownTo:
-    Telecrystal: 2
-  cost:
-    Telecrystal: 4
-  categories:
-  - UplinkJobNT
-  conditions:
-  - !type:BuyerJobCondition
-    whitelist:
-    - Chaplain
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
-
-- type: listing
   id: uplinkHolyHandGrenadeNT
   name: uplink-holy-hand-grenade-name
   description: uplink-holy-hand-grenade-desc
