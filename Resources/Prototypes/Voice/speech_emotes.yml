@@ -380,14 +380,16 @@
     - snapped fingers
 
 - type: emote
-  id: Thump
+  id: TailThump # starcup: Thump -> TailThump
   name: chat-emote-name-thump
-  category: Hands
+  category: General # starcup: why does thumping your tail require hands??
   available: false
   icon: Interface/Emotes/tailslap.png
-  whitelist:
-    components:
-    - Hands
+  # begin starcup
+  #whitelist:
+    #components:
+    #- Hands
+  # end starcup
   blacklist:
     tags:
     - SiliconEmotes

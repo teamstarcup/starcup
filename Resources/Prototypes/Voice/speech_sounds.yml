@@ -92,12 +92,14 @@
 
 - type: speechSounds
   id: Monkey
+  # begin starcup
   saySound:
-    path: /Audio/Animals/monkey_scream.ogg
+    collection: MonkeyOoks
   askSound:
-    path: /Audio/Animals/monkey_scream.ogg
+    path: /Audio/_starcup/Animals/Monkey/monkey_ask.ogg
   exclaimSound:
-    path: /Audio/Animals/monkey_scream.ogg
+    collection: MonkeyExclaims
+  # end starcup
 
 - type: speechSounds
   id: Parrot

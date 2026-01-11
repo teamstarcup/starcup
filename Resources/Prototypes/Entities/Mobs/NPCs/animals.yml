@@ -1631,9 +1631,17 @@
   components:
   - type: NameIdentifier
     group: Monkey
+  # begin starcup
+  - type: Vocal
+    sounds:
+      Male: MonkeySpeechEmotes
+      Female: MonkeySpeechEmotes
+      Unsexed: MonkeySpeechEmotes
   - type: Speech
     speechSounds: Monkey
     speechVerb: Monkey
+    allowedEmotes: ['CreatureScream', 'CreatureOok']
+  # end starcup
   - type: MonkeyAccent
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-primate
@@ -2211,15 +2219,18 @@
   id: MobLizard
   description: A harmless dragon.
   components:
-  - type: Speech # Imp edit
-    speechSounds: Lizard
+  # begin starcup
+  - type: Speech # Imp edit # nope now it's starcup
+    speechSounds: LizardSpeechSounds
     speechVerb: Reptilian
-    allowedEmotes: ['LizardHiss'] # Can't thump tail because no body component  # starcup: Hiss -> LizardHiss
-  - type: Vocal # Imp edit
+    allowedEmotes: ['CreatureScream', 'CreatureGrowl', 'CreatureHiss', 'CreatureWhimper', 'TailThump', 'TailWhip'] # Can't thump tail because no body component  # starcup: Hiss -> LizardHiss -> CreatureHiss
+  - type: Vocal # Imp edit # no it's starcup again babyyy
     sounds:
-      Male: MaleReptilian
-      Female: FemaleReptilian
-      Unsexed: MaleReptilian
+      Male: LizardSpeechEmotes
+      Female: LizardSpeechEmotes
+      Unsexed: LizardSpeechEmotes
+  - type: Deathgasp
+  # end starcup
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
     baseSprintSpeed: 3
@@ -2318,6 +2329,22 @@
     interactSuccessSpawn: EffectHearts
   - type: Bloodstream
     bloodMaxVolume: 50
+  # begin starcup
+  - type: Tag
+    tags:
+    - VimPilot
+    - CreatureEmotes # starcup
+  - type: Speech
+    speechSounds: LizardTinySpeechSounds
+    speechVerb: Reptilian
+    allowedEmotes: ['CreatureScream', 'CreatureWhimper', 'CreatureSqueak']
+  - type: Vocal
+    sounds:
+      Male: LizardTinySpeechEmotes
+      Female: LizardTinySpeechEmotes
+      Unsexed: LizardTinySpeechEmotes
+  - type: Deathgasp
+  # end starcup
 
 - type: entity
   name: frog

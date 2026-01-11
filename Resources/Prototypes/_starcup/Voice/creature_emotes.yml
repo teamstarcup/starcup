@@ -1,109 +1,7 @@
-# vocal emotes
-- type: emote
-  id: Roar
-  name: chat-emote-name-roar
-  category: Vocal
-  icon: _starcup/Interface/Emotes/roar.png
-  available: false
-  whitelist:
-    components:
-    - Vocal
-  chatMessages: ["chat-emote-msg-roar"]
-  chatTriggers:
-  - roar
-  - roars
-  - roaring
-  - roared
-  - rargh
-  - raah
-  - raahh
-  - raaahhh
-
-- type: emote
-  id: Crow
-  name: chat-emote-name-crow
-  category: Vocal
-  icon: _starcup/Interface/Emotes/crow.png
-  available: false
-  whitelist:
-    components:
-    - Vocal
-  chatMessages: ["chat-emote-msg-crow"]
-  chatTriggers:
-  - crow
-  - crowed
-  - crowing
-  - crows
-
-# general emotes
-- type: emote
-  id: Tailwhip
-  name: chat-emote-name-tailwhip
-  category: General
-  available: false
-  icon: _starcup/Interface/Emotes/tailswipe.png
-  chatMessages: ["chat-emote-msg-tailwhip"]
-  chatTriggers:
-  - whip
-  - whips
-  - whippping
-  - whipped
-  - whip tail
-  - whips tail
-  - whips their tail
-  - whips her tail
-  - whips his tail
-  - whips its tail
-
-- type: emote
-  id: Drool
-  name: chat-emote-name-drool
-  category: General
-  available: false
-  icon: _starcup/Interface/Emotes/drops.png
-  chatMessages: ["chat-emote-msg-drool"]
-  chatTriggers:
-  - drool
-  - drools
-  - drooling
-  - drooled
-
-- type: emote
-  id: Flutter
-  name: chat-emote-name-flutter
-  category: General
-  available: false
-  icon: _starcup/Interface/Emotes/wingflap.png
-  chatMessages: ["chat-emote-msg-flutter"]
-  chatTriggers:
-  - flutters
-  - fluttered
-
-- type: emote
-  id: ClawSnap
-  name: chat-emote-name-claw-snap
-  category: General
-  available: false
-  icon: _starcup/Interface/Emotes/clawsnap.png
-  chatMessages: ["chat-emote-msg-claw-snap"]
-  chatTriggers:
-  - snaps their claws
-  - snapped their claws
-
-- type: emote
-  id: ChestBeating
-  name: chat-emote-name-chest-beating
-  category: General
-  icon: _starcup/Interface/Emotes/chestbeating.png
-  available: false
-  chatMessages: ["chat-emote-msg-chest-beating"]
-  chatTriggers:
-  - beats their chest
-
 # creature vocal emotes. they have their own icons
 - type: emote
   abstract: true
-  id: CreatureEmote
+  id: CreatureEmoteBase
   name: chat-emote-name-creatureemote
   category: Vocal
   available: false
@@ -118,7 +16,7 @@
 
 - type: emote
   id: CreatureHiss
-  parent: CreatureEmote
+  parent: CreatureEmoteBase
   name: chat-emote-name-hiss
   category: Vocal
   available: false
@@ -136,7 +34,7 @@
 
 - type: emote
   id: CreatureGrowl
-  parent: CreatureEmote
+  parent: CreatureEmoteBase
   name: chat-emote-name-growl
   category: Vocal
   available: false
@@ -154,7 +52,7 @@
 
 - type: emote
   id: CreatureRoar
-  parent: CreatureEmote
+  parent: CreatureEmoteBase
   name: chat-emote-name-roar
   category: Vocal
   available: false
@@ -174,7 +72,7 @@
 
 - type: emote
   id: CreatureScream
-  parent: CreatureEmote
+  parent: CreatureEmoteBase
   name: chat-emote-name-scream
   category: Vocal
   available: false
@@ -200,7 +98,7 @@
 
 - type: emote
   id: CreatureSqueak
-  parent: CreatureEmote
+  parent: CreatureEmoteBase
   name: chat-emote-name-squeak
   category: Vocal
   available: false
@@ -213,7 +111,7 @@
 
 - type: emote
   id: CreatureLaugh
-  parent: CreatureEmote
+  parent: CreatureEmoteBase
   name: chat-emote-name-laugh
   category: Vocal
   available: false
@@ -238,7 +136,7 @@
 
 - type: emote
   id: CreatureChitter
-  parent: CreatureEmote
+  parent: CreatureEmoteBase
   name: chat-emote-name-chitter
   category: Vocal
   available: false
@@ -251,7 +149,7 @@
 
 - type: emote
   id: CreatureClick
-  parent: CreatureEmote
+  parent: CreatureEmoteBase
   name: chat-emote-name-click
   category: Vocal
   available: false
@@ -259,5 +157,34 @@
   chatMessages: ["chat-emote-msg-click"]
   chatTriggers:
   - click
-  - clickss
+  - clicks
   - clicked
+
+- type: emote
+  id: CreatureWhimper
+  parent: CreatureEmoteBase
+  name: chat-emote-name-whimper
+  category: Vocal
+  available: false
+  icon: _starcup/Interface/Emotes/whimper.png
+  chatMessages: ["chat-emote-msg-whimper"]
+  chatTriggers:
+  - whimper
+  - whimpers
+  - whimpered
+  - whine
+  - whines
+  - whined
+
+- type: emote
+  id: CreatureOok
+  parent: CreatureEmoteBase
+  name: chat-emote-name-ook
+  category: Vocal
+  available: false
+  icon: _starcup/Interface/Emotes/ook.png
+  chatMessages: ["chat-emote-msg-ook"]
+  chatTriggers:
+  - ook
+  - ooks
+  - ooked

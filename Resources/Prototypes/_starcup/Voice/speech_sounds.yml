@@ -80,6 +80,24 @@
   exclaimSound:
     collection: KangarooGrunts
 
+- type: speechSounds
+  id: LizardSpeechSounds
+  saySound:
+    collection: LizardGumbles
+  askSound:
+    path: /Audio/_starcup/Animals/Lizard/lizard_ask.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Animals/Lizard/lizard_exclaim.ogg
+
+- type: speechSounds
+  id: LizardTinySpeechSounds
+  saySound:
+    collection: LizardSqueaks
+  askSound:
+    path: /Audio/_starcup/Animals/Lizard/lizard_ask.ogg
+  exclaimSound:
+    collection: LizardSqueaks
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -259,3 +277,68 @@
       path: /Audio/Animals/kangaroo_grunt.ogg
     DefaultDeathgasp:
       path: /Audio/Animals/kangaroo_grunt.ogg
+
+- type: emoteSounds
+  id: MonkeySpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      path: /Audio/Animals/monkey_scream.ogg
+    CreatureOok:
+      collection: MonkeySqueaks
+    Gasp:
+      collection: MonkeyGasps
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Monkey/monkey_death.ogg
+
+- type: emoteSounds
+  id: FeralSlimeSpeechEmotes
+  sounds:
+    Squish:
+      collection: Squishes
+    Bubble:
+      collection: Bubbles
+    Pop:
+      collection: Pops
+  params:
+    variation: 0.125
+
+- type: emoteSounds
+  id: LizardSpeechEmotes
+  sounds:
+    CreatureScream:
+      path: /Audio/_starcup/Animals/Lizard/lizard_scream.ogg
+    CreatureGrowl:
+      collection: LizardSnarl
+    CreatureWhimper:
+      path: /Audio/_starcup/Animals/Lizard/lizard_whimper.ogg
+    CreatureHiss:
+      collection: ReptilianHiss
+    TailWhip:
+      path: /Audio/_RMC14/Xeno/alien_tail_swipe1.ogg
+    TailThump:
+      path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
+    Gasp:
+      path: /Audio/_starcup/Animals/Lizard/lizard_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Lizard/lizard_whimper.ogg
+  params:
+    variation: 0.125
+
+- type: emoteSounds
+  id: LizardTinySpeechEmotes
+  sounds:
+    CreatureScream:
+      path: /Audio/Voice/Reptilian/reptilian_scream.ogg
+    CreatureWhimper:
+      path: /Audio/_starcup/Animals/Lizard/lizard_whimper.ogg
+    CreatureSqueak:
+      collection: LizardSqueaks
+    Gasp:
+      path: /Audio/_starcup/Animals/Lizard/lizard_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Lizard/lizard_whimper.ogg
+  params:
+    variation: 0.125
+

@@ -132,14 +132,16 @@
   - type: Speech
     speechVerb: Slime
     speechSounds: Slime
-    allowedEmotes: ['Squish', 'Bubble', 'Pop', 'SlimeFizz'] # imp: added bubble and pop # starcup: added SlimeFizz
+    allowedEmotes: ['Squish', 'Bubble', 'Pop', 'Fizz'] # imp: added bubble and pop # starcup: added Fizz
   - type: TypingIndicator
     proto: slime
   - type: Vocal
-    sounds: # starcup
-      Male: AnimalSlime
-      Female: AnimalSlime
-      Unsexed: AnimalSlime
+    sounds:
+    # begin starcup
+      Male: FeralSlimeSpeechEmotes
+      Female: FeralSlimeSpeechEmotes
+      Unsexed: FeralSlimeSpeechEmotes
+    # end starcup
   - type: NpcFactionMember
     factions:
     - SimpleNeutral
