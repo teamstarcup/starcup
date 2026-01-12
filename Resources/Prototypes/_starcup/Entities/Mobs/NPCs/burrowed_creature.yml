@@ -116,6 +116,9 @@
     baseWalkSpeed : 0
     baseSprintSpeed : 0
   - type: NoSlip
+    # the components below were copied from MobDamageable, and maybe tweaked a little.
+    # the burrowed creature was not parented to it because MobDamageable has the pullable component.
+    # we don't want burrowed creatures to be pullable.
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: burrowed
