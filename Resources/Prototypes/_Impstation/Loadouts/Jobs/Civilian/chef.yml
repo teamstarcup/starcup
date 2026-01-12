@@ -1,7 +1,9 @@
 - type: loadout
   id: ChefCuteApron
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorChef
+  # begin starcup: SeniorChef does not exist
+  # effects:
+  # - !type:GroupLoadoutEffect
+  #   proto: SeniorChef
+  # end starcup
   equipment:
     outerClothing: ClothingOuterApronCuteChef
