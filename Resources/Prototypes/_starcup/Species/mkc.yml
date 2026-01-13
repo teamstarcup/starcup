@@ -25,6 +25,7 @@
   sprites:
     TailBehind: MobHumanoidAnyMarking
     TailOversuit: MobHumanoidAnyMarking
+    HeadBase: MobHumanoidAnyMarking
     Head: MobMKCHead
     HeadTop: MobHumanoidAnyMarking
     HeadSide: MobHumanoidAnyMarking
@@ -51,10 +52,13 @@
     FacialHair:
       points: 1
       required: false
-    Head:
+    HeadBase:
       points: 1
       required: true
       defaultMarkings: [ MobMKCHeadDefault ]
+    Head:
+      points: 1
+      required: false
     UndergarmentTop:
       points: 1
       required: false
@@ -73,9 +77,6 @@
       points: 4
       required: true
       defaultMarkings: [ MobMKCLArmDefault, MobMKCLHandDefault, MobMKCRArmDefault, MobMKCRHandDefault ]
-    HeadSide:
-      points: 1
-      required: false
 
 - type: humanoidBaseSprite
   id: MobMKCMarkingFollowSkin
@@ -98,8 +99,8 @@
 
 - type: marking
   id: MobMKCHeadDefault
-  bodyPart: Head
-  markingCategory: Head
+  bodyPart: HeadBase
+  markingCategory: HeadBase
   speciesRestriction: [MKC]
   sprites:
   - sprite: _EE/Mobs/Species/IPC/parts.rsi
