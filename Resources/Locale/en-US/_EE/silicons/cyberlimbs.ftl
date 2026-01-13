@@ -1,14 +1,15 @@
-marking-MobIPCHeadDefault = Standard Operational Monitor
-marking-MobIPCTorsoDefault = Standard Robotic Chassis
-marking-MobIPCTorsoFemaleDefault = Standard Robotic Chassis
-marking-MobIPCLArmDefault = Standard Left Robotic Arm
-marking-MobIPCLHandDefault = Standard Left Robotic Hand
-marking-MobIPCLLegDefault  = Standard Left Robotic Leg
-marking-MobIPCLFootDefault  = Standard Left Robotic Foot
-marking-MobIPCRArmDefault  = Standard Right Robotic Arm
-marking-MobIPCRHandDefault = Standard Right Robotic Hand
-marking-MobIPCRLegDefault = Standard Right Robotic Leg
-marking-MobIPCRFootDefault  = Standard Right Robotic Foot
+# starcup: replace IPC with MKC in key names
+marking-MobMKCHeadDefault = Standard Operational Monitor
+marking-MobMKCTorsoDefault = Standard Robotic Chassis
+marking-MobMKCTorsoFemaleDefault = Standard Robotic Chassis
+marking-MobMKCLArmDefault = Standard Left Robotic Arm
+marking-MobMKCLHandDefault = Standard Left Robotic Hand
+marking-MobMKCLLegDefault  = Standard Left Robotic Leg
+marking-MobMKCLFootDefault  = Standard Left Robotic Foot
+marking-MobMKCRArmDefault  = Standard Right Robotic Arm
+marking-MobMKCRHandDefault = Standard Right Robotic Hand
+marking-MobMKCRLegDefault = Standard Right Robotic Leg
+marking-MobMKCRFootDefault  = Standard Right Robotic Foot
 
 marking-CyberLimbsMarkingBishopHead = Operational Monitor from Bishop Cybernetics
 marking-CyberLimbsMarkingBishopHeadAlt = Head from Bishop Cybernetics
