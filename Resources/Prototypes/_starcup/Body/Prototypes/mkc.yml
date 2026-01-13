@@ -9,6 +9,7 @@
       - torso
       organs:
         eyes: OrganMKCEyes
+        tongue: OrganMKCTongue
     torso:
       part: TorsoMKC
       connections:
@@ -18,7 +19,9 @@
       - left leg
       organs:
         brain: PositronicBrain
-        heart: OrganMKCPump
+        heart: OrganMKCHeart
+        battery: OrganMKCCore
+        stomach: OrganMKCStomach
     right arm:
       part: RightArmMKC
       connections:
