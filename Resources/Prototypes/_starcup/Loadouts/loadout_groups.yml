@@ -145,7 +145,7 @@
   - EmergencyNitrogenBrigmedic
   - EmergencyOxygenBrigmedic
   - LoadoutSpeciesVoxNitrogen
-  - EmergencyIPCBox # DeltaV
+  - EmergencyMKCBox # starcup
 
 ## Detective
 - type: loadoutGroup
@@ -569,7 +569,7 @@
   - EmergencyNitrogenSyndicate
   - EmergencyOxygenSyndicate
   - LoadoutSpeciesVoxNitrogen
-  - EmergencyIPCBox # DeltaV
+  - EmergencyMKCBox # starcup
 
 - type: loadoutGroup
   parent: [ Glasses ]
@@ -682,3 +682,12 @@
   - PillCanisterCalmafluxineLoadout
   - PillCanisterEthyloxyephedrineLoadout
   - PillCanisterAgonolexyneLoadout
+
+# Species
+- type: loadoutGroup
+  id: GroupHumanoidSilicon
+  name: loadout-group-humanoid-silicon
+  minLimit: 1
+  hidden: true
+  loadouts:
+  - EmergencyIPCBox

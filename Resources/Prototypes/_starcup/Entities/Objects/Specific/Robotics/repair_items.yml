@@ -1,0 +1,33 @@
+- type: entity
+  parent: BaseItem
+  id: Oilpack
+  name: oil pack
+  suffix: Full
+  description: Contains a synthetic oil-based lubricant used by MKC chasses, which will start suffering internal damages without it.
+  components:
+  - type: Sprite
+    sprite: _DV/Objects/Medical/Oilpack.rsi
+    state: icon
+  - type: Item
+    sprite: _DV/Objects/Medical/Oilpack.rsi
+    heldPrefix: icon
+  - type: Healing
+    damageContainers:
+    - HumanoidSilicon
+    damage:
+      types:
+        Bloodloss: -0.5
+    modifyBloodLevel: 15
+  - type: Stack
+    stackType: Oilpack
+    count: 5
+  - type: StackPrice
+    price: 10
+
+- type: entity
+  parent: Oilpack
+  id: Oilpack1
+  suffix: Single
+  components:
+  - type: Stack
+    count: 1
