@@ -1638,7 +1638,7 @@
       Female: MonkeySpeechEmotes
       Unsexed: MonkeySpeechEmotes
   - type: Speech
-    speechSounds: Monkey
+    speechSounds: MonkeySpeechSounds
     speechVerb: Monkey
     allowedEmotes: ['CreatureScream', 'CreatureOok']
   # end starcup
@@ -2229,7 +2229,8 @@
       Male: LizardSpeechEmotes
       Female: LizardSpeechEmotes
       Unsexed: LizardSpeechEmotes
-  - type: Deathgasp
+  - type: ReplacementAccent
+    accent: lizard
   # end starcup
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
@@ -2333,7 +2334,7 @@
   - type: Tag
     tags:
     - VimPilot
-    - CreatureEmotes # starcup
+    - CreatureEmotes
   - type: Speech
     speechSounds: LizardTinySpeechSounds
     speechVerb: Reptilian
@@ -2343,7 +2344,8 @@
       Male: LizardTinySpeechEmotes
       Female: LizardTinySpeechEmotes
       Unsexed: LizardTinySpeechEmotes
-  - type: Deathgasp
+  - type: ReplacementAccent
+    accent: gecko
   # end starcup
 
 - type: entity
@@ -2414,6 +2416,20 @@
       behaviors:
       - !type:GibBehavior
         recursive: false
+    bloodMaxVolume: 50
+  # begin starcup
+  - type: Speech
+    speechSounds: FrogSpeechSounds
+    speechVerb: Reptilian
+    allowedEmotes: ['CreatureWhimper']
+  - type: Vocal
+    sounds:
+      Male: FrogSpeechEmotes
+      Female: FrogSpeechEmotes
+      Unsexed: FrogSpeechEmotes
+  - type: ReplacementAccent
+    accent: frog
+  # end starcup
 
 # Would be cool to have some functionality for the parrot to be able to sit on stuff
 - type: entity
@@ -2456,12 +2472,21 @@
     - id: FoodMeat
       amount: 1
     dropOrgansOnButcher: true # starcup: butchering gives organs
+  # begin starcup
   - type: Speech
-    speechSounds: Parrot
+    speechSounds: ParrotSpeechSounds
     speechVerb: Parrot
+    allowedEmotes: ['CreatureScream', 'CreatureGrowl', 'CreatureSqueak', 'Flutter']
   - type: Vocal
     sounds:
-      Unsexed: Parrot
+      Male: ParrotSpeechEmotes
+      Female: ParrotSpeechEmotes
+      Unsexed: ParrotSpeechEmotes
+  - type: Tag
+    tags:
+    - VimPilot
+    - CreatureEmotes
+  # end starcup
   - type: ActiveListener
   - type: Vocalizer
   - type: RadioVocalizer
@@ -2563,6 +2588,18 @@
     heatDamage:
       types:
         Heat : 0.2 #per second, scales with temperature & other constants
+  # begin starcup
+  - type: Speech
+    speechSounds: PenguinSpeechSounds
+    allowedEmotes: ['CreatureScream']
+  - type: Vocal
+    sounds:
+      Male: PenguinSpeechEmotes
+      Female: PenguinSpeechEmotes
+      Unsexed: PenguinSpeechEmotes
+  - type: ReplacementAccent
+    accent: Penguin
+  # end starcup
 
 # TODO: Make grenade penguin voice activated like the rest of the stealth items.
 - type: entity
@@ -2683,16 +2720,30 @@
     interactSuccessString: petting-success-reptile
     interactFailureString: petting-failure-generic
     interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/_starcup/Animals/Snake/snake_pet.ogg
   - type: Bloodstream
     bloodMaxVolume: 50
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Scale
-  # behind starcup
+  # begin starcup
+  - type: Speech
+    speechSounds: SnakeSpeechSounds
+    speechVerb: Parrot
+    allowedEmotes: ['CreatureHiss']
+  - type: Vocal
+    sounds:
+      Male: SnakeSpeechEmotes
+      Female: SnakeSpeechEmotes
+      Unsexed: SnakeSpeechEmotes
+  - type: ReplacementAccent
+    accent: xeno
   - type: Tag
     tags:
+    - VimPilot
     - CreatureEmotes
-# starcup
+  # end starcup
 
 # Code unique spider prototypes or combine them all into one spider and get a
 # random sprite state when you spawn it.

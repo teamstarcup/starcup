@@ -103,12 +103,14 @@
 
 - type: speechSounds
   id: Parrot
+  # begin starcup
   saySound:
-    path: /Audio/Animals/parrot_raught.ogg
+    collection: ParrotGrawks
   askSound:
-    path: /Audio/Animals/parrot_raught.ogg
+    collection: ParrotAsks
   exclaimSound:
-    path: /Audio/Animals/parrot_raught.ogg
+    collection: ParrotExclaims
+  # end starcup
 
 - type: speechSounds
   id: Lizard

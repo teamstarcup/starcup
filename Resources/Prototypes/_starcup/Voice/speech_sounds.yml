@@ -98,6 +98,51 @@
   exclaimSound:
     collection: LizardSqueaks
 
+- type: speechSounds
+  id: FrogSpeechSounds
+  saySound:
+    collection: FrogCroaks
+  askSound:
+    collection: FrogAsks
+  exclaimSound:
+    collection: FrogExclaims
+
+- type: speechSounds
+  id: MonkeySpeechSounds
+  saySound:
+    collection: MonkeyOoks
+  askSound:
+    path: /Audio/_starcup/Animals/Monkey/monkey_ask.ogg
+  exclaimSound:
+    collection: MonkeyExclaims
+
+- type: speechSounds
+  id: ParrotSpeechSounds
+  saySound:
+    collection: ParrotGrawks
+  askSound:
+    collection: ParrotAsks
+  exclaimSound:
+    collection: ParrotExclaims
+
+- type: speechSounds
+  id: PenguinSpeechSounds
+  saySound:
+    collection: PenguinSquawks
+  askSound:
+    collection: PenguinSquawks
+  exclaimSound:
+    collection: PenguinSquawks
+
+- type: speechSounds
+  id: SnakeSpeechSounds
+  saySound:
+    collection: SnakeHisses
+  askSound:
+    collection: SnakeHisses
+  exclaimSound:
+    collection: SnakeHisses
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -341,3 +386,73 @@
       path: /Audio/_starcup/Animals/Lizard/lizard_whimper.ogg
   params:
     variation: 0.125
+
+- type: emoteSounds
+  id: FrogSpeechEmotes
+  sounds:
+    CreatureWhimper:
+      path: /Audio/_starcup/Animals/Frog/frog_gasp.ogg
+    Gasp:
+      path: /Audio/_starcup/Animals/Frog/frog_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Frog/frog_gasp.ogg
+  params:
+    variation: 0.125
+
+- type: emoteSounds
+  id: ParrotSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      collection: ParrotScreams
+    CreatureGrowl:
+      collection: ParrotGrowls
+    CreatureSqueak:
+      collection: ParrotSqueaks
+    Flutter:
+      collection: WingRuffleSmall
+    Gasp:
+      path: /Audio/_starcup/Animals/Parrot/parrot_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Parrot/parrot_growl3.ogg
+
+- type: emoteSounds
+  id: GoatSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      collection: GoatScream
+    CreatureLaugh:
+      path: /Audio/_starcup/Animals/Goat/goat_laugh.ogg
+    Sneeze:
+      path: /Audio/_starcup/Animals/Goat/goat_sneeze.ogg
+    Gasp:
+      path: /Audio/_starcup/Animals/Goat/goat_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Goat/goat_death.ogg
+
+- type: emoteSounds
+  id: PenguinSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      path: /Audio/_starcup/Animals/Penguin/penguin_scream.ogg
+    Gasp:
+      path: /Audio/_starcup/Animals/Penguin/penguin_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Penguin/penguin_death.ogg
+
+- type: emoteSounds
+  id: SnakeSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureHiss:
+      path: /Audio/Animals/snake_hiss.ogg
+    Gasp:
+      path: /Audio/_starcup/Animals/Snake/snake_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Snake/snake_death.ogg
