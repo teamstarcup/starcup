@@ -74,6 +74,16 @@ public sealed class ButtonSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet
         MakeButtonRules(rules, buttonCfg.PositiveButtonPalette, StyleClass.Positive);
         MakeButtonRules(rules, buttonCfg.NegativeButtonPalette, StyleClass.Negative);
 
+        // begin starcup: add the AAC styles
+        MakeButtonRules(rules, buttonCfg.CommandButtonPalette, StyleClass.DepartmentCommand);
+        MakeButtonRules(rules, buttonCfg.EngineeringButtonPalette, StyleClass.DepartmentEngineering);
+        MakeButtonRules(rules, buttonCfg.ScienceButtonPalette, StyleClass.DepartmentScience);
+        MakeButtonRules(rules, buttonCfg.LogisticsButtonPalette, StyleClass.DepartmentLogistics);
+        MakeButtonRules(rules, buttonCfg.MedicalButtonPalette, StyleClass.DepartmentMedical);
+        MakeButtonRules(rules, buttonCfg.SecurityButtonPalette, StyleClass.DepartmentSecurity);
+        MakeButtonRules(rules, buttonCfg.ServiceButtonPalette, StyleClass.DepartmentService);
+        // end starcup
+
         return rules.ToArray();
     }
 

@@ -29,3 +29,43 @@
       effects:
       - !type:SatiateThirst
         factor: 2
+
+- type: reagent
+  id: CherryLimeade
+  name: reagent-name-cherry-limeade
+  parent: BaseDrink
+  desc: reagent-desc-cherry-limeade
+  physicalDesc: reagent-physical-desc-fizzy
+  flavor: cherrylimeade
+  color: "#fa1800"
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 3
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/cherrylimeade.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 6
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: EvilPrincess
+  name: reagent-name-evil-princess
+  parent: BaseDrink
+  desc: reagent-desc-evil-princess
+  physicalDesc: reagent-physical-desc-dark-red
+  flavor: evilprincess
+  color: "#771C3E"
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/evilprincess.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 3
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: true

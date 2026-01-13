@@ -67,4 +67,15 @@ public static class StyleClass
     public const string TooltipPanel = "TooltipPanel";
     public const string TooltipTitle = "TooltipTitle";
     public const string TooltipDesc = "TooltipDesc";
+
+
+    // begin starcup: departmental color classes
+    public const string DepartmentCommand = "DepartmentCommand";
+    public const string DepartmentEngineering = "DepartmentEngineering";
+    public const string DepartmentScience = "DepartmentScience";
+    public const string DepartmentLogistics = "DepartmentLogistics";
+    public const string DepartmentMedical = "DepartmentMedical";
+    public const string DepartmentSecurity = "DepartmentSecurity";
+    public const string DepartmentService = "DepartmentService";
+    // end starcup
 }
