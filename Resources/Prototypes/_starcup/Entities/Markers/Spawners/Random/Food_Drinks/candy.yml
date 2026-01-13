@@ -1,0 +1,15 @@
+- type: entity
+  id: RandomCandy
+  name: random candy spawner
+  parent: MarkerBase
+  placement:
+    mode: AlignTileAny
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _DV/Objects/Consumable/Food/candy.rsi
+      state: lollipop
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: RandomCandyTable

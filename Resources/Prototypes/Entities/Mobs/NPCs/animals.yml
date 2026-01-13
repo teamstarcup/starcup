@@ -167,7 +167,7 @@
 
 - type: entity
   name: bee
-  suffix: Angry
+  suffix: hostile # starcup: changed Angry to hostile
   parent: [ MobBee, MobCombat ]
   id: MobAngryBee
   description: How nice a bee. Oh no, it looks angry and wants my pizza.
@@ -255,6 +255,7 @@
     spawned:
     - id: FoodMeatChicken
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.8
     interactSuccessString: petting-success-bird
@@ -349,9 +350,14 @@
   id: MobCockroach
   description: This station is just crawling with bugs.
   components:
+  # begin starcup: Bug faction to not be attacked by bloodsuckers
+  - type: NpcFactionMember
+    factions:
+    - Bug
+  # end starcup
   - type: Sprite
     drawdepth: SmallMobs
-    sprite: Mobs/Animals/cockroach.rsi
+    sprite: _starcup/Mobs/Animals/Insects/cockroach.rsi # starcup
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: cockroach
@@ -392,7 +398,7 @@
   - type: Bloodstream
     bloodReagent: InsectBlood
     bloodMaxVolume: 20
-  - type: Food
+  - type: Edible
   - type: FlavorProfile
     flavors:
     - horrible
@@ -716,6 +722,7 @@
     spawned:
     - id: FoodMeatDuck
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.9
     interactSuccessString: petting-success-bird
@@ -926,6 +933,7 @@
     spawned:
     - id: FoodMeat
       amount: 5
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Grammar
     attributes:
       gender: female # Here because of UdderComponent
@@ -1092,6 +1100,7 @@
     spawned:
     - id: FoodMeat
       amount: 4
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Grammar
     attributes:
       gender: female # Here because of UdderComponent
@@ -1159,6 +1168,7 @@
     spawned:
     - id: FoodMeatChicken
       amount: 2
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup # TODO: Make it so there's a separate chance to make certain animals outright hostile towards you.
     successChance: 0.1 # Yeah, good luck with that.
     interactSuccessString: petting-success-goose
@@ -1208,6 +1218,7 @@
     spawned:
     - id: FoodMeat
       amount: 4
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Bloodstream
     bloodMaxVolume: 300
     # if you fuck with the gorilla he will harambe you
@@ -1235,6 +1246,8 @@
         true
       NavSmash: !type:Bool
         true
+  - type: Puller
+    needsHands: false
   - type: Prying
     pryPowered: true
     force: true
@@ -1285,6 +1298,7 @@
   - type: Butcherable
     spawned:
     - id: FoodMeat
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: DamageStateVisuals
     states:
       Alive:
@@ -1350,6 +1364,7 @@
   abstract: true
   components:
   - type: CombatMode
+    canDisarm: true
   - type: Inventory
     templateId: monkey
     speciesId: monkey
@@ -1459,7 +1474,7 @@
     - reagents: [ Water, SpaceCleaner ]
       methods: [ Touch ]
       effects:
-      - !type:WashCreamPieReaction
+      - !type:WashCreamPie
   - type: Crawler
 
 
@@ -1813,7 +1828,7 @@
         Base: dead-0
       Dead:
         Base: splat-0
-  - type: Food
+  - type: Edible
   - type: FlavorProfile
     flavors:
     - meaty
@@ -2006,6 +2021,12 @@
   parent: MobMouse
   id: MobMouseCancer
   components:
+  - type: GhostRole
+    name: ghost-role-information-cancer-mouse-name
+    description: ghost-role-information-cancer-mouse-description
+    rules: ghost-role-information-freeagent-rules
+    mindRoles:
+    - MindRoleGhostRoleFreeAgent
   - type: Sprite
     color: LightGreen
   - type: PointLight
@@ -2083,6 +2104,7 @@
     spawned:
     - id: FoodMeatLizard
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.3
     interactSuccessString: petting-success-reptile
@@ -2255,6 +2277,7 @@
     spawned:
     - id: FoodMeat
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Speech
     speechSounds: Parrot
     speechVerb: Parrot
@@ -2336,6 +2359,7 @@
     spawned:
     - id: FoodMeatPenguin
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-bird
@@ -2375,7 +2399,7 @@
   - type: MobMover
   - type: HTN
     rootTask:
-      task: SimpleHostileCompound
+      task: GrenadePenguinCompound
   - type: NpcFactionMember
     factions:
     - Syndicate
@@ -2423,9 +2447,9 @@
     beepInterval: 1
   - type: Explosive
     explosionType: Default
-    maxIntensity: 20
-    intensitySlope: 20
-    totalIntensity: 225
+    maxIntensity: 10
+    intensitySlope: 3
+    totalIntensity: 150
   - type: ExplodeOnTrigger
     keysIn:
     - timer
@@ -2474,6 +2498,7 @@
     spawned:
     - id: FoodMeatSnake
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.6
     interactSuccessString: petting-success-reptile
@@ -2492,6 +2517,13 @@
   id: MobSpiderBase
   abstract: true
   components:
+  # begin starcup: bug politics real
+  - type: NpcFactionMember
+    factions:
+      - SimpleNeutral
+      - BugHunter
+      - GiantBugHunter
+  # end starcup
   - type: Physics
   - type: Fixtures
     fixtures:
@@ -2508,6 +2540,7 @@
     spawned:
     - id: FoodMeatSpider
       amount: 2
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: CombatMode
   - type: Body
     prototype: AnimalHemocyanin
@@ -2576,15 +2609,27 @@
       groups:
         Brute: -0.07
         Burn: -0.07
+  # begin starcup: make spiders defend themselves and attack bugs
+  - type: NPCRetaliation
+  - type: FactionException
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  # end starcup
 
 - type: entity
   parent: MobSpiderBase
   id: MobSpiderAngryBase
+  suffix: AI, hostile
   abstract: true
   components:
   - type: NpcFactionMember
     factions:
       - Xeno
+    # begin starcup: bug politics real
+      - BugHunter
+      - GiantBugHunter
+    # end starcup
   - type: InputMover
   - type: MobMover
   - type: HTN
@@ -2745,6 +2790,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.2 # Low when undomesticated.
     interactSuccessString: petting-success-possum # Possums don't really make much noise when they're happy. They make clicking noises as a mating call, but that is NOT the same thing!
@@ -2818,6 +2864,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.2 # Low when undomesticated.
     interactSuccessString: petting-success-soft-floofy
@@ -2880,6 +2927,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-soft-floofy
@@ -2977,6 +3025,7 @@
     spawned:
     - id: FoodMeat
       amount: 2
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
     accent: dog
   - type: Tag
@@ -3081,7 +3130,7 @@
     drawdepth: Mobs
     sprite: Mobs/Pets/cat.rsi
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
+    - map: ["enum.DamageStateVisualLayers.Base", "sleeping"] # starcup: add sleeping layer for Rest
       state: cat
   - type: Physics
   - type: Fixtures
@@ -3113,6 +3162,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
     accent: cat
   - type: InteractionPopup
@@ -3144,6 +3194,21 @@
     baseSprintSpeed: 4
   - type: Puller
     needsHands: false # starcup - gives ghostrole cats more to do, lets them drag mice around to leave on their keepers' beds
+  # begin starcup
+  - type: Rest
+    sleepingLayers:
+      sleeping:
+        state: cat_rest
+    awakeLayers:
+      sleeping:
+        state: cat
+  - type: HealOnSleep
+    damage:
+      types:
+        Poison: -0.2
+        Cold: -0.4
+        Blunt: -0.2
+  # end starcup
 
 - type: entity
   name: calico cat
@@ -3153,7 +3218,7 @@
   components:
   - type: Sprite
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
+    - map: ["enum.DamageStateVisualLayers.Base", "sleeping"] # starcup: add sleeping
       state: cat2
   - type: DamageStateVisuals
     states:
@@ -3163,6 +3228,15 @@
         Base: cat2_dead
       Dead:
         Base: cat2_dead
+  # begin starcup
+  - type: Rest
+    sleepingLayers:
+      sleeping:
+        state: cat2_rest
+    awakeLayers:
+      sleeping:
+        state: cat2
+  # end starcup
 
 - type: entity
   name: syndicat
@@ -3225,7 +3299,7 @@
   components:
   - type: Sprite
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
+    - map: ["enum.DamageStateVisualLayers.Base", "sleeping"] # starcup: add sleeping
       state: spacecat
   - type: DamageStateVisuals
     states:
@@ -3254,6 +3328,15 @@
       path: /Audio/Animals/cat_meow.ogg
   - type: Respirator #It just works?
     minSaturation: 5.0
+  # begin starcup
+  - type: Rest
+    sleepingLayers:
+      sleeping:
+        state: spacecat_rest
+    awakeLayers:
+      sleeping:
+        state: spacecat
+  # end starcup
 
 - type: entity
   name: caracal cat
@@ -3274,6 +3357,11 @@
         Base: caracal_dead
       Dead:
         Base: caracal_dead
+  # begin starcup: disable sprite change as there is not a resting sprite for caracal cats
+  - type: Rest
+    sleepingLayers: {}
+    awakeLayers: {}
+  # end starcup
 
 - type: entity
   name: kitten
@@ -3283,7 +3371,7 @@
   components:
   - type: Sprite
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
+    - map: ["enum.DamageStateVisualLayers.Base", "sleeping"] # starcup: add sleeping
       state: kitten
   - type: DamageStateVisuals
     states:
@@ -3297,6 +3385,7 @@
     spawned:
     - id: FoodMeat
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: MobPrice
     price: 100
   - type: MeleeWeapon
@@ -3307,6 +3396,15 @@
     thresholds:
       0: Alive
       25: Dead
+  # begin starcup
+  - type: Rest
+    sleepingLayers:
+      sleeping:
+        state: kitten_rest
+    awakeLayers:
+      sleeping:
+        state: kitten
+  # end starcup
 
 - type: entity
   name: sloth
@@ -3350,6 +3448,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.9
     interactSuccessString: petting-success-sloth
@@ -3404,6 +3503,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.8
     interactDelay: 1.5 # Avoids overlapping SFX due to spam - these SFX are a little longer than the typical 1 second.
@@ -3418,6 +3518,7 @@
   - type: Tag
     tags:
     - VimPilot
+  - type: BurrowAbility # starcup
 
 - type: entity
   name: hamster
@@ -3493,7 +3594,7 @@
         Base: dead-0
       Dead:
         Base: splat-0
-  - type: Food
+  - type: Edible
   - type: FlavorProfile
     flavors:
     - meaty
@@ -3515,6 +3616,7 @@
     spawned:
     - id: FoodMeat
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
     accent: mouse
   - type: Tag
@@ -3621,6 +3723,7 @@
     spawned:
     - id: FoodMeatBacon
       amount: 6
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Grammar
     attributes:
       gender: epicene
@@ -3774,6 +3877,7 @@
     spawned:
     - id: FoodMeat
       amount: 4
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Bloodstream
     bloodMaxVolume: 300
     # Horns though

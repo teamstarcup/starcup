@@ -106,9 +106,32 @@
     - type: TriggerOnCollide
       fixtureID: floortrap
       maxTriggers: 1
+  # begin starcup: add burrowing ability
+    - type: EmitSoundOnTrigger
+      sound:
+        path: /Audio/_starcup/Effects/Burrowing/burrow_off_large.ogg
+      positional: true
+      predicted: true
+  # end starcup
     - type: SpawnOnTrigger
       proto: MobXenoDrone
     - type: DeleteOnTrigger
+  # begin starcup: add burrowing ability
+    - type: Sprite
+      noRot: true
+      sprite: _starcup/Mobs/Special/burrowed_large.rsi
+      drawdepth: FloorObjects
+      layers:
+      - state: burrowed1
+        map: ["random"]
+    - type: RandomSprite
+      available:
+      - random:
+          burrowed1: ""
+          burrowed2: ""
+          burrowed3: ""
+          burrowed4: ""
+  # end starcup
 
 - type: entity
   parent: CollideFloorTrapSpawn
@@ -118,6 +141,29 @@
     - type: TriggerOnCollide
       fixtureID: floortrap
       maxTriggers: 1
+  # begin starcup: add burrowing ability
+    - type: EmitSoundOnTrigger
+      sound:
+        path: /Audio/_starcup/Effects/Burrowing/burrow_off_large.ogg
+      positional: true
+      predicted: true
+  # end starcup
     - type: SpawnOnTrigger
       proto: MobXeno
     - type: DeleteOnTrigger
+  # begin starcup: add burrowing ability
+    - type: Sprite
+      noRot: true
+      sprite: _starcup/Mobs/Special/burrowed_large.rsi
+      drawdepth: FloorObjects
+      layers:
+      - state: burrowed1
+        map: ["random"]
+    - type: RandomSprite
+      available:
+      - random:
+          burrowed1: ""
+          burrowed2: ""
+          burrowed3: ""
+          burrowed4: ""
+  # end starcup

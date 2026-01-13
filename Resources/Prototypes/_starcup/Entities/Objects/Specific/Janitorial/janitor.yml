@@ -1,0 +1,88 @@
+- type: entity
+  parent: BaseItem
+  id: FeatherDuster
+  name: feather duster
+  description: A soft feather duster, able to remove rust by what we can only describe as maid magic.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Specific/Janitorial/featherduster.rsi
+    state: icon
+  - type: Item
+    storedSprite:
+      sprite: _starcup/Objects/Specific/Janitorial/featherduster.rsi
+      state: storage
+    size: Small
+  - type: Tag
+    tags:
+    - WireBrush
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 50
+      Plastic: 50
+  - type: ScrubbingTool
+  - type: Tool
+    qualities:
+    - Brushing
+    useSound:
+      path: /Audio/_starcup/Tools/dusting.ogg
+  - type: StaticPrice
+    price: 22
+  - type: MeleeWeapon
+    attackRate: 5
+    wideAnimationRotation: 50
+    damage:
+      types:
+        Blunt: 0
+    soundHit:
+      collection: ClothSmack
+
+- type: entity
+  parent: BaseItem
+  name: broom
+  id: BroomItem
+  description: Sweep that grime off the floor.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Specific/Janitorial/broom.rsi
+    layers:
+    - state: broom
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 10
+    soundHit:
+      collection: MetalThud
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 5
+  - type: Item
+    size: Large
+    sprite: _starcup/Objects/Specific/Janitorial/broom.rsi
+  - type: UseDelay
+    delay: 1
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 50
+  - type: ScrubbingTool
+  - type: Tool
+    qualities:
+    - Brushing
+    useSound:
+      path: /Audio/_starcup/Tools/sweeping.ogg
+
+- type: entity
+  parent: BroomItem
+  name: broom
+  suffix: wooden
+  id: BroomItemBrown
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Specific/Janitorial/broom_brown.rsi
+  - type: Item
+    size: Large
+    sprite: _starcup/Objects/Specific/Janitorial/broom_brown.rsi
+  - type: PhysicalComposition
+    materialComposition:
+      Wood: 50

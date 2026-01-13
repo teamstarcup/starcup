@@ -1,0 +1,59 @@
+- type: entity
+  parent: BaseStructure
+  id: BaseGlobe
+  name: globe
+  description: Probably not life-sized.
+  abstract: true
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Animateable
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Dynamic
+  - type: Sprite
+    drawdepth: LargeObjects
+    sprite: _starcup/Objects/Fun/globes.rsi
+    noRot: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        mask:
+          - HighImpassable
+        density: 100
+  - type: Pullable
+  - type: StaticPrice
+    price: 75
+
+- type: entity
+  parent: BaseGlobe
+  id: ToyGlobeAncientEarth
+  name: ancient globe
+  description: An antique globe depicting some sort of verdant paradise.
+  components:
+  - type: Sprite
+    state: earth
+
+- type: entity
+  parent: BaseGlobe
+  id: ToyGlobeLavaland
+  name: lavaland globe
+  description: A globe depicting the fiery moon known for its ash storms. Those little specks must be the dead salvagers.
+  components:
+  - type: Sprite
+    state: lavaland
+
+- type: entity
+  parent: BaseGlobe
+  id: ToyGlobeYssmoon
+  name: yssmoon globe
+  description: A globe depicting Yss's eerie unnamed moon, known for its molten plasma rivers. Frigid and perilous.
+  components:
+  - type: Sprite
+    state: yssmoon

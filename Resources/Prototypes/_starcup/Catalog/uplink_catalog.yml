@@ -752,6 +752,15 @@
           - SurplusBundle
 
 # Deception
+- type: listing
+  id: UplinkNanotrasenIDCard
+  name: uplink-nanotrasen-id-card-name
+  description: uplink-nanotrasen-id-card-desc
+  productEntity: NanotrasenIDCard
+  cost:
+    Telecrystal: 1
+  categories:
+  - UplinkDeception
 
 - type: listing
   id: UplinkAgentIDCardNT
@@ -1971,27 +1980,6 @@
     - !type:BuyerJobCondition
       whitelist:
         - Boxer
-
-- type: listing
-  id: uplinkNecronomiconNT
-  name: uplink-necronomicon-name
-  description: uplink-necronomicon-desc
-  productEntity: BibleNecronomicon
-  discountCategory: usualDiscounts
-  discountDownTo:
-    Telecrystal: 2
-  cost:
-    Telecrystal: 4
-  categories:
-  - UplinkJobNT
-  conditions:
-  - !type:BuyerJobCondition
-    whitelist:
-    - Chaplain
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
 
 - type: listing
   id: uplinkHolyHandGrenadeNT

@@ -1,0 +1,54 @@
+- type: entityTable
+  id: RandomCandyTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      children:
+        - id: FoodSnackChocolate
+        - id: FoodSnackChocolateImitation
+    - id: FoodSnackGummyBear
+    - id: FoodSnackGummyWormLarge
+      weight: 0.2
+    - id: FoodSnackChocolateBarLarjWrapped
+      weight: 0.2
+    - id: FoodSnackSwirlLollipop
+      weight: 0.1
+    - !type:NestedSelector
+      tableId: RandomLollipop
+    - !type:NestedSelector
+      tableId: RandomGumball
+    - !type:NestedSelector
+      tableId: RandomHardCandy
+
+- type: entityTable
+  id: RandomGumball
+  table: !type:GroupSelector
+    children:
+    - id: FoodGumballBasic
+    - id: FoodGumballBanana
+    - id: FoodGumballBlueRaspberry
+    - id: FoodGumballCherry
+    - id: FoodGumballGrape
+    - id: FoodGumballLemonLime
+    - id: FoodGumballOrange
+    - id: FoodGumballPineapple
+    - id: FoodGumballStrawberry
+
+- type: entityTable
+  id: RandomLollipop
+  table: !type:GroupSelector
+    children:
+    - id: FoodLollipopBlueRaspberry
+    - id: FoodLollipopBubblegum
+    - id: FoodLollipopButterscotch
+    - id: FoodLollipopCottonCandy
+    - id: FoodLollipopCherry
+    - id: FoodLollipopGrape
+    - id: FoodLollipopLemonLime
+    - id: FoodLollipopMango
+    - id: FoodLollipopOrange
+    - id: FoodLollipopPineapple
+    - id: FoodLollipopRootBeer
+    - id: FoodLollipopSourApple
+    - id: FoodLollipopStrawberry
+    - id: FoodLollipopWatermelon

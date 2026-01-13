@@ -318,7 +318,7 @@
 - type: entity
   parent: Holopad
   id: HolopadCommandQm
-  suffix: QM
+  suffix: LO # starcup: QM > LO
   components:
   - type: Label
     currentLabel: holopad-command-qm
@@ -497,7 +497,7 @@
 - type: entity
   parent: Holopad
   id: HolopadCargoFront
-  suffix: Cargo Front
+  suffix: Logistics Front # starcup: cargo > logistics
   components:
   - type: Label
     currentLabel: holopad-cargo-front
@@ -521,7 +521,7 @@
 - type: entity
   parent: Holopad
   id: HolopadCargoBreakroom
-  suffix: Cargo Breakroom
+  suffix: Logistics Breakroom # starcup: cargo > logistics
   components:
   - type: Label
     currentLabel: holopad-cargo-breakroom
@@ -529,7 +529,7 @@
 - type: entity
   parent: Holopad
   id: HolopadCargoMailroom
-  suffix: Cargo Mailroom
+  suffix: Mailroom # starcup: remove cargo, just call it the mail room
   components:
   - type: Label
     currentLabel: holopad-cargo-mailroom
@@ -715,7 +715,7 @@
 - type: entity
   parent: Holopad
   id: HolopadSecurityBrigMed
-  suffix: Brig Med
+  suffix: Combat Medic # starcup: rename brigmedic to combat medic
   components:
   - type: Label
     currentLabel: holopad-security-brig-med

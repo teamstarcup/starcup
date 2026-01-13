@@ -3,7 +3,7 @@
   alias:
     - survival
   name: survival-title
-  showInVote: false # secret
+  showInVote: true # starcup
   description: survival-description
   rules:
     - MeteorSwarmScheduler
@@ -119,7 +119,7 @@
     - secret
     - sekrit
   name: secret-title
-  showInVote: false # starcup: disable secret
+  showInVote: true
   description: secret-description
   rules:
     - Secret
@@ -146,9 +146,9 @@
   rules:
   - DummyNonAntagChance
   - Traitor
-  - SubGamemodesRule
-  - BasicStationEventScheduler
-  - MeteorSwarmScheduler
+  # - SubGamemodesRuleNoWizard # starcup: put thieves in their own gamemode
+  - TroubleStationEventScheduler # starcup: change to trouble scheduler
+  # - SlowMeteorSwarmScheduler # starcup: remove separate meteor scheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
 
@@ -175,7 +175,7 @@
   rules:
   - Nukeops
   - DummyNonAntagChance
-  - SubGamemodesRule
+  - SubGamemodesRuleNoWizard
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
@@ -193,7 +193,7 @@
   rules:
   - DummyNonAntagChance
   - Revolutionary
-  - SubGamemodesRule
+  - SubGamemodesRuleNoWizard
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler

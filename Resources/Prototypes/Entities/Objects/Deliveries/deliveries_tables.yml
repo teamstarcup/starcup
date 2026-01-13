@@ -1,0 +1,143 @@
+### Spawners
+- type: entityTable
+  id: RandomDeliveryBasic
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomDeliveryLetterBasic
+      weight: 0.7
+    - !type:NestedSelector
+      tableId: RandomDeliveryPackageBasic
+      weight: 0.3
+
+# Letters
+
+- type: entityTable # Used to pick between all different letter types, if there will be more
+  id: RandomDeliveryLetterBasic
+  table: !type:GroupSelector
+    children:
+    - id: LetterDelivery
+
+# Packages
+
+- type: entityTable # Used to pick between all different package types, if there will be more
+  id: RandomDeliveryPackageBasic
+  table: !type:GroupSelector
+    children:
+    - id: PackageDelivery
+
+### Reward Tables
+
+- type: entityTable
+  id: LetterDeliveryRewards
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: LetterCommonEntityTable
+      weight: 0.6
+    - !type:NestedSelector
+      tableId: LetterUncommonEntityTable
+      weight: 0.3
+    - !type:NestedSelector
+      tableId: LetterRareEntityTable
+      weight: 0.1
+
+- type: entityTable
+  id: PackageDeliveryRewards
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: PackageCommonEntityTable
+      weight: 0.6
+    - !type:NestedSelector
+      tableId: PackageUncommonEntityTable
+      weight: 0.3
+    - !type:NestedSelector
+      tableId: PackageRareEntityTable
+      weight: 0.1
+
+### Loot Tables
+# begin starcup: completely redid all of these tables
+
+# Letters
+- type: entityTable
+  id: LetterCommonEntityTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomFoodDrinkSmallTable
+    - !type:NestedSelector
+      tableId: RandomUsableFunSmallTable
+    - !type:NestedSelector
+      tableId: RandomCollectibleTable
+
+- type: entityTable
+  id: LetterUncommonEntityTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomUsablePracticalSmallTable
+      weight: 0.35
+    - !type:NestedSelector
+      tableId: RandomPrankHarmlessSmallTable
+      weight: 0.35
+    - !type:NestedSelector
+      tableId: RandomAccessoryTable
+      weight: 0.30
+
+- type: entityTable
+  id: LetterRareEntityTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomCombatGearSmallTable
+      weight: 0.4
+    - !type:NestedSelector
+      tableId: RandomPrankDangerousSmallTable
+      weight: 0.2
+    - !type:NestedSelector
+      tableId: RandomUsableDangerousSmallTable
+      weight: 0.4
+
+# Packages
+- type: entityTable
+  id: PackageCommonEntityTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomUsableFunTable
+      weight: 0.6
+    - !type:NestedSelector
+      tableId: RandomFoodDrinkTable
+      weight: 0.4
+      rolls: 2
+
+- type: entityTable
+  id: PackageUncommonEntityTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomCostumeTable
+    - !type:NestedSelector
+      tableId: RandomUsablePracticalTable
+    - !type:NestedSelector
+      tableId: RandomPrankHarmlessTable
+
+- type: entityTable
+  id: PackageRareEntityTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomPrankDangerousTable
+      weight: 0.1
+    - !type:NestedSelector
+      tableId: RandomCombatGearTable
+      weight: 0.55
+    - !type:NestedSelector
+      tableId: RandomUsableDangerousTable
+      weight: 0.15
+    - !type:NestedSelector
+      tableId: RandomTraitorGearTable
+      weight: 0.2
+
+# end starcup

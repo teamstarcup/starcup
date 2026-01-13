@@ -1,13 +1,15 @@
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SpawnMobCarp
   name: Space Carp Spawner
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
     - state: icon
       sprite: Mobs/Aliens/Carps/space.rsi
+    - state: ai # starcup
   - type: ConditionalSpawner
     prototypes:
     - MobCarp
@@ -18,43 +20,49 @@
     # end starcup: expanded carp and sharkminnows
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SpawnMobCarpHolo
   name: Holocarp Spawner
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
     - state: icon
       sprite: Mobs/Aliens/Carps/holo.rsi
+    - state: ai # starcup
   - type: ConditionalSpawner
     prototypes:
     - MobCarpHolo
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SpawnMobCarpMagic
   name: Magicarp Spawner
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
     - state: icon
       sprite: Mobs/Aliens/Carps/magic.rsi
+    - state: ai # starcup
   - type: ConditionalSpawner
     prototypes:
     - MobCarpMagic
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SpawnMobShark
   name: Space Sharkminnow Spawner
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
     - state: icon
       sprite: Mobs/Aliens/Carps/sharkminnow.rsi
+    - state: ai # starcup
   - type: ConditionalSpawner
     prototypes:
     - MobShark

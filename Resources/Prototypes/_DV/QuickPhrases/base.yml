@@ -40,41 +40,41 @@
 - type: quickPhrase
   id: BaseCommandPhrase
   group: Command
-  styleClass: CommandButton
+  styleClass: DepartmentCommand # starcup: change to department class
   abstract: true
 
 - type: quickPhrase
   id: BaseEngineeringPhrase
   group: Engineering
-  styleClass: EngineeringButton
+  styleClass: DepartmentEngineering # starcup: change to department class
   abstract: true
 
 - type: quickPhrase
   id: BaseSciencePhrase # starcup: epistemics to science
   group: Science # starcup: epistemics to science
-  styleClass: ScienceButton # starcup: epistemics to science
+  styleClass: DepartmentScience # starcup: change to department class & epistemics to science
   abstract: true
 
 - type: quickPhrase
   id: BaseLogisticsPhrase
   group: Logistics
-  styleClass: LogisticsButton
+  styleClass: DepartmentLogistics # starcup: change to department class
   abstract: true
 
 - type: quickPhrase
   id: BaseMedicalPhrase
   group: Medical
-  styleClass: MedicalButton
+  styleClass: DepartmentMedical # starcup: change to department class
   abstract: true
 
 - type: quickPhrase
   id: BaseSecurityPhrase
   group: Security
-  styleClass: SecurityButton
+  styleClass: DepartmentSecurity # starcup: change to department class
   abstract: true
 
 - type: quickPhrase
   id: BaseServicePhrase
   group: Service
-  styleClass: ServiceButton
+  styleClass: DepartmentService # starcup: change to department class
   abstract: true

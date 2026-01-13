@@ -1,0 +1,75 @@
+- type: entityTable
+  id: RandomUsableFunSmallTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: AllMiscToysTable
+    - !type:NestedSelector
+      tableId: AllToySoundMakerTable
+    - !type:NestedSelector
+      tableId: RandomLighterTable
+    - !type:NestedSelector
+      tableId: SlipTable
+    - !type:NestedSelector
+      tableId: RandomSmokeablesTable
+
+- type: entityTable
+  id: RandomUsableFunTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: AllToyWeaponsTable
+    - !type:NestedSelector
+      tableId: RandomInstrumentTable
+    - !type:GroupSelector
+      weight: 0.1 # weighted low because the other tables have way more options
+      children:
+      - id: ClothingShoesBootsMoon
+      - id: RGBStaff
+
+- type: entityTable
+  id: RandomCollectibleTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: AllFigurinesTable
+    - !type:NestedSelector
+      tableId: AllPlushiesTable
+
+- type: entityTable
+  id: RandomLighterTable
+  table: !type:GroupSelector
+    children:
+    - id: CheapLighter
+    - id: FlippoLighter
+    - id: FlippoEngravedLighter
+    - id: MysteryLighterBox
+
+- type: entityTable
+  id: RandomSmokeablesTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      children:
+      - id: CigPackGreen
+      - id: CigPackRed
+      - id: CigPackBlue
+      - id: CigPackBlack
+      - id: CigPackSyndicate
+      - id: CigPackMixed
+    - !type:GroupSelector
+      children:
+      - id: Joint
+      - id: JointRainbow
+      - id: Blunt
+      - id: BluntRainbow
+    - !type:GroupSelector
+      children:
+      - id: CigarCase
+      - id: CigarGoldCase
+    - !type:GroupSelector
+      children:
+      - id: SmokingPipeFilledTobacco
+      - id: SmokingPipeFilledCannabis
+      - id: SmokingPipeFilledCannabisRainbow
+    - id: Vape

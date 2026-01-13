@@ -7,6 +7,7 @@
   - type: StorageFill
     contents:
       - id: MopItem
+      - id: BroomItem # starcup: add misc tools & tweaks
       - id: MopBucketCubeWrapped
       - id: Bucket
         amount: 3
@@ -20,8 +21,10 @@
       - id: Plunger
         amount: 2
       - id: BoxCleanerGrenades
+    # begin starcup: replacing a wire brush with a feather duster
       - id: WireBrush
-        amount: 2
+      - id: FeatherDuster
+    # end starcup
 
 - type: entity
   id: CrateServiceCleanerGrenades
@@ -242,7 +245,7 @@
 
 - type: entity
   id: CrateServiceSodaDispenser
-  parent: CrateGenericSteel
+  parent: CrateFreezer
   name: soda dispenser refill crate
   description: Contains refills for soda dispensers.
   components:
@@ -271,7 +274,7 @@
 
 - type: entity
   id: CrateServiceBoozeDispenser
-  parent: CrateGenericSteel
+  parent: CrateFreezer
   name: booze dispenser refill crate
   description: Contains refills for booze dispensers.
   components:
@@ -289,6 +292,7 @@
       - id: DrinkVodkaBottleFull
       - id: DrinkWhiskeyBottleFull
       - id: DrinkWineBottleFull
+      - id: DrinkJaegermisterBottleFull # Den - Jaegerminster
 
 - type: entity
   id: CrateServiceBox
@@ -326,10 +330,19 @@
           # Creatures
         - id: MobCockroach
           prob: 0.05
+          orGroup: TrashVermin # starcup: add insects, honey, roach resprite
         - id: MobMothroach
           prob: 0.03
         - id: MobMouse
           prob: 0.05
+          # begin starcup: add insects, honey, roach resprite
+        - id: MobFlySwarm
+          prob: 0.05
+          orGroup: TrashVermin
+        - id: MobCockroachHL
+          prob: 0.05
+          orGroup: TrashVermin
+          # end starcup
           # Food Packaging
         - id: FoodPacketBoritosTrash
           prob: 0.1

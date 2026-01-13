@@ -96,6 +96,20 @@
     - id: MobMoproach
       prob: 0.0005
 
+- type: entity
+  id: FliesMigration
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    weight: 6
+    duration: 50
+  - type: VentCrittersRule
+    entries:
+      - id: MobFlySwarm
+
 # hostiles
 
 - type: entity
@@ -199,3 +213,23 @@
       prob: 0.0006
     - id: MobXenoQueen
       prob: 0.0003
+
+- type: entity
+  id: MosquitoSpawnLocalized
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 20
+    minimumPlayers: 10
+    weight: 6
+    duration: 30
+  - type: VentCrittersRuleLocalized
+    table: !type:GroupSelector
+      children:
+      - id: MobMosquitoSwarm
+        weight: 0.7
+      - id: MobGiantMosquito
+        weight: 0.3

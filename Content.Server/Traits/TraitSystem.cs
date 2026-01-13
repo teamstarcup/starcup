@@ -1,3 +1,4 @@
+using Content.Server._starcup.Administration.Commands; // starcup
 using Content.Shared.GameTicking;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
@@ -19,7 +20,16 @@ public sealed class TraitSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawnComplete);
+        SubscribeLocalEvent<AdminSpawnCompleteEvent>(OnAdminSpawnComplete); // starcup
     }
+
+    // begin starcup: so admin spawn can apply traits but not trigger other systems.
+    private void OnAdminSpawnComplete(AdminSpawnCompleteEvent ev)
+    {
+        // To avoid touching too many things
+        OnPlayerSpawnComplete(new PlayerSpawnCompleteEvent(ev.Mob, ev.Player, ev.JobId, false, true, 0, ev.Mob, ev.Profile));
+    }
+    // end starcup
 
     // When the player is spawned in, add all trait components selected during character creation
     private void OnPlayerSpawnComplete(PlayerSpawnCompleteEvent args)

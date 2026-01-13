@@ -165,6 +165,7 @@
     tags:
     - Brutepack
   - type: Sprite
+    sprite: _Impstation/Objects/Specific/Medical/medical.rsi # starcup
     state: medicated-suture
   - type: Item
     heldPrefix: medicated-suture
@@ -320,7 +321,7 @@
     stackType: Gauze
     count: 10
   - type: StackPrice
-    price: 10
+    price: 5 # starcup: 10 -> 5 for recipe cost decrease
 
 - type: entity
   id: Gauze1
@@ -333,9 +334,24 @@
 - type: entity
   name: aloe cream
   description: A topical cream for burns.
-  parent: Ointment ##Yes it's a direct reskin
+  parent: BaseHealingItem # IMP: make distinct from ointment
   id: AloeCream
   components:
+  # begin IMP changes
+  - type: Healing
+    damageContainers:
+      - Biological
+    damage:
+      types:
+        Heat: -10
+    healingBeginSound:
+      path: "/Audio/Items/Toys/ToyFall2.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/ointment_end.ogg"
+  - type: EmitSoundOnLand
+    sound:
+      path: "/Audio/Voice/Slime/slime_squish.ogg"
+  # end IMP
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/aloe.rsi
     state: cream
