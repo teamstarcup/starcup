@@ -58,6 +58,34 @@
       sprite: "Effects/creampie.rsi"
       state: "creampie_human"
       visible: false
+  - type: Barotrauma
+    damage:
+      types:
+        Heat: 0.6 # from 0.1, blunt damage removed
+  - type: Temperature # mirrored from parent, changes noted
+    heatDamageThreshold: 365 # from 325
+    coldDamageThreshold: 200 # from 260
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold: 0.1
+    heatDamage:
+      types:
+        Heat: 1.5
+  - type: TemperatureSpeed # mirrored from parent, changes noted
+    thresholds:
+      235: 0.9 # from 293
+      220: 0.8 # from 280
+      200: 0.7 # from 260
+  - type: ThermalRegulator # mirrored from parent, changes noted
+    metabolismHeat: 800
+    radiatedHeat: 100
+    implicitHeatRegulation: 250 # from 500
+    sweatHeatRegulation: 1000 # from 2000
+    shiveringHeatRegulation: 1000 # from 2000
+    normalBodyTemperature: 310.15
+    thermalRegulationTemperatureThreshold: 10 # originally 2
 
 - type: entity
   name: Urist McSilicon
