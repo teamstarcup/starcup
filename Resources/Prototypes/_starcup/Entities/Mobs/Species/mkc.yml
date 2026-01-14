@@ -91,7 +91,17 @@
     shiveringHeatRegulation: 1000 # from 2000
     normalBodyTemperature: 310.15
     thermalRegulationTemperatureThreshold: 10 # from 2
-  # TODO: emp knockout component
+  - type: TriggerOnEmp
+  - type: StunOnTrigger
+    stunAmount: 10
+  - type: KnockdownOnTrigger
+    knockdownAmount: 10
+    autoStand: false
+  - type: EntityEffectOnTrigger
+    effects:
+    - !type:ModifyStatusEffect
+      effectProto: StatusEffectMuted
+      time: 10
 
 - type: entity
   name: Urist McSilicon
