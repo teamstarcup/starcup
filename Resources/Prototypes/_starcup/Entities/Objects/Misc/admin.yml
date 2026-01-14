@@ -5,14 +5,16 @@
   description: A belt with everything a mapper could ever need.
   suffix: Admin
   components:
-  - type: StorageFill
-    contents:
-    - id: Multitool
-    - id: SprayPainterRecharging
-    - id: PowerDrill
-    - id: JawsOfLife
-    - id: WelderExperimental
-    - id: AccessConfiguratorUniversal
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: Multitool
+        - id: SprayPainterRecharging
+        - id: PowerDrill
+        - id: JawsOfLife
+        - id: WelderExperimental
+        - id: AccessConfiguratorUniversal
   - type: Storage
     maxItemSize: Huge
     whitelist: null
@@ -35,18 +37,20 @@
     whitelist: null
     grid:
     - 0,0,7,5
-  - type: StorageFill
-    contents:
-    - id: SheetSteel
-    - id: SheetGlass
-    - id: SheetPlastic
-    - id: SheetRGlass
-    - id: SheetPlasteel
-    - id: SheetPlasma
-    - id: SheetUranium
-    - id: MaterialWoodPlank
-    - id: MaterialCloth
-    - id: PartRodMetal
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: SheetSteel
+        - id: SheetGlass
+        - id: SheetPlastic
+        - id: SheetRGlass
+        - id: SheetPlasteel
+        - id: SheetPlasma
+        - id: SheetUranium
+        - id: MaterialWoodPlank
+        - id: MaterialCloth
+        - id: PartRodMetal
 
 - type: entity
   id: AdminMedkit
@@ -64,16 +68,16 @@
     whitelist: null
     grid:
     - 0,0,5,3
-  - type: StorageFill
-    contents:
-    - id: DefibrillatorOneHandedUnpowered
-    - id: MedicatedSuture
-    - id: RegenerativeMesh
-    - id: CombatMedipen
-    - id: CombatMedipen
-    - id: CombatMedipen
-    - id: CombatMedipen
-    - id: Bloodpack
-    - id: Bloodpack
-    - id: Oilpack
-    - id: Oilpack
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DefibrillatorOneHandedUnpowered
+        - id: MedicatedSuture
+        - id: RegenerativeMesh
+        - id: CombatMedipen
+          amount: 4
+        - id: Bloodpack
+          amount: 2
+        - id: Oilpack
+          amount: 2

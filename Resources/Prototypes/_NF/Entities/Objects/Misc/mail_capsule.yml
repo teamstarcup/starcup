@@ -30,9 +30,9 @@
           - Document
           - Mail
           components:
-          - Mail
+          - Delivery # starcup: changed from Mail
           - Paper
-          - HyperlinkBook
+#          - HyperlinkBook # starcup: unused
         insertOnInteract: true
         priority: 3
       food_slot:
@@ -42,7 +42,7 @@
         startingItem: null
         whitelist:
           components:
-          - Food
+          - Edible # starcup: replaced from Food
         insertOnInteract: true
         priority: 2
       cash_slot:
@@ -79,7 +79,7 @@
       icon-food:
         whitelist:
           components:
-          - Food
+          - Edible # starcup: replaced from Food
       icon-cash:
         whitelist:
           components:
@@ -91,9 +91,9 @@
           - Document
           - Mail
           components:
-          - Mail
+          - Delivery # starcup: changed from Mail
           - Paper
-          - HyperlinkBook
+    #     - HyperlinkBook # starcup: unused
     sprite: _NF/Objects/Misc/mail_capsule.rsi
   - type: Dumpable
   - type: Damageable
@@ -130,10 +130,12 @@
   - type: Storage
     grid:
     - 0,0,4,3
-  - type: StorageFill
-    contents:
-      - id: MailCapsulePrimed
-        amount: 10
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MailCapsulePrimed
+          amount: 10
   - type: Sprite
     layers:
       - state: box

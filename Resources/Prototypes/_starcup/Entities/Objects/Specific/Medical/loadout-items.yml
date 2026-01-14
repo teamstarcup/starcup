@@ -7,10 +7,12 @@
   name: narcolepsy medication
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-    - id: PillEthyloxyephedrine
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PillEthyloxyephedrine
+          amount: 5
 
 - type: entity
   parent: PillCanister
@@ -18,10 +20,12 @@
   name: painkiller medication
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-    - id: PillSoretizone
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PillSoretizone
+          amount: 5
 
 - type: entity
   parent: PillCanister
@@ -29,10 +33,12 @@
   name: strong painkiller medication
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-    - id: PillAgonolexyne
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PillAgonolexyne
+          amount: 5
 
 - type: entity
   parent: PillCanister
@@ -40,10 +46,12 @@
   name: antidepressant medication
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-    - id: PillNeurozenium
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PillNeurozenium
+          amount: 5
 
 - type: entity
   parent: PillCanister
@@ -51,7 +59,9 @@
   name: anxiety medication
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-    - id: PillCalmafluxine
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PillCalmafluxine
+          amount: 5

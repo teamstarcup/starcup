@@ -46,10 +46,12 @@
   components:
   - type: Sprite
     state: gummy_bear
-  - type: StorageFill
-    contents:
-    - id: FoodSnackGummyBear
-      amount: 18
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: FoodSnackGummyBear
+          amount: 18
 
 - type: entity
   parent: CandyBagBase

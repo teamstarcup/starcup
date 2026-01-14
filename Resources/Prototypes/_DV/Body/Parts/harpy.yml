@@ -35,25 +35,27 @@
 - type: entity
   id: HeadHarpy
   name: "harpy head"
-  parent: PartHarpy
+  parent: [PartHarpy, BaseHead] # starcup: added parent
   components:
   - type: Sprite
     netsync: false
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
     state: "head_m"
-  - type: Icon
-    sprite: _DV/Mobs/Species/Harpy/parts.rsi
-    state: "head_m"
-  - type: BodyPart
-    partType: Head
-    vital: true
-  - type: Input
-    context: "ghost"
-  - type: InputMover
-  - type: GhostOnMove
-  - type: Tag
-    tags:
-      - Head
+  # begin starcup: inherited from parent
+#  - type: Icon
+#    sprite: _DV/Mobs/Species/Harpy/parts.rsi
+#    state: "head_m"
+#  - type: BodyPart
+#    partType: Head
+#    vital: true
+#  - type: Input
+#    context: "ghost"
+#  - type: InputMover
+#  - type: GhostOnMove
+#  - type: Tag
+#    tags:
+#      - Head
+  # end starcup
 
 - type: entity
   id: LeftArmHarpy

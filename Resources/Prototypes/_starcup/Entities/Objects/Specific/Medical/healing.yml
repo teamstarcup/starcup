@@ -24,10 +24,12 @@
   components:
   - type: Label
     currentLabel: caramexinin 10u
-  - type: StorageFill
-    contents:
-    - id: PillCaramexinin
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PillCaramexinin
+          amount: 5
 
 - type: entity
   parent: Pill
@@ -55,7 +57,9 @@
   components:
   - type: Label
     currentLabel: ethyloxyephedrine 10u
-  - type: StorageFill
-    contents:
-    - id: PillEthyloxyephedrine
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PillEthyloxyephedrine
+          amount: 5

@@ -4,7 +4,9 @@
   id: BoxEncryptionKeyNT
   description: Two NanoTrasen encryption keys for the price of one. Miniaturized for ease of use.
   components:
-  - type: StorageFill
-    contents:
-      - id: EncryptionKeyNT
-        amount: 2
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: EncryptionKeyNT
+          amount: 2

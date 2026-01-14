@@ -5,10 +5,12 @@
   id: NanotrasenSpongeBox
   description: Drymate brand monkey cubes. Just add water!
   components:
-  - type: StorageFill
-    contents:
-      - id: NanotrasenSpongeWrapped
-        amount: 6
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NanotrasenSpongeWrapped
+          amount: 6
   - type: Sprite
     sprite: Objects/Misc/monkeycube.rsi
     state: box

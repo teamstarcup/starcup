@@ -3,12 +3,14 @@
   suffix: NanoTrasen
   parent: [BaseTraitorContraband, ElectricalDisruptionKit]
   components:
-    - type: StorageFill
-      contents:
-        - id: EmpGrenade
-          amount: 3
-        - id: EmpImplanterNT
-          amount: 1
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+          - id: EmpGrenade
+            amount: 3
+          - id: EmpImplanterNT
+            amount: 1
 
 - type: entity
   parent: [BaseTraitorContraband, ThrowingKnivesKit]
@@ -16,10 +18,12 @@
   suffix: NanoTrasen
   description: A set of 4 NanoTrasen branded throwing knives, perfect for embedding into the body of your victims.
   components:
-  - type: StorageFill
-    contents:
-      - id: ThrowingKnifeNT
-        amount: 4
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ThrowingKnifeNT
+          amount: 4
   - type: Sprite
     layers:
       - state: box_of_doom_nt
@@ -34,10 +38,12 @@
     layers:
       - state: box_of_doom_nt
       - state: syringe
-  - type: StorageFill
-    contents:
-      - id: DeathRattleImplanterNT
-        amount: 6
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DeathRattleImplanterNT
+          amount: 6
 
 - type: entity
   parent: [BaseTraitorContraband, CombatBakeryKit]
@@ -48,10 +54,12 @@
     layers:
       - state: box_of_doom_nt
       - state: france
-  - type: StorageFill
-    contents:
-      - id: WeaponCroissant
-        amount: 2
-      - id: WeaponBaguette
-      - id: NanotrasenMicrowaveMachineCircuitboard
-      - id: PaperWrittenCombatBakeryKitNT
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: WeaponCroissant
+          amount: 2
+        - id: WeaponBaguette
+        - id: NanotrasenMicrowaveMachineCircuitboard
+        - id: PaperWrittenCombatBakeryKitNT

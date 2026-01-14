@@ -49,6 +49,8 @@ loadout-group-bartender-shoes = Bartender shoes
 
 loadout-group-botanist-shoes = Botanist shoes
 
+loadout-group-boxer-jumpsuit = Boxer jumpsuit
+loadout-group-boxer-gloves = Boxer gloves
 loadout-group-boxer-shoes = Boxer shoes
 
 loadout-group-chaplain-shoes = Chaplain shoes

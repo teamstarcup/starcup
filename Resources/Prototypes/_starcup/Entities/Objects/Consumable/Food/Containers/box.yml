@@ -11,24 +11,24 @@
   - type: Item
     sprite: _starcup/Objects/Storage/Happyhonk/nukie.rsi
     heldPrefix: box
-  - type: StorageFill
-    contents:
-      - id: C4
-        prob: 0.02
-        orGroup: GiftPool
-      - id: ToyMarauder
-        orGroup: GiftPool
-      - id: ToyMauler
-        orGroup: GiftPool
-      - id: ToyNuke
-        orGroup: GiftPool
-      - id: ToySword
-        orGroup: GiftPool
-      - id: BalloonNT
-        prob: 0.6
-        orGroup: GiftPool
-      - id: PlushieNukeNT
-        orGroup: GiftPool
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: HappyHonkToyUnsafeNTEntityTable
+
+- type: entityTable # size: 1x2
+  id: HappyHonkToyUnsafeNTEntityTable
+  table: !type:GroupSelector
+    children:
+    - id: C4
+      weight: 0.02
+    - id: ToyMarauder
+    - id: ToyMauler
+    - id: ToyNuke
+    - id: ToySword
+    - id: BalloonNT
+      weight: 0.6
+    - id: PlushieNukeNT
 
 - type: entity
   parent: [BaseTraitorContraband, HappyHonkNukieSnacks]
@@ -41,43 +41,27 @@
   - type: Item
     sprite: _starcup/Objects/Storage/Happyhonk/nukie.rsi
     heldPrefix: box
-  - type: StorageFill
-    contents:
-    # toy
-    - id: C4
-      prob: 0.02
-      orGroup: GiftPool
-    - id: ToyMarauder
-      orGroup: GiftPool
-    - id: ToyMauler
-      orGroup: GiftPool
-    - id: ToyNuke
-      orGroup: GiftPool
-    - id: ToySword
-      orGroup: GiftPool
-    - id: BalloonNT
-      prob: 0.6
-      orGroup: GiftPool
-    - id: PlushieNukeNT
-      orGroup: GiftPool
-    # drinks - 4 cans, up to 2 blood-red brews
-    - id: DrinkNukieCan
-      prob: 0.2
-      orGroup: Drink1Pool
-    - id: DrinkColaCan
-      orGroup: Drink1Pool
-    - id: DrinkNukieCan
-      prob: 0.2
-      orGroup: Drink2Pool
-    - id: DrinkColaCan
-      orGroup: Drink2Pool
-    - id: DrinkColaCan
-      amount: 2
-    # food
-    - id: FoodSaladValid
-      prob: 0.05
-      amount: 4
-      orGroup: FoodPool
-    - id: FoodSnackNT
-      amount: 4
-      orGroup: FoodPool
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        # toy
+        - !type:NestedSelector
+          tableId: HappyHonkToyUnsafeNTEntityTable
+        # drinks - 4 cans, up to 2 blood-red brews
+        - !type:GroupSelector
+          rolls: 2
+          children:
+          - id: DrinkNukieCan
+            weight: 0.2
+          - id: DrinkColaCan
+        - id: DrinkColaCan
+          amount: 2
+        # food
+        - !type:GroupSelector
+          children:
+          - id: FoodSaladValid
+            weight: 0.05
+            amount: 4
+          - id: FoodSnackNT
+            amount: 4

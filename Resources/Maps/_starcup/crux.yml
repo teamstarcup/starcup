@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 267.3.0
+  engineVersion: 270.1.0
   forkId: ""
   forkVersion: ""
-  time: 12/29/2025 10:07:13
+  time: 01/10/2026 09:16:23
   entityCount: 14196
 maps:
 - 1
@@ -3820,6 +3820,7 @@ entities:
     - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: NavMap
+    - type: ExplosionAirtightGrid
 - proto: AACTablet
   entities:
   - uid: 4
@@ -9558,14 +9559,6 @@ entities:
     components:
     - type: Transform
       pos: 22.630543,9.851931
-      parent: 2
-- proto: BaseGasCondenser
-  entities:
-  - uid: 615
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -41.5,-7.5
       parent: 2
 - proto: BaseSofaTypePlainGrayCorner
   entities:
@@ -27675,6 +27668,13 @@ entities:
     - type: Transform
       pos: -9.523239,-7.403449
       parent: 2
+- proto: CargoMailTeleporter
+  entities:
+  - uid: 9989
+    components:
+    - type: Transform
+      pos: -22.5,-26.5
+      parent: 2
 - proto: CargoRequestComputerCircuitboard
   entities:
   - uid: 4181
@@ -34323,6 +34323,13 @@ entities:
     components:
     - type: Transform
       pos: -29.421078,10.543703
+      parent: 2
+- proto: CondenserMachineCircuitBoard
+  entities:
+  - uid: 615
+    components:
+    - type: Transform
+      pos: -39.550083,-9.485465
       parent: 2
 - proto: ContainmentFieldGenerator
   entities:
@@ -64196,7 +64203,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 38.5,-4.5
       parent: 2
-- proto: GlowstickBase
+- proto: GlowstickGreen
   entities:
   - uid: 9286
     components:
@@ -68614,13 +68621,6 @@ entities:
     components:
     - type: Transform
       pos: -43.249405,13.48962
-      parent: 2
-- proto: MailTeleporterSyndie
-  entities:
-  - uid: 9989
-    components:
-    - type: Transform
-      pos: -22.5,-26.5
       parent: 2
 - proto: MaintenanceFluffSpawner
   entities:
