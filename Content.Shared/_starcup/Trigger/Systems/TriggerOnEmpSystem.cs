@@ -15,6 +15,6 @@ public sealed partial class TriggerOnEmpSystem : TriggerOnXSystem
 
     private void OnEmpPulse(Entity<TriggerOnEmpComponent> ent, ref EmpPulseEvent args)
     {
-        Trigger.Trigger(ent.Owner, null, ent.Comp.KeyOut);
+        Trigger.Trigger(ent.Owner, args.User, ent.Comp.KeyOut);
     }
 }
