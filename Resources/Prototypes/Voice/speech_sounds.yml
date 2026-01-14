@@ -141,12 +141,14 @@
 
 - type: speechSounds
   id: Arachnid
+  # begin starcup
   saySound:
-    path: /Audio/Voice/Talk/arachnid.ogg
+    collection: ArachnidSays
   askSound:
-    path: /Audio/Voice/Talk/arachnid_ask.ogg
+    collection: ArachnidAsks
   exclaimSound:
-    path: /Audio/Voice/Talk/arachnid_exclaim.ogg
+    collection: ArachnidExclaims
+  # end starcup
 
 - type: speechSounds
   id: Cat

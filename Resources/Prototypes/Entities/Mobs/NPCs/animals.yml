@@ -2730,7 +2730,7 @@
   # begin starcup
   - type: Speech
     speechSounds: SnakeSpeechSounds
-    speechVerb: Parrot
+    speechVerb: Reptilian
     allowedEmotes: ['CreatureHiss']
   - type: Vocal
     sounds:
@@ -2816,12 +2816,12 @@
   - type: Speech
     speechVerb: Arachnid
     speechSounds: Arachnid
-    allowedEmotes: ['Click', 'Chitter']
+    allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureClick', 'CreatureChitter'] # starcup
   - type: Vocal
     sounds:
-      Male: UnisexArachnid
-      Female: UnisexArachnid
-      Unsexed: UnisexArachnid
+      Male: SpiderSpeechEmotes
+      Female: SpiderSpeechEmotes
+      Unsexed: SpiderSpeechEmotes
   - type: TypingIndicator
     proto: spider
   - type: Tag
@@ -2847,10 +2847,14 @@
         Burn: -0.07
   # begin starcup: make spiders defend themselves and attack bugs
   - type: NPCRetaliation
+    attackMemoryLength: 15
   - type: FactionException
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepGiantBug
   # end starcup
 
 - type: entity
