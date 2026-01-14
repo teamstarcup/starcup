@@ -69,8 +69,10 @@
         - ReagentId: UncookedAnimalProteins
           Quantity: 3
   - type: Bloodstream
-    bloodReagent: Blood
-    bloodMaxVolume: 50
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 50
   - type: Destructible
     thresholds:
     - trigger:

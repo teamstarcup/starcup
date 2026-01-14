@@ -60,6 +60,8 @@ public sealed partial class IdCardConsoleComponent : Component
         "Detective",
         "Engineering",
         "External",
+        "GenpopEnter",
+        "GenpopLeave",
         "HeadOfPersonnel",
         "HeadOfSecurity",
         "Hydroponics",

@@ -28,7 +28,7 @@
       0: Alive
       6: Dead
   - type: Stamina
-    critThreshold: 6
+    baseCritThreshold: 6
     animationThreshold: 1
   - type: DamageStateVisuals
     states:
@@ -44,8 +44,10 @@
     tags:
     - Trash
   - type: Bloodstream
-    bloodReagent: InsectBlood
-    bloodMaxVolume: 0.1
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: InsectBlood
+        Quantity: 0.1
   - type: ZombieImmune
   - type: Destructible
     thresholds:
@@ -96,7 +98,7 @@
       0: Alive
       35: Dead
   - type: Stamina
-    critThreshold: 10
+    baseCritThreshold: 10
     animationThreshold: 1
   - type: DamageStateVisuals
     states:
@@ -108,8 +110,10 @@
         Base: dead
   - type: Tag
   - type: Bloodstream
-    bloodReagent: InsectBlood
-    bloodMaxVolume: 0.1
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: InsectBlood
+        Quantity: 0.1
   - type: NPCRetaliation
   - type: FactionException
   - type: HTN
@@ -513,8 +517,10 @@
       Dead:
         Base: beetle_dead
   - type: Bloodstream
-    bloodReagent: InsectBlood
-    bloodMaxVolume: 20
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: InsectBlood
+        Quantity: 20
   - type: Edible
   - type: FlavorProfile
     flavors:

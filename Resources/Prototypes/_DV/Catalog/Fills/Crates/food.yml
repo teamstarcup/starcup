@@ -4,15 +4,17 @@
   name: HydroCo Dairy crate
   description: A shipment of powdered dairy products from HydroCo. Contains powdered milk and soy milk.
   components:
-    - type: StorageFill
-      contents:
-        - id: PaperCrateHydroCoConsumption
-        - id: SpoonPlastic
-          amount: 2
-        - id: ReagentTinPowderedMilk
-          amount: 2
-        - id: ReagentTinPowderedMilkSoy
-          amount: 2
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:AllSelector
+          children:
+          - id: PaperCrateHydroCoConsumption
+          - id: SpoonPlastic
+            amount: 2
+          - id: ReagentTinPowderedMilk
+            amount: 2
+          - id: ReagentTinPowderedMilkSoy
+            amount: 2
 
 - type: entity
   parent: CratePlastic

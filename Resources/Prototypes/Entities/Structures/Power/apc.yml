@@ -16,7 +16,7 @@
       path: /Audio/Ambience/Objects/hdd_buzz.ogg
   - type: PointLight
     radius: 3  # starcup: 1.5 -> 3
-    energy: 0.2  # starcup: 1.6 -> 0.2
+    energy: 0.2  # starcup: 3.0 -> 0.2
     color: "#3db83b"
     castShadows: false
     netsync: false
@@ -61,6 +61,11 @@
   - type: Appearance
   - type: ApcVisuals
   - type: Battery
+    # Very important:
+    # Disable networking to prevent the battery getting continuously dirtied every tick as it interacts with the power network.
+    # This can not be done by changing the charge rate as the power supply ramps up over time.
+    # This disables prediction for this battery.
+    netsync: false
     maxCharge: 50000
     startingCharge: 0
   - type: ExaminableBattery

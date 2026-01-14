@@ -3,19 +3,23 @@
   suffix: Filled
   parent: MedkitSilicon
   components:
-  - type: StorageFill
-    contents:
-      - id: Welder
-      - id: ClothingHeadHatWelding
-      - id: CableApcStack
-      - id: Oilpack
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: Welder
+        - id: ClothingHeadHatWelding
+        - id: CableApcStack
+        - id: Oilpack
 
 - type: entity
   id: StimkitFilledNT
   suffix: Stimkit, Filled, NanoTrasen
   parent: Medkit
   components:
-  - type: StorageFill
-    contents:
-      - id: StimpackMiniNT
-        amount: 6
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: StimpackMiniNT
+          amount: 6

@@ -23,7 +23,9 @@
   parent: [BaseTraitorContraband, BoxHoloparasite]
   id: BoxHoloparasiteNT
   components:
-  - type: StorageFill
-    contents:
-      - id: HoloparasiteInjectorNT
-      - id: HoloparasiteInfoNT
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: HoloparasiteInjectorNT
+        - id: HoloparasiteInfoNT

@@ -204,7 +204,6 @@
   - Accessibility # starcup
   - Trinkets
   - JanitorJobTrinkets
-  - JanitorPlunger
   - JanitorLight # starcup: adds a choice between flashlights/lanterns. who goers there
   - Survival
   - GroupSpeciesBreathTool
@@ -472,7 +471,6 @@
   - Accessibility # starcup
   - Trinkets
   - HeadofSecurityJobTrinkets
-  - SecurityStar
   - SecurityAllFirearm # DeltaV - loadouts
   - SecurityAllAmmo # DeltaV - loadouts
   - SurvivalSecurity
@@ -492,7 +490,6 @@
   - Accessibility # starcup
   - Trinkets
   - WardenJobTrinkets
-  - SecurityStar
   - SecurityAllFirearm # DeltaV - loadouts
   - SecurityAllAmmo # DeltaV - loadouts
   - SurvivalSecurity
@@ -514,7 +511,6 @@
   - Accessibility # starcup
   - Trinkets
   - SecurityJobTrinkets
-  - SecurityStar
   - SecurityFirearm # DeltaV - loadouts
   - SecurityFirearmAmmo # DeltaV - loadouts
   - GroupSpeciesBreathToolSecurity
@@ -532,7 +528,6 @@
   - Accessibility # starcup
   - Trinkets
   - DetectiveJobTrinkets
-  - SecurityStar
   - SecurityRevolverFirearm # DeltaV - loadouts
   - SecurityRevolverAmmo # DeltaV - loadouts
   - SurvivalSecurity
@@ -651,18 +646,6 @@
 
 # Wildcards
 - type: roleLoadout
-  id: JobZookeeper
-  groups:
-  - CommonBackpack
-  - Glasses
-  - Accessibility # starcup
-  - Trinkets
-  - ZookeeperJobTrinkets
-  - Survival
-  - GroupSpeciesBreathTool
-  - GroupTankHarness
-
-- type: roleLoadout
   id: JobReporter
   groups:
   - Scarfs # starcup
@@ -689,22 +672,6 @@
   - Accessibility # starcup
   - Trinkets
   - PsychologistJobTrinkets
-  - Survival
-  - GroupSpeciesBreathTool
-  - GroupTankHarness
-
-- type: roleLoadout
-  id: JobBoxer
-  groups:
-  - Scarfs # starcup
-  - BoxerJumpsuit
-  - CommonBackpack
-  - BoxerGloves
-  - BoxerShoes # starcup
-  - Glasses
-  - Accessibility # starcup
-  - Trinkets
-  - BoxerJobTrinkets
   - Survival
   - GroupSpeciesBreathTool
   - GroupTankHarness
@@ -769,6 +736,11 @@
   - GroupTankHarness
 
 - type: roleLoadout
+  id: RoleSurvivalMilitaryDouble
+  groups:
+  - SurvivalMilitaryDouble
+
+- type: roleLoadout
   id: RoleSurvivalNukie
   groups:
   - SurvivalSyndicate
@@ -780,3 +752,8 @@
   groups:
   - GroupEVATank
   - SurvivalExtended
+
+- type: roleLoadout
+  id: RoleSurvivalSpaceNinja
+  groups:
+  - GroupEVATank
