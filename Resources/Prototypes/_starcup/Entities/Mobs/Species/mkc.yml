@@ -66,11 +66,12 @@
     damage:
       types:
         Heat: 0.6 # from 0.1, blunt damage removed
-  - type: Temperature # mirrored from parent, changes noted
-    heatDamageThreshold: 365 # from 325
-    coldDamageThreshold: 200 # from 260
+  - type: Temperature
     currentTemperature: 310.15
     specificHeat: 42
+  - type: TemperatureDamage # mirrored from parent, changes noted
+    heatDamageThreshold: 365 # from 325
+    coldDamageThreshold: 200 # from 260
     coldDamage:
       types:
         Cold: 0.1
@@ -89,7 +90,7 @@
     sweatHeatRegulation: 1000 # from 2000
     shiveringHeatRegulation: 1000 # from 2000
     normalBodyTemperature: 310.15
-    thermalRegulationTemperatureThreshold: 10 # originally 2
+    thermalRegulationTemperatureThreshold: 10 # from 2
   # TODO: emp knockout component
 
 - type: entity
