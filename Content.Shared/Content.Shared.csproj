@@ -24,10 +24,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="_starcup\Cards\Rotation\" />
+    <Compile Remove="_starcup\Cards\Rotation\SparotCardRotationComponent.cs" />
+    <Compile Remove="_starcup\MKC\PowerCoreComponent.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="_starcup\Cards\Rotation\SparotCardRotationComponent.cs" />
+    <Folder Include="_starcup\MKC\" />
+    <Folder Include="_starcup\Species\" />
   </ItemGroup>
   <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />
   <Import Project="..\RobustToolbox\MSBuild\Robust.CompNetworkGenerator.targets" />
