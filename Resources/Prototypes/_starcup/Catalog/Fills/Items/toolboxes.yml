@@ -3,25 +3,23 @@
   id: ToolboxNanotrasenFilled
   suffix: Filled, NanoTrasen
   components:
-  - type: StorageFill
-    contents:
-    - id: Crowbar
-    # begin starcup: add misc tools & tweaks
-    - id: Wrench
-      orGroup: Wrenches
-    - id: HeavyWrench
-      orGroup: Wrenches
-    - id: MonkeyWrench
-      orGroup: Wrenches
-    - id: PipeWrench
-      orGroup: Wrenches
-    # end starcup: add misc tools & tweaks
-    - id: Screwdriver
-    - id: Wirecutter
-    - id: Welder
-    - id: Multitool
-    - id: ClothingHandsGlovesCombat
-    - id: ClothingMaskGasNanotrasen
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: Crowbar
+        - !type:GroupSelector
+          children:
+          - id: Wrench
+          - id: HeavyWrench
+          - id: MonkeyWrench
+          - id: PipeWrench
+        - id: Screwdriver
+        - id: Wirecutter
+        - id: Welder
+        - id: Multitool
+        - id: ClothingHandsGlovesCombat
+        - id: ClothingMaskGasNanotrasen
 
 - type: entity
   id: ToolboxElectricalTurretFilledNT
@@ -29,17 +27,7 @@
   suffix: Turret, NanoTrasen, Filled
   parent: ToolboxElectricalTurret
   components:
-  - type: StorageFill
-    contents:
-      - id: Screwdriver
-      - id: CrowbarOrange
-      - id: Wirecutter
-      - id: CableApcStack10
-      - id: CableMVStack10
-      - id: trayScanner
-        prob: 0.9
-      - id: ClothingHandsGlovesColorYellow
-        prob: 0.05
-        orGroup: GlovesOrWires
-      - id: CableHVStack10
-        orGroup: GlovesOrWires
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: ToolboxElectricalEntityTable

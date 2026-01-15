@@ -54,8 +54,10 @@
         layer:
         - MobLayer
   - type: Bloodstream
-    bloodMaxVolume: 75
-    bloodReagent: Plasma # starcup: replaced anomalium since we don't have that
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Plasma # starcup: replaced anomalium since we don't have that
+        Quantity: 75
   - type: InteractionPopup
     successChance: 0.1
     interactSuccessString: petting-success-anomalite
@@ -207,13 +209,14 @@
     damageContainer: Biological
     damageModifierSet: AnomalitePyroclastic
   - type: Temperature
+    currentTemperature: 310.15
+    specificHeat: 42
+  - type: TemperatureDamage
     heatDamageThreshold: 325
     coldDamageThreshold: 0
-    currentTemperature: 310.15
     coldDamage:
       types:
         Cold: 0.1
-    specificHeat: 42
     heatDamage:
       types:
         Heat: 0.0
@@ -316,13 +319,14 @@
     damageContainer: Biological
     damageModifierSet: AnomaliteIce
   - type: Temperature
+    currentTemperature: 310.15
+    specificHeat: 42
+  - type: TemperatureDamage
     heatDamageThreshold: 325
     coldDamageThreshold: 0
-    currentTemperature: 310.15
     coldDamage:
       types:
         Cold: 0.0
-    specificHeat: 42
     heatDamage:
       types:
         Heat: 1.5

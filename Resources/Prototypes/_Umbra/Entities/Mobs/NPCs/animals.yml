@@ -32,7 +32,7 @@
         - SmallMobMask
         layer:
         - SmallMobLayer
-  - type: Item 
+  - type: Item
     size: Normal
   - type: CanEscapeInventory
   - type: Speech
@@ -69,8 +69,10 @@
         - ReagentId: UncookedAnimalProteins
           Quantity: 3
   - type: Bloodstream
-    bloodReagent: Blood
-    bloodMaxVolume: 50
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 50
   - type: Destructible
     thresholds:
     - trigger:
@@ -91,7 +93,7 @@
     allowMovement: true
     name: ghost-role-information-bunny-name
     description: ghost-role-information-bunny-description
-    rules: ghost-role-information-freeagent-rules  
+    rules: ghost-role-information-freeagent-rules
   - type: CombatMode
   - type: MeleeWeapon
     soundHit:
@@ -109,7 +111,7 @@
       - ActionCritSuccumb
       - ActionCritFakeDeath
       - ActionCritLastWords
-  - type: NonSpreaderZombie  
+  - type: NonSpreaderZombie
   - type: StaticPrice
     price: 50
   - type: NpcFactionMember
@@ -121,3 +123,4 @@
     - CannotSuicide
     - VimPilot
     - Meat
+  - type: BurrowAbility # starcup

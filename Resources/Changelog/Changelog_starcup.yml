@@ -2376,3 +2376,253 @@
   id: 8332
   time: '2025-12-31T06:33:14.0000000+00:00'
   url: https://github.com/teamstarcup/starcup/pull/648
+- author: KoboldCatgirl
+  changes:
+  - message: Updated robotics control console's description and access limits.
+    type: Fix
+  id: 8333
+  time: '2026-01-02T23:43:33.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/658
+- author: KoboldCatgirl
+  changes:
+  - message: Fixed Saltern's emergency lights!
+    type: Fix
+  - message: Removed Saltern's CE/QM/RD id consoles
+    type: Remove
+  - message: Gave Saltern a dining area APC, a cutting machine, and an AI Restoration
+      Console, plus other stuff.
+    type: Tweak
+  id: 8334
+  time: '2026-01-02T23:44:27.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/655
+- author: KoboldCatgirl
+  changes:
+  - message: Restored Command access to SyndComm booth + other bugfixes
+    type: Tweak
+  id: 8335
+  time: '2026-01-02T23:43:33.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/657
+- author: Nesoryo, Nikovnik, kotobdev
+  changes:
+  - message: Added alternative typing indicators for whispering, emoting, using the
+      radio, and (L)OOC-ing!
+    type: Add
+  id: 8336
+  time: '2026-01-03T05:31:20.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/650
+- author: princesspengy
+  changes:
+  - message: meteor events should now be less frequent during all non-survival gamemodes
+    type: Tweak
+  id: 8337
+  time: '2026-01-03T09:06:12.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/659
+- author: KoboldCatgirl
+  changes:
+  - message: Removed roundstart shadow anomalies from the Latestart gamemode.
+    type: Remove
+  - message: increased Latestart's arrival shuttle time from 1 minute to 4 minutes.
+    type: Tweak
+  id: 8338
+  time: '2026-01-04T06:42:56.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/661
+- author: Oxdeception
+  changes:
+  - message: Department notice boards should no longer be filled with blank papers.
+      Remember to check them if you see a notice!
+    type: Tweak
+  id: 8339
+  time: '2026-01-04T06:49:50.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/660
+- author: foxcurl
+  changes:
+  - message: MKCs can no longer take the narcolepsy trait, as it does not work properly
+      on them.
+    type: Tweak
+  id: 8340
+  time: '2026-01-06T03:45:57.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/664
+- author: foxcurl
+  changes:
+  - message: The Research Director and Chief Medical Officer now have Externals access.
+    type: Tweak
+  id: 8341
+  time: '2026-01-06T03:57:57.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/663
+- author: Oxdeception
+  changes:
+  - message: The supply account should now receive the full value of transactions
+      instead of half. Restitution for the stolen funds is not available to employees
+      or contractors at this time.
+    type: Fix
+  id: 8342
+  time: '2026-01-06T03:57:57.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/662
+- author: princesspengy
+  changes:
+  - message: crux's main smes array has been swapped to basic units to better match
+      the roundstart power supply of other stations
+    type: Tweak
+  id: 8343
+  time: '2026-01-07T05:56:19.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/666
+- author: princesspengy
+  changes:
+  - message: smes batteries have had their storage greatly increased, increasing the
+      length of time a station can stay powered at roundstart
+    type: Tweak
+  id: 8344
+  time: '2026-01-07T06:04:18.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/665
+- author: princesspengy
+  changes:
+  - message: loop's main smes array has been swapped to basic units to better match
+      the roundstart power supply of other stations
+    type: Tweak
+  id: 8345
+  time: '2026-01-07T06:04:18.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/667
+- author: foxcurl
+  changes:
+  - message: Glow in the dark stars and variants are actually craftable now.
+    type: Fix
+  id: 8346
+  time: '2026-01-07T06:11:25.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/668
+- author: Eightballll
+  changes:
+  - message: Ported Jaegermister and its resulting cocktails (as well as chartruse)
+      from DenStation!
+    type: Add
+  id: 8347
+  time: '2026-01-07T06:23:42.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/669
+- author: princesspengy
+  changes:
+  - message: mail drop tables have been reworked, resulting in a much wider array
+      of possible results!
+    type: Add
+  - message: mail now uses fingerprint scans instead of ID scans. note that you don't
+      need to take your gloves off!
+    type: Tweak
+  - message: replaced mail-related sprites with upstream's
+    type: Tweak
+  - message: the mail metrics cartridge has been, for now, removed as a necessity
+      of the mail rework. long live the success rate...!
+    type: Remove
+  - message: you can now forcibly cut open mail using any cutting tool
+    type: Add
+  - message: mail now spawns inside of the mail teleporter, and must be retrieved
+      via right-click verb
+    type: Tweak
+  - message: the reward for delivering mail has been adjusted, and now varies slightly
+      between deliveries
+    type: Tweak
+  id: 8348
+  time: '2026-01-08T20:16:38.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/612
+- author: little-meow-meow
+  changes:
+  - message: chaplains can now sanctify any item at roundstart to grant it the healing
+      powers and other properties previously limited to bibles! for more details,
+      read the chaplain's new guidebook entry
+    type: Add
+  - message: bibles no longer have inherent special properties in light of this new
+      system
+    type: Remove
+  - message: the chaplain's healing no longer has a chance to fail and damage the
+      target instead
+    type: Tweak
+  - message: the sound effect for the chaplain's healing has been changed
+    type: Tweak
+  - message: the necronomicon has been removed from the traitor uplink, pending possible
+      reworks
+    type: Remove
+  - message: bibles have been removed from the chaplain's roundstart loadout
+    type: Remove
+  id: 8349
+  time: '2026-01-08T23:16:08.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/645
+- author: princesspengy
+  changes:
+  - message: the thief gamemode will now actually select thieves
+    type: Fix
+  id: 8350
+  time: '2026-01-09T03:07:22.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/672
+- author: Oxdeception
+  changes:
+  - message: Added the 'spawncharacter' command to easily spawn your SyndComm or other
+      characters with their components and outfits already set up.
+    type: Add
+  - message: Added the 'spawnplayer' command. This is similar to spawncharacter spawn
+      but for another player's current character.
+    type: Add
+  id: 8351
+  time: '2026-01-09T05:50:30.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/673
+- author: Psymbiote
+  changes:
+  - message: Added a burrowing ability to bunnies, ferrets and goliaths. NPCs will
+      not use it, they'll only burrow when controlled by a player or GM. Because of
+      the way xenos work, the ability wasn't given to burrowers as of this time.
+    type: Add
+  - message: Changed the sprite of xeno floor traps so they'll share it with burrowed
+      creatures, and added a noise alert when they're sprung. Traps involving other
+      mobs, like space animals, are unchanged.
+    type: Tweak
+  id: 8352
+  time: '2026-01-11T06:40:48.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/676
+- author: princesspengy
+  changes:
+  - message: added 30 new mixed drinks for bartenders to make, focused on unusual
+      or uncommon ingredients!
+    type: Add
+  id: 8353
+  time: '2026-01-13T02:53:41.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/670
+- author: Oxdeception
+  changes:
+  - message: The AAC tablet's buttons have colors again!
+    type: Fix
+  id: 8354
+  time: '2026-01-13T07:36:10.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/679
+- author: foxcurl
+  changes:
+  - message: Detailed examines are now visible from any range.
+    type: Tweak
+  id: 8355
+  time: '2026-01-13T07:43:10.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/680
+- author: starlighthowls
+  changes:
+  - message: Added new cute aprons for the bartender and chef
+    type: Add
+  id: 8356
+  time: '2026-01-14T03:56:55.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/678
+- author: Psymbiote
+  changes:
+  - message: Spiders' retaliation over friendly fire will expire after 15 seconds.
+      Shiva will no longer hate you forever if you accidentally stick your knife in
+      her.
+    type: Fix
+  id: 8357
+  time: '2026-01-15T06:50:15.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/682
+- author: princesspengy
+  changes:
+  - message: mail will now spawn less frequently
+    type: Tweak
+  - message: less packages will be spawned by mail compared to letters
+    type: Tweak
+  - message: rare results from mail (combat gear, hostile creatures, etc) will appear
+      less often
+    type: Tweak
+  - message: in addition to the above, creatures will appear from mail less often
+    type: Tweak
+  id: 8358
+  time: '2026-01-15T07:32:58.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/683

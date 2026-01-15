@@ -53,8 +53,8 @@
 #          FoodMeatChickenFriedVox:
 #            min: 3
 #            max: 5
-#      - !type:BurnBodyBehavior { }
-#      - !type:PlaySoundBehavior
+#      - !type:BurnBodyBehavior
+#        popupMessage: bodyburn-vox-text-others
 #        sound:
 #          collection: MeatLaserImpact
 # end starcup
@@ -93,7 +93,10 @@
       Burn:
         sprite: Mobs/Effects/burn_damage.rsi
   - type: Bloodstream
-    bloodReagent: AmmoniaBlood
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: AmmoniaBlood
+        Quantity: 300
   - type: Carriable # Carrying system from Nyanotrasen
   - type: MeleeWeapon
     soundHit:

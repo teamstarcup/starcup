@@ -31,7 +31,12 @@
   #       amount: 5
   # end starcup
   - type: Bloodstream
-    bloodReagent: Sugar
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 100
+      - ReagentId: Butter
+        Quantity: 200
   - type: Fixtures
     fixtures:
       fix1:

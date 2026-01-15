@@ -20,4 +20,14 @@ public interface IButtonConfig : ISheetletConfig
     public ColorPalette ButtonPalette { get; }
     public ColorPalette PositiveButtonPalette { get; }
     public ColorPalette NegativeButtonPalette { get; }
+
+    // begin starcup: department buttons
+    public ColorPalette CommandButtonPalette { get; }
+    public ColorPalette EngineeringButtonPalette { get; }
+    public ColorPalette ScienceButtonPalette { get; }
+    public ColorPalette LogisticsButtonPalette { get; }
+    public ColorPalette MedicalButtonPalette { get; }
+    public ColorPalette SecurityButtonPalette { get; }
+    public ColorPalette ServiceButtonPalette { get; }
+    // end starcup
 }

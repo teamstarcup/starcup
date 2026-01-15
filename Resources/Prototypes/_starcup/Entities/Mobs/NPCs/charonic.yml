@@ -43,7 +43,7 @@
     baseWalkSpeed: 2.5
     baseSprintSpeed: 3.5
   - type: Stamina
-    critThreshold: 100
+    baseCritThreshold: 100
   - type: DamageStateVisuals
     states:
       Alive:
@@ -84,8 +84,10 @@
       - !type:GibBehavior
         recursive: false
   - type: Bloodstream
-    bloodReagent: VentCrud
-    bloodMaxVolume: 300
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: VentCrud
+        Quantity: 300
 
 - type: entity
   name: glowing object
@@ -206,8 +208,10 @@
         0: Alive
         75: Dead
     - type: Bloodstream
-      bloodReagent: MuteToxin
-      chemicalMaxVolume: 100
+      bloodReferenceSolution:
+        reagents:
+        - ReagentId: MuteToxin
+          Quantity: 100
     - type: ExaminableSolution
       solution: bloodstream
     - type: InjectableSolution

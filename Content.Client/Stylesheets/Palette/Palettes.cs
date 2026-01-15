@@ -27,4 +27,14 @@ public static class Palettes
     // Intended to be used with `ModulateSelf` to darken / lighten something
     public static readonly ColorPalette AlphaModulate = ColorPalette.FromHexBase("#ffffff");
 
+    // begin starcup: department color palettes
+    public static readonly ColorPalette DepartmentCommand = ColorPalette.FromHexBase("#55203f");
+    public static readonly ColorPalette DepartmentEngineering = ColorPalette.FromHexBase("#77684B");
+    public static readonly ColorPalette DepartmentScience = ColorPalette.FromHexBase("#6F5973");
+    public static readonly ColorPalette DepartmentLogistics = ColorPalette.FromHexBase("#61503A");
+    public static readonly ColorPalette DepartmentMedical = ColorPalette.FromHexBase("#49687D");
+    public static readonly ColorPalette DepartmentSecurity = ColorPalette.FromHexBase("#724449");
+    public static readonly ColorPalette DepartmentService = ColorPalette.FromHexBase("#607952");
+    // end starcup
+
 }

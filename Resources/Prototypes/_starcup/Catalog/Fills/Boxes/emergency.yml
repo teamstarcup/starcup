@@ -5,15 +5,17 @@
   description: It's a box with basic internals inside.
   suffix: Combat Medic
   components:
-  - type: StorageFill
-    contents:
-    - id: ClothingMaskBreathMedicalSecurity
-    - id: EmergencyOxygenTankFilled
-    - id: EmergencyMedipen
-    - id: SpaceMedipen
-    - id: Flare
-    - id: FoodPSB
-    - id: DrinkWaterBottleFull
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingMaskBreathMedicalSecurity
+        - id: EmergencyOxygenTankFilled
+        - id: EmergencyMedipen
+        - id: SpaceMedipen
+        - id: Flare
+        - id: FoodPSB
+        - id: DrinkWaterBottleFull
   - type: Sprite
     layers:
     - state: internals
@@ -24,15 +26,17 @@
   id: BoxSurvivalBrigmedicNitrogen
   suffix: Combat Medic N2
   components:
-  - type: StorageFill
-    contents:
-    - id: ClothingMaskBreathMedicalSecurity
-    - id: EmergencyNitrogenTankFilled
-    - id: EmergencyMedipen
-    - id: SpaceMedipen
-    - id: Flare
-    - id: FoodPSB
-    - id: DrinkWaterBottleFull
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingMaskBreathMedicalSecurity
+        - id: EmergencyNitrogenTankFilled
+        - id: EmergencyMedipen
+        - id: SpaceMedipen
+        - id: Flare
+        - id: FoodPSB
+        - id: DrinkWaterBottleFull
   - type: Sprite
     layers:
     - state: internals
@@ -47,14 +51,16 @@
   description: It's a box with basic internals inside. This one is labelled to contain an extended-capacity tank.
   suffix: NanoTrasen
   components:
-  - type: StorageFill
-    contents:
-    - id: ClothingMaskGasNanotrasen
-    - id: ExtendedEmergencyOxygenTankFilled
-    - id: EmergencyMedipen
-    - id: SpaceMedipen
-    - id: Flare
-    - id: FoodPSB
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingMaskGasNanotrasen
+        - id: ExtendedEmergencyOxygenTankFilled
+        - id: EmergencyMedipen
+        - id: SpaceMedipen
+        - id: Flare
+        - id: FoodPSB
   - type: Sprite
     layers:
     - state: internals
@@ -65,14 +71,16 @@
   id: BoxSurvivalNanotrasenNitrogen
   suffix: NanoTrasen N2
   components:
-  - type: StorageFill
-    contents:
-    - id: ClothingMaskGasNanotrasen
-    - id: ExtendedEmergencyNitrogenTankFilled
-    - id: EmergencyMedipen
-    - id: SpaceMedipen
-    - id: Flare
-    - id: FoodPSB
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingMaskGasNanotrasen
+        - id: ExtendedEmergencyNitrogenTankFilled
+        - id: EmergencyMedipen
+        - id: SpaceMedipen
+        - id: Flare
+        - id: FoodPSB
   - type: Sprite
     layers:
     - state: internals

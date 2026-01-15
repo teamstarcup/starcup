@@ -93,10 +93,12 @@
   components:
   - type: Label
     currentLabel: serenitol 10u
-  - type: StorageFill
-    contents:
-    - id: PillSerenitol
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PillSerenitol
+          amount: 5
 
 - type: entity
   parent: Pill
@@ -124,10 +126,12 @@
   components:
   - type: Label
     currentLabel: neurozenium 10u
-  - type: StorageFill
-    contents:
-    - id: PillNeurozenium
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PillNeurozenium
+          amount: 5
 
 - type: entity
   parent: Pill
@@ -155,10 +159,12 @@
   components:
   - type: Label
     currentLabel: equilibrazine 5u
-  - type: StorageFill
-    contents:
-    - id: PillEquilibrazine
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PillEquilibrazine
+          amount: 5
 
 - type: entity
   parent: Pill
@@ -186,10 +192,12 @@
   components:
   - type: Label
     currentLabel: blissifylovene 5u
-  - type: StorageFill
-    contents:
-    - id: PillBlissifylovene
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PillBlissifylovene
+          amount: 5
 
 - type: entity
   parent: Pill
@@ -217,10 +225,12 @@
   components:
   - type: Label
     currentLabel: calmafluxine 10u
-  - type: StorageFill
-    contents:
-    - id: PillCalmafluxine
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PillCalmafluxine
+          amount: 5
 
 - type: entity
   parent: Pill
@@ -248,10 +258,12 @@
   components:
   - type: Label
     currentLabel: tranquinase 10u
-  - type: StorageFill
-    contents:
-    - id: PillTranquinase
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PillTranquinase
+          amount: 5
 
 - type: entity
   parent: Pill
@@ -279,10 +291,12 @@
   components:
   - type: Label
     currentLabel: stubantazine 10u
-  - type: StorageFill
-    contents:
-    - id: PillStubantazine
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PillStubantazine
+          amount: 5
 
 - type: entity
   parent: Pill
@@ -310,10 +324,12 @@
   components:
   - type: Label
     currentLabel: soretizone 10u
-  - type: StorageFill
-    contents:
-    - id: PillSoretizone
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PillSoretizone
+          amount: 5
 
 - type: entity
   parent: Pill
@@ -341,7 +357,9 @@
   components:
   - type: Label
     currentLabel: agonolexyne 5u
-  - type: StorageFill
-    contents:
-    - id: PillAgonolexyne
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PillAgonolexyne
+          amount: 5

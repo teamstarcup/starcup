@@ -474,14 +474,13 @@
     accentVColor: "#a23e3e"
   - type: Icon
     state: pda-qm
-  - type: CartridgeLoader # DeltaV - MailMetrics courier tracker
+  - type: CartridgeLoader
     preinstalled:
     - CrewManifestCartridge
     - NotekeeperCartridge
     - NanoTaskCartridge
     - NewsReaderCartridge
     - AstroNavCartridge
-    - MailMetricsCartridge
 
 - type: entity
   parent: BasePDA
@@ -1503,6 +1502,22 @@
     accentVColor: "#DFDFDF"
   - type: Icon
     state: pda-seniorcourier
+
+- type: entity
+  parent: [ BaseHighlyIllegalContraband, BasePDA ]
+  id: NinjaPDA
+  name: ninja PDA
+  description: You stealthy bastard, you!
+  components:
+  - type: Pda
+    id: NinjaIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-ninja
+  - type: Icon
+    state: pda-ninja
 
 - type: entity
   parent: SyndiPDA

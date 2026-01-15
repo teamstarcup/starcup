@@ -4,9 +4,7 @@ job-description-bartender = Manage the bar and keep it lively, give out drinks, 
 job-description-botanist = Grow food for the chef, drugs for medbay, and other plants to keep yourself entertained.
 job-description-borg = Half-human, Half-machine. Follow your laws, serve the crew, and hound the science team for upgrades.
 # begin starcup
-# job-description-boxer = Fight your way to the top! Challenge the head of personnel and get brigged when you win. Currently available on Core and Convex.
 # job-description-brigmedic = Fight in the rear of the security service, for the lives of your comrades! You are the first and last hope of your squad. Hippocrates bless you.
-job-description-boxer = Put on exciting performances and spar with the crew. Currently available on Byoin, Crux, Glacier, Loop, and Saltern.
 job-description-brigmedic = Provide medical support during hostile encounters, and make sure that the prisoners are kept healthy.
 # end starcup
 job-description-cadet = Learn the basics of arresting criminals and managing the brig. Listen to your supervisors and feel free to ask them for any help.
@@ -16,7 +14,7 @@ job-description-captain = Keep the station running, delegate work to the other h
 job-description-cargotech = Deal with requisitions and deliveries, supply other departments with materials, and pilot the cargo shuttle to the trade station and back.
 # end starcup
 job-description-ce = Manage the Engineering department to ensure power, atmospherics, and the hull are in perfect shape.
-job-description-centcomoff = Act as an ambassador to the newest state-of-the-art space station in Nanotrasen's fleet.
+job-description-centcommoff = Act as an ambassador to the newest state-of-the-art space station in Nanotrasen's fleet.
 job-description-chaplain = Preach the good word of your deity and religion, and conduct spiritual healing and miracles with your bible.
 job-description-chef = Keep the station fed with a variety of food items, butcher dead animals to ensure ammonia doesn't leak, and help keep the bar lively.
 job-description-chemist = Produce medicinal drugs for the doctors to use, research ethically dubious rare chemicals, and produce weapons of war when enemies of the station arrive.
@@ -45,14 +43,14 @@ job-description-mime = Entertain the crew without speaking or writing, and engag
 job-description-musician = Entertain the crew with your unique musical talent, and acquire new instruments to mess around with.
 job-description-passenger = Enjoy your stay aboard the station with no obligations!
 # begin starcup
-# job-description-psychologist = Provide emotional support to traumatized crew. Currently available on Box, Marathon and Oasis.
+# job-description-psychologist = Provide emotional support to traumatized crew.
 job-description-psychologist = Provide emotional support to traumatized crew.
 # end starcup
 job-description-qm = Manage the supplies of the station & the Cargo department, keep the salvage specialists working, make sure all orders are fulfilled, and keep the money flowing.
 job-description-rd = Manage the Science department, unlocking technologies, acquiring & researching artifacts, and performing experiments.
 job-description-research-assistant = Learn the basics of robotics and how to research various artifacts & anomalies.
 # begin starcup
-# job-description-reporter = Entertain & inform the crew with your vibrant journalism through wireless cameras, the radio and the news. Currently available on Bagel Station, Convex, Core, Train and Oasis.
+# job-description-reporter = Entertain & inform the crew with your vibrant journalism through wireless cameras, the radio and the news.
 job-description-reporter = Entertain & inform the crew with your vibrant journalism through wireless cameras, the radio and the news. Currently available on Byoin, Crux, Glacier, Loop, Saltern, and Train.
 # end starcup
 job-description-salvagespec = Use the salvage magnet to draw in detached scraps & asteroids to loot and enrich the station, build a salvage ship and then travel to new planets, while fighting off any space fauna along the way.
@@ -62,4 +60,3 @@ job-description-serviceworker = Learn the basics of bartending, cooking, and gro
 job-description-station-ai = Follow your laws, serve the crew.
 job-description-visitor = Enjoy your visit to the station.
 job-description-warden = Patrol the Security department, ensure that no one is stealing from the armory, and make sure that all prisoners are processed and let out when their time is up.
-job-description-zookeeper = Put on a joyful display of cute animals and space carps for all the crew to see. Currently available on Oasis.

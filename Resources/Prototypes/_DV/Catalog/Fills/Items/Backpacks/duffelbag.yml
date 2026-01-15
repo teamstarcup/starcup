@@ -4,14 +4,16 @@
   name: mining conscription kit
   description: A duffel bag containing everything a crewmember needs to support a shaft miner in the field.
   components:
-  - type: StorageFill
-    contents:
-    #- id: ClothingEyesGlassesMeson # starcup: removed mesons, those are engineering contraband
-    - id: MineralScanner
-    - id: OreBag
-    - id: ClothingUniformJumpsuitSalvageSpecialist
-    - id: EncryptionKeyCargo
-    - id: ClothingMaskGasExplorer
-    - id: WeaponProtoKineticAccelerator
-    - id: SurvivalKnife
-    - id: FlashlightBig # starcup: replaced seclite, those are sec contraband
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        #- id: ClothingEyesGlassesMeson # starcup: removed mesons, those are engineering contraband
+        - id: MineralScanner
+        - id: OreBag
+        - id: ClothingUniformJumpsuitSalvageSpecialist
+        - id: EncryptionKeyCargo
+        - id: ClothingMaskGasExplorer
+        - id: WeaponProtoKineticAccelerator
+        - id: SurvivalKnife
+        - id: FlashlightBig # starcup: replaced seclite, those are sec contraband

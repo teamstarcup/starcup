@@ -8,7 +8,7 @@ using Robust.Shared.Utility;
 using Content.Server._EE.Silicon.Charge;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Popups;
-using Content.Server.PowerCell;
+using Content.Shared.PowerCell;
 using Content.Shared.Popups;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
@@ -44,7 +44,7 @@ public sealed class BatteryDrinkerSystem : EntitySystem
 
         if (!TryComp<BatteryDrinkerComponent>(args.User, out var drinkerComp) ||
             !TestDrinkableBattery(uid, drinkerComp) ||
-            !_silicon.TryGetSiliconBattery(args.User, out var drinkerBattery))
+            !_silicon.TryGetSiliconBattery(args.User, out _))
             return;
 
         AlternativeVerb verb = new()
@@ -87,34 +87,27 @@ public sealed class BatteryDrinkerSystem : EntitySystem
         _doAfter.TryStartDoAfter(args);
     }
 
-    private void OnDoAfter(EntityUid uid, BatteryDrinkerComponent drinkerComp, DoAfterEvent args)
+    private void OnDoAfter(EntityUid drinker, BatteryDrinkerComponent drinkerComp, DoAfterEvent args)
     {
         if (args.Cancelled || args.Target == null)
             return;
 
         var source = args.Target.Value;
-        var drinker = uid;
         var sourceBattery = Comp<BatteryComponent>(source);
+        var sourceCharge = _battery.GetCharge((source, sourceBattery));
 
-        _silicon.TryGetSiliconBattery(drinker, out var drinkerBatteryComponent);
-
-        if (!TryComp(uid, out PowerCellSlotComponent? batterySlot))
+        if (!_silicon.TryGetSiliconBattery(drinker, out var drinkerBatteryMaybe))
             return;
-
-        var container = _container.GetContainer(uid, batterySlot.CellSlotId);
-        var drinkerBattery = container.ContainedEntities.First();
 
         TryComp<BatteryDrinkerSourceComponent>(source, out var sourceComp);
 
-        DebugTools.AssertNotNull(drinkerBattery);
-
-        if (drinkerBattery == null)
-            return;
+        var drinkerBattery = drinkerBatteryMaybe.Value;
+        var drinkerBatteryCharge = _battery.GetCharge(drinkerBattery.AsNullable());
 
         var amountToDrink = drinkerComp.DrinkMultiplier * 1000;
 
-        amountToDrink = MathF.Min(amountToDrink, sourceBattery.CurrentCharge);
-        amountToDrink = MathF.Min(amountToDrink, drinkerBatteryComponent!.MaxCharge - drinkerBatteryComponent.CurrentCharge);
+        amountToDrink = MathF.Min(amountToDrink, sourceCharge);
+        amountToDrink = MathF.Min(amountToDrink, drinkerBattery.Comp.MaxCharge - drinkerBatteryCharge);
 
         if (sourceComp != null && sourceComp.MaxAmount > 0)
             amountToDrink = MathF.Min(amountToDrink, (float) sourceComp.MaxAmount);
@@ -126,10 +119,10 @@ public sealed class BatteryDrinkerSystem : EntitySystem
         }
 
         if (_battery.TryUseCharge(source, amountToDrink))
-            _battery.SetCharge(drinkerBattery, drinkerBatteryComponent.CurrentCharge + amountToDrink, drinkerBatteryComponent);
+            _battery.SetCharge(drinkerBattery.AsNullable(), drinkerBatteryCharge + amountToDrink);
         else
         {
-            _battery.SetCharge(drinkerBattery, sourceBattery.CurrentCharge + drinkerBatteryComponent.CurrentCharge, drinkerBatteryComponent);
+            _battery.SetCharge(drinkerBattery.AsNullable(), sourceCharge + drinkerBatteryCharge);
             _battery.SetCharge(source, 0);
         }
 

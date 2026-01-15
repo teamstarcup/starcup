@@ -1,6 +1,9 @@
 # Security
 job-description-prisoner = Do your time in the brig; Take up gardening, chat with security.
 
+# Service
+job-description-boxer = Put on exciting performances and spar with the crew. Currently available on Byoin, Crux, Glacier, Loop, and Saltern.
+
 # SyndComm
 job-description-syndcomm-operator = Protect assets deemed vital to the Syndicate. Stand around hoping nothing goes wrong.
 job-description-syndcomm-agent = Represent the bureaucracy of Syndicate Communications. Make empty promises and dispense platitudes.

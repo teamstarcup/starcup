@@ -1,0 +1,54 @@
+- type: entityTable
+  id: RandomTraitorGearTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomSyndieAgentGearTable
+    - !type:NestedSelector
+      tableId: RandomNTAgentGearTable
+
+- type: entityTable
+  id: RandomSyndieAgentGearTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      children:
+      - id: EnergyDagger
+      - id: EnergyDaggerBox
+    - id: ThrowingKnife
+      amount: !type:LimitedBinomialNumberSelector
+        trials: 3
+        chance: 0.5
+    - id: ClothingHandsKnuckleDustersSyndicate
+    - id: C4
+    - id: SyndieMiniBomb
+    - id: ClothingBackpackSyndicate
+    - id: ClothingMaskGasVoiceChameleon
+    - id: ClothingOuterVestWeb
+    - id: ClothingShoesBootsMagSyndie
+    - id: ClothingBackpackChameleonFill
+    - id: ClothingBackpackSatchelSmugglerUnanchored
+    - id: SyndicateJawsOfLife
+
+- type: entityTable
+  id: RandomNTAgentGearTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      children:
+      - id: EnergyDagger
+      - id: EnergyDaggerBox
+    - id: ThrowingKnifeNT
+      amount: !type:LimitedBinomialNumberSelector
+        trials: 3
+        chance: 0.5
+    - id: ClothingHandsKnuckleDustersNanotrasen
+    - id: C4
+    - id: NanotrasenMiniBomb
+    - id: ClothingBackpackNanotrasen
+    - id: ClothingMaskGasVoiceChameleon
+    - id: ClothingOuterVestWeb
+    - id: ClothingShoesBootsMagNT
+    - id: ClothingBackpackChameleonFillNT
+    - id: ClothingBackpackSatchelSmugglerUnanchored
+    - id: NanotrasenJawsOfLife

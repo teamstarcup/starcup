@@ -1,0 +1,11 @@
+- type: loadout
+  id: LizardPlushieBoxer
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobBoxer
+      time: 72000 # 20hr
+  storage:
+    back:
+    - PlushieLizardJobBoxer

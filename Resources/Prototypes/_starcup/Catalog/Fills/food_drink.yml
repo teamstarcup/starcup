@@ -1,0 +1,83 @@
+- type: entityTable
+  id: RandomFoodDrinkSmallTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomSnackTable
+    - !type:NestedSelector
+      tableId: RandomCandyTable
+    - !type:NestedSelector
+      tableId: RandomAllSodaTable
+    - !type:NestedSelector
+      tableId: RandomCookiesTable
+
+- type: entityTable
+  id: RandomCookiesTable
+  table: !type:GroupSelector
+    children:
+    - id: FoodBakedCookie
+    - id: FoodBakedCookieImitation
+    - id: FoodBakedCookieOatmeal
+    - id: FoodBakedCookieRaisin
+    - id: FoodBakedCookieSugar
+
+- type: entityTable
+  id: RandomFoodDrinkTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomAllAlcoholTable
+    - !type:GroupSelector
+      children:
+      - !type:NestedSelector
+        tableId: RandomBulkCandyTable
+        weight: 0.7
+      - id: FoodSnackGummyWormLarge
+        weight: 0.15
+      - id: FoodSnackChocolateBarLarjWrapped
+        weight: 0.15
+    - !type:NestedSelector
+      tableId: RandomFoodSliceableTable
+
+- type: entityTable
+  id: RandomFoodSliceableTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: FoodRandomCakeTable
+    - !type:NestedSelector
+      tableId: RandomPieTable
+    - !type:NestedSelector
+      tableId: RandomPizzaTable
+
+- type: entityTable
+  id: RandomPieTable
+  table: !type:GroupSelector
+    children:
+    - id: FoodPieAmanita
+    - id: FoodPieApple
+    - id: FoodPieBaklava
+    - id: FoodPieBananaCream
+    - id: FoodPieClafoutis
+    - id: FoodPieCherry
+    - id: FoodPieFrosty
+    - id: FoodPieMeat
+    - id: FoodPiePumpkin
+    - id: FoodPieXeno
+
+- type: entityTable
+  id: RandomPizzaTable
+  table: !type:GroupSelector
+    children:
+    - id: FoodPizzaArnold
+    - id: FoodPizzaCotton
+    - id: FoodPizzaDank
+    - id: FoodPizzaDonkpocket
+    - id: FoodPizzaMargherita
+    - id: FoodPizzaMeat
+    - id: FoodPizzaMushroom
+    - id: FoodPizzaPineapple
+    - id: FoodPizzaSassysage
+    - id: FoodPizzaUranium
+    - id: FoodPizzaVegetable
+    - id: FoodPizzaWorldpeas
