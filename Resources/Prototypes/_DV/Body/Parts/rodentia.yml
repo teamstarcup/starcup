@@ -1,25 +1,27 @@
 - type: entity
   id: PartRodentia
-  parent: BaseItem
+  parent: BasePart # starcup: changed parent to BasePart
   name: "rodentia body part"
   abstract: true
   components:
   - type: Sprite
     sprite: _DV/Mobs/Species/Rodentia/parts.rsi
-  - type: Icon
-    sprite: _DV/Mobs/Species/Rodentia/parts.rsi
-  - type: Damageable
-    damageContainer: Biological
-  - type: BodyPart
-  - type: ContainerContainer
-    containers:
-      bodypart: !type:Container
-        ents: []
-  - type: StaticPrice #DynamicPrice
-    price: 100
-  - type: Tag
-    tags:
-      - Trash
+  # begin starcup: inherited by parent
+#  - type: Icon
+#    sprite: _DV/Mobs/Species/Rodentia/parts.rsi
+#  - type: Damageable
+#    damageContainer: Biological
+#  - type: BodyPart
+#  - type: ContainerContainer
+#    containers:
+#      bodypart: !type:Container
+#        ents: []
+#  - type: StaticPrice #DynamicPrice
+#    price: 100
+#  - type: Tag
+#    tags:
+#      - Trash
+  # end starcup
 
 - type: entity
   id: TorsoRodentia
@@ -28,30 +30,30 @@
   components:
   - type: Sprite
     state: "torso_m"
-  - type: Icon
-    state: "torso_m"
   - type: BodyPart
     partType: Torso
 
 - type: entity
   id: HeadRodentia
   name: "rodentia head"
-  parent: PartRodentia
+  parent: [PartRodentia, BaseHead] # starcup: added parent
   components:
   - type: Sprite
     state: "head_m"
-  - type: Icon
-    state: "head_m"
-  - type: BodyPart
-    partType: Head
-    vital: true
-  - type: Input
-    context: "ghost"
-  - type: InputMover
-  - type: GhostOnMove
-  - type: Tag
-    tags:
-      - Head
+  # begin starcup: inherited from parent
+#  - type: Icon
+#    state: "head_m"
+#  - type: BodyPart
+#    partType: Head
+#    vital: true
+#  - type: Input
+#    context: "ghost"
+#  - type: InputMover
+#  - type: GhostOnMove
+#  - type: Tag
+#    tags:
+#      - Head
+  # end starcup
 
 - type: entity
   id: LeftArmRodentia
@@ -59,8 +61,6 @@
   parent: PartRodentia
   components:
   - type: Sprite
-    state: "l_arm"
-  - type: Icon
     state: "l_arm"
   - type: BodyPart
     partType: Arm
@@ -73,8 +73,6 @@
   components:
   - type: Sprite
     state: "r_arm"
-  - type: Icon
-    state: "r_arm"
   - type: BodyPart
     partType: Arm
     symmetry: Right
@@ -85,8 +83,6 @@
   parent: PartRodentia
   components:
   - type: Sprite
-    state: "l_hand"
-  - type: Icon
     state: "l_hand"
   - type: BodyPart
     partType: Hand
@@ -99,8 +95,6 @@
   components:
   - type: Sprite
     state: "r_hand"
-  - type: Icon
-    state: "r_hand"
   - type: BodyPart
     partType: Hand
     symmetry: Right
@@ -111,8 +105,6 @@
   parent: PartRodentia
   components:
   - type: Sprite
-    state: "l_leg"
-  - type: Icon
     state: "l_leg"
   - type: BodyPart
     partType: Leg
@@ -126,8 +118,6 @@
   components:
   - type: Sprite
     state: "r_leg"
-  - type: Icon
-    state: "r_leg"
   - type: BodyPart
     partType: Leg
     symmetry: Right
@@ -140,8 +130,6 @@
   components:
   - type: Sprite
     state: "l_foot"
-  - type: Icon
-    state: "l_foot"
   - type: BodyPart
     partType: Foot
     symmetry: Left
@@ -152,8 +140,6 @@
   parent: PartRodentia
   components:
   - type: Sprite
-    state: "r_foot"
-  - type: Icon
     state: "r_foot"
   - type: BodyPart
     partType: Foot

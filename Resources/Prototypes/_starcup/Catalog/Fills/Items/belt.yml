@@ -3,11 +3,13 @@
   parent: ClothingBeltWaistbagMaid
   suffix: Filled
   components:
-  - type: StorageFill
-    contents:
-    - id: SprayBottleSpaceCleaner
-    - id: CleanerGrenade
-      amount: 2
-    - id: LightReplacer
-    - id: TrashBag # starcup: picking up trash is basically the first thing a janitor does at shift start
-    - id: FeatherDuster
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: SprayBottleSpaceCleaner
+        - id: CleanerGrenade
+          amount: 2
+        - id: LightReplacer
+        - id: TrashBag # starcup: picking up trash is basically the first thing a janitor does at shift start
+        - id: FeatherDuster

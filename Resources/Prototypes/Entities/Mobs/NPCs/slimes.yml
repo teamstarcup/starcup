@@ -54,7 +54,10 @@
     damageContainer: Biological
     damageModifierSet: Slime
   - type: Bloodstream
-    bloodReagent: Slime
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Slime
+        Quantity: 150
     bloodlossDamage:
       types:
         Bloodloss:
@@ -80,7 +83,6 @@
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        scaling: true
         damage:
           types:
             Caustic: 0.05 # starcup: changed damage type from heat
@@ -163,7 +165,7 @@
   name: blue slime
   parent: MobAdultSlimesBlue
   id: MobAdultSlimesBlueAngry
-  suffix: Angry
+  suffix: AI, hostile # starcup: mob suffix consistency
   components:
     - type: NpcFactionMember
       factions:
@@ -203,7 +205,7 @@
   name: green slime
   parent: MobAdultSlimesGreen
   id: MobAdultSlimesGreenAngry
-  suffix: Angry
+  suffix: AI, hostile # starcup: mob suffix consistency
   components:
     - type: NpcFactionMember
       factions:
@@ -242,7 +244,7 @@
   name: yellow slime
   parent: MobAdultSlimesYellow
   id: MobAdultSlimesYellowAngry
-  suffix: Angry
+  suffix: AI, hostile # starcup: mob suffix consistency
   components:
     - type: NpcFactionMember
       factions:

@@ -37,7 +37,7 @@
 - type: entity
   parent: [BaseTraitorObjective, BaseLivingObjective]
   id: EscapeShuttleObjective
-  name: Escape to SyndComm alive and unrestrained. # starcup - NT-SC swap
+  name: Escape to SyndComm alive and unrestrained via the escape shuttle. # starcup - NT-SC swap
   description: One of our undercover agents will debrief you when you arrive. Don't show up in cuffs.
   components:
   - type: Objective
@@ -64,6 +64,8 @@
       - EscapeShuttleCondition
       - StealCondition
   - type: DieCondition
+  - type: ObjectiveLimit
+    limit: 1
 
 #- type: entity
 #  parent: [BaseTraitorObjective, BaseLivingObjective]

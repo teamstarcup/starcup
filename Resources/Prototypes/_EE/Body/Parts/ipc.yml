@@ -32,28 +32,30 @@
 - type: entity
   id: HeadIPC
   name: "mkc head"
-  parent: PartIPC
+  parent: [PartIPC, BaseHead] # starcup: added parent
   components:
   - type: Sprite
     netsync: false
     sprite: _EE/Mobs/Species/IPC/parts.rsi
     state: "head_m"
-  - type: Icon
-    sprite: _EE/Mobs/Species/IPC/parts.rsi
-    state: "head_m"
-  - type: BodyPart
-    partType: Head
-    vital: true
-  - type: Input
-    context: "ghost"
-  - type: MovementSpeedModifier
-    baseWalkSpeed: 0
-    baseSprintSpeed: 0
-  - type: InputMover
-  - type: GhostOnMove
-  - type: Tag
-    tags:
-      - Head
+  # begin starcup: inherited from parent
+#  - type: Icon
+#    sprite: _EE/Mobs/Species/IPC/parts.rsi
+#    state: "head_m"
+#  - type: BodyPart
+#    partType: Head
+#    vital: true
+#  - type: Input
+#    context: "ghost"
+#  - type: MovementSpeedModifier
+#    baseWalkSpeed: 0
+#    baseSprintSpeed: 0
+#  - type: InputMover
+#  - type: GhostOnMove
+#  - type: Tag
+#    tags:
+#      - Head
+  # end starcup
 
 - type: entity
   id: LeftArmIPC

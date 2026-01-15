@@ -73,4 +73,14 @@ public abstract class CommonStylesheet : PalettedStylesheet, IButtonConfig, IWin
     ColorPalette IButtonConfig.ButtonPalette => PrimaryPalette with { PressedElement = PositivePalette.PressedElement };
     ColorPalette IButtonConfig.PositiveButtonPalette => PositivePalette;
     ColorPalette IButtonConfig.NegativeButtonPalette => NegativePalette;
+
+    // begin starcup: department buttons
+    ColorPalette IButtonConfig.CommandButtonPalette => Palettes.DepartmentCommand;
+    ColorPalette IButtonConfig.EngineeringButtonPalette => Palettes.DepartmentEngineering;
+    ColorPalette IButtonConfig.ScienceButtonPalette => Palettes.DepartmentScience;
+    ColorPalette IButtonConfig.LogisticsButtonPalette => Palettes.DepartmentLogistics;
+    ColorPalette IButtonConfig.MedicalButtonPalette => Palettes.DepartmentMedical;
+    ColorPalette IButtonConfig.SecurityButtonPalette => Palettes.DepartmentSecurity;
+    ColorPalette IButtonConfig.ServiceButtonPalette => Palettes.DepartmentService;
+    // end starcup
 }

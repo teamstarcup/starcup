@@ -1,0 +1,626 @@
+- type: reagent
+  id: AdiosMotherfucker
+  name: reagent-name-adios-motherfucker
+  parent: BaseAlcohol
+  desc: reagent-desc-adios-motherfucker
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: adiosmotherfucker
+  color: "#1bdaf7"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/adiosmotherfucker.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 6
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.13
+
+- type: reagent
+  id: Afterburner
+  name: reagent-name-afterburner
+  parent: BaseAlcohol
+  desc: reagent-desc-afterburner
+  physicalDesc: reagent-physical-desc-oily
+  flavor: afterburner
+  color: "#fb6948"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/afterburner.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1
+
+- type: reagent
+  id: Ambrosia
+  name: reagent-name-ambrosia
+  parent: BaseAlcohol
+  desc: reagent-desc-ambrosia
+  physicalDesc: reagent-physical-desc-exhilarating
+  flavor: ambrosia
+  color: "#A41659"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/ambrosia.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:ModifyBloodLevel
+        amount: 3
+      - !type:EvenHealthChange
+        damage:
+          Burn: -3
+          Brute: -3
+          Toxin: -2
+      - !type:HealthChange
+        damage:
+          types:
+            Bloodloss: -3
+      - !type:ModifyBleed
+        amount: -1.5
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.4
+
+
+- type: reagent
+  id: Appletini
+  name: reagent-name-appletini
+  parent: BaseAlcohol
+  desc: reagent-desc-appletini
+  physicalDesc: reagent-physical-desc-crisp
+  flavor: appletini
+  color: "#a6f037"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/appletini.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 3
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.13
+
+- type: reagent
+  id: Aviation
+  name: reagent-name-aviation
+  parent: BaseAlcohol
+  desc: reagent-desc-aviation
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: aviation
+  color: "#d0b8d9"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/aviation.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 3
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.12
+
+- type: reagent
+  id: BlackVelvet
+  name: reagent-name-black-velvet
+  parent: BaseAlcohol
+  desc: reagent-desc-black-velvet
+  physicalDesc: reagent-physical-desc-fizzy
+  flavor: blackvelvet
+  color: "#5c4439"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/blackvelvet.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: BlueLagoon
+  name: reagent-name-blue-lagoon
+  parent: BaseAlcohol
+  desc: reagent-desc-blue-lagoon
+  physicalDesc: reagent-physical-desc-citric
+  flavor: bluelagoon
+  color: "#32A8F2"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/bluelagoon.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 5
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.08
+
+- type: reagent
+  id: BrainScrambler
+  name: reagent-name-brain-scrambler
+  parent: BaseAlcohol
+  desc: reagent-desc-brain-scrambler
+  physicalDesc: reagent-physical-desc-opaque
+  flavor: brainscrambler
+  color: "#DD7B4D"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/brainscrambler.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.09
+
+- type: reagent
+  id: Bramble
+  name: reagent-name-bramble
+  parent: BaseAlcohol
+  desc: reagent-desc-bramble
+  physicalDesc: reagent-physical-desc-aromatic
+  flavor: bramble
+  color: "#bb2442"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/bramble.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.09
+
+- type: reagent
+  id: BuzzedBunny
+  name: reagent-name-buzzed-bunny
+  parent: BaseAlcohol
+  desc: reagent-desc-buzzed-bunny
+  physicalDesc: reagent-physical-desc-vibrant
+  flavor: buzzedbunny
+  color: "#ED6205"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/buzzedbunny.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1
+
+- type: reagent
+  id: Cactus
+  name: reagent-name-cactus
+  parent: BaseAlcohol
+  desc: reagent-desc-cactus
+  physicalDesc: reagent-physical-desc-vibrant
+  flavor: cactus
+  color: "#9fd13b"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/cactus.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 6
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: true
+
+- type: reagent
+  id: CherryBomb
+  name: reagent-name-cherry-bomb
+  parent: BaseAlcohol
+  desc: reagent-desc-cherry-bomb
+  physicalDesc: reagent-physical-desc-vibrant
+  flavor: cherrybomb
+  color: "#c92c39"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/cherrybomb.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.08
+
+- type: reagent
+  id: CorpseReviver
+  name: reagent-name-corpse-reviver
+  parent: BaseAlcohol
+  desc: reagent-desc-corpse-reviver
+  physicalDesc: reagent-physical-desc-overpowering
+  flavor: corpsereviver
+  color: "#e8e5c5"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/corpsereviver.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.14
+
+- type: reagent
+  id: Cryptid
+  name: reagent-name-cryptid
+  parent: BaseAlcohol
+  desc: reagent-desc-cryptid
+  physicalDesc: reagent-physical-desc-citric
+  flavor: cryptid
+  color: "#3FD367"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/cryptid.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 6
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.08
+
+- type: reagent
+  id: Earthquake
+  name: reagent-name-earthquake
+  parent: BaseAlcohol
+  desc: reagent-desc-earthquake
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: earthquake
+  color: "#bcbc00"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/earthquake.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 3
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.25
+
+- type: reagent
+  id: Eclipse
+  name: reagent-name-eclipse
+  parent: BaseAlcohol
+  desc: reagent-desc-eclipse
+  physicalDesc: reagent-physical-desc-crisp
+  flavor: eclipse
+  color: "#DF4600"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/eclipse.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1
+
+- type: reagent
+  id: EmeraldBreeze
+  name: reagent-name-emerald-breeze
+  parent: BaseAlcohol
+  desc: reagent-desc-emerald-breeze
+  physicalDesc: reagent-physical-desc-crisp
+  flavor: emeraldbreeze
+  color: "#9ADA4E"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/emeraldbreeze.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.12
+
+- type: reagent
+  id: FaeriesCheer
+  name: reagent-name-faeries-cheer
+  parent: BaseAlcohol
+  desc: reagent-desc-faeries-cheer
+  physicalDesc: reagent-physical-desc-exotic-smelling
+  flavor: faeriescheer
+  color: "#80FB62"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/faeriescheer.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1
+
+- type: reagent
+  id: GoblinsBrew
+  name: reagent-name-goblins-brew
+  parent: BaseAlcohol
+  desc: reagent-desc-goblins-brew
+  physicalDesc: reagent-physical-desc-bubbling
+  flavor: goblinsbrew
+  color: "#7CED1F"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/goblinsbrew.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 3
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 2
+        type: Remove
+      - !type:GenericStatusEffect
+        key: Stutter
+        component: StutteringAccent
+      - !type:Jitter
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.08
+
+- type: reagent
+  id: MoonMist
+  name: reagent-name-moon-mist
+  parent: BaseAlcohol
+  desc: reagent-desc-moon-mist
+  physicalDesc: reagent-physical-desc-shiny
+  flavor: moonmist
+  color: "#c8a5d4"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/moonmist.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1
+
+- type: reagent
+  id: Mushburger
+  name: reagent-name-mushburger
+  parent: BaseAlcohol
+  desc: reagent-desc-mushburger
+  physicalDesc: reagent-physical-desc-murky
+  flavor: mushburger
+  color: "#741E0B"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/mushburger.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 6
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:SatiateHunger
+        factor: 1
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentCondition
+          reagent: Mushburger
+          min: 5
+        type: Local
+        visualType: Medium
+        messages: [ "generic-reagent-effect-nauseous" ]
+        probability: 0.2
+      - !type:Vomit
+        conditions:
+        - !type:ReagentCondition
+          reagent: Mushburger
+          min: 5
+        probability: 0.05
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1
+
+- type: reagent
+  id: Necropolitan
+  name: reagent-name-necropolitan
+  parent: BaseAlcohol
+  desc: reagent-desc-necropolitan
+  physicalDesc: reagent-physical-desc-necrotic
+  flavor: necropolitan
+  color: "#D6155F"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/necropolitan.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 3
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1
+
+- type: reagent
+  id: ParadiseLost
+  name: reagent-name-paradise-lost
+  parent: BaseAlcohol
+  desc: reagent-desc-paradise-lost
+  physicalDesc: reagent-physical-desc-enigmatic
+  flavor: paradiselost
+  color: "#2c2c2c"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/paradiselost.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: RainbowShooter
+  name: reagent-name-rainbow-shooter
+  parent: BaseAlcohol
+  desc: reagent-desc-rainbow-shooter
+  physicalDesc: reagent-physical-desc-colorful
+  flavor: rainbowshooter
+  color: "#916877" # yes this is what you get when you mix all the component colors
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/rainbowshooter.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 5
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: RedDog
+  name: reagent-name-red-dog
+  parent: BaseAlcohol
+  desc: reagent-desc-red-dog
+  physicalDesc: reagent-physical-desc-dark-red
+  flavor: reddog
+  color: "#8f1802"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/reddog.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 2
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: RedEye
+  name: reagent-name-red-eye
+  parent: BaseAlcohol
+  desc: reagent-desc-red-eye
+  physicalDesc: reagent-physical-desc-cloudy
+  flavor: redeye
+  color: "#ae3235"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/redeye.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 6
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: SakuraMartini
+  name: reagent-name-sakura-martini
+  parent: BaseAlcohol
+  desc: reagent-desc-sakura-martini
+  physicalDesc: reagent-physical-desc-aromatic
+  flavor: sakuramartini
+  color: "#e6d5df"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/sakuramartini.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 3
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1
+
+- type: reagent
+  id: Snakebite
+  name: reagent-name-snakebite
+  parent: BaseAlcohol
+  desc: reagent-desc-snakebite
+  physicalDesc: reagent-physical-desc-fizzy
+  flavor: snakebite
+  color: "#845830"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/snakebite.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 6
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false

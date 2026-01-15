@@ -9,46 +9,51 @@
     maxItemSize: Huge
     grid:
     - 0,0,6,3
-  - type: StorageFill
-    contents:
-      - id: WeaponSniperHristov
-      - id: MagazineBoxAntiMateriel
-      - id: ClothingNeckTieRed
-      - id: ClothingHandsGlovesLatex
-      # - id: ClothingUniformJumpsuitLawyerBlack  # starcup (imp)
-      - id: ClothingUniformHitmanSuit #imp
-      - id: BarberScissors
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: WeaponSniperHristov
+        - id: MagazineBoxAntiMateriel
+        - id: ClothingNeckTieRed
+        - id: ClothingHandsGlovesLatex
+        # - id: ClothingUniformJumpsuitLawyerBlack  # starcup (imp)
+        - id: ClothingUniformHitmanSuit #imp
+        - id: BarberScissors
 
 - type: entity
   id: BriefcaseNTLobbyingBundleFilled
   parent: BriefcaseNT
   suffix: NanoTrasen, Spesos
   components:
-  - type: StorageFill
-    contents:
-      - id: ClothingEyesGlassesSunglasses
-      - id: SpaceCash30000
-        amount: 1
-      - id: EncryptionKeyNT
-      - id: RubberStampTrader
-      - id: PhoneInstrumentNanotrasen
-      - id: ClothingUniformJumpsuitTacticool
-      - id: ClothingOuterCoatJensen
-      - id: ClothingHandsGlovesCombat
-      - id: ClothingMaskNeckGaiter
-      - id: NTHandyFlag
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingEyesGlassesSunglasses
+        - id: SpaceCash30000
+        - id: EncryptionKeyNT
+        - id: RubberStampTrader
+        - id: PhoneInstrumentNanotrasen
+        - id: ClothingUniformJumpsuitTacticool
+        - id: ClothingOuterCoatJensen
+        - id: ClothingHandsGlovesCombat
+        - id: ClothingMaskNeckGaiter
+        - id: NTHandyFlag
 
 - type: entity
   id: BriefcaseSyndCommSpecialFilled
   parent: BriefcaseSyndComm
   suffix: Filled, Special
   components:
-  - type: StorageFill
-    contents:
-    - id: BoxFolderSyndCommClipboard
-    - id: BoxFolderSyndComm
-    - id: DiskCaseSyndComm
-    - id: NotebookSpiralCybersun
-    - id: PaperStickyNoteStackFilledPink
-    - id: LuxuryPen
-    - id: RubberStampSyndComm
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: BoxFolderSyndCommClipboard
+        - id: BoxFolderSyndComm
+        - id: DiskCaseSyndComm
+        - id: NotebookSpiralCybersun
+        - id: PaperStickyNoteStackFilledPink
+        - id: LuxuryPen
+        - id: RubberStampSyndComm

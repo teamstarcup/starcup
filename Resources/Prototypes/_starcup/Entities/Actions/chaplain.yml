@@ -1,0 +1,40 @@
+- type: entity
+  parent: BaseEntitySpellAction
+  id: ActionSanctifyItem
+  name: Sanctify Item
+  description: Designates an item as your sanctified archetype, making it a conduit for special powers. If your sanctified item is destroyed, you must find another of the EXACT SAME item!
+  components:
+  - type: Action
+    sound: !type:SoundPathSpecifier
+      path: /Audio/_starcup/Magic/sanctify.ogg
+    icon:
+      sprite: _starcup/Interface/Actions/actions_chaplain.rsi
+      state: sanctify
+    useDelay: 5
+  - type: EntityTargetAction
+    event: !type:SanctifyItemEvent
+    whitelist:
+      components:
+      - Item
+    blacklist:
+      components:
+      - MobState
+
+- type: entity
+  parent: BaseEntitySpellAction
+  id: ActionBlessedHealing
+  name: Blessed Healing
+  description: Heals the target using your sanctified item.
+  components:
+  - type: Action
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/staff_healing.ogg
+    icon:
+      sprite: _starcup/Interface/Actions/actions_chaplain.rsi
+      state: heal
+    useDelay: 10
+  - type: EntityTargetAction
+    event: !type:BlessedHealingEvent
+    whitelist:
+      components:
+      - MobState

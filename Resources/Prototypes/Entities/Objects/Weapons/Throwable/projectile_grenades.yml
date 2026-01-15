@@ -43,7 +43,7 @@
         friction: 0.2
 
 - type: entity
-  parent: [ProjectileGrenadeBase, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
+  parent: [FragileGrenadeBase, ProjectileGrenadeBase, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: GrenadeStinger
   name: stinger grenade
   description: Nothing to see here, please disperse.
@@ -81,7 +81,7 @@
   # end starcup
 
 - type: entity
-  parent: [ProjectileGrenadeBase, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
+  parent: [FragileGrenadeBase, ProjectileGrenadeBase, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
   id: GrenadeIncendiary
   name: incendiary grenade
   description: Guaranteed to light up the mood.
@@ -117,7 +117,7 @@
     price: 1500
 
 - type: entity
-  parent: [ProjectileGrenadeBase, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
+  parent: [FragileGrenadeBase, ProjectileGrenadeBase, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
   id: GrenadeShrapnel
   name: shrapnel grenade
   description: Releases a deadly spray of shrapnel that causes severe bleeding.

@@ -19,3 +19,9 @@ reagent-desc-silencer-starcup = A popular recreational drink among the eccentric
 reagent-desc-tonic-water-starcup = Originally used as a medicine, then drank recreationally when the disease it treated was effectively eradicated by medical advances. Still tastes a little bit like medicine.
 
 reagent-desc-water-starcup = A colorless liquid that most biological lifeforms need in order to survive.
+
+reagent-name-cherry-limeade = cherry limeade
+reagent-desc-cherry-limeade = Lemonade's tart, fizzy cousin.
+
+reagent-name-evil-princess = evil princess
+reagent-desc-evil-princess = For holding daintily in one hand while dismissively sentencing people you don't like to the dungeon.

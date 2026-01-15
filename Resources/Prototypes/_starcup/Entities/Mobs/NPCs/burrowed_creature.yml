@@ -18,6 +18,7 @@
       protoId: BurrowedSmall
   - type: DoAfterArgs
     delay: 2
+    breakOnMove: true
 
 - type: entity
   parent: [BaseActionPolymorph, BaseDoAfterAction]
@@ -35,6 +36,7 @@
       protoId: BurrowedLarge
   - type: DoAfterArgs
     delay: 3
+    breakOnMove: true
 
 # Action events/protoIDs
 - type: polymorph
@@ -48,11 +50,11 @@
     polymorphPopup: "burrowing-popup-generic"
     exitPolymorphPopup: "burrowing-revert-popup-generic"
     polymorphSound:
-      path: /Audio/_starcup/Effects/Burrowing/burrow_on.ogg
+      path: /Audio/_starcup/Effects/Burrowing/burrow_on_small.ogg
       params:
         volume: 0.1
     exitPolymorphSound:
-      path: /Audio/_starcup/Effects/Burrowing/burrow_off.ogg
+      path: /Audio/_starcup/Effects/Burrowing/burrow_off_small.ogg
 
 - type: polymorph
   id: BurrowedLarge
@@ -65,11 +67,11 @@
     polymorphPopup: "burrowing-popup-generic"
     exitPolymorphPopup: "burrowing-revert-popup-generic"
     polymorphSound:
-      path: /Audio/_starcup/Effects/Burrowing/burrow_on.ogg
+      path: /Audio/_starcup/Effects/Burrowing/burrow_on_large.ogg
       params:
         volume: 0.1
     exitPolymorphSound:
-      path: /Audio/_starcup/Effects/Burrowing/burrow_off.ogg
+      path: /Audio/_starcup/Effects/Burrowing/burrow_off_large.ogg
 
 # Entities resulting from the protoIDs
 - type: entity
@@ -78,7 +80,6 @@
   suffix: small
   parent:
     - BaseMob
-    - MobDamageable
   description: Something hides underground.
   components:
   - type: Sprite
@@ -105,9 +106,10 @@
         - Impassable
   - type: Insulated
   - type: Temperature
+    currentTemperature: 310.15
+  - type: TemperatureDamage
     heatDamageThreshold: 360
     coldDamageThreshold: -150
-    currentTemperature: 310.15
   - type: Tag
     tags:
     - CannotSuicide
@@ -115,6 +117,71 @@
     baseWalkSpeed : 0
     baseSprintSpeed : 0
   - type: NoSlip
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: burrowed
+    # the components below were copied from MobDamageable, and maybe tweaked a little.
+    # the burrowed creature was not parented to it because MobDamageable has the pullable component.
+    # we don't want burrowed creatures to be pullable.
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 400
+      behaviors:
+      - !type:GibBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Radiation
+        damage: 15
+      behaviors:
+      - !type:PopupBehavior
+        popup: mouth-taste-metal
+        popupType: LargeCaution
+        targetOnly: true
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Radiation
+        damage: 40
+      behaviors:
+      - !type:VomitBehavior
+  - type: RadiationReceiver
+  - type: Stamina
+  - type: StunVisuals
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      45: Critical
+      50: Dead
+  - type: MobStateActions
+    actions:
+      Critical:
+      - ActionCritSuccumb
+      - ActionCritFakeDeath
+      - ActionCritLastWords
+  - type: Deathgasp
+  - type: HealthExaminable
+    examinableTypes:
+    - Blunt
+    - Slash
+    - Piercing
+    - Heat
+    - Shock
+    - Cold
+    - Caustic
+    - Asphyxiation
+    - Radiation
+  - type: DamageOnHighSpeedImpact
+    damage:
+      types:
+        Blunt: 5
+    soundHit:
+      path: /Audio/Effects/hit_kick.ogg
+  - type: LightningTarget
+    priority: 2
+    lightningExplode: false
 
 - type: entity
   id: BurrowedCreatureLarge
@@ -134,3 +201,8 @@
           radius: 0.5
         mask:
         - Impassable
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      95: Critical
+      100: Dead

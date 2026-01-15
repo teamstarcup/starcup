@@ -93,10 +93,11 @@
   parent: BoxEncryptionKeyPassenger
   id: BoxEncryptionKeyPrison
   components:
-  - type: StorageFill
-    contents:
-    - id: EncryptionKeyPrison
-      amount: 4
+  - type: EntityTableContainerFill
+    containers:
+      storagebase:
+        id: EncryptionKeyPrison
+        amount: 4
 
 - type: radioChannel
   id: Prison

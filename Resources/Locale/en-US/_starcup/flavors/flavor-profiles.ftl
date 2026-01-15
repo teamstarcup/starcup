@@ -4,6 +4,38 @@ flavor-complex-mango = like mangoes
 flavor-complex-sour-apple = like sour apples
 flavor-complex-imitation-chocolate = sort of like chocolate
 
+# Drinks
+flavor-complex-adios-motherfucker = like sweet, burning sunrays
+flavor-complex-afterburner = like a burning tire
+flavor-complex-ambrosia = overwhelmingly invigorating
+flavor-complex-appletini = sharply sweet
+flavor-complex-aviation = like if perfume was edible
+flavor-complex-black-velvet = dark and brooding
+flavor-complex-blue-lagoon = like being splashed with seafoam
+flavor-complex-brain-scrambler = like everything at the same time
+flavor-complex-bramble = like the breath of a forest
+flavor-complex-buzzed-bunny = like a wild goose chase
+flavor-complex-cactus = sweet and tingly
+flavor-complex-cherry-bomb = like a sizzling burst of sweetness
+flavor-complex-cherry-limeade = vividly tart and sweet
+flavor-complex-corpse-reviver = strong enough to wake the dead
+flavor-complex-cryptid = like something dark and mysterious
+flavor-complex-earthquake = dizzyingly strong
+flavor-complex-eclipse = a little perplexing
+flavor-complex-emerald-breeze = like being carried on the wind
+flavor-complex-evil-princess = decadently sweet
+flavor-complex-feywild = like a pixie prancing across your tongue
+flavor-complex-goblins-brew = like a live grenade in your mouth
+flavor-complex-moon-mist = like cool nighttime air
+flavor-complex-mushburger = upsettingly starchy
+flavor-complex-necropolitan = tart and worryingly bitter
+flavor-complex-paradise-lost = sweet as sin
+flavor-complex-rainbow-shooter = like an entire fruit basket
+flavor-complex-red-dog = sort of like cookies
+flavor-complex-red-eye = like a bad idea
+flavor-complex-sakura-martini = like delicate spring blossoms
+flavor-complex-snakebite = bitter with a sweet aftertaste
+
 # Drinks (Rewrites)
 flavor-complex-acidspit-starcup = like your tongue is on fire
 flavor-complex-alien-brain-hemorrhage-starcup = like a sweet migraine

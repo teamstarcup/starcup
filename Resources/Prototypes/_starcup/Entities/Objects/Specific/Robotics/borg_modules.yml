@@ -1,4 +1,21 @@
 - type: entity
+  id: BorgModuleToolBasic
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  name: basic tool cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: generic
+    - state: icon-tools
+  - type: ItemBorgModule
+    hands:
+    - item: Crowbar
+    - item: Wrench
+    - item: Screwdriver
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: tool-module }
+
+- type: entity
   id: BaseBorgModuleNanotrasen
   parent: BaseBorgModule
   abstract: true

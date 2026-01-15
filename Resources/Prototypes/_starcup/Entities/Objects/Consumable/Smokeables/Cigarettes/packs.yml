@@ -8,7 +8,9 @@
     sprite: _starcup/Objects/Consumable/Smokeables/Cigarettes/Packs/nanotrasen.rsi
   - type: Item
     sprite: _starcup/Objects/Consumable/Smokeables/Cigarettes/Packs/nanotrasen.rsi
-  - type: StorageFill
-    contents:
-    - id: CigaretteNanotrasen
-      amount: 10
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: CigaretteNanotrasen
+          amount: 10

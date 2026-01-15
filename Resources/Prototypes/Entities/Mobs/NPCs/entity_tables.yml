@@ -3,16 +3,35 @@
   table: !type:GroupSelector
     children:
     - id: MobMothroach
-    - id: MobCockroach
+    # begin starcup: add borderworld cockroach
+    - !type:GroupSelector
+      children:
+      - id: MobCockroach
+      - id: MobCockroachHL
+    # end starcup
     - !type:GroupSelector
       children:
       - id: MobMouse
       - id: MobMouse1
       - id: MobMouse2
-      - id: MobMouseCancer
-        weight: 0.05
+    # begin starcup
+    #  - id: MobMouseCancer
+    #    weight: 0.05
+    # end starcup
     - !type:GroupSelector
       children:
       - id: MobSnail
       - id: MobSnailSpeed
       - id: MobSnailMoth
+    # begin starcup additions
+    - id: MobFlySwarm
+    - id: MobBeeSwarm
+    - id: MobFireflySwarm
+    - id: MobButterfly
+    - id: MobDragonfly
+    - !type:GroupSelector
+      children:
+      - id: MobBeetle
+      - id: MobBeetleRhino
+      - id: MobBeetleJune
+      - id: MobLadybug

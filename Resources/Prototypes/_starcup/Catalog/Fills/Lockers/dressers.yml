@@ -3,26 +3,30 @@
   parent: Dresser
   suffix: Filled, Captain, Syndicate
   components:
-  - type: StorageFill
-    contents:
-      - id: ClothingHeadHatCaptainSyndie
-      - id: ClothingHeadHatCapcapSyndie
-      - id: ClothingUniformJumpsuitCapFormalSyndie
-      - id: ClothingUniformJumpskirtCapFormalDressSyndie
-      - id: ClothingHandsGlovesCaptainSyndie
-      - id: ClothingOuterWinterCapSyndie
-      - id: ClothingNeckCloakCapSyndie
-      - id: ClothingOuterSweaterCommand
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingHeadHatCaptainSyndie
+        - id: ClothingHeadHatCapcapSyndie
+        - id: ClothingUniformJumpsuitCapFormalSyndie
+        - id: ClothingUniformJumpskirtCapFormalDressSyndie
+        - id: ClothingHandsGlovesCaptainSyndie
+        - id: ClothingOuterWinterCapSyndie
+        - id: ClothingNeckCloakCapSyndie
+        - id: ClothingOuterSweaterCommand
 
 - type: entity
   id: DresserHeadOfPersonnelFilledSyndie
   parent: Dresser
   suffix: Filled, Head Of Personnel, Syndicate
   components:
-  - type: StorageFill
-    contents:
-    - id: ClothingHeadHatHopcapSyndie
-    - id: ClothingOuterWinterHoPSyndie
-    - id: ClothingEyesGlasses
-    - id: ClothingNeckCloakHopSyndie
-    - id: ClothingOuterSweaterCommand
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingHeadHatHopcapSyndie
+        - id: ClothingOuterWinterHoPSyndie
+        - id: ClothingEyesGlasses
+        - id: ClothingNeckCloakHopSyndie
+        - id: ClothingOuterSweaterCommand

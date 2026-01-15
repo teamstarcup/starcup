@@ -11,19 +11,21 @@
   id: ClothingBackpackChameleonFillNT
   suffix: Fill, Chameleon, NanoTrasen
   components:
-    - type: StorageFill
-      contents:
-        - id: ChameleonPDA
-        - id: ClothingUniformJumpsuitChameleon
-        - id: ClothingOuterChameleon
-        - id: ClothingNeckChameleon
-        - id: ClothingMaskGasChameleon
-        - id: ClothingHeadHatChameleon
-        - id: ClothingHandsChameleon
-        - id: ClothingEyesChameleon
-        - id: ClothingHeadsetChameleon
-        - id: ClothingShoesChameleon
-        - id: ChameleonControllerImplanterNT
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+          - id: ChameleonPDA
+          - id: ClothingUniformJumpsuitChameleon
+          - id: ClothingOuterChameleon
+          - id: ClothingNeckChameleon
+          - id: ClothingMaskGasChameleon
+          - id: ClothingHeadHatChameleon
+          - id: ClothingHandsChameleon
+          - id: ClothingEyesChameleon
+          - id: ClothingHeadsetChameleon
+          - id: ClothingShoesChameleon
+          - id: ChameleonControllerImplanterNT
 
 - type: entity
   parent: ClothingBackpackNanotrasenBundle
@@ -31,9 +33,11 @@
   name: NanoTrasen raid suit bundle
   description: Contains NanoTrasen's durable raid armor suit.
   components:
-  - type: StorageFill
-    contents:
-    - id: ClothingOuterArmorRaidNT
-    - id: ClothingHeadHelmetRaidNanotrasen
-    - id: ClothingMaskGasNanotrasen
-    - id: ClothingHandsGlovesCombat
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingOuterArmorRaidNT
+        - id: ClothingHeadHelmetRaidNanotrasen
+        - id: ClothingMaskGasNanotrasen
+        - id: ClothingHandsGlovesCombat
