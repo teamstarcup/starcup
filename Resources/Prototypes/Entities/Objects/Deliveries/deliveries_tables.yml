@@ -77,13 +77,13 @@
     children:
     - !type:NestedSelector
       tableId: RandomUsablePracticalSmallTable
-      weight: 0.35
+      weight: 0.55
     - !type:NestedSelector
       tableId: RandomPrankHarmlessSmallTable
-      weight: 0.35
+      weight: 0.1
     - !type:NestedSelector
       tableId: RandomAccessoryTable
-      weight: 0.30
+      weight: 0.35
 
 - type: entityTable
   id: LetterRareEntityTable
@@ -91,13 +91,13 @@
     children:
     - !type:NestedSelector
       tableId: RandomCombatGearSmallTable
-      weight: 0.4
+      weight: 0.45
     - !type:NestedSelector
       tableId: RandomPrankDangerousSmallTable
-      weight: 0.2
+      weight: 0.1
     - !type:NestedSelector
       tableId: RandomUsableDangerousSmallTable
-      weight: 0.4
+      weight: 0.45
 
 # Packages
 - type: entityTable
