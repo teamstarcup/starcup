@@ -487,7 +487,12 @@
           type: [ Slime ]
         damage:
           types:
-            Caustic: 3 # starcup: changed damage type from heat
+            Heat: 3
+      - !type:Oxygenate # DeltaV - Harpy sensitive to air quality
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Harpy ]
+        factor: -1
 
 - type: reagent
   id: Ice
