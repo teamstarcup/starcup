@@ -47,7 +47,7 @@ public sealed class BlindHealingSystem : SharedBlindHealingSystem
         _adminLogger.Add(LogType.Healed, $"{ToPrettyString(args.User):user} repaired {ToPrettyString(uid):target}'s vision");
 
         var str = Loc.GetString("comp-repairable-repair",
-            ("target", args.Target), // starcup: actually say what we repaired, instead of the glass stack
+            ("target", args.User == args.Target ? Loc.GetString("verb-self-target-pronoun ") : args.Target), // starcup: actually say what we repaired, instead of the glass stack
             ("tool", args.Used!));
         _popup.PopupEntity(str, uid, args.User);
 
