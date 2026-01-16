@@ -11,6 +11,7 @@ using Content.Shared.Interaction;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Popups;
 using Content.Shared.Stacks;
+using Content.Shared.Tiles; // starcup
 
 namespace Content.Server._EE.Silicon.BlindHealing;
 
@@ -25,7 +26,7 @@ public sealed class BlindHealingSystem : SharedBlindHealingSystem
     public override void Initialize()
     {
         SubscribeLocalEvent<BlindHealingComponent, UseInHandEvent>(OnUse);
-        SubscribeLocalEvent<BlindHealingComponent, AfterInteractEvent>(OnInteract);
+        SubscribeLocalEvent<BlindHealingComponent, AfterInteractEvent>(OnInteract, before: [typeof(FloorTileSystem)]); // starcup: before floortile
         SubscribeLocalEvent<BlindHealingComponent, HealingDoAfterEvent>(OnHealingFinished);
     }
 
@@ -45,7 +46,7 @@ public sealed class BlindHealingSystem : SharedBlindHealingSystem
         _adminLogger.Add(LogType.Healed, $"{ToPrettyString(args.User):user} repaired {ToPrettyString(uid):target}'s vision");
 
         var str = Loc.GetString("comp-repairable-repair",
-            ("target", uid),
+            ("target", args.Target), // starcup: actually say what we repaired, instead of the glass stack
             ("tool", args.Used!));
         _popup.PopupEntity(str, uid, args.User);
 
@@ -69,14 +70,15 @@ public sealed class BlindHealingSystem : SharedBlindHealingSystem
     {
 
         if (args.Handled
-            || !TryComp<DamageableComponent>(args.User, out var damageable)
+            || !TryComp<DamageableComponent>(args.Target, out var damageable) // starcup: user -> target.
             || damageable.DamageContainerID != null && !component.DamageContainers.Contains(damageable.DamageContainerID)
-            || !TryComp<BlindableComponent>(args.User, out var blindcomp)
+            || !TryComp<BlindableComponent>(args.Target, out var blindcomp) // starcup: user -> target.
             || blindcomp.EyeDamage == 0
+            || args.Target == null // starcup: we should have a target
             || args.User == args.Target && !component.AllowSelfHeal)
             return;
 
-        TryHealBlindness(uid, args.User, args.User,
+        args.Handled = TryHealBlindness(uid, args.User, args.Target.Value, // starcup: handle the event, set the target to the target
             args.User == args.Target
                 ? component.DoAfterDelay * component.SelfHealPenalty
                 : component.DoAfterDelay);
@@ -92,7 +94,7 @@ public sealed class BlindHealingSystem : SharedBlindHealingSystem
             || !component.AllowSelfHeal)
             return;
 
-        TryHealBlindness(uid, args.User, args.User,
+        args.Handled = TryHealBlindness(uid, args.User, args.User, // starcup: handle the event
             component.DoAfterDelay * component.SelfHealPenalty);
     }
 }
