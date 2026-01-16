@@ -50,3 +50,15 @@ accent-words-penguin-1 = Grhgrhgrh.. squawk!
 accent-words-penguin-2 = Grhgrhgrh.. squawk?
 accent-words-penguin-3 = Grhgrh squawk.
 accent-words-penguin-4 = Grhgrh... squawk.
+
+# Raccoon
+accent-words-raccoon-1 = Grah grah?
+accent-words-raccoon-2 = Grragh!
+accent-words-raccoon-3 = Grirghh.
+accent-words-raccoon-4 = Grhgrh... grigh.
+
+# Fox
+accent-words-raccoon-1 = Nyeeeh... nyeeh?
+accent-words-raccoon-2 = Nyeeh!
+accent-words-raccoon-3 = Nyeehhh...
+accent-words-raccoon-4 = Nyeeh...

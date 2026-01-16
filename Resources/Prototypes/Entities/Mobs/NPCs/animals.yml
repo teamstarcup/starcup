@@ -2648,7 +2648,7 @@
       Female: PenguinSpeechEmotes
       Unsexed: PenguinSpeechEmotes
   - type: ReplacementAccent
-    accent: Penguin
+    accent: penguin
   # end starcup
 
 # TODO: Make grenade penguin voice activated like the rest of the stealth items.
@@ -3102,6 +3102,18 @@
     tags:
     - VimPilot
     - CreatureEmotes # starcup
+  # begin starcup
+  - type: Speech
+    speechSounds: PossumSpeechSounds
+    allowedEmotes: ['CreatureHiss']
+  - type: Vocal
+    sounds:
+      Male: PossumSpeechEmotes
+      Female: PossumSpeechEmotes
+      Unsexed: PossumSpeechEmotes
+  - type: ReplacementAccent
+    accent: xeno
+  # end starcup
 
 - type: entity
   name: possum
@@ -3180,6 +3192,18 @@
     - CreatureEmotes # starcup
   - type: Puller # starcup
     needsHands: false # starcup - "THEY CAN GRASP!!!"
+  # begin starcup
+  - type: Speech
+    speechSounds: RaccoonSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureChitter', 'CreatureBark', 'CreatureWhimper']
+  - type: Vocal
+    sounds:
+      Male: RaccoonSpeechEmotes
+      Female: RaccoonSpeechEmotes
+      Unsexed: RaccoonSpeechEmotes
+  - type: ReplacementAccent
+    accent: raccoon
+  # end starcup
 
 - type: entity
   name: fox
@@ -3266,6 +3290,18 @@
     - CreatureEmotes # starcup
   - type: Puller
     needsHands: false # starcup - ability to carry emeralds important for niche Minecraft challenge modes
+  # begin starcup
+  - type: Speech
+    speechSounds: FoxSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureBark', 'CreatureWhimper']
+  - type: Vocal
+    sounds:
+      Male: FoxSpeechEmotes
+      Female: FoxSpeechEmotes
+      Unsexed: FoxSpeechEmotes
+  - type: ReplacementAccent
+    accent: fox
+  # end starcup
 
 - type: entity
   abstract: true
@@ -3284,6 +3320,7 @@
   - type: Speech
     speechVerb: Canine
     speechSounds: Dog
+    allowedEmotes: ['CreatureScream', 'CreatureBark', 'CreatureWhimper'] # starcup
   - type: Fixtures
     fixtures:
       fix1:

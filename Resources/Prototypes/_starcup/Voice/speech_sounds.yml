@@ -143,6 +143,33 @@
   exclaimSound:
     collection: SnakeHisses
 
+- type: speechSounds
+  id: PossumSpeechSounds
+  saySound:
+    collection: PossumGrawrs
+  askSound:
+    collection: PossumGrawrs
+  exclaimSound:
+    path: /Audio/_starcup/Animals/Possum/possum_exclaim.ogg
+
+- type: speechSounds
+  id: RaccoonSpeechSounds
+  saySound:
+    collection: RaccoonSays
+  askSound:
+    path: /Audio/_starcup/Animals/Raccoon/raccoon_ask.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Animals/Raccoon/raccoon_exclaim.ogg
+
+- type: speechSounds
+  id: FoxSpeechSounds
+  saySound:
+    collection: FoxSays
+  askSound:
+    collection: FoxAsks
+  exclaimSound:
+    collection: FoxExclaims
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -152,14 +179,12 @@
   sounds:
     CreatureSqueak:
       path: /Audio/_starcup/Animals/Bat/bat_squeak.ogg
-    CreatureSneeze:
-      collection: MouseSneezes
-    CreatureCough:
-      collection: MouseSneezes
     CreatureScream:
       path: /Audio/_starcup/Animals/Bat/bat_scream.ogg
     Yawn:
       collection: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+    Sneeze:
+      collection: MouseSneezes
     Gasp:
       collection: MouseGasp
     DefaultDeathgasp:
@@ -471,6 +496,66 @@
     CreatureClick:
       path: /Audio/Voice/Arachnid/arachnid_click.ogg
     Gasp:
-      path: /Audio/_starcup/Voice/Arachnid/arachnid_gasp.ogg # starcup
+      path: /Audio/_starcup/Voice/Arachnid/arachnid_gasp.ogg
     DefaultDeathgasp:
-      path: /Audio/_starcup/Voice/Arachnid/arachnid_death.ogg # starcup
+      path: /Audio/_starcup/Voice/Arachnid/arachnid_death.ogg
+
+- type: emoteSounds
+  id: PossumSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureHiss:
+      collection: PossumHisses
+    Sneeze:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Cough:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Yawn:
+      collection: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+    Gasp:
+      path: /Audio/_starcup/Animals/Possum/possum_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Possum/possum_death.ogg
+
+- type: emoteSounds
+  id: RaccoonSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      collection: RaccoonScreams
+    CreatureChitter:
+      collection: RaccoonChitters
+    CreatureBark:
+      collection: RaccoonBarks
+    CreatureWhimper:
+      path: /Audio/_starcup/Animals/Raccoon/raccoon_whimper.ogg
+    Sneeze:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Cough:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Gasp:
+      collection: RaccoonGasps
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Raccoon/raccoon_whimper.ogg
+
+- type: emoteSounds
+  id: FoxSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      collection: VulpkaninScreams
+    CreatureBark:
+      collection: FoxBarks
+    CreatureWhimper:
+      collection: FoxAsks
+    Sneeze:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Cough:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Gasp:
+      path: /Audio/_starcup/Animals/Fox/fox_gasp.ogg
+    DefaultDeathgasp:
+      collection: FoxExclaims

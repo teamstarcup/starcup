@@ -9,6 +9,7 @@ chat-emote-name-claw-snap = Claw snap
 chat-emote-name-claw-chest-beating = Chest beating
 chat-emote-name-whimper = Whimper
 chat-emote-name-ook = Ook
+chat-emote-name-bark = Bark
 
 # Message
 chat-emote-msg-roar = roars!
@@ -20,3 +21,4 @@ chat-emote-msg-claw-snap = snaps their claws.
 chat-emote-msg-chest-beating = beats their chest.
 chat-emote-msg-whimper = whimpers.
 chat-emote-msg-ook = ooks softly.
+chat-emote-msg-bark = barks!
