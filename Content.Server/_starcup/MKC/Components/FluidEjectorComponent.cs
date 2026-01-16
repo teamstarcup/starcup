@@ -1,0 +1,32 @@
+using Content.Shared.Damage;
+
+namespace Content.Server._starcup.MKC.Components
+{
+    [RegisterComponent]
+    public sealed partial class FluidEjectorComponent : Component
+    {
+        /// <summary>
+        ///     The next time that the fluid ejector will attempt to begin the ejection process.
+        /// </summary>
+        [DataField]
+        public TimeSpan NextUpdate;
+
+        /// <summary>
+        ///     The amount of time it takes for fluids to be ejected once detected in the body.
+        /// </summary>
+        [DataField]
+        public TimeSpan EjectionTime = TimeSpan.FromSeconds(15);
+
+        /// <summary>
+        /// Damage applied to the entity when they eject fluids
+        /// </summary>
+        [DataField(required: true)]
+        public DamageSpecifier EjectionDamage;
+
+        /// <summary>
+        /// Multiplies EjectionDamage per unit of reagent expelled
+        /// </summary>
+        [DataField(required: true)]
+        public float EjectionDamageMultiplier;
+    }
+}

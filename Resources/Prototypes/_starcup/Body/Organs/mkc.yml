@@ -44,7 +44,11 @@
   - type: Sprite
     state: stomach
   - type: Organ
-  # TODO: fluid ejector component
+  - type: FluidEjector
+    ejectionDamage:
+      types:
+        Piercing: 1
+    ejectionDamageMultiplier: 0.8  # per unit of expelled reagent
 
 - type: entity
   id: OrganMKCEyes
