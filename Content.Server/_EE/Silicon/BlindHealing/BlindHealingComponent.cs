@@ -20,4 +20,12 @@ public sealed partial class BlindHealingComponent : Component
 
     [DataField(required: true)]
     public List<string> DamageContainers;
+
+    // begin starcup: item cost instead of misusing the price
+    /// <summary>
+    ///     For stackable items, how many are required in the stack to do the repair
+    /// </summary>
+    [DataField]
+    public int StackCost = 2;
+    // end starcup
 }

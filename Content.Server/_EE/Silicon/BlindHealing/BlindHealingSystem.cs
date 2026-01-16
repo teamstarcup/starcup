@@ -37,9 +37,10 @@ public sealed class BlindHealingSystem : SharedBlindHealingSystem
             || blindComp is { EyeDamage: 0 })
             return;
 
-        if (TryComp<StackComponent>(uid, out var stackComponent)
-            && TryComp<StackPriceComponent>(uid, out var stackPrice))
-            _stackSystem.SetCount(uid, (int) (_stackSystem.GetCount((uid, stackComponent)) - stackPrice.Price), stackComponent);
+        // begin starcup: stop misusing the item price
+        if (TryComp<StackComponent>(uid, out var stackComponent) && component.StackCost > 0)
+            _stackSystem.ReduceCount((uid, stackComponent), component.StackCost);
+        // end starcup
 
         _blindableSystem.AdjustEyeDamage((args.Target.Value, blindComp), -blindComp.EyeDamage);
 
