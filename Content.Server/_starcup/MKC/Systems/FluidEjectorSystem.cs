@@ -45,8 +45,8 @@ public sealed class FluidEjectorSystem : EntitySystem
 
     public override void Update(float deltaTime)
     {
-        var query = EntityQueryEnumerator<FluidEjectorComponent, OrganComponent, TransformComponent>();
-        while (query.MoveNext(out _, out var fluidEjector, out var organ, out var transform))
+        var query = EntityQueryEnumerator<FluidEjectorComponent, OrganComponent>();
+        while (query.MoveNext(out _, out var fluidEjector, out var organ))
         {
             if (fluidEjector.NextUpdate == TimeSpan.Zero)
                 continue;
@@ -57,7 +57,7 @@ public sealed class FluidEjectorSystem : EntitySystem
             if (_gameTiming.CurTime >= fluidEjector.NextUpdate)
             {
                 fluidEjector.NextUpdate = TimeSpan.Zero;
-                DoFluidEject(body, fluidEjector, transform);
+                DoFluidEject(body, fluidEjector);
             }
         }
     }
@@ -154,7 +154,7 @@ public sealed class FluidEjectorSystem : EntitySystem
         return ejectedSolution;
     }
 
-    private void DoFluidEject(EntityUid uid, FluidEjectorComponent fluidEjector, TransformComponent? transform = null)
+    private void DoFluidEject(EntityUid uid, FluidEjectorComponent fluidEjector)
     {
         var ejectedSolution = GetEjectedReagents(uid);
         if (ejectedSolution == null)
@@ -162,7 +162,7 @@ public sealed class FluidEjectorSystem : EntitySystem
 
         var ejectedAmount = ejectedSolution.Volume;
 
-        if (_puddle.TrySpillAt(uid, ejectedSolution, out var puddle, true, transform))
+        if (_puddle.TrySpillAt(uid, ejectedSolution, out var puddle, true))
             _forensics.TransferDna(puddle, uid, false);
 
         var slowdownTime = TimeSpan.FromSeconds((ejectedAmount * 0.4f).Value);
