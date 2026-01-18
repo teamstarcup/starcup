@@ -3317,10 +3317,23 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: corgi
   - type: Physics
+  # begin starcup
   - type: Speech
     speechVerb: Canine
-    speechSounds: Dog
-    allowedEmotes: ['CreatureScream', 'CreatureBark', 'CreatureWhimper'] # starcup
+    speechSounds: SmallDogSpeechSounds
+    allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'Snuffle', 'Pant', 'Shake']
+  - type: Vocal
+    sounds:
+      Male: SmallDogSpeechEmotes
+      Female: SmallDogSpeechEmotes
+      Unsexed: SmallDogSpeechEmotes
+  - type: ReplacementAccent
+    accent: smalldog
+  - type: Tag
+    tags:
+    - VimPilot
+    - CreatureEmotes
+  # end starcup
   - type: Fixtures
     fixtures:
       fix1:
@@ -3349,11 +3362,6 @@
   - type: MessyDrinker
   - type: Puller
     needsHands: false # starcup - gives ghostrole corgis something to do. go fetch!
-  # behind starcup
-  - type: Tag
-    tags:
-    - CreatureEmotes
-  # end starcup
 
 - type: entity
   parent: MobCorgiBase
@@ -3372,11 +3380,13 @@
     - id: FoodMeat
       amount: 2
     dropOrgansOnButcher: true # starcup: butchering gives organs
-  - type: ReplacementAccent
-    accent: dog
-  - type: Tag
-    tags:
-    - VimPilot
+  # begin starcup: all this made irrelevant by modifying MobCorgiBase
+  #- type: ReplacementAccent
+    #accent: dog
+  #- type: Tag
+    #tags:
+    #- VimPilot
+  # end starcup
 
 - type: entity
   name: corrupted corgi
@@ -3469,6 +3479,17 @@
   - type: Grammar
     attributes:
       gender: epicene
+  # begin starcup
+  - type: Speech
+    speechVerb: Canine
+    speechSounds: SmallDogSpeechSounds
+    allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'Snuffle', 'Pant', 'Shake']
+  - type: Vocal
+    sounds:
+      Male: SmallDogSpeechEmotes
+      Female: SmallDogSpeechEmotes
+      Unsexed: SmallDogSpeechEmotes
+  # end starcup
 
 - type: entity
   name: cat
@@ -3505,9 +3526,17 @@
         Base: cat_dead
       Dead:
         Base: cat_dead
+  # begin starcup
   - type: Speech
-    speechSounds: Cat
+    speechSounds: CatSpeechSounds
     speechVerb: SmallMob
+    allowedEmotes: ['CreatureTrill', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss']
+  - type: Vocal
+    sounds:
+      Male: CatSpeechEmotes
+      Female: CatSpeechEmotes
+      Unsexed: CatSpeechEmotes
+  # end starcup
   - type: Butcherable
     spawned:
     - id: FoodMeat
@@ -3521,7 +3550,7 @@
     interactFailureString: petting-failure-generic
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
-      path: /Audio/Animals/cat_meow.ogg
+      collection: CatTrills # starcup
   - type: MeleeWeapon
     altDisarm: false
     angle: 0
@@ -3756,6 +3785,15 @@
     awakeLayers:
       sleeping:
         state: kitten
+  - type: Speech
+    speechSounds: KittenSpeechSounds
+    speechVerb: SmallMob
+    allowedEmotes: ['CreatureTrill', 'CreatureMeow', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss']
+  - type: Vocal
+    sounds:
+      Male: KittenSpeechEmotes
+      Female: KittenSpeechEmotes
+      Unsexed: KittenSpeechEmotes
   # end starcup
 
 - type: entity

@@ -51,6 +51,19 @@
   - grrr
 
 - type: emote
+  id: CreatureSnarl
+  parent: CreatureEmoteBase
+  name: chat-emote-name-snarl
+  category: Vocal
+  available: false
+  icon: _starcup/Interface/Emotes/Creature/snarl.png
+  chatMessages: ["chat-emote-msg-snarl"]
+  chatTriggers:
+  - snarl
+  - snarled
+  - snarling
+
+- type: emote
   id: CreatureRoar
   parent: CreatureEmoteBase
   name: chat-emote-name-roar
@@ -76,7 +89,7 @@
   name: chat-emote-name-scream
   category: Vocal
   available: false
-  icon: _starcup/Interface/Emotes/scream.png
+  icon: _starcup/Interface/Emotes/Creature/scream.png
   chatMessages: ["chat-emote-msg-scream"]
   chatTriggers:
   - scream
@@ -102,7 +115,7 @@
   name: chat-emote-name-squeak
   category: Vocal
   available: false
-  icon: _starcup/Interface/Emotes/squeak.png
+  icon: _starcup/Interface/Emotes/Creature/squeak.png
   chatMessages: ["chat-emote-msg-squeak"]
   chatTriggers:
   - squeak
@@ -115,7 +128,7 @@
   name: chat-emote-name-laugh
   category: Vocal
   available: false
-  icon: _starcup/Interface/Emotes/laugh.png
+  icon: _starcup/Interface/Emotes/Creature/laugh.png
   chatMessages: ["chat-emote-msg-laugh"]
   chatTriggers:
   - laugh
@@ -140,7 +153,7 @@
   name: chat-emote-name-chitter
   category: Vocal
   available: false
-  icon: _starcup/Interface/Emotes/chitter.png
+  icon: _starcup/Interface/Emotes/Creature/chitter.png
   chatMessages: ["chat-emote-msg-chitter"]
   chatTriggers:
   - chitter
@@ -153,7 +166,7 @@
   name: chat-emote-name-click
   category: Vocal
   available: false
-  icon: _starcup/Interface/Emotes/click.png
+  icon: _starcup/Interface/Emotes/Creature/click.png
   chatMessages: ["chat-emote-msg-click"]
   chatTriggers:
   - click
@@ -166,7 +179,7 @@
   name: chat-emote-name-whimper
   category: Vocal
   available: false
-  icon: _starcup/Interface/Emotes/whimper.png
+  icon: _starcup/Interface/Emotes/Creature/whimper.png
   chatMessages: ["chat-emote-msg-whimper"]
   chatTriggers:
   - whimper
@@ -177,12 +190,25 @@
   - whined
 
 - type: emote
+  id: CreatureTrill
+  parent: CreatureEmoteBase
+  name: chat-emote-name-trill
+  category: Vocal
+  available: false
+  icon: _starcup/Interface/Emotes/Creature/trill.png
+  chatMessages: ["chat-emote-msg-trill"]
+  chatTriggers:
+  - trills
+  - trilled
+  - trilling
+
+- type: emote
   id: CreatureOok
   parent: CreatureEmoteBase
   name: chat-emote-name-ook
   category: Vocal
   available: false
-  icon: _starcup/Interface/Emotes/ook.png
+  icon: _starcup/Interface/Emotes/Creature/trill.png
   chatMessages: ["chat-emote-msg-ook"]
   chatTriggers:
   - ook
@@ -195,7 +221,7 @@
   name: chat-emote-name-bark
   category: Vocal
   available: false
-  icon: _starcup/Interface/Emotes/bark.png
+  icon: _starcup/Interface/Emotes/Creature/bark.png
   chatMessages: ["chat-emote-msg-bark"]
   chatTriggers:
   - bark
@@ -206,3 +232,34 @@
   - borks
   - borking
   - borked
+
+- type: emote
+  id: CreatureMeow
+  parent: CreatureEmoteBase
+  name: chat-emote-name-meow
+  category: Vocal
+  available: false
+  icon: _starcup/Interface/Emotes/Creature/meow.png
+  chatMessages: ["chat-emote-msg-meow"]
+  chatTriggers:
+  - meow
+  - meows
+  - meowing
+  - meowed
+  - mrow
+  - mraw
+  - mow
+
+- type: emote
+  id: CreatureHowl
+  parent: CreatureEmoteBase
+  name: chat-emote-name-howl
+  category: Vocal
+  available: false
+  icon: _starcup/Interface/Emotes/Creature/howl.png
+  chatMessages: ["chat-emote-msg-howl"]
+  chatTriggers:
+  - howl
+  - howls
+  - howling
+  - howled

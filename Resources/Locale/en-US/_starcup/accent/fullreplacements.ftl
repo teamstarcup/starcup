@@ -58,7 +58,13 @@ accent-words-raccoon-3 = Grirghh.
 accent-words-raccoon-4 = Grhgrh... grigh.
 
 # Fox
-accent-words-raccoon-1 = Nyeeeh... nyeeh?
-accent-words-raccoon-2 = Nyeeh!
-accent-words-raccoon-3 = Nyeehhh...
-accent-words-raccoon-4 = Nyeeh...
+accent-words-fox-1 = Nyeeeh... nyeeh?
+accent-words-fox-2 = Nyeeh!
+accent-words-fox-3 = Nyeehhh...
+accent-words-fox-4 = Nyeeh...
+
+# Small dog
+accent-words-smalldog-1 = Arf snarf.
+accent-words-smalldog-2 = Arf grr grf snrf.
+accent-words-smalldog-3 = Grr!
+accent-words-smalldog-4 = Grff snarf sniff?

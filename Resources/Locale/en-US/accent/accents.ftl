@@ -1,8 +1,8 @@
-# Cat accent
+# Cat accent # starcup: changed cat-4 from Hhss! to Mewl.
 accent-words-cat-1 = Meow!
 accent-words-cat-2 = Mow.
 accent-words-cat-3 = Mrrrow!
-accent-words-cat-4 = Hhsss!
+accent-words-cat-4 = Mewl.
 accent-words-cat-5 = Brrow.
 accent-words-cat-6 = Meow?
 accent-words-cat-7 = Miau.

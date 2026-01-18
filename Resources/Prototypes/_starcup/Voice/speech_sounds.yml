@@ -170,6 +170,33 @@
   exclaimSound:
     collection: FoxExclaims
 
+- type: speechSounds
+  id: SmallDogSpeechSounds
+  saySound:
+    collection: SmallDogSays
+  askSound:
+    path: /Audio/_starcup/Animals/Dog/dog_small_ask.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Animals/Dog/dog_small_exclaim.ogg
+
+- type: speechSounds
+  id: CatSpeechSounds
+  saySound:
+    collection: CatSays
+  askSound:
+    collection: CatAsks
+  exclaimSound:
+    collection: CatSays
+
+- type: speechSounds
+  id: KittenSpeechSounds
+  saySound:
+    collection: CatMews
+  askSound:
+    collection: CatMews
+  exclaimSound:
+    collection: CatMews
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -239,8 +266,8 @@
       path: /Audio/Voice/Moth/moth_chitter.ogg
     CreatureSqueak:
       path: /Audio/Voice/Moth/moth_squeak.ogg
-    Gasp:
-      path: /Audio/_starcup/Voice/Moth/moth_gasp.ogg
+    #Gasp:
+      #path: /Audio/_starcup/Voice/Moth/moth_gasp.ogg # Removed to avoid confusion with doptera during emergencies.
     Sneeze:
       path: /Audio/_starcup/Voice/Moth/moth_sneeze.ogg
     Cough:
@@ -559,3 +586,83 @@
       path: /Audio/_starcup/Animals/Fox/fox_gasp.ogg
     DefaultDeathgasp:
       collection: FoxExclaims
+
+- type: emoteSounds
+  id: SmallDogSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureBark:
+      collection: SmallDogBarks
+    CreatureSnarl:
+      collection: SmallDogSnarls
+    CreatureGrowl:
+      collection: SmallDogGrowls
+    CreatureWhimper:
+      collection: DogWhimpers
+    CreatureHowl:
+      collection: DogHowls
+    Snuffle:
+      collection: DogSniffing
+    Shake:
+      path: /Audio/_starcup/Animals/Dog/dog_shake.ogg
+    Pant:
+      path: /Audio/_starcup/Animals/Dog/dog_pant1.ogg
+    Sneeze:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Cough:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Gasp:
+      collection: DogGasps
+    DefaultDeathgasp:
+      collection: DogWhimpers
+
+- type: emoteSounds
+  id: CatSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureMeow:
+      collection: CatAsks
+    CreatureTrill:
+      collection: CatTrills
+    CreatureScream:
+      collection: FelinidScreams
+    CreatureGrowl:
+      path: /Audio/_DV/Voice/Felinid/cat_growl1.ogg
+    CreatureWhimper:
+      collection: CatWhimpers
+    CreatureHiss:
+      collection: CatHisses
+    Sneeze:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Cough:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Gasp:
+      collection: DogGasps
+    DefaultDeathgasp:
+      collection: CatWhimpers
+
+- type: emoteSounds
+  id: KittenSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureMeow:
+      collection: CatMews
+    CreatureTrill:
+      collection: CatTrills
+    CreatureGrowl:
+      path: /Audio/_DV/Voice/Felinid/cat_growl1.ogg
+    CreatureWhimper:
+      collection: CatWhimpers
+    CreatureHiss:
+      collection: KittenHisses
+    Sneeze:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Cough:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Gasp:
+      collection: DogGasps
+    DefaultDeathgasp:
+      collection: CatWhimpers
