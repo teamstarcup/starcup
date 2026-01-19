@@ -199,6 +199,26 @@
     - random:
         treelarge01: ""
 
+- type: entity
+  parent: BaseTreeLarge
+  id: FloraTreeLargePalm
+  name: palm tree
+  suffix: large
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_palm_large.rsi
+    layers:
+    - state: treelarge01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treelarge01: ""
+        treelarge02: ""
+        treelarge03: ""
+        treelarge04: ""
+        treelarge05: ""
+
 # Hollow trees
 
 - type: entity
