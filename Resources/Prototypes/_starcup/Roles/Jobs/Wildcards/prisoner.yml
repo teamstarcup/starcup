@@ -3,10 +3,7 @@
   name: job-name-prisoner
   description: job-description-prisoner
   playTimeTracker: JobPrisoner
-  requirements:
-  - !type:DepartmentTimeRequirement
-    department: Security
-    time: 7200 #2 hr
+  whitelisted: true
   startingGear: PrisonerGear
   icon: JobIconPermaPrisoner
   supervisors: job-supervisors-security
