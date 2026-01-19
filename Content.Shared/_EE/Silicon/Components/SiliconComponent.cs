@@ -101,10 +101,10 @@ public sealed partial class SiliconComponent : Component
     public float? ChargeThresholdCritical = 0.1f;
 
     [DataField]
-    public ProtoId<AlertPrototype> BatteryAlert = "BorgBattery";
+    public ProtoId<AlertPrototype> BatteryAlert = "IpcBattery"; // starcup: quick fix non-predicted alert
 
     [DataField]
-    public ProtoId<AlertPrototype> NoBatteryAlert = "BorgBatteryNone";
+    public ProtoId<AlertPrototype> NoBatteryAlert = "IpcBatteryNone"; // starcup: quick fix non-predicted alert
 
 
     /// <summary>
