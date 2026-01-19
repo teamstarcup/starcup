@@ -180,6 +180,15 @@
     path: /Audio/_starcup/Animals/Dog/dog_small_exclaim.ogg
 
 - type: speechSounds
+  id: PuppySpeechSounds
+  saySound:
+    path: /Audio/_starcup/Animals/Dog/puppy_say.ogg
+  askSound:
+    path: /Audio/_starcup/Animals/Dog/puppy_ask.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Animals/Dog/puppy_exclaim.ogg
+
+- type: speechSounds
   id: CatSpeechSounds
   saySound:
     collection: CatSays
@@ -602,6 +611,30 @@
       collection: DogWhimpers
     CreatureHowl:
       collection: DogHowls
+    Snuffle:
+      collection: DogSniffing
+    Shake:
+      path: /Audio/_starcup/Animals/Dog/dog_shake.ogg
+    Pant:
+      path: /Audio/_starcup/Animals/Dog/dog_pant1.ogg
+    Sneeze:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Cough:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Gasp:
+      collection: DogGasps
+    DefaultDeathgasp:
+      collection: DogWhimpers
+
+- type: emoteSounds
+  id: PuppySpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureBark:
+      collection: PuppyBarks
+    CreatureWhimper:
+      collection: PuppyWhimpers
     Snuffle:
       collection: DogSniffing
     Shake:

@@ -3482,13 +3482,13 @@
   # begin starcup
   - type: Speech
     speechVerb: Canine
-    speechSounds: SmallDogSpeechSounds
-    allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'Snuffle', 'Pant', 'Shake']
+    speechSounds: PuppySpeechSounds
+    allowedEmotes: ['CreatureBark', 'CreatureWhimper', 'Snuffle', 'Pant', 'Shake']
   - type: Vocal
     sounds:
-      Male: SmallDogSpeechEmotes
-      Female: SmallDogSpeechEmotes
-      Unsexed: SmallDogSpeechEmotes
+      Male: PuppySpeechEmotes
+      Female: PuppySpeechEmotes
+      Unsexed: PuppySpeechEmotes
   # end starcup
 
 - type: entity
@@ -3659,6 +3659,7 @@
     tags:
     - NuclearOperative
     - SyndicateAgent
+    - CreatureEmotes # starcup
   - type: MeleeWeapon
     altDisarm: false
     angle: 0
@@ -3696,6 +3697,7 @@
   - type: Tag
     tags:
       - DoorBumpOpener
+      - CreatureEmotes # starcup
   - type: MovementAlwaysTouching
   - type: PressureImmunity
   - type: ProtectedFromStepTriggers
@@ -3926,10 +3928,19 @@
     description: ghost-role-information-hamster-description
     rules: ghost-role-information-nonantagonist-rules
   - type: GhostTakeoverAvailable
+  # begin starcup
   - type: Speech
-    speechVerb: SmallMob
     speechSounds: Squeak
-    allowedEmotes: ['Squeak']
+    speechVerb: SmallMob
+    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureLaugh']
+  - type: Vocal
+    sounds:
+      Male: SqueakSpeechEmotes
+      Female: SqueakSpeechEmotes
+      Unsexed: SqueakSpeechEmotes
+  - type: TypingIndicator
+    proto: rodentia
+  # end starcup
   - type: Sprite
     drawdepth: SmallMobs
     sprite: Mobs/Animals/hamster.rsi
