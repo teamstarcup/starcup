@@ -58,6 +58,14 @@
       behaviors:
       - !type:GibBehavior
         recursive: false
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Slime
+          Quantity: 5
 
 - type: entity
   name: giant flying insect
