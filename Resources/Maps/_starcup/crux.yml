@@ -4,8 +4,8 @@ meta:
   engineVersion: 270.1.0
   forkId: ""
   forkVersion: ""
-  time: 01/20/2026 08:48:28
-  entityCount: 14208
+  time: 01/20/2026 08:53:30
+  entityCount: 14210
 maps:
 - 1
 grids:
@@ -41214,6 +41214,12 @@ entities:
     - type: Transform
       pos: -4.5,32.5
       parent: 2
+  - uid: 14210
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 27.5,-43.5
+      parent: 2
 - proto: Fireplace
   entities:
   - uid: 6396
@@ -71207,7 +71213,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 17.5,4.5
       parent: 2
-  - uid: 11647
+  - uid: 11648
     components:
     - type: Transform
       pos: 11.5,18.5
@@ -72525,6 +72531,11 @@ entities:
     components:
     - type: Transform
       pos: 36.5,-2.5
+      parent: 2
+  - uid: 14209
+    components:
+    - type: Transform
+      pos: 27.5,-48.5
       parent: 2
 - proto: RandomDrinkGlass
   entities:
@@ -78254,6 +78265,11 @@ entities:
     - type: Transform
       pos: -7.5,-31.5
       parent: 2
+  - uid: 11647
+    components:
+    - type: Transform
+      pos: 27.5,-48.5
+      parent: 2
   - uid: 12832
     components:
     - type: Transform
@@ -80107,11 +80123,6 @@ entities:
     components:
     - type: Transform
       pos: 17.5,18.5
-      parent: 2
-  - uid: 11648
-    components:
-    - type: Transform
-      pos: 27.5,-48.5
       parent: 2
 - proto: VendingMachineSeeds
   entities:
