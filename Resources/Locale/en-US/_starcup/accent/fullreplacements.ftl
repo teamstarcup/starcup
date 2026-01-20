@@ -1,3 +1,8 @@
+# Silent
+accent-words-silent-1 = ...
+accent-words-silent-2 = ...?
+accent-words-silent-3 = ...!
+
 # Cow
 accent-words-cow-1 = Moo!
 accent-words-cow-2 = Moo.

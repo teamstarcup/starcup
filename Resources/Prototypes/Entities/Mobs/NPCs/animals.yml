@@ -1020,7 +1020,7 @@
         Blunt: 15
     animation: WeaponArcPunch
   - type: ReplacementAccent
-    accent: cow
+    accent: CowAccent
   - type: Speech
     speechVerb: LargeMob
     speechSounds: CowSpeechSounds
@@ -1246,7 +1246,7 @@
         Blunt: 10
     animation: WeaponArcPunch
   - type: ReplacementAccent
-    accent: goat
+    accent: GoatAccent
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepGeneric
@@ -1316,7 +1316,7 @@
     - FootstepSound
     - CreatureEmotes
   - type: ReplacementAccent
-    accent: goose
+    accent: GooseAccent
   - type: Speech
     speechVerb: Harpy
     speechSounds: GooseSpeechSounds
@@ -1413,7 +1413,7 @@
     tags:
     - CreatureEmotes
   - type: ReplacementAccent
-    accent: gorilla
+    accent: GorillaAccent
   - type: Speech
     speechVerb: LargeMob
     speechSounds: GorillaSpeechSounds
@@ -2267,7 +2267,7 @@
       Female: LizardSpeechEmotes
       Unsexed: LizardSpeechEmotes
   - type: ReplacementAccent
-    accent: lizard
+    accent: LizardAccent
   # end starcup
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
@@ -2388,7 +2388,7 @@
       Female: LizardTinySpeechEmotes
       Unsexed: LizardTinySpeechEmotes
   - type: ReplacementAccent
-    accent: gecko
+    accent: GeckoAccent
   # end starcup
 
 - type: entity
@@ -2474,7 +2474,7 @@
       Female: FrogSpeechEmotes
       Unsexed: FrogSpeechEmotes
   - type: ReplacementAccent
-    accent: frog
+    accent: FrogAccent
   # end starcup
 
 # Would be cool to have some functionality for the parrot to be able to sit on stuff
@@ -2648,7 +2648,7 @@
       Female: PenguinSpeechEmotes
       Unsexed: PenguinSpeechEmotes
   - type: ReplacementAccent
-    accent: penguin
+    accent: PenguinAccent
   # end starcup
 
 # TODO: Make grenade penguin voice activated like the rest of the stealth items.
@@ -3202,7 +3202,7 @@
       Female: RaccoonSpeechEmotes
       Unsexed: RaccoonSpeechEmotes
   - type: ReplacementAccent
-    accent: raccoon
+    accent: RaccoonAccent
   # end starcup
 
 - type: entity
@@ -3300,7 +3300,7 @@
       Female: FoxSpeechEmotes
       Unsexed: FoxSpeechEmotes
   - type: ReplacementAccent
-    accent: fox
+    accent: FoxAccent
   # end starcup
 
 - type: entity
@@ -3328,7 +3328,7 @@
       Female: SmallDogSpeechEmotes
       Unsexed: SmallDogSpeechEmotes
   - type: ReplacementAccent
-    accent: smalldog
+    accent: SmallDogAccent
   - type: Tag
     tags:
     - VimPilot
@@ -3851,11 +3851,24 @@
   - type: Grammar
     attributes:
       gender: epicene
-  - type: SlowAccent
+  #- type: SlowAccent # Replaced by replacement accent below.
   - type: Tag
     tags:
     - VimPilot
     - CreatureEmotes # starcup
+  # begin starcup
+  - type: ReplacementAccent
+    accent: SilentAccent
+  - type: Speech
+    speechSounds: SlothSpeechSounds
+    speechVerb: SilentVerb
+    allowedEmotes: ['CreatureBark', 'CreatureScream', 'CreatureSqueak']
+  - type: Vocal
+    sounds:
+      Male: SlothSpeechEmotes
+      Female: SlothSpeechEmotes
+      Unsexed: SlothSpeechEmotes
+  # end starcup
 
 - type: entity
   name: ferret

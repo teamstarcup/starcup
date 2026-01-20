@@ -206,6 +206,15 @@
   exclaimSound:
     collection: CatMews
 
+- type: speechSounds
+  id: SlothSpeechSounds # Sloths are usually quiet unless they have a reason to be loud
+  saySound:
+    path: /Audio/_starcup/silence.ogg
+  askSound:
+    path: /Audio/_starcup/silence.ogg
+  exclaimSound:
+    path: /Audio/_starcup/silence.ogg
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -699,3 +708,23 @@
       collection: DogGasps
     DefaultDeathgasp:
       collection: CatWhimpers
+
+- type: emoteSounds
+  id: SlothSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureSqueak:
+      path: /Audio/Animals/sloth_squeak.ogg
+    CreatureBark:
+      path: /Audio/_starcup/Animals/Sloth/sloth_bark.ogg
+    CreatureScream:
+      path: /Audio/_starcup/Animals/Sloth/sloth_scream.ogg
+    Sneeze:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Cough:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Gasp:
+      collection: DogGasps
+    DefaultDeathgasp:
+      collection: /Audio/_starcup/Animals/Sloth/sloth_bark.ogg
