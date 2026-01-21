@@ -67,7 +67,7 @@ public sealed class FluidEjectorSystem : EntitySystem
             return;
 
         // stop if you don't have a fluid ejector
-        var ejectorList = _body.GetBodyOrganEntityComps<FluidEjectorComponent>((ent, null));
+        _body.TryGetOrgansWithComponent<FluidEjectorComponent>((ent, null), out var ejectorList);
         if (ejectorList.Count <= 0)
             return;
 
@@ -81,7 +81,7 @@ public sealed class FluidEjectorSystem : EntitySystem
                 .Any(reagent => ShouldExpelReagent(reagent.Reagent, metabolizerOrgans)))
             return;
 
-        var ejector = ejectorList.First().Comp1;
+        var ejector = ejectorList.First().Comp;
         if (ejector.NextUpdate != TimeSpan.Zero)
             return;
 
