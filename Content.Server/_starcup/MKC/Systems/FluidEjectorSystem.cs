@@ -39,7 +39,7 @@ public sealed class FluidEjectorSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<BloodstreamComponent, SolutionContainerChangedEvent>(OnSolutionChanged);
+        SubscribeLocalEvent<BodyComponent, SolutionContainerChangedEvent>(OnSolutionChanged);
     }
 
     public override void Update(float deltaTime)
@@ -61,7 +61,7 @@ public sealed class FluidEjectorSystem : EntitySystem
         }
     }
 
-    private void OnSolutionChanged(Entity<BloodstreamComponent> ent, ref SolutionContainerChangedEvent args)
+    private void OnSolutionChanged(Entity<BodyComponent> ent, ref SolutionContainerChangedEvent args)
     {
         if (_mobState.IsDead(ent.Owner))
             return;
@@ -75,7 +75,7 @@ public sealed class FluidEjectorSystem : EntitySystem
         RaiseLocalEvent(ent.Owner, ref ev);
 
         // check for presence of non-blood reagents that cannot be metabolized
-        var metabolizerOrgans = GetMetabolizerOrgans(ent);
+        _body.TryGetOrgansWithComponent<MetabolizerComponent>(ent.AsNullable(), out var metabolizerOrgans);
         if (!args.Solution.Contents
                 .Where(reagent => !ev.Reagents.Contains(reagent.Reagent))
                 .Any(reagent => ShouldExpelReagent(reagent.Reagent, metabolizerOrgans)))
@@ -86,13 +86,6 @@ public sealed class FluidEjectorSystem : EntitySystem
             return;
 
         ejector.NextUpdate = _gameTiming.CurTime + ejector.EjectionTime;
-    }
-
-    private List<Entity<MetabolizerComponent>> GetMetabolizerOrgans(EntityUid mob)
-    {
-        return _body.GetBodyOrganEntityComps<MetabolizerComponent>(mob)
-            .Select(organEntity => new Entity<MetabolizerComponent>(organEntity.Owner, organEntity.Comp1))
-            .ToList();
     }
 
     /// <summary>
@@ -138,7 +131,7 @@ public sealed class FluidEjectorSystem : EntitySystem
         var ev = new MetabolismExclusionEvent();
         RaiseLocalEvent(uid, ref ev);
 
-        var metabolizerOrgans = GetMetabolizerOrgans(uid);
+        _body.TryGetOrgansWithComponent<MetabolizerComponent>(uid, out var metabolizerOrgans);
         var ejectableReagents = bloodSolution.Contents
             .Where(r => !ev.Reagents.Contains(r.Reagent))
             .Where(r => ShouldExpelReagent(r.Reagent, metabolizerOrgans))

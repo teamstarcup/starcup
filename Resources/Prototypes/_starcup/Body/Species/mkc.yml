@@ -27,15 +27,14 @@
         - id: OrganMKCStomach
         - id: OrganMKCCore
   - type: HumanoidAppearance
-    species: IPC
+    species: MKC
 
 - type: entity
   parent:
-  - AppearanceIPC
-  - PlayerSiliconHumanoidBase
-  id: MobIPC
+  - AppearanceMKC
+  - BaseSpeciesMobSilicon
+  id: MobMKC
   name: Urist McPositronic
-  description: A positronic brain in a metal body.
   components:
   - type: Bloodstream
     bloodReferenceSolution:
@@ -173,7 +172,7 @@
 
 - type: entity
   id: OrganMKCCore
-  parent: [ OrganMKCInternal ]
+  parent: OrganMKCInternal
   name: power core
   description: Stores and provides electricity to power an MKC's chassis.
   components:
