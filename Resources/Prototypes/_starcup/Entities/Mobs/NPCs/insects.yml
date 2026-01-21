@@ -469,7 +469,9 @@
 
 - type: entity
   name: stag beetle
-  parent: SimpleMobBase
+  parent:
+  - SimpleMobBase
+  - BaseMobAnimal
   id: MobBeetle
   description: A little friend with a tough shell and a valiant heart.
   components:
@@ -541,8 +543,6 @@
       Starving: 5
       Dead: 0
     baseDecayRate: 0.1
-  - type: Body
-    prototype: Mouse
   - type: Extractable
     grindableSolutionName: food
   - type: SolutionContainerManager

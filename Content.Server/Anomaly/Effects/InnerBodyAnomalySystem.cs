@@ -12,6 +12,7 @@ using Content.Shared.Chat;
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Systems; // starcup
 using Content.Shared.Database;
+using Content.Shared.Gibbing;
 using Content.Shared.Mobs;
 using Content.Shared.Popups;
 using Content.Shared.Whitelist;
@@ -27,7 +28,7 @@ public sealed class InnerBodyAnomalySystem : SharedInnerBodyAnomalySystem
     [Dependency] private readonly IAdminLogManager _adminLog = default!;
     [Dependency] private readonly AnomalySystem _anomaly = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly BodySystem _body = default!;
+    [Dependency] private readonly GibbingSystem _gibbing = default!;
     [Dependency] private readonly IChatManager _chat = default!;
     [Dependency] private readonly ISharedPlayerManager _player = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
@@ -138,11 +139,11 @@ public sealed class InnerBodyAnomalySystem : SharedInnerBodyAnomalySystem
 
     private void OnAnomalySupercritical(Entity<InnerBodyAnomalyComponent> ent, ref AnomalySupercriticalEvent args)
     {
-        if (!TryComp<DamageableComponent>(ent, out _)) // starcup: change check to DamageableComponent
+        // begin starcup: replace supercrit gib with definable damage type
+        // _gibbing.Gib(ent.Owner);
+        if (!TryComp<DamageableComponent>(ent, out _))
             return;
 
-        // begin starcup: replace supercrit gib with definable damage type
-        // _body.GibBody(ent, true, body, splatModifier: 5f);
         _damageableSystem.ChangeDamage(ent.Owner, ent.Comp.SupercriticalDamage, true);
         // end starcup
     }

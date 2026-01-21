@@ -1,0 +1,111 @@
+# starcup: reorganized all loadout listings to a standardized order as follows:
+# - GroupTankHarness
+# - Head
+# - Mask
+# - Neck/Scarves
+# - Jumpsuit
+# - Belt
+# - Backpack
+# - Outer Clothing
+# - Gloves
+# - Shoes
+# - Eyewear/Glasses
+# - PDA
+# - Survival
+# - Accessibility
+# - Trinkets
+# - Job Trinkets
+# - Other Job Items (golden plunger, instruments, janitor flashlight, etc)
+# - GroupSpeciesBreathTool
+
+## Role Loadouts
+
+- type: roleLoadout
+  id: JobChiefMedicalOfficer
+  groups:
+  - GroupTankHarness
+  - ChiefMedicalOfficerHead
+  - MedicalMask
+  - ChiefMedicalOfficerNeck
+  - ChiefMedicalOfficerJumpsuit
+  - ChiefMedicalOfficerOuterClothing
+  - MedicalBackpack
+  - ChiefMedicalOfficerShoes
+  - Glasses
+  - SurvivalMedical
+  - Accessibility # starcup
+  - Trinkets
+  - ChiefMedicalOfficerJobTrinkets
+  - GroupSpeciesBreathToolMedical
+
+- type: roleLoadout
+  id: JobMedicalDoctor
+  groups:
+  - GroupTankHarness
+  - MedicalDoctorHead
+  - MedicalMask
+  - MedicalDoctorNeck # DeltaV
+  - MedicalDoctorJumpsuit
+  - MedicalBackpack
+  - MedicalDoctorOuterClothing
+  - MedicalShoes
+  - Glasses
+  - MedicalDoctorPDA
+  - SurvivalMedical
+  - Accessibility # starcup
+  - Trinkets
+  - MedicalDoctorJobTrinkets
+  - GroupSpeciesBreathToolMedical
+
+- type: roleLoadout
+  id: JobMedicalIntern
+  groups:
+  - GroupTankHarness
+  - Scarfs # starcup
+  - MedicalInternJumpsuit
+  - MedicalBackpack
+  - MedicalInternOuterClothing # starcup
+  - MedicalShoes # starcup
+  - Glasses
+  - MedicalInternPDADelta # DeltaV
+  - Accessibility # starcup
+  - SurvivalMedical
+  - Trinkets
+  - MedicalInternJobTrinkets
+  - GroupSpeciesBreathToolMedical
+
+- type: roleLoadout
+  id: JobChemist
+  groups:
+  - GroupTankHarness
+  - MedicalMask
+  - Scarfs # starcup
+  - ChemistJumpsuit
+  - ChemistBackpack
+  - ChemistOuterClothing
+  - ChemistShoes # DeltaV, replaces MedicalShoes
+  - Glasses
+  - ChemistPDA # starcup
+  - SurvivalMedical
+  - Accessibility # starcup
+  - Trinkets
+  - ChemistJobTrinkets
+  - GroupSpeciesBreathToolMedical
+
+- type: roleLoadout
+  id: JobParamedic
+  groups:
+  - GroupTankHarness
+  - ParamedicHead
+  - MedicalMask
+  - MedicalDoctorNeck # DeltaV
+  - ParamedicJumpsuit
+  - MedicalBackpack
+  - ParamedicOuterClothing
+  - ParamedicShoes
+  - Glasses
+  - SurvivalMedical
+  - Accessibility # starcup
+  - Trinkets
+  - ParamedicJobTrinkets
+  - GroupSpeciesBreathToolMedical
