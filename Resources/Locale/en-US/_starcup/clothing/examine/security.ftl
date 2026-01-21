@@ -27,13 +27,17 @@ clothing-hos-coat = [color=#a40000]Head of Security's armored trenchcoat[/color]
 clothing-riot-suit = [color=#a40000]riot suit[/color]
 clothing-bio-suit-security = [color=#a40000]security bio suit[/color]
 clothing-warden-jacket = [color=#a40000]warden's armored jacket[/color]
+clothing-warden-longcoat = [color=#a40000]warden's armored longcoat[/color]
 clothing-security-hardsuit = [color=#a40000]security hardsuit[/color]
 clothing-brigmedic-hardsuit = [color=#a40000]combat medic hardsuit[/color]
 clothing-warden-hardsuit = [color=#a40000]warden hardsuit[/color]
 clothing-hos-hardsuit = [color=#a40000]Head of Security's hardsuit[/color]
 clothing-security-winter-coat = [color=#a40000]security winter coat[/color]
+clothing-security-winter-coat = [color=#a40000]security longcoat[/color]
 clothing-warden-winter-coat = [color=#a40000]warden's armored winter coat[/color]
 clothing-hos-winter-coat = [color=#a40000]Head of Security's armored winter coat[/color]
+clothing-hos-winter-coat = [color=#a40000]Head of Security's armored longcoat[/color]
+
 
 ## Shoes
 clothing-jackboots = [color=#a40000]jackboots[/color]
