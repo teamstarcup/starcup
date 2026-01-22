@@ -1,9 +1,8 @@
-﻿using Content.Server.Body.Systems;
-using Content.Shared.Administration.Logs;
-using Content.Shared.Body.Components;
+﻿using Content.Shared.Administration.Logs;
 using Content.Shared.Database;
 using Content.Shared.Destructible;
 using Content.Shared.DoAfter;
+using Content.Shared.Gibbing;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
 using Content.Shared.Kitchen;
@@ -24,7 +23,7 @@ namespace Content.Server.Kitchen.EntitySystems;
 
 public sealed class SharpSystem : EntitySystem
 {
-    [Dependency] private readonly BodySystem _bodySystem = default!;
+    [Dependency] private readonly GibbingSystem _gibbing = default!;
     [Dependency] private readonly SharedDestructibleSystem _destructibleSystem = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
@@ -132,7 +131,7 @@ public sealed class SharpSystem : EntitySystem
         _popupSystem.PopupEntity(Loc.GetString("butcherable-knife-butchered-success", ("target", args.Args.Target.Value), ("knife", Identity.Entity(uid, EntityManager))),
             popupEnt, args.Args.User, popupType);
 
-        _bodySystem.GibBody(args.Args.Target.Value, gibOrgans: butcher.DropOrgansOnButcher); // does nothing if ent can't be gibbed // starcup: drop organs on butcher
+        _gibbing.Gib(args.Args.Target.Value, dropGiblets: butcher.DropOrgansOnButcher); // does nothing if ent can't be gibbed // starcup: drop organs on butcher
         _destructibleSystem.DestroyEntity(args.Args.Target.Value);
 
         args.Handled = true;
