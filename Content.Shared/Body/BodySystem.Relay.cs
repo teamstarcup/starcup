@@ -1,6 +1,8 @@
 using Content.Shared.Body.Events;
 using Content.Shared.Gibbing;
 using Content.Shared.Medical;
+using Content.Shared.Verbs;
+using Robust.Shared.Player;
 
 namespace Content.Shared.Body;
 
@@ -11,6 +13,12 @@ public sealed partial class BodySystem
         SubscribeLocalEvent<BodyComponent, ApplyMetabolicMultiplierEvent>(RefRelayBodyEvent);
         SubscribeLocalEvent<BodyComponent, TryVomitEvent>(RefRelayBodyEvent);
         SubscribeLocalEvent<BodyComponent, BeingGibbedEvent>(RefRelayBodyEvent);
+
+        // begin starcup
+        SubscribeLocalEvent<BodyComponent, GetVerbsEvent<InnateVerb>>(RelayBodyEvent);
+        SubscribeLocalEvent<BodyComponent, LocalPlayerAttachedEvent>(RelayBodyEvent);
+        SubscribeLocalEvent<BodyComponent, LocalPlayerDetachedEvent>(RelayBodyEvent);
+        // end starcup
     }
 
     private void RefRelayBodyEvent<T>(EntityUid uid, BodyComponent component, ref T args) where T : struct
@@ -22,6 +30,7 @@ public sealed partial class BodySystem
     {
         RelayEvent((uid, component), args);
     }
+
 
     public void RelayEvent<T>(Entity<BodyComponent> ent, ref T args) where T : struct
     {

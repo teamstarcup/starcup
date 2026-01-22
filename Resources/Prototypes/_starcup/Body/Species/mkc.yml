@@ -178,7 +178,10 @@
   components:
   - type: Sprite
     state: microcell
-  # TODO: power core component
+  - type: Battery
+    maxCharge: 1080
+    startingCharge: 1080
+  - type: PowerCore
 
 - type: entity
   id: OrganMKCPump
