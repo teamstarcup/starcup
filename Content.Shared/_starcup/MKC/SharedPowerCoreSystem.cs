@@ -1,16 +1,16 @@
-using Content.Shared.Alert;
 using Content.Shared.Body;
 using Content.Shared.DoAfter;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
+using Content.Shared.Power;
 using Content.Shared.Power.Components;
 using Content.Shared.Power.EntitySystems;
 using Content.Shared.Verbs;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
-using Robust.Shared.Network;
-using Robust.Shared.Player;
-using Robust.Shared.Prototypes;
+using Robust.Shared.Timing;
+
+// ReSharper disable InconsistentNaming
 
 namespace Content.Shared._starcup.MKC;
 
@@ -21,38 +21,66 @@ namespace Content.Shared._starcup.MKC;
 /// </summary>
 public abstract class SharedPowerCoreSystem : EntitySystem
 {
-    [Dependency] private readonly SharedBatterySystem _battery = default!;
+    [Dependency] protected readonly SharedBatterySystem _battery = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedJetpackSystem _jetpack = default!;
-    [Dependency] private readonly AlertsSystem _alerts = default!;
-    [Dependency] private readonly INetManager _net = default!;
+    [Dependency] private readonly MovementSpeedModifierSystem _movementSpeed = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
 
     private const float MaxEnergyDrainDistance = 32.0f;
     private readonly SoundSpecifier? _drainSounds = new SoundCollectionSpecifier("sparks");
-    private readonly ProtoId<AlertPrototype> _batteryAlertPrototype = "BorgBattery";
 
     public override void Initialize()
     {
         base.Initialize();
 
         // TODO: Localization
+        // TODO: Needs a new alert based on BorgBattery with accurate description text
+        // TODO: Call SharedBatterySystem.RefreshChargeRate when this organ is removed from the body
+
+        SubscribeLocalEvent<PowerCoreComponent, MapInitEvent>(OnMapInit);
 
         SubscribeLocalEvent<PowerCoreComponent, BodyRelayedEvent<GetVerbsEvent<InnateVerb>>>(AddEnergyDrainVerb);
         SubscribeLocalEvent<PowerCoreComponent, PowerCoreDoAfterEvent>(OnDoAfter);
 
-        SubscribeLocalEvent<PowerCoreComponent, BodyRelayedEvent<LocalPlayerAttachedEvent>>(OnPlayerAttached);
-        SubscribeLocalEvent<PowerCoreComponent, BodyRelayedEvent<LocalPlayerDetachedEvent>>(OnPlayerDetached);
-
-        // SubscribeLocalEvent<PowerCoreComponent, ComponentShutdown>(OnShutdown);
+        SubscribeLocalEvent<PowerCoreComponent, RefreshChargeRateEvent>(OnRefreshChargeRate);
+        SubscribeLocalEvent<PowerCoreComponent, BatteryStateChangedEvent>(OnBatteryStateChanged);
+        SubscribeLocalEvent<PowerCoreComponent, BodyRelayedEvent<RefreshMovementSpeedModifiersEvent>>(UpdateMoveSpeedModifier);
     }
 
-    public override void Update(float frameTime)
+    private void OnMapInit(Entity<PowerCoreComponent> ent, ref MapInitEvent _)
     {
-        base.Update(frameTime);
+        Entity<BatteryComponent?> battery = (ent.Owner, null);
+        if (!Resolve(battery, ref battery.Comp))
+            return;
 
-        // TODO: Drains power over time [on par with hunger]
+        _battery.RefreshChargeRate(battery);
+
+        var body = GetContainingBody(ent);
+        if (body == null)
+            return;
+
+        _movementSpeed.RefreshMovementSpeedModifiers(body.Value);
+    }
+
+    private void OnRefreshChargeRate(Entity<PowerCoreComponent> powerCore, ref RefreshChargeRateEvent args)
+    {
+        // TODO: Should not drain power while body is 'dead'
+        // TODO: Should not drain power while not inside a body
+        // TODO: Maybe drain less power while sleeping? Call SharedBatterySystem.RefreshChargeRate when conditions that modify this value change
+        args.NewChargeRate -= powerCore.Comp.WattConsumption;
+    }
+
+    private void OnBatteryStateChanged(Entity<PowerCoreComponent> powerCore, ref BatteryStateChangedEvent args)
+    {
+        var uid = GetContainingBody(powerCore);
+        if (uid == null)
+            return;
+
+        if (args.NewState == BatteryState.Empty || args.OldState == BatteryState.Empty)
+            _movementSpeed.RefreshMovementSpeedModifiers(uid.Value);
     }
 
     /// <summary>
@@ -60,63 +88,28 @@ public abstract class SharedPowerCoreSystem : EntitySystem
     /// </summary>
     /// <param name="powerCore"></param>
     /// <returns></returns>
-    private EntityUid? GetUsingMob(Entity<PowerCoreComponent> powerCore)
+    private EntityUid? GetContainingBody(Entity<PowerCoreComponent> powerCore)
     {
         OrganComponent? organ = null;
         return !Resolve(powerCore.Owner, ref organ) ? null : organ.Body;
     }
 
-    // TODO: Clear alert if organ is removed from player
-    // private void OnShutdown(Entity<PowerCoreComponent> powerCore, ref ComponentShutdown args)
-    // {
-    //     var bodyUid = GetUsingMob(powerCore);
-    //     if (bodyUid == null)
-    //         return;
-    //
-    //     _alerts.ClearAlertCategory(bodyUid.Value, "Battery");
-    // }
-
     private void UpdateMoveSpeedModifier(Entity<PowerCoreComponent> powerCore, ref BodyRelayedEvent<RefreshMovementSpeedModifiersEvent> args)
     {
+        // TODO: Call _movementSpeed.RefreshMovementSpeedModifiers on the body entity when the organ is removed from it
+
         Entity<BatteryComponent?> battery = (powerCore.Owner, null);
         if (!Resolve(powerCore.Owner, ref battery.Comp))
             return;
 
-        if (_battery.GetCharge(battery) > 0)
+        if (!MathHelper.CloseToPercent(_battery.GetCharge(battery), 0))
             return;
 
         // No slowdown in weightlessness
         if (_jetpack.IsUserFlying(args.Body.Owner))
              return;
 
-        args.Args.ModifySpeed(powerCore.Comp.LowPowerMovementSpeedMultiplier, powerCore.Comp.LowPowerMovementSpeedMultiplier);
-    }
-
-    private void OnPlayerAttached(Entity<PowerCoreComponent> powerCore, ref BodyRelayedEvent<LocalPlayerAttachedEvent> args)
-    {
-        UpdateBatteryAlert(args.Body.Owner, powerCore);
-    }
-
-    private void OnPlayerDetached(Entity<PowerCoreComponent> powerCore, ref BodyRelayedEvent<LocalPlayerDetachedEvent> args)
-    {
-        _alerts.ClearAlert(args.Args.Entity, _batteryAlertPrototype);
-    }
-
-    protected void UpdateBatteryAlert(EntityUid body, Entity<PowerCoreComponent> powerCore)
-    {
-        var battery = new Entity<BatteryComponent?>(powerCore.Owner, null);
-        if (!Resolve(powerCore.Owner, ref battery.Comp))
-            return;
-
-        if (!TryComp(body, out AlertsComponent? alerts))
-            return;
-
-        // alert levels from 0 to 10
-        var chargeLevel = _battery.GetChargeLevel(battery);
-        var alertLevel = (int) MathF.Round(chargeLevel * 10f);
-        alertLevel = chargeLevel > 0 ? Math.Max(alertLevel, 1) : 0;
-
-        _alerts.ShowAlert((body, alerts), _batteryAlertPrototype, (short) alertLevel);
+        args.Args.ModifySpeed(powerCore.Comp.LowPowerMovementSpeedMultiplier);
     }
 
     private void AddEnergyDrainVerb(Entity<PowerCoreComponent> powerCore,
@@ -142,8 +135,8 @@ public abstract class SharedPowerCoreSystem : EntitySystem
 
     private void StartDraining(Entity<PowerCoreComponent> powerCore, EntityUid target)
     {
-        var user = GetUsingMob(powerCore);
-        if (user == null)
+        var bodyUid = GetContainingBody(powerCore);
+        if (bodyUid == null)
             return;
 
         Entity<BatteryComponent?> powerCoreBattery = (powerCore.Owner, null);
@@ -156,17 +149,17 @@ public abstract class SharedPowerCoreSystem : EntitySystem
 
         if (_battery.IsFull(powerCoreBattery))
         {
-            _popup.PopupPredicted("Your battery is already full.", user.Value, user.Value);
+            _popup.PopupClient("Your battery is already full.", bodyUid.Value, bodyUid.Value);
             return;
         }
 
-        if (_battery.GetCharge(targetBattery) <= 1.0f && (!targetBattery.Comp.NetSyncEnabled && _net.IsClient))
+        if (MathHelper.CloseToPercent(_battery.GetCharge(targetBattery), 0) && targetBattery.Comp.NetSyncEnabled)
         {
-            _popup.PopupPredicted("The battery is empty.", user.Value, user.Value);
+            _popup.PopupClient("The battery is empty.", bodyUid.Value, bodyUid.Value);
             return;
         }
 
-        _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, user.Value, powerCore.Comp.Delay, new PowerCoreDoAfterEvent(), powerCore, target: target, used: powerCore)
+        _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, bodyUid.Value, powerCore.Comp.Delay, new PowerCoreDoAfterEvent(), powerCore, target: target, used: powerCore)
         {
             DuplicateCondition = DuplicateConditions.SameEvent,
             BreakOnMove = true,
@@ -193,13 +186,17 @@ public abstract class SharedPowerCoreSystem : EntitySystem
         Drink(powerCore, targetBattery);
 
         var powerCoreBatteryIsFull = _battery.IsFull(powerCoreBattery);
-        var targetBatteryIsEmpty = _battery.GetCharge(targetBattery) <= 1.0f;
+        var targetBatteryIsEmpty = MathHelper.CloseToPercent(_battery.GetCharge(targetBattery), 0);
 
         args.Repeat = !powerCoreBatteryIsFull && !targetBatteryIsEmpty;
     }
 
     private void Drink(Entity<PowerCoreComponent> powerCore, Entity<BatteryComponent?> target)
     {
+        var body = GetContainingBody(powerCore);
+        if (body == null)
+            return;
+
         if (target.Comp == null && !Resolve(target.Owner, ref target.Comp))
             return;
 
@@ -216,6 +213,7 @@ public abstract class SharedPowerCoreSystem : EntitySystem
 
         if (joulesToDrain <= 0f)
         {
+            // TODO: Maybe remove, currently never seen
             _popup.PopupPredicted("There is nothing left to drain.", powerCore.Owner, powerCore.Owner);
             return;
         }
@@ -223,8 +221,10 @@ public abstract class SharedPowerCoreSystem : EntitySystem
         _battery.SetCharge(powerCoreBattery, powerCoreBatteryCharge + joulesToDrain);
         _battery.SetCharge(target, targetBatteryCharge - joulesToDrain);
 
-        _audio.PlayPvs(_drainSounds, target.Owner);
-        Spawn("EffectSparks", Transform(target.Owner).Coordinates);
+        // TODO: Check if prediction still causes this to fire multiple times when draining held items
+        _audio.PlayPredicted(_drainSounds, target.Owner, body);
+        if (_timing.IsFirstTimePredicted)
+            Spawn("EffectSparks", Transform(target.Owner).Coordinates);
 
         _popup.PopupPredicted("You drain the battery of some power.", powerCore.Owner, powerCore.Owner);
     }

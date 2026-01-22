@@ -1,6 +1,7 @@
 using Content.Shared.Body.Events;
 using Content.Shared.Gibbing;
 using Content.Shared.Medical;
+using Content.Shared.Movement.Systems;
 using Content.Shared.Verbs;
 using Robust.Shared.Player;
 
@@ -18,6 +19,7 @@ public sealed partial class BodySystem
         SubscribeLocalEvent<BodyComponent, GetVerbsEvent<InnateVerb>>(RelayBodyEvent);
         SubscribeLocalEvent<BodyComponent, LocalPlayerAttachedEvent>(RelayBodyEvent);
         SubscribeLocalEvent<BodyComponent, LocalPlayerDetachedEvent>(RelayBodyEvent);
+        SubscribeLocalEvent<BodyComponent, RefreshMovementSpeedModifiersEvent>(RelayBodyEvent);
         // end starcup
     }
 
