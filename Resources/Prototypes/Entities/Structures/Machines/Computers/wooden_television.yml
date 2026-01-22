@@ -5,13 +5,18 @@
   description: Finally, some decent reception around here...
   components:
   - type: Sprite
+    sprite: Structures/Machines/computers.rsi
     noRot: true
     drawdepth: SmallObjects
     layers:
     - map: ["computerLayerBody"]
-      state: television
+    # begin starcup
+      sprite: _starcup/Structures/Machines/television.rsi
+      state: wooden_television
     - map: ["computerLayerScreen"]
+      sprite: _starcup/Structures/Machines/television.rsi
       state: detective_television
+    # end starcup
   - type: Computer
     board: ComputerTelevisionCircuitboard
   - type: PointLight
