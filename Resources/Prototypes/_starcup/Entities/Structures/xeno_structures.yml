@@ -14,7 +14,7 @@
         path:
           "/Audio/Weapons/slash.ogg"
   - type: Sprite
-    sprite: _starcup/Structures/xeno_weeds.rsi
+    sprite: _starcup/Structures/XenoHive/xeno_weeds.rsi
     drawdepth: LowFloors
   - type: Appearance
   - type: Clickable
@@ -98,7 +98,7 @@
     - Wall
     - Structure
   - type: Sprite
-    sprite: _starcup/Structures/xeno_wall.rsi
+    sprite: _starcup/Structures/XenoHive/xeno_wall.rsi
   - type: Icon
     sprite: _starcup/Structures/xeno_wall.rsi
   - type: Destructible
@@ -117,3 +117,82 @@
   - type: IconSmooth
     key: walls
     base: resin
+
+- type: entity
+  id: XenoBioluminiscentGrowth
+  name: biolomuniscent growth
+  suffix: green
+  description: It twitches every now and then...
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: RangedDamageSound
+    soundGroups:
+      Brute:
+        collection:
+          MeatBulletImpact
+    soundTypes:
+      Heat:
+        collection:
+          MeatLaserImpact
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: _starcup/Structures/XenoHive/xeno_tower.rsi
+    layers:
+    - state: wardingtower
+    - state: wardingtower-unshaded
+      shader: unshaded
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 1000
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: PointLight
+    radius: 5
+    energy: 1
+    color: "#f1fa89"
+
+- type: entity
+  id: XenoBioluminiscentGrowthBlue
+  parent: XenoBioluminiscentGrowth
+  components:
+  - type: Sprite
+    layers:
+    - state: recoverytower
+  - type: PointLight
+    color: "#a4e8ff"
+
+- type: entity
+  id: XenoBioluminiscentGrowthRed
+  parent: XenoBioluminiscentGrowth
+  suffix: red
+  components:
+  - type: Sprite
+    layers:
+    - state: frenzytower
+  - type: PointLight
+    color: "#eb608f"
