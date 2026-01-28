@@ -12,7 +12,7 @@ namespace Content.Shared._CD.Records;
 public sealed partial class PlayerProvidedCharacterRecords
 {
     public const int TextMedLen = 64;
-    public const int TextVeryLargeLen = 65536;
+    public const int TextVeryLargeLen = 65536; // starcup
 
     /* Basic info */
 
