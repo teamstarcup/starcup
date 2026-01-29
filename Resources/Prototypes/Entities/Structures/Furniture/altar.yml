@@ -2,7 +2,7 @@
   id: AltarBase
   parent: BaseStructure
   name: altar
-  description: Altar of the Gods.
+  description: An altar for meditation and prayer. # starcup: rewritten to remove mention of gods
   abstract: true
   components:
   - type: Anchorable
@@ -106,7 +106,7 @@
 - type: entity
   id: AltarSpaceChristian
   parent: AltarNanotrasen
-  name: space-Christian altar
+  name: bright altar # starcup: renamed to remove religious reference
   components:
   - type: Sprite
     sprite: Structures/Furniture/Altars/Gods/nanotrasen.rsi
@@ -125,7 +125,7 @@
 - type: entity
   id: AltarSatana
   parent: AltarNanotrasen
-  name: satanic altar
+  name: ominous altar # starcup: renamed to remove religious reference
   components:
   - type: Sprite
     sprite: Structures/Furniture/Altars/Gods/nanotrasen.rsi

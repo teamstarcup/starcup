@@ -58,6 +58,14 @@
       behaviors:
       - !type:GibBehavior
         recursive: false
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Slime
+          Quantity: 5
 
 - type: entity
   name: giant flying insect
@@ -127,6 +135,10 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/_starcup/Animals/Swarm/swarmpet.ogg
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatSlime
+      amount: 2
 
 - type: entity
   name: bees
