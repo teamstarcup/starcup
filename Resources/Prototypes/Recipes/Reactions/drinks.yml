@@ -1036,9 +1036,14 @@
 
 - type: reaction
   id: Sbiten
+  minTemp: 350 # starcup: you gotta boil it!
   reactants:
-    Mead: # starcup: changed from vodka (replace with honey once it exists?)
-      amount: 1
+    # begin starcup: changed recipe to be non-alcoholic
+    Honey:
+      amount: 2
+    Water:
+      amount: 2
+    # end starcup
     CapsaicinOil:
       amount: 1
   products:

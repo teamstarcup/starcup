@@ -40,3 +40,42 @@
       Reinforced glass window (quarter)    3,750 kPa          2,500 kPa
       Glass window (full)                  1,000 kPa          750 kPa
       Glass window (quarter)               250 kPa            187.5 kPa[/mono][/size][/size]
+
+- type: entity
+  parent: Paper
+  id: PaperNoticeBoardAtmosTritium
+  name: atmos notice - tritium changes
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Paper
+    stampState: paper_stamp-syndicate
+    stampedBy:
+    - stampedColor: '#664400'
+      stampedName: stamp-component-stamped-name-syndcomm
+      stampLargeIcon: large_stamp-syndcomm
+    content: |2
+      [mono]█▀  [color=#AA0000]█▀▀[/color]  ▀█  [mono]Supplier Update[/mono]
+      █   [color=#AA0000]▀▀█[/color]   █
+      ▀▀  [color=#AA0000]▀▀▀[/color]  ▀▀  Tritium Formulation Changes[/mono]
+      ─────────────────────────────────────────
+      Engineers may have noticed that the glass we've been using lately hasn't held up as well to the stress of our tritium burns as it once did, resulting in several unfortunate accidents across the sector. Here at Electra Dynamics, we pride ourselves on innovation and safety, and our researchers have been hard at work developing a new tritium formulation that requires less oxygen and produces far less heat and water vapor than before. To ensure the safety of our crews, the new formulation has become standardized and should be available at your stations today!
+
+      With these adjustments in mind, atmos technicians will need to change their burn methods to compensate. Our scientists at Electra Dynamics have identified a setup that keeps the burn chamber hot while consuming very little fuel - follow these simple steps to ensure your station's TEG can provide the power you need!
+
+      [bold]1.[/bold] Construct a scrubber leading from your burn chamber out into space (or outside, for those of you on stations with an atmosphere).
+
+      [bold]2.[/bold] Link this scrubber to your burn chamber's air alarm and set it to only filter out Carbon Dioxide and Water Vapor, turn on the WideNet setting, and turn off Auto Mode.
+
+      [bold]3.[/bold] Add a Volumetric Gas Pump to the fuel line just before it reaches the burn chamber. Leave it at 200 L/s for now. This is your Fuel Choke.
+
+      [bold]4.[/bold] Keeping an eye on the burn chamber's air alarm, start by injecting pure Oxygen into the room until the sensor reads roughly 100 mols. Then, stop adding Oxygen.
+
+      [bold]5.[/bold] Adjust your Fuel Choke to 0.1 L/s, then change the fuel mix to a 66.6% Plasma : 33.4% Oxygen.
+
+      [bold]6.[/bold] Begin injecting the new fuel mix into the room and ignite it promptly. We suggest a lit emergency flare or other source of open flame for this purpose, but you may opt to use an igniter if you wish.
+
+      [bold]7.[/bold] Congratulations! Your burn chamber will now slowly increase in temperature and pressure over time. If the pressure ever gets too high, simply turn off your Fuel Choke until it drops, then turn it back on again.[/bold]
+
+      Good luck with your TEGs, and glory to the Syndicate!
+      ─────────────────────────────────────────
+      [mono]Electra Dynamics Partner Communications[/mono]

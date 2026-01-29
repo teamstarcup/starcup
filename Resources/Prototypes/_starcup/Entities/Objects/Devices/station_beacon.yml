@@ -221,3 +221,68 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-restroom
+
+# Portals
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconPortal
+  suffix: Portal
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-portal
+
+- type: entity
+  parent: DefaultStationBeaconCommand
+  id: DefaultStationBeaconPortalCommand
+  suffix: Portal, Command
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-portal
+
+- type: entity
+  parent: DefaultStationBeaconEngineering
+  id: DefaultStationBeaconPortalEngineering
+  suffix: Portal, Engineering
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-portal
+
+- type: entity
+  parent: DefaultStationBeaconSupply
+  id: DefaultStationBeaconPortalLogistics
+  suffix: Portal, Logistics
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-portal
+
+- type: entity
+  parent: DefaultStationBeaconMedical
+  id: DefaultStationBeaconPortalMedical
+  suffix: Portal, Medical
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-portal
+
+- type: entity
+  parent: DefaultStationBeaconScience
+  id: DefaultStationBeaconPortalScience
+  suffix: Portal, Science
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-portal
+
+- type: entity
+  parent: DefaultStationBeaconSecurity
+  id: DefaultStationBeaconPortalSecurity
+  suffix: Portal, Security
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-portal
+
+- type: entity
+  parent: DefaultStationBeaconService
+  id: DefaultStationBeaconPortalService
+  suffix: Portal, Service
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-portal

@@ -28,3 +28,4 @@ station-beacon-game-room = Game Room
 station-beacon-lounge = Lounge
 station-beacon-pavilion = Pavilion
 station-beacon-restroom = Restroom
+station-beacon-portal = Portal
