@@ -210,6 +210,13 @@
   suffix: harpy
 
 - type: entity
+  id: OrganHarpyMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Harpy ]
+
+- type: entity
   parent: OrganHarpy
   id: OrganHarpyExternal
   abstract: true
@@ -258,19 +265,10 @@
   id: OrganHarpyFootRight
 
 - type: entity
-  parent: [ OrganBaseLungs, OrganHumanInternal, OrganHumanMetabolizer ]
+  parent: [ OrganBaseLungs, OrganHumanInternal, OrganHarpyMetabolizer ]
   id: OrganHarpyLungs
   name: lungs
   description: An advanced pair of avian lungs. Filters oxygen by way of moving air constantly through air sacs.
-  components:
-  - type: Metabolizer
-    updateInterval: 2.0
-    removeEmpty: true
-    solutionOnBody: false
-    solution: "Lung"
-    groups:
-    - id: Gas
-      rateModifier: 200.0
 
 - type: entity
   id: ActionHarpyPlayMidi
