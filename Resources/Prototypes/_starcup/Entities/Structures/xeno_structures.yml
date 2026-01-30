@@ -91,27 +91,27 @@
   parent: BaseWall
   id: WallResin
   name: resin wall
-  description: Hardened shell of the exomorph hive.
+  description: Shell of the exomorph hive.
   components:
   - type: Tag
     tags:
     - Wall
     - Structure
   - type: Sprite
-    sprite: _starcup/Structures/XenoHive/xeno_wall.rsi
+    sprite: _RMC14/Structures/Xenos/xeno_resin_wall.rsi
   - type: Icon
-    sprite: _starcup/Structures/xeno_wall.rsi
+    sprite: _RMC14/Structures/Xenos/xeno_resin_wall.rsi
+  - type: Damageable
+    damageModifierSet: XenoCrest
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 100 # weak
+        damage: 200
       behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          Girder:
-            min: 1
-            max: 1
+      - !type:PlaySoundBehavior
+        sound:
+          collection: OrganicDestroy
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: IconSmooth
@@ -148,8 +148,18 @@
     - state: wardingtower-unshaded
       shader: unshaded
   - type: Damageable
-    damageContainer: StructuralInorganic
-    damageModifierSet: Metallic
+    damageModifierSet: XenoCrest
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: OrganicDestroy
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
   - type: Physics
     bodyType: Static
   - type: Fixtures
@@ -163,14 +173,6 @@
         layer:
         - WallLayer
         density: 1000
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 50
-      behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
   - type: PointLight
     radius: 5
     energy: 1

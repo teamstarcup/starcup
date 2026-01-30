@@ -256,10 +256,7 @@
   - type: Spider
     webAction: ActionXenoWeeds
     webPrototype: XenoWeeds
-  - type: JumpAbility
-    action: ActionResinWall
-    canCollide: false
-    jumpDistance: 0
+  - type: BuildXenoWall
   # end starcup
   - type: MovementSpeedModifier
     baseSprintSpeed: 4
@@ -418,7 +415,11 @@
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Aliens/Xenos/rouny.rsi
-    offset: 0,0.6
+    # begin starcup: rouny's still using the upstream rsi, so state is "running" rather than "alive"
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base", "sleeping" ]
+      state: running
+    # end starcup
   - type: Butcherable
     butcheringType: Spike
     spawned:
@@ -439,7 +440,7 @@
     jumpDistance: 3
     jumpSound:
       collection: AlienPounce
-  # begin starcup: rouny's still using the upstream rsi
+  # begin starcup: rouny's still using the upstream rsi, so state is "running" rather than "alive"
   - type: DamageStateVisuals
     states:
       Alive:
