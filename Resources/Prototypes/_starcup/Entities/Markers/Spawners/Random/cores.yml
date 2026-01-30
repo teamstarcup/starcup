@@ -1,0 +1,215 @@
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreBluespace
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Specific/Anomalies/Cores/bluespace_core.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreBluespaceInert
+        weight: 0.90
+      - id: AnomalyCoreBluespace
+        weight: 0.1
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreElectricity
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Specific/Anomalies/Cores/electricity_core.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreElectricityInert
+        weight: 0.90
+      - id: AnomalyCoreElectricity
+        weight: 0.1
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreFlesh
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Specific/Anomalies/Cores/flesh_core.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreFleshInert
+        weight: 0.90
+      - id: AnomalyCoreFlesh
+        weight: 0.1
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreFlora
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Specific/Anomalies/Cores/flora_core.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreFloraInert
+        weight: 0.90
+      - id: AnomalyCoreFlora
+        weight: 0.1
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreGravity
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Specific/Anomalies/Cores/gravity_core.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreGravityInert
+        weight: 0.90
+      - id: AnomalyCoreGravity
+        weight: 0.1
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreIce
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Specific/Anomalies/Cores/ice_core.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreIceInert
+        weight: 0.90
+      - id: AnomalyCoreIce
+        weight: 0.1
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreLiquid
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Specific/Anomalies/Cores/liquid_core.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreLiquidInert
+        weight: 0.90
+      - id: AnomalyCoreLiquid
+        weight: 0.1
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCorePyroclastic
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Specific/Anomalies/Cores/pyro_core.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCorePyroclasticInert
+        weight: 0.90
+      - id: AnomalyCorePyroclastic
+        weight: 0.1
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreRock
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Specific/Anomalies/Cores/rock_core.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreRockInert
+        weight: 0.90
+      - id: AnomalyCoreRock
+        weight: 0.1
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreSanta # just in case
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Specific/Anomalies/Cores/santa_core.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreSantaInert
+        weight: 0.90
+      - id: AnomalyCoreSanta
+        weight: 0.1
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreShadow
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Specific/Anomalies/Cores/shadow_core.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreShadowInert
+        weight: 0.90
+      - id: AnomalyCoreShadow
+        weight: 0.1
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreTech
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Structures/Specific/Anomalies/Cores/tech_core.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreTechInert
+        weight: 0.90
+      - id: AnomalyCoreTech
+        weight: 0.1
