@@ -1,13 +1,3 @@
-# For mantles
-- type: loadoutEffectGroup
-  id: MasterCMO
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobChiefMedicalOfficer
-      time: 20h
-
 # Jumpsuit
 - type: loadout
   id: ChiefMedicalOfficerJumpsuit
@@ -50,16 +40,11 @@
   id: ChiefMedicalOfficerMantle
   equipment:
     neck: ClothingNeckMantleCMO
-# begin starcup: remove mantle role timers
-#  effects:
-#  - !type:GroupLoadoutEffect
-#    proto: MasterCMO
-# end starcup
-
-- type: startingGear
-  id: ChiefMedicalOfficerMantle
-  equipment:
-    neck: ClothingNeckMantleCMO
+  # begin starcup: remove mantle role timers
+  # effects:
+  # - !type:GroupLoadoutEffect
+  #   proto: CMOJourneymanTimer
+  # end starcup
 
 # Outer clothing
 - type: loadout

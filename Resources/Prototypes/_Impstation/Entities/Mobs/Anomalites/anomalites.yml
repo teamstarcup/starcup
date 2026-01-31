@@ -9,14 +9,13 @@
 
 # Base Anomalite
 - type: entity
-  parent: [ BaseMob, MobDamageable, MobPolymorphable, MobAtmosExposed, MobCombat, MobBloodstream, MobFlammable ]
+  parent: [ BaseMob, MobDamageable, MobPolymorphable, MobAtmosExposed, MobCombat, MobBloodstream, MobFlammable, BaseMobAnimal ]
   id: BaseAnomalite
   name: anomalite
   abstract: true
   categories: [ HideSpawnMenu ]
   components:
   - type: MindContainer
-    showExamineInfo: true
   - type: Sprite
     noRot: true
     drawdepth: Mobs
@@ -30,8 +29,6 @@
   - type: NpcFactionMember
     factions:
     - SimpleNeutral
-  - type: Body
-    prototype: Animal
   - type: Climbing
   - type: NameIdentifier
     group: Anomalite

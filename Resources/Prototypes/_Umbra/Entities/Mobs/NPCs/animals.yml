@@ -2,7 +2,9 @@
 
 - type: entity
   name: bunny
-  parent: SimpleMobBase
+  parent:
+  - SimpleMobBase
+  - BaseMobAnimal
   id: MobBunny
   description: Tiny, fluffy, and full of attitude.
   components:
@@ -84,8 +86,6 @@
   - type: FireVisuals
     sprite: Mobs/Effects/onfire.rsi
     normalState: Mouse_burning
-  - type: Body
-    prototype: Mouse
   - type: GhostTakeoverAvailable
   - type: GhostRole
     makeSentient: true
