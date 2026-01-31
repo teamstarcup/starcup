@@ -73,3 +73,9 @@ accent-words-smalldog-1 = Arf snarf.
 accent-words-smalldog-2 = Arf grr grf snrf.
 accent-words-smalldog-3 = Grr!
 accent-words-smalldog-4 = Grff snarf sniff?
+
+# Ferret
+accent-words-ferret-1 = Dook dook, dookdookdook...
+accent-words-ferret-2 = Dookdookdook.
+accent-words-ferret-3 = Dookdookdookdook!
+accent-words-ferret-4 = Dookdookdook?

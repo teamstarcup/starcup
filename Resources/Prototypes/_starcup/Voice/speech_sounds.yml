@@ -215,6 +215,15 @@
   exclaimSound:
     path: /Audio/_starcup/silence.ogg
 
+- type: speechSounds
+  id: FerretSpeechSounds
+  saySound:
+    collection: FerretDooks
+  askSound:
+    path: /Audio/_starcup/Animals/Ferret/ferret_ask.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Animals/Ferret/ferret_exclaim.ogg
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -728,3 +737,23 @@
       collection: DogGasps
     DefaultDeathgasp:
       collection: /Audio/_starcup/Animals/Sloth/sloth_bark.ogg
+
+- type: emoteSounds
+  id: FerretSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureSqueak:
+      path: /Audio/Animals/mouse_squeak.ogg
+    CreatureLaugh:
+      path: /Audio/_starcup/Animals/Ferret/ferret_laugh.ogg
+    CreatureWhimper:
+      path: /Audio/_starcup/Animals/Sloth/sloth_ask.ogg
+    Sneeze:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Cough:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Gasp:
+      collection: DogGasps
+    DefaultDeathgasp:
+      collection: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg

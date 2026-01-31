@@ -3918,6 +3918,19 @@
     tags:
     - VimPilot
     - CreatureEmotes # starcup
+  # begin starcup
+  - type: ReplacementAccent
+    accent: FerretAccent
+  - type: Speech
+    speechSounds: FerretSpeechSounds
+    speechVerb: SmallMob
+    allowedEmotes: ['CreatureSqueak', 'CreatureWhimper', 'CreatureLaugh']
+  - type: Vocal
+    sounds:
+      Male: FerretSpeechEmotes
+      Female: FerretSpeechEmotes
+      Unsexed: FerretSpeechEmotes
+  # end starcup
 
 - type: entity
   name: hamster
