@@ -184,3 +184,56 @@
       params:
         volume: 0.5
     duration: 6
+
+- type: entity
+  parent: [BaseActionPolymorph]
+  id: ActionXenoChameleonSkulker
+  name: Chameleon
+  description: Blend in with your surroundings. You move sloewr and can't fight while blending in.
+  components:
+  - type: Action
+    useDelay: 30
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: lurker_invisibility
+  - type: InstantAction
+    event: !type:PolymorphActionEvent
+      protoId: ChameleonSkulkerMorph
+
+- type: polymorph
+  id: ChameleonSkulkerMorph
+  configuration:
+    entity: MobXenoSkulkerChameleon
+    transferName: true
+    inventory: None
+    revertOnDeath: true
+    revertOnCrit: true
+    polymorphPopup: "chameleon-popup-exo"
+    exitPolymorphPopup: "chameleon-revert-popup-exo"
+
+- type: entity
+  parent: [BaseActionPolymorph]
+  id: ActionXenoChameleonLurker
+  name: Chameleon
+  description: Blend in with your surroundings, but only for a short time due to your hot-blooded nature. You move sloewr and can't fight while blending in.
+  components:
+  - type: Action
+    useDelay: 30
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: lurker_invisibility
+  - type: InstantAction
+    event: !type:PolymorphActionEvent
+      protoId: ChameleonLurkerMorph
+
+- type: polymorph
+  id: ChameleonLurkerMorph
+  configuration:
+    entity: MobXenoLurkerChameleon
+    transferName: true
+    inventory: None
+    revertOnDeath: true
+    revertOnCrit: true
+    polymorphPopup: "chameleon-popup-exo"
+    exitPolymorphPopup: "chameleon-revert-popup-exo"
+    duration: 15
