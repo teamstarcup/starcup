@@ -1,3 +1,4 @@
+using Content.Server._starcup.Administration.Commands; // starcup
 using Content.Shared.GameTicking;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
@@ -19,7 +20,16 @@ public sealed class TraitSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawnComplete);
+        SubscribeLocalEvent<AdminSpawnCompleteEvent>(OnAdminSpawnComplete); // starcup
     }
+
+    // begin starcup: so admin spawn can apply traits but not trigger other systems.
+    private void OnAdminSpawnComplete(AdminSpawnCompleteEvent ev)
+    {
+        // To avoid touching too many things
+        OnPlayerSpawnComplete(new PlayerSpawnCompleteEvent(ev.Mob, ev.Player, ev.JobId, false, true, 0, ev.Mob, ev.Profile));
+    }
+    // end starcup
 
     // When the player is spawned in, add all trait components selected during character creation
     private void OnPlayerSpawnComplete(PlayerSpawnCompleteEvent args)
@@ -41,11 +51,18 @@ public sealed class TraitSystem : EntitySystem
             }
 
             if (_whitelistSystem.IsWhitelistFail(traitPrototype.Whitelist, args.Mob) ||
-                _whitelistSystem.IsBlacklistPass(traitPrototype.Blacklist, args.Mob))
+                _whitelistSystem.IsWhitelistPass(traitPrototype.Blacklist, args.Mob))
                 continue;
 
             // Add all components required by the prototype
-            EntityManager.AddComponents(args.Mob, traitPrototype.Components, false);
+            if (traitPrototype.Components.Count > 0)
+                EntityManager.AddComponents(args.Mob, traitPrototype.Components, false);
+
+            // Add all JobSpecials required by the prototype
+            foreach (var special in traitPrototype.Specials)
+            {
+                special.AfterEquip(args.Mob);
+            }
 
             // Add item required by the trait
             if (traitPrototype.TraitGear == null)

@@ -1,0 +1,77 @@
+- type: entity
+  parent: Autolathe
+  id: AutolatheFilled
+  suffix: Filled
+  components:
+  - type: MaterialStorage
+    storage: &StandardLatheFillContents
+      Glass: 3000
+      Plastic: 3000
+      Steel: 3000
+    whitelist: &StandardMaterialWhitelist
+      tags:
+      - Sheet
+      - RawMaterial
+      - Ingot
+
+- type: entity
+  parent: Protolathe
+  id: ProtolatheFilled
+  suffix: Filled
+  components:
+  - type: MaterialStorage
+    storage: *StandardLatheFillContents
+    whitelist: *StandardMaterialWhitelist
+
+- type: entity
+  parent: MedicalTechFab
+  id: MedicalTechFabFilled
+  suffix: Filled
+  components:
+  - type: MaterialStorage
+    storage: *StandardLatheFillContents
+    whitelist: *StandardMaterialWhitelist
+
+- type: entity
+  parent: CircuitImprinter
+  id: CircuitImprinterFilled
+  suffix: Filled
+  components:
+  - type: MaterialStorage
+    storage:
+      Glass: 3000
+      Steel: 3000
+    whitelist:
+      tags:
+      - Sheet
+      - RawMaterial
+      - Ingot
+
+- type: entity
+  parent: ExosuitFabricator
+  id: ExosuitFabricatorFilled
+  suffix: Filled
+  components:
+  - type: MaterialStorage
+    storage: *StandardLatheFillContents
+    whitelist: *StandardMaterialWhitelist
+
+- type: entity
+  parent: SecurityTechFab
+  id: SecurityTechFabFilled
+  suffix: Filled
+  components:
+  - type: MaterialStorage
+    storage: *StandardLatheFillContents
+    whitelist: *StandardMaterialWhitelist
+
+- type: entity
+  parent: UniformPrinter
+  id: UniformPrinterFilled
+  suffix: Filled
+  components:
+  - type: MaterialStorage
+    storage:
+      Cloth: 3000
+      Durathread: 3000
+    whitelist: *StandardMaterialWhitelist

@@ -77,7 +77,7 @@ public sealed class StoreTests
             var mind = mindSystem.CreateMind(null);
             mindSystem.TransferTo(mind, human, mind: mind);
 
-            FixedPoint2 originalBalance = 20;
+            FixedPoint2 originalBalance = 30; // starcup: up from 20, fix test failure with L6 SAW bundle
             uplinkSystem.AddUplink(human, originalBalance, null, true);
 
             var storeComponent = entManager.GetComponent<StoreComponent>(pda);

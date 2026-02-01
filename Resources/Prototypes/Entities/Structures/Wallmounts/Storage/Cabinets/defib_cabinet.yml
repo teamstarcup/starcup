@@ -24,11 +24,14 @@
         whitelist:
           components:
           - Defibrillator
+  - type: Construction
+    graph: DefibrillatorCabinet
+    node: done
   # Begin DeltaV additions
   - type: Charger
     slotId: ItemCabinet
   - type: ApcPowerReceiver
-    powerLoad: 1000
+    powerLoad: 1
   - type: ExtensionCableReceiver
   - type: LightningTarget
     priority: 1

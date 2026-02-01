@@ -1,3 +1,89 @@
+# New Drinks
+reagent-name-adios-motherfucker = adios, motherfucker
+reagent-desc-adios-motherfucker = Much has been said about this cocktail's name, but at least no one can say that it isn't honest.
+
+reagent-name-afterburner = afterburner
+reagent-desc-afterburner = Originally mixed on a dare, then drank on a second, much more disastrous dare.
+
+reagent-name-ambrosia = ambrosia
+reagent-desc-ambrosia = Dragons may not be gods, but their taste can only be described as divine.
+
+reagent-name-appletini = appletini
+reagent-desc-appletini = Not technically a kind of martini. Not typically made with real apples, either.
+
+reagent-name-aviation = aviation
+reagent-desc-aviation = Ironically sends more people falling to the ground than lifting off of it.
+
+reagent-name-black-velvet = black velvet
+reagent-desc-black-velvet = For the classier, more discerning moody alcoholic.
+
+reagent-name-blue-lagoon = Blue Lagoon
+reagent-desc-blue-lagoon = Best known from Electra's attempts at trademarking the recipe during their resort world developments.
+
+reagent-name-brain-scrambler = brain scrambler
+reagent-desc-brain-scrambler = What's it taste like? Who knows, but it definitely tastes the most!
+
+reagent-name-bramble = bramble
+reagent-desc-bramble = An Augarvian blend, popular at vulpekin religious gatherings.
+
+reagent-name-buzzed-bunny = buzzed bunny
+reagent-desc-buzzed-bunny = Also known in some places as a rascally rabbit.
+
+reagent-name-cactus = cactus
+reagent-desc-cactus = Truly the most tsundere of cocktails.
+
+reagent-name-cherry-bomb = cherry bomb
+reagent-desc-cherry-bomb = Kablooey!
+
+reagent-name-corpse-reviver = corpse reviver
+reagent-desc-corpse-reviver = Not a medically approved resusicant, but you'd be forgiven for considering it one after a sip.
+
+reagent-name-cryptid = cryptid
+reagent-desc-cryptid = Named for being an uncommon enough blend that you'll never see it twice.
+
+reagent-name-earthquake = earthquake
+reagent-desc-earthquake = It'll leave you stumbling!
+
+reagent-name-eclipse = eclipse
+reagent-desc-eclipse = Hot as a corona, cool as the dark side of a moon.
+
+reagent-name-emerald-breeze = emerald breeze
+reagent-desc-emerald-breeze = Inspired by and named after the brilliant viridian storms of Jupiter-Psi.
+
+reagent-name-faeries-cheer = faerie's cheer
+reagent-desc-faeries-cheer = For moonlit revels and meeting charming strangers in the woods.
+
+reagent-name-goblins-brew = goblin's brew
+reagent-desc-goblins-brew = A concoction of a strange and terribly powerful nature.
+
+reagent-name-moon-mist = moon mist
+reagent-desc-moon-mist = It's a marvelous night for a moondance...
+
+reagent-name-mushburger = mushburger
+reagent-desc-mushburger = Even looking at this thing is enough to make you feel sick.
+
+reagent-name-necropolitan = necropolitan
+reagent-desc-necropolitan = A taste to die for!
+
+reagent-name-paradise-lost = paradise lost
+reagent-desc-paradise-lost = Hail, horrors, hail.
+
+reagent-name-rainbow-shooter = rainbow shooter
+reagent-desc-rainbow-shooter = Taste the rainbow!
+
+reagent-name-red-dog = red dog
+reagent-desc-red-dog = Traditionally served in very big tankards. What a red dog has to do with being very big is anyone's guess.
+
+reagent-name-red-eye = red eye
+reagent-desc-red-eye = It might look unappetizing, but as the "inventor" of this "cocktail" was known to say: Anything else is always something better.
+
+reagent-name-sakura-martini = sakura martini
+reagent-desc-sakura-martini = A frequent sight during moonlit seasonal festivals across a few different planets.
+
+reagent-name-snakebite = snakebite
+reagent-desc-snakebite = First invented by a Gothic priestess, whose faith happens to have a fairly substantial amount of symbolism involving snakes and the consumption of apples.
+
+# Rewritten Drinks
 reagent-desc-amasec-starcup = In the grim darkness of neocapitalism, there is only war.
 
 reagent-desc-bahama-mama-starcup = A large number of tropical cocktails like this one were inspired by tales from humans and harpies about a series of islands named Hawai'i.

@@ -96,7 +96,13 @@ public sealed class AmbientOcclusionOverlay : Overlay
                 foreach (var entry in query.QueryAabb(mapId, worldBounds))
                 {
                     DebugTools.Assert(entry.Component.Enabled);
-                    var matrix = xformSystem.GetWorldMatrix(entry.Transform);
+                    // begin starcup: account for occluder's bounding box
+                    var (occluder, xform) = entry;
+                    var (pos, rot) = xformSystem.GetWorldPositionRotation(xform);
+                    var (width, height) = occluder.BoundingBox.Size;
+                    pos += rot.RotateVec(occluder.BoundingBox.Center);
+                    var matrix = Matrix3Helpers.CreateTransform(pos.X, pos.Y, rot.Theta, width, height);
+                    // end starcup
                     var localMatrix = Matrix3x2.Multiply(matrix, invMatrix);
 
                     worldHandle.SetTransform(localMatrix);

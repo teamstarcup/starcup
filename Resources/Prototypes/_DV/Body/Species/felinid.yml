@@ -1,0 +1,202 @@
+- type: markingsGroup
+  parent:
+  - Undergarments
+  - Humanoid # starcup: added for standardized marking limits
+  id: Felinid
+  limits:
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [ FelinidTailBasic ]
+    enum.HumanoidVisualLayers.HeadBase:
+      limit: 1
+      required: true
+      default: [ FelinidHeadFemale ]
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: true
+      default: [ FelinidEarsBasic ]
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceFelinid
+  name: felinid appearance
+  components:
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+  - type: InitialBody
+    organs:
+      Torso: OrganFelinidTorso # starcup
+      Head: OrganFelinidHead # starcup
+      ArmLeft: OrganFelinidArmLeft # starcup
+      ArmRight: OrganFelinidArmRight # starcup
+      HandRight: OrganFelinidHandRight # starcup
+      HandLeft: OrganFelinidHandLeft # starcup
+      LegLeft: OrganFelinidLegLeft # starcup
+      LegRight: OrganFelinidLegRight # starcup
+      FootLeft: OrganFelinidFootLeft # starcup
+      FootRight: OrganFelinidFootRight # starcup
+      Brain: OrganHumanBrain
+      Eyes: OrganHumanEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganHumanLungs
+      Heart: OrganHumanHeart
+      Stomach: OrganAnimalStomach # starcup
+      Liver: OrganHumanLiver
+      Kidneys: OrganHumanKidneys
+  - type: HumanoidProfile
+    species: Felinid
+  - type: Sprite
+    scale: 0.8, 0.8
+
+- type: entity
+  parent:
+  - AppearanceFelinid
+  - BaseSpeciesMobOrganic # starcup: changed from BaseMobHuman for consistency
+  id: MobFelinid
+  name: Urist McFelinid
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.28
+        density: 140
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Damageable
+    damageModifierSet: Felinid
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 4
+        Piercing: 1
+#  - type: Thieving
+#    stealthy: true
+#    stripTimeReduction: 1
+  - type: Speech
+    speechSounds: Alto
+    speechVerb: Felinid
+    allowedEmotes: ['Meow', 'Hiss', 'Mew', 'Purr', 'Growl']
+  - type: DamageOnHighSpeedImpact # Landing on all fours!
+    damage:
+      types:
+        Blunt: 1
+  - type: Stamina
+    baseCritThreshold: 85
+  - type: TypingIndicator
+    proto: felinid
+  - type: PseudoItem
+    storedOffset: 0,17
+    shape:
+      - 0,0,1,4
+      - 0,2,3,4
+      - 4,0,5,4
+  - type: Vocal
+    wilhelm: "/Audio/_DV/Voice/Felinid/cat_wilhelm.ogg"
+    sounds:
+      Male: MaleFelinid
+      Female: FemaleFelinid
+      Unsexed: MaleFelinid
+  - type: Felinid
+
+- type: entity
+  parent: OrganHumanTorso
+  id: OrganFelinidTorso
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  parent: OrganHumanHead
+  id: OrganFelinidHead
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+  - type: VisualOrgan
+    data:
+      sprite: null
+      state: null
+    sexStateOverrides:
+      Male: null
+      Female: null
+
+- type: entity
+  parent: OrganHumanArmLeft
+  id: OrganFelinidArmLeft
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  parent: OrganHumanArmRight
+  id: OrganFelinidArmRight
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  parent: OrganHumanHandLeft
+  id: OrganFelinidHandLeft
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  parent: OrganHumanHandRight
+  id: OrganFelinidHandRight
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  parent: OrganHumanLegLeft
+  id: OrganFelinidLegLeft
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  parent: OrganHumanLegRight
+  id: OrganFelinidLegRight
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  parent: OrganHumanFootLeft
+  id: OrganFelinidFootLeft
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  parent: OrganHumanFootRight
+  id: OrganFelinidFootRight
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid

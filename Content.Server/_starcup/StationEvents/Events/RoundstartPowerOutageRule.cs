@@ -24,7 +24,7 @@ public sealed class RoundstartPowerOutageRule : VariationPassSystem<RoundstartPo
             if (_station.GetOwningStation(entity) != args.Station)
                 continue;
 
-            _battery.SetCharge(entity, 0, battery);
+            _battery.SetCharge((entity, battery), 0);
         }
     }
 }

@@ -9,14 +9,13 @@
 
 # Base Anomalite
 - type: entity
-  parent: [ BaseMob, MobDamageable, MobPolymorphable, MobAtmosExposed, MobCombat, MobBloodstream, MobFlammable ]
+  parent: [ BaseMob, MobDamageable, MobPolymorphable, MobAtmosExposed, MobCombat, MobBloodstream, MobFlammable, BaseMobAnimal ]
   id: BaseAnomalite
   name: anomalite
   abstract: true
   categories: [ HideSpawnMenu ]
   components:
   - type: MindContainer
-    showExamineInfo: true
   - type: Sprite
     noRot: true
     drawdepth: Mobs
@@ -30,8 +29,6 @@
   - type: NpcFactionMember
     factions:
     - SimpleNeutral
-  - type: Body
-    prototype: Animal
   - type: Climbing
   - type: NameIdentifier
     group: Anomalite
@@ -54,8 +51,10 @@
         layer:
         - MobLayer
   - type: Bloodstream
-    bloodMaxVolume: 75
-    bloodReagent: Plasma # starcup: replaced anomalium since we don't have that
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Plasma # starcup: replaced anomalium since we don't have that
+        Quantity: 75
   - type: InteractionPopup
     successChance: 0.1
     interactSuccessString: petting-success-anomalite
@@ -116,21 +115,23 @@
           AnomaliteCore:
             min: 1
             max: 1
-    - trigger:
-        !type:DamageTypeTrigger
-        damageType: Heat
-        damage: 1500
-      behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawnInContainer: true
-        spawn:
-          Ash:
-            min: 1
-            max: 1
-      - !type:BurnBodyBehavior { }
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MeatLaserImpact
+# begin starcup: remove ashing
+#    - trigger:
+#        !type:DamageTypeTrigger
+#        damageType: Heat
+#        damage: 1500
+#      behaviors:
+#      - !type:SpawnEntitiesBehavior
+#        spawnInContainer: true
+#        spawn:
+#          Ash:
+#            min: 1
+#            max: 1
+#      - !type:BurnBodyBehavior { }
+#      - !type:PlaySoundBehavior
+#        sound:
+#          collection: MeatLaserImpact
+# end starcup
   - type: StandingState
   # Anomaly component. Some settings changed to make them not be fucked-up powerful. now they're only a little bit fucked-up powerful.
   - type: Anomaly
@@ -205,13 +206,14 @@
     damageContainer: Biological
     damageModifierSet: AnomalitePyroclastic
   - type: Temperature
+    currentTemperature: 310.15
+    specificHeat: 42
+  - type: TemperatureDamage
     heatDamageThreshold: 325
     coldDamageThreshold: 0
-    currentTemperature: 310.15
     coldDamage:
       types:
         Cold: 0.1
-    specificHeat: 42
     heatDamage:
       types:
         Heat: 0.0
@@ -314,13 +316,14 @@
     damageContainer: Biological
     damageModifierSet: AnomaliteIce
   - type: Temperature
+    currentTemperature: 310.15
+    specificHeat: 42
+  - type: TemperatureDamage
     heatDamageThreshold: 325
     coldDamageThreshold: 0
-    currentTemperature: 310.15
     coldDamage:
       types:
         Cold: 0.0
-    specificHeat: 42
     heatDamage:
       types:
         Heat: 1.5

@@ -9,7 +9,7 @@ namespace Content.Server._starcup.Weather;
 /// conditions.
 /// </summary>
 [Prototype]
-public sealed class WeatherSchedulerPrototype : IPrototype
+public sealed partial class WeatherSchedulerPrototype : IPrototype
 {
     [IdDataField]
     public string ID { get; private set; } = default!;

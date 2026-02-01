@@ -28,7 +28,7 @@
       0: Alive
       6: Dead
   - type: Stamina
-    critThreshold: 6
+    baseCritThreshold: 6
     animationThreshold: 1
   - type: DamageStateVisuals
     states:
@@ -44,8 +44,10 @@
     tags:
     - Trash
   - type: Bloodstream
-    bloodReagent: InsectBlood
-    bloodMaxVolume: 0.1
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: InsectBlood
+        Quantity: 0.1
   - type: ZombieImmune
   - type: Destructible
     thresholds:
@@ -56,6 +58,14 @@
       behaviors:
       - !type:GibBehavior
         recursive: false
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Slime
+          Quantity: 5
 
 - type: entity
   name: giant flying insect
@@ -96,7 +106,7 @@
       0: Alive
       35: Dead
   - type: Stamina
-    critThreshold: 10
+    baseCritThreshold: 10
     animationThreshold: 1
   - type: DamageStateVisuals
     states:
@@ -108,8 +118,10 @@
         Base: dead
   - type: Tag
   - type: Bloodstream
-    bloodReagent: InsectBlood
-    bloodMaxVolume: 0.1
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: InsectBlood
+        Quantity: 0.1
   - type: NPCRetaliation
   - type: FactionException
   - type: HTN
@@ -123,6 +135,10 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/_starcup/Animals/Swarm/swarmpet.ogg
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatSlime
+      amount: 2
 
 - type: entity
   name: bees
@@ -425,7 +441,7 @@
   name: giant mosquito
   suffix: AI
   id: MobGiantMosquito
-  description: A large and fluffy friend.
+  description: A large and fluffy enemy. Oh, the misery.
   parent: MobGiantFlyingInsect
   components:
   - type: NpcFactionMember
@@ -465,7 +481,9 @@
 
 - type: entity
   name: stag beetle
-  parent: SimpleMobBase
+  parent:
+  - SimpleMobBase
+  - BaseMobAnimal
   id: MobBeetle
   description: A little friend with a tough shell and a valiant heart.
   components:
@@ -513,8 +531,10 @@
       Dead:
         Base: beetle_dead
   - type: Bloodstream
-    bloodReagent: InsectBlood
-    bloodMaxVolume: 20
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: InsectBlood
+        Quantity: 20
   - type: Edible
   - type: FlavorProfile
     flavors:
@@ -535,8 +555,6 @@
       Starving: 5
       Dead: 0
     baseDecayRate: 0.1
-  - type: Body
-    prototype: Mouse
   - type: Extractable
     grindableSolutionName: food
   - type: SolutionContainerManager

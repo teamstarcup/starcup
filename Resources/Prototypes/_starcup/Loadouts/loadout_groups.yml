@@ -217,6 +217,22 @@
 
 ## Boxer
 - type: loadoutGroup
+  id: BoxerJumpsuit
+  name: loadout-group-boxer-jumpsuit
+  loadouts:
+  - BoxerShorts
+  - BoxerShortsWithTop
+
+- type: loadoutGroup
+  id: BoxerGloves
+  name: loadout-group-boxer-gloves
+  loadouts:
+  - RedBoxingGloves
+  - BlueBoxingGloves
+  - GreenBoxingGloves
+  - YellowBoxingGloves
+
+- type: loadoutGroup
   id: BoxerShoes
   name: loadout-group-boxer-shoes
   loadouts:
@@ -226,6 +242,13 @@
   - RedShoes
   - YellowShoes
   - CombatBoots
+
+- type: loadoutGroup
+  id: BoxerJobTrinkets
+  name: loadout-group-jobtrinkets
+  minLimit: 0
+  loadouts:
+  - LizardPlushieBoxer
 
 ## Chaplain
 - type: loadoutGroup
@@ -666,7 +689,7 @@
   id: Accessibility
   name: loadout-group-accessibility
   minLimit: 0
-  maxLimit: 4
+  maxLimit: 6
   loadouts:
   - AACTablet
   - HandheldStationMap
@@ -677,3 +700,8 @@
   - OffsetCaneSyndie # starcup: reflavor ops
   - Cane
   - WhiteCane
+  - PillCanisterNeurozeniumLoadout
+  - PillCanisterSoretizoneLoadout
+  - PillCanisterCalmafluxineLoadout
+  - PillCanisterEthyloxyephedrineLoadout
+  - PillCanisterAgonolexyneLoadout

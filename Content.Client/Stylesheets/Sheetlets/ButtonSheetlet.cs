@@ -19,6 +19,7 @@ public sealed class ButtonSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet
 
         var crossTex = sheet.GetTextureOr(iconCfg.CrossIconPath, NanotrasenStylesheet.TextureRoot);
         var refreshTex = sheet.GetTextureOr(iconCfg.RefreshIconPath, NanotrasenStylesheet.TextureRoot);
+        var helpTex = sheet.GetTextureOr(iconCfg.HelpIconPath, NanotrasenStylesheet.TextureRoot);
 
         var rules = new List<StyleRule>
         {
@@ -56,6 +57,11 @@ public sealed class ButtonSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet
                 .Class(StyleClass.RefreshButton)
                 .Prop(TextureButton.StylePropertyTexture, refreshTex),
 
+            // Help button
+            E<TextureButton>()
+                .Class(StyleClass.HelpButton)
+                .Prop(TextureButton.StylePropertyTexture, helpTex),
+
             // Ensure labels in buttons are aligned.
             E<Label>()
                 // ReSharper disable once AccessToStaticMemberViaDerivedType
@@ -73,6 +79,16 @@ public sealed class ButtonSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet
         MakeButtonRules(rules, buttonCfg.ButtonPalette, null);
         MakeButtonRules(rules, buttonCfg.PositiveButtonPalette, StyleClass.Positive);
         MakeButtonRules(rules, buttonCfg.NegativeButtonPalette, StyleClass.Negative);
+
+        // begin starcup: add the AAC styles
+        MakeButtonRules(rules, buttonCfg.CommandButtonPalette, StyleClass.DepartmentCommand);
+        MakeButtonRules(rules, buttonCfg.EngineeringButtonPalette, StyleClass.DepartmentEngineering);
+        MakeButtonRules(rules, buttonCfg.ScienceButtonPalette, StyleClass.DepartmentScience);
+        MakeButtonRules(rules, buttonCfg.LogisticsButtonPalette, StyleClass.DepartmentLogistics);
+        MakeButtonRules(rules, buttonCfg.MedicalButtonPalette, StyleClass.DepartmentMedical);
+        MakeButtonRules(rules, buttonCfg.SecurityButtonPalette, StyleClass.DepartmentSecurity);
+        MakeButtonRules(rules, buttonCfg.ServiceButtonPalette, StyleClass.DepartmentService);
+        // end starcup
 
         return rules.ToArray();
     }

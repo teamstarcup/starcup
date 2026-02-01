@@ -1186,7 +1186,7 @@
 
 - type: entity
   id: SyndicateMicrowaveMachineCircuitboard
-  parent: BaseMachineCircuitboard
+  parent: [ BaseMachineCircuitboard, BaseSyndicateContraband ]
   name: donk co. microwave machine board
   components:
     - type: Sprite
@@ -1376,13 +1376,12 @@
   - type: Sprite
     state: supply
   - type: MachineBoard
-    prototype: MailTeleporter # starcup: replace with delta-v version
+    prototype: CargoMailTeleporter
     stackRequirements:
-      # begin starcup: use delta-v's materials
-      Steel: 4
-      Cable: 4
+      # begin starcup: preserve matter bin, capacitor, and manipulators
       Capacitor: 1
       MatterBin: 1
+      Steel: 5
       # end starcup
 
 - type: entity

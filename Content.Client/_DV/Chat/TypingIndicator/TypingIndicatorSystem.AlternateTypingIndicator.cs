@@ -23,7 +23,7 @@ public sealed partial class TypingIndicatorSystem
     /// <param name="protoId">The TypingIndicator to show in place of the normal TypingIndicator</param>
     public void ClientAlternateTyping(TypingIndicatorState state, ProtoId<TypingIndicatorPrototype> protoId)
     {
-        if (_shouldShowTyping)
+        if (_shouldShowTyping || _playerManager.LocalEntity == null) // starcup: avoid warning spam when player isn't attached to an entity
             return;
 
         _isClientTyping = true;

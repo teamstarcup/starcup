@@ -30,6 +30,10 @@
       - WeldingMask
       - RemoteSignaller
       - UtilityKnife
+      # begin starcup
+      - Hammer
+      - CrashAxe
+      # end starcup
       components:
       - StationMap
       - SprayPainter
@@ -78,6 +82,16 @@
         whitelist:
           tags:
           - Multitool
+      # begin starcup
+      hammer:
+        whitelist:
+          tags:
+          - Hammer
+      crash_axe:
+        whitelist:
+          tags:
+          - CrashAxe
+      # end starcup
   - type: Appearance
 
 - type: entity
@@ -177,6 +191,7 @@
       - Bloodpack
       - Gauze
       - Ointment
+      - Tourniquet
       - CigPack
       - PillCanister
       - Radio
@@ -184,7 +199,6 @@
       - SurgeryTool
       - Dropper
       components:
-      - Hypospray
       - Injector
       - Pill
       - HandLabeler
@@ -197,7 +211,7 @@
           - Bottle
       hypo:
         whitelist:
-          components:
+          tags:
           - Hypospray
       pill:
         whitelist:

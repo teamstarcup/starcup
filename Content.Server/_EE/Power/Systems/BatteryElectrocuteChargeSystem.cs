@@ -32,7 +32,8 @@ public sealed class BatteryElectrocuteChargeSystem : EntitySystem
                 battery.MaxCharge * 0.25f)
             * _random.NextFloat(0.75f, 1.25f);
 
-        _battery.SetCharge(uid, battery.CurrentCharge + charge);
+        var currentCharge = _battery.GetCharge((uid, battery));
+        _battery.SetCharge(uid, currentCharge + charge);
 
         _popup.PopupEntity(Loc.GetString("battery-electrocute-charge"), uid, uid);
     }

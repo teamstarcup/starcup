@@ -7,7 +7,7 @@
   # requirements:
   #   - !type:RoleTimeRequirement
   #     role: JobWarden
-  #     time: 1h
+  #     time: 3h
   #   - !type:RoleTimeRequirement
   #     role: JobDetective
   #     time: 1h # knowing how to use the tools is important
@@ -31,11 +31,12 @@
   - Security
   - Armory
   - Maintenance
-  # - Service # starcup: remove service access from non-service jobs
   - External
   - Detective
   - Cryogenics
   - Brigmedic # starcup
+  - GenpopEnter
+  - GenpopLeave
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

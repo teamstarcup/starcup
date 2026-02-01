@@ -5,8 +5,7 @@
 - type: marking
   id: VulpEarWolf
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Vulpkanin, Felinid]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: wolf
@@ -16,8 +15,7 @@
 - type: marking
   id: VulpEarTajaran
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: msai
@@ -27,8 +25,7 @@
 - type: marking
   id: VulpEarDalmatian
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Vulpkanin, Felinid]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: dalmatian
@@ -37,8 +34,7 @@
 - type: marking
   id: VulpSnoutAlt
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
       state: muzzle_alt
@@ -48,8 +44,7 @@
 - type: marking
   id: VulpSnoutSharp
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
       state: muzzle_sharp
@@ -59,8 +54,7 @@
 - type: marking
   id: VulpSnoutFade
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
       state: muzzle_fade
@@ -71,208 +65,87 @@
 - type: marking
   id: VulpTailAnimated
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: []
-  # begin floof: tail layering fixes
-  layering:
-    vulp_wag: TailOversuit
-    vulp_wag-fade: TailOversuit
-    vulp_wag_BACK: TailBehind
-    vulp_wag-fade_BACK: TailBehind
-  colorLinks:
-    vulp_wag_BACK: vulp_wag
-    vulp_wag-fade_BACK: vulp_wag-fade
+  groupWhitelist: []
   sprites:
-    - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp_wag
-    - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp_wag-fade
-    - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: vulp_wag_BACK
-    - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: vulp_wag-fade_BACK
-  # end floof
 
 - type: marking
   id: VulpTailTip
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid]
-  # begin floof: tail layering fixes
-  layering:
-    vulp: TailOversuit
-    tip: TailOversuit
-    vulp_BACK: TailBehind
-    tip_BACK: TailBehind
-  colorLinks:
-    vulp_BACK: vulp
-    vulp-tip_BACK: vulp-tip
+  groupWhitelist: [Vulpkanin]
   sprites:
-    - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp
-    - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp-tip
-    - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: vulp_BACK
-    - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: vulp-tip_BACK
-  # end floof
 
 - type: marking
   id: VulpTailTipAnimated
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: []
-  # begin floof: tail layering fixes
-  layering:
-    vulp_wag: TailOversuit
-    vulp_wag-tip: TailOversuit
-    vulp_wag_BACK: TailBehind
-    vulp_wag-tip_BACK: TailBehind
-  colorLinks:
-    vulp_wag_BACK: vulp_wag
-    vulp_wag-tip_BACK: vulp_wag-tip
+  groupWhitelist: []
   sprites:
-    - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp_wag
-    - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp_wag-tip
-    - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: vulp_wag_BACK
-    - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: vulp_wag-tip_BACK
-  # end floof
 
 - type: marking
   id: VulpTailAltTip
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid]
-  # begin floof: tail layering fixes
-  layering:
-    vulp_alt: TailOversuit
-    vulp_alt-tip: TailOversuit
-    vulp_alt_BACK: TailBehind
-    vulp_alt-tip_BACK: TailBehind
-  colorLinks:
-    vulp_alt_BACK: vulp_alt
-    vulp_alt-tip_BACK: vulp_alt-tip
+  groupWhitelist: [Vulpkanin]
   sprites:
-    - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp_alt
-    - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp_alt-tip
-    - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: vulp_alt_BACK
-    - sprite: _Floof/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: vulp_alt-tip_BACK
-  # end floof
 
 - type: marking
   id: VulpTailFox
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid]
-  # begin starcup: tail layering fixes
-  layering: # Floof
-    fox: TailOversuit
-    fox-fade: TailOversuit
-    fox_BACK: TailBehind
-    fox-fade_BACK: TailBehind
-  colorLinks:
-    fox_BACK: fox
-    fox-fade_BACK: fox-fade
+  groupWhitelist: [Vulpkanin]
   sprites:
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox-fade
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: fox_BACK
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: fox-fade_BACK
-  # end starcup
 
 - type: marking
   id: VulpTailFoxTip
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid]
-  # begin starcup: tail layering fixes
-  layering:
-    fox: TailOversuit
-    fox-tip: TailOversuit
-    fox_BACK: TailBehind
-    fox-tip_BACK: TailBehind
-  colorLinks:
-    fox_BACK: fox
-    fox-tip_BACK: fox-tip
+  groupWhitelist: [Vulpkanin]
   sprites:
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox-tip
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: fox_BACK
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: fox-tip_BACK
-  # end starcup
 
 - type: marking
   id: VulpTailFoxWag
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid]
-  # begin starcup: tail layering fixes
-  layering: # Floof
-    fox_wag: TailOversuit
-    fox_wag-fade: TailOversuit
-    fox_wag_BACK: TailBehind
-    fox_wag-fade_BACK: TailBehind
-  colorLinks:
-    fox_wag_BACK: vulp_wag
-    fox_wag-fade_BACK: vulp_wag-fade
+  groupWhitelist: [Vulpkanin]
   sprites:
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox_wag
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox_wag-fade
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: fox_wag_BACK
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: fox_wag-fade_BACK
-  # end starcup
 
 - type: marking
   id: VulpTailFoxWagTip
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid]
-  # begin starcup: tail layering fixes
-  layering: # Floof
-    fox_wag: TailOversuit
-    fox_wag-tip: TailOversuit
-    fox_wag_BACK: TailBehind
-    fox_wag-tip_BACK: TailBehind
-  colorLinks:
-    fox_wag_BACK: fox_wag
-    fox_wag-tip_BACK: fox_wag-tip
+  groupWhitelist: [Vulpkanin]
   sprites:
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox_wag
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox_wag-tip
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: fox_wag_BACK
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: fox_wag-tip_BACK
-  # end starcup
 
 - type: marking
   id: VulpTailBushy
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: bushfluff
@@ -280,8 +153,7 @@
 - type: marking
   id: VulpTailBushyWag
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: bushfluff_wag
@@ -289,8 +161,7 @@
 - type: marking
   id: VulpTailCoyote
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: coyote
@@ -298,8 +169,7 @@
 - type: marking
   id: VulpTailCoyoteWag
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: coyote_wag
@@ -307,8 +177,7 @@
 - type: marking
   id: VulpTailCorgiWag
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: corgi_wag
@@ -316,8 +185,7 @@
 - type: marking
   id: VulpTailHuskyAlt
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: husky
@@ -325,8 +193,7 @@
 - type: marking
   id: VulpTailFox2
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox2
@@ -334,117 +201,58 @@
 - type: marking
   id: VulpTailFox3
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid]
-  # begin starcup: tail layering fixes
-  layering:
-    fox3: TailOversuit
-    fox3-tip: TailOversuit
-    fox3_BACK: TailBehind
-    fox3-tip_BACK: TailBehind
-  colorLinks:
-    fox3_BACK: fox3
-    fox3-tip_BACK: fox3-tip
+  groupWhitelist: [Vulpkanin]
   sprites:
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox3
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox3-tip
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: fox3_BACK
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: fox3-tip_BACK
-  # end starcup
 
 - type: marking
   id: VulpTailOtie
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid]
-  # begin starcup: tail layering fixes
-  layering:
-    otie: TailOversuit
-    otie_BACK: TailBehind
-  colorLinks:
-    otie_BACK: otie
+  groupWhitelist: [Vulpkanin]
   sprites:
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: otie
-    - sprite: _starcup/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: otie_BACK
-  # end starcup
 
 - type: marking
   id: VulpTailDalmatianWag
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: dalmatian_wag
 
-# # Body Markings (Overlay)
-# Eventually layering will allow to have markings on the body not layering above jumpsuits
-# - type: marking
-#   id: VulpBodyPointsCrest
-#   markingCategory: Overlay
-#   bodyPart: RFoot
-#   speciesRestriction: [Vulpkanin]
-#   sprites:
-#     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
-#       state: points_crest
-#
-# - type: marking
-#   id: VulpBodyPointsFade
-#   markingCategory: Overlay
-#   bodyPart: RFoot
-#   speciesRestriction: [Vulpkanin]
-#   sprites:
-#     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
-#       state: points_fade
-#
-# - type: marking
-#   id: VulpBodyPointsSharp
-#   markingCategory: Overlay
-#   bodyPart: RFoot
-#   speciesRestriction: [Vulpkanin]
-#   sprites:
-#     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
-#       state: points_sharp
-
 # Leg Markings
 - type: marking
   id: VulpPointsFeet
-  markingCategory: Overlay
   bodyPart: RFoot
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: points_feet
 
 - type: marking
   id: VulpPointsCrestLegs
-  markingCategory: Legs
   bodyPart: LLeg
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: points_crest-legs
 
 - type: marking
   id: VulpPointsFadeLegs
-  markingCategory: Legs
   bodyPart: LLeg
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: points_fade-legs
 
 - type: marking
   id: VulpPointsSharpLegs
-  markingCategory: Legs
   bodyPart: LLeg
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: points_sharp-legs
@@ -452,36 +260,32 @@
 # Arm Markings
 - type: marking
   id: VulpPointsHands
-  markingCategory: Overlay
   bodyPart: RHand
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: points_hands
 
 - type: marking
   id: VulpPointsCrestArms
-  markingCategory: Arms
   bodyPart: LArm
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: points_crest-arms
 
 - type: marking
   id: VulpPointsFadeArms
-  markingCategory: Arms
   bodyPart: LArm
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: points_fade-arms
 
 - type: marking
   id: VulpPointsSharpArms
-  markingCategory: Arms
   bodyPart: LArm
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: points_sharp-arms

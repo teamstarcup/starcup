@@ -41,15 +41,17 @@ public static class StyleClass
     public const string LabelKeyText = "LabelKeyText";
     public const string LabelWeak = "LabelWeak"; // replaces `LabelSecondaryColor`
     public const string LabelMonospaceText = "ConsoleText";
-    public const string LabelMonospaceHeading = "ConsoleText";
-    public const string LabelMonospaceSubHeading = "ConsoleText";
+    public const string LabelMonospaceHeading = "ConsoleHeading";
+    public const string LabelMonospaceSubHeading = "ConsoleSubHeading";
 
     public const string BackgroundPanel = "BackgroundPanel"; // replaces `AngleRect`
+    public const string BackgroundPanelDark = "BackgroundPanelDark"; // replaces `Inset`
     public const string BackgroundPanelOpenLeft = "BackgroundPanelOpenLeft"; // replaces `BackgroundOpenLeft`
     public const string BackgroundPanelOpenRight = "BackgroundPanelOpenRight"; // replaces `BackgroundOpenRight`
 
     public const string PanelDark = "PanelDark";
     public const string PanelLight = "PanelLight";
+    public const string PanelDropTarget = "PanelDropTarget";
 
     public const string ButtonOpenRight = "OpenRight";
     public const string ButtonOpenLeft = "OpenLeft";
@@ -60,6 +62,7 @@ public static class StyleClass
 
     public const string CrossButtonRed = "CrossButtonRed";
     public const string RefreshButton = "RefreshButton";
+    public const string HelpButton = "HelpButton";
 
     public const string ItemStatus = "ItemStatus";
     public const string ItemStatusNotHeld = "ItemStatusNotHeld";
@@ -67,4 +70,15 @@ public static class StyleClass
     public const string TooltipPanel = "TooltipPanel";
     public const string TooltipTitle = "TooltipTitle";
     public const string TooltipDesc = "TooltipDesc";
+
+
+    // begin starcup: departmental color classes
+    public const string DepartmentCommand = "DepartmentCommand";
+    public const string DepartmentEngineering = "DepartmentEngineering";
+    public const string DepartmentScience = "DepartmentScience";
+    public const string DepartmentLogistics = "DepartmentLogistics";
+    public const string DepartmentMedical = "DepartmentMedical";
+    public const string DepartmentSecurity = "DepartmentSecurity";
+    public const string DepartmentService = "DepartmentService";
+    // end starcup
 }
