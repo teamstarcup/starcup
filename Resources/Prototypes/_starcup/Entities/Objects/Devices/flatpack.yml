@@ -1,0 +1,13 @@
+- type: entity
+  parent: [ BaseFlatpack, BaseTraitorContraband ]
+  id: NanotrasenMicrowaveFlatpack
+  name: NanoTrasen microwave flatpack
+  description: A flatpack used for constructing a microwave too hot for the Syndicate to handle.
+  components:
+  - type: Item
+    size: Normal
+  - type: Flatpack
+    entity: NanotrasenMicrowave
+  - type: GuideHelp
+    guides:
+    - FoodRecipes

@@ -1,3 +1,22 @@
+- type: markingsGroup
+  parent:
+  - Undergarments
+  - Humanoid # starcup: added for standardized marking limits
+  id: Felinid
+  limits:
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [ FelinidTailBasic ]
+    enum.HumanoidVisualLayers.HeadBase:
+      limit: 1
+      required: true
+      default: [ FelinidHeadFemale ]
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: true
+      default: [ FelinidEarsBasic ]
+
 - type: entity
   parent: BaseSpeciesAppearance
   id: AppearanceFelinid
@@ -10,35 +29,30 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
-  - type: EntityTableContainerFill
-    containers:
-      body_organs: !type:AllSelector
-        children:
-        - id: OrganHumanTorso
-        - id: OrganHumanHead
-        - id: OrganHumanArmLeft
-        - id: OrganHumanArmRight
-        - id: OrganHumanHandRight
-        - id: OrganHumanHandLeft
-        - id: OrganHumanLegLeft
-        - id: OrganHumanLegRight
-        - id: OrganHumanFootLeft
-        - id: OrganHumanFootRight
-        - id: OrganHumanBrain
-        - id: OrganHumanEyes
-        - id: OrganHumanTongue
-        - id: OrganHumanAppendix
-        - id: OrganHumanEars
-        - id: OrganHumanLungs
-        - id: OrganHumanHeart
-        - id: OrganAnimalStomach # starcup
-        - id: OrganHumanLiver
-        - id: OrganHumanKidneys
-  - type: HumanoidAppearance
+  - type: InitialBody
+    organs:
+      Torso: OrganFelinidTorso # starcup
+      Head: OrganFelinidHead # starcup
+      ArmLeft: OrganFelinidArmLeft # starcup
+      ArmRight: OrganFelinidArmRight # starcup
+      HandRight: OrganFelinidHandRight # starcup
+      HandLeft: OrganFelinidHandLeft # starcup
+      LegLeft: OrganFelinidLegLeft # starcup
+      LegRight: OrganFelinidLegRight # starcup
+      FootLeft: OrganFelinidFootLeft # starcup
+      FootRight: OrganFelinidFootRight # starcup
+      Brain: OrganHumanBrain
+      Eyes: OrganHumanEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganHumanLungs
+      Heart: OrganHumanHeart
+      Stomach: OrganAnimalStomach # starcup
+      Liver: OrganHumanLiver
+      Kidneys: OrganHumanKidneys
+  - type: HumanoidProfile
     species: Felinid
-    hideLayersOnEquip:
-    - Hair
-    - Snout
   - type: Sprite
     scale: 0.8, 0.8
 
@@ -99,3 +113,90 @@
       Female: FemaleFelinid
       Unsexed: MaleFelinid
   - type: Felinid
+
+- type: entity
+  parent: OrganHumanTorso
+  id: OrganFelinidTorso
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  parent: OrganHumanHead
+  id: OrganFelinidHead
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+  - type: VisualOrgan
+    data:
+      sprite: null
+      state: null
+    sexStateOverrides:
+      Male: null
+      Female: null
+
+- type: entity
+  parent: OrganHumanArmLeft
+  id: OrganFelinidArmLeft
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  parent: OrganHumanArmRight
+  id: OrganFelinidArmRight
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  parent: OrganHumanHandLeft
+  id: OrganFelinidHandLeft
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  parent: OrganHumanHandRight
+  id: OrganFelinidHandRight
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  parent: OrganHumanLegLeft
+  id: OrganFelinidLegLeft
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  parent: OrganHumanLegRight
+  id: OrganFelinidLegRight
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  parent: OrganHumanFootLeft
+  id: OrganFelinidFootLeft
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  parent: OrganHumanFootRight
+  id: OrganFelinidFootRight
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid

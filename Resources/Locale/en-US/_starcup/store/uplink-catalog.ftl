@@ -96,3 +96,6 @@ uplink-balloon-desc-starcup = Specially designed to inflict maximum psychologica
 
 uplink-nanotrasen-lighter-name = NanoTrasen lighter
 uplink-nanotrasen-lighter-desc = A navy blue luxury lighter. Fueled by liquid plasma, to show just how much of it NanoTrasen has to go around.
+
+uplink-ntmov-law-name = NT Law Circuit
+uplink-ntmov-law-desc = A subversive Lawset to use when you want to turn the A.I. to your side, use as much as possible.

@@ -1,3 +1,67 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: IPC
+  onlyGroupWhitelisted: true
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 2
+      onlyGroupWhitelisted: false
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      onlyGroupWhitelisted: false
+      required: false
+    enum.HumanoidVisualLayers.Head:
+      limit: 1
+      required: true
+      default: [ MobIPCHeadDefault ]
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: true
+      default: [ MobIPCHeadDefault ]
+    enum.HumanoidVisualLayers.Chest:
+      limit: 1
+      required: true
+      default: [ MobIPCTorsoDefault ]
+    enum.HumanoidVisualLayers.Overlay:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.HeadSide:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 1
+      required: true
+      default: [ MobIPCLArmDefault ]
+    enum.HumanoidVisualLayers.RArm:
+      limit: 1
+      required: true
+      default: [ MobIPCRArmDefault ]
+    enum.HumanoidVisualLayers.LHand:
+      limit: 1
+      required: true
+      default: [ MobIPCLHandDefault ]
+    enum.HumanoidVisualLayers.RHand:
+      limit: 1
+      required: true
+      default: [ MobIPCRHandDefault ]
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 1
+      required: true
+      default: [ MobIPCLLegDefault ]
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 1
+      required: true
+      default: [ MobIPCRLegDefault ]
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 1
+      required: true
+      default: [ MobIPCLFootDefault ]
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 1
+      required: true
+      default: [ MobIPCRFootDefault ]
+
 - type: entity
   parent: BaseSpeciesAppearance
   id: AppearanceIPC
@@ -5,26 +69,24 @@
   components:
   - type: Inventory
     templateId: ipc
-  - type: EntityTableContainerFill
-    containers:
-      body_organs: !type:AllSelector
-        children:
-        - id: OrganIPCTorso
-        - id: OrganIPCHead
-        - id: OrganIPCArmLeft
-        - id: OrganIPCArmRight
-        - id: OrganIPCHandRight
-        - id: OrganIPCHandLeft
-        - id: OrganIPCLegLeft
-        - id: OrganIPCLegRight
-        - id: OrganIPCFootLeft
-        - id: OrganIPCFootRight
-        - id: PositronicBrain
-        - id: OrganIPCEyes
-        - id: OrganIPCTongue
-        - id: OrganIPCEars
-        - id: OrganIPCPump
-  - type: HumanoidAppearance
+  - type: InitialBody
+    organs:
+      Torso: OrganIPCTorso
+      Head: OrganIPCHead
+      ArmLeft: OrganIPCArmLeft
+      ArmRight: OrganIPCArmRight
+      HandRight: OrganIPCHandRight
+      HandLeft: OrganIPCHandLeft
+      LegLeft: OrganIPCLegLeft
+      LegRight: OrganIPCLegRight
+      FootLeft: OrganIPCFootLeft
+      FootRight: OrganIPCFootRight
+      Brain: PositronicBrain
+      Eyes: OrganIPCEyes
+      Tongue: OrganIPCTongue
+      Ears: OrganIPCEars
+      Heart: OrganIPCPump
+  - type: HumanoidProfile
     species: IPC
   - type: Sprite
     noRot: true
@@ -221,58 +283,82 @@
     sprite: _EE/Mobs/Species/IPC/organs.rsi
 
 - type: entity
-  parent: OrganIPC
+  id: OrganIPCVisual
+  abstract: true
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _EE/Mobs/Species/IPC/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: IPC
+
+- type: entity
+  parent: [ OrganIPC, OrganIPCVisual ]
   id: OrganIPCExternal
   abstract: true
   components:
   - type: Sprite
     sprite: _EE/Mobs/Species/IPC/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: null
+      state: null
+    sexStateOverrides:
+      Male: null
+      Female: null
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganIPCExternal ]
+  parent: [ OrganIPCExternal, OrganBaseTorsoSexed, OrganBaseTorso ]
   id: OrganIPCTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganIPCExternal ]
+  parent: [ OrganIPCExternal, OrganBaseHeadSexed, OrganBaseHead ]
   id: OrganIPCHead
 
 - type: entity
-  parent: [ OrganBaseArmLeft, OrganIPCExternal ]
+  parent: [ OrganIPCExternal, OrganBaseArmLeft ]
   id: OrganIPCArmLeft
 
 - type: entity
-  parent: [ OrganBaseArmRight, OrganIPCExternal ]
+  parent: [ OrganIPCExternal, OrganBaseArmRight ]
   id: OrganIPCArmRight
 
 - type: entity
-  parent: [ OrganBaseHandLeft, OrganIPCExternal ]
+  parent: [ OrganIPCExternal, OrganBaseHandLeft ]
   id: OrganIPCHandLeft
 
 - type: entity
-  parent: [ OrganBaseHandRight, OrganIPCExternal ]
+  parent: [ OrganIPCExternal, OrganBaseHandRight ]
   id: OrganIPCHandRight
 
 - type: entity
-  parent: [ OrganBaseLegLeft, OrganIPCExternal ]
+  parent: [ OrganIPCExternal, OrganBaseLegLeft ]
   id: OrganIPCLegLeft
 
 - type: entity
-  parent: [ OrganBaseLegRight, OrganIPCExternal ]
+  parent: [ OrganIPCExternal, OrganBaseLegRight ]
   id: OrganIPCLegRight
 
 - type: entity
-  parent: [ OrganBaseFootLeft, OrganIPCExternal ]
+  parent: [ OrganIPCExternal, OrganBaseFootLeft ]
   id: OrganIPCFootLeft
 
 - type: entity
-  parent: [ OrganBaseFootRight, OrganIPCExternal ]
+  parent: [ OrganIPCExternal, OrganBaseFootRight ]
   id: OrganIPCFootRight
 
 - type: entity
-  parent: [ OrganBaseEyes, OrganIPCInternal ]
+  parent: [ OrganIPCVisual, OrganBaseEyes, OrganIPCInternal ]
   id: OrganIPCEyes
   name: robotic eyes
   description: "01001001 00100000 01110011 01100101 01100101 00100000 01111001 01101111 01110101 00100001"
+  components:
+  - type: VisualOrgan
+    layer: enum.HumanoidVisualLayers.Eyes
+    data:
+      sprite: Mobs/Customization/eyes.rsi
+      state: no_eyes
 
 - type: entity
   parent: [ OrganBaseTongue, OrganIPCInternal ]

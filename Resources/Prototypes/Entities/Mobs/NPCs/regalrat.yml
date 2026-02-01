@@ -1,8 +1,9 @@
 - type: entity
   name: rat king
+  suffix: original # starcup: recolors below
   id: MobRatKing
   parent: [ BaseMobRat, SimpleMobBase, MobCombat ]
-  description: He's da rat. He make da roolz.
+  description: The sheperd of the swarm, its mind and voice. It speaks their holy word. And that word is *more.* # starcup: changed for tone
   components:
   - type: CombatMode
   - type: MovementSpeedModifier
@@ -166,7 +167,7 @@
   name: rat servant
   id: MobRatServant
   parent: [ BaseMobRat, SimpleMobBase, MobCombat ]
-  description: He's da mini rat. He don't make da roolz.
+  description: The tide is rising, and they flee from ship to ship, bringing each in turn to rust and ruin, starving, eating, mating, devouring. # starcup: changed for tone
   categories: [ HideSpawnMenu ] #Must be configured to a King or the AI breaks.
   components:
   - type: CombatMode
@@ -194,14 +195,13 @@
     - SimpleHostile
   - type: Sprite
     drawdepth: SmallMobs
-    sprite: Mobs/Animals/rat.rsi
+    sprite: _starcup/Mobs/Animals/Rodents/rat.rsi # starcup
     layers:
     - map: ["enum.DamageStateVisualLayers.Base", "movement"]
       state: rat
     - map: [ "enum.DamageStateVisualLayers.BaseUnshaded"]
       state: eyes
       shader: unshaded
-
   - type: SpriteMovement
     movementLayers:
       movement:
