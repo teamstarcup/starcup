@@ -27,6 +27,46 @@
   categories:
   - UplinkAmmo
 
+# Chemicals
+- type: listing
+  id: UplinkCombatMedipenSilicon
+  name: uplink-combat-medipen-silicon-name
+  description: uplink-combat-medipen-silicon-desc
+  productEntity: CombatMedipenSilicon
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 3
+  categories:
+  - UplinkChemicals
+
+- type: listing
+  id: UplinkOverclockInjector
+  name: uplink-overclock-injector-name
+  description: uplink-overclock-injector-desc-starcup
+  productEntity: OverclockInjector
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 1
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkChemicals
+
+- type: listing
+  id: UplinkOverclockKit
+  name: uplink-overclock-kit-name
+  description: uplink-overclock-kit-desc
+  productEntity: OverclockKitFilled
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 3
+  cost:
+    Telecrystal: 5
+  categories:
+  - UplinkChemicals
+
 # Deception
 
 - type: listing
