@@ -8,8 +8,24 @@
     - state: shadowgreen
     - state: green
     - state: icon
-      sprite: _starcup/Mobs/Aliens/space_pike.rsi
+      sprite: _starcup/Mobs/Aliens/Pikes/space_pike.rsi
     - state: ai
   - type: ConditionalSpawner
     prototypes:
     - MobPike
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobPikeFriar
+  name: Friar Space Pike Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: icon
+      sprite: _starcup/Mobs/Aliens/Pikes/space_pike_pink.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobPikeFriar

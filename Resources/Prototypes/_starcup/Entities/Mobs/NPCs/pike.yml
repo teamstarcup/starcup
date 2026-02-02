@@ -16,7 +16,7 @@
     factions:
     - SimpleHostile
   - type: Sprite
-    sprite: _starcup/Mobs/Aliens/space_pike.rsi
+    sprite: _starcup/Mobs/Aliens/Pikes/space_pike.rsi
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: alive
@@ -62,7 +62,7 @@
       path: /Audio/Effects/bite.ogg
     damage:
       types:
-        Slash: 12
+        Piercing: 12
   - type: TypingIndicator
     proto: alien
   - type: Tag
@@ -79,6 +79,19 @@
     interactFailureString: petting-failure-carp
     interactFailureSound:
       path: /Audio/Effects/bite.ogg
+
+- type: entity
+  id: MobPikeFriar
+  parent: MobPike
+  name: friar space pike
+  description: Slightly larger and tougher than other space pike species. Named by Friar Glub, who the story goes was so pious they wouldn't attack him.
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Aliens/Pikes/space_pike_pink.rsi
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      135: Dead
 
 - type: entity
   id: MobPikeSalvage
