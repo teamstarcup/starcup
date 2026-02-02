@@ -1,10 +1,5 @@
 using System.Linq;
-using Content.Server._starcup.MKC.Components;
-using Content.Server.Body.Components;
-using Content.Server.Drunk;
-using Content.Server.Fluids.EntitySystems;
-using Content.Server.Forensics;
-using Content.Server.Popups;
+using Content.Shared._starcup.MKC.Components;
 using Content.Shared.Body;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Events;
@@ -12,27 +7,32 @@ using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Damage.Systems;
+using Content.Shared.Drunk;
+using Content.Shared.Fluids;
+using Content.Shared.Forensics.Systems;
 using Content.Shared.IdentityManagement;
+using Content.Shared.Metabolism;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Movement.Systems;
+using Content.Shared.Popups;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
-namespace Content.Server._starcup.MKC.Systems;
+namespace Content.Shared._starcup.MKC.Systems;
 
 public sealed class FluidEjectorSystem : EntitySystem
 {
     [Dependency] private readonly BodySystem _body = default!;
     [Dependency] private readonly MovementModStatusSystem _movementMod = default!;
-    [Dependency] private readonly ForensicsSystem _forensics = default!;
-    [Dependency] private readonly PuddleSystem _puddle = default!;
+    [Dependency] private readonly SharedForensicsSystem _forensics = default!;
+    [Dependency] private readonly SharedPuddleSystem _puddle = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
-    [Dependency] private readonly DrunkSystem _drunk = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
+    [Dependency] private readonly SharedDrunkSystem _drunk = default!;
+    [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly DamageableSystem _damageableSystem = default!;
 
     public override void Initialize()

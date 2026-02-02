@@ -1,6 +1,6 @@
 using Content.Shared.Damage;
 
-namespace Content.Server._starcup.MKC.Components
+namespace Content.Shared._starcup.MKC.Components
 {
     [RegisterComponent]
     public sealed partial class FluidEjectorComponent : Component
