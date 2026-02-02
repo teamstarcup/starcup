@@ -224,6 +224,24 @@
   exclaimSound:
     path: /Audio/_starcup/Animals/Ferret/ferret_exclaim.ogg
 
+- type: speechSounds
+  id: PigSpeechSounds
+  saySound:
+    collection: PigOinks
+  askSound:
+    collection: PigAsks
+  exclaimSound:
+    path: /Audio/_starcup/Animals/Pig/pig_exclaim.ogg
+
+- type: speechSounds
+  id: HamsterSpeechSounds
+  saySound:
+    collection: HamsterSqueaks
+  askSound:
+    collection: HamsterAsks
+  exclaimSound:
+    collection: HamsterSqueaks
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -341,6 +359,10 @@
   sounds:
     CreatureScream:
       path: /Audio/_starcup/Animals/Cow/cow_scream.ogg
+    Sneeze:
+      path: /Audio/_starcup/Animals/chuff.ogg
+    Cough:
+      path: /Audio/_starcup/Animals/chuff.ogg
     Gasp:
       path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
     DefaultDeathgasp:
@@ -675,6 +697,8 @@
   sounds:
     CreatureMeow:
       collection: CatAsks
+    CreaturePurr:
+      collection: FelinidPurrs
     CreatureTrill:
       collection: CatTrills
     CreatureScream:
@@ -701,6 +725,8 @@
   sounds:
     CreatureMeow:
       collection: CatMews
+    CreaturePurr:
+      collection: FelinidPurrs
     CreatureTrill:
       collection: CatTrills
     CreatureGrowl:
@@ -757,3 +783,39 @@
       collection: DogGasps
     DefaultDeathgasp:
       collection: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+
+- type: emoteSounds
+  id: PigSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      collection: PigScreams
+    Sneeze:
+      path: /Audio/_starcup/Animals/chuff.ogg
+    Cough:
+      path: /Audio/_starcup/Animals/chuff.ogg
+    Gasp:
+      collection: PigGasps
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Pig/pig_death.ogg
+
+- type: emoteSounds
+  id: HamsterSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureSqueak:
+      collection: HamsterSqueaks
+    CreaturePurr:
+      collection: HamsterPurrs
+    CreatureTrill:
+      collection: HamsterTrills
+    Sneeze:
+      collection: MouseSneezes
+    Cough:
+      collection: MouseSneezes
+    Gasp:
+      collection: MouseGasp
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg

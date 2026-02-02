@@ -3522,7 +3522,7 @@
   - type: Speech
     speechSounds: CatSpeechSounds
     speechVerb: SmallMob
-    allowedEmotes: ['CreatureTrill', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss']
+    allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss']
   - type: Vocal
     sounds:
       Male: CatSpeechEmotes
@@ -3782,7 +3782,7 @@
   - type: Speech
     speechSounds: KittenSpeechSounds
     speechVerb: SmallMob
-    allowedEmotes: ['CreatureTrill', 'CreatureMeow', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss']
+    allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss']
   - type: Vocal
     sounds:
       Male: KittenSpeechEmotes
@@ -3948,14 +3948,14 @@
   - type: GhostTakeoverAvailable
   # begin starcup
   - type: Speech
-    speechSounds: Squeak
+    speechSounds: HamsterSpeechSounds
     speechVerb: SmallMob
-    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureLaugh']
+    allowedEmotes: ['CreatureSqueak', 'CreaturePurr', 'CreatureTrill']
   - type: Vocal
     sounds:
-      Male: SqueakSpeechEmotes
-      Female: SqueakSpeechEmotes
-      Unsexed: SqueakSpeechEmotes
+      Male: HamsterSpeechEmotes
+      Female: HamsterSpeechEmotes
+      Unsexed: HamsterSpeechEmotes
   - type: TypingIndicator
     proto: rodentia
   # end starcup
@@ -4039,7 +4039,7 @@
       amount: 1
     dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
-    accent: mouse
+    accent: HamsterAccent # starcup
   - type: Tag
     tags:
     - VimPilot
@@ -4170,6 +4170,16 @@
   - type: HTN
     rootTask:
       task: RuminantCompound
+  # begin starcup
+  - type: Speech
+    speechSounds: PigSpeechSounds
+    allowedEmotes: ['CreatureScream']
+  - type: Vocal
+    sounds:
+      Male: PigSpeechEmotes
+      Female: PigSpeechEmotes
+      Unsexed: PigSpeechEmotes
+  # end starcup
 
 - type: entity
   name: diona nymph

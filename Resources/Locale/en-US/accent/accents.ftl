@@ -80,10 +80,12 @@ accent-words-chicken-3 = Cluck?
 accent-words-chicken-4 = Cluck cluck!
 
 # Pig
+# starcup: changed 2, 3 and 4 to better match with our new sounds. Also added 5.
 accent-words-pig-1 = Oink.
-accent-words-pig-2 = Oink?
-accent-words-pig-3 = Oink!
-accent-words-pig-4 = Oink oink!
+accent-words-pig-2 = Oink oink?
+accent-words-pig-3 = Snort... !
+accent-words-pig-4 = Oink snort.
+accent-words-pig-5 = Snort oink...
 
 # Kangaroo
 accent-words-kangaroo-1 = Grr!
