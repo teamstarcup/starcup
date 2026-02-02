@@ -95,18 +95,14 @@ public sealed class FluidEjectorSystem : EntitySystem
     /// <returns>true if any of the metabolizer organs can metabolize any of the reagent's metabolism groups</returns>
     private bool ShouldExpelReagent(ReagentId reagentId, List<Entity<MetabolizerComponent>> metabolizerOrgans)
     {
-        if (!_prototypeManager.TryIndex<ReagentPrototype>(reagentId.Prototype, out var reagentPrototype))
+        if (!_prototypeManager.TryIndex<ReagentPrototype>(reagentId.Prototype, out var proto))
             return true;
 
-        var reagentMetabolismGroups = reagentPrototype.Metabolisms?.Keys ?? [];
-        if (reagentMetabolismGroups.Length <= 0)
-            return true;
-
-        var metabolizerGroups = metabolizerOrgans
-            .SelectMany(metabolizer => metabolizer.Comp.MetabolismGroups ?? [])
+        var metabolizerWhitelists = metabolizerOrgans
+            .SelectMany(metabolizer => metabolizer.Comp.ReagentWhitelist ?? [])
             .Distinct();
 
-        return !metabolizerGroups.Any(group => reagentMetabolismGroups.Contains(group.Id));
+        return !metabolizerWhitelists.Contains(proto);
     }
 
     private Solution? GetEjectedReagents(EntityUid uid)
