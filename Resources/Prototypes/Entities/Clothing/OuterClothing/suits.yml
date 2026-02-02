@@ -24,12 +24,13 @@
   - type: Tag
     tags:
     - Hardsuit
-    - HidesHarpyWings
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
   - type: HideLayerClothing
     slots:
       - Tail
+      - RArm  # starcup: hide harpy wings
+      - LArm  # starcup: hide harpy wings
 
 - type: entity
   parent: ClothingOuterSuitBomb
@@ -76,9 +77,8 @@
   - type: HideLayerClothing
     slots:
     - Tail
-  - type: Tag
-    tags:
-      - HidesHarpyWings # Delta-V
+    - RArm  # starcup: hide harpy wings
+    - LArm  # starcup: hide harpy wings
 
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
@@ -115,10 +115,11 @@
     tags:
     - CorgiWearable
     - WhitelistChameleon
-    - HidesHarpyWings # Delta-V
   - type: HideLayerClothing
     slots:
     - Tail
+    - RArm  # starcup: hide harpy wings
+    - LArm  # starcup: hide harpy wings
 
 - type: entity
   parent: [ClothingOuterBaseLarge, GeigerCounterClothing, AllowSuitStorageClothing]
@@ -147,9 +148,8 @@
   - type: HideLayerClothing
     slots:
     - Tail
-  - type: Tag
-    tags:
-      - HidesHarpyWings # Delta-V
+    - RArm  # starcup: hide harpy wings
+    - LArm  # starcup: hide harpy wings
 
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseToggleClothing, BaseHighlyIllegalContraband, BaseExaminableClothing] # starcup: examinable clothing

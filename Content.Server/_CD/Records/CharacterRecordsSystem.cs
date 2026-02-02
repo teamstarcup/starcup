@@ -1,3 +1,4 @@
+using System.Numerics;
 using Content.Server.Forensics;
 using Content.Server.GameTicking;
 using Content.Server.StationRecords.Systems;
@@ -9,6 +10,8 @@ using Content.Shared.StationRecords;
 using Content.Shared._CD.Records;
 using Content.Shared.Forensics.Components;
 using Content.Shared.GameTicking;
+using Content.Shared.Humanoid.Prototypes;
+using Content.Shared.Sprite;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server._CD.Records;
@@ -18,6 +21,7 @@ public sealed class CharacterRecordsSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly StationRecordsSystem _records = default!;
+    [Dependency] private readonly SharedScaleVisualsSystem _scaleVisuals = default!;
 
     public override void Initialize()
     {
@@ -70,6 +74,14 @@ public sealed class CharacterRecordsSystem : EntitySystem
         {
             jobTitle = stationRecords.JobTitle;
         }
+
+        // begin starcup
+        var speciesPrototype = _prototype.Index(profile.Species);
+        var height = Math.Clamp(MathF.Round(profile.Height, 2), speciesPrototype.MinHeight, speciesPrototype.MaxHeight);
+        var scale = new Vector2(speciesPrototype.ScaleHeight ? height : 1f, height);
+        scale *= speciesPrototype.BaseScale;
+        _scaleVisuals.SetSpriteScale(player, scale);
+        // end starcup
 
         var records = new FullCharacterRecords(
             pRecords: new PlayerProvidedCharacterRecords(profile.CDCharacterRecords),

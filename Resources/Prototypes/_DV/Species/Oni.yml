@@ -4,8 +4,6 @@
   roundStart: true
   prototype: MobOni
   dollPrototype: AppearanceOni
-  markingLimits: MobOniMarkingLimits
-  sprites: MobHumanSprites
   skinColoration: Hues
   # begin starcup: new naming scheme
   maleFirstNames: NamesOniFirst
@@ -14,41 +12,3 @@
   naming: FirstOTheLast
   # end starcup
   baseScale: "1.2, 1.2"
-
-- type: markingPoints
-  id: MobOniMarkingLimits
-  points:
-    Hair:
-      points: 2 # starcup 1<2
-      required: false
-    FacialHair:
-      points: 1
-      required: false
-    HeadTop:
-      points: 1
-      required: true
-      defaultMarkings: [ OniHornDoubleCurved ]
-    HeadSide:
-      points: 1
-      required: false
-      defaultMarkings: [ PointyEarsUpwards ]
-    Snout:
-      points: 2
-      required: false
-    # begin starcup
-    UndergarmentTop:
-      points: 1
-      required: false
-    UndergarmentBottom:
-      points: 1
-      required: false
-    # end starcup
-    Chest:
-      points: 4 # starcup: 1 -> 4
-      required: false
-    Legs:
-      points: 8 # starcup: 2 -> 8
-      required: false
-    Arms:
-      points: 8 # starcup: 2 -> 8
-      required: false

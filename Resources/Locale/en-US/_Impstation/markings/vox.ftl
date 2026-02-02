@@ -273,9 +273,6 @@ marking-VoxCocktail-cocktail4 = Tail
 marking-VoxFootSpines = Leg Spines
 marking-VoxFootSpines-footspines = Leg Spines
 
-marking-VoxTailBack = Back Tail
-marking-VoxBackTail-colorable = Back Tail
-
 marking-VoxTailBalled = Thrasher
 marking-VoxTailBalled-balled = Thrasher
 
@@ -307,7 +304,5 @@ marking-VoxTailSpines-spines = Tail Spines
 
 marking-VoxSunAndMoon = Sun and Moon
 marking-VoxSunAndMoon-sunandmoon = Sun and Moon
-
-marking-VoxTail = Default Tail [DO NOT USE]
 
 # RArmExtension

@@ -7,12 +7,11 @@
   color: "#bdfff3"
   recognizable: true
   metabolisms:
-    Medicine:
+    Digestion:
       metabolismRate: 0.1 #this should metabolise in the same amount of time as a drink in a 5:1 mix
+      metabolites:
+        Theobromine: -0.5
       effects:
-      - !type:AdjustReagent
-        reagent: Theobromine
-        amount: -0.25
       - !type:HealthChange
         damage:
           types:

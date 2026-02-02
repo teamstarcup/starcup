@@ -1,5 +1,6 @@
 using Content.Shared.Body.Events;
 using Content.Shared.Gibbing;
+using Content.Shared.Humanoid;
 using Content.Shared.Medical;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Verbs;
@@ -14,6 +15,10 @@ public sealed partial class BodySystem
         SubscribeLocalEvent<BodyComponent, ApplyMetabolicMultiplierEvent>(RefRelayBodyEvent);
         SubscribeLocalEvent<BodyComponent, TryVomitEvent>(RefRelayBodyEvent);
         SubscribeLocalEvent<BodyComponent, BeingGibbedEvent>(RefRelayBodyEvent);
+        SubscribeLocalEvent<BodyComponent, ApplyOrganProfileDataEvent>(RefRelayBodyEvent);
+        SubscribeLocalEvent<BodyComponent, ApplyOrganMarkingsEvent>(RefRelayBodyEvent);
+        SubscribeLocalEvent<BodyComponent, OrganCopyAppearanceEvent>(RefRelayBodyEvent);
+        SubscribeLocalEvent<BodyComponent, HumanoidLayerVisibilityChangedEvent>(RefRelayBodyEvent);
 
         // begin starcup
         SubscribeLocalEvent<BodyComponent, GetVerbsEvent<InnateVerb>>(RelayBodyEvent);
@@ -32,7 +37,6 @@ public sealed partial class BodySystem
     {
         RelayEvent((uid, component), args);
     }
-
 
     public void RelayEvent<T>(Entity<BodyComponent> ent, ref T args) where T : struct
     {

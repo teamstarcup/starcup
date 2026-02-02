@@ -1,3 +1,57 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Slime
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 2 # starcup: up from 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    # begin starcup: added
+    enum.HumanoidVisualLayers.Head:
+      limit: 2
+      required: false
+    # end starcup
+    enum.HumanoidVisualLayers.Chest:
+      limit: 4 # starcup: up from 2
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 2 # starcup: up from 1
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 2 # starcup: up from 1
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 2 # starcup: up from 1
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 2 # starcup: up from 1
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 2 # starcup: up from 1
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 2 # starcup: up from 1
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 2 # starcup: up from 1
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 2 # starcup: up from 1
+      required: false
+    enum.HumanoidVisualLayers.Eyes:
+      limit: 1
+      required: true
+      default: [ SlimeEyesDefault ]
+  appearances:
+    enum.HumanoidVisualLayers.Hair:
+      layerAlpha: 0.72
+      matchSkin: true
+    enum.HumanoidVisualLayers.FacialHair:
+      layerAlpha: 0.72
+      matchSkin: true
+
 - type: entity
   parent: BaseSpeciesAppearance
   id: AppearanceSlimePerson
@@ -10,23 +64,21 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
-  - type: EntityTableContainerFill
-    containers:
-      body_organs: !type:AllSelector
-        children:
-        - id: OrganSlimePersonTorso
-        - id: OrganSlimePersonHead
-        - id: OrganSlimePersonArmLeft
-        - id: OrganSlimePersonArmRight
-        - id: OrganSlimePersonHandRight
-        - id: OrganSlimePersonHandLeft
-        - id: OrganSlimePersonLegLeft
-        - id: OrganSlimePersonLegRight
-        - id: OrganSlimePersonFootLeft
-        - id: OrganSlimePersonFootRight
-        - id: OrganSlimePersonCore
-        - id: OrganSlimePersonLungs
-  - type: HumanoidAppearance
+  - type: InitialBody
+    organs:
+      Torso: OrganSlimePersonTorso
+      Head: OrganSlimePersonHead
+      ArmLeft: OrganSlimePersonArmLeft
+      ArmRight: OrganSlimePersonArmRight
+      HandRight: OrganSlimePersonHandRight
+      HandLeft: OrganSlimePersonHandLeft
+      LegLeft: OrganSlimePersonLegLeft
+      LegRight: OrganSlimePersonLegRight
+      FootLeft: OrganSlimePersonFootLeft
+      FootRight: OrganSlimePersonFootRight
+      Brain: OrganSlimePersonCore
+      Lungs: OrganSlimePersonLungs
+  - type: HumanoidProfile
     species: SlimePerson
   - type: FootPrints # DeltaV port from EE, blood splatter
     leftBarePrint: "footprint-left-bare-slime"
@@ -164,14 +216,35 @@
   components:
   - type: Sprite
     sprite: Mobs/Species/Slime/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Species/Slime/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Slime
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganSlimePersonExternal ]
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganSlimePersonExternal ]
   id: OrganSlimePersonTorso
 
 - type: entity
   parent: [ OrganBaseHead, OrganSlimePersonExternal ]
   id: OrganSlimePersonHead
+  # begin starcup: put new eye layers on the head
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      layers:
+      - HeadBase
+      - Head
+      - Eyes # added
+      - Hair
+      - FacialHair
+      - Snout
+      - SnoutCover
+      - HeadSide
+      - HeadTop
+  # end starcup
 
 - type: entity
   parent: [ OrganBaseArmLeft, OrganSlimePersonExternal ]
@@ -218,15 +291,7 @@
   - type: Metabolizer
     maxReagents: 6
     metabolizerTypes: [ Slime ]
-    removeEmpty: true
-    groups:
-    - id: Food
-    - id: Drink
-    - id: Medicine
-    - id: Poison
-    - id: Narcotic
-    - id: Alcohol
-      rateModifier: 2.5
+    stages: [ Digestion, Bloodstream, Metabolites ]
 
 - type: entity
   parent: [ OrganBaseLungs, OrganSlimePersonInternal, OrganSlimePersonMetabolizer ]

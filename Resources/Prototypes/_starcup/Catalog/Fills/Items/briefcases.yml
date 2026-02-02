@@ -30,16 +30,15 @@
     containers:
       storagebase: !type:AllSelector
         children:
+        - id: ClothingOuterCoatJensenSyndie
+        - id: ClothingUniformJumpsuitTacticool
         - id: ClothingEyesGlassesSunglasses
         - id: SpaceCash30000
         - id: EncryptionKeyNT
         - id: RubberStampTrader
         - id: PhoneInstrumentNanotrasen
-        - id: ClothingUniformJumpsuitTacticool
-        - id: ClothingOuterCoatJensen
         - id: ClothingHandsGlovesCombat
         - id: ClothingMaskNeckGaiter
-        - id: NTHandyFlag
 
 - type: entity
   id: BriefcaseSyndCommSpecialFilled
@@ -57,3 +56,48 @@
         - id: PaperStickyNoteStackFilledPink
         - id: LuxuryPen
         - id: RubberStampSyndComm
+
+- type: entity
+  id: BriefcaseWeaponHushpupFilledNT
+  parent: BriefcaseWeaponNTSmall
+  name: secure hushpup case
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: WeaponShotgunHushpup
+        - id: TreasureCoinIron
+
+- type: entity
+  id: BriefcaseWeaponC20FilledNT
+  parent: BriefcaseWeaponNTSmall
+  name: secure C-20r case
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase:
+        id: WeaponSubMachineGunC20r
+
+- type: entity
+  id: BriefcaseWeaponBulldogFilledNT
+  parent: BriefcaseWeaponNTSmall
+  name: secure bulldog case
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase:
+        id: WeaponShotgunBulldog
+
+- type: entity
+  id: BriefcaseWeaponChinaLakeFilledNT
+  parent: BriefcaseWeaponNT
+  name: secure china lake case
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: WeaponLauncherChinaLake
+        - id: GrenadeFrag
+          amount: 2

@@ -1,3 +1,52 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Harpy
+  onlyGroupWhitelisted: true
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [ HarpyTailPhoenix ]
+    enum.HumanoidVisualLayers.Chest:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.Head:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.HeadSide:
+      limit: 1
+      required: true
+      default: [ HarpyEarsDefault ]
+    enum.HumanoidVisualLayers.LArm:
+      limit: 1
+      required: true
+      default: [ HarpyLeftWingDefaultHuescale ]
+    enum.HumanoidVisualLayers.RArm:
+      limit: 1
+      required: true
+      default: [ HarpyRightWingDefaultHuescale ]
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 1
+      required: false
+
 - type: entity
   parent: BaseSpeciesAppearance
   id: AppearanceHarpy
@@ -17,50 +66,42 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
-  - type: EntityTableContainerFill
-    containers:
-      body_organs: !type:AllSelector
-        children:
-        - id: OrganHarpyTorso
-        - id: OrganHarpyHead
-        - id: OrganHarpyArmLeft
-        - id: OrganHarpyArmRight
-        - id: OrganHarpyHandRight
-        - id: OrganHarpyHandLeft
-        - id: OrganHarpyLegLeft
-        - id: OrganHarpyLegRight
-        - id: OrganHarpyFootLeft
-        - id: OrganHarpyFootRight
-        - id: OrganHumanBrain
-        - id: OrganHumanEyes
-        - id: OrganHumanTongue
-        - id: OrganHumanAppendix
-        - id: OrganHumanEars
-        - id: OrganHarpyLungs
-        - id: OrganHumanHeart
-        - id: OrganAnimalStomach
-        - id: OrganAnimalLiver
-        - id: OrganAnimalKidneys
-  - type: HumanoidAppearance
+  - type: InitialBody
+    organs:
+      Torso: OrganHarpyTorso
+      Head: OrganHarpyHead
+      ArmLeft: OrganHarpyArmLeft
+      ArmRight: OrganHarpyArmRight
+      HandRight: OrganHarpyHandRight
+      HandLeft: OrganHarpyHandLeft
+      LegLeft: OrganHarpyLegLeft
+      LegRight: OrganHarpyLegRight
+      FootLeft: OrganHarpyFootLeft
+      FootRight: OrganHarpyFootRight
+      Brain: OrganHumanBrain
+      Eyes: OrganHumanEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganHarpyLungs
+      Heart: OrganHumanHeart
+      Stomach: OrganAnimalStomach
+      Liver: OrganAnimalLiver
+      Kidneys: OrganAnimalKidneys
+  - type: HumanoidProfile
     species: Harpy
-    hideLayersOnEquip:
-    - Hair
-    - Snout
   - type: Sprite
     scale: 0.9, 0.9
     layers:
     # Torso
-    - map: [ "enum.HumanoidVisualLayers.TailBehind" ] # floof
     - map: [ "enum.HumanoidVisualLayers.Chest" ]
 
     # Head
-    - map: [ "enum.HumanoidVisualLayers.HeadBase" ] # starcup: base head shapes
     - map: [ "enum.HumanoidVisualLayers.Head" ]
     - map: [ "enum.HumanoidVisualLayers.Snout" ]
     - map: [ "enum.HumanoidVisualLayers.Eyes" ]
 
     # Limbs
-    - map: [ "enum.HumanoidVisualLayers.LArm" ]
     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
 
@@ -75,11 +116,13 @@
     - map: ["enum.HumanoidVisualLayers.LHand"]
     - map: ["enum.HumanoidVisualLayers.RHand"]
 
+    # Stuff that goes over the body but below equipment
+    - map: ["enum.HumanoidVisualLayers.Overlay"]
+
     # More equipment
     - map: [ "gloves" ]
     - map: [ "shoes" ]
     - map: [ "ears" ]
-    - map: [ "enum.HumanoidVisualLayers.TailOversuit" ] # floof
     - map: [ "eyes" ]
     - map: [ "belt" ]
     - map: [ "id" ]
@@ -87,9 +130,12 @@
     - map: [ "back" ]
     - map: [ "neck" ]
 
+    # Arms (moved above clothing)
+    - map: [ "enum.HumanoidVisualLayers.RArm" ]
+    - map: [ "enum.HumanoidVisualLayers.LArm" ]
+
     # Stuff that goes in front of equipment
     - map: [ "enum.HumanoidVisualLayers.SnoutCover" ]
-    - map: [ "enum.HumanoidVisualLayers.RArm" ] # Yes, RArm has to be down here
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
     - map: [ "enum.HumanoidVisualLayers.Hair" ]
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
@@ -114,7 +160,7 @@
       state: "creampie_human"
       visible: false
 
-    - map: [ enum.InstrumentVisuals.Layer ]
+    - map: [ "enum.InstrumentVisuals.Layer" ]
       sprite: _DV/Effects/harpysinger.rsi
       state: singing_music_notes
       visible: false
@@ -192,7 +238,6 @@
     baseWalkSpeed: 2.5
     baseSprintSpeed: 5.0
     weightlessAcceleration: 2.5
-  - type: HarpyVisuals
   - type: UltraVision
   - type: Tag
     tags:
@@ -211,6 +256,25 @@
 
 - type: entity
   parent: OrganHarpy
+  id: OrganHarpyInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _DV/Mobs/Species/Harpy/organs.rsi
+
+- type: entity
+  id: OrganHarpyVisual
+  abstract: true
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _DV/Mobs/Species/Harpy/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Harpy
+
+- type: entity
+  parent: [ OrganHarpy, OrganHarpyVisual]
   id: OrganHarpyExternal
   abstract: true
   components:
@@ -218,20 +282,32 @@
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganHarpyExternal ]
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganHarpyExternal ]
   id: OrganHarpyTorso
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Tail
 
 - type: entity
-  parent: [ OrganBaseHead, OrganHarpyExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganHarpyExternal ]
   id: OrganHarpyHead
 
 - type: entity
   parent: [ OrganBaseArmLeft, OrganHarpyExternal ]
   id: OrganHarpyArmLeft
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.LArm
 
 - type: entity
   parent: [ OrganBaseArmRight, OrganHarpyExternal ]
   id: OrganHarpyArmRight
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.RArm
 
 - type: entity
   parent: [ OrganBaseHandLeft, OrganHarpyExternal ]
@@ -258,19 +334,10 @@
   id: OrganHarpyFootRight
 
 - type: entity
-  parent: [ OrganBaseLungs, OrganHumanInternal, OrganHumanMetabolizer ]
+  parent: [ OrganBaseLungs, OrganHarpyInternal, OrganHumanMetabolizer ]
   id: OrganHarpyLungs
   name: lungs
   description: An advanced pair of avian lungs. Filters oxygen by way of moving air constantly through air sacs.
-  components:
-  - type: Metabolizer
-    updateInterval: 2.0
-    removeEmpty: true
-    solutionOnBody: false
-    solution: "Lung"
-    groups:
-    - id: Gas
-      rateModifier: 200.0
 
 - type: entity
   id: ActionHarpyPlayMidi
