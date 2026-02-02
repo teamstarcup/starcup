@@ -283,7 +283,7 @@
     metabolizerTypes: [MKC]
     stages: [Bloodstream]
     reagentWhitelist:
-    # acids and other caustics
+    # caustic
     - PolytrinicAcid
     - FerrochromicAcid
     - FluorosulfuricAcid
@@ -292,30 +292,29 @@
     - Fluorine
     - Sulfur
     - Bleach
-    # causes physical internal damages
-    - BuzzochloricBees
-    - Razorium
-    # causes radioactive damage
+    # radioactive
     - Uranium
     - Radium
     - Tritium
-    # affects internal temperature
+    # thermodynamic
     - Thermite
     - Napalm
     - Phlogiston
     - ChlorineTrifluoride
     - Fresium
-    # electromagnetic properties
+    # electromagnetic
     - Tazinide
     - Licoxide
     - Fersilicite
-    # fantastical/silly stuff
-    - Pax
+    # esoteric
+    - BuzzochloricBees
+    - Razorium
     - Honk
     - Happiness
     - Laughter
     - JuiceThatMakesYouWeh
     - JuiceThatMakesYouHew
+    - HolyWater
 
 - type: entity
   id: OrganMKCStomach
