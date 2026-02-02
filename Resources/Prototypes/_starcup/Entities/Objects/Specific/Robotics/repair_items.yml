@@ -1,5 +1,181 @@
 - type: entity
   parent: BaseItem
+  id: BaseSiliconHealingItem
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medical.rsi # TODO(starcup): replace with new sprites
+  - type: Item
+    size: Small
+    sprite: Objects/Specific/Medical/medical.rsi # TODO(starcup): replace with new sprites
+    heldPrefix: ointment
+  # Inherited
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  name: repair spray
+  description: Small sprayers filled with rapid foaming agents, for repairing dents and scuffs on a silicon's chassis.
+  parent: BaseSiliconHealingItem
+  id: RepairSpray
+  suffix: Full
+  components:
+  - type: Sprite
+    state: ointment
+  - type: Item
+    heldPrefix: ointment
+    storedSprite:
+      state: ointment-storage
+      sprite: Objects/Specific/Medical/medical.rsi
+  - type: Healing
+    damageContainers:
+    - HumanoidSilicon
+    damage:
+      groups:
+        Brute: -15
+    healingBeginSound:
+      path: "/Audio/Items/Medical/ointment_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/ointment_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+
+- type: entity
+  id: RepairSpray1
+  parent: RepairSpray
+  suffix: Single
+  components:
+  - type: Stack
+    stackType: RepairSpray
+    count: 1
+
+- type: entity
+  name: thermal paste
+  description: Gel used to treat heat-damaged electronics in silicons.
+  parent: BaseSiliconHealingItem
+  id: ThermalPaste
+  suffix: Full
+  components:
+  - type: Sprite
+    state: ointment
+  - type: Item
+    heldPrefix: ointment
+    storedSprite:
+      state: ointment-storage
+      sprite: Objects/Specific/Medical/medical.rsi
+  - type: Healing
+    damageContainers:
+    - HumanoidSilicon
+    damage:
+      types:
+        Heat: -5
+        Caustic: -1.5
+    healingBeginSound:
+      path: "/Audio/Items/Medical/ointment_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/ointment_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+
+- type: entity
+  id: ThermalPaste1
+  parent: ThermalPaste
+  suffix: Single
+  components:
+  - type: Stack
+    stackType: ThermalPaste
+    count: 1
+
+- type: entity
+  name: hydraulic pouch
+  description: Replacement hydraulic fluids to treat silicons whose internals have frozen solid.
+  parent: BaseSiliconHealingItem
+  id: HydraulicPouch
+  suffix: Full
+  components:
+  - type: Sprite
+    state: ointment
+  - type: Item
+    heldPrefix: ointment
+    storedSprite:
+      state: ointment-storage
+      sprite: Objects/Specific/Medical/medical.rsi
+  - type: Healing
+    damageContainers:
+    - HumanoidSilicon
+    damage:
+      types:
+        Cold: -10
+    healingBeginSound:
+      path: "/Audio/Items/Medical/ointment_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/ointment_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+
+- type: entity
+  id: HydraulicPouch1
+  parent: HydraulicPouch
+  suffix: Single
+  components:
+  - type: Stack
+    stackType: HydraulicPouch
+    count: 1
+
+- type: entity
+  name: splice kit
+  description: Self-soldering bundles of wire for replacing damage caused to silicons by electrical overload.
+  parent: BaseSiliconHealingItem
+  id: SpliceKit
+  suffix: Full
+  components:
+  - type: Sprite
+    state: ointment
+  - type: Item
+    heldPrefix: ointment
+    storedSprite:
+      state: ointment-storage
+      sprite: Objects/Specific/Medical/medical.rsi
+  - type: Healing
+    damageContainers:
+    - HumanoidSilicon
+    damage:
+      types:
+        Shock: -10
+    healingBeginSound:
+      path: "/Audio/Items/Medical/ointment_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/ointment_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+
+- type: entity
+  id: SpliceKit1
+  parent: SpliceKit
+  suffix: Single
+  components:
+  - type: Stack
+    stackType: SpliceKit
+    count: 1
+
+- type: entity
+  parent: BaseHealingItem
   id: Oilpack
   name: oil pack
   suffix: Full
@@ -18,9 +194,19 @@
       types:
         Bloodloss: -0.5
     modifyBloodLevel: 15
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
   - type: Stack
     stackType: Oilpack
-    count: 5
+    count: 10
   - type: StackPrice
     price: 10
 
