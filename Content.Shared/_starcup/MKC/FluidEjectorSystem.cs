@@ -1,5 +1,4 @@
 using System.Linq;
-using Content.Shared._starcup.MKC.Components;
 using Content.Shared.Body;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Events;
@@ -19,7 +18,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._starcup.MKC.Systems;
+namespace Content.Shared._starcup.MKC;
 
 public sealed class FluidEjectorSystem : EntitySystem
 {
