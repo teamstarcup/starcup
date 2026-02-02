@@ -171,6 +171,14 @@ public sealed class MetabolizerSystem : EntitySystem
             if (ev.Reagents.Contains(reagent))
                 continue;
 
+            // begin starcup: metabolizer whitelist
+            if (ent.Comp1.ReagentWhitelist != null)
+            {
+                if (!ent.Comp1.ReagentWhitelist.Contains(proto))
+                    continue;
+            }
+            // end starcup
+
             if (proto.Metabolisms is null || !proto.Metabolisms.Metabolisms.TryGetValue(stage, out var entry))
             {
                 var mostToTransfer = FixedPoint2.Clamp(solutionData.TransferRate, 0, quantity);
