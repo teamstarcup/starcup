@@ -1,32 +1,91 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: MKC
+  onlyGroupWhitelisted: true
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 2
+      onlyGroupWhitelisted: false
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      onlyGroupWhitelisted: false
+      required: false
+    enum.HumanoidVisualLayers.HeadBase:
+      limit: 1
+      required: true
+      default: [ MobIPCHeadDefault ]
+    enum.HumanoidVisualLayers.Head:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Chest:
+      limit: 1
+      required: true
+      default: [ MobIPCTorsoDefault ]
+    enum.HumanoidVisualLayers.Overlay:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 1
+      required: true
+      default: [ MobIPCLArmDefault ]
+    enum.HumanoidVisualLayers.RArm:
+      limit: 1
+      required: true
+      default: [ MobIPCRArmDefault ]
+    enum.HumanoidVisualLayers.LHand:
+      limit: 1
+      required: true
+      default: [ MobIPCLHandDefault ]
+    enum.HumanoidVisualLayers.RHand:
+      limit: 1
+      required: true
+      default: [ MobIPCRHandDefault ]
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 1
+      required: true
+      default: [ MobIPCLLegDefault ]
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 1
+      required: true
+      default: [ MobIPCRLegDefault ]
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 1
+      required: true
+      default: [ MobIPCLFootDefault ]
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 1
+      required: true
+      default: [ MobIPCRFootDefault ]
+
 - type: entity
   parent: BaseSpeciesAppearance
   id: AppearanceMKC
   name: MKC appearance
   components:
   - type: Inventory
-    speciesId: mkc
-  - type: EntityTableContainerFill
-    containers:
-      body_organs: !type:AllSelector
-        children:
-        - id: OrganMKCTorso
-        - id: OrganMKCHead
-        - id: OrganMKCArmLeft
-        - id: OrganMKCArmRight
-        - id: OrganMKCHandRight
-        - id: OrganMKCHandLeft
-        - id: OrganMKCLegLeft
-        - id: OrganMKCLegRight
-        - id: OrganMKCFootLeft
-        - id: OrganMKCFootRight
-        - id: PositronicBrain
-        - id: OrganMKCEyes
-        - id: OrganMKCTongue
-        - id: OrganMKCEars
-        - id: OrganMKCPump
-        - id: OrganMKCStomach
-        - id: OrganMKCCore
-  - type: HumanoidAppearance
+    templateId: mkc
+  - type: InitialBody
+    organs:
+      Torso: OrganMKCTorso
+      Head: OrganMKCHead
+      ArmLeft: OrganMKCArmLeft
+      ArmRight: OrganMKCArmRight
+      HandRight: OrganMKCHandRight
+      HandLeft: OrganMKCHandLeft
+      LegLeft: OrganMKCLegLeft
+      LegRight: OrganMKCLegRight
+      FootLeft: OrganMKCFootLeft
+      FootRight: OrganMKCFootRight
+      Brain: PositronicBrain
+      Eyes: OrganMKCEyes
+      Tongue: OrganMKCTongue
+      Ears: OrganMKCEars
+      Heart: OrganMKCPump
+  - type: HumanoidProfile
     species: MKC
 
 - type: entity
@@ -105,19 +164,37 @@
     sprite: _EE/Mobs/Species/IPC/organs.rsi
 
 - type: entity
-  parent: OrganMKC
+  id: OrganMKCVisual
+  abstract: true
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _EE/Mobs/Species/IPC/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: IPC
+
+- type: entity
+  parent: [ OrganMKC, OrganMKCVisual ]
   id: OrganMKCExternal
   abstract: true
   components:
   - type: Sprite
     sprite: _EE/Mobs/Species/IPC/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: null
+      state: null
+    sexStateOverrides:
+      Male: null
+      Female: null
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganMKCExternal ]
+  parent: [ OrganMKCExternal, OrganBaseTorsoSexed, OrganBaseTorso ]
   id: OrganMKCTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganMKCExternal ]
+  parent: [ OrganMKCExternal, OrganBaseHeadSexed, OrganBaseHead ]
   id: OrganMKCHead
 
 - type: entity
@@ -153,7 +230,7 @@
   id: OrganMKCFootRight
 
 - type: entity
-  parent: [ OrganBaseEyes, OrganMKCInternal ]
+  parent: [ OrganMKCVisual, OrganBaseEyes, OrganMKCInternal ]
   id: OrganMKCEyes
   name: visual receptors
   description: Despite their similarity to eyeballs, these sensory devices are usually kept inside an MKC's chassis for safekeeping.
