@@ -93,7 +93,7 @@ public sealed partial class DefibrillatorComponent : Component
     /// starcup: The damage container this defibrillator is compatible with.
     /// </summary>
     [DataField(required: true)]
-    public ProtoId<DamageContainerPrototype> DamageContainer ;
+    public ProtoId<DamageContainerPrototype> DamageContainer;
 }
 
 /// <summary>
