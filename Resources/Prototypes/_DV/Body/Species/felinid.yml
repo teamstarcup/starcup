@@ -71,13 +71,9 @@
     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
 
-    # starcup: moved underneath clothes
-    - map: [ "enum.HumanoidVisualLayers.Overlay" ]
-
     # Underwear & clothing
     - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
     - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
-    - map: [ "jumpsuit" ]
 
     # Extremities
     - map: [ "enum.HumanoidVisualLayers.LFoot" ]
@@ -85,7 +81,11 @@
     - map: [ "enum.HumanoidVisualLayers.LHand" ]
     - map: [ "enum.HumanoidVisualLayers.RHand" ]
 
+    # Stuff that goes over the body but below equipment
+    - map: [ "enum.HumanoidVisualLayers.Overlay" ]
+
     # More equipment
+    - map: [ "jumpsuit" ] # starcup: moved above feet, hands, and overlay
     - map: [ "gloves" ]
     - map: [ "shoes" ]
     - map: [ "ears" ]
