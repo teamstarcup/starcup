@@ -198,9 +198,24 @@
   icon: _starcup/Interface/Emotes/Creature/trill.png
   chatMessages: ["chat-emote-msg-trill"]
   chatTriggers:
+  - trill
   - trills
   - trilled
   - trilling
+
+- type: emote
+  id: CreatureChirp
+  parent: CreatureEmoteBase
+  name: chat-emote-name-chirp
+  category: Vocal
+  available: false
+  icon: _starcup/Interface/Emotes/Creature/trill.png
+  chatMessages: ["chat-emote-msg-chirp"]
+  chatTriggers:
+  - chirp
+  - chirps
+  - chirped
+  - chirping
 
 - type: emote
   id: CreatureOok

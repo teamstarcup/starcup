@@ -4244,13 +4244,15 @@
       gender: epicene
   - type: Speech
     speechVerb: Plant
-    speechSounds: Alto
-    allowedEmotes: ['Chirp']
+  # begin starcup
+    speechSounds: NymphSpeechSounds
+    allowedEmotes: ['CreatureChirp', 'CreatureLaugh', 'CreatureChitter']
   - type: Vocal
     sounds:
-      Male: UnisexDiona
-      Female: UnisexDiona
-      Unsexed: UnisexDiona
+      Male: NymphSpeechEmotes
+      Female: NymphSpeechEmotes
+      Unsexed: NymphSpeechEmotes
+  # end starcup
   - type: Tag
     tags:
     - DoorBumpOpener

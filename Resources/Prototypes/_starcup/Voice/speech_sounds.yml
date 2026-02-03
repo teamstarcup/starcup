@@ -242,6 +242,15 @@
   exclaimSound:
     collection: HamsterSqueaks
 
+- type: speechSounds
+  id: NymphSpeechSounds
+  saySound:
+    collection: NymphSays
+  askSound:
+    path: /Audio/_starcup/Monsters/DionaNymph/nymph_ask.ogg
+  exclaimSound:
+    collection: NymphSays
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -819,3 +828,23 @@
       collection: MouseGasp
     DefaultDeathgasp:
       path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+
+- type: emoteSounds
+  id: NymphSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureChirp:
+      path: /Audio/Animals/nymph_chirp.ogg
+    CreatureLaugh:
+      path: /Audio/_starcup/Monsters/DionaNymph/nymph_laugh.ogg
+    CreatureChitter:
+      collection: NymphChitters
+    Sneeze:
+      path: /Audio/_starcup/Monsters/DionaNymph/nymph_gasp.ogg
+    Cough:
+      path: /Audio/_starcup/Monsters/DionaNymph/nymph_gasp.ogg
+    Gasp:
+      path: /Audio/_starcup/Monsters/DionaNymph/nymph_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Monsters/DionaNymph/nymph_gasp.ogg
