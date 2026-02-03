@@ -141,6 +141,11 @@
       - !type:ModifyStatusEffect
         effectProto: StatusEffectMuted
         time: 10
+  - type: CriticalDamage
+    damage:
+      types:
+        Heat: 1
+    emote: Buzz-Two
 
 - type: entity
   parent: OrganBase
