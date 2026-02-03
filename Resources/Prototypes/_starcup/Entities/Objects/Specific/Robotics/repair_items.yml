@@ -4,11 +4,11 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: Objects/Specific/Medical/medical.rsi # TODO(starcup): replace with new sprites
+    sprite: _starcup/Objects/Specific/Robotics/silicon_repair.rsi
   - type: Item
     size: Small
-    sprite: Objects/Specific/Medical/medical.rsi # TODO(starcup): replace with new sprites
-    heldPrefix: ointment
+    sprite: _starcup/Objects/Specific/Robotics/silicon_repair.rsi
+    heldPrefix: repairspray
   # Inherited
   - type: StaticPrice
     price: 0
@@ -21,12 +21,9 @@
   suffix: Full
   components:
   - type: Sprite
-    state: ointment
+    state: repairspray
   - type: Item
-    heldPrefix: ointment
-    storedSprite:
-      state: ointment-storage
-      sprite: Objects/Specific/Medical/medical.rsi
+    heldPrefix: repairspray
   - type: Healing
     damageContainers:
     - HumanoidSilicon
@@ -61,12 +58,9 @@
   suffix: Full
   components:
   - type: Sprite
-    state: ointment
+    state: thermalpaste
   - type: Item
-    heldPrefix: ointment
-    storedSprite:
-      state: ointment-storage
-      sprite: Objects/Specific/Medical/medical.rsi
+    heldPrefix: thermalpaste
   - type: Healing
     damageContainers:
     - HumanoidSilicon
@@ -95,19 +89,16 @@
     count: 1
 
 - type: entity
-  name: hydraulic pouch
-  description: Replacement hydraulic fluids to treat silicons whose internals have frozen solid.
+  name: defrost pouch
+  description: Defrosting agents to treat silicons whose internals have frozen solid.
   parent: BaseSiliconHealingItem
-  id: HydraulicPouch
+  id: DefrostPouch
   suffix: Full
   components:
   - type: Sprite
-    state: ointment
+    state: defrostpouch
   - type: Item
-    heldPrefix: ointment
-    storedSprite:
-      state: ointment-storage
-      sprite: Objects/Specific/Medical/medical.rsi
+    heldPrefix: defrostpouch
   - type: Healing
     damageContainers:
     - HumanoidSilicon
@@ -126,12 +117,12 @@
         variation: 0.125
 
 - type: entity
-  id: HydraulicPouch1
-  parent: HydraulicPouch
+  id: DefrostPouch1
+  parent: DefrostPouch
   suffix: Single
   components:
   - type: Stack
-    stackType: HydraulicPouch
+    stackType: DefrostPouch
     count: 1
 
 - type: entity
@@ -142,12 +133,9 @@
   suffix: Full
   components:
   - type: Sprite
-    state: ointment
+    state: splicekit
   - type: Item
-    heldPrefix: ointment
-    storedSprite:
-      state: ointment-storage
-      sprite: Objects/Specific/Medical/medical.rsi
+    heldPrefix: splicekit
   - type: Healing
     damageContainers:
     - HumanoidSilicon
@@ -175,18 +163,16 @@
     count: 1
 
 - type: entity
-  parent: BaseHealingItem
+  parent: BaseSiliconHealingItem
   id: Oilpack
   name: oil pack
   suffix: Full
   description: Contains a synthetic oil-based lubricant used by MKC chasses, which will start suffering internal damages without it.
   components:
   - type: Sprite
-    sprite: _DV/Objects/Medical/Oilpack.rsi
-    state: icon
+    state: oilpack
   - type: Item
-    sprite: _DV/Objects/Medical/Oilpack.rsi
-    heldPrefix: icon
+    heldPrefix: oilpack
   - type: Healing
     damageContainers:
     - HumanoidSilicon
