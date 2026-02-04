@@ -87,3 +87,16 @@
     - state: nitrogentank
   - type: Label
     currentLabel: reagent-name-nitrogen
+
+- type: entity
+  parent: BoxSurvival
+  id: BoxSurvivalHumanoidSilicon
+  suffix: MKC
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: Flare
+        - id: Oilpack1
+        - id: PowerCellSmall

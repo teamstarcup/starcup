@@ -7,7 +7,7 @@ stack-matter-bin = matter bin
 ## silicon repair
 stack-repair-spray = repair spray
 stack-thermal-paste = thermal paste
-stack-hydraulic-pouch = hydraulic pouch
+stack-defrost-pouch = defrost pouch
 stack-splice-kit = splice kit
 stack-oil-pack = oil pack
 
