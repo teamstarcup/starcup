@@ -13,10 +13,12 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: bat
       sprite: Mobs/Animals/bat.rsi
+  # begin starcup
   - type: Speech
     speechSounds: BatSpeechSounds
     speechVerb: SmallMob
     allowedEmotes: ['CreatureSqueak', 'CreatureScream']
+  # end starcup
   - type: Fixtures
     fixtures:
       fix1:
@@ -4252,12 +4254,16 @@
       Male: NymphSpeechEmotes
       Female: NymphSpeechEmotes
       Unsexed: NymphSpeechEmotes
-  # end starcup
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBug
   - type: Tag
     tags:
     - DoorBumpOpener
     - VimPilot
-    - CreatureEmotes # starcup
+    - FootstepSound
+    - CreatureEmotes
+  # end starcup
   - type: Emoting
   - type: BodyEmotes
     soundsId: Nymph
@@ -4343,7 +4349,23 @@
   # begin starcup
   - type: Tag
     tags:
+    - DoorBumpOpener
+    - VimPilot
+    - FootstepSound
     - CreatureEmotes
+  - type: Speech
+    speechSounds: DeerSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureBark']
+  - type: Vocal
+    sounds:
+      Male: DeerSpeechEmotes
+      Female: DeerSpeechEmotes
+      Unsexed: DeerSpeechEmotes
+  - type: ReplacementAccent
+    accent: DeerAccent
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepGeneric
   # end starcup
 
 - type: entity

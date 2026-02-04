@@ -1,0 +1,24 @@
+# speech sounds
+- type: speechSounds
+  id: GoliathSpeechSounds
+  saySound:
+    collection: GoliathGrowls
+  askSound:
+    collection: GoliathGrowls
+  exclaimSound:
+    collection: GoliathGrowls
+
+# speech sound emotes
+- type: emoteSounds
+  id: GoliathSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureRoar:
+      path: /Audio/_starcup/Monsters/Goliath/goliath_roar.ogg
+    CreatureGrowl:
+      collection: GoliathGrowls
+    Gasp:
+      path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Monsters/Goliath/goliath_death.ogg

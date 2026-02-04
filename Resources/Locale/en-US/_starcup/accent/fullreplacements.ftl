@@ -86,3 +86,9 @@ accent-words-hamster-2 = Smeek sqeek squeak.
 accent-words-hamster-3 = Squeek squeak smeeak!
 accent-words-hamster-4 = Squeek squeak?
 accent-words-hamster-5 = Squeak smeek- queek queek... ?
+
+# Deer
+accent-words-deer-1 = Mrwuuuh...
+accent-words-deer-2 = Mrrwuhh.
+accent-words-deer-3 = Mrwwuuuuh!
+accent-words-deer-4 = Mrruwh?

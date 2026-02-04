@@ -251,6 +251,15 @@
   exclaimSound:
     collection: NymphSays
 
+- type: speechSounds
+  id: DeerSpeechSounds
+  saySound:
+    collection: DeerSays
+  askSound:
+    collection: DeerAsks
+  exclaimSound:
+    collection: DeerExclaims
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -848,3 +857,21 @@
       path: /Audio/_starcup/Monsters/DionaNymph/nymph_gasp.ogg
     DefaultDeathgasp:
       path: /Audio/_starcup/Monsters/DionaNymph/nymph_gasp.ogg
+
+- type: emoteSounds
+  id: DeerSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      collection: DeerScreams
+    CreatureBark:
+      collection: DeerBarks
+    Sneeze:
+      path: /Audio/_starcup/Animals/chuff.ogg
+    Cough:
+      path: /Audio/_starcup/Animals/chuff.ogg
+    Gasp:
+      path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Cow/cow_death.ogg
