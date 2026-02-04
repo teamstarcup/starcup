@@ -45,3 +45,15 @@
   storage:
     back:
     - PlushieIPC
+
+- type: loadout
+  id: ToyNuke
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobPrisoner
+      time: 72000 #50 hrs
+  storage:
+    back:
+    - ToyNuke
