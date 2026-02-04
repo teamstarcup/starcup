@@ -28,5 +28,11 @@ namespace Content.Shared._starcup.MKC
         /// </summary>
         [DataField(required: true)]
         public float EjectionDamageMultiplier;
+
+        [DataField]
+        public TimeSpan PopupCooldown = TimeSpan.FromSeconds(6);
+
+        [ViewVariables]
+        public TimeSpan LastPopupTime;
     }
 }

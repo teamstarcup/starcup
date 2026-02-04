@@ -52,6 +52,12 @@ public sealed class FluidEjectorSystem : EntitySystem
             if (organ.Body is not {} body)
                 continue;
 
+            if (fluidEjector.NextUpdate != TimeSpan.Zero && _gameTiming.CurTime >= fluidEjector.LastPopupTime + fluidEjector.PopupCooldown)
+            {
+                fluidEjector.LastPopupTime = _gameTiming.CurTime;
+                _popup.PopupEntity(Loc.GetString("fluid-regulator-warning"), body, body, PopupType.LargeCaution);
+            }
+
             if (_gameTiming.CurTime >= fluidEjector.NextUpdate)
             {
                 fluidEjector.NextUpdate = TimeSpan.Zero;
@@ -161,8 +167,7 @@ public sealed class FluidEjectorSystem : EntitySystem
         var drunkennessTime = TimeSpan.FromSeconds((ejectedAmount * 0.4f + 40).Value);
         _drunk.TryApplyDrunkenness(uid, drunkennessTime);
 
-        // TODO: Change popup message
-        _popup.PopupEntity(Loc.GetString("disease-vomit", ("person", Identity.Entity(uid, EntityManager))), uid);
+        _popup.PopupEntity(Loc.GetString("fluid-regulator-eject", ("person", Identity.Entity(uid, EntityManager))), uid, PopupType.Large);
 
         var damage = ejectedAmount * fluidEjector.EjectionDamage * fluidEjector.EjectionDamageMultiplier;
         _damageableSystem.TryChangeDamage(uid, damage, ignoreResistances: true);
