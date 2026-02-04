@@ -54,8 +54,10 @@ loadout-group-bartender-shoes = Bartender shoes
 
 loadout-group-botanist-shoes = Botanist shoes
 
+loadout-group-boxer-head = Boxer head
 loadout-group-boxer-jumpsuit = Boxer jumpsuit
-loadout-group-boxer-gloves = Boxer gloves
+loadout-group-boxer-belt = Boxer belt
+loadout-group-boxer-weapon = Boxer weapon
 loadout-group-boxer-shoes = Boxer shoes
 
 loadout-group-chaplain-shoes = Chaplain shoes

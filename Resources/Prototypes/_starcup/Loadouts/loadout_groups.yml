@@ -252,20 +252,29 @@
 
 ## Boxer
 - type: loadoutGroup
+  id: BoxerHead
+  name: loadout-group-boxer-head
+  minLimit: 0
+  loadouts:
+  - GladiatorHat
+  - KendoHelmet
+
+- type: loadoutGroup
   id: BoxerJumpsuit
   name: loadout-group-boxer-jumpsuit
   loadouts:
   - BoxerShorts
   - BoxerShortsWithTop
+  - GladiatorUniform
+  - KendoHakama
+  - MNKGymBra
 
 - type: loadoutGroup
-  id: BoxerGloves
-  name: loadout-group-boxer-gloves
+  id: BoxerBelt
+  name: loadout-group-boxer-belt #TODO
+  minLimit: 0
   loadouts:
-  - RedBoxingGloves
-  - BlueBoxingGloves
-  - GreenBoxingGloves
-  - YellowBoxingGloves
+  - ChampionBelt
 
 - type: loadoutGroup
   id: BoxerShoes
@@ -284,6 +293,17 @@
   minLimit: 0
   loadouts:
   - LizardPlushieBoxer
+
+- type: loadoutGroup
+  id: BoxerWeapon
+  name: loadout-group-boxer-weapon
+  minLimit: 0
+  loadouts:
+  - RedBoxingGloves
+  - BlueBoxingGloves
+  - GreenBoxingGloves
+  - YellowBoxingGloves
+  - Shinai
 
 ## Chaplain
 - type: loadoutGroup
