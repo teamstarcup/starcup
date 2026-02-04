@@ -36,8 +36,6 @@ public abstract class SharedPowerCoreSystem : EntitySystem
     {
         base.Initialize();
 
-        // TODO: Localization
-        // TODO: Needs a new alert based on BorgBattery with accurate description text
         // TODO: Call SharedBatterySystem.RefreshChargeRate when this organ is removed from the body
 
         SubscribeLocalEvent<PowerCoreComponent, MapInitEvent>(OnMapInit);
@@ -126,7 +124,7 @@ public abstract class SharedPowerCoreSystem : EntitySystem
         InnateVerb verb = new()
         {
             Act = () => StartDraining(powerCore, target),
-            Text = Loc.GetString("stethoscope-verb"),
+            Text = Loc.GetString("power-core-verb"),
             IconEntity = GetNetEntity(powerCore),
             Priority = 2,
         };
@@ -149,13 +147,21 @@ public abstract class SharedPowerCoreSystem : EntitySystem
 
         if (_battery.IsFull(powerCoreBattery))
         {
-            _popup.PopupClient("Your battery is already full.", bodyUid.Value, bodyUid.Value);
+            _popup.PopupClient(
+                Loc.GetString("power-core-full", ("organ", powerCore)),
+                bodyUid.Value,
+                bodyUid.Value
+                );
             return;
         }
 
         if (MathHelper.CloseToPercent(_battery.GetCharge(targetBattery), 0) && targetBattery.Comp.NetSyncEnabled)
         {
-            _popup.PopupClient("The battery is empty.", bodyUid.Value, bodyUid.Value);
+            _popup.PopupClient(
+                Loc.GetString("power-core-battery-empty", ("target", target)),
+                bodyUid.Value,
+                bodyUid.Value
+                );
             return;
         }
 
@@ -212,11 +218,7 @@ public abstract class SharedPowerCoreSystem : EntitySystem
         joulesToDrain = Math.Min(joulesToDrain, powerCore.Comp.JoulesPerDrain);
 
         if (joulesToDrain <= 0f)
-        {
-            // TODO: Maybe remove, currently never seen
-            _popup.PopupPredicted("There is nothing left to drain.", powerCore.Owner, powerCore.Owner);
             return;
-        }
 
         _battery.SetCharge(powerCoreBattery, powerCoreBatteryCharge + joulesToDrain);
         _battery.SetCharge(target, targetBatteryCharge - joulesToDrain);
@@ -226,6 +228,11 @@ public abstract class SharedPowerCoreSystem : EntitySystem
         if (_timing.IsFirstTimePredicted)
             Spawn("EffectSparks", Transform(target.Owner).Coordinates);
 
-        _popup.PopupPredicted("You drain the battery of some power.", powerCore.Owner, powerCore.Owner);
+        _popup.PopupPredicted(
+            Loc.GetString("power-core-drain", ("target", target)),
+            powerCore.Owner,
+            powerCore.Owner
+            );
     }
 }
+

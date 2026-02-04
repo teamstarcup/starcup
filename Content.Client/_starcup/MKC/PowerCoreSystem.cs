@@ -20,7 +20,7 @@ public sealed class PowerCoreSystem : SharedPowerCoreSystem
     private EntityQuery<PowerCoreComponent> _powerCoreQuery;
     private EntityQuery<BodyComponent> _bodyQuery;
 
-    private readonly ProtoId<AlertPrototype> _batteryAlertPrototype = "BorgBattery";
+    private readonly ProtoId<AlertPrototype> _batteryAlertPrototype = "PowerCore";
 
     public override void Initialize()
     {
