@@ -13,6 +13,8 @@ loadout-group-courier-backpack = Courier backpack
 loadout-group-salvage-specialist-neck = Salvage specialist neck
 
 # Medical
+loadout-group-medical-intern-head = Medical intern head
+
 loadout-group-medical-intern-outerclothing = Medical intern outer clothing
 
 loadout-group-chemist-id = Chemist ID
