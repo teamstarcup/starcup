@@ -32,10 +32,12 @@ loadout-group-roboticist-id = Roboticist ID
 
 # Security
 loadout-group-security-glasses = Security glasses
+loadout-group-security-gloves = Security gloves
 
 loadout-group-brigmedic-head = Combat Medic head
 loadout-group-brigmedic-jumpsuit = Combat Medic jumpsuit
 loadout-group-brigmedic-outerclothing = Combat Medic outer clothing
+loadout-group-brigmedic-gloves = Combat Medic gloves
 loadout-group-brigmedic-shoes = Combat Medic shoes
 loadout-group-brigmedic-backpack = Combat Medic backpack
 

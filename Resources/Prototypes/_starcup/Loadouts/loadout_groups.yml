@@ -114,6 +114,15 @@
   - MechatronicsPDA
 
 # Security
+## All
+- type: loadoutGroup
+  id: SecurityGloves
+  name: loadout-group-security-gloves
+  minLimit: 0
+  loadouts:
+  - FingerlessGloves
+  - BlackGloves
+
 ## Combat Medic
 - type: loadoutGroup
   id: BrigmedicHead
@@ -136,6 +145,14 @@
   loadouts:
   - BrigmedicArmoredGown
   - SecurityOfficerWintercoat
+
+- type: loadoutGroup
+  id: BrigmedicGloves
+  name: loadout-group-brigmedic-gloves
+  minLimit: 0
+  loadouts:
+  - LatexGloves
+  - BlackGloves
 
 - type: loadoutGroup
   id: BrigmedicShoes
@@ -308,6 +325,7 @@
   - BibleCommunistManifesto
   - BibleMisc
   - JanitorLantern
+  - PumpkinLantern
   - BikeHorn
   - Wristwatch
   - AnomalyCoreShadowInert
@@ -675,6 +693,13 @@
   - DiagnosticHud
   - DiagnosticEyePatchHud
   - EngineeringGoggles
+
+- type: loadoutGroup
+  id: RoboticsJobTrinkets
+  name: loadout-group-jobtrinkets
+  minLimit: 0
+  loadouts:
+  - PlushieIPC
 
 - type: loadoutGroup
   parent: [ Glasses ]
