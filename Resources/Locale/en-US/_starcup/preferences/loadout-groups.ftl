@@ -25,6 +25,7 @@ loadout-group-psychologist-backpack = Psychologist backpack
 loadout-group-research-assistant-outerclothing = Research assistant outer clothing
 
 loadout-group-research-director-backpack = Research Director backpack
+loadout-group-research-director-face = Research Director face
 
 loadout-group-robotics-glasses = Roboticist glasses
 loadout-group-roboticist-id = Roboticist ID
@@ -57,6 +58,7 @@ loadout-group-boxer-shoes = Boxer shoes
 
 loadout-group-chaplain-shoes = Chaplain shoes
 loadout-group-chaplain-id-starcup = Chaplain ID
+loadout-group-chaplain-relic = Chaplain personal relic
 
 loadout-group-chef-shoes = Chef shoes
 
