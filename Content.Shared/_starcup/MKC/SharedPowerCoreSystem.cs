@@ -235,4 +235,3 @@ public abstract class SharedPowerCoreSystem : EntitySystem
             );
     }
 }
-
