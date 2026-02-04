@@ -25,7 +25,7 @@ loadout-group-psychologist-backpack = Psychologist backpack
 loadout-group-research-assistant-outerclothing = Research assistant outer clothing
 
 loadout-group-research-director-backpack = Research Director backpack
-loadout-group-research-director-face = Research Director face
+loadout-group-research-director-mask = Research Director mask
 
 loadout-group-robotics-glasses = Roboticist glasses
 loadout-group-roboticist-id = Roboticist ID

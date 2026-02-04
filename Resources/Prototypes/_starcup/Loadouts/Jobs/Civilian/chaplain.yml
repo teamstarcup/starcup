@@ -162,3 +162,27 @@
       time: 21600 #6 hrs
   equipment:
     mask: ClothingMaskBlushingMime
+
+- type: loadout
+  id: PlushieNar
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobLibrarian
+      time: 21600 #6 hrs
+  storage:
+    back:
+    - PlushieNar
+
+- type: loadout
+  id: PlushieRatvar
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobLibrarian
+      time: 21600 #6 hrs
+  storage:
+    back:
+    - PlushieRatvar

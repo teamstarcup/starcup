@@ -96,8 +96,9 @@
   - LeatherSatchel
 
 - type: loadoutGroup
-  id: ResearchDirectorFace
-  name: loadout-group-research-director-face
+  id: ResearchDirectorMask
+  name: loadout-group-research-director-mask
+  minLimit: 0
   loadouts:
   - MimeMaskNonmime
   - MimeMaskScaredNonmime
@@ -271,6 +272,7 @@
 - type: loadoutGroup
   id: ChaplainShoes
   name: loadout-group-chaplain-shoes
+  minLimit: 0 # if anyone gets to go barefoot, it's the holy man
   loadouts:
   - BlackShoes
   - WhiteShoes
@@ -297,6 +299,7 @@
 - type: loadoutGroup
   id: ChaplainRelic
   name: loadout-group-chaplain-relic
+  minLimit: 0
   loadouts:
   - BibleNanoTrasen
   - BibleDruid
