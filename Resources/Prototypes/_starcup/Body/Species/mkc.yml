@@ -80,10 +80,10 @@
       FootRight: OrganMKCFootRight
       Brain: PositronicBrain
       Eyes: OrganMKCEyes
-      Tongue: OrganMKCTongue
-      Ears: OrganMKCEars
+      Tongue: OrganMKCVocalSynth
+      Ears: OrganMKCSonicReceptors
       Heart: OrganMKCPump
-      FluidRegulator: OrganMKCStomach
+      FluidRegulator: OrganMKCFluidRegulator
       PowerCore: OrganMKCCore
   - type: HumanoidProfile
     species: MKC
@@ -248,15 +248,23 @@
 
 - type: entity
   parent: [ OrganBaseTongue, OrganMKCInternal ]
-  id: OrganMKCTongue
+  id: OrganMKCVocalSynth
   name: vocal synthesizer
   description: A vocal synthesizer, capable of producing speech using complex audio software.
+  components:
+  - type: Sprite
+    layers:
+    - state: vocal_synth
 
 - type: entity
   parent: [ OrganBaseEars, OrganMKCInternal ]
-  id: OrganMKCEars
+  id: OrganMKCSonicReceptors
   name: sonic receptors
   description: A paired set of devices that allow silicons to hear as a biological being might.
+  components:
+  - type: Sprite
+    layers:
+    - state: sonic_receptors
 
 - type: entity
   id: OrganMKCCore
@@ -267,7 +275,8 @@
   - type: Organ
     category: PowerCore
   - type: Sprite
-    state: microcell
+    layers:
+    - state: power_core
   - type: Battery
     maxCharge: 1920
     startingCharge: 1920
@@ -280,7 +289,8 @@
   description: Small, but powerful hydraulics allow this little miracle of robotics to distribute lubricant across an MKC's chassis.
   components:
   - type: Sprite
-    state: heart-on
+    layers:
+    - state: micro_pump
   - type: Organ
     category: Heart
   - type: Metabolizer
@@ -328,7 +338,7 @@
     - Holywater
 
 - type: entity
-  id: OrganMKCStomach
+  id: OrganMKCFluidRegulator
   parent: OrganMKCInternal
   name: fluid regulator
   description: Collects built-up fluids from across an MKC's body, then violently expels them.
@@ -336,7 +346,8 @@
   - type: Organ
     category: FluidRegulator
   - type: Sprite
-    state: stomach
+    layers:
+    - state: fluid_regulator
   - type: FluidEjector
     ejectionDamage:
       types:
