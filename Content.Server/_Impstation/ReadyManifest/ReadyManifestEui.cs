@@ -1,7 +1,7 @@
 using Content.Server.EUI;
-using Content.Shared.ReadyManifest;
+using Content.Shared._Impstation.ReadyManifest;
 
-namespace Content.Server.ReadyManifest;
+namespace Content.Server._Impstation.ReadyManifest;
 
 public sealed class ReadyManifestEui : BaseEui
 {

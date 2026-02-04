@@ -52,7 +52,7 @@ public sealed partial class ReadyManifestUi : DefaultWindow
 
         foreach (var department in departments)
         {
-            var departmentName = Loc.GetString($"department-{department.ID}");
+            var departmentName = Loc.GetString(department.Name); // starcup: un-hardcode string
 
             if (!_jobCategories.TryGetValue(department.ID, out var category))
             {
@@ -68,7 +68,7 @@ public sealed partial class ReadyManifestUi : DefaultWindow
                 category.AddChild(new Label()
                 {
                     StyleClasses = { "LabelBig" },
-                    Text = Loc.GetString($"department-{department.ID}")
+                    Text = departmentName // starcup: un-hardcode string
                 });
 
                 _jobCategories[department.ID] = category;

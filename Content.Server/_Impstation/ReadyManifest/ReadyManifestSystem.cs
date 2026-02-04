@@ -7,12 +7,12 @@ using Content.Shared.Preferences;
 using Robust.Shared.Configuration;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-using Content.Shared.ReadyManifest;
+using Content.Shared._Impstation.ReadyManifest;
 using Content.Server.GameTicking;
 using Content.Server.Preferences.Managers;
 using Content.Server.GameTicking.Events;
 
-namespace Content.Server.ReadyManifest;
+namespace Content.Server._Impstation.ReadyManifest;
 
 public sealed class ReadyManifestSystem : EntitySystem
 {

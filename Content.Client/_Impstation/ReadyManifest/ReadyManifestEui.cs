@@ -1,6 +1,6 @@
 using Content.Client.Eui;
 using Content.Shared.Eui;
-using Content.Shared.ReadyManifest;
+using Content.Shared._Impstation.ReadyManifest;
 using JetBrains.Annotations;
 
 namespace Content.Client._Impstation.ReadyManifest;
