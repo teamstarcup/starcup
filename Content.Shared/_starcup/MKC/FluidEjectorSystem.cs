@@ -55,7 +55,7 @@ public sealed class FluidEjectorSystem : EntitySystem
             if (fluidEjector.NextUpdate != TimeSpan.Zero && _gameTiming.CurTime >= fluidEjector.LastPopupTime + fluidEjector.PopupCooldown)
             {
                 fluidEjector.LastPopupTime = _gameTiming.CurTime;
-                _popup.PopupEntity(Loc.GetString("fluid-regulator-warning"), body, body, PopupType.LargeCaution);
+                _popup.PopupPredicted(Loc.GetString("fluid-regulator-warning"), body, body, PopupType.LargeCaution);
             }
 
             if (_gameTiming.CurTime >= fluidEjector.NextUpdate)
@@ -167,7 +167,7 @@ public sealed class FluidEjectorSystem : EntitySystem
         var drunkennessTime = TimeSpan.FromSeconds((ejectedAmount * 0.4f + 40).Value);
         _drunk.TryApplyDrunkenness(uid, drunkennessTime);
 
-        _popup.PopupEntity(Loc.GetString("fluid-regulator-eject", ("person", Identity.Entity(uid, EntityManager))), uid, PopupType.Large);
+        _popup.PopupPredicted(Loc.GetString("fluid-regulator-eject", ("person", Identity.Entity(uid, EntityManager))), uid, uid, PopupType.Large);
 
         var damage = ejectedAmount * fluidEjector.EjectionDamage * fluidEjector.EjectionDamageMultiplier;
         _damageableSystem.TryChangeDamage(uid, damage, ignoreResistances: true);
