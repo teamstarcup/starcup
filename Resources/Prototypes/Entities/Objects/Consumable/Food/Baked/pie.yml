@@ -127,7 +127,6 @@
   - type: Tag
     tags:
     - Fruit
-    - Pie
 # end starcup
 
 - type: entity
@@ -142,12 +141,10 @@
       - nutty
   - type: Sprite
     state: baklava-slice
-  # begin starcup - why doesn't it have this?
+  # begin starcup
   - type: Tag
     tags:
     - Fruit
-    - Pie
-    - Slice
 # end starcup
   # Tastes like pie, nuts.
 
@@ -354,6 +351,7 @@
   - type: Tag
     tags:
     - Pie
+    - Fruit # starcup - pumpkins are fruits
 
 - type: entity
   name: slice of pumpkin pie
@@ -371,6 +369,7 @@
     tags:
     - Pie
     - Slice
+    - Fruit # starcup - pumpkins are fruits
 
 - type: entity
   name: xeno pie
@@ -459,6 +458,11 @@
     heldPrefix: mime
   - type: SliceableFood
     slice: FoodTartMimeSlice
+# begin starcup - mimeanas are fruits
+  - type: Tag
+    tags:
+    - Fruit
+# end starcup
 
 - type: entity
   name: slice of mime tart
@@ -474,6 +478,11 @@
   - type: Item
     heldPrefix: mime
 # Tastes like nothing.
+  # begin starcup - mimeanas are fruits
+  - type: Tag
+    tags:
+    - Fruit
+# end starcup
 
 # No Slice
 
