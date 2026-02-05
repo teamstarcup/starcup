@@ -97,6 +97,7 @@ loadout-group-service-worker-glasses = Service worker eyewear
 
 # Wildcards
 loadout-group-prisoner-jumpsuit = Prisoner jumpsuit
+loadout-group-prisoner-outerclothing = Prisoner outer clothing
 
 # Misc
 loadout-group-plushies = Plushies
