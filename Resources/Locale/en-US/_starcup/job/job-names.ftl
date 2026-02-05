@@ -5,6 +5,9 @@ job-alt-title-barista = Barista
 job-alt-title-speakeasyer = Speakeasyer
 job-alt-title-seniorbartender = Senior Bartender
 
+# Cargo Technician
+job-alt-title-cargo-pilot = Pilot
+
 # Chaplain
 job-alt-title-atheist-shepherd = Atheist Shepherd
 job-alt-title-deus-dereliction = Deus Dereliction

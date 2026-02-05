@@ -73,6 +73,16 @@
   - type: Pda
     id: SeniorBartenderIDCard
 
+# Cargo Technician
+- type: entity
+  parent: CargoPDA
+  id: CargoPilotPDA
+  name: pilot PDA
+  description: If you're going to crash, aim for something nobody will miss. Like that stupid Tesla.
+  components:
+  - type: Pda
+    id: CargoPilotIDCard
+
 # Chaplain
 - type: entity
   parent: ChaplainPDA
