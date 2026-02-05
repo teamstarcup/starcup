@@ -123,6 +123,12 @@
     - state: baklava
   - type: SliceableFood
     slice: FoodPieBaklavaSlice
+  # begin starcup - why doesn't it have this?
+  - type: Tag
+    tags:
+    - Fruit
+    - Pie
+# end starcup
 
 - type: entity
   name: slice of baklava
@@ -136,7 +142,14 @@
       - nutty
   - type: Sprite
     state: baklava-slice
-# Tastes like pie, nuts.
+  # begin starcup - why doesn't it have this?
+  - type: Tag
+    tags:
+    - Fruit
+    - Pie
+    - Slice
+# end starcup
+  # Tastes like pie, nuts.
 
 - type: entity
   name: banana cream pie
