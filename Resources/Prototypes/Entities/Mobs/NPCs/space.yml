@@ -106,13 +106,26 @@
     accent: genericAggressive
   - type: Vocal
     sounds:
-      Unsexed: Bear
+      Unsexed: SpaceBearSpeechEmotes # starcup
   - type: InteractionPopup
     successChance: 0.25
     interactSuccessString: petting-success-bear
     interactFailureString: petting-failure-bear
     interactSuccessSound:
-      path: /Audio/Animals/sloth_squeak.ogg
+  # begin starcup
+      collection: SpaceBearSays
+  - type: Speech
+    speechSounds: SpaceBearSpeechSounds
+    speechVerb: LargeMob
+    allowedEmotes: ['CreatureRoar', 'CreatureGrowl']
+  - type: TypingIndicator
+    proto: alien
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+    - CreatureEmotes
+  # end starcup
 
 - type: entity
   id: MobBearSpaceSalvage
@@ -164,7 +177,21 @@
     templateId: spacekangaroo
   - type: Vocal
     sounds:
-      Unsexed: Kangaroo
+  # begin starcup
+      Male: SpaceKangarooSpeechEmotes
+      Female: SpaceKangarooSpeechEmotes
+      Unsexed: SpaceKangarooSpeechEmotes
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: SpaceKangarooSpeechSounds
+    allowedEmotes: ['CreatureGrowl']
+  - type: Tag
+    tags:
+    - VimPilot
+    - CreatureEmotes
+  - type: TypingIndicator
+    proto: alien
+  # end starcup
   - type: ReplacementAccent
     accent: kangaroo
   - type: Butcherable
@@ -266,17 +293,26 @@
     color: "#4faffb"
   - type: NoSlip
   - type: IgnoreSpiderWeb
+  # begin starcup
   - type: Speech
     speechVerb: Arachnid
     speechSounds: Arachnid
-    allowedEmotes: ['Click', 'Chitter']
+    allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureClick', 'CreatureChitter']
   - type: Vocal
     sounds:
-      Male: UnisexArachnid
-      Female: UnisexArachnid
-      Unsexed: UnisexArachnid
+      Male: SpaceSpiderSpeechEmotes
+      Female: SpaceSpiderSpeechEmotes
+      Unsexed: SpaceSpiderSpeechEmotes
   - type: TypingIndicator
-    proto: spider
+    proto: alien # starcup: more space than spider. changed for consistency's sake
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepGiantBug
+  - type: Tag
+    tags:
+    - VimPilot
+    - CreatureEmotes
+  # end starcup
 
 - type: entity
   id: MobSpiderSpaceSalvage
@@ -376,6 +412,23 @@
     - type: StealthOnMove
       passiveVisibilityRate: -0.25
       movementVisibilityRate: 0.25
+  # begin starcup
+    - type: Speech
+      speechSounds: SpaceSnakeSpeechSounds
+      speechVerb: Reptilian
+      allowedEmotes: ['CreatureHiss']
+    - type: Vocal
+      sounds:
+        Male: SpaceSnakeSpeechEmotes
+        Female: SpaceSnakeSpeechEmotes
+        Unsexed: SpaceSnakeSpeechEmotes
+    - type: Tag
+      tags:
+      - VimPilot
+      - CreatureEmotes
+    - type: TypingIndicator
+      proto: alien
+  # end starcup
 
 - type: entity
   id: MobCobraSpaceSalvage

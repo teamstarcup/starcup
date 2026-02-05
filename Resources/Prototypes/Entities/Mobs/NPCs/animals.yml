@@ -2767,7 +2767,7 @@
     interactFailureString: petting-failure-generic
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
-      path: /Audio/_starcup/Animals/Snake/snake_pet.ogg # starcup
+      path: /Audio/Animals/cat_hiss.ogg # starcup
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
@@ -2792,6 +2792,9 @@
     tags:
     - VimPilot
     - CreatureEmotes
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/bite.ogg
   # end starcup
 
 # Code unique spider prototypes or combine them all into one spider and get a

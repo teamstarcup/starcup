@@ -81,6 +81,15 @@
     collection: KangarooGrunts
 
 - type: speechSounds
+  id: SpaceKangarooSpeechSounds
+  saySound:
+    collection: SpaceKangarooGrunts
+  askSound:
+    collection: SpaceKangarooGrunts
+  exclaimSound:
+    collection: SpaceKangarooGrunts
+
+- type: speechSounds
   id: LizardSpeechSounds
   saySound:
     collection: LizardGumbles
@@ -142,6 +151,15 @@
     collection: SnakeHisses
   exclaimSound:
     collection: SnakeHisses
+
+- type: speechSounds
+  id: SpaceSnakeSpeechSounds
+  saySound:
+    collection: SpaceSnakeHisses
+  askSound:
+    collection: SpaceSnakeHisses
+  exclaimSound:
+    collection: SpaceSnakeHisses
 
 - type: speechSounds
   id: PossumSpeechSounds
@@ -259,6 +277,24 @@
     collection: DeerAsks
   exclaimSound:
     collection: DeerExclaims
+
+- type: speechSounds
+  id: BearSpeechSounds
+  saySound:
+    collection: BearSays
+  askSound:
+    collection: BearSays
+  exclaimSound:
+    collection: BearSays
+
+- type: speechSounds
+  id: SpaceBearSpeechSounds
+  saySound:
+    collection: SpaceBearSays
+  askSound:
+    collection: SpaceBearSays
+  exclaimSound:
+    collection: SpaceBearSays
 
 # speech sound emotes
 
@@ -443,6 +479,18 @@
       path: /Audio/Animals/kangaroo_grunt.ogg
 
 - type: emoteSounds
+  id: SpaceKangarooSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureGrowl:
+      collection: SpaceKangarooGrowls
+    Gasp:
+      collection: SpaceKangarooGrunts
+    DefaultDeathgasp:
+      collection: SpaceKangarooGrunts
+
+- type: emoteSounds
   id: MonkeySpeechEmotes
   params:
     variation: 0.125
@@ -577,6 +625,18 @@
       path: /Audio/_starcup/Animals/Snake/snake_death.ogg
 
 - type: emoteSounds
+  id: SpaceSnakeSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureHiss:
+      path: /Audio/Animals/snake_hiss.ogg
+    Gasp:
+      path: /Audio/_starcup/Animals/Snake/snake_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Snake/space_snake_death.ogg
+
+- type: emoteSounds
   id: SpiderSpeechEmotes
   params:
     variation: 0.125
@@ -593,6 +653,24 @@
       path: /Audio/_starcup/Voice/Arachnid/arachnid_gasp.ogg
     DefaultDeathgasp:
       path: /Audio/_starcup/Voice/Arachnid/arachnid_death.ogg
+
+- type: emoteSounds
+  id: SpaceSpiderSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      path: /Audio/_starcup/Animals/Spider/space_arachnid_scream.ogg
+    CreatureLaugh:
+      path: /Audio/Voice/Arachnid/arachnid_laugh.ogg
+    CreatureChitter:
+      path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
+    CreatureClick:
+      path: /Audio/Voice/Arachnid/arachnid_click.ogg
+    Gasp:
+      path: /Audio/_starcup/Voice/Arachnid/arachnid_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Spider/space_arachnid_scream.ogg
 
 - type: emoteSounds
   id: PossumSpeechEmotes
@@ -875,3 +953,35 @@
       path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
     DefaultDeathgasp:
       path: /Audio/_starcup/Animals/Cow/cow_death.ogg
+
+- type: emoteSounds
+  id: BearSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureRoar:
+      collection: BearRoars
+    CreatureGrowls:
+      collection: BearGrowls
+    Sneeze:
+      path: /Audio/_starcup/Animals/chuff.ogg
+    Cough:
+      path: /Audio/_starcup/Animals/chuff.ogg
+    Gasp:
+      path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
+    DefaultDeathgasp:
+      collection: BearGrowls
+
+- type: emoteSounds
+  id: SpaceBearSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureRoar:
+      collection: SpaceBearRoars
+    CreatureGrowl:
+      collection: SpaceBearGrowls
+    Gasp:
+      path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
+    DefaultDeathgasp:
+      collection: SpaceBearGrowls
