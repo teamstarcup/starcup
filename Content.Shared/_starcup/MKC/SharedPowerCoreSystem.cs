@@ -51,7 +51,7 @@ public abstract class SharedPowerCoreSystem : EntitySystem
     private void OnMapInit(Entity<PowerCoreComponent> ent, ref MapInitEvent _)
     {
         Entity<BatteryComponent?> battery = (ent.Owner, null);
-        if (!Resolve(battery, ref battery.Comp))
+        if (!TryComp(battery, out battery.Comp))
             return;
 
         _battery.RefreshChargeRate(battery);
