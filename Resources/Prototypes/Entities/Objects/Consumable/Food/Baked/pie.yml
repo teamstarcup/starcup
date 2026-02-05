@@ -123,7 +123,7 @@
     - state: baklava
   - type: SliceableFood
     slice: FoodPieBaklavaSlice
-# begin starcup - seems like baklava/mime tart should have the pie tags too but out of scope
+# begin starcup
   - type: Tag
     tags:
     - Fruit
@@ -141,7 +141,7 @@
       - nutty
   - type: Sprite
     state: baklava-slice
-  # begin starcup
+# begin starcup
   - type: Tag
     tags:
     - Fruit
@@ -479,7 +479,7 @@
   - type: Item
     heldPrefix: mime
 # Tastes like nothing.
-  # begin starcup - mimeanas are fruits
+# begin starcup - mimeanas are fruits
   - type: Tag
     tags:
     - Fruit
