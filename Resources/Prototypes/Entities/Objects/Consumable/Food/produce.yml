@@ -368,6 +368,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: Banana
+      CottonBurger: Banana # starcup
       Taco: Banana
 
 - type: entity
@@ -415,6 +416,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: Mimana
+      CottonBurger: Mimana # starcup
       Taco: Mimana
 
 - type: entity
@@ -682,6 +684,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: Lemon
+      CottonBurger: Lemon # starcup
       Taco: Lemon
 
 - type: entity
@@ -719,6 +722,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: Lemoon
+      CottonBurger: Lemoon # starcup
       Taco: Lemoon
 
 - type: entity
@@ -748,6 +752,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: Lime
+      CottonBurger: Lime # starcup
       Taco: Lime
 
 - type: entity
@@ -776,6 +781,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: Orange
+      CottonBurger: Orange # starcup
       Taco: Orange
 
 - type: entity
@@ -819,6 +825,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: ExtradimensionalOrangeBurger
+      CottonBurger: ExtradimensionalOrangeBurger # starcup
       Taco: ExtradimensionalOrange
 
 - type: entity
@@ -958,6 +965,7 @@
     entries:
       Skewer: TomatoSkewer
       Burger: Tomato
+      CottonBurger: Tomato # starcup
       Taco: Tomato
 
 - type: entity
@@ -1009,6 +1017,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: BlueTomato
+      CottonBurger: BlueTomato # starcup
       Taco: BlueTomato
 
 - type: entity
@@ -1059,6 +1068,7 @@
     entries:
       Skewer: TomatoSkewer
       Burger: BloodTomato
+      CottonBurger: BloodTomato # starcup
       Taco: BloodTomato
 
 - type: entity
@@ -1089,6 +1099,12 @@
     tags:
     - Fruit
     - Vegetable
+# begin starcup - why not eggplantburgers?
+  - type: FoodSequenceElement
+    entries:
+      Burger: Eggplant
+      CottonBurger: Eggplant
+# begin starcup - why not eggplantburgers?
 
 - type: entity
   name: apple
@@ -1125,6 +1141,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: Apple
+      CottonBurger: Apple # starcup
       Taco: Apple
 
 - type: entity
@@ -1500,10 +1517,12 @@
   - type: Tag
     tags:
     - Vegetable
+    - Fruit # starcup - same as tomato. peppers are berries.
   - type: FoodSequenceElement
     entries:
       Taco: ChiliPepper
       Burger: ChiliPepper
+      CottonBurger: ChiliPepper # starcup
       Skewer: ChiliPepperSkewer
 
 - type: entity
@@ -1537,6 +1556,7 @@
     entries:
       Taco: ChillyPepper
       Burger: ChillyPepper
+      CottonBurger: ChillyPepper # starcup
       Skewer: ChillyPepperSkewer
 
 - type: entity
