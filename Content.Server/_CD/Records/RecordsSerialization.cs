@@ -65,6 +65,7 @@ public static class RecordsSerialization
         return new PlayerProvidedCharacterRecords(
             height: DeserializeInt(e, nameof(def.Height), def.Height),
             weight: DeserializeInt(e, nameof(def.Weight), def.Weight),
+            birthday: DeserializeString(e, nameof(def.Birthday), def.Birthday), // TheDen
             emergencyContactName: DeserializeString(e, nameof(def.EmergencyContactName), def.EmergencyContactName),
             hasWorkAuthorization: DeserializeBool(e, nameof(def.HasWorkAuthorization), def.HasWorkAuthorization),
             identifyingFeatures: DeserializeString(e, nameof(def.IdentifyingFeatures), def.IdentifyingFeatures),

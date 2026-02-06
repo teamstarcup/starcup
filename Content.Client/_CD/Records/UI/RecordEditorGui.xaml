@@ -18,6 +18,12 @@
                          <Label Name="WeightImperialLabel" MinWidth="70"/>
                      </BoxContainer>
                  </GridContainer>
+                <!-- DEN Birthday -->
+                 <BoxContainer Orientation="Horizontal">
+                     <Label Text="{Loc 'humanoid-profile-editor-cd-records-birthday'}" />
+                     <Control HorizontalExpand="True" />
+                     <LineEdit Name="BirthdayEdit" HorizontalAlignment="Right" MinSize="350 0"/>
+                 </BoxContainer>
                  <!-- Emergency Contact -->
                  <BoxContainer Orientation="Horizontal">
                      <Label Text="{Loc 'humanoid-profile-editor-cd-records-contact-name'}" />
