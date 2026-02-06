@@ -36,15 +36,6 @@
     path: /Audio/_starcup/Animals/Goose/goose_exclaim.ogg
 
 - type: speechSounds
-  id: LeechSpeechSounds
-  saySound:
-    collection: LeechSpeech
-  askSound:
-    path: /Audio/_starcup/Animals/CharonicLeech/leech_question.ogg
-  exclaimSound:
-    path: /Audio/_starcup/Animals/CharonicLeech/leech_exclaim.ogg
-
-- type: speechSounds
   id: CowSpeechSounds
   saySound:
     collection: CowMoos
@@ -393,18 +384,6 @@
       path: /Audio/_starcup/Animals/Duck/duck_gasp.ogg
     DefaultDeathgasp:
       collection: DuckScreams
-
-- type: emoteSounds
-  id: LeechSpeechEmotes
-  params:
-    variation: 0.125
-  sounds:
-    CreatureScream:
-      path: /Audio/_starcup/Animals/CharonicLeech/leech_scream.ogg
-    CreatureGrowl:
-      path: /Audio/_starcup/Animals/CharonicLeech/leech_growl.ogg
-    DefaultDeathgasp:
-      path: /Audio/_starcup/Animals/CharonicLeech/leech_death.ogg
 
 - type: emoteSounds
   id: CowSpeechEmotes

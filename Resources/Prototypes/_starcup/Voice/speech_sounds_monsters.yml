@@ -1,4 +1,14 @@
 # speech sounds
+
+- type: speechSounds
+  id: LeechSpeechSounds
+  saySound:
+    collection: LeechSpeech
+  askSound:
+    path: /Audio/_starcup/Animals/CharonicLeech/leech_question.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Animals/CharonicLeech/leech_exclaim.ogg
+
 - type: speechSounds
   id: GoliathSpeechSounds
   saySound:
@@ -8,7 +18,29 @@
   exclaimSound:
     collection: GoliathGrowls
 
+- type: speechSounds
+  id: OreCrabSpeechSounds
+  saySound:
+    collection: OreCrabClicks
+  askSound:
+    path: /Audio/_starcup/Monsters/OreCrab/orecrab_ask.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Monsters/OreCrab/orecrab_exclaim.ogg
+
 # speech sound emotes
+
+- type: emoteSounds
+  id: LeechSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      path: /Audio/_starcup/Animals/CharonicLeech/leech_scream.ogg
+    CreatureGrowl:
+      path: /Audio/_starcup/Animals/CharonicLeech/leech_growl.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/CharonicLeech/leech_death.ogg
+
 - type: emoteSounds
   id: GoliathSpeechEmotes
   params:
@@ -22,3 +54,17 @@
       path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
     DefaultDeathgasp:
       path: /Audio/_starcup/Monsters/Goliath/goliath_death.ogg
+
+- type: emoteSounds
+  id: OreCrabSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureChitter:
+      path: /Audio/_starcup/Monsters/OreCrab/orecrab_chitter.ogg
+    CreatureScream:
+      collection: OreCrabScreams
+    Gasp:
+      path: /Audio/_starcup/Monsters/OreCrab/orecrab_chitter.ogg
+    DefaultDeathgasp:
+      collection: OreCrabScreams
