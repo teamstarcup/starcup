@@ -48,15 +48,15 @@ public abstract class SharedPowerCoreSystem : EntitySystem
         SubscribeLocalEvent<PowerCoreComponent, BodyRelayedEvent<RefreshMovementSpeedModifiersEvent>>(UpdateMoveSpeedModifier);
     }
 
-    private void OnMapInit(Entity<PowerCoreComponent> ent, ref MapInitEvent _)
+    private void OnMapInit(Entity<PowerCoreComponent> powerCore, ref MapInitEvent _)
     {
-        Entity<BatteryComponent?> battery = (ent.Owner, null);
+        Entity<BatteryComponent?> battery = (powerCore.Owner, null);
         if (!TryComp(battery, out battery.Comp))
             return;
 
         _battery.RefreshChargeRate(battery);
 
-        var body = GetContainingBody(ent);
+        var body = GetContainingBody(powerCore);
         if (body == null)
             return;
 
@@ -223,7 +223,6 @@ public abstract class SharedPowerCoreSystem : EntitySystem
         _battery.SetCharge(powerCoreBattery, powerCoreBatteryCharge + joulesToDrain);
         _battery.SetCharge(target, targetBatteryCharge - joulesToDrain);
 
-        // TODO: Check if prediction still causes this to fire multiple times when draining held items
         _audio.PlayPredicted(_drainSounds, target.Owner, body);
         if (_timing.IsFirstTimePredicted)
             Spawn("EffectSparks", Transform(target.Owner).Coordinates);

@@ -138,6 +138,7 @@ public sealed class FluidEjectorSystem : EntitySystem
             .Where(r => ShouldExpelReagent(r.Reagent, metabolizerOrgans))
             .ToList()
             .ShallowClone();
+
         foreach (var reagent in ejectableReagents)
         {
             bloodSolution.RemoveReagent(reagent);
