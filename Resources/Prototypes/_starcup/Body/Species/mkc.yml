@@ -136,11 +136,12 @@
   - type: KnockdownOnTrigger
     knockdownAmount: 10
     autoStand: false
-  - type: EntityEffectOnTrigger
-    effects:
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectMuted
-        time: 10
+  # TODO(starcup): put this back in when EntityEffectOnTrigger doesn't cause an exception during SpawnAndDirtyAllEntities
+  #- type: EntityEffectOnTrigger
+  #  effects:
+  #    - !type:ModifyStatusEffect
+  #      effectProto: StatusEffectMuted
+  #      time: 10
   - type: CriticalDamage
     damage:
       types:
