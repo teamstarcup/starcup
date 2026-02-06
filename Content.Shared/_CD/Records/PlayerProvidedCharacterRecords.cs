@@ -27,6 +27,9 @@ public sealed partial class PlayerProvidedCharacterRecords
     public int Weight { get; private set; }
     public const int MaxWeight = 300;
 
+    [DataField] // TheDen
+    public string Birthday { get; private set; }
+
     [DataField]
     public string EmergencyContactName { get; private set; }
 
@@ -98,6 +101,7 @@ public sealed partial class PlayerProvidedCharacterRecords
     public PlayerProvidedCharacterRecords(
         bool hasWorkAuthorization,
         int height, int weight,
+        string birthday, // TheDen
         string emergencyContactName,
         string identifyingFeatures,
         string allergies, string drugAllergies,
@@ -110,6 +114,7 @@ public sealed partial class PlayerProvidedCharacterRecords
         HasWorkAuthorization = hasWorkAuthorization;
         Height = height;
         Weight = weight;
+        Birthday = birthday; // TheDen
         EmergencyContactName = emergencyContactName;
         IdentifyingFeatures = identifyingFeatures;
         Allergies = allergies;
@@ -125,6 +130,7 @@ public sealed partial class PlayerProvidedCharacterRecords
     {
         Height = other.Height;
         Weight = other.Weight;
+        Birthday = other.Birthday; // TheDen
         EmergencyContactName = other.EmergencyContactName;
         HasWorkAuthorization = other.HasWorkAuthorization;
         IdentifyingFeatures = other.IdentifyingFeatures;
@@ -142,6 +148,7 @@ public sealed partial class PlayerProvidedCharacterRecords
         return new PlayerProvidedCharacterRecords(
             hasWorkAuthorization: true,
             height: 170, weight: 70,
+            birthday: "N/A", // TheDen
             emergencyContactName: "",
             identifyingFeatures: "",
             allergies: "None",
@@ -160,6 +167,7 @@ public sealed partial class PlayerProvidedCharacterRecords
         var test = Height == other.Height
                    && Weight == other.Weight
                    && EmergencyContactName == other.EmergencyContactName
+                   && Birthday == other.Birthday // TheDen
                    && HasWorkAuthorization == other.HasWorkAuthorization
                    && IdentifyingFeatures == other.IdentifyingFeatures
                    && Allergies == other.Allergies
@@ -220,6 +228,7 @@ public sealed partial class PlayerProvidedCharacterRecords
     {
         Height = Math.Clamp(Height, 0, MaxHeight);
         Weight = Math.Clamp(Weight, 0, MaxWeight);
+        Birthday = ClampString(Birthday, TextMedLen); // TheDen
         EmergencyContactName =
             ClampString(EmergencyContactName, TextMedLen);
         IdentifyingFeatures = ClampString(IdentifyingFeatures, TextMedLen);
@@ -243,6 +252,11 @@ public sealed partial class PlayerProvidedCharacterRecords
     public PlayerProvidedCharacterRecords WithWorkAuth(bool auth)
     {
         return new(this) { HasWorkAuthorization = auth };
+    }
+
+    public PlayerProvidedCharacterRecords WithBirthday(string birthday) // TheDen
+    {
+        return new(this) { Birthday = birthday};
     }
     public PlayerProvidedCharacterRecords WithContactName(string name)
     {

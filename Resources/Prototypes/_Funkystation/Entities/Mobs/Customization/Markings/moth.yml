@@ -1,9 +1,7 @@
 - type: marking
   id: MothEyesSoft
   bodyPart: Eyes
-  markingCategory: Head
-  speciesRestriction: [Moth]
-  followSkinColor: false
+  groupWhitelist: [Moth]
   coloring:
     default:
       type:
@@ -17,9 +15,7 @@
 - type: marking
   id: HeterochromiaMothSoft
   bodyPart: Eyes
-  markingCategory: Head
-  speciesRestriction: [Moth]
-  followSkinColor: false
+  groupWhitelist: [Moth]
   coloring:
     default:
       type:

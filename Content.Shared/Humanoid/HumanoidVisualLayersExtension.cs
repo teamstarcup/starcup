@@ -32,6 +32,7 @@ namespace Content.Shared.Humanoid
             switch (layer)
             {
                 case HumanoidVisualLayers.Head:
+                    yield return HumanoidVisualLayers.HeadBase; // starcup
                     yield return HumanoidVisualLayers.Head;
                     yield return HumanoidVisualLayers.Eyes;
                     yield return HumanoidVisualLayers.HeadSide;
@@ -64,8 +65,6 @@ namespace Content.Shared.Humanoid
                 case HumanoidVisualLayers.Chest:
                     yield return HumanoidVisualLayers.Chest;
                     yield return HumanoidVisualLayers.Tail;
-                    yield return HumanoidVisualLayers.TailBehind; // floof
-                    yield return HumanoidVisualLayers.TailOversuit; // floof
                     break;
                 default:
                     yield break;

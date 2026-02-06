@@ -1,3 +1,24 @@
+- type: markingsGroup
+  parent:
+  - Undergarments
+  - Humanoid # starcup: added for standardized marking limits
+  id: Rodentia
+  limits:
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [ RodentiaTailDefault ]
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: true
+      default: [ RodentiaHeadTopEarDefault ]
+    enum.HumanoidVisualLayers.HeadSide:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
+      required: false
+
 - type: entity
   parent: BaseSpeciesAppearance
   id: AppearanceRodentia
@@ -5,53 +26,43 @@
   components:
   - type: Inventory
     speciesId: rodentia
-    displacements:
-      jumpsuit:
-        sizeMaps:
-          32:
-            sprite: _DV/Mobs/Species/Harpy/displacement.rsi
-            state: jumpsuit
     femaleDisplacements:
       jumpsuit:
         sizeMaps:
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
-  - type: EntityTableContainerFill
-    containers:
-      body_organs: !type:AllSelector
-        children:
-        - id: OrganRodentiaTorso
-        - id: OrganRodentiaHead
-        - id: OrganRodentiaArmLeft
-        - id: OrganRodentiaArmRight
-        - id: OrganRodentiaHandRight
-        - id: OrganRodentiaHandLeft
-        - id: OrganRodentiaLegLeft
-        - id: OrganRodentiaLegRight
-        - id: OrganRodentiaFootLeft
-        - id: OrganRodentiaFootRight
-        - id: OrganHumanBrain
-        - id: OrganHumanEyes
-        - id: OrganHumanTongue
-        - id: OrganHumanAppendix
-        - id: OrganHumanEars
-        - id: OrganHumanLungs
-        - id: OrganAnimalHeart
-        - id: OrganAnimalStomach
-        - id: OrganAnimalLiver
-        - id: OrganHumanKidneys
-  - type: HumanoidAppearance
+  - type: InitialBody
+    organs:
+      Torso: OrganRodentiaTorso
+      Head: OrganRodentiaHead
+      ArmLeft: OrganRodentiaArmLeft
+      ArmRight: OrganRodentiaArmRight
+      HandRight: OrganRodentiaHandRight
+      HandLeft: OrganRodentiaHandLeft
+      LegLeft: OrganRodentiaLegLeft
+      LegRight: OrganRodentiaLegRight
+      FootLeft: OrganRodentiaFootLeft
+      FootRight: OrganRodentiaFootRight
+      Brain: OrganHumanBrain
+      Eyes: OrganHumanEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganHumanLungs
+      Heart: OrganAnimalHeart
+      Stomach: OrganAnimalStomach
+      Liver: OrganAnimalLiver
+      Kidneys: OrganHumanKidneys
+  - type: HumanoidProfile
     species: Rodentia
   - type: Sprite
     scale: 0.8, 0.8
     layers:
     # Torso
-    - map: [ "enum.HumanoidVisualLayers.TailBehind" ] # floof
     - map: [ "enum.HumanoidVisualLayers.Chest" ]
 
     # Head
-    - map: [ "enum.HumanoidVisualLayers.HeadBase" ] # starcup: base head shapes
     - map: [ "enum.HumanoidVisualLayers.Head" ]
     - map: [ "enum.HumanoidVisualLayers.Snout" ]
     - map: [ "enum.HumanoidVisualLayers.Eyes" ]
@@ -77,7 +88,6 @@
     - map: [ "gloves" ]
     - map: [ "shoes" ]
     - map: [ "ears" ]
-    - map: [ "enum.HumanoidVisualLayers.TailOversuit" ] # floof
     - map: [ "eyes" ]
     - map: [ "belt" ]
     - map: [ "id" ]
@@ -182,7 +192,18 @@
   suffix: rodentia
 
 - type: entity
-  parent: OrganRodentia
+  id: OrganRodentiaVisual
+  abstract: true
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _DV/Mobs/Species/Rodentia/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Rodentia
+
+- type: entity
+  parent: [ OrganRodentia, OrganRodentiaVisual ]
   id: OrganRodentiaExternal
   abstract: true
   components:
@@ -190,11 +211,11 @@
     sprite: _DV/Mobs/Species/Rodentia/parts.rsi
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganRodentiaExternal ]
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganRodentiaExternal ]
   id: OrganRodentiaTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganRodentiaExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganRodentiaExternal ]
   id: OrganRodentiaHead
 
 - type: entity

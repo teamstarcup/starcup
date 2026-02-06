@@ -5,8 +5,7 @@
 - type: marking
   id: BodyhairHumanFemale
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Human, Oni, Felinid, Rodentia ] # starcup: added oni, felinid, rodentia, and removed dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin ]
   sexRestriction: [ Female ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
@@ -15,8 +14,7 @@
 - type: marking
   id: BodyhairHumanMale
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Human, Oni, Felinid, Rodentia ] # starcup: added oni, felinid, rodentia, and removed dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin ]
   sexRestriction: [ Male ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
@@ -25,9 +23,8 @@
 - type: marking
   id: BodyhairHumanUnsexed
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Human, Felinid, Oni, Rodentia ] # starcup: added felinid, oni, rodentia, and removed dwarf
-  sexRestriction: [ Unsexed ]
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin ]
+  sexRestriction: [Unsexed]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
     state: bodyhairmale
@@ -35,8 +32,7 @@
 - type: marking
   id: ChestBackstabbed
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, and removed dwarf and thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
     state: backstabbed
@@ -44,8 +40,7 @@
 - type: marking
   id: ChestCutHere
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # added felinid, oni, rodentia, vulpkanin, and removed arachnid and dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -55,45 +50,10 @@
   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
     state: cuthere
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: ChestHeavyTattoos
-#   bodyPart: Chest
-#   markingCategory: Chest
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:TattooColoring
-#       fallbackColor: "#666666"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
-#     state: heavy1
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
-#     state: heavy2
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
-#     state: heavy3
-
-# - type: marking
-#   id: ChestNecklace
-#   bodyPart: Chest
-#   markingCategory: Chest
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#ffc833"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
-#     state: necklace
-# end starcup
-
 - type: marking
   id: ChestStar
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, and removed arachnid, dwarf, gray, thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
     state: star
@@ -101,8 +61,7 @@
 - type: marking
   id: ChestTwistingLeft
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, and removed dwarf and thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
     state: twistingleft
@@ -110,124 +69,15 @@
 - type: marking
   id: ChestTwistingRight
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, and removed dwarf and thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
     state: twistingright
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: HumanoidAbs
-#   bodyPart: Chest
-#   markingCategory: Chest
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson ]
-#   followSkinColor: true
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
-#     state: muscular
-
-# - type: marking
-#   id: ProstheticShoulderL
-#   bodyPart: Chest
-#   markingCategory: Chest
-#   speciesRestriction: [ Human, Dwarf, Reptilian ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#E4E4E4"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
-#     state: prostheticshoulderleft
-
-# - type: marking
-#   id: ProstheticShoulderR
-#   bodyPart: Chest
-#   markingCategory: Chest
-#   speciesRestriction: [ Human, Dwarf, Reptilian ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#E4E4E4"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
-#     state: prostheticshoulderright
-
-# - type: marking
-#   id: TattooAnchor
-#   bodyPart: Chest
-#   markingCategory: Chest
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson, Thaven ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#3894C5"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
-#     state: anchor
-
-# - type: marking
-#   id: TattooCode1
-#   bodyPart: Chest
-#   markingCategory: Chest
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson, Thaven ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#ffffff"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
-#     state: code1
-
-# - type: marking
-#   id: TattooCode2
-#   bodyPart: Chest
-#   markingCategory: Chest
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson, Thaven ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#ffffff"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
-#     state: code2
-
-# - type: marking
-#   id: TattooCode3
-#   bodyPart: Chest
-#   markingCategory: Chest
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson, Thaven ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#ffffff"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
-#     state: code3
-
-# - type: marking
-#   id: TattooDragon
-#   bodyPart: Chest
-#   markingCategory: Chest
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson, Thaven ]
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
-#     state: dragontattoo1
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
-#     state: dragontattoo2
-# end starcup
-
 - type: marking
   id: TattooNanotrasenChest
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Human, SlimePerson, Oni, Felinid, Rodentia ] # starcup: added oni, felinid, rodentia, and removed dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Slime ]
   coloring:
     default:
       type:
@@ -240,33 +90,15 @@
 - type: marking
   id: TorsoIncision
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, and removed arachnid, dwarf, thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
     state: incision
 
-# begin starcup: unimplemented
-# - type: marking
-#   id: TattooVinesHumanoid
-#   bodyPart: Chest
-#   markingCategory: Chest
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#379d0e"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/chest.rsi
-#     state: vines
-# end starcup
-
 - type: marking
   id: VitiligoChestF
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Human, Oni, Felinid, Rodentia ] # starcup: added oni, felinid, rodentia, and removed dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin ]
   forcedColoring: true
   coloring:
     default:
@@ -280,8 +112,7 @@
 - type: marking
   id: VitiligoChestSpots
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Human, Oni, Felinid, Rodentia ] # starcup: added oni, felinid, rodentia, and removed dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin ]
   forcedColoring: true
   coloring:
     default:
@@ -294,85 +125,18 @@
 
 # Head
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: EyebrowsBig
-#   bodyPart: Head
-#   markingCategory: Head
-#   speciesRestriction: [ Human, Dwarf ]
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/head.rsi
-#     state: eyebrowsthick
-
-# - type: marking
-#   id: EyebrowsBigger
-#   bodyPart: Head
-#   markingCategory: Head
-#   speciesRestriction: [ Human, Dwarf ]
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/head.rsi
-#     state: eyebrowsultra
-
-# - type: marking
-#   id: EyebrowsUnibrow
-#   bodyPart: Head
-#   markingCategory: Head
-#   speciesRestriction: [ Human, Dwarf ]
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/head.rsi
-#     state: eyebrowsunibrow
-
-# - type: marking
-#   id: HeadHeavyTattoos
-#   bodyPart: Head
-#   markingCategory: Head
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:TattooColoring
-#       fallbackColor: "#666666"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/head.rsi
-#     state: heavy1
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/head.rsi
-#     state: heavy2
-# end starcup
-
 - type: marking
   id: HeadTwisting
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [ Human, SlimePerson, Oni, Felinid, Rodentia ] # starcup: added oni, felinid, rodentia, and removed dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/head.rsi
     state: twisting
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: HeadTwistingFlipped
-#   bodyPart: Head
-#   markingCategory: Head
-#   speciesRestriction: [ Human, Dwarf, SlimePerson ]
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/head.rsi
-#     state: twistingflipped
-
-# - type: marking
-#   id: HumanoidEyebags
-#   bodyPart: Head
-#   markingCategory: Head
-#   speciesRestriction: [ Human, Dwarf, Reptilian, SlimePerson ]
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/head.rsi
-#     state: eyebags
-# end starcup
-
 - type: marking
   id: SmileScars
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [ Human, SlimePerson, Oni, Felinid, Rodentia ] # starcup: added oni, felinid, rodentia, and removed dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/head.rsi
     state: smile
@@ -380,8 +144,7 @@
 - type: marking
   id: VitiligoHeadJaw
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [ Human, Oni, Felinid, Rodentia ] # starcup: added oni, felinid, rodentia, and removed dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin ]
   forcedColoring: true
   coloring:
     default:
@@ -395,8 +158,7 @@
 - type: marking
   id: VitiligoHeadL
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [ Human, Oni, Felinid, Rodentia ] # starcup: added oni, felinid, rodentia, and removed dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin ]
   forcedColoring: true
   coloring:
     default:
@@ -410,8 +172,7 @@
 - type: marking
   id: VitiligoHeadR
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [ Human, Oni, Felinid, Rodentia ] # starcup: added oni, felinid, rodentia, and removed dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin ]
   forcedColoring: true
   coloring:
     default:
@@ -422,48 +183,12 @@
   - sprite: _Impstation/Mobs/Customization/Humanoid/head.rsi
     state: vitiligoright
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: Shadow
-#   bodyPart: Head
-#   markingCategory: Head
-#   speciesRestriction: [ Human, Dwarf, SlimePerson ]
-#   forcedColoring: true
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#000000"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/head.rsi
-#     state: shadow
-
-# Snout
-
-# - type: marking
-#   id: HeadSeptum
-#   bodyPart: Snout
-#   markingCategory: Snout
-#   speciesRestriction: [ Human, Dwarf ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#ffc833"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/snout.rsi
-#     state: septum
-# end starcup
-
-# Eyes
-
 # RArm
 
 - type: marking
   id: ArmDollJointsTattooRight
   bodyPart: RArm
-  markingCategory: Arms
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, removed arachnid, dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -476,8 +201,7 @@
 - type: marking
   id: ArmHeavyTattoosRight
   bodyPart: RArm
-  markingCategory: Arms
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, removed arachnid, dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -492,8 +216,7 @@
 - type: marking
   id: ArmProstheticRight
   bodyPart: RArm
-  markingCategory: Arms
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, and removed arachnid, dwarf, thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -506,67 +229,15 @@
 - type: marking
   id: ArmTwistingRight
   bodyPart: RArm
-  markingCategory: Arms
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, and removed arachnid, dwarf, thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/rarm.rsi
     state: twisting
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: TattooCode4
-#   bodyPart: RArm
-#   markingCategory: Arms
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson, Thaven ]
-#   followSkinColor: false
-#   forcedColoring: false
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#ffffff"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/rarm.rsi
-#     state: code4
-
-# - type: marking
-#   id: TattooCode5
-#   bodyPart: RArm
-#   markingCategory: Arms
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson, Thaven ]
-#   followSkinColor: false
-#   forcedColoring: false
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#ffffff"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/rarm.rsi
-#     state: code5
-
-# - type: marking
-#   id: TattooHeartR
-#   bodyPart: RArm
-#   markingCategory: Arms
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson, Thaven ]
-#   followSkinColor: false
-#   forcedColoring: false
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#ff254c"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/rarm.rsi
-#     state: heart
-# end starcup
-
 - type: marking
   id: VitiligoArmR
   bodyPart: RArm
-  markingCategory: Arms
-  speciesRestriction: [ Human, Oni, Felinid, Rodentia ] # starcup: added oni, felinid, rodentia, and removed dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin ]
   forcedColoring: true
   coloring:
     default:
@@ -582,8 +253,7 @@
 - type: marking
   id: ArmDollJointsTattooLeft
   bodyPart: LArm
-  markingCategory: Arms
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, removed arachnid, dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -593,29 +263,10 @@
   - sprite: _Impstation/Mobs/Customization/Humanoid/larm.rsi
     state: doll
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: ArmHeavyTattoosLeft
-#   bodyPart: LArm
-#   markingCategory: Arms
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:TattooColoring
-#       fallbackColor: "#666666"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/larm.rsi
-#     state: heavy1
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/larm.rsi
-#     state: heavy2
-# end starcup
-
 - type: marking
   id: ArmProstheticLeft
   bodyPart: LArm
-  markingCategory: Arms
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, and removed arachnid, dwarf, thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -628,35 +279,15 @@
 - type: marking
   id: ArmTwistingLeft
   bodyPart: LArm
-  markingCategory: Arms
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, and removed arachnid, dwarf, thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/larm.rsi
     state: twisting
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: TattooHeartL
-#   bodyPart: LArm
-#   markingCategory: Arms
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson, Thaven ]
-#   followSkinColor: false
-#   forcedColoring: false
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#ff254c"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/larm.rsi
-#     state: heart
-# end starcup
-
 - type: marking
   id: VitiligoArmL
   bodyPart: LArm
-  markingCategory: Arms
-  speciesRestriction: [ Human, Oni, Felinid, Rodentia ] # starcup: added oni, felinid, rodentia, and removed dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin ]
   forcedColoring: true
   coloring:
     default:
@@ -672,8 +303,7 @@
 - type: marking
   id: LegDollJointsTattooRight
   bodyPart: RLeg
-  markingCategory: Legs
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, removed arachnid, dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -683,29 +313,10 @@
   - sprite: _Impstation/Mobs/Customization/Humanoid/rleg.rsi
     state: doll
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: LegHeavyTattoosRight
-#   bodyPart: RLeg
-#   markingCategory: Legs
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:TattooColoring
-#       fallbackColor: "#666666"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/rleg.rsi
-#     state: heavy1
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/rleg.rsi
-#     state: heavy2
-# end starcup
-
 - type: marking
   id: LegProstheticRight
   bodyPart: RLeg
-  markingCategory: Legs
-  speciesRestriction: [ Human, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, removed arachnid, dwarf, thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -718,8 +329,7 @@
 - type: marking
   id: LegTwistingRight
   bodyPart: RLeg
-  markingCategory: Legs
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, and removed arachnid, dwarf, thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/rleg.rsi
     state: twisting
@@ -727,8 +337,7 @@
 - type: marking
   id: VitiligoLegR
   bodyPart: RLeg
-  markingCategory: Legs
-  speciesRestriction: [ Human, Oni, Felinid, Rodentia ] # starcup: added oni, felinid, rodentia, and removed dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin ]
   forcedColoring: true
   coloring:
     default:
@@ -744,8 +353,7 @@
 - type: marking
   id: LegDollJointsTattooLeft
   bodyPart: LLeg
-  markingCategory: Legs
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, removed arachnid, dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -758,8 +366,7 @@
 - type: marking
   id: LegHeavyTattoosLeft
   bodyPart: LLeg
-  markingCategory: Legs
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, removed arachnid, dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -774,8 +381,7 @@
 - type: marking
   id: LegProstheticLeft
   bodyPart: LLeg
-  markingCategory: Legs
-  speciesRestriction: [ Human, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, removed arachnid, dwarf, thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -788,8 +394,7 @@
 - type: marking
   id: LegTwistingLeft
   bodyPart: LLeg
-  markingCategory: Legs
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, and removed arachnid, dwarf, thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/lleg.rsi
     state: twisting
@@ -797,8 +402,7 @@
 - type: marking
   id: VitiligoLegL
   bodyPart: LLeg
-  markingCategory: Legs
-  speciesRestriction: [ Human, Oni, Felinid, Rodentia ] # starcup: added oni, felinid, rodentia, and removed dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin ]
   forcedColoring: true
   coloring:
     default:
@@ -809,358 +413,12 @@
   - sprite: _Impstation/Mobs/Customization/Humanoid/lleg.rsi
     state: vitiligo
 
-# UndergarmentBottom
-
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: UnderwearLowriders
-#   bodyPart: UndergarmentBottom
-#   markingCategory: UndergarmentBottom
-#   speciesRestriction: [ Human, Arachnid, Diona, Dwarf, Moth, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmentbottom.rsi
-#     state: lowriders
-
-# - type: marking
-#   id: UnderwearTanga
-#   bodyPart: UndergarmentBottom
-#   markingCategory: UndergarmentBottom
-#   speciesRestriction: [ Human, Arachnid, Diona, Dwarf, Moth, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmentbottom.rsi
-#     state: tanga
-
-# # UndergarmentTop
-
-# - type: marking
-#   id: UndergarmentTopBinderF
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Female ]
-#   coloring:
-#     default:
-#       type: null
-#       fallbackColor: '#FFFFFF'
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: binderf
-
-# - type: marking
-#   id: UndergarmentTopBinderU
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Unsexed ]
-#   coloring:
-#     default:
-#       type: null
-#       fallbackColor: '#FFFFFF'
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: binderf
-
-# - type: marking
-#   id: UndergarmentTopTanktopF
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Female ]
-#   coloring:
-#     default:
-#       type: null
-#       fallbackColor: '#FFFFFF'
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: tanktopf
-
-# - type: marking
-#   id: UndergarmentTopTanktopU
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Unsexed ]
-#   coloring:
-#     default:
-#       type: null
-#       fallbackColor: '#FFFFFF'
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: tanktopf
-
-# - type: marking
-#   id: UndershirtBraSportsF
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Female ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: sportsf
-
-# - type: marking
-#   id: UndershirtBraSportsU
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Unsexed ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: sports
-
-# - type: marking
-#   id: UndershirtBraStrapless
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Male ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: strapless
-
-# - type: marking
-#   id: UndershirtBraStraplessF
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Female ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: straplessf
-
-# - type: marking
-#   id: UndershirtBraStraplessU
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Unsexed ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: strapless
-
-# - type: marking
-#   id: UndershirtDefault
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Male ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: undershirt
-
-# - type: marking
-#   id: UndershirtDefaultF
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Female ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: undershirtf
-
-# - type: marking
-#   id: UndershirtDefaultU
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Unsexed ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: undershirt
-
-# - type: marking
-#   id: UndershirtGrossSleeveless
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Male ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: grosssleeveless
-
-# - type: marking
-#   id: UndershirtGrossSleevelessF
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Female ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: grosssleevelessf
-
-# - type: marking
-#   id: UndershirtGrossSleevelessU
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Unsexed ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: grosssleeveless
-
-# - type: marking
-#   id: UndershirtNanotrasen
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Male ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: nanotrasen
-
-# - type: marking
-#   id: UndershirtNanotrasenF
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Female ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: nanotrasenf
-
-# - type: marking
-#   id: UndershirtNanotrasenU
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Unsexed ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: nanotrasen
-
-# - type: marking
-#   id: UndershirtRolled
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Male ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: rolledundershirt
-
-# - type: marking
-#   id: UndershirtRolledF
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Female ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: rolledundershirtf
-
-# - type: marking
-#   id: UndershirtRolledU
-#   bodyPart: UndergarmentTop
-#   markingCategory: UndergarmentTop
-#   speciesRestriction: [ Human, Diona, Dwarf, Moth, Reptilian, SlimePerson ]
-#   sexRestriction: [ Unsexed ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#FFFFFF"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/undergarmenttop.rsi
-#     state: rolledundershirt
-# end starcup
-
 # LFoot
 
 - type: marking
   id: FootDollJointsTattooLeft
   bodyPart: LFoot
-  markingCategory: Legs
-  speciesRestriction: [ Human, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, removed arachnid, dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -1170,29 +428,10 @@
   - sprite: _Impstation/Mobs/Customization/Humanoid/lfoot.rsi
     state: doll
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: FootHeavyTattoosLeft
-#   bodyPart: LFoot
-#   markingCategory: Legs
-#   speciesRestriction: [ Human, Arachnid, Dwarf, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:TattooColoring
-#       fallbackColor: "#666666"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/lfoot.rsi
-#     state: heavy1
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/lfoot.rsi
-#     state: heavy2
-# end starcup
-
 - type: marking
   id: FootProstheticLeft
   bodyPart: LFoot
-  markingCategory: Legs
-  speciesRestriction: [ Human, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, removed arachnid, dwarf, thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -1207,8 +446,7 @@
 - type: marking
   id: FootDollJointsTattooRight
   bodyPart: RFoot
-  markingCategory: Legs
-  speciesRestriction: [ Human, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, removed arachnid, dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -1218,29 +456,10 @@
   - sprite: _Impstation/Mobs/Customization/Humanoid/rfoot.rsi
     state: doll
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: FootHeavyTattoosRight
-#   bodyPart: RFoot
-#   markingCategory: Legs
-#   speciesRestriction: [ Human, Arachnid, Dwarf, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:TattooColoring
-#       fallbackColor: "#666666"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/rfoot.rsi
-#     state: heavy1
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/rfoot.rsi
-#     state: heavy2
-# end starcup
-
 - type: marking
   id: FootProstheticRight
   bodyPart: RFoot
-  markingCategory: Legs
-  speciesRestriction: [ Human, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, removed arachnid, dwarf, thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -1252,27 +471,10 @@
 
 # LHand
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: HandBraceletLeft
-#   bodyPart: LHand
-#   markingCategory: Arms
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#ffc833"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/lhand.rsi
-#     state: bracelet
-# end starcup
-
 - type: marking
   id: HandDollJointsTattooLeft
   bodyPart: LHand
-  markingCategory: Arms
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, removed arachnid, dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -1282,29 +484,10 @@
   - sprite: _Impstation/Mobs/Customization/Humanoid/lhand.rsi
     state: doll
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: HandHeavyTattoosLeft
-#   bodyPart: LHand
-#   markingCategory: Arms
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:TattooColoring
-#       fallbackColor: "#666666"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/lhand.rsi
-#     state: heavy1
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/lhand.rsi
-#     state: heavy2
-# end starcup
-
 - type: marking
   id: HandProstheticLeft
   bodyPart: LHand
-  markingCategory: Arms
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, and removed arachnid, dwarf, thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -1314,29 +497,10 @@
   - sprite: _Impstation/Mobs/Customization/Humanoid/lhand.rsi
     state: prosthetic
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: HandRingsLeft
-#   bodyPart: LHand
-#   markingCategory: Arms
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#ffc833"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/lhand.rsi
-#     state: rings1
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/lhand.rsi
-#     state: rings2
-# end starcup
-
 - type: marking
   id: HandTwistingLeft
   bodyPart: LHand
-  markingCategory: Arms
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, and removed arachnid, dwarf, thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/lhand.rsi
     state: twisting
@@ -1344,8 +508,7 @@
 - type: marking
   id: VitiligoHandL
   bodyPart: LHand
-  markingCategory: Arms
-  speciesRestriction: [ Human, Oni, Felinid, Rodentia ] # starcup: added oni, felinid, rodentia, and removed dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin ]
   forcedColoring: true
   coloring:
     default:
@@ -1358,27 +521,10 @@
 
 # RHand
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: HandBraceletRight
-#   bodyPart: RHand
-#   markingCategory: Arms
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#ffc833"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/rhand.rsi
-#     state: bracelet
-# end starcup
-
 - type: marking
   id: HandDollJointsTattooRight
   bodyPart: RHand
-  markingCategory: Arms
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, removed arachnid, dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -1388,29 +534,10 @@
   - sprite: _Impstation/Mobs/Customization/Humanoid/rhand.rsi
     state: doll
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: HandHeavyTattoosRight
-#   bodyPart: RHand
-#   markingCategory: Arms
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:TattooColoring
-#       fallbackColor: "#666666"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/rhand.rsi
-#     state: heavy1
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/rhand.rsi
-#     state: heavy2
-# end starcup
-
 - type: marking
   id: HandProstheticRight
   bodyPart: RHand
-  markingCategory: Arms
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, and removed arachnid, dwarf, thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   coloring:
     default:
       type:
@@ -1420,29 +547,10 @@
   - sprite: _Impstation/Mobs/Customization/Humanoid/rhand.rsi
     state: prosthetic
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: HandRingsRight
-#   bodyPart: RHand
-#   markingCategory: Arms
-#   speciesRestriction: [ Human, Arachnid, Dwarf, Reptilian, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#ffc833"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/rhand.rsi
-#     state: rings1
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/rhand.rsi
-#     state: rings2
-# end starcup
-
 - type: marking
   id: HandTwistingRight
   bodyPart: RHand
-  markingCategory: Arms
-  speciesRestriction: [ Human, Reptilian, SlimePerson, Felinid, Oni, Rodentia, Vulpkanin ] # starcup: added felinid, oni, rodentia, vulpkanin, and removed arachnid, dwarf, thaven
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/rhand.rsi
     state: twisting
@@ -1450,8 +558,7 @@
 - type: marking
   id: VitiligoHandR
   bodyPart: RHand
-  markingCategory: Arms
-  speciesRestriction: [ Human, Oni, Felinid, Rodentia ] # starcup: added oni, felinid, rodentia, and removed dwarf
+  groupWhitelist: [ Human, Oni, Rodentia, Felinid, Vulpkanin ]
   forcedColoring: true
   coloring:
     default:
@@ -1462,57 +569,18 @@
   - sprite: _Impstation/Mobs/Customization/Humanoid/rhand.rsi
     state: vitiligo
 
-# FacialHair
-
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: FloralBeard
-#   bodyPart: FacialHair
-#   markingCategory: FacialHair
-#   speciesRestriction: [ Human, Dwarf ]
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/facialhair.rsi
-#     state: messyfloral1
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/facialhair.rsi
-#     state: messyfloral2
-# end starcup
-
 # Hair
 
 - type: marking
   id: BurqaSolid
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: burqasolid
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: HairFloralLong
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: florallong1
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: florallong2
-
-# - type: marking
-#   id: HairFloralMid
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: floralmid1
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: floralmid2
-# end starcup
-
 - type: marking
   id: HijabFashionable
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: hijabchic
@@ -1520,7 +588,6 @@
 - type: marking
   id: HijabSimple
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: hijabsimple
@@ -1528,7 +595,6 @@
 - type: marking
   id: HumanHairFrenchBraid
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: frenchbraid
@@ -1536,119 +602,27 @@
 - type: marking
   id: HumanHairGatheredlow
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: gatheredlow
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: HumanHairHalfUpShort
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: halfupshort
-
-# - type: marking
-#   id: HumanHairHalfUpLong
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: halfuplong
-
-# - type: marking
-#   id: HumanHairHalfUpUndercut
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: halfupundercut
-
 - type: marking
   id: HumanHairLowpigtails
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: lowpigtails
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: HumanHairMidPartLong
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: midpartlong
-
-# - type: marking
-#   id: HumanHairMidPartLonger
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: midpartlonger
-
-# - type: marking
-#   id: HumanHairMullet
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: mullet
-
-# - type: marking
-#   id: HumanHairMulletSideshave
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: mulletsideshave
-
-# - type: marking
-#   id: HumanHairSideshaveCurly
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: sideshavecurly
-# end starcup
-
 - type: marking
   id: HumanHairSpikyPonytailLong
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [ Human, SlimePerson, Oni, Felinid, Rodentia ] # starcup: added oni, felinid, rodentia, and removed dwarf
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: spikyponytaillong
 
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: HumanHairUndercutCurly
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: undercutcurly
-
-# - type: marking
-#   id: MessyPonytail
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   speciesRestriction: [ Human, Dwarf, SlimePerson ]
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: messyponytail
-# end starcup
-
 - type: marking
   id: Niqab
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [ Human, SlimePerson, Oni, Felinid, Rodentia ] # starcup: added oni, felinid, rodentia, and removed dwarf
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: niqab
@@ -1656,7 +630,6 @@
 - type: marking
   id: TichelFashionable
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: tichelfashionable
@@ -1664,399 +637,6 @@
 - type: marking
   id: TichelSimple
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
     state: tichelsimple
-
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: HumanHairShaggy
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: shaggy
-
-# - type: marking
-#   id: HumanHairShaggyLonger
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: shaggylonger
-
-# - type: marking
-#   id: HumanHairShaggyMessy
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: shaggymessy
-
-# - type: marking
-#   id: HumanHairSusie
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: susie
-
-# - type: marking
-#   id: HumanHairSusieNoBangs
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: susienobangs
-
-# - type: marking
-#   id: HumanHairEyeBangLong
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: eyebanglong
-
-# - type: marking
-#   id: HumanHairEyeBangSideTail
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: eyebangsidetail
-
-# - type: marking
-#   id: HumanHairOverEyes
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: overeyes
-
-# - type: marking
-#   id: HumanHairOverEyesTail
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: overeyestail
-# end starcup
-
-# begin starcup: duplicate of an upstream hairtype?
-# - type: marking
-#   id: HumanHairFringeTail
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: fringetail
-# end starcup
-
-# begin starcup: currently unimplemented
-# - type: marking
-#   id: HumanHairFringeRat
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: fringerat
-
-# - type: marking
-#   id: HumanHairFringeBraid
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: fringebraid
-
-# - type: marking
-#   id: HumanHairAsymBun
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: asymbun
-
-# - type: marking
-#   id: HumanHairIntakeShort
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: intakeshort
-
-# - type: marking
-#   id: HumanHairIntakeLong
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: intakelong
-
-# - type: marking
-#   id: HumanHairLiberatorTied
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: liberatortied
-
-# - type: marking
-#   id: HumanHairLiberatorShort
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: liberatorshort
-
-# - type: marking
-#   id: HumanHairLiberatorLong
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: liberatorlong
-
-# - type: marking
-#   id: HumanHairDrillTail
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: drilltail
-
-# - type: marking
-#   id: HumanHairBraidMed
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: braidmed
-
-# - type: marking
-#   id: HumanHairLocsTied
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: locstied
-
-# - type: marking
-#   id: HumanHairCurlyPerm
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: curlyperm
-
-# - type: marking
-#   id: HumanHairPosterPerson
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: posterperson
-
-# - type: marking
-#   id: HumanHairSmiler
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: smiler
-
-# - type: marking
-#   id: HumanHairWavyLong
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: wavylong
-
-# - type: marking
-#   id: HumanHairMiddlePartShort
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: middlepartshort
-
-# - type: marking
-#   id: HumanHairFadeHighlight
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: fadehighlight
-
-# - type: marking
-#   id: HumanHairChonmage
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: chonmage
-
-# - type: marking
-#   id: HumanHairBaldingLong
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: baldinglong
-
-# - type: marking
-#   id: HumanHairBaldingCurls
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: baldingcurls
-
-# - type: marking
-#   id: HumanHairFriar
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: friar
-
-# - type: marking
-#   id: HumanHairAdoringFan
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: adoringfan
-
-# - type: marking
-#   id: HumanHairBabyHair
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: babyhair
-
-# - type: marking
-#   id: HumanHairGuyMullet
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: guymullet
-
-# - type: marking
-#   id: HumanHairGuyTied
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: guytied
-
-# - type: marking
-#   id: HumanHairMidPartPonytail
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: midpartponytail
-
-# - type: marking
-#   id: HumanHairMidBangs
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: midbangs
-
-# - type: marking
-#   id: HumanHairMidBangsCovered
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: midbangscovered
-
-# - type: marking
-#   id: HumanHairSideshaveBun
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: sideshavebun
-
-# - type: marking
-#   id: HumanHairJed
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: jed
-
-# - type: marking
-#   id: HumanHairJedPonytail
-#   bodyPart: Hair
-#   markingCategory: Hair
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/hair.rsi
-#     state: jedponytail
-
-# # HeadSide
-
-# # HeadTop
-
-# - type: marking
-#   id: HeadEarrings
-#   bodyPart: HeadSide
-#   markingCategory: HeadSide
-#   speciesRestriction: [ Human, Dwarf, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#ffc833"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/headtop.rsi
-#     state: earrings1
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/headtop.rsi
-#     state: earrings2
-
-# - type: marking
-#   id: HeadEarringsDrop
-#   bodyPart: HeadSide
-#   markingCategory: HeadSide
-#   speciesRestriction: [ Human, Dwarf, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#ffc833"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/headtop.rsi
-#     state: earringsdrop1
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/headtop.rsi
-#     state: earringsdrop2
-
-# - type: marking
-#   id: HeadEarringsWeights
-#   bodyPart: HeadSide
-#   markingCategory: HeadSide
-#   speciesRestriction: [ Human, Dwarf, SlimePerson ]
-#   coloring:
-#     default:
-#       type:
-#         !type:SimpleColoring
-#         color: "#ffc833"
-#   sprites:
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/headtop.rsi
-#     state: earringsweights1
-#   - sprite: _Impstation/Mobs/Customization/Humanoid/headtop.rsi
-#     state: earringsweights2
-# end starcup
-
-# Tail
-
-# RArmExtension
-
-# Overlay

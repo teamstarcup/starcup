@@ -368,6 +368,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: Banana
+      CottonBurger: Banana # starcup
       Taco: Banana
 
 - type: entity
@@ -415,6 +416,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: Mimana
+      CottonBurger: Mimana # starcup
       Taco: Mimana
 
 - type: entity
@@ -682,6 +684,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: Lemon
+      CottonBurger: Lemon # starcup
       Taco: Lemon
 
 - type: entity
@@ -719,6 +722,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: Lemoon
+      CottonBurger: Lemoon # starcup
       Taco: Lemoon
 
 - type: entity
@@ -748,6 +752,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: Lime
+      CottonBurger: Lime # starcup
       Taco: Lime
 
 - type: entity
@@ -776,6 +781,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: Orange
+      CottonBurger: Orange # starcup
       Taco: Orange
 
 - type: entity
@@ -819,6 +825,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: ExtradimensionalOrangeBurger
+      CottonBurger: ExtradimensionalOrangeBurger # starcup
       Taco: ExtradimensionalOrange
 
 - type: entity
@@ -958,6 +965,7 @@
     entries:
       Skewer: TomatoSkewer
       Burger: Tomato
+      CottonBurger: Tomato # starcup
       Taco: Tomato
 
 - type: entity
@@ -1009,6 +1017,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: BlueTomato
+      CottonBurger: BlueTomato # starcup
       Taco: BlueTomato
 
 - type: entity
@@ -1059,6 +1068,7 @@
     entries:
       Skewer: TomatoSkewer
       Burger: BloodTomato
+      CottonBurger: BloodTomato # starcup
       Taco: BloodTomato
 
 - type: entity
@@ -1125,6 +1135,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: Apple
+      CottonBurger: Apple # starcup
       Taco: Apple
 
 - type: entity
@@ -1167,6 +1178,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: GoldenApple
+      CottonBurger: GoldenApple # starcup
       Taco: GoldenApple
 
 - type: entity
@@ -1405,6 +1417,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: PineappleSliceBurger
+      CottonBurger: PineappleSlice # starcup
       Taco: PineappleSlice
 
 - type: entity
@@ -1498,10 +1511,12 @@
   - type: Tag
     tags:
     - Vegetable
+    - Fruit # starcup - same as tomato. peppers are berries.
   - type: FoodSequenceElement
     entries:
       Taco: ChiliPepper
       Burger: ChiliPepper
+      CottonBurger: ChiliPepper # starcup
       Skewer: ChiliPepperSkewer
 
 - type: entity
@@ -1531,10 +1546,17 @@
     heldPrefix: produce
   - type: Produce
     seedId: chilly
+# begin starcup - should be treated same as chilis
+  - type: Tag
+    tags:
+    - Vegetable
+    - Fruit
+# end starcup
   - type: FoodSequenceElement
     entries:
       Taco: ChillyPepper
       Burger: ChillyPepper
+      CottonBurger: ChillyPepper # starcup
       Skewer: ChillyPepperSkewer
 
 - type: entity
@@ -1790,6 +1812,7 @@
     entries:
       Taco: Galaxythistle
       Burger: GalaxythistleBurger
+      CottonBurger: Galaxythistle # starcup
 
 - type: entity
   name: glasstle
@@ -1860,6 +1883,7 @@
     entries:
       Taco: Glasstle
       Burger: GlasstleBurger
+      CottonBurger: Glasstle # starcup
 
 - type: entity
   name: fly amanita
@@ -1932,6 +1956,7 @@
     entries:
       Taco: Gatfruit
       Burger: GatfruitBurger
+      CottonBurger: Gatfruit # starcup
 
 - type: entity
   name: capfruit
@@ -1971,6 +1996,7 @@
     entries:
       Taco: Capfruit
       Burger: CapfruitBurger
+      CottonBurger: Capfruit # starcup
 
 - type: entity
   name: capfruit
@@ -2202,6 +2228,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: WatermelonSliceBurger
+      CottonBurger: WatermelonSlice # starcup
       Taco: WatermelonSlice
       Skewer: WatermelonSliceSkewer
 
@@ -2306,6 +2333,7 @@
   - type: FoodSequenceElement
     entries:
       Burger: HolymelonSliceBurger
+      CottonBurger: HolymelonSlice # starcup
       Taco: HolymelonSlice
       Skewer: HolymelonSliceSkewer
 
@@ -2378,6 +2406,7 @@
     entries:
       Taco: Berries
       Burger: BerriesBurger
+      CottonBurger: Berries # starcup
 
 - type: entity
   name: bungo fruit
@@ -2420,6 +2449,7 @@
     entries:
       Taco: Bungo
       Burger: Bungo
+      CottonBurger: Bungo # starcup
 
 - type: entity
   name: bungo pit
@@ -2725,6 +2755,7 @@
     entries:
       Taco: Cherry
       Burger: Cherry
+      CottonBurger: Cherry # starcup
 
 - type: entity
   name: cherry pit
@@ -2793,6 +2824,7 @@
     entries:
       Taco: AnomalyBerry
       Burger: AnomalyBerryBurger
+      CottonBurger: AnomalyBerry # starcup
 
 - type: entity
   name: bloonion bulb
