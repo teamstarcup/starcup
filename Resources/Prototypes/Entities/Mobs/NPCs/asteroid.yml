@@ -451,4 +451,24 @@
     - id: DiamondOre1
       amount: 1
       maxAmount: 3
+  # begin starcup
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - FootstepSound
+    - CreatureEmotes # starcup
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: BasiliskSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureChitter', 'CreatureClick']
+  - type: Vocal
+    sounds:
+      Male: SpaceSpiderSpeechEmotes
+      Female: SpaceSpiderSpeechEmotes
+      Unsexed: SpaceSpiderSpeechEmotes
+  - type: ReplacementAccent
+    accent: xeno
+  - type: TypingIndicator
+    proto: alien
+  # end starcup
 
