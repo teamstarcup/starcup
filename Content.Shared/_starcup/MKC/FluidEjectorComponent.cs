@@ -19,20 +19,26 @@ namespace Content.Shared._starcup.MKC
         public TimeSpan EjectionTime = TimeSpan.FromSeconds(15);
 
         /// <summary>
-        /// Damage applied to the entity when they eject fluids
+        /// Damage applied to the entity when they eject fluids.
         /// </summary>
         [DataField(required: true)]
         public DamageSpecifier EjectionDamage;
 
         /// <summary>
-        /// Multiplies EjectionDamage per unit of reagent expelled
+        /// Multiplies EjectionDamage per unit of reagent expelled.
         /// </summary>
         [DataField(required: true)]
         public float EjectionDamageMultiplier;
 
+        /// <summary>
+        /// The amount of time between each intermittent popup during the fluid ejection process.
+        /// </summary>
         [DataField]
         public TimeSpan PopupCooldown = TimeSpan.FromSeconds(6);
 
+        /// <summary>
+        /// The last time a popup appeared during the fluid ejection process.
+        /// </summary>
         [ViewVariables]
         public TimeSpan LastPopupTime;
     }
