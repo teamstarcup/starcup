@@ -37,6 +37,15 @@
     collection: BasiliskExclaims
 
 - type: speechSounds
+  id: HivelordSpeechSounds
+  saySound:
+    collection: HivelordSays
+  askSound:
+    path: /Audio/_starcup/Monsters/Hivelord/hivelord_ask.ogg
+  exclaimSound:
+    collection: HivelordExclaims
+
+- type: speechSounds
   id: CarpSpeechSounds
   saySound:
     collection: CarpSays
@@ -119,3 +128,17 @@
       path: /Audio/_starcup/Monsters/Carp/sharkminnow_gasp.ogg
     DefaultDeathgasp:
       collection: SharkminnowGrowls
+
+- type: emoteSounds
+  id: HivelordSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureClick:
+      collection: HivelordClicks
+    CreatureScream:
+      path: /Audio/_starcup/Monsters/Hivelord/hivelord_scream.ogg
+    Gasp:
+      path: /Audio/_starcup/Monsters/Hivelord/hivelord_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Monsters/Hivelord/hivelord_death.ogg
