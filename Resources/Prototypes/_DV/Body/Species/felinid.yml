@@ -47,9 +47,9 @@
       Appendix: OrganHumanAppendix
       Ears: OrganHumanEars
       Lungs: OrganHumanLungs
-      Heart: OrganHumanHeart
+      Heart: OrganAnimalHeart # starcup
       Stomach: OrganAnimalStomach # starcup
-      Liver: OrganHumanLiver
+      Liver: OrganAnimalLiver # starcup
       Kidneys: OrganHumanKidneys
   - type: HumanoidProfile
     species: Felinid
@@ -258,6 +258,10 @@
   - type: VisualOrganMarkings
     markingData:
       group: Felinid
+  - type: VisualOrgan # starcup: tweak to be more cat-like
+    data:
+      sprite: _starcup/Mobs/Species/Felinid/parts.rsi
+      state: l_foot
 
 - type: entity
   parent: OrganHumanFootRight
@@ -266,3 +270,7 @@
   - type: VisualOrganMarkings
     markingData:
       group: Felinid
+  - type: VisualOrgan # starcup: tweak to be more cat-like
+    data:
+      sprite: _starcup/Mobs/Species/Felinid/parts.rsi
+      state: r_foot
