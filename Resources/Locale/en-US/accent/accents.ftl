@@ -36,10 +36,13 @@ accent-words-silicon-3 = Whirr.
 accent-words-silicon-4 = Beep-boop.
 
 # Xeno
+# starcup: added 5 and 6 for sounds.
 accent-words-xeno-1 = Hiss.
 accent-words-xeno-2 = Hisssss!
 accent-words-xeno-3 = Hisssuuu...
 accent-words-xeno-4 = Hiss...!
+accent-words-xeno-5 = Hiss...?
+accent-words-xeno-6 = Hiss?
 
 # Zombie
 accent-words-zombie-1 = Gruaahhhh...

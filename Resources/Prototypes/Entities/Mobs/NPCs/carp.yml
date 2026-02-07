@@ -77,10 +77,20 @@
         - Carp
         - DoorBumpOpener
         - CannotSuicide
+        - CreatureEmotes # starcup
     - type: ReplacementAccent
       accent: genericAggressive
+  # begin starcup
     - type: Speech
       speechVerb: LargeMob
+      speechSounds: CarpSpeechSounds
+      allowedEmotes: ['CreatureGrowl']
+    - type: Vocal
+      sounds:
+        Male: CarpSpeechEmotes
+        Female: CarpSpeechEmotes
+        Unsexed: CarpSpeechEmotes
+  # end starcup
     - type: InteractionPopup
       interactSuccessString: petting-success-carp
       interactFailureString: petting-failure-carp
@@ -256,6 +266,17 @@
         types:
           Slash: 10
           Bloodloss: 5
+  # begin starcup
+    - type: Speech
+      speechVerb: LargeMob
+      speechSounds: SharkminnowSpeechSounds
+      allowedEmotes: ['CreatureGrowl']
+    - type: Vocal
+      sounds:
+        Male: SharkminnowSpeechEmotes
+        Female: SharkminnowSpeechEmotes
+        Unsexed: SharkminnowSpeechEmotes
+  # end starcup
 
 - type: entity
   id: MobSharkSalvage

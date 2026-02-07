@@ -36,6 +36,24 @@
   exclaimSound:
     collection: BasiliskExclaims
 
+- type: speechSounds
+  id: CarpSpeechSounds
+  saySound:
+    collection: CarpSays
+  askSound:
+    collection: CarpSays
+  exclaimSound:
+    collection: CarpSays
+
+- type: speechSounds
+  id: SharkminnowSpeechSounds
+  saySound:
+    collection: SharkminnowSays
+  askSound:
+    collection: SharkminnowSays
+  exclaimSound:
+    collection: SharkminnowSays
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -77,3 +95,27 @@
       path: /Audio/_starcup/Monsters/OreCrab/orecrab_chitter.ogg
     DefaultDeathgasp:
       collection: OreCrabScreams
+
+- type: emoteSounds
+  id: CarpSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureGrowl:
+      collection: CarpGrowls
+    Gasp:
+      path: /Audio/_starcup/Monsters/Carp/sharkminnow_gasp.ogg
+    DefaultDeathgasp:
+      collection: CarpGrowls
+
+- type: emoteSounds
+  id: SharkminnowSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureGrowl:
+      collection: SharkminnowGrowls
+    Gasp:
+      path: /Audio/_starcup/Monsters/Carp/sharkminnow_gasp.ogg
+    DefaultDeathgasp:
+      collection: SharkminnowGrowls
