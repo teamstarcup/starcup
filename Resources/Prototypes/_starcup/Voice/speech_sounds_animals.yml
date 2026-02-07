@@ -287,6 +287,15 @@
   exclaimSound:
     collection: SpaceBearSays
 
+- type: speechSounds
+  id: RaptorSpeechSounds
+  saySound:
+    collection: RaptorGrawks
+  askSound:
+    collection: RaptorGrawks
+  exclaimSound:
+    collection: RaptorGrawks
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -952,3 +961,21 @@
       path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
     DefaultDeathgasp:
       collection: SpaceBearGrowls
+
+- type: emoteSounds
+  id: RaptorSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      path: /Audio/_starcup/Animals/Velociraptor/raptor_scream.ogg
+    CreatureChitter:
+      collection: RaptorChitters
+    CreatureHiss:
+      collection: ReptilianHiss
+    TailWhip:
+      path: /Audio/_RMC14/Xeno/alien_tail_swipe1.ogg
+    Gasp:
+      path: /Audio/_starcup/Animals/Penguin/penguin_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Velociraptor/raptor_death.ogg

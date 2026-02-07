@@ -100,3 +100,9 @@ accent-words-feralslime-3 = Grrglglrlglglrl!
 accent-words-feralslime-4 = Grrglglr gglrrgl!
 accent-words-feralslime-5 = Grgrllrl?
 accent-words-feralslime-6 = Grgrl grrlg?
+
+# Raptor
+accent-words-raptor-1 = Graaawkh! Chtrchtrchtr...
+accent-words-raptor-2 = Grrawkh!  Chtrchtrchtr!
+accent-words-raptor-3 = Ghrraaawk?  Chtrchtrchtr.
+accent-words-raptor-4 = Grraawhrkh. Chtrchtrchtrchtr...

@@ -47,6 +47,7 @@
     - type: Tag
       tags:
         - FootstepSound
+        - CreatureEmotes # starcup
     - type: BatteryAmmoProvider
       proto: RedLightLaser
       fireCost: 50
@@ -69,6 +70,22 @@
       interactFailureString: petting-failure-generic
       interactSuccessSound:
         path: /Audio/Animals/lizard_happy.ogg
+  # begin starcup
+    - type: Deathgasp
+    - type: Speech
+      speechVerb: Reptilian
+      speechSounds: RaptorSpeechSounds
+      allowedEmotes: ['CreatureScream', 'CreatureChitter', 'CreatureHiss', 'TailWhip']
+    - type: Vocal
+      sounds:
+        Male: RaptorSpeechEmotes
+        Female: RaptorSpeechEmotes
+        Unsexed: RaptorSpeechEmotes
+    - type: ReplacementAccent
+      accent: RaptorAccent
+    - type: TypingIndicator
+      proto: lizard
+  # end starcup
 
 - type: entity
   id: MobTomatoKiller
