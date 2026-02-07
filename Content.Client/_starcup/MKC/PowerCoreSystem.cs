@@ -28,8 +28,7 @@ public sealed class PowerCoreSystem : SharedPowerCoreSystem
 
         SubscribeLocalEvent<PowerCoreComponent, BodyRelayedEvent<LocalPlayerAttachedEvent>>(OnPlayerAttached);
         SubscribeLocalEvent<PowerCoreComponent, BodyRelayedEvent<LocalPlayerDetachedEvent>>(OnPlayerDetached);
-
-        // TODO: Remove alert when power core organ is removed from body
+        SubscribeLocalEvent<PowerCoreComponent, OrganGotRemovedEvent>(OnOrganRemoved);
 
         _powerCoreQuery = GetEntityQuery<PowerCoreComponent>();
         _bodyQuery = GetEntityQuery<BodyComponent>();
@@ -92,5 +91,10 @@ public sealed class PowerCoreSystem : SharedPowerCoreSystem
     private void OnPlayerDetached(Entity<PowerCoreComponent> powerCore, ref BodyRelayedEvent<LocalPlayerDetachedEvent> args)
     {
         _alerts.ClearAlert(args.Args.Entity, _batteryAlertPrototype);
+    }
+
+    private void OnOrganRemoved(Entity<PowerCoreComponent> powerCore, ref OrganGotRemovedEvent args)
+    {
+        _alerts.ClearAlert(args.Target, _batteryAlertPrototype);
     }
 }
