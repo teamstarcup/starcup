@@ -92,3 +92,11 @@ accent-words-deer-1 = Mrwuuuh...
 accent-words-deer-2 = Mrrwuhh.
 accent-words-deer-3 = Mrwwuuuuh!
 accent-words-deer-4 = Mrruwh?
+
+# Feral slime
+accent-words-feralslime-1 = Grrglglr.
+accent-words-feralslime-2 = Ggrlrrlgl gl...
+accent-words-feralslime-3 = Grrglglrlglglrl!
+accent-words-feralslime-4 = Grrglglr gglrrgl!
+accent-words-feralslime-5 = Grgrllrl?
+accent-words-feralslime-6 = Grgrl grrlg?

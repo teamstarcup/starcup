@@ -63,6 +63,15 @@
   exclaimSound:
     collection: SharkminnowSays
 
+- type: speechSounds
+  id: FeralSlimeSpeechSounds
+  saySound:
+    collection: FeralSlimeSays
+  askSound:
+    collection: FeralSlimeAsks
+  exclaimSound:
+    collection: FeralSlimeExclaims
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -142,3 +151,23 @@
       path: /Audio/_starcup/Monsters/Hivelord/hivelord_gasp.ogg
     DefaultDeathgasp:
       path: /Audio/_starcup/Monsters/Hivelord/hivelord_death.ogg
+
+- type: emoteSounds
+  id: FeralSlimeSpeechEmotes
+  sounds:
+    Squish:
+      collection: Squishes
+    Bubble:
+      collection: Bubbles
+    Pop:
+      collection: Pops
+    Fizz:
+      path: /Audio/_starcup/Emotes/Slime/fizz.ogg
+    Simmer:
+      path: /Audio/_starcup/Emotes/Slime/simmer.ogg
+    Gasp:
+      path: /Audio/_starcup/Monsters/FeralSlime/feral_slime_gasp.ogg
+    DefaultDeathgasp:
+      path: Resources/Audio/_starcup/Monsters/FeralSlime/feral_slime_death.ogg
+  params:
+    variation: 0.125

@@ -148,12 +148,14 @@
 - type: emote
   id: Squish
   name: chat-emote-name-squish
-  category: Vocal
+  category: General # starcup: changed from vocal, slimes do that with their whole bodies
   available: false
   icon: Interface/Emotes/squish.png
-  whitelist:
-    components:
-    - Vocal
+  # begin starcup: see "category: General" change
+  #whitelist:
+    #components:
+    #- Vocal
+  # end starcup
   blacklist:
     tags:
     - SiliconEmotes

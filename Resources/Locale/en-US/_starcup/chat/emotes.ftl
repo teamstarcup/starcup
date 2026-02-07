@@ -1,5 +1,6 @@
 # Names
-chat-emote-name-slime-fizz = Fizz
+chat-emote-name-fizz = Fizz
+chat-emote-name-simmer = Simmer
 chat-emote-name-roar = Roar
 chat-emote-name-crow = Crow
 chat-emote-name-tailwhip = Tail whip
@@ -18,6 +19,8 @@ chat-emote-name-meow = Meow
 # Message
 chat-emote-msg-roar = roars!
 chat-emote-msg-crow = crows loudly.
+chat-emote-msg-fizz = fizzes.
+chat-emote-msg-simmer = simmers.
 chat-emote-msg-flutter = flutters their wings.
 chat-emote-msg-tailwhip = whips their tail.
 chat-emote-msg-drool = drools.

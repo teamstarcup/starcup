@@ -36,6 +36,7 @@
     tags:
     - FootstepSound
     - DoorBumpOpener
+    - CreatureEmotes # starcup
   - type: Butcherable
     butcheringType: Knife
     spawned:
@@ -119,7 +120,7 @@
   description: It looks so much like jelly. I wonder what it tastes like?
   components:
   - type: ReplacementAccent
-    accent: slimes
+    accent: FeralSlimeAccent # starcup
   - type: GhostTakeoverAvailable
   - type: GhostRole
     makeSentient: true
@@ -130,8 +131,8 @@
       settings: short
   - type: Speech
     speechVerb: Slime
-    speechSounds: Slime
-    allowedEmotes: ['Squish', 'Bubble', 'Pop', 'Fizz'] # imp: added bubble and pop # starcup: added Fizz
+    speechSounds: FeralSlimeSpeechSounds # starcup
+    allowedEmotes: ['Squish', 'Bubble', 'Pop', 'Fizz', 'Simmer'] # imp: added bubble and pop # starcup: added Fizz and Simmer
   - type: TypingIndicator
     proto: slime
   - type: Vocal

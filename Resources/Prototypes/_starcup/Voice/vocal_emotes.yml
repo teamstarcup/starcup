@@ -37,19 +37,36 @@
 
 - type: emote
   id: Fizz
-  name: chat-emote-name-slime-fizz
-  category: Vocal
+  name: chat-emote-name-fizz
+  category: General
   icon: _starcup/Interface/Emotes/fizz.png
   available: false
-  whitelist:
-    components:
-    - Vocal
   blacklist:
     components:
     - BorgChasis
-  chatMessages: [fizzes.]
+  chatMessages: ["chat-emote-msg-fizz"]
   chatTriggers:
   - fizz
   - fizzes
   - fizzing
   - fizzed
+
+- type: emote
+  id: Simmer
+  name: chat-emote-name-simmer
+  category: General
+  icon: _starcup/Interface/Emotes/simmer.png
+  available: false
+  blacklist:
+    components:
+    - BorgChasis
+  chatMessages: ["chat-emote-msg-simmer"]
+  chatTriggers:
+  - simmer
+  - simmers
+  - simmiing
+  - simmed
+  - boil
+  - boils
+  - boiling
+  - boiled
