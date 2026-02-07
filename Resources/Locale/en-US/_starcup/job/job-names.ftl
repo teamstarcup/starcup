@@ -19,6 +19,7 @@ job-alt-title-n0tary-artist = N0tary Artist
 
 # Chef
 job-alt-title-flavorist = Flavorist
+job-alt-title-culinary-tailor = Culinary Tailor
 
 # Chemist
 job-alt-title-pharmacist = Pharmacist
