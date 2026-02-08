@@ -8,7 +8,6 @@ using Content.Shared.Atmos;
 using Content.Shared.Body;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Events;
-using Content.Shared.Body.Prototypes;
 using Content.Shared.Chat;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
@@ -20,6 +19,7 @@ using Content.Shared.EntityConditions.Conditions.Body;
 using Content.Shared.EntityEffects;
 using Content.Shared.EntityEffects.Effects.Body;
 using Content.Shared.EntityEffects.Effects.Damage;
+using Content.Shared.Metabolism;
 using Content.Shared.Mobs.Systems;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
@@ -43,7 +43,7 @@ public sealed class RespiratorSystem : EntitySystem
     [Dependency] private readonly SharedEntityConditionsSystem _entityConditions = default!;
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
 
-    private static readonly ProtoId<MetabolismGroupPrototype> GasId = new("Gas");
+    private static readonly ProtoId<MetabolismStagePrototype> RespirationStage = new("Respiration");
 
     public override void Initialize()
     {
@@ -88,18 +88,7 @@ public sealed class RespiratorSystem : EntitySystem
             if (_mobState.IsDead(uid))
                 continue;
 
-            // begin starcup: we don't use this right now so I can't be bothered to fix it
-            // Begin DeltaV Code: Addition:
-            // var organs = _bodySystem.GetBodyOrganEntityComps<LungComponent>((uid, body));
-            // var multiplier = -1f;
-            // foreach (var (_, lung, _) in organs)
-            // {
-            //     multiplier *= lung.SaturationLoss;
-            // }
-            // End DeltaV Code
-            // UpdateSaturation(uid, multiplier * (float) respirator.UpdateInterval.TotalSeconds, respirator); // DeltaV: use multiplier instead of negating
-            UpdateSaturation(uid, (float)-respirator.UpdateInterval.TotalSeconds, respirator);
-            // end starcup
+            UpdateSaturation(uid, -(float)respirator.UpdateInterval.TotalSeconds, respirator);
 
             if (!_mobState.IsIncapacitated(uid)) // cannot breathe in crit.
             {
@@ -288,7 +277,7 @@ public sealed class RespiratorSystem : EntitySystem
         if (!Resolve(lung, ref lung.Comp))
             return 0;
 
-        if (lung.Comp.MetabolismGroups == null)
+        if (lung.Comp.Stages == null)
             return 0;
 
         float saturation = 0;
@@ -298,7 +287,7 @@ public sealed class RespiratorSystem : EntitySystem
             if (reagent.Metabolisms == null)
                 continue;
 
-            if (!reagent.Metabolisms.TryGetValue(GasId, out var entry))
+            if (!reagent.Metabolisms.Metabolisms.TryGetValue(RespirationStage, out var entry))
                 continue;
 
             foreach (var effect in entry.Effects)

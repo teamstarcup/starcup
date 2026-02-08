@@ -32,9 +32,14 @@
   parent: ClothingOuterBase
   id: ClothingOuterStorageBase
   components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,2
   - type: Storage
     grid:
     - 0,0,2,1
+    maxItemSize: Small
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
@@ -141,7 +146,6 @@
     tags:
     - Hardsuit
     - WhitelistChameleon
-    - HidesHarpyWings #DeltaV: Used by harpies to help render their hardsuit sprites
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
   - type: DamageOnInteractProtection
@@ -152,6 +156,8 @@
   - type: HideLayerClothing
     slots:
     - Tail
+    - RArm  # starcup: hide harpy wings
+    - LArm  # starcup: hide harpy wings
 
 - type: entity
   abstract: true
@@ -174,9 +180,6 @@
   - type: HeldSpeedModifier
   - type: Item
     size: Huge
-  - type: Tag
-    tags:
-    - HidesHarpyWings #DeltaV: Used by harpies to help render their hardsuit sprites
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
   - type: DamageOnInteractProtection
@@ -187,6 +190,8 @@
   - type: HideLayerClothing
     slots:
     - Tail
+    - RArm  # starcup: hide harpy wings
+    - LArm  # starcup: hide harpy wings
 
 - type: entity
   parent: ClothingOuterBase
@@ -209,4 +214,6 @@
   id: ClothingOuterBaseMedium
   components:
   - type: Item
-    size: Huge
+    size: Large
+    shape:
+    - 0,0,2,3

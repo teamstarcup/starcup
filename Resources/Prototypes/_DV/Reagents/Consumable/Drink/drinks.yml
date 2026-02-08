@@ -13,13 +13,12 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
+    Digestion:
+      metabolites:
+        Radium: 0.02
       effects:
       - !type:SatiateThirst
         factor: 3
-      - !type:AdjustReagent
-        reagent: Radium
-        amount: 0.01
 
 - type: reagent
   id: PinkDrink
@@ -36,12 +35,6 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
 
-  metabolisms:
-    Drink:
-      effects:
-      - !type:SatiateThirst
-        factor: 3
-
 - type: reagent
   id: BubbleTea
   name: reagent-name-bubbletea
@@ -57,21 +50,15 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
+    Digestion:
+      metabolites:
+        Sugar: 0.4
+        Nutriment: 0.2
+        Theobromine: 0.1 # starcup: added
       effects:
       - !type:SatiateThirst
         factor: 3
-      - !type:AdjustReagent
-        reagent: Sugar
-        amount: 0.2
-      - !type:AdjustReagent
-        reagent: Nutriment
-        amount: 0.1
-      # begin starcup: add theobromine
-      - !type:AdjustReagent
-        reagent: Theobromine
-        amount: 0.05
-      # end starcup
+
 - type: reagent
   id: HealthViolation
   name: reagent-name-healthviolation
@@ -87,13 +74,12 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
+    Digestion:
+      metabolites:
+        Ethanol: 0.6
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.3
       - !type:PopupMessage
         conditions:
         - !type:ReagentCondition
@@ -125,15 +111,12 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
+    Digestion:
+      metabolites:
+        Ethanol: 0.13 # starcup: decreased from 0.4
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.09 # starcup: decreased from 0.2
-    Poison:
-      effects:
       - !type:HealthChange
         damage:
           types:
@@ -153,13 +136,12 @@
   metamorphicMaxFillLevels: 3
   metamorphicFillBaseName: fill-
   metabolisms:
-    Drink:
+    Digestion:
+      metabolites:
+        Ethanol: 0.16 # starcup: decreased from 0.3
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.15
 
 - type: reagent
   id: GreenGrass
@@ -174,14 +156,6 @@
     state: icon_empty
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
-  metabolisms:
-    Drink:
-      effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.05
 
 - type: reagent
   id: ArsonistsBrew
@@ -198,15 +172,12 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
+    Digestion:
+      metabolites:
+        Ethanol: 0.6
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.30
-    Poison:
-      effects:
       - !type:HealthChange
         damage:
           types:
@@ -248,20 +219,13 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
+    Digestion:
+      metabolites:
+        Ethanol: 0.5
+        Caffeine: 0.1
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.25
-      # begin starcup: add caffeine
-      - !type:AdjustReagent
-        reagent: Caffeine
-        amount: 0.05
-      # end starcup
-    Poison:
-      effects:
       - !type:Jitter
 
 - type: reagent
@@ -296,7 +260,7 @@
   metamorphicChangeColor: false
   fizziness: 0.2
   metabolisms:
-    Drink:
+    Digestion:
       effects:
       - !type:SatiateThirst
         factor: 2

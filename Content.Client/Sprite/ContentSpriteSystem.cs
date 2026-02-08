@@ -3,7 +3,6 @@ using System.Numerics;
 using System.Threading;
 using System.Threading.Tasks;
 using Content.Client.Administration.Managers;
-using Content.Shared.Humanoid;
 using Content.Shared.Verbs;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
@@ -30,11 +29,6 @@ public sealed class ContentSpriteSystem : EntitySystem
     private ContentSpriteControl _control = new();
 
     public static readonly ResPath Exports = new ResPath("/Exports");
-
-    // begin DEN: upscale exported sprites
-    // Upscaled for better compatibility with height sliders
-    public static readonly Vector2i ExportScale = new(4, 4);
-    // end DEN
 
     public override void Initialize()
     {
@@ -106,14 +100,6 @@ public sealed class ContentSpriteSystem : EntitySystem
         // Stop asserts
         if (size.Equals(Vector2i.Zero))
             return;
-
-        // begin DEN
-        // Add a little buffer on each side in case of height sliders making them too tall.
-        if (TryComp<HumanoidAppearanceComponent>(entity, out _))
-            size += new Vector2i(10, 10);
-
-        size *= ExportScale; // DEN: upscale exported sprites
-        // end DEN
 
         var texture = _clyde.CreateRenderTarget(new Vector2i(size.X, size.Y), new RenderTargetFormatParameters(RenderTargetColorFormat.Rgba8Srgb), name: "export");
         var tcs = new TaskCompletionSource(cancelToken);
@@ -193,10 +179,8 @@ public sealed class ContentSpriteSystem : EntitySystem
 
                     handle.RenderInRenderTarget(queued.Texture, () =>
                     {
-                        // begin DEN: upscale exported sprites
-                        handle.DrawEntity(result.Entity, result.Texture.Size / 2, ExportScale, Angle.Zero,
+                        handle.DrawEntity(result.Entity, result.Texture.Size / 2, Vector2.One, Angle.Zero,
                             overrideDirection: result.Direction);
-                        // end DEN
                     }, Color.Transparent);
 
                     ResPath fullFileName;

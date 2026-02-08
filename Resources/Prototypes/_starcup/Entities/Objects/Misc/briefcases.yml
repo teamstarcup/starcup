@@ -13,7 +13,21 @@
   description: A slick black briefcase commissioned for Syndicate Communications agents. Made with 100% genuine epoxy-coated pleather!
   components:
   - type: Sprite
-    sprite: _starcup/Objects/Storage/briefcase_syndcomm.rsi
+    sprite: _starcup/Objects/Storage/Briefcases/briefcase_syndcomm.rsi
     state: icon
   - type: Item
-    sprite: _starcup/Objects/Storage/briefcase_syndcomm.rsi
+    sprite: _starcup/Objects/Storage/Briefcases/briefcase_syndcomm.rsi
+
+- type: entity
+  parent: [BaseTraitorContraband, BriefcaseWeapon]
+  id: BriefcaseWeaponNT
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Storage/Briefcases/weapon_case_large_nt.rsi
+
+- type: entity
+  parent: [BaseTraitorContraband, BriefcaseWeaponSmall]
+  id: BriefcaseWeaponNTSmall
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Storage/Briefcases/weapon_case_nt.rsi

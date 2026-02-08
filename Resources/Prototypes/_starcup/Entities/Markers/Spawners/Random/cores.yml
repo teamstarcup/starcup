@@ -1,0 +1,155 @@
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreBluespace
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreBluespaceInert
+        weight: 0.95
+      - id: AnomalyCoreBluespace
+        weight: 0.05
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreElectricity
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreElectricityInert
+        weight: 0.95
+      - id: AnomalyCoreElectricity
+        weight: 0.05
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreFlesh
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreFleshInert
+        weight: 0.95
+      - id: AnomalyCoreFlesh
+        weight: 0.05
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreFlora
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreFloraInert
+        weight: 0.95
+      - id: AnomalyCoreFlora
+        weight: 0.05
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreGravity
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreGravityInert
+        weight: 0.95
+      - id: AnomalyCoreGravity
+        weight: 0.05
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreIce
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreIceInert
+        weight: 0.95
+      - id: AnomalyCoreIce
+        weight: 0.05
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreLiquid
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreLiquidInert
+        weight: 0.95
+      - id: AnomalyCoreLiquid
+        weight: 0.05
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCorePyroclastic
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCorePyroclasticInert
+        weight: 0.95
+      - id: AnomalyCorePyroclastic
+        weight: 0.05
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreRock
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreRockInert
+        weight: 0.95
+      - id: AnomalyCoreRock
+        weight: 0.05
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreSanta # just in case
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreSantaInert
+        weight: 0.95
+      - id: AnomalyCoreSanta
+        weight: 0.05
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreShadow
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreShadowInert
+        weight: 0.95
+      - id: AnomalyCoreShadow
+        weight: 0.05
+
+- type: entity
+  parent: MarkerBase
+  id: RandomAnomalyCoreTech
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: AnomalyCoreTechInert
+        weight: 0.95
+      - id: AnomalyCoreTech
+        weight: 0.05
