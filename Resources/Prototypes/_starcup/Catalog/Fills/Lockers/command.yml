@@ -1,5 +1,5 @@
 - type: entityTable
-  id: AdministrativeAssistantLockerFillSyndie
+  id: AdministrativeAssistantLockerFill
   table: !type:AllSelector
     children:
     - id: DrinkCoffeeJug # Gotta keep command awake during the greenshifts
@@ -11,11 +11,11 @@
     - id: ClothingOuterSweaterCommand
 
 - type: entity
-  parent: LockerAdministrativeAssistantSyndie
-  id: LockerAdministrativeAssistantFilledSyndie
+  parent: LockerAdministrativeAssistant
+  id: LockerAdministrativeAssistantFilled
   suffix: Filled, Syndicate
   components:
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
-        tableId: AdministrativeAssistantLockerFillSyndie
+        tableId: AdministrativeAssistantLockerFill

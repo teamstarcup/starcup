@@ -1,4 +1,29 @@
 - type: entity
+  parent: BasePDA
+  id: AdminAssistantPDA
+  name: administrative assistant PDA
+  description: Theres pen scribbles all over the edges, and a few sticky notes stuck on it.
+  components:
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda
+  - type: PdaBorderColor
+    borderColor: "#1B67A5"
+  - type: Icon
+    sprite: _DV/Objects/Devices/pda.rsi
+    state: pda-admin-assistant
+  - type: Pda
+    id: AdminAssistantIDCard
+    penSlot:
+      startingItem: LuxuryPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+
+- type: entity
   parent: [ BasePDA, BaseTraitorContraband ]
   id: NTPDA
   name: NanoTrasen PDA

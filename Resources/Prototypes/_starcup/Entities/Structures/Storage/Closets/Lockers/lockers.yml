@@ -1,4 +1,18 @@
 - type: entity
+  parent: LockerBaseSecure
+  id: LockerAdministrativeAssistant
+  name: administrative assistant's locker
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Storage/closet.rsi
+  - type: EntityStorageVisuals
+    stateBaseClosed: admin_assist
+    stateDoorOpen: admin_assist_open
+    stateDoorClosed: admin_assist_door
+  - type: AccessReader
+    access: [["Command"]]
+
+- type: entity
   id: LockerCaptainSyndie
   parent: LockerCaptain
   suffix: Syndicate
@@ -42,36 +56,6 @@
       map: [ "enum.StorageVisualLayers.Base" ]
       sprite: _starcup/Structures/Storage/closet.rsi
     - state: hop_door_syndi
-      map: [ "enum.StorageVisualLayers.Door" ]
-      sprite: _starcup/Structures/Storage/closet.rsi
-    - state: locked
-      map: [ "enum.LockVisualLayers.Lock" ]
-      shader: unshaded
-    - state: welded
-      visible: false
-      map: [ "enum.WeldableLayers.BaseWelded" ]
-    - state: paper
-      visible: false
-      sprite: Structures/Storage/closet_labels.rsi
-      offset: "-0.065,0"
-      map: [ "enum.PaperLabelVisuals.Layer" ]
-
-- type: entity
-  id: LockerAdministrativeAssistantSyndie
-  parent: LockerAdministrativeAssistant
-  suffix: Syndicate
-  components:
-  - type: EntityStorageVisuals
-    stateBaseClosed: admin_assist_syndi
-    stateDoorOpen: admin_assist_open_syndi
-    stateDoorClosed: admin_assist_door_syndi
-  - type: Sprite
-    sprite: _starcup/Structures/Storage/closet.rsi
-    layers:
-    - state: admin_assist_syndi
-      map: [ "enum.StorageVisualLayers.Base" ]
-      sprite: _starcup/Structures/Storage/closet.rsi
-    - state: admin_assist_door_syndi
       map: [ "enum.StorageVisualLayers.Door" ]
       sprite: _starcup/Structures/Storage/closet.rsi
     - state: locked

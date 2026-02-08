@@ -1,4 +1,18 @@
 - type: entity
+  parent: RubberStampBase
+  id: RubberStampAdminAssistant
+  name: administrative assistant rubber stamp
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-admin-assistant
+    stampedColor: "#4191f2"
+    stampState: "paper_stamp-admin-assistant"
+  - type: Sprite
+    sprite: _DV/Objects/Misc/stamps.rsi
+    state: stamp-admin-assistant
+
+- type: entity
   parent: RubberStampHop
   id: RubberStampHopSyndie
   categories: [ DoNotMap ]
@@ -7,7 +21,7 @@
     stampedName: stamp-component-stamped-name-hop
     stampedColor: "#D363A7"
     stampState: "paper_stamp-hop-syndie"
-    stampLargeIcon: "large_stamp-hop-syndie" # starcup
+    stampLargeIcon: "large_stamp-hop-syndie"
   - type: Sprite
     sprite: _starcup/Objects/Misc/stamps.rsi
     state: stamp-hop-syndi
@@ -21,7 +35,7 @@
     stampedName: stamp-component-stamped-name-captain
     stampedColor: "#A81962"
     stampState: "paper_stamp-cap-syndie"
-    stampLargeIcon: "large_stamp-cap-syndie" # starcup
+    stampLargeIcon: "large_stamp-cap-syndie"
   - type: Sprite
     sprite: _starcup/Objects/Misc/stamps.rsi
     state: stamp-cap-syndi
