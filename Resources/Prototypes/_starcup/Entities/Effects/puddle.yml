@@ -74,7 +74,7 @@
 
 - type: footprint
   id: lizardFootprint
-  parents: [baseFootprint]
+  parent: [baseFootprint]
   prints: !type:SequentialFootprint
     layers:
     - state: footprint-left-bare-lizard
@@ -84,7 +84,7 @@
 
 - type: footprint
   id: dionaFootprint
-  parents: [baseFootprint]
+  parent: [baseFootprint]
   prints: !type:SequentialFootprint
     layers:
     - state: footprint-left-bare-diona
@@ -94,7 +94,7 @@
 
 - type: footprint
   id: slimeFootprint
-  parents: [baseFootprint]
+  parent: [baseFootprint]
   prints: !type:SequentialFootprint
     layers:
     - state: footprint-left-bare-slime
@@ -104,7 +104,7 @@
 
 - type: footprint
   id: humanFootprint
-  parents: [baseFootprint]
+  parent: [baseFootprint]
   prints: !type:SequentialFootprint
     layers:
     - state: footprint-left-bare-human
