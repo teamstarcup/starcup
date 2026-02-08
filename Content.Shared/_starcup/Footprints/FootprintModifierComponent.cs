@@ -9,4 +9,3 @@ public sealed partial class FootprintModifierComponent : Component
     [DataField, AutoNetworkedField]
     public ProtoId<FootprintPrototype>? Footprint;
 }
-
