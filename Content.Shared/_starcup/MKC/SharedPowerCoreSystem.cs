@@ -1,5 +1,6 @@
 using Content.Shared.Body;
 using Content.Shared.DoAfter;
+using Content.Shared.Mobs.Systems;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Power;
@@ -28,6 +29,7 @@ public abstract class SharedPowerCoreSystem : EntitySystem
     [Dependency] private readonly SharedJetpackSystem _jetpack = default!;
     [Dependency] private readonly MovementSpeedModifierSystem _movementSpeed = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly MobStateSystem _mobState = default!;
 
     private const float MaxEnergyDrainDistance = 32.0f;
     private readonly SoundSpecifier? _drainSounds = new SoundCollectionSpecifier("sparks");
@@ -35,8 +37,6 @@ public abstract class SharedPowerCoreSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-
-        // TODO: Call SharedBatterySystem.RefreshChargeRate when this organ is removed from the body
 
         SubscribeLocalEvent<PowerCoreComponent, MapInitEvent>(OnMapInit);
 
@@ -46,6 +46,7 @@ public abstract class SharedPowerCoreSystem : EntitySystem
         SubscribeLocalEvent<PowerCoreComponent, RefreshChargeRateEvent>(OnRefreshChargeRate);
         SubscribeLocalEvent<PowerCoreComponent, BatteryStateChangedEvent>(OnBatteryStateChanged);
         SubscribeLocalEvent<PowerCoreComponent, BodyRelayedEvent<RefreshMovementSpeedModifiersEvent>>(UpdateMoveSpeedModifier);
+        SubscribeLocalEvent<PowerCoreComponent, OrganGotRemovedEvent>(OnOrganRemoved);
     }
 
     private void OnMapInit(Entity<PowerCoreComponent> powerCore, ref MapInitEvent _)
@@ -65,9 +66,13 @@ public abstract class SharedPowerCoreSystem : EntitySystem
 
     private void OnRefreshChargeRate(Entity<PowerCoreComponent> powerCore, ref RefreshChargeRateEvent args)
     {
-        // TODO: Should not drain power while body is 'dead'
-        // TODO: Should not drain power while not inside a body
-        // TODO: Maybe drain less power while sleeping? Call SharedBatterySystem.RefreshChargeRate when conditions that modify this value change
+        var body = GetContainingBody(powerCore);
+        if (body == null)
+            return;
+
+        if (_mobState.IsDead(body.Value))
+            return;
+
         args.NewChargeRate -= powerCore.Comp.WattConsumption;
     }
 
@@ -94,8 +99,6 @@ public abstract class SharedPowerCoreSystem : EntitySystem
 
     private void UpdateMoveSpeedModifier(Entity<PowerCoreComponent> powerCore, ref BodyRelayedEvent<RefreshMovementSpeedModifiersEvent> args)
     {
-        // TODO: Call _movementSpeed.RefreshMovementSpeedModifiers on the body entity when the organ is removed from it
-
         Entity<BatteryComponent?> battery = (powerCore.Owner, null);
         if (!Resolve(powerCore.Owner, ref battery.Comp))
             return;
@@ -232,5 +235,16 @@ public abstract class SharedPowerCoreSystem : EntitySystem
             powerCore.Owner,
             powerCore.Owner
             );
+    }
+
+    private void OnOrganRemoved(Entity<PowerCoreComponent> powerCore, ref OrganGotRemovedEvent args)
+    {
+        Entity<BatteryComponent?> battery = (powerCore.Owner, null);
+        if (!TryComp(battery, out battery.Comp))
+            return;
+
+        _battery.RefreshChargeRate(battery);
+
+        _movementSpeed.RefreshMovementSpeedModifiers(args.Target);
     }
 }
