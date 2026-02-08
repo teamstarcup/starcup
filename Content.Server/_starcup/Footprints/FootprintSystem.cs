@@ -195,18 +195,18 @@ public sealed class FootprintSystem : EntitySystem
         if (!_solution.TryGetSolution(puddleUid, puddleSolutionName, out var puddleSolution, out var puddleSol))
             return false;
 
-        if (!_solution.EnsureSolutionEntity(ent.Owner, ent.Comp.Solution, out _, out var moverSolution, footprintData.MaxStoredVolume))
+        if (!_solution.EnsureSolutionEntity(ent.Owner, ent.Comp.Solution, out _, out var footprintOwnerSolution, footprintData.MaxStoredVolume))
             return false;
 
-        var moverSol = moverSolution.Value.Comp.Solution;
+        var footprintOwnerSol = footprintOwnerSolution.Value.Comp.Solution;
 
-        _solution.TryTransferSolution(puddleSolution.Value, source: moverSol, GetScaledVolume(moverSol, footprintData));
+        _solution.TryTransferSolution(puddleSolution.Value, source: footprintOwnerSol, GetScaledVolume(footprintOwnerSol, footprintData));
 
         // Only pick up volume from puddles that are big enough
         if (puddleSol.Volume < _minimumPuddleSize)
             return false;
 
-        _solution.TryTransferSolution(moverSolution.Value, source: puddleSol, FixedPoint2.Max(0, footprintData.MaxStoredVolume - moverSol.Volume));
+        _solution.TryTransferSolution(footprintOwnerSolution.Value, source: puddleSol, FixedPoint2.Max(0, footprintData.MaxStoredVolume - footprintOwnerSol.Volume));
         _solution.UpdateChemicals(puddleSolution.Value, false);
 
         return true;
