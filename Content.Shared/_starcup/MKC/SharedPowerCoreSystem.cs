@@ -66,12 +66,13 @@ public abstract class SharedPowerCoreSystem : EntitySystem
 
     private void OnRefreshChargeRate(Entity<PowerCoreComponent> powerCore, ref RefreshChargeRateEvent args)
     {
-        var body = GetContainingBody(powerCore);
-        if (body == null)
-            return;
-
-        if (_mobState.IsDead(body.Value))
-            return;
+        // TODO(starcup): figure out why this keeps returning null
+        // var body = GetContainingBody(powerCore);
+        // if (body == null)
+        //     return;
+        //
+        // if (_mobState.IsDead(body.Value))
+        //     return;
 
         args.NewChargeRate -= powerCore.Comp.WattConsumption;
     }
@@ -108,7 +109,7 @@ public abstract class SharedPowerCoreSystem : EntitySystem
 
         // No slowdown in weightlessness
         if (_jetpack.IsUserFlying(args.Body.Owner))
-             return;
+            return;
 
         args.Args.ModifySpeed(powerCore.Comp.LowPowerMovementSpeedMultiplier);
     }
@@ -204,9 +205,6 @@ public abstract class SharedPowerCoreSystem : EntitySystem
     {
         var body = GetContainingBody(powerCore);
         if (body == null)
-            return;
-
-        if (target.Comp == null && !Resolve(target.Owner, ref target.Comp))
             return;
 
         var powerCoreBattery = new Entity<BatteryComponent?>(powerCore.Owner, null);

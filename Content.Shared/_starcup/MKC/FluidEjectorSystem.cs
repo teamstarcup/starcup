@@ -52,15 +52,16 @@ public sealed class FluidEjectorSystem : EntitySystem
             if (organ.Body is not {} body)
                 continue;
 
-            if (fluidEjector.NextUpdate != TimeSpan.Zero && _gameTiming.CurTime >= fluidEjector.LastPopupTime + fluidEjector.PopupCooldown)
+            if (_gameTiming.CurTime >= fluidEjector.NextPopupTime)
             {
-                fluidEjector.LastPopupTime = _gameTiming.CurTime;
+                fluidEjector.NextPopupTime = _gameTiming.CurTime + fluidEjector.PopupCooldown;
                 _popup.PopupPredicted(Loc.GetString("fluid-regulator-warning"), body, body, PopupType.LargeCaution);
             }
 
             if (_gameTiming.CurTime >= fluidEjector.NextUpdate)
             {
                 fluidEjector.NextUpdate = TimeSpan.Zero;
+                fluidEjector.NextPopupTime = TimeSpan.Zero;
                 DoFluidEject(body, fluidEjector);
             }
         }

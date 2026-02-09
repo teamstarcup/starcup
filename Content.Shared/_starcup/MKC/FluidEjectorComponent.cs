@@ -37,9 +37,9 @@ namespace Content.Shared._starcup.MKC
         public TimeSpan PopupCooldown = TimeSpan.FromSeconds(6);
 
         /// <summary>
-        /// The last time a popup appeared during the fluid ejection process.
+        /// The next time a popup will appear the fluid ejection process.
         /// </summary>
         [ViewVariables]
-        public TimeSpan LastPopupTime;
+        public TimeSpan NextPopupTime;
     }
 }

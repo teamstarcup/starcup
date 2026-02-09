@@ -57,7 +57,7 @@ public sealed class PowerCoreSystem : SharedPowerCoreSystem
         if (body.Organs == null)
             return;
 
-        foreach (var organ in body.Organs!.ContainedEntities)
+        foreach (var organ in body.Organs.ContainedEntities)
         {
             if (!_powerCoreQuery.TryComp(organ, out var powerCore))
                 continue;
