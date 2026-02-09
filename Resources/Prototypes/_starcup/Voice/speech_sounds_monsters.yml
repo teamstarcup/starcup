@@ -72,6 +72,15 @@
   exclaimSound:
     collection: FeralSlimeExclaims
 
+- type: speechSounds
+  id: FleshSpeechSounds
+  saySound:
+    collection: FleshSays
+  askSound:
+    collection: FleshAsks
+  exclaimSound:
+    collection: FleshSays
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -165,9 +174,31 @@
       path: /Audio/_starcup/Emotes/Slime/fizz.ogg
     Simmer:
       path: /Audio/_starcup/Emotes/Slime/simmer.ogg
+    Blink:
+      path: /Audio/_starcup/Monsters/FeralSlime/feral_slime_blink.ogg
     Gasp:
       path: /Audio/_starcup/Monsters/FeralSlime/feral_slime_gasp.ogg
     DefaultDeathgasp:
       path: Resources/Audio/_starcup/Monsters/FeralSlime/feral_slime_death.ogg
+  params:
+    variation: 0.125
+
+- type: emoteSounds
+  id: FleshSpeechEmotes
+  sounds:
+    CreatureScream:
+      collection: FleshScreams
+    CreatureBark:
+      path: /Audio/_starcup/Monsters/AberrantFlesh/flesh_bark.ogg
+    Squish:
+      collection: Squishes
+    Simmer:
+      path: /Audio/_starcup/Emotes/Slime/simmer.ogg
+    Blink:
+      path: /Audio/_starcup/Monsters/FeralSlime/feral_slime_blink.ogg
+    Gasp:
+      collection: FleshAsks
+    DefaultDeathgasp:
+      collection: FleshScreams
   params:
     variation: 0.125

@@ -65,10 +65,13 @@ accent-words-zombie-moth-5 = Haaaatsss... Hatttssss...
 accent-words-zombie-moth-6 = Scarffsss...
 
 # Generic Aggressive
+# starcup: added 5 and 6 for ask sounds.
 accent-words-generic-aggressive-1 = Grr!
 accent-words-generic-aggressive-2 = Rrrr!
 accent-words-generic-aggressive-3 = Grr...
 accent-words-generic-aggressive-4 = Grrow!!
+accent-words-generic-aggressive-5 = Grr... ?
+accent-words-generic-aggressive-6 = Rrr?
 
 # Duck
 accent-words-duck-1 = Quack!
