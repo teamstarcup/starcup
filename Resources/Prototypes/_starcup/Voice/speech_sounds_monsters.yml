@@ -41,7 +41,7 @@
   saySound:
     collection: HivelordSays
   askSound:
-    path: /Audio/_starcup/Monsters/Hivelord/hivelord_ask.ogg
+    collection: HivelordSays
   exclaimSound:
     collection: HivelordExclaims
 
@@ -81,6 +81,15 @@
   exclaimSound:
     collection: FleshSays
 
+- type: speechSounds
+  id: WatcherSpeechSounds
+  saySound:
+    collection: WatcherSays
+  askSound:
+    collection: WatcherSays
+  exclaimSound:
+    collection: WatcherSays
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -118,6 +127,8 @@
       path: /Audio/_starcup/Monsters/OreCrab/orecrab_chitter.ogg
     CreatureScream:
       collection: OreCrabScreams
+    ClawSnap:
+      path: /Audio/_starcup/Animals/claw_snap.ogg
     Gasp:
       path: /Audio/_starcup/Monsters/OreCrab/orecrab_chitter.ogg
     DefaultDeathgasp:
@@ -202,3 +213,19 @@
       collection: FleshScreams
   params:
     variation: 0.125
+
+- type: emoteSounds
+  id: WatcherSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureClick:
+      path: /Audio/Voice/Arachnid/arachnid_click.ogg
+    CreatureScream:
+      collection: WatcherScreams
+    Blink:
+      collection: Blinks
+    Gasp:
+      path: /Audio/_starcup/Monsters/Hivelord/hivelord_gasp.ogg
+    DefaultDeathgasp:
+      collection: WatcherScreams
