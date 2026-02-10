@@ -36,12 +36,26 @@
       soundGunshot: /Audio/Weapons/Guns/Gunshots/laser_clown.ogg
     - type: SpamEmitSound
       sound:
-        collection: BikeHorn
+        collection: BehonkerHorn # starcup
     - type: NpcFactionMember
       factions:
         - SimpleHostile
     - type: Speech
       speechVerb: Cluwne
+    # begin starcup
+      speechSounds: BehonkerSpeechSounds
+      allowedEmotes: ['CreatureLaugh']
+    - type: Vocal
+      sounds:
+        Male: BehonkerSpeechEmotes
+        Female: BehonkerSpeechEmotes
+        Unsexed: BehonkerSpeechEmotes
+    - type: Tag
+      tags:
+      - DoorBumpOpener
+      - StunImmune
+      - CreatureEmotes
+    # end starcup
     - type: CombatMode
     - type: MobMover
     - type: InputMover
@@ -116,6 +130,7 @@
         reagents:
         - ReagentId: Laughter
           Quantity: 300
+
 - type: entity
   name: behonker
   parent: BaseMobBehonker

@@ -90,6 +90,24 @@
   exclaimSound:
     collection: WatcherSays
 
+- type: speechSounds
+  id: DemonBigSpeechSounds
+  saySound:
+    collection: DemonBigSays
+  askSound:
+    collection: DemonBigAsks
+  exclaimSound:
+    collection: DemonBigSays
+
+- type: speechSounds
+  id: BehonkerSpeechSounds
+  saySound:
+    collection: BehonkerSays
+  askSound:
+    collection: BehonkerAsks
+  exclaimSound:
+    collection: BehonkerSays
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -229,3 +247,33 @@
       path: /Audio/_starcup/Monsters/Hivelord/hivelord_gasp.ogg
     DefaultDeathgasp:
       collection: WatcherScreams
+
+- type: emoteSounds
+  id: DemonBigSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      collection: DemonBigScreams
+    CreatureLaugh:
+      collection: DemonBigLaughs
+    CreatureRoar:
+      collection: DemonBigRoars
+    CreatureGrowl:
+      collection: DemonBigGrowls
+    Gasp:
+      path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
+    DefaultDeathgasp:
+      collection: DemonBigScreams
+
+- type: emoteSounds
+  id: BehonkerSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureLaugh:
+      collection: BehonkerLaughs
+    Gasp:
+      path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
+    DefaultDeathgasp:
+      collection: BehonkerLaughs
