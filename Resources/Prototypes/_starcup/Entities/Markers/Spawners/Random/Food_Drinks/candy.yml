@@ -13,3 +13,14 @@
   - type: EntityTableSpawner
     table: !type:NestedSelector
       tableId: RandomCandyTable
+
+- type: entityTable # price 100
+  id: FlavoredChocolateHeartsTable
+  table: !type:AllSelector
+    children:
+    - !type:GroupSelector
+      children:
+      - id: FoodChocolateHeartDark
+        amount: 1
+      - id: FoodChocolateHeartWhite
+        amount: 1

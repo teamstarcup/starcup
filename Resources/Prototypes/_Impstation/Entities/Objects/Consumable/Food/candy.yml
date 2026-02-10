@@ -37,7 +37,7 @@
   id: BoxConversationHeart
   description: A little container full of chalky treats to give to your honey. Or eat all on your own like some kind of weirdo.
   components:
-  - type: StorageFill
+  - type: StorageFill # TODO
     contents:
     - id: FoodConversationHeart
       amount: 5
@@ -76,9 +76,9 @@
         reagents:
         - ReagentId: Sugar
           Quantity: 2
-        - ReagentId: CocoaPowder # no chocolate i guess LOL
+        - ReagentId: CocoaPowder
           Quantity: 2
-        - ReagentId: Theobromine # cocoa powder doesnt metabolize into theobromine so i have to add it manually
+        - ReagentId: Theobromine
           Quantity: 1
 
 - type: entity
@@ -95,7 +95,8 @@
 - type: entity
   name: chocolate heart
   suffix: white
-  parent: FoodChocolateHeart
+  parent: FoodChocolateHeartImitation # starcup - white chocolate does not contain theobromine! :D
+  description: A mass-produced white chocolate heart. How sweet. # starcup - gave distinct description
   id: FoodChocolateHeartWhite
   components:
   - type: Sprite
@@ -114,14 +115,19 @@
     layers:
     - map: [ base ]
       state: heartbox-closed
-  - type: StorageFill
-    contents:
-    - id: FoodChocolateHeart
-      amount: 2
-    - id: FoodChocolateHeartDark
-      amount: 2
-    - id: FoodChocolateHeartWhite
-      amount: 2
+# begin starcup - add imitation choc/update containerfill format
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: FoodChocolateHeart
+          amount: 2
+        - id: FoodChocolateHeartImitation
+          amount: 2
+        - !type:NestedSelector
+          tableId: FlavoredChocolateHeartsTable
+          rolls: 2
+# end starcup
   - type: Storage
     grid:
     - 0,0,2,1
@@ -262,7 +268,7 @@
   id: BoxMacarons
   description: We don't need collectable figurines or trading cards. We need collectable macarons.
   components:
-  - type: StorageFill # good god there has to be a better way to do this
+  - type: StorageFill # TODO
     contents:
     - id: FoodMacaronBerry
       prob: 0.25
