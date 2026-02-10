@@ -52,6 +52,16 @@
   loadouts:
   - WinterCoatBlue
 
+- type: loadoutGroup
+  id: MedicalInternHead
+  name: loadout-group-medical-intern-head
+  minLimit: 0
+  loadouts:
+  - NurseHat
+  - BlueSurgeryCap
+  - GreenSurgeryCap
+  - PurpleSurgeryCap
+
 ## Chemist
 - type: loadoutGroup
   id: ChemistPDA
@@ -96,6 +106,15 @@
   - MechatronicsPDA
 
 # Security
+## All
+- type: loadoutGroup
+  id: SecurityGloves
+  name: loadout-group-security-gloves
+  minLimit: 0
+  loadouts:
+  - FingerlessGloves
+  - BlackGloves
+
 ## Combat Medic
 - type: loadoutGroup
   id: BrigmedicHead
@@ -118,6 +137,14 @@
   loadouts:
   - BrigmedicArmoredGown
   - SecurityOfficerWintercoat
+
+- type: loadoutGroup
+  id: BrigmedicGloves
+  name: loadout-group-brigmedic-gloves
+  minLimit: 0
+  loadouts:
+  - LatexGloves
+  - BlackGloves
 
 - type: loadoutGroup
   id: BrigmedicShoes
@@ -217,20 +244,29 @@
 
 ## Boxer
 - type: loadoutGroup
+  id: BoxerHead
+  name: loadout-group-boxer-head
+  minLimit: 0
+  loadouts:
+  - GladiatorHat
+  - KendoHelmet
+
+- type: loadoutGroup
   id: BoxerJumpsuit
   name: loadout-group-boxer-jumpsuit
   loadouts:
   - BoxerShorts
   - BoxerShortsWithTop
+  - GladiatorUniform
+  - KendoHakama
+  - MNKGymBra
 
 - type: loadoutGroup
-  id: BoxerGloves
-  name: loadout-group-boxer-gloves
+  id: BoxerBelt
+  name: loadout-group-boxer-belt
+  minLimit: 0
   loadouts:
-  - RedBoxingGloves
-  - BlueBoxingGloves
-  - GreenBoxingGloves
-  - YellowBoxingGloves
+  - ChampionBelt
 
 - type: loadoutGroup
   id: BoxerShoes
@@ -249,6 +285,17 @@
   minLimit: 0
   loadouts:
   - LizardPlushieBoxer
+
+- type: loadoutGroup
+  id: BoxerWeapon
+  name: loadout-group-boxer-weapon
+  minLimit: 0
+  loadouts:
+  - RedBoxingGloves
+  - BlueBoxingGloves
+  - GreenBoxingGloves
+  - YellowBoxingGloves
+  - Shinai
 
 ## Chaplain
 - type: loadoutGroup
@@ -276,6 +323,26 @@
   - GoshanPreacherPDA
   - GothicCardinalPDA
   - N0taryArtistPDA
+
+- type: loadoutGroup
+  id: ChaplainRelic
+  name: loadout-group-chaplain-relic
+  minLimit: 0
+  loadouts:
+  - BibleNanoTrasen
+  - BibleDruid
+  - BibleNarsie
+  - BibleCommunistManifesto
+  - BibleMisc
+  - BibleRatvar
+  - BloodVial
+  - JanitorLantern
+  - PumpkinLantern
+  - BikeHorn
+  - Wristwatch
+  - AnomalyCoreShadowInert
+  - AnomalyCoreFleshInert
+  - AnomalyCoreTechInert
 
 ## Chef
 - type: loadoutGroup
@@ -431,6 +498,10 @@
   loadouts:
   - BartenderJumpsuit
   - BartenderJumpskirt
+  - LawyerJumpsuit
+  - LawyerJumpskirt
+  - JanitorMaidUniform
+  - JanitorMaidUniformMini
   - BlackElegantDress
   - GreenElegantDress
   - PurpleElegantDress
@@ -633,6 +704,13 @@
   - DiagnosticHud
   - DiagnosticEyePatchHud
   - EngineeringGoggles
+
+- type: loadoutGroup
+  id: RoboticsJobTrinkets
+  name: loadout-group-jobtrinkets
+  minLimit: 0
+  loadouts:
+  - PlushieIPC
 
 - type: loadoutGroup
   parent: [ Glasses ]

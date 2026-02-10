@@ -9,3 +9,51 @@
   storage:
     back:
     - PlushieLizardJobBoxer
+
+- type: loadout
+  id: PlushieNar
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobLibrarian
+      time: 21600 #6 hrs
+  storage:
+    back:
+    - PlushieNar
+
+- type: loadout
+  id: PlushieRatvar
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobLibrarian
+      time: 21600 #6 hrs
+  storage:
+    back:
+    - PlushieRatvar
+
+- type: loadout
+  id: PlushieIPC
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobRoboticist
+      time: 72000 #20 hrs
+  storage:
+    back:
+    - PlushieIPC
+
+- type: loadout
+  id: ToyNuke
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobPrisoner
+      time: 72000 #50 hrs
+  storage:
+    back:
+    - ToyNuke

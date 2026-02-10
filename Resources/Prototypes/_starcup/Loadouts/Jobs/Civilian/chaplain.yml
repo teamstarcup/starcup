@@ -39,9 +39,83 @@
   equipment:
     id: N0taryArtistPDA
 
-# Holy Book
+# Relic
 - type: loadout
   id: BibleGoshan
   storage:
     back:
     - BibleGoshan
+
+- type: loadout
+  id: BibleCommunistManifesto
+  storage:
+    back:
+    - BibleCommunistManifesto
+
+- type: loadout
+  id: BibleMisc
+  storage:
+    back:
+    - BibleMisc
+
+- type: loadout
+  id: BloodVial
+  storage:
+    back:
+    - BloodChemistryVial
+# would be nice to add a "sacred flask" prototype that's like a holy water flask but empty
+# but the sprites aren't there for it being filled with blood. yet.
+
+- type: loadout
+  id: Wristwatch
+  storage:
+    back:
+    - Wristwatch
+
+- type: loadout
+  id: BikeHorn
+  storage:
+    back:
+    - BikeHorn
+
+- type: loadout
+  id: PumpkinLantern
+  storage:
+    back:
+    - PumpkinLantern
+
+- type: loadout
+  id: AnomalyCoreShadowInert
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Science
+      time: 21600 #6 hrs
+  storage:
+    back:
+    - AnomalyCoreShadowInert
+
+- type: loadout
+  id: AnomalyCoreFleshInert
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Science
+      time: 21600 #6 hrs
+  storage:
+    back:
+    - AnomalyCoreFleshInert
+
+- type: loadout
+  id: AnomalyCoreTechInert
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Science
+      time: 21600 #6 hrs
+  storage:
+    back:
+    - AnomalyCoreTechInert
