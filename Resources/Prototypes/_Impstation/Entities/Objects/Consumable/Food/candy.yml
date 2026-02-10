@@ -37,15 +37,28 @@
   id: BoxConversationHeart
   description: A little container full of chalky treats to give to your honey. Or eat all on your own like some kind of weirdo.
   components:
-  - type: StorageFill # TODO
-    contents:
-    - id: FoodConversationHeart
-      amount: 5
-    - id: FoodSnackGummyWormLarge
-      prob: 0.01
-      orGroup: SometimesWorm
-    - id: FoodConversationHeart
-      orGroup: SometimesWorm
+# begin starcup - update containerfill format
+#  - type: StorageFill # TODO - fix tables
+#    contents:
+#    - id: FoodConversationHeart
+#      amount: 5
+#    - id: FoodSnackGummyWormLarge
+#      prob: 0.01
+#      orGroup: SometimesWorm
+#    - id: FoodConversationHeart
+#      orGroup: SometimesWorm
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: FoodConversationHeart
+          amount: 5
+        - id: FoodConversationHeart
+          amount: 2
+          prob: 0.2
+        - id: FoodConversationHeart
+          prob: 0.2
+# end starcup
   - type: Storage
     grid:
     - 0,0,2,1
@@ -116,6 +129,14 @@
     - map: [ base ]
       state: heartbox-closed
 # begin starcup - add imitation choc/update containerfill format
+#  - type: StorageFill
+#    contents:
+#    - id: FoodChocolateHeart
+#      amount: 2
+#    - id: FoodChocolateHeartDark
+#      amount: 2
+#    - id: FoodChocolateHeartWhite
+#      amount: 2
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -124,9 +145,11 @@
           amount: 2
         - id: FoodChocolateHeartImitation
           amount: 2
-        - !type:NestedSelector
-          tableId: FlavoredChocolateHeartsTable
+        - !type:GroupSelector
           rolls: 2
+          children:
+          - id: FoodChocolateHeartDark
+          - id: FoodChocolateHeartWhite
 # end starcup
   - type: Storage
     grid:
@@ -268,7 +291,7 @@
   id: BoxMacarons
   description: We don't need collectable figurines or trading cards. We need collectable macarons.
   components:
-  - type: StorageFill # TODO
+  - type: StorageFill # TODO - fix tables
     contents:
     - id: FoodMacaronBerry
       prob: 0.25
