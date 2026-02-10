@@ -15,6 +15,7 @@ chat-emote-name-snuffle = Snuffle
 chat-emote-name-pant = Pant
 chat-emote-name-trill = Trill
 chat-emote-name-meow = Meow
+chat-emote-name-thumpgen = Thump
 
 # Message
 chat-emote-msg-roar = roars!
@@ -33,3 +34,4 @@ chat-emote-msg-snuffle = sniffs after a scent.
 chat-emote-msg-pant = pants.
 chat-emote-msg-trill = trills.
 chat-emote-msg-meow = meows.
+chat-emote-msg-thumpgen = thumps.

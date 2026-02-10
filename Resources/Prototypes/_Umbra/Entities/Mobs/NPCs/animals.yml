@@ -39,15 +39,17 @@
   - type: CanEscapeInventory
   - type: Speech
     speechVerb: SmallMob
-    speechSounds: Squeak
-    allowedEmotes: ['Squeak']
+  # begin starcup
+    speechSounds: KangarooSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureSqueak', 'FootThump', 'FootThumpx5']
   - type: Vocal
     sounds:
-      Male: Mouse
-      Female: Mouse
-      Unsexed: Mouse
+      Male: SqueakSpeechEmotes
+      Female: SqueakSpeechEmotes
+      Unsexed: SqueakSpeechEmotes
   - type: ReplacementAccent
     accent: mouse
+  # end starcup
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -123,4 +125,7 @@
     - CannotSuicide
     - VimPilot
     - Meat
-  - type: BurrowAbility # starcup
+  # begin starcup
+    - CreatureEmotes
+  - type: BurrowAbility
+  # end starcup
