@@ -31,27 +31,16 @@
   parent: CrateValentines
   name: romantic crate
   suffix: filled
-  components: # TODO - fix tables
-  # begin starcup - update containerfill format, remove plushies we don't have
-#  - type: StorageFill
-#    contents:
-#    - id: ItemBouquet
-#    - id: PlushieHeadofPersonnel
-#    - id: PlushieCaptain
-#    - id: PlushieGiantBear
-#    - id: BoxMacarons
-#      amount: 3
-#    - id: BoxConversationHeart
-#      amount: 3
-#    - id: BoxChocolateHearts
-#      amount: 2
-#    - id: HeartLocket
-#    - id: FoodGummyWorm
-#      prob: 0.01
-  - type: EntityTableContainerFill
+  components:
+  - type: EntityTableContainerFill # starcup - removed gummy worm and plushies
     containers:
       entity_storage: !type:AllSelector
         children:
+#      - id: PlushieHeadofPersonnel
+#      - id: PlushieCaptain
+#      - id: PlushieGiantBear
+#      - id: FoodGummyWorm
+#        prob: 0.01
         - id: ItemBouquet
         - id: BoxMacarons
           amount: 3
