@@ -372,7 +372,7 @@
     containers:
       storagebase: !type:AllSelector
         children:
-        - id: FoodChocolateCotton
+        - id: FoodMacaronCotton
           amount: 1
         - !type:GroupSelector
           rolls: 3
@@ -380,6 +380,7 @@
           - id: FoodMacaronBerry
           - id: FoodMacaronMimana
           - id: FoodMacaronCotton
+            weight: 0.5
           - id: FoodMacaronLemon
           - id: FoodMacaronCherry
 # end starcup
