@@ -72,7 +72,7 @@ public sealed class RummagerSystem : EntitySystem
         ent.Comp.LastLooted = time;
         // End DeltaV change
 
-        // ent.Comp.Looted = true;  # starcup: removed to enable repeatable rummaging
+        // ent.Comp.Looted = true;  // starcup: removed to enable repeatable rummaging
         Dirty(ent, ent.Comp);
         _audio.PlayPredicted(ent.Comp.Sound, ent, args.User);
 
