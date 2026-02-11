@@ -7,11 +7,14 @@
   - type: Tag
     tags:
     - FoodSnack
+    - Candy # starcup
   - type: FlavorProfile
     flavors:
     - chalky
   - type: Item
     size: Tiny
+    shape: # starcup - 1x2 feels too big!
+    - 0,0,0,0
   - type: Sprite
     sprite: _Impstation/Objects/Consumable/Food/candy.rsi
     layers:
@@ -38,7 +41,7 @@
   description: A little container full of chalky treats to give to your honey. Or eat all on your own like some kind of weirdo.
   components:
 # begin starcup - update containerfill format
-#  - type: StorageFill # TODO - fix tables
+#  - type: StorageFill
 #    contents:
 #    - id: FoodConversationHeart
 #      amount: 5
@@ -53,11 +56,6 @@
         children:
         - id: FoodConversationHeart
           amount: 5
-        - id: FoodConversationHeart
-          amount: 2
-          prob: 0.2
-        - id: FoodConversationHeart
-          prob: 0.2
 # end starcup
   - type: Storage
     grid:
@@ -76,8 +74,11 @@
   - type: Tag
     tags:
     - FoodSnack
+    - Candy # starcup
   - type: Item
     size: Tiny
+    shape: # starcup - 1x2 feels too big!
+    - 0,0,0,0
   - type: Sprite
     sprite: _Impstation/Objects/Consumable/Food/candy.rsi
     layers:
@@ -232,7 +233,7 @@
   id: FoodMacaronCotton
   description: Hey, wait! This isn't a macaron! It's a doily!
   components:
-  - type: Food
+  - type: Edible
     requiresSpecialDigestion: true
   - type: Tag
     tags:
