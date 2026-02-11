@@ -108,6 +108,15 @@
   exclaimSound:
     collection: BehonkerSays
 
+- type: speechSounds
+  id: LuminousSpeechSounds
+  saySound:
+    path: /Audio/_starcup/Monsters/LuminousBeing/luminous_say.ogg
+  askSound:
+    path: /Audio/_starcup/Monsters/LuminousBeing/luminous_ask.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Monsters/LuminousBeing/luminous_exclaim.ogg
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -277,3 +286,13 @@
       path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
     DefaultDeathgasp:
       collection: BehonkerLaughs
+
+- type: emoteSounds
+  id: LuminousSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureLaugh:
+      path: /Audio/_starcup/Monsters/LuminousBeing/luminous_laugh.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Monsters/LuminousBeing/luminous_laugh.ogg
