@@ -16,7 +16,6 @@ using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
-using Robust.Shared.Utility;
 
 namespace Content.Shared._starcup.MKC;
 
@@ -38,7 +37,8 @@ public sealed class FluidEjectorSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<BodyComponent, SolutionContainerChangedEvent>(OnSolutionChanged);
+        SubscribeLocalEvent<BodyComponent, SolutionContainerChangedEvent>(_body.RelayEvent);
+        SubscribeLocalEvent<FluidEjectorComponent, BodyRelayedEvent<SolutionContainerChangedEvent>>(OnSolutionChanged);
     }
 
     public override void Update(float deltaTime)
@@ -67,31 +67,25 @@ public sealed class FluidEjectorSystem : EntitySystem
         }
     }
 
-    private void OnSolutionChanged(Entity<BodyComponent> ent, ref SolutionContainerChangedEvent args)
+    private void OnSolutionChanged(Entity<FluidEjectorComponent> ent, ref BodyRelayedEvent<SolutionContainerChangedEvent> args)
     {
-        if (_mobState.IsDead(ent.Owner))
-            return;
-
-        // stop if you don't have a fluid ejector
-        _body.TryGetOrgansWithComponent<FluidEjectorComponent>((ent, null), out var ejectorList);
-        if (ejectorList.Count <= 0)
+        if (_mobState.IsDead(args.Body.Owner))
             return;
 
         var ev = new MetabolismExclusionEvent();
-        RaiseLocalEvent(ent.Owner, ref ev);
+        RaiseLocalEvent(args.Body.Owner, ref ev);
 
         // check for presence of non-blood reagents that cannot be metabolized
-        _body.TryGetOrgansWithComponent<MetabolizerComponent>(ent.AsNullable(), out var metabolizerOrgans);
-        if (!args.Solution.Contents
+        _body.TryGetOrgansWithComponent<MetabolizerComponent>(args.Body.AsNullable(), out var metabolizerOrgans);
+        if (!args.Args.Solution.Contents
                 .Where(reagent => !ev.Reagents.Contains(reagent.Reagent))
                 .Any(reagent => ShouldExpelReagent(reagent.Reagent, metabolizerOrgans)))
             return;
 
-        var ejector = ejectorList.First().Comp;
-        if (ejector.NextUpdate != TimeSpan.Zero)
+        if (ent.Comp.NextUpdate != TimeSpan.Zero)
             return;
 
-        ejector.NextUpdate = _gameTiming.CurTime + ejector.EjectionTime;
+        ent.Comp.NextUpdate = _gameTiming.CurTime + ent.Comp.EjectionTime;
     }
 
     /// <summary>
@@ -114,8 +108,6 @@ public sealed class FluidEjectorSystem : EntitySystem
 
     private Solution? GetEjectedReagents(EntityUid uid)
     {
-        var ejectedSolution = new Solution();
-
         BloodstreamComponent? bloodstream = null;
         if (!Resolve(uid, ref bloodstream))
             return null;
@@ -133,18 +125,14 @@ public sealed class FluidEjectorSystem : EntitySystem
         var ev = new MetabolismExclusionEvent();
         RaiseLocalEvent(uid, ref ev);
 
-        _body.TryGetOrgansWithComponent<MetabolizerComponent>(uid, out var metabolizerOrgans);
-        var ejectableReagents = bloodSolution.Contents
-            .Where(r => !ev.Reagents.Contains(r.Reagent))
-            .Where(r => ShouldExpelReagent(r.Reagent, metabolizerOrgans))
-            .ToList()
-            .ShallowClone();
+        var bloodReagents = bloodSolution.Contents
+            .Where(r => ev.Reagents.Contains(r.Reagent))
+            .Select(r => new ProtoId<ReagentPrototype>(r.Reagent.Prototype))
+            .ToArray();
 
-        foreach (var reagent in ejectableReagents)
-        {
-            bloodSolution.RemoveReagent(reagent);
-            ejectedSolution.AddReagent(reagent);
-        }
+        var ejectedSolution = _solutionContainer.SplitSolutionWithout(bloodstream.BloodSolution.Value,
+            bloodSolution.Volume,
+            bloodReagents);
 
         return ejectedSolution;
     }
@@ -157,7 +145,7 @@ public sealed class FluidEjectorSystem : EntitySystem
 
         var ejectedAmount = ejectedSolution.Volume;
 
-        if (_puddle.TrySpillAt(uid, ejectedSolution, out var puddle, true))
+        if (_puddle.TrySpillAt(uid, ejectedSolution, out var puddle))
             _forensics.TransferDna(puddle, uid, false);
 
         var slowdownTime = TimeSpan.FromSeconds((ejectedAmount * 0.4f).Value);
