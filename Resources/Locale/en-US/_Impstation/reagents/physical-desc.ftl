@@ -1,1 +1,1 @@
-reagent-physical-desc-lovepotion = romantic
+reagent-physical-desc-romantic = romantic
