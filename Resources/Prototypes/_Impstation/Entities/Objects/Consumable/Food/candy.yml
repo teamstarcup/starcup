@@ -197,7 +197,8 @@
     - FoodSnack
   - type: Item
     size: Tiny
-    shape: 0,0,0,0 # starcup - they should be 1x1
+    shape: # starcup - 1x2 feels too big!
+    - 0,0,0,0
   - type: Sprite
     sprite: _Impstation/Objects/Consumable/Food/candy.rsi
     state: macaronberry
