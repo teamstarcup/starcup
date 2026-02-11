@@ -117,6 +117,15 @@
   exclaimSound:
     path: /Audio/_starcup/Monsters/LuminousBeing/luminous_exclaim.ogg
 
+- type: speechSounds
+  id: DragonSpeechSounds
+  saySound:
+    collection: DragonSays
+  askSound:
+    path: /Audio/_starcup/Monsters/Dragon/dragon_ask.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Monsters/Dragon/dragon_exclaim.ogg
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -296,3 +305,23 @@
       path: /Audio/_starcup/Monsters/LuminousBeing/luminous_laugh.ogg
     DefaultDeathgasp:
       path: /Audio/_starcup/Monsters/LuminousBeing/luminous_laugh.ogg
+
+- type: emoteSounds
+  id: DragonSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureTrill:
+      collection: DragonTrills
+    CreatureLaugh:
+      collection: DragonLaughs
+    CreatureRoar:
+      path: /Audio/Animals/space_dragon_roar.ogg
+    CreaturePurr:
+      path: /Audio/_starcup/Monsters/Dragon/dragon_purr.ogg
+    CreatureGrowl:
+      collection: DragonGrowls
+    Gasp:
+      path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
+    DefaultDeathgasp:
+      collection: DragonGrowls
