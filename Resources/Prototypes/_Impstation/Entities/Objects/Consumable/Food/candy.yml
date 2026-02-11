@@ -190,13 +190,14 @@
   name: berry macaron
   parent: FoodMealBase
   id: FoodMacaronBerry
-  description: Complex to make, beautiful to look at, underwhelming to eat. A perfect romantic treat.
+  description: Complex to craft, beautiful to look at, why would you ruin this masterpiece by eating it? A perfect romantic treat. # starcup - macaroons aren't underwhelming!!
   components:
   - type: Tag
     tags:
     - FoodSnack
   - type: Item
     size: Tiny
+    shape: 0,0,0,0 # starcup - they should be 1x1
   - type: Sprite
     sprite: _Impstation/Objects/Consumable/Food/candy.rsi
     state: macaronberry
@@ -272,7 +273,7 @@
   name: mimana macaron
   parent: FoodMacaronBerry
   id: FoodMacaronMimana
-  description: Complex to make, beautiful to look at, underwhelming to eat. This one feels like nothing.
+  description: Complex to craft, beautiful to look at, why would you ruin this masterpiece by eating it? This one feels like nothing.
   components:
   - type: Sprite
     state: macaronmimana
@@ -292,80 +293,95 @@
   id: BoxMacarons
   description: We don't need collectable figurines or trading cards. We need collectable macarons.
   components:
-  - type: StorageFill # TODO - fix tables
-    contents:
-    - id: FoodMacaronBerry
-      prob: 0.25
-      orGroup: Macaron1
-    - id: FoodMacaronCherry
-      prob: 0.25
-      orGroup: Macaron1
-    - id: FoodMacaronLemon
-      prob: 0.25
-      orGroup: Macaron1
-    - id: FoodMacaronCotton
-      prob: 0.2
-      orGroup: Macaron1
-    - id: FoodMacaronMimana
-      prob: 0.04
-      orGroup: Macaron1
-    - id: FoodSnackGummyWormLarge
-      prob: 0.01
-      orGroup: Macaron1
-    - id: FoodMacaronBerry
-      prob: 0.25
-      orGroup: Macaron2
-    - id: FoodMacaronCherry
-      prob: 0.25
-      orGroup: Macaron2
-    - id: FoodMacaronLemon
-      prob: 0.25
-      orGroup: Macaron2
-    - id: FoodMacaronCotton
-      prob: 0.2
-      orGroup: Macaron2
-    - id: FoodMacaronMimana
-      prob: 0.04
-      orGroup: Macaron2
-    - id: FoodSnackGummyWormLarge
-      prob: 0.01
-      orGroup: Macaron2
-    - id: FoodMacaronBerry
-      prob: 0.25
-      orGroup: Macaron3
-    - id: FoodMacaronCherry
-      prob: 0.25
-      orGroup: Macaron3
-    - id: FoodMacaronLemon
-      prob: 0.25
-      orGroup: Macaron3
-    - id: FoodMacaronCotton
-      prob: 0.2
-      orGroup: Macaron3
-    - id: FoodMacaronMimana
-      prob: 0.04
-      orGroup: Macaron3
-    - id: FoodSnackGummyWormLarge
-      prob: 0.01
-      orGroup: Macaron3
-    - id: FoodMacaronBerry
-      prob: 0.25
-      orGroup: Macaron4
-    - id: FoodMacaronCherry
-      prob: 0.25
-      orGroup: Macaron4
-    - id: FoodMacaronLemon
-      prob: 0.25
-      orGroup: Macaron4
-    - id: FoodMacaronCotton
-      prob: 0.2
-      orGroup: Macaron4
-    - id: FoodMacaronMimana
-      prob: 0.04
-      orGroup: Macaron4
-    - id: FoodSnackGummyWormLarge
-      prob: 0.01
-      orGroup: Macaron4
+#  - type: StorageFill
+#    contents:
+#    - id: FoodMacaronBerry
+#      prob: 0.25
+#      orGroup: Macaron1
+#    - id: FoodMacaronCherry
+#      prob: 0.25
+#      orGroup: Macaron1
+#    - id: FoodMacaronLemon
+#      prob: 0.25
+#      orGroup: Macaron1
+#    - id: FoodMacaronCotton
+#      prob: 0.2
+#      orGroup: Macaron1
+#    - id: FoodMacaronMimana
+#      prob: 0.04
+#      orGroup: Macaron1
+#    - id: FoodSnackGummyWormLarge
+#      prob: 0.01
+#      orGroup: Macaron1
+#    - id: FoodMacaronBerry
+#      prob: 0.25
+#      orGroup: Macaron2
+#    - id: FoodMacaronCherry
+#      prob: 0.25
+#      orGroup: Macaron2
+#    - id: FoodMacaronLemon
+#      prob: 0.25
+#      orGroup: Macaron2
+#    - id: FoodMacaronCotton
+#      prob: 0.2
+#      orGroup: Macaron2
+#    - id: FoodMacaronMimana
+#      prob: 0.04
+#      orGroup: Macaron2
+#    - id: FoodSnackGummyWormLarge
+#      prob: 0.01
+#      orGroup: Macaron2
+#    - id: FoodMacaronBerry
+#      prob: 0.25
+#      orGroup: Macaron3
+#    - id: FoodMacaronCherry
+#      prob: 0.25
+#      orGroup: Macaron3
+#    - id: FoodMacaronLemon
+#      prob: 0.25
+#      orGroup: Macaron3
+#    - id: FoodMacaronCotton
+#      prob: 0.2
+#      orGroup: Macaron3
+#    - id: FoodMacaronMimana
+#      prob: 0.04
+#      orGroup: Macaron3
+#    - id: FoodSnackGummyWormLarge
+#      prob: 0.01
+#      orGroup: Macaron3
+#    - id: FoodMacaronBerry
+#      prob: 0.25
+#      orGroup: Macaron4
+#    - id: FoodMacaronCherry
+#      prob: 0.25
+#      orGroup: Macaron4
+#    - id: FoodMacaronLemon
+#      prob: 0.25
+#      orGroup: Macaron4
+#    - id: FoodMacaronCotton
+#      prob: 0.2
+#      orGroup: Macaron4
+#    - id: FoodMacaronMimana
+#      prob: 0.04
+#      orGroup: Macaron4
+#    - id: FoodSnackGummyWormLarge
+#      prob: 0.01
+#      orGroup: Macaron4
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: FoodChocolateCotton
+          amount: 1
+        - !type:GroupSelector
+          rolls: 3
+          children:
+          - id: FoodMacaronBerry
+          - id: FoodMacaronMimana
+          - id: FoodMacaronCotton
+          - id: FoodMacaronLemon
+          - id: FoodMacaronCherry
+# end starcup
   - type: Storage
     grid:
     - 0,0,1,1
