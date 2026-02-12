@@ -16,6 +16,11 @@
     enum.HumanoidVisualLayers.Chest:
       limit: 4 # starcup: up from 2
       required: false
+    # begin starcup - added for customization
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: false
+    # end starcup
     enum.HumanoidVisualLayers.LArm:
       limit: 2 # starcup: up from 1
       required: false
@@ -40,6 +45,11 @@
     enum.HumanoidVisualLayers.RFoot:
       limit: 2 # starcup: up from 1
       required: false
+# begin starcup - added for customization
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: false
+# end starcup
     enum.HumanoidVisualLayers.Eyes:
       limit: 1
       required: true

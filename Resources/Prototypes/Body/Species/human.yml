@@ -16,6 +16,11 @@
     enum.HumanoidVisualLayers.Snout:
       limit: 1
       required: false
+# begin starcup - added for customization
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 2
+      required: false
+# end starcup
     enum.HumanoidVisualLayers.LArm:
       limit: 1
       required: false
@@ -41,7 +46,7 @@
       limit: 1
       required: false
     enum.HumanoidVisualLayers.Tail:
-      limit: 0
+      limit: 1 # starcup
       required: false
     enum.HumanoidVisualLayers.Special:
       limit: 0
@@ -134,6 +139,12 @@
 - type: entity
   parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganHumanExternal ]
   id: OrganHumanTorso
+# begin starcup - give humans tails?
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Tail
+# end starcup
 
 - type: entity
   parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganHumanExternal ]
@@ -143,6 +154,7 @@
     hideableLayers:
     - enum.HumanoidVisualLayers.Hair
     - enum.HumanoidVisualLayers.Snout
+    - enum.HumanoidVisualLayers.HeadTop # starcup
 
 - type: entity
   parent: [ OrganBaseArmLeft, OrganHumanExternal ]

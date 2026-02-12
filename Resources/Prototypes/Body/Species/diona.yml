@@ -4,13 +4,13 @@
   onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Head:
-      limit: 2
+      limit: 4 # starcup - up from 2 because lots of markings got moved into head slot
       required: false
     enum.HumanoidVisualLayers.HeadTop:
-      limit: 1
+      limit: 2 # starcup - up from 1
       required: false
     enum.HumanoidVisualLayers.HeadSide:
-      limit: 1
+      limit: 2 # starcup - up from 1
       required: false
     enum.HumanoidVisualLayers.Chest:
       limit: 2
@@ -29,7 +29,7 @@
       required: false
     enum.HumanoidVisualLayers.Overlay:
       limit: 1
-      required: true
+      required: false # starcup - not sure why it would be required
       default: [ DionaVineOverlay ]
 
 - type: entity
