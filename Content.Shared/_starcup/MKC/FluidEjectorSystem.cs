@@ -10,7 +10,6 @@ using Content.Shared.Drunk;
 using Content.Shared.Fluids;
 using Content.Shared.Forensics.Systems;
 using Content.Shared.IdentityManagement;
-using Content.Shared.Metabolism;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
@@ -26,7 +25,6 @@ public sealed class FluidEjectorSystem : EntitySystem
     [Dependency] private readonly SharedForensicsSystem _forensics = default!;
     [Dependency] private readonly SharedPuddleSystem _puddle = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
     [Dependency] private readonly SharedDrunkSystem _drunk = default!;
@@ -72,38 +70,28 @@ public sealed class FluidEjectorSystem : EntitySystem
         if (_mobState.IsDead(args.Body.Owner))
             return;
 
-        var ev = new MetabolismExclusionEvent();
-        RaiseLocalEvent(args.Body.Owner, ref ev);
+        var bloodReagentEvent = new MetabolismExclusionEvent();
+        RaiseLocalEvent(args.Body.Owner, ref bloodReagentEvent);
+
+        var metabolismWhitelistEvent = new MetabolismWhitelistEvent();
+        RaiseLocalEvent(args.Body.Owner, ref metabolismWhitelistEvent);
 
         // check for presence of non-blood reagents that cannot be metabolized
-        _body.TryGetOrgansWithComponent<MetabolizerComponent>(args.Body.AsNullable(), out var metabolizerOrgans);
-        if (!args.Args.Solution.Contents
-                .Where(reagent => !ev.Reagents.Contains(reagent.Reagent))
-                .Any(reagent => ShouldExpelReagent(reagent.Reagent, metabolizerOrgans)))
+        var bodySolution = args.Args.Solution;
+        var bloodReagents = bloodReagentEvent.Reagents.Select(reagentId => reagentId.Prototype);
+        var whitelistedReagents = metabolismWhitelistEvent.Reagents.Select(protoId => protoId.Id);
+        if (!bodySolution.Contents
+            .Select(reagent => reagent.Reagent.Prototype)
+            .Any(reagentId => !bloodReagents.Contains(reagentId) && !whitelistedReagents.Contains(reagentId)))
+        {
+            // body does not contain reagents that cannot be metabolized
             return;
+        }
 
         if (ent.Comp.NextUpdate != TimeSpan.Zero)
             return;
 
         ent.Comp.NextUpdate = _gameTiming.CurTime + ent.Comp.EjectionTime;
-    }
-
-    /// <summary>
-    /// Determines if a given reagent should be expelled from the body
-    /// </summary>
-    /// <param name="reagentId"></param>
-    /// <param name="metabolizerOrgans"></param>
-    /// <returns>true if any of the metabolizer organs can metabolize any of the reagent's metabolism groups</returns>
-    private bool ShouldExpelReagent(ReagentId reagentId, List<Entity<MetabolizerComponent>> metabolizerOrgans)
-    {
-        if (!_prototypeManager.TryIndex<ReagentPrototype>(reagentId.Prototype, out var proto))
-            return true;
-
-        var metabolizerWhitelists = metabolizerOrgans
-            .SelectMany(metabolizer => metabolizer.Comp.ReagentWhitelist ?? [])
-            .Distinct();
-
-        return !metabolizerWhitelists.Contains(proto);
     }
 
     private Solution? GetEjectedReagents(EntityUid uid)

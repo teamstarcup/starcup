@@ -25,6 +25,8 @@ public sealed partial class BodySystem
         SubscribeLocalEvent<BodyComponent, LocalPlayerAttachedEvent>(RelayBodyEvent);
         SubscribeLocalEvent<BodyComponent, LocalPlayerDetachedEvent>(RelayBodyEvent);
         SubscribeLocalEvent<BodyComponent, RefreshMovementSpeedModifiersEvent>(RelayBodyEvent);
+
+        SubscribeLocalEvent<BodyComponent, MetabolismWhitelistEvent>(RefRelayBodyEvent);
         // end starcup
     }
 
