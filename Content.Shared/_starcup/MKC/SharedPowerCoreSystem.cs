@@ -237,11 +237,7 @@ public abstract class SharedPowerCoreSystem : EntitySystem
 
     private void OnOrganRemoved(Entity<PowerCoreComponent> powerCore, ref OrganGotRemovedEvent args)
     {
-        Entity<BatteryComponent?> battery = (powerCore.Owner, null);
-        if (!TryComp(battery, out battery.Comp))
-            return;
-
-        _battery.RefreshChargeRate(battery);
+        _battery.RefreshChargeRate(powerCore.Owner);
 
         _movementSpeed.RefreshMovementSpeedModifiers(args.Target);
     }
