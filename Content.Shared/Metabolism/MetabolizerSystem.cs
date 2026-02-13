@@ -45,7 +45,6 @@ public sealed class MetabolizerSystem : EntitySystem
 
         SubscribeLocalEvent<MetabolizerComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<MetabolizerComponent, BodyRelayedEvent<ApplyMetabolicMultiplierEvent>>(OnApplyMetabolicMultiplier);
-        SubscribeLocalEvent<MetabolizerComponent, MetabolismWhitelistEvent>(OnMetabolismWhitelistCheck); // starcup
     }
 
     private void OnMapInit(Entity<MetabolizerComponent> ent, ref MapInitEvent args)
@@ -282,19 +281,6 @@ public sealed class MetabolizerSystem : EntitySystem
             _solutionContainerSystem.UpdateChemicals(transferSolutionEntity.Value);
         }
     }
-
-    // begin starcup: new event for whitelisted metabolizers
-    private static void OnMetabolismWhitelistCheck(Entity<MetabolizerComponent> ent, ref MetabolismWhitelistEvent args)
-    {
-        if (ent.Comp.ReagentWhitelist == null)
-            return;
-
-        foreach (var reagent in ent.Comp.ReagentWhitelist)
-        {
-            args.Reagents.Add(reagent);
-        }
-    }
-    // end starcup
 
     private void TryMetabolize(Entity<MetabolizerComponent, OrganComponent?, SolutionContainerManagerComponent?> ent)
     {
