@@ -1,6 +1,6 @@
+using System.Diagnostics.CodeAnalysis;
 using Content.Shared.Body;
 using Content.Shared.DoAfter;
-using Content.Shared.Mobs.Systems;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Power;
@@ -29,7 +29,6 @@ public abstract class SharedPowerCoreSystem : EntitySystem
     [Dependency] private readonly SharedJetpackSystem _jetpack = default!;
     [Dependency] private readonly MovementSpeedModifierSystem _movementSpeed = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly MobStateSystem _mobState = default!;
 
     private const float MaxEnergyDrainDistance = 32.0f;
     private readonly SoundSpecifier? _drainSounds = new SoundCollectionSpecifier("sparks");
@@ -47,6 +46,7 @@ public abstract class SharedPowerCoreSystem : EntitySystem
         SubscribeLocalEvent<PowerCoreComponent, BatteryStateChangedEvent>(OnBatteryStateChanged);
         SubscribeLocalEvent<PowerCoreComponent, BodyRelayedEvent<RefreshMovementSpeedModifiersEvent>>(UpdateMoveSpeedModifier);
         SubscribeLocalEvent<PowerCoreComponent, OrganGotRemovedEvent>(OnOrganRemoved);
+        SubscribeLocalEvent<PowerCoreComponent, OrganGotInsertedEvent>(OnOrganInserted);
     }
 
     private void OnMapInit(Entity<PowerCoreComponent> powerCore, ref MapInitEvent _)
@@ -57,8 +57,7 @@ public abstract class SharedPowerCoreSystem : EntitySystem
 
         _battery.RefreshChargeRate(battery);
 
-        var body = GetContainingBody(powerCore);
-        if (body == null)
+        if (!TryGetContainingBody(powerCore, out var body))
             return;
 
         _movementSpeed.RefreshMovementSpeedModifiers(body.Value);
@@ -66,9 +65,9 @@ public abstract class SharedPowerCoreSystem : EntitySystem
 
     private void OnRefreshChargeRate(Entity<PowerCoreComponent> powerCore, ref RefreshChargeRateEvent args)
     {
-        // TODO(starcup): figure out why this keeps returning null
-        // var body = GetContainingBody(powerCore);
-        // if (body == null)
+        // TODO(starcup): This will drain power cores outside of bodies but OrganGotInsertedEvent is raised just
+        // before setting the body field on the organ so we can't query it at this point!
+        // if (!TryGetContainingBody(powerCore, out var body))
         //     return;
         //
         // if (_mobState.IsDead(body.Value))
@@ -79,23 +78,30 @@ public abstract class SharedPowerCoreSystem : EntitySystem
 
     private void OnBatteryStateChanged(Entity<PowerCoreComponent> powerCore, ref BatteryStateChangedEvent args)
     {
-        var uid = GetContainingBody(powerCore);
-        if (uid == null)
+        if (!TryGetContainingBody(powerCore, out var body))
             return;
 
         if (args.NewState == BatteryState.Empty || args.OldState == BatteryState.Empty)
-            _movementSpeed.RefreshMovementSpeedModifiers(uid.Value);
+            _movementSpeed.RefreshMovementSpeedModifiers(body.Value);
     }
 
     /// <summary>
     /// Returns the entity, if any, which contains this organ.
     /// </summary>
     /// <param name="powerCore"></param>
+    /// <param name="body"></param>
     /// <returns></returns>
-    private EntityUid? GetContainingBody(Entity<PowerCoreComponent> powerCore)
+    private bool TryGetContainingBody(Entity<PowerCoreComponent> powerCore, [NotNullWhen(true)] out EntityUid? body)
     {
         OrganComponent? organ = null;
-        return !Resolve(powerCore.Owner, ref organ) ? null : organ.Body;
+        if (!Resolve(powerCore.Owner, ref organ) || organ.Body == null)
+        {
+            body = null;
+            return false;
+        }
+
+        body = organ.Body;
+        return true;
     }
 
     private void UpdateMoveSpeedModifier(Entity<PowerCoreComponent> powerCore, ref BodyRelayedEvent<RefreshMovementSpeedModifiersEvent> args)
@@ -137,8 +143,7 @@ public abstract class SharedPowerCoreSystem : EntitySystem
 
     private void StartDraining(Entity<PowerCoreComponent> powerCore, EntityUid target)
     {
-        var bodyUid = GetContainingBody(powerCore);
-        if (bodyUid == null)
+        if (!TryGetContainingBody(powerCore, out var bodyUid))
             return;
 
         Entity<BatteryComponent?> powerCoreBattery = (powerCore.Owner, null);
@@ -203,8 +208,7 @@ public abstract class SharedPowerCoreSystem : EntitySystem
 
     private void Drink(Entity<PowerCoreComponent> powerCore, Entity<BatteryComponent?> target)
     {
-        var body = GetContainingBody(powerCore);
-        if (body == null)
+        if (!TryGetContainingBody(powerCore, out var body))
             return;
 
         var powerCoreBattery = new Entity<BatteryComponent?>(powerCore.Owner, null);
@@ -238,7 +242,12 @@ public abstract class SharedPowerCoreSystem : EntitySystem
     private void OnOrganRemoved(Entity<PowerCoreComponent> powerCore, ref OrganGotRemovedEvent args)
     {
         _battery.RefreshChargeRate(powerCore.Owner);
+        _movementSpeed.RefreshMovementSpeedModifiers(args.Target);
+    }
 
+    private void OnOrganInserted(Entity<PowerCoreComponent> powerCore, ref OrganGotInsertedEvent args)
+    {
+        _battery.RefreshChargeRate(powerCore.Owner);
         _movementSpeed.RefreshMovementSpeedModifiers(args.Target);
     }
 }
