@@ -8,7 +8,7 @@ namespace Content.Shared.Body.Events;
 /// that are whitelisted by a metabolizer organ.
 /// </summary>
 [ByRefEvent]
-public sealed class MetabolismWhitelistEvent
+public readonly record struct MetabolismWhitelistEvent()
 {
     public readonly List<ProtoId<ReagentPrototype>> Reagents = [];
 }
