@@ -53,7 +53,7 @@ public sealed class FluidEjectorSystem : EntitySystem
             if (_gameTiming.CurTime >= fluidEjector.NextPopupTime)
             {
                 fluidEjector.NextPopupTime = _gameTiming.CurTime + fluidEjector.PopupCooldown;
-                _popup.PopupPredicted(Loc.GetString("fluid-regulator-warning"), body, body, PopupType.LargeCaution);
+                _popup.PopupClient(Loc.GetString("fluid-regulator-warning"), body, body, PopupType.LargeCaution);
             }
 
             if (_gameTiming.CurTime >= fluidEjector.NextUpdate)
@@ -76,17 +76,11 @@ public sealed class FluidEjectorSystem : EntitySystem
         var metabolismWhitelistEvent = new MetabolismWhitelistEvent();
         RaiseLocalEvent(args.Body.Owner, ref metabolismWhitelistEvent);
 
-        // check for presence of non-blood reagents that cannot be metabolized
-        var bodySolution = args.Args.Solution;
-        var bloodReagents = bloodReagentEvent.Reagents.Select(reagentId => reagentId.Prototype);
+        var bodyReagents = args.Args.Solution.Contents.Select(r => r.Reagent.Prototype);
+        var bloodReferenceReagents = bloodReagentEvent.Reagents.Select(reagentId => reagentId.Prototype);
         var whitelistedReagents = metabolismWhitelistEvent.Reagents.Select(protoId => protoId.Id);
-        if (!bodySolution.Contents
-            .Select(reagent => reagent.Reagent.Prototype)
-            .Any(reagentId => !bloodReagents.Contains(reagentId) && !whitelistedReagents.Contains(reagentId)))
-        {
-            // body does not contain reagents that cannot be metabolized
+        if (!bodyReagents.Any(id => !bloodReferenceReagents.Contains(id) && !whitelistedReagents.Contains(id)))
             return;
-        }
 
         if (ent.Comp.NextUpdate != TimeSpan.Zero)
             return;
@@ -113,14 +107,10 @@ public sealed class FluidEjectorSystem : EntitySystem
         var ev = new MetabolismExclusionEvent();
         RaiseLocalEvent(uid, ref ev);
 
-        var bloodReagents = bloodSolution.Contents
-            .Where(r => ev.Reagents.Contains(r.Reagent))
-            .Select(r => new ProtoId<ReagentPrototype>(r.Reagent.Prototype))
-            .ToArray();
-
+        var bloodReferenceReagents = ev.Reagents.Select(reagentId => new ProtoId<ReagentPrototype>(reagentId.Prototype)).ToArray();
         var ejectedSolution = _solutionContainer.SplitSolutionWithout(bloodstream.BloodSolution.Value,
             bloodSolution.Volume,
-            bloodReagents);
+            bloodReferenceReagents);
 
         return ejectedSolution;
     }
