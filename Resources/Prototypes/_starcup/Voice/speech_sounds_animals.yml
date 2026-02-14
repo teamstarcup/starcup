@@ -1,3 +1,4 @@
+# Look in speech_sounds_arthropods.yml for crab, moth, spider and diona nymph sounds.
 # speech sounds
 - type: speechSounds
   id: BatSpeechSounds
@@ -7,15 +8,6 @@
     path: /Audio/_starcup/Animals/Bat/bat_question.ogg
   exclaimSound:
     path: /Audio/_starcup/Animals/Bat/bat_exclamation.ogg
-
-- type: speechSounds
-  id: MothSpeechSounds
-  saySound:
-    collection: MothSpeech
-  askSound:
-    path: /Audio/_starcup/Voice/Moth/moth_question.ogg
-  exclaimSound:
-    path: /Audio/_starcup/Voice/Moth/moth_exclamation.ogg
 
 - type: speechSounds
   id: DuckSpeechSounds
@@ -43,15 +35,6 @@
     collection: CowMoos
   exclaimSound:
     collection: CowMoos
-
-- type: speechSounds
-  id: CrabSpeechSounds
-  saySound:
-    collection: CrabSpeech
-  askSound:
-    path: /Audio/_starcup/Animals/Crab/crab_ask.ogg
-  exclaimSound:
-    path: /Audio/_starcup/Animals/Crab/crab_exclaim.ogg
 
 - type: speechSounds
   id: GorillaSpeechSounds
@@ -252,15 +235,6 @@
     collection: HamsterSqueaks
 
 - type: speechSounds
-  id: NymphSpeechSounds
-  saySound:
-    collection: NymphSays
-  askSound:
-    path: /Audio/_starcup/Monsters/DionaNymph/nymph_ask.ogg
-  exclaimSound:
-    collection: NymphSays
-
-- type: speechSounds
   id: DeerSpeechSounds
   saySound:
     collection: DeerSays
@@ -307,8 +281,10 @@
       path: /Audio/_starcup/Animals/Bat/bat_squeak.ogg
     CreatureScream:
       path: /Audio/_starcup/Animals/Bat/bat_scream.ogg
-    Yawn:
-      collection: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+    CreatureYawn:
+      path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+    CreatureCough:
+      collection: MouseSneezes
     Sneeze:
       collection: MouseSneezes
     Gasp:
@@ -325,18 +301,20 @@
       path: /Audio/_starcup/Animals/Mouse/mouse_scream.ogg
     CreatureLaugh:
       collection: MouseLaugh
-    FootThump:
-      path: /Audio/Effects/soft_thump.ogg
-    FootThumpx2:
-      path: /Audio/_starcup/Animals/soft_thumps.ogg
-    Sneeze:
-      collection: MouseSneezes
-    Cough:
-      collection: MouseSneezes
-    Yawn:
-      collection: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
     CreatureSqueak:
       path: /Audio/Animals/mouse_squeak.ogg
+    CreatureYawn:
+      path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+    CreatureCough:
+      collection: MouseSneezes
+    ThumpFootSoft:
+      path: /Audio/Effects/soft_thump.ogg
+    ThumpFootMany:
+      path: /Audio/_starcup/Effects/soft_thumps.ogg
+    ThumpFootLoud:
+      path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
+    Sneeze:
+      collection: MouseSneezes
     Gasp:
       collection: MouseGasp
     DefaultDeathgasp:
@@ -355,32 +333,6 @@
       collection: WingRuffleSmall
     DefaultDeathgasp:
       path: /Audio/_starcup/Animals/Chicken/chicken_scream.ogg
-
-- type: emoteSounds
-  id: MothroachSpeechEmotes
-  params:
-    variation: 0.125
-  sounds:
-    CreatureScream:
-      path: /Audio/Voice/Moth/moth_scream.ogg
-    CreatureLaugh:
-      path: /Audio/Voice/Moth/moth_laugh.ogg
-    CreatureChitter:
-      path: /Audio/Voice/Moth/moth_chitter.ogg
-    CreatureSqueak:
-      path: /Audio/Voice/Moth/moth_squeak.ogg
-    #Gasp:
-      #path: /Audio/_starcup/Voice/Moth/moth_gasp.ogg # Removed to avoid confusion with doptera during emergencies.
-    Sneeze:
-      path: /Audio/_starcup/Voice/Moth/moth_sneeze.ogg
-    Cough:
-      path: /Audio/_starcup/Voice/Moth/moth_sneeze.ogg
-    Yawn:
-      path: /Audio/_starcup/Voice/Moth/moth_yawn.ogg
-    Sigh:
-      path: /Audio/_starcup/Voice/Moth/moth_sigh.ogg
-    DefaultDeathgasp:
-      collection: MothDeathGasp
 
 - type: emoteSounds
   id: DuckSpeechEmotes
@@ -405,28 +357,14 @@
   sounds:
     CreatureScream:
       path: /Audio/_starcup/Animals/Cow/cow_scream.ogg
-    Sneeze:
+    CreatureCough:
       path: /Audio/_starcup/Animals/chuff.ogg
-    Cough:
+    Sneeze:
       path: /Audio/_starcup/Animals/chuff.ogg
     Gasp:
       path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
     DefaultDeathgasp:
       path: /Audio/_starcup/Animals/Cow/cow_death.ogg
-
-- type: emoteSounds
-  id: CrabSpeechEmotes
-  params:
-    variation: 0.125
-  sounds:
-    CreatureClick:
-      path: /Audio/Voice/Arachnid/arachnid_click.ogg
-    ClawSnap:
-      path: /Audio/_starcup/Animals/claw_snap.ogg
-    Gasp:
-      path: /Audio/_starcup/Animals/Crab/crab_gasp.ogg
-    DefaultDeathgasp:
-      path: /Audio/_starcup/Animals/Crab/crab_death.ogg
 
 - type: emoteSounds
   id: GooseSpeechEmotes
@@ -451,8 +389,12 @@
       path: /Audio/_starcup/Animals/Gorilla/gorilla_scream.ogg
     CreatureGrowl:
       collection: GorillaGrowls
+    CreatureCough:
+      path: /Audio/_starcup/Animals/chuff.ogg
     ChestBeating:
       path: /Audio/_starcup/Animals/Gorilla/chest_beating.ogg
+    ThumpFistLoud:
+      path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
     Gasp:
       collection: GorillaGasps
     DefaultDeathgasp:
@@ -465,6 +407,14 @@
   sounds:
     CreatureGrowl:
       collection: KangarooGrowls
+    CreatureCough:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    ThumpFootSoft:
+      path: /Audio/Effects/soft_thump.ogg
+    ThumpFootMany:
+      path: /Audio/_starcup/Effects/soft_thumps.ogg
+    ThumpFootLoud:
+      path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
     Gasp:
       path: /Audio/Animals/kangaroo_grunt.ogg
     DefaultDeathgasp:
@@ -477,6 +427,12 @@
   sounds:
     CreatureGrowl:
       collection: SpaceKangarooGrowls
+    ThumpFootSoft:
+      path: /Audio/Effects/soft_thump.ogg
+    ThumpFootMany:
+      path: /Audio/_starcup/Effects/soft_thumps.ogg
+    ThumpFootLoud:
+      path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
     Gasp:
       collection: SpaceKangarooGrunts
     DefaultDeathgasp:
@@ -491,6 +447,8 @@
       path: /Audio/Animals/monkey_scream.ogg
     CreatureOok:
       collection: MonkeySqueaks
+    CreatureCough:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
     Gasp:
       collection: MonkeyGasps
     DefaultDeathgasp:
@@ -509,7 +467,11 @@
       collection: ReptilianHiss
     TailWhip:
       path: /Audio/_RMC14/Xeno/alien_tail_swipe1.ogg
-    TailThump:
+    ThumpTailSoft:
+      path: /Audio/Effects/soft_thump.ogg
+    ThumpTailMany:
+      path: /Audio/_starcup/Effects/soft_thumps.ogg
+    ThumpTailLoud:
       path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
     Gasp:
       path: /Audio/_starcup/Animals/Lizard/lizard_gasp.ogg
@@ -527,6 +489,10 @@
       path: /Audio/_starcup/Animals/Lizard/lizard_whimper.ogg
     CreatureSqueak:
       collection: LizardSqueaks
+    ThumpTailSoft:
+      path: /Audio/Effects/soft_thump.ogg
+    ThumpTailMany:
+      path: /Audio/_starcup/Effects/soft_thumps.ogg
     Gasp:
       path: /Audio/_starcup/Animals/Lizard/lizard_gasp.ogg
     DefaultDeathgasp:
@@ -573,6 +539,8 @@
       collection: GoatScream
     CreatureLaugh:
       path: /Audio/_starcup/Animals/Goat/goat_laugh.ogg
+    CreatureCough:
+      path: /Audio/_starcup/Animals/Goat/goat_sneeze.ogg
     Sneeze:
       path: /Audio/_starcup/Animals/Goat/goat_sneeze.ogg
     Gasp:
@@ -617,48 +585,16 @@
       path: /Audio/_starcup/Animals/Snake/space_snake_death.ogg
 
 - type: emoteSounds
-  id: SpiderSpeechEmotes
-  params:
-    variation: 0.125
-  sounds:
-    CreatureScream:
-      path: /Audio/Voice/Arachnid/arachnid_scream.ogg
-    CreatureLaugh:
-      path: /Audio/Voice/Arachnid/arachnid_laugh.ogg
-    CreatureChitter:
-      path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
-    CreatureClick:
-      path: /Audio/Voice/Arachnid/arachnid_click.ogg
-    Gasp:
-      path: /Audio/_starcup/Voice/Arachnid/arachnid_gasp.ogg
-    DefaultDeathgasp:
-      path: /Audio/_starcup/Voice/Arachnid/arachnid_death.ogg
-
-- type: emoteSounds
-  id: SpaceSpiderSpeechEmotes
-  params:
-    variation: 0.125
-  sounds:
-    CreatureScream:
-      path: /Audio/_starcup/Animals/Spider/space_arachnid_scream.ogg
-    CreatureLaugh:
-      path: /Audio/Voice/Arachnid/arachnid_laugh.ogg
-    CreatureChitter:
-      path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
-    CreatureClick:
-      path: /Audio/Voice/Arachnid/arachnid_click.ogg
-    Gasp:
-      path: /Audio/_starcup/Voice/Arachnid/arachnid_gasp.ogg
-    DefaultDeathgasp:
-      path: /Audio/_starcup/Animals/Spider/space_arachnid_scream.ogg
-
-- type: emoteSounds
   id: PossumSpeechEmotes
   params:
     variation: 0.125
   sounds:
     CreatureHiss:
       collection: PossumHisses
+    CreatureYawn:
+      path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+    CreatureCough:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
     Sneeze:
       path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
     Cough:
@@ -683,6 +619,10 @@
       collection: RaccoonBarks
     CreatureWhimper:
       path: /Audio/_starcup/Animals/Raccoon/raccoon_whimper.ogg
+    CreatureYawn:
+      path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+    CreatureCough:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
     Sneeze:
       path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
     Cough:
@@ -703,9 +643,11 @@
       collection: FoxBarks
     CreatureWhimper:
       collection: FoxAsks
-    Sneeze:
+    CreatureCough:
       path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
-    Cough:
+    Shake:
+      path: /Audio/_starcup/Animals/Dog/dog_shake.ogg
+    Sneeze:
       path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
     Gasp:
       path: /Audio/_starcup/Animals/Fox/fox_gasp.ogg
@@ -729,13 +671,13 @@
       collection: DogHowls
     Snuffle:
       collection: DogSniffing
+    CreatureCough:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
     Shake:
       path: /Audio/_starcup/Animals/Dog/dog_shake.ogg
     Pant:
       path: /Audio/_starcup/Animals/Dog/dog_pant1.ogg
     Sneeze:
-      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
-    Cough:
       path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
     Gasp:
       collection: DogGasps
@@ -751,6 +693,10 @@
       collection: PuppyBarks
     CreatureWhimper:
       collection: PuppyWhimpers
+    CreatureYawn:
+      path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+    CreatureCough:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
     Snuffle:
       collection: DogSniffing
     Shake:
@@ -758,8 +704,6 @@
     Pant:
       path: /Audio/_starcup/Animals/Dog/dog_pant1.ogg
     Sneeze:
-      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
-    Cough:
       path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
     Gasp:
       collection: DogGasps
@@ -785,9 +729,9 @@
       collection: CatWhimpers
     CreatureHiss:
       collection: CatHisses
-    Sneeze:
+    CreatureCough:
       path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
-    Cough:
+    Sneeze:
       path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
     Gasp:
       collection: DogGasps
@@ -811,9 +755,11 @@
       collection: CatWhimpers
     CreatureHiss:
       collection: KittenHisses
-    Sneeze:
+    CreatureYawn:
+      path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+    CreatureCough:
       path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
-    Cough:
+    Sneeze:
       path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
     Gasp:
       collection: DogGasps
@@ -831,9 +777,11 @@
       path: /Audio/_starcup/Animals/Sloth/sloth_bark.ogg
     CreatureScream:
       path: /Audio/_starcup/Animals/Sloth/sloth_scream.ogg
-    Sneeze:
+    CreatureYawn:
+      path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+    CreatureCough:
       path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
-    Cough:
+    Sneeze:
       path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
     Gasp:
       collection: DogGasps
@@ -851,9 +799,11 @@
       path: /Audio/_starcup/Animals/Ferret/ferret_laugh.ogg
     CreatureWhimper:
       path: /Audio/_starcup/Animals/Sloth/sloth_ask.ogg
-    Sneeze:
+    CreatureYawn:
+      path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+    CreatureCough:
       path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
-    Cough:
+    Sneeze:
       path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
     Gasp:
       collection: DogGasps
@@ -867,9 +817,9 @@
   sounds:
     CreatureScream:
       collection: PigScreams
-    Sneeze:
+    CreatureCough:
       path: /Audio/_starcup/Animals/chuff.ogg
-    Cough:
+    Sneeze:
       path: /Audio/_starcup/Animals/chuff.ogg
     Gasp:
       collection: PigGasps
@@ -887,34 +837,16 @@
       collection: HamsterPurrs
     CreatureTrill:
       collection: HamsterTrills
-    Sneeze:
+    CreatureYawn:
+      path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+    CreatureCough:
       collection: MouseSneezes
-    Cough:
+    Sneeze:
       collection: MouseSneezes
     Gasp:
       collection: MouseGasp
     DefaultDeathgasp:
       path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
-
-- type: emoteSounds
-  id: NymphSpeechEmotes
-  params:
-    variation: 0.125
-  sounds:
-    CreatureChirp:
-      path: /Audio/Animals/nymph_chirp.ogg
-    CreatureLaugh:
-      path: /Audio/_starcup/Monsters/DionaNymph/nymph_laugh.ogg
-    CreatureChitter:
-      collection: NymphChitters
-    Sneeze:
-      path: /Audio/_starcup/Monsters/DionaNymph/nymph_gasp.ogg
-    Cough:
-      path: /Audio/_starcup/Monsters/DionaNymph/nymph_gasp.ogg
-    Gasp:
-      path: /Audio/_starcup/Monsters/DionaNymph/nymph_gasp.ogg
-    DefaultDeathgasp:
-      path: /Audio/_starcup/Monsters/DionaNymph/nymph_gasp.ogg
 
 - type: emoteSounds
   id: DeerSpeechEmotes
@@ -925,9 +857,9 @@
       collection: DeerScreams
     CreatureBark:
       collection: DeerBarks
-    Sneeze:
+    CreatureCough:
       path: /Audio/_starcup/Animals/chuff.ogg
-    Cough:
+    Sneeze:
       path: /Audio/_starcup/Animals/chuff.ogg
     Gasp:
       path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
@@ -943,9 +875,9 @@
       collection: BearRoars
     CreatureGrowls:
       collection: BearGrowls
-    Sneeze:
+    CreatureCough:
       path: /Audio/_starcup/Animals/chuff.ogg
-    Cough:
+    Sneeze:
       path: /Audio/_starcup/Animals/chuff.ogg
     Gasp:
       path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg

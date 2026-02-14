@@ -381,17 +381,20 @@
     - snapping fingers
     - snapped fingers
 
+# begin starcup: unnecessary commentary
+# We will be using SoftThump, LoudThump and ThumpMany instead of this Thump.
+# This is so we can have both foot and tail versions of it.
+# There's a lot about this emote I don't understand - like why does it require hands.
+# end starcup
 - type: emote
-  id: TailThump # starcup: Thump -> TailThump
+  id: Thump
   name: chat-emote-name-thump
-  category: General # starcup: why does thumping your tail require hands??
+  category: Hands
   available: false
   icon: Interface/Emotes/tailslap.png
-  # begin starcup
-  #whitelist:
-    #components:
-    #- Hands
-  # end starcup
+  whitelist:
+    components:
+    - Hands
   blacklist:
     tags:
     - SiliconEmotes
@@ -491,14 +494,16 @@
 - type: emote
   id: Buzz
   name: chat-emote-name-buzz
-  category: Vocal
+  category: General # starcup: Changed from vocal. They don't buzz with their mouth?
   icon: Interface/Emotes/buzz.png
-  whitelist:
-    requireAll: true
-    components:
-    - Vocal
-    tags:
-    - SiliconEmotes
+  # begin starcup: insects can buzz, they don't need to be silicons. Pointless requirements
+  #whitelist:
+    #requireAll: true
+    #components:
+    #- Vocal
+    #tags:
+    #- SiliconEmotes
+  # end starcup
   chatMessages: ["chat-emote-msg-buzz"]
   chatTriggers:
     - buzzing
