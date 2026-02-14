@@ -30,7 +30,7 @@
   description: trouble-description
   rules:
   - TroubleStationEventScheduler
-  - StarcupSpaceTrafficControlAllEventScheduler
+  - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
 
 - type: gamePreset
@@ -42,7 +42,7 @@
   description: danger-description
   rules:
   - DangerStationEventScheduler
-  - StarcupSpaceTrafficControlAllEventScheduler
+  - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
 
 - type: gamePreset
@@ -56,7 +56,7 @@
   - DummyNonAntagChance
   - Thief
   - TroubleStationEventScheduler
-  - StarcupSpaceTrafficControlAllEventScheduler
+  - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
 
 - type: gamePreset
@@ -66,7 +66,7 @@
   description: late-start-description
   rules:
   - TroubleStationEventScheduler
-  - StarcupSpaceTrafficControlAllEventScheduler
+  - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
   - LateJoinAnomalySpawns
   - RoundstartPowerOutageRule
