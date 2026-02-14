@@ -64,7 +64,7 @@
       limit: 1
       required: true
       default: [ VoxTail ]
-    enum.HumanoidVisualLayers.Overlay:
+    enum.HumanoidVisualLayers.TailOverlay:
       limit: 1
       required: false
     enum.HumanoidVisualLayers.UndergarmentTop:
@@ -167,7 +167,7 @@
   - AppearanceVox
   - BaseSpeciesMobOrganic
   id: MobVox
-  name: Uristititi McVox
+  name: Urist McVox
   components:
   - type: Damageable
     damageModifierSet: Vox
@@ -191,29 +191,12 @@
   # end starcup
   - type: Destructible
     thresholds:
+    # begin starcup: reintroduce blunt damage gibbing
     - trigger:
         !type:DamageTypeTrigger
         damageType: Blunt
         damage: 400
-      behaviors:
-      - !type:GibBehavior { }
-# begin starcup: remove ashing
-#    - trigger:
-#        !type:DamageTypeTrigger
-#        damageType: Heat
-#        damage: 1500
-#      behaviors:
-#      - !type:SpawnEntitiesBehavior
-#        spawnInContainer: true
-#        spawn:
-#          FoodMeatChickenFriedVox:
-#            min: 3
-#            max: 5
-#      - !type:BurnBodyBehavior
-#        popupMessage: bodyburn-vox-text-others
-#        sound:
-#          collection: MeatLaserImpact
-# end starcup
+    # end starcup
     - trigger:
         !type:DamageTypeTrigger
         damageType: Radiation
@@ -261,6 +244,7 @@
     damage:
       types:
         Slash: 5 # Reduce?
+  - type: Wagging
 
 - type: entity
   parent: OrganBase

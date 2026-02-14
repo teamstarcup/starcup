@@ -52,3 +52,18 @@
   - type: Sprite
     sprite: _starcup/Objects/Misc/stamps.rsi
     state: stamp-syndcomm
+
+- type: entity
+  name: heart rubber stamp
+  parent: [RubberStampBase]
+  id: RubberStampHeart
+  suffix: valentine
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-heart
+    stampedColor: "#fc8cb8"
+    stampState: "paper_stamp-heart"
+    stampLargeIcon: "large_stamp-heart"
+  - type: Sprite
+    sprite: _starcup/Objects/Misc/stamps.rsi
+    state: stamp-heart

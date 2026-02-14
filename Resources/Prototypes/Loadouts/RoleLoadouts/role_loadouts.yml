@@ -29,10 +29,10 @@
   - CaptainOuterClothing
   - CaptainShoes # DeltaV
   - CommandEyewear # starcup
+  - Survival
   - Accessibility # starcup
   - Trinkets
-  - CaptainJobTrinkets
-  - Survival
+  - CaptainJobTrinkets # starcup
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -45,10 +45,10 @@
   - HoPOuterClothing
   - HoPShoes # DeltaV
   - CommandEyewear # starcup
+  - Survival
   - Accessibility # starcup
   - Trinkets
-  - HoPJobTrinkets
-  - Survival
+  - HoPJobTrinkets # starcup
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -77,10 +77,10 @@
   - PassengerShoes
   - PassengerEyewear # starcup
   - PassengerPDADelta # DeltaV
+  - Survival
   - Accessibility # starcup
   - Trinkets
-  - PassengerJobTrinkets
-  - Survival
+  - PassengerJobTrinkets # starcup
   - GroupSpeciesBreathTool
   # - GroupTankHarness # starcup: removed for conflicting with new outer clothing options
 
@@ -112,10 +112,10 @@
   - ServiceWorkerOuterClothing # starcup
   - ServiceWorkerShoes # starcup
   - ServiceWorkerEyewear # starcup
+  - Survival
   - Accessibility # starcup
   - Trinkets
-  - ServiceWorkerJobTrinkets
-  - Survival
+  - ServiceWorkerJobTrinkets # starcup
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -131,10 +131,10 @@
   - ChefShoes # starcup
   - Glasses
   - ChefPDADelta # DeltaV
+  - Survival
   - Accessibility # starcup
   - Trinkets
-  - ChefJobTrinkets
-  - Survival
+  - ChefJobTrinkets # starcup
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -147,10 +147,10 @@
   - LibrarianOuterClothing # starcup
   - LibrarianShoes # starcup
   - Glasses
+  - Survival
   - Accessibility # starcup
   - Trinkets
-  - LibrarianJobTrinkets
-  - Survival
+  - LibrarianJobTrinkets # starcup
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -163,15 +163,16 @@
   - LawyerOuterClothing # starcup
   - LawyerShoes # starcup
   - Glasses
+  - Survival
   - Accessibility # starcup
   - Trinkets
-  - LawyerJobTrinkets
-  - Survival
+  - LawyerJobTrinkets # starcup
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
 - type: roleLoadout
   id: JobChaplain
+  canCustomizeName: true
   groups:
   - ChaplainHead
   - ChaplainMask
@@ -182,12 +183,12 @@
   - ChaplainShoes # starcup
   - ChaplainPDAstarcup
   - Glasses
+  - Survival
   - Accessibility # starcup
   - Trinkets
-  - ChaplainJobTrinkets
+  - ChaplainJobTrinkets # starcup
   - ChaplainRelic # starcup
   #- ChaplainBible # starcup: removed due to bible rework
-  - Survival
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -222,10 +223,10 @@
   - BotanistOuterClothing
   - BotanistShoes # starcup
   - Glasses
+  - Survival
   - Accessibility # starcup
   - Trinkets
-  - BotanistJobTrinkets
-  - Survival
+  - BotanistJobTrinkets # starcup
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -261,10 +262,10 @@
   - MimeOuterClothing
   - MimeShoes # starcup
   - Glasses
+  - SurvivalMime
   - Accessibility # starcup
   - Trinkets
-  - MimeJobTrinkets
-  - SurvivalMime
+  - MimeJobTrinkets # starcup
   - GroupTankHarness
 
 - type: roleLoadout
@@ -277,11 +278,11 @@
   - MusicianOuterClothing
   - MusicianShoes # starcup
   - MusicianEyewear # starcup
+  - Survival
   - Accessibility # starcup
   - Trinkets
-  - MusicianJobTrinkets
+  - MusicianJobTrinkets # starcup
   - Instruments
-  - Survival
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -296,10 +297,10 @@
   - QuartermasterOuterClothing
   - QuartermasterShoes
   - Glasses
+  - Survival
   - Accessibility # starcup
   - Trinkets
-  - QuartermasterJobTrinkets
-  - Survival
+  - LogisticsOfficerJobTrinkets # starcup
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -314,10 +315,10 @@
   - CargoTechnicianShoes
   - Glasses
   - CargoTechnicianID
+  - Survival
   - Accessibility # starcup
   - Trinkets
-  - CargoTechnicianJobTrinkets
-  - Survival
+  - CargoTechnicianJobTrinkets # starcup
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -330,10 +331,10 @@
   - SalvageSpecialistShoes
   - Glasses
   - SalvagePDADelta # DeltaV
+  - Survival
   - Accessibility # starcup
   - Trinkets
-  - SalvageSpecialistJobTrinkets
-  - Survival
+  - SalvageSpecialistJobTrinkets # starcup
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -347,10 +348,10 @@
   - StationEngineerBackpack
   - ChiefEngineerOuterClothing
   - ChiefEngineerShoes
+  - SurvivalExtended
   - Accessibility # starcup
   - Trinkets
-  - ChiefEngineerJobTrinkets
-  - SurvivalExtended
+  - ChiefEngineerJobTrinkets # starcup
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -363,10 +364,10 @@
   - StationEngineerBackpack
   - StationEngineerShoes # starcup
   - Glasses # starcup
+  - SurvivalExtended
   - Accessibility # starcup
   - Trinkets
-  - TechnicalAssistantJobTrinkets
-  - SurvivalExtended
+  - TechnicalAssistantJobTrinkets # starcup
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -380,10 +381,10 @@
   - StationEngineerOuterClothing
   - StationEngineerShoes
   - StationEngineerID
+  - SurvivalExtended
   - Accessibility # starcup
   - Trinkets
-  - StationEngineerJobTrinkets
-  - SurvivalExtended
+  - StationEngineerJobTrinkets # starcup
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -397,10 +398,10 @@
   - AtmosphericTechnicianOuterClothing
   - AtmosphericTechnicianShoes
   - AtmosPDADelta # DeltaV
+  - SurvivalExtended
   - Accessibility # starcup
   - Trinkets
-  - AtmosphericTechnicianJobTrinkets
-  - SurvivalExtended
+  - AtmosphericTechnicianJobTrinkets # starcup
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -416,10 +417,10 @@
   - ScientistGloves
   - ResearchDirectorShoes
   - Glasses
+  - Survival
   - Accessibility # starcup
   - Trinkets
-  - ResearchDirectorJobTrinkets
-  - Survival
+  - ResearchDirectorJobTrinkets # starcup
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -435,10 +436,10 @@
   - ScientistShoes
   - Glasses
   - ScientistPDA
+  - Survival
   - Accessibility # starcup
   - Trinkets
-  - ScientistJobTrinkets
-  - Survival
+  - ScientistJobTrinkets # starcup
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -451,10 +452,10 @@
   - ResearchAssistantOuterClothing # starcup
   - ScientistShoes # starcup
   - Glasses
+  - Survival
   - Accessibility # starcup
   - Trinkets
-  - ResearchAssistantJobTrinkets
-  - Survival
+  - ResearchAssistantJobTrinkets # starcup
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -472,12 +473,12 @@
   - HeadofSecurityShoes # DeltaV - winter boots
 #  - SecurityShoes # DeltaV
   - SecurityEyewear # starcup
+  - SurvivalSecurity
   - Accessibility # starcup
   - Trinkets
   - HeadofSecurityJobTrinkets
   - SecurityAllFirearm # DeltaV - loadouts
   - SecurityAllAmmo # DeltaV - loadouts
-  - SurvivalSecurity
   - GroupSpeciesBreathToolSecurity
 
 - type: roleLoadout
@@ -492,12 +493,12 @@
   - SecurityGloves # starcup
   - WardenShoes # starcup, replaces SecurityShoes
   - SecurityEyewear # starcup
+  - SurvivalSecurity
   - Accessibility # starcup
   - Trinkets
   - WardenJobTrinkets
   - SecurityAllFirearm # DeltaV - loadouts
   - SecurityAllAmmo # DeltaV - loadouts
-  - SurvivalSecurity
   - GroupSpeciesBreathToolSecurity
 
 - type: roleLoadout
@@ -512,8 +513,8 @@
   - SecurityGloves # starcup
   - SecurityShoes
   - SecurityEyewear # starcup
-  - SurvivalSecurity
   - SecurityPDA
+  - SurvivalSecurity
   - Accessibility # starcup
   - Trinkets
   - SecurityJobTrinkets
@@ -532,12 +533,12 @@
   - SecurityGloves # starcup
   - DetectiveShoes # starcup
   - SecurityEyewear # starcup
+  - SurvivalSecurity
   - Accessibility # starcup
   - Trinkets
   - DetectiveJobTrinkets
   - SecurityRevolverFirearm # DeltaV - loadouts
   - SecurityRevolverAmmo # DeltaV - loadouts
-  - SurvivalSecurity
   - GroupSpeciesBreathToolSecurity
 
 - type: roleLoadout
@@ -551,10 +552,10 @@
   - SecurityGloves # starcup
   - SecurityShoes # starcup
   - SecurityEyewear # starcup
+  - SurvivalSecurity
   - Accessibility # starcup
   - Trinkets
-  - SecurityCadetJobTrinkets
-  - SurvivalSecurity
+  - SecurityCadetJobTrinkets # starcup
   - GroupSpeciesBreathToolSecurity
 
 # Wildcards
@@ -566,10 +567,10 @@
   - CommonBackpack
   - ReporterShoes # starcup
   - ReporterEyewear # starcup
+  - Survival
   - Accessibility # starcup
   - Trinkets
-  - ReporterJobTrinkets
-  - Survival
+  - ReporterJobTrinkets # starcup
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -582,10 +583,10 @@
   - PsychologistShoes # DeltaV
   - Glasses
   - PsychologistPDADelta # DeltaV
+  - Survival
   - Accessibility # starcup
   - Trinkets
-  - PsychologistJobTrinkets
-  - Survival
+  - PsychologistJobTrinkets # starcup
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
