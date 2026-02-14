@@ -126,13 +126,14 @@
   components:
   - type: Puller
     needsHands: false
-# begin starcup: people are not food
-#  - type: Butcherable
-#    butcheringType: Spike
-#    spawned:
-#    - id: FoodMeatLizard
-#      amount: 5
-# end starcup
+  - type: Butcherable
+    # begin starcup: people are not food
+    #butcheringType: Spike
+    #spawned:
+    #- id: FoodMeatLizard
+    #  amount: 5
+    dropOrgansOnButcher: true # so brains can be retrieved
+    # end starcup
   - type: LizardAccent
   - type: Speech
     speechSounds: Lizard

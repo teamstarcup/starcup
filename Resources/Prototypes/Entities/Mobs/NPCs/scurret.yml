@@ -42,13 +42,14 @@
     heatDamageThreshold: 360
     coldDamageThreshold: 285
   # Good eatin', you monster.
-  # begin starcup: scurrets are not food
-  # - type: Butcherable
-  #   butcheringType: Spike
-  #   spawned:
-  #   - id: FoodMeat
-  #     amount: 4
-  # end starcup
+  - type: Butcherable
+    # begin starcup: scurrets are not food
+    #butcheringType: Spike
+    #spawned:
+    #- id: FoodMeat
+    #  amount: 4
+    dropOrgansOnButcher: true # so brains can be retrieved
+    # end starcup
   # They wawa!
   - type: Vocal
     sounds:

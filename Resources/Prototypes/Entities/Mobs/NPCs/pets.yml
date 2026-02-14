@@ -897,15 +897,16 @@
     description: ghost-role-information-punpun-description
     rules: ghost-role-information-nonantagonist-rules
   - type: GhostTakeoverAvailable
-  # begin starcup: monkeys are not food
-  # - type: Butcherable
-  #   butcheringType: Spike
-  #   spawned:
-  #   - id: FoodMeat
-  #     amount: 3
-  #   - id: DrinkTequilaBottleFull
-  #     amount: 1
-  # end starcup
+  - type: Butcherable
+    # begin starcup: people are not food
+    #butcheringType: Spike
+    spawned:
+    #- id: FoodMeatPlant
+    #  amount: 5
+    - id: DrinkTequilaBottleFull
+      amount: 1
+    dropOrgansOnButcher: true # so brains can be retrieved
+    # end starcup
   - type: Tag
     tags:
     - CannotSuicide

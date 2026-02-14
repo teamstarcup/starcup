@@ -182,13 +182,14 @@
       Male: UnisexVox
       Female: UnisexVox
       Unsexed: UnisexVox
-  # begin starcup: people are not food
-  # - type: Butcherable
-  #   butcheringType: Spike
-  #   spawned:
-  #   - id: FoodMeatChicken
-  #     amount: 5
-  # end starcup
+  - type: Butcherable
+    # begin starcup: people are not food
+    #butcheringType: Spike
+    #spawned:
+    #- id: FoodMeatChicken
+    #  amount: 5
+    dropOrgansOnButcher: true # so brains can be retrieved
+    # end starcup
   - type: Destructible
     thresholds:
     - trigger:
