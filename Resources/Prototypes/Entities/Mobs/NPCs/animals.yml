@@ -17,7 +17,7 @@
   - type: Speech
     speechSounds: BatSpeechSounds
     speechVerb: SmallMob
-    allowedEmotes: ['CreatureSqueak', 'CreatureScream']
+    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureYawn', 'CreatureCough']
   # end starcup
   - type: Fixtures
     fixtures:
@@ -471,6 +471,10 @@
     tags:
     - Trash
     - VimPilot
+    # begin starcup
+    - FootstepSound
+    - CreatureEmotes
+    # end starcup
   - type: Destructible
     thresholds:
     - trigger:
@@ -496,6 +500,20 @@
     damage:
       types:
         Piercing: 0
+  # begin starcup
+  - type: Speech
+    speechVerb: SmallMob
+    speechSounds: BeetleSpeechSounds
+    allowedEmotes: ['Buzz']
+  - type: Vocal
+    sounds:
+      Unsexed: BeetleSpeechEmotes
+  - type: ReplacementAccent
+    accent: crab
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBug
+  # end starcup
 
 - type: entity
   name: glockroach
@@ -632,8 +650,6 @@
   - type: Vocal
     # begin starcup
     sounds:
-      Male: MothroachSpeechEmotes
-      Female: MothroachSpeechEmotes
       Unsexed: MothroachSpeechEmotes
     # end starcup
     wilhelmProbability: 0.001
@@ -1022,11 +1038,9 @@
   - type: Speech
     speechVerb: LargeMob
     speechSounds: CowSpeechSounds
-    allowedEmotes: ['CreatureScream']
+    allowedEmotes: ['CreatureScream', 'CreatureCough']
   - type: Vocal
     sounds:
-      Male: CowSpeechEmotes
-      Female: CowSpeechEmotes
       Unsexed: CowSpeechEmotes
   - type: FootstepModifier
     footstepSoundCollection:
@@ -1120,8 +1134,6 @@
       collection: FootstepBug
   - type: Vocal
     sounds:
-      Male: CrabSpeechEmotes
-      Female: CrabSpeechEmotes
       Unsexed: CrabSpeechEmotes
   # end starcup
 
@@ -1208,11 +1220,9 @@
   - type: Speech
     speechSounds: Goat
     speechVerb: Goat
-    allowedEmotes: ['CreatureScream', 'CreatureLaugh'] # starcup
+    allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureCough'] # starcup
   - type: Vocal
     sounds:
-      Female: Goat
-      Male: Goat
       Unsexed: Goat
   - type: BleatingAccent
   - type: InteractionPopup
@@ -1317,8 +1327,6 @@
     allowedEmotes: ['CreatureScream', 'Flutter']
   - type: Vocal
     sounds:
-      Male: GooseSpeechEmotes
-      Female: GooseSpeechEmotes
       Unsexed: GooseSpeechEmotes
   # end starcup
 
@@ -1411,11 +1419,9 @@
   - type: Speech
     speechVerb: LargeMob
     speechSounds: GorillaSpeechSounds
-    allowedEmotes: ['CreatureScream', 'CreatureGrowl', 'ChestBeating']
+    allowedEmotes: ['CreatureScream', 'CreatureGrowl', 'ChestBeating', 'CreatureCough', 'ThumpFistLoud']
   - type: Vocal
     sounds:
-      Male: GorillaSpeechEmotes
-      Female: GorillaSpeechEmotes
       Unsexed: GorillaSpeechEmotes
   # end starcup
 
@@ -1481,13 +1487,11 @@
   - type: Vocal
     sounds:
   # begin starcup
-      Male: KangarooSpeechEmotes
-      Female: KangarooSpeechEmotes
       Unsexed: KangarooSpeechEmotes
   - type: Speech
     speechVerb: LargeMob
     speechSounds: KangarooSpeechSounds
-    allowedEmotes: ['CreatureGrowl']
+    allowedEmotes: ['CreatureGrowl', 'CreatureCough', 'ThumpFootSoft', 'ThumpFootMany', 'ThumpFootLoud']
   # end starcup
   - type: Puller
     needsHands: false
@@ -1661,13 +1665,11 @@
   # begin starcup
   - type: Vocal
     sounds:
-      Male: MonkeySpeechEmotes
-      Female: MonkeySpeechEmotes
       Unsexed: MonkeySpeechEmotes
   - type: Speech
     speechSounds: MonkeySpeechSounds
     speechVerb: Monkey
-    allowedEmotes: ['CreatureScream', 'CreatureOok']
+    allowedEmotes: ['CreatureScream', 'CreatureOok', 'CreatureCough']
   # end starcup
   - type: MonkeyAccent
   - type: SentienceTarget
@@ -1938,7 +1940,7 @@
   - type: Speech
     speechSounds: Squeak
     speechVerb: SmallMob
-    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureLaugh']
+    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough']
   - type: Sprite
     drawdepth: SmallMobs
     sprite: Mobs/Animals/mouse.rsi
@@ -2063,8 +2065,6 @@
   # begin starcup: give animals a voice
   - type: Vocal
     sounds:
-      Male: SqueakSpeechEmotes
-      Female: SqueakSpeechEmotes
       Unsexed: SqueakSpeechEmotes
   - type: TypingIndicator
     proto: rodentia
@@ -2256,11 +2256,9 @@
   - type: Speech # Imp edit # nope now it's starcup
     speechSounds: LizardSpeechSounds
     speechVerb: Reptilian
-    allowedEmotes: ['CreatureScream', 'CreatureGrowl', 'CreatureHiss', 'CreatureWhimper', 'TailThump', 'TailWhip'] # Can't thump tail because no body component  # starcup: Hiss -> LizardHiss -> CreatureHiss
+    allowedEmotes: ['CreatureScream', 'CreatureGrowl', 'CreatureHiss', 'CreatureWhimper', 'ThumpTailSoft', 'ThumpTailMany', 'ThumpTailLoud', 'TailWhip'] # Can't thump tail because no body component  # starcup: Hiss -> LizardHiss -> CreatureHiss
   - type: Vocal # Imp edit # no it's starcup again babyyy
     sounds:
-      Male: LizardSpeechEmotes
-      Female: LizardSpeechEmotes
       Unsexed: LizardSpeechEmotes
   - type: ReplacementAccent
     accent: LizardAccent
@@ -2377,11 +2375,9 @@
   - type: Speech
     speechSounds: LizardTinySpeechSounds
     speechVerb: Reptilian
-    allowedEmotes: ['CreatureScream', 'CreatureWhimper', 'CreatureSqueak']
+    allowedEmotes: ['CreatureScream', 'CreatureWhimper', 'CreatureSqueak', 'ThumpTailSoft']
   - type: Vocal
     sounds:
-      Male: LizardTinySpeechEmotes
-      Female: LizardTinySpeechEmotes
       Unsexed: LizardTinySpeechEmotes
   - type: ReplacementAccent
     accent: GeckoAccent
@@ -2466,8 +2462,6 @@
     allowedEmotes: ['CreatureWhimper']
   - type: Vocal
     sounds:
-      Male: FrogSpeechEmotes
-      Female: FrogSpeechEmotes
       Unsexed: FrogSpeechEmotes
   - type: ReplacementAccent
     accent: FrogAccent
@@ -2521,12 +2515,9 @@
     allowedEmotes: ['CreatureScream', 'CreatureGrowl', 'CreatureSqueak', 'Flutter']
   - type: Vocal
     sounds:
-      Male: ParrotSpeechEmotes
-      Female: ParrotSpeechEmotes
       Unsexed: ParrotSpeechEmotes
   - type: Tag
     tags:
-    - VimPilot
     - CreatureEmotes
   # end starcup
   - type: ActiveListener
@@ -2640,8 +2631,6 @@
     allowedEmotes: ['CreatureScream']
   - type: Vocal
     sounds:
-      Male: PenguinSpeechEmotes
-      Female: PenguinSpeechEmotes
       Unsexed: PenguinSpeechEmotes
   - type: ReplacementAccent
     accent: PenguinAccent
@@ -2783,14 +2772,11 @@
     allowedEmotes: ['CreatureHiss']
   - type: Vocal
     sounds:
-      Male: SnakeSpeechEmotes
-      Female: SnakeSpeechEmotes
       Unsexed: SnakeSpeechEmotes
   - type: ReplacementAccent
     accent: xeno
   - type: Tag
     tags:
-    - VimPilot
     - CreatureEmotes
   - type: MeleeWeapon
     soundHit:
@@ -2872,8 +2858,6 @@
   - type: Vocal
     sounds:
     # begin starcup
-      Male: SpiderSpeechEmotes
-      Female: SpiderSpeechEmotes
       Unsexed: SpiderSpeechEmotes
     # end starcup
   - type: TypingIndicator
@@ -3102,11 +3086,9 @@
   # begin starcup
   - type: Speech
     speechSounds: PossumSpeechSounds
-    allowedEmotes: ['CreatureHiss']
+    allowedEmotes: ['CreatureHiss', 'CreatureYawn', 'CreatureCough']
   - type: Vocal
     sounds:
-      Male: PossumSpeechEmotes
-      Female: PossumSpeechEmotes
       Unsexed: PossumSpeechEmotes
   - type: ReplacementAccent
     accent: xeno
@@ -3192,11 +3174,9 @@
   # begin starcup
   - type: Speech
     speechSounds: RaccoonSpeechSounds
-    allowedEmotes: ['CreatureScream', 'CreatureChitter', 'CreatureBark', 'CreatureWhimper']
+    allowedEmotes: ['CreatureScream', 'CreatureChitter', 'CreatureBark', 'CreatureWhimper', 'CreatureYawn', 'CreatureCough']
   - type: Vocal
     sounds:
-      Male: RaccoonSpeechEmotes
-      Female: RaccoonSpeechEmotes
       Unsexed: RaccoonSpeechEmotes
   - type: ReplacementAccent
     accent: RaccoonAccent
@@ -3290,11 +3270,9 @@
   # begin starcup
   - type: Speech
     speechSounds: FoxSpeechSounds
-    allowedEmotes: ['CreatureScream', 'CreatureBark', 'CreatureWhimper']
+    allowedEmotes: ['CreatureScream', 'CreatureBark', 'CreatureWhimper', 'CreatureCough', 'Shake']
   - type: Vocal
     sounds:
-      Male: FoxSpeechEmotes
-      Female: FoxSpeechEmotes
       Unsexed: FoxSpeechEmotes
   - type: ReplacementAccent
     accent: FoxAccent
@@ -3318,11 +3296,9 @@
   - type: Speech
     speechVerb: Canine
     speechSounds: SmallDogSpeechSounds
-    allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'Snuffle', 'Pant', 'Shake']
+    allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'CreatureCough', 'Snuffle', 'Pant', 'Shake']
   - type: Vocal
     sounds:
-      Male: SmallDogSpeechEmotes
-      Female: SmallDogSpeechEmotes
       Unsexed: SmallDogSpeechEmotes
   - type: ReplacementAccent
     accent: SmallDogAccent
@@ -3480,11 +3456,9 @@
   - type: Speech
     speechVerb: Canine
     speechSounds: PuppySpeechSounds
-    allowedEmotes: ['CreatureBark', 'CreatureWhimper', 'Snuffle', 'Pant', 'Shake']
+    allowedEmotes: ['CreatureBark', 'CreatureWhimper', 'CreatureYawn', 'CreatureCough', 'Snuffle', 'Pant', 'Shake']
   - type: Vocal
     sounds:
-      Male: PuppySpeechEmotes
-      Female: PuppySpeechEmotes
       Unsexed: PuppySpeechEmotes
   # end starcup
 
@@ -3527,11 +3501,9 @@
   - type: Speech
     speechSounds: CatSpeechSounds
     speechVerb: SmallMob
-    allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss']
+    allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureCough']
   - type: Vocal
     sounds:
-      Male: CatSpeechEmotes
-      Female: CatSpeechEmotes
       Unsexed: CatSpeechEmotes
   # end starcup
   - type: Butcherable
@@ -3741,6 +3713,14 @@
   - type: Rest
     sleepingLayers: {}
     awakeLayers: {}
+  # starcup: give caracals their own sounds
+  - type: Speech
+    speechSounds: CaracalSpeechSounds
+    speechVerb: SmallMob
+    allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureCough']
+  - type: Vocal
+    sounds:
+      Unsexed: CaracalSpeechEmotes
   # end starcup
 
 - type: entity
@@ -3790,8 +3770,6 @@
     allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss']
   - type: Vocal
     sounds:
-      Male: KittenSpeechEmotes
-      Female: KittenSpeechEmotes
       Unsexed: KittenSpeechEmotes
   # end starcup
 
@@ -3859,11 +3837,9 @@
   - type: Speech
     speechSounds: SlothSpeechSounds
     speechVerb: SilentVerb
-    allowedEmotes: ['CreatureBark', 'CreatureScream', 'CreatureSqueak']
+    allowedEmotes: ['CreatureBark', 'CreatureScream', 'CreatureSqueak', 'CreatureYawn', 'CreatureCough']
   - type: Vocal
     sounds:
-      Male: SlothSpeechEmotes
-      Female: SlothSpeechEmotes
       Unsexed: SlothSpeechEmotes
   # end starcup
 
@@ -3929,11 +3905,9 @@
   - type: Speech
     speechSounds: FerretSpeechSounds
     speechVerb: SmallMob
-    allowedEmotes: ['CreatureSqueak', 'CreatureWhimper', 'CreatureLaugh']
+    allowedEmotes: ['CreatureSqueak', 'CreatureWhimper', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough']
   - type: Vocal
     sounds:
-      Male: FerretSpeechEmotes
-      Female: FerretSpeechEmotes
       Unsexed: FerretSpeechEmotes
   # end starcup
 
@@ -3955,11 +3929,9 @@
   - type: Speech
     speechSounds: HamsterSpeechSounds
     speechVerb: SmallMob
-    allowedEmotes: ['CreatureSqueak', 'CreaturePurr', 'CreatureTrill']
+    allowedEmotes: ['CreatureSqueak', 'CreaturePurr', 'CreatureTrill', 'CreatureYawn', 'CreatureCough']
   - type: Vocal
     sounds:
-      Male: HamsterSpeechEmotes
-      Female: HamsterSpeechEmotes
       Unsexed: HamsterSpeechEmotes
   - type: TypingIndicator
     proto: rodentia
@@ -4178,11 +4150,9 @@
   # begin starcup
   - type: Speech
     speechSounds: PigSpeechSounds
-    allowedEmotes: ['CreatureScream']
+    allowedEmotes: ['CreatureScream', 'CreatureCough']
   - type: Vocal
     sounds:
-      Male: PigSpeechEmotes
-      Female: PigSpeechEmotes
       Unsexed: PigSpeechEmotes
   # end starcup
 
@@ -4251,19 +4221,15 @@
     speechVerb: Plant
   # begin starcup
     speechSounds: NymphSpeechSounds
-    allowedEmotes: ['CreatureChirp', 'CreatureLaugh', 'CreatureChitter']
+    allowedEmotes: ['CreatureChirp', 'CreatureLaugh', 'CreatureChitter', 'Buzz']
   - type: Vocal
     sounds:
-      Male: NymphSpeechEmotes
-      Female: NymphSpeechEmotes
       Unsexed: NymphSpeechEmotes
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepBug
   - type: Tag
     tags:
-    - DoorBumpOpener
-    - VimPilot
     - FootstepSound
     - CreatureEmotes
   # end starcup
@@ -4352,17 +4318,13 @@
   # begin starcup
   - type: Tag
     tags:
-    - DoorBumpOpener
-    - VimPilot
     - FootstepSound
     - CreatureEmotes
   - type: Speech
     speechSounds: DeerSpeechSounds
-    allowedEmotes: ['CreatureScream', 'CreatureBark']
+    allowedEmotes: ['CreatureScream', 'CreatureBark', 'CreatureCough']
   - type: Vocal
     sounds:
-      Male: DeerSpeechEmotes
-      Female: DeerSpeechEmotes
       Unsexed: DeerSpeechEmotes
   - type: ReplacementAccent
     accent: DeerAccent

@@ -102,7 +102,12 @@ accent-words-feralslime-5 = Grgrllrl?
 accent-words-feralslime-6 = Grgrl grrlg?
 
 # Raptor
-accent-words-raptor-1 = Graaawkh! Chtrchtrchtr...
-accent-words-raptor-2 = Grrawkh!  Chtrchtrchtr!
-accent-words-raptor-3 = Ghrraaawk?  Chtrchtrchtr.
-accent-words-raptor-4 = Grraawhrkh. Chtrchtrchtrchtr...
+accent-words-raptor-1 = Graaaawkh!
+accent-words-raptor-2 = Grrawkh!
+accent-words-raptor-3 = Ghrraaawk?
+accent-words-raptor-4 = Grraawhrkh.
+
+# Buzzing
+accent-words-buzz-1 = Bzzz!
+accent-words-buzz-2 = Bzzz?
+accent-words-buzz-3 = Bzzz bzzz.

@@ -2,6 +2,15 @@
 # speech sounds
 
 - type: speechSounds
+  id: BeetleSpeechSounds
+  saySound:
+    collection: BeetleSpeech
+  askSound:
+    collection: BeetleSpeech
+  exclaimSound:
+    collection: BeetleSpeech
+
+- type: speechSounds
   id: CrabSpeechSounds
   saySound:
     collection: CrabSpeech
@@ -9,6 +18,24 @@
     path: /Audio/_starcup/Arthropods/Crab/crab_ask.ogg
   exclaimSound:
     path: /Audio/_starcup/Arthropods/Crab/crab_exclaim.ogg
+
+- type: speechSounds
+  id: FlyingSwarmSpeechSounds
+  saySound:
+    collection: FlyingSwarmBuzzes
+  askSound:
+    collection: FlyingSwarmBuzzes
+  exclaimSound:
+    collection: FlyingSwarmBuzzes
+
+- type: speechSounds
+  id: GiantFlyingBugSpeechSounds
+  saySound:
+    collection: GiantBugBuzzes
+  askSound:
+    collection: GiantBugBuzzes
+  exclaimSound:
+    collection: GiantBugBuzzes
 
 - type: speechSounds
   id: MothSpeechSounds
@@ -31,6 +58,22 @@
 # speech sound emotes
 
 - type: emoteSounds
+  id: BeetleSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureChirp:
+      collection: BeetleChirps
+    MandibleSnap:
+      path: /Audio/_starcup/Arthropods/mandible_snap.ogg
+    Buzz:
+      path: /Audio/_starcup/Arthropods/Beetle/beetle_buzz.ogg
+    Gasp:
+      path: /Audio/_starcup/Arthropods/Crab/crab_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Arthropods/Crab/crab_death.ogg
+
+- type: emoteSounds
   id: CrabSpeechEmotes
   params:
     variation: 0.125
@@ -43,6 +86,26 @@
       path: /Audio/_starcup/Arthropods/Crab/crab_gasp.ogg
     DefaultDeathgasp:
       path: /Audio/_starcup/Arthropods/Crab/crab_death.ogg
+
+- type: emoteSounds
+  id: FlyingSwarmSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    Buzz:
+      collection: FlyingSwarmBuzzes
+    DefaultDeathgasp:
+      collection: FlyingSwarmBuzzes
+
+- type: emoteSounds
+  id: GiantFlyingBugSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    Buzz:
+      collection: GiantBugBuzzes
+    DefaultDeathgasp:
+      collection: GiantBugBuzzes
 
 - type: emoteSounds
   id: MothroachSpeechEmotes
@@ -83,6 +146,8 @@
       collection: NymphChitters
     CreatureCough:
       path: /Audio/_starcup/Arthropods/DionaNymph/nymph_gasp.ogg
+    Buzz:
+      collection: NymphBuzzes
     Sneeze:
       path: /Audio/_starcup/Arthropods/DionaNymph/nymph_gasp.ogg
     Gasp:

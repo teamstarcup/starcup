@@ -43,6 +43,7 @@
   - type: Tag
     tags:
     - Trash
+    - CreatureEmotes
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
@@ -66,6 +67,15 @@
         reagents:
         - ReagentId: Slime
           Quantity: 5
+  - type: Speech
+    speechVerb: SmallMob
+    speechSounds: FlyingSwarmSpeechSounds
+    allowedEmotes: ['Buzz']
+  - type: Vocal
+    sounds:
+      Unsexed: FlyingSwarmSpeechEmotes
+  - type: ReplacementAccent
+    accent: BuzzAccent
 
 - type: entity
   name: giant flying insect
@@ -117,6 +127,8 @@
       Dead:
         Base: dead
   - type: Tag
+    tags:
+    - CreatureEmotes
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
@@ -134,11 +146,20 @@
     interactFailureString: petting-failure-generic
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
-      path: /Audio/_starcup/Animals/Swarm/swarmpet.ogg
+      collection: GiantBugBuzzes
   - type: Butcherable
     spawned:
     - id: FoodMeatSlime
       amount: 2
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: GiantFlyingBugSpeechSounds
+    allowedEmotes: ['Buzz']
+  - type: Vocal
+    sounds:
+      Unsexed: GiantFlyingBugSpeechEmotes
+  - type: ReplacementAccent
+    accent: BuzzAccent
 
 - type: entity
   name: bees
@@ -188,6 +209,15 @@
   - type: Tag
     tags:
     - HoneyProducer
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: FlyingSwarmSpeechSounds
+    allowedEmotes: ['Buzz']
+  - type: Vocal
+    sounds:
+      Unsexed: GiantFlyingBugSpeechEmotes
+  - type: ReplacementAccent
+    accent: BuzzAccent
 
 - type: entity
   name: wasps
@@ -207,7 +237,7 @@
       20: Dead
   - type: MeleeWeapon
     soundHit:
-      collection: SwarmBuzzing
+      collection: FlyingSwarmAttacks
     animation: WeaponArcSting
     damage:
       types:
@@ -263,7 +293,7 @@
   - type: MeleeWeapon
     animation: WeaponArcSting
     soundHit:
-      collection: SwarmBuzzing
+      collection: FlyingSwarmAttacks
     damage:
       types:
         Piercing: 1
@@ -358,7 +388,7 @@
   - type: MeleeWeapon
     animation: WeaponArcBite
     soundHit:
-      collection: SwarmBuzzing
+      collection: FlyingSwarmAttacks
     damage:
       types:
         Piercing: 2
@@ -378,7 +408,7 @@
   - type: MeleeWeapon
     animation: WeaponArcSting
     soundHit:
-      collection: SwarmBuzzing
+      collection: FlyingSwarmAttacks
     damage:
       types:
         Piercing: 4
@@ -432,7 +462,7 @@
   - type: MeleeWeapon
     animation: WeaponArcSting
     soundHit:
-      collection: SwarmBuzzing
+      collection: FlyingSwarmAttacks
     damage:
       types:
         Piercing: 5
@@ -460,7 +490,7 @@
   - type: MeleeWeapon
     animation: WeaponArcSting
     soundHit:
-      collection: SwarmBuzzing
+      collection: FlyingSwarmAttacks
     damage:
       types:
         Piercing: 3
@@ -480,7 +510,8 @@
       state: cockroach
 
 - type: entity
-  name: stag beetle
+  name: base beetle
+  abstract: true # simplifying so I don't have to add mandible snap to every non-stag beetle
   parent:
   - SimpleMobBase
   - BaseMobAnimal
@@ -573,6 +604,8 @@
     tags:
     - Trash
     - VimPilot
+    - CreatureEmotes
+    - FootstepSound
   - type: Destructible
     thresholds:
     - trigger:
@@ -597,6 +630,29 @@
     damage:
       types:
         Piercing: 0
+  - type: Speech
+    speechVerb: SmallMob
+    speechSounds: BeetleSpeechSounds
+    allowedEmotes: ['CreatureChirp', 'Buzz']
+  - type: Vocal
+    sounds:
+      Unsexed: BeetleSpeechEmotes
+  - type: ReplacementAccent
+    accent: crab
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBug
+
+- type: entity
+  name: stag beetle
+  suffix: AI
+  id: MobBeetleStag
+  parent: MobBeetle
+  components:
+  - type: Speech
+    speechVerb: SmallMob
+    speechSounds: BeetleSpeechSounds
+    allowedEmotes: ['CreatureChirp', 'Buzz', 'MandibleSnap']
 
 - type: entity
   name: rhinoceros beetle

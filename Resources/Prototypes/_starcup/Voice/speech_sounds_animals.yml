@@ -199,6 +199,15 @@
     collection: CatMews
 
 - type: speechSounds
+  id: CaracalSpeechSounds
+  saySound:
+    collection: CaracalSays
+  askSound:
+    path: /Audio/_starcup/Animals/Caracal/caracal_ask.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Animals/Caracal/caracal_exclaim.ogg
+
+- type: speechSounds
   id: SlothSpeechSounds # Sloths are usually quiet unless they have a reason to be loud
   saySound:
     path: /Audio/_starcup/silence.ogg
@@ -757,6 +766,34 @@
       collection: KittenHisses
     CreatureYawn:
       path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+    CreatureCough:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Sneeze:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Gasp:
+      collection: DogGasps
+    DefaultDeathgasp:
+      collection: CatWhimpers
+
+- type: emoteSounds
+  id: CaracalSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureMeow:
+      collection: CaracalSays
+    CreaturePurr:
+      collection: FelinidPurrs
+    CreatureTrill:
+      collection: CaracalMews
+    CreatureScream:
+      collection: FelinidScreams
+    CreatureGrowl:
+      path: /Audio/_DV/Voice/Felinid/cat_growl1.ogg
+    CreatureWhimper:
+      collection: CatWhimpers
+    CreatureHiss:
+      collection: CaracalHisses
     CreatureCough:
       path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
     Sneeze:
