@@ -70,6 +70,9 @@ public sealed class FluidEjectorSystem : EntitySystem
         if (_mobState.IsDead(args.Body.Owner))
             return;
 
+        if (args.Args.SolutionId != ent.Comp.Solution)
+            return;
+
         var bloodReagentEvent = new MetabolismExclusionEvent();
         RaiseLocalEvent(args.Body.Owner, ref bloodReagentEvent);
 

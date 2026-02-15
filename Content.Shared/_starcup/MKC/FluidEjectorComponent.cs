@@ -41,5 +41,11 @@ namespace Content.Shared._starcup.MKC
         /// </summary>
         [ViewVariables]
         public TimeSpan NextPopupTime;
+
+        /// <summary>
+        /// The solution this fluid ejector will check for updates on and eject from.
+        /// </summary>
+        [DataField]
+        public string Solution = "bloodstream";
     }
 }
