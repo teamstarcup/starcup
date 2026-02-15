@@ -17,12 +17,12 @@
     state: torso
 
 - type: marking
-  id: MobMKCTorsoFemaleDefault
+  id: MobMKCTorsoSlimDefault
   bodyPart: Chest
   groupWhitelist: [MKC]
   sprites:
   - sprite: _starcup/Mobs/Species/MKC/parts.rsi
-    state: torso_f
+    state: torso_slim
 
 - type: marking
   id: MobMKCLLegDefault
@@ -106,7 +106,9 @@
   groupWhitelist: [MKC]
   sprites:
   - sprite: _starcup/Mobs/Customization/MKC/mkc_heads.rsi
-    state: bishop_head
+    state: bishop_head-1
+  - sprite: _starcup/Mobs/Customization/MKC/mkc_heads.rsi
+    state: bishop_head-2
 
 - type: marking
   id: CyberLimbsMarkingBishopHeadAlt
@@ -180,7 +182,9 @@
   groupWhitelist: [MKC]
   sprites:
   - sprite: _starcup/Mobs/Customization/MKC/mkc_heads.rsi
-    state: wardtakahashi_monitor
+    state: wardtakahashi_monitor-1
+  - sprite: _starcup/Mobs/Customization/MKC/mkc_heads.rsi
+    state: wardtakahashi_monitor-2
 
 - type: marking
   id: CyberLimbsMarkingWardtakahashiHead
