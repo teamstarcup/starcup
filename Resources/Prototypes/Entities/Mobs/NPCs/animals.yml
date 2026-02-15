@@ -88,6 +88,8 @@
   - type: Vocal
     sounds:
       Unsexed: BatSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   - type: TypingIndicator
     proto: rodentia
   # end starcup
@@ -302,6 +304,8 @@
   - type: Vocal
     sounds:
       Unsexed: CluckSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   # end starcup
 
 - type: entity
@@ -508,6 +512,8 @@
   - type: Vocal
     sounds:
       Unsexed: BeetleSpeechEmotes
+    screamId: Buzz
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: crab
   - type: FootstepModifier
@@ -651,6 +657,8 @@
     # begin starcup
     sounds:
       Unsexed: MothroachSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
     # end starcup
     wilhelmProbability: 0.001
   - type: MobPrice
@@ -804,6 +812,8 @@
   - type: Vocal
     sounds:
       Unsexed: DuckSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   # end starcup
 
 - type: entity
@@ -1042,6 +1052,8 @@
   - type: Vocal
     sounds:
       Unsexed: CowSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepGeneric
@@ -1135,6 +1147,8 @@
   - type: Vocal
     sounds:
       Unsexed: CrabSpeechEmotes
+    screamId: ClawSnap
+    screamAction: ActionEmitSound
   # end starcup
 
 - type: entity
@@ -1226,6 +1240,8 @@
       Female: Goat
       Male: Goat
       Unsexed: Goat
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   - type: BleatingAccent
   - type: InteractionPopup
     successChance: 0.2
@@ -1330,6 +1346,8 @@
   - type: Vocal
     sounds:
       Unsexed: GooseSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   # end starcup
 
 - type: entity
@@ -1425,6 +1443,8 @@
   - type: Vocal
     sounds:
       Unsexed: GorillaSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   # end starcup
 
 - type: entity
@@ -1490,6 +1510,8 @@
     sounds:
   # begin starcup
       Unsexed: KangarooSpeechEmotes
+    screamId: CreatureGrowl
+    screamAction: ActionEmitSound
   - type: Speech
     speechVerb: LargeMob
     speechSounds: KangarooSpeechSounds
@@ -1668,6 +1690,8 @@
   - type: Vocal
     sounds:
       Unsexed: MonkeySpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   - type: Speech
     speechSounds: MonkeySpeechSounds
     speechVerb: Monkey
@@ -2066,6 +2090,8 @@
   - type: Vocal
     sounds:
       Unsexed: SqueakSpeechEmotes
+    screamId: CreatureSqueak
+    screamAction: ActionEmitSound
   - type: TypingIndicator
     proto: rodentia
     # end starcup
@@ -2260,6 +2286,8 @@
   - type: Vocal # Imp edit # no it's starcup again babyyy
     sounds:
       Unsexed: LizardSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: LizardAccent
   # end starcup
@@ -2377,6 +2405,8 @@
   - type: Vocal
     sounds:
       Unsexed: LizardTinySpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: GeckoAccent
   # end starcup
@@ -2460,6 +2490,8 @@
   - type: Vocal
     sounds:
       Unsexed: FrogSpeechEmotes
+    screamId: CreatureWhimper
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: FrogAccent
   # end starcup
@@ -2513,6 +2545,8 @@
   - type: Vocal
     sounds:
       Unsexed: ParrotSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   - type: Tag
     tags:
     - CreatureEmotes
@@ -2629,6 +2663,8 @@
   - type: Vocal
     sounds:
       Unsexed: PenguinSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: PenguinAccent
   # end starcup
@@ -2770,6 +2806,8 @@
   - type: Vocal
     sounds:
       Unsexed: SnakeSpeechEmotes
+    screamId: CreatureHiss
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: xeno
   - type: Tag
@@ -2856,6 +2894,8 @@
     sounds:
     # begin starcup
       Unsexed: SpiderSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
     # end starcup
   - type: TypingIndicator
     proto: spider
@@ -3087,6 +3127,8 @@
   - type: Vocal
     sounds:
       Unsexed: PossumSpeechEmotes
+    screamId: CreatureHiss
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: xeno
   # end starcup
@@ -3175,6 +3217,8 @@
   - type: Vocal
     sounds:
       Unsexed: RaccoonSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: RaccoonAccent
   # end starcup
@@ -3271,6 +3315,8 @@
   - type: Vocal
     sounds:
       Unsexed: FoxSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: FoxAccent
   # end starcup
@@ -3297,6 +3343,8 @@
   - type: Vocal
     sounds:
       Unsexed: SmallDogSpeechEmotes
+    screamId: CreatureBark
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: SmallDogAccent
   - type: Tag
@@ -3457,6 +3505,8 @@
   - type: Vocal
     sounds:
       Unsexed: PuppySpeechEmotes
+    screamId: CreatureBark
+    screamAction: ActionEmitSound
   # end starcup
 
 - type: entity
@@ -3502,6 +3552,8 @@
   - type: Vocal
     sounds:
       Unsexed: CatSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   # end starcup
   - type: Butcherable
     spawned:
@@ -3718,6 +3770,8 @@
   - type: Vocal
     sounds:
       Unsexed: CaracalSpeechEmotes
+    screamId: CreatureHiss
+    screamAction: ActionEmitSound
   # end starcup
 
 - type: entity
@@ -3768,6 +3822,8 @@
   - type: Vocal
     sounds:
       Unsexed: KittenSpeechEmotes
+    screamId: CreatureWhimper
+    screamAction: ActionEmitSound
   # end starcup
 
 - type: entity
@@ -3838,6 +3894,8 @@
   - type: Vocal
     sounds:
       Unsexed: SlothSpeechEmotes
+    screamId: CreatureSqueak
+    screamAction: ActionEmitSound
   # end starcup
 
 - type: entity
@@ -3904,6 +3962,8 @@
     speechVerb: SmallMob
     allowedEmotes: ['CreatureSqueak', 'CreatureWhimper', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough']
   - type: Vocal
+    screamId: CreatureWhimper
+    screamAction: ActionEmitSound
     sounds:
       Unsexed: FerretSpeechEmotes
   # end starcup
@@ -3930,6 +3990,8 @@
   - type: Vocal
     sounds:
       Unsexed: HamsterSpeechEmotes
+    screamId: CreatureTrill
+    screamAction: ActionEmitSound
   - type: TypingIndicator
     proto: rodentia
   # end starcup
@@ -4151,6 +4213,8 @@
   - type: Vocal
     sounds:
       Unsexed: PigSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   # end starcup
 
 - type: entity
@@ -4222,6 +4286,8 @@
   - type: Vocal
     sounds:
       Unsexed: NymphSpeechEmotes
+    screamId: CreatureChirp
+    screamAction: ActionEmitSound
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepBug
@@ -4323,6 +4389,8 @@
   - type: Vocal
     sounds:
       Unsexed: DeerSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: DeerAccent
   - type: FootstepModifier

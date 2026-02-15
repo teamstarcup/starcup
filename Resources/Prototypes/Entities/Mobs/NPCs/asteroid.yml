@@ -106,9 +106,9 @@
     allowedEmotes: ['CreatureRoar', 'CreatureGrowl']
   - type: Vocal
     sounds:
-      Male: GoliathSpeechEmotes
-      Female: GoliathSpeechEmotes
       Unsexed: GoliathSpeechEmotes
+    screamId: CreatureRoar
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: genericAggressive
   - type: TypingIndicator
@@ -279,9 +279,9 @@
     allowedEmotes: ['CreatureScream', 'CreatureClick']
   - type: Vocal
     sounds:
-      Male: HivelordSpeechEmotes
-      Female: HivelordSpeechEmotes
       Unsexed: HivelordSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: xeno
   - type: TypingIndicator
@@ -482,9 +482,9 @@
     allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureChitter', 'CreatureClick']
   - type: Vocal
     sounds:
-      Male: SpaceSpiderSpeechEmotes
-      Female: SpaceSpiderSpeechEmotes
       Unsexed: SpaceSpiderSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: xeno
   - type: TypingIndicator

@@ -75,6 +75,8 @@
   - type: Vocal
     sounds:
       Unsexed: LeechSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   - type: InteractionPopup
     interactSuccessString: petting-success-frog
     interactFailureString: petting-failure-carp
@@ -255,6 +257,18 @@
       - CannotSuicide
       - DoorBumpOpener
       - StunImmune
+      - CreatureEmotes
+    - type: Speech
+      speechVerb: Slime
+      speechSounds: FeralSlimeSpeechSounds
+      allowedEmotes: ['Squish', 'Bubble', 'Pop', 'Fizz', 'Simmer']
+    - type: TypingIndicator
+      proto: slime
+    - type: Vocal
+      sounds:
+        Unsexed: FeralSlimeSpeechEmotes
+      screamId: Simmer
+      screamAction: ActionEmitSound
 
 - type: entity
   id: MobSpawnCharonicSlime

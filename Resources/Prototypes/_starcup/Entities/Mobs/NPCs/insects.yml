@@ -74,6 +74,8 @@
   - type: Vocal
     sounds:
       Unsexed: FlyingSwarmSpeechEmotes
+    screamId: Buzz
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: BuzzAccent
 
@@ -158,6 +160,8 @@
   - type: Vocal
     sounds:
       Unsexed: GiantFlyingBugSpeechEmotes
+    screamId: Buzz
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: BuzzAccent
 
@@ -216,6 +220,8 @@
   - type: Vocal
     sounds:
       Unsexed: GiantFlyingBugSpeechEmotes
+    screamId: Buzz
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: BuzzAccent
 
@@ -637,6 +643,8 @@
   - type: Vocal
     sounds:
       Unsexed: BeetleSpeechEmotes
+    screamId: CreatureChirp
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: crab
   - type: FootstepModifier
@@ -653,6 +661,11 @@
     speechVerb: SmallMob
     speechSounds: BeetleSpeechSounds
     allowedEmotes: ['CreatureChirp', 'Buzz', 'MandibleSnap']
+  - type: Vocal
+    sounds:
+      Unsexed: BeetleSpeechEmotes
+    screamId: MandibleSnap
+    screamAction: ActionEmitSound
 
 - type: entity
   name: rhinoceros beetle

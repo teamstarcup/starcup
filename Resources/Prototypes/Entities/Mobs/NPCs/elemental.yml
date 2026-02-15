@@ -72,12 +72,12 @@
   # begin starcup
   - type: Speech
     speechSounds: OreCrabSpeechSounds
-    allowedEmotes: ['CreatureScream', 'CreatureChitter', 'ClawSnap']
+    allowedEmotes: ['CreatureChitter', 'ClawSnap']
   - type: Vocal
     sounds:
-      Male: OreCrabSpeechEmotes
-      Female: OreCrabSpeechEmotes
       Unsexed: OreCrabSpeechEmotes
+    screamId: ClawSnap
+    screamAction: ActionEmitSound
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepBug
