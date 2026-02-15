@@ -37,6 +37,15 @@
   - type: IdCard
     jobTitle: job-alt-title-seniorbartender
 
+# Cargo Technician
+- type: entity
+  parent: CargoIDCard
+  id: CargoPilotIDCard
+  name: pilot ID card
+  components:
+  - type: IdCard
+    jobTitle: job-alt-title-cargo-pilot
+
 # Chaplain
 - type: entity
   parent: ChaplainIDCard
@@ -103,6 +112,14 @@
   components:
   - type: IdCard
     jobTitle: job-alt-title-flavorist
+
+- type: entity
+  parent: ChefIDCard
+  id: CulinaryTailorIDCard
+  name: culinary tailor ID card
+  components:
+  - type: IdCard
+    jobTitle: job-alt-title-culinary-tailor
 
 # Chemist
 

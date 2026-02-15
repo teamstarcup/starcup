@@ -63,16 +63,15 @@
       Stomach: OrganDionaStomachNymphing
   - type: HumanoidProfile
     species: Diona
-  - type: FootPrints # DeltaV port from EE, blood splatter
-    leftBarePrint: "footprint-left-bare-diona"
-    rightBarePrint: "footprint-right-bare-diona"
+  - type: FootprintOwner # starcup
+    footprint: dionaFootprint # starcup
 
 - type: entity
   parent:
   - AppearanceDiona
   - BaseSpeciesMobOrganic
   id: MobDiona
-  name: McUrist Plants
+  name: Urist McPlants
   components:
   - type: Respirator
     damage:
@@ -291,6 +290,7 @@
   id: OrganDionaBrainNymphing
   components:
   - type: Nymph
+    transferMind: true
     entityPrototype: OrganDionaNymphBrain
 
 - type: entity

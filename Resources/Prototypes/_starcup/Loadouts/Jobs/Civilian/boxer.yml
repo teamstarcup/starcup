@@ -1,3 +1,14 @@
+# Head
+- type: loadout
+  id: GladiatorHat
+  equipment:
+    head: ClothingHeadHatGladiator
+
+- type: loadout
+  id: KendoHelmet
+  equipment:
+    head: ClothingHeadHelmetKendoMen
+
 # Jumpsuit
 - type: loadout
   id: BoxerShorts
@@ -9,7 +20,34 @@
   equipment:
     jumpsuit: UniformShortsRedWithTop
 
-# Gloves
+- type: loadout
+  id: KendoHakama
+  equipment:
+    jumpsuit: ClothingUniformKendoHakama
+
+- type: loadout
+  id: SyndieFormalDress
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobCaptain
+      time: 21600 #6 hrs
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtSyndieFormalDress
+
+- type: loadout
+  id: GladiatorUniform
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitGladiator
+
+# Belts
+- type: loadout
+  id: ChampionBelt
+  equipment:
+    belt: ClothingBeltChampion
+
+# Weapons
 - type: loadout
   id: RedBoxingGloves
   equipment:
@@ -29,3 +67,12 @@
   id: YellowBoxingGloves
   equipment:
     gloves: ClothingHandsGlovesBoxingYellow
+
+- type: loadout
+  id: Shinai
+  storage:
+    back:
+    - Shinai
+
+# it's awkward to have backpack and glove items in the same tab but we'll handle it when Contender comes out,
+# since they don't otherwise have glove options anyways right now

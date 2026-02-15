@@ -1,0 +1,21 @@
+# "invisible" loadout groups that are used for things like vox breath masks and survival boxes
+
+- type: loadoutGroup
+  id: SurvivalNanotrasen
+  name: loadout-group-survival-syndicate
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - EmergencyNitrogenSyndicate
+  - EmergencyOxygenSyndicate
+  - LoadoutSpeciesVoxNitrogen
+  - EmergencyIPCBox
+
+- type: loadoutGroup
+  id: GroupSpeciesBreathToolBrigmedic
+  name: loadout-group-breath-tool
+  minLimit: 1
+  maxLimit: 1
+  hidden: true
+  loadouts:
+  - LoadoutSpeciesBreathToolBrigmedic

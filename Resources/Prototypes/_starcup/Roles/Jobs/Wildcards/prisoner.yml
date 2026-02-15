@@ -158,16 +158,54 @@
     - PrisonerJumpsuit
     - PrisonerJumpskirt
 
+- type: loadoutGroup
+  id: PrisonerJobTrinkets
+  name: loadout-group-jobtrinkets
+  loadouts:
+  - ToyNuke
+
+- type: loadoutGroup
+  id: PrisonerOuterClothing
+  name: loadout-group-prisoner-outerclothing
+  minLimit: 0
+  loadouts:
+  - BlackHoodie
+  - GrayHoodie
+  - MNKWhiteHoodie
+  - MNKBlackJacket
+  - FlannelRed
+  - FlannelBlue
+  - FlannelGreen
+  - MNKBlackTopCoat
+  - GentleCoat
+  - JensenCoat
+  - BomberJacket
+  - PassengerWintercoat
+  - LongWinterCoat
+  - BlackWinterCoat
+  - PurpleWinterCoat
+  - RedWinterCoat
+  - BlueWinterCoat
+  - BrownWinterCoat
+  - LightBrownWinterCoat
+  - GrayWinterCoat
+  - GreenWinterCoat
+  - OrangeWinterCoat
+  - WhiteWinterCoat
+  - YellowWinterCoat
+
 - type: roleLoadout
   id: JobPrisoner
   groups:
   - Scarfs
   - PrisonerJumpsuit
   - CommonBackpack
+  - PrisonerOuterClothing
   - PassengerShoes
   - Glasses
   - Accessibility
   - Trinkets
+  - PrisonerJobTrinkets
   - Plushies
   - Survival
   - GroupSpeciesBreathTool
