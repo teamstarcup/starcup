@@ -53,6 +53,54 @@
           type: [MKC]
 
 - type: reagent
+  id: RescueNanites
+  name: reagent-name-rescue-nanites
+  group: Nanites
+  desc: reagent-desc-rescue-nanites
+  physicalDesc: reagent-physical-desc-metallic
+  flavor: plastic
+  color: "#333333"
+  metabolisms:
+    Bloodstream:
+      effects:
+      - !type:HealthChange
+        conditions:
+          # they gotta be in crit first
+        - !type:MobStateCondition
+          mobstate: Critical
+        - !type:ReagentCondition
+          reagent: RescueNanites
+          max: 20
+        - !type:MetabolizerTypeCondition
+          type: [MKC]
+        damage:
+          types:
+            Heat: -2
+          groups:
+            Brute: -0.5
+            Burn: -0.5
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: RescueNanites
+          min: 20
+        damage:
+          types:
+            Slash: 1
+            Blunt: 1
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectStunned
+        time: 0.75
+        type: Remove
+      - !type:ModifyKnockdown
+        time: 0.75
+        type: Remove
+      - !type:GenericStatusEffect
+        key: Adrenaline
+        component: IgnoreSlowOnDamage
+        time: 5
+
+- type: reagent
   id: ReconstructorNanites
   name: reagent-name-reconstructor-nanites
   group: Nanites

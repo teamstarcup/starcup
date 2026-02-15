@@ -7,6 +7,9 @@ reagent-desc-crystal-lattice-nanites = Nanomachines capable of repairing the mol
 reagent-name-optical-fiber-nanites = optical fiber nanites
 reagent-desc-optical-fiber-nanites = Able to repair damage to the visual receptors of silicons without requiring replacement of the glass itself.
 
+reagent-name-rescue-nanites = rescue nanites
+reagent-desc-rescue-nanites = Activate when introduced to a silicon body in critical condition, rapidly repairing damaged components. Injecting too many at once can lead to internal damage.
+
 reagent-name-reconstructor-nanites = reconstructor nanites
 reagent-desc-reconstructor-nanites = Tiny little triumphs of Cybersun nanoengineering, able to fix nearly any kind of injury a silicon can sustain.
 
