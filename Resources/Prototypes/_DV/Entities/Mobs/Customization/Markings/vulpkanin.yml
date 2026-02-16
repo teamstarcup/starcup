@@ -140,6 +140,24 @@
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: bushfluff
 
+# starcup - upstream replaced these so vulps don't need them, but we're keeping them for non-vulps
+- type: marking
+  id: VulpTailBushyWag
+  bodyPart: Tail
+  groupWhitelist: [Human, Slime, Felinid] # starcup
+  sprites:
+  - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    state: bushfluff_wag
+
+- type: marking
+  id: VulpTailCoyoteWag
+  bodyPart: Tail
+  groupWhitelist: [Human, Slime, Felinid] # starcup
+  sprites:
+  - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    state: coyote_wag
+# end starcup
+
 - type: marking
   id: VulpTailBushyAnimated
   bodyPart: Tail
