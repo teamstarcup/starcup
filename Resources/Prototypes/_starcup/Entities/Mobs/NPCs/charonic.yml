@@ -77,11 +77,14 @@
       Unsexed: LeechSpeechEmotes
     screamId: CreatureScream
     screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - GrowlAutoemote
   - type: InteractionPopup
     interactSuccessString: petting-success-frog
     interactFailureString: petting-failure-carp
     interactFailureSound:
-      path: /Audio/_starcup/Animals/leech_scream.ogg
+      path: /Audio/_starcup/Monsters/CharonicLeech/leech_scream.ogg
   - type: FloatingVisuals
   - type: Destructible
     thresholds:

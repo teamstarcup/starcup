@@ -665,11 +665,11 @@
       Unsexed: MothroachSpeechEmotes
     screamId: CreatureScream
     screamAction: ActionEmitSound
+    wilhelmProbability: 0.001
   - type: AutoEmote
     emotes:
     - SqueakAutoemote
     # end starcup
-    wilhelmProbability: 0.001
   - type: MobPrice
     price: 150
   - type: Tag
@@ -2122,13 +2122,13 @@
       Unsexed: SqueakSpeechEmotes
     screamId: CreatureSqueak
     screamAction: ActionEmitSound
+    wilhelmProbability: 0.001
   - type: TypingIndicator
     proto: rodentia
   - type: AutoEmote
     emotes:
     - SqueakAutoemote
     # end starcup
-    wilhelmProbability: 0.001
   # TODO: Remove CombatMode when Prototype Composition is added
   - type: CombatMode
   - type: MeleeWeapon
@@ -3746,7 +3746,6 @@
     tags:
     - NuclearOperative
     - SyndicateAgent
-    - CreatureEmotes # starcup
   - type: MeleeWeapon
     altDisarm: false
     angle: 0

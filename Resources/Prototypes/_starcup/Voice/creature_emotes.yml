@@ -1,8 +1,8 @@
 # creature vocal emotes. they have their own icons
 - type: emote
-  abstract: true
-  id: CreatureEmoteBase
-  name: chat-emote-name-creatureemote
+  id: CreatureHiss
+  parent: CreatureEmoteBase
+  name: chat-emote-name-hiss
   category: Vocal
   available: false
   whitelist:
@@ -13,13 +13,6 @@
   blacklist:
     tags:
     - SiliconEmotes
-
-- type: emote
-  id: CreatureHiss
-  parent: CreatureEmoteBase
-  name: chat-emote-name-hiss
-  category: Vocal
-  available: false
   icon:
     sprite: _RMC14/Actions/xeno_emotes.rsi
     state: hiss
@@ -34,10 +27,17 @@
 
 - type: emote
   id: CreatureGrowl
-  parent: CreatureEmoteBase
   name: chat-emote-name-growl
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon:
     sprite: _RMC14/Actions/xeno_emotes.rsi
     state: growl
@@ -52,10 +52,17 @@
 
 - type: emote
   id: CreatureSnarl
-  parent: CreatureEmoteBase
   name: chat-emote-name-snarl
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/snarl.png
   chatMessages: ["chat-emote-msg-snarl"]
   chatTriggers:
@@ -65,10 +72,17 @@
 
 - type: emote
   id: CreatureRoar
-  parent: CreatureEmoteBase
   name: chat-emote-name-roar
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon:
     sprite: _RMC14/Actions/xeno_emotes.rsi
     state: roar
@@ -85,10 +99,17 @@
 
 - type: emote
   id: CreatureScream
-  parent: CreatureEmoteBase
   name: chat-emote-name-scream
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/scream.png
   chatMessages: ["chat-emote-msg-scream"]
   chatTriggers:
@@ -111,10 +132,17 @@
 
 - type: emote
   id: CreatureSqueak
-  parent: CreatureEmoteBase
   name: chat-emote-name-squeak
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/squeak.png
   chatMessages: ["chat-emote-msg-squeak"]
   chatTriggers:
@@ -124,10 +152,17 @@
 
 - type: emote
   id: CreatureLaugh
-  parent: CreatureEmoteBase
   name: chat-emote-name-laugh
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/laugh.png
   chatMessages: ["chat-emote-msg-laugh"]
   chatTriggers:
@@ -149,10 +184,17 @@
 
 - type: emote
   id: CreatureChitter
-  parent: CreatureEmoteBase
   name: chat-emote-name-chitter
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/chitter.png
   chatMessages: ["chat-emote-msg-chitter"]
   chatTriggers:
@@ -162,10 +204,17 @@
 
 - type: emote
   id: CreatureClick
-  parent: CreatureEmoteBase
   name: chat-emote-name-click
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/click.png
   chatMessages: ["chat-emote-msg-click"]
   chatTriggers:
@@ -175,10 +224,17 @@
 
 - type: emote
   id: CreatureWhimper
-  parent: CreatureEmoteBase
   name: chat-emote-name-whimper
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/whimper.png
   chatMessages: ["chat-emote-msg-whimper"]
   chatTriggers:
@@ -191,10 +247,17 @@
 
 - type: emote
   id: CreatureTrill
-  parent: CreatureEmoteBase
   name: chat-emote-name-trill
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/trill.png
   chatMessages: ["chat-emote-msg-trill"]
   chatTriggers:
@@ -205,10 +268,17 @@
 
 - type: emote
   id: CreatureChirp
-  parent: CreatureEmoteBase
   name: chat-emote-name-chirp
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/trill.png
   chatMessages: ["chat-emote-msg-chirp"]
   chatTriggers:
@@ -219,10 +289,17 @@
 
 - type: emote
   id: CreatureOok
-  parent: CreatureEmoteBase
   name: chat-emote-name-ook
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/misc.png
   chatMessages: ["chat-emote-msg-ook"]
   chatTriggers:
@@ -232,10 +309,17 @@
 
 - type: emote
   id: CreatureBark
-  parent: CreatureEmoteBase
   name: chat-emote-name-bark
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/bark.png
   chatMessages: ["chat-emote-msg-bark"]
   chatTriggers:
@@ -250,10 +334,17 @@
 
 - type: emote
   id: CreatureMeow
-  parent: CreatureEmoteBase
   name: chat-emote-name-meow
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/meow.png
   chatMessages: ["chat-emote-msg-meow"]
   chatTriggers:
@@ -267,10 +358,17 @@
 
 - type: emote
   id: CreatureHowl
-  parent: CreatureEmoteBase
   name: chat-emote-name-howl
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/howl.png
   chatMessages: ["chat-emote-msg-howl"]
   chatTriggers:
@@ -281,10 +379,17 @@
 
 - type: emote
   id: CreaturePurr
-  parent: CreatureEmoteBase
   name: chat-emote-name-purr
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/purr.png
   chatMessages: [purrs.]
   chatTriggers:
@@ -297,11 +402,18 @@
 
 - type: emote
   id: CreatureCrow
-  parent: CreatureEmoteBase
   name: chat-emote-name-crow
   category: Vocal
   icon: _starcup/Interface/Emotes/Creature/call.png
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   whitelist:
     components:
     - Vocal
@@ -314,10 +426,17 @@
 
 - type: emote
   id: CreatureCough
-  parent: CreatureEmoteBase
   name: chat-emote-name-cough
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/cough.png
   chatMessages: ["chat-emote-msg-cough"]
   chatTriggers:
@@ -328,10 +447,17 @@
 
 - type: emote
   id: CreatureYawn
-  parent: CreatureEmoteBase
   name: chat-emote-name-yawn
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/yawn.png
   chatMessages: ["chat-emote-msg-cough"]
   chatTriggers:
@@ -342,10 +468,17 @@
 
 - type: emote
   id: CreatureMoo
-  parent: CreatureEmoteBase
   name: chat-emote-name-moo
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/misc.png
   chatMessages: ["chat-emote-msg-moo"]
   chatTriggers:
@@ -355,10 +488,17 @@
 
 - type: emote
   id: CreatureBleat
-  parent: CreatureEmoteBase
   name: chat-emote-name-baa
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/misc.png
   chatMessages: ["chat-emote-msg-baa"]
   chatTriggers:
@@ -370,10 +510,17 @@
 
 - type: emote
   id: CreatureCluck
-  parent: CreatureEmoteBase
   name: chat-emote-name-cluck
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/misc.png
   chatMessages: ["chat-emote-msg-cluck"]
   chatTriggers:
@@ -383,10 +530,17 @@
 
 - type: emote
   id: CreatureQuack
-  parent: CreatureEmoteBase
   name: chat-emote-name-quack
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/misc.png
   chatMessages: ["chat-emote-msg-quack"]
   chatTriggers:
@@ -396,10 +550,17 @@
 
 - type: emote
   id: CreatureHonk
-  parent: CreatureEmoteBase
   name: chat-emote-name-honk
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/misc.png
   chatMessages: ["chat-emote-msg-honk"]
   chatTriggers:
@@ -409,10 +570,17 @@
 
 - type: emote
   id: CreatureCroak
-  parent: CreatureEmoteBase
   name: chat-emote-name-croak
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/misc.png
   chatMessages: ["chat-emote-msg-croak"]
   chatTriggers:
@@ -422,10 +590,17 @@
 
 - type: emote
   id: CreatureOink
-  parent: CreatureEmoteBase
   name: chat-emote-name-oink
   category: Vocal
   available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  blacklist:
+    tags:
+    - SiliconEmotes
   icon: _starcup/Interface/Emotes/Creature/misc.png
   chatMessages: ["chat-emote-msg-oink"]
   chatTriggers:
