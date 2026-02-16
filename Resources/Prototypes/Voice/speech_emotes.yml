@@ -496,13 +496,12 @@
   name: chat-emote-name-buzz
   category: General # starcup: Changed from vocal. They don't buzz with their mouth?
   icon: Interface/Emotes/buzz.png
-  # begin starcup: insects can buzz, they don't need to be silicons. Pointless requirements
-  #whitelist:
+  whitelist:
     #requireAll: true
     #components:
     #- Vocal
-    #tags:
-    #- SiliconEmotes
+    tags:
+    - SiliconEmotes
   # end starcup
   chatMessages: ["chat-emote-msg-buzz"]
   chatTriggers:

@@ -163,13 +163,13 @@
     collection: FoxExclaims
 
 - type: speechSounds
-  id: SmallDogSpeechSounds
+  id: DogSpeechSounds
   saySound:
-    collection: SmallDogSays
+    collection: DogSays
   askSound:
-    path: /Audio/_starcup/Animals/Dog/dog_small_ask.ogg
+    path: /Audio/_starcup/Animals/Dog/dog_ask.ogg
   exclaimSound:
-    path: /Audio/_starcup/Animals/Dog/dog_small_exclaim.ogg
+    path: /Audio/_starcup/Animals/Dog/dog_exclaim.ogg
 
 - type: speechSounds
   id: PuppySpeechSounds
@@ -336,7 +336,7 @@
   sounds:
     CreatureScream:
       path: /Audio/_starcup/Animals/Chicken/chicken_scream.ogg
-    Crow:
+    CreatureCrow:
       path: /Audio/_starcup/Animals/Chicken/rooster_crow.ogg
     Flutter:
       collection: WingRuffleSmall
@@ -609,7 +609,7 @@
     Cough:
       path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
     Yawn:
-      collection: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+      path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
     Gasp:
       path: /Audio/_starcup/Animals/Possum/possum_gasp.ogg
     DefaultDeathgasp:
@@ -781,7 +781,7 @@
     variation: 0.125
   sounds:
     CreatureMeow:
-      collection: CaracalSays
+      collection: CaracalMews
     CreaturePurr:
       collection: FelinidPurrs
     CreatureTrill:
@@ -823,7 +823,7 @@
     Gasp:
       collection: DogGasps
     DefaultDeathgasp:
-      collection: /Audio/_starcup/Animals/Sloth/sloth_bark.ogg
+      path: /Audio/_starcup/Animals/Sloth/sloth_bark.ogg
 
 - type: emoteSounds
   id: FerretSpeechEmotes
@@ -845,7 +845,7 @@
     Gasp:
       collection: DogGasps
     DefaultDeathgasp:
-      collection: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+      path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
 
 - type: emoteSounds
   id: PigSpeechEmotes
@@ -952,3 +952,25 @@
       path: /Audio/_starcup/Animals/Penguin/penguin_gasp.ogg
     DefaultDeathgasp:
       path: /Audio/_starcup/Animals/Velociraptor/raptor_death.ogg
+
+- type: emoteSounds
+  id: MimeletSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureSqueak:
+      path: /Audio/_starcup/silence.ogg
+    CreaturePurr:
+      path: /Audio/_starcup/silence.ogg
+    CreatureTrill:
+      path: /Audio/_starcup/silence.ogg
+    CreatureYawn:
+      path: /Audio/_starcup/silence.ogg
+    CreatureCough:
+      path: /Audio/_starcup/silence.ogg
+    Sneeze:
+      path: /Audio/_starcup/silence.ogg
+    Gasp:
+      collection: MouseGasp
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg

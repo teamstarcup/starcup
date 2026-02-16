@@ -70,11 +70,11 @@
   - type: Speech
     speechVerb: SmallMob
     speechSounds: FlyingSwarmSpeechSounds
-    allowedEmotes: ['Buzz']
+    allowedEmotes: ['BuzzNonSilicon']
   - type: Vocal
     sounds:
       Unsexed: FlyingSwarmSpeechEmotes
-    screamId: Buzz
+    screamId: BuzzNonSilicon
     screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: BuzzAccent
@@ -156,11 +156,11 @@
   - type: Speech
     speechVerb: LargeMob
     speechSounds: GiantFlyingBugSpeechSounds
-    allowedEmotes: ['Buzz']
+    allowedEmotes: ['BuzzNonSilicon']
   - type: Vocal
     sounds:
       Unsexed: GiantFlyingBugSpeechEmotes
-    screamId: Buzz
+    screamId: BuzzNonSilicon
     screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: BuzzAccent
@@ -213,14 +213,15 @@
   - type: Tag
     tags:
     - HoneyProducer
+    - CreatureEmotes
   - type: Speech
     speechVerb: LargeMob
     speechSounds: FlyingSwarmSpeechSounds
-    allowedEmotes: ['Buzz']
+    allowedEmotes: ['BuzzNonSilicon']
   - type: Vocal
     sounds:
-      Unsexed: GiantFlyingBugSpeechEmotes
-    screamId: Buzz
+      Unsexed: FlyingSwarmSpeechEmotes
+    screamId: BuzzNonSilicon
     screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: BuzzAccent
@@ -398,6 +399,15 @@
     damage:
       types:
         Piercing: 2
+  - type: Speech
+    speechVerb: SmallMob
+    speechSounds: GiantFlyingBugSpeechSounds
+    allowedEmotes: ['BuzzNonSilicon']
+  - type: Vocal
+    sounds:
+      Unsexed: GiantFlyingBugSpeechEmotes
+    screamId: BuzzNonSilicon
+    screamAction: ActionEmitSound
 
 - type: entity
   name: giant bee
@@ -639,7 +649,7 @@
   - type: Speech
     speechVerb: SmallMob
     speechSounds: BeetleSpeechSounds
-    allowedEmotes: ['CreatureChirp', 'Buzz']
+    allowedEmotes: ['CreatureChirp', 'BuzzNonSilicon']
   - type: Vocal
     sounds:
       Unsexed: BeetleSpeechEmotes
@@ -660,7 +670,7 @@
   - type: Speech
     speechVerb: SmallMob
     speechSounds: BeetleSpeechSounds
-    allowedEmotes: ['CreatureChirp', 'Buzz', 'MandibleSnap']
+    allowedEmotes: ['CreatureChirp', 'BuzzNonSilicon', 'MandibleSnap']
   - type: Vocal
     sounds:
       Unsexed: BeetleSpeechEmotes

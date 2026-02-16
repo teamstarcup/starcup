@@ -127,6 +127,24 @@
   exclaimSound:
     path: /Audio/_starcup/Monsters/Dragon/dragon_exclaim.ogg
 
+- type: speechSounds
+  id: RatKingSpeechSounds
+  saySound:
+    collection: RatKingSqueak
+  askSound:
+    path: /Audio/_starcup/Monsters/RatKing/rat_king_question.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Monsters/RatKing/rat_king_agitated.ogg
+
+- type: speechSounds
+  id: HellhoundSpeechSounds
+  saySound:
+    collection: HellhoundSays
+  askSound:
+    path: /Audio/_starcup/Monsters/Hellhound/dog_ask.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Monsters/Hellhound/dog_exclaim.ogg
+
 # speech sound emotes
 
 - type: emoteSounds
@@ -165,7 +183,7 @@
     CreatureScream:
       collection: OreCrabScreams
     ClawSnap:
-      path: /Audio/_starcup/Animals/claw_snap.ogg
+      path: /Audio/_starcup/Arthropods/claw_snap.ogg
     Gasp:
       path: /Audio/_starcup/Monsters/OreCrab/orecrab_chitter.ogg
     DefaultDeathgasp:
@@ -227,7 +245,7 @@
     Gasp:
       path: /Audio/_starcup/Monsters/FeralSlime/feral_slime_gasp.ogg
     DefaultDeathgasp:
-      path: Resources/Audio/_starcup/Monsters/FeralSlime/feral_slime_death.ogg
+      path: /Audio/_starcup/Monsters/FeralSlime/feral_slime_death.ogg
   params:
     variation: 0.125
 
@@ -261,7 +279,7 @@
     CreatureScream:
       collection: WatcherScreams
     Blink:
-      collection: Blinks
+      path: /Audio/_starcup/Monsters/FeralSlime/feral_slime_blink.ogg
     Gasp:
       path: /Audio/_starcup/Monsters/Hivelord/hivelord_gasp.ogg
     DefaultDeathgasp:
@@ -292,8 +310,10 @@
   sounds:
     CreatureLaugh:
       collection: BehonkerLaughs
-    Buzz:
+    BuzzNonSilicon:
       path: /Audio/_starcup/Monsters/Behonker/behonker_buzz.ogg
+    Blink:
+      path: /Audio/_starcup/Monsters/FeralSlime/feral_slime_blink.ogg
     Gasp:
       path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
     DefaultDeathgasp:
@@ -304,6 +324,8 @@
   params:
     variation: 0.125
   sounds:
+    CreatureScream:
+      path: /Audio/_starcup/Monsters/LuminousBeing/luminous_scream.ogg
     CreatureLaugh:
       path: /Audio/_starcup/Monsters/LuminousBeing/luminous_laugh.ogg
     DefaultDeathgasp:
@@ -328,3 +350,81 @@
       path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
     DefaultDeathgasp:
       collection: DragonGrowls
+
+- type: emoteSounds
+  id: RatKingSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      path: /Audio/_starcup/Monsters/RatKing/rat_king_scream.ogg
+    CreatureLaugh:
+      collection: RatKingLaugh
+    CreatureSqueak:
+      path: /Audio/_starcup/Monsters/RatKing/rat_king_squeak1.ogg
+    CreatureYawn:
+      path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+    CreatureCough:
+      collection: MouseSneezes
+    ThumpTailSoft:
+      path: /Audio/Effects/soft_thump.ogg
+    ThumpTailMany:
+      path: /Audio/_starcup/Effects/soft_thumps.ogg
+    ThumpTailLoud:
+      path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
+    Sneeze:
+      collection: MouseSneezes
+    Gasp:
+      collection: MouseGasp
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Monsters/RatKing/rat_king_death.ogg
+
+- type: emoteSounds
+  id: SmallHellhoundSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureBark:
+      collection: SmallHellhoundBarks
+    CreatureSnarl:
+      collection: SmallHellhoundSnarls
+    CreatureGrowl:
+      collection: SmallHellhoundGrowls
+    CreatureWhimper:
+      collection: HellhoundWhimpers
+    CreatureHowl:
+      collection: HellhoundHowls
+    Snuffle:
+      collection: DogSniffing
+    Shake:
+      path: /Audio/_starcup/Animals/Dog/dog_shake.ogg
+    Pant:
+      path: /Audio/_starcup/Animals/Dog/dog_pant1.ogg
+    Gasp:
+      collection: DogGasps
+    DefaultDeathgasp:
+      collection: HellhoundWhimpers
+
+- type: emoteSounds
+  id: LargeHellhoundSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureBark:
+      collection: LargeHellhoundBarks
+    CreatureGrowl:
+      collection: LargeHellhoundGrowls
+    CreatureWhimper:
+      collection: HellhoundWhimpers
+    CreatureHowl:
+      collection: HellhoundHowls
+    Snuffle:
+      collection: DogSniffing
+    Shake:
+      path: /Audio/_starcup/Animals/Dog/dog_shake.ogg
+    Pant:
+      path: /Audio/_starcup/Animals/Dog/dog_pant1.ogg
+    Gasp:
+      collection: DogGasps
+    DefaultDeathgasp:
+      collection: HellhoundWhimpers
