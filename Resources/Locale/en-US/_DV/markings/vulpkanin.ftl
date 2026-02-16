@@ -134,9 +134,6 @@ marking-VulpTailBushy = Vulpekin Bush
 marking-VulpTailBushyWag-bushfluff_wag = Bush tail
 marking-VulpTailBushyWag = Vulpekin Bush (wag)
 
-marking-VulpTailCoyote-coyote = Coyote tail
-marking-VulpTailCoyote = Vulpekin Coyote
-
 marking-VulpTailCoyoteWag-coyote_wag = Coyote tail
 marking-VulpTailCoyoteWag = Vulpekin Coyote (wag)
 
