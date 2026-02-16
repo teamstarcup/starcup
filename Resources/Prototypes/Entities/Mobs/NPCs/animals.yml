@@ -92,6 +92,9 @@
     screamAction: ActionEmitSound
   - type: TypingIndicator
     proto: rodentia
+  - type: AutoEmote
+    emotes:
+    - SqueakAutoemote
   # end starcup
 
 - type: entity
@@ -245,7 +248,7 @@
   - type: Speech
     speechVerb: SmallMob
     speechSounds: Cluck
-    allowedEmotes: ['CreatureCrow', 'Flutter', 'CreatureScream'] # starcup
+    allowedEmotes: ['CreatureCrow', 'Flutter', 'CreatureScream', 'CreatureCluck'] # starcup
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -306,6 +309,9 @@
       Unsexed: CluckSpeechEmotes
     screamId: CreatureScream
     screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - CluckAutoemote
   # end starcup
 
 - type: entity
@@ -659,6 +665,9 @@
       Unsexed: MothroachSpeechEmotes
     screamId: CreatureScream
     screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - SqueakAutoemote
     # end starcup
     wilhelmProbability: 0.001
   - type: MobPrice
@@ -808,12 +817,16 @@
   - type: Speech
     speechVerb: SmallMob
     speechSounds: DuckSpeechSounds
-    allowedEmotes: ['Flutter', 'CreatureLaugh', 'CreatureScream']
+    allowedEmotes: ['Flutter', 'CreatureQuack', 'CreatureLaugh', 'CreatureScream']
   - type: Vocal
     sounds:
       Unsexed: DuckSpeechEmotes
     screamId: CreatureScream
     screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - QuackAutoemote
+    - FlutterAutoemote
   # end starcup
 
 - type: entity
@@ -1048,12 +1061,15 @@
   - type: Speech
     speechVerb: LargeMob
     speechSounds: CowSpeechSounds
-    allowedEmotes: ['CreatureScream', 'CreatureCough']
+    allowedEmotes: ['CreatureScream', 'CreatureCough', 'CreatureMoo']
   - type: Vocal
     sounds:
       Unsexed: CowSpeechEmotes
     screamId: CreatureScream
     screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - MooAutoemote
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepGeneric
@@ -1235,12 +1251,15 @@
     speechSounds: Goat
     speechVerb: Goat
   # begin starcup
-    allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureCough'] # starcup
+    allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureCough', 'CreatureBleat'] # starcup
   - type: Vocal
     sounds:
       Unsexed: GoatSpeechEmotes
     screamId: CreatureScream
     screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - BleatAutoemote
   # end starcup
   - type: BleatingAccent
   - type: InteractionPopup
@@ -1342,12 +1361,16 @@
   - type: Speech
     speechVerb: Harpy
     speechSounds: GooseSpeechSounds
-    allowedEmotes: ['CreatureScream', 'Flutter']
+    allowedEmotes: ['CreatureScream', 'CreatureHonk', 'Flutter']
   - type: Vocal
     sounds:
       Unsexed: GooseSpeechEmotes
     screamId: CreatureScream
     screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - HonkAutoemote
+    - FlutterAutoemote
   # end starcup
 
 - type: entity
@@ -1439,12 +1462,16 @@
   - type: Speech
     speechVerb: LargeMob
     speechSounds: GorillaSpeechSounds
-    allowedEmotes: ['CreatureScream', 'CreatureGrowl', 'ChestBeating', 'CreatureCough', 'ThumpFistLoud']
+    allowedEmotes: ['CreatureScream', 'CreatureOok', 'CreatureGrowl', 'ChestBeating', 'CreatureCough', 'ThumpFistLoud']
   - type: Vocal
     sounds:
       Unsexed: GorillaSpeechEmotes
     screamId: CreatureScream
     screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - OokAutoemote
+    - FistThumpAutoemote
   # end starcup
 
 - type: entity
@@ -1696,6 +1723,9 @@
     speechSounds: MonkeySpeechSounds
     speechVerb: Monkey
     allowedEmotes: ['CreatureScream', 'CreatureOok', 'CreatureCough']
+  - type: AutoEmote
+    emotes:
+    - OokAutoemote
   # end starcup
   - type: MonkeyAccent
   - type: SentienceTarget
@@ -2094,6 +2124,9 @@
     screamAction: ActionEmitSound
   - type: TypingIndicator
     proto: rodentia
+  - type: AutoEmote
+    emotes:
+    - SqueakAutoemote
     # end starcup
     wilhelmProbability: 0.001
   # TODO: Remove CombatMode when Prototype Composition is added
@@ -2486,7 +2519,7 @@
   - type: Speech
     speechSounds: FrogSpeechSounds
     speechVerb: Reptilian
-    allowedEmotes: ['CreatureWhimper']
+    allowedEmotes: ['CreatureWhimper', 'CreatureCroak']
   - type: Vocal
     sounds:
       Unsexed: FrogSpeechEmotes
@@ -2494,6 +2527,9 @@
     screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: FrogAccent
+  - type: AutoEmote
+    emotes:
+    - CroakAutoemote
   # end starcup
 
 # Would be cool to have some functionality for the parrot to be able to sit on stuff
@@ -2550,6 +2586,10 @@
   - type: Tag
     tags:
     - CreatureEmotes
+  - type: AutoEmote
+    emotes:
+    - SqueakAutoemote
+    - FlutterAutoemote
   # end starcup
   - type: ActiveListener
   - type: Vocalizer
@@ -2659,7 +2699,7 @@
   # begin starcup
   - type: Speech
     speechSounds: PenguinSpeechSounds
-    allowedEmotes: ['CreatureScream']
+    allowedEmotes: ['CreatureScream', 'CreatureChitter']
   - type: Vocal
     sounds:
       Unsexed: PenguinSpeechEmotes
@@ -2667,6 +2707,9 @@
     screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: PenguinAccent
+  - type: AutoEmote
+    emotes:
+    - ChitterAutoemote
   # end starcup
 
 # TODO: Make grenade penguin voice activated like the rest of the stealth items.
@@ -2896,6 +2939,9 @@
       Unsexed: SpiderSpeechEmotes
     screamId: CreatureScream
     screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - ChitterAutoemote
     # end starcup
   - type: TypingIndicator
     proto: spider
@@ -3131,6 +3177,9 @@
     screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: xeno
+  - type: AutoEmote
+    emotes:
+    - SneezeAutoemote
   # end starcup
 
 - type: entity
@@ -3221,6 +3270,9 @@
     screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: RaccoonAccent
+  - type: AutoEmote
+    emotes:
+    - ChitterAutoemote
   # end starcup
 
 - type: entity
@@ -3319,6 +3371,9 @@
     screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: FoxAccent
+  - type: AutoEmote
+    emotes:
+    - WhimperAutoemote
   # end starcup
 
 - type: entity
@@ -3350,6 +3405,9 @@
   - type: Tag
     tags:
     - CreatureEmotes
+  - type: AutoEmote
+    emotes:
+    - BarkAutoemote
   # end starcup
   - type: Fixtures
     fixtures:
@@ -3562,6 +3620,9 @@
       Unsexed: CatSpeechEmotes
     screamId: CreatureScream
     screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - MeowAutoemote
   # end starcup
   - type: Butcherable
     spawned:
@@ -3904,6 +3965,10 @@
       Unsexed: SlothSpeechEmotes
     screamId: CreatureSqueak
     screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - SqueakAutoemote
+    - SneezeAutoemote
   # end starcup
 
 - type: entity
@@ -4002,6 +4067,9 @@
     screamAction: ActionEmitSound
   - type: TypingIndicator
     proto: rodentia
+  - type: AutoEmote
+    emotes:
+    - SqueakAutoemote
   # end starcup
   - type: Sprite
     drawdepth: SmallMobs
@@ -4217,12 +4285,15 @@
   # begin starcup
   - type: Speech
     speechSounds: PigSpeechSounds
-    allowedEmotes: ['CreatureScream', 'CreatureCough']
+    allowedEmotes: ['CreatureScream', 'CreatureCough', 'CreatureOink']
   - type: Vocal
     sounds:
       Unsexed: PigSpeechEmotes
     screamId: CreatureScream
     screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - OinkAutoemote
   # end starcup
 
 - type: entity
@@ -4303,6 +4374,9 @@
     tags:
     - FootstepSound
     - CreatureEmotes
+  - type: AutoEmote
+    emotes:
+    - ChirpAutoemote
   # end starcup
   - type: Emoting
   - type: BodyEmotes
@@ -4404,6 +4478,9 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepGeneric
+  - type: AutoEmote
+    emotes:
+    - ScreamAutoemote
   # end starcup
 
 - type: entity
