@@ -1,3 +1,5 @@
+# event schedulers
+
 - type: entity
   id: CalmStationEventScheduler
   parent: BaseGameRule
@@ -30,7 +32,33 @@
     scheduledGameRules: !type:NestedSelector
       tableId: DangerGameRulesTable
 
-# event schedulers
+- type: entity
+  id: StarcupSpaceTrafficControlAllEventScheduler
+  parent: BaseGameRule
+  components:
+  - type: BasicStationEventScheduler
+    minimumTimeUntilFirstEvent: 2700 # 45 mins
+    maximumSpanUntilFirstEvent: 900
+    minMaxEventTiming:
+      min: 5400 # 90 mins
+      max: 7200 # 120 mins
+    scheduledGameRules: !type:NestedSelector
+      tableId: StarcupSpaceTrafficControlTable
+
+- type: entity
+  id: StarcupSpaceTrafficControlFriendlyEventScheduler
+  parent: BaseGameRule
+  components:
+  - type: BasicStationEventScheduler
+    minimumTimeUntilFirstEvent: 2700 # 45 mins
+    maximumSpanUntilFirstEvent: 900
+    minMaxEventTiming:
+      min: 5400 # 90 mins
+      max: 7200 # 120 mins
+    scheduledGameRules: !type:NestedSelector
+      tableId: StarcupUnknownShuttlesFriendlyTable
+
+# event tables
 
 - type: entityTable
   id: CalmGameRulesTable
@@ -89,3 +117,14 @@
       tableId: StarcupDangerEventsTable
     - !type:NestedSelector
       tableId: HostileCritterEventsTable
+
+- type: entityTable
+  id: StarcupSpaceTrafficControlTable
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: StarcupUnknownShuttlesFriendlyTable
+    - !type:NestedSelector
+      tableId: StarcupUnknownShuttlesFreelanceTable
+    - !type:NestedSelector
+      tableId: StarcupUnknownShuttlesHostileTable

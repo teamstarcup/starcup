@@ -22,3 +22,24 @@
         - state: inhand-left
       right:
         - state: inhand-right
+
+- type: entity
+  id: ItemBouquet
+  parent: BaseItem
+  name: bouquet
+  description: The Augarvian flower language equivalent of a keysmash. # starcup - fancifulifized description
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/bouquet.rsi
+    state: bouquet
+  - type: Item
+    size: Normal
+    sprite: _Impstation/Objects/Fun/bouquet.rsi
+    inhandVisuals:
+      left:
+      - state: bouquet-inhand-left
+      right:
+      - state: bouquet-inhand-right
+  - type: Construction
+    graph: Bouquet
+    node: bouquet

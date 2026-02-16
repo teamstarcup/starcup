@@ -55,7 +55,7 @@ public sealed partial class MetabolizerComponent : Component
             SolutionName = "stomach",
             SolutionOnBody = false,
             TransferSolutionName = BloodstreamComponent.DefaultBloodSolutionName,
-            TransferEfficacy = 0.5
+            // TransferEfficacy = 0.5 // starcup: reset to default value
         },
         ["Bloodstream"] = new()
         {

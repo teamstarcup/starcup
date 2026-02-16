@@ -13,6 +13,10 @@
     - id: AstroNavCartridge
     - id: QuartermasterIDCard # starcup: added spare ID
     - id: ClothingHandsKnuckleDustersQM
+    # begin starcup: moved back to loadouts
+    #- id: PlushieLizardJobQuartermaster
+    #  prob: 0.02
+    # end starcup
     - id: ClothingShoesBootsWinterLogisticsOfficer # DeltaV
 
 - type: entity
@@ -51,6 +55,10 @@
       conditions:
       - !type:PlayerCountCondition
         max: 15
+    # begin starcup: moved back to loadouts
+    #- id: PlushieLizardJobCaptain
+    #  prob: 0.02
+    # end starcup
     - id: ClothingShoesBootsWinterCap # DeltaV
 
 # No laser table + Laser table
@@ -132,6 +140,11 @@
     - id: DoorRemoteService
     - id: HoPIDCard
     - id: WeaponDisabler
+    - id: ClothingEyesHudCommand
+    # begin starcup: moved back to loadouts
+    #- id: PlushieLizardJobHeadofpersonnel
+    #  prob: 0.02
+    # end starcup
     - id: ClothingEyesHudCommandSyndie # starcup
     - id: ClothingShoesBootsWinterHeadOfPersonel # DeltaV
 
@@ -165,6 +178,10 @@
     - id: RCDAmmo
     - id: RubberStampCE
     - id: MetalFoamGrenade
+    # begin starcup: moved back to loadouts
+    #- id: PlushieLizardJobChiefengineer
+    #  prob: 0.02
+    # end starcup
     - id: ClothingShoesBootsWinterChiefEngineer # DeltaV
 
 # Hardsuit table, used for suit storage as well
@@ -220,6 +237,10 @@
     - id: DoorRemoteMedical
     - id: BoxEncryptionKeyMedical
     - id: BoxCMOCircuitboards
+    # begin starcup: moved back to loadouts
+    #- id: PlushieLizardJobChiefmedicalofficer
+    #  prob: 0.02
+    # end starcup
     - id: ClothingShoesBootsWinterChiefMedicalOfficer # DeltaV
     - id: CMOIDCard # starcup: added spare ID
 
@@ -271,6 +292,10 @@
     - id: DoorRemoteResearch
     - id: HandTeleporter
     - id: RubberStampRd
+    # begin starcup: moved back to loadouts
+    #- id: PlushieLizardJobResearchdirector
+    #  prob: 0.02
+    # end starcup
     - id: RDIDCard # starcup: added spare ID
     - id: ClothingShoesBootsWinterMystagogue # DeltaV
 
@@ -335,6 +360,10 @@
     # - id: WeaponTaser # starcup: remove tasers
     - id: WantedListCartridge
     - id: DrinkHosFlask
+    # begin starcup: moved back to loadouts
+    #- id: PlushieLizardJobHeadofsecurity
+    #  prob: 0.02
+    # end starcup
     - id: ClothingShoesBootsWinterHeadOfSecurity # DeltaV
 
 # Hardsuit table, used for suit storage as well

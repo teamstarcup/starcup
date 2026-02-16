@@ -208,6 +208,12 @@
       prob: 0.10
       rolls: !type:RangeNumberSelector
         range: 1, 2
+    # begin starcup: moved back to loadouts
+    #- !type:NestedSelector
+    #  tableId: MaintenancePlushies
+    #  prob: 0.02
+    # end starcup
+
     # Weapons
     - !type:NestedSelector
       tableId: MaintWeaponTable
@@ -225,6 +231,19 @@
       tableId: MaintenanceLootNanotrasen
       prob: 0.01 # low for now since it's just the notebook
     # end starcup
+
+- type: entityTable
+  id: MaintenancePlushies
+  table: !type:GroupSelector
+    children:
+    - id: PlushieLizardJobBoxer
+    - id: PlushieLizardJobClown
+    - id: PlushieLizardJobLibrarian
+    - id: PlushieLizardJobMime
+    - id: PlushieLizardJobMusician
+    - id: PlushieLizardJobPassenger
+    - id: PlushieLizardJobReporter
+    - id: PlushieLizardJobZookeeper
 
 - type: entity
   id: ClosetMaintenanceFilledRandom

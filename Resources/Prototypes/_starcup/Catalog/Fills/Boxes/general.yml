@@ -10,3 +10,24 @@
         children:
         - id: EncryptionKeyNT
           amount: 2
+
+- type: entity
+  name: romantic letter box
+  parent: BoxCardboard
+  id: BoxValentine
+  description: A box filled with envelopes, pink paper, and a heart stamp.
+  components:
+  - type: Sprite
+    layers:
+    - state: box_hug
+    - state: heart
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: Envelope
+          amount: 4
+        - id: PaperDyedPink
+          amount: 4
+        - id: RubberStampHeart
+          amount: 1
