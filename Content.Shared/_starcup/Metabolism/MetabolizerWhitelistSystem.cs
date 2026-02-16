@@ -8,17 +8,17 @@ public sealed class MetabolizerWhitelistSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<MetabolizerWhitelistComponent, MetabolismWhitelistEvent>(OnMetabolismWhitelistCheck);
+        SubscribeLocalEvent<MetabolizerWhitelistComponent, BodyRelayedEvent<MetabolismWhitelistEvent>>(OnMetabolismWhitelistCheck);
     }
 
-    private static void OnMetabolismWhitelistCheck(Entity<MetabolizerWhitelistComponent> ent, ref MetabolismWhitelistEvent args)
+    private static void OnMetabolismWhitelistCheck(Entity<MetabolizerWhitelistComponent> ent, ref BodyRelayedEvent<MetabolismWhitelistEvent> args)
     {
         if (ent.Comp.ReagentWhitelist == null)
             return;
 
         foreach (var reagent in ent.Comp.ReagentWhitelist)
         {
-            args.Reagents.Add(reagent);
+            args.Args.Reagents.Add(reagent);
         }
     }
 }
