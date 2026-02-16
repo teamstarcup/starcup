@@ -23,14 +23,14 @@ public sealed class StationPowerTests
     private static readonly string[] GameMaps =
     [
         // starcup: replaced upstream maps with ours
-        // "Glacier",
-        // "Loop",
-        // "Omega",
-        // "Reach",
-        // "Saltern",
-        // "Byoin",
-        // "Train",
-        // "Crux",
+        "Glacier",
+        "Loop",
+        "Omega",
+        "Reach",
+        "Saltern",
+        "Byoin",
+        "Train",
+        "Crux",
         // end starcup
     ];
 
