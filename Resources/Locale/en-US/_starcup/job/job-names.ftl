@@ -1,3 +1,5 @@
+job-name-admin-assistant = Administrative Assistant
+
 # Alternate titles
 
 # Bartender
@@ -47,9 +49,11 @@ job-alt-title-mechatronics = Mechatronics Specialist
 # Scientist
 job-alt-title-necrocosmicist = Necrocosmicist
 
-
 # SyndComm
 job-name-syndcomm-operator = SyndComm Operator
 job-name-syndcomm-agent = SyndComm Agent
 job-name-syndcomm-officer = SyndComm Officer
 job-name-syndcomm-official = SyndComm Official
+
+# Role Timers
+JobAdminAssistant = Administrative Assistant
