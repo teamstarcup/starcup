@@ -135,7 +135,7 @@ public sealed class FluidEjectorSystem : EntitySystem
             slowdownTime,
             0.5f);
 
-        var drunkennessTime = TimeSpan.FromSeconds((ejectedAmount * 0.4f + 40).Value);
+        var drunkennessTime = slowdownTime * 1.5;
         _drunk.TryApplyDrunkenness(uid, drunkennessTime);
 
         _popup.PopupPredicted(Loc.GetString("fluid-regulator-eject", ("person", Identity.Entity(uid, EntityManager))), uid, uid, PopupType.Large);
