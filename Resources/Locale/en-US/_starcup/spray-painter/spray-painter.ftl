@@ -40,7 +40,7 @@ spray-painter-style-airlockglass-robotics = Robotics
 spray-painter-style-airlockglass-service = Service
 
 # Lockers
-spray-painter-style-locker-adminassistant = Adminstrative Assistant
+spray-painter-style-locker-adminassistant = Administrative Assistant
 spray-painter-style-locker-chef = Kitchen
 spray-painter-style-locker-janitor = Janitorial
 spray-painter-style-locker-logistics = Logistics

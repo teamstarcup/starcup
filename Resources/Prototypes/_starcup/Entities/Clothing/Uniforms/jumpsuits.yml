@@ -1,4 +1,15 @@
 - type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitAdminAssistant
+  name: administrative assistant's jumpsuit
+  description: A suit worn by the Administrative Assistant. Smells of burnt coffee.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/admin_assistant.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpsuit/admin_assistant.rsi
+
+- type: entity
   parent: ClothingUniformJumpsuitHoP
   id: ClothingUniformJumpsuitHoPSyndie
   suffix: Syndicate
