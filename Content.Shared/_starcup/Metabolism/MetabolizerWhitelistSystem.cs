@@ -1,3 +1,4 @@
+using Content.Shared.Body;
 using Content.Shared.Body.Events;
 
 namespace Content.Shared._starcup.Metabolism;
