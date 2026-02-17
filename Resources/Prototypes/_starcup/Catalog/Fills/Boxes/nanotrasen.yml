@@ -63,3 +63,20 @@
         - id: WeaponBaguette
         - id: NanotrasenMicrowaveFlatpack
         - id: PaperWrittenCombatBakeryKitNT
+
+- type: entity
+  parent: [BoxCardboardSmall, BaseTraitorContraband]
+  id: NTmovCircuitKit
+  name: NTmov circuit kit
+  description: A kit containing an electronics board with the NTmov lawset and a NanoTrasen ID.
+  components:
+  - type: Sprite
+    layers:
+    - state: box_of_doom_nt
+    - state: circuit
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NTmovCircuitBoard
+        - id: NanotrasenIDCard

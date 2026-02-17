@@ -36,8 +36,9 @@
         sound: "/Audio/Misc/thief_greeting.ogg"
   - type: DynamicRuleCost
     cost: 75
-  # begin starcup: added so thief can be a standalone gamemode
   - type: GameRule
+    cancelPresetOnTooFewPlayers: false
+  # begin starcup: added delay for standalone gamemode
     delay:
       min: 240
       max: 420
@@ -76,17 +77,16 @@
         nameFormat: name-format-wizard
       mindRoles:
       - MindRoleWizard
+  - type: GameRule
+    cancelPresetOnTooFewPlayers: false
 
 - type: entity
-  parent: BaseGameRule
-  id: Xenoborgs
+  parent: BaseXenoborgsRule
+  id: SubXenoborgs
   components:
-  - type: XenoborgsRule
-  - type: RuleGrids
   - type: GameRule
     minPlayers: 30
-  - type: LoadMapRule
-    gridPath: /Maps/Shuttles/mothership.yml
+    cancelPresetOnTooFewPlayers: false
   - type: AntagMultipleRoleSpawner
     antagRoleToPrototypes:
       MothershipCore: [ MothershipCore ]

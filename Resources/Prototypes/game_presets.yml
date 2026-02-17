@@ -8,8 +8,7 @@
   rules:
     - MeteorSwarmScheduler
     - RampingStationEventScheduler
-    - SpaceTrafficControlEventScheduler
-   # - SpaceTrafficControlFriendlyEventScheduler # starcup: SpaceTrafficControlEventScheduler already spawns these.
+    - StarcupSpaceTrafficControlAllEventScheduler # starcup
     - BasicRoundstartVariation
 
 - type: gamePreset
@@ -69,7 +68,6 @@
     - MeteorSwarmScheduler
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
-    - SpaceTrafficControlFriendlyEventScheduler
     - BasicRoundstartVariation
 
 - type: gamePreset
@@ -95,7 +93,6 @@
   showInVote: false
   description: greenshift-description
   rules:
-  - SpaceTrafficControlFriendlyEventScheduler
   - BasicRoundstartVariation
 
 - type: gamePreset
@@ -151,7 +148,7 @@
   # - SubGamemodesRuleNoWizard # starcup: put thieves in their own gamemode
   - TroubleStationEventScheduler # starcup: change to trouble scheduler
   # - SlowMeteorSwarmScheduler # starcup: remove separate meteor scheduler
-  - SpaceTrafficControlEventScheduler
+  - StarcupSpaceTrafficControlAllEventScheduler # starcup
   - BasicRoundstartVariation
 
 - type: gamePreset

@@ -1,0 +1,137 @@
+- type: entityTable
+  id: StarcupUnknownShuttlesFriendlyTable
+  table: !type:AllSelector
+    children:
+    - id: UnknownShuttlePrimrose
+    # TODO(starcup): review the rest of these, they're previously upstream shuttles we may or may not want to rework
+    - id: UnknownShuttleCargoLost
+    - id: UnknownShuttleDisasterEvacPod
+    - id: UnknownShuttleCryptid
+    - id: UnknownShuttleEternal
+    - id: UnknownShuttleFlatline
+    - id: UnknownShuttleGym
+    - id: UnknownShuttleNTIncorporation
+    - id: UnknownShuttleJoe
+    - id: UnknownShuttleLambordeere
+    - id: UnknownShuttleMeatZone
+    - id: UnknownShuttleSpacebus
+
+- type: entityTable
+  id: StarcupUnknownShuttlesFreelanceTable
+  table: !type:AllSelector
+    children:
+    - id: UnknownShuttleSyndieEvacPod
+
+- type: entityTable
+  id: StarcupUnknownShuttlesHostileTable
+  table: !type:AllSelector
+    children:
+    - id: UnknownShuttleManOWar
+
+# starcup originals
+- type: preloadedGrid
+  id: Primrose
+  path: /Maps/_starcup/Shuttles/ShuttleEvent/primrose.yml
+  copies: 1
+
+- type: entity
+  id: UnknownShuttlePrimrose
+  parent: BaseUnknownShuttleAnnouncedRule
+  components:
+  - type: StationEvent
+  - type: LoadMapRule
+    preloadedGrid: Primrose
+
+# orphaned from upstream
+- type: entity
+  parent: BaseUnknownShuttleRule
+  id: UnknownShuttleCargoLost
+  components:
+  - type: StationEvent
+    maxOccurrences: 2
+  - type: LoadMapRule
+    gridPath: /Maps/_starcup/Shuttles/ShuttleEvent/WizDen/lost_cargo.yml
+
+- type: entity
+  parent: BaseUnknownShuttleAnnouncedRule
+  id: UnknownShuttleDisasterEvacPod
+  components:
+  - type: StationEvent
+    maxOccurrences: 3
+  - type: LoadMapRule
+    gridPath: /Maps/_starcup/Shuttles/ShuttleEvent/WizDen/disaster_evacpod.yml
+
+- type: entity
+  id: UnknownShuttleCryptid
+  parent: BaseUnknownShuttleAnnouncedRule
+  components:
+  - type: StationEvent
+  - type: LoadMapRule
+    gridPath: /Maps/_starcup/Shuttles/ShuttleEvent/WizDen/cryptid.yml
+
+- type: entity
+  id: UnknownShuttleEternal
+  parent: BaseUnknownShuttleAnnouncedRule
+  components:
+  - type: StationEvent
+  - type: LoadMapRule
+    gridPath: /Maps/_starcup/Shuttles/ShuttleEvent/WizDen/eternal.yml
+
+- type: entity
+  id: UnknownShuttleFlatline
+  parent: BaseUnknownShuttleAnnouncedRule
+  components:
+  - type: StationEvent
+  - type: LoadMapRule
+    gridPath: /Maps/_starcup/Shuttles/ShuttleEvent/WizDen/flatline.yml
+
+- type: entity
+  id: UnknownShuttleGym
+  parent: BaseUnknownShuttleAnnouncedRule
+  components:
+  - type: StationEvent
+    weight: 5 # Its just a big ship, so it needs to be rarer to be interesting.
+  - type: LoadMapRule
+    gridPath: /Maps/_starcup/Shuttles/ShuttleEvent/WizDen/gym.yml
+
+- type: entity
+  id: UnknownShuttleNTIncorporation
+  parent: BaseUnknownShuttleAnnouncedRule
+  components:
+  - type: StationEvent
+    weight: 2 # Its just a big ship, so it needs to be rarer to be interesting.
+    earliestStart: 45 # late to hopefully have enough ghosts to fill all roles quickly. (5-6)
+  - type: LoadMapRule
+    gridPath: /Maps/_starcup/Shuttles/ShuttleEvent/WizDen/incorporation.yml
+
+- type: entity
+  id: UnknownShuttleJoe
+  parent: BaseUnknownShuttleAnnouncedRule
+  components:
+  - type: StationEvent
+  - type: LoadMapRule
+    gridPath: /Maps/_starcup/Shuttles/ShuttleEvent/WizDen/joe.yml
+
+- type: entity
+  id: UnknownShuttleLambordeere
+  parent: BaseUnknownShuttleAnnouncedRule
+  components:
+  - type: StationEvent
+  - type: LoadMapRule
+    gridPath: /Maps/_starcup/Shuttles/ShuttleEvent/WizDen/lambordeere.yml
+
+- type: entity
+  id: UnknownShuttleMeatZone
+  parent: BaseUnknownShuttleAnnouncedRule
+  components:
+  - type: StationEvent
+  - type: LoadMapRule
+    gridPath: /Maps/_starcup/Shuttles/ShuttleEvent/WizDen/meatzone.yml
+
+- type: entity
+  id: UnknownShuttleSpacebus
+  parent: BaseUnknownShuttleAnnouncedRule
+  components:
+  - type: StationEvent
+  - type: LoadMapRule
+    gridPath: /Maps/_starcup/Shuttles/ShuttleEvent/WizDen/spacebus.yml
