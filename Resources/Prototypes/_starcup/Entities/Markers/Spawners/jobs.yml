@@ -9,3 +9,16 @@
     layers:
       - state: green
       - state: boxer
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointAdminAssistant
+  name: administrative assistant
+  components:
+  - type: SpawnPoint
+    job_id: AdministrativeAssistant
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _starcup/Markers/jobs.rsi
+      state: adminassistant
