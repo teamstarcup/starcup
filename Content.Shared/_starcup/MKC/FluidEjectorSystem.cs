@@ -6,13 +6,13 @@ using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Damage.Systems;
-using Content.Shared.Drunk;
 using Content.Shared.Fluids;
 using Content.Shared.Forensics.Systems;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
+using Content.Shared.StatusEffectNew;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
@@ -20,6 +20,8 @@ namespace Content.Shared._starcup.MKC;
 
 public sealed class FluidEjectorSystem : EntitySystem
 {
+    public static readonly EntProtoId Drunk = "StatusEffectDrunk";
+
     [Dependency] private readonly BodySystem _body = default!;
     [Dependency] private readonly MovementModStatusSystem _movementMod = default!;
     [Dependency] private readonly SharedForensicsSystem _forensics = default!;
@@ -27,7 +29,7 @@ public sealed class FluidEjectorSystem : EntitySystem
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
-    [Dependency] private readonly SharedDrunkSystem _drunk = default!;
+    [Dependency] private readonly StatusEffectsSystem _status = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly DamageableSystem _damageableSystem = default!;
 
@@ -129,14 +131,14 @@ public sealed class FluidEjectorSystem : EntitySystem
         if (_puddle.TrySpillAt(uid, ejectedSolution, out var puddle))
             _forensics.TransferDna(puddle, uid, false);
 
-        var slowdownTime = TimeSpan.FromSeconds((ejectedAmount * 0.4f).Value);
+        var slowdownTime = TimeSpan.FromSeconds(Math.Clamp((ejectedAmount * 0.2f).Value, 0, 600)); // clamped at 10 minutes to prevert forever-slows
         _movementMod.TryUpdateMovementSpeedModDuration(uid,
             MovementModStatusSystem.VomitingSlowdown,
             slowdownTime,
             0.5f);
 
         var drunkennessTime = slowdownTime * 1.5;
-        _drunk.TryApplyDrunkenness(uid, drunkennessTime);
+        _status.TryUpdateStatusEffectDuration(uid, Drunk, drunkennessTime);
 
         _popup.PopupPredicted(Loc.GetString("fluid-regulator-eject", ("person", Identity.Entity(uid, EntityManager))), uid, uid, PopupType.Large);
 
