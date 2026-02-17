@@ -21,9 +21,6 @@
   # - type: MeleeStaminaCost
   #   swing: 10
   #   wieldCoefficient: 0.40
-  - type: Tag
-    tags:
-    - StringInstrument
   - type: MeleeWeapon
     soundHit:
       path: /Audio/_DV/Weapons/electricguitarhit.ogg
@@ -31,6 +28,9 @@
       types:
         Blunt: 7
     bluntStaminaDamageFactor: 1.50 #13.5 stamina damage
+  - type: Tag
+    tags:
+    - StringInstrument
 
 - type: entity
   parent: Rickenbacker4003Instrument
