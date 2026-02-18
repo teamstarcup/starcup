@@ -1,0 +1,16 @@
+# This action is pointed to in the "screamAction:" field of the Vocal component to replace the default scream.
+
+- type: entity
+  parent: BaseAction
+  id: ActionEmitSound
+  name: Vocalize
+  description: Emit a characteristic sound.
+  components:
+  - type: Action
+    useDelay: 10
+    icon:
+      sprite: _starcup/Interface/Actions/actions_general.rsi
+      state: emit_sound
+    checkCanInteract: false
+  - type: InstantAction
+    event: !type:ScreamActionEvent

@@ -18,12 +18,14 @@
 - type: emote
   id: Bubble
   name: chat-emote-name-bubble
-  category: Vocal
+  category: General # starcup: changed from vocal, slimes do that with their whole bodies
   available: false
   icon: _Impstation/Interface/Emotes/bubble.png
-  whitelist:
-    components:
-    - Vocal
+  # begin starcup: see "category: General" change
+  #whitelist:
+    #components:
+    #- Vocal
+  # end starcup
   blacklist:
     components:
     - BorgChassis
@@ -35,12 +37,14 @@
 - type: emote
   id: Pop
   name: chat-emote-name-pop
-  category: Vocal
+  category: General # starcup: changed from vocal, slimes do that with their whole bodies
   available: false
   icon: _Impstation/Interface/Emotes/pop.png
-  whitelist:
-    components:
-    - Vocal
+  # begin starcup: see "category: General" change
+  #whitelist:
+    #components:
+    #- Vocal
+  # end starcup
   blacklist:
     components:
     - BorgChassis
