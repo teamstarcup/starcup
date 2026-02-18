@@ -242,23 +242,23 @@ marking-ScreenL-screen_l = Screen
 
 # HeadTop
 
-marking-RobotAntennaTv = Tv
+marking-RobotAntennaTv = Antenna (TV)
 marking-RobotAntennaTv-antenna_tv = Antenna
 
-marking-RobotAntennaTesla = Tesla
+marking-RobotAntennaTesla = Antenna (Tesla)
 marking-RobotAntennaTesla-antenna_tesla = Antenna
 
 marking-RobotAntennaCyberhead = Cyberhead
 marking-RobotAntennaCyberhead-antenna_cyberhead = Antenna
 
-marking-RobotAntennaAntlers = Antlers
+marking-RobotAntennaAntlers = Antenna (Antlers)
 marking-RobotAntennaAntlers-antenna_antlers = Antenna
 
 marking-RobotAntennaDroneeyes = Drone Eyes
 marking-RobotAntennaDroneeyes-antenna_droneeyes = Antenna
 
-marking-RobotAntennaCrowned = Crowned
+marking-RobotAntennaCrowned = Antenna (Crowned)
 marking-RobotAntennaCrowned-antenna_crowned = Antenna
 
-marking-RobotAntennaTowers = Towers
+marking-RobotAntennaTowers = Antenna (Towers)
 marking-RobotAntennaTowers-antenna_towers = Antenna
