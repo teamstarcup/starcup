@@ -1,0 +1,192 @@
+# Includes crab, moth, spider and diona nymph noises.
+# speech sounds
+
+- type: speechSounds
+  id: BeetleSpeechSounds
+  saySound:
+    collection: BeetleSpeech
+  askSound:
+    collection: BeetleSpeech
+  exclaimSound:
+    collection: BeetleSpeech
+
+- type: speechSounds
+  id: CrabSpeechSounds
+  saySound:
+    collection: CrabSpeech
+  askSound:
+    path: /Audio/_starcup/Arthropods/Crab/crab_ask.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Arthropods/Crab/crab_exclaim.ogg
+
+- type: speechSounds
+  id: FlyingSwarmSpeechSounds
+  saySound:
+    collection: FlyingSwarmBuzzes
+  askSound:
+    collection: FlyingSwarmBuzzes
+  exclaimSound:
+    collection: FlyingSwarmBuzzes
+
+- type: speechSounds
+  id: GiantFlyingBugSpeechSounds
+  saySound:
+    collection: GiantBugBuzzes
+  askSound:
+    collection: GiantBugBuzzes
+  exclaimSound:
+    collection: GiantBugBuzzes
+
+- type: speechSounds
+  id: MothSpeechSounds
+  saySound:
+    collection: MothSpeech
+  askSound:
+    path: /Audio/_starcup/Voice/Moth/moth_question.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Voice/Moth/moth_exclamation.ogg
+
+- type: speechSounds
+  id: NymphSpeechSounds
+  saySound:
+    collection: NymphSays
+  askSound:
+    path: /Audio/_starcup/Arthropods/DionaNymph/nymph_ask.ogg
+  exclaimSound:
+    collection: NymphSays
+
+# speech sound emotes
+
+- type: emoteSounds
+  id: BeetleSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureChirp:
+      collection: BeetleChirps
+    MandibleSnap:
+      path: /Audio/_starcup/Arthropods/mandible_snap.ogg
+    BuzzNonSilicon:
+      path: /Audio/_starcup/Arthropods/Beetle/beetle_buzz.ogg
+    Gasp:
+      path: /Audio/_starcup/Arthropods/Crab/crab_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Arthropods/Crab/crab_death.ogg
+
+- type: emoteSounds
+  id: CrabSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureClick:
+      path: /Audio/Voice/Arachnid/arachnid_click.ogg
+    ClawSnap:
+      path: /Audio/_starcup/Arthropods/claw_snap.ogg
+    Gasp:
+      path: /Audio/_starcup/Arthropods/Crab/crab_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Arthropods/Crab/crab_death.ogg
+
+- type: emoteSounds
+  id: FlyingSwarmSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    BuzzNonSilicon:
+      collection: FlyingSwarmBuzzes
+    DefaultDeathgasp:
+      collection: FlyingSwarmBuzzes
+
+- type: emoteSounds
+  id: GiantFlyingBugSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    BuzzNonSilicon:
+      collection: GiantBugBuzzes
+    DefaultDeathgasp:
+      collection: GiantBugBuzzes
+
+- type: emoteSounds
+  id: MothroachSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      path: /Audio/Voice/Moth/moth_scream.ogg
+    CreatureLaugh:
+      path: /Audio/Voice/Moth/moth_laugh.ogg
+    CreatureChitter:
+      path: /Audio/Voice/Moth/moth_chitter.ogg
+    CreatureSqueak:
+      path: /Audio/Voice/Moth/moth_squeak.ogg
+    CreatureYawn:
+      path: /Audio/_starcup/Voice/Moth/moth_yawn.ogg
+    CreatureCough:
+      path: /Audio/_starcup/Voice/Moth/moth_sneeze.ogg
+      #Gasp:
+      #path: /Audio/_starcup/Voice/Moth/moth_gasp.ogg # Removed to avoid confusion with doptera during emergencies.
+    Sneeze:
+      path: /Audio/_starcup/Voice/Moth/moth_sneeze.ogg
+    Sigh:
+      path: /Audio/_starcup/Voice/Moth/moth_sigh.ogg
+    DefaultDeathgasp:
+      collection: MothDeathGasp
+
+- type: emoteSounds
+  id: NymphSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureChirp:
+      path: /Audio/Animals/nymph_chirp.ogg
+    CreatureLaugh:
+      path: /Audio/_starcup/Arthropods/DionaNymph/nymph_laugh.ogg
+    CreatureChitter:
+      collection: NymphChitters
+    CreatureCough:
+      path: /Audio/_starcup/Arthropods/DionaNymph/nymph_gasp.ogg
+    BuzzNonSilicon:
+      collection: NymphBuzzes
+    Sneeze:
+      path: /Audio/_starcup/Arthropods/DionaNymph/nymph_gasp.ogg
+    Gasp:
+      path: /Audio/_starcup/Arthropods/DionaNymph/nymph_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Arthropods/DionaNymph/nymph_gasp.ogg
+
+- type: emoteSounds
+  id: SpiderSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      path: /Audio/Voice/Arachnid/arachnid_scream.ogg
+    CreatureLaugh:
+      path: /Audio/Voice/Arachnid/arachnid_laugh.ogg
+    CreatureChitter:
+      path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
+    CreatureClick:
+      path: /Audio/Voice/Arachnid/arachnid_click.ogg
+    Gasp:
+      path: /Audio/_starcup/Voice/Arachnid/arachnid_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Voice/Arachnid/arachnid_death.ogg
+
+- type: emoteSounds
+  id: SpaceSpiderSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      path: /Audio/_starcup/Arthropods/Spider/space_arachnid_scream.ogg
+    CreatureLaugh:
+      path: /Audio/Voice/Arachnid/arachnid_laugh.ogg
+    CreatureChitter:
+      path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
+    CreatureClick:
+      path: /Audio/Voice/Arachnid/arachnid_click.ogg
+    Gasp:
+      path: /Audio/_starcup/Voice/Arachnid/arachnid_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Arthropods/Spider/space_arachnid_scream.ogg

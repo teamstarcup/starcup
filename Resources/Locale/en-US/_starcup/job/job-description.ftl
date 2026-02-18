@@ -1,3 +1,6 @@
+# Command
+job-description-admin-assistant = Handle entry-level errands for Command staff and help them keep tabs on the rest of the station. Do the bureaucratic work that everyone needs and no one deserves.
+
 # Security
 job-description-prisoner = Do your time in the brig; Take up gardening, chat with security.
 

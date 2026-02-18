@@ -22,6 +22,7 @@
     tags:
     - DoorBumpOpener
     - VimPilot
+    - CreatureEmotes # starcup
   - type: Access
     tags:
     - Chapel
@@ -82,15 +83,26 @@
   - type: Tag
     tags:
     - DoorBumpOpener
-    - VimPilot
+  # begin starcup: monster three-headed dog in the VIM? Really?
+    #- VimPilot
+    - CreatureEmotes
+  # end starcup
   - type: Access
     tags:
     - Chapel
   - type: MindContainer
   - type: MindExaminable
   - type: Familiar
+  # begin starcup
   - type: Vocal
     sounds:
-      Male: Cerberus
-      Female: Cerberus
-      Unsexed: Cerberus
+      Unsexed: LargeHellhoundSpeechEmotes
+    screamId: CreatureBark
+    screamAction: ActionEmitSound
+  - type: Speech
+    speechVerb: Canine
+    speechSounds: HellhoundSpeechSounds
+    allowedEmotes: ['CreatureBark', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'Snuffle', 'Pant', 'Shake']
+  - type: ReplacementAccent
+    accent: DogAccent
+  # end starcup

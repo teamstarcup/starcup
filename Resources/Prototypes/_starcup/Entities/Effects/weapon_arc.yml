@@ -10,3 +10,29 @@
     state: sting
   - type: TimedDespawn
     lifetime: 0.399
+
+- type: entity
+  id: WeaponArcPincer
+  parent: WeaponArcStatic
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: WeaponArcVisuals
+    fadeOut: false
+  - type: Sprite
+    sprite: _starcup/Effects/arcs.rsi
+    state: pincer
+  - type: TimedDespawn
+    lifetime: 0.399
+
+- type: entity
+  id: WeaponArcGore
+  parent: WeaponArcStatic
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: WeaponArcVisuals
+    fadeOut: false
+  - type: Sprite
+    sprite: _starcup/Effects/arcs.rsi
+    state: gore
+  - type: TimedDespawn
+    lifetime: 0.399

@@ -47,6 +47,7 @@
     - type: Tag
       tags:
         - FootstepSound
+        - CreatureEmotes # starcup
     - type: BatteryAmmoProvider
       proto: RedLightLaser
       fireCost: 50
@@ -67,6 +68,25 @@
       successChance: 0.3
       interactSuccessString: petting-success-reptile
       interactFailureString: petting-failure-generic
+  # begin starcup
+    - type: Deathgasp
+    - type: Speech
+      speechVerb: Reptilian
+      speechSounds: RaptorSpeechSounds
+      allowedEmotes: ['CreatureScream', 'CreatureChitter', 'CreatureHiss', 'TailWhip']
+    - type: Vocal
+      sounds:
+        Unsexed: RaptorSpeechEmotes
+      screamId: CreatureScream
+      screamAction: ActionEmitSound
+    - type: ReplacementAccent
+      accent: RaptorAccent
+    - type: TypingIndicator
+      proto: lizard
+    - type: AutoEmote
+      emotes:
+      - ChitterAutoEmote
+  # end starcup
 
 - type: entity
   id: MobTomatoKiller
@@ -213,6 +233,7 @@
     tags:
       - FootstepSound
       - Fruit
+      - CreatureEmotes # starcup
   - type: Extractable
     grindableSolutionName: bloodstream
   - type: PotencyVisuals
@@ -229,3 +250,16 @@
         Blunt: 0.11
   - type: StaticPrice
     price: 400
+    # begin starcup
+  - type: Speech
+    speechVerb: Slime
+    speechSounds: FeralSlimeSpeechSounds
+    allowedEmotes: ['CreatureScream', 'Squish']
+  - type: TypingIndicator
+    proto: slime
+  - type: Vocal
+    sounds:
+      Unsexed: FleshSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+    # end starcup

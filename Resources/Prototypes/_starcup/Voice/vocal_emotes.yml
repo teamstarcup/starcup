@@ -1,0 +1,72 @@
+# vocal emotes
+- type: emote
+  id: Roar
+  name: chat-emote-name-roar
+  category: Vocal
+  icon: _starcup/Interface/Emotes/roar.png
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  chatMessages: ["chat-emote-msg-roar"]
+  chatTriggers:
+  - roar
+  - roars
+  - roaring
+  - roared
+  - rargh
+  - raah
+  - raahh
+  - raaahhh
+
+- type: emote
+  id: Crow
+  name: chat-emote-name-crow
+  category: Vocal
+  icon: _starcup/Interface/Emotes/crow.png
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  chatMessages: ["chat-emote-msg-crow"]
+  chatTriggers:
+  - crow
+  - crowed
+  - crowing
+  - crows
+
+- type: emote
+  id: Fizz
+  name: chat-emote-name-fizz
+  category: General
+  icon: _starcup/Interface/Emotes/fizz.png
+  available: false
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: ["chat-emote-msg-fizz"]
+  chatTriggers:
+  - fizz
+  - fizzes
+  - fizzing
+  - fizzed
+
+- type: emote
+  id: Simmer
+  name: chat-emote-name-simmer
+  category: General
+  icon: _starcup/Interface/Emotes/simmer.png
+  available: false
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: ["chat-emote-msg-simmer"]
+  chatTriggers:
+  - simmer
+  - simmers
+  - simmering
+  - simmered
+  - boil
+  - boils
+  - boiling
+  - boiled

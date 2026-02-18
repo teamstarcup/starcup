@@ -13,10 +13,12 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: bat
       sprite: Mobs/Animals/bat.rsi
+  # begin starcup
   - type: Speech
-    speechSounds: Squeak
+    speechSounds: BatSpeechSounds
     speechVerb: SmallMob
-    allowedEmotes: ['Squeak']
+    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureYawn', 'CreatureCough']
+  # end starcup
   - type: Fixtures
     fixtures:
       fix1:
@@ -46,7 +48,7 @@
     interactFailureString: petting-failure-bat
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
-      path: /Audio/Animals/fox_squeak.ogg
+      collection: BatSqueaks
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-organic
   - type: Bloodstream
@@ -81,6 +83,19 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
+  # begin starcup: give animals a voice
+  - type: Vocal
+    sounds:
+      Unsexed: BatSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: TypingIndicator
+    proto: rodentia
+  - type: AutoEmote
+    emotes:
+    - SqueakAutoEmote
+  # end starcup
 
 - type: entity
   name: bee
@@ -200,7 +215,6 @@
         Quantity: 0.1
   - type: ZombieImmune
 
-
 - type: entity
   name: chicken
   parent: SimpleMobBase
@@ -234,11 +248,13 @@
   - type: Speech
     speechVerb: SmallMob
     speechSounds: Cluck
+    allowedEmotes: ['CreatureCrow', 'Flutter', 'CreatureScream', 'CreatureCluck'] # starcup
   - type: Tag
     tags:
     - DoorBumpOpener
     - Chicken
     - VimPilot
+    - CreatureEmotes # starcup
   - type: Reproductive
     breedChance: 0.05
     birthPopup: reproductive-laid-egg-popup
@@ -270,7 +286,7 @@
     interactFailureString: petting-failure-generic
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
-      path: /Audio/Animals/chicken_cluck_happy.ogg
+      collection: ChickenClucks # starcup
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
@@ -287,6 +303,16 @@
   - type: NpcFactionMember
     factions:
     - Passive
+  # begin starcup: give animals a voice
+  - type: Vocal
+    sounds:
+      Unsexed: CluckSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - CluckAutoEmote
+  # end starcup
 
 - type: entity
   parent: MobChicken
@@ -455,6 +481,10 @@
     tags:
     - Trash
     - VimPilot
+    # begin starcup
+    - FootstepSound
+    - CreatureEmotes
+    # end starcup
   - type: Destructible
     thresholds:
     - trigger:
@@ -480,6 +510,22 @@
     damage:
       types:
         Piercing: 0
+  # begin starcup
+  - type: Speech
+    speechVerb: SmallMob
+    speechSounds: BeetleSpeechSounds
+    allowedEmotes: ['BuzzNonSilicon']
+  - type: Vocal
+    sounds:
+      Unsexed: BeetleSpeechEmotes
+    screamId: BuzzNonSilicon
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: crab
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBug
+  # end starcup
 
 - type: entity
   name: glockroach
@@ -541,9 +587,9 @@
         - SmallMobLayer
   - type: GhostTakeoverAvailable
   - type: Speech
+    speechSounds: MothSpeechSounds # starcup
     speechVerb: Moth
-    speechSounds: Squeak
-    allowedEmotes: ['Chitter', 'Squeak']
+    allowedEmotes: ['CreatureChitter', 'CreatureSqueak', 'CreatureLaugh', 'CreatureScream'] # starcup
   - type: FaxableObject
     insertingState: inserting_mothroach
   - type: MothAccent
@@ -614,11 +660,16 @@
   - type: ZombieAccentOverride
     accent: zombieMoth
   - type: Vocal
+    # begin starcup
     sounds:
-      Male: UnisexMoth
-      Female: UnisexMoth
-      Unsexed: UnisexMoth
+      Unsexed: MothroachSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
     wilhelmProbability: 0.001
+  - type: AutoEmote
+    emotes:
+    - SqueakAutoEmote
+    # end starcup
   - type: MobPrice
     price: 150
   - type: Tag
@@ -626,6 +677,7 @@
     - Trash
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: CanEscapeInventory
   - type: NpcFactionMember
     factions:
@@ -712,6 +764,7 @@
     - DoorBumpOpener
     - Duck
     - VimPilot
+    - CreatureEmotes # starcup
   - type: Reproductive
     breedChance: 0.05
     birthPopup: reproductive-laid-egg-popup
@@ -760,6 +813,21 @@
   - type: NpcFactionMember
     factions:
     - Passive
+  # begin starcup
+  - type: Speech
+    speechVerb: SmallMob
+    speechSounds: DuckSpeechSounds
+    allowedEmotes: ['Flutter', 'CreatureQuack', 'CreatureLaugh', 'CreatureScream']
+  - type: Vocal
+    sounds:
+      Unsexed: DuckSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - QuackAutoEmote
+    - FlutterAutoEmote
+  # end starcup
 
 - type: entity
   name: white duck #Quack
@@ -909,6 +977,10 @@
     tags:
     - DoorBumpOpener
     - Cow
+    # begin starcup
+    - FootstepSound
+    - CreatureEmotes
+    # end starcup
   - type: Reproductive
     partnerWhitelist:
       tags:
@@ -976,6 +1048,32 @@
     guides:
     - Chef
     - FoodRecipes
+  # begin starcup
+  - type: MeleeWeapon
+    soundHit:
+      collection: MetalThud
+    damage:
+      types:
+        Blunt: 15
+    animation: WeaponArcPunch
+  - type: ReplacementAccent
+    accent: CowAccent
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: CowSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureCough', 'CreatureMoo']
+  - type: Vocal
+    sounds:
+      Unsexed: CowSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - MooAutoEmote
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepGeneric
+  # end starcup
 
 - type: entity
   name: crab
@@ -1010,8 +1108,10 @@
         - MobLayer
   - type: Speech
     speechVerb: Arachnid
-    speechSounds: Arachnid
-    allowedEmotes: ['Click', 'Chitter']
+    # begin starcup
+    speechSounds: CrabSpeechSounds
+    allowedEmotes: ['CreatureClick', 'ClawSnap']
+    # end starcup
   - type: DamageStateVisuals
     states:
       Alive:
@@ -1030,7 +1130,7 @@
     interactFailureString: petting-failure-crab
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
-      path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
+      path: /Audio/Voice/Arachnid/arachnid_click.ogg # starcup
   - type: ReplacementAccent
     accent: crab
   - type: Bloodstream
@@ -1041,9 +1141,31 @@
   - type: Tag
     tags:
     - VimPilot
+  # begin starcup
+    - FootstepSound
+    - CreatureEmotes
+  # end starcup
   - type: HTN
     rootTask:
       task: RuminantCompound
+  # begin starcup
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    damage:
+      types:
+        Piercing: 2
+        Slash: 2
+    animation: WeaponArcPincer
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBug
+  - type: Vocal
+    sounds:
+      Unsexed: CrabSpeechEmotes
+    screamId: ClawSnap
+    screamAction: ActionEmitSound
+  # end starcup
 
 - type: entity
   name: goat
@@ -1074,6 +1196,10 @@
     - ClothMade
     - DoorBumpOpener
     - Goat
+    # begin starcup
+    - FootstepSound
+    - CreatureEmotes
+    # end starcup
   - type: Reproductive
     partnerWhitelist:
       tags:
@@ -1124,11 +1250,17 @@
   - type: Speech
     speechSounds: Goat
     speechVerb: Goat
+  # begin starcup
+    allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureCough', 'CreatureBleat'] # starcup
   - type: Vocal
     sounds:
-      Female: Goat
-      Male: Goat
-      Unsexed: Goat
+      Unsexed: GoatSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - BleatAutoEmote
+  # end starcup
   - type: BleatingAccent
   - type: InteractionPopup
     successChance: 0.2
@@ -1146,6 +1278,20 @@
   - type: HTN
     rootTask:
       task: RuminantHostileCompound
+  # begin starcup
+  - type: MeleeWeapon
+    soundHit:
+      collection: MetalThud
+    damage:
+      types:
+        Blunt: 10
+    animation: WeaponArcPunch
+  - type: ReplacementAccent
+    accent: GoatAccent
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepGeneric
+  # end starcup
 
 # Note that we gotta make this bitch vomit someday when you feed it anthrax or sumthin. Needs to be a small item thief too and aggressive if attacked.
 - type: entity
@@ -1199,6 +1345,33 @@
   - type: NpcFactionMember
     factions:
     - Passive
+  # begin starcup
+  - type: HTN
+    rootTask:
+      task: RuminantHostileCompound
+  - type: NPCRetaliation
+    attackMemoryLength: 5
+  - type: FactionException
+  - type: Tag
+    tags:
+    - FootstepSound
+    - CreatureEmotes
+  - type: ReplacementAccent
+    accent: GooseAccent
+  - type: Speech
+    speechVerb: Harpy
+    speechSounds: GooseSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureHonk', 'Flutter']
+  - type: Vocal
+    sounds:
+      Unsexed: GooseSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - HonkAutoEmote
+    - FlutterAutoEmote
+  # end starcup
 
 - type: entity
   name: gorilla
@@ -1280,6 +1453,26 @@
       0: Alive
       200: Critical
       250: Dead
+  # begin starcup
+  - type: Tag
+    tags:
+    - CreatureEmotes
+  - type: ReplacementAccent
+    accent: GorillaAccent
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: GorillaSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureOok', 'CreatureGrowl', 'ChestBeating', 'CreatureCough', 'ThumpFistLoud']
+  - type: Vocal
+    sounds:
+      Unsexed: GorillaSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - OokAutoEmote
+    - FistThumpAutoEmote
+  # end starcup
 
 - type: entity
   name: kangaroo
@@ -1333,6 +1526,7 @@
     tags:
     - DoorBumpOpener
     - FootstepSound
+    - CreatureEmotes # starcup
   - type: GhostRole
     prob: 0.25
     name: ghost-role-information-kangaroo-name
@@ -1341,7 +1535,15 @@
   - type: GhostTakeoverAvailable
   - type: Vocal
     sounds:
-      Unsexed: Kangaroo
+  # begin starcup
+      Unsexed: KangarooSpeechEmotes
+    screamId: CreatureGrowl
+    screamAction: ActionEmitSound
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: KangarooSpeechSounds
+    allowedEmotes: ['CreatureGrowl', 'CreatureCough', 'ThumpFootSoft', 'ThumpFootMany', 'ThumpFootLoud']
+  # end starcup
   - type: Puller
     needsHands: false
   - type: StaminaDamageOnHit
@@ -1488,6 +1690,7 @@
     - VimPilot
     - DoorBumpOpener
     - AnomalyHost
+    - CreatureEmotes # starcup
   - type: Reactive
     groups:
       Flammable: [ Touch ]
@@ -1510,9 +1713,20 @@
   components:
   - type: NameIdentifier
     group: Monkey
+  # begin starcup
+  - type: Vocal
+    sounds:
+      Unsexed: MonkeySpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   - type: Speech
-    speechSounds: Monkey
+    speechSounds: MonkeySpeechSounds
     speechVerb: Monkey
+    allowedEmotes: ['CreatureScream', 'CreatureOok', 'CreatureCough']
+  - type: AutoEmote
+    emotes:
+    - OokAutoEmote
+  # end starcup
   - type: MonkeyAccent
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-primate
@@ -1780,7 +1994,7 @@
   - type: Speech
     speechSounds: Squeak
     speechVerb: SmallMob
-    allowedEmotes: ['Squeak']
+    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough'] # starcup
   - type: Sprite
     drawdepth: SmallMobs
     sprite: Mobs/Animals/mouse.rsi
@@ -1890,6 +2104,7 @@
     - ChefPilot
     - Mouse
     - Meat
+    - CreatureEmotes # starcup
   - type: Respirator
     damage:
       types:
@@ -1901,12 +2116,19 @@
     damage:
       types:
         Blunt: 0.1
+  # begin starcup: give animals a voice
   - type: Vocal
     sounds:
-      Male: Mouse
-      Female: Mouse
-      Unsexed: Mouse
+      Unsexed: SqueakSpeechEmotes
+    screamId: CreatureSqueak
+    screamAction: ActionEmitSound
     wilhelmProbability: 0.001
+  - type: TypingIndicator
+    proto: rodentia
+  - type: AutoEmote
+    emotes:
+    - SqueakAutoEmote
+    # end starcup
   # TODO: Remove CombatMode when Prototype Composition is added
   - type: CombatMode
   - type: MeleeWeapon
@@ -2089,15 +2311,19 @@
   id: MobLizard
   description: A harmless dragon.
   components:
-  - type: Speech # Imp edit
-    speechSounds: Lizard
+  # begin starcup
+  - type: Speech # Imp edit # nope now it's starcup
+    speechSounds: LizardSpeechSounds
     speechVerb: Reptilian
-    allowedEmotes: ['LizardHiss'] # Can't thump tail because no body component  # starcup: Hiss -> LizardHiss
-  - type: Vocal # Imp edit
+    allowedEmotes: ['CreatureScream', 'CreatureGrowl', 'CreatureHiss', 'CreatureWhimper', 'ThumpTailSoft', 'ThumpTailMany', 'ThumpTailLoud', 'TailWhip'] # Can't thump tail because no body component  # starcup: Hiss -> LizardHiss -> CreatureHiss
+  - type: Vocal # Imp edit # no it's starcup again babyyy
     sounds:
-      Male: MaleReptilian
-      Female: FemaleReptilian
-      Unsexed: MaleReptilian
+      Unsexed: LizardSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: LizardAccent
+  # end starcup
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
     baseSprintSpeed: 3
@@ -2148,6 +2374,7 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
 
 
 - type: entity
@@ -2199,6 +2426,23 @@
       reagents:
       - ReagentId: Blood
         Quantity: 50
+  # begin starcup
+  - type: Tag
+    tags:
+    - VimPilot
+    - CreatureEmotes
+  - type: Speech
+    speechSounds: LizardTinySpeechSounds
+    speechVerb: Reptilian
+    allowedEmotes: ['CreatureScream', 'CreatureWhimper', 'CreatureSqueak', 'ThumpTailSoft']
+  - type: Vocal
+    sounds:
+      Unsexed: LizardTinySpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: GeckoAccent
+  # end starcup
 
 - type: entity
   name: frog
@@ -2261,6 +2505,7 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
   - type: Destructible
     thresholds:
     - trigger:
@@ -2270,6 +2515,22 @@
       behaviors:
       - !type:GibBehavior
         recursive: false
+  # begin starcup
+  - type: Speech
+    speechSounds: FrogSpeechSounds
+    speechVerb: Reptilian
+    allowedEmotes: ['CreatureWhimper', 'CreatureCroak']
+  - type: Vocal
+    sounds:
+      Unsexed: FrogSpeechEmotes
+    screamId: CreatureWhimper
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: FrogAccent
+  - type: AutoEmote
+    emotes:
+    - CroakAutoEmote
+  # end starcup
 
 # Would be cool to have some functionality for the parrot to be able to sit on stuff
 - type: entity
@@ -2312,12 +2573,24 @@
     - id: FoodMeat
       amount: 1
     dropOrgansOnButcher: true # starcup: butchering gives organs
+  # begin starcup
   - type: Speech
-    speechSounds: Parrot
+    speechSounds: ParrotSpeechSounds
     speechVerb: Parrot
+    allowedEmotes: ['CreatureScream', 'CreatureGrowl', 'CreatureSqueak', 'Flutter']
   - type: Vocal
     sounds:
-      Unsexed: Parrot
+      Unsexed: ParrotSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: Tag
+    tags:
+    - CreatureEmotes
+  - type: AutoEmote
+    emotes:
+    - SqueakAutoEmote
+    - FlutterAutoEmote
+  # end starcup
   - type: ActiveListener
   - type: Vocalizer
   - type: RadioVocalizer
@@ -2407,6 +2680,7 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
   - type: NpcFactionMember
     factions:
     - Passive
@@ -2422,6 +2696,21 @@
     heatDamage:
       types:
         Heat : 0.2 #per second, scales with temperature & other constants
+  # begin starcup
+  - type: Speech
+    speechSounds: PenguinSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureChitter']
+  - type: Vocal
+    sounds:
+      Unsexed: PenguinSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: PenguinAccent
+  - type: AutoEmote
+    emotes:
+    - ChitterAutoEmote
+  # end starcup
 
 # TODO: Make grenade penguin voice activated like the rest of the stealth items.
 - type: entity
@@ -2542,6 +2831,8 @@
     interactSuccessString: petting-success-reptile
     interactFailureString: petting-failure-generic
     interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/Animals/cat_hiss.ogg # starcup
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
@@ -2550,6 +2841,25 @@
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Scale
+  # begin starcup
+  - type: Speech
+    speechSounds: SnakeSpeechSounds
+    speechVerb: Reptilian
+    allowedEmotes: ['CreatureHiss']
+  - type: Vocal
+    sounds:
+      Unsexed: SnakeSpeechEmotes
+    screamId: CreatureHiss
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: xeno
+  - type: Tag
+    tags:
+    - CreatureEmotes
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+  # end starcup
 
 # Code unique spider prototypes or combine them all into one spider and get a
 # random sprite state when you spawn it.
@@ -2622,18 +2932,24 @@
   - type: Speech
     speechVerb: Arachnid
     speechSounds: Arachnid
-    allowedEmotes: ['Click', 'Chitter']
+    allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureClick', 'CreatureChitter'] # starcup
   - type: Vocal
     sounds:
-      Male: UnisexArachnid
-      Female: UnisexArachnid
-      Unsexed: UnisexArachnid
+    # begin starcup
+      Unsexed: SpiderSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - ChitterAutoEmote
+    # end starcup
   - type: TypingIndicator
     proto: spider
   - type: Tag
     tags:
     - DoorBumpOpener
     - FootstepSound
+    - CreatureEmotes # starcup
   - type: Prying # Open door from xeno.yml.
     pryPowered: true
     force: true
@@ -2657,6 +2973,9 @@
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepGiantBug
   # end starcup
 
 - type: entity
@@ -2846,6 +3165,22 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
+  # begin starcup
+  - type: Speech
+    speechSounds: PossumSpeechSounds
+    allowedEmotes: ['CreatureHiss', 'CreatureYawn', 'CreatureCough']
+  - type: Vocal
+    sounds:
+      Unsexed: PossumSpeechEmotes
+    screamId: CreatureHiss
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: xeno
+  - type: AutoEmote
+    emotes:
+    - SneezeAutoEmote
+  # end starcup
 
 - type: entity
   name: possum
@@ -2921,8 +3256,24 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
   - type: Puller # starcup
     needsHands: false # starcup - "THEY CAN GRASP!!!"
+  # begin starcup
+  - type: Speech
+    speechSounds: RaccoonSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureChitter', 'CreatureBark', 'CreatureWhimper', 'CreatureYawn', 'CreatureCough']
+  - type: Vocal
+    sounds:
+      Unsexed: RaccoonSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: RaccoonAccent
+  - type: AutoEmote
+    emotes:
+    - ChitterAutoEmote
+  # end starcup
 
 - type: entity
   name: fox
@@ -3006,8 +3357,24 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
   - type: Puller
     needsHands: false # starcup - ability to carry emeralds important for niche Minecraft challenge modes
+  # begin starcup
+  - type: Speech
+    speechSounds: FoxSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureBark', 'CreatureWhimper', 'CreatureCough', 'Shake']
+  - type: Vocal
+    sounds:
+      Unsexed: FoxSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: FoxAccent
+  - type: AutoEmote
+    emotes:
+    - WhimperAutoEmote
+  # end starcup
 
 - type: entity
   abstract: true
@@ -3023,9 +3390,25 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: corgi
   - type: Physics
+  # begin starcup
   - type: Speech
     speechVerb: Canine
-    speechSounds: Dog
+    speechSounds: DogSpeechSounds
+    allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'CreatureCough', 'Snuffle', 'Pant', 'Shake']
+  - type: Vocal
+    sounds:
+      Unsexed: SmallDogSpeechEmotes
+    screamId: CreatureBark
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: DogAccent
+  - type: Tag
+    tags:
+    - CreatureEmotes
+  - type: AutoEmote
+    emotes:
+    - BarkAutoEmote
+  # end starcup
   - type: Fixtures
     fixtures:
       fix1:
@@ -3072,11 +3455,13 @@
     - id: FoodMeat
       amount: 2
     dropOrgansOnButcher: true # starcup: butchering gives organs
-  - type: ReplacementAccent
-    accent: dog
-  - type: Tag
-    tags:
-    - VimPilot
+  # begin starcup: all this made irrelevant by modifying MobCorgiBase
+  #- type: ReplacementAccent
+    #accent: dog
+  #- type: Tag
+    #tags:
+    #- VimPilot
+  # end starcup
 
 - type: entity
   name: corrupted corgi
@@ -3142,6 +3527,15 @@
     heatDamage:
       types:
         Heat : 1 #per second, scales with temperature & other constants
+  # begin starcup
+  - type: Speech
+    speechVerb: Canine
+    speechSounds: HellhoundSpeechSounds
+    allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'Snuffle', 'Pant', 'Shake']
+  - type: Vocal
+    sounds:
+      Unsexed: SmallHellhoundSpeechEmotes
+  # end starcup
 
 - type: entity
   name: corgi puppy
@@ -3169,6 +3563,17 @@
   - type: Grammar
     attributes:
       gender: epicene
+  # begin starcup
+  - type: Speech
+    speechVerb: Canine
+    speechSounds: PuppySpeechSounds
+    allowedEmotes: ['CreatureBark', 'CreatureWhimper', 'CreatureYawn', 'CreatureCough', 'Snuffle', 'Pant', 'Shake']
+  - type: Vocal
+    sounds:
+      Unsexed: PuppySpeechEmotes
+    screamId: CreatureBark
+    screamAction: ActionEmitSound
+  # end starcup
 
 - type: entity
   name: cat
@@ -3205,9 +3610,20 @@
         Base: cat_dead
       Dead:
         Base: cat_dead
+  # begin starcup
   - type: Speech
-    speechSounds: Cat
+    speechSounds: CatSpeechSounds
     speechVerb: SmallMob
+    allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureCough']
+  - type: Vocal
+    sounds:
+      Unsexed: CatSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - MeowAutoEmote
+  # end starcup
   - type: Butcherable
     spawned:
     - id: FoodMeat
@@ -3221,7 +3637,7 @@
     interactFailureString: petting-failure-generic
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
-      path: /Audio/Animals/cat_meow.ogg
+      collection: CatTrills # starcup
   - type: MeleeWeapon
     altDisarm: false
     angle: 0
@@ -3239,6 +3655,7 @@
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
     baseSprintSpeed: 4
@@ -3366,6 +3783,7 @@
   - type: Tag
     tags:
       - DoorBumpOpener
+      - CreatureEmotes # starcup
   - type: MovementAlwaysTouching
   - type: PressureImmunity
   - type: ProtectedFromStepTriggers
@@ -3412,6 +3830,16 @@
   - type: Rest
     sleepingLayers: {}
     awakeLayers: {}
+  # starcup: give caracals their own sounds
+  - type: Speech
+    speechSounds: CaracalSpeechSounds
+    speechVerb: SmallMob
+    allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureCough']
+  - type: Vocal
+    sounds:
+      Unsexed: CaracalSpeechEmotes
+    screamId: CreatureHiss
+    screamAction: ActionEmitSound
   # end starcup
 
 - type: entity
@@ -3455,6 +3883,15 @@
     awakeLayers:
       sleeping:
         state: kitten
+  - type: Speech
+    speechSounds: KittenSpeechSounds
+    speechVerb: SmallMob
+    allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss']
+  - type: Vocal
+    sounds:
+      Unsexed: KittenSpeechEmotes
+    screamId: CreatureWhimper
+    screamAction: ActionEmitSound
   # end starcup
 
 - type: entity
@@ -3510,10 +3947,28 @@
   - type: Grammar
     attributes:
       gender: epicene
-  - type: SlowAccent
+  #- type: SlowAccent # Replaced by replacement accent below.
   - type: Tag
     tags:
     - VimPilot
+    - CreatureEmotes # starcup
+  # begin starcup
+  - type: ReplacementAccent
+    accent: SilentAccent
+  - type: Speech
+    speechSounds: SlothSpeechSounds
+    speechVerb: SilentVerb
+    allowedEmotes: ['CreatureBark', 'CreatureScream', 'CreatureSqueak', 'CreatureYawn', 'CreatureCough']
+  - type: Vocal
+    sounds:
+      Unsexed: SlothSpeechEmotes
+    screamId: CreatureSqueak
+    screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - SqueakAutoEmote
+    - SneezeAutoEmote
+  # end starcup
 
 - type: entity
   name: ferret
@@ -3569,7 +4024,21 @@
   - type: Tag
     tags:
     - VimPilot
-  - type: BurrowAbility # starcup
+  # begin starcup
+    - CreatureEmotes
+  - type: BurrowAbility
+  - type: ReplacementAccent
+    accent: FerretAccent
+  - type: Speech
+    speechSounds: FerretSpeechSounds
+    speechVerb: SmallMob
+    allowedEmotes: ['CreatureSqueak', 'CreatureWhimper', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough']
+  - type: Vocal
+    screamId: CreatureWhimper
+    screamAction: ActionEmitSound
+    sounds:
+      Unsexed: FerretSpeechEmotes
+  # end starcup
 
 - type: entity
   name: hamster
@@ -3585,10 +4054,22 @@
     description: ghost-role-information-hamster-description
     rules: ghost-role-information-nonantagonist-rules
   - type: GhostTakeoverAvailable
+  # begin starcup
   - type: Speech
+    speechSounds: HamsterSpeechSounds
     speechVerb: SmallMob
-    speechSounds: Squeak
-    allowedEmotes: ['Squeak']
+    allowedEmotes: ['CreatureSqueak', 'CreaturePurr', 'CreatureTrill', 'CreatureYawn', 'CreatureCough']
+  - type: Vocal
+    sounds:
+      Unsexed: HamsterSpeechEmotes
+    screamId: CreatureTrill
+    screamAction: ActionEmitSound
+  - type: TypingIndicator
+    proto: rodentia
+  - type: AutoEmote
+    emotes:
+    - SqueakAutoEmote
+  # end starcup
   - type: Sprite
     drawdepth: SmallMobs
     sprite: Mobs/Animals/hamster.rsi
@@ -3669,7 +4150,7 @@
       amount: 1
     dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
-    accent: mouse
+    accent: HamsterAccent # starcup
   - type: Tag
     tags:
     - VimPilot
@@ -3677,6 +4158,7 @@
     - Trash
     - Hamster
     - Meat
+    - CreatureEmotes # starcup
   - type: Respirator
     damage:
       types:
@@ -3758,6 +4240,7 @@
     - DoorBumpOpener
     - Pig
     - VimPilot
+    - CreatureEmotes # starcup
   - type: Reproductive
     partnerWhitelist:
       tags:
@@ -3798,6 +4281,19 @@
   - type: HTN
     rootTask:
       task: RuminantCompound
+  # begin starcup
+  - type: Speech
+    speechSounds: PigSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureCough', 'CreatureOink']
+  - type: Vocal
+    sounds:
+      Unsexed: PigSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - OinkAutoEmote
+  # end starcup
 
 - type: entity
   name: diona nymph
@@ -3862,17 +4358,25 @@
       gender: epicene
   - type: Speech
     speechVerb: Plant
-    speechSounds: Alto
-    allowedEmotes: ['Chirp']
+  # begin starcup
+    speechSounds: NymphSpeechSounds
+    allowedEmotes: ['CreatureChirp', 'CreatureLaugh', 'CreatureChitter', 'BuzzNonSilicon']
   - type: Vocal
     sounds:
-      Male: UnisexDiona
-      Female: UnisexDiona
-      Unsexed: UnisexDiona
+      Unsexed: NymphSpeechEmotes
+    screamId: CreatureChirp
+    screamAction: ActionEmitSound
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBug
   - type: Tag
     tags:
-    - DoorBumpOpener
-    - VimPilot
+    - FootstepSound
+    - CreatureEmotes
+  - type: AutoEmote
+    emotes:
+    - ChirpAutoEmote
+  # end starcup
   - type: Emoting
   - type: BodyEmotes
     soundsId: Nymph
@@ -3955,6 +4459,28 @@
       task: SimpleHostileCompound
   - type: Puller
     needsHands: false
+  # begin starcup
+  - type: Tag
+    tags:
+    - FootstepSound
+    - CreatureEmotes
+  - type: Speech
+    speechSounds: DeerSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureBark', 'CreatureCough']
+  - type: Vocal
+    sounds:
+      Unsexed: DeerSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: DeerAccent
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepGeneric
+  - type: AutoEmote
+    emotes:
+    - ScreamAutoEmote
+  # end starcup
 
 - type: entity
   name: reindeer doe
@@ -4055,6 +4581,7 @@
     - VimPilot
     - CanPilot
     - DoorBumpOpener
+    - CreatureEmotes # starcup
   - type: StatusIcon
     bounds: -0.5,-0.5,0.5,0.5
   - type: JobStatus # marks them as crew

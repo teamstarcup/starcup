@@ -76,6 +76,7 @@
       - CannotSuicide
       - DoorBumpOpener
       - FootstepSound
+      - CreatureEmotes # starcup
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -101,3 +102,14 @@
     energy: 4.5
     color: "#ff4242"
     castShadows: false
+  # begin starcup
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: DemonBigSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureRoar', 'CreatureGrowl']
+  - type: Vocal
+    sounds:
+      Unsexed: DemonBigSpeechEmotes
+    screamId: CreatureRoar
+    screamAction: ActionEmitSound
+  # end starcup
