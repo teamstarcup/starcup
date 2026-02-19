@@ -37,10 +37,10 @@
       weight: 0.6
     - !type:NestedSelector
       tableId: LetterUncommonEntityTable
-      weight: 0.35
+      weight: 0.35 # starcup: up from 30%
     - !type:NestedSelector
       tableId: LetterRareEntityTable
-      weight: 0.05
+      weight: 0.05 # starcup: down from 10%
 
 - type: entityTable
   id: PackageDeliveryRewards
@@ -51,10 +51,10 @@
       weight: 0.6
     - !type:NestedSelector
       tableId: PackageUncommonEntityTable
-      weight: 0.35
+      weight: 0.35 # starcup: up from 30%
     - !type:NestedSelector
       tableId: PackageRareEntityTable
-      weight: 0.05
+      weight: 0.05 # starcup: down from 10%
 
 ### Loot Tables
 # begin starcup: completely redid all of these tables

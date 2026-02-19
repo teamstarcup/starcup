@@ -88,6 +88,7 @@
     - CannotSuicide
     - Goliath
     - FootstepSound
+    - CreatureEmotes # starcup
   - type: NoSlip
   - type: Butcherable
     spawned:
@@ -99,6 +100,22 @@
   - type: Polymorphable
   - type: BurrowAbility
     action: ActionBurrowLarge
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: GoliathSpeechSounds
+    allowedEmotes: ['CreatureRoar', 'CreatureGrowl']
+  - type: Vocal
+    sounds:
+      Unsexed: GoliathSpeechEmotes
+    screamId: CreatureRoar
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: genericAggressive
+  - type: TypingIndicator
+    proto: alien
+  - type: AutoEmote
+    emotes:
+    - GrowlAutoEmote
   # end starcup
 
 - type: entity
@@ -254,6 +271,28 @@
   - type: Butcherable
     spawned:
     - id: FoodHivelordRemains
+  # begin starcup
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - CreatureEmotes # starcup
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: HivelordSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureClick']
+  - type: Vocal
+    sounds:
+      Unsexed: HivelordSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: xeno
+  - type: TypingIndicator
+    proto: alien
+  - type: AutoEmote
+    emotes:
+    - ClickAutoEmote
+  # end starcup
 
 - type: entity
   id: MobHivelordBrood
@@ -437,4 +476,24 @@
     - id: DiamondOre1
       amount: 1
       maxAmount: 3
+  # begin starcup
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - FootstepSound
+    - CreatureEmotes # starcup
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: BasiliskSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureChitter', 'CreatureClick']
+  - type: Vocal
+    sounds:
+      Unsexed: SpaceSpiderSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: xeno
+  - type: TypingIndicator
+    proto: alien
+  # end starcup
 

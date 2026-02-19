@@ -5,9 +5,11 @@
   limits:
     enum.HumanoidVisualLayers.Hair:
       limit: 2
+      onlyGroupWhitelisted: false
       required: false
     enum.HumanoidVisualLayers.FacialHair:
       limit: 1
+      onlyGroupWhitelisted: false
       required: false
     enum.HumanoidVisualLayers.Tail:
       limit: 1
@@ -244,15 +246,21 @@
     - CanPilot
     - FootstepSound
     - DoorBumpOpener
-  - type: FootPrints #DeltaV port from EE, blood splatter
-    leftBarePrint: "footprint-left-bare-lizard" #DeltaV port from EE, blood splatter
-    rightBarePrint: "footprint-right-bare-lizard" #DeltaV port from EE, blood splatter
+  - type: FootprintOwner # starcup
+    footprint: lizardFootprint # starcup
 
 - type: entity
   parent: OrganBase
   id: OrganHarpy
   abstract: true
   suffix: harpy
+
+- type: entity
+  id: OrganHarpyMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Harpy ]
 
 - type: entity
   parent: OrganHarpy
@@ -334,7 +342,7 @@
   id: OrganHarpyFootRight
 
 - type: entity
-  parent: [ OrganBaseLungs, OrganHarpyInternal, OrganHumanMetabolizer ]
+  parent: [ OrganBaseLungs, OrganHarpyInternal, OrganHarpyMetabolizer ]
   id: OrganHarpyLungs
   name: lungs
   description: An advanced pair of avian lungs. Filters oxygen by way of moving air constantly through air sacs.

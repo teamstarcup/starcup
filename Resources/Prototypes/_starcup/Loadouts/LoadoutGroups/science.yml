@@ -1,0 +1,37 @@
+# Research Assistant
+- type: loadoutGroup
+  id: ResearchAssistantOuterClothing
+  name: loadout-group-research-assistant-outerclothing
+  minLimit: 0
+  loadouts:
+  - WinterCoatPurple
+
+# Research Director
+- type: loadoutGroup
+  id: ResearchDirectorBackpack
+  name: loadout-group-research-director-backpack
+  loadouts:
+  - ScientistBackpack
+  - ScientistSatchel
+  - ScientistDuffel
+  - LeatherSatchel
+
+# Roboticist
+- type: loadoutGroup
+  id: RoboticistPDA
+  name: loadout-group-roboticist-id
+  loadouts:
+  - RoboticistPDA
+  - ToymakerPDA
+  - NeuroroboticistPDA
+  - MechatronicsPDA
+
+- type: loadoutGroup
+  parent: [ Glasses ]
+  id: RoboticsEyewear
+  name: loadout-group-robotics-glasses
+  minLimit: 0
+  loadouts:
+  - DiagnosticHud
+  - DiagnosticEyePatchHud
+  - EngineeringGoggles

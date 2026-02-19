@@ -380,3 +380,47 @@
     - type: FlavorProfile
       flavors:
         - candystrawberry
+
+# Imitation Chocolate
+- type: entity
+  name: imitation chocolate heart
+  parent: FoodChocolateHeart
+  id: FoodChocolateHeartImitation
+  description: A mass-produced 'chocolate' heart. Is what's between us more real than this?
+  components:
+  - type: FlavorProfile
+    flavors:
+    - imitationchocolate
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 2
+        - ReagentId: CocoaPowderImitation
+          Quantity: 2
+        - ReagentId: Nutriment
+          Quantity: 1
+
+- type: entity
+  name: homemade imitation chocolate heart
+  parent: FoodChocolateHeartImitation
+  id: FoodHomemadeChocolateHeartImitation
+  description: An imitation chocolate heart, made with love and a microwave.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Consumable/Food/candy.rsi
+    layers:
+    - state: homemadechocolate
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15 # extra space for poison purposes
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 2
+        - ReagentId: CocoaPowderImitation
+          Quantity: 2
+        - ReagentId: Nutriment
+          Quantity: 1

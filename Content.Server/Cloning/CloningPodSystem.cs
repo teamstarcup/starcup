@@ -31,6 +31,7 @@ using Robust.Shared.Physics.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Content.Shared.Chemistry.Reagent;
+using Content.Shared._starcup.Traits; // starcup
 
 namespace Content.Server.Cloning;
 
@@ -164,6 +165,11 @@ public sealed class CloningPodSystem : EntitySystem
 
         if (HasComp<SiliconComponent>(bodyToClone))
             return false; // Goobstation: Don't clone IPCs.
+
+        // begin starcup: uncloneable component
+        if (HasComp<UncloneableComponent>(bodyToClone))
+            return false;
+        // end starcup
 
         var cloningCost = (int)Math.Round(physics.FixturesMass);
 

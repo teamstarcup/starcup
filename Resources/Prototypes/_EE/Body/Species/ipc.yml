@@ -17,8 +17,7 @@
       default: [ MobIPCHeadDefault ]
     enum.HumanoidVisualLayers.HeadTop:
       limit: 1
-      required: true
-      default: [ MobIPCHeadDefault ]
+      required: false
     enum.HumanoidVisualLayers.Chest:
       limit: 1
       required: true
@@ -260,6 +259,7 @@
   - type: CombatMode # DeltaV - let IPCs disarm
     canDisarm: true
   - type: Fingerprint # starcup: give ipcs fingerprints
+  - type: Uncloneable # starcup
 
 - type: entity
   parent: OrganBase

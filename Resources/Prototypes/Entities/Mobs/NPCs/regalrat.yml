@@ -99,14 +99,26 @@
     tags:
       - CannotSuicide
       - FootstepSound
+      - CreatureEmotes # starcup
   - type: NoSlip
+  - type: Insulated
+    coefficient: 0.5 # rat king touches more wires, see?
   - type: Rummager
   - type: RatKing
     hungerPerArmyUse: 25
     hungerPerDomainUse: 50
   - type: MobsterAccent
+  # begin starcup
   - type: Speech
-    speechVerb: SmallMob
+    speechSounds: RatKingSpeechSounds
+    speechVerb: LargeMob
+    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough']
+  - type: Vocal
+    sounds:
+      Unsexed: RatKingSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  # end starcup
   - type: Butcherable
     spawned:
     - id: ClothingHeadHatFancyCrown #how did that get there?
@@ -277,23 +289,37 @@
     spawned:
     - id: FoodMeatRat
       amount: 1
+  # begin starcup: give animals a voice
   - type: Vocal
     sounds:
-      Male: Mouse
-      Female: Mouse
-      Unsexed: Mouse
+      Unsexed: SqueakSpeechEmotes
+    screamId: CreatureSqueak
+    screamAction: ActionEmitSound
     wilhelmProbability: 0.001
+  - type: TypingIndicator
+    proto: rodentia
+  - type: AutoEmote
+    emotes:
+    - SqueakAutoEmote
+    # end starcup
   - type: Tag
     tags:
       - CannotSuicide
       - FootstepSound
+      - CreatureEmotes # starcup
   - type: NoSlip
+  - type: Insulated
+    coefficient: 0.2 # they don't make da roolz, but they sneaky
   - type: MobPrice
     price: 500 # rat wealth
   - type: MobsterAccent
     isBoss: false
+  # begin starcup
   - type: Speech
+    speechSounds: Squeak
     speechVerb: SmallMob
+    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough'] # starcup
+  # end starcup
   - type: GuideHelp
     guides:
     - MinorAntagonists

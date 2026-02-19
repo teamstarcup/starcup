@@ -47,14 +47,80 @@
       Appendix: OrganHumanAppendix
       Ears: OrganHumanEars
       Lungs: OrganHumanLungs
-      Heart: OrganHumanHeart
+      Heart: OrganAnimalHeart # starcup
       Stomach: OrganAnimalStomach # starcup
-      Liver: OrganHumanLiver
+      Liver: OrganAnimalLiver # starcup
       Kidneys: OrganHumanKidneys
   - type: HumanoidProfile
     species: Felinid
   - type: Sprite
     scale: 0.8, 0.8
+    layers:
+    # Torso
+    - map: [ "enum.HumanoidVisualLayers.Chest" ]
+
+    # Head
+    - map: [ "enum.HumanoidVisualLayers.HeadBase" ] # starcup: base head shapes
+    - map: [ "enum.HumanoidVisualLayers.Head" ]
+    - map: [ "enum.HumanoidVisualLayers.Snout" ]
+    - map: [ "enum.HumanoidVisualLayers.Eyes" ]
+
+    # Limbs
+    - map: [ "enum.HumanoidVisualLayers.RArm" ]
+    - map: [ "enum.HumanoidVisualLayers.LArm" ]
+    - map: [ "enum.HumanoidVisualLayers.RLeg" ]
+    - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+
+    # Underwear & clothing
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+
+    # Extremities
+    - map: [ "enum.HumanoidVisualLayers.LFoot" ]
+    - map: [ "enum.HumanoidVisualLayers.RFoot" ]
+    - map: [ "enum.HumanoidVisualLayers.LHand" ]
+    - map: [ "enum.HumanoidVisualLayers.RHand" ]
+
+    # Stuff that goes over the body but below equipment
+    - map: [ "enum.HumanoidVisualLayers.Overlay" ]
+
+    # More equipment
+    - map: [ "jumpsuit" ] # starcup: moved above feet, hands, and overlay
+    - map: [ "gloves" ]
+    - map: [ "shoes" ]
+    - map: [ "ears" ]
+    - map: [ "eyes" ]
+    - map: [ "belt" ]
+    - map: [ "id" ]
+    - map: [ "outerClothing" ]
+    - map: [ "back" ]
+    - map: [ "neck" ]
+
+    # Stuff that goes in front of equipment
+    - map: [ "enum.HumanoidVisualLayers.SnoutCover" ]
+    - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
+    - map: [ "enum.HumanoidVisualLayers.Hair" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
+    - map: [ "enum.HumanoidVisualLayers.Tail" ]
+
+    # Stuff that goes in front of stuff that goes in front of equipment
+    - map: [ "mask" ]
+    - map: [ "head" ]
+    - map: [ "pocket1" ]
+    - map: [ "pocket2" ]
+
+    # Extra stuff
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+
+    - map: [ "clownedon" ] # Dynamically generated
+      sprite: "Effects/creampie.rsi"
+      state: "creampie_human"
+      visible: false
 
 - type: entity
   parent:
@@ -192,6 +258,10 @@
   - type: VisualOrganMarkings
     markingData:
       group: Felinid
+  - type: VisualOrgan # starcup: tweak to be more cat-like
+    data:
+      sprite: _starcup/Mobs/Species/Felinid/parts.rsi
+      state: l_foot
 
 - type: entity
   parent: OrganHumanFootRight
@@ -200,3 +270,7 @@
   - type: VisualOrganMarkings
     markingData:
       group: Felinid
+  - type: VisualOrgan # starcup: tweak to be more cat-like
+    data:
+      sprite: _starcup/Mobs/Species/Felinid/parts.rsi
+      state: r_foot

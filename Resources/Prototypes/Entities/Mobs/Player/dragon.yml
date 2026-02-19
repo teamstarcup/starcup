@@ -38,6 +38,18 @@
     - Dragon
   - type: Speech
     speechVerb: LargeMob
+    # begin starcup
+    speechSounds: DragonSpeechSounds
+    allowedEmotes: ['CreatureRoar', 'CreatureLaugh', 'CreatureGrowl', 'CreatureTrill', 'CreaturePurr']
+  - type: Vocal
+    sounds:
+      Unsexed: DragonSpeechEmotes
+    screamId: CreatureRoar
+    screamAction: ActionEmitSound
+  - type: TypingIndicator
+    proto: alien
+    # end starcup
+
   - type: CombatMode
   - type: MobMover
   - type: InputMover
@@ -155,6 +167,7 @@
     - CannotSuicide
     - DoorBumpOpener
     - StunImmune
+    - CreatureEmotes # starcup
   - type: Puller
     needsHands: false
   - type: RandomMetadata

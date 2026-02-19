@@ -74,7 +74,7 @@
       path: /Audio/Ambience/Objects/fireplace.ogg
   - type: Anomaly
     corePrototype: AnomalyCorePyroclastic
-    coreInertPrototype: AnomalyCorePyroclasticInert
+    coreInertPrototype: RandomAnomalyCorePyroclastic # starcup - enables rare non-inert drop
     supercriticalSoundAtAnimationStart:
       collection: AnomalyPyroSupercritical
   - type: Sprite
@@ -128,7 +128,7 @@
   components:
   - type: Anomaly
     corePrototype: AnomalyCoreGravity
-    coreInertPrototype: AnomalyCoreGravityInert
+    coreInertPrototype: RandomAnomalyCoreGravity # starcup - enables rare non-inert drop
     supercriticalSoundAtAnimationStart:
       collection: AnomalyGravitySupercritical
     supercriticalDuration: 15s
@@ -163,7 +163,7 @@
   components:
   - type: Anomaly
     corePrototype: AnomalyCoreElectricity
-    coreInertPrototype: AnomalyCoreElectricityInert
+    coreInertPrototype: RandomAnomalyCoreElectricity # starcup - enables rare non-inert drop
     supercriticalSoundAtAnimationStart:
       collection: AnomalyElectricitySupercritical
   - type: Sprite
@@ -188,7 +188,7 @@
   components:
   - type: Anomaly
     corePrototype: AnomalyCoreFlesh
-    coreInertPrototype: AnomalyCoreFleshInert
+    coreInertPrototype: RandomAnomalyCoreFlesh # starcup - enables rare non-inert drop
     minPulseLength: 180
     maxPulseLength: 300
     supercriticalSoundAtAnimationStart:
@@ -335,7 +335,7 @@
         hard: false
   - type: Anomaly
     corePrototype: AnomalyCoreBluespace
-    coreInertPrototype: AnomalyCoreBluespaceInert
+    coreInertPrototype: RandomAnomalyCoreBluespace # starcup - enables rare non-inert drop
     supercriticalSoundAtAnimationStart:
       collection: AnomalyBluespaceSupercritical
     pulseSound:
@@ -363,7 +363,7 @@
     castShadows: false
   - type: Anomaly
     corePrototype: AnomalyCoreIce
-    coreInertPrototype: AnomalyCoreIceInert
+    coreInertPrototype: RandomAnomalyCoreIce # starcup - enables rare non-inert drop
     supercriticalSoundAtAnimationStart:
       collection: AnomalyIceSupercritical
   - type: ExplosionAnomaly
@@ -425,7 +425,7 @@
   components:
   - type: Anomaly
     corePrototype: AnomalyCoreRock
-    coreInertPrototype: AnomalyCoreRockInert
+    coreInertPrototype: RandomAnomalyCoreRock # starcup - enables rare non-inert drop
     minPulseLength: 180
     maxPulseLength: 300
     supercriticalSoundAtAnimationStart:
@@ -847,7 +847,7 @@
     animationTime: 6
     offset: 0, 0
     corePrototype: AnomalyCoreFlora
-    coreInertPrototype: AnomalyCoreFloraInert
+    coreInertPrototype: RandomAnomalyCoreFlora # starcup - enables rare non-inert drop
     minPulseLength: 60
     maxPulseLength: 120
     supercriticalSoundAtAnimationStart:
@@ -952,7 +952,7 @@
   - type: BadFood
   - type: Anomaly
     corePrototype: AnomalyCoreLiquid
-    coreInertPrototype: AnomalyCoreLiquidInert
+    coreInertPrototype: RandomAnomalyCoreLiquid # starcup - enables rare non-inert drop
     minPulseLength: 60
     maxPulseLength: 120
     supercriticalSoundAtAnimationStart:
@@ -1070,7 +1070,7 @@
       path: /Audio/Ambience/anomaly_scary.ogg
   - type: Anomaly
     corePrototype: AnomalyCoreShadow
-    coreInertPrototype: AnomalyCoreShadowInert
+    coreInertPrototype: RandomAnomalyCoreShadow # starcup - enables rare non-inert drop
     minPulseLength: 60
     maxPulseLength: 120
     animationTime: 4
@@ -1134,7 +1134,7 @@
     color: "#56c1e8"
   - type: Anomaly
     corePrototype: AnomalyCoreTech
-    coreInertPrototype: AnomalyCoreTechInert
+    coreInertPrototype: RandomAnomalyCoreTech # starcup - enables rare non-inert drop
     minPulseLength: 60
     maxPulseLength: 120
     supercriticalSoundAtAnimationStart:
@@ -1194,7 +1194,7 @@
     animationTime: 6
     offset: 0, 0
     corePrototype: AnomalyCoreSanta
-    coreInertPrototype: AnomalyCoreSantaInert
+    coreInertPrototype: RandomAnomalyCoreSanta # starcup - enables rare non-inert drop. just in case.
     minPulseLength: 60
     maxPulseLength: 120
     supercriticalSoundAtAnimationStart:

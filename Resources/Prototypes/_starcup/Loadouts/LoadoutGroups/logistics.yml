@@ -1,0 +1,34 @@
+# Cargo Technician
+- type: loadoutGroup
+  parent: [ Scarfs ]
+  id: CargoTechnicianNeck
+  name: loadout-group-cargo-technician-neck
+  minLimit: 0
+  loadouts:
+  - GoliathCloak
+
+# Courier
+- type: loadoutGroup
+  id: CourierBelt
+  name: loadout-group-courier-belt
+  loadouts:
+  - CourierBag
+  - MailBag
+
+- type: loadoutGroup
+  id: CourierBackpack
+  name: loadout-group-courier-backpack
+  loadouts:
+  - CargoTechnicianBackpack
+  - CargoTechnicianSatchel
+  - CargoTechnicianDuffel
+  - LeatherSatchel
+
+# Salvage Specialist
+- type: loadoutGroup
+  parent: [ Scarfs ]
+  id: SalvageSpecialistNeck
+  name: loadout-group-salvage-specialist-neck
+  minLimit: 0
+  loadouts:
+  - GoliathCloak

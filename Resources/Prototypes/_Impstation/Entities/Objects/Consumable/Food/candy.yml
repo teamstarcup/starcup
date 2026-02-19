@@ -1,0 +1,285 @@
+﻿- type: entity
+  name: conversation heart
+  parent: FoodInjectableBase # starcup - foodmealbase -> foodinjectablebase, these aren't big hearty meals
+  id: FoodConversationHeart
+  description: "You can barely make out the imprinted text: luv u"
+  components:
+  - type: FlavorProfile
+    flavors:
+    - chalky
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: _Impstation/Objects/Consumable/Food/candy.rsi
+    layers:
+    - state: chalkheartcolorable
+      map: [ "enum.DamageStateVisualLayers.Base" ]
+  - type: RandomSprite
+    available:
+    - enum.DamageStateVisualLayers.Base:
+        chalkheartcolorable: Pastel
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 2 # starcup - allows tiny injections
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 1
+  - type: RandomMetadata
+    descriptionSegments: [ConversationHeartDescriptions]
+  - type: Tag
+    tags:
+    - FoodSnack
+    - Candy # starcup
+
+- type: entity
+  name: box of conversation hearts
+  parent: BoxCardboard
+  id: BoxConversationHeart
+  description: A little container full of chalky treats to give to your honey. Or eat all on your own like some kind of weirdo.
+  components:
+  - type: EntityTableContainerFill # starcup - removed gummy worms
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: FoodConversationHeart
+          amount: 5
+  - type: Storage
+    grid:
+    - 0,0,2,1
+    maxItemSize: Tiny
+  - type: Sprite
+    sprite: _Impstation/Objects/Consumable/Food/candy.rsi
+    state: chalkheartpackage2
+
+- type: entity
+  name: chocolate heart
+  parent: FoodInjectableBase # starcup - foodmealbase -> foodinjectablebase, these aren't big hearty meals
+  id: FoodChocolateHeart
+  description: A mass-produced chocolate heart. How sweet.
+  components:
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: _Impstation/Objects/Consumable/Food/candy.rsi
+    layers:
+    - state: chocolateheart
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 2
+        - ReagentId: CocoaPowder
+          Quantity: 2
+        - ReagentId: Theobromine
+          Quantity: 1
+  - type: Tag
+    tags:
+    - FoodSnack
+    - Candy # starcup
+
+- type: entity
+  name: chocolate heart
+  suffix: dark
+  parent: FoodChocolateHeart
+  id: FoodChocolateHeartDark
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Consumable/Food/candy.rsi
+    layers:
+    - state: chocolateheartdark
+
+- type: entity
+  name: chocolate heart
+  suffix: white
+  parent: FoodChocolateHeartImitation # starcup - white chocolate does not contain theobromine! :D
+  description: A mass-produced white chocolate heart. How sweet. # starcup - gave distinct description
+  id: FoodChocolateHeartWhite
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Consumable/Food/candy.rsi
+    layers:
+    - state: chocolateheartwhite
+
+- type: entity
+  name: heart-shaped box
+  parent: BoxCardboard
+  id: BoxChocolateHearts
+  description: A box of romantic treats, brought to you by your friends at GetMore Chocolate Corp!
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Consumable/Food/candy.rsi
+    layers:
+    - map: [ base ]
+      state: heartbox-closed
+  - type: EntityTableContainerFill # starcup - added imitation hearts
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: FoodChocolateHeart
+          amount: 2
+        - id: FoodChocolateHeartImitation
+          amount: 2
+        - !type:GroupSelector
+          rolls: 2
+          children:
+          - id: FoodChocolateHeartDark
+          - id: FoodChocolateHeartWhite
+# end starcup
+  - type: Storage
+    grid:
+    - 0,0,2,1
+    maxItemSize: Tiny
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        base:
+          True: { state: heartbox-open }
+          False: { state: heartbox-closed }
+  - type: Appearance
+
+- type: entity
+  name: homemade chocolate heart
+  parent: FoodChocolateHeart
+  id: FoodHomemadeChocolateHeart
+  description: A chocolate heart, made with love and a microwave.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Consumable/Food/candy.rsi
+    layers:
+    - state: homemadechocolate
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15 # extra space for poison purposes
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 2
+        - ReagentId: CocoaPowder
+          Quantity: 2
+        - ReagentId: Theobromine
+          Quantity: 1
+
+- type: entity
+  name: berry macaron
+  parent: FoodInjectableBase # starcup - foodmealbase -> foodinjectablebase, these aren't big hearty meals
+  id: FoodMacaronBerry
+  description: Complex to craft, beautiful to look at, why would you ruin this masterpiece by eating it? A perfect romantic treat. # starcup - macaroons aren't underwhelming!!
+  components:
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: _Impstation/Objects/Consumable/Food/candy.rsi
+    state: macaronberry
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 7 # starcup - for pumping in extra flavor
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 3
+        - ReagentId: JuiceBerry
+          Quantity: 2
+  - type: Tag
+    tags:
+    - FoodSnack
+    - Candy # starcup
+    - Fruit # starcup - they all have fruit ingredients (pistachios are fruit)
+
+- type: entity
+  name: cherry macaron
+  parent: FoodMacaronBerry
+  id: FoodMacaronCherry
+  components:
+  - type: Sprite
+    state: macaroncherry
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 7 # starcup - for pumping in extra flavor
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 3
+        - ReagentId: JuiceCherry
+          Quantity: 2
+
+- type: entity
+  name: cotton macaron
+  parent: FoodMacaronBerry
+  id: FoodMacaronCotton
+  description: Hey, wait! This isn't a macaron! It's a doily!
+  components:
+  - type: Edible
+    requiresSpecialDigestion: true
+  - type: Sprite
+    state: macaroncotton
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 7 # starcup - for pumping in extra flavor
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 3
+        - ReagentId: Fiber
+          Quantity: 2
+  - type: Tag
+    tags:
+    - FoodSnack
+    - ClothMade
+
+- type: entity
+  name: lemon macaron
+  parent: FoodMacaronBerry
+  id: FoodMacaronLemon
+  components:
+  - type: Sprite
+    state: macaronlemon
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 7 # starcup - for pumping in extra flavor
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 3
+        - ReagentId: JuiceLemon
+          Quantity: 2
+
+- type: entity
+  name: mimana macaron
+  parent: FoodMacaronBerry
+  id: FoodMacaronMimana
+  description: Complex to craft, beautiful to look at, why would you ruin this masterpiece by eating it? This one feels like nothing. # starcup
+  components:
+  - type: Sprite
+    state: macaronmimana
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 7 # starcup - for pumping in extra nothingness
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 3
+        - ReagentId: MuteToxin
+          Quantity: 2
+
+- type: entity
+  name: box of macarons
+  parent: BoxCardboard
+  id: BoxMacarons
+  description: We don't need collectable figurines or trading cards. We need collectable macarons.
+  components:
+  - type: EntityTableContainerFill # starcup - removed gummy worm, made into table, cotton/mimana slightly less common
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: RandomMacaron
+        rolls: !type:ConstantNumberSelector
+          value: 4
+  - type: Storage
+    grid:
+    - 0,0,1,1
+    maxItemSize: Tiny
+  - type: Sprite
+    sprite: _Impstation/Objects/Consumable/Food/candy.rsi
+    state: chalkheartpackage1

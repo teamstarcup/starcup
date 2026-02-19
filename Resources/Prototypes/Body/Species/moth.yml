@@ -4,7 +4,8 @@
   onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Hair:
-      limit: 0
+      limit: 1 # starcup - 0 -> 1
+      onlyGroupWhitelisted: true # starcup
       required: false
     enum.HumanoidVisualLayers.FacialHair:
       limit: 0
@@ -319,6 +320,7 @@
       - ClothMade
       - Paper
       - Pill
+      - Fruit # starcup: let moths eat fruit
 
 - type: entity
   parent: [ OrganBaseLiver, OrganSpriteHumanInternal, OrganMothInternal, OrganAnimalMetabolizer ]

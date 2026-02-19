@@ -13,5 +13,5 @@ public sealed partial class CCVars
     /// wizden deltav
     /// </example>
     public static readonly CVarDef<string> FeedbackValidOrigins =
-        CVarDef.Create("feedback.valid_origins", "", CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("feedback.valid_origins", "starcup", CVar.SERVER | CVar.REPLICATED);
 }

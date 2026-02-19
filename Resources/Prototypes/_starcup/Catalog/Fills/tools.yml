@@ -80,7 +80,13 @@
     - id: GeigerCounter
     - id: HandheldGPSBasic
     - id: HandLabeler
-    - id: GlowstickBase
+    - !type:GroupSelector
+      children:
+      - id: GlowstickGreen
+      - id: GlowstickRed
+      - id: GlowstickPurple
+      - id: GlowstickYellow
+      - id: GlowstickBlue
     - id: RadioHandheld
     - id: AppraisalTool
     - !type:NestedSelector

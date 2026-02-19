@@ -583,9 +583,9 @@
   productEntity: StimpackNT
   discountCategory: usualDiscounts
   discountDownTo:
-    Telecrystal: 2
+    Telecrystal: 1
   cost:
-    Telecrystal: 4
+    Telecrystal: 2
   categories:
   - UplinkChemicalsNT
 
@@ -596,9 +596,9 @@
   productEntity: StimkitFilledNT
   discountCategory: rareDiscounts
   discountDownTo:
-    Telecrystal: 8
+    Telecrystal: 3
   cost:
-    Telecrystal: 12
+    Telecrystal: 5
   categories:
   - UplinkChemicalsNT
 
@@ -905,9 +905,10 @@
           - SurplusBundle
 
 - type: listing
-  id: UplinkNTmovCircuitBoard
+  id: UplinkNTmovCircuitKit
   name: uplink-ntmov-law-name
   description: uplink-ntmov-law-desc
+  icon: { sprite: _starcup/Objects/Storage/boxicons.rsi, state: nt_circuit }
   productEntity: NTmovCircuitBoard
   discountCategory: usualDiscounts
   discountDownTo:
