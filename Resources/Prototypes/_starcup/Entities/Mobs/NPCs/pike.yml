@@ -1,17 +1,9 @@
 - type: entity
   name: space pike
   id: MobPike
-  parent: [ SimpleSpaceMobBase, FlyingMobBase, MobCombat ]
+  parent: BaseMobCarp
   description: A ferocious killer fish from outer space.
   components:
-  - type: InputMover
-  - type: MobMover
-  - type: HTN
-    rootTask:
-      task: SimpleHostileCompound
-    blackboard:
-      NavSmash: !type:Bool
-        true
   - type: NpcFactionMember
     factions:
     - SimpleHostile
@@ -20,7 +12,6 @@
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: alive
-  - type: Physics
   - type: Fixtures
     fixtures:
       fix1:
@@ -32,17 +23,12 @@
         - FlyingMobMask
         layer:
         - FlyingMobLayer
-  - type: CombatMode
-  - type: MobState
   - type: MobThresholds
     thresholds:
       0: Alive
-      100: Dead
-  - type: MovementSpeedModifier
-    baseWalkSpeed: 2.5
-    baseSprintSpeed: 3.5
+      82: Dead
   - type: Stamina
-    critThreshold: 100
+    baseCritThreshold: 150
   - type: DamageStateVisuals
     states:
       Alive:
@@ -52,33 +38,26 @@
   - type: Butcherable
     spawned:
     - id: FoodMeatFish
-      amount: 4
+      amount: 3
+    - id: MaterialToothSharkminnow1
+      amount: 2
   - type: MeleeWeapon
-    attackRate: 1.2
-    altDisarm: false
-    angle: 0
-    animation: WeaponArcBite
-    soundHit:
-      path: /Audio/Effects/bite.ogg
+    attackRate: 1.25
     damage:
       types:
         Piercing: 12
-  - type: TypingIndicator
-    proto: alien
-  - type: Tag
-    tags:
-    - Carp
-    - DoorBumpOpener
-    - CannotSuicide
-  - type: ReplacementAccent
-    accent: genericAggressive
   - type: Speech
     speechVerb: LargeMob
-  - type: InteractionPopup
-    interactSuccessString: petting-success-carp
-    interactFailureString: petting-failure-carp
-    interactFailureSound:
-      path: /Audio/Effects/bite.ogg
+    speechSounds: SharkminnowSpeechSounds
+    allowedEmotes: ['CreatureGrowl']
+  - type: Vocal
+    sounds:
+      Unsexed: SharkminnowSpeechEmotes
+    screamId: CreatureGrowl
+    screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - GrowlAutoEmote
 
 - type: entity
   id: MobPikeFriar
@@ -91,7 +70,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      135: Dead
+      115: Dead
 
 - type: entity
   id: MobPikeSalvage
