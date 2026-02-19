@@ -853,10 +853,10 @@
     sprite: Clothing/Head/Hats/truckershat.rsi
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseSyndicateContraband ]
+  parent: ClothingHeadBase # starcup: remove syndicate contraband label
   id: ClothingHeadPyjamaSyndicateBlack
   name: syndicate black pyjama hat
-  description: For keeping that traitor head of yours warm.
+  description: It might seem extraneous and silly, but Interdyne studies have proven a minimum 50% increase in coziness while wearing one of these. # starcup: rewritten for setting lore
   components:
   - type: Sprite
     sprite: Clothing/Head/Hats/pyjamasyndicateblack.rsi
@@ -869,10 +869,10 @@
       HeadSide : HEAD
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseSyndicateContraband ]
+  parent: ClothingHeadBase # starcup: remove syndicate contraband label
   id: ClothingHeadPyjamaSyndicatePink
   name: syndicate pink pyjama hat
-  description: For keeping that traitor head of yours warm.
+  description: It might seem extraneous and silly, but Interdyne studies have proven a minimum 50% increase in coziness while wearing one of these. # starcup: rewritten for setting lore
   components:
   - type: Sprite
     sprite: Clothing/Head/Hats/pyjamasyndicatepink.rsi
@@ -885,10 +885,10 @@
       HeadSide : HEAD
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseSyndicateContraband ]
+  parent: ClothingHeadBase # starcup: remove syndicate contraband label
   id: ClothingHeadPyjamaSyndicateRed
   name: syndicate red pyjama hat
-  description: For keeping that traitor head of yours warm.
+  description: It might seem extraneous and silly, but Interdyne studies have proven a minimum 50% increase in coziness while wearing one of these. # starcup: rewritten for setting lore
   components:
   - type: Sprite
     sprite: Clothing/Head/Hats/pyjamasyndicatered.rsi
@@ -1086,7 +1086,7 @@
         Caustic: 0.95
 
 - type: entity
-  parent: [ClothingHeadBase, BaseSyndicateContraband]
+  parent: ClothingHeadBase # starcup: remove syndicate contraband label
   id: ClothingHeadHatSyndie
   name: syndicate hat
   description: A souvenir hat from "Syndieland", their production has already been closed.
