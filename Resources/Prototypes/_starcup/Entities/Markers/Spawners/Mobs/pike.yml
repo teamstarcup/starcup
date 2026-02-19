@@ -16,8 +16,8 @@
 
 - type: entity
   parent: MarkerBaseStarcup
-  id: SpawnMobPikeFriar
-  name: Friar Space Pike Spawner
+  id: SpawnMobDunklosteus
+  name: Space Dunklosteus Spawner
   components:
   - type: Sprite
     layers:
@@ -28,4 +28,4 @@
     - state: ai
   - type: ConditionalSpawner
     prototypes:
-    - MobPikeFriar
+    - MobDunklosteus
