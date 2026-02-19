@@ -208,7 +208,7 @@
 - type: entity
   parent: [ ClothingHeadBase ]
   id: ClothingHeadHatCatEars
-  name: cat ears
+  name: cat ears with tail # starcup: clarify tail attachment
   description: "NYAH!"
 #  categories: [ DoNotMap ] # starcup - no need
   components:
@@ -254,9 +254,9 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatDogEars
-  name: doggy ears
+  name: doggy ears with tail # starcup: clarify tail attachment
   description: Awawawa. # starcup: rewritten for tone
-  categories: [ DoNotMap ]
+#  categories: [ DoNotMap ] # starcup - no need
   components:
   - type: Sprite
     sprite: Clothing/Head/Hats/dogears.rsi
