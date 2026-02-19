@@ -1106,9 +1106,22 @@
       settings: short
   - type: GhostTakeoverAvailable
   - type: OwOAccent
+  # begin starcup
+  - type: Emoting
+  - type: BodyEmotes
+    soundsId: GeneralBodyEmotes
   - type: Speech
-    speechSounds: Cat
+    speechSounds: CatSpeechSounds
     speechVerb: SmallMob
+    allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureCough']
+  - type: Vocal
+    sounds:
+      Unsexed: CatSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: cat
+  # end starcup
   - type: MovementSpeedModifier
     baseWalkSpeed : 3
     baseSprintSpeed : 5
@@ -1117,6 +1130,7 @@
     - VimPilot
     - DoorBumpOpener
     - Cake
+    - CreatureEmotes # starcup
   - type: CanEscapeInventory
     baseResistTime: 2
   - type: Puller

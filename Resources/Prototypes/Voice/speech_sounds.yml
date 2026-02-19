@@ -37,11 +37,13 @@
 - type: speechSounds
   id: Squeak
   saySound:
-    path: /Audio/Animals/mouse_squeak.ogg
+  # begin starcup
+    collection: MouseSqueak
   askSound:
-    path: /Audio/Animals/mouse_squeak.ogg
+    path: /Audio/_starcup/Animals/Mouse/mouse_question.ogg
   exclaimSound:
-    path: /Audio/Animals/mouse_squeak.ogg
+    path: /Audio/_starcup/Animals/Mouse/mouse_agitated.ogg
+  # end starcup
 
 - type: speechSounds
   id: Vending
@@ -90,21 +92,25 @@
 
 - type: speechSounds
   id: Monkey
+  # begin starcup
   saySound:
-    path: /Audio/Animals/monkey_scream.ogg
+    collection: MonkeyOoks
   askSound:
-    path: /Audio/Animals/monkey_scream.ogg
+    path: /Audio/_starcup/Animals/Monkey/monkey_ask.ogg
   exclaimSound:
-    path: /Audio/Animals/monkey_scream.ogg
+    collection: MonkeyExclaims
+  # end starcup
 
 - type: speechSounds
   id: Parrot
+  # begin starcup
   saySound:
-    path: /Audio/Animals/parrot_raught.ogg
+    collection: ParrotGrawks
   askSound:
-    path: /Audio/Animals/parrot_raught.ogg
+    collection: ParrotAsks
   exclaimSound:
-    path: /Audio/Animals/parrot_raught.ogg
+    collection: ParrotExclaims
+  # end starcup
 
 - type: speechSounds
   id: Lizard
@@ -135,12 +141,14 @@
 
 - type: speechSounds
   id: Arachnid
+  # begin starcup
   saySound:
-    path: /Audio/Voice/Talk/arachnid.ogg
+    collection: ArachnidSays
   askSound:
-    path: /Audio/Voice/Talk/arachnid_ask.ogg
+    collection: ArachnidAsks
   exclaimSound:
-    path: /Audio/Voice/Talk/arachnid_exclaim.ogg
+    collection: ArachnidExclaims
+  # end starcup
 
 - type: speechSounds
   id: Cat
@@ -163,20 +171,24 @@
 - type: speechSounds
   id: Cluck
   saySound:
-    path: /Audio/Animals/chicken_cluck_happy.ogg
+  # begin starcup
+    collection: ChickenClucks
   askSound:
-    path: /Audio/Animals/chicken_cluck_happy.ogg
+    collection: ChickenClucks
   exclaimSound:
-    path: /Audio/Animals/chicken_cluck_happy.ogg
+    collection: ChickenClucks
+  # end starcup
 
 - type: speechSounds
   id: Goat
   saySound:
-    path: /Audio/Animals/goat_bah.ogg
+  # begin starcup
+    collection: GoatSpeech
   askSound:
-    path: /Audio/Animals/goat_bah.ogg
+    path: /Audio/_starcup/Animals/Goat/goat_ask.ogg
   exclaimSound:
-    path: /Audio/Animals/goat_bah.ogg
+    path: /Audio/_starcup/Animals/Goat/goat_exclaim.ogg
+  # end starcup
 
 - type: speechSounds
   id: Vulpkanin

@@ -432,6 +432,22 @@
     tags:
     - DoorBumpOpener
     - FootstepSound
+    - CreatureEmotes # starcup
+    # begin starcup
+  - type: Speech
+    speechSounds: SpaceSnakeSpeechSounds
+    speechVerb: Reptilian
+    allowedEmotes: ['CreatureHiss']
+  - type: Vocal
+    sounds:
+      Unsexed: SpaceSnakeSpeechEmotes
+    screamId: CreatureHiss
+    screamAction: ActionEmitSound
+  - type: TypingIndicator
+    proto: alien
+  - type: ReplacementAccent
+    accent: xeno
+    # end starcup
 
 - type: entity
   name: space adder

@@ -56,10 +56,11 @@
   - type: MeleeWeapon
     hidden: true
     soundHit:
-      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+      collection: AlienClaw
     damage:
       types:
         Blunt: 6
+    animation: WeaponArcPincer # starcup
   - type: MovementSpeedModifier
     baseWalkSpeed : 2
     baseSprintSpeed : 2.5
@@ -68,6 +69,29 @@
       - SimpleHostile
   - type: Damageable
     damageContainer: StructuralInorganic
+  # begin starcup
+  - type: Speech
+    speechSounds: OreCrabSpeechSounds
+    allowedEmotes: ['CreatureChitter', 'ClawSnap']
+  - type: Vocal
+    sounds:
+      Unsexed: OreCrabSpeechEmotes
+    screamId: ClawSnap
+    screamAction: ActionEmitSound
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBug
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+    - CreatureEmotes
+  - type: ReplacementAccent
+    accent: crab
+  - type: AutoEmote
+    emotes:
+    - ChitterAutoEmote
+  # end starcup
 
 - type: entity
   parent: MobOreCrab

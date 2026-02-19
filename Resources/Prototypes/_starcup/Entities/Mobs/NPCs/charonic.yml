@@ -65,15 +65,26 @@
     tags:
     - DoorBumpOpener
     - CannotSuicide
+    - CreatureEmotes
   - type: ReplacementAccent
     accent: genericAggressive
   - type: Speech
     speechVerb: LargeMob
+    speechSounds: LeechSpeechSounds
+    allowedEmotes: ['CreatureGrowl', 'CreatureScream']
+  - type: Vocal
+    sounds:
+      Unsexed: LeechSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - GrowlAutoEmote
   - type: InteractionPopup
     interactSuccessString: petting-success-frog
     interactFailureString: petting-failure-carp
     interactFailureSound:
-      path: /Audio/_starcup/Animals/leechbite1.ogg
+      path: /Audio/_starcup/Monsters/CharonicLeech/leech_scream.ogg
   - type: FloatingVisuals
   - type: Destructible
     thresholds:
@@ -249,6 +260,18 @@
       - CannotSuicide
       - DoorBumpOpener
       - StunImmune
+      - CreatureEmotes
+    - type: Speech
+      speechVerb: Slime
+      speechSounds: FeralSlimeSpeechSounds
+      allowedEmotes: ['Squish', 'Bubble', 'Pop', 'Fizz', 'Simmer']
+    - type: TypingIndicator
+      proto: slime
+    - type: Vocal
+      sounds:
+        Unsexed: FeralSlimeSpeechEmotes
+      screamId: Simmer
+      screamAction: ActionEmitSound
 
 - type: entity
   id: MobSpawnCharonicSlime

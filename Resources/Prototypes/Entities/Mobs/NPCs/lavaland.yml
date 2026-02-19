@@ -70,6 +70,29 @@
     successChance: 0.3
     interactSuccessString: petting-success-slimes
     interactFailureString: petting-failure-generic
+  # begin starcup
+  - type: Deathgasp
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - CreatureEmotes
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: WatcherSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureClick']
+  - type: Vocal
+    sounds:
+      Unsexed: WatcherSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: xeno
+  - type: TypingIndicator
+    proto: alien
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+  # end starcup
 
 - type: entity
   id: MobWatcherLavaland

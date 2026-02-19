@@ -22,6 +22,15 @@
         layer:
         - WallLayer
         hard: false
+  # begin starcup
+  - type: TriggerOnSpawn
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_starcup/Monsters/OreCrab/orecrab_spawn.ogg
+      params:
+        pitch: 0.82
+        volume: 0.85
+  # end starcup
   - type: TimedDespawn
     lifetime: 2.1
   - type: SpawnOnDespawn
