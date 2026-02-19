@@ -26,6 +26,7 @@ Assets have distinct licenses in `attributions.yml` and `meta.json` files which 
 | `_Floof`         | Floofstation         | https://github.com/Floof-Station/Floof-Station          | AGPL 3.0  |
 | `_Funkystation`  | Funky Station        | https://github.com/funky-station/funky-station          | AGPL 3.0  |
 | `_Goobstation`   | Goob Station         | https://github.com/Goob-Station/Goob-Station/           | AGPL 3.0  |
+| `_GreyStation`   | Greystation (Legacy) | https://github.com/grey-tiders/GreyStation-14-Legacy    | MIT       |
 | `_Impstation`    | Impstation           | https://github.com/impstation/imp-station-14/           | AGPL 3.0  |
 | `_L5`            | Lagrange 14          | https://github.com/lagrange14/substations/              | AGPL 3.0  |
 | `_NC`            | Nuclear-14           | https://github.com/Vault-Overseers/nuclear-14/          | AGPL 3.0  |
