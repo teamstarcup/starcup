@@ -133,9 +133,9 @@
 
 - type: entity
   name: Python
-  parent: [BaseWeaponRevolver, BaseSyndicateContraband]
+  parent: [BaseWeaponRevolver, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
   id: WeaponRevolverPython
-  description: A powerful double-action revolver manufactured by the Syndicate. Loud and flashy, perfect for any agent looking to make a statement. Loads 6 rounds of .45 magnum.
+  description: A powerful double-action revolver. Loud and flashy, perfect for any agent looking to make a statement. Loads 6 rounds of .45 magnum. # starcup: removed syndicate mention
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Revolvers/python.rsi
@@ -154,6 +154,10 @@
         volume: 2.25
   - type: StaticPrice
     price: 1500 # Botany can shit these out like candy, but let's see how it goes
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-traitor-python
+  # end starcup
 
 - type: entity
   parent: WeaponRevolverPython
