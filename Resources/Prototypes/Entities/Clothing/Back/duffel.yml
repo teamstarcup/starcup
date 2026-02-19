@@ -163,7 +163,7 @@
       sprite: Clothing/Back/Duffels/salvage.rsi
 
 - type: entity
-  parent: [ClothingBackpackDuffel, BaseSyndicateContraband]
+  parent: [ClothingBackpackDuffel, BaseSyndicateContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingBackpackDuffelSyndicate
   name: syndicate duffel bag
   description: A large duffel bag for holding various traitor goods.
@@ -175,6 +175,10 @@
   - type: Storage
     grid:
     - 0,0,8,4
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-syndicate-duffel-bag
+  # end starcup
 
 - type: entity
   parent: [ ClothingBackpackDuffelSyndicate, BaseSyndicateContraband ]

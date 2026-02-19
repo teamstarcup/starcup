@@ -592,7 +592,7 @@
 #ANTAG HARDSUITS
 #Blood-red Hardsuit
 - type: entity
-  parent: [ ClothingOuterHardsuitBase, BaseSyndicateContraband ]
+  parent: [ ClothingOuterHardsuitBase, BaseSyndicateContraband, BaseExaminableClothing ] # starcup: examinable clothing
   id: ClothingOuterHardsuitSyndie
   name: blood-red hardsuit
   description: A heavily armored hardsuit designed for work in special operations. Property of Gorlex Marauders.
@@ -634,6 +634,10 @@
     - ScurretWearable
   - type: StaticPrice
     price: 5000
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-syndicate-hardsuit
+  # end starcup
 
 # Syndicate Medic Hardsuit
 - type: entity
@@ -652,6 +656,10 @@
     tags:
     - Hardsuit
     - WhitelistChameleon
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-syndicate-hardsuit-medic
+  # end starcup
 
 #Syndicate Elite Hardsuit
 - type: entity
@@ -698,6 +706,10 @@
     - CorgiWearable
     - Hardsuit
     - WhitelistChameleon
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-syndicate-hardsuit-elite
+  # end starcup
 
 #Syndicate Commander Hardsuit
 - type: entity
@@ -737,6 +749,10 @@
     - CorgiWearable
     - Hardsuit
     - WhitelistChameleon
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-syndicate-hardsuit-commander
+  # end starcup
 
 
 #Cybersun Juggernaut Hardsuit
@@ -777,6 +793,10 @@
     - CorgiWearable
     - Hardsuit
     - WhitelistChameleon
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-syndicate-hardsuit-juggernaut
+  # end starcup
 
 #Wizard Hardsuit
 - type: entity

@@ -1,7 +1,11 @@
-# Hands
+# Clothing
+## Belt
+clothing-chest-rig = [color=red]chest rig[/color]
+
+## Hands
 clothing-gloves-of-the-north-star = [color=red]gloves of the north star[/color]
 
-# Outer
+## Outer
 clothing-web-vest = [color=red]web vest[/color]
 
 # Weapons

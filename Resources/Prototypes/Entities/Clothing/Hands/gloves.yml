@@ -605,7 +605,7 @@
   # end starcup
 
 - type: entity
-  parent: [ClothingHandsBase, BaseSyndicateContraband]
+  parent: [ClothingHandsBase, BaseSyndicateContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingHandsKnuckleDustersSyndicate
   name: syndicate knuckle dusters
   description: "Plastitanium knuckle dusters branded with the blood-red S. A real man beats someone to death with these."
@@ -631,6 +631,10 @@
     - Kangaroo
   - type: StaticPrice
     price: 2000
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-syndicate-knuckle-dusters
+  # end starcup
 
 - type: entity
   name: stun knuckle dusters
