@@ -60,17 +60,17 @@
     - GrowlAutoEmote
 
 - type: entity
-  id: MobPikeFriar
+  id: MobDunklosteus
   parent: MobPike
-  name: friar space pike
-  description: Slightly larger and tougher than other space pike species. Named by Friar Glub, who the story goes was so pious they wouldn't attack him.
+  name: space dunkleosteus
+  description: Slightly larger and tougher than other space pike species, with a tough, bony head.
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Aliens/Pikes/space_pike_pink.rsi
   - type: MobThresholds
     thresholds:
       0: Alive
-      115: Dead
+      124: Dead
 
 - type: entity
   id: MobPikeSalvage
