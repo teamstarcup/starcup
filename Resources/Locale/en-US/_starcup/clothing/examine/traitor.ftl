@@ -1,3 +1,9 @@
+# Hands
+clothing-gloves-of-the-north-star = [color=red]gloves of the north star[/color]
+
+# Outer
+clothing-web-vest = [color=red]web vest[/color]
+
 # Weapons
 
 clothing-traitor-viper = [color=red]Viper pistol[/color]
@@ -14,3 +20,6 @@ clothing-grenade-emp = [color=red]EMP grenade[/color]
 clothing-grenade-holy = [color=red]holy hand grenade[/color]
 clothing-grenade-incendiary = [color=red]incendiary grenade[/color]
 clothing-grenade-shrapnel = [color=red]shrapnel grenade[/color]
+
+# Misc
+clothing-black-jetpack = [color=red]black jetpack[/color]

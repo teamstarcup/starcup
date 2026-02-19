@@ -16,7 +16,6 @@ clothing-nanotrasen-medical-visor = [color=#007bff]NanoTrasen medical visor[/col
 
 ## Hands
 clothing-nanotrasen-knuckle-dusters = [color=#007bff]NanoTrasen knuckle dusters[/color]
-clothing-gloves-of-the-north-star = [color=#007bff]gloves of the north star[/color]
 
 ## Head
 clothing-nanotrasen-eva-helmet = [color=#007bff]NanoTrasen EVA helmet[/color]
@@ -32,7 +31,6 @@ clothing-nanotrasen-gas-mask = [color=#007bff]NanoTrasen gas mask[/color]
 clothing-nanotrasen-blue-scarf = [color=#007bff]striped NanoTrasen blue scarf[/color]
 
 ## Outer
-clothing-web-vest = [color=#007bff]web vest[/color]
 clothing-nanotrasen-elite-web-vest = [color=#007bff]elite web vest[/color]
 clothing-nanotrasen-raid-suit = [color=#007bff]NanoTrasen raid suit[/color]
 clothing-nanotrasen-hardsuit = [color=#007bff]blueblood hardsuit[/color]
@@ -55,6 +53,3 @@ clothing-nanotrasen-formal-suit = [color=#007bff]NanoTrasen formal suit[/color]
 
 # Weapons
 clothing-nanotrasen-minibomb = [color=#007bff]NanoTrasen minibomb[/color]
-
-# Misc
-clothing-black-jetpack = [color=#007bff]black jetpack[/color]

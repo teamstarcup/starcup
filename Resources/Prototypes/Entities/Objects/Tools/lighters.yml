@@ -435,7 +435,7 @@
     color: cyan
 
 - type: entity
-  parent: [BaseBrandedLighter, BaseTraitorContraband ] # starcup: added contraband label
+  parent: [BaseBrandedLighter, BaseNanotrasenContraband ] # starcup: added contraband label
   id: NanotrasenFlippo
   name: NanoTrasen flippo # starcup: capitalization corrections
   description: A navy blue luxury lighter. Fueled by liquid plasma, to show just how much of it NanoTrasen has to go around. # starcup: rewritten for setting lore
@@ -531,7 +531,7 @@
     color: green
 
 - type: entity
-  parent: [BaseBrandedLighter, BaseTraitorContraband] # starcup: syndicate contraband to traitor
+  parent: BaseBrandedLighter # starcup: removed contraband label
   id: WaffleCoFlippo
   name: Waffle Co. flippo
   description: "A robust mass produced lighter. The Waffle Co. logo turns the spark wheel when pushed up, minimising risk of lighter burns for even the most inept user."
