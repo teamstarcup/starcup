@@ -95,11 +95,13 @@
   - BaseSpeciesMobOrganic
   id: MobHuman
   name: Urist McHands
-  components:
-  - type: Butcherable
-    spawned:
-    - id: FoodMeatHuman
-      amount: 5
+  # begin starcup: people are not food
+  #components:
+  #- type: Butcherable
+  #  spawned:
+  #  - id: FoodMeatHuman
+  #    amount: 5
+  # end starcup
 
 - type: entity
   parent: OrganBase
