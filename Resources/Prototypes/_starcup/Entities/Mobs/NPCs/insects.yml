@@ -38,6 +38,16 @@
         Base: dead
       Dead:
         Base: dead
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: GroundInsect
+          Quantity: 5
+  - type: Butcherable
+    spawned: [] # Should give nothing when you butcher it so we set the item id it needs to spawn to null
   - type: Item
     size: Tiny
   - type: Tag
@@ -59,14 +69,6 @@
       behaviors:
       - !type:GibBehavior
         recursive: false
-  - type: Extractable
-    grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: Slime
-          Quantity: 5
   - type: Speech
     speechVerb: SmallMob
     speechSounds: FlyingSwarmSpeechSounds
@@ -128,6 +130,14 @@
         Base: dead
       Dead:
         Base: dead
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Slime
+          Quantity: 5
   - type: Tag
     tags:
     - CreatureEmotes
@@ -171,6 +181,9 @@
   id: MobBeeSwarm
   parent: MobBee
   components:
+  - type: NpcFactionMember
+    factions:
+    - Bug
   - type: Sprite
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
@@ -187,6 +200,16 @@
         - FlyingMobMask
         layer:
         - FlyingMobLayer
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: Extractable
+    grindableSolutionName: food
   - type: SolutionContainerManager
     solutions:
       food:
@@ -225,6 +248,13 @@
     screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: BuzzAccent
+  - type: MeleeWeapon
+    animation: WeaponArcSting
+    soundHit:
+      collection: FlyingSwarmAttacks
+    damage:
+      types:
+        Piercing: 1
 
 - type: entity
   name: wasps
@@ -253,7 +283,7 @@
     solutions:
       food:
         reagents:
-        - ReagentId: GroundBee
+        - ReagentId: GroundInsect
           Quantity: 5
 
 - type: entity
@@ -280,6 +310,12 @@
         - FlyingMobMask
         layer:
         - FlyingMobLayer
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: GroundInsect
+          Quantity: 5
 
 - type: entity
   name: mosquitoes
@@ -304,6 +340,12 @@
     damage:
       types:
         Piercing: 1
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: GroundInsect
+          Quantity: 5
 
 - type: entity
   name: fireflies
@@ -660,6 +702,10 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepBug
+  - type: JumpAbility
+    action: ActionInsectGravityJump
+    jumpSound:
+      path: /Audio/_starcup/Arthropods/Beetle/beetle_buzz.ogg
 
 - type: entity
   name: stag beetle

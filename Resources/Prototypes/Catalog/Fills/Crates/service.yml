@@ -90,6 +90,17 @@
       entity_storage:
         id: BoxMousetrap
 
+- type: entityTable # starcup start
+  id: AllCigCarton
+  table: !type:GroupSelector
+    children:
+    - id: CigCartonGreen
+    - id: CigCartonRed
+    - id: CigCartonBlue
+    - id: CigCartonBlack
+    - id: CigCartonPurple
+    - id: CigCartonCandy # starcup end
+
 - type: entity
   parent: CrateGenericSteel
   id: CrateServiceSmokeables
@@ -100,16 +111,10 @@
     containers:
       entity_storage: !type:AllSelector
         children:
-        - !type:GroupSelector
-          children:
-          - id: CigCartonGreen
-            weight: 0.50
-          - id: CigCartonRed
-        - !type:GroupSelector
-          children:
-          - id: CigCartonBlue
-            weight: 0.50
-          - id: CigCartonBlack
+        - !type:NestedSelector # starcup start
+          tableId: AllCigCarton
+          rolls: !type:ConstantNumberSelector
+            value: 3 # starcup end
         - !type:GroupSelector
           children:
           - id: CigarGoldCase

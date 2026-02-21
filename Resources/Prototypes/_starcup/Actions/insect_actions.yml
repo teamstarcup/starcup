@@ -1,0 +1,13 @@
+- type: entity
+  parent: BaseAction
+  id: ActionInsectGravityJump
+  name: Leap
+  description: Unfold your wings to propel yourself forward!
+  components:
+  - type: Action
+    useDelay: 8
+    icon:
+      sprite: _starcup/Interface/Actions/jump.rsi
+      state: icon_bug
+  - type: InstantAction
+    event: !type:GravityJumpEvent {}
