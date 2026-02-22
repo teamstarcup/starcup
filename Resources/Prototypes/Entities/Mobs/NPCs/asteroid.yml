@@ -216,7 +216,7 @@
   id: MobHivelord
   parent: [ BaseMobAsteroid, FlyingMobBase ]
   name: hivelord
-  description: A truly alien creature, it is a mass of unknown organic material, constantly fluctuating. When attacking, pieces of it split off and attack in tandem with the original.
+  description: A colony of truly alien creatures of unknown organic material, constantly fluctuating. When attacking, members of the colony split off and attack in tandem. # starcup: changed to reflect new sprite
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Aliens/Asteroid/hivelord.rsi # starcup
@@ -298,7 +298,7 @@
   id: MobHivelordBrood
   parent: [ BaseMobAsteroid, FlyingMobBase ]
   name: hivelord brood
-  description: A fragment of the original hivelord, rallying behind its original. One isn't much of a threat, but...
+  description: A member of the original hivelord colony, rallying behind its peers. One isn't much of a threat, but... # starcup: changed to reflect new sprite
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Aliens/Asteroid/hivelord.rsi # starcup
@@ -351,7 +351,7 @@
   id: FoodHivelordRemains
   parent: FoodBase
   name: hivelord remains
-  description: All that remains of a hivelord, it seems to be what allows it to break pieces of itself off without being hurt... its healing properties will soon become inert if not used quickly. Try not to think about what you're eating.
+  description: All that remains of a hivelord, its healing properties will soon become inert if not used quickly. Try not to think about what you're eating. # starcup
   components:
   - type: SolutionContainerManager
     solutions:

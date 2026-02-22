@@ -1,0 +1,28 @@
+- type: entity
+  id: MobHivelordOld
+  parent: MobHivelord
+  name: deep space hivelord
+  suffix: old sprite
+  description: A truly alien creature, it is a mass of unknown organic material, constantly fluctuating. When attacking, pieces of it split off and attack in tandem with the original.
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Aliens/Asteroid/hivelord_old.rsi # starcup
+  - type: BasicEntityAmmoProvider
+    proto: MobHivelordBroodOld
+
+- type: entity
+  id: MobHivelordBroodOld
+  parent: MobHivelordBrood
+  name: hivelord brood
+  suffix: old sprite
+  description: A fragment of the original hivelord, rallying behind its original. One isn't much of a threat, but...
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Aliens/Asteroid/hivelord_old.rsi # starcup
+
+- type: entity
+  id: FoodHivelordRemainsShadow
+  parent: FoodHivelordRemains
+  name: hivelord remains
+  suffix: shadow
+  description: All that remains of a hivelord, it seems to be what allows it to break pieces of itself off without being hurt... its healing properties will soon become inert if not used quickly. Try not to think about what you're eating.
