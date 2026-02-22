@@ -84,4 +84,32 @@
     slots:
     - NECK
   - type: InteractionPopup
-    successChance: 0.9
+    successChance: 0.9 # More pliant than the typical snake
+    interactSuccessSound:
+      path: /Audio/Animals/snake_hiss.ogg
+
+- type: entity
+  name: Henrietta
+  parent: MobChicken
+  id: MobHenrietta
+  description: A bird of regal bearing with exceptionally luxurious down feathers. Refuses to answer to "Henri".
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Pets/henrietta.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: henrietta
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: henrietta
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: Item
+    size: Huge
+  - type: InteractionPopup
+    successChance: 0.25 # A princess does not permit the commoners to touch her
+    interactSuccessString: petting-success-henrietta
+    interactFailureString: petting-failure-henrietta
