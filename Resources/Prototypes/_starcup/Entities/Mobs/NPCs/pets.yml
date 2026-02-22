@@ -160,10 +160,14 @@
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: gloom
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: gloomglow
+      shader: unshaded
   - type: DamageStateVisuals
     states:
       Alive:
         Base: gloom
+        BaseUnshaded: gloomglow
       Critical:
         Base: gloom_dead
       Dead:
@@ -173,13 +177,18 @@
     - id: FoodMeatSlime
       amount: 2
     - id: MaterialBones
-      amount: 3
+      amount: 4
+    - id: MaterialSmileExtract
+      amount: 1
     dropOrgansOnButcher: true
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1.5
+    baseSprintSpeed: 3
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepSlime
       params:
-        volume: -10
+        volume: -12 # On-theme!
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -191,16 +200,18 @@
   - type: SolutionContainerManager
     solutions:
       melee:
-        maxVol: 30
+        maxVol: 0.5
   - type: SolutionRegeneration
     solution: melee
     generated:
       reagents:
-      - ReagentId: MuteToxin
-        Quantity: 1
+      - ReagentId: MuteToxin # Charon-Epsilon lives.
+        Quantity: 0.01
   - type: MeleeChemicalInjector
     transferAmount: 0.1
     solution: melee
+  - type: NPCRetaliation # Gloom is not as sweet as Smile. Don't try it.
+    attackMemoryLength: 10
   - type: DamageOnInteract
     damage:
       types:
