@@ -111,8 +111,8 @@ public sealed class MarkingsViewModelTests
 
         Model.EnforceLimits = false;
         Assert.That(Model.TrySelectMarking(Torso, HumanoidVisualLayers.Chest, MothChestFan), Is.True);
-        Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)!, Has.Count.EqualTo(3));
-        Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)![2].MarkingId, Is.EqualTo(MothChestFan));
+        Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)!, Has.Count.EqualTo(5)); // starcup: extend marking count
+        Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)![4].MarkingId, Is.EqualTo(MothChestFan)); // starcup: extend marking count
     }
 
     [MarkingTest]
