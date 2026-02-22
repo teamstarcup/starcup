@@ -152,8 +152,8 @@
 - type: entity
   name: Gloom
   parent: MobAdultSlimes
-  id: MobGloomPet
-  description: A masterpiece that went through thousands of experiments... not all of them ethical. Smile Slime?
+  id: MobGloom
+  description: Even a masterpiece is not untouchable to the corruptive nature of Charon-Epsilon. Smile Slime?
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Pets/gloom.rsi
@@ -165,9 +165,9 @@
       Alive:
         Base: gloom
       Critical:
-        Base: blue_adult_slime_dead
+        Base: gloom_dead
       Dead:
-        Base: blue_adult_slime_dead
+        Base: gloom_dead
   - type: Butcherable
     spawned:
     - id: FoodMeatSlime
@@ -179,7 +179,7 @@
     footstepSoundCollection:
       collection: FootstepSlime
       params:
-        volume: -20
+        volume: -10
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -216,3 +216,9 @@
     - DoorBumpOpener
     - CannotSuicide
     - VimPilot
+
+- type: entity
+  name: Starbuck
+  parent: MobBunny
+  id: MobStarbuck
+  description: A bunny with a rebellious spirit and can-do attitude.
