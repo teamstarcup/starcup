@@ -87,6 +87,10 @@
     successChance: 0.9 # More pliant than the typical snake
     interactSuccessSound:
       path: /Audio/Animals/snake_hiss.ogg
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - VimPilot
 
 - type: entity
   name: Henrietta
@@ -107,9 +111,108 @@
         Base: dead
       Dead:
         Base: dead
+  - type: NpcFactionMember
+    factions:
+    - BugHunter
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 1
+  - type: Reproductive
+    breedChance: 0
+  - type: TemperatureDamage
+    coldDamageThreshold: 250
+    coldDamage:
+      types:
+        Cold: 0.5
   - type: Item
     size: Huge
+  - type: Grammar
+    attributes:
+      proper: true
+      gender: female
   - type: InteractionPopup
     successChance: 0.25 # A princess does not permit the commoners to touch her
     interactSuccessString: petting-success-henrietta
     interactFailureString: petting-failure-henrietta
+  - type: Puller
+    needsHands: false
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - VimPilot
+
+- type: entity
+  name: Gloom
+  parent: MobAdultSlimes
+  id: MobGloomPet
+  description: A masterpiece that went through thousands of experiments... not all of them ethical. Smile Slime?
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Pets/gloom.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: gloom
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: gloom
+      Critical:
+        Base: blue_adult_slime_dead
+      Dead:
+        Base: blue_adult_slime_dead
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatSlime
+      amount: 2
+    - id: MaterialBones
+      amount: 3
+    dropOrgansOnButcher: true
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepSlime
+      params:
+        volume: -20
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Dead
+  - type: MeleeWeapon
+    damage:
+      types:
+        Caustic: 3
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 30
+  - type: SolutionRegeneration
+    solution: melee
+    generated:
+      reagents:
+      - ReagentId: MuteToxin
+        Quantity: 1
+  - type: MeleeChemicalInjector
+    transferAmount: 0.1
+    solution: melee
+  - type: DamageOnInteract
+    damage:
+      types:
+        Caustic: 0.9
+  - type: InteractionPopup
+    successChance: 1 # Don't know how to give the damage on interact a chance to fail
+    interactSuccessString: petting-success-gloom
+    interactSuccessSound:
+      path: /Audio/Effects/lightburn.ogg
+  - type: Tag
+    tags:
+    - FootstepSound
+    - DoorBumpOpener
+    - CannotSuicide
+    - VimPilot
