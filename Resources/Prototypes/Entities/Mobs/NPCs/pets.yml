@@ -161,7 +161,7 @@
 
 - type: entity
   name: Runtime
-  parent: MobCatGhost # DeltaV - Frontier Feature
+  parent: MobCat
   id: MobCatRuntime
   description: Professional mouse hunter. Escape artist.
   components:
@@ -175,10 +175,6 @@
     attributes:
       proper: true
       gender: female
-  - type: Butcherable # DeltaV - Frontier Feature
-    spawned:
-    - id: FoodMeatCat
-      amount: 1
   - type: Tag
     tags:
     - CannotSuicide
@@ -190,7 +186,7 @@
 - type: entity
   name: Exception
   id: MobCatException
-  parent: MobCatCalicoGhost # DeltaV - Frontier Feature
+  parent: MobCatCalico
   description: Ask nicely, and maybe they'll give you one of their spare lives.
   components:
   - type: NpcFactionMember
@@ -200,10 +196,6 @@
     attributes:
       proper: true
       gender: male
-  - type: Butcherable # DeltaV - Frontier Feature
-    spawned:
-    - id: FoodMeatCat
-      amount: 1
   - type: Tag
     tags:
     - CannotSuicide
@@ -215,7 +207,7 @@
 - type: entity
   name: Floppa
   id: MobCatFloppa
-  parent: MobCatCaracalGhost # DeltaV - Frontier Feature
+  parent: MobCatCaracal
   description: He out here.
   components:
   - type: Fixtures

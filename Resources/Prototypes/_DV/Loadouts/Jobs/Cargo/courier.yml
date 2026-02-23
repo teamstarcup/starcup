@@ -15,18 +15,6 @@
   equipment:
       jumpsuit: ClothingUniformSkirtCourier
 
-# Backpack
-- type: loadout
-  id: ClothingBackpackClippy
-  equipment:
-      back: ClothingBackpackClippy
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobCourier
-      time: 54000 #15 hrs
-
 # Shoes
 - type: loadout
   id: RollerSkates
