@@ -6,7 +6,7 @@
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: DeltaV/Mobs/Pets/arcticfox.rsi
+    sprite: _DV/Mobs/Pets/arcticfox.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: arcticfox
@@ -22,16 +22,16 @@
         - MobMask
         layer:
         - MobLayer
-  - type: Appearance
-  - type: Inventory
-    speciesId: arcticfox
-    templateId: pet
-  - type: InventorySlots
-  - type: Strippable
-  - type: UserInterface
-    interfaces:
-    - key: enum.StrippingUiKey.Key
-      type: StrippableBoundUserInterface
+#  - type: Appearance
+#  - type: Inventory
+#    speciesId: arcticfox
+#    templateId: pet
+#  - type: InventorySlots
+#  - type: Strippable
+#  - type: UserInterface
+#    interfaces:
+#    - key: enum.StrippingUiKey.Key
+#      type: StrippableBoundUserInterface
   - type: DamageStateVisuals
     states:
       Alive:

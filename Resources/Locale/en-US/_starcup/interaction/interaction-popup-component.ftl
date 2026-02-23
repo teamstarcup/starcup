@@ -16,4 +16,4 @@ petting-success-gloom = You pet {THE($target)} on {POSS-ADJ($target)} acidic hea
 ## Starbuck
 
 petting-success-starbuck = You pet {THE($target)} on {POSS-ADJ($target)} mischievous, floppy-eared head.
-petting-failure-starbuck = You reach out to pet {THE($target)} on {POSS-ADJ($target)} head, but {SUBJECT($target)} {CONJUGATE-BASIC($target, "hop", "hops") away!
+petting-failure-starbuck = You reach out to pet {THE($target)} on {POSS-ADJ($target)} head, but {SUBJECT($target)} {CONJUGATE-BASIC($target, "hop", "hops")} away!
