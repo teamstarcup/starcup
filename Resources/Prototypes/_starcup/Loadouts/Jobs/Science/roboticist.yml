@@ -1,4 +1,68 @@
-#Eyewear
+# Senior Time
+- type: loadoutEffectGroup
+  id: SeniorRoboticist
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobRoboticist
+      time: 36000 # 10 hours
+
+# Head
+- type: loadout
+  id: CardborgHelmet
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorRoboticist
+  equipment:
+    head: ClothingHeadHatCardborg
+
+- type: loadout
+  id: NeuroroboticistHelmet
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorRoboticist
+  equipment:
+    head: ClothingHeadSuitNeuroroboticist
+
+# Jumpsuits
+- type: loadout
+  id: NeuroroboticistJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitRoboNeuroticist
+  groupBy: "jumpsuit"
+
+- type: loadout
+  id: NeuroroboticistJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtRoboNeuroticist
+  groupBy: "jumpskirt"
+
+# Outer Clothing
+- type: loadout
+  id: NeuroroboticistSuit
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorRoboticist
+  equipment:
+    head: ClothingOuterSuitNeuroroboticist
+  groupBy: "labcoat"
+
+- type: loadout
+  id: CardborgCostume
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorRoboticist
+  equipment:
+    head: ClothingOuterCardborg
+
+# Shoes
+- type: loadout
+  id: RoboticsWinterBoots
+  equipment:
+    shoes: ClothingShoesBootsWinterRobo
+
+# Eyewear
 - type: loadout
   id: DiagnosticHud
   equipment:
@@ -16,39 +80,12 @@
   equipment:
     eyes: ClothingEyesGlassesMeson
 
-# OuterClothing
-- type: loadout
-  id: NeuroroboticistSuit
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorRoboticist
-  equipment:
-    head: ClothingOuterSuitNeuroroboticist
-  groupBy: "labcoat" # starcup
-
-# Jumpsuits
-- type: loadout
-  id: NeuroroboticistJumpsuit
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitRoboNeuroticist
-  groupBy: "jumpsuit" # starcup
-
-- type: loadout
-  id: NeuroroboticistJumpskirt
-  equipment:
-    jumpsuit: ClothingUniformJumpskirtRoboNeuroticist
-  groupBy: "jumpskirt" # starcup
-
-# Head
-- type: loadout
-  id: NeuroroboticistHelmet
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorRoboticist
-  equipment:
-    head: ClothingHeadSuitNeuroroboticist
-
 # ID
+- type: loadout
+  id: RoboticistPDA
+  equipment:
+    id: RoboticistPDA
+
 - type: loadout
   id: ToymakerPDA
   equipment:
