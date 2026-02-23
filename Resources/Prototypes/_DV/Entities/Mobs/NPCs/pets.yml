@@ -18,3 +18,33 @@
     tags:
     - CannotSuicide
     - VimPilot
+
+- type: entity
+  name: Laika
+  parent: MobSecDog
+  id: MobSecDogLaika
+  description: Retired after the Security Uprisings as a hero of the people. Even now she does what she can to help. # starcup. orig: Much like her namesake, Laika is a specimen of indeterminate breed, fresh off the streets and ready to tussle.
+  components:
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: true
+    name: "Laika"
+    description: "The Psych office's canine therapy pet. Emotionally support the crew like the very good girl you are!" # starcup. orig:"Security's resident she-dog. Badger the officers for headpats and nip at the heels of violent offenders."
+  - type: GhostTakeoverAvailable
+  - type: InteractionPopup
+    successChance: 1
+  - type: Butcherable
+    spawned:
+    - id: FoodMeat
+      amount: 2
+  - type: Grammar
+    attributes:
+      proper: true
+      gender: female
+#  - type: Loadout # starcup: Laika doesn't need this gear in her new role.
+#    prototypes: [ MobSecDogLaikaGear ]
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - VimPilot
