@@ -305,6 +305,18 @@
 
 # Service Worker
 - type: loadoutGroup
+  id: ServiceWorkerHead
+  name: loadout-group-service-worker-head
+  minLimit: 0
+  loadouts:
+  - ServiceWorkerCap
+  - ServiceWorkerCapFlip
+  - ServiceWorkerBandana
+  - MaidLaceHeadpiece
+  - CatEarsNoTail
+  - CatEarsWithTail
+
+- type: loadoutGroup
   id: ServiceWorkerJumpsuit
   name: loadout-group-service-worker-jumpsuit
   loadouts:
@@ -349,6 +361,44 @@
   - Mirrorshades
 
 # Passenger
+- type: loadoutGroup
+  parent: PlushiesWorn
+  id: AssistantHead
+  name: loadout-group-assistant-head
+  minLimit: 0
+  loadouts:
+  - BlackBandana
+  - BlueBandana
+  - GoldBandana
+  - GreenBandana
+  - GreyBandana
+  - RedBandana
+  - BrownBandana
+  - SkullBandana
+  - Beanie
+  - BartenderHead
+  - BartenderBowler
+  - RedBeret
+  - BrownFedora
+  - GreyFedora
+  - GreyFlatCap
+  - BrownCowboyHat
+  - BlackCowboyHat
+  - GreyCowboyHat
+  - RedCowboyHat
+  - WhiteCowboyHat
+  - BountyHunterHat
+  - StrawHat
+  - HeadBand
+  - OutlawHat
+  - CatEarsNoTail
+  - CatEarsWithTail
+  - DogEarsNoTail
+  - DogEarsWithTail
+  - WitchHat
+  - PirateHat
+  - WarningCone
+
 - type: loadoutGroup
   parent: [ Glasses ]
   id: PassengerEyewear
