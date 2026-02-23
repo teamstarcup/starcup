@@ -1,28 +1,49 @@
 - type: entity
-  id: MobHivelordOld
+  id: MobHivelordColony
   parent: MobHivelord
-  name: deep space hivelord
-  suffix: old sprite
-  description: A truly alien creature, it is a mass of unknown organic material, constantly fluctuating. When attacking, pieces of it split off and attack in tandem with the original.
+  name: colony hivelord
+  description: A colony of alien creatures of unknown organic material, constantly fluctuating. When attacking, members of the colony split off and attack in tandem.
   components:
   - type: Sprite
-    sprite: _starcup/Mobs/Aliens/Asteroid/hivelord_old.rsi # starcup
+    sprite: _starcup/Mobs/Aliens/Asteroid/hivelord_colony.rsi
   - type: BasicEntityAmmoProvider
-    proto: MobHivelordBroodOld
+    proto: MobHivelordBroodColony
 
 - type: entity
-  id: MobHivelordBroodOld
+  id: MobHivelordBroodColony
   parent: MobHivelordBrood
-  name: hivelord brood
-  suffix: old sprite
-  description: A fragment of the original hivelord, rallying behind its original. One isn't much of a threat, but...
+  suffix: colony
+  description: A member of the original hivelord colony, rallying behind its peers. One isn't much of a threat, but...
   components:
   - type: Sprite
-    sprite: _starcup/Mobs/Aliens/Asteroid/hivelord_old.rsi # starcup
+    sprite: _starcup/Mobs/Aliens/Asteroid/hivelord_colony.rsi
 
 - type: entity
-  id: FoodHivelordRemainsShadow
-  parent: FoodHivelordRemains
-  name: hivelord remains
-  suffix: shadow
-  description: All that remains of a hivelord, it seems to be what allows it to break pieces of itself off without being hurt... its healing properties will soon become inert if not used quickly. Try not to think about what you're eating.
+  id: MobHivelordFractal
+  parent: MobHivelord
+  name: fractal hivelord
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Aliens/Asteroid/hivelord_fractal.rsi
+  - type: BasicEntityAmmoProvider
+    proto: MobHivelordBroodFractal
+
+- type: entity
+  id: MobHivelordBroodFractal
+  parent: MobHivelordBrood
+  suffix: fractal
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Aliens/Asteroid/hivelord_fractal.rsi
+
+- type: entity
+  id: MobBasiliskSkitterer
+  parent: MobBasilisk
+  suffix: skitterer
+  description: A territorial beast, covered in a thick shell that absorbs energy. Its stare causes victims to freeze from the inside. This specimen belongs to the rarely seen 'arocknid' subspecies.
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Aliens/Asteroid/basilisk.rsi
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepGiantBug
