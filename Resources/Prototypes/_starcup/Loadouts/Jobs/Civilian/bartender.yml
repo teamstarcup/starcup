@@ -8,6 +8,43 @@
       role: JobBartender
       time: 187200 #52 hrs (1 hour per week for 1 year)
 
+# Uniform
+- type: loadout
+  id: ClothingUniformNightclubSuit
+  equipment:
+    jumpsuit: ClothingUniformNightclubSuit # Impstation
+  groupBy: "jumpsuit"
+
+- type: loadout
+  id: ClothingUniformNightclubSuitSkirt
+  equipment:
+    jumpsuit: ClothingUniformNightclubSuitSkirt # Impstation
+  groupBy: "jumpskirt"
+
+- type: loadout
+  id: ClothingUniformSeniorBartender
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorBartender
+  equipment:
+    jumpsuit: ClothingUniformSeniorBartender # Impstation
+  groupBy: "jumpsuit"
+
+- type: loadout
+  id: ClothingUniformSeniorBartenderSkirt
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorBartender
+  equipment:
+    jumpsuit: ClothingUniformSeniorBartenderSkirt # Impstation
+  groupBy: "jumpskirt"
+
+# Outer
+- type: loadout
+  id: BartenderCuteApron
+  equipment:
+    outerClothing: ClothingOuterApronCuteBar # Impstation
+
 # ID
 - type: loadout
   id: BaristaPDA
