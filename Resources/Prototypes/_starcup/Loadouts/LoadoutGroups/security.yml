@@ -1,0 +1,117 @@
+# All
+- type: loadoutGroup
+  id: SecurityGloves
+  name: loadout-group-security-gloves
+  minLimit: 0
+  loadouts:
+  - FingerlessGloves
+  - BlackGloves
+
+- type: loadoutGroup
+  parent: [ Glasses ]
+  id: SecurityEyewear
+  name: loadout-group-security-glasses
+  minLimit: 0
+  loadouts:
+  - SecurityGlasses
+  - SecurityHud
+  - SecurityEyePatchHud
+
+# Combat Medic
+- type: loadoutGroup
+  id: BrigmedicHead
+  name: loadout-group-brigmedic-head
+  minLimit: 0
+  loadouts:
+  - BrigmedicBeret
+
+- type: loadoutGroup
+  id: BrigmedicJumpsuit
+  name: loadout-group-brigmedic-jumpsuit
+  loadouts:
+  - BrigmedicJumpsuit
+  - BrigmedicJumpskirt
+
+- type: loadoutGroup
+  id: BrigmedicOuterClothing
+  name: loadout-group-brigmedic-outerclothing
+  minLimit: 0
+  loadouts:
+  - BrigmedicArmoredGown
+  - SecurityOfficerWintercoat
+
+- type: loadoutGroup
+  id: BrigmedicGloves
+  name: loadout-group-brigmedic-gloves
+  minLimit: 0
+  loadouts:
+  - LatexGloves
+  - BlackGloves
+
+- type: loadoutGroup
+  id: BrigmedicShoes
+  name: loadout-group-brigmedic-shoes
+  loadouts:
+  - JackBoots
+  - RedShoes
+  - WhiteShoes
+  - SecurityWinterBoots
+
+- type: loadoutGroup
+  id: BrigmedicBackpack
+  name: loadout-group-brigmedic-backpack
+  loadouts:
+  - BrigmedicBackpack
+  - BrigmedicSatchel
+  - BrigmedicDuffel
+
+- type: loadoutGroup
+  id: SurvivalBrigmedic
+  name: loadout-group-survival-brigmedic
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - EmergencyNitrogenBrigmedic
+  - EmergencyOxygenBrigmedic
+  - LoadoutSpeciesVoxNitrogen
+  - EmergencyIPCBox # DeltaV
+
+# Detective
+- type: loadoutGroup
+  id: DetectiveBackpack
+  name: loadout-group-detective-backpack
+  loadouts:
+  - SecurityBackpack
+  - SecuritySatchel
+  - SecurityDuffel
+  - LeatherSatchel
+
+- type: loadoutGroup
+  id: DetectiveShoes
+  name: loadout-group-detective-shoes
+  loadouts:
+  - JackBoots
+  - BrownLeatherShoes
+  - LaceupShoes
+  - RedHeels
+  - BlackHeels
+  - SecurityWinterBoots
+
+# Security Cadet
+- type: loadoutGroup
+  id: SecurityCadetOuterClothing
+  name: loadout-group-security-cadet-outerclothing
+  minLimit: 0
+  loadouts:
+  - WinterCoatRed
+  - ArmorVest
+  - ArmorVestSlim
+
+# Warden
+- type: loadoutGroup
+  id: WardenShoes
+  name: loadout-group-warden-shoes
+  loadouts:
+  - JackBoots
+  - SecurityWinterBoots
+  - WardenWinterBoots

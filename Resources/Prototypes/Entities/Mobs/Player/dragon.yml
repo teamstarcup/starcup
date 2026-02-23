@@ -38,6 +38,18 @@
     - Dragon
   - type: Speech
     speechVerb: LargeMob
+    # begin starcup
+    speechSounds: DragonSpeechSounds
+    allowedEmotes: ['CreatureRoar', 'CreatureLaugh', 'CreatureGrowl', 'CreatureTrill', 'CreaturePurr']
+  - type: Vocal
+    sounds:
+      Unsexed: DragonSpeechEmotes
+    screamId: CreatureRoar
+    screamAction: ActionEmitSound
+  - type: TypingIndicator
+    proto: alien
+    # end starcup
+
   - type: CombatMode
   - type: MobMover
   - type: InputMover
@@ -115,9 +127,7 @@
     solutionOnBody: false
     updateInterval: 0.25
     metabolizerTypes: [ Dragon ]
-    groups:
-    - id: Medicine
-    - id: Poison
+    stages: [ Digestion, Bloodstream ]
   - type: Butcherable
     spawned:
     - id: FoodMeatDragon
@@ -140,7 +150,7 @@
   - type: Devourer
     foodPreferenceWhitelist:
       components:
-      - HumanoidAppearance
+      - HumanoidProfile
     stomachStorageWhitelist:
       components:
       - MobState
@@ -157,6 +167,7 @@
     - CannotSuicide
     - DoorBumpOpener
     - StunImmune
+    - CreatureEmotes # starcup
   - type: Puller
     needsHands: false
   - type: RandomMetadata

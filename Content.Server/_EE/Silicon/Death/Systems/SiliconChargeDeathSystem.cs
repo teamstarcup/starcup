@@ -12,7 +12,6 @@ public sealed class SiliconDeathSystem : EntitySystem
 {
     [Dependency] private readonly SleepingSystem _sleep = default!;
     [Dependency] private readonly SiliconChargeSystem _silicon = default!;
-    [Dependency] private readonly HumanoidAppearanceSystem _humanoidAppearanceSystem = default!;
     [Dependency] private readonly StatusEffectsSystem _statusEffect = default!; // starcup
 
     public override void Initialize()
@@ -49,12 +48,6 @@ public sealed class SiliconDeathSystem : EntitySystem
 
         EntityManager.EnsureComponent<SleepingComponent>(uid);
         _statusEffect.TrySetStatusEffectDuration(uid, SleepingSystem.StatusEffectForcedSleeping); // starcup: edited for status effects refactor
-
-        if (TryComp(uid, out HumanoidAppearanceComponent? humanoidAppearanceComponent))
-        {
-            var layers = HumanoidVisualLayersExtension.Sublayers(HumanoidVisualLayers.HeadSide);
-            _humanoidAppearanceSystem.SetLayersVisibility((uid, humanoidAppearanceComponent), layers, visible: false);
-        }
 
         siliconDeadComp.Dead = true;
 

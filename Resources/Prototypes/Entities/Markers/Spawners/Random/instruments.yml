@@ -28,6 +28,13 @@
       - id: BassGuitarInstrument
       - id: OcarinaInstrument
       - id: PanFluteInstrument
+      - !type:GroupSelector # starcup start
+        children:
+        - id: Rickenbacker4003Instrument
+        - id: Rickenbacker4003InstrumentBlack
+        - id: Rickenbacker4003InstrumentRed
+        - id: Rickenbacker4003InstrumentPink
+        - id: Rickenbacker4003InstrumentSlime # starcup end
     - !type:GroupSelector
       weight: 5
       children:
@@ -73,6 +80,13 @@
       - id: CelloInstrument
       - id: ViolaInstrument
       - id: HarpInstrument
+      - !type:GroupSelector # starcup start
+        children:
+        - id: Rickenbacker4003Instrument
+        - id: Rickenbacker4003InstrumentBlack
+        - id: Rickenbacker4003InstrumentRed
+        - id: Rickenbacker4003InstrumentPink
+        - id: Rickenbacker4003InstrumentSlime # starcup end
 
 - type: entityTable
   id: WoodwindInstrumentTable

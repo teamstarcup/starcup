@@ -1,0 +1,430 @@
+# Look in speech_sounds_arthropods.yml for spider sounds.
+# speech sounds
+
+- type: speechSounds
+  id: LeechSpeechSounds
+  saySound:
+    collection: LeechSpeech
+  askSound:
+    path: /Audio/_starcup/Monsters/CharonicLeech/leech_question.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Monsters/CharonicLeech/leech_exclaim.ogg
+
+- type: speechSounds
+  id: GoliathSpeechSounds
+  saySound:
+    collection: GoliathGrowls
+  askSound:
+    collection: GoliathGrowls
+  exclaimSound:
+    collection: GoliathGrowls
+
+- type: speechSounds
+  id: OreCrabSpeechSounds
+  saySound:
+    collection: OreCrabClicks
+  askSound:
+    path: /Audio/_starcup/Monsters/OreCrab/orecrab_ask.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Monsters/OreCrab/orecrab_exclaim.ogg
+
+- type: speechSounds
+  id: BasiliskSpeechSounds
+  saySound:
+    collection: BasiliskSays
+  askSound:
+    collection: BasiliskAsks
+  exclaimSound:
+    collection: BasiliskExclaims
+
+- type: speechSounds
+  id: HivelordSpeechSounds
+  saySound:
+    collection: HivelordSays
+  askSound:
+    collection: HivelordSays
+  exclaimSound:
+    collection: HivelordExclaims
+
+- type: speechSounds
+  id: CarpSpeechSounds
+  saySound:
+    collection: CarpSays
+  askSound:
+    collection: CarpSays
+  exclaimSound:
+    collection: CarpSays
+
+- type: speechSounds
+  id: SharkminnowSpeechSounds
+  saySound:
+    collection: SharkminnowSays
+  askSound:
+    collection: SharkminnowSays
+  exclaimSound:
+    collection: SharkminnowSays
+
+- type: speechSounds
+  id: FeralSlimeSpeechSounds
+  saySound:
+    collection: FeralSlimeSays
+  askSound:
+    collection: FeralSlimeAsks
+  exclaimSound:
+    collection: FeralSlimeExclaims
+
+- type: speechSounds
+  id: FleshSpeechSounds
+  saySound:
+    collection: FleshSays
+  askSound:
+    collection: FleshAsks
+  exclaimSound:
+    collection: FleshSays
+
+- type: speechSounds
+  id: WatcherSpeechSounds
+  saySound:
+    collection: WatcherSays
+  askSound:
+    collection: WatcherSays
+  exclaimSound:
+    collection: WatcherSays
+
+- type: speechSounds
+  id: DemonBigSpeechSounds
+  saySound:
+    collection: DemonBigSays
+  askSound:
+    collection: DemonBigAsks
+  exclaimSound:
+    collection: DemonBigSays
+
+- type: speechSounds
+  id: BehonkerSpeechSounds
+  saySound:
+    collection: BehonkerSays
+  askSound:
+    collection: BehonkerAsks
+  exclaimSound:
+    collection: BehonkerSays
+
+- type: speechSounds
+  id: LuminousSpeechSounds
+  saySound:
+    path: /Audio/_starcup/Monsters/LuminousBeing/luminous_say.ogg
+  askSound:
+    path: /Audio/_starcup/Monsters/LuminousBeing/luminous_ask.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Monsters/LuminousBeing/luminous_exclaim.ogg
+
+- type: speechSounds
+  id: DragonSpeechSounds
+  saySound:
+    collection: DragonSays
+  askSound:
+    path: /Audio/_starcup/Monsters/Dragon/dragon_ask.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Monsters/Dragon/dragon_exclaim.ogg
+
+- type: speechSounds
+  id: RatKingSpeechSounds
+  saySound:
+    collection: RatKingSqueak
+  askSound:
+    path: /Audio/_starcup/Monsters/RatKing/rat_king_question.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Monsters/RatKing/rat_king_agitated.ogg
+
+- type: speechSounds
+  id: HellhoundSpeechSounds
+  saySound:
+    collection: HellhoundSays
+  askSound:
+    path: /Audio/_starcup/Monsters/Hellhound/dog_ask.ogg
+  exclaimSound:
+    path: /Audio/_starcup/Monsters/Hellhound/dog_exclaim.ogg
+
+# speech sound emotes
+
+- type: emoteSounds
+  id: LeechSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      path: /Audio/_starcup/Monsters/CharonicLeech/leech_scream.ogg
+    CreatureGrowl:
+      path: /Audio/_starcup/Monsters/CharonicLeech/leech_growl.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Monsters/CharonicLeech/leech_death.ogg
+
+- type: emoteSounds
+  id: GoliathSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureRoar:
+      path: /Audio/_starcup/Monsters/Goliath/goliath_roar.ogg
+    CreatureGrowl:
+      collection: GoliathGrowls
+    Gasp:
+      path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Monsters/Goliath/goliath_death.ogg
+
+- type: emoteSounds
+  id: OreCrabSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureChitter:
+      path: /Audio/_starcup/Monsters/OreCrab/orecrab_chitter.ogg
+    CreatureScream:
+      collection: OreCrabScreams
+    ClawSnap:
+      path: /Audio/_starcup/Arthropods/claw_snap.ogg
+    Gasp:
+      path: /Audio/_starcup/Monsters/OreCrab/orecrab_chitter.ogg
+    DefaultDeathgasp:
+      collection: OreCrabScreams
+
+- type: emoteSounds
+  id: CarpSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureGrowl:
+      collection: CarpGrowls
+    Gasp:
+      path: /Audio/_starcup/Monsters/Carp/sharkminnow_gasp.ogg
+    DefaultDeathgasp:
+      collection: CarpGrowls
+
+- type: emoteSounds
+  id: SharkminnowSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureGrowl:
+      collection: SharkminnowGrowls
+    Gasp:
+      path: /Audio/_starcup/Monsters/Carp/sharkminnow_gasp.ogg
+    DefaultDeathgasp:
+      collection: SharkminnowGrowls
+
+- type: emoteSounds
+  id: HivelordSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureClick:
+      collection: HivelordClicks
+    CreatureScream:
+      path: /Audio/_starcup/Monsters/Hivelord/hivelord_scream.ogg
+    Gasp:
+      path: /Audio/_starcup/Monsters/Hivelord/hivelord_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Monsters/Hivelord/hivelord_death.ogg
+
+- type: emoteSounds
+  id: FeralSlimeSpeechEmotes
+  sounds:
+    Squish:
+      collection: Squishes
+    Bubble:
+      collection: Bubbles
+    Pop:
+      collection: Pops
+    Fizz:
+      path: /Audio/_starcup/Emotes/Slime/fizz.ogg
+    Simmer:
+      path: /Audio/_starcup/Emotes/Slime/simmer.ogg
+    Blink:
+      path: /Audio/_starcup/Monsters/FeralSlime/feral_slime_blink.ogg
+    Gasp:
+      path: /Audio/_starcup/Monsters/FeralSlime/feral_slime_gasp.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Monsters/FeralSlime/feral_slime_death.ogg
+  params:
+    variation: 0.125
+
+- type: emoteSounds
+  id: FleshSpeechEmotes
+  sounds:
+    CreatureScream:
+      collection: FleshScreams
+    CreatureBark:
+      path: /Audio/_starcup/Monsters/AberrantFlesh/flesh_bark.ogg
+    Squish:
+      collection: Squishes
+    Simmer:
+      path: /Audio/_starcup/Emotes/Slime/simmer.ogg
+    Blink:
+      path: /Audio/_starcup/Monsters/FeralSlime/feral_slime_blink.ogg
+    Gasp:
+      collection: FleshAsks
+    DefaultDeathgasp:
+      collection: FleshScreams
+  params:
+    variation: 0.125
+
+- type: emoteSounds
+  id: WatcherSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureClick:
+      path: /Audio/Voice/Arachnid/arachnid_click.ogg
+    CreatureScream:
+      collection: WatcherScreams
+    Blink:
+      path: /Audio/_starcup/Monsters/FeralSlime/feral_slime_blink.ogg
+    Gasp:
+      path: /Audio/_starcup/Monsters/Hivelord/hivelord_gasp.ogg
+    DefaultDeathgasp:
+      collection: WatcherScreams
+
+- type: emoteSounds
+  id: DemonBigSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      collection: DemonBigScreams
+    CreatureLaugh:
+      collection: DemonBigLaughs
+    CreatureRoar:
+      collection: DemonBigRoars
+    CreatureGrowl:
+      collection: DemonBigGrowls
+    Gasp:
+      path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
+    DefaultDeathgasp:
+      collection: DemonBigScreams
+
+- type: emoteSounds
+  id: BehonkerSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureLaugh:
+      collection: BehonkerLaughs
+    BuzzNonSilicon:
+      path: /Audio/_starcup/Monsters/Behonker/behonker_buzz.ogg
+    Blink:
+      path: /Audio/_starcup/Monsters/FeralSlime/feral_slime_blink.ogg
+    Gasp:
+      path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
+    DefaultDeathgasp:
+      collection: BehonkerLaughs
+
+- type: emoteSounds
+  id: LuminousSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      path: /Audio/_starcup/Monsters/LuminousBeing/luminous_scream.ogg
+    CreatureLaugh:
+      path: /Audio/_starcup/Monsters/LuminousBeing/luminous_laugh.ogg
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Monsters/LuminousBeing/luminous_laugh.ogg
+
+- type: emoteSounds
+  id: DragonSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureTrill:
+      collection: DragonTrills
+    CreatureLaugh:
+      collection: DragonLaughs
+    CreatureRoar:
+      path: /Audio/Animals/space_dragon_roar.ogg
+    CreaturePurr:
+      path: /Audio/_starcup/Monsters/Dragon/dragon_purr.ogg
+    CreatureGrowl:
+      collection: DragonGrowls
+    Gasp:
+      path: /Audio/_starcup/Animals/heavy_animal_gasp.ogg
+    DefaultDeathgasp:
+      collection: DragonGrowls
+
+- type: emoteSounds
+  id: RatKingSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureScream:
+      path: /Audio/_starcup/Monsters/RatKing/rat_king_scream.ogg
+    CreatureLaugh:
+      collection: RatKingLaugh
+    CreatureSqueak:
+      path: /Audio/_starcup/Monsters/RatKing/rat_king_squeak1.ogg
+    CreatureYawn:
+      path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
+    CreatureCough:
+      collection: MouseSneezes
+    ThumpTailSoft:
+      path: /Audio/Effects/soft_thump.ogg
+    ThumpTailMany:
+      path: /Audio/_starcup/Effects/soft_thumps.ogg
+    ThumpTailLoud:
+      path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
+    Sneeze:
+      collection: MouseSneezes
+    Gasp:
+      collection: MouseGasp
+    DefaultDeathgasp:
+      path: /Audio/_starcup/Monsters/RatKing/rat_king_death.ogg
+
+- type: emoteSounds
+  id: SmallHellhoundSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureBark:
+      collection: SmallHellhoundBarks
+    CreatureSnarl:
+      collection: SmallHellhoundSnarls
+    CreatureGrowl:
+      collection: SmallDogGrowls
+    CreatureWhimper:
+      collection: HellhoundWhimpers
+    CreatureHowl:
+      collection: HellhoundHowls
+    Snuffle:
+      collection: DogSniffing
+    Shake:
+      path: /Audio/_starcup/Animals/Dog/dog_shake.ogg
+    Pant:
+      path: /Audio/_starcup/Animals/Dog/dog_pant1.ogg
+    Gasp:
+      collection: DogGasps
+    DefaultDeathgasp:
+      collection: HellhoundWhimpers
+
+- type: emoteSounds
+  id: LargeHellhoundSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureBark:
+      collection: LargeHellhoundBarks
+    CreatureGrowl:
+      collection: LargeHellhoundGrowls
+    CreatureWhimper:
+      collection: HellhoundWhimpers
+    CreatureHowl:
+      collection: HellhoundHowls
+    Snuffle:
+      collection: DogSniffing
+    Shake:
+      path: /Audio/_starcup/Animals/Dog/dog_shake.ogg
+    Pant:
+      path: /Audio/_starcup/Animals/Dog/dog_pant1.ogg
+    Gasp:
+      collection: DogGasps
+    DefaultDeathgasp:
+      collection: HellhoundWhimpers

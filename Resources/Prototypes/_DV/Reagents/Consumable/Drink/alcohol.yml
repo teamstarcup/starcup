@@ -13,13 +13,12 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
+    Digestion:
+      metabolites:
+        Ethanol: 0.3
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.15
 
 - type: reagent
   id: OrangeCreamice
@@ -36,13 +35,12 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
+    Digestion:
+      metabolites:
+        Ethanol: 0.12 # starcup: increased from 0.1
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.07 # starcup: increased from 0.05
 
 - type: reagent
   id: Silverjack
@@ -59,13 +57,12 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
+    Digestion:
+      metabolites:
+        Ethanol: 0.17 # starcup: increased from 0.125
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.09 # starcup: increased from 0.0625
 
 - type: reagent
   id: Brainbomb
@@ -82,7 +79,11 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
+    Digestion:
+      metabolites:
+        Ethanol: 0.13 # starcup: decreased from 0.17
+        THC: 0.66
+        SpaceDrugs: 0.66
       effects:
       - !type:HealthChange
         conditions:
@@ -94,15 +95,6 @@
             Caustic: 0.25
       - !type:SatiateThirst
         factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.07 # starcup: decreased from 0.085
-      - !type:AdjustReagent
-        reagent: THC
-        amount: 0.33
-      - !type:AdjustReagent
-        reagent: SpaceDrugs
-        amount: 0.33
 
 - type: reagent
   id: ClownBlood
@@ -119,13 +111,12 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
+    Digestion:
+      metabolites:
+        Ethanol: 0.12 # starcup: increased from 0.05
       effects:
       - !type:SatiateThirst
         factor: 2
-#      - !type:AdjustReagent # starcup: <0.06 ethanol doesn't do anything
-#        reagent: Ethanol
-#        amount: 0.025
 
 - type: reagent
   id: CircusJuice
@@ -142,13 +133,12 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
+    Digestion:
+      metabolites:
+        Ethanol: 0.13 # starcup: increased from 0.125
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.06 # starcup: rounded down from 0.0625 for standardization
       - !type:Emote #It's very funny
         emote: Laugh
         probability: 0.15
@@ -168,13 +158,12 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
+    Digestion:
+      metabolites:
+        Ethanol: 0.12 # starcup: decreased from 0.13
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.06 # starcup: rounded down from 0.065 for standardization
       - !type:AdjustTemperature
         amount: 75 # thermal energy, not temperature!
 
@@ -193,13 +182,13 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
+    Digestion:
+      metabolites:
+        Ethanol: 0.12 # starcup: increased from 0.06
       effects:
       - !type:SatiateThirst
         factor: 2
-#      - !type:AdjustReagent # starcup: <0.06 ethanol doesn't do anything
-#        reagent: Ethanol
-#        amount: 0.03
+
 - type: reagent
   id: Angobitters
   name: reagent-name-angobitters
@@ -210,10 +199,9 @@
   color: "#331002"
   recognizable: true
   metabolisms:
-    Drink:
+    Digestion:
+      metabolites:
+        Ethanol: 0.4 # starcup: increased from 0.12
       effects:
       - !type:SatiateThirst
         factor: 1
-#      - !type:AdjustReagent # starcup: <0.06 ethanol doesn't do anything
-#        reagent: Ethanol
-#        amount: 0.03

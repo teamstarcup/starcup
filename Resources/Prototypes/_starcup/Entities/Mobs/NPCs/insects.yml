@@ -38,11 +38,22 @@
         Base: dead
       Dead:
         Base: dead
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: GroundInsect
+          Quantity: 5
+  - type: Butcherable
+    spawned: [] # Should give nothing when you butcher it so we set the item id it needs to spawn to null
   - type: Item
     size: Tiny
   - type: Tag
     tags:
     - Trash
+    - CreatureEmotes
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
@@ -58,6 +69,17 @@
       behaviors:
       - !type:GibBehavior
         recursive: false
+  - type: Speech
+    speechVerb: SmallMob
+    speechSounds: FlyingSwarmSpeechSounds
+    allowedEmotes: ['BuzzNonSilicon']
+  - type: Vocal
+    sounds:
+      Unsexed: FlyingSwarmSpeechEmotes
+    screamId: BuzzNonSilicon
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: BuzzAccent
 
 - type: entity
   name: giant flying insect
@@ -108,7 +130,17 @@
         Base: dead
       Dead:
         Base: dead
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Slime
+          Quantity: 5
   - type: Tag
+    tags:
+    - CreatureEmotes
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
@@ -126,7 +158,22 @@
     interactFailureString: petting-failure-generic
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
-      path: /Audio/_starcup/Animals/Swarm/swarmpet.ogg
+      collection: GiantBugBuzzes
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatSlime
+      amount: 2
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: GiantFlyingBugSpeechSounds
+    allowedEmotes: ['BuzzNonSilicon']
+  - type: Vocal
+    sounds:
+      Unsexed: GiantFlyingBugSpeechEmotes
+    screamId: BuzzNonSilicon
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: BuzzAccent
 
 - type: entity
   name: bees
@@ -134,6 +181,9 @@
   id: MobBeeSwarm
   parent: MobBee
   components:
+  - type: NpcFactionMember
+    factions:
+    - Bug
   - type: Sprite
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
@@ -150,6 +200,16 @@
         - FlyingMobMask
         layer:
         - FlyingMobLayer
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: Extractable
+    grindableSolutionName: food
   - type: SolutionContainerManager
     solutions:
       food:
@@ -176,6 +236,25 @@
   - type: Tag
     tags:
     - HoneyProducer
+    - CreatureEmotes
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: FlyingSwarmSpeechSounds
+    allowedEmotes: ['BuzzNonSilicon']
+  - type: Vocal
+    sounds:
+      Unsexed: FlyingSwarmSpeechEmotes
+    screamId: BuzzNonSilicon
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: BuzzAccent
+  - type: MeleeWeapon
+    animation: WeaponArcSting
+    soundHit:
+      collection: FlyingSwarmAttacks
+    damage:
+      types:
+        Piercing: 1
 
 - type: entity
   name: wasps
@@ -195,7 +274,7 @@
       20: Dead
   - type: MeleeWeapon
     soundHit:
-      collection: SwarmBuzzing
+      collection: FlyingSwarmAttacks
     animation: WeaponArcSting
     damage:
       types:
@@ -204,7 +283,7 @@
     solutions:
       food:
         reagents:
-        - ReagentId: GroundBee
+        - ReagentId: GroundInsect
           Quantity: 5
 
 - type: entity
@@ -231,6 +310,12 @@
         - FlyingMobMask
         layer:
         - FlyingMobLayer
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: GroundInsect
+          Quantity: 5
 
 - type: entity
   name: mosquitoes
@@ -251,10 +336,16 @@
   - type: MeleeWeapon
     animation: WeaponArcSting
     soundHit:
-      collection: SwarmBuzzing
+      collection: FlyingSwarmAttacks
     damage:
       types:
         Piercing: 1
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: GroundInsect
+          Quantity: 5
 
 - type: entity
   name: fireflies
@@ -346,10 +437,19 @@
   - type: MeleeWeapon
     animation: WeaponArcBite
     soundHit:
-      collection: SwarmBuzzing
+      collection: FlyingSwarmAttacks
     damage:
       types:
         Piercing: 2
+  - type: Speech
+    speechVerb: SmallMob
+    speechSounds: GiantFlyingBugSpeechSounds
+    allowedEmotes: ['BuzzNonSilicon']
+  - type: Vocal
+    sounds:
+      Unsexed: GiantFlyingBugSpeechEmotes
+    screamId: BuzzNonSilicon
+    screamAction: ActionEmitSound
 
 - type: entity
   name: giant bee
@@ -366,7 +466,7 @@
   - type: MeleeWeapon
     animation: WeaponArcSting
     soundHit:
-      collection: SwarmBuzzing
+      collection: FlyingSwarmAttacks
     damage:
       types:
         Piercing: 4
@@ -420,7 +520,7 @@
   - type: MeleeWeapon
     animation: WeaponArcSting
     soundHit:
-      collection: SwarmBuzzing
+      collection: FlyingSwarmAttacks
     damage:
       types:
         Piercing: 5
@@ -448,7 +548,7 @@
   - type: MeleeWeapon
     animation: WeaponArcSting
     soundHit:
-      collection: SwarmBuzzing
+      collection: FlyingSwarmAttacks
     damage:
       types:
         Piercing: 3
@@ -468,8 +568,11 @@
       state: cockroach
 
 - type: entity
-  name: stag beetle
-  parent: SimpleMobBase
+  name: base beetle
+  abstract: true # simplifying so I don't have to add mandible snap to every non-stag beetle
+  parent:
+  - SimpleMobBase
+  - BaseMobAnimal
   id: MobBeetle
   description: A little friend with a tough shell and a valiant heart.
   components:
@@ -541,8 +644,6 @@
       Starving: 5
       Dead: 0
     baseDecayRate: 0.1
-  - type: Body
-    prototype: Mouse
   - type: Extractable
     grindableSolutionName: food
   - type: SolutionContainerManager
@@ -561,6 +662,8 @@
     tags:
     - Trash
     - VimPilot
+    - CreatureEmotes
+    - FootstepSound
   - type: Destructible
     thresholds:
     - trigger:
@@ -585,6 +688,40 @@
     damage:
       types:
         Piercing: 0
+  - type: Speech
+    speechVerb: SmallMob
+    speechSounds: BeetleSpeechSounds
+    allowedEmotes: ['CreatureChirp', 'BuzzNonSilicon']
+  - type: Vocal
+    sounds:
+      Unsexed: BeetleSpeechEmotes
+    screamId: CreatureChirp
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: crab
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBug
+  - type: JumpAbility
+    action: ActionInsectGravityJump
+    jumpSound:
+      path: /Audio/_starcup/Arthropods/Beetle/beetle_buzz.ogg
+
+- type: entity
+  name: stag beetle
+  suffix: AI
+  id: MobBeetleStag
+  parent: MobBeetle
+  components:
+  - type: Speech
+    speechVerb: SmallMob
+    speechSounds: BeetleSpeechSounds
+    allowedEmotes: ['CreatureChirp', 'BuzzNonSilicon', 'MandibleSnap']
+  - type: Vocal
+    sounds:
+      Unsexed: BeetleSpeechEmotes
+    screamId: MandibleSnap
+    screamAction: ActionEmitSound
 
 - type: entity
   name: rhinoceros beetle

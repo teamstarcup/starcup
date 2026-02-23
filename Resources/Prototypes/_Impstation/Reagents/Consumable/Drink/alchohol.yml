@@ -1,0 +1,20 @@
+- type: reagent
+  id: LovePotion
+  name: reagent-name-lovepotion
+  parent: BaseSoda
+  desc: reagent-desc-lovepotion
+  physicalDesc: reagent-physical-desc-romantic
+  flavor: lovepotion
+  color: "#ff60c0"
+  metamorphicSprite:
+    sprite: _Impstation/Objects/Consumable/Drinks/lovepotion.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 6
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Digestion: # starcup
+      effects:
+      - !type:SatiateThirst
+        factor: 3
+  fizziness: 0.1 # starcup - formatting nitpick

@@ -1,0 +1,31 @@
+# Medical Intern
+- type: loadoutGroup
+  id: MedicalInternOuterClothing
+  name: loadout-group-medical-intern-outerclothing
+  minLimit: 0
+  loadouts:
+  - WinterCoatBlue
+
+- type: loadoutGroup
+  id: MedicalInternHead
+  name: loadout-group-medical-intern-head
+  minLimit: 0
+  loadouts:
+  - NurseHat
+  - BlueSurgeryCap
+  - GreenSurgeryCap
+  - PurpleSurgeryCap
+
+# Chemist
+- type: loadoutGroup
+  id: ChemistPDA
+  name: loadout-group-chemist-id
+  loadouts:
+  - ChemistPDA
+  - PharmacistPDA
+
+# Psychologist
+- type: loadoutGroup
+  parent: [ CommonBackpack, MedicalBackpack ]
+  id: PsychologistBackpack
+  name: loadout-group-psychologist-backpack

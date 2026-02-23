@@ -1,0 +1,11 @@
+- type: entity
+  id: NTmovCircuitBoard
+  parent: [BaseSiliconLawboard, BaseTraitorContraband]
+  name: law board (NTmov)
+  description: An electronics board containing the NTmov lawset.
+  components:
+  - type: SiliconLawProvider
+    laws: NanotrasenStatic
+    lawUploadSound: /Audio/Ambience/Antag/emagged_borg.ogg # This should probably have its own sound but it's fine for now.
+  - type: StaticPrice
+    price: 5000

@@ -13,6 +13,11 @@
       weight: 0.2
     - id: FoodSnackSwirlLollipop
       weight: 0.1
+    - id: FoodConversationHeart
+      weight: 0.1
+    - !type:NestedSelector
+      tableId: RandomMacaron
+      weight: 0.5
     - !type:NestedSelector
       tableId: RandomLollipop
     - !type:NestedSelector
@@ -52,3 +57,15 @@
     - id: FoodLollipopSourApple
     - id: FoodLollipopStrawberry
     - id: FoodLollipopWatermelon
+
+- type: entityTable
+  id: RandomMacaron
+  table: !type:GroupSelector
+    children:
+    - id: FoodMacaronBerry
+    - id: FoodMacaronMimana
+      weight: 0.5 # starcup - special ingredients should be slightly rarer
+    - id: FoodMacaronCotton
+      weight: 0.5 # starcup - all macarons are doptera-edible, so there's no need for this to be too common
+    - id: FoodMacaronLemon
+    - id: FoodMacaronCherry

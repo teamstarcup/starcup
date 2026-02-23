@@ -135,3 +135,6 @@ flavor-complex-whiskey-soda-starcup = like little bursts of heat
 flavor-complex-whiskey-sour-starcup = intensely sour
 flavor-complex-xeno-basher-starcup = strong and energizing
 flavor-complex-zombie-cocktail-starcup = like you just took a bite out of someone
+
+# Other
+flavor-complex-bug = the foundations for a good buguette

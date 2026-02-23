@@ -1,22 +1,15 @@
 - type: entity
   id: NanotrasenMicrowave
-  parent: KitchenMicrowave
+  parent: [ BaseTraitorContraband, SyndicateMicrowave ]
   name: NanoTrasen microwave
   description: So advanced, it can cook nano-pockets in a mere 2.5 seconds!
   components:
-  - type: Microwave
-    cookTimeMultiplier: 0.5
-    baseHeatMultiplier: 200
-    capacity: 10
-    canMicrowaveIdsSafely: false
-    explosionChance: 0.3
   - type: Sprite
     sprite: _starcup/Structures/Machines/microwave_nt.rsi
     drawdepth: SmallObjects
     snapCardinals: true
   - type: Machine
     board: NanotrasenMicrowaveMachineCircuitboard
-  - type: FoodRecipeProvider
-    providedRecipes:
-    - RecipeBaguetteSword
-    - RecipeThrowingCroissant
+  - type: Item
+    sprite: _starcup/Structures/Machines/microwave_nt.rsi
+    size: Ginormous

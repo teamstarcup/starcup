@@ -35,13 +35,29 @@
         - SemiAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/laser_clown.ogg
     - type: SpamEmitSound
+      minInterval: 4
+      maxInterval: 12
       sound:
-        collection: BikeHorn
+        collection: BehonkerHorn # starcup
     - type: NpcFactionMember
       factions:
         - SimpleHostile
     - type: Speech
       speechVerb: Cluwne
+    # begin starcup
+      speechSounds: BehonkerSpeechSounds
+      allowedEmotes: ['CreatureLaugh', 'BuzzNonSilicon']
+    - type: Vocal
+      sounds:
+        Unsexed: BehonkerSpeechEmotes
+      screamId: CreatureLaugh
+      screamAction: ActionEmitSound
+    - type: Tag
+      tags:
+      - DoorBumpOpener
+      - StunImmune
+      - CreatureEmotes
+    # end starcup
     - type: CombatMode
     - type: MobMover
     - type: InputMover
@@ -90,9 +106,7 @@
       solutionOnBody: false
       updateInterval: 0.25
       metabolizerTypes: [ Dragon ]
-      groups:
-        - id: Medicine
-        - id: Poison
+      stages: [ Digestion, Bloodstream ]
     - type: Butcherable
       spawned:
         - id: MaterialBananium1
@@ -118,6 +132,7 @@
         reagents:
         - ReagentId: Laughter
           Quantity: 300
+
 - type: entity
   name: behonker
   parent: BaseMobBehonker

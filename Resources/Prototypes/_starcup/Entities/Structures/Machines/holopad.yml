@@ -16,6 +16,14 @@
   - type: Label
     currentLabel: holopad-engineering-pa
 
+- type: entity
+  parent: Holopad
+  id: HolopadMedicalPsychology
+  suffix: Psychology
+  components:
+  - type: Label
+    currentLabel: holopad-psychology
+
 # Service
 - type: entity
   parent: Holopad
@@ -24,6 +32,14 @@
   components:
   - type: Label
     currentLabel: holopad-service-breakroom
+
+- type: entity
+  parent: Holopad
+  id: HolopadServiceLibrarianOffice
+  suffix: Librarian's Office
+  components:
+  - type: Label
+    currentLabel: holopad-service-librarian-office
 
 # General
 - type: entity

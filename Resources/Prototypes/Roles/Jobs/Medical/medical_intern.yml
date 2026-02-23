@@ -6,7 +6,7 @@
 #  requirements: # starcup: remove intern lockout
 #    - !type:DepartmentTimeRequirement
 #      department: Medical
-#      time: 5h
+#      time: 10h
 #      inverted: true # stop playing intern if you're good at med!
   startingGear: MedicalInternGear
   icon: "JobIconMedicalIntern"
@@ -23,11 +23,7 @@
 #    id: MedicalInternPDA # DeltaV: different PDAs in loadouts
     neck: ClothingNeckNoviceMark # imp
     ears: ClothingHeadsetMedical
-    belt: ClothingBeltMedicalFilled
     pocket2: BookMedicalReferenceBook
-  #storage:
-    #back:
-    #- Stuff
 
 - type: chameleonOutfit
   id: MedicalInternChameleonOutfit
