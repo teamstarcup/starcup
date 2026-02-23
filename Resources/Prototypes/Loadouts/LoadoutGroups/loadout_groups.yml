@@ -1,63 +1,38 @@
-# starcup - significantly reordered and organized trinkets. may regret this later.
-
 # Miscellaneous
 - type: loadoutGroup
-  parent: [ Plushies, TrinketsInstrument ]
+  # begin starcup: use parenting for our additions
+  parent:
+  - Plushies
+  - TrinketsBureaucracy
+  - TrinketsLighter
+  - TrinketsUtility
+  - TrinketsTreat
+  - TrinketsToy
+  - TrinketsCosmetic
+  - TrinketsTowel
+  - TrinketsInstrument
+  # end starcup
   id: Trinkets
   name: loadout-group-trinkets
   minLimit: 0
   maxLimit: 3
   loadouts:
-  # Head Cosmetics
   - FlowerWreath
   - Hairflower
   - Headphones
-  # Bureaucracy # starcup
-  - BoxFolderClipboard
-  - BoxFolderBlack
-  - BoxFolderRed
-  - BoxFolderGreen
-  - BoxFolderBlue
-  - BoxFolderWhite
-  - NotebookPocketBlue
-  - NotebookPocketBrown
-  - NotebookPocketGreen
-  - NotebookSpiralCybersun
-  - NotebookSpiralInterdyne
-  - NotebookSpiralBeige
-  - NotebookSpiralPurple
-  - NotebookSpiralTeal
-  - NotebookCompositionBlack
-  # Utility
-  # - AACTablet # Delta-V # starcup: moved to Accessibility
-  - TapeRecorder # Delta-V
-  - NoviceMark # imp
+  #- PlushieLizard # starcup: inherited from Plushies
+  #- PlushieSpaceLizard # starcup: inherited from Plushies
   - ThreeCandles
-  # Lighters
-  # begin starcup
   - Lighter
-  - CybersunFlippo
-  - DonkcoLighter
-  - GorlexMatchbox
-  - InterdyneFlippo
-  - SyndicateFlippo
-  # end starcup
-  # Smokeables
   - CigPackGreen
   - CigPackRed
   - CigPackBlue
   - CigPackBlack
   - CigarCase
   - CigarGold
-  # Treats
-  - LollipopBubblegum # starcup
-  # Toys
-  - CardBoxSparot # starcup
-  - PlushieLizard
-  - PlushieSpaceLizard
-  # Neck Cosmetics
-  - CDDogtags # Cosmatic Drift
-  - HeartLocket  # Impstation
+  #- BoxFolderBaseThreePapers # starcup: replaced with specific colored folders by TrinketsBureaucracy
+  - BoxFolderPlasticClipboardThreePapers
+  - BoxFolderClipboardThreePapers
   - ClothingNeckLGBTPin
   - ClothingNeckAllyPin
   - ClothingNeckAromanticPin
@@ -76,36 +51,15 @@
   - ClothingNeckTransPin
   - ClothingNeckAutismPin
   - ClothingNeckGoldAutismPin
-  # begin starcup: moved to Accessibility group
-  # - OffsetCane
-  # - OffsetCaneWood
-  # - OffsetCaneClown
-  # - OffsetCaneMime
-  # - OffsetCaneNT
-  # - Cane
-  # - WhiteCane # Delta-V
+  # begin starcup: moved to Accessibility
+  #- OffsetCane
+  #- OffsetCaneWood
+  #- OffsetCaneClown
+  #- OffsetCaneMime
+  #- OffsetCaneNT
+  #- Cane
   # end starcup
-  # Misc Cosmetics
   - TowelColorWhite
-  # begin starcup: job towels
-  - TowelColorGray
-  - TowelColorBlack
-  - TowelColorRed
-  - TowelColorOrange
-  - TowelColorLightBrown
-  - TowelColorYellow
-  - TowelColorDarkGreen
-  - TowelColorGreen
-  - TowelColorLightBlue
-  - TowelColorDarkBlue
-  - TowelColorPurple
-  - TowelColorMaroon
-  - TowelColorMime
-  - TowelColorSilver
-  - TowelColorGold
-  # end starcup
-  - GoldRing # Delta-V
-  - SilverRing # Delta-V
 
 - type: loadoutGroup
   id: Glasses
@@ -267,7 +221,7 @@
 
 # Civilian
 - type: loadoutGroup
-  parent: [ ColoredJumpsuits, Turtlenecks ]
+  parent: [ ColoredJumpsuits, Turtlenecks ] # starcup
   id: PassengerJumpsuit
   name: loadout-group-passenger-jumpsuit
   loadouts:
@@ -276,46 +230,48 @@
   - AncientJumpsuit
   - RainbowJumpsuit
   - RainbowJumpskirt
-  - CasualBlueSuit # Delta-V
-  - CasualBlueSkirt # Delta-V
-  - CasualRedSuit # Delta-V
-  - CasualRedSkirt # Delta-V
-  - CasualPurpleSuit # Delta-V
-  - CasualPurpleSkirt # Delta-V
-  - CasualGreenSuit # starcup
-  - CasualGreenSkirt # starcup
-  - LawyerJumpsuit # starcup
-  - LawyerJumpsuitRed # starcup
-  - LawyerJumpskirt # starcup
-  - LawyerJumpskirtRed # starcup
-  - Loungewear # starcup
-  - MNKExposedShoulders # starcup
-  - MNKGymBra # starcup
-  - MNKOfficeSkirt # starcup
-  - TacticoolJumpsuit # starcup
-  - TacticoolJumpskirt # starcup
-  - BlackElegantDress # Delta-V
-  - RedElegantDress # Delta-V
-  - GreenElegantDress # Delta-V
-  - BlueElegantDress # Delta-V
-  - PurpleElegantDress # Delta-V
-  - CyanStripedDress # Delta-V
-  - RedStripedDress # Delta-V
-  - GreenStripedDress # Delta-V
-  - PinkStripedDress # Delta-V
-  - OrangeStripedDress # Delta-V
-  - PurpleTurtleneckDress # Delta-V
-  - RedTurtleneckDress # Delta-V
-  - GreenTurtleneckDress # Delta-V
-  - BlueTurtleneckDress # Delta-V
-  - YellowTurtleneckDress # Delta-V
-  - OldYellowDress # Delta-V
-  - MNKBlackDress # starcup
-  - BlueKimono # starcup
-  - GreenKimono # starcup
-  - PinkKimono # starcup
-  - PurpleKimono # starcup
-  - SkyKimono # starcup
+  # begin starcup additions
+  - CasualBlueSuit
+  - CasualBlueSkirt
+  - CasualRedSuit
+  - CasualRedSkirt
+  - CasualPurpleSuit
+  - CasualPurpleSkirt
+  - CasualGreenSuit
+  - CasualGreenSkirt
+  - LawyerJumpsuit
+  - LawyerJumpsuitRed
+  - LawyerJumpskirt
+  - LawyerJumpskirtRed
+  - Loungewear
+  - MNKExposedShoulders
+  - MNKGymBra
+  - MNKOfficeSkirt
+  - TacticoolJumpsuit
+  - TacticoolJumpskirt
+  - BlackElegantDress
+  - RedElegantDress
+  - GreenElegantDress
+  - BlueElegantDress
+  - PurpleElegantDress
+  - CyanStripedDress
+  - RedStripedDress
+  - GreenStripedDress
+  - PinkStripedDress
+  - OrangeStripedDress
+  - PurpleTurtleneckDress
+  - RedTurtleneckDress
+  - GreenTurtleneckDress
+  - BlueTurtleneckDress
+  - YellowTurtleneckDress
+  - OldYellowDress
+  - MNKBlackDress
+  - BlueKimono
+  - GreenKimono
+  - PinkKimono
+  - PurpleKimono
+  - SkyKimono
+  # end starcup
 
 - type: loadoutGroup
   id: PassengerFace
@@ -323,7 +279,7 @@
   minLimit: 0
   loadouts:
   - PassengerFace
-  # Begin DeltaV additions
+  # begin starcup additions
   - BlackBandanaMask
   - GoldBandanaMask
   - GreenBandanaMask
@@ -331,7 +287,7 @@
   - RedBandanaMask
   - SkullBandanaMask
   - BrownBandanaMask
-  # End DeltaV additions
+  # end starcup
 
 - type: loadoutGroup
   id: PassengerGloves
@@ -339,7 +295,7 @@
   minLimit: 0
   loadouts:
   - PassengerGloves
-  # Begin DeltaV additions
+  # begin starcup additions
   - PurpleGloves
   - RedGloves
   - BlueGloves
@@ -352,7 +308,7 @@
   - WhiteGloves
   - BlackGloves
   - FingerlessGloves
-  # End DeltaV additions
+  # End starcup additions
 
 - type: loadoutGroup
   id: CommonBackpack
@@ -377,6 +333,7 @@
   name: loadout-group-passenger-outerclothing
   minLimit: 0
   loadouts:
+  - PassengerWintercoat
   - BlackHoodie # Delta-V
   - GrayHoodie # Delta-V
   - MNKWhiteHoodie # starcup
@@ -389,7 +346,6 @@
   - JensenCoat # starcup
   - Poncho # starcup
   - BomberJacket # starcup
-  - PassengerWintercoat
   - WinterCoatLong # starcup
   - WinterCoatBlack # Delta-V
   - WinterCoatPurple # Delta-V
@@ -410,6 +366,7 @@
   loadouts:
   - BlackShoes
   - WinterBoots
+  # begin starcup additions
   - WhiteShoes # Delta-V
   - BlueShoes # Delta-V
   - BrownShoes # Delta-V
@@ -430,6 +387,7 @@
   - BrownCowboyBoots # Delta-V
   - BlackCowboyBoots # Delta-V
   - WhiteCowboyBoots # Delta-V
+  # end starcup
 
 #- type: loadoutGroup
 #  id: PassengerJobTrinkets

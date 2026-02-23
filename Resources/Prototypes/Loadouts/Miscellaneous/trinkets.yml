@@ -121,17 +121,19 @@
   storage:
     back:
     - BoxFolderPlasticClipboardThreePapers
-  groupBy: "folders"
+  groupBy: "bureaucracy" # starcup: changed from "folders"
 
 - type: loadout
   id: BoxFolderClipboardThreePapers
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: Command
+  # begin starcup: everybody gets the nice clipboards!
+  #effects:
+  #- !type:GroupLoadoutEffect
+  #  proto: Command
+  # end starcup
   storage:
     back:
     - BoxFolderClipboardThreePapers
-  groupBy: "folders"
+  groupBy: "bureaucracy" # starcup: changed from "folders"
 
 # Pins
 - type: loadout
