@@ -128,10 +128,10 @@
   - type: Reproductive
     breedChance: 0
   - type: TemperatureDamage
-    coldDamageThreshold: 250
+    coldDamageThreshold: 250 # 10k lower than typical
     coldDamage:
       types:
-        Cold: 0.5
+        Cold: 0.5 # reduced damage from cold weather / kitchen freezers, but not cold-based attacks
   - type: Item
     size: Huge
   - type: Grammar
@@ -177,7 +177,7 @@
     - id: FoodMeatSlime
       amount: 2
     - id: MaterialBones
-      amount: 4
+      amount: 4 # enough to create a skull mask
     - id: MaterialSmileExtract
       amount: 1
     dropOrgansOnButcher: true
@@ -192,7 +192,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      200: Dead
+      200: Dead # same bulk as Smile
   - type: MeleeWeapon
     damage:
       types:
@@ -216,6 +216,10 @@
     damage:
       types:
         Caustic: 0.9
+  - type: Grammar
+    attributes:
+      proper: true
+      gender: female
   - type: InteractionPopup
     successChance: 1 # Don't know how to give the damage on interact a chance to fail
     interactSuccessString: petting-success-gloom
@@ -226,10 +230,25 @@
     - FootstepSound
     - DoorBumpOpener
     - CannotSuicide
-    - VimPilot
 
 - type: entity
   name: Starbuck
   parent: MobBunny
   id: MobStarbuck
-  description: A bunny with a rebellious spirit and can-do attitude.
+  description: A most curious bunny renowned for their knack for finding themselves in a Situation.
+  components:
+  - type: Grammar
+    attributes:
+      proper: true
+      gender: epicene
+  - type: InteractionPopup
+    successChance: 0.75
+    interactSuccessString: petting-success-starbuck
+    interactFailureString: petting-failure-starbuck
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/Animals/mouse_squeak.ogg
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - VimPilot
