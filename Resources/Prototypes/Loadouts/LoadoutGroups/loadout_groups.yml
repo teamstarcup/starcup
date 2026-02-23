@@ -230,7 +230,7 @@
   - AncientJumpsuit
   - RainbowJumpsuit
   - RainbowJumpskirt
-  # begin starcup additions
+  # starcup: begin additions
   - CasualBlueSuit
   - CasualBlueSkirt
   - CasualRedSuit
@@ -279,7 +279,7 @@
   minLimit: 0
   loadouts:
   - PassengerFace
-  # begin starcup additions
+  # starcup: begin additions
   - BlackBandanaMask
   - GoldBandanaMask
   - GreenBandanaMask
@@ -295,7 +295,7 @@
   minLimit: 0
   loadouts:
   - PassengerGloves
-  # begin starcup additions
+  # starcup: begin additions
   - PurpleGloves
   - RedGloves
   - BlueGloves
@@ -334,31 +334,33 @@
   minLimit: 0
   loadouts:
   - PassengerWintercoat
-  - BlackHoodie # Delta-V
-  - GrayHoodie # Delta-V
-  - MNKWhiteHoodie # starcup
-  - MNKBlackJacket # starcup
-  - FlannelRed # Delta-V
-  - FlannelBlue # Delta-V
-  - FlannelGreen # Delta-V
-  - MNKBlackTopCoat # starcup
-  - GentleCoat # starcup
-  - JensenCoat # starcup
-  - Poncho # starcup
-  - BomberJacket # starcup
-  - WinterCoatLong # starcup
-  - WinterCoatBlack # Delta-V
-  - WinterCoatPurple # Delta-V
-  - WinterCoatRed # Delta-V
-  - WinterCoatBlue # Delta-V
-  - WinterCoatBrown # Delta-V
-  - WinterCoatLightBrown # Delta-V
-  - WinterCoatGray # Delta-V
-  - WinterCoatGreen # Delta-V
-  - WinterCoatOrange # Delta-V
-  - WinterCoatWhite # Delta-V
-  - WinterCoatYellow # Delta-V
-  - TrenchCoat # starcup
+  # starcup: begin additions
+  - BlackHoodie
+  - GrayHoodie
+  - MNKWhiteHoodie
+  - MNKBlackJacket
+  - FlannelRed
+  - FlannelBlue
+  - FlannelGreen
+  - MNKBlackTopCoat
+  - GentleCoat
+  - JensenCoat
+  - Poncho
+  - BomberJacket
+  - WinterCoatLong
+  - WinterCoatBlack
+  - WinterCoatPurple
+  - WinterCoatRed
+  - WinterCoatBlue
+  - WinterCoatBrown
+  - WinterCoatLightBrown
+  - WinterCoatGray
+  - WinterCoatGreen
+  - WinterCoatOrange
+  - WinterCoatWhite
+  - WinterCoatYellow
+  - TrenchCoat
+  # end starcup
 
 - type: loadoutGroup
   id: PassengerShoes
@@ -366,27 +368,27 @@
   loadouts:
   - BlackShoes
   - WinterBoots
-  # begin starcup additions
-  - WhiteShoes # Delta-V
-  - BlueShoes # Delta-V
-  - BrownShoes # Delta-V
-  - GreenShoes # Delta-V
-  - OrangeShoes # Delta-V
-  - RedShoes # Delta-V
-  - YellowShoes # Delta-V
-  - PurpleShoes # Delta-V
-  - CombatBoots # starcup
-  - BrownLeatherShoes # starcup
-  - LaceupShoes # starcup
-  - BlackHeels # starcup
-  - BlueHeels # starcup
-  - BrownHeels # starcup
-  - GreenHeels # starcup
-  - RedHeels # starcup
-  - HighHeels # Delta-V
-  - BrownCowboyBoots # Delta-V
-  - BlackCowboyBoots # Delta-V
-  - WhiteCowboyBoots # Delta-V
+  # starcup: begin additions
+  - WhiteShoes
+  - BlueShoes
+  - BrownShoes
+  - GreenShoes
+  - OrangeShoes
+  - RedShoes
+  - YellowShoes
+  - PurpleShoes
+  - CombatBoots
+  - BrownLeatherShoes
+  - LaceupShoes
+  - BlackHeels
+  - BlueHeels
+  - BrownHeels
+  - GreenHeels
+  - RedHeels
+  - HighHeels
+  - BrownCowboyBoots
+  - BlackCowboyBoots
+  - WhiteCowboyBoots
   # end starcup
 
 #- type: loadoutGroup
@@ -410,11 +412,13 @@
   - BartenderJumpsuit
   - BartenderJumpskirt
   - BartenderJumpsuitPurple
-  - BlackElegantDress # starcup
-  - ClothingUniformNightclubSuit #imp
-  - ClothingUniformNightclubSuitSkirt #imp
-  - ClothingUniformSeniorBartender #imp
-  - ClothingUniformSeniorBartenderSkirt #imp
+  # starcup: begin additions
+  - BlackElegantDress
+  - ClothingUniformNightclubSuit
+  - ClothingUniformNightclubSuitSkirt
+  - ClothingUniformSeniorBartender
+  - ClothingUniformSeniorBartenderSkirt
+  # end starcup
 
 - type: loadoutGroup
   id: BartenderOuterClothing
@@ -487,9 +491,11 @@
   - LibrarianJumpskirt
   - CuratorJumpsuit
   - CuratorJumpskirt
-  - ClothingUniformBrownSuit #imp
-  - ClothingUniformBrownSuitSkirt #imp
-  - LibrarianSpaceDress #imp
+  # starcup: begin additions
+  - ClothingUniformBrownSuit
+  - ClothingUniformBrownSuitSkirt
+  - LibrarianSpaceDress
+  # end starcup
 
 #- type: loadoutGroup
 #  id: LibrarianJobTrinkets
@@ -511,10 +517,12 @@
   - LawyerJumpskirtRed
   - LawyerJumpsuitGood
   - LawyerJumpskirtGood
-  - BlackElegantDress # starcup
-  - RedElegantDress # starcup
-  - ClothingUniformCreamSuit #imp
-  - ClothingUniformCreamSuitSkirt #imp
+  # starcup: begin additions
+  - BlackElegantDress
+  - RedElegantDress
+  - ClothingUniformCreamSuit
+  - ClothingUniformCreamSuitSkirt
+  # end starcup
 
 - type: loadoutGroup
   parent: [ Scarfs ] # starcup
@@ -556,13 +564,13 @@
   - ChaplainJumpskirt
   - ChaplainRobesLight
   - ChaplainRobesDark
-  # begin starcup additions
+  # starcup: begin additions
   - BlackElegantDress
   - RedElegantDress
   - PurpleElegantDress
+  - ClothingUniformFuneralSuit
+  - ClothingUniformFuneralSuitSkirt
   # end starcup
-  - ClothingUniformFuneralSuit #imp
-  - ClothingUniformFuneralSuitSkirt #imp
 
 - type: loadoutGroup
   id: ChaplainOuterClothing
@@ -734,7 +742,7 @@
   - EmergencyNitrogenClown
   - EmergencyOxygenClown
   - LoadoutSpeciesVoxNitrogen
-  - EmergencyIPCBox # DeltaV
+  - EmergencyIPCBox # starcup
 
 - type: loadoutGroup
   id: ClownJobTrinkets
@@ -783,10 +791,12 @@
   minLimit: 0
   loadouts:
   - MimeWintercoat
-  - MimeWintercoatLong # DeltaV
-  - MimeSweater # starcup
-  - MNKBlackTopCoat # starcup
-  - GentleCoat # starcup
+  # starcup: begin additions
+  - MimeWintercoatLong
+  - MimeSweater
+  - MNKBlackTopCoat
+  - GentleCoat
+  # end starcup
 
 - type: loadoutGroup
   id: MimeBelt
@@ -805,7 +815,7 @@
   - EmergencyOxygenMime
   - EmergencySpeciesMothMime
   - LoadoutSpeciesVoxNitrogen
-  - EmergencyIPCBox # DeltaV
+  - EmergencyIPCBox # starcup
 
 #- type: loadoutGroup
 #  id: MimeJobTrinkets
@@ -819,10 +829,12 @@
   loadouts:
   - MusicianJumpsuit
   - MusicianJumpskirt
-  - ClothingUniformMrSpaceWide #imp
-  - ClothingUniformMrSpaceWideSkirt #imp
-  - ClothingUniformNightclubSuit # starcup
-  - ClothingUniformNightclubSuitSkirt # starcup
+  # starcup: begin additions
+  - ClothingUniformMrSpaceWide
+  - ClothingUniformMrSpaceWideSkirt
+  - ClothingUniformNightclubSuit
+  - ClothingUniformNightclubSuitSkirt
+  # end starcup
 
 - type: loadoutGroup
   id: MusicianOuterClothing
@@ -915,12 +927,14 @@
   name: loadout-group-quartermaster-shoes
   loadouts:
   # - BrownShoes # starcup: provided by parent
-  - BrownLeatherShoes # starcup
-  - LaceupShoes # starcup
-  - BlackHeels # starcup
-  - BlackCommandHeels # starcup
   # - CargoWinterBoots # starcup: provided by parent
-  - LogisticsOfficerWinterBoots # starcup
+  # starcup: begin additions
+  - BrownLeatherShoes
+  - LaceupShoes
+  - BlackHeels
+  - BlackCommandHeels
+  - LogisticsOfficerWinterBoots
+  # end starcup
 
 #- type: loadoutGroup
 #  id: QuartermasterJobTrinkets
@@ -939,11 +953,13 @@
   id: CargoTechnicianJumpsuit
   name: loadout-group-cargo-technician-jumpsuit
   loadouts:
- #- CargoTechnicianJumpsuit
- #- CargoTechnicianJumpskirt
-  - ClothingUniformJumpsuitCargoTechPants # DeltaV
-  - ClothingUniformJumpsuitCargoTechOveralls # DeltaV
-  - ClothingUniformJumpskirtCargoTechRomper # DeltaV
+  #- CargoTechnicianJumpsuit # starcup: replaced
+  #- CargoTechnicianJumpskirt # starcup: replaced
+  # starcup: begin additions
+  - ClothingUniformJumpsuitCargoTechPants
+  - ClothingUniformJumpsuitCargoTechOveralls
+  - ClothingUniformJumpskirtCargoTechRomper
+  # end starcup
 
 - type: loadoutGroup
   id: CargoTechnicianBackpack
@@ -977,9 +993,11 @@
   loadouts:
   - CargoTechnicianPDA
   # - SeniorCourierPDA # starcup: moved to courier
-  - DeckWorkerPDA # starcup
-  - InventoryAssociatePDA # starcup
-  - CargoPilotPDA # starcup
+  # starcup: begin additions
+  - DeckWorkerPDA
+  - InventoryAssociatePDA
+  - CargoPilotPDA
+  # end starcup
 
 #- type: loadoutGroup
 #  id: CargoTechnicianJobTrinkets
@@ -1010,7 +1028,7 @@
   - SalvageBoots
 #  - CargoWinterBoots # starcup: provided by parent
   - PurpleShoes # starcup
-  - SalvageWinterBoots # DeltaV
+  - SalvageWinterBoots # starcup
 
 #- type: loadoutGroup
 #  id: SalvageSpecialistJobTrinkets
@@ -1057,14 +1075,16 @@
   id: ChiefEngineerShoes
   name: loadout-group-chief-engineer-shoes
   loadouts:
-#  - BrownShoes # starcup: provided by parent
-  - GreenShoes # starcup
-  - BrownLeatherShoes # starcup
-  - LaceupShoes # starcup
-  - BlackHeels # starcup
-  - BlackCommandHeels # starcup
-#  - EngineeringWinterBoots # starcup: provided by parent
-  - ChiefEngineerWinterBoots # DeltaV
+  #- BrownShoes # starcup: provided by parent
+  #- EngineeringWinterBoots # starcup: provided by parent
+  # starcup: begin additions
+  - GreenShoes
+  - BrownLeatherShoes
+  - LaceupShoes
+  - BlackHeels
+  - BlackCommandHeels
+  - ChiefEngineerWinterBoots
+  # end starcup
 
 #- type: loadoutGroup
 #  id: ChiefEngineerJobTrinkets
@@ -1126,13 +1146,15 @@
   name: loadout-group-station-engineer-shoes
   loadouts:
   - WorkBoots
-  - BlackShoes # starcup
-  - BrownShoes # starcup
-  - OrangeShoes # starcup
-  - RedShoes # starcup
-  - YellowShoes # starcup
-  - CombatBoots # starcup
   - EngineeringWinterBoots
+  # starcup: begin additions
+  - BlackShoes
+  - BrownShoes
+  - OrangeShoes
+  - RedShoes
+  - YellowShoes
+  - CombatBoots
+  # end starcup
 
 - type: loadoutGroup
   id: StationEngineerID
@@ -1178,9 +1200,9 @@
   id: AtmosphericTechnicianShoes
   name: loadout-group-atmospheric-technician-shoes
   loadouts:
-  - BlueShoes # starcup
   - WhiteShoes
   #- EngineeringWinterBoots # starcup: provided by parent
+  - BlueShoes # starcup
   - AtmosTechWinterBoots # starcup
 
 #- type: loadoutGroup
@@ -1198,7 +1220,7 @@
   - EmergencyNitrogenExtended
   - EmergencyOxygenExtended
   - LoadoutSpeciesVoxNitrogen
-  - EmergencyIPCBox # DeltaV
+  - EmergencyIPCBox # starcup
 
 # Science
 - type: loadoutGroup
@@ -1238,12 +1260,14 @@
   name: loadout-group-research-director-shoes
   loadouts:
   - BrownShoes
-  - BrownLeatherShoes # starcup
-  - CombatBoots # starcup
-  - LaceupShoes # starcup
-  - BlackHeels # starcup
-  # - ScienceWinterBoots # starcup: provided by parent
-  - ResearchDirectorWinterBoots # DeltaV
+  #- ScienceWinterBoots # starcup: provided by parent
+  # starcup: begin additions
+  - ResearchDirectorWinterBoots
+  - BrownLeatherShoes
+  - CombatBoots
+  - LaceupShoes
+  - BlackHeels
+  # end starcup
 
 #- type: loadoutGroup
 #  id: ResearchDirectorJobTrinkets
@@ -1256,7 +1280,7 @@
   name: loadout-group-scientist-head
   minLimit: 0
   loadouts:
-  #- RoboticistCap # DeltaV: Moved to RoboticistHead
+  #- RoboticistCap # starcup: Moved to RoboticistHead
   - SkullBandana
   - ScientificBeret
 
@@ -1275,8 +1299,8 @@
   - ScientistJumpsuit
   - ScientistJumpskirt
   - ScientistFormalJumpsuit # starcup
-  #- RoboticistJumpsuit # DeltaV: Moved to RoboticistJumpsuit
-  #- RoboticistJumpskirt # DeltaV: Moved to RoboticistJumpsuit
+  #- RoboticistJumpsuit # starcup: Moved to RoboticistJumpsuit
+  #- RoboticistJumpskirt # starcup: Moved to RoboticistJumpsuit
   - SeniorResearcherJumpsuit
   - SeniorResearcherJumpskirt
 
@@ -1317,7 +1341,7 @@
   loadouts:
   - LatexGloves
   - PurpleGloves
-  #- RobohandsGloves # DeltaV: Moved to RoboticistGloves
+  #- RobohandsGloves # starcup: Moved to RoboticistGloves
 
 - type: loadoutGroup
   id: ScientistPDA
@@ -1325,10 +1349,11 @@
   loadouts:
   - ScientistPDA
   - SeniorResearcherPDA
-  - LabTechPDA # DeltaV
-  - XenoarchPDA # DeltaV
-  # - RoboticistPDA # DeltaV # starcup - we've already got one of those!
-  - NecrocosmicistPDA # starcup
+  # begin starcup addditions
+  - LabTechPDA
+  - XenoarchPDA
+  - NecrocosmicistPDA
+  # end starcup
 
 #- type: loadoutGroup
 #  id: ScientistJobTrinkets
@@ -1515,10 +1540,12 @@
   - DetectiveJumpskirt
   - NoirJumpsuit
   - NoirJumpskirt
-  - ClothingUniformMiamiVice #imp
-  - ClothingUniformMiamiViceSkirt #imp
-  - ClothingUniformDetectiveSuit #imp
-  - ClothingUniformDetectiveSuitSkirt #imp
+  # starcup: begin additions
+  - ClothingUniformMiamiVice
+  - ClothingUniformMiamiViceSkirt
+  - ClothingUniformDetectiveSuit
+  - ClothingUniformDetectiveSuitSkirt
+  # end starcup
 
 - type: loadoutGroup
   id: DetectiveOuterClothing
@@ -1527,11 +1554,13 @@
   - DetectiveArmorVest
   - DetectiveCoat
   - DetectiveCoatGrey
-  - StasecWinterCoatDet # DeltaV
-  - MNKBlackTopCoat # starcup
-  - GentleCoat # starcup
-  - JensenCoat # starcup
-  - TrenchCoat # starcup
+  # starcup: begin additions
+  - StasecWinterCoatDet
+  - MNKBlackTopCoat
+  - GentleCoat
+  - JensenCoat
+  - TrenchCoat
+  # end starcup
 
 - type: loadoutGroup
   id: DetectiveJobTrinkets
@@ -1572,13 +1601,15 @@
   loadouts:
   - ReporterJumpsuit
   - JournalistJumpsuit
-  - LawyerJumpskirtBlue # starcup
-  - LawyerJumpsuit # starcup
-  - LawyerJumpskirt # starcup
-  - LawyerJumpsuitRed # starcup
-  - LawyerJumpskirtRed # starcup
-  - ClothingUniformBrosBlazer #imp
-  - ClothingUniformBrosBlazerSkirt #imp
+  # starcup: begin additions
+  - LawyerJumpskirtBlue
+  - LawyerJumpsuit
+  - LawyerJumpskirt
+  - LawyerJumpsuitRed
+  - LawyerJumpskirtRed
+  - ClothingUniformBrosBlazer
+  - ClothingUniformBrosBlazerSkirt
+  # end starcup
 
 #- type: loadoutGroup
 #  id: ReporterJobTrinkets
@@ -1593,10 +1624,12 @@
   loadouts:
   - PsychologistJumpsuit
   - PsychologistJumpskirt
-  - LawyerJumpsuit # starcup
-  - LawyerJumpskirt # starcup
-  - LawyerJumpsuitBlue # starcup
-  - LawyerJumpskirtBlue # starcup
+  # begin starcup
+  - LawyerJumpsuit
+  - LawyerJumpskirt
+  - LawyerJumpsuitBlue
+  - LawyerJumpskirtBlue
+  # end starcup
 
 #- type: loadoutGroup
 #  id: PsychologistJobTrinkets
@@ -1615,7 +1648,7 @@
   - EmergencyNitrogenSyndicate
   - EmergencyOxygenSyndicate
   - LoadoutSpeciesVoxNitrogen
-  - EmergencyIPCBox # DeltaV
+  - EmergencyIPCBox # starcup
 
 - type: loadoutGroup
   id: SurvivalMilitaryDouble
