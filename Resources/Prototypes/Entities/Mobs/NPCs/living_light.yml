@@ -86,10 +86,23 @@
       collection: FootstepBells
   - type: Speech
     speechVerb: Ghost
+  # begin starcup
+    speechSounds: LuminousSpeechSounds
+    allowedEmotes: ['CreatureLaugh', 'CreatureScream']
+  - type: Vocal
+    sounds:
+      Unsexed: LuminousSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - LaughAutoEmote
+  # end starcup
   - type: Tag
     tags:
       - FootstepSound
       - SlowImmune
+      - CreatureEmotes # starcup
   - type: Destructible
     thresholds:
       - trigger:

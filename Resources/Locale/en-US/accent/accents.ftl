@@ -1,8 +1,8 @@
-# Cat accent
+# Cat accent # starcup: changed cat-4 from Hhss! to Mewl.
 accent-words-cat-1 = Meow!
 accent-words-cat-2 = Mow.
 accent-words-cat-3 = Mrrrow!
-accent-words-cat-4 = Hhsss!
+accent-words-cat-4 = Mewl.
 accent-words-cat-5 = Brrow.
 accent-words-cat-6 = Meow?
 accent-words-cat-7 = Miau.
@@ -15,13 +15,14 @@ accent-words-dog-4 = Arf.
 accent-words-dog-5 = Grrr.
 
 # Mouse
+# starcup: Changed 2, 4, 5, 6 and 7 to make use of the expanded squeaks.
 accent-words-mouse-1 = Squeak!
-accent-words-mouse-2 = Piep!
+accent-words-mouse-2 = Piep.
 accent-words-mouse-3 = Chuu!
-accent-words-mouse-4 = Eeee!
-accent-words-mouse-5 = Pip!
-accent-words-mouse-6 = Fwiep!
-accent-words-mouse-7 = Heep!
+accent-words-mouse-4 = Queek.
+accent-words-mouse-5 = Pip.
+accent-words-mouse-6 = Fwiep.
+accent-words-mouse-7 = Heep?
 
 # Mumble
 accent-words-mumble-1 = Mmfph!
@@ -35,10 +36,13 @@ accent-words-silicon-3 = Whirr.
 accent-words-silicon-4 = Beep-boop.
 
 # Xeno
+# starcup: added 5 and 6 for sounds.
 accent-words-xeno-1 = Hiss.
 accent-words-xeno-2 = Hisssss!
 accent-words-xeno-3 = Hisssuuu...
 accent-words-xeno-4 = Hiss...!
+accent-words-xeno-5 = Hiss...?
+accent-words-xeno-6 = Hiss?
 
 # Zombie
 accent-words-zombie-1 = Gruaahhhh...
@@ -61,10 +65,13 @@ accent-words-zombie-moth-5 = Haaaatsss... Hatttssss...
 accent-words-zombie-moth-6 = Scarffsss...
 
 # Generic Aggressive
+# starcup: added 5 and 6 for ask sounds.
 accent-words-generic-aggressive-1 = Grr!
 accent-words-generic-aggressive-2 = Rrrr!
 accent-words-generic-aggressive-3 = Grr...
 accent-words-generic-aggressive-4 = Grrow!!
+accent-words-generic-aggressive-5 = Grr... ?
+accent-words-generic-aggressive-6 = Rrr?
 
 # Duck
 accent-words-duck-1 = Quack!
@@ -79,10 +86,12 @@ accent-words-chicken-3 = Cluck?
 accent-words-chicken-4 = Cluck cluck!
 
 # Pig
+# starcup: changed 2, 3 and 4 to better match with our new sounds. Also added 5.
 accent-words-pig-1 = Oink.
-accent-words-pig-2 = Oink?
-accent-words-pig-3 = Oink!
-accent-words-pig-4 = Oink oink!
+accent-words-pig-2 = Oink oink?
+accent-words-pig-3 = Snort... !
+accent-words-pig-4 = Oink snort.
+accent-words-pig-5 = Snort oink...
 
 # Kangaroo
 accent-words-kangaroo-1 = Grr!

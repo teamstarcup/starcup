@@ -123,7 +123,7 @@ marking-VulpTailVulpFade-vulp-fade = Vulpekin tail (Fade)
 marking-VulpTailVulpFade = Vulpekin (Fade)
 
 marking-VulpTailCoyote-coyote = Coyote Tail (Base)
-marking-VulpTailCoyote = Vulpkanin Coyote
+marking-VulpTailCoyote = Vulpekin Coyote
 
 
 # Chest

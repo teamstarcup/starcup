@@ -25,6 +25,7 @@
     tags:
     - DoorBumpOpener
     - Flesh
+    - CreatureEmotes # starcup
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Aliens/flesh.rsi
@@ -63,6 +64,20 @@
         Slash: 6
   - type: ReplacementAccent
     accent: genericAggressive
+  # begin starcup
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: FleshSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureBark', 'Squish', 'Simmer']
+  - type: Vocal
+    sounds:
+      Unsexed: FleshSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - ScreamAutoEmote
+  # end starcup
 
 - type: entity
   parent: BaseMobFlesh

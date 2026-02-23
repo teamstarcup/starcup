@@ -131,7 +131,13 @@ marking-VulpTailFoxWagTip = Vulpekin Fox (wag, tip)
 marking-VulpTailBushy-bushfluff = Bush tail
 marking-VulpTailBushy = Vulpekin Bush
 
-marking-VulpTailCorgiWag-corgi_wag = Crogi tail
+marking-VulpTailBushyWag-bushfluff_wag = Bush tail
+marking-VulpTailBushyWag = Vulpekin Bush (wag)
+
+marking-VulpTailCoyoteWag-coyote_wag = Coyote tail
+marking-VulpTailCoyoteWag = Vulpekin Coyote (wag)
+
+marking-VulpTailCorgiWag-corgi_wag = Corgi tail
 marking-VulpTailCorgiWag = Vulpekin Corgi (wag)
 
 marking-VulpTailHusky-husky-inner = Husky tail (inner)

@@ -5,7 +5,7 @@
 - type: marking
   id: VulpEarWolf
   bodyPart: HeadTop
-  groupWhitelist: [Vulpkanin]
+  groupWhitelist: [Vulpkanin, Human] # starcup
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: wolf
@@ -25,7 +25,7 @@
 - type: marking
   id: VulpEarDalmatian
   bodyPart: HeadTop
-  groupWhitelist: [Vulpkanin]
+  groupWhitelist: [Vulpkanin, Human, Slime] # starcup
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: dalmatian
@@ -85,7 +85,7 @@
 - type: marking
   id: VulpTailAltTip
   bodyPart: Tail
-  groupWhitelist: [Vulpkanin]
+  groupWhitelist: [Vulpkanin, Human, Felinid, Slime] # starcup
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp_alt
@@ -95,7 +95,7 @@
 - type: marking
   id: VulpTailFox
   bodyPart: Tail
-  groupWhitelist: [Vulpkanin]
+  groupWhitelist: [Vulpkanin, Felinid] # starcup
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox
@@ -105,7 +105,7 @@
 - type: marking
   id: VulpTailFoxTip
   bodyPart: Tail
-  groupWhitelist: [Vulpkanin]
+  groupWhitelist: [Vulpkanin, Felinid] # starcup
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox
@@ -125,7 +125,7 @@
 - type: marking
   id: VulpTailFoxWagTip
   bodyPart: Tail
-  groupWhitelist: [Vulpkanin]
+  groupWhitelist: [Vulpkanin, Human, Felinid, Slime] # starcup
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox_wag
@@ -135,10 +135,28 @@
 - type: marking
   id: VulpTailBushy
   bodyPart: Tail
-  groupWhitelist: [Vulpkanin]
+  groupWhitelist: [Vulpkanin, Human, Felinid, Slime] # starcup
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: bushfluff
+
+# starcup - upstream replaced these so vulps don't need them, but we're keeping them for non-vulps
+- type: marking
+  id: VulpTailBushyWag
+  bodyPart: Tail
+  groupWhitelist: [Human, Slime, Felinid] # starcup
+  sprites:
+  - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    state: bushfluff_wag
+
+- type: marking
+  id: VulpTailCoyoteWag
+  bodyPart: Tail
+  groupWhitelist: [Human, Slime, Felinid] # starcup
+  sprites:
+  - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    state: coyote_wag
+# end starcup
 
 - type: marking
   id: VulpTailBushyAnimated
@@ -151,7 +169,7 @@
 - type: marking
   id: VulpTailCorgiWag
   bodyPart: Tail
-  groupWhitelist: [Vulpkanin]
+  groupWhitelist: [Vulpkanin, Felinid] # starcup (cats need lynx tails!)
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: corgi_wag
@@ -167,7 +185,7 @@
 - type: marking
   id: VulpTailFox2
   bodyPart: Tail
-  groupWhitelist: [Vulpkanin]
+  groupWhitelist: [Vulpkanin, Felinid] # starcup
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox2
@@ -175,7 +193,7 @@
 - type: marking
   id: VulpTailFox3
   bodyPart: Tail
-  groupWhitelist: [Vulpkanin]
+  groupWhitelist: [Vulpkanin, Felinid] # starcup
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox3
@@ -193,7 +211,7 @@
 - type: marking
   id: VulpTailDalmatianWag
   bodyPart: Tail
-  groupWhitelist: [Vulpkanin]
+  groupWhitelist: [ Vulpkanin, Slime ] # starcup
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: dalmatian_wag
