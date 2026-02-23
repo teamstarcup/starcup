@@ -88,10 +88,28 @@
   - type: MeleeChemicalInjector
     solution: melee
   - type: ReplacementAccent
-    accent: genericAggressive
+    accent: crab # starcup
   - type: Speech
     speechVerb: SmallMob
+    # begin starcup
+    speechSounds: CrabSpeechSounds
+    allowedEmotes: ['CreatureClick']
+    # end starcup
   - type: NonSpreaderZombie
+    # begin starcup
+  - type: Tag
+    tags:
+    - FootstepSound
+    - CreatureEmotes
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBug
+  - type: Vocal
+    sounds:
+      Unsexed: CrabSpeechEmotes
+    screamId: CreatureClick
+    screamAction: ActionEmitSound
+    # end starcup
 
 - type: entity
   id: MobTickSalvage

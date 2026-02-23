@@ -1,0 +1,39 @@
+- type: entity
+  name: Arctic Fox Siobhan Spawner
+  id: SpawnMobArcticFoxSiobhan
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobArcticFoxSiobhan
+
+- type: entity
+  name: Sec Dog Laika Spawner
+  id: SpawnMobSecDogLaika
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobSecDogLaika
+    
+- type: entity
+  name: Silvia Spawner
+  id: SpawnMobCMOPetSilvia
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: silvia
+        sprite: DeltaV/Mobs/Pets/silvia.rsi
+  - type: ConditionalSpawner
+    prototypes:
+      - MobCobraSilvia      

@@ -49,6 +49,7 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalIan
 
@@ -160,7 +161,7 @@
 
 - type: entity
   name: Runtime
-  parent: MobCat
+  parent: MobCatGhost # DeltaV - Frontier Feature
   id: MobCatRuntime
   description: Professional mouse hunter. Escape artist.
   components:
@@ -174,17 +175,22 @@
     attributes:
       proper: true
       gender: female
+  - type: Butcherable # DeltaV - Frontier Feature
+    spawned:
+    - id: FoodMeatCat
+      amount: 1
   - type: Tag
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalNamedCat
 
 - type: entity
   name: Exception
   id: MobCatException
-  parent: MobCatCalico
+  parent: MobCatCalicoGhost # DeltaV - Frontier Feature
   description: Ask nicely, and maybe they'll give you one of their spare lives.
   components:
   - type: NpcFactionMember
@@ -194,17 +200,22 @@
     attributes:
       proper: true
       gender: male
+  - type: Butcherable # DeltaV - Frontier Feature
+    spawned:
+    - id: FoodMeatCat
+      amount: 1
   - type: Tag
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalNamedCat
 
 - type: entity
   name: Floppa
   id: MobCatFloppa
-  parent: MobCatCaracal
+  parent: MobCatCaracalGhost # DeltaV - Frontier Feature
   description: He out here.
   components:
   - type: Fixtures
@@ -225,6 +236,7 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalNamedCat
 
@@ -242,6 +254,7 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
 
 - type: entity
   name: Bingus
@@ -298,10 +311,24 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalNamedCat
   - type: Puller # starcup - basically a cat
     needsHands: false
+  # begin starcup
+  - type: Speech
+    speechSounds: CatSpeechSounds
+    speechVerb: SmallMob
+    allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureCough']
+  - type: Vocal
+    sounds:
+      Unsexed: CatSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: cat
+  # end starcup
 
 - type: entity
   name: McGriff
@@ -357,7 +384,7 @@
       amount: 2
     dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
-    accent: dog
+    accent: DogAccent # starcup
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-dog
@@ -369,13 +396,22 @@
     attributes:
       proper: true
       gender: male
+  # begin starcup
   - type: Speech
     speechVerb: Canine
-    speechSounds: Dog
+    speechSounds: DogSpeechSounds
+    allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'CreatureCough', 'Snuffle', 'Pant', 'Shake']
+  - type: Vocal
+    sounds:
+      Unsexed: SmallDogSpeechEmotes
+    screamId: CreatureBark
+    screamAction: ActionEmitSound
   - type: Tag
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes
+  # end starcup
   - type: StealTarget
     stealGroup: AnimalMcGriff
   - type: MessyDrinker
@@ -460,7 +496,7 @@
       amount: 3
     dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
-    accent: dog
+    accent: DogAccent # starcup
   - type: InteractionPopup
     successChance: 0.7
     interactSuccessString: petting-success-dog
@@ -476,11 +512,20 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalWalter
+  # begin starcup
   - type: Speech
     speechVerb: Canine
-    speechSounds: Dog
+    speechSounds: DogSpeechSounds
+    allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'CreatureCough', 'Snuffle', 'Pant', 'Shake']
+  - type: Vocal
+    sounds:
+      Unsexed: SmallDogSpeechEmotes
+    screamId: CreatureBark
+    screamAction: ActionEmitSound
+  # end starcup
   - type: MessyDrinker
   - type: Puller # starcup - go fetch!
     needsHands: false
@@ -506,6 +551,7 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalMorty
 
@@ -572,6 +618,7 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
 
 - type: entity
   name: Alexander
@@ -594,6 +641,7 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
 
 - type: entity
   name: Renault
@@ -625,6 +673,7 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalRenault
   # begin starcup: add sentience target
@@ -681,6 +730,7 @@
     - Hamster
     - VimPilot
     - ChefPilot
+    - CreatureEmotes # starcup
   - type: FlavorProfile
     flavors:
     - meaty
@@ -766,6 +816,7 @@
     - VimPilot
     - DoorBumpOpener
     - FootstepSound
+    - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalShiva
 
@@ -791,6 +842,7 @@
     - CannotSuicide
     - DoorBumpOpener
     - FootstepSound
+    - CreatureEmotes # starcup
   - type: GhostRole
     prob: 0.25
     name: ghost-role-information-willow-name
@@ -836,6 +888,7 @@
     - DoorBumpOpener
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: DamageStateVisuals
     states:
       Alive:
@@ -881,6 +934,14 @@
     attributes:
       proper: true
       gender: female
+  # begin starcup
+  - type: Speech
+    speechVerb: Slime
+    speechSounds: Slime
+    allowedEmotes: [ 'Squish', 'Bubble', 'Pop', 'Fizz', 'Simmer']
+  - type: ReplacementAccent
+    accent: slimes
+  # end starcup
 
 - type: entity
   name: Pun Pun
@@ -912,6 +973,7 @@
     - DoorBumpOpener
     - VimPilot
     - AnomalyHost
+    - CreatureEmotes # starcup
   - type: Loadout
     prototypes: [ MobMonkeyGear ]
   - type: Grammar
@@ -938,6 +1000,7 @@
     tags:
     - VimPilot
     - CannotSuicide
+    - CreatureEmotes # starcup
   - type: Grammar
     attributes:
       proper: true

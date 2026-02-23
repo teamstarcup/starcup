@@ -168,7 +168,7 @@
 
 - type: entity
   parent: MarkerBaseStarcup
-  id: SpawnMobBeetle
+  id: SpawnMobBeetleStag
   name: stag beetle spawner
   components:
   - type: Sprite
@@ -179,7 +179,7 @@
       sprite: _starcup/Mobs/Animals/Insects/beetle.rsi
   - type: ConditionalSpawner
     prototypes:
-    - MobBeetle
+    - MobBeetleStag
 
 - type: entity
   parent: MarkerBaseStarcup
@@ -200,7 +200,7 @@
 - type: entity
   parent: MarkerBaseStarcup
   id: SpawnMobBeetleJune
-  name: rhinoceros beetle spawner
+  name: june beetle spawner
   components:
   - type: Sprite
     layers:
@@ -284,7 +284,7 @@
     - state: ai
   - type: RandomSpawner
     prototypes:
-    - MobBeetle
+    - MobBeetleStag
     - MobBeetleRhino
     - MobBeetleJune
     - MobLadybug
@@ -367,7 +367,7 @@
       state: timed
   - type: TimedSpawner
     prototypes:
-    - MobBeetle
+    - MobBeetleStag
     - MobBeetleRhino
     - MobBeetleJune
     - MobLadybug

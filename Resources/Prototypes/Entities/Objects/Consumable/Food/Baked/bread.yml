@@ -975,9 +975,22 @@
       settings: short
   - type: GhostTakeoverAvailable
   - type: BarkAccent
+  # begin starcup
+  - type: Emoting
+  - type: BodyEmotes
+    soundsId: GeneralBodyEmotes
   - type: Speech
-    speechSounds: Dog
-    speechVerb: SmallMob
+    speechVerb: Canine
+    speechSounds: PuppySpeechSounds
+    allowedEmotes: ['CreatureBark', 'CreatureWhimper', 'CreatureYawn', 'CreatureCough', 'Snuffle', 'Pant', 'Shake']
+  - type: Vocal
+    sounds:
+      Unsexed: PuppySpeechEmotes
+    screamId: CreatureBark
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: DogAccent
+  # end starcup
   - type: MovementSpeedModifier
     baseWalkSpeed : 5
     baseSprintSpeed : 3
@@ -987,6 +1000,7 @@
     - DoorBumpOpener
     - Bread
     - Meat
+    - CreatureEmotes # starcup
   - type: CanEscapeInventory
     baseResistTime: 2
   - type: Puller

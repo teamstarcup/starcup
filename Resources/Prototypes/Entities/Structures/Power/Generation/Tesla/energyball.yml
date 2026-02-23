@@ -84,11 +84,15 @@
     shootRange: 7
     lightningPrototype: Lightning #To do: change to HyperchargedLightning, after fix beam system
   - type: ChasingWalk
-    minSpeed: 1
-    maxSpeed: 3
+    minSpeed: 0.33 # starcup: was 1
+    maxSpeed: 1.00 # starcup: was 3
   - type: ChaoticJump
-    jumpMinInterval: 8
-    jumpMaxInterval: 15
+    # begin starcup: nerf tesla movement
+    jumpMinInterval: 15
+    jumpMaxInterval: 30
+    rangeMin: 3
+    rangeMax: 6
+    # end starcup
   - type: Tag
     tags:
     - GhostOnlyWarp
@@ -127,8 +131,8 @@
   description: The cub of a destructive energy cage. Not as dangerous, but still not worth touching with bare hands.
   components:
   - type: ChasingWalk
-    minSpeed: 2
-    maxSpeed: 3
+    minSpeed: 1 # starcup: was 2
+    maxSpeed: 2 # starcup: was 3
     chasingComponent:
     - type: TeslaEnergyBall
   - type: Fixtures

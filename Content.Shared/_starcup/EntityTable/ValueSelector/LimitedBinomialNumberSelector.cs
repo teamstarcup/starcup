@@ -14,6 +14,6 @@ public sealed partial class LimitedBinomialNumberSelector : BinomialNumberSelect
     public override int Get(System.Random rand)
     {
         var amount = base.Get(rand);
-        return Math.Min(amount, Minimum);
+        return Math.Max(amount, Minimum);
     }
 }

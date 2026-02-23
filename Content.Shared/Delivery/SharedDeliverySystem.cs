@@ -5,6 +5,7 @@ using Content.Shared.FingerprintReader;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction.Events;
+using Content.Shared.Mobs.Components;
 using Content.Shared.NameModifier.EntitySystems;
 using Content.Shared.Objectives.Components;
 using Content.Shared.Popups;
@@ -222,6 +223,11 @@ public abstract class SharedDeliverySystem : EntitySystem
         {
             foreach (var entity in container.ContainedEntities.ToArray())
             {
+                // begin starcup: don't put living things in hand
+                if (HasComp<MobStateComponent>(entity))
+                    _hands.PickupOrDrop(user, entity, dropNear: true);
+                // end starcup
+
                 _hands.PickupOrDrop(user, entity);
             }
         }
