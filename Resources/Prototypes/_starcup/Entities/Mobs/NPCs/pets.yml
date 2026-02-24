@@ -112,8 +112,15 @@
   - type: Sprite
     sprite: _starcup/Mobs/Pets/henrietta.rsi
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
+    - map: ["enum.DamageStateVisualLayers.Base", "movement"]
       state: henrietta
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: henrietta-moving
+    noMovementLayers:
+      movement:
+        state: henrietta
   - type: DamageStateVisuals
     states:
       Alive:
