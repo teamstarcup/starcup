@@ -51,7 +51,7 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/fox_squeak.ogg
-  - type: Temperature
+  - type: TemperatureDamage
     coldDamageThreshold: 210
     coldDamage:
       types:
@@ -60,7 +60,10 @@
     attributes:
       gender: epicene
   - type: Bloodstream
-    bloodMaxVolume: 100
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 100
   - type: MobPrice
     price: 400
   - type: Tag
