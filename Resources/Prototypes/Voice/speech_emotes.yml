@@ -380,35 +380,34 @@
     - snapping fingers
     - snapped fingers
 
-# begin starcup: unnecessary commentary
-# We will be using SoftThump, LoudThump and ThumpMany instead of this Thump.
+# begin starcup: We will be using SoftThump, LoudThump and ThumpMany instead of this Thump.
 # This is so we can have both foot and tail versions of it.
 # There's a lot about this emote I don't understand - like why does it require hands.
+#- type: emote
+  #id: Thump
+  #name: chat-emote-name-thump
+  #category: Hands
+  #available: false
+  #icon: Interface/Emotes/tailslap.png
+  #whitelist:
+    #components:
+    #- Hands
+  #blacklist:
+    #tags:
+    #- SiliconEmotes
+  #chatMessages: ["chat-emote-msg-thump"]
+  #chatTriggers:
+    #- thump
+    #- thumps
+    #- thumping
+    #- thumped
+    #- thump tail
+    #- thumps tail
+    #- thumps their tail
+    #- thumps her tail
+    #- thumps his tail
+    #- thumps its tail
 # end starcup
-- type: emote
-  id: Thump
-  name: chat-emote-name-thump
-  category: Hands
-  available: false
-  icon: Interface/Emotes/tailslap.png
-  whitelist:
-    components:
-    - Hands
-  blacklist:
-    tags:
-    - SiliconEmotes
-  chatMessages: ["chat-emote-msg-thump"]
-  chatTriggers:
-    - thump
-    - thumps
-    - thumping
-    - thumped
-    - thump tail
-    - thumps tail
-    - thumps their tail
-    - thumps her tail
-    - thumps his tail
-    - thumps its tail
 
 - type: emote
   id: Salute
