@@ -23,15 +23,15 @@
         layer:
         - MobLayer
 #  - type: Appearance
-#  - type: Inventory
-#    speciesId: arcticfox
-#    templateId: pet
-#  - type: InventorySlots
-#  - type: Strippable
-#  - type: UserInterface
-#    interfaces:
-#    - key: enum.StrippingUiKey.Key
-#      type: StrippableBoundUserInterface
+  - type: Inventory
+    speciesId: arcticfox
+    templateId: pet
+  - type: InventorySlots
+  - type: Strippable
+  - type: UserInterface
+    interfaces:
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
   - type: DamageStateVisuals
     states:
       Alive:
@@ -60,7 +60,7 @@
     attributes:
       gender: epicene
   - type: Bloodstream
-    bloodReferenceSolution:
+    bloodReferenceSolution: #starcup
       reagents:
       - ReagentId: Blood
         Quantity: 100
@@ -140,11 +140,11 @@
     speciesId: secdog
     templateId: secdog
   - type: InventorySlots
-#  - type: Strippable
-#  - type: UserInterface
-#    interfaces:
-#    - key: enum.StrippingUiKey.Key
-#      type: StrippableBoundUserInterface
+  - type: Strippable
+  - type: UserInterface
+    interfaces:
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
   - type: DamageStateVisuals
     states:
       Alive:
@@ -169,8 +169,10 @@
   - type: Grammar
     attributes:
       gender: epicene
-  - type: Bloodstream
-    bloodMaxVolume: 300 # BIG DOG. MUCH BLOOD :3
+    bloodReferenceSolution: #starcup
+      reagents:
+      - ReagentId: Blood
+        Quantity: 300
   - type: Puller
   - type: MobPrice
     price: 400
