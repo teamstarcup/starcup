@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 271.1.0
+  engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 02/06/2026 19:42:52
-  entityCount: 16774
+  time: 02/25/2026 05:04:35
+  entityCount: 16776
 maps:
 - 1
 grids:
@@ -75320,6 +75320,13 @@ entities:
     - type: Transform
       pos: 5.5,-11.5
       parent: 2
+- proto: JumperUnitCabinetFilled
+  entities:
+  - uid: 13057
+    components:
+    - type: Transform
+      pos: -47.5,-15.5
+      parent: 2
 - proto: Katana
   entities:
   - uid: 11030
@@ -75723,7 +75730,7 @@ entities:
         12851:
         - - Pressed
           - Toggle
-- proto: LockerAdministrativeAssistantFilledSyndie
+- proto: LockerAdministrativeAssistantFilled
   entities:
   - uid: 11070
     components:
@@ -76904,10 +76911,15 @@ entities:
       parent: 2
 - proto: MedkitSiliconFilled
   entities:
-  - uid: 7298
+  - uid: 13426
     components:
     - type: Transform
-      pos: -42.40242,-17.249514
+      pos: -22.055607,-27.240688
+      parent: 2
+  - uid: 13923
+    components:
+    - type: Transform
+      pos: -43.47967,-6.9618893
       parent: 2
 - proto: MedkitToxinFilled
   entities:
@@ -86242,6 +86254,12 @@ entities:
     - type: Transform
       pos: 33.5,-6.5
       parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
 - proto: SeedExtractor
   entities:
   - uid: 12754
@@ -88640,15 +88658,15 @@ entities:
       parent: 2
 - proto: SignSurgery
   entities:
+  - uid: 7298
+    components:
+    - type: Transform
+      pos: -48.5,-15.5
+      parent: 2
   - uid: 13056
     components:
     - type: Transform
       pos: 8.5,-27.5
-      parent: 2
-  - uid: 13057
-    components:
-    - type: Transform
-      pos: -47.5,-15.5
       parent: 2
 - proto: SignTelecomms
   entities:
@@ -95199,6 +95217,12 @@ entities:
     - type: Transform
       pos: -19.5,-16.5
       parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
 - proto: UprightPianoInstrument
   entities:
   - uid: 14036

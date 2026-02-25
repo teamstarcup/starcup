@@ -1,6 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Content.Shared._EE.Silicon.Components; // Goobstation
 using Content.Shared.Administration.Logs;
 using Content.Shared.Database;
 using Content.Shared.Emoting;
@@ -600,17 +599,17 @@ public abstract partial class SharedMindSystem : EntitySystem
     /// Returns a list of every living humanoid player's minds, except for a single one which is exluded.
     /// A new hashset is allocated for every call, consider using <see cref="AddAliveHumans"/> instead.
     /// </summary>
-    public HashSet<Entity<MindComponent>> GetAliveHumans(EntityUid? exclude = null, bool excludeSilicon = false) // Goobstation
+    public HashSet<Entity<MindComponent>> GetAliveHumans(EntityUid? exclude = null)
     {
         var allHumans = new HashSet<Entity<MindComponent>>();
-        AddAliveHumans(allHumans, exclude, excludeSilicon); // Goobstation
+        AddAliveHumans(allHumans, exclude);
         return allHumans;
     }
 
     /// <summary>
     /// Adds to a hashset every living humanoid player's minds, except for a single one which is exluded.
     /// </summary>
-    public void AddAliveHumans(HashSet<Entity<MindComponent>> allHumans, EntityUid? exclude = null, bool excludeSilicon = false) // Goobstation
+    public void AddAliveHumans(HashSet<Entity<MindComponent>> allHumans, EntityUid? exclude = null)
     {
         // HumanoidProfileComponent is used to prevent mice, pAIs, etc from being chosen
         var query = EntityQueryEnumerator<HumanoidProfileComponent, MobStateComponent>();
@@ -619,10 +618,6 @@ public abstract partial class SharedMindSystem : EntitySystem
             // the player needs to have a mind and not be the excluded one +
             // the player has to be alive
             if (!TryGetMind(uid, out var mind, out var mindComp) || mind == exclude || !_mobState.IsAlive(uid, mobState))
-                continue;
-
-            // Goobstation: Skip IPCs from selections
-            if (excludeSilicon && HasComp<SiliconComponent>(uid))
                 continue;
 
             allHumans.Add((mind, mindComp));

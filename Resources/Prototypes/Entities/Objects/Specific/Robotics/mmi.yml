@@ -134,7 +134,10 @@
       guides:
       - Cyborgs
       - Robotics
-    - type: Organ # EinsteinEngines: IPCs
+    # begin starcup: added for MKCs
+    - type: Organ
+      category: Brain
+    # end starcup
     - type: ChangeVoiceInContainer
       whitelist:
         components:

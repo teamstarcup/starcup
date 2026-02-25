@@ -12,7 +12,7 @@
 - type: entity
   parent: BasePlushie
   id: PlushieIPC
-  name: mkc plushie # starcup: ipc -> mkc
+  name: MKC plushie # starcup: ipc -> mkc
   description: A massive robo-plushie. The screen might be hard plastic, but the rest of it is soft and cuddly!
   components:
   - type: Sprite
@@ -27,22 +27,22 @@
     size: Ginormous
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/_EE/Voice/IPC/pai_whistle.ogg
+      path: /Audio/_starcup/Voice/MKC/pai_whistle.ogg
   - type: EmitSoundOnLand
     sound:
-      path: /Audio/_EE/Voice/IPC/robot-scream.ogg
+      path: /Audio/_starcup/Voice/MKC/robot-scream.ogg
   - type: EmitSoundOnActivate
     sound:
-      path: /Audio/_EE/Voice/IPC/pai_whistle.ogg
+      path: /Audio/_starcup/Voice/MKC/pai_whistle.ogg
   - type: EmitSoundOnTrigger
     sound:
-      path: /Audio/_EE/Voice/IPC/robot-scream.ogg
+      path: /Audio/_starcup/Voice/MKC/robot-scream.ogg
   - type: MeleeWeapon
     soundHit:
-      path: /Audio/_EE/Voice/IPC/robot-scream.ogg
+      path: /Audio/_starcup/Voice/MKC/robot-scream.ogg
   - type: Edible
     useSound:
-      path: /Audio/_EE/Voice/IPC/pai_whistle.ogg
+      path: /Audio/_starcup/Voice/MKC/pai_whistle.ogg
     delay: 5
   - type: HeldSpeedModifier
     walkModifier: 0.7
