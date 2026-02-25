@@ -1,9 +1,31 @@
 - type: entity
   name: Siobhan
-  parent: MobArcticFox
+  parent: MobFoxRenault # starcup
   id: MobArcticFoxSiobhan
   description: Her name is pronounced "Shivahn", but she is known as Shivs by her associates. A fluffy, adorable arctic fox.
   components:
+  - type: Sprite # starcup start: expended components as she is now parented off renault instead of arcticfox
+    drawdepth: Mobs
+    sprite: _DV/Mobs/Pets/arcticfox.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: arcticfox
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: arcticfox
+      Critical:
+        Base: arcticfox_crit
+      Dead:
+        Base: arcticfox_dead
+  - type: TemperatureDamage
+    coldDamageThreshold: 210
+    coldDamage:
+      types:
+        Cold: 0.1
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound # starcup end
   - type: InteractionPopup
     successChance: 1
   - type: Butcherable
@@ -18,10 +40,11 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes
 
 - type: entity
   name: Laika
-  parent: MobSecDog
+  parent: MobMcGriff # starcup
   id: MobSecDogLaika
   description: Retired after the Security Uprisings as a hero of the people. Even now she does what she can to help. # starcup. orig: Much like her namesake, Laika is a specimen of indeterminate breed, fresh off the streets and ready to tussle.
   components:
@@ -32,8 +55,84 @@
     name: "Laika"
     description: "The Psych office's canine therapy pet. Emotionally support the crew like the very good girl you are!" # starcup. orig:"Security's resident she-dog. Badger the officers for headpats and nip at the heels of violent offenders."
   - type: GhostTakeoverAvailable
+  - type: CombatMode # starcup start: Need to include more components now that she's parented off mcgriff instead of a bespoke secdog animal
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.5
+    baseSprintSpeed: 5.0
+  - type: NpcFactionMember
+    factions:
+    - PetsNT
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _DV/Mobs/Pets/secdog.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: secdog
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 120
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      300: Dead
+  - type: MeleeWeapon
+    hidden: true
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    angle: 0
+    attackRate: 0.75
+    damage:
+      types:
+        Slash: 6
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      40: 0.70
+      80: 0.30
+  - type: Appearance
+  - type: Inventory
+    speciesId: secdog
+    templateId: secdog
+  - type: InventorySlots
+  - type: Strippable
+  - type: UserInterface
+    interfaces:
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: secdog
+      Critical:
+        Base: secdog_crit
+      Dead:
+        Base: secdog_dead
   - type: InteractionPopup
     successChance: 1
+    interactSuccessString: petting-success-dog
+    interactFailureString: petting-failure-generic
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/_DV/Voice/Vulpkanin/dog_bark2.ogg #keeping the classic pet noise despite the new creature emotes
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 300
+  - type: Puller
+    needsHands: false #starcup end
   - type: Butcherable
     spawned:
     - id: FoodMeat
@@ -49,13 +148,14 @@
     - CannotSuicide
     - VimPilot
     - DoorBumpOpener
+    - CreatureEmotes
 #  - type: StealTarget
 #    stealGroup: AnimalSecurity #DeltaV - Adjusts because we have multiple possible sec animals
 
 - type: entity
   name: Silvia
   id: MobCobraSilvia
-  parent: MobSpaceBasic
+  parent: MobCobraSpace
   description: A charming practitioner of the art of acupuncture. Her alluring gaze has won her many fans. # starcup: eliminating confusion as to her status as a pet vs an enemy
   components:
     - type: HTN
@@ -178,5 +278,6 @@
       - VimPilot
       - DoorBumpOpener
       - FootstepSound
+      - CreatureEmotes
 #    - type: StealTarget
 #      stealGroup: AnimalSilvia

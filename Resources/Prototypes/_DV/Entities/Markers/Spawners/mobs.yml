@@ -1,5 +1,8 @@
 - type: entity
-  name: Arctic Fox Siobhan Spawner
+  # begin starcup: standardize spawners
+  name: Siobhan Spawner
+  suffix: RD Pet
+  # end starcup
   id: SpawnMobArcticFoxSiobhan
   parent: MarkerBase
   components:
@@ -12,7 +15,10 @@
       - MobArcticFoxSiobhan
 
 - type: entity
-  name: Sec Dog Laika Spawner
+  # begin starcup: standardize spawners
+  name: Laika Spawner
+  suffix: Psych Pet # laika is a psych pet now!
+  # end starcup
   id: SpawnMobSecDogLaika
   parent: MarkerBase
   components:
@@ -25,7 +31,10 @@
       - MobSecDogLaika
 
 - type: entity
+  # begin starcup: standardize spawners
   name: Silvia Spawner
+  suffix: CMO Pet
+  # end starcup
   id: SpawnMobCMOPetSilvia
   parent: MarkerBase
   components:
