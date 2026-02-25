@@ -1,7 +1,15 @@
 # items
+## machine parts
 stack-capacitor = capacitor
 stack-micro-manipulator-starcup = micro manipulator
 stack-matter-bin = matter bin
+
+## silicon repair
+stack-repair-spray = repair spray
+stack-thermal-paste = thermal paste
+stack-defrost-pouch = defrost pouch
+stack-splice-kit = splice kit
+stack-oil-pack = oil pack
 
 # brick
 stack-starcup-floor-brick-horizontal = horizontal astro-brick

@@ -1,18 +1,19 @@
+# MKCs
 - type: loadoutEffectGroup
   id: HumanoidSilicon
   effects:
   - !type:SpeciesLoadoutEffect
     species:
-    - IPC
+    - MKC
 
 - type: loadout
-  id: EmergencyIPCBox
+  id: EmergencyBoxMKC
   effects:
   - !type:GroupLoadoutEffect
     proto: HumanoidSilicon
   storage:
     back:
-    - BoxSurvivalHumanoidSilicon
+    - BoxSurvivalMKC
 
 # Security
 - type: loadout

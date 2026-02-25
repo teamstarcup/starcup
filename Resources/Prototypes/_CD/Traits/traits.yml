@@ -3,13 +3,12 @@
   id: Synthetic
   name: trait-synth-name
   description: trait-synth-desc
-  # Begin DeltaV Additions - blacklist IPCs
+  # begin starcup: blacklist MKCs
   blacklist:
     components:
-      - Silicon
       - BorgChassis
   excludedSpecies:
-    - IPC
-  # End DeltaV Additions - blacklist IPCs
+    - MKC
+  # end starcup
   components:
     - type: Synth

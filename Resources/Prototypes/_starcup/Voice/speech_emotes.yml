@@ -1,0 +1,37 @@
+- type: emote
+  id: SiliconDeathgasp
+  name: chat-emote-name-deathgasp
+  icon: Interface/Emotes/deathgasp.png
+  chatMessages: ["chat-emote-msg-deathgasp-silicon"]
+
+- type: emote
+  id: Boop
+  name: chat-emote-name-boop
+  icon: _DV/Interface/Emotes/ecg.png # DeltaV - Added icon
+  category: Vocal
+  whitelist:
+    # begin starcup: allow cyborgs to use mkc emotes
+    requireAll: true
+    components:
+    - Vocal
+    tags:
+    - SiliconEmotes
+  # end starcup
+  chatMessages: [ boops ]
+  chatTriggers:
+  - boops
+
+- type: emote
+  id: Whirr # uncategorized as it is generic
+  whitelist:
+    # begin starcup: allow cyborgs to use mkc emotes
+    requireAll: true
+    components:
+    - Vocal
+    tags:
+    - SiliconEmotes
+  # end starcup
+  name: chat-emote-name-whirr
+  chatMessages: [ whirrs ]
+  chatTriggers:
+  - whirrs
