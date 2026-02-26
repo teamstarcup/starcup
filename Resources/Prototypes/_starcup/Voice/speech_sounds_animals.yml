@@ -706,6 +706,36 @@
       collection: DogWhimpers
 
 - type: emoteSounds
+  id: LargeDogSpeechEmotes
+  params:
+    variation: 0.125
+  sounds:
+    CreatureBark:
+      collection: LargeDogBarks
+    CreatureSnarl:
+      collection: VulpkaninSnarls
+    CreatureGrowl:
+      collection: LargeDogGrowls
+    CreatureWhimper:
+      collection: DogWhimpers
+    CreatureHowl:
+      collection: DogHowls
+    Snuffle:
+      collection: DogSniffing
+    CreatureCough:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Shake:
+      path: /Audio/_starcup/Animals/Dog/dog_shake.ogg
+    Pant:
+      path: /Audio/_starcup/Animals/Dog/dog_pant1.ogg
+    Sneeze:
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
+    Gasp:
+      collection: DogGasps
+    DefaultDeathgasp:
+      collection: DogWhimpers
+
+- type: emoteSounds
   id: PuppySpeechEmotes
   params:
     variation: 0.125
