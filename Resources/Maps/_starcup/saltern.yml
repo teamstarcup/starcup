@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 267.3.0
+  engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 12/31/2025 23:03:15
-  entityCount: 14414
+  time: 02/25/2026 05:02:53
+  entityCount: 14416
 maps:
 - 1
 grids:
@@ -4384,6 +4384,9 @@ entities:
     - type: RadiationGridResistance
     - type: NavMap
     - type: ImplicitRoof
+    - type: TileHistory
+      chunkHistory: {}
+    - type: ExplosionAirtightGrid
 - proto: AACTablet
   entities:
   - uid: 3
@@ -26516,6 +26519,13 @@ entities:
     - type: Transform
       rot: 6.283185307179586 rad
       pos: -11.516802,-12.205157
+      parent: 2
+- proto: CargoMailTeleporter
+  entities:
+  - uid: 9963
+    components:
+    - type: Transform
+      pos: 15.5,12.5
       parent: 2
 - proto: Carpet
   entities:
@@ -58694,20 +58704,6 @@ entities:
     - type: Transform
       pos: -31.5,-37.5
       parent: 2
-- proto: GlowstickBase
-  entities:
-  - uid: 8823
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 27.901573,15.567275
-      parent: 2
-  - uid: 8824
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 27.948448,15.708046
-      parent: 2
 - proto: GlowstickBlue
   entities:
   - uid: 8825
@@ -58726,6 +58722,20 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -3.8740103,-9.396057
+      parent: 2
+- proto: GlowstickGreen
+  entities:
+  - uid: 8823
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 27.901573,15.567275
+      parent: 2
+  - uid: 8824
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 27.948448,15.708046
       parent: 2
 - proto: GlowstickPurple
   entities:
@@ -62927,7 +62937,7 @@ entities:
     - type: Transform
       pos: 24.362673,-7.5532103
       parent: 2
-- proto: HandheldHealthAnalyzerUnpowered
+- proto: HandheldHealthAnalyzer
   entities:
   - uid: 9642
     components:
@@ -64309,6 +64319,13 @@ entities:
     - type: Transform
       pos: -2.5,1.5
       parent: 2
+- proto: JumperUnitCabinetFilled
+  entities:
+  - uid: 14415
+    components:
+    - type: Transform
+      pos: -2.5,-24.5
+      parent: 2
 - proto: KalimbaInstrument
   entities:
   - uid: 9834
@@ -64914,7 +64931,7 @@ entities:
           - Toggle
     - type: Fixtures
       fixtures: {}
-- proto: LockerAdministrativeAssistantFilledSyndie
+- proto: LockerAdministrativeAssistantFilled
   entities:
   - uid: 9891
     components:
@@ -65651,13 +65668,6 @@ entities:
     - type: Transform
       pos: 24.583178,-21.16174
       parent: 2
-- proto: MailTeleporterSyndie
-  entities:
-  - uid: 9963
-    components:
-    - type: Transform
-      pos: 15.5,12.5
-      parent: 2
 - proto: MaintenanceFluffSpawner
   entities:
   - uid: 9964
@@ -66096,12 +66106,17 @@ entities:
   - uid: 10033
     components:
     - type: Transform
-      pos: 0.067399025,-27.36356
+      pos: -14.273918,-24.53019
       parent: 2
   - uid: 10034
     components:
     - type: Transform
       pos: -17.55778,13.799268
+      parent: 2
+  - uid: 14416
+    components:
+    - type: Transform
+      pos: 32.34098,-2.9410014
       parent: 2
 - proto: MedkitToxinFilled
   entities:
@@ -68195,6 +68210,18 @@ entities:
     components:
     - type: Transform
       pos: -32.49629,-32.382465
+      parent: 2
+- proto: PlushieSpawner50
+  entities:
+  - uid: 12491
+    components:
+    - type: Transform
+      pos: -27.5,-1.5
+      parent: 2
+  - uid: 12492
+    components:
+    - type: Transform
+      pos: -30.5,13.5
       parent: 2
 - proto: PlushieVox
   entities:
@@ -78787,7 +78814,7 @@ entities:
     - type: Transform
       pos: -29.433363,10.115166
       parent: 2
-- proto: SpacemenFigureSpawner
+- proto: SpacemenFigurineSpawner90
   entities:
   - uid: 11875
     components:
@@ -82809,18 +82836,6 @@ entities:
     components:
     - type: Transform
       pos: 12.492016,27.532398
-      parent: 2
-- proto: ToySpawner
-  entities:
-  - uid: 12491
-    components:
-    - type: Transform
-      pos: -27.5,-1.5
-      parent: 2
-  - uid: 12492
-    components:
-    - type: Transform
-      pos: -30.5,13.5
       parent: 2
 - proto: TrainingBomb
   entities:

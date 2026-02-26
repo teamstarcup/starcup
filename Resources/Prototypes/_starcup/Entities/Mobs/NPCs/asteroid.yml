@@ -1,0 +1,49 @@
+- type: entity
+  id: MobHivelordColony
+  parent: MobHivelord
+  name: colony hivelord
+  description: A colony of alien creatures of unknown organic material, constantly fluctuating. When attacking, members of the colony split off and attack in tandem.
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Aliens/Asteroid/hivelord_colony.rsi
+  - type: BasicEntityAmmoProvider
+    proto: MobHivelordBroodColony
+
+- type: entity
+  id: MobHivelordBroodColony
+  parent: MobHivelordBrood
+  suffix: colony
+  description: A member of the original hivelord colony, rallying behind its peers. One isn't much of a threat, but...
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Aliens/Asteroid/hivelord_colony.rsi
+
+- type: entity
+  id: MobHivelordFractal
+  parent: MobHivelord
+  name: fractal hivelord
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Aliens/Asteroid/hivelord_fractal.rsi
+  - type: BasicEntityAmmoProvider
+    proto: MobHivelordBroodFractal
+
+- type: entity
+  id: MobHivelordBroodFractal
+  parent: MobHivelordBrood
+  suffix: fractal
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Aliens/Asteroid/hivelord_fractal.rsi
+
+- type: entity
+  id: MobBasiliskSkitterer
+  parent: MobBasilisk
+  suffix: skitterer
+  description: A territorial beast, covered in a thick shell that absorbs energy. Its stare causes victims to freeze from the inside. This specimen belongs to the rarely seen 'arocknid' subspecies.
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Aliens/Asteroid/basilisk.rsi
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepGiantBug

@@ -1,3 +1,4 @@
+# Felinid Base Markings
 # Head
 
 - type: marking
@@ -16,9 +17,8 @@
   - sprite: Mobs/Species/Human/parts.rsi
     state: head_f
 
-# Tajaran Markings
-
-# Head
+# Tajaran Base Markings
+# HeadBase
 
 - type: marking
   id: TajaranHeadMale
@@ -88,6 +88,8 @@
   - sprite: _starcup/Mobs/Customization/Felinid/parts.rsi
     state: r_hand
 
+# Legs
+
 - type: marking
   id: TajaranLeftLeg
   bodyPart: LLeg
@@ -119,3 +121,248 @@
   sprites:
   - sprite: _starcup/Mobs/Customization/Felinid/parts.rsi
     state: r_foot
+
+# Tajaran Customization Markings
+# HeadTop
+
+- type: marking
+  id: TajaranServalEars
+  bodyPart: HeadTop
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/ears.rsi
+    state: serval_ears
+  - sprite: _DEN/Mobs/Customization/Tajaran/ears.rsi
+    state: serval_ears_markings
+  - sprite: _DEN/Mobs/Customization/Tajaran/ears.rsi
+    state: serval_ears_inside
+
+# Head
+
+- type: marking
+  id: TajaranFaceServal
+  bodyPart: Head
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/head.rsi
+    state: serval_face
+
+- type: marking
+  id: TajaranFaceSpots
+  bodyPart: Head
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/head.rsi
+    state: face_spots
+
+- type: marking
+  id: TajaranFaceTearL
+  bodyPart: Head
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/head.rsi
+    state: tear_left
+
+- type: marking
+  id: TajaranFaceTearR
+  bodyPart: Head
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/head.rsi
+    state: tear_right
+
+# Chest
+
+- type: marking
+  id: TajaranSpotted
+  bodyPart: Chest
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/chest.rsi
+    state: spotted
+  - sprite: _DEN/Mobs/Customization/Tajaran/chest.rsi
+    state: spotted_extra
+
+- type: marking
+  id: TajaranSpottedAlt
+  bodyPart: Chest
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/chest.rsi
+    state: spotted_alt
+  - sprite: _DEN/Mobs/Customization/Tajaran/chest.rsi
+    state: spotted_extra
+
+- type: marking
+  id: TajaranHeart
+  bodyPart: Chest
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/chest.rsi
+    state: heart_big
+
+- type: marking
+  id: TajaranHeartSmall
+  bodyPart: Chest
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/chest.rsi
+    state: heart_small
+
+# L Arm
+
+- type: marking
+  id: TajaranLArmSpotted
+  bodyPart: LArm
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/arms.rsi
+    state: spotted_arm_left
+  - sprite: _DEN/Mobs/Customization/Tajaran/arms.rsi
+    state: spotted_arm_left_extra
+
+# R Arm
+
+- type: marking
+  id: TajaranRArmSpotted
+  bodyPart: RArm
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/arms.rsi
+    state: spotted_arm_right
+  - sprite: _DEN/Mobs/Customization/Tajaran/arms.rsi
+    state: spotted_arm_right_extra
+
+# L Hand
+
+- type: marking
+  id: TajaranLHandSpotted
+  bodyPart: LHand
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/arms.rsi
+    state: spotted_paw_left
+  - sprite: _DEN/Mobs/Customization/Tajaran/arms.rsi
+    state: spotted_paw_left_extra
+
+# R Hand
+
+- type: marking
+  id: TajaranRHandSpotted
+  bodyPart: RHand
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/arms.rsi
+    state: spotted_paw_right
+  - sprite: _DEN/Mobs/Customization/Tajaran/arms.rsi
+    state: spotted_paw_right_extra
+
+# L Leg
+
+- type: marking
+  id: TajaranLLegSpotted
+  bodyPart: LLeg
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/legs.rsi
+    state: spotted_leg_left
+  - sprite: _DEN/Mobs/Customization/Tajaran/legs.rsi
+    state: spotted_leg_left_extra
+
+# R Leg
+
+- type: marking
+  id: TajaranRLegSpotted
+  bodyPart: RLeg
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/legs.rsi
+    state: spotted_leg_right
+  - sprite: _DEN/Mobs/Customization/Tajaran/legs.rsi
+    state: spotted_leg_right_extra
+
+# L Foot
+
+- type: marking
+  id: TajaranLFootSpotted
+  bodyPart: LFoot
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/legs.rsi
+    state: spotted_foot_left
+  - sprite: _DEN/Mobs/Customization/Tajaran/legs.rsi
+    state: spotted_foot_left_extra
+
+# R Foot
+
+- type: marking
+  id: TajaranRFootSpotted
+  bodyPart: RFoot
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/legs.rsi
+    state: spotted_foot_right
+  - sprite: _DEN/Mobs/Customization/Tajaran/legs.rsi
+    state: spotted_foot_right_extra
+
+# Tails
+
+- type: marking
+  id: TajaranTailSpottedAnimated
+  bodyPart: Tail
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _EE/Mobs/Customization/Tajaran/tails.rsi
+    state: tail_anim
+  - sprite: _DEN/Mobs/Customization/Tajaran/tail_markings.rsi
+    state: tail_spots_anim
+
+- type: marking
+  id: TajaranTailSpottedSparseAnimated
+  bodyPart: Tail
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _EE/Mobs/Customization/Tajaran/tails.rsi
+    state: tail_anim
+  - sprite: _DEN/Mobs/Customization/Tajaran/tail_markings.rsi
+    state: tail_spots_alt_anim
+
+- type: marking
+  id: TajaranTailSpottedDoubleAnimated
+  bodyPart: Tail
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _EE/Mobs/Customization/Tajaran/tails.rsi
+    state: tail_anim
+  - sprite: _DEN/Mobs/Customization/Tajaran/tail_markings.rsi
+    state: tail_spots_anim
+  - sprite: _DEN/Mobs/Customization/Tajaran/tail_markings.rsi
+    state: tail_spots_alt_anim
+
+- type: marking
+  id: TajaranTailNubAnimated
+  bodyPart: Tail
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/tails.rsi
+    state: tail_nub_anim
+
+- type: marking
+  id: TajaranTailNubUndersideAnimated
+  bodyPart: Tail
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/tails.rsi
+    state: tail_nub_anim
+  - sprite: _DEN/Mobs/Customization/Tajaran/tail_markings.rsi
+    state: tail_nub_underside_anim
+
+- type: marking
+  id: TajaranTailNubTippedAnimated
+  bodyPart: Tail
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Tajaran/tails.rsi
+    state: tail_nub_anim
+  - sprite: _DEN/Mobs/Customization/Tajaran/tail_markings.rsi
+    state: tail_nub_tip_anim

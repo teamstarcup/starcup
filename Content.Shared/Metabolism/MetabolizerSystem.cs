@@ -161,6 +161,12 @@ public sealed class MetabolizerSystem : EntitySystem
         var ev = new MetabolismExclusionEvent();
         RaiseLocalEvent(solutionOwner.Value, ref ev);
 
+        // begin starcup: collect whitelisted reagents for filtering
+        Entity<MetabolizerComponent> metabolizer = (ent.Owner, ent.Comp1);
+        var evWhitelist = new MetabolismWhitelistEvent();
+        RaiseLocalEvent(metabolizer, ref evWhitelist);
+        // end starcup
+
         // randomize the reagent list so we don't have any weird quirks
         // like alphabetical order or insertion order mattering for processing
         _random.Shuffle(list);
@@ -178,9 +184,9 @@ public sealed class MetabolizerSystem : EntitySystem
                 continue;
 
             // begin starcup: metabolizer whitelist
-            if (ent.Comp1.ReagentWhitelist != null)
+            if (evWhitelist.Reagents.Count > 0)
             {
-                if (!ent.Comp1.ReagentWhitelist.Contains(proto))
+                if (!evWhitelist.Reagents.Contains(proto))
                     continue;
             }
             // end starcup
