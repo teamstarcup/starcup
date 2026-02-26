@@ -14,7 +14,7 @@ public sealed partial class PowerCoreComponent : Component
     /// Time between each 'drink' from a battery
     /// </summary>
     [DataField, AutoNetworkedField]
-    public TimeSpan Delay = TimeSpan.FromSeconds(1.75);
+    public TimeSpan Delay = TimeSpan.FromSeconds(1);
 
     /// <summary>
     /// How many joules the 'drinker' drains from a power source per do-after
@@ -49,5 +49,5 @@ public sealed partial class PowerCoreComponent : Component
     /// much smaller value for the sake of allowing the robots to carry around rechargeable snacks.
     /// </remarks>
     [DataField, AutoNetworkedField]
-    public float WattConsumption = 4;
+    public float WattConsumption = 1;
 }
