@@ -14,7 +14,7 @@
       state: icon
   - type: EntityTableSpawner
     table: !type:NestedSelector
-      tableId: StringInstrumentTable
+      tableId: StringSmallInstrumentTable # minus harp
 
 - type: entity
   id: RandomInstrumentsBrass
@@ -29,7 +29,7 @@
       state: icon
   - type: EntityTableSpawner
     table: !type:NestedSelector
-      tableId: BrassInstrumentTable
+      tableId: BrassSmallInstrumentTable # minus tuba
 
 - type: entity
   id: RandomInstrumentsWoodwind
@@ -59,7 +59,7 @@
       state: icon
   - type: EntityTableSpawner
     table: !type:NestedSelector
-      tableId: KeyedPercussionInstrumentTable
+      tableId: KeyedPercussionSmallInstrumentTable # minus vibraphone
 
 - type: entity
   id: RandomInstrumentsSpecial
@@ -185,3 +185,43 @@
       - id: HarpInstrument
       - id: ContrabassInstrument
 
+# Small Instrument Tables
+- type: entityTable
+  id: StringSmallInstrumentTable
+  table: !type:GroupSelector
+    children:
+    - id: AcousticGuitarInstrument
+    - id: ElectricGuitarInstrument
+    - id: BassGuitarInstrument
+    - id: RockGuitarInstrument
+    - id: BanjoInstrument
+    - id: ViolinInstrument
+    - id: CelloInstrument
+    - id: ViolaInstrument
+    - id: HandheldHarpInstrument
+    - !type:GroupSelector # starcup start
+      children:
+      - id: Rickenbacker4003Instrument
+      - id: Rickenbacker4003InstrumentBlack
+      - id: Rickenbacker4003InstrumentRed
+      - id: Rickenbacker4003InstrumentPink
+      - id: Rickenbacker4003InstrumentSlime
+
+- type: entityTable
+  id: KeyedPercussionSmallInstrumentTable
+  table: !type:GroupSelector
+    children:
+    - id: SynthesizerInstrument
+    - id: AccordionInstrument
+    - id: KalimbaInstrument
+    - id: WoodblockInstrument
+    - id: GlockenspielInstrument
+
+- type: entityTable
+  id: BrassSmallInstrumentTable
+  table: !type:GroupSelector
+    children:
+    - id: TrumpetInstrument
+    - id: TromboneInstrument
+    - id: FrenchHornInstrument
+    - id: EuphoniumInstrument
