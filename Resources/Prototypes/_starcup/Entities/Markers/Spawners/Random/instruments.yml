@@ -136,7 +136,7 @@
     table: !type:NestedSelector
       tableId: MiscLargeInstrumentTable
 
-# Random Instrument Tables
+# Large Instrument Tables
 - type: entityTable
   id: LargeInstrumentsTable
   table: !type:GroupSelector
@@ -199,7 +199,7 @@
     - id: CelloInstrument
     - id: ViolaInstrument
     - id: HandheldHarpInstrument
-    - !type:GroupSelector # starcup start
+    - !type:GroupSelector
       children:
       - id: Rickenbacker4003Instrument
       - id: Rickenbacker4003InstrumentBlack
