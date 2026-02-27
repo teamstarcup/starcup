@@ -1,0 +1,100 @@
+# Upstream conifer variants
+- type: entity
+  parent: BaseTreeConifer
+  id: FloraTreeConiferNoSnow
+  name: conifer
+  suffix: no snow
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Environment/Flora/Trees/ConiferTrees/flora_treesconifer_nosnow.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+        tree06: ""
+        tree07: ""
+        tree08: ""
+        tree09: ""
+
+# Dead trees
+- type: entity
+  parent: BaseTreeConifer
+  id: FloraTreeConiferDead
+  name: conifer
+  suffix: dead
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Environment/Flora/Trees/ConiferTrees/flora_dead_conifers.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+
+# Original trees
+- type: entity
+  parent: BaseTreeConifer
+  id: FloraTreeTamarack
+  name: conifer
+  suffix: no snow
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Environment/Flora/Trees/ConiferTrees/flora_tamaracks.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+
+- type: entity
+  parent: BaseTreeLarge
+  id: FloraTreeCorsicanPine
+  name: corsican pine
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Environment/Flora/Trees/ConiferTrees/flora_corsican_pines.rsi
+    layers:
+    - state: treelarge01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treelarge01: ""
+        treelarge02: ""
+        treelarge03: ""
+        treelarge04: ""
+        treelarge05: ""
+
+- type: entity
+  parent: BaseTreeConifer
+  id: FloraTreeGulmorePine
+  name: gulmore pine
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Environment/Flora/Trees/ConiferTrees/flora_gulmore_pines.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""

@@ -1,0 +1,237 @@
+# Upstream tree variants
+  type: entity
+  parent: BaseTree
+  id: FloraTreeAutumn
+  name: tree
+  suffix: autumn
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_autumn_trees.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+        tree06: ""
+
+- type: entity
+  parent: BaseTree
+  id: FloraTreeVerdant
+  name: tree
+  suffix: verdant
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_verdant_trees.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+        tree06: ""
+
+- type: entity
+  parent: BaseTree
+  id: FloraTreeTemperate
+  name: tree
+  suffix: temperate
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_temperate_trees.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+        tree06: ""
+        tree03: ""
+
+- type: entity
+  parent: BaseTreeLarge
+  id: FloraTreeLargeDark
+  name: dark wood
+  suffix: large
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_treeslarge_dark.rsi
+    layers:
+    - state: treelarge01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treelarge01: ""
+        treelarge02: ""
+        treelarge03: ""
+        treelarge04: ""
+        treelarge05: ""
+        treelarge06: ""
+
+# Dead trees
+- type: entity
+  parent: BaseTree
+  id: FloraTreeDead
+  name: tree
+  suffix: dead
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_dead_trees.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+        tree06: ""
+
+# Original trees
+- type: entity
+  parent: BaseTree
+  id: FloraTreeAspbirch
+  name: tree
+  suffix: aspen birch
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_aspen_birches.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+
+- type: entity
+  parent: BaseTree
+  id: FloraTreeTeal
+  name: tree
+  suffix: teal
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_trees_teal.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+
+- type: entity
+  parent: BaseTreeLarge
+  id: FloraTreeLargeTeal
+  name: large tree
+  suffix: teal
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_treeslarge_teal.rsi
+    layers:
+    - state: treelarge01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treelarge01: ""
+
+- type: entity
+  parent: BaseTree
+  id: FloraTreePink
+  name: cherry tree
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_cherry_trees.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+
+- type: entity
+  parent: BaseTree
+  id: FloraTreeJuniper
+  name: juniper tree
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_juniper_trees.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+
+- type: entity
+  parent: BaseTree
+  id: FloraTreeAjorax
+  name: ajorax tree
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_ajorax_trees.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+        tree06: ""
+        tree03: ""
+
+- type: entity
+  parent: BaseTreeLarge
+  id: FloraTreeAjoraxLarge
+  name: ajorax tree
+  suffix: large
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_ajorax_trees_large.rsi
+    layers:
+    - state: treelarge01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treelarge01: ""
+        treelarge02: ""
+        treelarge03: ""
+        treelarge04: ""
+        treelarge05: ""
