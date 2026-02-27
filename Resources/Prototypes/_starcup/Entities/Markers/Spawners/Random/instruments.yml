@@ -10,7 +10,7 @@
   - type: Sprite
     layers:
     - state: red
-    - sprite: _starcup/Objects/Fun/Instruments/rickenbacker_pink.rsi
+    - sprite: _starcup/Objects/Fun/Instruments/glishenbacker.rsi
       state: icon
   - type: EntityTableSpawner
     table: !type:NestedSelector
@@ -94,7 +94,7 @@
 - type: entity
   id: RandomInstrumentsLargeDrum
   name: random large drum instruments spawner
-  description: Non-keyed percussion.
+  description: Taiko, timpani, tom drums, and drumkit.
   parent: MarkerBase
   components:
   - type: Sprite
@@ -109,7 +109,7 @@
 - type: entity
   id: RandomInstrumentsLargeKeyboard
   name: random large keyboard instruments spawner
-  description: Pianos, organs, and synthesizers.
+  description: Pianos, the organ, and the minimoog.
   parent: MarkerBase
   components:
   - type: Sprite
@@ -124,7 +124,7 @@
 - type: entity
   id: RandomInstrumentsLargeMisc
   name: random large misc instruments spawner
-  description: Everything that's not a piano or drum.
+  description: Vibraphone, marimba, tuba, harp, and contrabass.
   parent: MarkerBase
   components:
   - type: Sprite
@@ -171,10 +171,6 @@
       - id: UprightPianoInstrument
       - id: ChurchOrganInstrument
       - id: MinimoogInstrument
-    - !type:GroupSelector
-      weight: 0.01 # should be very rare but it's cute to have a chance at it
-      children:
-      - id: DawInstrumentMachineCircuitboard
 
 - type: entityTable
   id: MiscLargeInstrumentTable
@@ -189,6 +185,3 @@
       - id: HarpInstrument
       - id: ContrabassInstrument
 
-# strictly speaking, the overall big spawner slightly disadvantages the misc items,
-# since Misc is 1 item larger than the piano/drum tables. it's fine for now, but be
-# prepared to split it up if/when more big instruments are added.

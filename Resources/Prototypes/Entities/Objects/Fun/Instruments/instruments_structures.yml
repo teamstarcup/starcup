@@ -1,5 +1,6 @@
 ﻿- type: entity
   name: piano
+  suffix: Large Instrument, Keyboard Instrument # starcup
   parent: BasePlaceableInstrumentRotatable
   id: PianoInstrument
   description: Play Needles Piano Now.
@@ -12,6 +13,7 @@
 
 - type: entity
   name: upright piano
+  suffix: Large Instrument, Keyboard Instrument # starcup
   parent: BasePlaceableInstrumentRotatable
   id: UprightPianoInstrument
   description: I said Piannie!
@@ -24,6 +26,7 @@
 
 - type: entity
   name: vibraphone
+  suffix: Large Instrument, Keyed Percussion Instrument # starcup
   id: VibraphoneInstrument
   parent: BasePlaceableInstrumentRotatable
   description: Good vibes all around.
@@ -35,6 +38,7 @@
 
 - type: entity
   name: marimba
+  suffix: Large Instrument, Keyed Percussion Instrument # starcup
   id: MarimbaInstrument
   parent: BasePlaceableInstrumentRotatable
   components:
@@ -47,6 +51,7 @@
   name: church organ
   parent: BasePlaceableInstrumentRotatable
   id: ChurchOrganInstrument
+  suffix: Large Instrument, Keyboard Instrument # starcup
   description: This thing really blows!
   components:
   - type: Instrument
@@ -58,6 +63,7 @@
   name: tuba
   parent: BasePlaceableInstrument
   id: TubaInstrument
+  suffix: Large Instrument, Brass Instrument # starcup
   description: The big daddy of the brass family. Standing next to its majesty makes you feel insecure.
   components:
   - type: Instrument
@@ -69,6 +75,7 @@
   id: HarpInstrument
   parent: BasePlaceableInstrument
   name: harp
+  suffix: Large Instrument, String Instrument # starcup
   description: Plucking at the strings cuts your fingers, but at least the music is pretty.
   components:
   - type: Instrument
@@ -80,6 +87,7 @@
   id: TimpaniInstrument
   parent: BasePlaceableInstrumentRotatable
   name: timpani
+  suffix: Large Instrument, Percussion Instrument # starcup
   description: It goes BOOM BOOM BOOM BOOM!
   components:
   - type: Instrument
@@ -91,6 +99,7 @@
   id: TaikoInstrument
   parent: BasePlaceableInstrumentRotatable
   name: taiko
+  suffix: Large Instrument, Percussion Instrument # starcup
   description: A large drum. Looking at it fills you with the urge to slap it.
   components:
   - type: Instrument
@@ -102,6 +111,7 @@
   id: ContrabassInstrument
   parent: BasePlaceableInstrument
   name: contrabass
+  suffix: Large Instrument, String Instrument # starcup
   description: Perfect for laying down a nice jazzy beat.
   components:
   - type: Instrument
@@ -129,6 +139,7 @@
   name: minimoog
   parent: BasePlaceableInstrumentRotatable
   id: MinimoogInstrument
+  suffix: Large Instrument, Keyboard Instrument # starcup
   description: This is a minimoog, like a space piano, but more spacey!
   components:
   - type: Instrument
@@ -147,6 +158,7 @@
   id: TomDrumsInstrument
   parent: BasePlaceableInstrumentRotatable
   name: tom drums
+  suffix: Large Instrument, Percussion Instrument # starcup
   description: Where'd the rest of the kit go?
   components:
   - type: Instrument
@@ -158,6 +170,7 @@
   parent: [ BasePlaceableInstrumentRotatable, ConstructibleMachine]
   id: DawInstrument
   name: digital audio workstation
+  suffix: Large Instrument, Keyboard Instrument # starcup
   description: Cutting edge music technology, straight from the 90s.
   components:
   - type: Sprite
