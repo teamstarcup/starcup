@@ -1,0 +1,194 @@
+# Random Instrument Spawners
+
+## Handheld instruments
+- type: entity
+  id: RandomInstrumentsString
+  name: random string instruments spawner
+  description: Guitars and bowed instruments.
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _starcup/Objects/Fun/Instruments/rickenbacker_pink.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: StringInstrumentTable
+
+- type: entity
+  id: RandomInstrumentsBrass
+  name: random brass instruments spawner
+  description: Trumpets, horns, and similar instruments.
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Fun/Instruments/trumpet.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: BrassInstrumentTable
+
+- type: entity
+  id: RandomInstrumentsWoodwind
+  name: random woodwind instruments spawner
+  description: Flutes and similar instruments.
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Fun/Instruments/panflute.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: WoodwindInstrumentTable
+
+- type: entity
+  id: RandomInstrumentsKeyedPercussion
+  name: random percussion instruments spawner
+  description: It's fun to hit things with sticks.
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Fun/Instruments/h_synthesizer.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: KeyedPercussionInstrumentTable
+
+- type: entity
+  id: RandomInstrumentsSpecial
+  name: random special instruments spawner
+  description: Silly or unique instruments.
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Fun/Instruments/microphone.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: SpecialInstrumentTable
+
+## Big instruments
+- type: entity
+  id: RandomInstrumentsLarge
+  name: random large instruments spawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Fun/Instruments/structureinstruments.rsi
+      state: church-organ
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: LargeInstrumentsTable
+
+- type: entity
+  id: RandomInstrumentsLargeDrum
+  name: random large drum instruments spawner
+  description: Non-keyed percussion.
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _GreyStation/Objects/Fun/Instruments/structureinstruments.rsi
+      state: drumkit
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: DrumLargeInstrumentTable
+
+- type: entity
+  id: RandomInstrumentsLargeKeyboard
+  name: random large keyboard instruments spawner
+  description: Pianos, organs, and synthesizers.
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Fun/Instruments/structureinstruments.rsi
+      state: piano
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: KeyboardLargeInstrumentTable
+
+- type: entity
+  id: RandomInstrumentsLargeMisc
+  name: random large misc instruments spawner
+  description: Everything that's not a piano or drum.
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Fun/Instruments/structureinstruments.rsi
+      state: harp
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: MiscLargeInstrumentTable
+
+# Random Instrument Tables
+- type: entityTable
+  id: LargeInstrumentsTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: DrumLargeInstrumentTable
+    - !type:NestedSelector
+      tableId: KeyboardLargeInstrumentTable
+    - !type:NestedSelector
+      tableId: MiscLargeInstrumentTable
+
+- type: entityTable
+  id: DrumLargeInstrumentTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 1
+      children:
+      - id: TaikoInstrument
+      - id: TimpaniInstrument
+      - id: TomDrumsInstrument
+      - id: DrumkitInstrument
+
+- type: entityTable
+  id: KeyboardLargeInstrumentTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 1
+      children:
+      - id: PianoInstrument
+      - id: UprightPianoInstrument
+      - id: ChurchOrganInstrument
+      - id: MinimoogInstrument
+    - !type:GroupSelector
+      weight: 0.01 # should be very rare but it's cute to have a chance at it
+      children:
+      - id: DawInstrumentMachineCircuitboard
+
+- type: entityTable
+  id: MiscLargeInstrumentTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 1
+      children:
+      - id: VibraphoneInstrument
+      - id: MarimbaInstrument
+      - id: TubaInstrument
+      - id: HarpInstrument
+      - id: ContrabassInstrument
+
+# strictly speaking, the overall big spawner slightly disadvantages the misc items,
+# since Misc is 1 item larger than the piano/drum tables. it's fine for now, but be
+# prepared to split it up if/when more big instruments are added.
