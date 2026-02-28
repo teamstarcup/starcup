@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 02/25/2026 04:57:32
-  entityCount: 14634
+  time: 02/28/2026 16:56:40
+  entityCount: 14637
 maps:
 - 1
 grids:
@@ -40067,6 +40067,11 @@ entities:
     - type: Transform
       pos: -20.5,17.5
       parent: 2
+  - uid: 14636
+    components:
+    - type: Transform
+      pos: 11.5,-20.5
+      parent: 2
 - proto: DonkpocketBoxSpawner
   entities:
   - uid: 6311
@@ -79397,7 +79402,7 @@ entities:
     - type: Transform
       pos: 4.5,-41.5
       parent: 2
-- proto: SpawnMobBandito
+- proto: SpawnMobArcticFoxSiobhan
   entities:
   - uid: 11965
     components:
@@ -79417,6 +79422,20 @@ entities:
     components:
     - type: Transform
       pos: -26.5,-25.5
+      parent: 2
+- proto: SpawnMobChickenHenrietta
+  entities:
+  - uid: 14635
+    components:
+    - type: Transform
+      pos: 6.5,-1.5
+      parent: 2
+- proto: SpawnMobCMOPetSilvia
+  entities:
+  - uid: 14637
+    components:
+    - type: Transform
+      pos: -21.5,-22.5
       parent: 2
 - proto: SpawnMobCorgi
   entities:
