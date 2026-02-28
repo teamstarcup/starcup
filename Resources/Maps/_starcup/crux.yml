@@ -4,7 +4,7 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 02/28/2026 16:24:59
+  time: 02/28/2026 16:46:26
   entityCount: 14235
 maps:
 - 1
@@ -75709,13 +75709,6 @@ entities:
     - type: Transform
       pos: 15.5,-12.5
       parent: 2
-- proto: SpawnMobCatBingus
-  entities:
-  - uid: 11549
-    components:
-    - type: Transform
-      pos: -14.5,12.5
-      parent: 2
 - proto: SpawnMobChickenGeneric
   entities:
   - uid: 11550
@@ -75755,6 +75748,13 @@ entities:
     components:
     - type: Transform
       pos: 27.5,3.5
+      parent: 2
+- proto: SpawnMobMedicalPet
+  entities:
+  - uid: 11549
+    components:
+    - type: Transform
+      pos: -14.5,12.5
       parent: 2
 - proto: SpawnMobPossumMorty
   entities:
