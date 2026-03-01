@@ -7,7 +7,7 @@ clothing-syndicate-duffel-bag = [color=#a40000]Syndicate duffel bag[/color]
 clothing-syndicate-shoulder-holster = [color=#a40000]Syndicate shoulder holster[/color]
 
 ## Ear
-clothing-syndicate-headset = [color=#a40000]blueblood over-ear headset[/color]
+clothing-syndicate-headset = [color=#a40000]blood-red over-ear headset[/color]
 
 ## Eyes
 clothing-syndicate-visor = [color=#a40000]Syndicate visor[/color]
@@ -26,14 +26,14 @@ clothing-syndicate-gas-mask = [color=#a40000]Syndicate gas mask[/color]
 ## Outer
 clothing-syndicate-elite-web-vest = [color=#a40000]elite web vest[/color]
 clothing-syndicate-raid-suit = [color=#a40000]Syndicate raid suit[/color]
-clothing-syndicate-hardsuit = [color=#a40000]blueblood hardsuit[/color]
-clothing-syndicate-hardsuit-medic = [color=#a40000]blueblood medic hardsuit[/color]
+clothing-syndicate-hardsuit = [color=#a40000]blood-red hardsuit[/color]
+clothing-syndicate-hardsuit-medic = [color=#a40000]blood-red medic hardsuit[/color]
 clothing-syndicate-hardsuit-elite = [color=#a40000]Syndicate elite hardsuit[/color]
 clothing-syndicate-hardsuit-commander = [color=#a40000]Syndicate commander hardsuit[/color]
 clothing-syndicate-hardsuit-juggernaut = [color=#a40000]Syndicate juggernaut suit[/color]
 
 ## Shoes
-clothing-syndicate-magboots = [color=#a40000]blueblood magboots[/color]
+clothing-syndicate-magboots = [color=#a40000]blood-red magboots[/color]
 
 # Weapons
 clothing-syndicate-minibomb = [color=#a40000]Syndicate minibomb[/color]
