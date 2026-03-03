@@ -739,10 +739,10 @@
       sprite: Clothing/Uniforms/Jumpsuit/lawyergood.rsi
 
 - type: entity
-  parent: [UnsensoredClothingUniformBase, BaseSyndicateContraband]
+  parent: UnsensoredClothingUniformBase # starcup: remove syndicate contraband label
   id: ClothingUniformJumpsuitPyjamaSyndicateBlack
   name: black syndicate pyjamas
-  description: For those long nights in perma.
+  description: Perfect for lounging around on the floor and gossiping with friends. # starcup: rewritten for setting lore
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/pyjamasyndicateblack.rsi
@@ -750,10 +750,10 @@
     sprite: Clothing/Uniforms/Jumpsuit/pyjamasyndicateblack.rsi
 
 - type: entity
-  parent: [UnsensoredClothingUniformBase, BaseSyndicateContraband]
+  parent: UnsensoredClothingUniformBase # starcup: remove syndicate contraband label
   id: ClothingUniformJumpsuitPyjamaSyndicatePink
   name: pink syndicate pyjamas
-  description: For those long nights in perma.
+  description: Perfect for lounging around on the floor and gossiping with friends. # starcup: rewritten for setting lore
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/pyjamasyndicatepink.rsi
@@ -761,10 +761,10 @@
     sprite: Clothing/Uniforms/Jumpsuit/pyjamasyndicatepink.rsi
 
 - type: entity
-  parent: [UnsensoredClothingUniformBase, BaseSyndicateContraband]
+  parent: UnsensoredClothingUniformBase # starcup: remove syndicate contraband label
   id: ClothingUniformJumpsuitPyjamaSyndicateRed
   name: red syndicate pyjamas
-  description: For those long nights in perma.
+  description: Perfect for lounging around on the floor and gossiping with friends. # starcup: rewritten for setting lore
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/pyjamasyndicatered.rsi
@@ -816,7 +816,7 @@
     sprite: Clothing/Uniforms/Jumpsuit/hosformal.rsi
 
 - type: entity
-  parent: [UnsensoredClothingUniformBase, BaseSyndicateContraband]
+  parent: UnsensoredClothingUniformBase # starcup: remove syndicate contraband label
   id: ClothingUniformJumpsuitOperative
   name: operative jumpsuit
   description: Uniform for elite syndicate operatives performing tactical operations in deep space.
@@ -1119,10 +1119,10 @@
     sprite: Clothing/Uniforms/Jumpsuit/hawaiyellow.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseSyndicateContraband]
+  parent: ClothingUniformBase # starcup: remove syndicate contraband label
   id: ClothingUniformJumpsuitSyndieFormal
   name: syndicate formal suit
-  description: "The syndicate's uniform is made in an elegant style, it's even a pity to do dirty tricks in this."
+  description: The upper echelons of Syndicate bureaucracy are all about making the right impression, which always starts with the right outfit. This one reads something like "I'm in charge here." # starcup: rewritten for setting lore
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/syndieformal.rsi

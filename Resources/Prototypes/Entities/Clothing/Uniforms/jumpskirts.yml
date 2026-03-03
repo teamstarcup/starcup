@@ -512,7 +512,7 @@
     sprite: Clothing/Uniforms/Jumpskirt/hosformaldress.rsi
 
 - type: entity
-  parent: [UnsensoredClothingUniformSkirtBase, BaseSyndicateContraband]
+  parent: UnsensoredClothingUniformSkirtBase # starcup: remove syndicate contraband label
   id: ClothingUniformJumpskirtOperative
   name: operative jumpskirt
   description: Uniform for elite syndicate operatives performing tactical operations in deep space.
@@ -628,10 +628,10 @@
       sprite: Clothing/Uniforms/Jumpskirt/lawyergood.rsi
 
 - type: entity
-  parent: [ ClothingUniformSkirtBase ] # starcup - removed contraband label
+  parent: ClothingUniformSkirtBase # starcup: remove syndicate contraband label
   id: ClothingUniformJumpskirtSyndieFormalDress
   name: syndicate formal dress
-  description: "The syndicate's uniform is made in an elegant style, it's even a pity to do dirty tricks in this."
+  description: The upper echelons of Syndicate bureaucracy are all about making the right impression, which always starts with the right outfit. This one reads something like "I'm in charge here." # starcup: rewritten for setting lore
   components:
     - type: Sprite
       sprite: Clothing/Uniforms/Jumpskirt/syndieformaldress.rsi

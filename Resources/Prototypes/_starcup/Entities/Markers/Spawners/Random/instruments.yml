@@ -1,0 +1,227 @@
+# Random Instrument Spawners
+
+## Handheld instruments
+- type: entity
+  id: RandomInstrumentsString
+  name: random string instruments spawner
+  description: Guitars and bowed instruments.
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _starcup/Objects/Fun/Instruments/glishenbacker.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: StringSmallInstrumentTable # minus harp
+
+- type: entity
+  id: RandomInstrumentsBrass
+  name: random brass instruments spawner
+  description: Trumpets, horns, and similar instruments.
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Fun/Instruments/trumpet.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: BrassSmallInstrumentTable # minus tuba
+
+- type: entity
+  id: RandomInstrumentsWoodwind
+  name: random woodwind instruments spawner
+  description: Flutes and similar instruments.
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Fun/Instruments/panflute.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: WoodwindInstrumentTable
+
+- type: entity
+  id: RandomInstrumentsKeyedPercussion
+  name: random percussion instruments spawner
+  description: It's fun to hit things with sticks.
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Fun/Instruments/h_synthesizer.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: KeyedPercussionSmallInstrumentTable # minus vibraphone
+
+- type: entity
+  id: RandomInstrumentsSpecial
+  name: random special instruments spawner
+  description: Silly or unique instruments.
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Fun/Instruments/microphone.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: SpecialInstrumentTable
+
+## Big instruments
+- type: entity
+  id: RandomInstrumentsLarge
+  name: random large instruments spawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Fun/Instruments/structureinstruments.rsi
+      state: church-organ
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: LargeInstrumentsTable
+
+- type: entity
+  id: RandomInstrumentsLargeDrum
+  name: random large drum instruments spawner
+  description: Taiko, timpani, tom drums, and drumkit.
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _GreyStation/Objects/Fun/Instruments/structureinstruments.rsi
+      state: drumkit
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: DrumLargeInstrumentTable
+
+- type: entity
+  id: RandomInstrumentsLargeKeyboard
+  name: random large keyboard instruments spawner
+  description: Pianos, the organ, and the minimoog.
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Fun/Instruments/structureinstruments.rsi
+      state: piano
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: KeyboardLargeInstrumentTable
+
+- type: entity
+  id: RandomInstrumentsLargeMisc
+  name: random large misc instruments spawner
+  description: Vibraphone, marimba, tuba, harp, and contrabass.
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Fun/Instruments/structureinstruments.rsi
+      state: harp
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: MiscLargeInstrumentTable
+
+# Large Instrument Tables
+- type: entityTable
+  id: LargeInstrumentsTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: DrumLargeInstrumentTable
+    - !type:NestedSelector
+      tableId: KeyboardLargeInstrumentTable
+    - !type:NestedSelector
+      tableId: MiscLargeInstrumentTable
+
+- type: entityTable
+  id: DrumLargeInstrumentTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 1
+      children:
+      - id: TaikoInstrument
+      - id: TimpaniInstrument
+      - id: TomDrumsInstrument
+      - id: DrumkitInstrument
+
+- type: entityTable
+  id: KeyboardLargeInstrumentTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 1
+      children:
+      - id: PianoInstrument
+      - id: UprightPianoInstrument
+      - id: ChurchOrganInstrument
+      - id: MinimoogInstrument
+
+- type: entityTable
+  id: MiscLargeInstrumentTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 1
+      children:
+      - id: VibraphoneInstrument
+      - id: MarimbaInstrument
+      - id: TubaInstrument
+      - id: HarpInstrument
+      - id: ContrabassInstrument
+
+# Small Instrument Tables
+- type: entityTable
+  id: StringSmallInstrumentTable
+  table: !type:GroupSelector
+    children:
+    - id: AcousticGuitarInstrument
+    - id: ElectricGuitarInstrument
+    - id: BassGuitarInstrument
+    - id: RockGuitarInstrument
+    - id: BanjoInstrument
+    - id: ViolinInstrument
+    - id: CelloInstrument
+    - id: ViolaInstrument
+    - id: HandheldHarpInstrument
+    - !type:GroupSelector
+      children:
+      - id: Rickenbacker4003Instrument
+      - id: Rickenbacker4003InstrumentBlack
+      - id: Rickenbacker4003InstrumentRed
+      - id: Rickenbacker4003InstrumentPink
+      - id: Rickenbacker4003InstrumentSlime
+
+- type: entityTable
+  id: KeyedPercussionSmallInstrumentTable
+  table: !type:GroupSelector
+    children:
+    - id: SynthesizerInstrument
+    - id: AccordionInstrument
+    - id: KalimbaInstrument
+    - id: WoodblockInstrument
+    - id: GlockenspielInstrument
+
+- type: entityTable
+  id: BrassSmallInstrumentTable
+  table: !type:GroupSelector
+    children:
+    - id: TrumpetInstrument
+    - id: TromboneInstrument
+    - id: FrenchHornInstrument
+    - id: EuphoniumInstrument

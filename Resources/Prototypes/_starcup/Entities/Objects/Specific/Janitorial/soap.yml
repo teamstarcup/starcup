@@ -19,7 +19,7 @@
 - type: entity
   id: SoapNTAntag
   suffix: NanoTrasen, Antag
-  parent: [BaseTraitorContraband, SoapSyndie]
+  parent: [BaseNanotrasenContraband, SoapSyndie]
   description: A NanoTrasen bar of soap. Smells of plasma.
   components:
   - type: Sprite
@@ -35,7 +35,7 @@
     residueColor: residue-blue
 
 - type: entity
-  parent: [BaseTraitorContraband, SoapletSyndie]
+  parent: [BaseNanotrasenContraband, SoapletSyndie]
   id: SoapletNTAntag
   suffix: NanoTrasen
   description: A tiny piece of NanoTrasen soap.

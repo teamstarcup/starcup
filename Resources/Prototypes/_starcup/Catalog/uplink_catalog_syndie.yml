@@ -4,7 +4,7 @@
   id: UplinkRevolverPython
   name: uplink-revolver-python-name
   description: uplink-revolver-python-desc
-  productEntity: WeaponRevolverPythonAPNT
+  productEntity: WeaponRevolverPythonAP
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 2
@@ -26,6 +26,40 @@
     Telecrystal: 3
   categories:
   - UplinkAmmo
+
+# Chemicals
+- type: listing
+  id: UplinkCombatMedipenSilicon
+  name: uplink-combat-medipen-silicon-name
+  description: uplink-combat-medipen-silicon-desc
+  productEntity: CombatMedipenSilicon
+  discountCategory: usualDiscounts
+  cost:
+    Telecrystal: 3
+  categories:
+  - UplinkChemicals
+
+- type: listing
+  id: UplinkOverclockInjector
+  name: uplink-overclock-injector-name
+  description: uplink-overclock-injector-desc
+  productEntity: OverclockInjector
+  discountCategory: usualDiscounts
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkChemicals
+
+- type: listing
+  id: UplinkOverclockKit
+  name: uplink-overclock-kit-name
+  description: uplink-overclock-kit-desc
+  productEntity: OverclockKitFilled
+  discountCategory: rareDiscounts
+  cost:
+    Telecrystal: 5
+  categories:
+  - UplinkChemicals
 
 # Deception
 

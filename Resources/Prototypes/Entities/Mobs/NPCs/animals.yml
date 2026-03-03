@@ -2716,9 +2716,9 @@
 # TODO: Make grenade penguin voice activated like the rest of the stealth items.
 - type: entity
   name: grenade penguin
-  parent: [ MobPenguin, MobCombat, BaseSyndicateContraband ]
+  parent: [ MobPenguin, MobCombat, BaseTraitorContraband ] # starcup: shared contraband level with nt gear
   id: MobGrenadePenguin
-  description: A small penguin with a grenade strapped around its neck. Harvested by the Syndicate from icy shit-hole planets.
+  description: A small penguin with a grenade strapped around its neck. Harvested by neocorporate agents from icy shit-hole planets. # starcup: removed syndicate reference
   components:
   - type: MovementSpeedModifier
     baseWalkSpeed: 3

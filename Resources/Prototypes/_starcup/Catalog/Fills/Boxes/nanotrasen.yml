@@ -1,7 +1,7 @@
 - type: entity
   id: ElectricalDisruptionKitNT
   suffix: NanoTrasen
-  parent: [BaseTraitorContraband, ElectricalDisruptionKit]
+  parent: [BaseNanotrasenContraband, ElectricalDisruptionKit]
   components:
     - type: EntityTableContainerFill
       containers:
@@ -13,7 +13,7 @@
             amount: 1
 
 - type: entity
-  parent: [BaseTraitorContraband, ThrowingKnivesKit]
+  parent: [BaseNanotrasenContraband, ThrowingKnivesKit]
   id: ThrowingKnivesKitNT
   suffix: NanoTrasen
   description: A set of 4 NanoTrasen branded throwing knives, perfect for embedding into the body of your victims.
@@ -30,7 +30,7 @@
       - state: throwing_knives_nt
 
 - type: entity
-  parent: [BaseTraitorContraband, BoxDeathRattleImplants]
+  parent: [BaseNanotrasenContraband, BoxDeathRattleImplants]
   id: BoxDeathRattleImplantsNT
   suffix: NanoTrasen
   components:
@@ -46,7 +46,7 @@
           amount: 6
 
 - type: entity
-  parent: [BaseTraitorContraband, CombatBakeryKit]
+  parent: [BaseNanotrasenContraband, CombatBakeryKit]
   id: CombatBakeryKitNT
   suffix: NanoTrasen
   components:
@@ -65,7 +65,7 @@
         - id: PaperWrittenCombatBakeryKitNT
 
 - type: entity
-  parent: [BoxCardboardSmall, BaseTraitorContraband]
+  parent: [BoxCardboardSmall, BaseNanotrasenContraband]
   id: NTmovCircuitKit
   name: NTmov circuit kit
   description: A kit containing an electronics board with the NTmov lawset and a NanoTrasen ID.

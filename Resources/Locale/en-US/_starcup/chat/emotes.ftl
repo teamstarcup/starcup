@@ -24,6 +24,8 @@ chat-emote-name-baa = Bleat
 chat-emote-name-quack = Quack
 chat-emote-name-croak = Croak
 chat-emote-name-oink = Oink
+chat-emote-name-whirr = Whirr
+chat-emote-name-boop = Boop
 
 # Message
 chat-emote-msg-roar = roars!
@@ -50,3 +52,4 @@ chat-emote-msg-baa = bleats.
 chat-emote-msg-cluck = quacks.
 chat-emote-msg-croak = croaks.
 chat-emote-msg-oink = oinks.
+chat-emote-msg-deathgasp-silicon =  suddenly goes silent, with a hiss of grinding servos and a screech of dying myomers.

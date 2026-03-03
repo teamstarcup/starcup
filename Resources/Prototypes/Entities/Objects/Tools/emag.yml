@@ -1,9 +1,9 @@
 - type: entity
-  parent: [BaseItem, BaseSyndicateContraband]
+  parent: [BaseItem, BaseTraitorContraband] # starcup: shared contraband level with nt gear
   id: EmagUnlimited
   suffix: Unlimited
   name: cryptographic sequencer
-  description: The all-in-one hacking solution. Friend of any syndicate. The iconic EMAG.
+  description: The all-in-one hacking solution. Just swipe on any electronic device and watch the sparks fly. # starcup: removed syndicate reference and clarified a bit
   components:
   - type: Emag
   - type: Sprite
