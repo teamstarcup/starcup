@@ -142,3 +142,37 @@
     - random:
         boulder1: ""
         boulder2: ""
+
+- type: entity
+  parent: FloraBoulderBlue
+  id: FloraBoulderBrown
+  suffix: brown
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Rocks/boulder_brown.rsi
+    layers:
+    - state: boulder1
+      map: ["random"]
+
+- type: entity
+  parent: FloraBoulderLargeBlue
+  id: FloraBoulderLargeBrown
+  suffix: large, brown
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Rocks/boulder_large_brown.rsi
+    layers:
+    - state: boulder_large1
+      map: ["random"]
+
+- type: entity
+  parent: FloraBoulderWideBlue
+  id: FloraBoulderWideBrown
+  suffix: wide, brown
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Rocks/boulder_wide_brown.rsi
+    layers:
+    - state: boulder1
