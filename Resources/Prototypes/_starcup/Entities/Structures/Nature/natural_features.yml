@@ -8,7 +8,7 @@
   - type: Clickable
   - type: Sprite
     noRot: true
-    sprite: _starcup/Structures/Environment/shroom_mound.rsi
+    sprite: _starcup/Structures/Nature/shroom_mound.rsi
   - type: Physics
     bodyType: Static
   - type: Fixtures
@@ -41,7 +41,7 @@
   description: Windows into the earth. You won't like it when they look back.
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Environment/geyser.rsi
+    sprite: _starcup/Structures/Nature/geyser.rsi
     layers:
     - state: rocksolid01
       map: ["random"]
@@ -60,7 +60,7 @@
   description: Gummy tendrils reach out from the top.
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Environment/shroom_mound.rsi
+    sprite: _starcup/Structures/Nature/shroom_mound.rsi
     layers:
     - state: rocksolid01
       map: ["random"]
@@ -79,7 +79,7 @@
   description: Large mushrooms have made this clump of earth their home.
   components:
   - type: Sprite
-    sprite: _starcup/Objects/Decoration/Flora/flora_shroom_rock.rsi
+    sprite: _starcup/Structures/Nature/shroom_rock.rsi
     layers:
     - state: rocksolid01
       map: ["random"]
@@ -99,7 +99,7 @@
   - type: Clickable
   - type: Sprite
     noRot: true
-    sprite: _starcup/Structures/Environment/solid_shrooms.rsi
+    sprite: _starcup/Structures/Nature/solid_shrooms.rsi
   - type: Physics
     bodyType: Static
   - type: Fixtures
@@ -132,7 +132,7 @@
   - type: Damageable
     damageModifierSet: Wood
   - type: Sprite
-    sprite: _starcup/Structures/Environment/solid_shrooms.rsi
+    sprite: _starcup/Structures/Nature/solid_shrooms.rsi
     layers:
     - state: shroomsolid1
       map: ["random"]

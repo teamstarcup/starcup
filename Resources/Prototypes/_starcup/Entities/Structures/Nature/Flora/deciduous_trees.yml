@@ -1,12 +1,13 @@
 # Upstream tree variants
-  type: entity
+- type: entity
   parent: BaseTree
   id: FloraTreeAutumn
   name: tree
   suffix: autumn
+  description: The sun sets on the leaves of this swaying veteran.
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_autumn_trees.rsi
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_autumn_trees.rsi
     layers:
     - state: tree01
       map: ["random"]
@@ -25,9 +26,10 @@
   id: FloraTreeVerdant
   name: tree
   suffix: verdant
+  description: A sturdy tree in the spring of its youth.
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_verdant_trees.rsi
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_verdant_trees.rsi
     layers:
     - state: tree01
       map: ["random"]
@@ -46,9 +48,10 @@
   id: FloraTreeTemperate
   name: tree
   suffix: temperate
+  description: The oak's stength is tempered by experience.
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_temperate_trees.rsi
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_temperate_trees.rsi
     layers:
     - state: tree01
       map: ["random"]
@@ -61,16 +64,16 @@
         tree04: ""
         tree05: ""
         tree06: ""
-        tree03: ""
 
 - type: entity
   parent: BaseTreeLarge
   id: FloraTreeLargeDark
   name: dark wood
   suffix: large
+  description: A foreboding canopy to hide the stars.
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_treeslarge_dark.rsi
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_treeslarge_dark.rsi
     layers:
     - state: treelarge01
       map: ["random"]
@@ -90,9 +93,10 @@
   id: FloraTreeDead
   name: tree
   suffix: dead
+  description: The bones of the earth make for a beautifully haunting tombstone.
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_dead_trees.rsi
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_dead_trees.rsi
     layers:
     - state: tree01
       map: ["random"]
@@ -112,9 +116,10 @@
   id: FloraTreeAspbirch
   name: tree
   suffix: aspen birch
+  description: The criss-crossed pale wood of this tree, and the leaves that crown it, make it unclear whether it is a son of the aspen, or the birch.
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_aspen_birches.rsi
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_aspen_birches.rsi
     layers:
     - state: tree01
       map: ["random"]
@@ -126,15 +131,61 @@
         tree03: ""
         tree04: ""
         tree05: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/tree_fell.ogg
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 2
+            max: 6
+          AspenStump:
+            min: 1
+            max: 1
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: AspenStump
+  suffix: aspen
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_aspen_birches.rsi
+    layers:
+    - state: treestump01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump01: ""
+        treestump02: ""
+        treestump03: ""
 
 - type: entity
   parent: BaseTree
   id: FloraTreeTeal
   name: tree
   suffix: teal
+  description: A hybrid of indeterminate species seen across many worlds of the Chalice sector.
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_trees_teal.rsi
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_trees_teal.rsi
     layers:
     - state: tree01
       map: ["random"]
@@ -144,15 +195,44 @@
         tree01: ""
         tree02: ""
         tree03: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/tree_fell.ogg
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 2
+            max: 6
+          TealStump:
+            min: 1
+            max: 1
 
 - type: entity
   parent: BaseTreeLarge
   id: FloraTreeLargeTeal
   name: large tree
   suffix: teal
+  description: A large, curiously shaped tree. Could it hear the thoughts of those pondering in its shade?
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_treeslarge_teal.rsi
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_treeslarge_teal.rsi
     layers:
     - state: treelarge01
       map: ["random"]
@@ -160,14 +240,59 @@
     available:
     - random:
         treelarge01: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/tree_fell.ogg
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 2
+            max: 6
+          TealStump:
+            min: 1
+            max: 1
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: TealStump
+  suffix: teal
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_trees_teal.rsi
+    layers:
+    - state: treestump01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump01: ""
+        treestump02: ""
 
 - type: entity
   parent: BaseTree
   id: FloraTreePink
   name: cherry tree
+  description: Love is the fruit that blooms from this tree.
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_cherry_trees.rsi
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_cherry_trees.rsi
     layers:
     - state: tree01
       map: ["random"]
@@ -177,14 +302,52 @@
         tree01: ""
         tree02: ""
         tree03: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/tree_fell.ogg
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 2
+            max: 6
+          CherryStump:
+            min: 1
+            max: 1
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: CherryStump
+  suffix: cherry
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_cherry_trees.rsi
+    state: treestump
 
 - type: entity
   parent: BaseTree
   id: FloraTreeJuniper
   name: juniper tree
+  description: Jagged and twisted, this son of distant Terra may have changed somewhat in shape, but carries within it its forefathers' soul.
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_juniper_trees.rsi
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_juniper_trees.rsi
     layers:
     - state: tree01
       map: ["random"]
@@ -194,44 +357,40 @@
         tree01: ""
         tree02: ""
         tree03: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/tree_fell.ogg
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 2
+            max: 8
+          JuniperStump:
+            min: 1
+            max: 1
 
 - type: entity
-  parent: BaseTree
-  id: FloraTreeAjorax
-  name: ajorax tree
+  parent: BaseStumpStarcup
+  id: JuniperStump
+  suffix: juniper
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_ajorax_trees.rsi
-    layers:
-    - state: tree01
-      map: ["random"]
-  - type: RandomSprite
-    available:
-    - random:
-        tree01: ""
-        tree02: ""
-        tree03: ""
-        tree04: ""
-        tree05: ""
-        tree06: ""
-        tree03: ""
-
-- type: entity
-  parent: BaseTreeLarge
-  id: FloraTreeAjoraxLarge
-  name: ajorax tree
-  suffix: large
-  components:
-  - type: Sprite
-    sprite: _starcup/Structures/Environment/Flora/Trees/DeciduousTrees/flora_ajorax_trees_large.rsi
-    layers:
-    - state: treelarge01
-      map: ["random"]
-  - type: RandomSprite
-    available:
-    - random:
-        treelarge01: ""
-        treelarge02: ""
-        treelarge03: ""
-        treelarge04: ""
-        treelarge05: ""
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_juniper_trees.rsi
+    state: treestump

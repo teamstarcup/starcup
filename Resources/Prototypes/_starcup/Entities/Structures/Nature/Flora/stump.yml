@@ -1,0 +1,136 @@
+# Upstream trees do not spawn stumps when destroyed.
+# And that's just as well, because the stump prototype is parented to BaseTree with the sprite being the only change.
+# So if they did spawn trees, you'd end up with a nonsensical recursive phoenix stump.
+# Solution: we make our own stumps.
+- type: entity
+  id: BaseStumpStarcup
+  name: tree stump
+  description: A tree once stood here. Now, only nature's seat remains.
+  abstract: true
+  components:
+  - type: Clickable
+  - type: Sprite
+    noRot: true
+    sprite: Objects/Decoration/Flora/flora_trees.rsi
+    state: treestump
+    drawdepth: Overdoors
+    offset: 0,0.9
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.03,-0.05,0.03,0.05"
+        density: 1000
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: WoodenStructure
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path: /Audio/Effects/chop.ogg
+        params:
+          variation: 0.05
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/tree_fell.ogg
+          params:
+            volume: 3
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: DeciduousStump
+  suffix: deciduous
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_autumn_trees.rsi
+    layers:
+    - state: treestump01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump01: ""
+        treestump02: ""
+        treestump03: ""
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: DeciduousLargeStump
+  suffix: deciduous, large
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_treeslarge.rsi
+    layers:
+    - state: treestump01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump01: ""
+        treestump02: ""
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: ConiferStump
+  suffix: conifer
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/ConiferTrees/flora_treesconifer_nosnow.rsi
+    state: treestump
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: ConiferSnowyStump
+  suffix: conifer, snowy
+  components:
+  - type: Sprite
+    sprite: Objects/Decoration/Flora/flora_treesconifer.rsi
+    state: treestumpconifer
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: SwampStump
+  suffix: swamp
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_swamp_trees.rsi
+    state: treestump
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: SnowStump
+  suffix: snowy
+  components:
+  - type: Sprite
+    sprite: Objects/Decoration/Flora/flora_treessnow.rsi
+    state: treestump
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: LightStump
+  suffix: light
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_treeslight.rsi
+    layers:
+    - state: treestump01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump01: ""
+        treestump02: ""
