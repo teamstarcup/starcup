@@ -397,10 +397,10 @@
     sprite: Clothing/OuterClothing/Coats/windbreaker_paramedic.rsi
 
 - type: entity
-  parent: [ClothingOuterStorageBase, BaseSyndicateContraband]
+  parent: ClothingOuterStorageBase # starcup: remove syndicate contraband label
   id: ClothingOuterCoatSyndieCap
-  name: syndicate's coat
-  description: The syndicate's coat is made of durable fabric, with gilded patterns.
+  name: syndicate captain's coat # starcup: renamed for clarity
+  description: Made of durable fabric with gilded patterns. # starcup: rewritten for proofreading
   components:
   - type: Sprite
     sprite: Clothing/OuterClothing/Coats/syndicate/coatsyndiecap.rsi
@@ -410,8 +410,8 @@
 - type: entity
   parent: [BaseSyndicateContraband, ClothingOuterCoatHoSTrench] # BaseSyndicateContraband as first parent so contraband system takes that as priority, yeah I know
   id: ClothingOuterCoatSyndieCapArmored
-  name: syndicate's armored coat
-  description: The syndicate's armored coat is made of durable fabric, with gilded patterns.
+  name: syndicate captain's armored coat # starcup: renamed for clarity
+  description: Made of durable fabric with gilded patterns. This one comes with thick armored plating for combat engagements. # starcup: rewritten for proofreading
   components:
   - type: Sprite
     sprite: Clothing/OuterClothing/Coats/syndicate/coatsyndiecaparmored.rsi

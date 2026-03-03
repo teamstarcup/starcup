@@ -45,7 +45,7 @@
   # end starcup
 
 - type: entity
-  parent: [ClothingMaskGas, BaseSyndicateContraband]
+  parent: [ClothingMaskGas, BaseSyndicateContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingMaskGasSyndicate
   name: syndicate gas mask
   description: A close-fitting tactical mask that can be connected to an air supply.
@@ -63,6 +63,10 @@
         Slash: 0.95
         Piercing: 0.95
         Heat: 0.95
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-syndicate-gas-mask
+  # end starcup
 
 - type: entity
   parent: ClothingMaskGas

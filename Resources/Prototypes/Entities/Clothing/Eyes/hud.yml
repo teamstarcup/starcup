@@ -230,7 +230,7 @@
   - type: ShowSyndicateIcons
 
 - type: entity
-  parent: [ClothingEyesHudBase, ShowSecurityIcons, BaseSyndicateContraband]
+  parent: [ClothingEyesHudBase, ShowSecurityIcons, BaseSyndicateContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingEyesHudSyndicate
   name: syndicate visor
   description: The syndicate's professional head-up display, designed for better detection of humanoids and their subsequent elimination.
@@ -244,9 +244,13 @@
     tags:
     - PetWearable
     - WhitelistChameleon
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-syndicate-visor
+  # end starcup
 
 - type: entity
-  parent: [ClothingEyesHudBase, ShowSecurityIcons, BaseSyndicateContraband]
+  parent: [ClothingEyesHudBase, ShowSecurityIcons, BaseSyndicateContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingEyesHudSyndicateAgent
   name: syndicate medical visor
   description: The Syndicate Corpsman's professional heads-up display, designed for quick diagnosis of their team's status.
@@ -261,6 +265,10 @@
     tags:
     - PetWearable
     - WhitelistChameleon
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-syndicate-medical-visor
+  # end starcup
 
 - type: entity
   parent: [ClothingEyesGlassesSunglasses, ShowSecurityIcons]

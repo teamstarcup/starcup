@@ -31,3 +31,255 @@
   components:
   - type: Loadout
     prototypes: [ MobMonkeyGearCold ]
+
+- type: entity
+  name: Dishduty
+  parent: MobPaperwork
+  id: MobDishduty
+  description: A former corporate enemy on parole for crimes against the Syndicate. She is just as slow as Paperwork.
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Pets/dishduty.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: dishduty
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: dishduty
+      Critical:
+        Base: dishduty_dead
+      Dead:
+        Base: dishduty_dead
+  - type: Grammar
+    attributes:
+      proper: true
+      gender: female
+  - type: InteractionPopup
+    successChance: 0.7 # She's a little chillier than Paperwork
+    interactSuccessString: petting-success-dishduty
+    interactFailureString: petting-failure-sloth
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/Animals/sloth_squeak.ogg
+    interactFailureSound:
+      path: /Audio/Misc/woosh.ogg
+
+- type: entity
+  name: Greenstuff
+  parent: MobSnake
+  id: MobGreenstuff
+  description: An exceptionally lazy, scaly friend with a pliant disposition.
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Pets/greenstuff.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: snake
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: snake
+      Critical:
+        Base: snake_dead
+      Dead:
+        Base: snake_dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 0.75
+    baseSprintSpeed: 1
+  - type: Item
+    size: Huge
+  - type: Clothing
+    sprite: _starcup/Mobs/Pets/greenstuff.rsi
+    quickEquip: false
+    slots:
+    - NECK
+  - type: Grammar
+    attributes:
+      proper: true
+  - type: InteractionPopup
+    successChance: 0.9 # More pliant than the typical snake
+    interactSuccessSound:
+      path: /Audio/Animals/snake_hiss.ogg
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - VimPilot
+    - CreatureEmotes
+
+- type: entity
+  name: Henrietta
+  parent: MobChicken
+  id: MobHenrietta
+  description: A bird of regal bearing with exceptionally luxurious down feathers. Refuses to answer to "Henri".
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Pets/henrietta.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base", "movement"]
+      state: henrietta
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: henrietta-moving
+    noMovementLayers:
+      movement:
+        state: henrietta
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: henrietta
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: NpcFactionMember
+    factions:
+    - BugHunter
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 1
+  - type: Reproductive
+    breedChance: 0
+  - type: TemperatureDamage
+    coldDamageThreshold: 250 # 10k lower than typical
+    coldDamage:
+      types:
+        Cold: 0.5 # reduced damage from cold weather / kitchen freezers, but not cold-based attacks
+  - type: Item
+    size: Huge
+  - type: Grammar
+    attributes:
+      proper: true
+      gender: female
+  - type: InteractionPopup
+    successChance: 0.25 # A princess does not permit the commoners to touch her
+    interactSuccessString: petting-success-henrietta
+    interactFailureString: petting-failure-henrietta
+  - type: Puller
+    needsHands: false
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - VimPilot
+    - CreatureEmotes
+
+- type: entity
+  name: Gloom
+  parent: MobAdultSlimes
+  id: MobGloom
+  description: The influence of Charon-Epsilon has her going through a bit of a phase. Smile Slime?
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Pets/gloom.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: gloom
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: gloomglow
+      shader: unshaded
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: gloom
+        BaseUnshaded: gloomglow
+      Critical:
+        Base: gloom_dead
+      Dead:
+        Base: gloom_dead
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: true
+    name: "Gloom"
+    description: You used to be the sweetest creature ever. Now you're a little prickly and a lot acidic.
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatSlime
+      amount: 2
+    - id: MaterialBones
+      amount: 4 # enough to create a skull mask
+    - id: MaterialSmileExtract
+      amount: 1
+    dropOrgansOnButcher: true
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1.5
+    baseSprintSpeed: 3
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepSlime
+      params:
+        volume: -12 # On-theme!
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Dead # same bulk as Smile
+  - type: MeleeWeapon
+    damage:
+      types:
+        Caustic: 3
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 0.5
+  - type: SolutionRegeneration
+    solution: melee
+    generated:
+      reagents:
+      - ReagentId: MuteToxin # Charon-Epsilon lives.
+        Quantity: 0.01
+  - type: MeleeChemicalInjector
+    transferAmount: 0.1
+    solution: melee
+  - type: NPCRetaliation # Gloom is not as sweet as Smile. Don't try it.
+    attackMemoryLength: 10
+  - type: DamageOnInteract
+    damage:
+      types:
+        Caustic: 0.9
+  - type: Grammar
+    attributes:
+      proper: true
+      gender: female
+  - type: InteractionPopup
+    successChance: 1 # Don't know how to give the damage on interact a chance to fail
+    interactSuccessString: petting-success-gloom
+    interactSuccessSound:
+      path: /Audio/Effects/lightburn.ogg
+  - type: Tag
+    tags:
+    - FootstepSound
+    - DoorBumpOpener
+    - CannotSuicide
+    - CreatureEmotes
+
+- type: entity
+  name: Starbuck
+  parent: MobBunny
+  id: MobStarbuck
+  description: A most curious bunny renowned for their knack for finding themselves in a Situation.
+  components:
+  - type: Grammar
+    attributes:
+      proper: true
+      gender: epicene
+  - type: InteractionPopup
+    successChance: 0.75
+    interactSuccessString: petting-success-starbuck
+    interactFailureString: petting-failure-starbuck
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/Animals/mouse_squeak.ogg
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - VimPilot
+    - CreatureEmotes

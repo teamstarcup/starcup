@@ -18,10 +18,10 @@
 
 #Syndicate EVA
 - type: entity
-  parent: [ ClothingOuterEVASuitBase, BaseSyndicateContraband ]
+  parent: ClothingOuterEVASuitBase # starcup: remove syndicate contraband label
   id: ClothingOuterEVASuitSyndicate
   name: syndicate EVA suit
-  description: "Has a tag on the back that reads: 'Totally not property of an enemy corporation, honest!'"
+  description: The blinding red color scheme might not be flattering, but it'll at least make you highly visible to rescue teams! # starcup: rewritten for setting lore
   components:
   - type: Sprite
     sprite: Clothing/OuterClothing/Suits/eva_syndicate.rsi

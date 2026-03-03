@@ -1,10 +1,20 @@
-# non-stealth syndicate stuff
+# non-stealth traitor stuff
 - type: entity
   id: BaseTraitorContraband
   abstract: true
   components:
   - type: Contraband
     severity: Traitor
+    allowedDepartments: [ SyndicateCommunications ]
+
+- type: entity
+  id: BaseNanotrasenContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: Nanotrasen
+    allowedDepartments: [  ]
+    allowedJobs: [  ]
 
 # one department restricted contraband
 - type: entity

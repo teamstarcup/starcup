@@ -645,8 +645,10 @@
 - type: emoteSounds
   id: ReptilianBodyEmotes
   sounds:
-    Thump:
+    # begin starcup
+    ThumpTailLoud:
       path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
+    # end starcup
       params:
         variation: 0.125
     Clap:
@@ -744,10 +746,14 @@
   params:
     variation: 0.125
   sounds:
-    Thump:
+    # begin starcup
+    ThumpTailSoft:
       path: /Audio/Effects/soft_thump.ogg
-      params:
-        variation: 0.125
+    ThumpTailMany:
+      path: /Audio/_starcup/Effects/soft_thumps.ogg
+    ThumpTailLoud:
+      path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
+    # end starcup
     Clap:
       collection: Claps
     ClapSingle:

@@ -16,7 +16,7 @@
     sprite: _starcup/Objects/Specific/Medical/nanohypo.rsi
 
 - type: entity
-  parent: [BaseTraitorContraband, Stimpack]
+  parent: [BaseNanotrasenContraband, Stimpack]
   id: StimpackNT
   suffix: NanoTrasen
   components:
@@ -45,7 +45,7 @@
     emptySpriteName: stimpen_nt_empty
 
 - type: entity
-  parent: [BaseTraitorContraband, StimpackMini]
+  parent: [BaseNanotrasenContraband, StimpackMini]
   id: StimpackMiniNT
   suffix: NanoTrasen
   components:

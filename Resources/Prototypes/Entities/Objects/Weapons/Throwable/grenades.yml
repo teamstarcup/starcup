@@ -87,7 +87,7 @@
 - type: entity
   name: syndicate minibomb
   description: A syndicate-manufactured explosive used to stow destruction and cause chaos.
-  parent: [VolatileGrenadeBase, TimerGrenadeBase, BaseSyndicateContraband]
+  parent: [VolatileGrenadeBase, TimerGrenadeBase, BaseSyndicateContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: SyndieMiniBomb
   components:
   - type: Sprite
@@ -112,6 +112,10 @@
         volume: 12
   - type: StaticPrice
     price: 2000
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-syndicate-minibomb
+  # end starcup
 
 - type: entity
   name: self destruct
@@ -160,7 +164,7 @@
 
 
 - type: entity
-  parent: [ FragileGrenadeBase, TimerGrenadeBase, BaseSyndicateContraband, BaseTraitorContraband, BaseExaminableClothing ] # starcup: shared contraband level with nt gear, examinable clothing
+  parent: [ FragileGrenadeBase, TimerGrenadeBase, BaseTraitorContraband, BaseExaminableClothing ] # starcup: shared contraband level with nt gear, examinable clothing
   id: SingularityGrenade
   name: singularity grenade
   description: Grenade that simulates the power of a singularity, pulling things in a heap.

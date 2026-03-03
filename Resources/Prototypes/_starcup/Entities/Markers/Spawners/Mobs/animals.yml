@@ -71,3 +71,15 @@
   - type: ConditionalSpawner
     prototypes:
     - MobBunny
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobArcticFox
+  name: arctic fox spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+  - type: ConditionalSpawner
+    prototypes:
+    - MobArcticFox
