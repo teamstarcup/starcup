@@ -39,11 +39,6 @@
       Brute:
         path:
           "/Audio/Weapons/slash.ogg"
-  - type: Temperature
-    heatDamage:
-      types:
-        Heat: 5
-    coldDamage: {}
   - type: Flammable
     fireSpread: true
     damage:
@@ -58,7 +53,6 @@
       methods: [Touch]
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
         damage:
           types:
             Heat: 10
