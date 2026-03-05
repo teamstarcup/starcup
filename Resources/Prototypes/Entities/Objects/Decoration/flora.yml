@@ -355,14 +355,13 @@
         treesnow05: ""
         treesnow06: ""
 
-# begin starcup: obsolete prototype
-#- type: entity
-  #parent: BaseTreeSnow
-  #id: FloraTreeStump
-  #name: tree stump
-  #components:
-  #- type: Sprite
-    #state: treestump
+- type: entity
+  parent: BaseTreeSnow
+  id: FloraTreeStump
+  name: tree stump
+  components:
+  - type: Sprite
+    state: treestump
 
 - type: entity
   parent: BaseTreeLarge
@@ -606,15 +605,13 @@
             max: 1
   # end starcup
 
-# begin starcup: obsolete prototype
-#- type: entity
-  #parent: BaseTreeConifer
-  #id: FloraTreeStumpConifer
-  #name: tree stump
-  #components:
-  #- type: Sprite
-    #state: treestumpconifer
-# end starcup
+- type: entity
+  parent: BaseTreeConifer
+  id: FloraTreeStumpConifer
+  name: tree stump
+  components:
+  - type: Sprite
+    state: treestumpconifer
 
 - type: entity
   parent: FloraTree
