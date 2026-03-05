@@ -53,26 +53,32 @@
     - pops
     - popping
 
-- type: emote
-  id: LizardHiss # starcup: Hiss -> LizardHiss
-  name: chat-emote-name-hiss
-  category: Vocal
-  available: false
-  icon: _Impstation/Interface/Emotes/hiss.png
-  whitelist:
-    components:
-    - Vocal
-  blacklist:
-    components:
-    - BorgChassis
-  chatMessages: ["chat-emote-msg-hiss"]
-  chatTriggers:
-    - hiss
-    - hiss.
-    - hiss!
-    - hisses
-    - hisses.
-    - hisses!
+# begin starcup: emote disabling rant
+# Why do we have two hiss emotes? Just so lizards use the lizard icon and felinids the cat one?
+# I'd be down for that except for the fact that it makes triggering the emote through the chat not work.
+# They have slightly different trigger words, but it means you have to memorize which is which for each.
+# I don't think this is reasonable. I'm choosing to keep the felinid one, as it has the better bespoke icon.
+# end starcup
+#- type: emote
+  #id: LizardHiss # starcup: Hiss -> LizardHiss
+  #name: chat-emote-name-hiss
+  #category: Vocal
+  #available: false
+  #icon: _Impstation/Interface/Emotes/hiss.png
+  #whitelist:
+    #components:
+    #- Vocal
+  #blacklist:
+    #components:
+    #- BorgChassis
+  #chatMessages: ["chat-emote-msg-hiss"]
+  #chatTriggers:
+    #- hiss
+    #- hiss.
+    #- hiss!
+    #- hisses
+    #- hisses.
+    #- hisses!
 
 - type: emote
   id: Blink

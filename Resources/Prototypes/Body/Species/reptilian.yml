@@ -135,9 +135,9 @@
 # end starcup
   - type: LizardAccent
   - type: Speech
-    speechSounds: Lizard
+    speechSounds: LizardSpeechSounds # starcup: used to be Lizard
     speechVerb: Reptilian
-    allowedEmotes: ['ThumpTailSoft', 'ThumpTailMany', 'ThumpTailLoud', 'LizardHiss'] # imp: added hiss # starcup: Hiss -> LizardHiss, Thump -> ThumpTailSoft/Many/Loud
+    allowedEmotes: ['ThumpTailSoft', 'ThumpTailMany', 'ThumpTailLoud', 'Hiss', 'TailWhip'] # imp: added hiss # starcup: Thump -> ThumpTailSoft/Many/Loud
   - type: TypingIndicator
     proto: lizard
   - type: Vocal
