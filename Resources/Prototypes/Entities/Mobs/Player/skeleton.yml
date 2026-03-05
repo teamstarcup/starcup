@@ -38,11 +38,11 @@
 - type: entity
   parent: MobSkeletonPerson
   id: MobSkeletonCloset
-  name: closet skeleton
+  name: lost skeleton # starcup: formerly closet skeleton, rewritten for tone
   components:
   - type: GhostRole
-    name: ghost-role-information-closet-skeleton-name
-    description: ghost-role-information-closet-skeleton-description
+    name: ghost-role-information-lost-skeleton-name # starcup: rewritten for tone
+    description: ghost-role-information-lost-skeleton-description # starcup: rewritten for tone
     rules: ghost-role-information-freeagent-rules
     mindRoles:
     - MindRoleGhostRoleFreeAgent
