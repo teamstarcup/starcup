@@ -67,7 +67,7 @@
         - Opaque
 
 - type: entity
-  parent: FloraBoulderLargeRed
+  parent: BaseRock
   id: FloraBoulderWideRed
   suffix: wide, red
   placement:
@@ -77,6 +77,22 @@
     sprite: _RMC14/Objects/Flora/boulder_wide.rsi
     layers:
     - state: boulder1
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/rock_break.ogg
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
   - type: Fixtures
     fixtures:
       fix1:
