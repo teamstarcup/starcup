@@ -123,7 +123,7 @@
     sprite: Clothing/Ears/Headsets/science.rsi
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseSyndicateContraband]
+  parent: [ClothingHeadsetAlt, BaseSyndicateContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingHeadsetAltSyndicate
   name: blood-red over-ear headset
   description: An updated, modular syndicate intercom that fits over the head and takes encryption keys (there are 5 key slots.).
@@ -139,6 +139,10 @@
     sprite: Clothing/Ears/Headsets/syndicate.rsi
   - type: Clothing
     sprite: Clothing/Ears/Headsets/syndicate.rsi
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-syndicate-headset
+  # end starcup
 
 - type: entity
   parent: ClothingHeadsetAlt

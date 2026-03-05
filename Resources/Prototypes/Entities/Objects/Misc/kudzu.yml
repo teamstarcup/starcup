@@ -170,7 +170,7 @@
 
 - type: entity
   id: FleshKudzu
-  name: tendons
+  name: tendon cluster # starcup: "the tendons gasps" sounds awful, needs to be singular.
   parent: BaseKudzu
   description: A rapidly growing cluster of meaty tendons, animated by anomalous forces. # starcup: rewritten for tone
   placement:
@@ -267,6 +267,16 @@
       tags:
       - Meat
       - Ruminant
+    # begin starcup
+      - CreatureEmotes
+    - type: Speech
+      speechSounds: FleshSpeechSounds
+    - type: Vocal
+      sounds:
+        Male: FleshSpeechEmotes
+        Female: FleshSpeechEmotes
+        Unsexed: FleshSpeechEmotes
+    # end starcup
 
 - type: entity
   name: dark haze

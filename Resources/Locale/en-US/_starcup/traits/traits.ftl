@@ -18,3 +18,6 @@ trait-pottymouth-desc = You're quite above improper language, sometimes even pro
 
 trait-vowed-name = Vow of Silence
 trait-vowed-desc = You're serious about your vow, and uphold it outside of jobs that require one.
+
+trait-uncloneable-name = Uncloneable
+trait-uncloneable-desc = Due to some quirk in your physical composition, you cannot be reconstituted by medical cloning.

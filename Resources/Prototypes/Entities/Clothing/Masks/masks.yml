@@ -45,7 +45,7 @@
   # end starcup
 
 - type: entity
-  parent: [ClothingMaskGas, BaseSyndicateContraband]
+  parent: [ClothingMaskGas, BaseSyndicateContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingMaskGasSyndicate
   name: syndicate gas mask
   description: A close-fitting tactical mask that can be connected to an air supply.
@@ -63,6 +63,10 @@
         Slash: 0.95
         Piercing: 0.95
         Heat: 0.95
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-syndicate-gas-mask
+  # end starcup
 
 - type: entity
   parent: ClothingMaskGas
@@ -216,7 +220,6 @@
     tags:
     - ClownMask
     - WhitelistChameleon
-    - IPCMaskWearable # EinsteinEngines: IPCs
   - type: HideLayerClothing
     slots:
     - Snout
@@ -311,9 +314,6 @@
   - type: HideLayerClothing
     slots:
     - Snout
-  - type: Tag
-    tags:
-    - IPCMaskWearable # EinsteinEngines: IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -331,7 +331,6 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
-    - IPCMaskWearable # EinsteinEngines: IPCs
   - type: HideLayerClothing
     slots:
     - Snout
@@ -530,7 +529,6 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
-    - IPCMaskWearable # EinsteinEngines: IPCs
   - type: HideLayerClothing
     slots:
     - Snout
@@ -551,9 +549,6 @@
   - type: HideLayerClothing
     slots:
     - Snout
-  - type: Tag
-    tags:
-    - IPCMaskWearable # EinsteinEngines: IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -570,9 +565,6 @@
   - type: HideLayerClothing
     slots:
     - Snout
-  - type: Tag
-    tags:
-    - IPCMaskWearable # EinsteinEngines: IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -589,9 +581,6 @@
   - type: HideLayerClothing
     slots:
     - Snout
-  - type: Tag
-    tags:
-    - IPCMaskWearable # EinsteinEngines: IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -608,9 +597,6 @@
   - type: HideLayerClothing
     slots:
     - Snout
-  - type: Tag
-    tags:
-    - IPCMaskWearable # EinsteinEngines: IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -627,9 +613,6 @@
   - type: HideLayerClothing
     slots:
     - Snout
-  - type: Tag
-    tags:
-    - IPCMaskWearable # EinsteinEngines: IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -646,9 +629,6 @@
   - type: HideLayerClothing
     slots:
     - Snout
-  - type: Tag
-    tags:
-    - IPCMaskWearable # EinsteinEngines: IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -665,7 +645,6 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-    - IPCMaskWearable # EinsteinEngines: IPCs
 
 - type: entity
   parent: ClothingMaskNeckGaiter
@@ -770,9 +749,6 @@
   - type: EyeProtection
   - type: BreathMask
   - type: IdentityBlocker
-  - type: Tag
-    tags:
-    - IPCMaskWearable # EinsteinEngines: IPCs
 
 - type: entity
   parent: ClothingMaskGas
@@ -796,7 +772,6 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-    - IPCMaskWearable # EinsteinEngines: IPCs
 
 # Entity tables
 - type: entityTable

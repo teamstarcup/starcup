@@ -88,6 +88,7 @@
     - CannotSuicide
     - Goliath
     - FootstepSound
+    - CreatureEmotes # starcup
   - type: NoSlip
   - type: Butcherable
     spawned:
@@ -99,6 +100,22 @@
   - type: Polymorphable
   - type: BurrowAbility
     action: ActionBurrowLarge
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: GoliathSpeechSounds
+    allowedEmotes: ['CreatureRoar', 'CreatureGrowl']
+  - type: Vocal
+    sounds:
+      Unsexed: GoliathSpeechEmotes
+    screamId: CreatureRoar
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: genericAggressive
+  - type: TypingIndicator
+    proto: alien
+  - type: AutoEmote
+    emotes:
+    - GrowlAutoEmote
   # end starcup
 
 - type: entity
@@ -202,7 +219,7 @@
   description: A truly alien creature, it is a mass of unknown organic material, constantly fluctuating. When attacking, pieces of it split off and attack in tandem with the original.
   components:
   - type: Sprite
-    sprite: Mobs/Aliens/Asteroid/hivelord.rsi
+    sprite: _starcup/Mobs/Aliens/Asteroid/hivelord_classic.rsi # starcup
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: hivelord
@@ -254,6 +271,28 @@
   - type: Butcherable
     spawned:
     - id: FoodHivelordRemains
+  # begin starcup
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - CreatureEmotes # starcup
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: HivelordSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureClick']
+  - type: Vocal
+    sounds:
+      Unsexed: HivelordSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: xeno
+  - type: TypingIndicator
+    proto: alien
+  - type: AutoEmote
+    emotes:
+    - ClickAutoEmote
+  # end starcup
 
 - type: entity
   id: MobHivelordBrood
@@ -262,7 +301,7 @@
   description: A fragment of the original hivelord, rallying behind its original. One isn't much of a threat, but...
   components:
   - type: Sprite
-    sprite: Mobs/Aliens/Asteroid/hivelord.rsi
+    sprite: _starcup/Mobs/Aliens/Asteroid/hivelord_classic.rsi # starcup
     layers:
     - state: hivelordbrood
   - type: MovementSpeedModifier
@@ -369,7 +408,7 @@
   description: A territorial beast, covered in a thick shell that absorbs energy. Its stare causes victims to freeze from the inside.
   components:
   - type: Sprite
-    sprite: Mobs/Aliens/Asteroid/basilisk.rsi
+    sprite: _starcup/Mobs/Aliens/Asteroid/basilisk_classic.rsi # starcup
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: basilisk
@@ -437,4 +476,24 @@
     - id: DiamondOre1
       amount: 1
       maxAmount: 3
+  # begin starcup
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - FootstepSound
+    - CreatureEmotes # starcup
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: BasiliskSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureChitter', 'CreatureClick']
+  - type: Vocal
+    sounds:
+      Unsexed: SpaceSpiderSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: xeno
+  - type: TypingIndicator
+    proto: alien
+  # end starcup
 

@@ -1,6 +1,6 @@
 - type: entity
   parent: Bible
-  name: Goshan Bible
+  name: goshan bible
   description: A copy of one of the ancient illuminated Books of Gosh. You can't read any of the words, but the pictures are probably pretty enough to base a religion around.
   id: BibleGoshan
   components:
@@ -8,3 +8,23 @@
     sprite: _starcup/Objects/Specific/Chapel/goshan_bible.rsi
   - type: Item
     sprite: _starcup/Objects/Specific/Chapel/goshan_bible.rsi
+
+- type: entity
+  parent: Bible
+  name: miscellanean bible
+  description: A book sacred to one of the countless "faiths of miscellanea" that dot the cosmos.
+  id: BibleMisc
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/books.rsi
+    layers:
+    - state: paper
+    - state: cover_strong
+      color: "#39210b"
+    - state: decor_diagonal
+      color: "#cf792d"
+    - state: decor_wingette_circle
+      color: black
+    - state: icon_question
+    - state: detail_bookmark
+      color: "#cf792d"

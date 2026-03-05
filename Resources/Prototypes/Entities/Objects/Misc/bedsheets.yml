@@ -306,9 +306,9 @@
 
 - type: entity
   id: BedsheetSyndie
-  parent: [ BedsheetBase, BaseSyndicateContraband ]
+  parent: BedsheetBase # starcup: remove syndicate contraband label
   name: syndicate bedsheet
-  description: It has a syndicate emblem and it has an aura of evil.
+  description: Decorated with a stylized Syndicate logo. # starcup: rewritten for setting lore
   components:
   - type: Sprite
     state: sheetsyndie

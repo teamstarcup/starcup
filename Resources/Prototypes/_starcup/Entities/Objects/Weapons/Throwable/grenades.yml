@@ -1,7 +1,7 @@
 - type: entity
   name: NanoTrasen minibomb
   description: A NanoTrasen-manufactured explosive used to sow destruction and cause chaos.
-  parent: [BaseTraitorContraband, SyndieMiniBomb, BaseExaminableClothing]
+  parent: [BaseNanotrasenContraband, SyndieMiniBomb]
   id: NanotrasenMiniBomb
   components:
   - type: Sprite
@@ -12,7 +12,7 @@
 - type: entity
   name: NanoTrasen trickybomb
   description: A NanoTrasen-manufactured explosive used to make an excellent distraction.
-  parent: [BaseTraitorContraband, SyndieTrickyBomb, BaseExaminableClothing]
+  parent: [BaseNanotrasenContraband, SyndieTrickyBomb]
   id: NanotrasenTrickyBomb
   components:
   - type: Sprite

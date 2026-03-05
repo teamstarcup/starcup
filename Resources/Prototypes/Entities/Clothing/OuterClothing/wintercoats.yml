@@ -381,6 +381,11 @@
     sprite: Clothing/OuterClothing/WinterCoats/coathosarmored.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterHOS
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot { }
+      storagebase: !type:Container
+        ents: [ ]
   # begin starcup: examinable clothing
   - type: ExaminableClothing
     examineText: clothing-hos-winter-coat
@@ -755,6 +760,11 @@
     sprite: Clothing/OuterClothing/WinterCoats/coatwardenarmored.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterWarden
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot { }
+      storagebase: !type:Container
+        ents: [ ]
   # begin starcup: examinable clothing
   - type: ExaminableClothing
     examineText: clothing-warden-winter-coat
@@ -786,10 +796,10 @@
     clothingPrototype: ClothingHeadHatHoodWinterWarden
 
 - type: entity
-  parent: [ClothingOuterWinterCoatToggleable, BaseSyndicateContraband]
+  parent: ClothingOuterWinterCoatToggleable # starcup: remove syndicate contraband label
   id: ClothingOuterWinterSyndieCap
-  name: syndicate's winter coat
-  description: "The syndicate's winter coat is made of durable fabric, with gilded patterns, and coarse wool."
+  name: syndicate captain's winter coat # starcup: renamed for clarity
+  description: Made of durable fabric, with gilded patterns and coarse wool. # starcup: rewritten for proofreading
   components:
   - type: Sprite
     sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
@@ -813,8 +823,8 @@
 - type: entity
   parent: [ BaseSyndicateContraband, ClothingOuterWinterWarden ]
   id: ClothingOuterWinterSyndieCapArmored
-  name: syndicate's armored winter coat
-  description: "The syndicate's armored winter coat is made of durable fabric, with gilded patterns, and coarse wool."
+  name: syndicate captain's armored winter coat # starcup: renamed for clarity
+  description: Made of durable fabric, with gilded patterns and coarse wool. This one comes with thick armored plating for combat engagements. # starcup: rewritten for proofreading
   components:
   - type: Sprite
     sprite: Clothing/OuterClothing/WinterCoats/syndicate/coatsyndiecaparmored.rsi
@@ -825,10 +835,10 @@
 ##############################################################
 
 - type: entity
-  parent: [ClothingOuterWinterCoatToggleable, BaseSyndicateContraband]
+  parent: ClothingOuterWinterCoatToggleable # starcup: remove syndicate contraband label
   id: ClothingOuterWinterSyndie
-  name: syndicate's winter coat
-  description: Insulated winter coat, looks like a merch from "Syndieland".
+  name: syndicate winter coat # starcup: renamed for clarity
+  description: An insulated winter coat adorned with the colors of the Syndicate. # starcup: rewritten for setting lore
   components:
   - type: Sprite
     sprite: Clothing/OuterClothing/WinterCoats/coat.rsi

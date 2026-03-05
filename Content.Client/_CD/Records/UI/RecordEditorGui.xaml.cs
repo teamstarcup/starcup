@@ -41,6 +41,11 @@ public sealed partial class RecordEditorGui : Control
             UpdateRecords(_records.WithWeight(newWeight));
         };
 
+        BirthdayEdit.OnTextChanged += args => // TheDen
+        {
+            UpdateRecords(_records.WithBirthday(args.Text));
+        };
+
         ContactNameEdit.OnTextChanged += args =>
         {
             UpdateRecords(_records.WithContactName(args.Text));
@@ -139,6 +144,7 @@ public sealed partial class RecordEditorGui : Control
         UpdateImperialHeight(_records.Height);
         WeightEdit.SetText(_records.Weight.ToString());
         UpdateImperialWeight(_records.Weight);
+        BirthdayEdit.SetText(_records.Birthday); // TheDen
         ContactNameEdit.SetText(_records.EmergencyContactName);
 
         WorkAuthCheckBox.Pressed = _records.HasWorkAuthorization;

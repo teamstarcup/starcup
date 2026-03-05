@@ -385,3 +385,20 @@
           EffectHollowTree:
             min: 1
             max: 1
+
+- type: entity
+  parent: BaseTree
+  id: FloraTreePink
+  name: cherry tree
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Decoration/Flora/flora_cherry_trees.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""

@@ -119,7 +119,7 @@
   # end starcup
 
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
+  parent: [ ClothingOuterBaseMedium, AllowSuitStorageClothing ]
   id: ClothingOuterArmorBaseCarapace
   abstract: true
   components:
@@ -133,10 +133,6 @@
         Caustic: 0.9
   - type: ExplosionResistance
     damageCoefficient: 0.65
-  - type: ClothingSpeedModifier
-    walkModifier: 1.0
-    sprintModifier: 1.0
-  - type: HeldSpeedModifier
   - type: GroupExamine
 
 - type: entity
@@ -167,7 +163,7 @@
 
 #Web vest
 - type: entity
-  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
+  parent: [ClothingOuterArmorBase, ClothingOuterStorageBase, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
   id: ClothingOuterVestWeb
   name: web vest
   description: A synthetic armor vest. This one has added webbing and ballistic plates.
@@ -183,8 +179,6 @@
         Slash: 0.6
         Piercing: 0.3
         Heat: 0.9
-  - type: ExplosionResistance
-    damageCoefficient: 0.9
   - type: StaticPrice
     price: 1500
   # begin starcup: examinable clothing
@@ -194,7 +188,7 @@
 
 #Elite web vest
 - type: entity
-  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, BaseSyndicateContraband]
+  parent: [ClothingOuterArmorBase, AllowSuitStorageClothing, BaseSyndicateContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingOuterVestWebElite
   name: elite web vest
   description: A synthetic armor vest. This one has added webbing and heat resistant fibers.
@@ -221,6 +215,10 @@
     reduction: 0.85
   - type: StaticPrice
     price: 2500
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-syndicate-elite-web-vest
+  # end starcup
 
 #Mercenary web vest
 - type: entity
@@ -240,13 +238,11 @@
         Slash: 0.7
         Piercing: 0.5
         Heat: 0.9
-  - type: ExplosionResistance
-    damageCoefficient: 0.9
 
 
 # Armor covering multiple body parts including limbs
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseSyndicateContraband ]
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseSyndicateContraband, BaseExaminableClothing ] # starcup: examinable clothing
   id: ClothingOuterArmorRaid
   name: syndicate raid suit
   description: A somewhat flexible and well-armored suit with a powerful shoulder mounted flashlight manufactured in the Gorlex Marauder's iconic blood-red color scheme, it does not protect its wearer from space.
@@ -323,6 +319,10 @@
     autoRechargeRate: 2
   - type: Item
     size: Normal
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-syndicate-raid-suit
+  # end starcup
 
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing

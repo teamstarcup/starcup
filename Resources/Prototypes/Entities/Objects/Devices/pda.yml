@@ -415,6 +415,11 @@
       whitelist:
         components:
         - Cartridge
+    # begin starcup: give mimes the standard pda programs
+    #preinstalled:
+    #- CrewManifestCartridge
+    #- NewsReaderCartridge
+    # end starcup
   - type: Appearance
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
@@ -1074,10 +1079,10 @@
     - WhitelistChameleon # DeltaV - it has a unique sprite
 
 - type: entity
-  parent: [ BasePDA, BaseSyndicateContraband ]
+  parent: BasePDA # starcup: remove syndicate contraband label
   id: SyndiPDA
   name: syndicate PDA
-  description: Features state-of-the-art encryption technology for deep espionage assignments. # starcup: rewritten for tone
+  description: One of many, very slightly different models of personal electronics common to Syndicate space. # starcup: rewritten for tone
   components:
   - type: Pda
     id: SyndicateIDCard
@@ -1568,6 +1573,14 @@
         type: HealthAnalyzerBoundUserInterface
       enum.ChameleonUiKey.Key:
         type: ChameleonBoundUserInterface
+
+- type: entity
+  parent: ChameleonPDA
+  id: ChameleonAgentPDA
+  suffix: Chameleon, Agent ID
+  components:
+  - type: Pda
+    id: AgentIDCard
 
 - type: entity
   parent: BaseWidePDA

@@ -285,7 +285,7 @@
 
 #Syndicate
 - type: entity
-  parent: [ClothingBackpack, BaseSyndicateContraband]
+  parent: [ClothingBackpack, BaseSyndicateContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingBackpackSyndicate
   name: syndicate backpack
   description:
@@ -300,6 +300,10 @@
     - 8,1,8,3
   - type: StaticPrice
     price: 1000
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-syndicate-backpack
+  # end starcup
 
 #Special
 - type: entity

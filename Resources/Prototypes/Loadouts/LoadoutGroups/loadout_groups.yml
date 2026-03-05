@@ -12,7 +12,6 @@
   - FlowerWreath
   - Hairflower
   - Headphones
-  - CDDogtags # Cosmatic Drift
   # Bureaucracy # starcup
   - BoxFolderClipboard
   - BoxFolderBlack
@@ -50,11 +49,15 @@
   - CigPackBlack
   - CigarCase
   - CigarGold
+  # Treats
+  - LollipopBubblegum # starcup
   # Toys
   - CardBoxSparot # starcup
   - PlushieLizard
   - PlushieSpaceLizard
   # Neck Cosmetics
+  - CDDogtags # Cosmatic Drift
+  - HeartLocket  # Impstation
   - ClothingNeckLGBTPin
   - ClothingNeckAllyPin
   - ClothingNeckAromanticPin
@@ -82,7 +85,9 @@
   # - Cane
   # - WhiteCane # Delta-V
   # end starcup
+  # Misc Cosmetics
   - TowelColorWhite
+  # begin starcup: job towels
   - TowelColorGray
   - TowelColorBlack
   - TowelColorRed
@@ -98,7 +103,7 @@
   - TowelColorMime
   - TowelColorSilver
   - TowelColorGold
-  # Misc Cosmetics
+  # end starcup
   - GoldRing # Delta-V
   - SilverRing # Delta-V
 
@@ -130,7 +135,7 @@
   - EmergencyNitrogen
   - EmergencyOxygen
   - LoadoutSpeciesVoxNitrogen
-  - EmergencyIPCBox # DeltaV
+  - EmergencyBoxMKC # starcup
 
 # nitrogen or oxygen tank, depending on what your species needs
 - type: loadoutGroup
@@ -203,12 +208,11 @@
   - CommandSweater # starcup
   - TrenchCoat # starcup
 
-- type: loadoutGroup
-  id: CaptainJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieCaptain
+#- type: loadoutGroup
+#  id: CaptainJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts: []
 
 - type: loadoutGroup
   id: HoPHead
@@ -255,12 +259,11 @@
   - CommandSweater # starcup
   - TrenchCoat # starcup
 
-- type: loadoutGroup
-  id: HoPJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieHeadOfPersonnel
+#- type: loadoutGroup
+#  id: HoPJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts: []
 
 # Civilian
 - type: loadoutGroup
@@ -281,6 +284,10 @@
   - CasualPurpleSkirt # Delta-V
   - CasualGreenSuit # starcup
   - CasualGreenSkirt # starcup
+  - LawyerJumpsuit # starcup
+  - LawyerJumpsuitRed # starcup
+  - LawyerJumpskirt # starcup
+  - LawyerJumpskirtRed # starcup
   - Loungewear # starcup
   - MNKExposedShoulders # starcup
   - MNKGymBra # starcup
@@ -381,6 +388,7 @@
   - GentleCoat # starcup
   - JensenCoat # starcup
   - Poncho # starcup
+  - BomberJacket # starcup
   - PassengerWintercoat
   - LongWinterCoat # starcup
   - BlackWinterCoat # Delta-V
@@ -423,12 +431,11 @@
   - BlackCowboyBoots # Delta-V
   - WhiteCowboyBoots # Delta-V
 
-- type: loadoutGroup
-  id: PassengerJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushiePassenger
+#- type: loadoutGroup
+#  id: PassengerJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts: []
 
 - type: loadoutGroup
   id: BartenderHead
@@ -466,15 +473,14 @@
   name: loadout-group-jobtrinkets
   minLimit: 0
   loadouts:
-  - LizardPlushieBartender
   - BartenderGoldenShaker
+  - LizardPlushieBartender # starcup: added back
 
-- type: loadoutGroup
-  id: ServiceWorkerJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieServiceWorker
+#- type: loadoutGroup
+#  id: ServiceWorkerJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 - type: loadoutGroup
   id: ChefHead
@@ -508,12 +514,11 @@
   - ChefWintercoat
   - ChefCuteApron # imp
 
-- type: loadoutGroup
-  id: ChefJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieChef
+#- type: loadoutGroup
+#  id: ChefJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 - type: loadoutGroup
   parent: [ Turtlenecks ] # starcup
@@ -528,12 +533,11 @@
   - ClothingUniformBrownSuitSkirt #imp
   - LibrarianSpaceDress #imp
 
-- type: loadoutGroup
-  id: LibrarianJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieLibrarian
+#- type: loadoutGroup
+#  id: LibrarianJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 - type: loadoutGroup
   id: LawyerJumpsuit
@@ -562,12 +566,11 @@
   loadouts:
   - LawyerNeck
 
-- type: loadoutGroup
-  id: LawyerJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieLawyer
+#- type: loadoutGroup
+#  id: LawyerJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 - type: loadoutGroup
   id: ChaplainHead
@@ -622,12 +625,11 @@
   loadouts:
   - ChaplainNeck
 
-- type: loadoutGroup
-  id: ChaplainJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieChaplain
+#- type: loadoutGroup
+#  id: ChaplainJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 - type: loadoutGroup
   id: ChaplainBible
@@ -647,6 +649,7 @@
   minLimit: 0
   loadouts:
   - JanitorHead
+  - MaidLaceHeadpiece # starcup
 
 - type: loadoutGroup
   id: JanitorJumpsuit
@@ -679,8 +682,8 @@
   name: loadout-group-jobtrinkets
   minLimit: 0
   loadouts:
-  - LizardPlushieJanitor
   - JanitorGoldenPlunger
+  - LizardPlushieJanitor # starcup: added back
 
 - type: loadoutGroup
   id: BotanistHead
@@ -715,12 +718,11 @@
   - BotanistApron
   - BotanistWintercoat
 
-- type: loadoutGroup
-  id: BotanistJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieBotanist
+#- type: loadoutGroup
+#  id: BotanistJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 - type: loadoutGroup
   id: ClownHead
@@ -762,6 +764,7 @@
   loadouts:
   - ClownShoes
   - JesterShoes
+  - JesterAltShoes # starcup
   - ClownWinterBoots # starcup
 
 - type: loadoutGroup
@@ -773,15 +776,15 @@
   - EmergencyNitrogenClown
   - EmergencyOxygenClown
   - LoadoutSpeciesVoxNitrogen
-  - EmergencyIPCBox # DeltaV
+  - EmergencyBoxMKC # starcup
 
 - type: loadoutGroup
   id: ClownJobTrinkets
   name: loadout-group-jobtrinkets
   minLimit: 0
   loadouts:
-  - LizardPlushieClown
   - FlowerWaterClown
+  - LizardPlushieClown # starcup: added back
 
 - type: loadoutGroup
   id: MimeHead
@@ -799,6 +802,7 @@
   - MimeMask
   - MimeMaskSad
   - MimeMaskScared
+  - MimeMaskBlushing
 
 - type: loadoutGroup
   id: MimeJumpsuit
@@ -843,14 +847,13 @@
   - EmergencyOxygenMime
   - EmergencySpeciesMothMime
   - LoadoutSpeciesVoxNitrogen
-  - EmergencyIPCBox # DeltaV
+  - EmergencyBoxMKC # starcup
 
-- type: loadoutGroup
-  id: MimeJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieMime
+#- type: loadoutGroup
+#  id: MimeJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 - type: loadoutGroup
   id: MusicianJumpsuit
@@ -905,12 +908,11 @@
   - Ocarina
   - Bagpipe
 
-- type: loadoutGroup
-  id: MusicianJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieMusician
+#- type: loadoutGroup
+#  id: MusicianJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 # Cargo
 - type: loadoutGroup
@@ -962,12 +964,11 @@
   # - CargoWinterBoots # starcup: provided by parent
   - QuartermasterWinterBoots # starcup
 
-- type: loadoutGroup
-  id: QuartermasterJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieQuartermaster
+#- type: loadoutGroup
+#  id: QuartermasterJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 - type: loadoutGroup
   id: CargoTechnicianHead
@@ -1001,6 +1002,7 @@
   loadouts:
   - CargoTechnicianWintercoat
   - LogisticsSweater # starcup
+  - BomberJacket # starcup
 
 - type: loadoutGroup
   id: CargoTechnicianShoes
@@ -1019,13 +1021,13 @@
   # - SeniorCourierPDA # starcup: moved to courier
   - DeckWorkerPDA # starcup
   - InventoryAssociatePDA # starcup
+  - CargoPilotPDA # starcup
 
-- type: loadoutGroup
-  id: CargoTechnicianJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieCargoTechnician
+#- type: loadoutGroup
+#  id: CargoTechnicianJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 - type: loadoutGroup
   id: SalvageSpecialistBackpack
@@ -1052,12 +1054,11 @@
   - PurpleShoes # starcup
   - SalvageWinterBoots # DeltaV
 
-- type: loadoutGroup
-  id: SalvageSpecialistJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieSalvageSpecialist
+#- type: loadoutGroup
+#  id: SalvageSpecialistJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 # Engineering
 - type: loadoutGroup
@@ -1107,12 +1108,11 @@
 #  - EngineeringWinterBoots # starcup: provided by parent
   - ChiefEngineerWinterBoots # DeltaV
 
-- type: loadoutGroup
-  id: ChiefEngineerJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieChiefEngineer
+#- type: loadoutGroup
+#  id: ChiefEngineerJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 - type: loadoutGroup
   id: TechnicalAssistantJumpsuit
@@ -1121,12 +1121,11 @@
   - YellowJumpsuit
   - YellowJumpskirt
 
-- type: loadoutGroup
-  id: TechnicalAssistantJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieTechnicalAssistant
+#- type: loadoutGroup
+#  id: TechnicalAssistantJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 - type: loadoutGroup
   id: StationEngineerHead
@@ -1187,12 +1186,11 @@
   - MechanicPDA # DeltaV
 
 
-- type: loadoutGroup
-  id: StationEngineerJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieStationEngineer
+#- type: loadoutGroup
+#  id: StationEngineerJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 - type: loadoutGroup
   id: AtmosphericTechnicianJumpsuit
@@ -1227,12 +1225,11 @@
   #- EngineeringWinterBoots # starcup: provided by parent
   - AtmosTechWinterBoots # starcup
 
-- type: loadoutGroup
-  id: AtmosphericTechnicianJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieAtmosphericTechnician
+#- type: loadoutGroup
+#  id: AtmosphericTechnicianJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 - type: loadoutGroup
   id: SurvivalExtended
@@ -1243,7 +1240,7 @@
   - EmergencyNitrogenExtended
   - EmergencyOxygenExtended
   - LoadoutSpeciesVoxNitrogen
-  - EmergencyIPCBox # DeltaV
+  - EmergencyBoxMKC # starcup
 
 # Science
 - type: loadoutGroup
@@ -1290,12 +1287,11 @@
   # - ScienceWinterBoots # starcup: provided by parent
   - ResearchDirectorWinterBoots # DeltaV
 
-- type: loadoutGroup
-  id: ResearchDirectorJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieResearchDirector
+#- type: loadoutGroup
+#  id: ResearchDirectorJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 - type: loadoutGroup
   id: ScientistHead
@@ -1376,12 +1372,11 @@
   # - RoboticistPDA # DeltaV # starcup - we've already got one of those!
   - NecrocosmicistPDA # starcup
 
-- type: loadoutGroup
-  id: ScientistJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieScientist
+#- type: loadoutGroup
+#  id: ScientistJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 - type: loadoutGroup
   id: ResearchAssistantJumpsuit
@@ -1390,12 +1385,11 @@
   - WhiteJumpsuit
   - WhiteJumpskirt
 
-- type: loadoutGroup
-  id: ResearchAssistantJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieResearchAssistant
+#- type: loadoutGroup
+#  id: ResearchAssistantJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 # Security
 - type: loadoutGroup
@@ -1438,8 +1432,8 @@
   name: loadout-group-jobtrinkets
   minLimit: 0
   loadouts:
-  - LizardPlushieHeadofSecurity
   - SecStar
+  - LizardPlushieHeadofSecurity # starcup: added back
 
 - type: loadoutGroup
   id: WardenHead
@@ -1468,8 +1462,8 @@
   name: loadout-group-jobtrinkets
   minLimit: 0
   loadouts:
-  - LizardPlushieWarden
   - SecStar
+  - LizardPlushieWarden # starcup: added back
 
 - type: loadoutGroup
   id: SecurityHead
@@ -1536,8 +1530,8 @@
   name: loadout-group-jobtrinkets
   minLimit: 0
   loadouts:
-  - LizardPlushieSecurity
   - SecStar
+  - LizardPlushieSecurity # starcup: added back
 
 - type: loadoutGroup
   id: DetectiveHead
@@ -1586,8 +1580,8 @@
   name: loadout-group-jobtrinkets
   minLimit: 0
   loadouts:
-  - LizardPlushieDetective
   - SecStar
+  - LizardPlushieDetective # starcup: added back
 
 - type: loadoutGroup
   id: SecurityCadetJumpsuit
@@ -1596,12 +1590,11 @@
   - RedJumpsuit
   - RedJumpskirt
 
-- type: loadoutGroup
-  id: SecurityCadetJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieSecurityCadet
+#- type: loadoutGroup
+#  id: SecurityCadetJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 - type: loadoutGroup
   id: SurvivalSecurity
@@ -1612,7 +1605,7 @@
   - EmergencyNitrogenSecurity
   - EmergencyOxygenSecurity
   - LoadoutSpeciesVoxNitrogen
-  - EmergencyIPCBox # DeltaV
+  - EmergencyBoxMKC # starcup
 
 # Wildcards
 - type: loadoutGroup
@@ -1621,15 +1614,19 @@
   loadouts:
   - ReporterJumpsuit
   - JournalistJumpsuit
+  - LawyerJumpskirtBlue # starcup
+  - LawyerJumpsuit # starcup
+  - LawyerJumpskirt # starcup
+  - LawyerJumpsuitRed # starcup
+  - LawyerJumpskirtRed # starcup
   - ClothingUniformBrosBlazer #imp
   - ClothingUniformBrosBlazerSkirt #imp
 
-- type: loadoutGroup
-  id: ReporterJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushieReporter
+#- type: loadoutGroup
+#  id: ReporterJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 - type: loadoutGroup
   parent: [ Turtlenecks ] # starcup
@@ -1638,13 +1635,16 @@
   loadouts:
   - PsychologistJumpsuit
   - PsychologistJumpskirt
+  - LawyerJumpsuit # starcup
+  - LawyerJumpskirt # starcup
+  - LawyerJumpsuitBlue # starcup
+  - LawyerJumpskirtBlue # starcup
 
-- type: loadoutGroup
-  id: PsychologistJobTrinkets
-  name: loadout-group-jobtrinkets
-  minLimit: 0
-  loadouts:
-  - LizardPlushiePsychologist
+#- type: loadoutGroup
+#  id: PsychologistJobTrinkets
+#  name: loadout-group-jobtrinkets
+#  minLimit: 0
+#  loadouts:
 
 # Other
 
@@ -1657,7 +1657,7 @@
   - EmergencyNitrogenSyndicate
   - EmergencyOxygenSyndicate
   - LoadoutSpeciesVoxNitrogen
-  - EmergencyIPCBox # DeltaV
+  - EmergencyBoxMKC # starcup
 
 - type: loadoutGroup
   id: SurvivalMilitaryDouble

@@ -163,15 +163,17 @@
     variation: 0.125
   sounds:
     Scream:
-      path: /Audio/Animals/mouse_squeak.ogg
+      path: /Audio/_starcup/Animals/Mouse/mouse_scream.ogg # starcup
     Laugh:
       collection: MaleLaugh
+    # begin starcup
     Sneeze:
-      collection: MaleSneezes
+      collection: MouseSneezes
     Cough:
-      collection: MaleCoughs
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
     Yawn:
-      collection: MaleYawn
+      path: /Audio/_starcup/Animals/Mouse/mouse_death.ogg
+    # end starcup
     Snore:
       collection: Snores
     Honk:
@@ -184,12 +186,30 @@
       collection: Whistles
     Weh:
       collection: Weh
+    # begin starcup
+    Purr:
+      collection: HamsterPurrs
+    Trill:
+      collection: HamsterTrills
+    Hiss:
+      collection: PossumHisses
+    ThumpFootSoft:
+      path: /Audio/Effects/soft_thump.ogg
+    ThumpFootMany:
+      path: /Audio/_starcup/Effects/soft_thumps.ogg
+    ThumpFootLoud:
+      path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
+    Growl:
+      path: /Audio/_DV/Voice/Kitsune/fox_growl1.ogg
+    TailWhip:
+      path: /Audio/_RMC14/Xeno/alien_tail_swipe1.ogg
     Squeak:
-      path: /Audio/Animals/mouse_squeak.ogg
+      collection: MouseSqueak
     Gasp:
-      collection: MaleGasp
+      collection: MouseGasp
     DefaultDeathgasp:
-      collection: MaleDeathGasp
+      path: /Audio/_starcup/Animals/Mouse/mouse_death.ogg
+    # end starcup
 
 - type: emoteSounds
   id: FemaleRodentia
@@ -197,15 +217,17 @@
     variation: 0.125
   sounds:
     Scream:
-      path: /Audio/Animals/mouse_squeak.ogg
+      path: /Audio/_starcup/Animals/Mouse/mouse_scream.ogg # starcup
     Laugh:
       collection: FemaleLaugh
+    # begin starcup
     Sneeze:
-      collection: FemaleSneezes
+      collection: MouseSneezes
     Cough:
-      collection: FemaleCoughs
+      path: /Audio/_starcup/Animals/sneeze_animal_small.ogg
     Yawn:
-      collection: FemaleYawn
+      path: /Audio/_starcup/Animals/Mouse/mouse_death.ogg
+    # end starcup
     Snore:
       collection: Snores
     Honk:
@@ -218,9 +240,27 @@
       collection: Whistles
     Weh:
       collection: Weh
+    # begin starcup
+    Purr:
+      collection: HamsterPurrs
+    Trill:
+      collection: HamsterTrills
+    Hiss:
+      collection: PossumHisses
+    ThumpFootSoft:
+      path: /Audio/Effects/soft_thump.ogg
+    ThumpFootMany:
+      path: /Audio/_starcup/Effects/soft_thumps.ogg
+    ThumpFootLoud:
+      path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
+    Growl:
+      path: /Audio/_DV/Voice/Kitsune/fox_growl1.ogg
+    TailWhip:
+      path: /Audio/_RMC14/Xeno/alien_tail_swipe1.ogg
     Squeak:
-      path: /Audio/Animals/mouse_squeak.ogg
+      collection: MouseSqueak
     Gasp:
-      collection: FemaleGasp
+      collection: MouseGasp
     DefaultDeathgasp:
-      collection: FemaleDeathGasp
+      path: /Audio/_starcup/Animals/Mouse/mouse_death.ogg
+    # end starcup

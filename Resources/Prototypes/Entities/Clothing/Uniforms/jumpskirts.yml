@@ -512,7 +512,7 @@
     sprite: Clothing/Uniforms/Jumpskirt/hosformaldress.rsi
 
 - type: entity
-  parent: [UnsensoredClothingUniformSkirtBase, BaseSyndicateContraband]
+  parent: UnsensoredClothingUniformSkirtBase # starcup: remove syndicate contraband label
   id: ClothingUniformJumpskirtOperative
   name: operative jumpskirt
   description: Uniform for elite syndicate operatives performing tactical operations in deep space.
@@ -553,7 +553,7 @@
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtJanimaid
-  name: janitorial maid uniform
+  name: maid uniform # starcup - genericized
   description: For professionals, not the posers.
   components:
   - type: Sprite
@@ -564,7 +564,7 @@
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtJanimaidmini
-  name: janitorial maid uniform with miniskirt
+  name: maid uniform with miniskirt # starcup - genericized
   description: Elite service, not some candy wrappers.
   components:
   - type: Sprite
@@ -575,7 +575,7 @@
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtLawyerRed
-  name: red lawyer suitskirt
+  name: red suitskirt # starcup
   description: A flashy red suitskirt worn by lawyers and show-offs.
   components:
     - type: Sprite
@@ -586,7 +586,7 @@
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtLawyerBlue
-  name: blue lawyer suitskirt
+  name: blue suitskirt # starcup
   description: A flashy blue suitskirt worn by lawyers and show-offs.
   components:
     - type: Sprite
@@ -597,7 +597,7 @@
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtLawyerBlack
-  name: black lawyer suitskirt
+  name: black suitskirt # starcup
   description: A subtle black suitskirt worn by lawyers and gangsters.
   components:
     - type: Sprite
@@ -608,7 +608,7 @@
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtLawyerPurple
-  name: purple lawyer suitskirt
+  name: purple suitskirt # starcup
   description: A stylish purple piece worn by lawyers and show people.
   components:
     - type: Sprite
@@ -628,10 +628,10 @@
       sprite: Clothing/Uniforms/Jumpskirt/lawyergood.rsi
 
 - type: entity
-  parent: [ ClothingUniformSkirtBase, BaseSyndicateContraband ]
+  parent: ClothingUniformSkirtBase # starcup: remove syndicate contraband label
   id: ClothingUniformJumpskirtSyndieFormalDress
   name: syndicate formal dress
-  description: "The syndicate's uniform is made in an elegant style, it's even a pity to do dirty tricks in this."
+  description: The upper echelons of Syndicate bureaucracy are all about making the right impression, which always starts with the right outfit. This one reads something like "I'm in charge here." # starcup: rewritten for setting lore
   components:
     - type: Sprite
       sprite: Clothing/Uniforms/Jumpskirt/syndieformaldress.rsi

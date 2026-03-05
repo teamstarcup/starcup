@@ -13,6 +13,8 @@ loadout-group-courier-backpack = Courier backpack
 loadout-group-salvage-specialist-neck = Salvage specialist neck
 
 # Medical
+loadout-group-medical-intern-head = Medical intern head
+
 loadout-group-medical-intern-outerclothing = Medical intern outer clothing
 
 loadout-group-chemist-id = Chemist ID
@@ -23,16 +25,19 @@ loadout-group-psychologist-backpack = Psychologist backpack
 loadout-group-research-assistant-outerclothing = Research assistant outer clothing
 
 loadout-group-research-director-backpack = Research Director backpack
+loadout-group-research-director-mask = Research Director mask
 
 loadout-group-robotics-glasses = Roboticist glasses
 loadout-group-roboticist-id = Roboticist ID
 
 # Security
 loadout-group-security-glasses = Security glasses
+loadout-group-security-gloves = Security gloves
 
 loadout-group-brigmedic-head = Combat Medic head
 loadout-group-brigmedic-jumpsuit = Combat Medic jumpsuit
 loadout-group-brigmedic-outerclothing = Combat Medic outer clothing
+loadout-group-brigmedic-gloves = Combat Medic gloves
 loadout-group-brigmedic-shoes = Combat Medic shoes
 loadout-group-brigmedic-backpack = Combat Medic backpack
 
@@ -49,12 +54,15 @@ loadout-group-bartender-shoes = Bartender shoes
 
 loadout-group-botanist-shoes = Botanist shoes
 
+loadout-group-boxer-head = Boxer head
 loadout-group-boxer-jumpsuit = Boxer jumpsuit
-loadout-group-boxer-gloves = Boxer gloves
+loadout-group-boxer-belt = Boxer belt
+loadout-group-boxer-weapon = Boxer weapon
 loadout-group-boxer-shoes = Boxer shoes
 
 loadout-group-chaplain-shoes = Chaplain shoes
 loadout-group-chaplain-id-starcup = Chaplain ID
+loadout-group-chaplain-relic = Chaplain personal relic
 
 loadout-group-chef-shoes = Chef shoes
 
@@ -89,6 +97,7 @@ loadout-group-service-worker-glasses = Service worker eyewear
 
 # Wildcards
 loadout-group-prisoner-jumpsuit = Prisoner jumpsuit
+loadout-group-prisoner-outerclothing = Prisoner outer clothing
 
 # Misc
 loadout-group-plushies = Plushies

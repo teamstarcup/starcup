@@ -285,7 +285,7 @@ public sealed class SingularitySystem : SharedSingularitySystem
     /// <param name="args">The event arguments.</param>
     private void UpdateRandomWalk(EntityUid uid, RandomWalkComponent comp, SingularityLevelChangedEvent args)
     {
-        var scale = MathF.Max(args.NewValue, 4);
+        var scale = MathF.Max(args.NewValue + 2, 6); // starcup: bumped up numbers by 2 to slow down singularity
         comp.MinSpeed = 7.5f / scale;
         comp.MaxSpeed = 10f / scale;
     }

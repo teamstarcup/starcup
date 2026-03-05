@@ -124,7 +124,7 @@
     - 0,0,3,1
 
 - type: entity
-  parent: [ClothingBeltStorageBase, BaseSyndicateContraband]
+  parent: [ClothingBeltStorageBase, BaseSyndicateContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingBeltSyndieHolster
   name: syndicate shoulder holster
   description: A deep shoulder holster capable of holding many types of ballistics.
@@ -144,6 +144,10 @@
       - CartridgeAmmo
   - type: StaticPrice
     price: 500
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-syndicate-shoulder-holster
+  # end starcup
 
 ## Webbing
 
@@ -183,10 +187,10 @@
     sprite: Clothing/Belt/salvagewebbing.rsi
 
 - type: entity
-  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseSyndicateContraband]
+  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
   id: ClothingBeltMilitaryWebbing
   name: chest rig
-  description: A set of tactical webbing worn by Syndicate boarding parties.
+  description: A set of tactical webbing worn by military boarding parties. # starcup: remove syndicate reference
   components:
   - type: Sprite
     sprite: Clothing/Belt/militarywebbing.rsi
@@ -196,6 +200,10 @@
     damageCoefficient: 0.1
   - type: StaticPrice
     price: 500
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-chest-rig
+  # end starcup
 
 - type: entity
   parent: ClothingBeltMilitaryWebbing

@@ -92,7 +92,7 @@
     price: 3000
 
 - type: entity
-  parent: [ClothingShoesBootsMagBase, BaseJetpack, BaseSyndicateContraband]
+  parent: [ClothingShoesBootsMagBase, BaseJetpack, BaseSyndicateContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingShoesBootsMagSyndie
   name: blood-red magboots
   description: Reverse-engineered from ERT magboots, they have a heavy magnetic pull and integrated thrusters. It can hold 0.75 L of gas.
@@ -119,6 +119,10 @@
     size: Normal
   - type: StaticPrice
     price: 1500
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-syndicate-magboots
+  # end starcup
 
 - type: entity
   parent: [BaseCentcommContraband, ClothingShoesBootsMagSyndie]

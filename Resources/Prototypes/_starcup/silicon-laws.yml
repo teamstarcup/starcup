@@ -1,0 +1,24 @@
+# NanoTrasen
+- type: siliconLaw
+  id: Nanotrasen1
+  order: 1
+  lawString: law-nanotrasen-1
+
+- type: siliconLaw
+  id: Nanotrasen2
+  order: 2
+  lawString: law-nanotrasen-2
+
+- type: siliconLaw
+  id: Nanotrasen3
+  order: 3
+  lawString: law-Nanotrasen-3
+
+- type: siliconLawset
+  id: NanotrasenStatic
+  name: law-nanotrasen-name
+  laws:
+  - Nanotrasen1
+  - Nanotrasen2
+  - Nanotrasen3
+  obeysTo: laws-owner-nanotrasen

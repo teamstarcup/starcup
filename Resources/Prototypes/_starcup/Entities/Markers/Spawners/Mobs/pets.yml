@@ -28,3 +28,222 @@
   - type: ConditionalSpawner
     prototypes:
     - CrateNPCHamletMime
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobEngineeringPet
+  name: Random Engineering Pet Spawner
+  suffix: Engineering Pet
+  description: Spawns 1 of Tropico, Polly, or Poppy
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobCrabAtmos
+    - MobPollyParrot
+    - MobPossumPoppy
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobSecurityPet
+  name: Random Security Pet Spawner
+  suffix: Security Pet
+  description: Spawns 1 of Shiva, McGriff, or Bandito
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSpiderShiva
+    - MobMcGriff
+    - MobBandito
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobBarPet
+  name: Random Bar Pet Spawner
+  suffix: Bar Pet
+  description: Spawns 1 of Pun Pun, or Dishduty
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobMonkeyPunpun
+    - MobDishduty
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobBarPetCold
+  name: Random Cold Bar Pet Spawner
+  suffix: Bar Pet, Cold
+  description: Spawns 1 of cold-weather Pun Pun, or Dishduty
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobMonkeyPunpunCold
+    - MobDishduty
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobMaintsPet
+  name: Random Maints Pet Spawner
+  suffix: Maints Pet
+  description: Spawns 1 of Runtime, or Morticia
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobRaccoonMorticia
+    - MobCatRuntime
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobKitchenPet
+  name: Random Kitchen Pet Spawner
+  suffix: Kitchen Pet
+  description: Spawns 1 of Alexander, Starbuck, or Henrietta
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobAlexander
+    - MobStarbuck
+    - MobHenrietta
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobSciencePet
+  name: Random Science Pet Spawner
+  suffix: Science Pet
+  description: Spawns 1 of Smile, Gloom, or Shivs
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSlimesPet
+    - MobGloom
+    - MobArcticFoxSiobhan
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobMedicalPet
+  name: Random Medical Pet Spawner
+  suffix: Medical Pet
+  description: Spawns 1 of Morty, Silvia, or Walter
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobPossumMortyOld
+    - MobCobraSilvia
+    - MobWalter
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobPsychPet
+  name: Random Psych Pet Spawner
+  suffix: Psych Pet
+  description: Spawns 1 of Bingus or Laika
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSecDogLaika
+    - MobBingus
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobSlothDishduty
+  name: Sloth Dishduty Spawner
+  suffix: Bar Pet
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobDishduty
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobSnakeGreenstuff
+  name: Snake Greenstuff Spawner
+  suffix: HoP Pet
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobGreenstuff
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobChickenHenrietta
+  name: Chicken Henrietta Spawner
+  suffix: Kitchen Pet
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobHenrietta
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobSlimeGloom
+  name: Slime Gloom Spawner
+  suffix: Science Pet
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobGloom
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobBunnyStarbuck
+  name: Bunny Starbuck Spawner
+  suffix: Service Pet
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobStarbuck

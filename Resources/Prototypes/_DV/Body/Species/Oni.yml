@@ -1,13 +1,57 @@
+- type: markingsGroup
+  parent:
+  - Undergarments
+  - Humanoid # starcup: added for standardized marking limits
+  id: Oni
+  limits:
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: true
+      default: [ OniHornDoubleCurved ]
+    enum.HumanoidVisualLayers.HeadSide:
+      limit: 1
+      required: true
+      default: [ PointyEarsUpwards ]
+    enum.HumanoidVisualLayers.Snout:
+      limit: 2
+      required: false
+
 - type: entity
-  parent: AppearanceHuman
+  parent: BaseSpeciesAppearance
   id: AppearanceOni
   name: oni appearance
   components:
-  - type: HumanoidAppearance
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+  - type: InitialBody
+    organs:
+      Torso: OrganHumanTorso
+      Head: OrganOniHead
+      ArmLeft: OrganHumanArmLeft
+      ArmRight: OrganHumanArmRight
+      HandRight: OrganHumanHandRight
+      HandLeft: OrganHumanHandLeft
+      LegLeft: OrganHumanLegLeft
+      LegRight: OrganHumanLegRight
+      FootLeft: OrganHumanFootLeft
+      FootRight: OrganHumanFootRight
+      Brain: OrganHumanBrain
+      Eyes: OrganHumanEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganHumanLungs
+      Heart: OrganHumanHeart
+      Stomach: OrganHumanStomach
+      Liver: OrganHumanLiver
+      Kidneys: OrganHumanKidneys
+  - type: HumanoidProfile
     species: Oni
-    hideLayersOnEquip:
-    - Hair
-    - Snout
   - type: Sprite
     scale: 1.2, 1.2
 
@@ -50,3 +94,12 @@
         - MobLayer
   - type: Stamina
     baseCritThreshold: 115
+
+- type: entity
+  parent: OrganHumanHead
+  id: OrganOniHead
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Oni
+

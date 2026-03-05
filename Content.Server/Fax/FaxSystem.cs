@@ -1,10 +1,13 @@
+using System.Threading.Tasks; // starcup
 using Content.Server.Administration;
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
 using Content.Server.DeviceNetwork.Systems;
+using Content.Server.Discord; // starcup
 using Content.Server.Popups;
 using Content.Server.Power.Components;
 using Content.Server.Tools;
+using Content.Shared._starcup.CCVars; // starcup
 using Content.Shared.Administration.Logs;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Database;
@@ -15,6 +18,7 @@ using Content.Shared.Emag.Systems;
 using Content.Shared.Fax;
 using Content.Shared.Fax.Components;
 using Content.Shared.Fax.Systems;
+using Content.Shared.GameTicking;
 using Content.Shared.Interaction;
 using Content.Shared.Labels.Components;
 using Content.Shared.Labels.EntitySystems;
@@ -24,12 +28,16 @@ using Content.Shared.Paper;
 using Content.Shared.Power;
 using Content.Shared.Tools;
 using Content.Shared.UserInterface;
+using Robust.Server; // starcup
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Configuration; // starcup
 using Robust.Shared.Containers;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Timing;
+using Robust.Shared.Utility; // starcup
 
 namespace Content.Server.Fax;
 
@@ -39,6 +47,7 @@ public sealed class FaxSystem : EntitySystem
     [Dependency] private readonly IAdminManager _adminManager = default!;
     [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearanceSystem = default!;
+    [Dependency] private readonly SharedGameTicker _gameTicker = default!;
     [Dependency] private readonly PopupSystem _popupSystem = default!;
     [Dependency] private readonly DeviceNetworkSystem _deviceNetworkSystem = default!;
     [Dependency] private readonly PaperSystem _paperSystem = default!;
@@ -51,6 +60,23 @@ public sealed class FaxSystem : EntitySystem
     [Dependency] private readonly MetaDataSystem _metaData = default!;
     [Dependency] private readonly FaxecuteSystem _faxecute = default!;
     [Dependency] private readonly EmagSystem _emag = default!;
+
+    // begin starcup: admin fax webhook
+    [Dependency] private readonly IBaseServer _baseServer = default!;
+    [Dependency] private readonly DiscordWebhook _discord = default!;
+    [Dependency] private readonly IConfigurationManager _cfg = default!;
+
+    // Discord webhook limits; Passing these will cause a bad request.
+    // There is a total text limit of 6000 characters, combined across text fields
+    private const ushort WebhookDescriptionMax = 4000;
+    private const ushort WebhookFieldsMax = 25;
+    private const ushort WebhookFieldCharsMax = 1000;
+
+    // String to use to indicate that the description got cut off;
+    private const string TooLongText = "... **(too long)**";
+
+    private WebhookIdentifier? _webhookId = null;
+    // end starcup
 
     private static readonly ProtoId<ToolQualityPrototype> ScrewingQuality = "Screwing";
 
@@ -81,6 +107,8 @@ public sealed class FaxSystem : EntitySystem
         SubscribeLocalEvent<FaxMachineComponent, FaxSendMessage>(OnSendButtonPressed);
         SubscribeLocalEvent<FaxMachineComponent, FaxRefreshMessage>(OnRefreshButtonPressed);
         SubscribeLocalEvent<FaxMachineComponent, FaxDestinationMessage>(OnDestinationSelected);
+
+        _cfg.OnValueChanged(SCCVars.DiscordAdminFaxWebhook, SetWebhookId, true); // starcup
     }
 
     public override void Update(float frameTime)
@@ -300,8 +328,9 @@ public sealed class FaxSystem : EntitySystem
                     args.Data.TryGetValue(FaxConstants.FaxPaperStampedByData, out List<StampDisplayInfo>? stampedBy);
                     args.Data.TryGetValue(FaxConstants.FaxPaperPrototypeData, out string? prototypeId);
                     args.Data.TryGetValue(FaxConstants.FaxPaperLockedData, out bool? locked);
+                    args.Data.TryGetValue(FaxConstants.FaxPaperSenderFaxNameData, out string? senderFaxName);
 
-                    var printout = new FaxPrintout(content, name, label, prototypeId, stampState, stampedBy, locked ?? false);
+                    var printout = new FaxPrintout(content, name, label, prototypeId, stampState, stampedBy, locked ?? false, senderFaxName);
                     Receive(uid, printout, args.SenderAddress);
 
                     break;
@@ -392,6 +421,7 @@ public sealed class FaxSystem : EntitySystem
             return;
 
         component.DestinationFaxAddress = destAddress;
+        component.DestinationFaxName = component.KnownFaxes[destAddress];
 
         UpdateUserInterface(uid, component);
     }
@@ -521,13 +551,35 @@ public sealed class FaxSystem : EntitySystem
 
         TryComp<LabelComponent>(sendEntity, out var labelComponent);
 
+        var content = paper.Content;
+
+        if (component.AddSenderInfo)
+        {
+            var faxMachineAddress = TryComp<DeviceNetworkComponent>(uid, out var deviceNetworkComponent)
+            ? deviceNetworkComponent.Address
+            : Loc.GetString("device-address-unknown");
+
+            var time = _gameTicker.RoundDuration();
+            var timeString = TimeSpan.FromSeconds(Math.Truncate(time.TotalSeconds)).ToString();
+
+            content += "\n";
+            content += Loc.GetString(component.SenderInfo,
+                ("sender_name", component.FaxName),
+                ("sender_addr", faxMachineAddress),
+                ("recipient_name", component.DestinationFaxName ?? Loc.GetString("fax-machine-popup-source-unknown")),
+                ("recipient_addr", component.DestinationFaxAddress),
+                ("time", timeString)
+            );
+        }
+
         var payload = new NetworkPayload()
         {
             { DeviceNetworkConstants.Command, FaxConstants.FaxPrintCommand },
             { FaxConstants.FaxPaperNameData, nameMod?.BaseName ?? metadata.EntityName },
             { FaxConstants.FaxPaperLabelData, labelComponent?.CurrentLabel },
-            { FaxConstants.FaxPaperContentData, paper.Content },
+            { FaxConstants.FaxPaperContentData, content },
             { FaxConstants.FaxPaperLockedData, paper.EditingDisabled },
+            { FaxConstants.FaxPaperSenderFaxNameData, component.FaxName ?? Loc.GetString("fax-machine-popup-source-unknown") }
         };
 
         if (metadata.EntityPrototype != null)
@@ -570,15 +622,13 @@ public sealed class FaxSystem : EntitySystem
         if (!Resolve(uid, ref component))
             return;
 
-        var faxName = Loc.GetString("fax-machine-popup-source-unknown");
-        if (fromAddress != null && component.KnownFaxes.TryGetValue(fromAddress, out var fax)) // If message received from unknown fax address
-            faxName = fax;
+        var faxName = printout.SenderFaxName ?? Loc.GetString("fax-machine-popup-source-unknown");
 
         _popupSystem.PopupEntity(Loc.GetString("fax-machine-popup-received", ("from", faxName)), uid);
         _appearanceSystem.SetData(uid, FaxMachineVisuals.VisualState, FaxMachineVisualState.Printing);
 
         if (component.NotifyAdmins)
-            NotifyAdmins(faxName);
+            NotifyAdmins(faxName, printout); // starcup: pass the printout
 
         component.PrintingQueue.Enqueue(printout);
     }
@@ -619,9 +669,92 @@ public sealed class FaxSystem : EntitySystem
         _adminLogger.Add(LogType.Action, LogImpact.Low, $"\"{component.FaxName}\" {ToPrettyString(uid):tool} printed {ToPrettyString(printed):subject}: {printout.Content}");
     }
 
-    private void NotifyAdmins(string faxName)
+    private void NotifyAdmins(string faxName, FaxPrintout printout) // starcup: printout parameter
     {
         _chat.SendAdminAnnouncement(Loc.GetString("fax-machine-chat-notify", ("fax", faxName)));
         _audioSystem.PlayGlobal("/Audio/Machines/high_tech_confirm.ogg", Filter.Empty().AddPlayers(_adminManager.ActiveAdmins), false, AudioParams.Default.WithVolume(-8f));
+        NotifyAdminsSendWebhook(printout); // starcup
     }
+
+    // begin starcup: admin fax webhook
+    private void SetWebhookId(string value)
+    {
+        if (string.IsNullOrWhiteSpace(value))
+            _webhookId = null;
+        else
+            _discord.GetWebhook(value, data => _webhookId = data.ToIdentifier());
+    }
+
+    private async void NotifyAdminsSendWebhook(FaxPrintout printout)
+    {
+        await Task.Run(async () => await SendFaxToDiscordWebhook(printout));
+    }
+
+    private async Task SendFaxToDiscordWebhook(FaxPrintout printout)
+    {
+        if (_webhookId is null)
+            return;
+
+        try
+        {
+            var description = FormattedMessage.RemoveMarkupPermissive(printout.Content);
+            if (description.Length > WebhookDescriptionMax)
+                description = description[..(WebhookDescriptionMax - TooLongText.Length)] + TooLongText;
+
+            var embed = new WebhookEmbed
+            {
+                Title = printout.Name,
+                Description = description,
+                Footer = new WebhookEmbedFooter
+                {
+                    Text = $"{_baseServer.ServerName} ({_gameTicker.RoundId} @{_gameTicker.RoundDuration():hh\\:mm\\:ss})"
+                },
+            };
+
+            if (!string.IsNullOrWhiteSpace(printout.Label))
+            {
+                embed.Title += $" ({printout.Label})";
+            }
+
+            if (printout.StampState != null)
+            {
+                List<WebhookEmbedField> fields = [];
+                var characters = 0;
+                foreach (var stamp in printout.StampedBy)
+                {
+                    if (fields.Count >= WebhookFieldsMax)
+                        break;
+
+                    var name = "Signature";
+                    if (Loc.TryGetString(stamp.StampedName, out var value))
+                        name = "Stamp";
+
+                    var field = new WebhookEmbedField
+                    {
+                        Name = name,
+                        Value = value ?? stamp.StampedName,
+                        Inline = true,
+                    };
+
+                    // while field name and value have their own length limits (256, 1024), we won't likely
+                    // hit them. They are however both added to the overall lengh limit with the title and
+                    // description so we need to count that.
+                    characters += field.Name.Length + field.Value.Length;
+                    if (characters > WebhookFieldCharsMax)
+                        break;
+
+                    fields.Add(field);
+                }
+                embed.Fields = fields;
+            }
+            var payload = new WebhookPayload { Embeds = [embed] };
+            await _discord.CreateMessage(_webhookId.Value, payload);
+            Log.Info("Sent admin fax to Discord webhook");
+        }
+        catch (Exception e)
+        {
+            Log.Error($"Error while sending discord admin fax: \n{e}");
+        }
+    }
+    // end starcup
 }

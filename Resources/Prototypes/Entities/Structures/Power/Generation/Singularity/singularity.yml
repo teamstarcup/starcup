@@ -49,8 +49,8 @@
     radsPerLevel: 2
     energyLoss: 1
   - type: RandomWalk # To make the singularity move around.
-    maxSpeed: 2.5
-    minSpeed: 1.875
+    maxSpeed: 1.6666666 # starcup: was 2.5
+    minSpeed: 1.25 # starcup: was 1.875
   - type: SingularityDistortion
     falloffPower: 2.529822
     intensity: 3645
