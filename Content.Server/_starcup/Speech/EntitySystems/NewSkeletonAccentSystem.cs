@@ -1,5 +1,5 @@
 using System.Text.RegularExpressions;
-using Content.Server.Speech.Components;
+using Content.Server._starcup.Speech.Components;
 using Content.Shared.Speech;
 
 namespace Content.Server._starcup.Speech.EntitySystems;
@@ -12,10 +12,10 @@ public sealed class NewSkeletonAccentSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<SouthernAccentComponent, AccentGetEvent>(OnAccent);
+        SubscribeLocalEvent<NewSkeletonAccentComponent, AccentGetEvent>(OnAccent);
     }
 
-    private void OnAccent(EntityUid uid, SouthernAccentComponent component, AccentGetEvent args)
+    private void OnAccent(EntityUid uid, NewSkeletonAccentComponent component, AccentGetEvent args)
     {
         var message = args.Message;
 
