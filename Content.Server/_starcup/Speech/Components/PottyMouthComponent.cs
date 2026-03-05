@@ -1,4 +1,4 @@
-namespace Content.Server._starcup.Speech;
+namespace Content.Server._starcup.Speech.Components;
 
 /// <summary>
 /// Replaces the speaker's swear words with minced oaths.

@@ -1,7 +1,8 @@
+using Content.Server._starcup.Speech.Components;
 using Content.Server.Speech.EntitySystems;
 using Content.Shared.Speech;
 
-namespace Content.Server._starcup.Speech;
+namespace Content.Server._starcup.Speech.EntitySystems;
 
 public sealed class PottyMouthAccentSystem : EntitySystem
 {
