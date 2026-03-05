@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 02/28/2026 16:46:26
-  entityCount: 14235
+  time: 03/05/2026 04:11:47
+  entityCount: 14236
 maps:
 - 1
 grids:
@@ -68791,6 +68791,13 @@ entities:
     - type: Transform
       pos: -10.601797,19.383003
       parent: 2
+- proto: MaterialCardboard
+  entities:
+  - uid: 14236
+    components:
+    - type: Transform
+      pos: -28.595528,-11.533713
+      parent: 2
 - proto: MaterialCloth
   entities:
   - uid: 903
@@ -73819,6 +73826,13 @@ entities:
     - type: Transform
       pos: -45.350727,14.564247
       parent: 2
+- proto: SheetPaper
+  entities:
+  - uid: 12447
+    components:
+    - type: Transform
+      pos: -28.336618,-11.399368
+      parent: 2
 - proto: SheetPlasma
   entities:
   - uid: 11289
@@ -76922,13 +76936,13 @@ entities:
   - uid: 11743
     components:
     - type: Transform
-      pos: 34.5,6.5
+      pos: 33.5,6.5
       parent: 2
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraCommand
       nameSet: True
-      id: 'Bridge: Vault'
+      id: Vault
   - uid: 11744
     components:
     - type: Transform
@@ -79317,7 +79331,7 @@ entities:
   - uid: 12087
     components:
     - type: Transform
-      pos: -28.487305,-11.529761
+      pos: -28.64909,-11.6130495
       parent: 2
 - proto: ToolboxElectricalFilled
   entities:
@@ -81630,11 +81644,6 @@ entities:
     components:
     - type: Transform
       pos: 35.5,5.5
-      parent: 2
-  - uid: 12447
-    components:
-    - type: Transform
-      pos: 34.5,5.5
       parent: 2
   - uid: 12448
     components:
