@@ -2,7 +2,7 @@
   id: SpaceBlade
   parent: GasTankBase
   name: SpaceBlade
-  description: Let it drip
+  description: Let it drip!
   abstract: true
   components:
   - type: GasTank
@@ -47,17 +47,19 @@
       types:
         Slash: 2
 
+# starcup - added new names and descriptions.
+
 - type: entity
   id: SpaceBladeRedOrange
   parent: SpaceBlade
-  name: RedOrange Blade #Starcup
+  name: RedOrange Blade # starcup
   description: "Officially titled \"Fire Blade\", this Blade was dubbed \"RedOrange\" by the community. The content creator who popularized the term explained during an interview: \"FireBlade sounds stupid, and people kept arguing about whether it was red or orange.\"" #Starcup
 
 - type: entity
   id: SpaceBladeBlue
   parent: SpaceBlade
-  name: Blue Blade #starcup
-  description: "On episode 1 of SpaceBlade, Jimmy Spin is quoted saying \"Wow, I hope mine is green!\" before immediately receieving this." #starcup
+  name: Blue Blade # starcup
+  description: "On episode 1 of SpaceBlade, Jimmy Spin is quoted saying \"Wow, I hope mine is green!\" before immediately receieving this." # starcup
   components:
   - type: Sprite
     state: blue
@@ -65,8 +67,8 @@
 - type: entity
   id: SpaceBladeFrontier
   parent: SpaceBlade
-  name: Frontier Blade #starcup
-  description: "An advertisement in and of itself, bearing the logo of the Sector where SpaceBlades originated. On the side reads an inscription, \"Let it drip!\"" #starcup
+  name: Frontier Blade # starcup
+  description: "An advertisement in and of itself, bearing the logo of the Sector where SpaceBlades originated. On the side reads an inscription, \"Let it drip!\"" # starcup
   components:
   - type: Sprite
     state: frontier
@@ -74,8 +76,8 @@
 - type: entity
   id: SpaceBladeGoldBlue
   parent: SpaceBlade
-  name: GoldBlue Blade #starcup
-  description: A fancy version of the Blue Blade, released in an attempt to resell unused stock. While it worked extremely well, the build quality was unfortunately questionable, and intact GoldBlues are uncommon. #starcup
+  name: GoldBlue Blade # starcup
+  description: A fancy version of the Blue Blade, released in an attempt to resell unused stock. While it worked extremely well, the build quality was unfortunately questionable, and intact GoldBlues are uncommon. # starcup
   components:
   - type: Sprite
     state: goldblue
@@ -83,8 +85,8 @@
 - type: entity
   id: SpaceBladeMail
   parent: SpaceBlade
-  name: Mail Blade #starcup
-  description: These Blades were a company gift from Hawkmoon Acquisitions to its couriers, as a reward for exceeding qutoas. Unfortunately, a warehouse full of these was discovered, and their value vanished overnight. #starcup
+  name: Mail Blade # starcup
+  description: These Blades were a company gift from Hawkmoon Acquisitions to its couriers as a reward for exceeding qutoas. Unfortunately, a warehouse full of these was discovered, and their value vanished overnight. # starcup
   components:
   - type: Sprite
     state: mail
@@ -92,8 +94,8 @@
 - type: entity
   id: SpaceBladeEyeball
   parent: SpaceBlade
-  name: Eyeball Blade #starcup
-  description: Originally a Halloween exclusive, these Blades were so popular that they became a year-round product. #starcup
+  name: Eyeball Blade # starcup
+  description: Originally a Halloween exclusive, these Blades were so popular that they became a year-round product. # starcup
   components:
   - type: Sprite
     state: eyeball
@@ -101,8 +103,8 @@
 - type: entity
   id: SpaceBladeBlade
   parent: SpaceBlade
-  name: Blade Blade #starcup
-  description: "\"It's got blades on its blades!\" - SpaceBlade commerical" #starcup
+  name: Blade Blade # starcup
+  description: "As the commercial says, \"It's got blades on it!\"" # starcup
   components:
   - type: Sprite
     state: blade
@@ -111,7 +113,7 @@
   id: SpaceBladeCheck
   parent: SpaceBlade
   name: Check Blade #starcup
-  description: The first Blade to be exclusively available through blindboxes. #starcup
+  description: The first Blade to be exclusively available through blindboxes. # starcup
   components:
   - type: Sprite
     state: check
@@ -146,8 +148,8 @@
 - type: entity
   id: SpaceBladeSec
   parent: SpaceBlade
-  name: Security Blade #starcup
-  description: When the owner of the SpaceBlade franchise was wrongfully arrested after claims of copyright infringement, he made this Blade out of pure spite. #starcup
+  name: Security Blade # starcup
+  description: When the owner of the SpaceBlade franchise was wrongfully arrested after claims of copyright infringement, he made this Blade out of pure spite. # starcup
   components:
   - type: Sprite
     state: secblade
@@ -155,8 +157,8 @@
 - type: entity
   id: SpaceBladeContra
   parent: SpaceBlade
-  name: Contra Blade #starcup
-  description: "SpaceBlade's attempt to appeal to its aging audience, this one is the result of a crossover with the controversial Nukies cartoon show. While its somewhat political source raises eyebrows, this Blade is popular for being the only official Blade that is fully cast in metal. On the side reads an engraving, \"Let it reap!\"" #starcup
+  name: Contra Blade # starcup
+  description: "SpaceBlade's attempt to appeal to its aging audience, this one is the result of a crossover with the controversial Nukies cartoon show. While its somewhat political source raises eyebrows, this Blade is popular for being the only official Blade that is fully cast in metal. On the side reads an engraving, \"Let it reap!\"" # starcup
   components:
   - type: Sprite
     state: contraband
@@ -174,8 +176,8 @@
 - type: entity
   id: SpaceBladeMoff
   parent: SpaceBlade
-  name: Moff Blade #starcup
-  description: The result of a crossover episode between SpaceBlade and Safety Moth, in an attempt to increase employee retention. It didn't work, but this is still a cute blade. #starcup
+  name: Moff Blade # starcup
+  description: The result of a crossover episode between SpaceBlade and Safety Moth, in an attempt to increase employee retention. It didn't work, but this is still a cute blade. # starcup
   components:
   - type: Sprite
     state: moff
@@ -194,8 +196,8 @@
 - type: entity
   id: SpaceBladeWeh
   parent: SpaceBlade
-  name: Weh Blade #starcup
-  description: Originally a fan-made Blade, the concept was 'accidentally' used in SpaceBlade, episode 21. After community backlash, they agreed to settle it privately with the original creator, though nobody has heard from them since. #starcup
+  name: Weh Blade # starcup
+  description: Originally a fan-made Blade, the concept was 'accidentally' used in SpaceBlade, episode 21. After community backlash, they agreed to settle it privately with the original creator, though nobody has heard from them since. # starcup
   components:
   - type: Sprite
     state: weh
@@ -214,8 +216,8 @@
 - type: entity
   id: SpaceBladeTesla
   parent: SpaceBlade
-  name: TeslaBlade #starcup
-  description: The first 'Godhood' Blade introduced in the show, prophecy states that whoever wields this blade wields the key to the universe. Whatever that means... #starcup
+  name: TeslaBlade # starcup
+  description: The first 'Godhood' Blade introduced in the show, prophecy states that whoever wields this blade wields the key to the universe. Whatever that means... # starcup
   components:
   - type: Sprite
     state: tesla
@@ -237,8 +239,8 @@
 - type: entity
   id: SpaceBladePizza
   parent: [SpaceBlade]
-  name: Pizza Blade #starcup
-  description: This one comes with a scratch-and-sniff...it smells like cardboard. Great. #starcup
+  name: Pizza Blade # starcup
+  description: This one comes with a scratch-and-sniff...it smells like cardboard. Great. # starcup
   components:
   - type: Sprite
     state: pizza
@@ -246,8 +248,8 @@
 - type: entity
   id: SpaceBladeSingularity
   parent: SpaceBlade
-  name: Singularity Blade #starcup
-  description: The second 'Godhood' Blade, this one is destined to consume all of reality. It was revealed in the season finale of SpaceBlade, as a cliffhanger for season 2. #starcup
+  name: Singularity Blade # starcup
+  description: The second 'Godhood' Blade, this one is destined to consume all of reality. It was revealed in the season finale of SpaceBlade, as a cliffhanger for season 2. # starcup
   components:
   - type: Sprite
     state: singularity
@@ -262,8 +264,8 @@
 - type: entity
   id: SpaceBladeClown
   parent: SpaceBlade
-  name: Honk Blade #starcup
-  description: "Released on April Fools day with the simple advertisement: \"Slippery when wet.\"" #starcup
+  name: Honk Blade # starcup
+  description: "Released on April Fools day with the simple advertisement: \"Slippery when wet.\"" # starcup
   components:
   - type: Sprite
     state: clown
