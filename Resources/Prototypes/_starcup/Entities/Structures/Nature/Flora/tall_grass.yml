@@ -54,11 +54,9 @@
   - type: Destructible
     thresholds:
     - trigger:
-        # begin starcup: make it slashable
         !type:DamageTypeTrigger
         damageType: Slash
         damage: 10
-        # end starcup
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
