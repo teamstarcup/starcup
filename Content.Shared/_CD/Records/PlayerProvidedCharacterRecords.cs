@@ -28,7 +28,7 @@ public sealed partial class PlayerProvidedCharacterRecords
     public const int MaxWeight = 300;
 
     [DataField] // TheDen
-    public string Birthday { get; private set; }
+    public string Birthday { get; private set; } = "N/A";
 
     [DataField]
     public string EmergencyContactName { get; private set; }

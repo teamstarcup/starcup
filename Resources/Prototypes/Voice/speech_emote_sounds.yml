@@ -90,14 +90,16 @@
   sounds:
     Scream:
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
-    LizardHiss: # Imp edit
+    Hiss: # Imp edit
       collection: ReptilianHiss
+    Chirp: # Imp addition
+      collection: ReptilianChirp
     Honk:
       collection: BikeHorn
     Whistle:
       collection: Whistles
     Crying:
-      collection: MaleCry
+      path: /Audio/_starcup/Animals/Lizard/lizard_whimper.ogg # starcup
     Weh:
       collection: Weh
     Hew:
@@ -112,8 +114,18 @@
     Yawn:
       collection: MaleYawn
     # End DeltaV Additions
+    # begin starcup
+    TailWhip:
+      path: /Audio/_RMC14/Xeno/alien_tail_swipe1.ogg
+    ThumpTailSoft:
+      path: /Audio/Effects/soft_thump.ogg
+    ThumpTailMany:
+      path: /Audio/_starcup/Effects/soft_thumps.ogg
+    ThumpTailLoud:
+      path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
+    # end starcup
     Gasp:
-      collection: MaleGasp
+      path: /Audio/_starcup/Animals/Lizard/lizard_gasp.ogg # starcup
     DefaultDeathgasp:
       collection: DeathGasp
 
@@ -124,14 +136,16 @@
   sounds:
     Scream:
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
-    LizardHiss: # Imp edit
+    Hiss: # Imp edit
       collection: ReptilianHiss
+    Chirp: # Imp addition
+      collection: ReptilianChirp
     Honk:
       collection: BikeHorn
     Whistle:
       collection: Whistles
     Crying:
-      collection: FemaleCry
+      path: /Audio/_starcup/Animals/Lizard/lizard_whimper.ogg # starcup
     Weh:
       collection: Weh
     Hew:
@@ -146,8 +160,18 @@
     Yawn:
       collection: FemaleYawn
     # End DeltaV Additions
+    # begin starcup
+    TailWhip:
+      path: /Audio/_RMC14/Xeno/alien_tail_swipe1.ogg
+    ThumpTailSoft:
+      path: /Audio/Effects/soft_thump.ogg
+    ThumpTailMany:
+      path: /Audio/_starcup/Effects/soft_thumps.ogg
+    ThumpTailLoud:
+      path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
+    # end starcup
     Gasp:
-      collection: FemaleGasp
+      path: /Audio/_starcup/Animals/Lizard/lizard_gasp.ogg # starcup
     DefaultDeathgasp:
       collection: FemaleDeathGasp
 
