@@ -37,8 +37,10 @@
   components:
   - type: Sprite
     layers:
+    - state: shadow # starcup
     - state: green
-    - state: decal
+    - sprite: Markers/cross.rsi
+      state: decal
     - sprite: Decals/Flora/flora_rocks.rsi
       state: rock01
   - type: RandomDecalSpawner
@@ -58,8 +60,10 @@
   components:
   - type: Sprite
     layers:
+    - state: shadow # starcup
     - state: green
-    - state: decal
+    - sprite: Markers/cross.rsi
+      state: decal
     - sprite: Decals/basalt.rsi
       state: basalt1
   - type: RandomDecalSpawner
@@ -77,14 +81,16 @@
 - type: entity
   parent: DecalSpawnerFloraBase
   id: DecalSpawnerBushesAC
-  suffix: Bushes (a-c)
+  suffix: Ferny bushes (a-c) # starcup: renamed for clarity
   components:
   - type: Sprite
     layers:
+    - state: shadow # starcup
     - state: green
-    - state: decal
+    - sprite: Markers/cross.rsi
+      state: decal
     - sprite: Decals/Flora/flora_bushes.rsi
-      state: busha1
+      state: bushb1 # starcup: more representative of the group
   - type: RandomDecalSpawner
     decals:
     - Busha1
@@ -98,6 +104,7 @@
     - Bushc3
 
 # I really don't want to add all the rest of the bushes right now, leaving this as an exercise for someone else.
+# starcup: Hi. I'm someone else. I'm adding the missing bush spawners under the _starcup namespace.
 
 - type: entity
   parent: DecalSpawnerFloraBase
@@ -106,8 +113,10 @@
   components:
   - type: Sprite
     layers:
+    - state: shadow # starcup
     - state: green
-    - state: decal
+    - sprite: Markers/cross.rsi
+      state: decal
     - sprite: Decals/Flora/flora_flowers.rsi
       state: flowersbr1
   - type: RandomDecalSpawner
@@ -130,8 +139,10 @@
   components:
   - type: Sprite
     layers:
+    - state: shadow # starcup
     - state: green
-    - state: decal
+    - sprite: Markers/cross.rsi
+      state: decal
     - sprite: Decals/Flora/flora_grass.rsi
       state: grassa1
   - type: RandomDecalSpawner
@@ -154,8 +165,10 @@
   components:
   - type: Sprite
     layers:
+    - state: shadow # starcup
     - state: green
-    - state: decal
+    - sprite: Markers/cross.rsi
+      state: decal
     - sprite: Decals/Flora/flora_grass.rsi
       state: grassc1
   - type: RandomDecalSpawner
@@ -172,8 +185,10 @@
   components:
   - type: Sprite
     layers:
+    - state: shadow # starcup
     - state: green
-    - state: decal
+    - sprite: Markers/cross.rsi
+      state: decal
     - sprite: Decals/Flora/flora_grass.rsi
       state: grassd1
   - type: RandomDecalSpawner
