@@ -60,8 +60,8 @@
 
 - type: entity
   parent: DecalSpawnerFloraBase
-  id: DecalSpawnerBushesGnK
-  suffix: Mountain bushes (g&k)
+  id: DecalSpawnerBushesGKLMN
+  suffix: Mountain bushes (g,k,l,m,n)
   components:
   - type: Sprite
     layers:
@@ -80,6 +80,15 @@
     - Bushk1
     - Bushk2
     - Bushk3
+    - Bushl1
+    - Bushl2
+    - Bushl3
+    - Bushl4
+    - Bushm1
+    - Bushm2
+    - Bushm3
+    - Bushm4
+    - Bushn1
 
 - type: entity
   parent: DecalSpawnerFloraBase
@@ -122,31 +131,6 @@
     - Bushj1
     - Bushj2
     - Bushj3
-
-- type: entity
-  parent: DecalSpawnerFloraBase
-  id: DecalSpawnerBushesLN
-  suffix: Mountain bushes (l-n)
-  components:
-  - type: Sprite
-    layers:
-    - state: shadow
-    - state: green
-    - sprite: Markers/cross.rsi
-      state: decal
-    - sprite: Decals/Flora/flora_bushes.rsi
-      state: bushl1
-  - type: RandomDecalSpawner
-    decals:
-    - Bushl1
-    - Bushl2
-    - Bushl3
-    - Bushl4
-    - Bushm1
-    - Bushm2
-    - Bushm3
-    - Bushm4
-    - Bushn1
 
 - type: entity
   parent: DecalSpawnerFloraBase
