@@ -5,6 +5,23 @@
   id: GiantBug
 
 - type: npcFaction
+  id: PestHunter
+  hostile:
+  - Mouse
+  - Bug
+
+- type: npcFaction
+  id: Protector
+  friendly:
+  - NanoTrasen
+  hostile:
+  - SimpleHostile
+  - Zombie
+  - Xeno
+  - AllHostile
+  - Dragon
+
+- type: npcFaction
   id: BugHunter
   hostile:
   - Bug
