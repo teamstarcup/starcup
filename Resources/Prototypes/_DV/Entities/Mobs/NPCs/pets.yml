@@ -176,11 +176,9 @@
       interactSuccessSpawn: EffectHearts
       interactSuccessSound:
         path: /Audio/Animals/snake_hiss.ogg
-    # begin starcup: removed, hostiles attacking silvia feels weird when she doesn't fight back and has healing attacks anyways
-    #- type: NpcFactionMember
-    #  factions:
-    #    - PetsNT
-    # end starcup
+    - type: NpcFactionMember
+      factions:
+        - Passive # starcup: hostiles attacking silvia feels weird when she doesn't fight back and has healing attacks anyways
     - type: Grammar
       attributes:
         proper: true
