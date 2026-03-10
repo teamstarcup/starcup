@@ -43,6 +43,35 @@
         tree01: ""
         tree02: ""
         tree03: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 1
+            max: 2
+          TamarackStump:
+            min: 1
+            max: 1
+        offset: 0
 
 # Original trees
 - type: entity
@@ -76,7 +105,7 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/tree_fell.ogg
+          collection: TreeFall
           params:
             volume: 5
             variation: 0.05
@@ -86,18 +115,28 @@
         spawn:
           Log:
             min: 1
-            max: 8
+            max: 2
           TamarackStump:
             min: 1
             max: 1
+        offset: 0
 
 - type: entity
   parent: BaseStumpStarcup
   id: TamarackStump
   components:
   - type: Sprite
+    offset: 0,1.1
     sprite: _starcup/Structures/Nature/Flora/Trees/ConiferTrees/flora_tamaracks.rsi
     state: treestump
+    layers:
+    - state: treestump1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""
 
 - type: entity
   parent: BaseTreeLarge
@@ -132,7 +171,7 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/tree_fell.ogg
+          collection: TreeFall
           params:
             volume: 5
             variation: 0.05
@@ -146,21 +185,23 @@
           CorsicanStump:
             min: 1
             max: 1
+        offset: 0
 
 - type: entity
   parent: BaseStumpStarcup
   id: CorsicanStump
   components:
   - type: Sprite
+    offset: 0,1.5
     sprite: _starcup/Structures/Nature/Flora/Trees/ConiferTrees/flora_corsican_pines.rsi
     layers:
-    - state: treestump01
+    - state: treestump1
       map: ["random"]
   - type: RandomSprite
     available:
     - random:
-        treestump01: ""
-        treestump02: ""
+        treestump1: ""
+        treestump2: ""
 
 - type: entity
   parent: BaseTreeConifer
@@ -195,7 +236,7 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/tree_fell.ogg
+          collection: TreeFall
           params:
             volume: 5
             variation: 0.05
@@ -205,15 +246,25 @@
         spawn:
           Log:
             min: 1
-            max: 8
+            max: 4
           GulmoreStump:
             min: 1
             max: 1
+        offset: 0
 
 - type: entity
   parent: BaseStumpStarcup
   id: GulmoreStump
   components:
   - type: Sprite
+    offset: 0,1.1
     sprite: _starcup/Structures/Nature/Flora/Trees/ConiferTrees/flora_gulmore_pines.rsi
     state: treestump
+    layers:
+    - state: treestump1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""

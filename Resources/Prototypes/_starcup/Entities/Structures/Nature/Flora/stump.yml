@@ -13,8 +13,8 @@
     noRot: true
     sprite: Objects/Decoration/Flora/flora_trees.rsi
     state: treestump
-    drawdepth: Overdoors
-    offset: 0,0.9
+    drawdepth: HighFloorObjects
+    offset: 0,0
   - type: Physics
     bodyType: Static
   - type: Fixtures
@@ -43,7 +43,7 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/tree_fell.ogg
+          collection: TreeFall
           params:
             volume: 3
             variation: 0.05
@@ -58,14 +58,14 @@
   - type: Sprite
     sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_autumn_trees.rsi
     layers:
-    - state: treestump01
+    - state: treestump1
       map: ["random"]
   - type: RandomSprite
     available:
     - random:
-        treestump01: ""
-        treestump02: ""
-        treestump03: ""
+        treestump1: ""
+        treestump2: ""
+        treestump3: ""
 
 - type: entity
   parent: BaseStumpStarcup
@@ -73,15 +73,33 @@
   suffix: deciduous, large
   components:
   - type: Sprite
+    offset: 0,1.5
     sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_treeslarge.rsi
     layers:
-    - state: treestump01
+    - state: treestump1
       map: ["random"]
   - type: RandomSprite
     available:
     - random:
-        treestump01: ""
-        treestump02: ""
+        treestump1: ""
+        treestump2: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.18,-0.35,0.18,0.35"
+        density: 2000
+        layer:
+        - WallLayer
+
+- type: entity
+  parent: DeciduousLargeStump
+  id: DeciduousLargeDarkStump
+  suffix: deciduous, large, dark
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_treeslarge_dark.rsi
 
 - type: entity
   parent: BaseStumpStarcup
@@ -89,8 +107,26 @@
   suffix: conifer
   components:
   - type: Sprite
+    offset: 0,1.1
     sprite: _starcup/Structures/Nature/Flora/Trees/ConiferTrees/flora_treesconifer_nosnow.rsi
-    state: treestump
+    layers:
+    - state: treestump1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""
+        treestump3: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.35,0.1,0.35"
+        density: 3500
+        layer:
+        - WallLayer
 
 - type: entity
   parent: BaseStumpStarcup
@@ -98,8 +134,18 @@
   suffix: conifer, snowy
   components:
   - type: Sprite
+    offset: 0,1.1
     sprite: Objects/Decoration/Flora/flora_treesconifer.rsi
     state: treestumpconifer
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.35,0.1,0.35"
+        density: 3500
+        layer:
+        - WallLayer
 
 - type: entity
   parent: BaseStumpStarcup
@@ -107,8 +153,17 @@
   suffix: swamp
   components:
   - type: Sprite
+    offset: 0,0.9
     sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_swamp_trees.rsi
-    state: treestump
+    layers:
+    - state: treestump1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""
+        treestump3: ""
 
 - type: entity
   parent: BaseStumpStarcup
@@ -116,8 +171,25 @@
   suffix: snowy
   components:
   - type: Sprite
-    sprite: Objects/Decoration/Flora/flora_treessnow.rsi
-    state: treestump
+    offset: 0,0.8
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_treessnow.rsi
+    layers:
+    - state: treestump1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.3,0.1,0.3"
+        density: 4000
+        layer:
+        - WallLayer
 
 - type: entity
   parent: BaseStumpStarcup
@@ -127,10 +199,10 @@
   - type: Sprite
     sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_treeslight.rsi
     layers:
-    - state: treestump01
+    - state: treestump1
       map: ["random"]
   - type: RandomSprite
     available:
     - random:
-        treestump01: ""
-        treestump02: ""
+        treestump1: ""
+        treestump2: ""

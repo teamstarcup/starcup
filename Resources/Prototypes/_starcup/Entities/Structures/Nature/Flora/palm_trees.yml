@@ -40,17 +40,47 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/tree_fell.ogg
+          collection: TreeFall
           params:
             volume: 5
             variation: 0.05
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
+        offset: 0
         spawn:
           Log:
             min: 1
             max: 3
+          PalmStump:
+            min: 1
+            max: 1
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: PalmStump
+  components:
+  - type: Sprite
+    offset: 0,0.9
+    sprite: _starcup/Structures/Nature/Flora/Trees/flora_palms.rsi
+    state: treestump
+    layers:
+    - state: treestump1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.3,0.1,0.3"
+        density: 4000
+        layer:
+        - WallLayer
 
 - type: entity
   parent: BaseTreeLarge
@@ -72,3 +102,48 @@
         treelarge03: ""
         treelarge04: ""
         treelarge05: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        offset: 0
+        spawn:
+          Log:
+            min: 1
+            max: 8
+          LargePalmStump:
+            min: 1
+            max: 1
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: LargePalmStump
+  components:
+  - type: Sprite
+    offset: 0,1.5
+    sprite: _starcup/Structures/Nature/Flora/Trees/flora_palms_large.rsi
+    layers:
+    - state: treestump1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""

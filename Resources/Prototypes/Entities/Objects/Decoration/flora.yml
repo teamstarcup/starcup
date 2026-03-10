@@ -87,7 +87,7 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/tree_fell.ogg
+          collection: TreeFall # starcup
           params:
             volume: 5
             variation: 0.05
@@ -102,6 +102,7 @@
           DeciduousStump:
             min: 1
             max: 1
+        offset: 0
           # end starcup
   - type: TypingIndicator # Add diona typing indicator here so that diona players keep the same typing bubble when polymorphed into a tree.
     proto: diona
@@ -138,7 +139,7 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/tree_fell.ogg
+          collection: TreeFall # starcup
           params:
             volume: 5
             variation: 0.05
@@ -152,6 +153,7 @@
           SnowStump:
             min: 1
             max: 1
+        offset: 0
   # end starcup
 
 - type: entity
@@ -171,6 +173,37 @@
         density: 2000
         layer:
         - WallLayer
+  # begin starcup: add stumps
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall # starcup
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 3
+            max: 8
+          DeciduousLargeStump:
+            min: 1
+            max: 1
+        offset: 0
+  # end starcup
 
 - type: entity
   parent: BaseTree
@@ -204,7 +237,7 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/tree_fell.ogg
+          collection: TreeFall # starcup
           params:
             volume: 5
             variation: 0.05
@@ -218,6 +251,7 @@
           ConiferStump:
             min: 1
             max: 1
+        offset: 0
   # end starcup
 
 - type: entity
@@ -320,7 +354,7 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/tree_fell.ogg
+          collection: TreeFall # starcup
           params:
             volume: 5
             variation: 0.05
@@ -334,6 +368,7 @@
           SwampStump:
             min: 1
             max: 1
+        offset: 0
   # end starcup
 
 - type: entity
@@ -382,36 +417,6 @@
         treelarge04: ""
         treelarge05: ""
         treelarge06: ""
-  # begin starcup: add stumps
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 400
-      behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-    - trigger:
-        !type:DamageTrigger
-        damage: 150
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          path: /Audio/Effects/tree_fell.ogg
-          params:
-            volume: 5
-            variation: 0.05
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          Log:
-            min: 3
-            max: 8
-          DeciduousLargeStump:
-            min: 1
-            max: 1
-  # end starcup
 
 - type: entity
   parent: BaseTreeConifer
@@ -443,7 +448,7 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/tree_fell.ogg
+          collection: TreeFall # starcup
           params:
             volume: 5
             variation: 0.05
@@ -457,6 +462,7 @@
           ConiferSnowyStump:
             min: 1
             max: 1
+        offset: 0
   # end starcup
 
 - type: entity
@@ -481,7 +487,7 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/tree_fell.ogg
+          collection: TreeFall # starcup
           params:
             volume: 5
             variation: 0.05
@@ -495,6 +501,7 @@
           ConiferSnowyStump:
             min: 1
             max: 1
+        offset: 0
   # end starcup
 
 - type: entity
@@ -542,7 +549,7 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/tree_fell.ogg
+          collection: TreeFall # starcup
           params:
             volume: 5
             variation: 0.05
@@ -556,6 +563,7 @@
           ConiferSnowyStump:
             min: 1
             max: 1
+        offset: 0
   # end starcup
 
 - type: entity
@@ -589,7 +597,7 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/tree_fell.ogg
+          collection: TreeFall # starcup
           params:
             volume: 5
             variation: 0.05
@@ -603,6 +611,7 @@
           ConiferSnowyStump:
             min: 1
             max: 1
+        offset: 0
   # end starcup
 
 - type: entity
@@ -636,7 +645,7 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/tree_fell.ogg
+          collection: TreeFall # starcup
           params:
             volume: 5
             variation: 0.05
@@ -650,6 +659,7 @@
           SwampStump:
             min: 1
             max: 1
+        offset: 0
   # end starcup
 
 - type: entity
@@ -690,7 +700,7 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/tree_fell.ogg
+          collection: TreeFall # starcup
           params:
             volume: 5
             variation: 0.05
@@ -705,6 +715,7 @@
           LightStump:
             min: 1
             max: 1
+        offset: 0
       # end starcup
       - !type:SpawnEntitiesBehavior
         spawn:

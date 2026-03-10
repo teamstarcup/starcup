@@ -55,13 +55,14 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/tree_fell.ogg
+          collection: TreeFall
           params:
             volume: 5
             variation: 0.05
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
+        offset: 0
         spawn:
           EffectHollowTree:
             min: 1
@@ -79,13 +80,21 @@
   components:
   - type: Sprite
     sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_hollowtrees.rsi
-    state: treestump
+    layers:
+    - state: treestump1
+      map: ["random"]
+    offset: 0,1.5
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""
   - type: Fixtures
     fixtures:
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.4,-0.3,0.4,0.3"
+          bounds: "-0.4,-0.3,0.4,0"
         density: 2000
         layer:
         - WallLayer
@@ -137,14 +146,14 @@
         sound:
           path: /Audio/_starcup/Effects/branch_break.ogg
           params:
-            volume: 5
+            volume: 3
             variation: 0.05
       - !type:SpawnEntitiesBehavior
+        offset: 0
         spawn:
           AlienReedStump:
             min: 1
             max: 1
-        offset: 0
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
 
@@ -156,8 +165,25 @@
   components:
   - type: Sprite
     sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_treealien.rsi
+    layers:
+    - state: treestumpalien1
+      map: ["random"]
     offset: 0,0.7
-    state: treestumpalien
+  - type: RandomSprite
+    available:
+    - random:
+        treestumpalien1: ""
+        treestumpalien2: ""
+        treestumpalien3: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.3,0.1,0.3"
+        density: 4000
+        layer:
+        - WallLayer
   - type: Destructible
     thresholds:
     - trigger:
@@ -168,7 +194,7 @@
         sound:
           path: /Audio/_starcup/Effects/branch_break.ogg
           params:
-            volume: 3
+            volume: 2
             variation: 0.05
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -299,7 +325,44 @@
   - type: Sprite
     sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_ajorax_trees.rsi
     offset: 0,0.7
-    state: treestump
+    layers:
+    - state: treestump1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 35
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 3
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: AjoraxStumpLarge
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_ajorax_trees_large.rsi
+    offset: 0,0.7
+    layers:
+    - state: treestump1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""
   - type: Destructible
     thresholds:
     - trigger:
