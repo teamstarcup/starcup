@@ -44,6 +44,9 @@ public sealed partial class InstrumentStandSystem : EntitySystem
 
     private void RefreshInstrumentComponent(Entity<InstrumentStandComponent> ent)
     {
+        if (!HasComp<ItemSlotsComponent>(ent)) // starcup: prevent TryGetSlot from throwing errors in tests by checking if it has ItemSlotsComponent first
+            return;
+
         if (!_itemSlots.TryGetSlot(ent, ent.Comp.SlotId, out var itemSlot))
             return;
 
