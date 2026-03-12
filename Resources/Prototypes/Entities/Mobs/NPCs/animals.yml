@@ -484,6 +484,7 @@
     # begin starcup
     - FootstepSound
     - CreatureEmotes
+    - IgnoreTallGrass
     # end starcup
   - type: Destructible
     thresholds:
@@ -2110,6 +2111,7 @@
     - Mouse
     - Meat
     - CreatureEmotes # starcup
+    - IgnoreTallGrass # starcup
   - type: Respirator
     damage:
       types:
@@ -2376,6 +2378,7 @@
     tags:
     - VimPilot
     - CreatureEmotes # starcup
+    - IgnoreTallGrass # starcup
 
 
 - type: entity
@@ -2432,6 +2435,7 @@
     tags:
     - VimPilot
     - CreatureEmotes
+    - IgnoreTallGrass
   - type: Speech
     speechSounds: LizardTinySpeechSounds
     speechVerb: Reptilian
@@ -2951,6 +2955,7 @@
     - DoorBumpOpener
     - FootstepSound
     - CreatureEmotes # starcup
+    - IgnoreTallGrass # starcup
   - type: Prying # Open door from xeno.yml.
     pryPowered: true
     force: true
@@ -3657,6 +3662,7 @@
     tags:
     - VimPilot
     - CreatureEmotes # starcup
+    - IgnoreTallGrass # starcup
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
     baseSprintSpeed: 4

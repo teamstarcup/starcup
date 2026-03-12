@@ -1,0 +1,379 @@
+# Hollow trees
+- type: entity
+  id: FloraTreeHollowBase
+  name: hollow tree
+  description: Are these really trees... ?
+  components:
+  - type: Clickable
+  - type: Sprite
+    noRot: true
+    sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_hollowtrees.rsi
+    drawdepth: Overdoors
+    offset: 0,1.5
+    layers:
+    - state: treelarge01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treelarge01: ""
+        treelarge02: ""
+        treelarge03: ""
+        treelarge04: ""
+        treelarge05: ""
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.3,0.4,0.3"
+        density: 2000
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: WoodenStructure
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path: /Audio/Effects/chop.ogg
+        params:
+          variation: 0.05
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 135 # two hits with axes, three hits with picks
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        offset: 0
+        spawn:
+          EffectHollowTree:
+            min: 1
+            max: 1
+          HollowTreeStump:
+            min: 1
+            max: 1
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: HollowTreeStump
+  suffix: hollow tree
+  name: hollow tree stump
+  description: A dark cauldron of fleshy wood, full of foul-smelling ooze.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_hollowtrees.rsi
+    layers:
+    - state: treestump1
+      map: ["random"]
+    offset: 0,1.5
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.3,0.4,0"
+        density: 2000
+        layer:
+        - WallLayer
+
+# Reeds of Paradise, for use with RMC's flora_treealien sprite
+- type: entity
+  parent: BaseTree
+  id: FloraTreeAlienReed
+  name: reed of paradise
+  description: Oozes with rich, yellow sap. Also known as snaketongue orchids and fool's crowns, for their penchant for occassionally hiding their pistils within the stalk.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_treealien.rsi
+    offset: 0,0.7
+    layers:
+    - state: treealien01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treealien01: ""
+        treealien02: ""
+        treealien03: ""
+        treealien04: ""
+        treealien05: ""
+        treealien06: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.3,0.1,0.3"
+        density: 4000
+        layer:
+        - WallLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 3
+            variation: 0.05
+      - !type:SpawnEntitiesBehavior
+        offset: 0
+        spawn:
+          AlienReedStump:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: AlienReedStump
+  name: stalk stump
+  description: The sticky remains of strange alien flora.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_treealien.rsi
+    layers:
+    - state: treestumpalien1
+      map: ["random"]
+    offset: 0,0.7
+  - type: RandomSprite
+    available:
+    - random:
+        treestumpalien1: ""
+        treestumpalien2: ""
+        treestumpalien3: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.3,0.1,0.3"
+        density: 4000
+        layer:
+        - WallLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 35
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 2
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+# Ajorax trees
+- type: entity
+  parent: BaseTree
+  id: FloraTreeAjorax
+  name: ajorax tree
+  description: A slender tree native to Najisa-3 with delectable leaves.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_ajorax_trees.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+        tree06: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.03,-0.05,0.03,0.05"
+        density: 4000
+        layer:
+        - WallLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 63
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 1
+            max: 1
+          AjoraxStump:
+            min: 1
+            max: 1
+        offset: 0
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseTreeLarge
+  id: FloraTreeLargeAjorax
+  name: ajorax tree
+  suffix: large
+  description: A slender tree native to Najisa-3 with delectable leaves.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_ajorax_trees_large.rsi
+    layers:
+    - state: treelarge01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treelarge01: ""
+        treelarge02: ""
+        treelarge03: ""
+        treelarge04: ""
+        treelarge05: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.03,-0.05,0.03,0.05"
+        density: 4000
+        layer:
+        - WallLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 63
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 1
+            max: 2
+          AjoraxStump:
+            min: 1
+            max: 1
+        offset: 0
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: AjoraxStump
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_ajorax_trees.rsi
+    offset: 0,0.7
+    layers:
+    - state: treestump1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 35
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 3
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: AjoraxStumpLarge
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_ajorax_trees_large.rsi
+    offset: 0,0.7
+    layers:
+    - state: treestump1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 35
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 3
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

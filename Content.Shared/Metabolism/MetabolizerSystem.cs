@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Content.Shared._starcup.Metabolism; // starcup
 using Content.Shared.Body.Events;
 using Content.Shared.Body;
 using Content.Shared.Chemistry.Components;
@@ -184,7 +185,7 @@ public sealed class MetabolizerSystem : EntitySystem
                 continue;
 
             // begin starcup: metabolizer whitelist
-            if (evWhitelist.Reagents.Count > 0)
+            if (HasComp<MetabolizerWhitelistComponent>(ent))
             {
                 if (!evWhitelist.Reagents.Contains(proto))
                     continue;

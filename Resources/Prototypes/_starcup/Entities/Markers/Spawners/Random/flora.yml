@@ -1,0 +1,212 @@
+# Spawners by type
+- type: entity
+  id: RandomFloraTreeDeciduous
+  name: random deciduous tree spawner
+  parent: MarkerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+      - state: shadowpink
+      - state: pink
+      - sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_verdant_trees.rsi
+        state: tree01
+  - type: RandomSpawner
+    prototypes:
+      - FloraTreeLarge
+      - FloraTree
+      - FloraTreeAutumn
+      - FloraTreeVerdant
+      - FloraTreeTemperate
+      - FloraTreeAspbirch
+      - FloraTreeDeadBrown
+      - FloraTreeDeadPurple
+      - FloraTreeTeal
+      - FloraTreeLargeTeal
+      - FloraTreePink
+      - FloraTreeJuniper
+    chance: 0.95
+    rarePrototypes:
+      - ShadowTree
+      - FloraTreeLargeDark
+    rareChance: 0.05
+
+- type: entity
+  id: RandomFloraTreeConifer
+  name: random conifer spawner
+  parent: MarkerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowpink
+    - state: pink
+    - sprite: _starcup/Structures/Nature/Flora/Trees/ConiferTrees/flora_treesconifer_nosnow.rsi
+      state: tree01
+  - type: RandomSpawner
+    prototypes:
+    - FloraTreeConiferNoSnow
+    - FloraTreeCorsicanPine
+    - FloraTreeGulmorePine
+    - FloraTreeTamarack
+    - FloraTreeConiferDead
+
+- type: entity
+  id: RandomFloraTreePalm
+  name: random palm tree spawner
+  parent: MarkerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowpink
+    - state: pink
+    - sprite: _starcup/Structures/Nature/Flora/Trees/flora_palms.rsi
+      state: palm1
+  - type: RandomSpawner
+    prototypes:
+    - FloraTreePalm
+    - FloraTreeLargePalm
+
+# Spawners by climate/biome
+- type: entity
+  id: RandomFloraTreeJungle
+  name: random jungle tree spawner
+  parent: MarkerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowpink
+    - state: pink
+    - sprite: Objects/Decoration/Flora/flora_treeslarge.rsi
+      state: treelarge01
+  - type: RandomSpawner
+    prototypes:
+    - FloraTreeLarge
+    - FloraTree
+    - FloraTreePalm
+    chance: 0.95
+    rarePrototypes:
+    - FloraTreeLargePalm
+    - ShadowTree
+    - FloraTreeLargeDark
+    rareChance: 0.05
+
+- type: entity
+  id: RandomFloraTreeWinter
+  name: random winter tree spawner
+  parent: MarkerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowpink
+    - state: pink
+    - sprite: Objects/Decoration/Flora/flora_treesconifer.rsi
+      state: treeconifer01
+  - type: RandomSpawner
+    prototypes:
+    - FloraTreeConifer
+    - FloraTreeSnow
+    - FloraTreeConiferDead
+    chance: 0.9
+    rarePrototypes:
+    - FloraTreeConiferNoSnow
+    - FloraTreePink
+    rareChance: 0.1
+
+- type: entity
+  id: RandomFloraTreeMountain
+  name: random mountain tree spawner
+  parent: MarkerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowpink
+    - state: pink
+    - sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_juniper_trees.rsi
+      state: tree01
+  - type: RandomSpawner
+    prototypes:
+    - FloraTreeConiferNoSnow
+    - FloraTreeCorsicanPine
+    - FloraTreeGulmorePine
+    - FloraTreeTamarack
+    - FloraTreeConiferDead
+    - FloraTreeTemperate
+    - FloraTreeAspbirch
+    - FloraTreeAutumn
+    - FloraTreePink
+    - FloraTreeJuniper
+    chance: 0.9
+    rarePrototypes:
+    - FloraTreeVerdant
+    rareChance: 0.1
+
+- type: entity
+  id: RandomFloraTreeGassland
+  name: random grassland tree spawner
+  parent: MarkerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowpink
+    - state: pink
+    - sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_autumn_trees.rsi
+      state: tree01
+  - type: RandomSpawner
+    prototypes:
+    - FloraTreeConiferNoSnow
+    - FloraTreeGulmorePine
+    - FloraTreeTamarack
+    - FloraTreeTemperate
+    - FloraTreeAspbirch
+    - FloraTreeAutumn
+    - FloraTreeVerdant
+    - FloraTreeJuniper
+    chance: 0.9
+    rarePrototypes:
+    - FloraTreeConiferDead
+    - FloraTreePink
+    rareChance: 0.1
+
+- type: entity
+  id: RandomFloraTreeTeal
+  name: random teal planet tree spawner
+  parent: MarkerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowpink
+    - state: pink
+    - sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_ajorax_trees.rsi
+      state: tree01
+  - type: RandomSpawner
+    prototypes:
+    - FloraTreeTeal
+    - FloraTreeAjorax
+    - FloraTreeLargeAjorax
+    chance: 0.9
+    rarePrototypes:
+    - FloraTreeLargeTeal
+    - LightTree
+    rareChance: 0.1
+
+- type: entity
+  id: RandomFloraTreeCharon
+  name: random charonic tree spawner
+  parent: MarkerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowpink
+    - state: pink
+    - sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_hollowtrees.rsi
+      state: treelarge01
+  - type: RandomSpawner
+    prototypes:
+    - FloraTreeHollowBase
+    chance: 0.75
+    rarePrototypes:
+    - FloraTreeDeadBrown
+    - FloraTreeDeadPurple
+    - ShadowTree
+    - FloraTreeLargeDark
+    - LightTree
+    rareChance: 0.25

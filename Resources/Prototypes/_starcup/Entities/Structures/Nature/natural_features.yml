@@ -1,0 +1,143 @@
+# Mounds & geysers
+- type: entity
+  id: BaseMound
+  name: mound
+  description: A rising mass of earthy material.
+  abstract: true
+  components:
+  - type: Clickable
+  - type: Sprite
+    noRot: true
+    sprite: _starcup/Structures/Nature/shroom_mound.rsi
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        density: 1000
+        layer:
+        - HalfWallLayer
+        - Opaque
+  - type: Climbable
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseMound
+  id: FloraGeyser
+  name: geyser
+  description: Windows into the earth. You won't like it when they look back.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/geyser.rsi
+    layers:
+    - state: rocksolid01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        rocksolid01: ""
+        rocksolid02: ""
+        rocksolid03: ""
+
+# Fungal formations
+- type: entity
+  parent: BaseMound
+  id: FloraShroomMound
+  name: fungal mound
+  description: Gummy tendrils reach out from the top.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/shroom_mound.rsi
+    layers:
+    - state: rocksolid01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        rocksolid01: ""
+        rocksolid02: ""
+        rocksolid03: ""
+        rocksolid04: ""
+
+- type: entity
+  parent: BaseMound
+  id: FloraShroomRock
+  name: fungal rock
+  description: Large mushrooms have made this clump of earth their home.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/shroom_rock.rsi
+    layers:
+    - state: rocksolid01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        rocksolid01: ""
+        rocksolid02: ""
+        rocksolid03: ""
+
+- type: entity
+  id: BaseShroomSolid
+  name: mushrooms
+  description: Now that's one BIG mushroom.
+  abstract: true
+  components:
+  - type: Clickable
+  - type: Sprite
+    noRot: true
+    sprite: _starcup/Structures/Nature/solid_shrooms.rsi
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        density: 1000
+        layer:
+        - HalfWallLayer
+        - Opaque
+  - type: Climbable
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Wood
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseShroomSolid
+  id: FloraMushroom
+  components:
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/solid_shrooms.rsi
+    layers:
+    - state: shroomsolid1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        shroomsolid1: ""
+        shroomsolid2: ""

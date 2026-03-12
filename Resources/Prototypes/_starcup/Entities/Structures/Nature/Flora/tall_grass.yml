@@ -1,0 +1,110 @@
+- type: entity
+  id: GrassTallEntityBase
+  abstract: true
+  name: tall grass
+  description: What lurks in it... ?
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: FloorOccluder
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.5
+    sprintSpeedModifier: 0.6
+    ignoreWhitelist:
+      tags:
+      - IgnoreTallGrass
+  - type: SyncSprite
+  - type: Clickable
+  - type: Sprite
+    sprite: _starcup/Tiles/Planet/tallgrass.rsi
+    drawdepth: Walls
+  - type: Icon
+    sprite: _starcup/Tiles/Planet/tallgrass.rsi
+    state: base_preview
+  - type: Transform
+    anchored: true
+  - type: IconSmooth
+    key: base
+    base: base_
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        layer:
+        - SlipLayer
+        mask:
+        - ItemMask
+        density: 1000
+        hard: false
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Weapons/slash.ogg"
+        params:
+          variation: 0.05
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Slash
+        damage: 10
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: GrassTallEntityBase
+  id: GrassTallCold
+  suffix: cold
+  components:
+  - type: Sprite
+    color: "#C7EDDE"
+
+- type: entity
+  parent: GrassTallEntityBase
+  id: GrassTallDark
+  suffix: dark
+  components:
+  - type: Sprite
+    color: "#64AA6E"
+
+- type: entity
+  parent: GrassTallEntityBase
+  id: GrassTallTemperate
+  suffix: temperate
+  components:
+  - type: Sprite
+    color: "#99d178"
+
+- type: entity
+  parent: GrassTallEntityBase
+  id: GrassTallDry
+  suffix: dry
+  components:
+  - type: Sprite
+    color: "#FFC648"
+
+- type: entity
+  parent: GrassTallEntityBase
+  id: GrassTallRed
+  suffix: red
+  components:
+  - type: Sprite
+    color: "#FFA297"
+
+- type: entity
+  parent: GrassTallEntityBase
+  id: GrassTallPurple
+  suffix: purple
+  components:
+  - type: Sprite
+    color: "#E49CFF"
