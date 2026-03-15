@@ -185,9 +185,9 @@ public sealed class MetabolizerSystem : EntitySystem
                 continue;
 
             // begin starcup: metabolizer whitelist
-            if (HasComp<MetabolizerWhitelistComponent>(ent))
+            if (TryComp<MetabolizerWhitelistComponent>(ent, out var comp))
             {
-                if (!evWhitelist.Reagents.Contains(proto))
+                if (!comp.ReagentWhitelist.Contains(proto))
                     continue;
             }
             // end starcup

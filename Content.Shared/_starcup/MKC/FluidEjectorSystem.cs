@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Shared._starcup.Metabolism;
 using Content.Shared.Body;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Events;
@@ -75,6 +76,9 @@ public sealed class FluidEjectorSystem : EntitySystem
         if (args.Args.SolutionId != ent.Comp.Solution)
             return;
 
+        if (!TryComp<MetabolizerWhitelistComponent>(ent, out var whitelistComp))
+            return;
+
         var bloodReagentEvent = new MetabolismExclusionEvent();
         RaiseLocalEvent(args.Body.Owner, ref bloodReagentEvent);
 
@@ -83,7 +87,7 @@ public sealed class FluidEjectorSystem : EntitySystem
 
         var bodyReagents = args.Args.Solution.Contents.Select(r => r.Reagent.Prototype);
         var bloodReferenceReagents = bloodReagentEvent.Reagents.Select(reagentId => reagentId.Prototype);
-        var whitelistedReagents = metabolismWhitelistEvent.Reagents.Select(protoId => protoId.Id);
+        var whitelistedReagents = whitelistComp.ReagentWhitelist.Select(protoId => protoId.Id);
         if (!bodyReagents.Any(id => !bloodReferenceReagents.Contains(id) && !whitelistedReagents.Contains(id)))
             return;
 
