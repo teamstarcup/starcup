@@ -1,0 +1,131 @@
+- type: entity
+  name: command comfort deployment unit
+  parent: EmergencyComfortDeploymentUnitWrapped
+  id: EmergencyComfortDeploymentUnitCommandWrapped
+  description: The Command Comfort Deployment Unit, for resting a head weary with the burdens of leadership. Deploy as needed.
+  components:
+  - type: Sprite
+    sprite: /Textures/_starcup/Structures/Furniture/departmental_pillows.rsi
+    state: CommandWrapped
+  - type: Item
+    size: Normal
+  - type: SpawnItemsOnUse
+    items:
+      - id: EmergencyComfortDeploymentUnitCommandUnwrapped
+    sound:
+      path: /Audio/Misc/zip.ogg
+
+- type: entity
+  name: deployed command comfort unit
+  parent: EmergencyComfortDeploymentUnitUnwrapped
+  id: EmergencyComfortDeploymentUnitCommandUnwrapped
+  description: The Command Comfort Deployment Unit, for resting a head weary with the burdens of leadership.
+  components:
+  - type: Sprite
+    sprite: /Textures/_starcup/Structures/Furniture/departmental_pillows.rsi
+    state: CommandUnwrapped
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 0
+    soundHit:
+      collection: storageRustle
+
+- type: entity
+  name: bar comfort deployment unit
+  parent: EmergencyComfortDeploymentUnitWrapped
+  id: EmergencyComfortDeploymentUnitBarWrapped
+  description: A plain red Comfort Deployment Unit intended for the bar and other places of leisure. Deploy as needed.
+  components:
+  - type: Sprite
+    sprite: /Textures/_starcup/Structures/Furniture/departmental_pillows.rsi
+    state: BarWrapped
+  - type: Item
+    size: Normal
+  - type: SpawnItemsOnUse
+    items:
+    - id: EmergencyComfortDeploymentUnitBarUnwrapped
+    sound:
+      path: /Audio/Misc/zip.ogg
+
+- type: entity
+  name: deployed bar comfort unit
+  parent: EmergencyComfortDeploymentUnitUnwrapped
+  id: EmergencyComfortDeploymentUnitBarUnwrapped
+  description: A plain red Comfort Deployment Unit intended for the bar and other places of leisure.
+  components:
+  - type: Sprite
+    sprite: /Textures/_starcup/Structures/Furniture/departmental_pillows.rsi
+    state: BarUnwrapped
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 0
+    soundHit:
+      collection: storageRustle
+
+- type: entity
+  name: bar comfort deployment unit
+  parent: EmergencyComfortDeploymentUnitWrapped
+  id: EmergencyComfortDeploymentUnitEngineeringWrapped
+  description: The Engineering Comfort Deployment Unit, for resting between repairs. Deploy as needed, ideally not when the Tesla is about to loose.
+  components:
+  - type: Sprite
+    sprite: /Textures/_starcup/Structures/Furniture/departmental_pillows.rsi
+    state: EngineeringWrapped
+  - type: Item
+    size: Normal
+  - type: SpawnItemsOnUse
+    items:
+    - id: EmergencyComfortDeploymentUnitEngineeringUnwrapped
+    sound:
+      path: /Audio/Misc/zip.ogg
+
+- type: entity
+  name: deployed bar comfort unit
+  parent: EmergencyComfortDeploymentUnitUnwrapped
+  id: EmergencyComfortDeploymentUnitEngineeringUnwrapped
+  description: The Engineering Comfort Deployment Unit, for resting between repairs.
+  components:
+  - type: Sprite
+    sprite: /Textures/_starcup/Structures/Furniture/departmental_pillows.rsi
+    state: EngineeringUnwrapped
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 0
+    soundHit:
+      collection: storageRustle
+
+- type: entity
+  name: medical comfort deployment unit
+  parent: EmergencyComfortDeploymentUnitWrapped
+  id: EmergencyComfortDeploymentUnitMedicalWrapped
+  description: The Medical Comfort Deployment Unit, for the comfort of patients and overworked professionals alike. Deploy as needed.
+  components:
+  - type: Sprite
+    sprite: /Textures/_starcup/Structures/Furniture/departmental_pillows.rsi
+    state: MedicalWrapped
+  - type: Item
+    size: Normal
+  - type: SpawnItemsOnUse
+    items:
+    - id: EmergencyComfortDeploymentUnitMedicalUnwrapped
+    sound:
+      path: /Audio/Misc/zip.ogg
+
+- type: entity
+  name: deployed medical comfort unit
+  parent: EmergencyComfortDeploymentUnitUnwrapped
+  id: EmergencyComfortDeploymentUnitMedicalUnwrapped
+  description: The Medical Comfort Deployment Unit, for the comfort of patients and overworked professionals alike.
+  components:
+  - type: Sprite
+    sprite: /Textures/_starcup/Structures/Furniture/departmental_pillows.rsi
+    state: MedicalUnwrapped
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 0
+    soundHit:
+      collection: storageRustle
