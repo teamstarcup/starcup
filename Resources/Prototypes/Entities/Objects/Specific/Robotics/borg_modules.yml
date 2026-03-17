@@ -812,6 +812,14 @@
     hands:
     - item: MopItem
     - item: WireBrush
+# begin starcup - lets them pick up feather dusters and brooms
+      hand:
+        emptyLabel: borg-slot-wirebrush-empty
+        emptyRepresentative: WireBrush
+        whitelist:
+          tags:
+          - WireBrush
+# end starcup
     - item: BorgBucket
     - item: BorgSprayBottle
     - item: HoloprojectorBorg
@@ -1112,6 +1120,21 @@
           components:
           - FitsInDispenser
     - item: BarSpoon
+# begin starcup - wait, let her cook!
+    - item: UtilityKnife
+    - hand:
+        emptyRepresentative: BorgModuleIngredientPlaceholder
+        emptyLabel: borg-slot-ingredient-empty
+        whitelist:
+          components:
+          - Edible
+    - hand:
+        emptyRepresentative: BorgModuleBakingContainerPlaceholder
+        emptyLabel: borg-slot-baking-container-empty
+        whitelist:
+          tags:
+          - BakingContainer
+# end starcup
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: service-module }
 
@@ -1182,6 +1205,20 @@
     - item: HydroponicsToolScythe
     - item: HydroponicsToolHatchet
     - item: PlantBag
+# begin starcup - let gardening bots garden
+    - hand:
+        emptyRepresentative: BorgModuleSeedPlaceholder
+        emptyLabel: borg-slot-seed-empty
+        whitelist:
+          components:
+          - Seed
+    - hand:
+        emptyRepresentative: BorgModuleProducePlaceholder
+        emptyLabel: borg-slot-produce-empty
+        whitelist:
+          components:
+          - Produce
+# end starcup
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: harvesting-module }
 
