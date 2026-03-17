@@ -4,7 +4,7 @@
   id: Blindness
   name: trait-blindness-name
   description: trait-blindness-desc
-  traitGear: WhiteCane
+#  traitGear: WhiteCane # starcup - decouple disability traits from accessibility loadouts gear
   category: Disabilities
   cost: 1 # starcup: given point value to be mutually exclusive with short-sighted
   whitelist:
@@ -32,12 +32,10 @@
   name: trait-narcolepsy-name
   description: trait-narcolepsy-desc
   category: Disabilities
-  # begin starcup: exclude MKCs
+  # begin starcup
   blacklist:
     components:
       - BorgChassis
-  excludedSpecies:
-    - MKC
   # end starcup
   components:
     - type: Narcolepsy
@@ -111,7 +109,7 @@
   id: ImpairedMobility
   name: trait-impaired-mobility-name
   description: trait-impaired-mobility-desc
-  traitGear: OffsetCane
+#  traitGear: OffsetCane # starcup - decouple disability traits from accessibility loadouts gear
   category: Disabilities
   components:
     - type: ImpairedMobility
