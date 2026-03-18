@@ -76,3 +76,25 @@
         - type: TradeStation
         paths:
         - /Maps/_starcup/Events/SilentMoonGrids/T1-ats-9x9.yml
+
+- type: entity
+  id: StandardTerrestrialStationTrading
+  parent:
+  - StandardTerrestrialStation
+  - BaseTerrestrialStationTrading
+  categories: [ HideSpawnMenu ]
+
+# Terrestrial Stations with a surface trading outpost
+- type: entity
+  id: BaseTerrestrialStationTrading
+  abstract: true
+  components:
+  - type: GridSpawn
+    groups:
+      trade: !type:GridSpawnGroup
+        addComponents:
+        - type: ProtectedGrid
+        - type: TradeStation
+        paths:
+        - Maps/_starcup/Shuttles/ # TODO trade outpost grid
+      # could add custom ruins later
