@@ -54,3 +54,26 @@
   - BaseStationEvacuation
   - BaseStationAllEventsEligible
   categories: [ HideSpawnMenu ]
+
+- type: entity
+  id: StandardTerrestrialStationTrading
+  parent:
+  - StandardTerrestrialStation
+  - BaseTerrestrialStationTrading
+  categories: [ HideSpawnMenu ]
+
+# Terrestrial Stations with a surface trading outpost
+- type: entity
+  id: BaseTerrestrialStationTrading
+  abstract: true
+  components:
+  - type: GridSpawn
+    groups:
+      trade: !type:GridSpawnGroup
+        addComponents:
+        - type: ProtectedGrid
+        - type: TradeStation
+        paths:
+        - Maps/_starcup/Shuttles/ # TODO trade outpost grid
+      # could add custom ruins later
+# we might need to just make the trade outpost part of the map if the ATOP gets messed up by the biome
