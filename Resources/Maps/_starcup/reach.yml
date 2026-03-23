@@ -7496,32 +7496,6 @@ entities:
     - type: Transform
       pos: 13.5,-5.5
       parent: 2
-- proto: ClothingBackpackERTJanitor
-  entities:
-  - uid: 19
-    components:
-    - type: Transform
-      parent: 16
-    - type: GroupExamine
-      group:
-      - hoverMessage: ""
-        contextText: verb-examine-group-other
-        icon: /Textures/Interface/examine-star.png
-        components:
-        - Armor
-        - ClothingSpeedModifier
-        entries:
-        - message: >-
-            It provides the following protection:
-
-            - [color=orange]Explosion[/color] damage [color=white]to contents[/color] reduced by [color=lightblue]90%[/color].
-          priority: 0
-          component: Armor
-        title: null
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-      storage: 16
 - proto: ClothingBeltPlantFilled
   entities:
   - uid: 1113
@@ -7605,49 +7579,12 @@ entities:
     - type: Transform
       pos: 6.4035683,-4.3785286
       parent: 2
-- proto: ClothingOuterHardsuitERTJanitor
+- proto: ClothingHeadHelmetEVA
   entities:
   - uid: 20
     components:
     - type: Transform
       parent: 16
-    - type: GroupExamine
-      group:
-      - hoverMessage: ""
-        contextText: verb-examine-group-other
-        icon: /Textures/Interface/examine-star.png
-        components:
-        - Armor
-        - ClothingSpeedModifier
-        entries:
-        - message: This decreases your speed by [color=yellow]10%[/color].
-          priority: 0
-          component: ClothingSpeedModifier
-        - message: >-
-            It provides the following protection:
-
-            - [color=yellow]Blunt[/color] damage reduced by [color=lightblue]40%[/color].
-
-            - [color=yellow]Slash[/color] damage reduced by [color=lightblue]40%[/color].
-
-            - [color=yellow]Piercing[/color] damage reduced by [color=lightblue]40%[/color].
-
-            - [color=yellow]Heat[/color] damage reduced by [color=lightblue]80%[/color].
-
-            - [color=yellow]Radiation[/color] damage reduced by [color=lightblue]99%[/color].
-
-            - [color=yellow]Caustic[/color] damage reduced by [color=lightblue]50%[/color].
-
-            - [color=lightyellow]Stamina[/color] damage reduced by [color=lightblue]40%[/color].
-
-            - [color=orange]Fire[/color] damage reduced by [color=lightblue]80%[/color].
-
-            - [color=orange]Explosion[/color] damage reduced by [color=lightblue]80%[/color].
-          priority: 0
-          component: Armor
-        title: null
-    - type: Physics
-      canCollide: False
     - type: InsideEntityStorage
       storage: 16
 - proto: ClothingOuterHardsuitSalvage
@@ -7677,7 +7614,7 @@ entities:
       user: 1118
     - type: Physics
       canCollide: False
-- proto: ClothingUniformJumpsuitERTJanitor
+- proto: ClothingOuterHardsuitEVA
   entities:
   - uid: 21
     components:
@@ -13996,7 +13933,6 @@ entities:
           - 17
           - 21
           - 22
-          - 19
           - 20
         paper_label: !type:ContainerSlot
           showEnts: False
