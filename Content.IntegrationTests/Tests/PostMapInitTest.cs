@@ -108,7 +108,6 @@ namespace Content.IntegrationTests.Tests
             "EventGlacierVacation",
             "EventCharonEpsilon",
             "EventSyndcommEpilogue",
-            "EventByoinWedding",
             // end starcup
         };
 
