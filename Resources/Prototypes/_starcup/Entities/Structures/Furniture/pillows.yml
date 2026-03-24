@@ -32,10 +32,10 @@
       collection: storageRustle
 
 - type: entity
-  name: bar comfort deployment unit
+  name: comfort deployment unit
   parent: EmergencyComfortDeploymentUnitWrapped
   id: EmergencyComfortDeploymentUnitBarWrapped
-  description: A plain red Comfort Deployment Unit intended for the bar and other places of leisure. Deploy as needed.
+  description: A plain Comfort Deployment Unit intended for the bar and other places of leisure. Deploy as needed.
   components:
   - type: Sprite
     sprite: /Textures/_starcup/Structures/Furniture/departmental_pillows.rsi
@@ -49,10 +49,10 @@
       path: /Audio/Misc/zip.ogg
 
 - type: entity
-  name: deployed bar comfort unit
+  name: deployed comfort unit
   parent: EmergencyComfortDeploymentUnitUnwrapped
   id: EmergencyComfortDeploymentUnitBarUnwrapped
-  description: A plain red Comfort Deployment Unit intended for the bar and other places of leisure.
+  description: A plain Comfort Deployment Unit intended for the bar and other places of leisure.
   components:
   - type: Sprite
     sprite: /Textures/_starcup/Structures/Furniture/departmental_pillows.rsi
@@ -65,7 +65,7 @@
       collection: storageRustle
 
 - type: entity
-  name: bar comfort deployment unit
+  name: engineering comfort deployment unit
   parent: EmergencyComfortDeploymentUnitWrapped
   id: EmergencyComfortDeploymentUnitEngineeringWrapped
   description: The Engineering Comfort Deployment Unit, for resting between repairs. Deploy as needed, ideally not when the Tesla is about to loose.
@@ -82,7 +82,7 @@
       path: /Audio/Misc/zip.ogg
 
 - type: entity
-  name: deployed bar comfort unit
+  name: deployed engineering comfort unit
   parent: EmergencyComfortDeploymentUnitUnwrapped
   id: EmergencyComfortDeploymentUnitEngineeringUnwrapped
   description: The Engineering Comfort Deployment Unit, for resting between repairs.
