@@ -1,6 +1,21 @@
+# items
+## machine parts
+stack-capacitor = capacitor
+stack-micro-manipulator-starcup = micro manipulator
+stack-matter-bin = matter bin
+
+## silicon repair
+stack-repair-spray = repair spray
+stack-thermal-paste = thermal paste
+stack-defrost-pouch = defrost pouch
+stack-splice-kit = splice kit
+stack-oil-pack = oil pack
+
 # brick
 stack-starcup-floor-brick-horizontal = horizontal astro-brick
 stack-starcup-floor-brick-vertical = vertical astro-brick
+stack-starcup-floor-gray-brick = gray bricks
+stack-starcup-floor-dark-gray-brick = dark gray bricks
 
 # carpet
 stack-starcup-carpet-blue = blue carpet floor
@@ -19,6 +34,16 @@ stack-starcup-carpet-violet = violet carpet floor
 stack-starcup-carpet-violet-diamond = diamond-pattern violet carpet floor
 stack-starcup-carpet-violet-fancy = fancy violet carpet floor
 stack-starcup-carpet-shag-white = white shag carpet floor
+
+# stone
+stack-starcup-floor-blackstone01 = black stone floor
+stack-starcup-floor-blackstone02 = black stone floor
+stack-starcup-floor-blackstone08 = black stone floor
+stack-starcup-floor-blackstone10 = black stone floor
+stack-starcup-floor-blackstone14 = black stone floor
+stack-starcup-floor-blue-stone-02 = blue stone floor
+stack-starcup-floor-blue-stone-06 = blue stone floor
+stack-starcup-floor-blue-stone-10 = blue stone floor
 
 # wood
 stack-starcup-floor-wood-brick = brick-pattern wood floor
@@ -45,3 +70,15 @@ stack-starcup-tile-metal-white-solid = solid white metal tile
 stack-starcup-tile-fancy = fancy tile
 stack-starcup-tile-ornate = ornate tile
 stack-starcup-tile-sierra = sierra tile
+
+# faux sci fi floors
+stack-astro-grass-cold-floor = cold astro-grass
+stack-astro-grass-snowy-floor = snowy astro-grass
+stack-astro-grass-twilight-floor = twilight astro-grass
+stack-astro-grass-golden-floor = golden astro-grass
+stack-astro-snow-grassy-floor = grassy snow
+stack-astro-dirt-floor = dirt
+stack-astro-cave-floor = cave dirt
+stack-astro-cavedrought-floor = cave dirt
+stack-astro-dirt-pale-floor = pale dirt
+stack-astro-dirt-twilight-floor = twilight dirt

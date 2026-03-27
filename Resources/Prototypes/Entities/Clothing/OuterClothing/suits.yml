@@ -24,12 +24,13 @@
   - type: Tag
     tags:
     - Hardsuit
-    - HidesHarpyWings
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
   - type: HideLayerClothing
     slots:
       - Tail
+      - RArm  # starcup: hide harpy wings
+      - LArm  # starcup: hide harpy wings
 
 - type: entity
   parent: ClothingOuterSuitBomb
@@ -76,9 +77,8 @@
   - type: HideLayerClothing
     slots:
     - Tail
-  - type: Tag
-    tags:
-      - HidesHarpyWings
+    - RArm  # starcup: hide harpy wings
+    - LArm  # starcup: hide harpy wings
 
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
@@ -113,12 +113,13 @@
     slots: WITHOUT_POCKET
   - type: Tag
     tags:
-      - HidesHarpyWings
-      - CorgiWearable
-      - WhitelistChameleon
+    - CorgiWearable
+    - WhitelistChameleon
   - type: HideLayerClothing
     slots:
     - Tail
+    - RArm  # starcup: hide harpy wings
+    - LArm  # starcup: hide harpy wings
 
 - type: entity
   parent: [ClothingOuterBaseLarge, GeigerCounterClothing, AllowSuitStorageClothing]
@@ -147,12 +148,11 @@
   - type: HideLayerClothing
     slots:
     - Tail
-  - type: Tag
-    tags:
-      - HidesHarpyWings
+    - RArm  # starcup: hide harpy wings
+    - LArm  # starcup: hide harpy wings
 
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseToggleClothing, BaseMajorContraband, BaseExaminableClothing] # starcup: examinable clothing
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseToggleClothing, BaseHighlyIllegalContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingOuterSuitSpaceNinja
   name: space ninja suit
   description: This black technologically advanced, cybernetically-enhanced suit provides many abilities like invisibility or teleportation.
@@ -196,6 +196,8 @@
     noPowerPopup: ninja-no-power
   # core ninja suit stuff
   - type: NinjaSuit
+  - type: EmpResistance
+    strengthMultiplier: 0
   - type: UseDelay
     delay: 5 # disable time
   - type: PowerCellSlot
@@ -299,6 +301,8 @@
     tags:
     - CorgiWearable
     - WhitelistChameleon
+  - type: AddAccentClothing
+    accent: BarkAccent
 
 - type: entity
   parent: ClothingOuterBase

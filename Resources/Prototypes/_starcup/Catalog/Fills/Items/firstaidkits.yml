@@ -3,19 +3,47 @@
   suffix: Filled
   parent: MedkitSilicon
   components:
-  - type: StorageFill
-    contents:
-      - id: Welder
-      - id: ClothingHeadHatWelding
-      - id: CableApcStack
-      - id: Oilpack
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: RepairSpray
+        - id: ThermalPaste
+        - id: Oilpack
+        - id: EmergencyMedipenSilicon
 
 - type: entity
   id: StimkitFilledNT
   suffix: Stimkit, Filled, NanoTrasen
+  parent: MedkitSilicon
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: StimpackMiniNT
+          amount: 6
+
+- type: entity
+  id: OverclockKitFilled
+  suffix: Overclock Kit, Filled
+  parent: MedkitSilicon
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OverclockInjectorMini
+          amount: 6
+
+- type: entity
+  id: OverclockKitFilledNT
+  suffix: Overclock Kit, Filled, NanoTrasen
   parent: Medkit
   components:
-  - type: StorageFill
-    contents:
-      - id: StimpackMiniNT
-        amount: 6
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: OverclockInjectorMiniNT
+          amount: 6

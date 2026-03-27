@@ -15,6 +15,27 @@
   - type: Sprite
     state: poster-ppe-pink1
 
+- type: entity
+  parent: PosterBase
+  id: PosterLegitElectra
+  name: "Electra Dynamics Energy Corporation"
+  description: "A poster depicting the logo of Electra Dynamics, the energy and terraforming company."
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/posters.rsi
+    state: poster-electra
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitElectraTattered
+  name: "Electra Dynamics Energy Corporation"
+  suffix: Tattered
+  description: "A tattered poster depicting the logo of Electra Dynamics, the energy and terraforming company."
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/posters.rsi
+    state: poster-electra-torn
+
 # rebrands
 - type: entity
   parent: PosterLegitHereForYourSafety

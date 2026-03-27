@@ -19,6 +19,9 @@
         Slash: 6
   - type: Item
     sprite: Objects/Tools/Hydroponics/hoe.rsi
+    storedSprite:
+      state: storage
+      sprite: Objects/Tools/Hydroponics/hoe.rsi
   - type: PhysicalComposition
     materialComposition:
       Steel: 100
@@ -62,6 +65,10 @@
     damage:
       types:
         Slash: 10
+    # begin starcup: adding missing/fitting sounds
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+    # end starcup
   - type: Item
     size: Normal
   - type: Clothing
@@ -94,9 +101,16 @@
     damage:
       types:
         Slash: 8
-        Piercing: 2
+        # Piercing: 2 # starcup: It deals slashing damage already, it doesn't need piercing. You're not stabbing people with it.
+    # begin starcup: adding missing/fitting sounds
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+    # end starcup
   - type: Item
     sprite: Objects/Tools/Hydroponics/hatchet.rsi
+    storedSprite:
+      state: storage
+      sprite: Objects/Tools/Hydroponics/hatchet.rsi
   - type: PhysicalComposition
     materialComposition:
       Steel: 100
@@ -117,17 +131,30 @@
     wideAnimationRotation: 45
     damage:
       types:
-        Blunt: 8
+        Blunt: 6 # starcup: Reduced blunt damage, you're apparently stabbing people with it and it hits hard enough like this.
         Piercing: 2 # I guess you can stab it into them?
     soundHit:
       collection: MetalThud
   - type: Item
     sprite: Objects/Tools/Hydroponics/spade.rsi
+    storedSprite:
+      state: storage
+      sprite: Objects/Tools/Hydroponics/spade.rsi
   - type: Shovel
     speedModifier: 0.75 # slower at digging than a full-sized shovel
   - type: PhysicalComposition
     materialComposition:
       Steel: 100
+  # begin starcup: digging quality to remove dirt and grass floors
+  - type: Tool
+    qualities:
+    - Digging
+    useSound:
+      path: "/Audio/_starcup/Tools/shovel.ogg"
+  - type: ToolTileCompatible
+    delay: 1.75
+  - type: Prying
+  # end starcup
 
 - type: entity
   name: plant bag

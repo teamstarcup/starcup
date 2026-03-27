@@ -51,10 +51,18 @@
           sprite: Objects/Misc/stock_parts.rsi
           state: capacitor
         name: construction-graph-tag-capacitor
-      - material: Capacitor
+      - material: Capacitor # starcup: preserve capacitors, matter bins, and manipulators
         amount: 1
       - material: Cable
         amount: 2
+        doAfter: 1
+    - to: random_gate
+      steps:
+      - material: MetalRod
+        amount: 1
+        doAfter: 1
+      - material: Cable
+        amount: 1
         doAfter: 1
   - node: logic_gate
     entity: LogicGateOr
@@ -103,7 +111,21 @@
         doAfter: 2
       completed:
       - !type:SpawnPrototype
-        prototype: CapacitorStockPart
+        prototype: CapacitorStockPart # starcup: preserve capacitors, matter bins, and manipulators
       - !type:SpawnPrototype
         prototype: CableApcStack1
         amount: 2
+  - node: random_gate
+    entity: RandomGate
+    edges:
+    - to: empty
+      steps:
+      - tool: Prying
+        doAfter: 2
+      completed:
+      - !type:SpawnPrototype
+        prototype: CableApcStack1
+        amount: 1
+      - !type:SpawnPrototype
+        prototype: PartRodMetal1
+        amount: 1

@@ -1,5 +1,11 @@
+# Command
+job-description-admin-assistant = Handle entry-level errands for Command staff and help them keep tabs on the rest of the station. Do the bureaucratic work that everyone needs and no one deserves.
+
 # Security
 job-description-prisoner = Do your time in the brig; Take up gardening, chat with security.
+
+# Service
+job-description-boxer = Put on exciting performances and spar with the crew. Currently available on Byoin, Crux, Glacier, Loop, and Saltern.
 
 # SyndComm
 job-description-syndcomm-operator = Protect assets deemed vital to the Syndicate. Stand around hoping nothing goes wrong.

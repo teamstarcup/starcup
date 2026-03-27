@@ -1,0 +1,70 @@
+# Based on the salvage harpoon from The Den.
+
+- type: entity
+  name: plasteel harpoon
+  parent: SalvageHarpoon
+  id: SalvageHarpoonPlasteel
+  description: A hardier, better quality harpoon.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/Harpoons/plasteel_harpoon.rsi
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Piercing: 12
+        Slash: 2
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 18
+  - type: ExaminableClothing
+    examineText: clothing-plasteel-harpoon # starcup: examinable clothing
+
+
+- type: entity
+  name: incendiary harpoon
+  parent: SalvageHarpoon
+  id: SalvageHarpoonPlasma
+  description: A fiery, plasma-tipped harpoon.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/Harpoons/plasma_harpoon.rsi
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Piercing: 15
+        Slash: 3
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 21
+  - type: IgniteOnMeleeHit
+    fireStacks: 1
+  - type: ExaminableClothing
+    examineText: clothing-plasma-harpoon # starcup: examinable clothing
+
+
+- type: entity
+  name: uranium harpoon
+  parent: SalvageHarpoon
+  id: SalvageHarpoonUranium
+  description: A dangerous, radioactive harpoon.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/Harpoons/uranium_harpoon.rsi
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Piercing: 12
+        Slash: 3
+        Radiation: 6
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 12
+        Radiation: 9
+  - type: ExaminableClothing
+    examineText: clothing-uranium-harpoon # starcup: examinable clothing

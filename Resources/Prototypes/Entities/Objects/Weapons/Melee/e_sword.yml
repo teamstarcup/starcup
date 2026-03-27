@@ -153,13 +153,13 @@
   - type: PointLight
     enabled: false
     radius: 1.5
-    energy: 1.5
+    energy: 2.7
     color: white
     netsync: false
 
 - type: entity
   name: pen
-  parent: BaseMeleeWeaponEnergy
+  parent: [BaseMeleeWeaponEnergy, SelectableLock]
   id: EnergyDagger
   suffix: E-Dagger
   description: 'A dark ink pen.'
@@ -212,7 +212,7 @@
   - type: PointLight
     enabled: false
     radius: 1.5
-    energy: 1.5
+    energy: 2.7
     color: white
     netsync: false
   - type: MeleeWeapon
@@ -222,6 +222,16 @@
     damage:
       types:
         Blunt: 1
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/pen_click.ogg
+      params:
+        volume: -4
+        maxDistance: 2
+  - type: UseDelay
+    delay: 1.5
+  - type: ItemToggleRequiresLock #  TODO: FIX THIS VERB IS COOKED
+    lockedPopup: null
   - type: Tag
     tags:
     - Write
@@ -272,7 +282,7 @@
   name: double-bladed energy sword
   parent: [BaseMeleeWeaponEnergy, BaseTraitorContraband] # starcup: shared contraband level with nt gear
   id: EnergySwordDouble
-  description: Syndicate Communications Interns thought that having one blade on the energy sword was not enough. This can be stored in pockets.
+  description: Because having one blade on the energy sword was not enough. This can be stored in pockets. # starcup: removed syndicate reference
   components:
   - type: ItemToggle
     onUse: false # wielding events control it instead
@@ -387,11 +397,18 @@
     spread: 75
 
 # Borgs
+
 - type: entity
-  suffix: One-Handed, For Borgs
+  parent: EnergySword
+  id: CyborgEnergySword
+  suffix: For Borgs
+  description: A very loud & dangerous sword with a beam made of pure, concentrated plasma. Specially designed for cyborgs. # starcup: removed syndicate reference
+
+- type: entity
   parent: EnergySwordDouble
   id: CyborgEnergySwordDouble # why is this invalid if ID is BorgEnergySwordDouble
-  description: Syndicate Communications Interns thought that having one blade on the energy sword was not enough. Specially designed for syndicate cyborgs.
+  suffix: One-Handed, For Borgs
+  description: Because having one blade on the energy sword was not enough. Specially designed for cyborgs. # starcup: removed syndicate reference
   components: # could add energy-draining like the L6C
   - type: Wieldable
     freeHandsRequired: 0 # because borg has no off-hand to wield with.  Without this, it will be unable to activate the esword

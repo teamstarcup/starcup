@@ -15,7 +15,7 @@ namespace Content.Shared.Fluids.Components
         public SoundSpecifier SpillSound = new SoundPathSpecifier("/Audio/Effects/Fluids/splat.ogg");
 
         [DataField]
-        public FixedPoint2 OverflowVolume = FixedPoint2.New(20);
+        public FixedPoint2 OverflowVolume = FixedPoint2.New(50);
 
         [DataField("solution")] public string SolutionName = "puddle";
 
@@ -27,5 +27,15 @@ namespace Content.Shared.Fluids.Components
 
         [ViewVariables]
         public Entity<SolutionComponent>? Solution;
+
+        // begin CorvaxNext
+        /// <summary>
+        /// Whether or not the contents of this puddle can slow you down.
+        /// Used to prevent footprints from slowing movers down, as this causes
+        /// prediction issues when they place new puddles.
+        /// </summary>
+        [DataField]
+        public bool AffectsMovement = true;
+        // end CorvaxNext
     }
 }

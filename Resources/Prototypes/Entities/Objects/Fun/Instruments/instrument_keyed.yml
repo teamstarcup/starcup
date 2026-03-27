@@ -11,6 +11,7 @@
   parent: BaseKeyedInstrument
   id: SynthesizerInstrument
   name: synthesizer
+  suffix: Small Instrument, Keyboard Instrument # starcup
   components:
   - type: Instrument
     program: 87 # The Den - changed to the synth lead
@@ -32,13 +33,13 @@
 - type: entity
   parent: BaseKeyedInstrument
   id: SuperSynthesizerInstrument
+  suffix: Admin, Small Instrument, Keyboard Instrument # starcup
   name: super synthesizer
   description: Blasting the ghetto with Touhou MIDIs since 2020.
   components:
   - type: Instrument
     allowPercussion: true
     allowProgramChange: true
-    respectMidiLimits: false
   - type: Sprite
     sprite: Objects/Fun/Instruments/h_synthesizer.rsi
     state: supersynth
@@ -46,9 +47,18 @@
     heldPrefix: super
 
 - type: entity
+  parent: SuperSynthesizerInstrument
+  id: SuperSynthesizerNoLimitInstrument
+  suffix: NoLimits Admin, Small Instrument, Keyboard Instrument # starcup
+  components:
+  - type: Instrument
+    respectMidiLimits: false
+
+- type: entity
   parent: BaseKeyedInstrument
   id: AccordionInstrument
   name: accordion
+  suffix: Small Instrument, Keyed Percussion Instrument # starcup
   components:
   - type: Instrument
     program: 21
@@ -63,6 +73,7 @@
   parent: BaseKeyedInstrument
   id: KalimbaInstrument
   name: kalimba
+  suffix: Small Instrument, Keyed Percussion Instrument # starcup
   description: The power of a piano right at your thumbs.
   components:
   - type: Instrument

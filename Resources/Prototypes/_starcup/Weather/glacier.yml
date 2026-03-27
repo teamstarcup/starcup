@@ -1,0 +1,23 @@
+- type: weatherScheduler
+  id: WeatherGlacier
+  states:
+    Clear:
+      transitions:
+        Clear: 162
+        SnowfallLight: 1
+        SnowfallHeavy: 0.05
+    SnowfallLight:
+      transitions:
+        Clear: 1
+        SnowfallLight: 100
+        SnowfallMedium: 2
+    SnowfallMedium:
+      transitions:
+        SnowfallLight: 3
+        SnowfallMedium: 150
+        SnowfallHeavy: 1
+    SnowfallHeavy:
+      transitions:
+        SnowfallLight: 1
+        SnowfallMedium: 3
+        SnowfallHeavy: 36

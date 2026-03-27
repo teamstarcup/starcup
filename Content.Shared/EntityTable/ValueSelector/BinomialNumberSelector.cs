@@ -5,7 +5,8 @@ namespace Content.Shared.EntityTable.ValueSelector;
 /// <summary>
 /// Picks a value based on a Binomial Distribution of N Trials given P Chance
 /// </summary>
-public sealed partial class BinomialNumberSelector : NumberSelector
+[Virtual]  // starcup: unsealed
+public partial class BinomialNumberSelector : NumberSelector
 {
     /// <summary>
     /// How many times to try including an entry. i.e. the Max.
@@ -34,5 +35,21 @@ public sealed partial class BinomialNumberSelector : NumberSelector
         }
         return count;
         // get binomialed motherfucker
+    }
+
+    public override float Odds()
+    {
+        if (Chance >= 1f)
+            return 1;
+
+        return 1 - MathF.Pow(1 - Chance, Trials);
+    }
+
+    public override float Average()
+    {
+        if (Chance >= 1f)
+            return Trials;
+
+        return Trials * Chance;
     }
 }

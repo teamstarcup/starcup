@@ -566,6 +566,8 @@
   - type: TemperatureProtection # starcup - cold-weather hats should work
     heatingCoefficient: 1.05
     coolingCoefficient: 0.7
+  - type: Item
+    storedRotation: 0
   - type: Tag
     tags:
     - PetWearable
@@ -581,8 +583,8 @@
     sprite: Clothing/Head/Hats/sombrero.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/sombrero.rsi
-#  - type: AddAccentClothing # DeltaV - remove clothing-forced accents
-#    accent: SpanishAccent
+  # - type: AddAccentClothing # DeltaV - remove clothing-forced accents
+  #   accent: SpanishAccent
   - type: Tag
     tags:
     - PetWearable
@@ -591,7 +593,7 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatSurgcapBlue
-  name: surgical cap
+  name: blue surgical cap
   description: A blue cap surgeons wear during operations. Keeps their hair from tickling your internal organs.
   components:
   - type: Sprite
@@ -613,7 +615,7 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatSurgcapGreen
-  name: surgical cap
+  name: green surgical cap
   description: A green cap surgeons wear during operations. Keeps their hair from tickling your internal organs.
   components:
   - type: Sprite
@@ -629,7 +631,7 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatSurgcapPurple
-  name: surgical cap
+  name: purple surgical cap
   description: A purple cap surgeons wear during operations. Keeps their hair from tickling your internal organs.
   components:
   - type: Sprite
@@ -851,10 +853,10 @@
     sprite: Clothing/Head/Hats/truckershat.rsi
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseSyndicateContraband ]
+  parent: ClothingHeadBase # starcup: remove syndicate contraband label
   id: ClothingHeadPyjamaSyndicateBlack
   name: syndicate black pyjama hat
-  description: For keeping that traitor head of yours warm.
+  description: It might seem extraneous and silly, but Interdyne studies have proven a minimum 50% increase in coziness while wearing one of these. # starcup: rewritten for setting lore
   components:
   - type: Sprite
     sprite: Clothing/Head/Hats/pyjamasyndicateblack.rsi
@@ -867,10 +869,10 @@
       HeadSide : HEAD
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseSyndicateContraband ]
+  parent: ClothingHeadBase # starcup: remove syndicate contraband label
   id: ClothingHeadPyjamaSyndicatePink
   name: syndicate pink pyjama hat
-  description: For keeping that traitor head of yours warm.
+  description: It might seem extraneous and silly, but Interdyne studies have proven a minimum 50% increase in coziness while wearing one of these. # starcup: rewritten for setting lore
   components:
   - type: Sprite
     sprite: Clothing/Head/Hats/pyjamasyndicatepink.rsi
@@ -883,10 +885,10 @@
       HeadSide : HEAD
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseSyndicateContraband ]
+  parent: ClothingHeadBase # starcup: remove syndicate contraband label
   id: ClothingHeadPyjamaSyndicateRed
   name: syndicate red pyjama hat
-  description: For keeping that traitor head of yours warm.
+  description: It might seem extraneous and silly, but Interdyne studies have proven a minimum 50% increase in coziness while wearing one of these. # starcup: rewritten for setting lore
   components:
   - type: Sprite
     sprite: Clothing/Head/Hats/pyjamasyndicatered.rsi
@@ -1084,7 +1086,7 @@
         Caustic: 0.95
 
 - type: entity
-  parent: [ClothingHeadBase, BaseSyndicateContraband]
+  parent: ClothingHeadBase # starcup: remove syndicate contraband label
   id: ClothingHeadHatSyndie
   name: syndicate hat
   description: A souvenir hat from "Syndieland", their production has already been closed.
@@ -1236,6 +1238,8 @@
     sprite: Clothing/Head/Hats/party_red.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/party_red.rsi
+  - type: Item
+    storedRotation: 0
   - type: Tag
     tags:
     - PetWearable
@@ -1252,12 +1256,6 @@
     sprite: Clothing/Head/Hats/party_yellow.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/party_yellow.rsi
-  - type: Tag
-    tags:
-    - PetWearable
-    - CorgiWearable
-    - WhitelistChameleon
-    - HamsterWearable
 
 - type: entity
   parent: ClothingHeadHatPartyRed
@@ -1268,12 +1266,6 @@
     sprite: Clothing/Head/Hats/party_green.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/party_green.rsi
-  - type: Tag
-    tags:
-    - PetWearable
-    - CorgiWearable
-    - WhitelistChameleon
-    - HamsterWearable
 
 - type: entity
   parent: ClothingHeadHatPartyRed
@@ -1284,12 +1276,6 @@
     sprite: Clothing/Head/Hats/party_blue.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/party_blue.rsi
-  - type: Tag
-    tags:
-    - PetWearable
-    - CorgiWearable
-    - WhitelistChameleon
-    - HamsterWearable
 
 - type: entity
   parent: ClothingHeadHatPartyRed
@@ -1346,9 +1332,9 @@
       sprite: Clothing/Head/Hats/cowboyhatbrown.rsi
     - type: Clothing
       sprite: Clothing/Head/Hats/cowboyhatbrown.rsi
-#    - type: AddAccentClothing # DeltaV - remove clothing-forced accents
-#      accent: ReplacementAccent
-#      replacement: cowboy
+    # - type: AddAccentClothing # DeltaV - remove clothing-forced accents
+    #   accent: ReplacementAccent
+    #   replacement: cowboy
     - type: Tag
       tags:
       - PetWearable

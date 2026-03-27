@@ -44,10 +44,12 @@
     - id: FoodMeatCorgi
       amount: 2
     - id: MaterialHideCorgi
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Tag
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalIan
 
@@ -75,6 +77,7 @@
       amount: 2
     - id: SheetSteel1
     - id: MaterialHideCorgi
+    dropOrgansOnButcher: true # starcup: butchering gives organs
 
 - type: entity
   name: Lisa
@@ -135,6 +138,7 @@
     attributes:
       proper: true
       gender: female
+  - type: Godmode # starcup
 
 - type: entity
   name: Puppy Ian
@@ -151,6 +155,7 @@
     - id: FoodMeatCorgi
       amount: 2
     - id: MaterialHideCorgi
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: StealTarget
     stealGroup: AnimalIan
 
@@ -174,6 +179,7 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalNamedCat
 
@@ -194,6 +200,7 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalNamedCat
 
@@ -221,6 +228,7 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalNamedCat
 
@@ -238,6 +246,7 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
 
 - type: entity
   name: Bingus
@@ -278,6 +287,7 @@
     spawned:
     - id: FoodMeat
       amount: 2
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.9
     interactSuccessString: petting-success-bingus
@@ -293,10 +303,24 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalNamedCat
-  - type: Puller
-    needsHands: false # starcup - basically a cat
+  - type: Puller # starcup - basically a cat
+    needsHands: false
+  # begin starcup
+  - type: Speech
+    speechSounds: CatSpeechSounds
+    speechVerb: SmallMob
+    allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureCough']
+  - type: Vocal
+    sounds:
+      Unsexed: CatSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: cat
+  # end starcup
 
 - type: entity
   name: McGriff
@@ -350,8 +374,9 @@
     spawned:
     - id: FoodMeat
       amount: 2
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
-    accent: dog
+    accent: DogAccent # starcup
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-dog
@@ -363,17 +388,27 @@
     attributes:
       proper: true
       gender: male
+  # begin starcup
   - type: Speech
     speechVerb: Canine
-    speechSounds: Dog
+    speechSounds: DogSpeechSounds
+    allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'CreatureCough', 'Snuffle', 'Pant', 'Shake']
+  - type: Vocal
+    sounds:
+      Unsexed: SmallDogSpeechEmotes
+    screamId: CreatureBark
+    screamAction: ActionEmitSound
   - type: Tag
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes
+  # end starcup
   - type: StealTarget
     stealGroup: AnimalMcGriff
-  - type: Puller
-    needsHands: false # starcup - go fetch!
+  - type: MessyDrinker
+  - type: Puller # starcup - go fetch!
+    needsHands: false
 
 - type: entity
   name: Paperwork
@@ -399,6 +434,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 1
     interactSuccessString: petting-success-sloth
@@ -408,8 +444,8 @@
     attributes:
       proper: true
       gender: male
-  - type: Puller
-    needsHands: false # starcup - Paperwork likes helping retrieve random books and papers for his librarian caretaker
+  - type: Puller # starcup - Paperwork likes helping retrieve random books and papers for his librarian caretaker
+    needsHands: false
 
 - type: entity
   name: Walter
@@ -450,8 +486,9 @@
     spawned:
     - id: FoodMeat
       amount: 3
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
-    accent: dog
+    accent: DogAccent # starcup
   - type: InteractionPopup
     successChance: 0.7
     interactSuccessString: petting-success-dog
@@ -467,13 +504,23 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalWalter
+  # begin starcup
   - type: Speech
     speechVerb: Canine
-    speechSounds: Dog
-  - type: Puller
-    needsHands: false # starcup - go fetch!
+    speechSounds: DogSpeechSounds
+    allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'CreatureCough', 'Snuffle', 'Pant', 'Shake']
+  - type: Vocal
+    sounds:
+      Unsexed: SmallDogSpeechEmotes
+    screamId: CreatureBark
+    screamAction: ActionEmitSound
+  # end starcup
+  - type: MessyDrinker
+  - type: Puller # starcup - go fetch!
+    needsHands: false
 
 - type: entity
   name: Morty
@@ -496,6 +543,7 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalMorty
 
@@ -562,6 +610,7 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
 
 - type: entity
   name: Alexander
@@ -584,6 +633,7 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
 
 - type: entity
   name: Renault
@@ -606,6 +656,7 @@
     # - id: Telecrystal5
     #   amount: 1
     # end starcup
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Grammar
     attributes:
       proper: true
@@ -614,6 +665,7 @@
     tags:
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalRenault
   # begin starcup: add sentience target
@@ -659,6 +711,7 @@
     spawned:
     - id: FoodMeat
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Grammar
     attributes:
       proper: true
@@ -669,10 +722,27 @@
     - Hamster
     - VimPilot
     - ChefPilot
+    - CreatureEmotes # starcup
   - type: FlavorProfile
     flavors:
     - meaty
     - sadness
+
+- type: entity
+  parent: MobHamsterHamlet
+  id: MobHamsterHamletSlippery
+  suffix: Slippery
+  components:
+  - type: Slippery
+  - type: StepTrigger
+    requiredTriggeredSpeed: 1
+  - type: TriggerOnStepTrigger
+  # - type: GibOnTrigger # starcup: don't make the hamster explode
+  - type: EmitSoundOnTrigger
+    sound:
+      path: "/Audio/Animals/mouse_squeak.ogg"
+    positional: true
+    predicted: true
 
 - type: entity
   name: Shiva
@@ -738,6 +808,7 @@
     - VimPilot
     - DoorBumpOpener
     - FootstepSound
+    - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalShiva
 
@@ -763,6 +834,7 @@
     - CannotSuicide
     - DoorBumpOpener
     - FootstepSound
+    - CreatureEmotes # starcup
   - type: GhostRole
     prob: 0.25
     name: ghost-role-information-willow-name
@@ -808,6 +880,7 @@
     - DoorBumpOpener
     - CannotSuicide
     - VimPilot
+    - CreatureEmotes # starcup
   - type: DamageStateVisuals
     states:
       Alive:
@@ -821,6 +894,7 @@
       amount: 1
     - id: MaterialSmileExtract
       amount: 1
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Damageable
     damageModifierSet: SlimePet
   - type: Bloodstream
@@ -829,6 +903,7 @@
         Bloodloss:
           -0.8
   - type: Temperature
+  - type: TemperatureDamage
     heatDamageThreshold: 800
     coldDamageThreshold: 0
   - type: MeleeWeapon
@@ -840,8 +915,6 @@
   - type: Item
     sprite: Mobs/Pets/Smile/smile.rsi
     size: Huge
-  - type: SentienceTarget
-    flavorKind: station-event-random-sentience-flavor-slime
   - type: MobPrice
     price: 3000 # it is a truly valuable creature
   - type: GhostRole
@@ -853,6 +926,14 @@
     attributes:
       proper: true
       gender: female
+  # begin starcup
+  - type: Speech
+    speechVerb: Slime
+    speechSounds: Slime
+    allowedEmotes: [ 'Squish', 'Bubble', 'Pop', 'Fizz', 'Simmer']
+  - type: ReplacementAccent
+    accent: slimes
+  # end starcup
 
 - type: entity
   name: Pun Pun
@@ -884,6 +965,7 @@
     - DoorBumpOpener
     - VimPilot
     - AnomalyHost
+    - CreatureEmotes # starcup
   - type: Loadout
     prototypes: [ MobMonkeyGear ]
   - type: Grammar
@@ -910,6 +992,7 @@
     tags:
     - VimPilot
     - CannotSuicide
+    - CreatureEmotes # starcup
   - type: Grammar
     attributes:
       proper: true

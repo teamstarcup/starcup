@@ -1,0 +1,39 @@
+- type: loadoutEffectGroup
+  id: SalvageVeteran
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSalvageSpecialist
+      time: 10h
+
+# Neck
+- type: loadout
+  id: GoliathCloak
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SalvageVeteran
+  equipment:
+    neck: ClothingNeckCloakGoliathCloak
+
+# Shoes
+- type: loadout
+  id: SalvageWinterBoots
+  equipment:
+    shoes: ClothingShoesBootsWinterMiner
+
+# ID
+- type: loadout
+  id: SalvagePDA
+  equipment:
+    id: SalvagePDA
+
+- type: loadout
+  id: ProspectorPDA
+  equipment:
+    id: ProspectorPDA
+
+- type: loadout
+  id: ExcavatorPDA
+  equipment:
+    id: ExcavatorPDA

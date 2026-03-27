@@ -16,7 +16,7 @@ namespace Content.Server.GameTicking.Commands
         [Dependency] private readonly IGameTiming _time = default!; // L5
 
         public override string Command => "golobby";
-        
+
         // L5 - add confirm
         public string Help => $"Usage: {Command} [confirm] / {Command} <preset> [confirm]";
 

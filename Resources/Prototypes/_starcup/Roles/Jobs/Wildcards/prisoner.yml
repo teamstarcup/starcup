@@ -3,10 +3,7 @@
   name: job-name-prisoner
   description: job-description-prisoner
   playTimeTracker: JobPrisoner
-  requirements:
-  - !type:DepartmentTimeRequirement
-    department: Security
-    time: 7200 #2 hr
+  whitelisted: true
   startingGear: PrisonerGear
   icon: JobIconPermaPrisoner
   supervisors: job-supervisors-security
@@ -48,9 +45,11 @@
   components:
   - type: Sprite
     layers:
-    - state: orange
-    - sprite: _starcup/Objects/Misc/id_card_prisoner.rsi
-      state: idprisoner
+    - sprite: _starcup/Objects/Misc/id_cards.rsi # starcup: syndicate rebranding
+      state: orange
+    - sprite: _starcup/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: Prisoner
   - type: PresetIdCard
     job: Prisoner
 
@@ -91,10 +90,11 @@
   parent: BoxEncryptionKeyPassenger
   id: BoxEncryptionKeyPrison
   components:
-  - type: StorageFill
-    contents:
-    - id: EncryptionKeyPrison
-      amount: 4
+  - type: EntityTableContainerFill
+    containers:
+      storagebase:
+        id: EncryptionKeyPrison
+        amount: 4
 
 - type: radioChannel
   id: Prison
@@ -139,37 +139,6 @@
       - EncryptionKeyCommon
       - EncryptionKeyPrison
       - EncryptionKeySecurity
-
-# Loadouts
-- type: loadout
-  id: PrisonerJumpsuit
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitPrisoner
-
-- type: loadout
-  id: PrisonerJumpskirt
-  equipment:
-    jumpsuit: ClothingUniformJumpskirtPrisoner
-
-- type: loadoutGroup
-  id: PrisonerJumpsuit
-  name: loadout-group-prisoner-jumpsuit
-  loadouts:
-    - PrisonerJumpsuit
-    - PrisonerJumpskirt
-
-- type: roleLoadout
-  id: JobPrisoner
-  groups:
-  - GroupTankHarness
-  - PrisonerJumpsuit
-  - CommonBackpack
-  - PassengerShoes
-  - Glasses
-  - Survival
-  - Plushies
-  - Trinkets
-  - GroupSpeciesBreathTool
 
 - type: chameleonOutfit
   id: PrisonerChameleonOutfit

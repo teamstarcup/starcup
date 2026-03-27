@@ -7,7 +7,7 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitCaptainSyndie # starcup: command recolors
     shoes: ClothingShoesBootsLaceup
-    eyes: ClothingEyesGlassesSunglasses
+    eyes: ClothingEyesGlassesCommand
     gloves: ClothingHandsGlovesCaptainSyndie # starcup: command recolors
     head: ClothingHeadHatCaptainSyndie # starcup: command recolors
     neck: ClothingNeckCloakCapSyndie # starcup: command recolors
@@ -23,7 +23,7 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitCapFormalSyndie # starcup: command recolors
     shoes: ClothingShoesBootsLaceup
-    eyes: ClothingEyesGlassesSunglasses
+    eyes: ClothingEyesGlassesCommand
     gloves: ClothingHandsGlovesCaptainSyndie # starcup: command recolors
     head: ClothingHeadHatCapcapSyndie # starcup: command recolors
     neck: ClothingNeckMantleCapSyndie # starcup: command recolors
@@ -219,7 +219,7 @@
   id: VisitorSecurityCadet
   equipment:
     jumpsuit: ClothingUniformJumpsuitSec
-    shoes: ClothingShoesBootsCombatFilled
+    shoes: ClothingShoesBootsJackFilled # starcup: replace combat boots with jackboots
     head: ClothingHeadHelmetBasic
     id: VisitorPDA
     belt: ClothingBeltSecurityFilled
@@ -236,7 +236,7 @@
   id: VisitorSecurityCadetAlt
   equipment:
     jumpsuit: ClothingUniformJumpsuitSecGrey
-    shoes: ClothingShoesBootsCombatFilled
+    shoes: ClothingShoesBootsJackFilled # starcup: replace combat boots with jackboots
     head: ClothingHeadHelmetBasic
     neck: SecurityWhistle
     id: VisitorPDA
@@ -254,7 +254,7 @@
   id: VisitorSecurityOfficer
   equipment:
     jumpsuit: ClothingUniformJumpsuitSec
-    shoes: ClothingShoesBootsCombatFilled
+    shoes: ClothingShoesBootsJackFilled # starcup: replace combat boots with jackboots
     head: ClothingHeadHelmetBasic
     id: VisitorPDA
     belt: ClothingBeltSecurityWebbingFilled
@@ -271,7 +271,7 @@
   id: VisitorSecurityOfficerAlt
   equipment:
     jumpsuit: ClothingUniformJumpsuitSecGrey
-    shoes: ClothingShoesBootsCombatFilled
+    shoes: ClothingShoesBootsJackFilled # starcup: replace combat boots with jackboots
     head: ClothingHeadHatCorpsoft
     neck: SecurityWhistle
     id: VisitorPDA
@@ -289,7 +289,7 @@
   id: VisitorDetective
   equipment:
     jumpsuit: ClothingUniformJumpsuitDetective
-    shoes: ClothingShoesBootsCombatFilled
+    shoes: ClothingShoesBootsJackFilled # starcup: replace combat boots with jackboots
     head: ClothingHeadHatFedoraBrown
     neck: ClothingNeckTieDet
     id: VisitorPDA
@@ -307,7 +307,7 @@
   id: VisitorDetectiveAlt
   equipment:
     jumpsuit: ClothingUniformJumpsuitDetectiveGrey
-    shoes: ClothingShoesBootsCombatFilled
+    shoes: ClothingShoesBootsJackFilled # starcup: replace combat boots with jackboots
     head: ClothingHeadHatFedoraGrey
     neck: ClothingNeckTieDet
     id: VisitorPDA
@@ -325,7 +325,7 @@
   id: VisitorWarden
   equipment:
     jumpsuit: ClothingUniformJumpsuitWarden
-    shoes: ClothingShoesBootsCombatFilled
+    shoes: ClothingShoesBootsJackFilled # starcup: replace combat boots with jackboots
     gloves: ClothingHandsGlovesCombat
     head: ClothingHeadHatBeretWarden
     neck: SecurityWhistle
@@ -345,7 +345,7 @@
   id: VisitorWardenAlt
   equipment:
     jumpsuit: ClothingUniformJumpsuitWarden
-    shoes: ClothingShoesBootsCombatFilled
+    shoes: ClothingShoesBootsJackFilled # starcup: replace combat boots with jackboots
     gloves: ClothingHandsGlovesCombat
     head: ClothingHeadHatWarden
     id: VisitorPDA
@@ -738,7 +738,7 @@
 - type: startingGear
   id: VisitorParamedic
   equipment:
-    jumpsuit: ClothingUniformJumpsuitParamedicNT
+    jumpsuit: ClothingUniformJumpsuitParamedic
     shoes: ClothingShoesSwat
     gloves: ClothingHandsGlovesLatex
     head: ClothingHeadHatParamedicsoft
@@ -1239,7 +1239,7 @@
     pocket1: BookSun
     pocket2: BookRandomStory
   inhand:
-  - BoxFolderClipboard
+  - BoxFolderClipboardThreePapers
 
 - type: startingGear
   id: VisitorMusicianFancyAltA
@@ -1509,7 +1509,7 @@
     back: ClothingBackpackSatchel
     ears: ClothingHeadsetService
     pocket1: MicrophoneInstrument
-    pocket2: BoxFolderClipboard
+    pocket2: BoxFolderClipboardThreePapers
 
 - type: startingGear
   id: VisitorReporterAlt
@@ -1520,7 +1520,7 @@
     back: ClothingBackpackSatchel
     ears: ClothingHeadsetService
     pocket1: MicrophoneInstrument
-    pocket2: BoxFolderClipboard
+    pocket2: BoxFolderClipboardThreePapers
 
 - type: startingGear
   id: VisitorServiceWorker

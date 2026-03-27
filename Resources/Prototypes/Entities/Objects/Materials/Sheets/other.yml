@@ -12,6 +12,7 @@
   - type: Tag
     tags:
     - Sheet
+    - ConstructionMaterial
   - type: Damageable
     damageContainer: Inorganic
   - type: Destructible
@@ -83,13 +84,6 @@
   - type: PhysicalComposition
     materialComposition:
       Plasma: 100
-  - type: Healing # DeltaV - Plasma heals IPC radiation
-    delay: 2.0
-    damageContainers:
-    - HumanoidSilicon
-    damage:
-      types:
-        Radiation: -5.0
   - type: Stack
     stackType: Plasma
     baseLayer: base
@@ -114,9 +108,6 @@
         - ReagentId: Plasma
           Quantity: 10
         canReact: false
-  - type: Tag
-    tags:
-    - Sheet
 
 - type: entity
   parent: SheetPlasma
@@ -140,16 +131,6 @@
     count: 1
 
 - type: entity
-  parent: SheetPlasma
-  id: SheetPlasmaLingering0
-  name: plasma
-  suffix: 0, Lingering
-  components:
-  - type: Stack
-    lingering: true
-    count: 0
-
-- type: entity
   parent: SheetOtherBase
   id: SheetPlastic
   name: plastic
@@ -159,18 +140,11 @@
     tags:
     - Plastic
     - Sheet
+    - ConstructionMaterial
   - type: Material
   - type: PhysicalComposition
     materialComposition:
       Plastic: 100
-  - type: Healing # DeltaV - plastic repairs stop bleeding
-    delay: 3.0
-    damageContainers:
-    - HumanoidSilicon
-    damage:
-      types:
-        Caustic: 0 # DeltaV - prevent RequiredFieldNotMapped error # teamstarcup/starcup#224: changed to caustic to prevent useless application
-    bloodlossModifier: -20
   - type: Stack
     stackType: Plastic
     baseLayer: base
@@ -227,7 +201,7 @@
   suffix: Full
   components:
   - type: Material
-  - type: Food
+  - type: Edible
     transferAmount: 10
   - type: BadFood
   - type: PhysicalComposition

@@ -1,12 +1,13 @@
 using System.Diagnostics.CodeAnalysis;
 using Content.Server._DEN.AbstractAnalyzer;
-using Content.Server.PowerCell;
+using Content.Shared.PowerCell;
 using Content.Shared.DoAfter;
 using Content.Shared.Interaction;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Item.ItemToggle;
 using Content.Shared.Item.ItemToggle.Components;
 using Content.Shared.Popups;
+using Content.Shared.PowerCell.Components;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
@@ -72,7 +73,17 @@ public abstract class AbstractAnalyzerSystem<TAnalyzerComponent, TAnalyzerDoAfte
     /// </summary>
     private void OnAfterInteract(Entity<TAnalyzerComponent> uid, ref AfterInteractEvent args)
     {
-        if (args.Target == null || !args.CanReach || !ValidScanTarget(args.Target) || !_cell.HasDrawCharge(uid, user: args.User))
+        // begin starcup: refactor for upstream merge
+        PowerCellDrawComponent? powerCellDraw = null;
+        if (!Resolve(uid.Owner, ref powerCellDraw))
+            return;
+
+        PowerCellSlotComponent? powerCellSlot = null;
+        if (!Resolve(uid.Owner, ref powerCellSlot))
+            return;
+        // end starcup
+
+        if (args.Target == null || !args.CanReach || !ValidScanTarget(args.Target) || !_cell.HasDrawCharge((uid, powerCellDraw, powerCellSlot), user: args.User))
             return;
 
         _audio.PlayPvs(uid.Comp.ScanningBeginSound, uid);
@@ -93,7 +104,17 @@ public abstract class AbstractAnalyzerSystem<TAnalyzerComponent, TAnalyzerDoAfte
 
     private void OnDoAfter(Entity<TAnalyzerComponent> uid, ref TAnalyzerDoAfterEvent args)
     {
-        if (args.Handled || args.Cancelled || args.Target == null || !_cell.HasDrawCharge(uid, user: args.User))
+        // begin starcup: refactor for upstream merge
+        PowerCellDrawComponent? powerCellDraw = null;
+        if (!Resolve(uid.Owner, ref powerCellDraw))
+            return;
+
+        PowerCellSlotComponent? powerCellSlot = null;
+        if (!Resolve(uid.Owner, ref powerCellSlot))
+            return;
+        // end starcup
+
+        if (args.Handled || args.Cancelled || args.Target == null || !_cell.HasDrawCharge((uid, powerCellDraw, powerCellSlot), user: args.User))
             return;
 
         if (!uid.Comp.Silent)

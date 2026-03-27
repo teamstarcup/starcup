@@ -1,39 +1,61 @@
+# starcup: reorganized all loadout listings to a standardized order as follows:
+# - Head
+# - Mask
+# - Neck/Scarves
+# - Jumpsuit
+# - Belt
+# - Backpack
+# - Outer Clothing
+# - Shoes
+# - Eyewear/Glasses
+# - PDA
+# - Survival
+# - Accessibility
+# - Trinkets
+# - Job Trinkets
+# - Other Job Items (golden plunger, instruments, janitor flashlight, etc)
+# - GroupSpeciesBreathTool
+# - GroupTankHarness
+
 # Logistics
 - type: roleLoadout
   id: JobCourier
   groups:
-  - GroupTankHarness
   - CourierHead
-  - CourierNeck
+  - Scarfs # starcup
   - CourierJumpsuit
+  - CourierBelt # starcup
+  - CourierBackpack # starcup
   - CourierOuterClothing
-  - CourierPDA
-  - CourierBackpack
   - CourierShoes
   - Glasses # starcup
-  - Survival
+  - CourierPDA
+  - Accessibility # starcup
   - Trinkets
+  - Survival
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: JobCargoAssistant
   groups:
-  - GroupTankHarness
   - CargoAssistantHead
+  - Scarfs # starcup
   - CargoAssistantJumpsuit
-  - CargoAssistantBackpack
+  - CargoTechnicianBackpack # starcup
   - CargoAssistantOuterClothing
   - CargoAssistantShoes
   - Glasses
   - Survival
+  - Accessibility # starcup
   - Trinkets
   - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 # Epistemics
 - type: roleLoadout
   id: JobRoboticist
   groups:
-  - GroupTankHarness
   - RoboticistHead
   - ScientistNeck
   - RoboticistJumpsuit
@@ -41,22 +63,11 @@
   - RoboticistOuterClothing
   - RoboticistGloves
   - RoboticistShoes
-  - RoboticistPDAstarcup # starcup
   - RoboticsEyewear # starcup
-  - Survival
+  - RoboticistPDA # starcup
+  - Accessibility # starcup
   - Trinkets
-  - GroupSpeciesBreathTool
-
-# Command
-- type: roleLoadout
-  id: JobAdministrativeAssistant
-  groups:
-  - AdminAssistantJumpsuit
-  - AdminAssistantOuter
-  - AdminAssistantShoes
-  - AdminAssistantGloves
-  - CommonBackpack
-  - CommandEyewear # starcup
+  - RoboticsJobTrinkets # starcup
   - Survival
-  - Trinkets
   - GroupSpeciesBreathTool
+  - GroupTankHarness

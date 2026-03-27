@@ -9,7 +9,10 @@
   access:
   - Theatre
   - Maintenance
-  - Clown # starcup: added unique access level
+  # begin starcup
+  - Clown
+  - Service
+  # end starcup
   special:
   - !type:AddComponentSpecial
     components:
@@ -18,8 +21,7 @@
         types: #literally just picked semi random valus. i tested this once and tweaked it.
           Blunt: 5
           Piercing: 4
-        groups:
-          Burn: 3
+          Heat: 3
       catchingFailDamage:
         types:
           Blunt: 1
@@ -37,6 +39,8 @@
     pocket2: ClownRecorder
 #    id: ClownPDA # DeltaV: different PDAs in loadouts
     ears: ClothingHeadsetService
+  inhand:
+  - FoolboxFilled
   storage:
     back:
     - RubberStampClown

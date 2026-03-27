@@ -2,12 +2,13 @@
 # Base
 
 - type: entity
+  abstract: true
   parent: FoodInjectableBase
   id: FoodPieBase
-  abstract: true
   components:
   - type: Item
-    storedRotation: -90
+    shape:
+    - 0,0,1,0
   - type: FlavorProfile
     flavors:
       - sweet
@@ -24,7 +25,7 @@
           Quantity: 14
         - ReagentId: Sugar
           Quantity: 5
-  - type: Food #All pies here made with a pie tin; unless you're some kind of savage, you're probably not destroying this when you eat or slice the pie!
+  - type: Edible #It's actually possible now to have a pie stored in a tin rather than spawning trash when you finish eating it. But right now I'm just cleaning up.
     trash:
     - FoodPlateTin
   - type: SliceableFood
@@ -122,6 +123,11 @@
     - state: baklava
   - type: SliceableFood
     slice: FoodPieBaklavaSlice
+# begin starcup
+  - type: Tag
+    tags:
+    - Fruit
+# end starcup
 
 - type: entity
   name: slice of baklava
@@ -135,7 +141,13 @@
       - nutty
   - type: Sprite
     state: baklava-slice
-# Tastes like pie, nuts.
+# begin starcup
+  - type: Tag
+    tags:
+    - Fruit
+    - Slice
+# end starcup
+  # Tastes like pie, nuts.
 
 - type: entity
   name: banana cream pie
@@ -340,6 +352,7 @@
   - type: Tag
     tags:
     - Pie
+    - Fruit # starcup - pumpkins are fruits
 
 - type: entity
   name: slice of pumpkin pie
@@ -357,6 +370,7 @@
     tags:
     - Pie
     - Slice
+    - Fruit # starcup - pumpkins are fruits
 
 - type: entity
   name: xeno pie
@@ -445,6 +459,11 @@
     heldPrefix: mime
   - type: SliceableFood
     slice: FoodTartMimeSlice
+# begin starcup - mimeanas are fruits
+  - type: Tag
+    tags:
+    - Fruit
+# end starcup
 
 - type: entity
   name: slice of mime tart
@@ -460,6 +479,12 @@
   - type: Item
     heldPrefix: mime
 # Tastes like nothing.
+# begin starcup - mimeanas are fruits
+  - type: Tag
+    tags:
+    - Fruit
+    - Slice
+# end starcup
 
 # No Slice
 

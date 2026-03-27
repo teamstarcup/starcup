@@ -1,0 +1,673 @@
+# starcup: reorganized all loadout listings to a standardized order as follows:
+# - Head
+# - Mask
+# - Neck/Scarves
+# - Jumpsuit
+# - Belt
+# - Backpack
+# - Outer Clothing
+# - Gloves
+# - Shoes
+# - Eyewear/Glasses
+# - PDA
+# - Accessibility
+# - Trinkets
+# - Job Trinkets
+# - Other Job Items (golden plunger, instruments, janitor flashlight, etc)
+# - Survival
+# - GroupSpeciesBreathTool
+# - GroupTankHarness
+
+# Command
+- type: roleLoadout
+  id: JobCaptain
+  groups:
+  - CaptainHead
+  - CaptainNeck
+  - CaptainJumpsuit
+  - CaptainBackpack
+  - CaptainOuterClothing
+  - CaptainShoes # starcup
+  - CommandEyewear # starcup
+  - Survival
+  - Accessibility # starcup
+  - Trinkets
+  - CaptainJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+
+- type: roleLoadout
+  id: JobHeadOfPersonnel
+  groups:
+  - HoPHead
+  - HoPNeck
+  - HoPJumpsuit
+  - HoPBackpack
+  - HoPOuterClothing
+  - HoPShoes # starcup
+  - CommandEyewear # starcup
+  - Survival
+  - Accessibility # starcup
+  - Trinkets
+  - HoPJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+# Silicons
+- type: roleLoadout
+  id: JobBorg
+  nameDataset: NamesBorgstarcup # starcup
+  canCustomizeName: true
+
+- type: roleLoadout
+  id: JobStationAi
+  nameDataset: NamesAI
+  canCustomizeName: true
+
+# Civilian
+- type: roleLoadout
+  id: JobPassenger
+  groups:
+  - PassengerHead # starcup
+  - PassengerFace
+  - PassengerNeck
+  - PassengerJumpsuit
+  - CommonBackpack
+  - PassengerOuterClothing
+  - PassengerGloves
+  - PassengerShoes
+  - PassengerEyewear # starcup
+  - PassengerID # starcup
+  - Survival
+  - Accessibility # starcup
+  - Trinkets
+  - PassengerJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  # - GroupTankHarness # starcup: removed for conflicting with new outer clothing options
+
+- type: roleLoadout
+  id: JobBartender
+  groups:
+  - BartenderHead
+  - Scarfs # starcup
+  - BartenderJumpsuit
+  - CommonBackpack
+  - BartenderOuterClothing
+  - BartenderShoes # starcup
+  - BartenderEyewear # starcup
+  - BartenderID # starcup
+  - Accessibility # starcup
+  - Trinkets
+  - BartenderJobTrinkets
+  - Survival
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: JobServiceWorker
+  groups:
+  - ServiceWorkerHead # starcup, this got removed for some reason
+  - Scarfs # starcup
+  - ServiceWorkerJumpsuit # starcup, replaces BartenderJumpsuit
+  - CommonBackpack
+  - ServiceWorkerOuterClothing # starcup
+  - ServiceWorkerShoes # starcup
+  - ServiceWorkerEyewear # starcup
+  - Survival
+  - Accessibility # starcup
+  - Trinkets
+  - ServiceWorkerJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: JobChef
+  groups:
+  - ChefHead
+  #- ChefMask # starcup: removed for tone
+  - Scarfs # starcup
+  - ChefJumpsuit
+  - CommonBackpack
+  - ChefOuterClothing
+  - ChefShoes # starcup
+  - Glasses
+  - ChefID # starcup
+  - Survival
+  - Accessibility # starcup
+  - Trinkets
+  - ChefJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: JobLibrarian
+  groups:
+  - Scarfs # starcup
+  - LibrarianJumpsuit
+  - CommonBackpack
+  - LibrarianOuterClothing # starcup
+  - LibrarianShoes # starcup
+  - Glasses
+  - Survival
+  - Accessibility # starcup
+  - Trinkets
+  - LibrarianJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: JobLawyer
+  groups:
+  - LawyerNeck
+  - LawyerJumpsuit
+  - CommonBackpack
+  - LawyerOuterClothing # starcup
+  - LawyerShoes # starcup
+  - Glasses
+  - Survival
+  - Accessibility # starcup
+  - Trinkets
+  - LawyerJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: JobChaplain
+  canCustomizeName: true
+  groups:
+  - ChaplainHead
+  - ChaplainMask
+  - ChaplainNeck
+  - ChaplainJumpsuit
+  - CommonBackpack
+  - ChaplainOuterClothing
+  - ChaplainShoes # starcup
+  - ChaplainPDAstarcup
+  - Glasses
+  - Survival
+  - Accessibility # starcup
+  - Trinkets
+  - ChaplainJobTrinkets # starcup
+  - ChaplainRelic # starcup
+  #- ChaplainBible # starcup: removed due to bible rework
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: JobJanitor
+  groups:
+  - JanitorHead
+  - Scarfs # starcup
+  - JanitorJumpsuit
+  - JanitorBelt # starcup
+  - CommonBackpack
+  - JanitorOuterClothing
+  - JanitorGloves
+  - JanitorShoes # starcup
+  - Glasses
+  - JanitorID # starcup
+  - Accessibility # starcup
+  - Trinkets
+  - JanitorJobTrinkets
+  - JanitorLight # starcup: adds a choice between flashlights/lanterns. who goers there
+  - Survival
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: JobBotanist
+  groups:
+  - BotanistHead
+  - Scarfs # starcup
+  - BotanistJumpsuit
+  - BotanistBackpack
+  - BotanistOuterClothing
+  - BotanistShoes # starcup
+  - Glasses
+  - Survival
+  - Accessibility # starcup
+  - Trinkets
+  - BotanistJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: JobClown
+  canCustomizeName: true
+  groups:
+  - ClownHead
+  - ClownMask # starcup
+  - Scarfs # starcup
+  - ClownJumpsuit
+  - ClownBackpack
+  - ClownOuterClothing
+  - ClownShoes
+  - Glasses
+  - ClownID # starcup
+  - Accessibility # starcup
+  - Trinkets
+  - ClownJobTrinkets
+  - SurvivalClown
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: JobMime
+  canCustomizeName: true
+  groups:
+  - MimeHead
+  - MimeMask
+  - Scarfs # starcup
+  - MimeJumpsuit
+  - MimeBelt
+  - MimeBackpack
+  - MimeOuterClothing
+  - MimeShoes # starcup
+  - Glasses
+  - SurvivalMime
+  - Accessibility # starcup
+  - Trinkets
+  - MimeJobTrinkets # starcup
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: JobMusician
+  canCustomizeName: true
+  groups:
+  - Scarfs # starcup
+  - MusicianJumpsuit
+  - CommonBackpack
+  - MusicianOuterClothing
+  - MusicianShoes # starcup
+  - MusicianEyewear # starcup
+  - Survival
+  - Accessibility # starcup
+  - Trinkets
+  - MusicianJobTrinkets # starcup
+  - Instruments
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+# Cargo
+- type: roleLoadout
+  id: JobQuartermaster
+  groups:
+  - QuartermasterHead
+  - QuartermasterNeck
+  - QuartermasterJumpsuit
+  - CargoTechnicianBackpack
+  - QuartermasterOuterClothing
+  - QuartermasterShoes
+  - Glasses
+  - Survival
+  - Accessibility # starcup
+  - Trinkets
+  - LogisticsOfficerJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: JobCargoTechnician
+  groups:
+  - CargoTechnicianHead
+  - CargoTechnicianNeck # starcup
+  - CargoTechnicianJumpsuit
+  - CargoTechnicianBackpack
+  - CargoTechnicianOuterClothing
+  - CargoTechnicianShoes
+  - Glasses
+  - CargoTechnicianID
+  - Survival
+  - Accessibility # starcup
+  - Trinkets
+  - CargoTechnicianJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: JobSalvageSpecialist
+  groups:
+  - SalvageSpecialistNeck # starcup
+  - SalvageSpecialistBackpack
+  - SalvageSpecialistOuterClothing
+  - SalvageSpecialistShoes
+  - Glasses
+  - SalvageSpecialistID # starcup
+  - Survival
+  - Accessibility # starcup
+  - Trinkets
+  - SalvageSpecialistJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+# Engineering
+- type: roleLoadout
+  id: JobChiefEngineer
+  groups:
+  - ChiefEngineerHead
+  - ChiefEngineerNeck
+  - ChiefEngineerJumpsuit
+  - StationEngineerBackpack
+  - ChiefEngineerOuterClothing
+  - ChiefEngineerShoes
+  - SurvivalExtended
+  - Accessibility # starcup
+  - Trinkets
+  - ChiefEngineerJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: JobTechnicalAssistant
+  groups:
+  - Scarfs # starcup
+  - TechnicalAssistantJumpsuit
+  - TechnicalAssistantOuterClothing # starcup
+  - StationEngineerBackpack
+  - StationEngineerShoes # starcup
+  - Glasses # starcup
+  - SurvivalExtended
+  - Accessibility # starcup
+  - Trinkets
+  - TechnicalAssistantJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: JobStationEngineer
+  groups:
+  - StationEngineerHead
+  - Scarfs # starcup
+  - StationEngineerJumpsuit
+  - StationEngineerBackpack
+  - StationEngineerOuterClothing
+  - StationEngineerShoes
+  - StationEngineerID
+  - SurvivalExtended
+  - Accessibility # starcup
+  - Trinkets
+  - StationEngineerJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: JobAtmosphericTechnician
+  groups:
+  - AtmosphericTechnicianHead # starcup
+  - Scarfs # starcup
+  - AtmosphericTechnicianJumpsuit
+  - AtmosphericTechnicianBackpack
+  - AtmosphericTechnicianOuterClothing
+  - AtmosphericTechnicianShoes
+  - AtmosphericTechnicianID # starcup
+  - SurvivalExtended
+  - Accessibility # starcup
+  - Trinkets
+  - AtmosphericTechnicianJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+# Science
+- type: roleLoadout
+  id: JobResearchDirector
+  groups:
+  - ResearchDirectorHead
+  - ResearchDirectorNeck
+  - ResearchDirectorJumpsuit
+  - ResearchDirectorBackpack # starcup
+  - ResearchDirectorOuterClothing
+  - ScientistGloves
+  - ResearchDirectorShoes
+  - Glasses
+  - Survival
+  - Accessibility # starcup
+  - Trinkets
+  - ResearchDirectorJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: JobScientist
+  groups:
+  - ScientistHead
+  - ScientistNeck
+  - ScientistJumpsuit
+  - ScientistBackpack
+  - ScientistOuterClothing
+  - ScientistGloves
+  - ScientistShoes
+  - Glasses
+  - ScientistPDA
+  - Survival
+  - Accessibility # starcup
+  - Trinkets
+  - ScientistJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: JobResearchAssistant
+  groups:
+  - Scarfs # starcup
+  - ResearchAssistantJumpsuit
+  - ScientistBackpack
+  - ResearchAssistantOuterClothing # starcup
+  - ScientistShoes # starcup
+  - Glasses
+  - Survival
+  - Accessibility # starcup
+  - Trinkets
+  - ResearchAssistantJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+# Security
+- type: roleLoadout
+  id: JobHeadOfSecurity
+  groups:
+  - HeadofSecurityHead
+  - HeadofSecurityNeck
+  - HeadofSecurityJumpsuit
+  - SecurityBelt
+  - SecurityBackpack
+  - HeadofSecurityOuterClothing
+  - SecurityGloves # starcup
+  - HeadofSecurityShoes # starcup - winter boots
+#  - SecurityShoes # starcup
+  - SecurityEyewear # starcup
+  - SurvivalSecurity
+  - Accessibility # starcup
+  - Trinkets
+  - HeadofSecurityJobTrinkets
+  - SecurityAllFirearm # starcup
+  - SecurityAllAmmo # starcup
+  - GroupSpeciesBreathToolSecurity
+
+- type: roleLoadout
+  id: JobWarden
+  groups:
+  - WardenHead
+  - Scarfs # starcup
+  - WardenJumpsuit
+  - SecurityBelt
+  - SecurityBackpack
+  - WardenOuterClothing
+  - SecurityGloves # starcup
+  - WardenShoes # starcup, replaces SecurityShoes
+  - SecurityEyewear # starcup
+  - SurvivalSecurity
+  - Accessibility # starcup
+  - Trinkets
+  - WardenJobTrinkets
+  - SecurityAllFirearm # starcup
+  - SecurityAllAmmo # starcup
+  - GroupSpeciesBreathToolSecurity
+
+- type: roleLoadout
+  id: JobSecurityOfficer
+  groups:
+  - SecurityHead
+  - Scarfs # starcup
+  - SecurityJumpsuit
+  - SecurityBelt
+  - SecurityBackpack
+  - SecurityOuterClothing
+  - SecurityGloves # starcup
+  - SecurityShoes
+  - SecurityEyewear # starcup
+  - SecurityPDA
+  - SurvivalSecurity
+  - Accessibility # starcup
+  - Trinkets
+  - SecurityJobTrinkets
+  - SecurityFirearm # starcup
+  - SecurityFirearmAmmo # starcup
+  - GroupSpeciesBreathToolSecurity
+
+- type: roleLoadout
+  id: JobDetective
+  groups:
+  - DetectiveHead
+  - DetectiveNeck
+  - DetectiveJumpsuit
+  - DetectiveBackpack # starcup
+  - DetectiveOuterClothing
+  - SecurityGloves # starcup
+  - DetectiveShoes # starcup
+  - SecurityEyewear # starcup
+  - SurvivalSecurity
+  - Accessibility # starcup
+  - Trinkets
+  - DetectiveJobTrinkets
+  - SecurityRevolverFirearm # starcup
+  - SecurityRevolverAmmo # starcup
+  - GroupSpeciesBreathToolSecurity
+
+- type: roleLoadout
+  id: JobSecurityCadet
+  groups:
+  - SecurityCadetHead # starcup
+  - Scarfs # starcup
+  - SecurityCadetJumpsuit
+  - SecurityBackpack
+  - SecurityCadetOuterClothing # starcup
+  - SecurityGloves # starcup
+  - SecurityShoes # starcup
+  - SecurityEyewear # starcup
+  - SurvivalSecurity
+  - Accessibility # starcup
+  - Trinkets
+  - SecurityCadetJobTrinkets # starcup
+  - GroupSpeciesBreathToolSecurity
+
+# Wildcards
+- type: roleLoadout
+  id: JobReporter
+  groups:
+  - Scarfs # starcup
+  - ReporterJumpsuit
+  - CommonBackpack
+  - ReporterShoes # starcup
+  - ReporterEyewear # starcup
+  - Survival
+  - Accessibility # starcup
+  - Trinkets
+  - ReporterJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: JobPsychologist
+  groups:
+  - Scarfs # starcup
+  - PsychologistJumpsuit
+  - PsychologistBackpack # starcup
+  - PsychologistShoes # starcup
+  - Glasses
+  - PsychologistID # starcup
+  - Survival
+  - Accessibility # starcup
+  - Trinkets
+  - PsychologistJobTrinkets # starcup
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+# These loadouts are used for non-crew spawns, like off-station antags and event mobs
+# They will be used without player configuration, thus they will only ever apply what is forced by MinLimit
+
+# gives vox a harness and breathing mask
+# nitrogen tank not included
+- type: roleLoadout
+  id: RoleSurvivalVoxSupport
+  groups:
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+# gives vox a nitrogen breathing tank
+# other species get nothing
+- type: roleLoadout
+  id: RoleSurvivalVoxTank
+  groups:
+  - GroupEVATankVox
+
+- type: roleLoadout
+  id: RoleSurvivalStandard
+  groups:
+  - Survival
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: RoleSurvivalClown
+  groups:
+  - SurvivalClown
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: RoleSurvivalExtended
+  groups:
+  - SurvivalExtended
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: RoleSurvivalMedical
+  groups:
+  - SurvivalMedical
+  - GroupSpeciesBreathToolMedical
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: RoleSurvivalSecurity
+  groups:
+  - SurvivalSecurity
+  - GroupSpeciesBreathToolSecurity
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: RoleSurvivalSyndicate
+  groups:
+  - SurvivalSyndicate
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: RoleSurvivalMilitaryDouble
+  groups:
+  - SurvivalMilitaryDouble
+
+- type: roleLoadout
+  id: RoleSurvivalNukie
+  groups:
+  - SurvivalSyndicate
+  - GroupSpeciesBreathTool
+  - GroupPocketTankDouble
+
+- type: roleLoadout
+  id: RoleSurvivalEVA
+  groups:
+  - GroupEVATank
+  - SurvivalExtended
+
+- type: roleLoadout
+  id: RoleSurvivalSpaceNinja
+  groups:
+  - GroupEVATank

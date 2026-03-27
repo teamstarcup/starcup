@@ -9,6 +9,8 @@
   - Revolutionary
   - AllHostile
   - Wizard
+  - Xenoborg
+  - SimpleHostile # starcup: carp did not defend themselves from hostile spawns
 
 - type: npcFaction
   id: NanoTrasen
@@ -35,13 +37,14 @@
 
 - type: npcFaction
   id: PetsNT
+  friendly:
+  - NanoTrasen
   hostile:
   - Mouse
   - SimpleHostile
   - Zombie
   - Xeno
   - AllHostile
-  - Wizard
   - Dragon
 
 - type: npcFaction
@@ -131,6 +134,7 @@
   - Revolutionary
   - Wizard
   - Xenoborg
+  - Bug # starcup
 
 - type: npcFaction
   id: Wizard
@@ -162,5 +166,5 @@
   - Xeno # rivalry
 
   # cause they are hostile to them
-  - SimpleHostile 
+  - SimpleHostile
   - AllHostile

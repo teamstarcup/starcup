@@ -56,6 +56,7 @@
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
     - type: Temperature
+    - type: TemperatureDamage
       heatDamage:
         types:
           Heat: 5
@@ -75,7 +76,6 @@
         methods: [Touch]
         effects:
         - !type:HealthChange
-          scaleByQuantity: true
           damage:
             types:
               Heat: 0.5
@@ -89,8 +89,8 @@
       ignoreWhitelist:
         components:
         - IgnoreKudzu
-    - type: Food
-      requiredStomachs: 2 # ruminants have 4 stomachs but i dont care to give them literally 4 stomachs. 2 is good
+    - type: Edible
+      requiresSpecialDigestion: true
       delay: 0.5
     - type: FlavorProfile
       flavors:
@@ -100,7 +100,10 @@
         food:
           reagents:
           - ReagentId: Nutriment
-            Quantity: 2
+            Quantity: 0.1
+    - type: Tag
+      tags:
+      - Ruminant
 
 - type: entity
   id: WeakKudzu
@@ -145,10 +148,13 @@
       - CrystalCyan
       rarePrototypes:
       - AnomalyFloraBulb
+    - type: Tag
+      tags:
+      - Ruminant
 
 - type: entity
   id: KudzuFlowerAngry
-  suffix: Angry, Floral Anomaly
+  suffix: hostile, floral anomaly # starcup: changed angry to hostile, turned to lowercase for consistency
   parent: KudzuFlowerFriendly
   components:
     - type: Kudzu
@@ -164,7 +170,7 @@
 
 - type: entity
   id: FleshKudzu
-  name: tendons
+  name: tendon cluster # starcup: "the tendons gasps" sounds awful, needs to be singular.
   parent: BaseKudzu
   description: A rapidly growing cluster of meaty tendons, animated by anomalous forces. # starcup: rewritten for tone
   placement:
@@ -221,6 +227,7 @@
           Cold: -1.0
           Blunt: -0.5 # Needs to be balanced (approx 3x) with vacuum damage to stall but not kill Kudzu
     - type: Temperature
+    - type: TemperatureDamage
       heatDamage:
         types:
           Heat: 10
@@ -237,14 +244,14 @@
        types:
          Heat: 3
     - type: AtmosExposed
+    - type: Edible # delightfully devilish !
+      delay: 0.5
     - type: SpeedModifierContacts
       walkSpeedModifier: 0.3
       sprintSpeedModifier: 0.3
       ignoreWhitelist:
         tags:
         - Flesh
-    - type: Food # delightfully devilish !
-      delay: 0.5
     - type: SolutionContainerManager
       solutions:
         food:
@@ -253,16 +260,23 @@
             Quantity: 2
           - ReagentId: Protein
             Quantity: 1
-    - type: Respirator
-      damage:
-        types:
-          Asphyxiation: 0.25
-      damageRecovery:
-        types:
-          Asphyxiation: -0.25
+    - type: AutoEmote # Meat Kudzu used to have respirator, but couldn't breathe so all it would do is gasp.
+      emotes:
+      - MeatGasp
     - type: Tag
       tags:
       - Meat
+      - Ruminant
+    # begin starcup
+      - CreatureEmotes
+    - type: Speech
+      speechSounds: FleshSpeechSounds
+    - type: Vocal
+      sounds:
+        Male: FleshSpeechEmotes
+        Female: FleshSpeechEmotes
+        Unsexed: FleshSpeechEmotes
+    # end starcup
 
 - type: entity
   name: dark haze

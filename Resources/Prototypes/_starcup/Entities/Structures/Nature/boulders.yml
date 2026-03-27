@@ -1,0 +1,196 @@
+# Extensively modified RMC prototypes.
+- type: entity
+  parent: BaseRock
+  id: FloraBoulderRed
+  name: boulder
+  suffix: red
+  description: A large rock. It's not cooking anything.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Flora/boulder.rsi
+    layers:
+    - state: boulder1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        boulder1: ""
+        boulder2: ""
+        boulder3: ""
+
+- type: entity
+  parent: BaseRock
+  id: FloraBoulderLargeRed
+  name: boulder
+  suffix: large, red
+  description: A large rock. It's not cooking anything.
+  placement:
+    mode: SnapgridBorder
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Flora/boulder_large.rsi
+    layers:
+    - state: boulder_large1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        boulder_large1: ""
+        boulder_large2: ""
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/rock_break.ogg
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.8
+        density: 1000
+        layer:
+        - HalfWallLayer
+        - Opaque
+
+- type: entity
+  parent: BaseRock
+  id: FloraBoulderWideRed
+  suffix: wide, red
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Flora/boulder_wide.rsi
+    layers:
+    - state: boulder1
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/rock_break.ogg
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.3,0.5,0.3"
+        density: 1000
+        layer:
+        - HalfWallLayer
+        - Opaque
+
+- type: entity
+  parent: FloraBoulderRed
+  id: FloraBoulderBlue
+  suffix: blue
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Rocks/boulder.rsi
+    layers:
+    - state: boulder1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        boulder1: ""
+        boulder2: ""
+        boulder3: ""
+        boulder4: ""
+        boulder5: ""
+        boulder6: ""
+
+- type: entity
+  parent: FloraBoulderLargeRed
+  id: FloraBoulderLargeBlue
+  suffix: large, blue
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Rocks/boulder_large.rsi
+    layers:
+    - state: boulder_large1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        boulder_large1: ""
+        boulder_large2: ""
+        boulder_large3: ""
+        boulder_large4: ""
+
+- type: entity
+  parent: FloraBoulderLargeBlue
+  id: FloraBoulderWideBlue
+  suffix: wide, blue
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Rocks/boulder_wide.rsi
+    layers:
+    - state: boulder1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        boulder1: ""
+        boulder2: ""
+
+- type: entity
+  parent: FloraBoulderBlue
+  id: FloraBoulderBrown
+  suffix: brown
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Rocks/boulder_brown.rsi
+    layers:
+    - state: boulder1
+      map: ["random"]
+
+- type: entity
+  parent: FloraBoulderLargeBlue
+  id: FloraBoulderLargeBrown
+  suffix: large, brown
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Rocks/boulder_large_brown.rsi
+    layers:
+    - state: boulder_large1
+      map: ["random"]
+
+- type: entity
+  parent: FloraBoulderWideBlue
+  id: FloraBoulderWideBrown
+  suffix: wide, brown
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Rocks/boulder_wide_brown.rsi
+    layers:
+    - state: boulder1
+      map: ["random"]

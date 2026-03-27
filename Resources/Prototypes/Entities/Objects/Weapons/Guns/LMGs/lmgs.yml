@@ -51,7 +51,6 @@
             - MagazineLightRifleBox
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifle
         priority: 1
         whitelist:
           tags:
@@ -68,8 +67,8 @@
 - type: entity
   name: L6 SAW
   id: WeaponLightMachineGunL6
-  parent: [BaseWeaponLightMachineGun, BaseSyndicateContraband]
-  description: Developed by Waffle Corp, the L6 Squad Automatic Weapon is a deadly light machine gun often used by the Gorlex Marauders. Although bulky and cumbersome, its heavy barrel and high ammo capacity make it perfect for suppressing combatants with a hail of bullets. Feeds from .30 ammo belts.
+  parent: [BaseWeaponLightMachineGun, BaseTraitorContraband, BaseExaminableClothing] # starcup: shared contraband level with nt gear, examinable clothing
+  description: The L6 Squad Automatic Weapon is a deadly light machine gun often used by marauders and other military-adjacent groups. Although bulky and cumbersome, its heavy barrel and high ammo capacity make it perfect for suppressing combatants with a hail of bullets. Feeds from .30 ammo belts. # starcup: removed syndicate reference
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/LMGs/l6.rsi
@@ -85,6 +84,10 @@
   - type: Appearance
   - type: StaticPrice
     price: 10000
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-traitor-l6-saw
+  # end starcup
 
 - type: entity
   name: L6C ROW
@@ -117,13 +120,14 @@
     - type: ContainerContainer
       containers:
         ballistic-ammo: !type:Container
-    - type: ProjectileBatteryAmmoProvider
+    - type: BallisticAmmoProvider
+      whitelist:
+        tags:
+        - CartridgeLightRifle
+      capacity: 100
       proto: CartridgeLightRifle
-      fireCost: 100
-    - type: Battery
-      maxCharge: 10000
-      startingCharge: 10000
-    - type: BatterySelfRecharger
-      autoRecharge: true
-      autoRechargeRate: 25
+      cycleable: false # No synthesizing ammo for your syndicate masters.
+    - type: BallisticAmmoSelfRefiller
+      autoRefillRate: 4s
+      affectedByEmp: true
     - type: AmmoCounter

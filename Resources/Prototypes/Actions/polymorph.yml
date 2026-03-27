@@ -4,8 +4,10 @@
   name: Revert
   description: Revert back into your original form.
   components:
-  - type: ConfirmableAction
-    popup: revert-polymorph-action-popup
+  # begin starcup: annoying and nearly pointless check. messes with burrowing.
+  #- type: ConfirmableAction
+  #popup: revert-polymorph-action-popup
+  # end starcup
   - type: InstantAction
     event: !type:RevertPolymorphActionEvent
 

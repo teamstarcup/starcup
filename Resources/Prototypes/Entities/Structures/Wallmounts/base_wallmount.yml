@@ -6,6 +6,10 @@
     snap:
     - Wallmount
   components:
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Rotatable
   # begin starcup: extend wallmount interact range
   - type: Physics
     bodyType: Static

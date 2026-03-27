@@ -4,7 +4,9 @@ humanoid-profile-editor-cd-records-tab = Records
 # General
 humanoid-profile-editor-cd-records-height = Height (cm):
 humanoid-profile-editor-cd-records-weight = Weight (kg):
-humanoid-profile-editor-cd-records-contact-name = Emergency Contact Names(s):
+# TheDen, added Birthday
+humanoid-profile-editor-cd-records-birthday = Birthday:
+humanoid-profile-editor-cd-records-contact-name = Emergency Contact Name(s):
 
 # Employment
 humanoid-profile-editor-cd-records-employment = Employment
@@ -19,7 +21,8 @@ humanoid-profile-editor-cd-records-drug-allergies = Drug Allergies:
 humanoid-profile-editor-cd-records-postmortem = Postmortem Instructions:
 
 # Admin
-humanoid-profile-editor-cd-records-admin = Admin
+# starcup: change name from admin to ooc
+humanoid-profile-editor-cd-records-admin = OOC
 
 # Entries
 humanoid-profile-editor-cd-records-add-entry = Add Entry

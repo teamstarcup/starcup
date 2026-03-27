@@ -211,6 +211,7 @@
   - type: UseDelay
   - type: IgnitionSource
     ignited: false
+  - type: Engraveable # Impstation
 
 - type: entity
   name: flippo engraved lighter
@@ -310,6 +311,7 @@
   - type: UseDelay
   - type: IgnitionSource
     ignited: false
+  - type: Engraveable # starcup
 
 - type: entity
   parent: BaseBrandedLighter # starcup: removed contraband label
@@ -433,7 +435,7 @@
     color: cyan
 
 - type: entity
-  parent: [BaseBrandedLighter, BaseTraitorContraband ] # starcup: added contraband label
+  parent: [BaseBrandedLighter, BaseNanotrasenContraband ] # starcup: added contraband label
   id: NanotrasenFlippo
   name: NanoTrasen flippo # starcup: capitalization corrections
   description: A navy blue luxury lighter. Fueled by liquid plasma, to show just how much of it NanoTrasen has to go around. # starcup: rewritten for setting lore
@@ -475,7 +477,7 @@
     sprite: Objects/Tools/Lighters/centcomm.rsi
   - type: ItemToggleRequiresLock
     requireLocked: false
-  - type: Welder
+  - type: Welder #
     fuelConsumption: 0.0
     fuelLitCost: 10
     fuelReagent: Plasma
@@ -529,7 +531,7 @@
     color: green
 
 - type: entity
-  parent: [BaseBrandedLighter, BaseTraitorContraband] # starcup: syndicate contraband to traitor
+  parent: BaseBrandedLighter # starcup: removed contraband label
   id: WaffleCoFlippo
   name: Waffle Co. flippo
   description: "A robust mass produced lighter. The Waffle Co. logo turns the spark wheel when pushed up, minimising risk of lighter burns for even the most inept user."
@@ -558,7 +560,7 @@
     sprite: Objects/Tools/Lighters/honkco.rsi
   - type: Item
     sprite: Objects/Tools/Lighters/honkco.rsi
-  - type: ComponentToggler
+  - type: ComponentToggler # This is super cursed and ends up deleting the fixtures when toggled off
     components:
     - type: Slippery
     - type: StepTrigger
@@ -583,7 +585,7 @@
           density: 10
           mask:
           - ItemMask
-  - type: Welder
+  - type: Welder #
     fuelConsumption: 0.1
     fuelLitCost: 1
     tankSafe: true
@@ -627,12 +629,12 @@
         #  Quantity: 10
   - type: FlavorProfile
     flavors:
-      - bread
-      - meaty
-      - cheap
+    - bread
+    - meaty
+    - cheap
   - type: ComponentToggler
     components:
-    - type: Food
+    - type: Edible # This shouldn't be component toggler, but doesn't work when it's not
   - type: PointLight
     enabled: false
     netsync: false

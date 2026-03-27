@@ -1,0 +1,34 @@
+# Re-parented, modified RMC prototype
+- type: entity
+  parent: FloraPlantBaseStarcup
+  id: FloraAlienPlant
+  description: Pox Polyps, commonly known as honeybulb and lamptrap, is a predatory plant whose glowing, sweet nectar is deadly to the insects it lures.
+  name: lamptrap
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/flora_plantalien.rsi
+    layers:
+    - state: alienplant1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        alienplant1: ""
+        alienplant2: ""
+        alienplant3: ""
+        alienplant4: ""
+        alienplant5: ""
+        alienplant6: ""
+        alienplant7: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 8
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: PointLight
+    radius: 2.0
+    energy: 1.5
+    color: "#ecca87"

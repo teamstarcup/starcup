@@ -1,0 +1,28 @@
+- type: entity
+  id: SpaceBladeBoxTrash
+  parent: MysteryFigureBoxTrash
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Fun/spaceblade.rsi
+    state: sb_box_unfolded
+
+- type: entity
+  parent: MysteryFigureBox
+  id: MysterySpaceBladeBox
+  name: mystery space blade box
+  description: A box containing a mystery space blade. The side of the box depicts a few blacked-out 'rare' space blades.
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Fun/spaceblade.rsi
+    scale: 0.65, 0.65
+    layers:
+      - state: sb_box
+  - type: StaticPrice
+    price: 160
+  - type: SpawnEntityTableOnTrigger
+    useMapCoords: true
+    table: !type:AllSelector
+      children:
+      - id: SpaceBladeBoxTrash
+      - !type:NestedSelector
+        tableId: AllSpacebladesTable

@@ -4,3 +4,23 @@
     Blunt: 1.15
     Slash: 1.15
     Piercing: 1.15
+
+- type: damageModifierSet
+  id: WoodenStructure  # Trees, barricades, thicker and sturdier wood than the wood set seems to represent.
+  coefficients:
+    Blunt: 0.25
+    Slash: 0.5
+    Piercing: 0.25
+    Structural: 2.0
+
+- type: damageModifierSet
+  id: burrowed  # Resistant to blizzards and ash storms.
+  coefficients:
+    Heat: 0
+    Cold: 0
+
+- type: damageModifierSet
+  id: HumanoidSilicon
+  coefficients:
+    Cold: 0.7
+    Shock: 1.3

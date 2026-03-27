@@ -23,10 +23,10 @@
     sprite: Objects/Misc/Handy_Flags/NT_handy_flag.rsi
 
 - type: entity
-  parent: [BaseItem, BaseSyndicateContraband]
+  parent: BaseItem # starcup: remove syndicate contraband label
   id: SyndieHandyFlag
   name: syndicate handheld flag
-  description: "For truly rebellious patriots. Death to NT!"
+  description: Show your pride for the Syndicate! # starcup: rewritten for setting lore
   components:
   - type: Sprite
     sprite: Objects/Misc/Handy_Flags/syndie_handy_flag.rsi

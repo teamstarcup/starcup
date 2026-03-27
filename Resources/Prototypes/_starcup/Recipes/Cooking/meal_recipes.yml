@@ -1,3 +1,4 @@
+# Imitation Chocolate Variants
 - type: microwaveMealRecipe
   id: RecipeCookieImitation
   name: imitation chocolate cookie recipe
@@ -74,3 +75,27 @@
   solids:
     FoodCannabisButter: 2
     FoodSnackChocolateBarImitation: 2
+
+- type: microwaveMealRecipe
+  id: RecipeCocoTartImitation
+  name: chocolate lava tart recipe
+  result: FoodTartCocoImitation
+  time: 15
+  group: Pie
+  reagents:
+    Sugar: 5
+    Milk: 5
+  solids:
+    FoodDoughPie: 1
+    FoodSnackChocolateBarImitation: 3
+    FoodPlateTin: 1
+
+- type: microwaveMealRecipe
+  id: RecipeChocolateHeartImitation
+  name: homemade imitation chocolate heart recipe
+  result: FoodHomemadeChocolateHeartImitation
+  time: 5
+  reagents:
+    Sugar: 2
+    CocoaPowderImitation: 2
+    Milk: 2

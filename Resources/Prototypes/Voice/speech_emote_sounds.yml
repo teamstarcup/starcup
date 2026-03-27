@@ -90,16 +90,16 @@
   sounds:
     Scream:
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
-    Laugh:
-      path: /Audio/Animals/lizard_happy.ogg
-    LizardHiss: # Imp edit
+    Hiss: # Imp edit
       collection: ReptilianHiss
+    Chirp: # Imp addition
+      collection: ReptilianChirp
     Honk:
       collection: BikeHorn
     Whistle:
       collection: Whistles
     Crying:
-      collection: MaleCry
+      path: /Audio/_starcup/Animals/Lizard/lizard_whimper.ogg # starcup
     Weh:
       collection: Weh
     Hew:
@@ -114,8 +114,18 @@
     Yawn:
       collection: MaleYawn
     # End DeltaV Additions
+    # begin starcup
+    TailWhip:
+      path: /Audio/_RMC14/Xeno/alien_tail_swipe1.ogg
+    ThumpTailSoft:
+      path: /Audio/Effects/soft_thump.ogg
+    ThumpTailMany:
+      path: /Audio/_starcup/Effects/soft_thumps.ogg
+    ThumpTailLoud:
+      path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
+    # end starcup
     Gasp:
-      collection: MaleGasp
+      path: /Audio/_starcup/Animals/Lizard/lizard_gasp.ogg # starcup
     DefaultDeathgasp:
       collection: DeathGasp
 
@@ -126,16 +136,16 @@
   sounds:
     Scream:
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
-    Laugh:
-      path: /Audio/Animals/lizard_happy.ogg
-    LizardHiss: # Imp edit
+    Hiss: # Imp edit
       collection: ReptilianHiss
+    Chirp: # Imp addition
+      collection: ReptilianChirp
     Honk:
       collection: BikeHorn
     Whistle:
       collection: Whistles
     Crying:
-      collection: FemaleCry
+      path: /Audio/_starcup/Animals/Lizard/lizard_whimper.ogg # starcup
     Weh:
       collection: Weh
     Hew:
@@ -150,8 +160,18 @@
     Yawn:
       collection: FemaleYawn
     # End DeltaV Additions
+    # begin starcup
+    TailWhip:
+      path: /Audio/_RMC14/Xeno/alien_tail_swipe1.ogg
+    ThumpTailSoft:
+      path: /Audio/Effects/soft_thump.ogg
+    ThumpTailMany:
+      path: /Audio/_starcup/Effects/soft_thumps.ogg
+    ThumpTailLoud:
+      path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
+    # end starcup
     Gasp:
-      collection: FemaleGasp
+      path: /Audio/_starcup/Animals/Lizard/lizard_gasp.ogg # starcup
     DefaultDeathgasp:
       collection: FemaleDeathGasp
 
@@ -199,7 +219,7 @@
     Gasp:
       collection: MaleGasp
     # begin starcup
-    SlimeFizz:
+    Fizz:
       collection: SlimeFizz
       params:
         volume: 0
@@ -254,7 +274,7 @@
     Gasp:
       collection: FemaleGasp
     # begin starcup
-    SlimeFizz:
+    Fizz:
       collection: SlimeFizz
     # end starcup
     DefaultDeathgasp:
@@ -269,21 +289,29 @@
       path: /Audio/Voice/Vox/shriek1.ogg
     Laugh:
       path: /Audio/Voice/Vox/vox_laugh.ogg
+    Cough:
+      path: /Audio/Voice/Vox/vox_cough.ogg
+    Sigh:
+      path: /Audio/Voice/Vox/vox_sigh.ogg
+    Click:
+      path: /Audio/Voice/Vox/vox_click.ogg
+    Chitter:
+      path: /Audio/Voice/Vox/vox_chitter.ogg
     Honk:
       collection: BikeHorn
+    Crying:
+      path: /Audio/Voice/Vox/vox_cry.ogg
     Weh:
       collection: Weh
     Hew:
       collection: Hew
-    # Begin DeltaV Additions
     Gasp:
-      collection: VoxGasp
+      path: /Audio/Effects/Gasp/vox_gasp.ogg
     DefaultDeathgasp:
-      path: /Audio/_DV/Effects/Gasp/vox_deathgasp_1.ogg
-    # End DeltaV Additions
+      path: /Audio/Effects/Gasp/vox_DeathGasp.ogg
   params:
     variation: 0.125
-    # We need vox sounds for the other emotes
+    # TODO: We need vox sounds for the other emotes
 
 - type: emoteSounds
   id: UnisexDiona
@@ -423,7 +451,7 @@
     variation: 0.125
   sounds:
     Buzz:
-      path: /Audio/Voice/Moth/moth_scream.ogg
+      collection: NymphBuzzes # starcup
     Scream:
       path: /Audio/Voice/Moth/moth_scream.ogg
     Laugh:
@@ -432,6 +460,22 @@
       path: /Audio/Voice/Moth/moth_chitter.ogg
     Squeak:
       path: /Audio/Voice/Moth/moth_squeak.ogg
+    # begin starcup
+    Sneeze:
+      path: /Audio/_starcup/Voice/Moth/moth_sneeze.ogg
+    Sigh:
+      collection: MothSighs
+    Yawn:
+      path: /Audio/_Impstation/Voice/Moth/mothyawn.ogg
+    Cough:
+      path: /Audio/_Impstation/Voice/Moth/mothcough.ogg
+    Flutter:
+      collection: WingRuffleBug
+    Crying:
+      path: /Audio/_Impstation/Voice/Moth/mothcry.ogg
+    BuzzNonSilicon:
+      collection: NymphBuzzes
+    # end starcup
     Weh:
       collection: Weh
     Hew:
@@ -439,7 +483,7 @@
     Honk:
       collection: BikeHorn
     Gasp:
-      collection: MaleGasp
+      collection: MothGasps # starcup
     DefaultDeathgasp:
       collection: MothDeathGasp
 
@@ -507,6 +551,91 @@
     Ping:
       collection: XenoborgPing
 
+# Vulp Sounds
+- type: emoteSounds
+  id: MaleVulpkanin
+  params:
+    variation: 0.125
+  sounds:
+    Laugh:
+      collection: MaleLaugh
+    Sneeze:
+      collection: MaleSneezes
+    Cough:
+      collection: MaleCoughs
+    Whistle:
+      collection: Whistles
+    Sigh:
+      collection: MaleSigh
+    Yawn:
+      collection: VulpkaninYawns
+    Scream:
+      collection: VulpkaninScreams
+    Growl:
+      collection: VulpkaninGrowls
+    Snarl:
+      collection: VulpkaninSnarls
+    Bark:
+      collection: VulpkaninBarks
+    Whine:
+      collection: VulpkaninWhines
+    Crying:
+      collection: VulpkaninWhines
+    Howl:
+      collection: VulpkaninHowls
+    Weh:
+      collection: Weh
+    Hew:
+      collection: Hew
+    Honk:
+      collection: BikeHorn
+    Gasp:
+      collection: MaleGasp
+    DefaultDeathgasp:
+      collection: MaleDeathGasp
+
+- type: emoteSounds
+  id: FemaleVulpkanin
+  params:
+    variation: 0.125
+  sounds:
+    Laugh:
+      collection: FemaleLaugh
+    Sneeze:
+      collection: FemaleSneezes
+    Cough:
+      collection: FemaleCoughs
+    Whistle:
+      collection: Whistles
+    Sigh:
+      collection: FemaleSigh
+    Yawn:
+      collection: VulpkaninYawns
+    Scream:
+      collection: VulpkaninScreams
+    Growl:
+      collection: VulpkaninGrowls
+    Snarl:
+      collection: VulpkaninSnarls
+    Bark:
+      collection: VulpkaninBarks
+    Whine:
+      collection: VulpkaninWhines
+    Crying:
+      collection: VulpkaninWhines
+    Howl:
+      collection: VulpkaninHowls
+    Weh:
+      collection: Weh
+    Hew:
+      collection: Hew
+    Honk:
+      collection: BikeHorn
+    Gasp:
+      collection: FemaleGasp
+    DefaultDeathgasp:
+      collection: FemaleDeathGasp
+
 # body emotes
 - type: emoteSounds
   id: GeneralBodyEmotes
@@ -556,8 +685,10 @@
 - type: emoteSounds
   id: ReptilianBodyEmotes
   sounds:
-    Thump:
+    # begin starcup
+    ThumpTailLoud:
       path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
+    # end starcup
       params:
         variation: 0.125
     Clap:
@@ -655,10 +786,14 @@
   params:
     variation: 0.125
   sounds:
-    Thump:
+    # begin starcup
+    ThumpTailSoft:
       path: /Audio/Effects/soft_thump.ogg
-      params:
-        variation: 0.125
+    ThumpTailMany:
+      path: /Audio/_starcup/Effects/soft_thumps.ogg
+    ThumpTailLoud:
+      path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
+    # end starcup
     Clap:
       collection: Claps
     ClapSingle:

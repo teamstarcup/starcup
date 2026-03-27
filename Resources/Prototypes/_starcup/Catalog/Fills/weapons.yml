@@ -1,0 +1,165 @@
+- type: entityTable
+  id: RandomCombatGearSmallTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomKnifeTable
+    - !type:NestedSelector
+      tableId: RandomAmmoTable
+    - !type:NestedSelector
+      tableId: RandomGrenadeTable
+
+- type: entityTable
+  id: RandomCombatGearTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomWeaponTable
+    - !type:NestedSelector
+      tableId: RandomArmorTable
+    - !type:GroupSelector
+      children:
+      - id: ClothingShoesBootsJack
+      - id: ClothingHeadHelmetBasic
+      - id: ClothingHeadHelmetMerc
+      - id: ClothingHeadHelmetCult
+      - id: ClothingHeadHelmetTemplar
+      - id: ClothingHeadHelmetBone
+      - id: ClothingHeadHelmetPodWars
+
+- type: entityTable
+  id: RandomWeaponTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      children:
+      - id: Spear
+      - id: SpearReinforced
+    - !type:AllSelector
+      children:
+      - id: BowImprovised
+      - id: ArrowImprovised
+        amount: 3
+    - id: Stunprod
+    - id: BaseBallBat
+    - id: ClothingHandsKnuckleDusters
+    - id: Cutlass
+    - id: Claymore
+    - id: Katana
+    - id: Machete
+    - id: Musket
+    - id: WeaponSniperMosin
+    - id: WeaponShotgunBlunderbuss
+    - id: WeaponLaserSvalinn
+    - id: WeaponPistolFlintlock
+
+- type: entityTable
+  id: RandomArmorTable
+  table: !type:GroupSelector
+    children:
+    - id: ClothingOuterArmorBasic
+    - id: ClothingOuterArmorBasicSlim
+    - id: ClothingOuterArmorBulletproof
+    - id: ClothingOuterArmorReflective
+    - id: ClothingOuterVestWebMerc
+    - id: ClothingOuterArmorCult
+    - id: ClothingOuterArmorBone
+    - id: ClothingOuterArmorPodWars
+
+- type: entityTable
+  id: RandomKnifeTable
+  table: !type:GroupSelector
+    children:
+    - id: KitchenKnife
+    - id: CombatKnife
+    - id: SurvivalKnife
+    - id: KukriKnife
+    - !type:GroupSelector
+      children:
+      - id: ReinforcedShiv
+        weight: 0.40
+      - id: PlasmaShiv
+        weight: 0.35
+      - id: UraniumShiv
+        weight: 0.25
+
+- type: entityTable
+  id: RandomAmmoTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      children:
+      - id: MagazinePistol
+      - id: MagazinePistolPractice
+        weight: 0.5
+      - id: MagazinePistolIncendiary
+        weight: 0.5
+    - !type:GroupSelector
+      children:
+      - id: MagazinePistolSubMachineGun
+      - id: MagazinePistolSubMachineGunPractice
+        weight: 0.5
+      - id: MagazinePistolSubMachineGunIncendiary
+        weight: 0.5
+    - !type:GroupSelector
+      children:
+      - id: MagazineLightRifle
+      - id: MagazineLightRiflePractice
+        weight: 0.5
+      - id: MagazineLightRifleIncendiary
+        weight: 0.5
+    - !type:GroupSelector
+      children:
+      - id: MagazineRifle
+      - id: MagazineRiflePractice
+        weight: 0.5
+      - id: MagazineRifleIncendiary
+        weight: 0.5
+    - !type:GroupSelector
+      children:
+      - id: SpeedLoaderMagnum
+      - id: SpeedLoaderMagnumPractice
+        weight: 0.5
+      - id: SpeedLoaderMagnumIncendiary
+        weight: 0.5
+    - !type:GroupSelector
+      children:
+      - id: ShellShotgun
+        amount: !type:RangeNumberSelector
+          range: 2, 3
+      - id: ShellShotgunBeanbag
+        amount: !type:RangeNumberSelector
+          range: 2, 3
+      - id: ShellShotgunSlug
+        amount: !type:RangeNumberSelector
+          range: 2, 3
+      - id: ShellShotgunFlare
+        amount: !type:RangeNumberSelector
+          range: 2, 3
+      - id: ShellShotgunIncendiary
+        amount: !type:RangeNumberSelector
+          range: 2, 3
+      - id: ShellTranquilizer
+        amount: !type:RangeNumberSelector
+          range: 2, 3
+
+- type: entityTable
+  id: RandomGrenadeTable
+  table: !type:GroupSelector
+    children:
+    - !type:AllSelector # make your own!
+      children:
+      - !type:GroupSelector
+        children:
+        - id: TimerTrigger
+        - id: SignalTrigger
+        - id: VoiceTrigger
+      - !type:GroupSelector
+        children:
+        - id: ChemicalPayload
+        - id: FlashPayload
+    - id: GrenadeFlashBang
+    - id: SmokeGrenade
+    - id: TearGasGrenade
+    - id: GrenadeStinger
+    - id: GrenadeEMP

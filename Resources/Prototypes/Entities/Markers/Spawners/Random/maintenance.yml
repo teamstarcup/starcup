@@ -6,6 +6,9 @@
     - !type:GroupSelector
       weight: 75
       children:
+      - !type:NestedSelector
+        weight: 5 # Roughly 7% chance
+        tableId: AllToysTable
       # Smoker's specialty
       - !type:AllSelector
         children:
@@ -111,14 +114,9 @@
         - id: ClothingNeckCloakGay
         - id: ClothingNeckCloakEnby
         - id: ClothingNeckCloakPan
-      - id: ToySkeleton
-      - id: Basketball
-      - id: Football
-#      - id: BalloonNT # starcup: removed for syndicate rebranding ops
-      - id: BalloonSyn # starcup: added for syndicate rebranding ops
-      - id: BalloonCorgi
+      - id: ToyFigurineSkeleton
       - id: MysteryFigureBox
-      - id: RubberChicken
+      - id: MysterySpaceBladeBox # starcup
       # Cult
       - !type:AllSelector
         children:
@@ -160,21 +158,27 @@
         - id: ClothingNeckTransPin
         - id: ClothingNeckAutismPin
         - id: ClothingNeckGoldAutismPin
+      # begin starcup: candy buckets
+      - !type:GroupSelector
+        children:
+        - id: CandyBucketPailPlainRandom
+        - id: CandyBucketPailSmileyRandom
+        - id: CandyBucketPailCat
+        - id: CandyBucketPailClown
+        - id: CandyBucketPailGhost
+        - id: CandyBucketPailPumpkin
+        - id: CandyBucketPailSkeleton
+      # end starcup
     # Rare Group
     - !type:GroupSelector
       weight: 2
       children:
-      - id: Skub
-      - id: PonderingOrb
-      - id: CluwneHorn
-      - id: ClothingShoesSkates
       - id: DrinkMugDog
       - id: CigarGold
       - id: ClothingUniformJumpsuitFamilyGuy
       - id: WristwatchGold
       - id: RubberStampGreytide
       - id: MysteryLighterBox
-      - id: GoldenPersonalAI
 
 - type: entity
   name: Maint Loot Spawner
@@ -200,7 +204,16 @@
     - !type:GroupSelector
       weight: 75
       children:
-      - id: FlashlightLantern
+      # begin starcup: add misc. tools & tweaks
+      - !type:GroupSelector
+        children:
+        - id: FlashlightLantern
+        - id: FlashlightLanternGreen
+        - id: FlashlightLanternPurple
+        - id: FlashlightLanternTeal
+        - id: FlashlightLanternRed
+        - id: FlashlightBig
+      # end starcup
       - id: ToolboxEmergencyFilled
       - !type:GroupSelector
         children:
@@ -228,13 +241,24 @@
       - id: Plunger
       - id: PowerCellMedium
       - id: PowerCellSmall
-      - id: Soap
+      - !type:NestedSelector
+        tableId: AllSoapsTable
       - id: Wirecutter
       - id: Screwdriver
-      - id: Wrench
+      # begin starcup: add misc. tools & tweaks
+      - !type:GroupSelector
+        children:
+        - id: Wrench
+        - id: HeavyWrench
+        - id: MonkeyWrench
+        - id: PipeWrench
+      - id: BroomItemBrown
+      - id: ItemHammer
+      # end starcup
       - id: Crowbar
       - id: Multitool
       - id: Shovel
+      - id: ChoppingAxe # starcup: add chopping axes & fireaxe resprite
       - id: Welder
       - id: GasAnalyzer
       - id: SprayPainter
@@ -274,7 +298,7 @@
       - id: trayScanner
       - id: HandheldGPSBasic
       - id: HandLabeler
-      - id: GlowstickBase
+      - id: GlowstickGreen
       - id: Bucket
       - id: RadioHandheld
       - id: AppraisalTool
@@ -329,12 +353,17 @@
       weight: 95
       children:
       - id: Machete
+      - id: Claymore
       - id: BaseBallBat
       - id: CombatKnife
       - id: Spear
       - id: RifleStock
       - id: ModularReceiver
       - id: HydroponicsToolScythe
+      # begin starcup: add misc. tools & tweaks
+      - id: CrashAxe
+      - id: BrushAxe
+      # end starcup
     # Rare Group
     - !type:GroupSelector
       weight: 5
@@ -361,6 +390,8 @@
       - id: SawImprov
       - id: HydroponicsToolMiniHoe
       - id: ClothingHandsKnuckleDusters
+      - !type:NestedSelector
+        tableId: AllToyWeaponsTable
 
 - type: entity
   name: Maint Loot Spawner

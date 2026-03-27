@@ -1,9 +1,14 @@
+job-name-admin-assistant = Administrative Assistant
+
 # Alternate titles
 
 # Bartender
 job-alt-title-barista = Barista
 job-alt-title-speakeasyer = Speakeasyer
 job-alt-title-seniorbartender = Senior Bartender
+
+# Cargo Technician
+job-alt-title-cargo-pilot = Pilot
 
 # Chaplain
 job-alt-title-atheist-shepherd = Atheist Shepherd
@@ -16,6 +21,7 @@ job-alt-title-n0tary-artist = N0tary Artist
 
 # Chef
 job-alt-title-flavorist = Flavorist
+job-alt-title-culinary-tailor = Culinary Tailor
 
 # Chemist
 job-alt-title-pharmacist = Pharmacist
@@ -43,9 +49,11 @@ job-alt-title-mechatronics = Mechatronics Specialist
 # Scientist
 job-alt-title-necrocosmicist = Necrocosmicist
 
-
 # SyndComm
 job-name-syndcomm-operator = SyndComm Operator
 job-name-syndcomm-agent = SyndComm Agent
 job-name-syndcomm-officer = SyndComm Officer
 job-name-syndcomm-official = SyndComm Official
+
+# Role Timers
+JobAdminAssistant = Administrative Assistant

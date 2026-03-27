@@ -1,0 +1,139 @@
+# The following prototype is a mix of RMCBasePlant and AnomalyFloraBulb meant to serve as a base for our small plants.
+- type: entity
+  id: FloraPlantBaseStarcup
+  name: plant
+  abstract: true
+  description: Some manner of space flora.
+  components:
+  - type: Clickable
+  - type: GravityAffected
+  - type: Sprite
+    noRot: true
+    sprite: Structures/Specific/Anomalies/flora_anom.rsi
+    state: bulb
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.1
+        layer:
+        - HalfWallLayer
+        - Opaque
+  - type: InteractionOutline
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Diona
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 16
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Weapons/slash.ogg"
+  - type: Flammable
+    fireSpread: true
+    damage:
+      types:
+        Heat: 3
+  - type: Reactive
+    groups:
+      Flammable: [Touch]
+      Extinguish: [Touch]
+    reactions:
+    - reagents: [WeedKiller, PlantBGone]
+      methods: [Touch]
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 10
+
+# Re-parented, modified RMC prototypes
+- type: entity
+  parent: FloraPlantBaseStarcup
+  id: FloraBushBonsai
+  description: A small, leafy bush.
+  name: leafy bush
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/dam.rsi
+    layers:
+    - state: bush01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        bush01: ""
+        bush02: ""
+        bush03: ""
+        bush04: ""
+        bush05: ""
+        bush06: ""
+        bush07: ""
+        bush08: ""
+        bush09: ""
+        bush10: ""
+
+- type: entity
+  parent: FloraPlantBaseStarcup
+  id: FloraBushStalk
+  name: stalky bush
+  components:
+  - type: Sprite
+    sprite: Decals/Flora/flora_bushes.rsi
+    layers:
+    - state: bushh1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        bushh1: ""
+        bushh2: ""
+        bushh3: ""
+
+- type: entity
+  parent: FloraPlantBaseStarcup
+  id: FloraBushFern
+  name: ferny bush
+  components:
+  - type: Sprite
+    sprite: Decals/Flora/flora_bushes.rsi
+    layers:
+    - state: bushj1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        bushj1: ""
+        bushj2: ""
+        bushj3: ""
+  - type: SpriteFade
+
+- type: entity
+  parent: FloraPlantBaseStarcup
+  id: FloraBushJungle
+  name: jungle bush
+  components:
+  - type: Sprite
+    sprite: _RMC14/Structures/Flora/bush.rsi
+    layers:
+    - state: bush1
+      map: ["random"]
+    offset: 0.1, 0.35
+    drawdepth: Overdoors
+  - type: RandomSprite
+    available:
+    - random:
+        bush1: ""
+        bush2: ""
+        bush3: ""
+  - type: SpriteFade

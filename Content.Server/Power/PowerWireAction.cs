@@ -53,12 +53,30 @@ public sealed partial class PowerWireAction : BaseWireAction
                && cut == 0;
     }
 
+    /// <summary>
+    /// DeltaV - called by SetPower for non-receivers (APCs).
+    /// Can't be in a partial class due to datafield sourcegen.
+    /// </summary>
+    private void SetBatteryPower(EntityUid uid, bool pulsed)
+    {
+        if (!EntityManager.TryGetComponent<PowerNetworkBatteryComponent>(uid, out var comp))
+            return;
+
+        if (pulsed || AllWiresCut(uid))
+            comp.PowerEnabled = false;
+        else if (WiresSystem.TryGetData<bool>(uid, PowerWireActionKey.Pulsed, out var isPulsed) && isPulsed)
+            return;
+        else
+            comp.PowerEnabled = true;
+    }
+
     // I feel like these two should be within ApcPowerReceiverComponent at this point.
     // Getting it from a dictionary is significantly more expensive.
     private void SetPower(EntityUid owner, bool pulsed)
     {
         if (!EntityManager.TryGetComponent(owner, out ApcPowerReceiverComponent? power))
         {
+            SetBatteryPower(owner, pulsed); // DeltaV
             return;
         }
 
@@ -189,8 +207,7 @@ public sealed partial class PowerWireAction : BaseWireAction
     public override bool Cut(EntityUid user, Wire wire)
     {
         base.Cut(user, wire);
-        if (!TrySetElectrocution(user, wire))
-            return false;
+        TrySetElectrocution(user, wire); // starcup: don't return false after electrocuting
 
         SetWireCuts(wire.Owner, true);
 
@@ -202,8 +219,7 @@ public sealed partial class PowerWireAction : BaseWireAction
     public override bool Mend(EntityUid user, Wire wire)
     {
         base.Mend(user, wire);
-        if (!TrySetElectrocution(user, wire))
-            return false;
+        TrySetElectrocution(user, wire); // starcup: don't return false after electrocuting
 
         // Mending any power wire restores shorts.
         WiresSystem.TryCancelWireAction(wire.Owner, PowerWireActionKey.PulseCancel);
@@ -221,7 +237,7 @@ public sealed partial class PowerWireAction : BaseWireAction
         base.Pulse(user, wire);
         WiresSystem.TryCancelWireAction(wire.Owner, PowerWireActionKey.ElectrifiedCancel);
 
-        var electrocuted = !TrySetElectrocution(user, wire, true);
+        // var electrocuted = !TrySetElectrocution(user, wire, true); // starcup: variable goes unused, comment it out
 
         if (WiresSystem.TryGetData<bool>(wire.Owner, PowerWireActionKey.Pulsed, out var pulsedKey) && pulsedKey)
             return;
@@ -229,8 +245,7 @@ public sealed partial class PowerWireAction : BaseWireAction
         WiresSystem.SetData(wire.Owner, PowerWireActionKey.Pulsed, true);
         WiresSystem.StartWireAction(wire.Owner, _pulseTimeout, PowerWireActionKey.PulseCancel, new TimedWireEvent(AwaitPulseCancel, wire));
 
-        if (electrocuted)
-            return;
+        TrySetElectrocution(user, wire, true); // starcup: don't return after electrocuting
 
         SetPower(wire.Owner, true);
     }

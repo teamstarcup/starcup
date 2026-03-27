@@ -1,0 +1,109 @@
+- type: loadout
+  id: BoxFolderBlackThreePapers
+  storage:
+    back:
+    - BoxFolderBlackThreePapers
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: BoxFolderRedThreePapers
+  storage:
+    back:
+    - BoxFolderRedThreePapers
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: BoxFolderGreenThreePapers
+  storage:
+    back:
+    - BoxFolderGreenThreePapers
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: BoxFolderBlueThreePapers
+  storage:
+    back:
+    - BoxFolderBlueThreePapers
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: BoxFolderWhiteThreePapers
+  storage:
+    back:
+    - BoxFolderWhiteThreePapers
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: NotebookPocketBlue
+  storage:
+    back:
+    - NotebookPocketBlue
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: NotebookPocketBrown
+  storage:
+    back:
+    - NotebookPocketBrown
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: NotebookPocketGreen
+  storage:
+    back:
+    - NotebookPocketGreen
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: NotebookSpiralCybersun
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Command
+      time: 43200 #12 hrs
+  storage:
+    back:
+    - NotebookSpiralCybersun
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: NotebookSpiralInterdyne
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Medical
+      time: 43200 #12 hrs
+  storage:
+    back:
+    - NotebookSpiralInterdyne
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: NotebookSpiralBeige
+  storage:
+    back:
+    - NotebookSpiralBeige
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: NotebookSpiralPurple
+  storage:
+    back:
+    - NotebookSpiralPurple
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: NotebookSpiralTeal
+  storage:
+    back:
+    - NotebookSpiralTeal
+  groupBy: "bureaucracy"
+
+- type: loadout
+  id: NotebookCompositionBlack
+  storage:
+    back:
+    - NotebookCompositionBlack
+  groupBy: "bureaucracy"

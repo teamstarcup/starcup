@@ -14,6 +14,9 @@ uplink-exploding-nanotrasen-bomb-fake-desc = A training bomb carefully made to l
 
 uplink-emag-desc-starcup = The business card of NanoTrasen black ops, this sequencer is able to tamper with a variety of station devices. Recharges automatically.
 
+uplink-nanotrasen-id-card-name = NanoTrasen ID Card
+uplink-nanotrasen-id-card-desc = A NanoTrasen ID card, with NanoTrasen access. Unlikely to be useful on its own, but goes great with reconfigured doors. Does not come with access-copying functionality.
+
 uplink-reinforcement-radio-ancestor-desc-starcup =  Call in a trained ancestor of your choosing to assist you. Comes with a single NanoTrasen cigarette.
 
 uplink-reinforcement-radio-cyborg-assault-name-starcup = NanoTrasen Assault Cyborg Teleporter
@@ -93,3 +96,21 @@ uplink-balloon-desc-starcup = Specially designed to inflict maximum psychologica
 
 uplink-nanotrasen-lighter-name = NanoTrasen lighter
 uplink-nanotrasen-lighter-desc = A navy blue luxury lighter. Fueled by liquid plasma, to show just how much of it NanoTrasen has to go around.
+
+uplink-ntmov-law-name = NT Law Circuit
+uplink-ntmov-law-desc = A subversive Lawset to use when you want to turn the A.I. to your side, use as much as possible.
+
+uplink-spaceblade-nanotrasen-name = NanoTrasen Brand SpaceBlade
+uplink-spaceblade-nanotrasen-desc = A silly toy with a hidden blade. It can do some serious damage to your enemies' ankles.
+
+#Syndicate uplink locs
+uplink-spaceblade-syndicate-name = Syndicate Brand SpaceBlade
+uplink-spaceblade-syndicate-desc = This Blade does not officially exist, according to SyndComm.
+uplink-combat-medipen-silicon-name = Silicon Combat Medipen
+uplink-combat-medipen-silicon-desc = A single-use medipen specifically designed for silicons, containing nanites that regenerate most types of damage.
+
+uplink-overclock-injector-name = Overclock Injector
+uplink-overclock-injector-desc = Using the power of nanotechnology, this injector will grant silicons 60 seconds of death-defying power similar to that of hyperzine.
+
+uplink-overclock-kit-name = Overclock Kit
+uplink-overclock-kit-desc = A medkit containing 6 overclock microinjectors, which each inject you with enough nanites to last for 30 seconds.

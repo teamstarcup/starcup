@@ -301,3 +301,18 @@
     materialComposition:
       Glass: 500
       Steel: 200
+
+- type: entity
+  id: FloodlightTest
+  parent: Floodlight
+  name: floodlight
+  suffix: Test
+  components:
+  - type: PointLight
+    color: "#ff8000"
+    energy: 2
+    radius: 8
+    mask: /Textures/Effects/LightMasks/cone.png
+    offset: "0, -0.1"
+    autoRot: true
+  - type: Rotatable

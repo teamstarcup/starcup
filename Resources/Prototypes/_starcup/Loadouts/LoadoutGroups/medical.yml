@@ -1,0 +1,88 @@
+# Medical Doctor
+- type: loadoutGroup
+  id: MedicalDoctorNeck
+  parent: [ Scarfs ]
+  name: loadout-group-medical-doctor-neck
+  minLimit: 0
+  loadouts:
+  - Stethoscope
+
+# Medical Intern
+- type: loadoutGroup
+  id: MedicalInternOuterClothing
+  name: loadout-group-medical-intern-outerclothing
+  minLimit: 0
+  loadouts:
+  - WinterCoatBlue
+
+- type: loadoutGroup
+  id: MedicalInternHead
+  name: loadout-group-medical-intern-head
+  minLimit: 0
+  loadouts:
+  - NurseHat
+  - BlueSurgeryCap
+  - GreenSurgeryCap
+  - PurpleSurgeryCap
+
+- type: loadoutGroup
+  id: MedicalInternID
+  name: loadout-group-medical-intern-id-delta
+  loadouts:
+  - MedicalInternPDA
+  - PracticalNursePDA
+  - ResidentPDA
+
+# Chemist
+- type: loadoutGroup
+  id: ChemistPDA
+  name: loadout-group-chemist-id
+  loadouts:
+  - ChemistPDA
+  - PharmacistPDA
+
+- type: loadoutGroup
+  id: ChemistShoes
+  name: loadout-group-chemist-shoes
+  loadouts:
+  - OrangeShoes
+  - WhiteShoes
+  - ChemistWinterBoots
+
+# Psychologist
+- type: loadoutGroup
+  id: PsychologistOuterClothing
+  name: loadout-group-psychologist-outerclothing
+  minLimit: 0
+  loadouts:
+  - MedicalDoctorWintercoat
+  - WinterCoat
+  - WinterCoatPlaid
+
+- type: loadoutGroup
+  id: PsychologistShoes
+  name: loadout-group-psychologist-shoes
+  loadouts:
+  - BrownLeatherShoes
+  - LaceupShoes
+  - RedHeels
+  - BlackHeels
+  - BlueHeels
+  - GreenHeels
+  - MedicalWinterBoots
+  - WinterBoots
+
+- type: loadoutGroup
+  parent: [ CommonBackpack, MedicalBackpack ]
+  id: PsychologistBackpack
+  name: loadout-group-psychologist-backpack
+
+- type: loadoutGroup
+  id: PsychologistID
+  name: loadout-group-psychologist-id-delta
+  loadouts:
+  - PsychologistPDA
+  - PsychiatristPDA
+  - TherapistPDA
+  - SocialWorkerPDA
+  - CounselorPDA

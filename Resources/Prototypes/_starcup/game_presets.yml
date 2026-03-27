@@ -18,7 +18,7 @@
   description: calm-description
   rules:
   - CalmStationEventScheduler
-  - SpaceTrafficControlFriendlyEventScheduler
+  - StarcupSpaceTrafficControlFriendlyEventScheduler
   - BasicRoundstartVariation
 
 - type: gamePreset
@@ -30,8 +30,7 @@
   description: trouble-description
   rules:
   - TroubleStationEventScheduler
-  - SlowMeteorSwarmScheduler
-  - SpaceTrafficControlEventScheduler
+  - StarcupSpaceTrafficControlAllEventScheduler
   - BasicRoundstartVariation
 
 - type: gamePreset
@@ -43,55 +42,42 @@
   description: danger-description
   rules:
   - DangerStationEventScheduler
-  - MeteorSwarmScheduler
-  - SpaceTrafficControlEventScheduler
+  - StarcupSpaceTrafficControlAllEventScheduler
   - BasicRoundstartVariation
 
-## "False" Gamemodes, for Admin Use
 - type: gamePreset
-  id: SecretEmpty # runs Empty but shows "Secret" in lobby.
+  id: Thief
   alias:
-    - secretempty
-  name: secret-title
-  showInVote: false #Admin Use
-  description: secret-description
+  - thief
+  name: thief-title
+  description: thief-description
+  showInVote: false
   rules:
+  - DummyNonAntagChance
+  - Thief
+  - TroubleStationEventScheduler
+  - StarcupSpaceTrafficControlAllEventScheduler
   - BasicRoundstartVariation
 
 - type: gamePreset
-  id: SecretCalm # runs Calm but shows "Secret" in lobby.
-  alias:
-    - secretcalm
-  name: secret-title
-  showInVote: false #Admin Use
-  description: secret-description
-  rules:
-  - CalmStationEventScheduler
-  - SpaceTrafficControlFriendlyEventScheduler
-  - BasicRoundstartVariation
-
-- type: gamePreset
-  id: SecretTrouble # runs Trouble but shows "Secret" in lobby.
-  alias:
-    - secrettrouble
-  name: secret-title
-  showInVote: false #Admin Use
-  description: secret-description
+  id: LateStart
+  name: late-start-title
+  showInVote: true
+  description: late-start-description
   rules:
   - TroubleStationEventScheduler
-  - SlowMeteorSwarmScheduler
-  - SpaceTrafficControlEventScheduler
+  - StarcupSpaceTrafficControlAllEventScheduler
   - BasicRoundstartVariation
+  - LateJoinAnomalySpawns
+  - RoundstartPowerOutageRule
+  - SpawnOnShiftChangeShuttleUntilArrivalRule
+  - ReturnShiftChangeShuttle
 
 - type: gamePreset
-  id: SecretDanger # runs Danger but shows "Secret" in lobby.
+  id: EmptyEpilogue # Empty, but without any trash or decals, so we can load SyndComm without it looking like a dump
   alias:
-    - secretdanger
-  name: secret-title
-  showInVote: false #Admin Use
-  description: secret-description
-  rules:
-  - DangerStationEventScheduler
-  - MeteorSwarmScheduler
-  - SpaceTrafficControlEventScheduler
-  - BasicRoundstartVariation
+  - empty
+  - blank
+  name: empty-title
+  showInVote: false
+  description: empty-description

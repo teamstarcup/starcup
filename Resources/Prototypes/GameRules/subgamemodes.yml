@@ -19,8 +19,8 @@
     selectionTime: IntraPlayerSpawn
     definitions:
     - prefRoles: [ Thief ]
-      max: 3
-      playerRatio: 20
+      max: 8 # starcup: increased from 3 since thieves are their own gamemode
+      playerRatio: 10 # starcup: decreased from 20 since thieves are their own gamemode
       lateJoinAdditional: true
       allowNonHumans: true
       multiAntagSetting: NotExclusive
@@ -34,6 +34,15 @@
       - MindRoleThief
       briefing:
         sound: "/Audio/Misc/thief_greeting.ogg"
+  - type: DynamicRuleCost
+    cost: 75
+  - type: GameRule
+    cancelPresetOnTooFewPlayers: false
+  # begin starcup: added delay for standalone gamemode
+    delay:
+      min: 240
+      max: 420
+  # end starcup
 
 # Needs testing
 - type: entity
@@ -68,3 +77,35 @@
         nameFormat: name-format-wizard
       mindRoles:
       - MindRoleWizard
+  - type: GameRule
+    cancelPresetOnTooFewPlayers: false
+
+- type: entity
+  parent: BaseXenoborgsRule
+  id: SubXenoborgs
+  components:
+  - type: GameRule
+    minPlayers: 30
+    cancelPresetOnTooFewPlayers: false
+  - type: AntagMultipleRoleSpawner
+    antagRoleToPrototypes:
+      MothershipCore: [ MothershipCore ]
+      Xenoborg: [ XenoborgEngi, XenoborgHeavy, XenoborgScout, XenoborgStealth ]
+    pickAndTake: true
+  - type: AntagSelection
+    selectionTime: PrePlayerSpawn
+    definitions:
+    - prefRoles: [ MothershipCore ]
+      fallbackRoles: [ Xenoborg ]
+      spawnerPrototype: SpawnPointGhostRoleMothershipCore
+      mindRoles:
+      - MindRoleMothershipCore
+    - prefRoles: [ Xenoborg ]
+      fallbackRoles: [ MothershipCore ]
+      spawnerPrototype: SpawnPointGhostRoleXenoborg
+      mindRoles:
+      - MindRoleXenoborg
+      min: 4
+      max: 4
+  - type: DynamicRuleCost
+    cost: 200

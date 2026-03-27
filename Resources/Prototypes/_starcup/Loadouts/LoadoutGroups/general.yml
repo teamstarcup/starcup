@@ -1,0 +1,259 @@
+- type: loadoutGroup
+  id: Scarfs
+  name: loadout-group-scarfs
+  minLimit: 0
+  loadouts:
+  - ScarfRed
+  - ScarfBlue
+  - ScarfLightBlue
+  - ScarfGreen
+  - ScarfPurple
+  - ScarfBrown
+  - ScarfOrange
+  - ScarfBlack
+  - ScarfZebra
+  - ScarfSyndieRed
+  - ScarfSyndieGreen
+  - ScarfAce
+  - ScarfAro
+  - ScarfAroAce
+  - ScarfBi
+  - ScarfGay
+  - ScarfInter
+  - ScarfLesbian
+  - ScarfLesbianLong
+  - ScarfPan
+  - ScarfNonbinary
+  - ScarfRainbow
+  - ScarfTrans
+
+- type: loadoutGroup
+  id: Accessibility
+  name: loadout-group-accessibility
+  minLimit: 0
+  maxLimit: 6
+  loadouts:
+  - AACTablet
+  - HandheldStationMap
+  - OffsetCane
+  - OffsetCaneWood
+  - OffsetCaneClown
+  - OffsetCaneMime
+  - OffsetCaneSyndie
+  - Cane
+  - WhiteCane
+  - PillCanisterNeurozeniumLoadout
+  - PillCanisterSoretizoneLoadout
+  - PillCanisterCalmafluxineLoadout
+  - PillCanisterEthyloxyephedrineLoadout
+  - PillCanisterAgonolexyneLoadout
+
+# Abstract Groups (for parenting purposes)
+## Trinkets
+
+- type: loadoutGroup
+  abstract: true
+  id: Plushies
+  loadouts:
+  - PlushieLizardInversed
+  - PlushieBee
+  - PlushieSnake
+  - PlushieCarp
+  - PlushieHolocarp
+  - PlushieExperiment
+  - PlushieSharkBlue
+  - PlushieSharkPink
+  - PlushieSharkGrey
+  - PlushieHampter
+  - PlushiePenguin
+  - PlushieArachnid
+  - PlushieDiona
+  - PlushieMoth
+  - PlushieSlime
+  - PlushieVox
+  - PlushieVulp
+  - PlushieRouny
+  - PlushieXeno
+  - PlushieZetan
+
+- type: loadoutGroup
+  abstract: true
+  id: PlushiesWorn
+  loadouts:
+  - PlushieLizardWorn
+  - PlushieSpaceLizardWorn
+  - PlushieLizardInversedWorn
+  - PlushieBeeWorn
+  - PlushieExperimentWorn
+  - PlushieHampterWorn
+  - PlushiePenguinWorn
+  - PlushieArachnidWorn
+  - PlushieDionaWorn
+  - PlushieMothWorn
+  - PlushieSlimeWorn
+  - PlushieVoxWorn
+  - PlushieVulpWorn
+  - PlushieRounyWorn
+  - PlushieXenoWorn
+  - PlushieZetan
+
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsBureaucracy
+  loadouts:
+  - BoxFolderBlackThreePapers
+  - BoxFolderRedThreePapers
+  - BoxFolderGreenThreePapers
+  - BoxFolderBlueThreePapers
+  - BoxFolderWhiteThreePapers
+  - NotebookPocketBlue
+  - NotebookPocketBrown
+  - NotebookPocketGreen
+  - NotebookSpiralCybersun
+  - NotebookSpiralInterdyne
+  - NotebookSpiralBeige
+  - NotebookSpiralPurple
+  - NotebookSpiralTeal
+  - NotebookCompositionBlack
+
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsLighter
+  loadouts:
+  - CybersunFlippo
+  - DonkcoLighter
+  - GorlexMatchbox
+  - InterdyneFlippo
+  - SyndicateFlippo
+
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsUtility
+  loadouts:
+  - TapeRecorder
+  - NoviceMark
+
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsTreat
+  loadouts:
+  - LollipopBubblegum
+
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsToy
+  loadouts:
+  - CardBoxSparot
+
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsCosmetic
+  loadouts:
+  - CDDogtags
+  - HeartLocket
+  - GoldRing
+  - SilverRing
+
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsTowel
+  loadouts:
+  - TowelColorGray
+  - TowelColorBlack
+  - TowelColorRed
+  - TowelColorOrange
+  - TowelColorLightBrown
+  - TowelColorYellow
+  - TowelColorDarkGreen
+  - TowelColorGreen
+  - TowelColorLightBlue
+  - TowelColorDarkBlue
+  - TowelColorPurple
+  - TowelColorMaroon
+  - TowelColorMime
+  - TowelColorSilver
+  - TowelColorGold
+
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsInstrument
+  loadouts:
+  - AcousticGuitar
+  - Flute
+  - PanFlute
+  - Ocarina
+  - Harmonica
+  - MusicBox
+  - Kalimba
+  - Woodblock
+
+## Clothes
+- type: loadoutGroup
+  abstract: true
+  id: ColoredJumpsuits
+  loadouts:
+  - WhiteJumpsuit
+  - WhiteJumpskirt
+  - BlackJumpsuit
+  - BlackJumpskirt
+  - BlueJumpsuit
+  - BlueJumpskirt
+  - DarkBlueJumpsuit
+  - DarkBlueJumpskirt
+  - TealJumpsuit
+  - TealJumpskirt
+  - GreenJumpsuit
+  - GreenJumpskirt
+  - DarkGreenJumpsuit
+  - DarkGreenJumpskirt
+  - OrangeJumpsuit
+  - OrangeJumpskirt
+  - PinkJumpsuit
+  - PinkJumpskirt
+  - RedJumpsuit
+  - RedJumpskirt
+  - YellowJumpsuit
+  - YellowJumpskirt
+  - PurpleJumpsuit
+  - PurpleJumpskirt
+  - LightBrownJumpsuit
+  - LightBrownJumpskirt
+  - BrownJumpsuit
+  - BrownJumpskirt
+  - MaroonJumpsuit
+  - MaroonJumpskirt
+
+- type: loadoutGroup
+  abstract: true
+  id: Turtlenecks
+  loadouts:
+  - WhiteTurtleneckSuit
+  - WhiteTurtleneckSkirt
+  - BlackTurtleneckSuit
+  - BlackTurtleneckSkirt
+  - BlueTurtleneckSuit
+  - BlueTurtleneckSkirt
+  - DarkBlueTurtleneckSuit
+  - DarkBlueTurtleneckSkirt
+  - TealTurtleneckSuit
+  - TealTurtleneckSkirt
+  - GreenTurtleneckSuit
+  - GreenTurtleneckSkirt
+  - DarkGreenTurtleneckSuit
+  - DarkGreenTurtleneckSkirt
+  - OrangeTurtleneckSuit
+  - OrangeTurtleneckSkirt
+  - PinkTurtleneckSuit
+  - PinkTurtleneckSkirt
+  - RedTurtleneckSuit
+  - RedTurtleneckSkirt
+  - YellowTurtleneckSuit
+  - YellowTurtleneckSkirt
+  - PurpleTurtleneckSuit
+  - PurpleTurtleneckSkirt
+  - LightBrownTurtleneckSuit
+  - LightBrownTurtleneckSkirt
+  - BrownTurtleneckSuit
+  - BrownTurtleneckSkirt
+  - MaroonTurtleneckSuit
+  - MaroonTurtleneckSkirt

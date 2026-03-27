@@ -2,9 +2,8 @@
 
 - type: marking
   id: HarpyEarsDefault
-  bodyPart: Head
-  markingCategory: HeadTop
-  speciesRestriction: [Harpy]
+  bodyPart: HeadSide # starcup: changed from Head
+  groupWhitelist: [Harpy]
   coloring:
     default:
       type:
@@ -20,8 +19,7 @@
 - type: marking
   id: HarpyTailPhoenix
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Harpy]
+  groupWhitelist: [Harpy]
   coloring:
     default:
       type:
@@ -37,8 +35,7 @@
 - type: marking
   id: HarpyTailRooster
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Harpy]
+  groupWhitelist: [Harpy]
   coloring:
     default:
       type:
@@ -53,8 +50,7 @@
 - type: marking
   id: HarpyTailFinch
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Harpy]
+  groupWhitelist: [Harpy]
   coloring:
     default:
       type:
@@ -67,29 +63,9 @@
       state: finch_tail
 
 - type: marking
-  id: HarpyChestDefault
-  bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Harpy]
-  coloring:
-    default:
-      type:
-        !type:CategoryColoring
-          category: Hair
-      fallbackTypes:
-        - !type:SimpleColoring
-          color: "#964b00"
-  sprites:
-    - sprite: _DV/Mobs/Customization/Harpy/harpy_chest.rsi
-      state: upper
-    - sprite: _DV/Mobs/Customization/Harpy/harpy_chest.rsi
-      state: lower
-
-- type: marking
   id: HarpyLegsDefault
   bodyPart: LLeg
-  markingCategory: Legs
-  speciesRestriction: [Harpy]
+  groupWhitelist: [Harpy]
   coloring:
     default:
       type:
@@ -105,8 +81,7 @@
 - type: marking
   id: HarpyFeetDefault
   bodyPart: RFoot
-  markingCategory: Legs
-  speciesRestriction: [Harpy]
+  groupWhitelist: [Harpy]
   coloring:
     default:
       fallbackTypes:

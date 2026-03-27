@@ -1,7 +1,7 @@
 ﻿- type: entity
   name: basic slime
   id: BaseMobAdultSlimes
-  parent: [ SimpleMobBase, MobCombat ]
+  parent: [ BaseMobSlimes, SimpleMobBase, MobCombat ]
   abstract: true
   description: It looks so much like jelly. I wonder what it tastes like?
   components:
@@ -36,11 +36,13 @@
     tags:
     - FootstepSound
     - DoorBumpOpener
+    - CreatureEmotes # starcup
   - type: Butcherable
     butcheringType: Knife
     spawned:
     - id: FoodMeatSlime
       amount: 2
+    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Respirator
     damage:
       types:
@@ -53,7 +55,10 @@
     damageContainer: Biological
     damageModifierSet: Slime
   - type: Bloodstream
-    bloodReagent: Slime
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Slime
+        Quantity: 150
     bloodlossDamage:
       types:
         Bloodloss:
@@ -74,22 +79,18 @@
     - reagents: [ Water, SpaceCleaner ]
       methods: [ Touch ]
       effects:
-      - !type:WashCreamPieReaction
+      - !type:WashCreamPie
     - reagents: [ Water ]
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
         damage:
           types:
-            Caustic: 0.15 # starcup: changed damage type from heat
+            Caustic: 0.05 # starcup: changed damage type from heat
       - !type:PopupMessage
         type: Local
         messages: [ "slime-hurt-by-water-popup" ]
         probability: 0.25
-  - type: Body
-    prototype: Slimes
-    requiredLegs: 1
   - type: MeleeWeapon
     altDisarm: false
     soundHit:
@@ -119,7 +120,7 @@
   description: It looks so much like jelly. I wonder what it tastes like?
   components:
   - type: ReplacementAccent
-    accent: slimes
+    accent: FeralSlimeAccent # starcup
   - type: GhostTakeoverAvailable
   - type: GhostRole
     makeSentient: true
@@ -130,21 +131,29 @@
       settings: short
   - type: Speech
     speechVerb: Slime
-    speechSounds: Slime
-    allowedEmotes: ['Squish', 'Bubble', 'Pop', 'SlimeFizz'] # imp: added bubble and pop # starcup: added SlimeFizz
+    speechSounds: FeralSlimeSpeechSounds # starcup
+    allowedEmotes: ['Squish', 'Bubble', 'Pop', 'Fizz', 'Simmer'] # imp: added bubble and pop # starcup: added Fizz and Simmer
   - type: TypingIndicator
     proto: slime
   - type: Vocal
-    sounds: # starcup
-      Male: AnimalSlime
-      Female: AnimalSlime
-      Unsexed: AnimalSlime
+    sounds:
+    # begin starcup
+      Unsexed: FeralSlimeSpeechEmotes
+    screamId: Simmer
+    screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - BubbleAutoEmote
+    - SquishAutoEmote
+    - PopAutoEmote
+    # end starcup
   - type: NpcFactionMember
     factions:
     - SimpleNeutral
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
+  - type: Deathgasp # starcup
 
 - type: entity
   name: blue slime
@@ -162,7 +171,7 @@
   name: blue slime
   parent: MobAdultSlimesBlue
   id: MobAdultSlimesBlueAngry
-  suffix: Angry
+  suffix: AI, hostile # starcup: mob suffix consistency
   components:
     - type: NpcFactionMember
       factions:
@@ -202,7 +211,7 @@
   name: green slime
   parent: MobAdultSlimesGreen
   id: MobAdultSlimesGreenAngry
-  suffix: Angry
+  suffix: AI, hostile # starcup: mob suffix consistency
   components:
     - type: NpcFactionMember
       factions:
@@ -241,7 +250,7 @@
   name: yellow slime
   parent: MobAdultSlimesYellow
   id: MobAdultSlimesYellowAngry
-  suffix: Angry
+  suffix: AI, hostile # starcup: mob suffix consistency
   components:
     - type: NpcFactionMember
       factions:

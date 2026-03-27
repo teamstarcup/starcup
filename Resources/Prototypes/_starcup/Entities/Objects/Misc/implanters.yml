@@ -1,6 +1,6 @@
 - type: entity
   id: BaseImplantOnlyImplanterNT
-  parent: [BaseTraitorContraband, BaseImplantOnlyImplanterSyndi]
+  parent: [BaseNanotrasenContraband, BaseImplantOnlyImplanterSyndi]
   name: NanoTrasen implanter
   abstract: true
   components:
@@ -89,6 +89,14 @@
   components:
   - type: Implanter
     implant: ChameleonControllerImplant
+
+- type: entity
+  id: VoiceMaskImplanterNT
+  name: voice mask implanter
+  parent: BaseImplantOnlyImplanterNT
+  components:
+  - type: Implanter
+    implant: VoiceMaskImplant
 
 #Nuclear Operative/Special implanters
 

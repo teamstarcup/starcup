@@ -2,7 +2,9 @@
 
 - type: entity
   name: bunny
-  parent: SimpleMobBase
+  parent:
+  - SimpleMobBase
+  - BaseMobAnimal
   id: MobBunny
   description: Tiny, fluffy, and full of attitude.
   components:
@@ -32,20 +34,25 @@
         - SmallMobMask
         layer:
         - SmallMobLayer
-  - type: Item 
+  - type: Item
     size: Normal
   - type: CanEscapeInventory
   - type: Speech
     speechVerb: SmallMob
-    speechSounds: Squeak
-    allowedEmotes: ['Squeak']
+  # begin starcup
+    speechSounds: KangarooSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureSqueak', 'CreatureYawn', 'CreatureCough', 'ThumpFootSoft', 'ThumpFootMany', 'ThumpFootLoud']
   - type: Vocal
     sounds:
-      Male: Mouse
-      Female: Mouse
-      Unsexed: Mouse
+      Unsexed: SqueakSpeechEmotes
+    screamId: ThumpFootSoft
+    screamAction: ActionEmitSound
   - type: ReplacementAccent
-    accent: mouse
+    accent: kangaroo
+  - type: AutoEmote
+    emotes:
+    - FootThumpAutoEmote
+  # end starcup
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -69,8 +76,10 @@
         - ReagentId: UncookedAnimalProteins
           Quantity: 3
   - type: Bloodstream
-    bloodReagent: Blood
-    bloodMaxVolume: 50
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 50
   - type: Destructible
     thresholds:
     - trigger:
@@ -82,8 +91,6 @@
   - type: FireVisuals
     sprite: Mobs/Effects/onfire.rsi
     normalState: Mouse_burning
-  - type: Body
-    prototype: Mouse
   - type: GhostTakeoverAvailable
   - type: GhostRole
     makeSentient: true
@@ -91,7 +98,7 @@
     allowMovement: true
     name: ghost-role-information-bunny-name
     description: ghost-role-information-bunny-description
-    rules: ghost-role-information-freeagent-rules  
+    rules: ghost-role-information-freeagent-rules
   - type: CombatMode
   - type: MeleeWeapon
     soundHit:
@@ -109,7 +116,7 @@
       - ActionCritSuccumb
       - ActionCritFakeDeath
       - ActionCritLastWords
-  - type: NonSpreaderZombie  
+  - type: NonSpreaderZombie
   - type: StaticPrice
     price: 50
   - type: NpcFactionMember
@@ -121,3 +128,7 @@
     - CannotSuicide
     - VimPilot
     - Meat
+  # begin starcup
+    - CreatureEmotes
+  - type: BurrowAbility
+  # end starcup

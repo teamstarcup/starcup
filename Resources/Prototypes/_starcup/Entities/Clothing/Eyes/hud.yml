@@ -9,7 +9,7 @@
     sprite: _starcup/Clothing/Eyes/Hud/command_syndi.rsi
 
 - type: entity
-  parent: [BaseTraitorContraband, ClothingEyesHudSyndicate, BaseExaminableClothing]
+  parent: [BaseNanotrasenContraband, ClothingEyesHudSyndicate]
   id: ClothingEyesHudNanotrasen
   name: NanoTrasen visor
   description: NanoTrasen's professional head-up display, designed for better detection of humanoids and their subsequent elimination.
@@ -22,7 +22,7 @@
     examineText: clothing-nanotrasen-visor
 
 - type: entity
-  parent: [BaseTraitorContraband, ClothingEyesHudSyndicateAgent, BaseExaminableClothing]
+  parent: [BaseNanotrasenContraband, ClothingEyesHudSyndicateAgent]
   id: ClothingEyesHudNanotrasenAgent
   name: NanoTrasen medical visor
   description: The NanoTrasen Corpsman's professional heads-up display, designed for quick diagnosis of their team's status.

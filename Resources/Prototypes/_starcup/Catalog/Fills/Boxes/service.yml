@@ -1,0 +1,39 @@
+- type: entity
+  parent: BoxLighttube
+  id: BoxLightsCold
+  name: mixed cold lights box
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: LightTubeCold
+          amount: 6
+        - id: ColdLightBulb
+          amount: 6
+
+- type: entity
+  parent: BoxLighttube
+  id: BoxLightsWarm
+  name: mixed warm lights box
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: LightTubeWarm
+          amount: 6
+        - id: WarmLightBulb
+          amount: 6
+
+- type: entity
+  parent: BoxLighttube
+  id: BoxLightsViolet
+  name: mixed warm lights box
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: LightTubeViolet
+          amount: 12

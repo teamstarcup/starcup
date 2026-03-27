@@ -1,0 +1,15 @@
+- type: entity
+  id: CrateFunMysterySpaceBlades
+  parent: CratePlastic
+  name: mystery space blade crate
+  description: A collection of 10 Mystery Space Blade boxes. Duplicates non refundable.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: MysterySpaceBladeBox
+          amount: 10
+        - id: MysterySpaceBladeBox
+          amount: 16
+          prob: 0.05

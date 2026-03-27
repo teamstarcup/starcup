@@ -4,10 +4,15 @@
   abstract: true
   components:
   - type: OrientationHint
+    direction: 180
   - type: WallMount
     arc: 90
   - type: Clickable
   - type: InteractionOutline
+  - type: Tag
+    tags:
+      - Structure
+      - ForceNoFixRotations
 
 - type: entity
   id: HospitalCurtainsDirectional
@@ -38,6 +43,16 @@
   id: CurtainsBlueOpenDirectional
   parent: [ BaseCurtainsDirectional, CurtainsBlueOpen ]
   suffix: Fancy blue, Open, Directional
+
+- type: entity
+  id: CurtainsSkyBlueDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsSkyBlue ]
+  suffix: Fancy sky blue, Directional
+
+- type: entity
+  id: CurtainsSkyBlueOpenDirectional
+  parent: [ BaseCurtainsDirectional, CurtainsSkyBlueOpen ]
+  suffix: Fancy sky blue, Open, Directional
 
 - type: entity
   id: CurtainsCyanDirectional

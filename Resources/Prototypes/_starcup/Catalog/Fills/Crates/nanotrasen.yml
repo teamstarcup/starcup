@@ -1,6 +1,6 @@
 - type: entity
   id: CrateNanotrasenSurplusBundle
-  parent: [ BaseTraitorContraband, CrateNanotrasen, StorePresetUplinkNT ]
+  parent: [ BaseNanotrasenContraband, CrateNanotrasen, StorePresetUplinkNT ]
   name: NanoTrasen surplus crate
   description: Contains 50 telecrystals worth of completely random NanoTrasen items. It can be useless junk or really good.
   components:
@@ -14,17 +14,19 @@
   name: NanoTrasen juggernaut bundle
   description: Contains everything except a big gun to go postal.
   components:
-  - type: StorageFill
-    contents:
-      - id: ClothingOuterHardsuitJuggernautNT
-      - id: ClothingMaskGasNanotrasen
-      - id: ClothingHandsGlovesCombat
-      - id: DoubleEmergencyOxygenTankFilled
-      - id: DoubleEmergencyNitrogenTankFilled
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: ClothingOuterHardsuitJuggernautNT
+        - id: ClothingMaskGasNanotrasen
+        - id: ClothingHandsGlovesCombat
+        - id: DoubleEmergencyOxygenTankFilled
+        - id: DoubleEmergencyNitrogenTankFilled
 
 - type: entity
   id: CrateNanotrasenSuperSurplusBundle
-  parent: [ BaseTraitorContraband, CrateNanotrasen, StorePresetUplinkNT ]
+  parent: [ BaseNanotrasenContraband, CrateNanotrasen, StorePresetUplinkNT ]
   name: NanoTrasen super surplus crate
   description: Contains 125 telecrystals worth of completely random NanoTrasen items.
   components:

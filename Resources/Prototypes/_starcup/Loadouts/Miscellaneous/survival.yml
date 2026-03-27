@@ -1,3 +1,20 @@
+# MKCs
+- type: loadoutEffectGroup
+  id: HumanoidSilicon
+  effects:
+  - !type:SpeciesLoadoutEffect
+    species:
+    - MKC
+
+- type: loadout
+  id: EmergencyBoxMKC
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: HumanoidSilicon
+  storage:
+    back:
+    - BoxSurvivalMKC
+
 # Security
 - type: loadout
   id: EmergencyOxygenBrigmedic

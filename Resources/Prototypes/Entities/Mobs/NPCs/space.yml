@@ -34,15 +34,18 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      100: Dead
+      100: Dead # starcup: revert salvage damage nerf (80 > 100)
   - type: Stamina
-    critThreshold: 150
+    baseCritThreshold: 150
   - type: MovementAlwaysTouching
   - type: Bloodstream
-    bloodMaxVolume: 300
-    bloodReagent: Cryoxadone
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Cryoxadone
+        Quantity: 300
   - type: CombatMode
   - type: Temperature
+  - type: TemperatureDamage
     heatDamageThreshold: 500
     coldDamageThreshold: 0
   - type: MeleeWeapon
@@ -103,13 +106,31 @@
     accent: genericAggressive
   - type: Vocal
     sounds:
-      Unsexed: Bear
+      Unsexed: SpaceBearSpeechEmotes # starcup
+    screamId: CreatureRoar
+    screamAction: ActionEmitSound
   - type: InteractionPopup
     successChance: 0.25
     interactSuccessString: petting-success-bear
     interactFailureString: petting-failure-bear
     interactSuccessSound:
-      path: /Audio/Animals/sloth_squeak.ogg
+  # begin starcup
+      collection: SpaceBearSays
+  - type: Speech
+    speechSounds: SpaceBearSpeechSounds
+    speechVerb: LargeMob
+    allowedEmotes: ['CreatureRoar', 'CreatureGrowl']
+  - type: TypingIndicator
+    proto: alien
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+    - CreatureEmotes
+  - type: AutoEmote
+    emotes:
+    - GrowlAutoEmote
+  # end starcup
 
 - type: entity
   id: MobBearSpaceSalvage
@@ -155,19 +176,39 @@
       Dead:
         Base: kangaroo-space-dead
   - type: Stamina
-    critThreshold: 180
+    baseCritThreshold: 180
   - type: Inventory
     speciesId: kangaroo
     templateId: spacekangaroo
   - type: Vocal
     sounds:
-      Unsexed: Kangaroo
+  # begin starcup
+      Unsexed: SpaceKangarooSpeechEmotes
+    screamId: CreatureGrowl
+    screamAction: ActionEmitSound
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: SpaceKangarooSpeechSounds
+    allowedEmotes: ['CreatureGrowl']
+  - type: Tag
+    tags:
+    - VimPilot
+    - CreatureEmotes
+  - type: TypingIndicator
+    proto: alien
+  # end starcup
   - type: ReplacementAccent
     accent: kangaroo
   - type: Butcherable
     spawned:
     - id: FoodMeat
       amount: 1
+  # begin starcup: revert salvage damage nerf
+  # - type: MobThresholds
+  #   thresholds:
+  #     0: Alive
+  #     60: Dead
+  # end starcup
 
 - type: entity
   id: MobKangarooSpaceSalvage
@@ -194,9 +235,9 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      90: Dead
+      90: Dead # starcup: revert salvage damage nerf (45 > 90)
   - type: Stamina
-    critThreshold: 150
+    baseCritThreshold: 150
   - type: DamageStateVisuals
     states:
       Alive:
@@ -212,8 +253,10 @@
       amount: 1
       prob: 0.5
   - type: Bloodstream
-    bloodMaxVolume: 250
-    bloodReagent: Cryoxadone
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Cryoxadone
+        Quantity: 250
   - type: Fixtures
     fixtures:
       fix1:
@@ -255,17 +298,26 @@
     color: "#4faffb"
   - type: NoSlip
   - type: IgnoreSpiderWeb
+  # begin starcup
   - type: Speech
     speechVerb: Arachnid
     speechSounds: Arachnid
-    allowedEmotes: ['Click', 'Chitter']
+    allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureClick', 'CreatureChitter']
   - type: Vocal
     sounds:
-      Male: UnisexArachnid
-      Female: UnisexArachnid
-      Unsexed: UnisexArachnid
+      Unsexed: SpaceSpiderSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
   - type: TypingIndicator
-    proto: spider
+    proto: alien # starcup: more space than spider. changed for consistency's sake
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepGiantBug
+  - type: Tag
+    tags:
+    - VimPilot
+    - CreatureEmotes
+  # end starcup
 
 - type: entity
   id: MobSpiderSpaceSalvage
@@ -295,9 +347,9 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        100: Dead
+        100: Dead # starcup: revert salvage damage nerf (45 > 100)
     - type: Stamina
-      critThreshold: 150
+      baseCritThreshold: 150
     - type: DamageStateVisuals
       states:
         Alive:
@@ -315,8 +367,10 @@
           amount: 1
           prob: 0.3
     - type: Bloodstream
-      bloodMaxVolume: 200
-      bloodReagent: Cryoxadone
+      bloodReferenceSolution:
+        reagents:
+        - ReagentId: Cryoxadone
+          Quantity: 200
     - type: Fixtures
       fixtures:
         fix1:
@@ -355,7 +409,7 @@
       interactFailureString: petting-failure-generic
     - type: PointLight
       radius: 1.1
-      energy: 1.5
+      energy: 2.7
       color: "#4faffb"
     - type: Stealth
       enabledOnDeath: false
@@ -363,6 +417,23 @@
     - type: StealthOnMove
       passiveVisibilityRate: -0.25
       movementVisibilityRate: 0.25
+  # begin starcup
+    - type: Speech
+      speechSounds: SpaceSnakeSpeechSounds
+      speechVerb: Reptilian
+      allowedEmotes: ['CreatureHiss']
+    - type: Vocal
+      sounds:
+        Unsexed: SpaceSnakeSpeechEmotes
+      screamId: CreatureHiss
+      screamAction: ActionEmitSound
+    - type: Tag
+      tags:
+      - VimPilot
+      - CreatureEmotes
+    - type: TypingIndicator
+      proto: alien
+  # end starcup
 
 - type: entity
   id: MobCobraSpaceSalvage
@@ -372,13 +443,13 @@
     - type: SalvageMobRestrictions
 
 - type: entity
-  parent: SimpleSpaceMobBase
+  parent:
+  - SimpleSpaceMobBase
+  - BaseMobAnimal
   id: MobSnail
   name: snail
   description: Revolting unless you're french.
   components:
-  - type: Body
-    prototype: Mouse
   - type: GhostRole
     makeSentient: true
     allowSpeech: false
@@ -450,7 +521,7 @@
         Base: dead
       Dead:
         Base: dead
-  - type: Food
+  - type: Edible
   - type: Thirst
     startingThirst: 25  # spawn with Okay thirst state
     thresholds:
@@ -489,8 +560,10 @@
   - type: CombatMode
     combatToggleAction: ActionCombatModeToggleOff
   - type: Bloodstream
-    bloodMaxVolume: 30
-    bloodReagent: Cryoxadone
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Cryoxadone
+        Quantity: 30
   - type: CanEscapeInventory
   - type: MobPrice
     price: 50
@@ -500,6 +573,7 @@
     sprite: Mobs/Effects/onfire.rsi
     normalState: Mouse_burning
   - type: Temperature
+  - type: TemperatureDamage
     heatDamageThreshold: 500
     coldDamageThreshold: 0
   - type: Reactive
@@ -508,7 +582,6 @@
       methods: [Touch, Ingestion, Injection]
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
         damage:
           types:
             Caustic: 1
@@ -565,12 +638,10 @@
   - type: MovementAlwaysTouching
 
 - type: entity
-  parent: MobSnail
+  parent: [ BaseMobMothroach, MobSnail ]
   id: MobSnailMoth
   name: Snoth
   components:
-  - type: Body
-    prototype: Mothroach
   - type: GhostRole
     name: ghost-role-information-snoth-name
     description: ghost-role-information-snoth-description

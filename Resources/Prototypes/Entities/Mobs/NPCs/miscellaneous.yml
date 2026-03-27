@@ -47,11 +47,11 @@
     - type: Tag
       tags:
         - FootstepSound
-    - type: HitscanBatteryAmmoProvider
+        - CreatureEmotes # starcup
+    - type: BatteryAmmoProvider
       proto: RedLightLaser
       fireCost: 50
     - type: BatterySelfRecharger
-      autoRecharge: true
       autoRechargeRate: 50
     - type: Battery
       maxCharge: 1000
@@ -68,8 +68,25 @@
       successChance: 0.3
       interactSuccessString: petting-success-reptile
       interactFailureString: petting-failure-generic
-      interactSuccessSound:
-        path: /Audio/Animals/lizard_happy.ogg
+  # begin starcup
+    - type: Deathgasp
+    - type: Speech
+      speechVerb: Reptilian
+      speechSounds: RaptorSpeechSounds
+      allowedEmotes: ['CreatureScream', 'CreatureChitter', 'CreatureHiss', 'TailWhip']
+    - type: Vocal
+      sounds:
+        Unsexed: RaptorSpeechEmotes
+      screamId: CreatureScream
+      screamAction: ActionEmitSound
+    - type: ReplacementAccent
+      accent: RaptorAccent
+    - type: TypingIndicator
+      proto: lizard
+    - type: AutoEmote
+      emotes:
+      - ChitterAutoEmote
+  # end starcup
 
 - type: entity
   id: MobTomatoKiller
@@ -104,39 +121,38 @@
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
         damage:
           groups:
-            Brute: -0.25
+            Brute: -0.15
     - reagents: [ Blood ]
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
         damage:
           groups:
-            Brute: -0.5
-            Burn: -0.5
+            Brute: -0.25
+            Burn: -0.25
     - reagents: [ RobustHarvest ]
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
         damage:
           groups:
-            Brute: -2
-            Burn: -2
+            Brute: -1
+            Burn: -1
     - reagents: [ WeedKiller, PlantBGone ]
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
         damage:
           types:
-            Heat: 2
+            Heat: 1
   - type: ReplacementAccent
     accent: tomatoKiller
   - type: Item
+    size: Large
+    shape:
+    - 0,0,2,2
   - type: MultiHandedItem
   - type: NpcFactionMember
     factions:
@@ -147,7 +163,7 @@
   - type: NPCImprintingOnSpawnBehaviour
     whitelist:
       components:
-      - HumanoidAppearance
+      - HumanoidProfile
   - type: Sprite
     sprite: Mobs/Demons/tomatokiller.rsi
     noRot: true
@@ -155,9 +171,10 @@
       - map: [ "enum.DamageStateVisualLayers.Base" ]
         state: alive
   - type: Bloodstream
-    bloodReagent: JuiceTomato
-    bloodMaxVolume: 50
-    chemicalMaxVolume: 30
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: JuiceTomato
+        Quantity: 50
   - type: DamageStateVisuals
     states:
       Alive:
@@ -216,6 +233,7 @@
     tags:
       - FootstepSound
       - Fruit
+      - CreatureEmotes # starcup
   - type: Extractable
     grindableSolutionName: bloodstream
   - type: PotencyVisuals
@@ -232,3 +250,16 @@
         Blunt: 0.11
   - type: StaticPrice
     price: 400
+    # begin starcup
+  - type: Speech
+    speechVerb: Slime
+    speechSounds: FeralSlimeSpeechSounds
+    allowedEmotes: ['CreatureScream', 'Squish']
+  - type: TypingIndicator
+    proto: slime
+  - type: Vocal
+    sounds:
+      Unsexed: FleshSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+    # end starcup

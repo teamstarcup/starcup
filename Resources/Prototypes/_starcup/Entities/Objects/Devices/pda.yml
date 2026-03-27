@@ -1,5 +1,30 @@
 - type: entity
-  parent: [ BasePDA, BaseTraitorContraband ]
+  parent: BasePDA
+  id: AdminAssistantPDA
+  name: administrative assistant PDA
+  description: Theres pen scribbles all over the edges, and a few sticky notes stuck on it.
+  components:
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda
+  - type: PdaBorderColor
+    borderColor: "#1B67A5"
+  - type: Icon
+    sprite: _DV/Objects/Devices/pda.rsi
+    state: pda-admin-assistant
+  - type: Pda
+    id: AdminAssistantIDCard
+    penSlot:
+      startingItem: LuxuryPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+
+- type: entity
+  parent: [ BasePDA, BaseNanotrasenContraband ]
   id: NTPDA
   name: NanoTrasen PDA
   description: Features state-of-the-art encryption technology for deep espionage assignments.
@@ -22,7 +47,7 @@
       - NanoTaskCartridge
 
 - type: entity
-  parent: [ BaseMedicalPDA, BaseTraitorContraband ]
+  parent: [ BaseMedicalPDA, BaseNanotrasenContraband ]
   id: NTAgentPDA
   name: NanoTrasen corpsman PDA
   description: For those days when healing normal NT agents aren't enough, try healing nuclear operatives instead!
@@ -72,6 +97,16 @@
   components:
   - type: Pda
     id: SeniorBartenderIDCard
+
+# Cargo Technician
+- type: entity
+  parent: CargoPDA
+  id: CargoPilotPDA
+  name: pilot PDA
+  description: If you're going to crash, aim for something nobody will miss. Like that stupid Tesla.
+  components:
+  - type: Pda
+    id: CargoPilotIDCard
 
 # Chaplain
 - type: entity
@@ -147,6 +182,15 @@
   components:
   - type: Pda
     id: FlavoristIDCard
+
+- type: entity
+  parent: ChefPDA
+  id: CulinaryTailorPDA
+  name: culinary tailor PDA
+  description: The silken delicacies that some chefs weave look closer to arts and crafts than food preparation.
+  components:
+  - type: Pda
+    id: CulinaryTailorIDCard
 
 # Chemist
 

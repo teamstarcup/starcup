@@ -2,7 +2,7 @@ using Content.Server.Ghost;
 using Content.Server.Hands.Systems;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Chat;
-using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
 using Content.Shared.Database;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction.Events;
@@ -15,7 +15,6 @@ using Content.Shared.Popups;
 using Content.Shared.Tag;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-using Content.Shared._EE.Silicon.Components;
 
 namespace Content.Server.Chat;
 
@@ -170,10 +169,7 @@ public sealed class SuicideSystem : EntitySystem
             return;
         }
 
-        if (HasComp<SiliconComponent>(victim)) // Goobstation
-            args.DamageType ??= "Shock";
-        else
-            args.DamageType ??= "Bloodloss";
+        args.DamageType ??= "Bloodloss";
         _suicide.ApplyLethalDamage(victim, args.DamageType);
         args.Handled = true;
     }

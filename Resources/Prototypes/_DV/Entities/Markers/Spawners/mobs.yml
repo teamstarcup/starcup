@@ -1,0 +1,48 @@
+- type: entity
+  # begin starcup: standardize spawners
+  name: Siobhan Spawner
+  suffix: RD Pet
+  # end starcup
+  id: SpawnMobArcticFoxSiobhan
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobArcticFoxSiobhan
+
+- type: entity
+  # begin starcup: standardize spawners
+  name: Laika Spawner
+  suffix: Psych Pet # laika is a psych pet now!
+  # end starcup
+  id: SpawnMobSecDogLaika
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobSecDogLaika
+
+- type: entity
+  # begin starcup: standardize spawners
+  name: Silvia Spawner
+  suffix: CMO Pet
+  # end starcup
+  id: SpawnMobCMOPetSilvia
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: silvia
+        sprite: _DV/Mobs/Pets/silvia.rsi
+  - type: ConditionalSpawner
+    prototypes:
+      - MobCobraSilvia

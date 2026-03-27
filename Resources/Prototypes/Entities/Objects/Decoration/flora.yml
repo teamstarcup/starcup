@@ -30,8 +30,16 @@
           !type:DamageTrigger
           damage: 200
         behaviors:
-          - !type:DoActsBehavior
-            acts: [ "Destruction" ]
+        # begin starcup: give it a sound
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/_starcup/Effects/rock_break.ogg
+            params:
+              volume: 5
+              variation: 0.05
+        # end starcup
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
 
 - type: entity
   id: BaseTree
@@ -58,7 +66,7 @@
         - WallLayer
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: Wood
+    damageModifierSet: WoodenStructure # The wood set seems better suited to represent furniture. Shouldn't chop a tree down with three quick smacks of a hatchet. starcup: feat more trees and flora
   - type: MeleeSound
     soundGroups:
       Brute:
@@ -75,11 +83,11 @@
           acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 50
+        damage: 150 # starcup: make trees a bit more respectably tough please
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/tree_fell.ogg
+          collection: TreeFall # starcup
           params:
             volume: 5
             variation: 0.05
@@ -90,6 +98,14 @@
           Log:
             min: 2
             max: 8
+          # begin starcup
+          DeciduousStump:
+            min: 1
+            max: 1
+        offset: 0
+          # end starcup
+  - type: TypingIndicator # Add diona typing indicator here so that diona players keep the same typing bubble when polymorphed into a tree.
+    proto: diona
 
 - type: entity
   parent: BaseTree
@@ -108,6 +124,37 @@
         density: 4000
         layer:
         - WallLayer
+  # begin starcup: add stumps
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall # starcup
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 2
+            max: 8
+          SnowStump:
+            min: 1
+            max: 1
+        offset: 0
+  # end starcup
 
 - type: entity
   parent: BaseTree
@@ -126,6 +173,37 @@
         density: 2000
         layer:
         - WallLayer
+  # begin starcup: add stumps
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall # starcup
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 3
+            max: 8
+          DeciduousLargeStump:
+            min: 1
+            max: 1
+        offset: 0
+  # end starcup
 
 - type: entity
   parent: BaseTree
@@ -144,6 +222,37 @@
         density: 3500
         layer:
         - WallLayer
+  # begin starcup: add stumps
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall # starcup
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 1
+            max: 8
+          ConiferStump:
+            min: 1
+            max: 1
+        offset: 0
+  # end starcup
 
 - type: entity
   parent: BaseRock
@@ -215,6 +324,7 @@
   parent: BaseTree
   id: FloraTree
   name: tree
+  suffix: jungle/swamp # Added for clarity, as there's more variation in trees now. starcup: feat. more tress & flora
   components:
   - type: Sprite
     layers:
@@ -229,6 +339,37 @@
         tree04: ""
         tree05: ""
         tree06: ""
+  # begin starcup: add stumps
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall # starcup
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 2
+            max: 8
+          SwampStump:
+            min: 1
+            max: 1
+        offset: 0
+  # end starcup
 
 - type: entity
   parent: BaseTreeSnow
@@ -261,6 +402,7 @@
   parent: BaseTreeLarge
   id: FloraTreeLarge
   name: large tree
+  suffix: jungle/swamp # Added for clarity, as there's more variation in trees now. starcup: feat. more tress & flora
   components:
   - type: Sprite
     layers:
@@ -291,6 +433,37 @@
         treeconifer01: ""
         treeconifer02: ""
         treeconifer03: ""
+  # begin starcup: add stumps
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall # starcup
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 2
+            max: 8
+          ConiferSnowyStump:
+            min: 1
+            max: 1
+        offset: 0
+  # end starcup
 
 - type: entity
   parent: BaseTreeConifer
@@ -299,6 +472,37 @@
   components:
   - type: Sprite
     state: treechristmas01
+  # begin starcup: add stumps
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall # starcup
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 2
+            max: 8
+          ConiferSnowyStump:
+            min: 1
+            max: 1
+        offset: 0
+  # end starcup
 
 - type: entity
   parent: BaseTreeConifer
@@ -330,6 +534,37 @@
     receivedPopup: christmas-tree-got-gift
     deniedPopup: christmas-tree-no-gift
     requiredHoliday: FestiveSeason
+  # begin starcup: add stumps
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall # starcup
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 2
+            max: 8
+          ConiferSnowyStump:
+            min: 1
+            max: 1
+        offset: 0
+  # end starcup
 
 - type: entity
   parent: FloraTreeChristmas02
@@ -347,6 +582,37 @@
       - id: PresentRandomInsane
         prob: 0.2
         orGroup: present
+  # begin starcup: add stumps
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall # starcup
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 2
+            max: 8
+          ConiferSnowyStump:
+            min: 1
+            max: 1
+        offset: 0
+  # end starcup
 
 - type: entity
   parent: BaseTreeConifer
@@ -364,6 +630,37 @@
   components:
   - type: Sprite
     sprite: Objects/Decoration/Flora/flora_shadow_trees.rsi
+  # begin starcup: add stumps
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall # starcup
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 2
+            max: 8
+          SwampStump:
+            min: 1
+            max: 1
+        offset: 0
+  # end starcup
 
 - type: entity
   parent: BaseTree
@@ -403,7 +700,7 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/tree_fell.ogg
+          collection: TreeFall # starcup
           params:
             volume: 5
             variation: 0.05
@@ -414,6 +711,12 @@
           Log:
             min: 0
             max: 1
+      # begin starcup
+          LightStump:
+            min: 1
+            max: 1
+        offset: 0
+      # end starcup
       - !type:SpawnEntitiesBehavior
         spawn:
           MobLuminousObject:

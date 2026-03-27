@@ -5,14 +5,12 @@ namespace Content.Shared._starcup.OrientationHint;
 [RegisterComponent, AutoGenerateComponentState]
 public sealed partial class OrientationHintComponent : Component
 {
-    [AutoNetworkedField]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField, AutoNetworkedField]
     public EntProtoId ExamineArrow = "TurnstileArrow";
 
     /// <summary>
     ///     The direction in which the examine arrow is facing, relative to the entity's rotation. Defaults to south.
     /// </summary>
-    [AutoNetworkedField]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField, AutoNetworkedField]
     public Angle Direction = Angle.Zero;
 }

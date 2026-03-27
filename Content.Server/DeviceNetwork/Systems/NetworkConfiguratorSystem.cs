@@ -372,14 +372,11 @@ public sealed class NetworkConfiguratorSystem : SharedNetworkConfiguratorSystem
         if (hasLinking && HasComp<DeviceListComponent>(target) || hasLinking == configurator.LinkModeActive)
             return;
 
-        if (hasLinking)
-        {
-            SetMode(configuratorUid, configurator, userUid, true);
-            return;
-        }
-
-        if (HasComp<DeviceNetworkComponent>(target))
+        var hasNetworking = HasComp<DeviceNetworkComponent>(target);
+        if (hasNetworking)
             SetMode(configuratorUid, configurator, userUid, false);
+        else if (hasLinking)
+            SetMode(configuratorUid, configurator, userUid, true);
     }
 
     #endregion
@@ -852,12 +849,6 @@ public sealed class NetworkConfiguratorSystem : SharedNetworkConfiguratorSystem
         }
 
         UpdateListUiState(conf, conf.Comp);
-    }
-
-    private void OnUiOpenAttempt(EntityUid uid, NetworkConfiguratorComponent configurator, ActivatableUIOpenAttemptEvent args)
-    {
-        if (configurator.LinkModeActive)
-            args.Cancel();
     }
     #endregion
 }

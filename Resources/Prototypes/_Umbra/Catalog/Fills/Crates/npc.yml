@@ -5,7 +5,9 @@
   name: crate of bunnies
   description: A crate containing three bunnies.
   components:
-  - type: StorageFill
-    contents:
-      - id: MobBunny
-        amount: 3
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: MobBunny
+          amount: 3

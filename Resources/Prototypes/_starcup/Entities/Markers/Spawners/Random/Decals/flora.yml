@@ -1,0 +1,155 @@
+# Missing bush decal spawners from upstream
+- type: entity
+  parent: DecalSpawnerFloraBase
+  id: DecalSpawnerBushesD
+  suffix: Verdant bushes (d)
+  components:
+  - type: Sprite
+    layers:
+    - state: shadow
+    - state: green
+    - sprite: Markers/cross.rsi
+      state: decal
+    - sprite: Decals/Flora/flora_bushes.rsi
+      state: bushd4
+  - type: RandomDecalSpawner
+    decals:
+    - Bushd1
+    - Bushd2
+    - Bushd3
+    - Bushd4
+
+- type: entity
+  parent: DecalSpawnerFloraBase
+  id: DecalSpawnerBushesE
+  suffix: Stalky bushes (e)
+  components:
+  - type: Sprite
+    layers:
+    - state: shadow
+    - state: green
+    - sprite: Markers/cross.rsi
+      state: decal
+    - sprite: Decals/Flora/flora_bushes.rsi
+      state: bushe1
+  - type: RandomDecalSpawner
+    decals:
+    - Bushe1
+    - Bushe2
+    - Bushe3
+    - Bushe4
+
+- type: entity
+  parent: DecalSpawnerFloraBase
+  id: DecalSpawnerBushesF
+  suffix: Wide-leaved bushes (f)
+  components:
+  - type: Sprite
+    layers:
+    - state: shadow
+    - state: green
+    - sprite: Markers/cross.rsi
+      state: decal
+    - sprite: Decals/Flora/flora_bushes.rsi
+      state: bushf1
+  - type: RandomDecalSpawner
+    decals:
+    - Bushf1
+    - Bushf2
+    - Bushf3
+
+- type: entity
+  parent: DecalSpawnerFloraBase
+  id: DecalSpawnerBushesGKLMN
+  suffix: Mountain bushes (g,k,l,m,n)
+  components:
+  - type: Sprite
+    layers:
+    - state: shadow
+    - state: green
+    - sprite: Markers/cross.rsi
+      state: decal
+    - sprite: Decals/Flora/flora_bushes.rsi
+      state: bushg1
+  - type: RandomDecalSpawner
+    decals:
+    - Bushg1
+    - Bushg2
+    - Bushg3
+    - Bushg4
+    - Bushk1
+    - Bushk2
+    - Bushk3
+    - Bushl1
+    - Bushl2
+    - Bushl3
+    - Bushl4
+    - Bushm1
+    - Bushm2
+    - Bushm3
+    - Bushm4
+    - Bushn1
+
+- type: entity
+  parent: DecalSpawnerFloraBase
+  id: DecalSpawnerBushesHI
+  suffix: Grassy bushes (h-1)
+  components:
+  - type: Sprite
+    layers:
+    - state: shadow
+    - state: green
+    - sprite: Markers/cross.rsi
+      state: decal
+    - sprite: Decals/Flora/flora_bushes.rsi
+      state: bushi1
+  - type: RandomDecalSpawner
+    decals:
+    - Bushh1
+    - Bushh2
+    - Bushh3
+    - Bushi1
+    - Bushi2
+    - Bushi3
+    - Bushi4
+
+- type: entity
+  parent: DecalSpawnerFloraBase
+  id: DecalSpawnerBushesJ
+  suffix: Jungle bushes (j)
+  components:
+  - type: Sprite
+    layers:
+    - state: shadow
+    - state: green
+    - sprite: Markers/cross.rsi
+      state: decal
+    - sprite: Decals/Flora/flora_bushes.rsi
+      state: bushj1
+  - type: RandomDecalSpawner
+    decals:
+    - Bushj1
+    - Bushj2
+    - Bushj3
+
+- type: entity
+  parent: DecalSpawnerFloraBase
+  id: DecalSpawnerBushesSnow
+  suffix: Snowy bushes
+  components:
+  - type: Sprite
+    layers:
+    - state: shadow
+    - state: green
+    - sprite: Markers/cross.rsi
+      state: decal
+    - sprite: Decals/Flora/flora_bushessnow.rsi
+      state: bushsnowa1
+  - type: RandomDecalSpawner
+    decals:
+    - bushsnowa1
+    - bushsnowa2
+    - bushsnowa3
+    - bushsnowb3
+    - bushsnowb2
+    - bushsnowb3

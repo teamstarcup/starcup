@@ -1,19 +1,93 @@
+# reorganized all loadout listings to a standardized order as follows:
+# - Head
+# - Mask
+# - Neck/Scarves
+# - Jumpsuit
+# - Belt
+# - Backpack
+# - Outer Clothing
+# - Shoes
+# - Eyewear/Glasses
+# - PDA
+# - Survival
+# - Accessibility
+# - Trinkets
+# - Job Trinkets
+# - Other Job Items (golden plunger, instruments, janitor flashlight, etc)
+# - GroupSpeciesBreathTool
+# - GroupTankHarness
+
+# Command
+- type: roleLoadout
+  id: JobAdministrativeAssistant
+  groups:
+  - Scarfs
+  - AdminAssistantJumpsuit
+  - CommonBackpack
+  - AdminAssistantOuter
+  - AdminAssistantGloves
+  - AdminAssistantShoes
+  - CommandEyewear
+  - Accessibility
+  - Trinkets
+  - Survival
+  - GroupSpeciesBreathTool
+
 # Security
 - type: roleLoadout
   id: JobBrigmedic
   groups:
   - BrigmedicHead
-  - SecurityNeck
+  - MedicalMask
+  - Scarfs
   - BrigmedicJumpsuit
   - BrigmedicBackpack
   - BrigmedicOuterClothing
+  - BrigmedicGloves
   - BrigmedicShoes
-  - SurvivalBrigmedic
+  - Accessibility
   - Trinkets
-  - SecurityStar
-  - GroupSpeciesBreathToolBrigmedic
   - SecurityFirearm
   - SecurityFirearmAmmo
+  - SurvivalBrigmedic
+  - GroupSpeciesBreathToolBrigmedic
+
+# Service
+- type: roleLoadout
+  id: JobBoxer
+  groups:
+  - BoxerHead
+  - Scarfs
+  - BoxerJumpsuit
+  - BoxerBelt
+  - CommonBackpack
+  - BoxerShoes
+  - Glasses
+  - Accessibility
+  - Trinkets
+  - BoxerJobTrinkets
+  - BoxerWeapon
+  - Survival
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+# Prisoner
+- type: roleLoadout
+  id: JobPrisoner
+  groups:
+  - Scarfs
+  - PrisonerJumpsuit
+  - CommonBackpack
+  - PrisonerOuterClothing
+  - PassengerShoes
+  - Glasses
+  - Survival
+  - Accessibility
+  - Trinkets
+  - PrisonerJobTrinkets
+  - Plushies
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 # Misc
 - type: roleLoadout

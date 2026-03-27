@@ -1,9 +1,17 @@
 - type: entity
   name: mail RPDS
-  parent: WeaponLauncherChinaLake
+  parent: BaseWeaponLauncher # starcup: changed parent from the china lake to avoid inherited weirdness
   id: WeaponMailLake
   description: Rap(b?)id Parcel Delivery System
   components:
+  # begin starcup: inherited from china lake
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,4,2
+  - type: AmmoCounter
+  - type: GunRequiresWield
+  # end starcup
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Launchers/mail.rsi
     layers:
@@ -22,5 +30,3 @@
       tags:
         - MailCapsule
     capacity: 4
-  - type: StaticPrice # starcup: remove inherited sell value
-    price: 0 # starcup: remove inherited sell value

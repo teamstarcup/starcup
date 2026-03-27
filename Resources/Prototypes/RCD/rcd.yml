@@ -37,7 +37,7 @@
   category: WallsAndFlooring
   sprite: /Textures/Interface/Radial/RCD/plating.png
   mode: ConstructTile
-  prototype: Plating
+  prototype: PlatingRCD
   cost: 1
   delay: 1
   collisionMask: InteractImpassable
@@ -128,6 +128,7 @@
     - IsWindow
   rotation: User
   fx: EffectRCDConstruct1
+  allowMultiDirection: true
 
 - type: rcd
   id: ReinforcedWindow
@@ -157,12 +158,13 @@
     - IsWindow
   rotation: User
   fx: EffectRCDConstruct2
+  allowMultiDirection: true
 
 # Airlocks
 - type: rcd
   id: Airlock
   category: Airlocks
-  sprite: /Textures/Interface/Radial/RCD/airlock.png
+  sprite: _starcup/Interface/Radial/RCD/airlock.png # Starcup - airlock resprite
   mode: ConstructObject
   prototype: Airlock
   cost: 4
@@ -174,7 +176,7 @@
 - type: rcd
   id: AirlockGlass
   category: Airlocks
-  sprite: /Textures/Interface/Radial/RCD/glass_airlock.png
+  sprite: _starcup/Interface/Radial/RCD/glass_airlock.png # Starcup - airlock resprite
   mode: ConstructObject
   prototype: AirlockGlass
   cost: 4
@@ -186,7 +188,7 @@
 - type: rcd
   id: Firelock
   category: Airlocks
-  sprite: /Textures/Interface/Radial/RCD/firelock.png
+  sprite: _starcup/Interface/Radial/RCD/firelock.png # Starcup - airlock resprite
   mode: ConstructObject
   prototype: Firelock
   cost: 4
@@ -208,6 +210,7 @@
   collisionBounds: "-0.23,-0.49,0.23,-0.36"
   rotation: User
   fx: EffectRCDConstruct1
+  allowMultiDirection: true
 
 - type: rcd
   id: BulbLight
@@ -221,6 +224,7 @@
   collisionBounds: "-0.23,-0.49,0.23,-0.36"
   rotation: User
   fx: EffectRCDConstruct1
+  allowMultiDirection: true
 
 # Electrical
 - type: rcd

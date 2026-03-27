@@ -17,8 +17,10 @@
   parent: SuitStorageBase
   suffix: NanoTrasen EVA
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: OxygenTankFilled
         - id: ClothingOuterEVASuitNanotrasen
         - id: ClothingHeadHelmetNanotrasen
@@ -30,8 +32,10 @@
   parent: SuitStorageBase
   suffix: NanoTrasen Hardsuit
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: OxygenTankFilled
         - id: ClothingOuterHardsuitNT
         - id: ClothingShoesBootsMagNT

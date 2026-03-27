@@ -104,7 +104,7 @@
       rolls: !type:RangeNumberSelector
         range: 1, 2
     - !type:NestedSelector
-      tableId: RandomInstrumentTable
+      tableId: SalvageInstrumentTable
 
 - type: entityTable
   id: SalvageTreasureUncommon
@@ -171,7 +171,7 @@
     - id: ClothingMaskGoldenCursed
     - id: ClothingHeadHatFancyCrown
     - id: GoldenBikeHorn
-    - id: ClothingHeadHatCatEars
+    #- id: ClothingHeadHatCatEars # starcup
     - id: GoldenPersonalAI
     - id: TreasureCoinDiamond
       amount: !type:RangeNumberSelector
@@ -199,7 +199,17 @@
       - id: Welder
         weight: 0.5
     - id: Shovel
-    - id: FlashlightLantern
+    - id: ChoppingAxe # starcup: add chopping axes & fireaxe resprite
+    # begin starcup: add misc. tools & tweawks
+    - id: ItemHammer
+    - id: CrashAxe
+    - !type:GroupSelector
+      children:
+      - id: FlashlightLantern
+      - id: FlashlightLanternRed
+      - id: FlashlightLanternGreen
+      - id: FlashlightLanternTeal
+    # end starcup
     - id: FireExtinguisher
     - id: SurvivalKnife
 
@@ -218,6 +228,7 @@
     - id: OxygenTankFilled
     - id: WelderIndustrial
     - id: WeaponGrapplingGun
+    - id: WeaponSpearGun # starcup: add harpoons & spearguns
     - !type:GroupSelector
       children:
       - id: ClothingHeadHatWelding
@@ -262,6 +273,11 @@
     - id: WeaponCrusherGlaive
     - id: ClothingOuterHardsuitSalvage
     - id: ChemistryBottleOmnizine
+      # begin starcup: add harpoons, speargun, harpoon gun
+    - id: SalvageHarpoonPlasteel
+    - id: SalvageHarpoonPlasma
+    - id: SalvageHarpoonUranium
+      # end starcup: add harpoons, speargun, harpoon gun
     - !type:GroupSelector
       children:
       - id: JetpackBlueFilled

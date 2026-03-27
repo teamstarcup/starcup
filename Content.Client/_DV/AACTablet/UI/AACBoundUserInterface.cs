@@ -38,7 +38,7 @@ public sealed partial class AACBoundUserInterface : BoundUserInterface // starcu
     private void OnTyping()
     {
         _typing ??= EntMan.System<TypingIndicatorSystem>();
-        _typing?.ClientAlternateTyping(AACTypingIndicator);
+        _typing?.ClientAlternateTyping(TypingIndicatorState.Typing, AACTypingIndicator);
     }
 
     private void OnSubmit()

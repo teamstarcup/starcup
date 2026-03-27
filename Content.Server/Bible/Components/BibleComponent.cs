@@ -18,26 +18,28 @@ namespace Content.Server.Bible.Components
         [DataField]
         public SoundSpecifier BibleHitSound = new SoundCollectionSpecifier(DefaultBibleHit, AudioParams.Default.WithVolume(-4f));
 
-        /// <summary>
-        /// Damage that will be healed on a success
-        /// </summary>
-        [DataField("damage", required: true)]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public DamageSpecifier Damage = default!;
-
-        /// <summary>
-        /// Damage that will be dealt on a failure
-        /// </summary>
-        [DataField("damageOnFail", required: true)]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public DamageSpecifier DamageOnFail = default!;
-
-        /// <summary>
-        /// Damage that will be dealt when a non-chaplain attempts to heal
-        /// </summary>
-        [DataField("damageOnUntrainedUse", required: true)]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public DamageSpecifier DamageOnUntrainedUse = default!;
+        // begin starcup: replaced with blessed healing action (needs to be commented out because damage specifiers are required)
+        // /// <summary>
+        // /// Damage that will be healed on a success
+        // /// </summary>
+        // [DataField("damage", required: true)]
+        // [ViewVariables(VVAccess.ReadWrite)]
+        // public DamageSpecifier Damage = default!;
+        //
+        // /// <summary>
+        // /// Damage that will be dealt on a failure
+        // /// </summary>
+        // [DataField("damageOnFail", required: true)]
+        // [ViewVariables(VVAccess.ReadWrite)]
+        // public DamageSpecifier DamageOnFail = default!;
+        //
+        // /// <summary>
+        // /// Damage that will be dealt when a non-chaplain attempts to heal
+        // /// </summary>
+        // [DataField("damageOnUntrainedUse", required: true)]
+        // [ViewVariables(VVAccess.ReadWrite)]
+        // public DamageSpecifier DamageOnUntrainedUse = default!;
+        // end starcup
 
         /// <summary>
         /// Chance the bible will fail to heal someone with no helmet

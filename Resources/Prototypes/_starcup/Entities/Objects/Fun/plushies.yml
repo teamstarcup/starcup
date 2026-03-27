@@ -42,3 +42,39 @@
       head:
       - state: equipped-HELMET
         offset: "0, 0.03"
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieZetan
+  name: zetan plushie
+  description: A little alien from out or space. The tag is in an unfamiliar language.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Fun/Plushies/zetan.rsi
+    state: icon
+  - type: EmitSoundOnUse
+    sound: &PlushieZetanSound
+      path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
+      params:
+        volume: -8
+  - type: EmitSoundOnLand
+    sound: *PlushieZetanSound
+  - type: EmitSoundOnActivate
+    sound: *PlushieZetanSound
+  - type: EmitSoundOnTrigger
+    sound: *PlushieZetanSound
+  - type: EmitSoundOnCollide
+    sound: *PlushieZetanSound
+  - type: Edible
+    useSound: *PlushieZetanSound
+  - type: MeleeWeapon
+    soundHit: *PlushieZetanSound
+  - type: Clothing
+    quickEquip: false
+    sprite: _starcup/Objects/Fun/Plushies/zetan.rsi
+    slots:
+    - HEAD
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"

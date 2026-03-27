@@ -106,9 +106,6 @@
     stampLargeIcon: "large_stamp-clown" # imp
   - type: Sprite
     state: stamp-clown
-  - type: Tag
-    tags:
-      - ClownRubberStamp
 
 - type: entity
   name: chief engineer's rubber stamp
@@ -223,7 +220,7 @@
 
 - type: entity
   name: syndicate rubber stamp
-  parent: [RubberStampBase, BaseSyndicateContraband]
+  parent: RubberStampBase # starcup: remove syndicate contraband label
   id: RubberStampSyndicate
   categories: [ DoNotMap ]
   components:

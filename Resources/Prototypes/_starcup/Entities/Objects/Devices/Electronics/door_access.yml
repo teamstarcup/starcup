@@ -72,11 +72,11 @@
 
 - type: entity
   parent: DoorElectronics
-  id: DoorElectronicsZookeeper
-  suffix: Zookeeper, Locked
+  id: DoorElectronicsMail
+  suffix: Mail, Locked
   components:
   - type: AccessReader
-    access: [["Zookeeper"]]
+    access: [["Mail"]]
 
 - type: entity
   parent: DoorElectronics

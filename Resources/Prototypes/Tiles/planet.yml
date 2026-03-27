@@ -1,5 +1,16 @@
 - type: tile
+  id: BaseFloorPlanet
+  abstract: true
+  heatCapacity: 10000
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepAsteroid
+  # weather: true  # starcup: early merge of #38638
+  indestructible: true
+
+- type: tile
   id: FloorPlanetDirt
+  parent: BaseFloorPlanet
   name: tiles-dirt-planet-floor
   sprite: /Textures/Tiles/Planet/dirt.rsi/dirt.png
   variants: 4
@@ -8,16 +19,11 @@
   - 1.0
   - 1.0
   - 1.0
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepAsteroid
-  heatCapacity: 10000
-  # weather: true  # starcup: early merge of #38638
-  indestructible: true
 
 # Desert
 - type: tile
   id: FloorDesert
+  parent: BaseFloorPlanet
   name: tiles-desert-floor
   sprite: /Textures/Tiles/Planet/Desert/desert.png
   variants: 6
@@ -28,12 +34,6 @@
   - 1.0
   - 1.0
   - 1.0
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepAsteroid
-  heatCapacity: 10000
-  # weather: true  # starcup: early merge of #38638
-  indestructible: true
 
 - type: tile
   id: FloorLowDesert
@@ -47,16 +47,11 @@
   - 1.0
   - 1.0
   - 1.0
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepAsteroid
-  heatCapacity: 10000
-  # weather: true  # starcup: early merge of #38638
-  indestructible: true
 
 # Grass
 - type: tile
   id: FloorPlanetGrass
+  parent: BaseFloorPlanet
   name: tiles-grass-planet-floor
   sprite: /Textures/Tiles/Planet/Grass/grass.png
   variants: 4
@@ -67,38 +62,31 @@
   - 1.0
   edgeSpritePriority: 1
   edgeSprites:
-    SouthEast: /Textures/Tiles/Planet/Grass/single_edge.png
-    NorthEast: /Textures/Tiles/Planet/Grass/single_edge.png
-    NorthWest: /Textures/Tiles/Planet/Grass/single_edge.png
-    SouthWest: /Textures/Tiles/Planet/Grass/single_edge.png
-    South: /Textures/Tiles/Planet/Grass/double_edge.png
-    East: /Textures/Tiles/Planet/Grass/double_edge.png
-    North: /Textures/Tiles/Planet/Grass/double_edge.png
-    West: /Textures/Tiles/Planet/Grass/double_edge.png
+    # begin starcup: Rounded edges for a more natural look
+    SouthEast: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
+    South: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
+    East: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
+    North: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
+    West: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
+    # end starcup
   baseTurf: FloorPlanetDirt
-  isSubfloor: true
   footstepSounds:
     collection: FootstepGrass
-  itemDrop: FloorTileItemGrass
-  heatCapacity: 10000
-  # weather: true  # starcup: early merge of #38638
-  indestructible: true
 
 # Lava
 - type: tile
   id: FloorBasalt
   name: tiles-basalt-floor
+  parent: BaseFloorPlanet
   sprite: /Textures/Tiles/Planet/basalt.png
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepAsteroid
-  heatCapacity: 10000
-  # weather: true  # starcup: early merge of #38638
-  indestructible: true
 
 # Snow
 - type: tile
   id: FloorSnow
+  parent: BaseFloorPlanet
   name: tiles-snow
   sprite: /Textures/Tiles/Planet/Snow/snow.png
   variants: 13
@@ -118,16 +106,14 @@
   - 0.0116
   edgeSpritePriority: 2
   edgeSprites:
-    South: /Textures/Tiles/Planet/Snow/snow_double_edge_south.png
-    East: /Textures/Tiles/Planet/Snow/snow_double_edge_east.png
-    North: /Textures/Tiles/Planet/Snow/snow_double_edge_north.png
-    West: /Textures/Tiles/Planet/Snow/snow_double_edge_west.png
-  isSubfloor: true
+    # begin starcup: rounded edges for a more natural look
+    South: /Textures/_starcup/Tiles/Planet/Snow/snow_double_edge_south.png
+    East: /Textures/_starcup/Tiles/Planet/Snow/snow_double_edge_east.png
+    North: /Textures/_starcup/Tiles/Planet/Snow/snow_double_edge_north.png
+    West: /Textures/_starcup/Tiles/Planet/Snow/snow_double_edge_west.png
+    # end starcup
   footstepSounds:
     collection: FootstepSnow
-  heatCapacity: 10000
-  # weather: true  # starcup: early merge of #38638
-  indestructible: true
 
 # Ice
 - type: tile
@@ -144,19 +130,18 @@
 # Dug snow
 - type: tile
   id: FloorSnowDug
+  parent: BaseFloorPlanet
   name: tiles-snow-dug
   sprite: /Textures/Tiles/Planet/Snow/snow_dug.png
   edgeSpritePriority: 1
   edgeSprites:
-    South: /Textures/Tiles/Planet/Snow/snow_dug_double_edge_south.png
-    East: /Textures/Tiles/Planet/Snow/snow_dug_double_edge_east.png
-    North: /Textures/Tiles/Planet/Snow/snow_dug_double_edge_north.png
-    West: /Textures/Tiles/Planet/Snow/snow_dug_double_edge_west.png
-  isSubfloor: true
+    # begin starcup. Rounded edges for a more natural look
+    South: /Textures/_starcup/Tiles/Planet/Snow/snow_dug_double_edge_south.png
+    East: /Textures/_starcup/Tiles/Planet/Snow/snow_dug_double_edge_east.png
+    North: /Textures/_starcup/Tiles/Planet/Snow/snow_dug_double_edge_north.png
+    West: /Textures/_starcup/Tiles/Planet/Snow/snow_dug_double_edge_west.png
+    # end starcup
   footstepSounds:
     collection: FootstepSnow
-  heatCapacity: 10000
-  # weather: true  # starcup: early merge of #38638
-  indestructible: true
 
 # Wasteland

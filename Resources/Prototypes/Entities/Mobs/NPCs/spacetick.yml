@@ -41,7 +41,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      15: Dead
+      15: Dead # starcup: revert salvage damage nerf (5 > 15)
   - type: Destructible
     thresholds:
     - trigger:
@@ -52,7 +52,7 @@
       - !type:GibBehavior
         recursive: false
   - type: Stamina
-    critThreshold: 15
+    baseCritThreshold: 15
     animationThreshold: 5
   - type: MovementAlwaysTouching
   - type: DamageStateVisuals
@@ -66,7 +66,10 @@
     - id: FoodMeatXeno
       amount: 1
   - type: Bloodstream
-    bloodMaxVolume: 50
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 50
   - type: CombatMode
   - type: MeleeWeapon
     soundHit:
@@ -85,10 +88,28 @@
   - type: MeleeChemicalInjector
     solution: melee
   - type: ReplacementAccent
-    accent: genericAggressive
+    accent: crab # starcup
   - type: Speech
     speechVerb: SmallMob
+    # begin starcup
+    speechSounds: CrabSpeechSounds
+    allowedEmotes: ['CreatureClick']
+    # end starcup
   - type: NonSpreaderZombie
+    # begin starcup
+  - type: Tag
+    tags:
+    - FootstepSound
+    - CreatureEmotes
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBug
+  - type: Vocal
+    sounds:
+      Unsexed: CrabSpeechEmotes
+    screamId: CreatureClick
+    screamAction: ActionEmitSound
+    # end starcup
 
 - type: entity
   id: MobTickSalvage

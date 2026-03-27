@@ -1,10 +1,13 @@
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: DecalSpawnerBase
   name: Decal Spawner
   abstract: true
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
-    - state: decal
+    - sprite: Markers/cross.rsi
+      state: decal
+

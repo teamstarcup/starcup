@@ -25,6 +25,7 @@
     tags:
     - DoorBumpOpener
     - Flesh
+    - CreatureEmotes # starcup
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Aliens/flesh.rsi
@@ -41,14 +42,17 @@
       0: Alive
       75: Dead
   - type: Stamina
-    critThreshold: 50
+    baseCritThreshold: 50
     animationThreshold: 25
   - type: Butcherable
     spawned:
     - id: FoodMeat
       amount: 1
   - type: Bloodstream
-    bloodMaxVolume: 100
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 100
   - type: CombatMode
   - type: MeleeWeapon
     soundHit:
@@ -60,6 +64,20 @@
         Slash: 6
   - type: ReplacementAccent
     accent: genericAggressive
+  # begin starcup
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: FleshSpeechSounds
+    allowedEmotes: ['CreatureScream', 'CreatureBark', 'Squish', 'Simmer']
+  - type: Vocal
+    sounds:
+      Unsexed: FleshSpeechEmotes
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: AutoEmote
+    emotes:
+    - ScreamAutoEmote
+  # end starcup
 
 - type: entity
   parent: BaseMobFlesh
@@ -240,14 +258,17 @@
       0: Alive
       75: Dead
   - type: Stamina
-    critThreshold: 50
+    baseCritThreshold: 50
     animationThreshold: 25
   - type: Butcherable
     spawned:
     - id: FoodMeat
       amount: 1
   - type: Bloodstream
-    bloodMaxVolume: 100
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 100
   - type: CombatMode
   - type: MeleeWeapon
     soundHit:

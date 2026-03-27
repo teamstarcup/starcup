@@ -1,21 +1,24 @@
 using System.Linq;
 using System.Numerics;
+using Content.Server.Administration.Managers; // DeltaV
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
-using Content.Server.Ghost.Components;
 using Content.Server.Mind;
 using Content.Server.Roles.Jobs;
 using Content.Shared.Actions;
 using Content.Shared.CCVar;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Prototypes;
+using Content.Shared.Damage.Systems;
 using Content.Shared.Database;
 using Content.Shared.Examine;
 using Content.Shared.Eye;
 using Content.Shared.FixedPoint;
 using Content.Shared.Follower;
 using Content.Shared.Ghost;
+using Content.Shared.GhostTypes;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
 using Content.Shared.Mobs;
@@ -25,6 +28,7 @@ using Content.Shared.Movement.Events;
 using Content.Shared.Movement.Systems;
 using Content.Shared.NameModifier.EntitySystems;
 using Content.Shared.Popups;
+using Content.Server.Preferences.Managers; // DeltaV
 using Content.Shared.Storage.Components;
 using Content.Shared.Tag;
 using Content.Shared.Warps;
@@ -67,6 +71,9 @@ namespace Content.Server.Ghost
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly TagSystem _tag = default!;
         [Dependency] private readonly NameModifierSystem _nameMod = default!;
+        [Dependency] private readonly GhostSpriteStateSystem _ghostState = default!;
+        [Dependency] private readonly IServerPreferencesManager _preferencesManager = default!; // DeltaV
+        [Dependency] private readonly IAdminManager _admin = default!; // DeltaV
 
         private EntityQuery<GhostComponent> _ghostQuery;
         private EntityQuery<PhysicsComponent> _physicsQuery;
@@ -332,7 +339,8 @@ namespace Content.Server.Ghost
             if (_followerSystem.GetMostGhostFollowed() is not {} target)
                 return;
 
-            WarpTo(uid, target);
+            // If there is a ghostnado happening you almost definitely wanna join it, so we automatically follow instead of just warping.
+            _followerSystem.StartFollowingEntity(uid, target);
         }
 
         private void WarpTo(EntityUid uid, EntityUid target)
@@ -479,6 +487,11 @@ namespace Content.Server.Ghost
             var ghost = SpawnAtPosition(GameTicker.ObserverPrototypeName, spawnPosition.Value);
             var ghostComponent = Comp<GhostComponent>(ghost);
 
+            if (TryComp<GhostSpriteStateComponent>(ghost, out var state))  // If more TryComps are added this should be turned into an event
+            {
+                _ghostState.SetGhostSprite((ghost, state), mind);
+            }
+
             // Try setting the ghost entity name to either the character name or the player name.
             // If all else fails, it'll default to the default entity prototype name, "observer".
             // However, that should rarely happen.
@@ -503,6 +516,7 @@ namespace Content.Server.Ghost
             // we changed the entity name above
             // we have to call this after the mind has been transferred since some mind roles modify the ghost's name
             _nameMod.RefreshNameModifiers(ghost);
+            ApplyAdminOOCColor(ghost); // DeltaV
             return ghost;
         }
 
@@ -586,7 +600,7 @@ namespace Content.Server.Ghost
 
                     DamageSpecifier damage = new(_prototypeManager.Index(AsphyxiationDamageType), dealtDamage);
 
-                    _damageable.TryChangeDamage(playerEntity, damage, true);
+                    _damageable.ChangeDamage(playerEntity.Value, damage, true);
                 }
             }
 
@@ -599,6 +613,38 @@ namespace Content.Server.Ghost
                 return false;
 
             return true;
+        }
+
+
+        /// <summary>
+        /// DeltaV - Applies the admin OOC color to a ghost entity if the player has one set.
+        /// </summary>
+        /// <param name="ghostEntity">The ghost entity to apply the color to</param>
+        /// <param name="mindId">The mind ID of the player</param>
+        public void ApplyAdminOOCColor(EntityUid ghostEntity) // Mono
+        {
+            if (!_player.TryGetSessionByEntity(ghostEntity, out var session))
+                return;
+
+            // Only apply admin OOC color if the player is actually an admin
+            if (!_admin.IsAdmin(session))
+                return;
+
+            if (!_preferencesManager.TryGetCachedPreferences(session.UserId, out var prefs))
+                return;
+
+            // Only apply the color if it's not transparent (the default)
+            if (prefs.AdminOOCColor == Color.Transparent)
+                return;
+
+            // Make the color slightly transparent for ghosts
+            var ghostColor = prefs.AdminOOCColor;
+
+            if (TryComp<GhostComponent>(ghostEntity, out var ghostComp))
+            {
+                ghostComp.Color = ghostColor;
+                Dirty(ghostEntity, ghostComp);
+            }
         }
     }
 

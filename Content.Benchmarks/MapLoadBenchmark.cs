@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using BenchmarkDotNet.Attributes;
 using Content.IntegrationTests;
 using Content.IntegrationTests.Pair;
-using Content.Server.Maps;
+using Content.Shared.Maps;
 using Robust.Shared;
 using Robust.Shared.Analyzers;
 using Robust.Shared.EntitySerialization.Systems;
@@ -22,6 +22,12 @@ public class MapLoadBenchmark
     private TestPair _pair = default!;
     private MapLoaderSystem _mapLoader = default!;
     private SharedMapSystem _mapSys = default!;
+
+    [ParamsSource(nameof(MapsSource))]
+    public string Map;
+
+    public Dictionary<string, string> Paths;
+    private MapId _mapId;
 
     [GlobalSetup]
     public void Setup()
@@ -47,13 +53,7 @@ public class MapLoadBenchmark
         PoolManager.Shutdown();
     }
 
-    public static readonly string[] MapsSource = { "Empty", "Saltern", "Box", "Bagel", "Dev", "CentComm", "Core", "TestTeg", "Packed", "Omega", "Reach", "Meta", "Marathon", "MeteorArena", "Fland", "Oasis", "Convex"};
-
-    [ParamsSource(nameof(MapsSource))]
-    public string Map;
-
-    public Dictionary<string, string> Paths;
-    private MapId _mapId;
+    public static string[] MapsSource { get; } = { "Empty", "Saltern", "Box", "Bagel", "Dev", "CentComm", "Core", "TestTeg", "Packed", "Omega", "Reach", "Meta", "Marathon", "MeteorArena", "Fland", "Oasis", "Convex"};
 
     [Benchmark]
     public async Task LoadMap()

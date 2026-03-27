@@ -1,0 +1,102 @@
+- type: entity
+  id: SpaceBladeSC
+  parent: SpaceBlade
+  name: starcup Blade
+  description: Despite having been around for quite some time, the origin of this Blade is unknown.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Fun/spaceblade.rsi
+    state: starcup
+  - type: EmitSoundOnCollide
+    sound:
+      collection: FootstepBells
+      params:
+        variation: 0.65
+        volume: -5
+
+- type: entity
+  id: SpaceBladeDuality
+  parent: SpaceBlade
+  name: Duality Blade
+  description: Featured in SpaceBlades episode 7, this is well known as the Blade that Jimmy Spin used to collapse a dying supernova.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Fun/spaceblade.rsi
+    state: duality
+
+- type: entity
+  id: SpaceBladeCalico
+  parent: SpaceBlade
+  name: Calico Blade
+  description: This Blade was only available for a short time as a promotion for Donk Co's cat cafes. This one is in surprisingly good condition.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Fun/spaceblade.rsi
+    state: calico
+  - type: EmitSoundOnCollide
+    sound:
+      collection: CatMeows
+
+- type: entity
+  id: SpaceBladeSyndicate
+  parent: [SpaceBlade, BaseSyndicateContraband]
+  name: Syndicate Blade
+  description: This SpaceBlade, officially, does not exist. If it did, you would be urged to alert the nearest SyndComm Agent. But it doesn't, so don't worry about it.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Fun/spaceblade.rsi
+    layers:
+      - state: syndicate
+      - state: syndicateactive
+        visible: false
+        map: ["active"]
+  - type: ToggleableVisuals
+    spriteLayer: active
+  - type: Appearance
+  - type: ItemToggle
+    soundActivate:
+      path: /Audio/Weapons/utilityknifeopen.ogg
+      params:
+        variation: 0.250
+    soundDeactivate:
+      path: /Audio/Weapons/utilityknifeclose.ogg
+      params:
+        variation: 0.250
+    soundFailToActivate:
+      path: /Audio/Machines/button.ogg
+      params:
+        variation: 0.250
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+      types:
+        Slash: 5
+    activatedSoundOnHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: PointLight
+    enabled: true
+    radius: 3
+    color: "#b83b3b"
+  - type: StaticPrice
+    price: 100
+  - type: ComponentToggler
+    components:
+    - type: DamageOtherOnHit
+      damage:
+        types:
+          Slash: 5
+
+- type: entity
+  id: SpaceBladeNT
+  parent: [BaseTraitorContraband, SpaceBladeSyndicate]
+  name: Nano Blade
+  description: A testament to corporate propaganda, this SpaceBlade is rumored to be a deadly weapon. Probably an exaggerated story from some fool having an ankle too close.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Fun/spaceblade.rsi
+    layers:
+      - state: nt
+      - state: ntactive
+        visible: false
+        map: ["active"]
+  - type: PointLight
+    enabled: false

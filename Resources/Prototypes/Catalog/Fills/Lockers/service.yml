@@ -17,7 +17,7 @@
     - id: DrinkShaker
     - id: ClothingEyesHudBeer
     - id: HandLabeler
-    - id: DrinkBottleBeer
+    - id: DrinkBeerBottleFull
       amount: !type:BinomialNumberSelector
         trials: 3
     - !type:AllSelector
@@ -25,6 +25,12 @@
       children:
       - id: BoxBeanbag
       - id: RagItem
+    # begin starcup: moved back to loadouts
+    #- id: PlushieLizardJobBartender
+    #  prob: 0.02
+    #- id: PlushieLizardJobServiceworker
+    #  prob: 0.02
+    # end starcup
 
 #- type: entity
 #  id: LockerFormalFilled
@@ -64,6 +70,12 @@
       children:
       - id: FoodCondimentPacketSalt
       - id: FoodCondimentPacketPepper
+    # begin starcup: moved back to loadouts
+    #- id: PlushieLizardJobChef
+    #  prob: 0.02
+    #- id: PlushieLizardJobServiceworker
+    #  prob: 0.02
+    # end starcup
 
 - type: entity
   id: ClosetJanitorFilled
@@ -91,9 +103,18 @@
       - id: BoxMousetrap
       - id: TrashBag
       - id: SoapNT
-      - id: FlashlightLantern
+      #- id: FlashlightLantern # starcup: replaced it with another one further down
       - id: Plunger
       - id: WireBrush
+      # begin starcup: add misc tools & tweaks
+      - id: BroomItem
+      - id: FlashlightLanternPurple
+      - id: FeatherDuster
+      # end starcup
+    # begin starcup: moved back to loadouts
+    #- id: PlushieLizardJobJanitor
+    #  prob: 0.02
+    # end starcup
 
 - type: entity
   id: ClosetLegalFilled
@@ -112,6 +133,10 @@
     - id: BriefcaseBrownFilled
       prob: 0.80
     - id: ClothingOuterRobesJudge
+    # begin starcup: moved back to loadouts
+    #- id: PlushieLizardJobLawyer
+    #  prob: 0.02
+    # end starcup
 
 - type: entity
   id: LockerBotanistFilled
@@ -141,6 +166,12 @@
     - id: ClothingUniformOveralls
     - id: ClothingHeadHatTrucker
       prob: 0.1
+    # begin starcup: moved back to loadouts
+    #- id: PlushieLizardJobBotanist
+    #  prob: 0.02
+    #- id: PlushieLizardJobServiceworker
+    #  prob: 0.02
+    # end starcup
 
 - type: entity
   id: LockerBotanistLoot
@@ -165,6 +196,12 @@
       prob: 0.5
     - id: NettleSeeds
       prob: 0.7
+    # begin starcup
+    - id: ChoppingAxe
+      prob: 0.3
+    - id: BrushAxe
+      prob: 0.2
+    # end starcup
 
 - type: entity
   id: ClosetJanitorBombFilled

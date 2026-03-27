@@ -19,7 +19,7 @@
     slots:
     - neck
   - type: StaticPrice
-    price: 100
+    price: 12
   - type: Tag
     tags:
     - Bedsheet
@@ -306,24 +306,26 @@
 
 - type: entity
   id: BedsheetSyndie
-  parent: [ BedsheetBase, BaseSyndicateContraband ]
+  parent: BedsheetBase # starcup: remove syndicate contraband label
   name: syndicate bedsheet
-  description: It has a syndicate emblem and it has an aura of evil.
+  description: Decorated with a stylized Syndicate logo. # starcup: rewritten for setting lore
   components:
   - type: Sprite
     state: sheetsyndie
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/syndie.rsi
 
-- type: entity
-  id: BedsheetUSA
-  parent: BedsheetBase
-  name: USA bedsheet
-  components:
-  - type: Sprite
-    state: sheetUSA
-  - type: Clothing
-    sprite: Clothing/Neck/Bedsheets/USA.rsi
+# begin starcup: removed
+#- type: entity
+#  id: BedsheetUSA
+#  parent: BedsheetBase
+#  name: USA bedsheet
+#  components:
+#  - type: Sprite
+#    state: sheetUSA
+#  - type: Clothing
+#    sprite: Clothing/Neck/Bedsheets/USA.rsi
+# end starcup
 
 - type: entity
   id: BedsheetWhite

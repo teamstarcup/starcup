@@ -1,21 +1,23 @@
 - type: entity
-  parent: Windoor
+  parent: WindoorCargoLocked
   id: WindoorMailLocked
   suffix: Mail, Locked
   components:
-  - type: AccessReader
-    access: [["Mail"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMail ]
 
 - type: entity
-  parent: WindoorSecure
+  parent: WindoorSecureCargoLocked
   id: WindoorSecureMailLocked
   suffix: Mail, Locked
   components:
-  - type: AccessReader
-    access: [["Mail"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMail ]
 
 - type: entity
-  parent: WindoorSecure
+  parent: WindoorSecureScienceLocked
   id: WindoorSecureRoboticsLocked
   suffix: Robotics, Locked
   components:

@@ -1,0 +1,65 @@
+- type: entity
+  parent: MachineMaterialSilo
+  id: MachineMaterialSiloFilled
+  suffix: Filled
+  components:
+  - type: MaterialStorage
+    storage:
+      Glass: 3000
+      Plastic: 3000
+      Steel: 3000
+    whitelist:
+      tags:
+      - Sheet
+      - RawMaterial
+      - Ingot
+
+- type: entity
+  parent: MachineMaterialSilo
+  id: MachineMaterialSiloFilledAll
+  suffix: Filled, All
+  components:
+  - type: MaterialStorage
+    storage: # a full stack of everything most full-size stations might feasibly have lying around at roundstart
+      Glass: 3000
+      Plastic: 3000
+      Steel: 3000
+      Cloth: 3000
+      Durathread: 3000
+      Wood: 3000
+      Plasma: 3000
+      Silver: 3000
+      Gold: 3000
+    whitelist:
+      tags:
+      - Sheet
+      - RawMaterial
+      - Ingot
+
+- type: entity
+  parent: MachineMaterialSilo
+  id: MachineMaterialSiloFilledDebug
+  suffix: DEBUG
+  categories: [ DoNotMap ]
+  components:
+  - type: MaterialStorage
+    storage:
+      Glass: 100000
+      Plastic: 100000
+      Steel: 100000
+      Cloth: 100000
+      Durathread: 100000
+      Cardboard: 100000
+      Wood: 100000
+      Biomass: 100000
+      Plasma: 100000
+      Silver: 100000
+      Gold: 100000
+      Uranium: 100000
+      Bananium: 100000
+      Diamond: 100000
+    whitelist:
+      tags:
+      - Sheet
+      - RawMaterial
+      - Ingot
