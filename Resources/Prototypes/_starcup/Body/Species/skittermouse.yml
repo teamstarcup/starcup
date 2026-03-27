@@ -1,45 +1,258 @@
-- type: body
+- type: markingsGroup
+  parent: Undergarments
   id: Skittermouse
-  name: species-name-skittermouse
-  root: torso
-  slots:
-    head:
-      part: HeadSkittermouse
-      connections:
-      - torso
-      organs:
-        brain: OrganHumanBrain
-        eyes: OrganSkittermouseEyes
-    torso:
-      part: TorsoSkittermouse
-      connections:
-      - right arm
-      - left arm
-      - right leg
-      - left leg
-      organs:
-        heart: OrganAnimalHeart
-        lungs: OrganHumanLungs
-        stomach: OrganAnimalStomach
-        liver:  OrganAnimalLiver
-        kidneys: OrganHumanKidneys
-    right arm:
-      part: RightArmSkittermouse
-    left arm:
-      part: LeftArmSkittermouse
-      connections:
-      - left hand
-    left hand:
-      part: LeftHandSkittermouse
-    right leg:
-      part: RightLegSkittermouse
-      connections:
-      - right foot
-    left leg:
-      part: LeftLegSkittermouse
-      connections:
-      - left foot
-    right foot:
-      part: RightFootSkittermouse
-    left foot:
-      part: LeftFootSkittermouse
+  onlyGroupWhitelisted: true
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [ SkittermouseTailSlug ]
+    enum.HumanoidVisualLayers.Chest:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Head:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: true
+      default: [ SkittermouseEarsCat ]
+    enum.HumanoidVisualLayers.HeadSide:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 4
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceSkittermouse
+  name: Skittermouse appearance
+  components:
+  - type: Inventory
+    speciesId: skittermouse
+    displacements: #TODO: these
+      #placeholder
+  - type: InitialBody
+    organs:
+      Torso: OrganSkittermouseTorso
+      Head: OrganSkittermouseHead
+      ArmLeft: OrganSkittermouseArmLeft
+      ArmRight: OrganSkittermouseArmRight
+      HandRight: OrganSkittermouseHandRight
+      HandLeft: OrganSkittermouseHandLeft
+      LegLeft: OrganSkittermouseLegLeft
+      LegRight: OrganSkittermouseLegRight
+      FootLeft: OrganSkittermouseFootLeft
+      FootRight: OrganSkittermouseFootRight
+      Brain: OrganSkittermouseBrain
+      Eyes: OrganSkittermouseBrain
+      Tongue: OrganSkittermouseTongue
+      Ears: OrganSkittermouseEars
+      Lungs: OrganSkittermouseLungs
+      Heart: OrganSkittermouseHeart
+      Stomach: OrganSkittermouseStomach
+      Liver: OrganSkittermouseLiver
+      Kidneys: OrganSkittermouseKidneys
+  - type: HumanoidProfile
+    species: Skittermouse
+  - type: Sprite
+    scale: 0.5, 0.5
+    layers:
+    # Torso
+    - map: [ "enum.HumanoidVisualLayers.Chest" ]
+
+    # Head
+    - map: [ "enum.HumanoidVisualLayers.Head" ]
+    - map: [ "enum.HumanoidVisualLayers.Snout" ]
+    - map: [ "enum.HumanoidVisualLayers.Eyes" ]
+
+    # Limbs
+    - map: [ "enum.HumanoidVisualLayers.RArm" ]
+    - map: [ "enum.HumanoidVisualLayers.LArm" ]
+    - map: [ "enum.HumanoidVisualLayers.RLeg" ]
+    - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+
+    # Underwear & clothing
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+    - map: [ "jumpsuit" ]
+
+    # Extremities
+    - map: [ "enum.HumanoidVisualLayers.LFoot" ]
+    - map: [ "enum.HumanoidVisualLayers.RFoot" ]
+    - map: [ "enum.HumanoidVisualLayers.LHand" ]
+    - map: [ "enum.HumanoidVisualLayers.RHand" ]
+
+    # More equipment
+    - map: [ "gloves" ]
+    - map: [ "shoes" ]
+    - map: [ "ears" ]
+    - map: [ "eyes" ]
+    - map: [ "belt" ]
+    - map: [ "id" ]
+    - map: [ "outerClothing" ]
+    - map: [ "back" ]
+    - map: [ "neck" ]
+
+    # Stuff that goes in front of equipment
+    - map: [ "enum.HumanoidVisualLayers.SnoutCover" ]
+    - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
+    - map: [ "enum.HumanoidVisualLayers.Hair" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
+    - map: [ "enum.HumanoidVisualLayers.Tail" ]
+
+    # Stuff that goes in front of stuff that goes in front of equipment
+    - map: [ "mask" ]
+    - map: [ "head" ]
+    - map: [ "pocket1" ]
+    - map: [ "pocket2" ]
+
+    # Extra stuff
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+
+    - map: [ "clownedon" ] # Dynamically generated
+      sprite: "_starcup/Effects/creampie.rsi"
+      state: "creampie_skittermouse"
+      visible: false
+
+- type: entity
+  parent:
+  - AppearanceSkittermouse
+  - BaseSpeciesMobOrganic
+  id: MobSkittermouse
+  name: Urist-333 McMouse
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.175 #i'm pretty sure i had a reason for this number but i should double-check
+        density: 62
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Speech #TODO: review those emotes
+    speechVerb: Skittermouse
+    speechSounds: Skittermouse
+    allowedEmotes: [ 'Squeak', 'Hiss', 'Purr', 'Growl', 'ThumpTailSoft', 'ThumpTailMany', 'ThumpTailLoud', 'Chirp' ]
+  - type: TypingIndicator
+    proto: skittermouse
+  - type: Vocal
+    sounds:
+      Male: Skittermouse
+      Female: Skittermouse
+      Unsexed: Skittermouse
+  - type: BodyEmotes
+    soundsId: ReptilianBodyEmotes #TODO: this is probably stupid i should change it
+  - type: Damageable
+    damageModifierSet: Skittermouse
+  - type: MeleeWeapon
+    soundhit:
+      path: /Audio/Effects/bite.ogg
+    angle: 30
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 6
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.5
+    baseSprintSpeed: 3.5
+    weightlessAcceleration: 2.5
+  - type: Stamina
+    decay: 5 #I think this will increase the rate they regen Stamina damage. I have no idea if this is a good number; for reference, the default is 3, but it is multiplied by 5x after exiting a crit (I think)
+  - type: PseudoItem #TODO: find out if this is stupid
+    size: Large
+    shape:
+    - 0,0,3,1
+  - type: GuideHelp
+    guides:
+    - Skittermouse
+  - type: UnpoweredFlashlight #TODO: increase hunger drain while flashlight eyes are active, add special sprite state when flashlight eyes are active
+  - type: PointLight
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    radius: 6
+    netsync: false
+
+- type: entity
+  parent: OrganBase
+  id: OrganSkittermouse
+  abstract: true
+  suffix: skittermouse
+
+- type: entity
+  parent: OrganSkittermouseMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Animal ]
+
+- type: entity
+  parent: OrganSkittermouse
+  id: OrganSkittermouseInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+
+- type: entity
+  parent: OrganSkittermouse
+  id: OrganSkittermouseExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Species/Skittermouse/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _starcup/Mobs/Species/Skittermouse/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Skittermouse
+
+- type: entity
+  parent: [ OrganBaseTorso, OrganSkittermouseExternal ]
+  id: OrganSkittermouseTorso
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Tail
