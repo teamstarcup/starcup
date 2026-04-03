@@ -155,7 +155,10 @@
           - MobLayer
   - type: Speech
     speechVerb: Plant
-    allowedEmotes: ['Chirp']
+    # begin starcup
+    speechSounds: DionaSpeechSounds
+    allowedEmotes: ['Chirp', 'Chitter', 'BuzzNonSilicon']
+    # end starcup
   - type: Vocal
     sounds:
       Male: UnisexDiona
