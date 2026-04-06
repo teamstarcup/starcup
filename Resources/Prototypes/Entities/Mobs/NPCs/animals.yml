@@ -484,6 +484,7 @@
     # begin starcup
     - FootstepSound
     - CreatureEmotes
+    - IgnoreTallGrass
     # end starcup
   - type: Destructible
     thresholds:
@@ -594,7 +595,7 @@
   - type: Speech
     speechSounds: MothSpeechSounds # starcup
     speechVerb: Moth
-    allowedEmotes: ['CreatureChitter', 'CreatureSqueak', 'CreatureLaugh', 'CreatureScream'] # starcup
+    allowedEmotes: ['CreatureChitter', 'CreatureSqueak', 'CreatureLaugh', 'CreatureScream','CreatureWhimper', 'BuzzNonSilicon', 'Flutter'] # starcup: new creature emotes, renamed Flap to Flutter
   - type: FaxableObject
     insertingState: inserting_mothroach
   - type: MothAccent
@@ -2110,6 +2111,7 @@
     - Mouse
     - Meat
     - CreatureEmotes # starcup
+    - IgnoreTallGrass # starcup
   - type: Respirator
     damage:
       types:
@@ -2376,6 +2378,7 @@
     tags:
     - VimPilot
     - CreatureEmotes # starcup
+    - IgnoreTallGrass # starcup
 
 
 - type: entity
@@ -2432,6 +2435,7 @@
     tags:
     - VimPilot
     - CreatureEmotes
+    - IgnoreTallGrass
   - type: Speech
     speechSounds: LizardTinySpeechSounds
     speechVerb: Reptilian
@@ -2951,6 +2955,7 @@
     - DoorBumpOpener
     - FootstepSound
     - CreatureEmotes # starcup
+    - IgnoreTallGrass # starcup
   - type: Prying # Open door from xeno.yml.
     pryPowered: true
     force: true
@@ -3170,7 +3175,7 @@
   # begin starcup
   - type: Speech
     speechSounds: PossumSpeechSounds
-    allowedEmotes: ['CreatureHiss', 'CreatureYawn', 'CreatureCough']
+    allowedEmotes: ['CreatureHiss', 'CreatureYawn', 'CreatureCough','CreatureChitter', 'CreatureGrowl', 'CreatureLaugh']
   - type: Vocal
     sounds:
       Unsexed: PossumSpeechEmotes
@@ -3657,6 +3662,7 @@
     tags:
     - VimPilot
     - CreatureEmotes # starcup
+    - IgnoreTallGrass # starcup
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
     baseSprintSpeed: 4

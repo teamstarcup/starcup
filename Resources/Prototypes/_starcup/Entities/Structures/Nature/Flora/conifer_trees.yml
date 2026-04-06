@@ -1,0 +1,270 @@
+# Upstream conifer variants
+- type: entity
+  parent: BaseTreeConifer
+  id: FloraTreeConiferNoSnow
+  name: conifer
+  suffix: no snow
+  description: Thick and spiny shades of dark in the land white and beige.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/ConiferTrees/flora_treesconifer_nosnow.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+        tree06: ""
+        tree07: ""
+        tree08: ""
+        tree09: ""
+
+# Dead trees
+- type: entity
+  parent: BaseTreeConifer
+  id: FloraTreeConiferDead
+  name: conifer
+  suffix: dead
+  description: Nothing lasts forever, but what remains may yet last for a long, long time.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/ConiferTrees/flora_dead_conifers.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 1
+            max: 2
+          TamarackStump:
+            min: 1
+            max: 1
+        offset: 0
+
+# Original trees
+- type: entity
+  parent: BaseTreeConifer
+  id: FloraTreeTamarack
+  name: tamarack
+  description: Golden and olive pines, the swans of the hill and the cliff.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/ConiferTrees/flora_tamaracks.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 1
+            max: 2
+          TamarackStump:
+            min: 1
+            max: 1
+        offset: 0
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: TamarackStump
+  components:
+  - type: Sprite
+    offset: 0,1.1
+    sprite: _starcup/Structures/Nature/Flora/Trees/ConiferTrees/flora_tamaracks.rsi
+    state: treestump
+    layers:
+    - state: treestump1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""
+
+- type: entity
+  parent: BaseTreeLarge
+  id: FloraTreeCorsicanPine
+  name: corsican pine
+  description: Tall, mighty lords of the mountain keep high watch over their realm.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/ConiferTrees/flora_corsican_pines.rsi
+    layers:
+    - state: treelarge01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treelarge01: ""
+        treelarge02: ""
+        treelarge03: ""
+        treelarge04: ""
+        treelarge05: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 1
+            max: 8
+          CorsicanStump:
+            min: 1
+            max: 1
+        offset: 0
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: CorsicanStump
+  components:
+  - type: Sprite
+    offset: 0,1.5
+    sprite: _starcup/Structures/Nature/Flora/Trees/ConiferTrees/flora_corsican_pines.rsi
+    layers:
+    - state: treestump1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""
+
+- type: entity
+  parent: BaseTreeConifer
+  id: FloraTreeGulmorePine
+  name: gulmore pine
+  description: Squat and stocky pines that defy the rock and the wind.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/ConiferTrees/flora_gulmore_pines.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 1
+            max: 4
+          GulmoreStump:
+            min: 1
+            max: 1
+        offset: 0
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: GulmoreStump
+  components:
+  - type: Sprite
+    offset: 0,1.1
+    sprite: _starcup/Structures/Nature/Flora/Trees/ConiferTrees/flora_gulmore_pines.rsi
+    state: treestump
+    layers:
+    - state: treestump1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""

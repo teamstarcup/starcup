@@ -11,5 +11,5 @@ namespace Content.Shared._starcup.Metabolism;
 public sealed partial class MetabolizerWhitelistComponent : Component
 {
     [DataField(required: true)]
-    public HashSet<ProtoId<ReagentPrototype>>? ReagentWhitelist;
+    public HashSet<ProtoId<ReagentPrototype>> ReagentWhitelist;
 }

@@ -1,10 +1,11 @@
 - type: entity
   id: RandomFloraTree
   name: random tree spawner
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   components:
   - type: Sprite
     layers:
+      - state: shadowred # starcup
       - state: red
       - sprite: Objects/Decoration/Flora/flora_trees.rsi
         state: tree01
@@ -19,13 +20,27 @@
       - FloraTreeVerdant
       - FloraTreeTemperate
       - FloraTreeAspbirch
-      - FloraTreeDead
+      - FloraTreeDeadBrown
+      - FloraTreeDeadPurple
       - FloraTreeConiferDead
       - FloraTreeTeal
       - FloraTreeLargeTeal
-      # end starcup: feat. more tress & flora
+      - FloraTreePalm
+      - FloraTreeLargePalm
+      - FloraTreePink
+      - FloraTreeJuniper
+      - FloraTreeCorsicanPine
+      - FloraTreeConiferNoSnow
+      - FloraTreeGulmorePine
+      - FloraTreeTamarack
+      - FloraTreeAjorax
+      - FloraTreeLargeAjorax
+      # end starcup
     chance: 0.95
     rarePrototypes:
       - ShadowTree
-      - FloraTreeLargeDark # starcup: feat. more tress & flora
+    # begin starcup: feat. more tress & flora
+      - FloraTreeLargeDark
+      - FloraTreeHollowBase
+    # end starcup
     rareChance: 0.05

@@ -140,9 +140,9 @@
   saySound:
     collection: PossumGrawrs
   askSound:
-    collection: PossumGrawrs
+    path: /Audio/_starcup/Animals/Possum/possum_ask.ogg
   exclaimSound:
-    path: /Audio/_starcup/Animals/Possum/possum_exclaim.ogg
+    collection: PossumExclaims
 
 - type: speechSounds
   id: RaccoonSpeechSounds
@@ -612,6 +612,12 @@
   sounds:
     CreatureHiss:
       collection: PossumHisses
+    CreatureChitter:
+      path: /Audio/_starcup/Animals/Possum/possum_chitter.ogg
+    CreatureGrowl:
+      path: /Audio/_starcup/Animals/Possum/possum_growl.ogg
+    CreatureLaugh:
+      path: /Audio/_starcup/Animals/Possum/possum_laugh.ogg
     CreatureYawn:
       path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
     CreatureCough:
@@ -623,9 +629,9 @@
     Yawn:
       path: /Audio/_starcup/Animals/Mouse/mouse_yawn.ogg
     Gasp:
-      path: /Audio/_starcup/Animals/Possum/possum_gasp.ogg
+      collection: PossumGasps
     DefaultDeathgasp:
-      path: /Audio/_starcup/Animals/Possum/possum_death.ogg
+      path: /Audio/_starcup/Animals/Possum/possum_chitter.ogg
 
 - type: emoteSounds
   id: RaccoonSpeechEmotes

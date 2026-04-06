@@ -47,6 +47,10 @@ public sealed class MarkingsViewModelTests
     public ProtoId<MarkingPrototype> MothAntennasCharred = "MothAntennasCharred";
     public ProtoId<MarkingPrototype> MothChestCharred = "MothChestCharred";
     public ProtoId<MarkingPrototype> MothChestDeathhead = "MothChestDeathhead";
+    // begin starcup: added for extended test
+    public ProtoId<MarkingPrototype> MothChestFirewatch = "MothChestFirewatch";
+    public ProtoId<MarkingPrototype> MothChestGothic = "MothChestGothic";
+    // end starcup
     public ProtoId<MarkingPrototype> MothChestFan = "MothChestFan";
     public ProtoId<MarkingPrototype> LizardHornsCurled = "LizardHornsCurled";
     public ProtoId<MarkingPrototype> MothAntennasDefault = "MothAntennasDefault";
@@ -92,13 +96,23 @@ public sealed class MarkingsViewModelTests
         Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)!, Has.Count.EqualTo(2));
         Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)![1].MarkingId, Is.EqualTo(MothChestDeathhead));
 
+        // begin starcup: need to add two more assertions here since chest marking limit was bumped up to 4
+        Assert.That(Model.TrySelectMarking(Torso, HumanoidVisualLayers.Chest, MothChestFirewatch), Is.True);
+        Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)!, Has.Count.EqualTo(3));
+        Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)![2].MarkingId, Is.EqualTo(MothChestFirewatch));
+
+        Assert.That(Model.TrySelectMarking(Torso, HumanoidVisualLayers.Chest, MothChestGothic), Is.True);
+        Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)!, Has.Count.EqualTo(4));
+        Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)![3].MarkingId, Is.EqualTo(MothChestGothic));
+        // end starcup
+
         Assert.That(Model.TrySelectMarking(Torso, HumanoidVisualLayers.Chest, MothChestFan), Is.False);
         Assert.That(Model.TrySelectMarking(Head, HumanoidVisualLayers.HeadTop, LizardHornsCurled), Is.False);
 
         Model.EnforceLimits = false;
         Assert.That(Model.TrySelectMarking(Torso, HumanoidVisualLayers.Chest, MothChestFan), Is.True);
-        Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)!, Has.Count.EqualTo(3));
-        Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)![2].MarkingId, Is.EqualTo(MothChestFan));
+        Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)!, Has.Count.EqualTo(5)); // starcup: extend marking count
+        Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)![4].MarkingId, Is.EqualTo(MothChestFan)); // starcup: extend marking count
     }
 
     [MarkingTest]

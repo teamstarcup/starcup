@@ -100,6 +100,12 @@ uplink-nanotrasen-lighter-desc = A navy blue luxury lighter. Fueled by liquid pl
 uplink-ntmov-law-name = NT Law Circuit
 uplink-ntmov-law-desc = A subversive Lawset to use when you want to turn the A.I. to your side, use as much as possible.
 
+uplink-spaceblade-nanotrasen-name = NanoTrasen Brand SpaceBlade
+uplink-spaceblade-nanotrasen-desc = A silly toy with a hidden blade. It can do some serious damage to your enemies' ankles.
+
+#Syndicate uplink locs
+uplink-spaceblade-syndicate-name = Syndicate Brand SpaceBlade
+uplink-spaceblade-syndicate-desc = This Blade does not officially exist, according to SyndComm.
 uplink-combat-medipen-silicon-name = Silicon Combat Medipen
 uplink-combat-medipen-silicon-desc = A single-use medipen specifically designed for silicons, containing nanites that regenerate most types of damage.
 

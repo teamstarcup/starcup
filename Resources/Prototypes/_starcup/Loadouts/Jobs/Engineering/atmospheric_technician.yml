@@ -4,8 +4,35 @@
   equipment:
     head: ClothingHeadHatHardhatBlue
 
+- type: loadout
+  id: AtmosBeret
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobAtmosphericTechnician
+      time: 72000
+  equipment:
+    head: ClothingHeadHatBeretAtmospherics
+
 # Shoes
 - type: loadout
   id: AtmosTechWinterBoots
   equipment:
     shoes: ClothingShoesBootsWinterAtmos
+
+# ID
+- type: loadout
+  id: AtmosPDA
+  equipment:
+    id: AtmosPDA
+
+- type: loadout
+  id: LifeSupportTechPDA
+  equipment:
+    id: LifeSupportTechPDA
+
+- type: loadout
+  id: PlasmaScientistPDA
+  equipment:
+    id: PlasmaScientistPDA

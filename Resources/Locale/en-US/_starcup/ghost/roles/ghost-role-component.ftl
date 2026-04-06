@@ -30,3 +30,8 @@ ghost-role-information-nanotrasen-soldier-teamlead-description = You are the fir
 ghost-role-information-anomalite-description = An ominous, esoteric entity coalesced from anomalous energies. Loyal to whoever possesses the core that spawned them.
 
 ghost-role-information-familiar-anomalite-rules = You are a [color=#6495ed][bold]Familiar[/bold][/color], bound to the core that spawned you. Although you're compelled to serve whoever bears it, your mind is born of impossible esoterica, and strongly shaped by the principles of your anomaly.
+
+# Misc
+
+ghost-role-information-lost-skeleton-name = Lost Skeleton
+ghost-role-information-lost-skeleton-description = You are a long-dead corpse, spontaneously reanimated by errant soul nanites. Use your second chance for whatever feels right, whether it's returning to your former life or taking revenge against those who still live.

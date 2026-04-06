@@ -1,0 +1,65 @@
+# Extensively modified prototype originally from RMC14.
+- type: entity
+  parent: BaseTree
+  id: FloraTreeJoshua
+  name: joshua tree
+  description: A tall tree with spiky-like needles named after an old religion.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/joshua.rsi
+    layers:
+    - state: joshua_1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        joshua_1: ""
+        joshua_2: ""
+        joshua_3: ""
+        joshua_4: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        offset: 0
+        spawn:
+          Log:
+            min: 1
+            max: 3
+          JoshuaStump:
+            min: 1
+            max: 1
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: JoshuaStump
+  components:
+  - type: Sprite
+    offset: 0,0.9
+    sprite: _starcup/Structures/Nature/Flora/Trees/joshua.rsi
+    state: treestump
+    layers:
+    - state: treestump1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""

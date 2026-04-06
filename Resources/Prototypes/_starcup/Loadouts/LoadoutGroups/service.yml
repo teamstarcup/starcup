@@ -25,6 +25,16 @@
   - Sunglasses
   - Mirrorshades
 
+- type: loadoutGroup
+  id: BartenderID
+  name: loadout-group-bartender-id-delta
+  loadouts:
+  - BartenderPDA
+  - MixologistPDA
+  - BaristaPDA
+  - SpeakeasyerPDA
+  - SeniorBartenderPDA
+
 # Botanist
 - type: loadoutGroup
   id: BotanistShoes
@@ -153,6 +163,16 @@
   - BlackHeels
   - ChefWinterBoots
 
+- type: loadoutGroup
+  id: ChefID
+  name: loadout-group-chef-id-delta
+  loadouts:
+  - ChefPDA
+  - BakerPDA
+  - ButcherPDA
+  - FlavoristPDA
+  - CulinaryTailorPDA
+
 # Clown
 - type: loadoutGroup
   id: ClownMask
@@ -169,9 +189,18 @@
   - JackalMask
   - BatMask
 
+- type: loadoutGroup
+  id: ClownID
+  name: loadout-group-clown-id-delta
+  loadouts:
+  - ClownPDA
+  - JesterPDA
+  - FoolPDA
+  - StoogePDA
+
 # Janitor
 - type: loadoutGroup
-  id: JanitorBeltstarcup
+  id: JanitorBelt
   name: loadout-group-janitor-belt-starcup
   minLimit: 1
   loadouts:
@@ -196,6 +225,14 @@
   loadouts:
   - JanitorFlashlight
   - JanitorLantern
+
+- type: loadoutGroup
+  id: JanitorID
+  name: loadout-group-janitor-id-delta
+  loadouts:
+  - JanitorPDA
+  - HygieneTechnicianPDA
+  - StationMaidPDA
 
 # Lawyer
 - type: loadoutGroup
@@ -305,6 +342,18 @@
 
 # Service Worker
 - type: loadoutGroup
+  id: ServiceWorkerHead
+  name: loadout-group-service-worker-head
+  minLimit: 0
+  loadouts:
+  - SoftcapGreen
+  - SoftcapGreenFlipped
+  - GreenBandana
+  - MaidLaceHeadpiece
+  - CatEarsNoTail
+  - CatEarsWithTail
+
+- type: loadoutGroup
   id: ServiceWorkerJumpsuit
   name: loadout-group-service-worker-jumpsuit
   loadouts:
@@ -350,9 +399,58 @@
 
 # Passenger
 - type: loadoutGroup
+  parent: PlushiesWorn
+  id: PassengerHead
+  name: loadout-group-assistant-head
+  minLimit: 0
+  loadouts:
+  - BlackBandana
+  - BlueBandana
+  - GoldBandana
+  - GreenBandana
+  - GreyBandana
+  - RedBandana
+  - BrownBandana
+  - SkullBandana
+  - Beanie
+  - BartenderHead
+  - BartenderBowler
+  - RedBeret
+  - BrownFedora
+  - GreyFedora
+  - GreyFlatCap
+  - BrownCowboyHat
+  - BlackCowboyHat
+  - GreyCowboyHat
+  - RedCowboyHat
+  - WhiteCowboyHat
+  - BountyHunterHat
+  - StrawHat
+  - HeadBand
+  - OutlawHat
+  - CatEarsNoTail
+  - CatEarsWithTail
+  - DogEarsNoTail
+  - DogEarsWithTail
+  - WitchHat
+  - PirateHat
+  - WarningCone
+
+- type: loadoutGroup
   parent: [ Glasses ]
   id: PassengerEyewear
   name: loadout-group-passenger-glasses
   minLimit: 0
   loadouts:
   - CheapSunglasses
+
+- type: loadoutGroup
+  id: PassengerID
+  name: loadout-group-passenger-id-delta
+  loadouts:
+  - PassengerPDA
+  - VisitorPDA
+  - TouristPDA
+  - OffDutyCrewPDA
+  - StudentPDA
+  - VolunteerPDA

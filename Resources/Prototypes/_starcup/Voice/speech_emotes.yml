@@ -23,6 +23,7 @@
 
 - type: emote
   id: Whirr # uncategorized as it is generic
+  icon: _starcup/Interface/Emotes/whirr.png # starcup
   whitelist:
     # begin starcup: allow cyborgs to use mkc emotes
     requireAll: true
@@ -35,3 +36,21 @@
   chatMessages: [ whirrs ]
   chatTriggers:
   - whirrs
+
+- type: emote
+  id: DialUp
+  name: chat-emote-name-dialup
+  icon: _starcup/Interface/Emotes/dial-up.png
+  whitelist:
+    requireAll: true
+    components:
+    - Vocal
+    tags:
+    - SiliconEmotes
+  chatMessages: ["chat-emote-msg-dialup"]
+  chatTriggers:
+  - dialup
+  - dial-up
+  - dial up
+  - dials up
+  - dialups

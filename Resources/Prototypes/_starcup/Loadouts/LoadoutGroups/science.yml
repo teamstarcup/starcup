@@ -18,6 +18,58 @@
 
 # Roboticist
 - type: loadoutGroup
+  id: RoboticistHead
+  name: loadout-group-roboticist-head
+  minLimit: 0
+  loadouts:
+  - RoboticistCap
+  - SkullBandana
+  - ScientificBeret
+  - CardborgHelmet
+  - NeuroroboticistHelmet
+
+- type: loadoutGroup
+  parent: ScientistJumpsuit
+  id: RoboticistJumpsuit
+  name: loadout-group-roboticist-jumpsuit
+  loadouts:
+  - RoboticistJumpsuit
+  - RoboticistJumpskirt
+  - NeuroroboticistJumpsuit
+  - NeuroroboticistJumpskirt
+  - TacticoolJumpsuit
+  - TacticoolJumpskirt
+
+- type: loadoutGroup
+  parent: ScientistOuterClothing
+  id: RoboticistOuterClothing
+  name: loadout-group-roboticist-outerclothing
+  minLimit: 0
+  loadouts:
+  - RoboticistLabCoat
+  - RoboticistWintercoat
+  - CardborgCostume
+  - NeuroroboticistSuit
+
+- type: loadoutGroup
+  id: RoboticistGloves
+  name: loadout-group-roboticist-gloves
+  minLimit: 0
+  loadouts:
+  - LatexGloves
+  - PurpleGloves
+  - RobohandsGloves
+
+- type: loadoutGroup
+  parent: ScientistShoes
+  id: RoboticistShoes
+  name: loadout-group-roboticist-shoes
+  loadouts:
+  - RedShoes
+  - CombatBoots
+  - RoboticsWinterBoots
+
+- type: loadoutGroup
   id: RoboticistPDA
   name: loadout-group-roboticist-id
   loadouts:

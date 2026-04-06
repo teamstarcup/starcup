@@ -1,0 +1,46 @@
+#Spaceblades (except the NT and Syndicate ones)
+- type: entityTable
+  id: AllSpacebladesTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector #Common spaceblades
+      weight: 0.6
+      children:
+      - id: SpaceBladeRedOrange
+      - id: SpaceBladeBlue
+      - id: SpaceBladeGoldBlue
+      - id: SpaceBladeMail
+      - id: SpaceBladeEyeball
+      - id: SpaceBladeBlade
+      - id: MysterySpaceBladeBox
+      - id: SpaceBladeCalico
+      - id: SpaceBladeDuality
+    - !type:GroupSelector #Uncommon spaceblades
+      weight: 0.3
+      children:
+      - id: SpaceBladeCheck
+      - id: SpaceBladeMoff
+      - id: SpaceBladePizza
+      - id: SpaceBladeWeh
+      - id: SpaceBladeClown
+      - id: SpaceBladeSC
+      - id: SpaceBladeFrontier
+    - !type:GroupSelector #Rare spaceblades
+      weight: 0.1
+      children:
+      - id: SpaceBladeTesla
+      - id: SpaceBladeSingularity
+      - id: SpaceBladeContra
+
+- type: entity
+  name: SpaceBlade Spawner
+  id: SpaceBladeSpawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: _NF/Objects/Fun/spaceblade.rsi
+          state: sb_box
+    - type: EntityTableSpawner
+      table: !type:NestedSelector
+        tableId: AllSpacebladesTable

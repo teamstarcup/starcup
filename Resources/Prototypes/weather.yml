@@ -4,10 +4,10 @@
     sprite: /Textures/Effects/weather.rsi
     state: ashfall
   sound:
-    path: /Audio/Effects/Weather/snowstorm_weak.ogg
+    path: /Audio/_starcup/Effects/Weather/firestorm.ogg # starcup
     params:
       loop: true
-      volume: -6
+      volume: -1 # starcup
   damage: # DeltaV
     types:
       Heat: 4
@@ -21,10 +21,10 @@
     sprite: /Textures/Effects/weather.rsi
     state: ashfall_light
   sound:
-    path: /Audio/Effects/Weather/snowstorm_weak.ogg
+    path: /Audio/_starcup/Effects/Weather/firestorm.ogg # starcup
     params:
       loop: true
-      volume: -6
+      volume: -3 # starcup
 
 - type: weather
   id: AshfallHeavy
@@ -32,10 +32,10 @@
     sprite: /Textures/Effects/weather.rsi
     state: ashfall_heavy
   sound:
-    path: /Audio/Effects/Weather/snowstorm.ogg
+    path: /Audio/_starcup/Effects/Weather/firestorm.ogg # starcup
     params:
       loop: true
-      volume: -6
+      #volume: -6 # starcup: the new sound is quiet enough
 
 - type: weather
   id: Fallout
@@ -43,10 +43,10 @@
     sprite: /Textures/Effects/weather.rsi
     state: fallout
   sound:
-    path: /Audio/Effects/Weather/snowstorm_weak.ogg
+    path: /Audio/_starcup/Effects/Weather/fallout.ogg # starcup
     params:
       loop: true
-      volume: -6
+      volume: -3 # starcup
 
 - type: weather
   id: Hail
@@ -83,10 +83,10 @@
     sprite: /Textures/Effects/weather.rsi
     state: sandstorm
   sound:
-    path: /Audio/Effects/Weather/snowstorm_weak.ogg
+    path: /Audio/_starcup/Effects/Weather/sandstorm.ogg # starcup
     params:
       loop: true
-      volume: -6
+      volume: -3
 
 - type: weather
   id: SandstormHeavy
@@ -94,10 +94,10 @@
     sprite: /Textures/Effects/weather.rsi
     state: sandstorm_heavy
   sound:
-    path: /Audio/Effects/Weather/snowstorm.ogg
+    path: /Audio/_starcup/Effects/Weather/sandstorm.ogg # starcup
     params:
       loop: true
-      volume: -6
+      volume: -1 # starcup
 
 - type: weather
   id: SnowfallLight
@@ -105,10 +105,10 @@
     sprite: /Textures/Effects/weather.rsi
     state: snowfall_light
   sound:
-    path: /Audio/Effects/Weather/snowstorm_weak.ogg
+    path: /Audio/_starcup/Effects/Weather/polar_wind.ogg # starcup
     params:
       loop: true
-      volume: -6
+      volume: -3 # starcup
 
 - type: weather
   id: SnowfallMedium
@@ -116,10 +116,10 @@
     sprite: /Textures/Effects/weather.rsi
     state: snowfall_med
   sound:
-    path: /Audio/Effects/Weather/snowstorm_weak.ogg
+    path: /Audio/_starcup/Effects/Weather/polar_wind.ogg # starcup
     params:
       loop: true
-      volume: -6
+      #volume: -6 # starcup: the new sound is quiet enough
 
 - type: weather
   id: SnowfallHeavy
