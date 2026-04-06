@@ -114,6 +114,8 @@
     # begin starcup: silicon and creature emotes
     - CreatureEmotes
     #- SiliconEmotes
+    components:
+    - Rootable # so Diona don't have an empty, silent emote
     # end starcup
   chatMessages: ["chat-emote-msg-whistle"]
   chatTriggers:
