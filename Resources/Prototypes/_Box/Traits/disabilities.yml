@@ -1,0 +1,23 @@
+# If you add a new trait, make sure to add the corresponding component to the whitelist in \Resources\Prototypes\Entities\Mobs\Player\clone.yml so it gets copied to clones correctly!
+
+- type: trait
+  id: BloodDeficiency
+  name: trait-blood-deficiency-name
+  description: trait-blood-deficiency-desc
+  category: BloodDeficiency
+  cost: 1
+  components:
+    - type: BloodDeficiency
+      bloodRegenAmount: 0.08
+      bloodLevelTarget: 0
+      
+- type: trait
+  id: BloodDeficiencyMinor
+  name: trait-blood-deficiency-minor-name
+  description: trait-blood-deficiency-minor-desc
+  category: BloodDeficiency
+  cost: 1
+  components:
+    - type: BloodDeficiency
+      bloodRegenAmount: 0
+      bloodLevelTarget: 1
