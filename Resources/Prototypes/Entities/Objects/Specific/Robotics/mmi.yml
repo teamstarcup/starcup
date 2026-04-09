@@ -39,6 +39,15 @@
     proto: robot
   - type: Speech
     speechSounds: Pai
+    # start starcup change - Allows use of borg emotes
+  - type: Tag
+    tags:
+    - SiliconEmotes
+  - type: Emoting
+  - type: Vocal
+    sounds:
+      Unsexed: UnisexSilicon
+    # end starcup change
   - type: ItemSlots
   - type: ContainerContainer
     containers:
@@ -110,6 +119,12 @@
       group: PositronicBrain
     - type: DoAfter
     - type: Actions
+    # start starcup change - Allows use of borg emotes
+    - type: Emoting
+    - type: Vocal
+      sounds:
+        Unsexed: UnisexSilicon
+    # end starcup change
     - type: TypingIndicator
       proto: robot
     - type: Speech
@@ -123,6 +138,7 @@
     - type: Tag
       tags:
       - CannotSuicide
+      - SiliconEmotes # starcup - Allows use of borg emotes
     - type: GenericVisualizer
       visuals:
         enum.ToggleableGhostRoleVisuals.Status:
