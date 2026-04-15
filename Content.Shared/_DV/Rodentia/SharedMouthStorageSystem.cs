@@ -37,7 +37,7 @@ public abstract class SharedMouthStorageSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<MouthStorageComponent, MapInitEvent>(OnMouthStorageInit);
-        SubscribeLocalEvent<MouthStorageComponent, KnockedDownEvent>(DropAllContents);
+        SubscribeLocalEvent<MouthStorageComponent, StunnedEvent>(DropAllContents); // starcup: use StunnedEvent instead of KnockedDown event so you don't spit up your items when going prone
         SubscribeLocalEvent<MouthStorageComponent, DisarmedEvent>(DropAllContents);
         SubscribeLocalEvent<MouthStorageComponent, DamageChangedEvent>(OnDamageModified);
         SubscribeLocalEvent<MouthStorageComponent, ExaminedEvent>(OnExamined);
