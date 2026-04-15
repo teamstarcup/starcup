@@ -34,7 +34,26 @@
             - material: WoodPlank
               amount: 2
               doAfter: 2
+        - to: ornateWoodWall # starcup
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: WoodPlank
+              amount: 2
+              doAfter: 2
     - node: woodWall
+      entity: WallWood
+      edges:
+      - to: barricadefull
+        completed:
+        - !type:GivePrototype
+          prototype: MaterialWoodPlank1
+          amount: 2
+        steps:
+        - tool: Prying
+          doAfter: 10
+    - node: ornateWoodWall # starcup
       entity: WallWood
       edges:
       - to: barricadefull
