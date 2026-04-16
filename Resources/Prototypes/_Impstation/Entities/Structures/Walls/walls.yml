@@ -20,7 +20,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 100
+        damage: 400 # starcup - outright deletion shouldn't be easier than solid wall
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -62,7 +62,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 100
+        damage: 600 # starcup - outright deletion shouldn't be easier than reinforced wall
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
