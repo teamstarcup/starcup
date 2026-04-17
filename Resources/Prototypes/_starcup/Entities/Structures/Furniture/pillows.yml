@@ -1,131 +1,157 @@
+# starcup - Emergency Comfort Deployment Units adapted from The Den.
+
 - type: entity
-  name: command comfort deployment unit
-  parent: EmergencyComfortDeploymentUnitWrapped
-  id: EmergencyComfortDeploymentUnitCommandWrapped
-  description: The Command Comfort Deployment Unit, for resting a head weary with the burdens of leadership. Deploy as needed.
+  parent: BaseItem
+  id: PillowBaseWrapped
+  name: wrapped pillow
+  description: The SyndComm Emergency Deployment Comfort Unit, to be deployed in case of comfort crisis.
   components:
   - type: Sprite
-    sprite: /Textures/_starcup/Structures/Furniture/departmental_pillows.rsi
-    state: CommandWrapped
+    sprite: /Textures/_starcup/Structures/Furniture/pillows.rsi
+    state: base-wrapped
   - type: Item
     size: Normal
   - type: SpawnItemsOnUse
     items:
-      - id: EmergencyComfortDeploymentUnitCommandUnwrapped
+    - id: PillowBaseUnwrapped
     sound:
       path: /Audio/Misc/zip.ogg
+  - type: Construction
+    graph: Pillow
+    node: pillowbasewrapped
 
 - type: entity
-  name: deployed command comfort unit
-  parent: EmergencyComfortDeploymentUnitUnwrapped
-  id: EmergencyComfortDeploymentUnitCommandUnwrapped
-  description: The Command Comfort Deployment Unit, for resting a head weary with the burdens of leadership.
+  parent: SeatBase
+  id: PillowBaseUnwrapped
+  name: pillow
+  description: The SyndComm Emergency Deployment Comfort Unit, optimized for maximum fluffiness in conditions of zero-gravity.
   components:
   - type: Sprite
-    sprite: /Textures/_starcup/Structures/Furniture/departmental_pillows.rsi
-    state: CommandUnwrapped
+    sprite: /Textures/_starcup/Structures/Furniture/pillows.rsi
+    state: base-unwrapped
   - type: MeleeWeapon
     damage:
       types:
         Blunt: 0
     soundHit:
       collection: storageRustle
+  - type: Construction
+    graph: Pillow
+    node: pillowbaseunwrapped
 
 - type: entity
-  name: comfort deployment unit
-  parent: EmergencyComfortDeploymentUnitWrapped
-  id: EmergencyComfortDeploymentUnitBarWrapped
-  description: A plain Comfort Deployment Unit intended for the bar and other places of leisure. Deploy as needed.
+  parent: PillowBaseWrapped
+  id: PillowCommandWrapped
+  name: wrapped command pillow
+  description: Contains a soft velvet cushion, perfect for resting those heads weary with the weight of authority. Deploy as needed.
   components:
   - type: Sprite
-    sprite: /Textures/_starcup/Structures/Furniture/departmental_pillows.rsi
-    state: BarWrapped
+    sprite: /Textures/_starcup/Structures/Furniture/pillows.rsi
+    state: command-wrapped
   - type: Item
     size: Normal
   - type: SpawnItemsOnUse
     items:
-    - id: EmergencyComfortDeploymentUnitBarUnwrapped
+      - id: PillowCommandUnwrapped
     sound:
       path: /Audio/Misc/zip.ogg
+  - type: Construction
+    graph: Pillow
+    node: pillowcommandwrapped
 
 - type: entity
-  name: deployed comfort unit
-  parent: EmergencyComfortDeploymentUnitUnwrapped
-  id: EmergencyComfortDeploymentUnitBarUnwrapped
-  description: A plain Comfort Deployment Unit intended for the bar and other places of leisure.
+  parent: PillowBaseUnwrapped
+  id: PillowCommandUnwrapped
+  name: command pillow
+  description: A soft velvet cushion, perfect for resting those heads weary with the weight of authority for the rare occasions Renault isn't already sleeping on it.
   components:
   - type: Sprite
-    sprite: /Textures/_starcup/Structures/Furniture/departmental_pillows.rsi
-    state: BarUnwrapped
+    sprite: /Textures/_starcup/Structures/Furniture/pillows.rsi
+    state: command-unwrapped
   - type: MeleeWeapon
     damage:
       types:
         Blunt: 0
     soundHit:
       collection: storageRustle
+  - type: Construction
+    graph: Pillow
+    node: pillowcommandunwrapped
 
 - type: entity
-  name: engineering comfort deployment unit
-  parent: EmergencyComfortDeploymentUnitWrapped
-  id: EmergencyComfortDeploymentUnitEngineeringWrapped
-  description: The Engineering Comfort Deployment Unit, for resting between repairs. Deploy as needed, ideally not when the Tesla is about to loose.
+  parent: PillowBaseWrapped
+  id: PillowEngineeringWrapped
+  name: wrapped engineering pillow
+  description: A pillow sewn into a sturdy flame-resistant case. Not Tesla-proof. Deploy as needed.
   components:
   - type: Sprite
-    sprite: /Textures/_starcup/Structures/Furniture/departmental_pillows.rsi
-    state: EngineeringWrapped
+    sprite: /Textures/_starcup/Structures/Furniture/pillows.rsi
+    state: engineering-wrapped
   - type: Item
     size: Normal
   - type: SpawnItemsOnUse
     items:
-    - id: EmergencyComfortDeploymentUnitEngineeringUnwrapped
+    - id: PillowEngineeringUnwrapped
     sound:
       path: /Audio/Misc/zip.ogg
+  - type: Construction
+    graph: Pillow
+    node: pillowengineeringwrapped
 
 - type: entity
-  name: deployed engineering comfort unit
-  parent: EmergencyComfortDeploymentUnitUnwrapped
-  id: EmergencyComfortDeploymentUnitEngineeringUnwrapped
-  description: The Engineering Comfort Deployment Unit, for resting between repairs.
+  parent: PillowBaseUnwrapped
+  id: PillowEngineeringUnwrapped
+  name: engineering pillow
+  description: A pillow sewn into a sturdy flame-resistant case. Not Tesla-proof.
   components:
   - type: Sprite
-    sprite: /Textures/_starcup/Structures/Furniture/departmental_pillows.rsi
-    state: EngineeringUnwrapped
+    sprite: /Textures/_starcup/Structures/Furniture/pillows.rsi
+    state: engineering-unwrapped
   - type: MeleeWeapon
     damage:
       types:
         Blunt: 0
     soundHit:
       collection: storageRustle
+  - type: Construction
+    graph: Pillow
+    node: pillowengineeringunwrapped
 
 - type: entity
-  name: medical comfort deployment unit
-  parent: EmergencyComfortDeploymentUnitWrapped
-  id: EmergencyComfortDeploymentUnitMedicalWrapped
-  description: The Medical Comfort Deployment Unit, for the comfort of patients and overworked professionals alike. Deploy as needed.
+  parent: PillowBaseWrapped
+  id: PillowMedicalWrapped
+  name: wrapped medical pillow
+  description: A pillow sewn into an soft antimicrobial case, for the comfort of patients and overworked professionals alike. Deploy as needed.
   components:
   - type: Sprite
-    sprite: /Textures/_starcup/Structures/Furniture/departmental_pillows.rsi
-    state: MedicalWrapped
+    sprite: /Textures/_starcup/Structures/Furniture/pillows.rsi
+    state: medical-wrapped
   - type: Item
     size: Normal
   - type: SpawnItemsOnUse
     items:
-    - id: EmergencyComfortDeploymentUnitMedicalUnwrapped
+    - id: PillowMedicalUnwrapped
     sound:
       path: /Audio/Misc/zip.ogg
+  - type: Construction
+    graph: Pillow
+    node: pillowmedicalwrapped
 
 - type: entity
-  name: deployed medical comfort unit
-  parent: EmergencyComfortDeploymentUnitUnwrapped
-  id: EmergencyComfortDeploymentUnitMedicalUnwrapped
-  description: The Medical Comfort Deployment Unit, for the comfort of patients and overworked professionals alike.
+  parent: PillowBaseUnwrapped
+  id: PillowMedicalUnwrapped
+  name: medical pillow
+  description: A pillow sewn into an soft antimicrobial case, for the comfort of patients and overworked professionals alike.
   components:
   - type: Sprite
-    sprite: /Textures/_starcup/Structures/Furniture/departmental_pillows.rsi
-    state: MedicalUnwrapped
+    sprite: /Textures/_starcup/Structures/Furniture/pillows.rsi
+    state: medical-unwrapped
   - type: MeleeWeapon
     damage:
       types:
         Blunt: 0
     soundHit:
       collection: storageRustle
+  - type: Construction
+    graph: Pillow
+    node: pillowmedicalunwrapped
