@@ -7,3 +7,7 @@ construction-recipe-pillow-engineering-wrapped = wrapped engineering pillow
 construction-recipe-pillow-engineering-unwrapped = engineering pillow
 construction-recipe-pillow-medical-wrapped = wrapped medical pillow
 construction-recipe-pillow-medical-unwrapped = medical pillow
+construction-recipe-pillow-base
+construction-recipe-pillow-command
+construction-recipe-pillow-engineering
+construction-recipe-pillow-medical
