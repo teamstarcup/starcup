@@ -12,59 +12,61 @@
   - node: pillowbaseunwrapped
     entity: PillowBaseUnwrapped
     edges:
-
 # Base
-    - to: pillowbasewrapped
+      completed:
+      - !type:SpawnPrototype
+        prototype: PillowBaseWrapped
+        amount: 1
       steps:
       - material: Plastic
         amount: 1
-    - node: pillowbasewrapped
-      entity: PillowBaseWrapped
 
 # Command
-    - to: pillowcommandunwrapped
-      steps:
-      - material: FloorCarpetPurple
-        amount: 1
-      - material: Gold
-        amount: 1
-    - node: pillowcommandunwrapped
-      entity: PillowCommandUnwrapped
-      edges:
-      - to: pillowcommandwrapped
+      - to: pillowcommandunwrapped
         steps:
-        - material: Plastic
+        - material: FloorCarpetPurple
           amount: 1
-    - node: pillowcommandwrapped
-      entity: PillowCommandWrapped
+        - material: Gold
+          amount: 1
+  - node: pillowcommandunwrapped
+    entity: PillowCommandUnwrapped
+    edges:
+      completed:
+      - !type:SpawnPrototype
+        prototype: PillowCommandWrapped
+        amount: 1
+      steps:
+      - material: Plastic
+        amount: 1
 
 # Engineering
-    - to: pillowengineeringunwrapped
-      steps:
-      - material: FloorCarpetOrange
-        amount: 1
-    - node: pillowengineeringunwrapped
-      entity: PillowEngineeringUnwrapped
-      edges:
-      - to: pillowengineeringwrapped
+      - to: pillowengineeringunwrapped
         steps:
-        - material: Plastic
+        - material: FloorCarpetOrange
           amount: 1
-          doAfter: 2
-      - node: pillowengineeringwrapped
-        entity: PillowEngineeringWrapped
+  - node: pillowengineeringunwrapped
+    entity: PillowEngineeringUnwrapped
+    edges:
+      completed:
+      - !type:SpawnPrototype
+        prototype: PillowEngineeringWrapped
+        amount: 1
+      steps:
+      - material: Plastic
+        amount: 1
 
 # Medical
-    - to: pillowmedicalunwrapped
-      steps:
-      - material: FloorCarpetSkyBlue
-        amount: 1
-    - node: pillowmedicalunwrapped
-      entity: PillowMedicalUnwrapped
-      edges:
-      - to: pillowmedicalwrapped
+      - to: pillowmedicalunwrapped
         steps:
-        - material: Plastic
+        - material: FloorCarpetSkyBlue
           amount: 1
-    - node: pillowmedicalwrapped
-      entity: PillowMedicalWrapped
+  - node: pillowmedicalunwrapped
+    entity: PillowMedicalUnwrapped
+    edges:
+      completed:
+      - !type:SpawnPrototype
+        prototype: PillowMedicalWrapped
+        amount: 1
+      steps:
+      - material: Plastic
+        amount: 1
