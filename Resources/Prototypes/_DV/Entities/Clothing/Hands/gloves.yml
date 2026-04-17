@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingHandsGlovesCombat
+  parent: ClothingHandsBase # starcup: remove insulation
   id: ClothingHandsGlovesInspection
   name: inspection gloves
   description: A fancy pair of white gloves, both durable and delicate.
@@ -11,3 +11,4 @@
   - type: Fiber
     fiberMaterial: fibers-leather
     fiberColor: fibers-white
+  - type: FingerprintMask # starcup: reparenting

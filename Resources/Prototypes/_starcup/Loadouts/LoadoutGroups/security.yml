@@ -17,6 +17,58 @@
   - SecurityHud
   - SecurityEyePatchHud
 
+# Guns
+- type: loadoutGroup
+  id: SecurityFirearm
+  name: loadout-group-security-gun
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - SecurityFirearmWeaponPistolMk58
+  - SecurityFirearmWeaponDisabler
+
+- type: loadoutGroup
+  id: SecurityRevolverFirearm
+  name: loadout-group-revolver-gun
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - SecurityRevolverInspector
+
+- type: loadoutGroup
+  id: SecurityFirearmAmmo
+  name: loadout-group-security-gun-ammo
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+  - SecurityFirearmMagazinePistol
+  - SecurityFirearmMagazinePistolRubber
+
+- type: loadoutGroup
+  id: SecurityRevolverAmmo
+  name: loadout-group-revolver-ammo
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+  - SecurityFirearmSpeedLoaderMagnumRubber
+  - SecurityFirearmSpeedLoaderMagnum
+
+- type: loadoutGroup
+  parent: [ SecurityFirearm, SecurityRevolverFirearm ]
+  id: SecurityAllFirearm
+  name: loadout-group-all-gun
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - SecurityFirearmWeaponRevolverDeckard
+
+- type: loadoutGroup
+  parent: [ SecurityFirearmAmmo, SecurityRevolverAmmo ]
+  id: SecurityAllAmmo
+  name: loadout-group-all-ammo
+  minLimit: 0
+  maxLimit: 2
+
 # Combat Medic
 - type: loadoutGroup
   id: BrigmedicHead
@@ -97,7 +149,28 @@
   - BlackHeels
   - SecurityWinterBoots
 
+# Head of Security
+- type: loadoutGroup
+  id: HeadofSecurityShoes
+  name: loadout-group-head-of-security-shoes
+  loadouts:
+  - JackBoots
+  - BrownLeatherShoes
+  - LaceupShoes
+  - BlackHeels
+  - BlackCommandHeels
+  - SecurityWinterBoots
+  - HeadOfSecurityWinterBoots
+
 # Security Cadet
+- type: loadoutGroup
+  id: SecurityCadetHead
+  name: loadout-group-security-cadet-head
+  minLimit: 0
+  loadouts:
+  - MimeFrenchBeret
+  - SecurityHelmet
+
 - type: loadoutGroup
   id: SecurityCadetOuterClothing
   name: loadout-group-security-cadet-outerclothing

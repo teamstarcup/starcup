@@ -317,7 +317,7 @@
   id: UnisexDiona
   sounds:
     Scream:
-      path: /Audio/Voice/Diona/diona_scream.ogg
+      collection: DionaScreams # starcup
     Laugh:
       collection: DionaLaugh
     Chirp:
@@ -329,9 +329,23 @@
     Hew:
       collection: Hew
     Gasp:
-      collection: MaleGasp
+    # begin starcup
+      path: /Audio/_starcup/Voice/Diona/diona_gasp.ogg
+    Sigh:
+      path: /Audio/_starcup/Voice/Diona/diona_sigh.ogg
+    Yawn:
+      path: /Audio/_starcup/Voice/Diona/diona_yawn.ogg
+    Chitter:
+      collection: NymphChitters
+    Cough:
+      path: /Audio/_starcup/Arthropods/DionaNymph/nymph_gasp.ogg
+    BuzzNonSilicon:
+      collection: NymphBuzzes
+    Crying:
+      path: /Audio/_Impstation/Voice/Moth/mothcry.ogg
     DefaultDeathgasp:
-      collection: DeathGasp
+      path: /Audio/Voice/Diona/diona_scream.ogg
+    # end starcup
   params:
     variation: 0.125
 
@@ -662,10 +676,10 @@
   id: DionaBodyEmotes
   sounds:
     Clap:
-      path: /Audio/Voice/Diona/diona_clap.ogg
-    # TODO: Replace this with a similar wood themed single clap
+      collection: DionaClaps
+    # TODO: Replace this with a similar wood themed single clap # starcup: done.
     ClapSingle:
-      collection: ClapSingle
+      path: /Audio/_starcup/Emotes/Diona/clap_single.ogg
     Snap:
       path: /Audio/Voice/Diona/diona_snap.ogg
       params:
@@ -680,7 +694,7 @@
         volume: -3
         variation: 0.1 # DEN
     Crack: # Imp addition
-      collection: Cracks
+      collection: DionaKnuckleCracks # starcup
 
 - type: emoteSounds
   id: ReptilianBodyEmotes

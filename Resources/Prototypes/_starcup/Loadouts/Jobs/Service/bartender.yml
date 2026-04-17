@@ -1,0 +1,88 @@
+# Senior times
+- type: loadoutEffectGroup
+  id: SeniorBartender
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobBartender
+      time: 187200 #52 hrs (1 hour per week for 1 year)
+
+# Uniform
+- type: loadout
+  id: ClothingUniformNightclubSuit
+  equipment:
+    jumpsuit: ClothingUniformNightclubSuit
+  groupBy: "jumpsuit"
+
+- type: loadout
+  id: ClothingUniformNightclubSuitSkirt
+  equipment:
+    jumpsuit: ClothingUniformNightclubSuitSkirt
+  groupBy: "jumpskirt"
+
+- type: loadout
+  id: ClothingUniformSeniorBartender
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorBartender
+  equipment:
+    jumpsuit: ClothingUniformSeniorBartender
+  groupBy: "jumpsuit"
+
+- type: loadout
+  id: ClothingUniformSeniorBartenderSkirt
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorBartender
+  equipment:
+    jumpsuit: ClothingUniformSeniorBartenderSkirt
+  groupBy: "jumpskirt"
+
+# Outer
+- type: loadout
+  id: BartenderCuteApron
+  equipment:
+    outerClothing: ClothingOuterApronCuteBar
+
+# ID
+- type: loadout
+  id: BartenderPDA
+  equipment:
+    id: BartenderPDA
+
+- type: loadout
+  id: MixologistPDA
+  equipment:
+    id: MixologistPDA
+
+- type: loadout
+  id: BaristaPDA
+  equipment:
+    id: BaristaPDA
+
+- type: loadout
+  id: SpeakeasyerPDA
+  equipment:
+    id: SpeakeasyerPDA
+
+- type: loadout
+  id: SeniorBartenderPDA
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorBartender
+  equipment:
+    id: SeniorBartenderPDA
+
+# Eyewear
+- type: loadout
+  id: BeerGlasses
+  equipment:
+    eyes: ClothingEyesHudBeer
+  groupBy: "hud"
+
+- type: loadout
+  id: BeerEyePatchHud
+  equipment:
+    eyes: ClothingEyesEyepatchHudBeer
+  groupBy: "hud"

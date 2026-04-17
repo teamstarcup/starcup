@@ -1,4 +1,57 @@
 - type: loadoutGroup
+  id: Scarfs
+  name: loadout-group-scarfs
+  minLimit: 0
+  loadouts:
+  - ScarfRed
+  - ScarfBlue
+  - ScarfLightBlue
+  - ScarfGreen
+  - ScarfPurple
+  - ScarfBrown
+  - ScarfOrange
+  - ScarfBlack
+  - ScarfZebra
+  - ScarfSyndieRed
+  - ScarfSyndieGreen
+  - ScarfAce
+  - ScarfAro
+  - ScarfAroAce
+  - ScarfBi
+  - ScarfGay
+  - ScarfInter
+  - ScarfLesbian
+  - ScarfLesbianLong
+  - ScarfPan
+  - ScarfNonbinary
+  - ScarfRainbow
+  - ScarfTrans
+
+- type: loadoutGroup
+  id: Accessibility
+  name: loadout-group-accessibility
+  minLimit: 0
+  maxLimit: 6
+  loadouts:
+  - AACTablet
+  - HandheldStationMap
+  - OffsetCane
+  - OffsetCaneWood
+  - OffsetCaneClown
+  - OffsetCaneMime
+  - OffsetCaneSyndie
+  - Cane
+  - WhiteCane
+  - PillCanisterNeurozeniumLoadout
+  - PillCanisterSoretizoneLoadout
+  - PillCanisterCalmafluxineLoadout
+  - PillCanisterEthyloxyephedrineLoadout
+  - PillCanisterAgonolexyneLoadout
+
+# Abstract Groups (for parenting purposes)
+## Trinkets
+
+- type: loadoutGroup
   abstract: true
   id: Plushies
   loadouts:
@@ -44,6 +97,97 @@
   - PlushieXenoWorn
   - PlushieZetan
 
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsBureaucracy
+  loadouts:
+  - BoxFolderBlackThreePapers
+  - BoxFolderRedThreePapers
+  - BoxFolderGreenThreePapers
+  - BoxFolderBlueThreePapers
+  - BoxFolderWhiteThreePapers
+  - NotebookPocketBlue
+  - NotebookPocketBrown
+  - NotebookPocketGreen
+  - NotebookSpiralCybersun
+  - NotebookSpiralInterdyne
+  - NotebookSpiralBeige
+  - NotebookSpiralPurple
+  - NotebookSpiralTeal
+  - NotebookCompositionBlack
+
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsLighter
+  loadouts:
+  - CybersunFlippo
+  - DonkcoLighter
+  - GorlexMatchbox
+  - InterdyneFlippo
+  - SyndicateFlippo
+
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsUtility
+  loadouts:
+  - TapeRecorder
+  - NoviceMark
+
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsTreat
+  loadouts:
+  - LollipopBubblegum
+
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsToy
+  loadouts:
+  - CardBoxSparot
+
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsCosmetic
+  loadouts:
+  - CDDogtags
+  - HeartLocket
+  - GoldRing
+  - SilverRing
+
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsTowel
+  loadouts:
+  - TowelColorGray
+  - TowelColorBlack
+  - TowelColorRed
+  - TowelColorOrange
+  - TowelColorLightBrown
+  - TowelColorYellow
+  - TowelColorDarkGreen
+  - TowelColorGreen
+  - TowelColorLightBlue
+  - TowelColorDarkBlue
+  - TowelColorPurple
+  - TowelColorMaroon
+  - TowelColorMime
+  - TowelColorSilver
+  - TowelColorGold
+
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsInstrument
+  loadouts:
+  - AcousticGuitar
+  - Flute
+  - PanFlute
+  - Ocarina
+  - Harmonica
+  - MusicBox
+  - Kalimba
+  - Woodblock
+
+## Clothes
 - type: loadoutGroup
   abstract: true
   id: ColoredJumpsuits
@@ -113,37 +257,3 @@
   - BrownTurtleneckSkirt
   - MaroonTurtleneckSuit
   - MaroonTurtleneckSkirt
-
-- type: loadoutGroup
-  abstract: true
-  id: TrinketsInstrument
-  loadouts:
-  - AcousticGuitar
-  - Flute
-  - PanFlute
-  - Ocarina
-  - Harmonica
-  - MusicBox
-  - Kalimba
-  - Woodblock
-
-- type: loadoutGroup
-  id: Accessibility
-  name: loadout-group-accessibility
-  minLimit: 0
-  maxLimit: 6
-  loadouts:
-  - AACTablet
-  - HandheldStationMap
-  - OffsetCane
-  - OffsetCaneWood
-  - OffsetCaneClown
-  - OffsetCaneMime
-  - OffsetCaneSyndie # starcup: reflavor ops
-  - Cane
-  - WhiteCane
-  - PillCanisterNeurozeniumLoadout
-  - PillCanisterSoretizoneLoadout
-  - PillCanisterCalmafluxineLoadout
-  - PillCanisterEthyloxyephedrineLoadout
-  - PillCanisterAgonolexyneLoadout

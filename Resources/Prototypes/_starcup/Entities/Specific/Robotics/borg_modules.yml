@@ -1,0 +1,71 @@
+- type: entity
+  id: BorgModuleRoboticsRescue
+  parent: [ BaseBorgModuleScience, BaseProviderBorgModule ]
+  name: robotics rescue cyborg module
+  description: Grants a cyborg all the tools it needs to revive its silicon crewmates, including topicals and a jumper unit.
+  components:
+  - type: Sprite
+    layers:
+    - state: science
+    - state: icon-defib
+  - type: ItemBorgModule
+    hands:
+    - item: HandheldHealthAnalyzer
+    - item: JumperUnitOneHandedUnpowered
+    - item: RefuelingWelder
+    - item: RepairSpray
+      hand:
+        emptyLabel: borg-slot-topicals-empty
+        emptyRepresentative: RepairSpray
+        whitelist:
+          components:
+          - Healing
+    - item: ThermalPaste
+      hand:
+        emptyLabel: borg-slot-topicals-empty
+        emptyRepresentative: ThermalPaste
+        whitelist:
+          components:
+          - Healing
+    - item: Oilpack
+      hand:
+        emptyLabel: borg-slot-topicals-empty
+        emptyRepresentative: Oilpack
+        whitelist:
+          components:
+          - Healing
+  - type: BorgModuleIcon
+    icon: { sprite: _starcup/Interface/Actions/actions_borg.rsi, state: robotics-rescue-module }
+
+# Container placeholders
+- type: entity
+  id: BorgModuleIngredientPlaceholder
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/ingredients.rsi
+    state: dough
+
+- type: entity
+  id: BorgModuleProducePlaceholder
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/apple.rsi
+    state: produce
+
+- type: entity
+  id: BorgModuleSeedPlaceholder
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/seeds.rsi
+    state: seed
+
+- type: entity
+  id: BorgModuleBakingContainerPlaceholder
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/ingredients.rsi
+    state: flour-big

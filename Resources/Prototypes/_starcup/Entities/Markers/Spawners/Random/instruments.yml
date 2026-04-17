@@ -124,7 +124,7 @@
 - type: entity
   id: RandomInstrumentsLargeMisc
   name: random large misc instruments spawner
-  description: Vibraphone, marimba, tuba, harp, and contrabass.
+  description: Vibraphone, marimba, tuba, harp, microphone stand, and contrabass.
   parent: MarkerBase
   components:
   - type: Sprite
@@ -184,6 +184,7 @@
       - id: TubaInstrument
       - id: HarpInstrument
       - id: ContrabassInstrument
+      - id: InstrumentStandMicrophoneFilled
 
 # Small Instrument Tables
 - type: entityTable

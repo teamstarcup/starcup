@@ -9,11 +9,11 @@
 # - Shoes
 # - Eyewear/Glasses
 # - PDA
+# - Survival
 # - Accessibility
 # - Trinkets
 # - Job Trinkets
 # - Other Job Items (golden plunger, instruments, janitor flashlight, etc)
-# - Survival
 # - GroupSpeciesBreathTool
 # - GroupTankHarness
 
@@ -57,17 +57,35 @@
   id: JobBoxer
   groups:
   - BoxerHead
-  - Scarfs # starcup
+  - Scarfs
   - BoxerJumpsuit
   - BoxerBelt
   - CommonBackpack
-  - BoxerShoes # starcup
+  - BoxerShoes
   - Glasses
-  - Accessibility # starcup
+  - Accessibility
   - Trinkets
   - BoxerJobTrinkets
   - BoxerWeapon
   - Survival
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+# Prisoner
+- type: roleLoadout
+  id: JobPrisoner
+  groups:
+  - Scarfs
+  - PrisonerJumpsuit
+  - CommonBackpack
+  - PrisonerOuterClothing
+  - PassengerShoes
+  - Glasses
+  - Survival
+  - Accessibility
+  - Trinkets
+  - PrisonerJobTrinkets
+  - Plushies
   - GroupSpeciesBreathTool
   - GroupTankHarness
 

@@ -1,0 +1,63 @@
+- type: entity
+  parent: CrateGenericSteel
+  id: CrateMedicalAccessibilityItems
+  name: accessibility items crate
+  description: Contains canes, AAC tablets, and a range of other useful items for crewmembers with accessibility needs.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - !type:NestedSelector
+          tableId: RandomPrescriptionPillCanisterTable
+          weight: 0.8
+          rolls: !type:RangeNumberSelector
+            range: 1, 2
+        - !type:NestedSelector
+          tableId: RandomWalkingCaneTable
+          rolls: 2
+        - id: AACTablet
+          amount: 2
+        - id: WhiteCane
+        - id: ClothingEyesGlasses
+          amount: 2
+        - id: ClothingEyesBlindfold
+          weight: 0.1
+        - !type:NestedSelector
+          tableId: AllPlushiesTable
+          rolls: !type:RangeNumberSelector
+            range: 0, 1
+
+# New Tables
+- type: entityTable
+  id: RandomPrescriptionPillCanisterTable
+  table: !type:GroupSelector
+    children:
+    - id: PillCanisterEthyloxyephedrine
+      weight: 0.1
+    - id: PillCanisterSoretizone
+      weight: 0.2
+    - id: PillCanisterBlissifylovene
+      weight: 0.1
+    - id: PillCanisterCalmafluxine
+      weight: 0.1
+    - id: PillCanisterCaramexinin
+      weight: 0.2
+    - id: PillCanisterAgonolexyne
+      weight: 0.1
+
+- type: entityTable
+  id: RandomWalkingCaneTable # all canes minus white cane
+  table: !type:GroupSelector
+    children:
+    - id: OffsetCane
+    - id: OffsetCaneWood
+    - id: OffsetCaneClown
+      weight: 0.4
+    - id: OffsetCaneMime
+      weight: 0.4
+    - id: OffsetCaneSyndie
+      weight: 0.2
+    - id: OffsetCaneNT
+      weight: 0.01
+    - id: Cane

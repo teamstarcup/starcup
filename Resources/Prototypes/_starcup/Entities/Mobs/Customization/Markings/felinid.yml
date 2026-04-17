@@ -54,6 +54,14 @@
   - sprite: _starcup/Mobs/Customization/Felinid/parts.rsi
     state: torso_f
 
+- type: marking
+  id: TajaranTorsoPatch
+  bodyPart: Chest
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _starcup/Mobs/Customization/Felinid/felinid_limbs.rsi
+    state: patch_torso
+
 # Arms
 
 - type: marking
@@ -88,6 +96,70 @@
   - sprite: _starcup/Mobs/Customization/Felinid/parts.rsi
     state: r_hand
 
+- type: marking
+  id: TajaranLeftArmPatch
+  bodyPart: LArm
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _starcup/Mobs/Customization/Felinid/felinid_limbs.rsi
+    state: patch_l_arm
+
+- type: marking
+  id: TajaranRightArmPatch
+  bodyPart: RArm
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _starcup/Mobs/Customization/Felinid/felinid_limbs.rsi
+    state: patch_r_arm
+
+- type: marking
+  id: TajaranLeftHandPatch
+  bodyPart: LHand
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _starcup/Mobs/Customization/Felinid/felinid_limbs.rsi
+    state: patch_l_hand
+
+- type: marking
+  id: TajaranRightHandPatch
+  bodyPart: RHand
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _starcup/Mobs/Customization/Felinid/felinid_limbs.rsi
+    state: patch_r_hand
+
+- type: marking
+  id: TajaranLeftArmPoints
+  bodyPart: LArm
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _starcup/Mobs/Customization/Felinid/felinid_limbs.rsi
+    state: points_l_arm
+
+- type: marking
+  id: TajaranRightArmPoints
+  bodyPart: RArm
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _starcup/Mobs/Customization/Felinid/felinid_limbs.rsi
+    state: points_r_arm
+
+- type: marking
+  id: TajaranLeftHandPoints
+  bodyPart: LHand
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _starcup/Mobs/Customization/Felinid/felinid_limbs.rsi
+    state: points_l_hand
+
+- type: marking
+  id: TajaranRightHandPoints
+  bodyPart: RHand
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _starcup/Mobs/Customization/Felinid/felinid_limbs.rsi
+    state: points_r_hand
+
 # Legs
 
 - type: marking
@@ -121,6 +193,70 @@
   sprites:
   - sprite: _starcup/Mobs/Customization/Felinid/parts.rsi
     state: r_foot
+
+- type: marking
+  id: TajaranLeftLegPatch
+  bodyPart: LLeg
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _starcup/Mobs/Customization/Felinid/felinid_limbs.rsi
+    state: patch_l_leg
+
+- type: marking
+  id: TajaranRightLegPatch
+  bodyPart: RLeg
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _starcup/Mobs/Customization/Felinid/felinid_limbs.rsi
+    state: patch_r_leg
+
+- type: marking
+  id: TajaranLeftFootPatch
+  bodyPart: LFoot
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _starcup/Mobs/Customization/Felinid/felinid_limbs.rsi
+    state: patch_l_foot
+
+- type: marking
+  id: TajaranRightFootPatch
+  bodyPart: RFoot
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _starcup/Mobs/Customization/Felinid/felinid_limbs.rsi
+    state: patch_r_foot
+
+- type: marking
+  id: TajaranLeftLegPoints
+  bodyPart: LLeg
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _starcup/Mobs/Customization/Felinid/felinid_limbs.rsi
+    state: points_l_leg
+
+- type: marking
+  id: TajaranRightLegPoints
+  bodyPart: RLeg
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _starcup/Mobs/Customization/Felinid/felinid_limbs.rsi
+    state: points_r_leg
+
+- type: marking
+  id: TajaranLeftFootPoints
+  bodyPart: LFoot
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _starcup/Mobs/Customization/Felinid/felinid_limbs.rsi
+    state: points_l_foot
+
+- type: marking
+  id: TajaranRightFootPoints
+  bodyPart: RFoot
+  groupWhitelist: [Felinid]
+  sprites:
+  - sprite: _starcup/Mobs/Customization/Felinid/felinid_limbs.rsi
+    state: points_r_foot
 
 # Tajaran Customization Markings
 # HeadTop

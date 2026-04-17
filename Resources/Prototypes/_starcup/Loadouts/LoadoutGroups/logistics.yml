@@ -1,3 +1,32 @@
+# Cargo Assistant
+- type: loadoutGroup
+  id: CargoAssistantHead
+  name: loadout-group-cargo-assistant-head
+  minLimit: 0
+  loadouts:
+  - CargoTechnicianHead
+
+- type: loadoutGroup
+  id: CargoAssistantJumpsuit
+  name: loadout-group-cargo-assistant-jumpsuit
+  loadouts:
+  - CargoTechnicianJumpsuit
+  - CargoTechnicianJumpskirt
+
+- type: loadoutGroup
+  id: CargoAssistantOuterClothing
+  name: loadout-group-cargo-assistant-outerclothing
+  minLimit: 0
+  loadouts:
+  - WinterCoatYellow
+
+- type: loadoutGroup
+  id: CargoAssistantShoes
+  name: loadout-group-cargo-assistant-shoes
+  loadouts:
+  - BlackShoes
+  - CargoWinterBoots
+
 # Cargo Technician
 - type: loadoutGroup
   parent: [ Scarfs ]
@@ -8,6 +37,49 @@
   - GoliathCloak
 
 # Courier
+- type: loadoutGroup
+  id: CourierHead
+  name: loadout-group-courier-head
+  minLimit: 0
+  loadouts:
+  - CourierHead
+  - MailCarrierHead
+
+- type: loadoutGroup
+  id: CourierJumpsuit
+  name: loadout-group-courier-jumpsuit
+  loadouts:
+  - CourierJumpsuit
+  - CourierJumpskirt
+  - MailCarrierJumpsuit
+  - MailCarrierJumpskirt
+
+- type: loadoutGroup
+  id: CourierOuterClothing
+  name: loadout-group-courier-outerclothing
+  minLimit: 0
+  loadouts:
+  - CargoTechnicianWintercoat
+  - MailCarrierWintercoat
+
+- type: loadoutGroup
+  id: CourierShoes
+  name: loadout-group-courier-shoes
+  loadouts:
+  - BlackShoes
+  - BlueShoes
+  - BrownShoes
+  - CargoWinterBoots
+  - RollerSkates
+
+- type: loadoutGroup
+  id: CourierPDA
+  name: loadout-group-courier-id
+  loadouts:
+  - CourierPDA
+  - MailCarrierPDA
+  - SeniorCourierPDA
+
 - type: loadoutGroup
   id: CourierBelt
   name: loadout-group-courier-belt
@@ -32,3 +104,11 @@
   minLimit: 0
   loadouts:
   - GoliathCloak
+
+- type: loadoutGroup
+  id: SalvageSpecialistID
+  name: loadout-group-salvage-id-delta
+  loadouts:
+  - SalvagePDA
+  - ProspectorPDA
+  - ExcavatorPDA

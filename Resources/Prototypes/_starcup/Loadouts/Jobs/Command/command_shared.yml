@@ -1,10 +1,44 @@
-#Outer Clothing
+# Outer
 - type: loadout
   id: CommandSweater
   equipment:
     outerClothing: ClothingOuterSweaterCommand
 
-#Eyewear
+# Gloves
+- type: loadout
+  id: HoPGloves
+  equipment:
+    gloves: ClothingHandsGlovesHop
+
+- type: loadout
+  id: InspectionGloves
+  equipment:
+    gloves: ClothingHandsGlovesInspection
+
+# Shoes
+- type: loadout
+  id: BrownLeatherShoes
+  equipment:
+    shoes: ClothingShoesLeather
+
+- type: loadout
+  id: LaceupShoes
+  equipment:
+    shoes: ClothingShoesBootsLaceup
+
+- type: loadout
+  id: BlackCommandHeels
+  equipment:
+    shoes: ClothingShoesHeelsCommandBlack # Impstation
+  groupBy: "heelsgilded"
+
+- type: loadout
+  id: BlueCommandHeels
+  equipment:
+    shoes: ClothingShoesHeelsCommandBlue # Impstation
+  groupBy: "heelsgilded"
+
+# Eyewear
 - type: loadout
   id: CommandGlasses
   equipment:
