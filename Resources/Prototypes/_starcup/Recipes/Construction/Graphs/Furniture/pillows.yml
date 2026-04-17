@@ -17,24 +17,26 @@
       steps:
       - material: Plastic
         amount: 1
-        doafter: 1
+        doAfter: 1
 
     - to: pillowcommandunwrapped
       steps:
       - material: FloorCarpetPurple
         amount: 1
+        doAfter: 2
       - material: Gold
         amount: 1
-        doafter: 3
+        doAfter: 3
     - to: pillowengineeringunwrapped
       steps:
       - material: FloorCarpetOrange
         amount: 1
-        doafter: 2
+        doAfter: 2
     - to: pillowmedicalunwrapped
       steps:
       - material: FloorCarpetSkyBlue
         amount: 1
+        doAfter: 2
 
   - node: pillowcommandunwrapped
     entity: PillowCommandUnwrapped
@@ -43,7 +45,7 @@
       steps:
       - material: Plastic
         amount: 1
-        doafter: 1
+        doAfter: 1
 
   - node: pillowengineeringunwrapped
     entity: PillowEngineeringUnwrapped
@@ -52,7 +54,7 @@
       steps:
       - material: Plastic
         amount: 1
-        doafter: 1
+        doAfter: 1
 
   - node: pillowmedicalunwrapped
     entity: PillowMedicalUnwrapped
@@ -61,7 +63,7 @@
       steps:
       - material: Plastic
         amount: 1
-        doafter: 1
+        doAfter: 1
 
   - node: pillowbasewrapped
     entity: PillowBaseWrapped
