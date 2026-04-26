@@ -1,7 +1,7 @@
 - type: gameMap
   id: Ptarmigan
   mapName: 'Ptarmigan Outpost'
-  mapPath: /Maps/_starcup/Events/ptarmigan.yml # TODO
+  mapPath: /Maps/_starcup/ptarmigan.yml
   maxRandomOffset: 0
   randomRotation: false
   minPlayers: 0
@@ -11,17 +11,17 @@
       stationProto: StandardTerrestrialStationTrading
       components:
       - type: StationNameSetup
-        mapNameTemplate: 'Ptarmigan Outpost'
+        mapNameTemplate: '{0} Ptarmigan Outpost {1}'
         nameGenerator:
           !type:SyndicateNameGenerator
-          prefixCreator: 'CAT'
+          prefixCreator: '-SC-EDEN'
       - type: StationEmergencyShuttle
-        emergencyShuttlePath: /Maps/_starcup/Shuttles/ #TODO
+        emergencyShuttlePath: /Maps/_starcup/Shuttles/SYND_EmergencyShuttlePtarmigan.yml
       - type: StationBiome
         biome: Snow
         mapLightColor: "#2B3153"
       - type: StationJobs
-        availableJobs: # 33 jobs total w/o latejoins, 38 jobs total w/ latejoins
+        availableJobs: # 35 jobs total w/o latejoins, 41 jobs total w/ latejoins
       ## Command (3 - 3)
 #          HeadOfSecurity: [ 1, 1 ] - no laws on the moon
 #          ChiefMedicalOfficer: [ 1, 1 ] - unnecessary on station this small
@@ -35,13 +35,13 @@
           AtmosphericTechnician: [ 1, 1 ]
           StationEngineer: [ 1, 1 ]
           TechnicalAssistant: [ 1, 1 ]
-      ## Logistics (4 - 4)
-#          Courier: [ 1, 1 ]
+      ## Logistics (5 - 5)
+          Courier: [ 1, 1 ]
           CargoTechnician: [ 1, 1 ]
           CargoAssistant: [ 1, 1 ]
           SalvageSpecialist: [ 2, 2 ]
-      ## Medical (4 - 5)
-#          Psychologist: [ 1, 1 ] - needless medical clutter
+      ## Medical (5 - 6)
+          Psychologist: [ 1, 1 ]
           Chemist: [ 1, 1 ]
           MedicalDoctor: [ 1, 2 ]
           MedicalIntern: [ 1, 1 ]
@@ -52,7 +52,7 @@
           Roboticist: [ 1, 1 ]
       ## Security (4 - 7)
 #          Brigmedic: [ 1, 1 ] - unnecessary on station this small
-#          SecurityOfficer: [ 4, 4 ] - not enough call for this
+#          SecurityOfficer: [ 4, 4 ] - not sure yet
           Detective: [ 2, 2 ]
           Prisoner: [ 0, 1 ]
           SecurityCadet: [ 1, 2 ]
@@ -63,7 +63,7 @@
           Chef: [ 1, 1 ]
           Janitor: [ 1, 1 ]
           ServiceWorker: [ 1, 2 ]
-      ## Civilian (6+ - 6+)
+      ## Civilian (6+ - 7+)
 #          Boxer: [ 1, 1 ] - maybe re-add when contender comes out?
 #          Lawyer: [ 1, 1 ] - no laws in antarctica
 #          Reporter: [ 1, 1 ] - no news for a station this small
@@ -71,7 +71,7 @@
           Chaplain: [ 1, 1 ]
           Clown: [ 1, 1 ]
           Librarian: [ 1, 1 ]
-          Mime: [ 1, 1 ]
+          Mime: [ 1, 2 ]
           Musician: [ 1, 1 ]
       ## Silicon (1 - 1)
           Borg: [ 1, 1 ]
