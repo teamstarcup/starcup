@@ -1,73 +1,11 @@
-## Command
-
-parent: WindoorSecureCommandLocked
-id: WindoorSecureCaptainLocked
-suffix: Captain, Locked
-components:
-- type: ContainerFill
-  containers:
-    board: [ DoorElectronicsCaptain ]
-
-parent: WindoorSecureCommandLocked
-id: WindoorSecureChiefEngineerLocked
-suffix: ChiefEngineer, Locked
-components:
-- type: ContainerFill
-  containers:
-    board: [ DoorElectronicsChiefEngineer ]
-
-parent: WindoorSecureCommandLocked
-id: WindoorSecureChiefMedicalOfficerLocked
-suffix: ChiefMedicalOfficer, Locked
-components:
-- type: ContainerFill
-  containers:
-    board: [ DoorElectronicsChiefMedicalOfficer ]
-
-parent: WindoorSecureCommandLocked
-id: WindoorSecureHeadOfSecurityLocked
-suffix: HeadOfSecurity, Locked
-components:
-- type: ContainerFill
-  containers:
-    board: [ DoorElectronicsHeadOfSecurity ]
-
-parent: WindoorSecureCommandLocked
-id: WindoorSecureQuartermasterLocked
-suffix: Quartermaster, Locked
-components:
-- type: ContainerFill
-  containers:
-    board: [ DoorElectronicsQuartermaster ]
-
-parent: WindoorSecureCommandLocked
-id: WindoorSecureResearchDirectorLocked
-suffix: ResearchDirector, Locked
-components:
-- type: ContainerFill
-  containers:
-    board: [ DoorElectronicsResearchDirector ]
-
-## Medical
 - type: entity
-  parent: WindoorSecureSecurityLocked
-  id: WindoorSecureParamedicLocked
-  suffix: Paramedic, Locked
+  parent: WindoorSecureServiceLocked
+  id: WindoorSecureBoxerLocked
+  suffix: Boxer, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsParamedic ]
-
-- type: entity
-  parent: WindoorSecureMedicalLocked
-  id: WindoorSecurePsychologistLocked
-  suffix: Psychologist, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsPsychologist ]
-
-## Security
+      board: [ DoorElectronicsBoxer ]
 
 - type: entity
   parent: WindoorSecureSecurityLocked
@@ -77,16 +15,6 @@ components:
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsBrigmedic ]
-
-## Service
-- type: entity
-  parent: WindoorSecureServiceLocked
-  id: WindoorSecureBoxerLocked
-  suffix: Boxer, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsBoxer ]
 
 - type: entity
   parent: WindoorSecureServiceLocked
@@ -134,6 +62,24 @@ components:
       board: [ DoorElectronicsMusician ]
 
 - type: entity
+  parent: WindoorSecureSecurityLocked
+  id: WindoorSecureParamedicLocked
+  suffix: Paramedic, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsParamedic ]
+
+- type: entity
+  parent: WindoorSecureMedicalLocked
+  id: WindoorSecurePsychologistLocked
+  suffix: Psychologist, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsPsychologist ]
+
+- type: entity
   parent: WindoorSecureServiceLocked
   id: WindoorSecureReporterLocked
   suffix: Reporter, Locked
@@ -142,7 +88,6 @@ components:
     containers:
       board: [ DoorElectronicsReporter ]
 
-## SyndComm
 - type: entity
   parent: WindoorSecureCommandLocked
   id: WindoorSecureSyndicateCommunicationsLocked
