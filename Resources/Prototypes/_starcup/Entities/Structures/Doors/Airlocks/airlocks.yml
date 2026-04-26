@@ -1,3 +1,12 @@
+# GridFill Airlocks
+- type: entity
+  parent: AirlockExternalGlassShuttleMining
+  id: AirlockExternalGlassShuttleExpeditionFilled
+  suffix: Ptarmigan, Expedition, Filled, Locked
+  components:
+  - type: GridFill
+    path: /Maps/_starcup/Shuttles/broken_expedition_shuttle.yml
+
 # Syndie Command
 - type: entity
   parent: AirlockCommand
