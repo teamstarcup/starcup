@@ -9,6 +9,7 @@
   - BaseStationJobsSpawning
   - BaseStationRecords
 #  - BaseStationArrivals
+# - BaseStationExpeditions
   - BaseStationGateway
   - BaseStationCentcomm
   - BaseStationAlertLevels
@@ -60,6 +61,7 @@
   parent:
   - StandardTerrestrialStation
   - BaseTerrestrialStationTrading
+  - BaseStationExpeditions
   categories: [ HideSpawnMenu ]
 
 # Terrestrial Stations with a surface trading outpost
@@ -76,4 +78,3 @@
         paths:
         - /Maps/_starcup/Shuttles/snowy_trade_outpost.yml
       # could add custom ruins later
-# we might need to just make the trade outpost part of the map if the ATOP gets messed up by the biome
