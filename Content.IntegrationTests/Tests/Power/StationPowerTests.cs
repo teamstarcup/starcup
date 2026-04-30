@@ -32,6 +32,7 @@ public sealed class StationPowerTests
         "Train",
         "Crux",
         "Freighter",
+        "Ptarmigan",
         // end starcup
     ];
 
