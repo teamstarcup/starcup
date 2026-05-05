@@ -9,11 +9,18 @@
       plantRsi: _Impstation/Objects/Specific/Hydroponics/rose.rsi
 
 - type: entity
-  parent: RoseBlack
+  parent: Rose # starcup - reparenting so it's not contraband
   id: RoseBlackSeedless
   suffix: seedless
   components:
+  - type: Clothing
+    sprite: _Impstation/Objects/Specific/Hydroponics/blackRose.rsi
+  - type: Sprite
+    sprite: _Impstation/Objects/Specific/Hydroponics/blackRose.rsi
+  - type: Item
+    sprite: _Impstation/Objects/Specific/Hydroponics/blackRose.rsi
   - type: Produce
+    seedId: blackRose
     seed:
       seedless: true
       plantRsi: _Impstation/Objects/Specific/Hydroponics/blackRose.rsi
