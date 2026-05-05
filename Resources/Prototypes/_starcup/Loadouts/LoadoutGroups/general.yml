@@ -47,9 +47,50 @@
   - PillCanisterCalmafluxineLoadout
   - PillCanisterEthyloxyephedrineLoadout
   - PillCanisterAgonolexyneLoadout
+  - CigPackGreen
+  - CigPackRed
+  - CigPackBlue
+  - CigPackBlack
+  - CigarCase
+  - CigarGold
+  - NoviceMark
+
+- type: loadoutGroup
+  parent:
+  - CosmeticsPridePin
+  - CosmeticsJewelry
+  - CosmeticsTowel
+  id: Cosmetics
+  name: loadout-group-cosmetics
+  minLimit: 0
+  maxLimit: 4
+  loadouts:
+  - FlowerWreath
+  - Hairflower
+  - Headphones
 
 # Abstract Groups (for parenting purposes)
-## Trinkets
+## Plushies
+- type: loadoutGroup
+  abstract: true
+  id: PlushiesWorn
+  loadouts:
+  - PlushieLizardWorn
+  - PlushieSpaceLizardWorn
+  - PlushieLizardInversedWorn
+  - PlushieBeeWorn
+  - PlushieExperimentWorn
+  - PlushieHampterWorn
+  - PlushiePenguinWorn
+  - PlushieArachnidWorn
+  - PlushieDionaWorn
+  - PlushieMothWorn
+  - PlushieSlimeWorn
+  - PlushieVoxWorn
+  - PlushieVulpWorn
+  - PlushieRounyWorn
+  - PlushieXenoWorn
+  - PlushieZetan
 
 - type: loadoutGroup
   abstract: true
@@ -76,27 +117,7 @@
   - PlushieXeno
   - PlushieZetan
 
-- type: loadoutGroup
-  abstract: true
-  id: PlushiesWorn
-  loadouts:
-  - PlushieLizardWorn
-  - PlushieSpaceLizardWorn
-  - PlushieLizardInversedWorn
-  - PlushieBeeWorn
-  - PlushieExperimentWorn
-  - PlushieHampterWorn
-  - PlushiePenguinWorn
-  - PlushieArachnidWorn
-  - PlushieDionaWorn
-  - PlushieMothWorn
-  - PlushieSlimeWorn
-  - PlushieVoxWorn
-  - PlushieVulpWorn
-  - PlushieRounyWorn
-  - PlushieXenoWorn
-  - PlushieZetan
-
+## Trinkets
 - type: loadoutGroup
   abstract: true
   id: TrinketsBureaucracy
@@ -131,7 +152,6 @@
   id: TrinketsUtility
   loadouts:
   - TapeRecorder
-  - NoviceMark
 
 - type: loadoutGroup
   abstract: true
@@ -147,7 +167,21 @@
 
 - type: loadoutGroup
   abstract: true
-  id: TrinketsCosmetic
+  id: TrinketsInstrument
+  loadouts:
+  - AcousticGuitar
+  - Flute
+  - PanFlute
+  - Ocarina
+  - Harmonica
+  - MusicBox
+  - Kalimba
+  - Woodblock
+
+## Cosmetics (primarily worn trinkets)
+- type: loadoutGroup
+  abstract: true
+  id: CosmeticsJewelry
   loadouts:
   - CDDogtags
   - HeartLocket
@@ -156,7 +190,30 @@
 
 - type: loadoutGroup
   abstract: true
-  id: TrinketsTowel
+  id: CosmeticsPridePin
+  loadouts:
+  - ClothingNeckLGBTPin
+  - ClothingNeckAllyPin
+  - ClothingNeckAromanticPin
+  - ClothingNeckAsexualPin
+  - ClothingNeckAroacePin
+  - ClothingNeckBisexualPin
+  - ClothingNeckGayPin
+  - ClothingNeckIntersexPin
+  - ClothingNeckLesbianPin
+  - ClothingNeckNonBinaryPin
+  - ClothingNeckPansexualPin
+  - ClothingNeckPluralPin
+  - ClothingNeckOmnisexualPin
+  - ClothingNeckGenderqueerPin
+  - ClothingNeckGenderfluidPin
+  - ClothingNeckTransPin
+  - ClothingNeckAutismPin
+  - ClothingNeckGoldAutismPin
+
+- type: loadoutGroup
+  abstract: true
+  id: CosmeticsTowel
   loadouts:
   - TowelColorGray
   - TowelColorBlack
@@ -173,19 +230,7 @@
   - TowelColorMime
   - TowelColorSilver
   - TowelColorGold
-
-- type: loadoutGroup
-  abstract: true
-  id: TrinketsInstrument
-  loadouts:
-  - AcousticGuitar
-  - Flute
-  - PanFlute
-  - Ocarina
-  - Harmonica
-  - MusicBox
-  - Kalimba
-  - Woodblock
+  - TowelColorWhite
 
 ## Clothes
 - type: loadoutGroup

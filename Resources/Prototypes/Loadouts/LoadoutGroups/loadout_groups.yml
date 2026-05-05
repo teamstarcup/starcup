@@ -2,14 +2,14 @@
 - type: loadoutGroup
   # begin starcup: use parenting for our additions
   parent:
-  - Plushies
+#  - Plushies
   - TrinketsBureaucracy
   - TrinketsLighter
   - TrinketsUtility
   - TrinketsTreat
   - TrinketsToy
-  - TrinketsCosmetic
-  - TrinketsTowel
+#  - TrinketsCosmetic
+#  - TrinketsTowel
   - TrinketsInstrument
   # end starcup
   id: Trinkets
@@ -17,49 +17,53 @@
   minLimit: 0
   maxLimit: 3
   loadouts:
-  - FlowerWreath
-  - Hairflower
-  - Headphones
-  - PlushieLizard
-  - PlushieSpaceLizard
+# begin starcup: moved to Cosmetics/Plushies
+#  - FlowerWreath
+#  - Hairflower
+#  - Headphones
+#  - PlushieLizard
+#  - PlushieSpaceLizard
   - ThreeCandles
   - Lighter
-  - CigPackGreen
-  - CigPackRed
-  - CigPackBlue
-  - CigPackBlack
-  - CigarCase
-  - CigarGold
-  #- BoxFolderBaseThreePapers # starcup: replaced with specific colored folders by TrinketsBureaucracy
+# begin starcup: moved to Accessibility
+#  - CigPackGreen
+#  - CigPackRed
+#  - CigPackBlue
+#  - CigPackBlack
+#  - CigarCase
+#  - CigarGold
+#  - BoxFolderBaseThreePapers # replaced with specific colored folders by TrinketsBureaucracy
+# end starcup
   - BoxFolderPlasticClipboardThreePapers
   - BoxFolderClipboardThreePapers
-  - ClothingNeckLGBTPin
-  - ClothingNeckAllyPin
-  - ClothingNeckAromanticPin
-  - ClothingNeckAsexualPin
-  - ClothingNeckAroacePin
-  - ClothingNeckBisexualPin
-  - ClothingNeckGayPin
-  - ClothingNeckIntersexPin
-  - ClothingNeckLesbianPin
-  - ClothingNeckNonBinaryPin
-  - ClothingNeckPansexualPin
-  - ClothingNeckPluralPin
-  - ClothingNeckOmnisexualPin
-  - ClothingNeckGenderqueerPin
-  - ClothingNeckGenderfluidPin
-  - ClothingNeckTransPin
-  - ClothingNeckAutismPin
-  - ClothingNeckGoldAutismPin
-  # begin starcup: moved to Accessibility
+# begin starcup: moved to Cosmetics
+#  - ClothingNeckLGBTPin
+#  - ClothingNeckAllyPin
+#  - ClothingNeckAromanticPin
+#  - ClothingNeckAsexualPin
+#  - ClothingNeckAroacePin
+#  - ClothingNeckBisexualPin
+#  - ClothingNeckGayPin
+#  - ClothingNeckIntersexPin
+#  - ClothingNeckLesbianPin
+#  - ClothingNeckNonBinaryPin
+#  - ClothingNeckPansexualPin
+#  - ClothingNeckPluralPin
+#  - ClothingNeckOmnisexualPin
+#  - ClothingNeckGenderqueerPin
+#  - ClothingNeckGenderfluidPin
+#  - ClothingNeckTransPin
+#  - ClothingNeckAutismPin
+#  - ClothingNeckGoldAutismPin
+# moved to Accessibility
   #- OffsetCane
   #- OffsetCaneWood
   #- OffsetCaneClown
   #- OffsetCaneMime
   #- OffsetCaneNT
   #- Cane
-  # end starcup
-  - TowelColorWhite
+#  - TowelColorWhite # starcup: moved to Cosmetics
+# end starcup
 
 - type: loadoutGroup
   id: Glasses
