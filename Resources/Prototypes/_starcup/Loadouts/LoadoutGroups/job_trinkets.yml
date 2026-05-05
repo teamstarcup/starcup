@@ -217,3 +217,102 @@
   minLimit: 0
   loadouts:
   - LizardPlushiePassenger
+
+- type: loadout
+  id: LizardPlushieBoxer
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobBoxer
+      time: 72000 # 20hr
+  storage:
+    back:
+    - PlushieLizardJobBoxer
+
+- type: loadout
+  id: PlushieNar
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobLibrarian
+      time: 21600 #6 hrs
+  storage:
+    back:
+    - PlushieNar
+
+- type: loadout
+  id: PlushieRatvar
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobLibrarian
+      time: 21600 #6 hrs
+  storage:
+    back:
+    - PlushieRatvar
+
+- type: loadout
+  id: PlushieIPC
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobRoboticist
+      time: 72000 #20 hrs
+  storage:
+    back:
+    - PlushieIPC
+
+- type: loadout
+  id: ToyNuke
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobPrisoner
+      time: 72000 #50 hrs
+  storage:
+    back:
+    - ToyNuke
+
+# CATTY TODO: Add this to the Station Engineer, CE, and Atmos Tech job trinkets.
+- type: loadout
+  id: PillowEngineering
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 72000 #50 hrs
+  storage:
+    back:
+    - PillowEngineeringWrapped
+
+# CATTY TODO: Add this to the Doctor, Paramedic, CMO, Brig Medic, and Chemist job trinkets.
+- type: loadout
+  id: PillowMedical
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Medical
+      time: 72000 #50 hrs
+  storage:
+    back:
+    - PillowMedicalWrapped
+
+# CATTY TODO: Add this to the Captain and HoP job trinkets.
+- type: loadout
+  id: PillowCommand
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Command
+      time: 72000 #50 hrs
+  storage:
+    back:
+    - PillowCommandWrapped
