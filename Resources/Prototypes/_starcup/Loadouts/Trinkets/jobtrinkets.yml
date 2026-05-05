@@ -57,3 +57,42 @@
   storage:
     back:
     - ToyNuke
+
+# CATTY TODO: Add this to the Station Engineer, CE, and Atmos Tech job trinkets.
+- type: loadout
+  id: PillowEngineering
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 72000 #50 hrs
+  storage:
+    back:
+    - PillowEngineeringWrapped
+
+# CATTY TODO: Add this to the Doctor, Paramedic, CMO, Brig Medic, and Chemist job trinkets.
+- type: loadout
+  id: PillowMedical
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Medical
+      time: 72000 #50 hrs
+  storage:
+    back:
+    - PillowMedicalWrapped
+
+# CATTY TODO: Add this to the Captain and HoP job trinkets.
+- type: loadout
+  id: PillowCommand
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Command
+      time: 72000 #50 hrs
+  storage:
+    back:
+    - PillowCommandWrapped

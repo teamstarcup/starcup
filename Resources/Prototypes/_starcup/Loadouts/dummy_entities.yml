@@ -1,0 +1,54 @@
+- type: entity
+  id: LoadoutDummyStorybook
+  categories: [ HideSpawnMenu ]
+  name: random storybook
+  description: A book you picked out to read to pass the time.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/books.rsi
+    state: book_icon
+
+# Medications
+- type: entity
+  id: LoadoutDummyPillCanisterBase
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: box
+    - state: pillbox
+
+- type: entity
+  parent: LoadoutDummyPillCanisterBase
+  id: LoadoutDummyEthyloxyephredine
+  categories: [ HideSpawnMenu ]
+  name: ethyloxyephredine pills
+  description: A canister of narcolepsy medication.
+
+- type: entity
+  parent: LoadoutDummyPillCanisterBase
+  id: LoadoutDummySoretizone
+  categories: [ HideSpawnMenu ]
+  name: soretizone pills
+  description: A canister of painkiller medication.
+
+- type: entity
+  parent: LoadoutDummyPillCanisterBase
+  id: LoadoutDummyAgonolexyne
+  categories: [ HideSpawnMenu ]
+  name: agonolexyne pills
+  description: A canister of potent painkiller medication.
+
+- type: entity
+  parent: LoadoutDummyPillCanisterBase
+  id: LoadoutDummyNeurozenium
+  categories: [ HideSpawnMenu ]
+  name: neurozenium pills
+  description: A canister of antidepressant medication.
+
+- type: entity
+  parent: LoadoutDummyPillCanisterBase
+  id: LoadoutDummyCalmafluxine
+  categories: [ HideSpawnMenu ]
+  name: calmafluxine pills
+  description: A canister of anxiety medication.
