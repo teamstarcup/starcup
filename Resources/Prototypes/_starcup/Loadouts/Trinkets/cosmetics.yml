@@ -22,9 +22,6 @@
     back:
     - SilverRing
 
-# CATTY TODO: Add these all plus a mime mask to Cosmetics, remove Wristwatch from Chaplain's relics,
-# CATTY TODO: add puppy/cat ears to theatervend!
-
 - type: loadout
   id: Wristwatch
   storage:
@@ -48,3 +45,24 @@
   storage:
     back:
     - FoodLilySeedless
+
+- type: loadout
+  id: MimeMaskTrinket
+  storage:
+    back:
+    - ClothingMaskMime
+  groupBy: "mime"
+
+- type: loadout
+  id: MimeMaskSadTrinket
+  storage:
+    back:
+    - ClothingMaskSadMime
+  groupBy: "mime"
+
+- type: loadout
+  id: MimeMaskScaredTrinket
+  storage:
+    back:
+    - ClothingMaskScaredMime
+  groupBy: "mime"
