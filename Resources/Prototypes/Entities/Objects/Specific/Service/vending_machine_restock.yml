@@ -494,3 +494,20 @@
     - state: green_bit
       shader: unshaded
     - state: refill_medical
+
+# starcup: added sustenance vendor restock
+- type: entity
+  parent: BaseVendingMachineRestock
+  id: VendingMachineRestockSustenanceVendor
+  name: Sustenance Vendor restock box
+  description: A box loaded with the worst of the worst ingredients, food, and drinks for prisoners. So many corners were cut, that they reused an old snack vendor box.
+  components:
+  - type: VendingMachineRestock
+    canRestock:
+    - SustenanceInventory
+  - type: Sprite
+    layers:
+    - state: base
+    - state: green_bit
+      shader: unshaded
+    - state: refill_snack
