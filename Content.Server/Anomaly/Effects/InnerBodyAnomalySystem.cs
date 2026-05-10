@@ -28,7 +28,7 @@ public sealed class InnerBodyAnomalySystem : SharedInnerBodyAnomalySystem
     [Dependency] private readonly IAdminLogManager _adminLog = default!;
     [Dependency] private readonly AnomalySystem _anomaly = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly GibbingSystem _gibbing = default!;
+    // [Dependency] private readonly GibbingSystem _gibbing = default!; // starcup: unusud
     [Dependency] private readonly IChatManager _chat = default!;
     [Dependency] private readonly ISharedPlayerManager _player = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;

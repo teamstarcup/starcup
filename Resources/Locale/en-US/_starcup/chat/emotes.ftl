@@ -54,4 +54,4 @@ chat-emote-msg-cluck = quacks.
 chat-emote-msg-croak = croaks.
 chat-emote-msg-oink = oinks.
 chat-emote-msg-deathgasp-silicon =  suddenly goes silent, with a hiss of grinding servos and a screech of dying myomers.
-chat-emote-msg-dialup = tries to estabilish connection.
+chat-emote-msg-dialup = tries to establish connection.

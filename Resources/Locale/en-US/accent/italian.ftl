@@ -69,14 +69,16 @@ accent-italian-words-replace-20 = my-a
 accent-italian-words-21 = nuke
 accent-italian-words-replace-21 = spiciest-a meatball
 
+# begin starcup: removed for tone
 accent-italian-words-22 = op
-accent-italian-words-replace-22 = greek
+accent-italian-words-replace-22 = op
 
 accent-italian-words-23 = operative
-accent-italian-words-replace-23 = greek
+accent-italian-words-replace-23 = operative
 
 accent-italian-words-24 = operatives
-accent-italian-words-replace-24 = greeks
+accent-italian-words-replace-24 = operatives
+# end starcup
 
 accent-italian-words-25 = sec
 accent-italian-words-replace-25 = polizia
@@ -96,8 +98,10 @@ accent-italian-words-replace-29 = carabinieri
 accent-italian-words-30 = sing
 accent-italian-words-replace-30 = sing-a
 
+# begin starcup: removed for tone
 accent-italian-words-31 = spaghetti
-accent-italian-words-replace-31 = SPAGHETT
+accent-italian-words-replace-31 = spaghetti
+# end starcup
 
 accent-italian-words-32 = spicy
 accent-italian-words-replace-32 = a-spicy

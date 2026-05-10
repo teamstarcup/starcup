@@ -418,13 +418,13 @@
       children:
       - id: MobCarpSalvage
         weight: 2
-      - !type:AllSelector
-        weight: 1
-        children:
-        - id: LandMineExplosive
-        - !type:NestedSelector # what's that thing underneath the scrap?
-          prob: 0.33
-          tableId: SalvageScrapSpawnerCommon
+#      - !type:AllSelector # starcup - Salvie insta-kills are annoying. Replace with something more fun later.
+#        weight: 1
+#        children:
+#        - id: LandMineExplosive
+#        - !type:NestedSelector # what's that thing underneath the scrap?
+#          prob: 0.33
+#          tableId: SalvageScrapSpawnerCommon
     - !type:GroupSelector # scary monsters
       weight: 5
       children:

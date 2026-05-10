@@ -1,4 +1,4 @@
-﻿using Content.Client.Gameplay;
+using Content.Client.Gameplay;
 using Content.Client.Ghost;
 using Content.Client.UserInterface.Systems.Gameplay;
 using Content.Client.UserInterface.Systems.Ghost.Widgets;
@@ -16,7 +16,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
 {
     [Dependency] private readonly IEntityNetworkManager _net = default!;
     [Dependency] private readonly IConsoleHost _consoleHost = default!; // Frontier
-    [Dependency] private readonly IConfigurationManager _cfg = default!; // Frontier
+    // [Dependency] private readonly IConfigurationManager _cfg = default!; // Frontier // starcup - remove unused
 
     [UISystemDependency] private readonly GhostSystem? _system = default;
 

@@ -18,7 +18,7 @@ public sealed class DynamicWeatherSystem : EntitySystem
     /// <summary>
     /// The meta-weather type that functions as a stand-in for no active weather event.
     /// </summary>
-    private static readonly ProtoId<WeatherPrototype> WeatherClear = "Clear";
+    private static readonly EntProtoId<WeatherStatusEffectComponent> WeatherClear = "WeatherClear";
 
     private static readonly TimeSpan MaximumExpectedRoundLength = TimeSpan.FromHours(6);
 
@@ -34,13 +34,13 @@ public sealed class DynamicWeatherSystem : EntitySystem
         if (!_proto.Resolve(dynamicWeather.Scheduler, out var weatherScheduler))
             return;
 
-        ProtoId<WeatherPrototype>? initialStateProtoId = weatherScheduler.States.First().Key;
+        EntProtoId<WeatherStatusEffectComponent>? initialStateProtoId = weatherScheduler.States.First().Key;
         if (dynamicWeather.RandomInitialState)
         {
             for (var i = 0; i < MaximumExpectedRoundLength / dynamicWeather.StepFrequency; i++)
             {
                 initialStateProtoId = NextState(dynamicWeather, weatherScheduler);
-                _proto.Resolve(initialStateProtoId, out dynamicWeather.CurrentState);
+                dynamicWeather.CurrentState = initialStateProtoId;
             }
         }
 
@@ -70,42 +70,31 @@ public sealed class DynamicWeatherSystem : EntitySystem
         }
     }
 
-    private ProtoId<WeatherPrototype>? NextState(DynamicWeatherComponent dynamicWeather, WeatherSchedulerPrototype weatherScheduler)
+    private EntProtoId<WeatherStatusEffectComponent>? NextState(DynamicWeatherComponent dynamicWeather, WeatherSchedulerPrototype weatherScheduler)
     {
-        var currentStateProto = dynamicWeather.CurrentState?.ID ?? WeatherClear;
-        return SharedRandomExtensions.Pick(weatherScheduler.States[currentStateProto].Transitions, _robustRandom.GetRandom());
+        var currentStateProto = dynamicWeather.CurrentState ?? WeatherClear;
+        return _robustRandom.Pick(weatherScheduler.States[currentStateProto].Transitions);
     }
 
-    private void SetWeather(EntityUid map, DynamicWeatherComponent dynamicWeather, WeatherPrototype? weather)
+    private void SetWeather(EntityUid map, DynamicWeatherComponent dynamicWeather, EntProtoId<WeatherStatusEffectComponent>? weatherProto)
     {
-        if (weather != null && weather.ID == WeatherClear)
-            weather = null;
+        if (weatherProto != null && weatherProto.Equals(WeatherClear))
+            weatherProto = null;
 
         var previousState = dynamicWeather.CurrentState;
-        dynamicWeather.CurrentState = weather;
+        dynamicWeather.CurrentState = weatherProto;
 
         var mapId = Transform(map).MapID;
-        _weather.SetWeather(mapId, weather, dynamicWeather.NextUpdate + WeatherComponent.ShutdownTime);
+        _weather.TrySetWeather(mapId, weatherProto, out _, dynamicWeather.NextUpdate + SharedWeatherSystem.ShutdownTime);
 
         if (!_proto.Resolve(dynamicWeather.Scheduler, out var weatherScheduler))
             return;
 
-        if (previousState == weather)
+        if (previousState == weatherProto)
             return;
 
-        var ev = new DynamicWeatherUpdateEvent(map, previousState, weather);
+        var ev = new DynamicWeatherUpdateEvent(map, previousState, weatherProto);
         RaiseLocalEvent(map, ref ev, true);
-    }
-
-    private void SetWeather(EntityUid map, DynamicWeatherComponent dynamicWeather, ProtoId<WeatherPrototype>? weatherProtoId)
-    {
-        WeatherPrototype? weather = null;
-        if (weatherProtoId != null && weatherProtoId != WeatherClear)
-        {
-            _proto.Resolve(weatherProtoId, out weather);
-        }
-
-        SetWeather(map, dynamicWeather, weather);
     }
 }
 
@@ -113,4 +102,4 @@ public sealed class DynamicWeatherSystem : EntitySystem
 /// Raised when a map with dynamic weather switches from one weather state to another.
 /// </summary>
 [ByRefEvent]
-public readonly record struct DynamicWeatherUpdateEvent(EntityUid DynamicWeather, WeatherPrototype? PreviousState, WeatherPrototype? NextState);
+public readonly record struct DynamicWeatherUpdateEvent(EntityUid DynamicWeather, EntProtoId<WeatherStatusEffectComponent>? PreviousState, EntProtoId<WeatherStatusEffectComponent>? NextState);

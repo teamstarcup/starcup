@@ -1,0 +1,40 @@
+- type: entity
+  parent: [ ClothingOuterArmorWarden, BaseSecurityContraband, BaseExaminableClothing ] # Same as ClothingOuterCoatWarden, without ClothingOuterWinterCoatToggleable from ClothingOuterWinterWarden # starcup - added examinable clothing
+  id: ClothingLongcoatWarden
+  name: warden's armored longcoat
+  description: A black double-breasted longcoat with silver buttons and red band and cuffs, specifically designed for the warden. Security longcoats sport protective plates underneath, but are fairly heavy.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/OuterClothing/Longcoats/warden.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/OuterClothing/Longcoats/warden.rsi
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-warden-longcoat
+  # end starcup
+
+- type: entity
+  parent: [ ClothingOuterWinterCoatToggleable, BaseSecurityContraband, BaseExaminableClothing ] # Same as ClothingOuterWinterSec, without ClothingOuterWinterCoatToggleable # starcup - added examinable clothing
+  id: ClothingLongcoatSecurity
+  name: security officer's armored longcoat
+  description: A black double-breasted longcoat with silver buttons and red bands, specifically designed for security personnel. Security longcoats sport protective plates underneath, but are fairly heavy.
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/OuterClothing/Longcoats/security.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/OuterClothing/Longcoats/security.rsi
+  # begin starcup: examinable clothing
+  - type: ExaminableClothing
+    examineText: clothing-security-winter-coat
+  # end starcup
+
+- type: entity
+  parent: [ ClothingOuterWinterCoatToggleable, BaseSecurityContraband, BaseExaminableClothing ] # Same as ClothingOuterWinterSec, without ClothingOuterWinterCoatToggleable # starcup - reparented/added examinable clothing
+  id: ClothingLongcoatBrigmedic
+  name: combat medic's armored longcoat
+  description: A black double-breasted longcoat with silver buttons, blue bands, and sterile fabric cuffs, specifically designed for the combat medic. Security longcoats sport protective plates underneath, though this one comes with lighter plates that traditional security longcoats. # starcup - corpsman -> cb medic
+  components:
+  - type: Sprite
+    sprite: _Floof/Clothing/OuterClothing/Longcoats/corpsman.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/OuterClothing/Longcoats/corpsman.rsi

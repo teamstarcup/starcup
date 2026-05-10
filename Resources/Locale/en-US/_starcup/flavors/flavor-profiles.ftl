@@ -24,7 +24,7 @@ flavor-complex-earthquake = dizzyingly strong
 flavor-complex-eclipse = a little perplexing
 flavor-complex-emerald-breeze = like being carried on the wind
 flavor-complex-evil-princess = decadently sweet
-flavor-complex-feywild = like a pixie prancing across your tongue
+flavor-complex-faeries-cheer = like a pixie prancing across your tongue
 flavor-complex-goblins-brew = like a live grenade in your mouth
 flavor-complex-moon-mist = like cool nighttime air
 flavor-complex-mushburger = upsettingly starchy
@@ -138,3 +138,4 @@ flavor-complex-zombie-cocktail-starcup = like you just took a bite out of someon
 
 # Other
 flavor-complex-bug = the foundations for a good buguette
+flavor-complex-floral = sweet and floral

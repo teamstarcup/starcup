@@ -12,6 +12,7 @@ using Robust.Shared.Maths;
 using Robust.Shared.Physics;
 using Robust.Shared.Prototypes;
 using System.Numerics;
+using Robust.Shared.Random; // starcup
 
 namespace Content.Server._DV.Salvage.Systems;
 
@@ -23,6 +24,7 @@ public sealed class ShelterCapsuleSystem : SharedShelterCapsuleSystem
     [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
     [Dependency] private readonly SharedMapSystem _map = default!;
     [Dependency] private readonly SmokeSystem _smoke = default!;
+    [Dependency] private readonly IRobustRandom _random = default!; // starcup: Random -> IRobustRandom
 
     public static readonly EntProtoId SmokePrototype = "Smoke";
 
@@ -70,7 +72,7 @@ public sealed class ShelterCapsuleSystem : SharedShelterCapsuleSystem
             grid,
             origin,
             room,
-            new Random(),
+            _random, // starcup
             null,
             clearExisting: true); // already checked for mobs and structures here
 

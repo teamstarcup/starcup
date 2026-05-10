@@ -1,7 +1,10 @@
+using Content.Server._DV.Weather;
+using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.StatusEffectNew; // starcup
+using Content.Shared.StatusEffectNew.Components;
 using Content.Shared.Weather;
 using Content.Shared.Whitelist;
 using Robust.Shared.Map.Components;
@@ -18,7 +21,7 @@ public sealed partial class WeatherEffectsSystem : EntitySystem
     [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
+    // [Dependency] private readonly IPrototypeManager _proto = default!; // starcup: unused
     [Dependency] private readonly SharedMapSystem _map = default!;
     [Dependency] private readonly SharedWeatherSystem _weather = default!;
     [Dependency] private readonly StatusEffectsSystem _statusEffects = default!; // starcup
@@ -35,31 +38,33 @@ public sealed partial class WeatherEffectsSystem : EntitySystem
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
-
+        var query = EntityQueryEnumerator<WeatherDamageStatusEffectComponent, StatusEffectComponent>();
         var now = _timing.CurTime;
-        var query = EntityQueryEnumerator<WeatherComponent>();
-        while (query.MoveNext(out var map, out var weather))
+        while (query.MoveNext(out var effectEnt, out var weather, out var status))
         {
+            if (!status.Applied)
+                continue;
+
+            if (status.AppliedTo is not {} map)
+                continue;
+
             if (now < weather.NextUpdate)
                 continue;
 
             weather.NextUpdate = now + weather.UpdateDelay;
 
-            foreach (var (id, data) in weather.Weather)
-            {
-                // start and end do no damage
-                if (data.State != WeatherState.Running)
-                    continue;
+            // FIXME: determine how weather startup and ending should be handled now
+            // start and end do no damage
+            // if (data.State != WeatherState.Running)
+            //     continue;
 
-                UpdateDamage(map, id);
-                UpdateEffects(map, id); // starcup
-            }
+            UpdateDamage(map, weather);
+            UpdateEffects(map, weather); // starcup
         }
     }
 
-    private void UpdateDamage(EntityUid map, ProtoId<WeatherPrototype> id)
+    private void UpdateDamage(EntityUid map, WeatherDamageStatusEffectComponent weather)
     {
-        var weather = _proto.Index(id);
         if (weather.Damage is not {} damage)
             return;
 
@@ -74,7 +79,7 @@ public sealed partial class WeatherEffectsSystem : EntitySystem
             if (xform.GridUid is {} gridUid && _gridQuery.TryComp(gridUid, out var grid))
             {
                 var tile = _map.GetTileRef((gridUid, grid), xform.Coordinates);
-                if (!_weather.CanWeatherAffect(gridUid, grid, tile))
+                if (!_weather.CanWeatherAffect((gridUid, grid), tile))
                     continue;
             }
 
@@ -84,13 +89,10 @@ public sealed partial class WeatherEffectsSystem : EntitySystem
     }
 
     // starcup - allows weather to inflict status effects
-    private void UpdateEffects(EntityUid map, ProtoId<WeatherPrototype> id)
+    private void UpdateEffects(EntityUid map, WeatherDamageStatusEffectComponent weather)
     {
-        var weather = _proto.Index(id);
         if (weather.StatusEffect is not {} statusEffectId)
             return;
-
-        var statusEffect = _proto.Index(statusEffectId);
 
         var query = EntityQueryEnumerator<MobStateComponent, TransformComponent>();
         while (query.MoveNext(out var uid, out var mob, out var xform))
@@ -102,7 +104,7 @@ public sealed partial class WeatherEffectsSystem : EntitySystem
             if (xform.GridUid is {} gridUid && _gridQuery.TryComp(gridUid, out var grid))
             {
                 var tile = _map.GetTileRef((gridUid, grid), xform.Coordinates);
-                if (!_weather.CanWeatherAffect(gridUid, grid, tile))
+                if (!_weather.CanWeatherAffect((gridUid, grid), tile))
                     continue;
             }
 
@@ -114,3 +116,5 @@ public sealed partial class WeatherEffectsSystem : EntitySystem
         }
     }
 }
+
+

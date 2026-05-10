@@ -40,10 +40,15 @@
 
 - type: cargoProduct
   id: MaterialPlasteel
+  name: cargoproduct-name-material-plasteel
+  description: cargoproduct-description-material-plasteel
   icon:
     sprite: Objects/Materials/Sheets/metal.rsi
     state: plasteel_3
-  product: CrateMaterialPlasteel
+  product: SheetPlasteel
+  container:
+    entity: WrappedParcel
+    containerId: contents
   cost: 1600
   category: cargoproduct-category-name-materials
   group: market

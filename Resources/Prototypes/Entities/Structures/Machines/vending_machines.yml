@@ -194,10 +194,10 @@
         shape:
           !type:PhysShapeAabb
           bounds: "-0.3,-0.16,0.3,0.40"
-        mask:
-        - MachineMask
+        # mask:
+        # - MachineMask # starcup: rendered this inert
         layer:
-        - MachineLayer
+        - BulletImpassable #starcup: removed machine layer and replaced it with BulletImpassable
         density: 190
   - type: DatasetVocalizer
     dataset: CondimentVendAds
@@ -924,7 +924,7 @@
 - type: entity
   parent: VendingMachine
   id: VendingMachineMedicalBase
-  name: NanoMed Civilian
+  name: Interdyne PharmAssist Civilian # starcup: NanoMed to Interdyne PharmAssist
   description: It's a medical drug dispenser. Natural chemicals only!
   components:
   - type: VendingMachine
@@ -960,7 +960,7 @@
 - type: entity
   parent: VendingMachineMedicalBase
   id: VendingMachineMedical
-  name: NanoMed Plus
+  name: Interdyne PharmAssist Plus # starcup: NanoMed to Interdyne PharmAssist
   components:
   - type: VendingMachine
     pack: NanoMedPlusInventory
@@ -2294,7 +2294,7 @@
 - type: entity
   parent: VendingMachineWallmount
   id: VendingMachineWallMedicalCivilian
-  name: NanoMed band-aid
+  name: Interdyne PharmAssist band-aid # starcup: NanoMed to Interdyne PharmAssist
   description: It's a wall-mounted medical equipment dispenser. Natural chemicals only!
   components:
   - type: VendingMachine
@@ -2324,7 +2324,7 @@
 - type: entity
   parent: VendingMachineWallMedicalCivilian
   id: VendingMachineWallMedical
-  name: NanoMed
+  name: Interdyne PharmAssist # starcup: NanoMed to Interdyne PharmAssist
   components:
   - type: VendingMachine
     pack: NanoMedInventory

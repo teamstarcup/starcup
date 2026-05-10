@@ -23,6 +23,10 @@ using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+// Start Box Change - For blood deficiency
+using Content.Shared._Box.Traits.Assorted; 
+using Content.Shared._Box.Body.Events;
+// End Box Change
 
 namespace Content.Shared.Body.Systems;
 
@@ -55,6 +59,7 @@ public abstract class SharedBloodstreamSystem : EntitySystem
         SubscribeLocalEvent<BloodstreamComponent, ApplyMetabolicMultiplierEvent>(OnApplyMetabolicMultiplier);
         SubscribeLocalEvent<BloodstreamComponent, RejuvenateEvent>(OnRejuvenate);
         SubscribeLocalEvent<BloodstreamComponent, MetabolismExclusionEvent>(OnMetabolismExclusion);
+        SubscribeLocalEvent<BloodDeficiencyComponent, NaturalBloodRegenerationEvent>(OnNaturalBloodRegeneration); // Box Change: Event subscription for blood deficiency
     }
 
     public override void Update(float frameTime)
@@ -77,7 +82,12 @@ public abstract class SharedBloodstreamSystem : EntitySystem
             // Blood level regulation. Must be alive.
             if (!_mobStateSystem.IsDead(uid))
             {
-                TryRegulateBloodLevel(uid, bloodstream.BloodRefreshAmount);
+                //Start Box Change - Event for blood deficiency traits
+                //TryRegulateBloodLevel(uid, bloodstream.BloodRefreshAmount);
+                var ev = new NaturalBloodRegenerationEvent(bloodstream.BloodRefreshAmount, 1.0f); //Raise event before natural blood regen tick, for anything that might want to modify it
+                RaiseLocalEvent(uid, ref ev);
+                TryRegulateBloodLevel(uid, ev.BloodRefreshAmount, ev.BloodReferenceFactor);
+                //End Box Change
 
                 TickBleed((uid, bloodstream));
 
@@ -278,7 +288,8 @@ public abstract class SharedBloodstreamSystem : EntitySystem
         if (SolutionContainer.ResolveSolution(ent.Owner, ent.Comp.BloodSolutionName, ref ent.Comp.BloodSolution))
         {
             SolutionContainer.RemoveAllSolution(ent.Comp.BloodSolution.Value);
-            TryModifyBloodLevel(ent.AsNullable(), ent.Comp.BloodReferenceSolution.Volume);
+            // TODO: Use Solutions API for this when it exists
+            TryRegulateBloodLevel(ent.AsNullable(), ent.Comp.BloodReferenceSolution.Volume);
         }
     }
 
@@ -290,6 +301,25 @@ public abstract class SharedBloodstreamSystem : EntitySystem
             args.Reagents.Add(reagent);
         }
     }
+
+    // Start Box Change: Blood deficiency value modifications
+    /// <summary>
+    /// Modify blood regen amount for blood deficiency traits
+    /// </summary>
+    /// <param name="ent">Component to reference.</param>
+    /// <param name="args">Event to modify.</param>
+    private void OnNaturalBloodRegeneration(Entity<BloodDeficiencyComponent> ent, ref NaturalBloodRegenerationEvent args)
+    {
+        if (ent.Comp.BloodRefreshAmount != 1.0f) // Don't mess with the input values unless the comp has been changed from default settings
+        {
+            args.BloodRefreshAmount = ent.Comp.BloodRefreshAmount;
+        }
+        if (ent.Comp.BloodReferenceFactor != 1.0f)
+        {
+            args.BloodReferenceFactor = ent.Comp.BloodReferenceFactor;
+        }
+    }
+    //End Box Changes
 
     /// <summary>
     /// This returns the minimum amount of *usable* blood.
@@ -403,12 +433,15 @@ public abstract class SharedBloodstreamSystem : EntitySystem
             || amount == 0)
             return false;
 
+        // TODO: Either make this percentage based regeneration and pre-pass the percentage.
+        // TODO: Solution regulation API that doesn't result in very minor FixedPoint2 errors (Currently gingerbreadman only regenerates 0.99u instead of 1.00u)
         referenceFactor = Math.Clamp(referenceFactor, 0f, ent.Comp.MaxVolumeModifier);
+        var ratio = (float)amount / (float)ent.Comp.BloodReferenceSolution.Volume;
 
         foreach (var (referenceReagent, referenceQuantity) in ent.Comp.BloodReferenceSolution)
         {
             var error = referenceQuantity * referenceFactor - bloodSolution.GetTotalPrototypeQuantity(referenceReagent.Prototype);
-            var adjustedAmount = amount * referenceQuantity / ent.Comp.BloodReferenceSolution.Volume;
+            var adjustedAmount = referenceQuantity * ratio;
 
             if (error > 0)
             {

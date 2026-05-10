@@ -13,6 +13,7 @@ public sealed partial class DogVisionOverlay : Overlay
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] IEntityManager _entityManager = default!;
 
+    private static readonly ProtoId<ShaderPrototype> DogVision = "DogVision"; // starcup: constant
 
     public override bool RequestScreenTexture => true;
     public override OverlaySpace Space => OverlaySpace.WorldSpace;
@@ -21,7 +22,7 @@ public sealed partial class DogVisionOverlay : Overlay
     public DogVisionOverlay()
     {
         IoCManager.InjectDependencies(this);
-        _dogVisionShader = _prototypeManager.Index<ShaderPrototype>("DogVision").Instance().Duplicate();
+        _dogVisionShader = _prototypeManager.Index(DogVision).Instance().Duplicate(); // starcup: constant
     }
 
     protected override bool BeforeDraw(in OverlayDrawArgs args)

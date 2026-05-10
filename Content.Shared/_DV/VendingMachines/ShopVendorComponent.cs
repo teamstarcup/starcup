@@ -11,7 +11,7 @@ namespace Content.Shared._DV.VendingMachines;
 /// Another component must handle <see cref="ShopVendorBalanceEvent"/> and <see cref="ShopVendorPurchaseEvent"/> to work.
 /// </summary>
 [RegisterComponent, NetworkedComponent, Access(typeof(SharedShopVendorSystem))]
-[AutoGenerateComponentState, AutoGenerateComponentPause]
+[AutoGenerateComponentState] // starcup: remove AutoGenerateComponentPause - not used
 public sealed partial class ShopVendorComponent : Component
 {
     /// <summary>

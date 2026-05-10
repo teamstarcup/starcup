@@ -27,11 +27,6 @@ trait-paracusia-desc = You hear sounds that aren't really there.
 trait-unrevivable-name = Unrevivable
 trait-unrevivable-desc = You are unable to be revived by defibrillators.
 
-# begin starcup: removed
-# trait-pirate-accent-name = Pirate accent
-# trait-pirate-accent-desc = You can't stop speaking like a pirate!
-# end starcup
-
 trait-accentless-name = Accentless
 trait-accentless-desc = You don't have the accent that your species would usually have.
 
@@ -73,6 +68,10 @@ trait-snoring-desc = You will snore while sleeping.
 # trait-spanish-desc = Hola señor, donde esta la biblioteca.
 # end starcup
 
+# begin starcup: removed (renamed)
+# trait-scottish-name = Scottish accent
+# trait-scottish-desc = Ye're speaking like ae proper Scot!
+# end starcup
 trait-painnumbness-name = Numb
 trait-painnumbness-desc = You lack any sense of feeling pain, being unaware of how hurt you may be.
 

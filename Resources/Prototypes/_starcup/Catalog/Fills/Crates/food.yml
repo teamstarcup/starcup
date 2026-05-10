@@ -1,0 +1,23 @@
+- type: entity
+  parent: CratePlastic
+  id: CrateServiceLunchboxDelivery
+  name: homemade lunchbox delivery
+  description: Give the whole station a treat with these hand-packed lunchboxes, with love from Mom. Each department gets one!
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: LunchboxGenericFilledRandom
+          amount: 2
+        - id: LunchboxCommandSyndieFilledRandom
+        - id: LunchboxSecurityFilledRandom
+        - id: LunchboxMedicalFilledRandom
+        - id: LunchboxLogisticsFilledRandom
+        - id: LunchboxEngineeringFilledRandom
+        - id: LunchboxEpistemicsFilledRandom
+        - id: LunchboxServiceFilledRandom
+        - id: LunchboxSyndicateFilledRandom
+          prob: 0.05
+        - id: LunchboxJusticeFilledRandom
+          prob: 0.005

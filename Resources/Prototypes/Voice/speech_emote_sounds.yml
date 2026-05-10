@@ -94,6 +94,8 @@
       collection: ReptilianHiss
     Chirp: # Imp addition
       collection: ReptilianChirp
+    Laugh:
+      path: /Audio/Animals/lizard_happy.ogg
     Honk:
       collection: BikeHorn
     Whistle:
@@ -140,6 +142,8 @@
       collection: ReptilianHiss
     Chirp: # Imp addition
       collection: ReptilianChirp
+    Laugh:
+      path: /Audio/Animals/lizard_happy.ogg
     Honk:
       collection: BikeHorn
     Whistle:
@@ -289,6 +293,8 @@
       path: /Audio/Voice/Vox/shriek1.ogg
     Laugh:
       path: /Audio/Voice/Vox/vox_laugh.ogg
+    Sneeze:
+      path: /Audio/Voice/Vox/vox_sneeze.ogg
     Cough:
       path: /Audio/Voice/Vox/vox_cough.ogg
     Sigh:
@@ -317,9 +323,11 @@
   id: UnisexDiona
   sounds:
     Scream:
-      path: /Audio/Voice/Diona/diona_scream.ogg
+      collection: DionaScreams # starcup
     Laugh:
       collection: DionaLaugh
+    Sneeze:
+      collection: DionaSneeze
     Chirp:
       path: /Audio/Animals/nymph_chirp.ogg
     Honk:
@@ -329,9 +337,23 @@
     Hew:
       collection: Hew
     Gasp:
-      collection: MaleGasp
+    # begin starcup
+      path: /Audio/_starcup/Voice/Diona/diona_gasp.ogg
+    Sigh:
+      path: /Audio/_starcup/Voice/Diona/diona_sigh.ogg
+    Yawn:
+      path: /Audio/_starcup/Voice/Diona/diona_yawn.ogg
+    Chitter:
+      collection: NymphChitters
+    Cough:
+      path: /Audio/_starcup/Arthropods/DionaNymph/nymph_gasp.ogg
+    BuzzNonSilicon:
+      collection: NymphBuzzes
+    Crying:
+      path: /Audio/_Impstation/Voice/Moth/mothcry.ogg
     DefaultDeathgasp:
-      collection: DeathGasp
+      path: /Audio/Voice/Diona/diona_scream.ogg
+    # end starcup
   params:
     variation: 0.125
 
@@ -560,7 +582,7 @@
     Laugh:
       collection: MaleLaugh
     Sneeze:
-      collection: MaleSneezes
+      collection: VulpkaninSneeze
     Cough:
       collection: MaleCoughs
     Whistle:
@@ -602,7 +624,7 @@
     Laugh:
       collection: FemaleLaugh
     Sneeze:
-      collection: FemaleSneezes
+      collection: VulpkaninSneeze
     Cough:
       collection: FemaleCoughs
     Whistle:
@@ -662,10 +684,10 @@
   id: DionaBodyEmotes
   sounds:
     Clap:
-      path: /Audio/Voice/Diona/diona_clap.ogg
-    # TODO: Replace this with a similar wood themed single clap
+      collection: DionaClaps
+    # TODO: Replace this with a similar wood themed single clap # starcup: done.
     ClapSingle:
-      collection: ClapSingle
+      path: /Audio/_starcup/Emotes/Diona/clap_single.ogg
     Snap:
       path: /Audio/Voice/Diona/diona_snap.ogg
       params:
@@ -680,7 +702,7 @@
         volume: -3
         variation: 0.1 # DEN
     Crack: # Imp addition
-      collection: Cracks
+      collection: DionaKnuckleCracks # starcup
 
 - type: emoteSounds
   id: ReptilianBodyEmotes
@@ -710,6 +732,22 @@
       params:
         volume: -3
         variation: 0.1 # DEN
+
+- type: emoteSounds
+  id: MothBodyEmotes
+  sounds:
+    Flap:
+      path: /Audio/Voice/Moth/moth_flap.ogg
+    Clap:
+      collection: Claps
+    ClapSingle:
+      collection: ClapSingle
+    Snap:
+      collection: Snaps
+      params:
+        volume: -6
+    Salute:
+      collection: Salutes
 
 # mobs
 - type: emoteSounds

@@ -36,6 +36,47 @@
     sprite: _starcup/Structures/Wallmounts/posters.rsi
     state: poster-electra-torn
 
+- type: entity
+  parent: PosterBase
+  id: PosterLegitHawkmoonAd
+  name: "Hawkmoon Acquisitions"
+  description: "A poster advertising the logistics and supply services of Hawkmoon Acquisitions."
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/posters.rsi
+    state: poster-hawkmoon-ad
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitHawkmoonAdTattered
+  name: "Hawkmoon Acquisitions"
+  suffix: Tattered
+  description: "A poster advertising the logistics and supply services of Hawkmoon Acquisitions. It's torn and faded."
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/posters.rsi
+    state: poster-hawkmoon-ad-torn
+
+- type: entity
+  parent: PosterBase
+  id: PosterContrabandHawkmoonAd
+  name: "Annihilation"
+  description: "A poster depicting an enormous laser destroying a moon. Allegedly what Hawkmoon has done in pursuit of more FTL lanes, but it may just be an ad for a cool movie."
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/posters.rsi
+    state: poster-hawkmoon-ad-evil
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitTrimaranBlueprint
+  name: "Trimaran Freighter"
+  description: "A blueprint for Hawkmoon Acquisitions's \"Trimaran\" class of freighters, intended for long-term crew habitation."
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/posters.rsi
+    state: poster-trimaran-blueprint
+
 # rebrands
 - type: entity
   parent: PosterLegitHereForYourSafety

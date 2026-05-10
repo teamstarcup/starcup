@@ -26,18 +26,20 @@
         - ReagentId: Opporozidone
           Quantity: 15
 
-- type: entity
-  id: NecrosolChemistryBottle
-  parent: BaseChemistryBottleFilled
-  name: necrosol bottle
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: Necrosol
-          Quantity: 30
+# begin starcup: Necrosol was removed upstream
+# - type: entity
+#   id: NecrosolChemistryBottle
+#   parent: BaseChemistryBottleFilled
+#   name: necrosol bottle
+#   components:
+#   - type: SolutionContainerManager
+#     solutions:
+#       drink:
+#         maxVol: 30
+#         reagents:
+#         - ReagentId: Necrosol
+#           Quantity: 30
+# end starcup
 
 # Premium Alcohol: wait, it's just marketing?
 # TODO: different sprites would be nice.

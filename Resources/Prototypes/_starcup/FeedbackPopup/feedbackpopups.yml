@@ -31,6 +31,16 @@
   showRoundEnd: false
 
 - type: feedbackPopup
+  id: FeedbackPopupMapFreighter
+  popupOrigin: starcup
+  title: "[bold]Map Feedback: Freighter[/bold]"
+  description: |-
+    If you have any thoughts on this map or noticed something wrong, let us know on our forum!
+  responseType: "Forum Thread"
+  responseLink: "https://forum.starcup.cc/t/trimaran-freighter-feedback-thread/444"
+  showRoundEnd: true
+
+- type: feedbackPopup
   id: FeedbackPopupMapGlacier
   popupOrigin: starcup
   title: "[bold]Map Feedback: Glacier[/bold]"
@@ -132,4 +142,4 @@
     And if you encountered any bugs or frustrations during play, please let us know so we can fix them!
   responseType: "Forum Thread"
   responseLink: "https://forum.starcup.cc/t/mkc-feedback-thread/413"
-  showRoundEnd: true
+  showRoundEnd: false

@@ -106,6 +106,7 @@ barsign-prototype-name-whiskeyechoes = Whiskey Echoes
 barsign-prototype-description-whiskeyechoes = A cozy little pub for Gorlex veterans and loyal Syndicate...wait, was that a NanoTrasen logo? Huh, nevermind. It's gone again.
 
 ## EmpBarSign
+barsign-prototype-name-empbarsign = glitchy bar sign 
 barsign-prototype-description-empbarsign = Something has gone very wrong.
 
 ## SignOff

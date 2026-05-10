@@ -35,3 +35,12 @@ ghost-role-information-familiar-anomalite-rules = You are a [color=#6495ed][bold
 
 ghost-role-information-lost-skeleton-name = Lost Skeleton
 ghost-role-information-lost-skeleton-description = You are a long-dead corpse, spontaneously reanimated by errant soul nanites. Use your second chance for whatever feels right, whether it's returning to your former life or taking revenge against those who still live.
+
+ghost-role-information-syndie-soldier-teamlead-name-starcup = Syndicate Squad Leader
+ghost-role-information-syndie-soldier-teamlead-description-starcup = You are the leader of a squad of soldiers serving the Syndicate. Listen to any higher-ups and protect the Syndicate.
+
+ghost-role-information-syndie-soldier-name-starcup = Syndicate Squad Soldier
+ghost-role-information-syndie-soldier-description-starcup = You are a member of a squad of soldiers serving the Syndicate. Listen to your leader and protect the Syndicate.
+
+ghost-role-information-syndie-disaster-victim-name-starcup = Syndicate Disaster Victim
+ghost-role-information-syndie-disaster-victim-description-starcup = You are a civilian under Syndicate Communications, having just escaped your assigned station. Maybe you'll have better luck here?
