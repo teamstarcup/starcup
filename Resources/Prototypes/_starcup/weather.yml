@@ -1,33 +1,44 @@
-- type: weather
-  id: CharonOilfall
-  sprite:
-    sprite: /Textures/Effects/weather.rsi
-    state: oilfall # for now, just a recolor of rain
-  sound:
-    collection: Rain # might be nice to develop a custom sound later
-    params:
-      loop: true
-      volume: -20 # it's a little... muted :)
-  statusEffect: StatusEffectMuted
-  refresh: true
+- type: entity
+  parent: WeatherBase
+  id: WeatherCharonOilfall
+  components:
+  - type: WeatherStatusEffect
+    sprite:
+      sprite: /Textures/Effects/weather.rsi
+      state: oilfall # for now, just a recolor of rain
+    sound:
+      collection: Rain # might be nice to develop a custom sound later
+      params:
+        loop: true
+        volume: -20 # it's a little... muted :)
+  - type: WeatherDamageStatusEffect
+    statusEffect: StatusEffectMuted
+    refresh: true
 
-- type: weather
-  id: CharonHush
-  sprite:
-    sprite: /Textures/Effects/weather.rsi
-    state: charonhush # it'd be nice to have a custom sprite and sound but for now these will do
-  sound:
-    path:
-      /Audio/Ambience/ambireebe1.ogg
-    params:
-      loop: true
-      volume: -25 # should be barely audible, if that, this will be playing constantly
-  statusEffect: StatusEffectHushed
-  refresh: true
+- type: entity
+  parent: WeatherBase
+  id: WeatherCharonHush
+  components:
+  - type: WeatherStatusEffect
+    sprite:
+      sprite: /Textures/Effects/weather.rsi
+      state: charonhush # it'd be nice to have a custom sprite and sound but for now these will do
+    sound:
+      path:
+        /Audio/Ambience/ambireebe1.ogg
+      params:
+        loop: true
+        volume: -25 # should be barely audible, if that, this will be playing constantly
+  - type: WeatherDamageStatusEffect
+    statusEffect: StatusEffectHushed
+    refresh: true
 
 # NOTE: This isn't intended to be used directly! DynamicWeatherSystem secretly swaps this for `null`.
-- type: weather
-  id: Clear
-  sprite:
-    sprite: /Textures/Effects/weather.rsi
-    state: storm
+- type: entity
+  id: WeatherClear
+  parent: WeatherBase
+  components:
+  - type: WeatherStatusEffect
+    sprite:
+     sprite: /Textures/Effects/weather.rsi
+     state: storm

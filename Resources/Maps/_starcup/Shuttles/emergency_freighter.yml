@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 04/24/2026 00:54:40
-  entityCount: 1097
+  time: 04/28/2026 00:30:12
+  entityCount: 1098
 maps: []
 grids:
 - 1
@@ -36,7 +36,7 @@ entities:
     - type: MetaData
       name: SYND Transfer Shuttle "Impedance"
     - type: Transform
-      pos: -30.413116,-35.551765
+      pos: 0, 0
       parent: invalid
     - type: MapGrid
       chunks:
@@ -7010,6 +7010,15 @@ entities:
     components:
     - type: Transform
       pos: -2.5,19.5
+      parent: 1
+- proto: WarpPoint
+  entities:
+  - uid: 1098
+    components:
+    - type: MetaData
+      name: Evacuation Shuttle
+    - type: Transform
+      pos: 5.5,8.5
       parent: 1
 - proto: Windoor
   entities:

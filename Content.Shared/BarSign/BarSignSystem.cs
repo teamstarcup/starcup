@@ -1,3 +1,4 @@
+using Content.Shared.Emp;
 using System.Linq;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -22,22 +23,21 @@ public sealed class BarSignSystem : EntitySystem
         {
             subs.Event<SetBarSignMessage>(OnSetBarSignMessage);
         });
+
+        SubscribeLocalEvent<BarSignComponent, EmpPulseEvent>(OnEmpPulse);
+        SubscribeLocalEvent<BarSignComponent, BoundUserInterfaceMessageAttempt>(OnBoundUIAttempt);
     }
 
     private void OnMapInit(Entity<BarSignComponent> ent, ref MapInitEvent args)
     {
-        if (ent.Comp.Current != null)
-        {
-            // begin starcup: bar signs emit light
-            if (!_prototypeManager.TryIndex(ent.Comp.Current, out var signPrototype))
-                return;
-
-            _pointLight.SetColor(ent.Owner, signPrototype.Color);
-            // end starcup
+        BarSignPrototype? newPrototype;
+        if (ent.Comp.Current is null)
+            newPrototype = _random.Pick(GetAllBarSigns(_prototypeManager));
+        else if (!_prototypeManager.Resolve(ent.Comp.Current, out newPrototype))
             return;
-        }
 
-        var newPrototype = _random.Pick(GetAllBarSigns(_prototypeManager));
+        _pointLight.SetColor(ent.Owner, newPrototype.Color); // starcup: bar signs emit light
+
         SetBarSign(ent, newPrototype);
     }
 
@@ -59,12 +59,28 @@ public sealed class BarSignSystem : EntitySystem
         SetBarSign(ent, signPrototype);
     }
 
+    private void OnEmpPulse(Entity<BarSignComponent> ent, ref EmpPulseEvent args)
+    {
+        if (!_prototypeManager.Resolve(ent.Comp.Emped, out var empedPrototype))
+            return;
+
+        SetBarSign(ent, empedPrototype);
+        args.Affected = true;
+        args.Disabled = true;
+    }
+
+    private void OnBoundUIAttempt(Entity<BarSignComponent> ent, ref BoundUserInterfaceMessageAttempt args)
+    {
+        if (HasComp<EmpDisabledComponent>(ent))
+            args.Cancel();
+    }
+
     /// <summary>
     /// Set the sprite, name and description of the bar sign to a given <see cref="BarSignPrototype"/>.
     /// </summary>
     public void SetBarSign(Entity<BarSignComponent> ent, BarSignPrototype newPrototype)
     {
-        if (ent.Comp.Current == newPrototype.ID)
+        if (HasComp<EmpDisabledComponent>(ent))
             return;
 
         var meta = MetaData(ent);

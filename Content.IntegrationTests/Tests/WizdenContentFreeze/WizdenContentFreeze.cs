@@ -1,3 +1,4 @@
+using Content.IntegrationTests.Fixtures;
 using Content.Shared.Kitchen;
 
 namespace Content.IntegrationTests.Tests.WizdenContentFreeze;
@@ -5,7 +6,7 @@ namespace Content.IntegrationTests.Tests.WizdenContentFreeze;
 /// <summary>
 /// These tests are limited to adding a specific type of content, essentially freezing it. If you are a fork developer, you may want to disable these tests.
 /// </summary>
-public sealed class WizdenContentFreeze
+public sealed class WizdenContentFreeze : GameTest
 {
     /// <summary>
     /// This freeze prohibits the addition of new microwave recipes.

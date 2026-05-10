@@ -11,6 +11,7 @@
             - material: WoodPlank
               amount: 4
               doAfter: 3
+
     - node: barricadefull
       entity: Barricade
       edges:
@@ -26,6 +27,7 @@
           steps:
             - tool: Prying
               doAfter: 5
+
         - to: woodWall
           completed:
             - !type:SnapToGrid
@@ -34,8 +36,33 @@
             - material: WoodPlank
               amount: 2
               doAfter: 2
+
+        - to: ornateWoodWall # starcup
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: MetalRod
+              amount: 1
+              doAfter: 2
+            - material: WoodPlank
+              amount: 2
+              doAfter: 2
+
     - node: woodWall
       entity: WallWood
+      edges:
+      - to: barricadefull
+        completed:
+        - !type:GivePrototype
+          prototype: MaterialWoodPlank1
+          amount: 2
+        steps:
+        - tool: Prying
+          doAfter: 10
+
+    - node: ornateWoodWall # starcup
+      entity: WallWoodOrnate
       edges:
       - to: barricadefull
         completed:

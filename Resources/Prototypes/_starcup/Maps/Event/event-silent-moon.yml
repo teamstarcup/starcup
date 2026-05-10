@@ -8,13 +8,15 @@
   maxPlayers: 60
   stations:
     EventSilentMoon:
-      stationProto: StandardTerrestrialStationNoEvac
+      stationProto: StandardTerrestrialStationTradingCharonic
       components:
       - type: StationNameSetup
         mapNameTemplate: 'Charon-Epsilon Surface Outpost'
       - type: StationBiome
         biome: Charonic
         mapLightColor: "#2B3153"
+      - type: StationEmergencyShuttle
+        emergencyShuttlePath: /Maps/_starcup/Shuttles/silent_moon_surface_shuttle.yml
       - type: StationJobs
         availableJobs:
           #Command

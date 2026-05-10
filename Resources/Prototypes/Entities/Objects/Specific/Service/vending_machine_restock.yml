@@ -276,8 +276,9 @@
 - type: entity
   parent: BaseVendingMachineRestock
   id: VendingMachineRestockMedical
-  name: NanoMed restock box
-  description: Slot into your department's NanoMed or NanoMedPlus to dispense. Handle with care.
+  name: Interdyne PharmAssist restock box # NanoMed to Interdyne PharmAssist
+  description: Slot into your department's Interdyne PharmAssist or PharmAssist Plus to dispense. Handle with care.
+  # starcup: NanoMed to Interdyne PharmAssist
   components:
   - type: VendingMachineRestock
     canRestock:

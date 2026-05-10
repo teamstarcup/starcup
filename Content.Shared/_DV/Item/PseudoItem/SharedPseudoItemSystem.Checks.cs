@@ -1,4 +1,4 @@
-﻿using Content.Shared.Item;
+using Content.Shared.Item;
 using Content.Shared.Storage;
 
 namespace Content.Shared._DV.Item.PseudoItem;
@@ -16,7 +16,7 @@ public partial class SharedPseudoItemSystem
         if (!Resolve(itemEnt, ref itemEnt.Comp) || !Resolve(storageEnt, ref storageEnt.Comp))
             return false;
 
-        if (!TryComp<MetaDataComponent>(itemEnt, out var metadata))
+        if (!TryComp(itemEnt, out MetaDataComponent? metadata)) // starcup: non-generic required for metadata
             return false;
 
         TryComp<ItemComponent>(itemEnt, out var item);

@@ -16,14 +16,13 @@
     soundHit:
       collection: MiningPick # starcup: new sounds
     damage:
-      groups:
-        Brute: 5
+      types:
+        Piercing: 5
   - type: Wieldable
   - type: IncreaseDamageOnWield
     damage:
-      groups:
-        Brute: 10
       types:
+        Piercing: 10
         Structural: 30
   - type: Item
     size: Normal
@@ -69,9 +68,8 @@
       path: "/Audio/Items/drill_hit.ogg"
     attackRate: 4
     damage:
-      groups:
-        Brute: 3
       types:
+        Piercing: 3
         Structural: 15
   # begin starcup: mining quality to remove stone floors
   - type: Tool
@@ -101,9 +99,8 @@
       path: "/Audio/Items/drill_hit.ogg"
     attackRate: 4
     damage:
-      groups:
-        Brute: 6
       types:
+        Piercing: 6
         Structural: 30
 
 
@@ -157,8 +154,10 @@
     delay: 0.9
   - type: LeechOnMarker
     leech:
-      groups:
-        Brute: -10 # # starcup: revert salvage damage nerf (6 > 10)
+      types:
+        Blunt: -3.5 # starcup: revert salvage damage nerf (2 > 3.5)
+        Slash: -3.5 # starcup: revert salvage damage nerf (2 > 3.5)
+        Piercing: -3.5 # starcup: revert salvage damage nerf (2 > 3.5)
   - type: Gun
     soundGunshot: /Audio/Weapons/plasma_cutter.ogg
     fireRate: 1
@@ -273,8 +272,10 @@
   # end starcup
   - type: LeechOnMarker
     leech:
-      groups:
-        Brute: -21
+      types:
+        Blunt: -5
+        Piercing: -5
+        Slash: -5
   - type: Tag
     tags:
       - Pickaxe

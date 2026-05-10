@@ -127,7 +127,7 @@ public sealed class PlantAnalyzerSystem : AbstractAnalyzerSystem<PlantAnalyzerCo
         }
 
         // Spawn a piece of paper.
-        var printed = EntityManager.SpawnEntity(component.MachineOutput, Transform(uid).Coordinates);
+        var printed = Spawn(component.MachineOutput, Transform(uid).Coordinates); // starcup: SpawnEntity -> Spawn
         _handsSystem.PickupOrDrop(args.Actor, printed, checkActionBlocker: false);
 
         if (!TryComp<PaperComponent>(printed, out var paperComp))

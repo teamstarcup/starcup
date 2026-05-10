@@ -15,7 +15,7 @@ public sealed partial class WeatherSchedulerPrototype : IPrototype
     public string ID { get; private set; } = default!;
 
     [DataField(required: true)]
-    public Dictionary<ProtoId<WeatherPrototype>, WeatherState> States = default!;
+    public Dictionary<EntProtoId<WeatherStatusEffectComponent>, WeatherState> States = default!;
 }
 
 [Serializable, DataDefinition]
@@ -25,5 +25,5 @@ public partial struct WeatherState
     /// Describes possible weather states that may follow this one, and how likely they are to occur compared to others.
     /// </summary>
     [DataField(required: true)]
-    public Dictionary<ProtoId<WeatherPrototype>, float> Transitions = default!;
+    public Dictionary<EntProtoId<WeatherStatusEffectComponent>, float> Transitions = default!;
 }
