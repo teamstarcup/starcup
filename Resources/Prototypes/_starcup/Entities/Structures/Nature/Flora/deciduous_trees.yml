@@ -602,3 +602,141 @@
     - random:
         treestump1: ""
         treestump2: ""
+
+# Tree walls
+- type: entity
+  parent: BaseTree
+  id: FloraTreeWallDeadBrown
+  name: trees
+  suffix: wall, dead, brown
+  description: The bones of the earth make for a beautifully haunting tombstone.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Occluder
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_tree_wall_dead.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall
+          params:
+            volume: 7
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 6
+            max: 22
+          StumpWallDeadBrown:
+            min: 1
+            max: 1
+        offset: 0
+  - type: IconSmooth
+    key: trees
+    base: tree
+    mode: NoSprite
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: StumpWallDeadBrown
+  suffix: dead, brown
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_tree_wall_dead.rsi
+    layers:
+    - state: treestump1
+      map: ["random"]
+    offset: 0,1
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+
+- type: entity
+  parent: FloraTreeWallDeadBrown
+  id: FloraTreeWallTemperate
+  name: trees
+  suffix: wall, temperate
+  description: The oak's stength is tempered by experience.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Occluder
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_tree_wall_temperate.rsi
+
+- type: entity
+  parent: StumpWallDeadBrown
+  id: StumpWallTemperate
+  suffix: temperate
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_tree_wall_temperate.rsi
+
+- type: entity
+  parent: BaseWall
+  id: WallWoodTrees
+  name: wall of trees
+  description: The traditional greytide defense.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_tree_wall_dead.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroyHeavy
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroyHeavy
+      - !type:ChangeConstructionNodeBehavior
+        node: Barricade
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: IconSmooth
+    key: trees
+    base: tree
+    mode: NoSprite
