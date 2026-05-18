@@ -7,3 +7,15 @@
   - MKC
   components:
   - type: Uncloneable
+
+- type: trait
+  id: NarcolepsyWeak
+  name: trait-narcolepsy-weak-name
+  description: trait-narcolepsy-weak-desc
+  category: Disabilities
+  components:
+    - type: Narcolepsy
+      maxTimeBetweenIncidents: 1200
+      minTimeBetweenIncidents: 600
+      maxDurationOfIncident: 15
+      minDurationOfIncident: 5

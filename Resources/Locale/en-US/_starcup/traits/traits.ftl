@@ -21,3 +21,6 @@ trait-vowed-desc = You're serious about your vow, and uphold it outside of jobs 
 
 trait-uncloneable-name = Uncloneable
 trait-uncloneable-desc = Due to some quirk in your physical composition, you cannot be reconstituted by medical cloning.
+
+trait-narcolepsy-weak-name = Narcolepsy (Weak)
+trait-narcolepsy-weak-desc = You fall asleep randomly, but not as often nor for as long as other narcoleptics.
