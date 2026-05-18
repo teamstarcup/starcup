@@ -1,3 +1,5 @@
+trait-category-narcolepsy = Narcolepsy
+
 trait-scottish-accent-name = Highlander
 trait-scottish-accent-desc = Hailing frae hielans ae rock and thistle, ya dinnae ken why others sometimes cannae understand wot ya say.
 
