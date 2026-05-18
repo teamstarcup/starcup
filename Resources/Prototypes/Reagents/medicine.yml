@@ -999,6 +999,13 @@
         messages: ["ethyloxyephedrine-effect-feeling-awake", "ethyloxyephedrine-effect-clear-mind"]
         type: Local
         probability: 0.1
+    Digestion: # starcup: make ethyloxyephedrine pills treat narcolepsy
+      effects:
+      - !type:ResetNarcolepsy
+        conditions:
+        - !type:ReagentCondition
+          reagent: Ethyloxyephedrine
+          min: 10
 
 - type: reagent
   id: Diphenylmethylamine
@@ -1025,6 +1032,13 @@
         messages: ["ethyloxyephedrine-effect-feeling-awake", "ethyloxyephedrine-effect-clear-mind"]
         type: Local
         probability: 0.1
+    Digestion: # starcup: make diphenylmethylamine pills treat narcolepsy
+      effects:
+      - !type:ResetNarcolepsy
+        conditions:
+        - !type:ReagentCondition
+          reagent: Diphenylmethylamine
+          min: 10
 
 - type: reagent
   id: Sigynate
