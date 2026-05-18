@@ -156,6 +156,11 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Sap
+        Quantity: 100
 
 - type: entity
   parent: BaseStumpStarcup
@@ -258,6 +263,11 @@
         offset: 0
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Sap
+        Quantity: 100
 
 - type: entity
   parent: BaseTreeLarge
