@@ -377,3 +377,154 @@
             variation: 0.05
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+
+# "Sporal" trees, alien looking, somewhere between trees, coral and fungi
+- type: entity
+  parent: BaseTree
+  id: FloraTreeSporal
+  name: sporal tree
+  description: There are several species of alien flora that defy classification, resembling trees as well as coral and fungi. "Sporal trees" is the colloquial name given to them by spacers.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_sporal_trees.rsi
+    offset: 0,0.7
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.3,-0.3,0.3,0.3"
+        density: 4000
+        layer:
+        - WallLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 80
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 3
+            variation: 0.05
+      - !type:SpawnEntitiesBehavior
+        offset: 0
+        spawn:
+          SporalStump:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: SporalStump
+  name: stalk stump
+  description: The sticky remains of strange alien flora.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_sporal_trees.rsi
+    layers:
+    - state: treestump1
+      map: ["random"]
+    offset: 0,0.7
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.3,-0.3,0.3,0.3"
+        density: 4000
+        layer:
+        - WallLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 45
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 2
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: FloraTreeSporal
+  id: FloraTreeBruiseBonnet
+  name: bruise bonnet
+  description: The fruits of this alien tree look like particularly vibrant fresh bruises.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_bruise_bonnet.rsi
+    offset: 0,0.7
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 80
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 3
+            variation: 0.05
+      - !type:SpawnEntitiesBehavior
+        offset: 0
+        spawn:
+          BruiseBonnetStump:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: SporalStump
+  id: BruiseBonnetStump
+  name: stalk stump
+  description: The sticky remains of strange alien flora.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_bruise_bonnet.rsi

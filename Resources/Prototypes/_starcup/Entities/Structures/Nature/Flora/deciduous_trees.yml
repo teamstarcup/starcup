@@ -274,6 +274,70 @@
         treestump1: ""
         treestump2: ""
 
+- type: entity
+  parent: FloraTreeDeadBrown
+  id: FloraTreeDeadThick
+  suffix: dead, thick
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_dead_trees_ms.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 2
+            max: 8
+          DeadStumpThick:
+            min: 1
+            max: 1
+        offset: 0
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: DeadStumpThick
+  suffix: dead, thick
+  components:
+  - type: Sprite
+    offset: 0,0.95
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_dead_trees_ms.rsi
+    layers:
+    - state: treestump1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""
+        treestump3: ""
+
 # Original trees
 - type: entity
   parent: BaseTree
@@ -639,13 +703,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 1500
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 500
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -664,10 +728,14 @@
             min: 1
             max: 1
         offset: 0
-  - type: IconSmooth
-    key: trees
-    base: tree
-    mode: NoSprite
+  # Couldn't get the icon to smooth no matter what I tried.
+  #- type: IconSmooth
+    #smoothKey: Wall
+    #base: tree
+    #mode: NoSprite
+  #- type: Tag
+    #tags:
+    #- Wall
 
 - type: entity
   parent: BaseStumpStarcup
@@ -705,38 +773,3 @@
   components:
   - type: Sprite
     sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_tree_wall_temperate.rsi
-
-- type: entity
-  parent: BaseWall
-  id: WallWoodTrees
-  name: wall of trees
-  description: The traditional greytide defense.
-  components:
-  - type: Sprite
-    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_tree_wall_dead.rsi
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 300
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-      - !type:PlaySoundBehavior
-        sound:
-          collection: WoodDestroyHeavy
-    - trigger:
-        !type:DamageTrigger
-        damage: 150
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: WoodDestroyHeavy
-      - !type:ChangeConstructionNodeBehavior
-        node: Barricade
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-  - type: IconSmooth
-    key: trees
-    base: tree
-    mode: NoSprite

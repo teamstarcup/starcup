@@ -1,0 +1,245 @@
+# Base cacti
+- type: entity
+  parent: BaseTree
+  id: BaseCactus
+  abstract: true
+  name: cactus
+  description: Hardy plant that can store fluids and thrives across the galaxy.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Cacti/flora_cactus.rsi
+    layers:
+    - state: cactus01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        cactus01: ""
+        cactus02: ""
+        cactus03: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.1,0.1,0.3"
+        density: 4000
+        layer:
+        - WallLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 65
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 3
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: DamageOnInteract
+    damage:
+      types:
+        Piercing: 0.9
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 120
+      - ReagentId: Water
+        Quantity: 80
+
+- type: entity
+  parent: BaseCactus
+  id: BaseCactusSmall
+  abstract: true
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 2
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: DamageOnInteract
+    damage:
+      types:
+        Piercing: 0.8
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 60
+      - ReagentId: Water
+        Quantity: 40
+
+- type: entity
+  parent: BaseCactus
+  id: BaseCactusGiant
+  abstract: true
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.3,0.4,0"
+        density: 4000
+        layer:
+        - WallLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 3
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: DamageOnInteract
+    damage:
+      types:
+        Piercing: 1.5
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 210
+      - ReagentId: Water
+        Quantity: 140
+
+# Cacti species
+- type: entity
+  parent: BaseCactus
+  id: FloraCactus
+  name: lesser saguaro cactus
+  description: A hardy plant that can store fluids and thrives across the galaxy. This species is a smaller cousin to the much larger saguaros that grow on some planets.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Cacti/flora_cactus.rsi
+
+- type: entity
+  parent: BaseCactusSmall
+  id: FloraCactusBarrel
+  name: barrel cactus
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Cacti/flora_barrel_cactus.rsi
+    offset: 0,0
+    layers:
+    - state: cactus01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        cactus01: ""
+        cactus02: ""
+        cactus03: ""
+        cactus04: ""
+
+- type: entity
+  parent: BaseCactusGiant
+  id: FloraCactusBarrelGiant
+  name: giant barrel cactus
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Cacti/flora_giant_cactus.rsi
+    offset: 0,0
+    layers:
+    - state: cactus01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        cactus01: ""
+        cactus02: ""
+        cactus03: ""
+        cactus04: ""
+
+- type: entity
+  parent: BaseCactusGiant
+  id: FloraCactusBlooddthorn
+  name: bloodthorn cactus
+  description: A large, tough, extremely pokey-looking cactus, often seen thriving in war-torn areas of the galaxy.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Cacti/flora_giant_cactus_gr.rsi
+    offset: 0,0
+    layers:
+    - state: cactus01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        cactus01: ""
+        cactus02: ""
+        cactus03: ""
+        cactus04: ""
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 210
+      - ReagentId: Water
+        Quantity: 70
+      - ReagentId: Blood
+        Quantity: 70
+
+- type: entity
+  parent: FloraCactusBlooddthorn
+  id: FloraCactusBlooddthornGiant
+  suffix: giant
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Cacti/flora_giant_cactus_gr.rsi
+    offset: 0,0
+    layers:
+    - state: cactus01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        cactus01: ""
+        cactus02: ""
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 320
+      - ReagentId: Water
+        Quantity: 110
+      - ReagentId: Blood
+        Quantity: 110

@@ -1,3 +1,4 @@
+# Footprints
 - type: entity
   name: footprint
   id: Footprint
@@ -111,3 +112,107 @@
       offset: *left
     - state: footprint-right-bare-human
       offset: *right
+
+# Puddles
+- type: entity
+  id: PuddleWater
+  parent: PuddleTemporary
+  suffix: Water (30u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Water
+          Quantity: 30
+
+- type: entity
+  id: PuddleWaterLarge
+  parent: PuddleTemporary
+  suffix: Water (100u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Water
+          Quantity: 100
+
+- type: entity
+  id: PuddleWaterVeryLarge
+  parent: PuddleTemporary
+  suffix: Water (200u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Water
+          Quantity: 200
+
+- type: entity
+  id: PuddleCactusSmall
+  parent: PuddleTemporary
+  suffix: Cactus water (50u)
+  description: Contains sugar and water.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 30
+        - ReagentId: Water
+          Quantity: 20
+
+- type: entity
+  id: PuddleCactusMedium
+  parent: PuddleCactusSmall
+  suffix: Cactus water (100u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 60
+        - ReagentId: Water
+          Quantity: 40
+
+- type: entity
+  id: PuddleCactusLarge
+  parent: PuddleCactusMedium
+  suffix: Cactus water (200u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 120
+        - ReagentId: Water
+          Quantity: 80
+
+- type: entity
+  id: PuddleCactusBlood
+  parent: PuddleCactusLarge
+  suffix: Bloodthorne cactus water (200u)
+  description: Contains sugar, water, and blood.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 120
+        - ReagentId: Water
+          Quantity: 40
+        - ReagentId: Blood
+          Quantity: 40
