@@ -494,3 +494,20 @@
     - state: green_bit
       shader: unshaded
     - state: refill_medical
+
+# starcup: added sustenance vendor restock
+- type: entity
+  parent: BaseVendingMachineRestock
+  id: VendingMachineRestockSustenanceVendor
+  name: Sustenance Vendor restock box
+  description: A box loaded with the worst of the worst in terms of... "sustenance." They couldn't even bother to paint anything unique on the box. Load it into a Sustenance Vendor to begin.
+  components:
+  - type: VendingMachineRestock
+    canRestock:
+    - SustenanceInventory
+  - type: Sprite
+    layers:
+    - state: base
+    - state: green_bit
+      shader: unshaded
+    - state: refill_snack
