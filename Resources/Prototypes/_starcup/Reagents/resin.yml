@@ -1,0 +1,24 @@
+- type: reagent
+  id: Resin
+  name: reagent-name-resin
+  group: Biological
+  desc: reagent-desc-resin
+  flavor: bitter
+  color: "#cd7314"
+  recognizable: true
+  physicalDesc: reagent-physical-desc-sticky
+  viscosity: 0.30
+  tileReactions:
+  - !type:SpillTileReaction
+  metabolisms:
+    Digestion:
+      # Sweet!
+      effects:
+      - !type:SatiateHunger
+        factor: 1
+      - !type:SatiateThirst
+        factor: 1
+  footstepSound:
+    collection: FootstepSlime
+    params:
+      volume: 6
