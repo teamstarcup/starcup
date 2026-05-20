@@ -5,7 +5,6 @@
   minLimit: 0
   loadouts:
   - LizardPlushieCaptain
-  - PillowCommand
 
 - type: loadoutGroup
   id: HoPJobTrinkets
@@ -13,7 +12,6 @@
   minLimit: 0
   loadouts:
   - LizardPlushieHeadOfPersonnel
-  - PillowCommand
 
 # Engineering
 - type: loadoutGroup
@@ -22,7 +20,6 @@
   minLimit: 0
   loadouts:
   - LizardPlushieAtmosphericTechnician
-  - PillowEngineering
 
 - type: loadoutGroup
   id: ChiefEngineerJobTrinkets
@@ -30,7 +27,6 @@
   minLimit: 0
   loadouts:
   - LizardPlushieChiefEngineer
-  - PillowEngineering
 
 - type: loadoutGroup
   id: StationEngineerJobTrinkets
@@ -38,7 +34,6 @@
   minLimit: 0
   loadouts:
   - LizardPlushieStationEngineer
-  - PillowEngineering
 
 - type: loadoutGroup
   id: TechnicalAssistantJobTrinkets
@@ -76,7 +71,6 @@
   minLimit: 0
   loadouts:
   - LizardPlushieChemist
-  - PillowMedical
 
 - type: loadoutGroup
   id: ChiefMedicalOfficerJobTrinkets
@@ -84,7 +78,6 @@
   minLimit: 0
   loadouts:
   - LizardPlushieChiefMedicalOfficer
-  - PillowMedical
 
 - type: loadoutGroup
   id: MedicalDoctorJobTrinkets
@@ -92,7 +85,6 @@
   minLimit: 0
   loadouts:
   - LizardPlushieMedicalDoctor
-  - PillowMedical
 
 - type: loadoutGroup
   id: MedicalInternJobTrinkets
@@ -100,7 +92,6 @@
   minLimit: 0
   loadouts:
   - LizardPlushieMedicalIntern
-  - PillowMedical
 
 - type: loadoutGroup
   id: ParamedicJobTrinkets
@@ -108,7 +99,6 @@
   minLimit: 0
   loadouts:
   - LizardPlushieParamedic
-  - PillowMedical
 
 - type: loadoutGroup
   id: PsychologistJobTrinkets
@@ -287,39 +277,3 @@
   storage:
     back:
     - ToyNuke
-
-- type: loadout
-  id: PillowEngineering
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:DepartmentTimeRequirement
-      department: Engineering
-      time: 72000 #50 hrs
-  storage:
-    back:
-    - PillowEngineeringWrapped
-
-- type: loadout
-  id: PillowMedical
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:DepartmentTimeRequirement
-      department: Medical
-      time: 72000 #50 hrs
-  storage:
-    back:
-    - PillowMedicalWrapped
-
-- type: loadout
-  id: PillowCommand
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:DepartmentTimeRequirement
-      department: Command
-      time: 72000 #50 hrs
-  storage:
-    back:
-    - PillowCommandWrapped
