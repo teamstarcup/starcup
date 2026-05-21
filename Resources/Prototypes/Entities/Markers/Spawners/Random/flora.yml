@@ -9,38 +9,44 @@
       - state: red
       - sprite: Objects/Decoration/Flora/flora_trees.rsi
         state: tree01
-  - type: RandomSpawner
-    prototypes:
-      - FloraTreeLarge
-      - FloraTreeConifer
-      - FloraTreeSnow
-      - FloraTree
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      # starcup: more trees - make group
+      - !type:GroupSelector
+        weight: 5
+        children:
+        - id: ShadowTree
       # begin starcup: feat. more tress & flora
-      - FloraTreeAutumn
-      - FloraTreeVerdant
-      - FloraTreeTemperate
-      - FloraTreeAspbirch
-      - FloraTreeDeadBrown
-      - FloraTreeDeadPurple
-      - FloraTreeConiferDead
-      - FloraTreeTeal
-      - FloraTreeLargeTeal
-      - FloraTreePalm
-      - FloraTreeLargePalm
-      - FloraTreePink
-      - FloraTreeJuniper
-      - FloraTreeCorsicanPine
-      - FloraTreeConiferNoSnow
-      - FloraTreeGulmorePine
-      - FloraTreeTamarack
-      - FloraTreeAjorax
-      - FloraTreeLargeAjorax
+        - id: FloraTreeLargeDark
+        - id: FloraTreeHollowBase
       # end starcup
-    chance: 0.95
-    rarePrototypes:
-      - ShadowTree
-    # begin starcup: feat. more tress & flora
-      - FloraTreeLargeDark
-      - FloraTreeHollowBase
-    # end starcup
-    rareChance: 0.05
+      - !type:GroupSelector
+        weight: 95
+        prob: 0.95
+        children:
+        - id: FloraTreeLarge
+        - id: FloraTreeConifer
+        - id: FloraTreeSnow
+        - id: FloraTree
+        # begin starcup: feat. more tress & flora
+        - id: FloraTreeAutumn
+        - id: FloraTreeVerdant
+        - id: FloraTreeTemperate
+        - id: FloraTreeAspbirch
+        - id: FloraTreeDeadBrown
+        - id: FloraTreeDeadPurple
+        - id: FloraTreeConiferDead
+        - id: FloraTreeTeal
+        - id: FloraTreeLargeTeal
+        - id: FloraTreePalm
+        - id: FloraTreeLargePalm
+        - id: FloraTreePink
+        - id: FloraTreeJuniper
+        - id: FloraTreeCorsicanPine
+        - id: FloraTreeConiferNoSnow
+        - id: FloraTreeGulmorePine
+        - id: FloraTreeTamarack
+        - id: FloraTreeAjorax
+        - id: FloraTreeLargeAjorax
+        # end starcup

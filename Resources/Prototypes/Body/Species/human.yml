@@ -4,6 +4,9 @@
   - Humanoid # starcup: added for standardized marking limits
   id: Human
   limits:
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 2 # starcup: up from 1
+      required: false
     enum.HumanoidVisualLayers.Hair:
       limit: 2
       required: false
@@ -16,11 +19,6 @@
     enum.HumanoidVisualLayers.Snout:
       limit: 1
       required: false
-# begin starcup - added for customization
-    enum.HumanoidVisualLayers.HeadTop:
-      limit: 2
-      required: false
-# end starcup
     enum.HumanoidVisualLayers.LArm:
       limit: 4 # starcup: up from 1
       required: false
@@ -55,6 +53,7 @@
 - type: entity
   parent: BaseSpeciesAppearance
   id: AppearanceHuman
+  categories: [ HideSpawnMenu ]
   name: human appearance
   components:
   - type: Inventory

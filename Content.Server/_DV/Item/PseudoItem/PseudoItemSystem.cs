@@ -1,4 +1,4 @@
-﻿using Content.Server.Carrying;
+using Content.Server.Carrying;
 using Content.Server.DoAfter;
 using Content.Server.Item;
 using Content.Server.Popups;
@@ -17,9 +17,9 @@ namespace Content.Server._DV.Item.PseudoItem;
 
 public sealed class PseudoItemSystem : SharedPseudoItemSystem
 {
-    [Dependency] private readonly StorageSystem _storage = default!;
-    [Dependency] private readonly ItemSystem _item = default!;
-    [Dependency] private readonly DoAfterSystem _doAfter = default!;
+    // [Dependency] private readonly StorageSystem _storage = default!; // starcup: unused
+    // [Dependency] private readonly ItemSystem _item = default!; // starcup: unused
+    // [Dependency] private readonly DoAfterSystem _doAfter = default!; // starcup: unused
     [Dependency] private readonly CarryingSystem _carrying = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
 

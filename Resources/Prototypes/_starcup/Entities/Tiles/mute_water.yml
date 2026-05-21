@@ -9,7 +9,7 @@
   components:
   - type: StepTrigger
     requiredTriggeredSpeed: 0
-    intersectRatio: 0.1
+    intersectRatio: 0.25 # more forgiving than lava/plasma since it's less visually obvious
     blacklist:
       tags:
         - Catwalk

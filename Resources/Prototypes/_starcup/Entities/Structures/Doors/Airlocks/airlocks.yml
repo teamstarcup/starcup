@@ -269,7 +269,7 @@
       sprite: _starcup/Structures/Doors/Airlocks/Standard/unpainted.rsi
 
 - type: entity
-  parent: Airlock
+  parent: AirlockGlass
   id: AirlockUnpaintedGlass
   suffix: Unpainted
   description: It opens, it closes, and maybe crushes you. This one seems to be unpainted.
@@ -282,7 +282,7 @@
 - type: entity
   parent: AirlockMaint
   id: AirlockMaintCargo
-  name: logistics maintenance access
+  suffix: Logistics, Unlocked
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_cargo.rsi
@@ -292,7 +292,7 @@
 - type: entity
   parent: AirlockMaint
   id: AirlockMaintCommand
-  name: command maintenance access
+  suffix: Command, Unlocked
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_command.rsi
@@ -300,7 +300,7 @@
 - type: entity
   parent: AirlockMaint
   id: AirlockMaintEngineering
-  name: engineering maintenance access
+  suffix: Engineering, Unlocked
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_engineering.rsi
@@ -310,7 +310,7 @@
 - type: entity
   parent: AirlockMaint
   id: AirlockMaintMedical
-  name: medical maintenance access
+  suffix: Medical, Unlocked
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_medical.rsi
@@ -320,7 +320,7 @@
 - type: entity
   parent: AirlockMaint
   id: AirlockMaintScience
-  name: science maintenance access
+  suffix: Science, Unlocked
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_science.rsi
@@ -330,7 +330,7 @@
 - type: entity
   parent: AirlockMaint
   id: AirlockMaintSecurity
-  name: security maintenance access
+  suffix: Security, Unlocked
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_security.rsi
@@ -340,7 +340,7 @@
 - type: entity
   parent: AirlockMaint
   id: AirlockMaintService
-  name: service maintenance access
+  suffix: Service, Unlocked
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_service.rsi
@@ -350,7 +350,7 @@
 - type: entity
   parent: AirlockMaint
   id: AirlockMaintJustice
-  name: justice maintenance access
+  suffix: Justice, Unlocked
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_justice.rsi
@@ -360,7 +360,7 @@
 - type: entity
   parent: AirlockSyndicate
   id: AirlockMaintSyndicate
-  name: syndicate maintenance access
+  suffix: Syndicate, Unlocked
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_syndicate.rsi
@@ -368,7 +368,7 @@
 - type: entity
   parent: AirlockMaintScience
   id: AirlockMaintRnDMed
-  name: RD/medical maintenance access
+  suffix: Medical/Science, Unlocked
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/maint_medical.rsi
@@ -378,6 +378,7 @@
 - type: entity
   parent: AirlockCommand
   id: AirlockChiefMedicalOfficer
+  suffix: ChiefMedicalOfficer
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/command_cmo.rsi
@@ -385,6 +386,7 @@
 - type: entity
   parent: AirlockCommand
   id: AirlockChiefEngineer
+  suffix: ChiefEngineer
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/command_ce.rsi
@@ -392,6 +394,7 @@
 - type: entity
   parent: AirlockCommand
   id: AirlockHeadOfSecurity
+  suffix: HeadOfSecurity
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/command_hos.rsi
@@ -399,6 +402,7 @@
 - type: entity
   parent: AirlockCommand
   id: AirlockResearchDirector
+  suffix: ResearchDirector
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/command_rd.rsi
@@ -406,6 +410,7 @@
 - type: entity
   parent: AirlockCommand
   id: AirlockHeadOfPersonnel
+  suffix: HeadOfPersonnel
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/command_hop.rsi
@@ -413,6 +418,7 @@
 - type: entity
   parent: AirlockCommand
   id: AirlockQuartermaster
+  suffix: Quartermaster
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Standard/command_qm.rsi
@@ -422,6 +428,7 @@
 - type: entity
   parent: AirlockCommandGlass
   id: AirlockChiefMedicalOfficerGlass
+  suffix: ChiefMedicalOfficer
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Glass/command_cmo.rsi
@@ -429,6 +436,7 @@
 - type: entity
   parent: AirlockCommandGlass
   id: AirlockChiefEngineerGlass
+  suffix: ChiefEngineer
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Glass/command_ce.rsi
@@ -436,6 +444,7 @@
 - type: entity
   parent: AirlockCommandGlass
   id: AirlockHeadOfSecurityGlass
+  suffix: HeadOfSecurity
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Glass/command_hos.rsi
@@ -443,6 +452,7 @@
 - type: entity
   parent: AirlockCommandGlass
   id: AirlockResearchDirectorGlass
+  suffix: ResearchDirector
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Glass/command_rd.rsi
@@ -450,6 +460,7 @@
 - type: entity
   parent: AirlockCommandGlass
   id: AirlockHeadOfPersonnelGlass
+  suffix: HeadOfPersonnel
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Glass/command_hop.rsi
@@ -457,6 +468,7 @@
 - type: entity
   parent: AirlockCommandGlass
   id: AirlockQuartermasterGlass
+  suffix: Quartermaster
   components:
     - type: Sprite
       sprite: _starcup/Structures/Doors/Airlocks/Glass/command_qm.rsi

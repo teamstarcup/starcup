@@ -138,3 +138,4 @@ flavor-complex-zombie-cocktail-starcup = like you just took a bite out of someon
 
 # Other
 flavor-complex-bug = the foundations for a good buguette
+flavor-complex-floral = sweet and floral

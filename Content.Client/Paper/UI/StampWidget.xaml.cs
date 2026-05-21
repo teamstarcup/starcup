@@ -60,7 +60,7 @@ public sealed partial class StampWidget : PanelContainer
         RobustXamlLoader.Load(this);
         // begin imp
         var prototypes = IoCManager.Resolve<IPrototypeManager>();
-        _stampShader = prototypes.Index<ShaderPrototype>("PaperStamp").InstanceUnique();
+        _stampShader = prototypes.Index(PaperStamp).InstanceUnique(); // starcup: remove string literal
 
         if (PanelOverride != null)
             return;

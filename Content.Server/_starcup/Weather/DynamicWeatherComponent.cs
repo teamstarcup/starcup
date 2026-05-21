@@ -31,7 +31,7 @@ public sealed partial class DynamicWeatherComponent : Component
     public bool RandomInitialState = true;
 
     [ViewVariables(VVAccess.ReadWrite)]
-    public WeatherPrototype? CurrentState;
+    public EntProtoId<WeatherStatusEffectComponent>? CurrentState;
 
     [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan NextUpdate;

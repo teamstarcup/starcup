@@ -18,7 +18,7 @@ public sealed class OrientationHintSystem : EntitySystem
 
     private void OnExamined(Entity<OrientationHintComponent> ent, ref ExaminedEvent args)
     {
-        var arrowEntity = EntityManager.SpawnEntity(ent.Comp.ExamineArrow, new EntityCoordinates(ent, 0, 0));
+        var arrowEntity = Spawn(ent.Comp.ExamineArrow, new EntityCoordinates(ent, 0, 0));
 
         TransformComponent? arrowTransform = default!;
         if (!Resolve<TransformComponent>(arrowEntity, ref arrowTransform))

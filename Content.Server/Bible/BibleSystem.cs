@@ -16,6 +16,7 @@ using Content.Shared.Popups;
 using Content.Shared.Timing;
 using Content.Shared.Verbs;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 
@@ -23,15 +24,15 @@ namespace Content.Server.Bible
 {
     public sealed class BibleSystem : EntitySystem
     {
-        [Dependency] private readonly IRobustRandom _random = default!;
+        // [Dependency] private readonly IRobustRandom _random = default!; // starcup: unusud
         [Dependency] private readonly ActionBlockerSystem _blocker = default!;
-        [Dependency] private readonly DamageableSystem _damageableSystem = default!;
-        [Dependency] private readonly InventorySystem _invSystem = default!;
-        [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
+        // [Dependency] private readonly DamageableSystem _damageableSystem = default!; // starcup: unused
+        // [Dependency] private readonly InventorySystem _invSystem = default!; // starcup: unused
+        // [Dependency] private readonly MobStateSystem _mobStateSystem = default!; // starcup: unused
         [Dependency] private readonly PopupSystem _popupSystem = default!;
         [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
         [Dependency] private readonly SharedAudioSystem _audio = default!;
-        [Dependency] private readonly UseDelaySystem _delay = default!;
+        // [Dependency] private readonly UseDelaySystem _delay = default!; // starcup: unused
         [Dependency] private readonly SharedTransformSystem _transform = default!;
 
         public override void Initialize()

@@ -28,11 +28,11 @@
           !type:PhysShapeCircle
           radius: 0.2
         density: 200
-        mask:
-        - MachineMask
-        layer:
-        - MidImpassable
-        - BulletImpassable
+        #mask:
+        # - MachineMask # starcup: rendered inert
+        #layer: # starcup: rendered inert
+        #- MidImpassable
+        #- BulletImpassable
   - type: InteractionOutline
   - type: Construction
     graph: Mannequin

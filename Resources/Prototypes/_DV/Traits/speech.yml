@@ -7,7 +7,8 @@
   category: SpeechTraits
   cost: 2 # Changed weight to 2 in accordance with other accents
   components:
-    - type: ScottishAccent
+    - type: ReplacementAccent # starcup: replacementaccent
+      accent: DVscottish # starcup: DV namespaced
 
 - type: trait
   id: MobsterAccent

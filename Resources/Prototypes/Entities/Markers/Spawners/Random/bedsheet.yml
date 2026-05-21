@@ -3,30 +3,35 @@
   id: BedsheetSpawner
   parent: MarkerBase
   components:
-    - type: Sprite
-      layers:
-        - state: red
-        - sprite: Objects/Misc/bedsheets.rsi
-          state: random_bedsheet
-    - type: RandomSpawner
-      rarePrototypes:
-        - BedsheetIan
-        - BedsheetCosmos
-      rareChance: 0.03
-      prototypes:
-        - BedsheetBlue
-        - BedsheetYellow
-        - BedsheetOrange
-        - BedsheetGreen
-#        - BedsheetNT # starcup: removed for syndicate rebranding ops
-        - BedsheetSyndie  #starcup: added for syndicate rebranding ops
-        - BedsheetRed
-        # - BedsheetUSA # starcup: removed
-        - BedsheetBrown
-        - BedsheetBlack
-        - BedsheetPurple
-        - BedsheetGrey
-        - BedsheetWhite
-        - BedsheetRainbow
-      chance: 0.97
-      offset: 0
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Misc/bedsheets.rsi
+      state: random_bedsheet
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - !type:GroupSelector
+        weight: 97
+        prob: 0.97
+        children:
+        - id: BedsheetBlue
+        - id: BedsheetYellow
+        - id: BedsheetOrange
+        - id: BedsheetGreen
+        # - id: BedsheetNT # starcup: removed for syndicate rebranding ops
+        - id: BedsheetSyndie  #starcup: added for syndicate rebranding ops
+        - id: BedsheetRed
+        # - id: BedsheetUSA # starcup: remove
+        - id: BedsheetBrown
+        - id: BedsheetBlack
+        - id: BedsheetPurple
+        - id: BedsheetGrey
+        - id: BedsheetWhite
+        - id: BedsheetRainbow
+      - !type:GroupSelector
+        weight: 3
+        children:
+        - id: BedsheetIan
+        - id: BedsheetCosmos
+    offset: 0

@@ -12,6 +12,12 @@ using Content.Shared.Throwing;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
 using Robust.Shared.Physics.Components;
+// begin starcup
+using Robust.Shared.Random;
+using System.Linq;
+using Content.Shared.Popups;
+using Robust.Shared.Player;
+// end starcup
 
 namespace Content.Shared._DV.Rodentia;
 
@@ -20,13 +26,18 @@ public abstract class SharedMouthStorageSystem : EntitySystem
     // [Dependency] private readonly DumpableSystem _dumpableSystem = default!;  // starcup: removed for refactor
     [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
     [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
+    // begin starcup: additions for DropAllContents refactor
+    [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
+    [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
+    // end starcup
 
     public override void Initialize()
     {
         base.Initialize();
 
         SubscribeLocalEvent<MouthStorageComponent, MapInitEvent>(OnMouthStorageInit);
-        SubscribeLocalEvent<MouthStorageComponent, KnockedDownEvent>(DropAllContents);
+        SubscribeLocalEvent<MouthStorageComponent, StunnedEvent>(DropAllContents); // starcup: use StunnedEvent instead of KnockedDown event so you don't spit up your items when going prone
         SubscribeLocalEvent<MouthStorageComponent, DisarmedEvent>(DropAllContents);
         SubscribeLocalEvent<MouthStorageComponent, DamageChangedEvent>(OnDamageModified);
         SubscribeLocalEvent<MouthStorageComponent, ExaminedEvent>(OnExamined);
@@ -60,12 +71,25 @@ public abstract class SharedMouthStorageSystem : EntitySystem
 
     private void DropAllContents<T>(EntityUid uid, MouthStorageComponent component, ref T _)
     {
-        // begin starcup: upstream breaking changes but this so rarely comes up so it's disabled for now
-        if (component.MouthId == null)
-            return;
-
+        // begin starcup: total refactor due to relying on methods missing from wizden
+        //if (component.MouthId == null)
+        //    return;
+        //
         // _dumpableSystem.DumpContents(component.MouthId.Value, uid, uid);
         // end starcup
+        TryComp<StorageComponent>(component.MouthId, out var storage);
+        if (storage != null)
+        {
+            var contained = storage.Container.ContainedEntities.ToArray();
+            var targetPos = _transformSystem.GetWorldPosition(uid);
+            foreach (var ent in contained)
+            {
+                _popupSystem.PopupEntity(Loc.GetString("rodentia-cheek-storage-eject-self"), uid, uid, PopupType.MediumCaution); // For whatever reason PopupClient and PopupPredicted do not work, so we use this instead.
+                _popupSystem.PopupEntity(Loc.GetString("rodentia-cheek-storage-eject-other", ("rat", Identity.Entity(component.Owner, EntityManager))), uid, Filter.PvsExcept(uid), true, PopupType.MediumCaution);
+                var transform = Transform(ent);
+                _transformSystem.SetWorldPositionRotation(ent, targetPos + _random.NextVector2Box() / 4, _random.NextAngle(), transform);
+            }
+        }
     }
 
     private void OnDamageModified(EntityUid uid, MouthStorageComponent component, DamageChangedEvent args)

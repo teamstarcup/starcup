@@ -1,4 +1,4 @@
-﻿using Content.Server.Administration;
+using Content.Server.Administration;
 using Content.Server.GameTicking.Presets;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
@@ -18,7 +18,7 @@ namespace Content.Server.GameTicking.Commands
         public override string Command => "golobby";
 
         // L5 - add confirm
-        public string Help => $"Usage: {Command} [confirm] / {Command} <preset> [confirm]";
+        public override string Help => $"Usage: {Command} [confirm] / {Command} <preset> [confirm]"; // starcup: override
 
         public override void Execute(IConsoleShell shell, string argStr, string[] args)
         {

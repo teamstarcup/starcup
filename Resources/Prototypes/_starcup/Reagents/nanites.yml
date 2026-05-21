@@ -75,10 +75,12 @@
           type: [MKC]
         damage:
           types:
+            Blunt: -0.2
+            Piercing: -0.2
+            Slash: -0.2
             Heat: -2
-          groups:
-            Brute: -0.5
-            Burn: -0.5
+            Cold: -0.5
+            Shock: -0.5
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -197,8 +199,8 @@
         amount: -1.5
       - !type:EvenHealthChange
         conditions:
-        - !type:TotalDamageCondition
-          min: 70
+        - !type:MobStateCondition
+          mobstate: Critical
         - !type:MetabolizerTypeCondition
           type: [ MKC ]
         damage:

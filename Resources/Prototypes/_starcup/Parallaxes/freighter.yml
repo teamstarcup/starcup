@@ -1,0 +1,46 @@
+- type: parallax
+  id: TrimaranFreighter
+  layers:
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_starcup/Parallaxes/FreighterBase.png"
+      scale: "1, 1"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_starcup/Parallaxes/FreighterDust.png"
+      slowness: 0.994
+      scale: "1, 1"
+      scrolling: "0.000, -0.004"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_starcup/Parallaxes/FreighterStars.png"
+      slowness: 0.993
+      scale: "1, 1"
+      scrolling: "0.000, -0.005"
+    #- texture:
+    #    !type:ImageParallaxTextureSource
+    #    path: "/Textures/_starcup/Parallaxes/FreighterNebulae.png"
+    #  slowness: 0.990
+    #  scale: "1, 1"
+    #  scrolling: "0.000, -0.005"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Parallaxes/debris_large.png"
+      slowness: 0.970
+      scale: "0.5, 0.5"
+      scrolling: "-0.005, -0.02"
+      worldHomePosition: "25, -100"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Parallaxes/debris_small.png"
+      slowness: 0.950
+      scale: "0.4, 0.4"
+      scrolling: "0.005, -0.02"
+      worldHomePosition: "-25, -100"
+  layersLQ:
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_starcup/Parallaxes/FreighterLQ.png"
+      slowness: 0.995
+      scale: "1, 1"
+  layersLQUseHQ: false

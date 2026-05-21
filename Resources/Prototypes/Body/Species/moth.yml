@@ -57,6 +57,7 @@
 - type: entity
   parent: BaseSpeciesAppearance
   id: AppearanceMoth
+  categories: [ HideSpawnMenu ]
   name: moth appearance
   components:
   - type: Inventory
@@ -155,6 +156,10 @@
     allowedEmotes: ['Chitter', 'Squeak', 'Buzz', 'Flutter', 'BuzzNonSilicon'] # starcup: added BuzzNonSilicon, renamed Flap to Flutter
   - type: TypingIndicator
     proto: moth
+  - type: CreamPied
+    sprite:
+      sprite: Effects/creampie.rsi
+      state: creampie_moth
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
@@ -173,6 +178,8 @@
       Male: UnisexMoth
       Female: UnisexMoth
       Unsexed: UnisexMoth
+  - type: BodyEmotes
+    soundsId: MothBodyEmotes
   - type: MovementSpeedModifier
     baseWeightlessAcceleration: 1.5 # Move around more easily in space.
     baseWeightlessFriction: 1

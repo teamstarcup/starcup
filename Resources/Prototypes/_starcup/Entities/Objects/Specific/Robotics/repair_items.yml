@@ -28,8 +28,10 @@
     damageContainers:
     - HumanoidSilicon
     damage:
-      groups:
-        Brute: -15
+      types:
+        Blunt: -5
+        Piercing: -5
+        Slash: -5
     healingBeginSound:
       path: "/Audio/Machines/lightswitch.ogg"
       params:
