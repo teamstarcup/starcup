@@ -1,0 +1,735 @@
+# Rats
+# Normal rat is a modified copy of MobMouse.
+- type: entity
+  name: rat
+  parent:
+  - SimpleMobBase
+  - BaseMobAnimal
+  id: MobRat
+  description: Slightly bigger and meaner than most mice.
+  components:
+  - type: Speech
+    speechSounds: Squeak
+    speechVerb: SmallMob
+    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough']
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: _starcup/Mobs/Animals/Rodents/rat.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base", "movement"]
+      state: rat
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: rat-moving
+    noMovementLayers:
+      movement:
+        state: rat
+  - type: Item
+    size: Tiny
+    heldPrefix: 0
+  - type: NpcFactionMember
+    factions:
+    - Mouse
+  - type: HTN
+    constantlyReplan: false
+    rootTask:
+      task: MouseCompound
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 30
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: MobState
+  - type: Deathgasp
+  - type: MobStateActions
+    actions:
+      Critical:
+      - ActionCritSuccumb
+      - ActionCritFakeDeath
+      - ActionCritLastWords
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      20: Critical
+      30: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.5
+    baseSprintSpeed : 5
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: rat
+      Critical:
+        Base: dead
+      Dead:
+        Base: splat
+  - type: Edible
+  - type: FlavorProfile
+    flavors:
+    - meaty
+  - type: Thirst
+    startingThirst: 25
+    thresholds:
+      OverHydrated: 35
+      Okay: 25
+      Thirsty: 15
+      Parched: 5
+      Dead: 0
+    baseDecayRate: 0.04
+  - type: Hunger
+    thresholds:
+      Overfed: 35
+      Okay: 25
+      Peckish: 12.5
+      Starving: 5
+      Dead: 0
+    baseDecayRate: 0.05
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 3
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatRat
+      amount: 1
+  - type: ReplacementAccent
+    accent: mouse
+  - type: Tag
+    tags:
+    - Trash
+    - VimPilot
+    - ChefPilot
+    - Mouse
+    - Meat
+    - CreatureEmotes
+    - IgnoreTallGrass
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 0.25
+    damageRecovery:
+      types:
+        Asphyxiation: -0.25
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0.1
+  - type: Vocal
+    sounds:
+      Unsexed: SqueakSpeechEmotes
+    screamId: CreatureSqueak
+    screamAction: ActionEmitSound
+    wilhelmProbability: 0.001
+  - type: TypingIndicator
+    proto: rodentia
+  - type: CombatMode
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 1.2
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 50
+  - type: CanEscapeInventory
+  - type: BadFood
+  - type: NonSpreaderZombie
+  - type: FoodSequenceElement
+    entries:
+      Taco: RatTaco
+      Burger: RatBurger
+      Skewer: RatSkewer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 60
+      behaviors:
+      - !type:GibBehavior
+        recursive: false
+  - type: FelinidFood
+  - type: Puller
+    needsHands: false
+
+- type: entity
+  parent: MobRat
+  id: MobRatGray
+  suffix: gray
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Animals/Rodents/rat_gray.rsi
+
+- type: entity
+  parent: MobRat
+  id: MobRatWhite
+  suffix: white
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Animals/Rodents/rat_white.rsi
+
+- type: entity
+  name: large rat
+  parent:
+  - SimpleMobBase
+  - BaseMobAnimal
+  id: MobRatLarge
+  description: A rather rotund rodent.
+  components:
+  - type: Speech
+    speechSounds: Squeak
+    speechVerb: SmallMob
+    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough']
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: _starcup/Mobs/Animals/Rodents/rat_big.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: rat
+  - type: NpcFactionMember
+    factions:
+    - Mouse
+  - type: HTN
+    constantlyReplan: false
+    rootTask:
+      task: MouseCompound
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        density: 30
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: MobState
+  - type: Deathgasp
+  - type: MobStateActions
+    actions:
+      Critical:
+      - ActionCritSuccumb
+      - ActionCritFakeDeath
+      - ActionCritLastWords
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      25: Critical
+      35: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.5
+    baseSprintSpeed : 5
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: rat
+      Critical:
+        Base: dead
+      Dead:
+        Base: splat
+  - type: Edible
+  - type: FlavorProfile
+    flavors:
+    - meaty
+  - type: Thirst
+    startingThirst: 25
+    thresholds:
+      OverHydrated: 35
+      Okay: 25
+      Thirsty: 15
+      Parched: 5
+      Dead: 0
+    baseDecayRate: 0.04
+  - type: Hunger
+    thresholds:
+      Overfed: 35
+      Okay: 25
+      Peckish: 12.5
+      Starving: 5
+      Dead: 0
+    baseDecayRate: 0.05
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 3
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatRat
+      amount: 2
+  - type: ReplacementAccent
+    accent: mouse
+  - type: Tag
+    tags:
+    - Trash
+    - VimPilot
+    - ChefPilot
+    - Mouse
+    - Meat
+    - CreatureEmotes
+    - IgnoreTallGrass
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 0.25
+    damageRecovery:
+      types:
+        Asphyxiation: -0.25
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0.1
+  - type: Vocal
+    sounds:
+      Unsexed: SqueakSpeechEmotes
+    screamId: CreatureSqueak
+    screamAction: ActionEmitSound
+    wilhelmProbability: 0.001
+  - type: TypingIndicator
+    proto: rodentia
+  - type: CombatMode
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 2
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 50
+  - type: CanEscapeInventory
+  - type: BadFood
+  - type: NonSpreaderZombie
+  - type: FoodSequenceElement
+    entries:
+      Taco: RatTaco
+      Burger: RatBurger
+      Skewer: RatSkewer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 60
+      behaviors:
+      - !type:GibBehavior
+        recursive: false
+  - type: FelinidFood
+  - type: Puller
+    needsHands: false
+
+- type: entity
+  parent: MobRatLarge
+  id: MobRatLargeBlue
+  suffix: blue
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Animals/Rodents/rat_big_blue.rsi
+
+- type: entity
+  parent: MobRatLarge
+  id: MobRatLargeBrown
+  suffix: brown
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Animals/Rodents/rat_big_brown.rsi
+
+- type: entity
+  name: dire rat
+  parent:
+  - SimpleMobBase
+  - BaseMobAnimal
+  id: MobRatDire
+  description: Overgrown vent vermin that have grown feral eating refuse in the dark.
+  components:
+  - type: Speech
+    speechSounds: Squeak
+    speechVerb: SmallMob
+    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough']
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: _starcup/Mobs/Animals/Rodents/dire_rat.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: rat_alt
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: HTN
+    constantlyReplan: false
+    rootTask:
+      task: SimpleHostileCompound
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        density: 70
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MobState
+  - type: Deathgasp
+  - type: MobStateActions
+    actions:
+      Critical:
+      - ActionCritSuccumb
+      - ActionCritFakeDeath
+      - ActionCritLastWords
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      40: Critical
+      50: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3
+    baseSprintSpeed : 4
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: rat_alt
+      Critical:
+        Base: dead
+      Dead:
+        Base: splat
+  - type: Thirst
+    startingThirst: 25
+    thresholds:
+      OverHydrated: 35
+      Okay: 25
+      Thirsty: 15
+      Parched: 5
+      Dead: 0
+    baseDecayRate: 0.04
+  - type: Hunger
+    thresholds:
+      Overfed: 35
+      Okay: 25
+      Peckish: 12.5
+      Starving: 5
+      Dead: 0
+    baseDecayRate: 0.05
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 3
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatRat
+      amount: 3
+  - type: ReplacementAccent
+    accent: mouse
+  - type: Tag
+    tags:
+    - Meat
+    - CreatureEmotes
+    - IgnoreTallGrass
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 0.25
+    damageRecovery:
+      types:
+        Asphyxiation: -0.25
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0.1
+  - type: Vocal
+    sounds:
+      Unsexed: SqueakSpeechEmotes
+    screamId: CreatureSqueak
+    screamAction: ActionEmitSound
+    wilhelmProbability: 0.001
+  - type: TypingIndicator
+    proto: rodentia
+  - type: CombatMode
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 4.5
+        Structural: 6
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 100
+  - type: BadFood
+  - type: NonSpreaderZombie
+  - type: FoodSequenceElement
+    entries:
+      Taco: RatTaco
+      Burger: RatBurger
+      Skewer: RatSkewer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 100
+      behaviors:
+      - !type:GibBehavior
+        recursive: false
+  - type: Puller
+    needsHands: false
+  - type: CrawlUnderObjects
+    actionProto: ActionToggleSneakMode
+
+- type: entity
+  name: bristle rat
+  parent:
+  - SimpleMobBase
+  - BaseMobAnimal
+  id: MobRatBristleBlue
+  suffix: blue
+  description: Overgrown vent vermin that have grown feral eating refuse in the dark.
+  components:
+  - type: Speech
+    speechSounds: Squeak
+    speechVerb: SmallMob
+    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough']
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: _starcup/Mobs/Animals/Rodents/dire_rat.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: rat_alt
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: HTN
+    constantlyReplan: false
+    rootTask:
+      task: SimpleHostileCompound
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        density: 70
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MobState
+  - type: Deathgasp
+  - type: MobStateActions
+    actions:
+      Critical:
+      - ActionCritSuccumb
+      - ActionCritFakeDeath
+      - ActionCritLastWords
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      40: Critical
+      50: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3
+    baseSprintSpeed : 4
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: rat_alt
+      Critical:
+        Base: dead
+      Dead:
+        Base: splat
+  - type: Thirst
+    startingThirst: 25
+    thresholds:
+      OverHydrated: 35
+      Okay: 25
+      Thirsty: 15
+      Parched: 5
+      Dead: 0
+    baseDecayRate: 0.04
+  - type: Hunger
+    thresholds:
+      Overfed: 35
+      Okay: 25
+      Peckish: 12.5
+      Starving: 5
+      Dead: 0
+    baseDecayRate: 0.05
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 3
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatRat
+      amount: 3
+  - type: ReplacementAccent
+    accent: mouse
+  - type: Tag
+    tags:
+    - Meat
+    - CreatureEmotes
+    - IgnoreTallGrass
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 0.25
+    damageRecovery:
+      types:
+        Asphyxiation: -0.25
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0.1
+  - type: Vocal
+    sounds:
+      Unsexed: SqueakSpeechEmotes
+    screamId: CreatureSqueak
+    screamAction: ActionEmitSound
+    wilhelmProbability: 0.001
+  - type: TypingIndicator
+    proto: rodentia
+  - type: CombatMode
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 2
+        Structural: 4
+  - type: Gun
+    fireRate: 0.75
+    projectileSpeed: 15.0
+    selectedMode: SemiAuto
+    showExamineText: false
+    availableModes: [ SemiAuto ]
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/syringe_gun.ogg
+  - type: RechargeBasicEntityAmmo
+    showExamineText: false
+    rechargeCooldown: 0
+    rechargeSound: null
+  - type: BasicEntityAmmoProvider
+    proto: RatQuill
+    capacity: 1
+    count: 1
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 100
+  - type: BadFood
+  - type: NonSpreaderZombie
+  - type: FoodSequenceElement
+    entries:
+      Taco: RatTaco
+      Burger: RatBurger
+      Skewer: RatSkewer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 100
+      behaviors:
+      - !type:GibBehavior
+        recursive: false
+  - type: Puller
+    needsHands: false
+
+- type: entity
+  parent: BaseBullet
+  id: RatQuill
+  name: bristle rat quill
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: FlyBySound
+    sound:
+      collection: EnergyMiss
+      params:
+        volume: 5
+  - type: Sprite
+    sprite: _starcup/Mobs/Animals/Rodents/bristle_rat_blue.rsi
+    layers:
+    - state: bristle
+      shader: unshaded
+  - type: Ammo
+    muzzleFlash: null
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.05,-0.05,0.05,0.05"
+        hard: false
+        mask:
+        - Opaque
+      fly-by: *flybyfixture
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    damage:
+      types:
+        Piercing: 4
+  - type: TimedDespawn
+    lifetime: 3
+
+# Rat King variants
+- type: entity
+  name: rat king
+  suffix: gray
+  id: MobRatKingGray
+  parent: MobRatKing
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Animals/Rodents/regalrat_gray.rsi
+
+- type: entity
+  name: rat king
+  suffix: white
+  id: MobRatKingWhite
+  parent: MobRatKing
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Animals/Rodents/regalrat_white.rsi
