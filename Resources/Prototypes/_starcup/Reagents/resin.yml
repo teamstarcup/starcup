@@ -10,14 +10,6 @@
   viscosity: 0.30
   tileReactions:
   - !type:SpillTileReaction
-  metabolisms:
-    Digestion:
-      # Sweet!
-      effects:
-      - !type:SatiateHunger
-        factor: 0
-      - !type:SatiateThirst
-        factor: 0
   footstepSound:
     collection: FootstepSlime
     params:
