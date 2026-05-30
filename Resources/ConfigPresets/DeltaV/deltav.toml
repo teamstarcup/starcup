@@ -1,0 +1,114 @@
+[game]
+desc               = "A medium roleplay fork based around the mysterious Noösphere, featuring unique content, custom maps, new species and a revamped science department."
+lobbyenabled       = true
+lobbyduration      = 420
+round_end_pacifist = true
+round_restart_time = 300
+contraband_examine = false # Doubtful that it's desired at all, and would require going over every item in accordance with SOP
+secret_weight_prototype = "SecretDeltaV"
+role_timer_override = "DeltaV"
+showgreentext = false # focus more on telling a story
+round_end_pvs_overrides = false # Fix EOR lag due to sending every player model to every player on the server (80 times 80 on highpop)
+enable_preset_cooldowns = true
+
+[movement]
+mob_pushing = false
+
+# New players can't join a server without admins
+[game.panic_bunker]
+enabled = true
+min_overall_minutes = 240
+disable_with_admins = true
+enable_without_admins = true
+show_reason = true
+custom_reason = "You have not played on Delta-V long enough to connect to this server. Due to administrative reasons, new accounts cannot join a server with no game admins."
+
+[infolinks]
+discord    = "https://discord.gg/deltav"
+github     = "https://github.com/DeltaV-Station/Delta-v"
+website    = "https://www.deltav.gay/"
+wiki       = "https://wiki.deltav.gay/view/Main_Page"
+patreon    = "https://www.patreon.com/c/deltav_gay/membership"
+bug_report = "https://github.com/DeltaV-Station/Delta-v/issues/new/choose"
+appeal     = "https://discord.gg/deltav"
+
+[net]
+max_connections = 1024
+tickrate = 30
+
+[vote]
+restart_required_ratio = 0.7
+preset_enabled = false
+
+[netres]
+limit    = 10.0
+
+[admin]
+see_own_notes   = true
+deadmin_on_join = true
+allow_multi_server_play = false
+[admin.alert]
+min_players_sharing_connection = 2
+
+[server]
+id         = "deltav"
+rules_file = "DeltaVRuleset"
+uptime_restart_minutes = 2880 # 48h
+
+[discord]
+rich_main_icon_id = "deltav"
+
+# general mrp stuff
+[ic]
+flavor_text = true
+punctuation = true
+
+# Disabled because it causes giga lag
+#[worldgen]
+#enabled = true
+
+[rules]
+time = 60
+
+[ahelp]
+admin_prefix = false
+admin_prefix_webhook = false
+
+[votekick]
+enabled = false # only enabled on periapsis
+eligible_number = 5
+initiator_ghost_requirement = false
+voter_ghost_requirement = false
+
+[atmos]
+space_wind = true
+
+[shuttle]
+arrivals = true
+arrivals_planet = false
+arrivals_map = "/Maps/_DV/transit_hub.yml"
+arrivals_cooldown = 90 # Need to be longer than cooldown
+cooldown = 60 # 50 longer than the default
+travel_time = 9.5 # 10.5 seconds less than the default
+emergency_dock_time = 240
+emergency_transit_time_min = 30
+auto_call_time = 120 # rounds are longer
+auto_call_extension_time = 30 # next auto call at 2h30
+emergency_early_launch_allowed = true # MRP server command ban time
+recall_turning_point = 0.33
+
+[biomass]
+easy_mode = false # reclaimer can work on soul-ful bodies, mrp server
+
+[control]
+storage_limit = 3
+
+[nf14.respawn]
+time = 600
+
+[chat]
+max_announcement_length = 512
+
+[audio]
+attenuation = 4 # inversedistanceclamped 1 << 2, see audioparams.cs
+z_offset = -2
