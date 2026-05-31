@@ -156,6 +156,11 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Sap
+        Quantity: 25
 
 - type: entity
   parent: BaseStumpStarcup
@@ -258,6 +263,11 @@
         offset: 0
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Resin
+        Quantity: 15
 
 - type: entity
   parent: BaseTreeLarge
@@ -311,12 +321,17 @@
           Log:
             min: 1
             max: 2
-          AjoraxStump:
+          AjoraxStumpLarge:
             min: 1
             max: 1
         offset: 0
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Resin
+        Quantity: 25
 
 - type: entity
   parent: BaseStumpStarcup
@@ -324,7 +339,7 @@
   components:
   - type: Sprite
     sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_ajorax_trees.rsi
-    offset: 0,0.7
+    offset: 0,0
     layers:
     - state: treestump1
       map: ["random"]
@@ -354,7 +369,7 @@
   components:
   - type: Sprite
     sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_ajorax_trees_large.rsi
-    offset: 0,0.7
+    offset: 0,1.5
     layers:
     - state: treestump1
       map: ["random"]

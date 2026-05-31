@@ -1,6 +1,8 @@
 # Re-parented, modified RMC prototype
 - type: entity
-  parent: FloraPlantBaseStarcup
+  parent:
+  - FloraPlantBaseStarcup
+  - MobBloodstream
   id: FloraAlienPlant
   description: Pox Polyps, commonly known as honeybulb and lamptrap, is a predatory plant whose glowing, sweet nectar is deadly to the insects it lures.
   name: lamptrap
@@ -32,3 +34,8 @@
     radius: 2.0
     energy: 1.5
     color: "#ecca87"
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Honey
+        Quantity: 40
