@@ -42,7 +42,7 @@
           acts: [ "Destruction" ]
 
 - type: entity
-  parent: MobBloodstream # starcup: add bloodstream to trees
+  parent: VascularSystemPlant # starcup: add a bloodstream-like mechanic to trees
   id: BaseTree
   description: Yep, it's a tree.
   abstract: true
@@ -107,13 +107,6 @@
           # end starcup
   - type: TypingIndicator # Add diona typing indicator here so that diona players keep the same typing bubble when polymorphed into a tree.
     proto: diona
-    # begin starcup: add bloodstream to trees
-  - type: Bloodstream
-    bloodReferenceSolution:
-      reagents:
-      - ReagentId: Resin
-        Quantity: 50
-    # end starcup
 
 - type: entity
   parent: BaseTree
@@ -181,7 +174,7 @@
         density: 2000
         layer:
         - WallLayer
-  # begin starcup: add stumps and bloodstream to trees
+  # begin starcup: add stumps and a bloodstream-like mechanic to trees
   - type: Destructible
     thresholds:
     - trigger:
@@ -211,11 +204,13 @@
             min: 1
             max: 1
         offset: 0
-  - type: Bloodstream
-    bloodReferenceSolution:
-      reagents:
-      - ReagentId: Resin
-        Quantity: 70
+  - type: SolutionContainerManager
+    solutions:
+      pool:
+        maxVol: 50
+        reagents:
+        - ReagentId: Resin
+          Quantity: 50
     # end starcup
 
 - type: entity
