@@ -138,3 +138,30 @@
           Quantity: 5
         - ReagentId: THC
           Quantity: 25
+
+# Empanadas
+- type: entity
+  name: capybara empanada
+  parent: FoodBakedBase
+  id: FoodBakedEmpanadaCapybara
+  description: A delicious turnover filled with the meat of the galaxy's chillest rodent.
+  components:
+  - type: Sprite
+    state: dumplings
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 8
+        - ReagentId: Protein
+          Quantity: 2
+  - type: FlavorProfile
+    flavors:
+    - meaty
+    - dough
+    - tomato
+  - type: Tag
+    tags:
+    - Meat

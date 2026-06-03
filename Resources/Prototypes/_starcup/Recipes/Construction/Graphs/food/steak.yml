@@ -1,0 +1,17 @@
+# capybara steak
+- type: constructionGraph
+  id: CapybaraSteak
+  start: start
+  graph:
+
+  - node: start
+    edges:
+    - to: cooked capybara
+      completed:
+      - !type:PlaySound
+        sound: /Audio/Effects/sizzle.ogg
+      steps:
+      - minTemperature: 345
+
+  - node: cooked capybara
+    entity: FoodMeatCapybaraCooked
