@@ -51,7 +51,7 @@ book-text-ptarmigan-intro = [bold]Start of recorded transcript[/bold]
 
       {"[color=gray]Neither can you, of course. Remember to dress warmly.[/color]"}
 
-      {"[color=gray]On the other hand, while the atmosphere of Yssmoon is very cold, the liquid plasma rivers are very hot. Crew should avoid moving near liquid plasma without proper protections.[/color]"}
+      {"[color=gray]Now, while the atmosphere of Yssmoon is very cold, the liquid plasma rivers are very hot. Unprotected crew should avoid going near liquid plasma.[/color]"}
 
       {"[color=gray]Did you know that liquid plasma can burn you even without direct skin-to-plasma contact? It can.[/color]"}
 
@@ -81,9 +81,9 @@ book-text-ptarmigan-intro = [bold]Start of recorded transcript[/bold]
 
       {"[color=#AE6716]These switches should only be pulled in an emergency or when the crew is leaving the outpost.[/color]"}
 
-      {"[color=#AE6716]Terrain near the Ptarmigan has been treated to allow for easy shoveling and construction.[/color]"}
+      {"[color=#AE6716]When it comes to construction work, due to terraforming complications, the Ptarmigan's foundations have become slightly unstable.[/color]"}
 
-      {"[color=#AE6716]You should try not to build too far away from the outpost, as complications might impact the behavior of electronic devices and wiring.[/color]"}
+      {"[color=#AE6716]This can make the behavior of electronic wiring or replacement floors a little unreliable without special assistance.[/color]"}
 
       {"[color=#AE6716]Because Yssmoon was ruled unsuitable for full necrocosmic terraforming, your job as an Atmospheric Technician is very important.[/color]"}
 
@@ -91,7 +91,9 @@ book-text-ptarmigan-intro = [bold]Start of recorded transcript[/bold]
 
       {"[color=#AE6716]You will need to optimize your pumps and heating equipment to extract air from the atmosphere, heat it up by about 70 degrees, and pump it into the outpost.[/color]"}
 
-      {"[color=#AE6716]If you do not think you can manage all of that, you might want to have a few extra space heaters built.[/color]"}
+      {"[color=#AE6716]You might rarely observe bouts of unnaturally warm weather. Some say that this indicates an impending plasma gale. That is false. Plasma gales are not real.[/color]"}
+
+      {"[color=#AE6716]If you do not think you can manage all of this, you might want to have a few extra space heaters built.[/color]"}
 
       {"[color=#765428][bold]Part Three. Logistics.[/bold][/color]"}
 
@@ -102,6 +104,12 @@ book-text-ptarmigan-intro = [bold]Start of recorded transcript[/bold]
       {"[color=#765428]Because it is a long walk, you may wish to contact your Roboticist for an Autonomous Power Loading Unit.[/color]"}
 
       {"[color=#765428]Salvage Specialists will need to do a lot of mining for plasma to power the outpost.[/color]"}
+
+      {"[color=#765428]Sometimes, shuttle landing areas become cluttered with trees, snow, or even plasma leakage. These are harmless to our high-quality shuttlecraft, but impede foot traffic.[/color]"}
+
+      {"[color=#765428]Salvage should aim to preemptively clear trees and snow from the evacuation landing area whenever possible.[/color]"}
+
+      {"[color=#765428]Plasma appearing to shine through shuttle floors is a complex optical illusion and will not hurt shuttle passengers.[/color]"}
 
       {"[color=#765428]Additionally, should any threats arise, Salvage will need to use their equipment in cooperation with Security to solve the problem.[/color]"}
 
