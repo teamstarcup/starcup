@@ -9,3 +9,17 @@
   id: AllTraitorCodesPaperNT
   name: NanoTrasen codewords registry
   description: A registry of all active NanoTrasen codewords.
+
+- type: entity
+  parent: PaperDyedTan
+  id: TapeRecorderTranscriptPtarmigan
+  name: Ptarmigan Introductory Recording transcript
+  description: A dry transcription of an already dry introduction.
+  components:
+  - type: Paper
+    contentSize: 14000
+    stampState: paper_stamp-greytide
+    stampedBy:
+    - stampedColor: '#717A55FF'
+      stampedName: Electra Dynamics
+    content: book-text-ptarmigan-intro
