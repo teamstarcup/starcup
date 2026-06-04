@@ -469,7 +469,10 @@
   description: Prime meat from maintenance!
   components:
   - type: Sprite
-    state: plain
+    # begin starcup: add rodent variants
+    sprite: _starcup/Objects/Consumable/Food/meat.rsi
+    state: bushmeat
+    # end starcup
   - type: SolutionContainerManager
     solutions:
       food:
