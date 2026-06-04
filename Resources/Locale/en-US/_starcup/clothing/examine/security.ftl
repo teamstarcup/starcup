@@ -33,10 +33,10 @@ clothing-brigmedic-hardsuit = [color=#a40000]combat medic hardsuit[/color]
 clothing-warden-hardsuit = [color=#a40000]warden hardsuit[/color]
 clothing-hos-hardsuit = [color=#a40000]Head of Security's hardsuit[/color]
 clothing-security-winter-coat = [color=#a40000]security winter coat[/color]
-clothing-security-winter-coat = [color=#a40000]security longcoat[/color]
+clothing-security-longcoat = [color=#a40000]security longcoat[/color]
 clothing-warden-winter-coat = [color=#a40000]warden's armored winter coat[/color]
 clothing-hos-winter-coat = [color=#a40000]Head of Security's armored winter coat[/color]
-clothing-hos-winter-coat = [color=#a40000]Head of Security's armored longcoat[/color]
+clothing-hos-longcoat = [color=#a40000]Head of Security's armored longcoat[/color]
 
 
 ## Shoes

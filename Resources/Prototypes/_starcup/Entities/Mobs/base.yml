@@ -1,0 +1,26 @@
+# Used in lieu of bloodstream for trees, plants, etc.
+# I tried giving them bloodstream but it made them map unsavable.
+# Rather than mess with powers beyond comprehension, we made this alternative.
+- type: entity
+  id: VascularSystemPlant
+  abstract: true
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pool:
+        maxVol: 30
+        reagents:
+        - ReagentId: Resin
+          Quantity: 30
+  - type: SolutionRegeneration
+    solution: pool
+    generated:
+      reagents:
+      - ReagentId: Resin
+        Quantity: 0.1
+  #- type: DrainableSolution # Left here in case we want to add taps to them later.
+    #solution: pool
+  - type: DrawableSolution
+    solution: pool
+  - type: InjectableSolution
+    solution: pool

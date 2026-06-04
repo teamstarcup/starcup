@@ -2,6 +2,7 @@ using Content.Server.VentHorde.Components;
 using Content.Shared.Destructible;
 using Content.Shared.Jittering;
 using Content.Shared.Throwing;
+using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -62,7 +63,9 @@ public sealed class VentHordeSystem : EntitySystem
     /// <param name="spawns">List of entities to spawn.</param>
     /// <param name="spawnDelay">Time after which to spawn the entities.</param>
     /// <param name="append">If an already active spawner is selected, will add entities to its list. Otherwise, will fail.</param>
-    public void StartHordeSpawn(EntityUid uid, List<EntProtoId> spawns, TimeSpan spawnDelay, bool append = true)
+    /// starcup: <param name="passiveSound">Will override the default sound in VentHordeSpawnerComponent if provided.</param>
+    /// starcup: <param name="endSound">Will override the default sound in VentHordSpawnerComponent if provided.</param>
+    public void StartHordeSpawn(EntityUid uid, List<EntProtoId> spawns, TimeSpan spawnDelay, bool append = true, SoundSpecifier? passiveSound = null, SoundSpecifier? endSound = null)
     {
         if (TryComp<VentHordeSpawnerComponent>(uid, out var hordeSpawner))
         {
@@ -75,6 +78,14 @@ public sealed class VentHordeSystem : EntitySystem
         }
 
         hordeSpawner = EnsureComp<VentHordeSpawnerComponent>(uid);
+
+        // begin starcup: allow rules to set custom sounds
+        if (passiveSound is not null)
+            hordeSpawner.PassiveSound = passiveSound;
+
+        if (endSound is not null)
+            hordeSpawner.EndSound = endSound;
+        // end starcup
 
         hordeSpawner.AudioStream = _audio.PlayPvs(hordeSpawner.PassiveSound, uid, hordeSpawner.PassiveSound.Params.WithLoop(true))?.Entity;
 

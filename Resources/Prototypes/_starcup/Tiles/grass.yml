@@ -60,6 +60,7 @@
 - type: tile
   id: FloorPlanetGrassBlue
   name: twilight grass
+  parent: FloorPlanetGrass
   sprite: /Textures/_starcup/Tiles/Planet/grass_twilight/grass.png
   variants: 4
   placementVariants:
@@ -77,11 +78,6 @@
     East: /Textures/_starcup/Tiles/Planet/grass_twilight/double_edge.png
     North: /Textures/_starcup/Tiles/Planet/grass_twilight/double_edge.png
     West: /Textures/_starcup/Tiles/Planet/grass_twilight/double_edge.png
-  isSubfloor: true
-  footstepSounds:
-    collection: FootstepGrass
-  heatCapacity: 10000
-  indestructible: true
 
 - type: tile
   id: FloorPlanetGrassDarkEdges

@@ -9,11 +9,33 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtJanimaidmini
 
+- type: loadout
+  id: TacticalMaidUniform
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Security
+      time: 36000 # 10 hours
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtTacticalMaid
+
 # Hat
 - type: loadout
   id: MaidLaceHeadpiece
   equipment:
     head: ClothingHeadHatMaidLaceHeadpiece
+
+- type: loadout
+  id: TacticalMaidHeadband
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Security
+      time: 36000 # 10 hours
+  equipment:
+    head: ClothingHeadHatTacticalMaidHeadband
 
 # Belt
 - type: loadout

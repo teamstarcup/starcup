@@ -1,3 +1,5 @@
+trait-category-narcolepsy = Narcolepsy
+
 trait-scottish-accent-name = Highlander
 trait-scottish-accent-desc = Hailing frae hielans ae rock and thistle, ya dinnae ken why others sometimes cannae understand wot ya say.
 
@@ -21,3 +23,6 @@ trait-vowed-desc = You're serious about your vow, and uphold it outside of jobs 
 
 trait-uncloneable-name = Uncloneable
 trait-uncloneable-desc = Due to some quirk in your physical composition, you cannot be reconstituted by medical cloning.
+
+trait-narcolepsy-weak-name = Narcolepsy (Weak)
+trait-narcolepsy-weak-desc = You fall asleep randomly, but not as often nor for as long as other narcoleptics.
