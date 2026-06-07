@@ -158,13 +158,13 @@
         acts: [ "Destruction" ]
   - type: SolutionContainerManager
     solutions:
-      pool:
+      vasculature:
         maxVol: 25
         reagents:
         - ReagentId: Sap
           Quantity: 25
   - type: SolutionRegeneration
-    solution: pool
+    solution: vasculature
     generated:
       reagents:
       - ReagentId: Sap
@@ -273,7 +273,7 @@
         acts: [ "Destruction" ]
   - type: SolutionContainerManager
     solutions:
-      pool:
+      vasculature:
         maxVol: 15
         reagents:
         - ReagentId: Resin
@@ -339,7 +339,7 @@
         acts: [ "Destruction" ]
   - type: SolutionContainerManager
     solutions:
-      pool:
+      vasculature:
         maxVol: 15
         reagents:
         - ReagentId: Resin
@@ -460,6 +460,64 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 30
+        reagents:
+        - ReagentId: Cellulose
+          Quantity: 5
+        - ReagentId: SpaceDrugs
+          Quantity: 13
+        - ReagentId: Stellibinin
+          Quantity: 12
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
+      reagents:
+      - ReagentId: Cellulose
+        Quantity: 0.1
+      - ReagentId: SpaceDrugs
+        Quantity: 0.05
+      - ReagentId: Stellibinin
+        Quantity: 0.03
+
+- type: entity
+  parent: FloraTreeSporal
+  id: FloraTreeSporalRobust
+  suffix: robust
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_sporal_trees_robust.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 30
+        reagents:
+        - ReagentId: Cellulose
+          Quantity: 5
+        - ReagentId: SpaceDrugs
+          Quantity: 13
+        - ReagentId: Stellibinin
+          Quantity: 12
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
+      reagents:
+      - ReagentId: Cellulose
+        Quantity: 0.1
+      - ReagentId: SpaceDrugs
+        Quantity: 0.08
+      - ReagentId: Stellibinin
+        Quantity: 0.08
 
 - type: entity
   parent: BaseStumpStarcup
@@ -546,6 +604,55 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 30
+        reagents:
+        - ReagentId: Cellulose
+          Quantity: 20
+        - ReagentId: Sigynate
+          Quantity: 10
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
+      reagents:
+      - ReagentId: Cellulose
+        Quantity: 0.1
+      - ReagentId: Sigynate
+        Quantity: 0.05
+
+- type: entity
+  parent: FloraTreeBruiseBonnet
+  id: FloraTreeBruiseBonnetRobust
+  suffix: robust
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_bruise_bonnet_robust.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 30
+        reagents:
+        - ReagentId: Cellulose
+          Quantity: 5
+        - ReagentId: Sigynate
+          Quantity: 25
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
+      reagents:
+      - ReagentId: Cellulose
+        Quantity: 0.1
+      - ReagentId: Sigynate
+        Quantity: 0.08
 
 - type: entity
   parent: SporalStump

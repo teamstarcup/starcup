@@ -49,14 +49,25 @@
   - type: DamageOnInteract
     damage:
       types:
-        Piercing: 0.9
-  - type: Bloodstream
-    bloodReferenceSolution:
+        Piercing: 1
+    interactSound: /Audio/_starcup/Effects/hit_needle.ogg
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 25
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 17
+        - ReagentId: Water
+          Quantity: 8
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
       reagents:
       - ReagentId: Sugar
-        Quantity: 120
+        Quantity: 0.03
       - ReagentId: Water
-        Quantity: 80
+        Quantity: 0.01
 
 - type: entity
   parent: BaseCactus
@@ -83,17 +94,23 @@
             variation: 0.05
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: DamageOnInteract
-    damage:
-      types:
-        Piercing: 0.8
-  - type: Bloodstream
-    bloodReferenceSolution:
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 15
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 10
+        - ReagentId: Water
+          Quantity: 5
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
       reagents:
       - ReagentId: Sugar
-        Quantity: 60
+        Quantity: 0.03
       - ReagentId: Water
-        Quantity: 40
+        Quantity: 0.01
 
 - type: entity
   parent: BaseCactus
@@ -133,13 +150,23 @@
     damage:
       types:
         Piercing: 1.5
-  - type: Bloodstream
-    bloodReferenceSolution:
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 40
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 30
+        - ReagentId: Water
+          Quantity: 10
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
       reagents:
       - ReagentId: Sugar
-        Quantity: 210
+        Quantity: 0.03
       - ReagentId: Water
-        Quantity: 140
+        Quantity: 0.01
 
 # Cacti species
 - type: entity
@@ -191,7 +218,7 @@
 
 - type: entity
   parent: BaseCactusGiant
-  id: FloraCactusBlooddthorn
+  id: FloraCactusBloodthorn
   name: bloodthorn cactus
   description: A large, tough, extremely pokey-looking cactus, often seen thriving in war-torn areas of the galaxy.
   components:
@@ -208,24 +235,36 @@
         cactus02: ""
         cactus03: ""
         cactus04: ""
-  - type: Bloodstream
-    bloodReferenceSolution:
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 40
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 20
+        - ReagentId: Water
+          Quantity: 10
+        - ReagentId: Blood
+          Quantity: 10
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
       reagents:
       - ReagentId: Sugar
-        Quantity: 210
+        Quantity: 0.03
       - ReagentId: Water
-        Quantity: 70
+        Quantity: 0.01
       - ReagentId: Blood
-        Quantity: 70
+        Quantity: 0.01
 
 - type: entity
-  parent: FloraCactusBlooddthorn
-  id: FloraCactusBlooddthornGiant
+  parent: FloraCactusBloodthorn
+  id: FloraCactusBloodthornGiant
   suffix: giant
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Nature/Flora/Cacti/flora_giant_cactus_gr.rsi
-    offset: 0,0
+    sprite: _starcup/Structures/Nature/Flora/Cacti/flora_giant_cactus_gr_large.rsi
+    offset: 0,1
     layers:
     - state: cactus01
       map: ["random"]
@@ -234,12 +273,102 @@
     - random:
         cactus01: ""
         cactus02: ""
-  - type: Bloodstream
-    bloodReferenceSolution:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.3,0.4,0.4"
+        density: 4000
+        layer:
+        - WallLayer
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 70
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 35
+        - ReagentId: Water
+          Quantity: 18
+        - ReagentId: Blood
+          Quantity: 17
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
       reagents:
       - ReagentId: Sugar
-        Quantity: 320
+        Quantity: 0.03
       - ReagentId: Water
-        Quantity: 110
+        Quantity: 0.01
       - ReagentId: Blood
-        Quantity: 110
+        Quantity: 0.01
+
+- type: entity
+  parent: FloraCactusBloodthorn
+  id: FloraCactusChaosthorn
+  name: mutant bloodthorn cactus
+  description: A large, tough, heavily mutated cactus of a species often seen thriving in war-torn areas of the galaxy.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Cacti/flora_giant_cactus_py.rsi
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 50
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 35
+        - ReagentId: Water
+          Quantity: 18
+        - ReagentId: UnstableMutagen
+          Quantity: 17
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 0.03
+      - ReagentId: Water
+        Quantity: 0.01
+      - ReagentId: UnstableMutagen
+        Quantity: 0.01
+
+- type: entity
+  parent: FloraCactusBloodthornGiant
+  id: FloraCactusChaosthornGiant
+  suffix: giant
+  name: mutant bloodthorn cactus
+  description: A large, tough, heavily mutated cactus of a species often seen thriving in war-torn areas of the galaxy.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Cacti/flora_giant_cactus_py_large.rsi
+    layers:
+    - state: cactus01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        cactus01: ""
+        cactus02: ""
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 70
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 35
+        - ReagentId: Water
+          Quantity: 18
+        - ReagentId: UnstableMutagen
+          Quantity: 17
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 0.03
+      - ReagentId: Water
+        Quantity: 0.01
+      - ReagentId: UnstableMutagen
+        Quantity: 0.01

@@ -67,6 +67,104 @@
     - FloraTreePalm
     - FloraTreeLargePalm
 
+- type: entity
+  id: RandomFloraCactus
+  name: random cactus spawner
+  parent: MarkerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowpink
+    - state: pink
+    - sprite: _starcup/Structures/Nature/Flora/Cacti/flora_cactus.rsi
+      state: cactus01
+  - type: RandomSpawner
+    prototypes:
+    - FloraCactus
+    - FloraCactusBarrel
+    - FloraCactusBarrelGiant
+
+- type: entity
+  id: RandomFloraCactusBloodthorn
+  name: bloodthorn cactus spawner
+  parent: MarkerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowpink
+    - state: pink
+    - sprite: _starcup/Structures/Nature/Flora/Cacti/flora_giant_cactus_gr.rsi
+      state: cactus01
+  - type: RandomSpawner
+    prototypes:
+    - FloraCactusBloodthorn
+    - FloraCactusBloodthornGiant
+    chance: 0.9
+    rarePrototypes:
+    - FloraCactusChaosthorn
+    - FloraCactusChaosthornGiant
+    rareChance: 0.1
+
+- type: entity
+  id: RandomFloraTreeAlien
+  name: random alien tree spawner
+  parent: MarkerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowpink
+    - state: pink
+    - sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_sporal_trees.rsi
+      state: tree01
+  - type: RandomSpawner
+    prototypes:
+    - FloraTreeAlienReed
+    - FloraTreeSporal
+    - FloraTreeBruiseBonnet
+    chance: 0.75
+    rarePrototypes:
+    - FloraTreeSporalRobust
+    - FloraTreeBruiseBonnetRobust
+    rareChance: 0.05
+
+- type: entity
+  id: RandomFloraTreeSporal
+  name: sporal tree spawner
+  parent: MarkerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowpink
+    - state: pink
+    - sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_sporal_trees.rsi
+      state: tree01
+  - type: RandomSpawner
+    prototypes:
+    - FloraTreeSporal
+    chance: 0.95
+    rarePrototypes:
+    - FloraTreeSporalRobust
+    rareChance: 0.05
+
+- type: entity
+  id: RandomFloraTreeBruiseBonnet
+  name: sporal tree spawner
+  parent: MarkerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowpink
+    - state: pink
+    - sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_sporal_trees.rsi
+      state: tree01
+  - type: RandomSpawner
+    prototypes:
+    - FloraTreeBruiseBonnet
+    chance: 0.95
+    rarePrototypes:
+    - FloraTreeBruiseBonnetRobust
+    rareChance: 0.05
+
 # Spawners by climate/biome
 - type: entity
   id: RandomFloraTreeJungle
@@ -217,20 +315,5 @@
     - LightTree
     rareChance: 0.25
 
-- type: entity
-  id: RandomFloraTreeAlien
-  name: random alien tree spawner
-  parent: MarkerBaseStarcup
-  components:
-  - type: Sprite
-    layers:
-    - state: shadowpink
-    - state: pink
-    - sprite: _starcup/Structures/Nature/Flora/Trees/AlienTrees/flora_sporal_trees.rsi
-      state: tree01
-  - type: RandomSpawner
-    prototypes:
-    - FloraTreeAlienReed
-    - FloraTreeSporal
-    - FloraTreeBruiseBonnet
-    chance: 0.75
+
+# Spawners by climate/biome
