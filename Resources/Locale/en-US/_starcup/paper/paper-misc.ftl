@@ -191,6 +191,8 @@ book-text-ptarmigan-intro = [bold]Start of recorded transcript[/bold]
 
       {"[color=#66244A]Taking cold-vulnerable animals to the evacuation shuttle should be avoided when possible unless Medical is prepared to treat their potential frostbite.[/color]"}
 
+      {"[color=#66244A]Finally, due to atmospheric interference, digital clocks do not function properly on Yssmoon. Try to avoid anyone being left behind.[/color]"}
+
       {"[color=#66244A]We hope that you are excited to start your Yssmoon adventure.[/color]"}
 
       {"[bold]End of recorded transcript[/bold]"}
