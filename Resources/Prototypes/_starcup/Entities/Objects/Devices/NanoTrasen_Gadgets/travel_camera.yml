@@ -13,12 +13,8 @@
   - type: Sprite
     sprite: Objects/Devices/travel_camera.rsi
     state: icon
-  - type: Flash
+  - type: CameraFlasher
     flashOnRangedInteract: true
-    MeleeDuration: TimeSpan.FromSeconds(0)
-    AoeFlashDuration: TimeSpan.FromSeconds(0)
-    SlowTo: 1f
-    Range: 0f
     sound: !type:SoundPathSpecifier
       path: /Audio/Misc/camera_snap.ogg
   - type: MeleeWeapon # allows using the camera in melee
