@@ -2,7 +2,7 @@
   parent: BaseItem
   id: TravelCameraSafe
   name: travel camera
-  description: A picture says more than a thousand words. Comes with an internal recharging photo roll.
+  description: A picture says more than a thousand words. Comes with an internal recharging photo roll. Unfortunately, the ultrabright flash was mounted in reverse in a factory automation incident. 
   components:
     # aptly named component for picture taking
   - type: PictureTaker
@@ -15,9 +15,6 @@
     state: icon
   - type: Flash
     flashOnRangedInteract: true
-    MeleeDuration: 0
-    AoeFlashDuration: 0
-    MeleeStunDuration: 0
     sound: !type:SoundPathSpecifier
       path: /Audio/Misc/camera_snap.ogg
   - type: MeleeWeapon # allows using the camera in melee
