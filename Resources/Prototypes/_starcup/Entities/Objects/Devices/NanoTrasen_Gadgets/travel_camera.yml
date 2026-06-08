@@ -15,10 +15,9 @@
     state: icon
   - type: Flash
     flashOnRangedInteract: true
-    TimeSpan FlashingTime: TimeSpan.FromSeconds(0)
-    TimeSpan MeleeDuration: TimeSpan.FromSeconds(0)
-    TimeSpan AoeFlashDuration: TimeSpan.FromSeconds(0)
-    TimeSpan? MeleeStunDuration: TimeSpan.FromSeconds(0)
+    MeleeDuration: 0
+    AoeFlashDuration: 0
+    MeleeStunDuration: 0
     Range: 0f
     SlowTo: 1f
     sound: !type:SoundPathSpecifier
