@@ -1,0 +1,18 @@
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskPyrite
+  name: pyrite mask
+  description: A replica of an ancient mask. Thoroughly tested, the mask has no strange effects upon actors donning it.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Mask/pyritemask.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Mask/pyritemask.rsi
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+  - type: HideLayerClothing
+    slots:
+    - Snout
+  - type: IngestionBlocker
+  - type: StaticPrice
+    price: 50

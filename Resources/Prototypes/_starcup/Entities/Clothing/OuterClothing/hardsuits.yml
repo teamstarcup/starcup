@@ -95,3 +95,58 @@
     clothingPrototype: ClothingHeadHelmetHardsuitJuggernautNT
   - type: ExaminableClothing
     examineText: clothing-nanotrasen-hardsuit-juggernaut
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterBlukieFake
+  name: bluclear operative costume
+  description: A hardsuit replica made to resemble the suits used in films about nuclear operatives, such as Running Out, Ticking Clock, and Three Hundred Seconds. The movie studios really like clocks.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/nanotrasen.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/nanotrasen.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterBlukieMedicFake
+  name: bluclear medic costume
+  description: A replica of a hardsuit, made for movie productions featuring Nuclear Operatives. The combat medics would always go out in excruciatingly horrible ways, and you swear you can see a large scratch bisecting the suit horizontally.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntmedic.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntmedic.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterBlukieCommanderFake
+  name: bluclear commander costume
+  description: A replica of a nuclear commander hardsuit, used in films about, well... nuclear operatives. The commanders in the movies typically ended up... commanding.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntcommander.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntcommander.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterBlukieEliteFake
+  name: bluclear elite costume
+  description: A suit made to look like the elite suits in an old spin-off nuclear operative show. The new style was controversial with fans.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntelite.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntelite.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterBlukieJuggernautFake
+  name: bluclear juggernaut costume
+  description: A hardsuit look-a-like of a nuclear operative juggernaut suit. Fans of the show disliked their ex-machina appearances.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntjuggernaut.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Hardsuits/ntjuggernaut.rsi
