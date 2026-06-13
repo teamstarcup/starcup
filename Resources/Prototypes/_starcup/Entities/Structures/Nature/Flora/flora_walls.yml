@@ -3,7 +3,7 @@
   id: WallBrambleGreenThick
   name: thick brambles
   suffix: green
-  description: Describing them as "knotted and thorny" was a mistake.
+  description: These tough vines have grown tightly intertwined, blocking all sight of what's beyond.
   components:
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -57,12 +57,18 @@
         damage:
           types:
             Poison: 10
+  - type: DamageOnInteract
+    damage:
+      types:
+        Piercing: 1
+    interactSound: /Audio/_starcup/Effects/hit_needle.ogg
 
 - type: entity
   parent: WallBrambleGreenThick
   id: WallBrambleGreen
   name: brambles
   suffix: green
+  description: Tough vines covered in thorns.
   components:
   - type: Sprite
     sprite: _starcup/Structures/Walls/flora_bramble_wall_green.rsi
