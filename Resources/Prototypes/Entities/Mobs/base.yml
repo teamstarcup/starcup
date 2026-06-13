@@ -73,19 +73,13 @@
     damageContainer: Biological
   - type: Destructible
     thresholds:
-    # begin starcup: reintroduce blunt damage gibbing and remove ashing
     - trigger:
         !type:DamageTypeTrigger
         damageType: Blunt
         damage: 400
       behaviors:
       - !type:GibBehavior { }
-#    - trigger:
-#        !type:DamageTypeTrigger
-#        damageType: Blunt
-#        damage: 400
-#      behaviors:
-#      - !type:GibBehavior { }
+    # begin starcup: remove ashing
 #    - trigger:
 #        !type:DamageTypeTrigger
 #        damageType: Heat
