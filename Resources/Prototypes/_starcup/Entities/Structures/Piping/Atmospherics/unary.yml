@@ -1,7 +1,56 @@
 - type: entity
-  parent: GasVentPump
-  id: GasVentPumpNoSpawns
-  suffix: Pests Only
+  parent: GasUnaryBase
+  id: GasVentPumpBroken
+  name: broken vent
+  description: Something broke through it.
+  placement:
+    mode: SnapgridCenter
   components:
-   - type: VentCritterSpawnLocation
-     canSpawn: false
+  - type: SubFloorHide
+    visibleLayers:
+    - enum.SubfloorLayers.FirstLayer
+  - type: Sprite
+    drawdepth: FloorObjects
+    sprite: _starcup/Structures/Piping/vent_destroyed.rsi
+    layers:
+    - sprite: Structures/Piping/Atmospherics/pipe.rsi
+      state: pipeUnaryConnectors
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: vent_broken
+      map: [ "enum.SubfloorLayers.FirstLayer" ]
+  #- type: GasPassiveVent # Makes sense, but is also very dangerous, so it's deactivated for now.
+  - type: Construction
+    graph: GasUnaryBroken
+    node: ventpumpbroken
+  - type: AmbientSound
+    enabled: true
+    volume: -12
+    range: 5
+    sound:
+      path: /Audio/Ambience/Objects/gas_vent.ogg
+
+- type: entity
+  parent: GasVentPumpBroken
+  id: GasVentPumpInfested
+  name: infested vent
+  description: Something broke through it. Something still moves inside it...
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: SubFloorHide
+    visibleLayers:
+    - enum.SubfloorLayers.FirstLayer
+  - type: Sprite
+    drawdepth: FloorObjects
+    sprite: _starcup/Structures/Piping/vent_destroyed.rsi
+    layers:
+    - sprite: Structures/Piping/Atmospherics/pipe.rsi
+      state: pipeUnaryConnectors
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: vent_infested
+      map: [ "enum.SubfloorLayers.FirstLayer" ]
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoRunner
+    chance: 0.1
+

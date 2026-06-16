@@ -1,3 +1,4 @@
+# Footprints
 - type: entity
   name: footprint
   id: Footprint
@@ -111,3 +112,17 @@
       offset: *left
     - state: footprint-right-bare-human
       offset: *right
+
+# Reagent puddles
+- type: entity
+  id: PuddleSlime
+  parent: PuddleTemporary
+  suffix: slime
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Slime
+          Quantity: 25

@@ -74,4 +74,16 @@ public sealed partial class VentHordeSpawnerComponent : Component
     [DataField]
     [ViewVariables(VVAccess.ReadOnly)]
     public EntityUid? AudioStream;
+
+    /// <summary>
+    /// starcup: The chance that a vent will break when entities are spawned.
+    /// </summary>
+    [DataField]
+    public float VentBreakChance;
+
+    /// <summary>
+    /// starcup: The entity that will replace the vent when it breaks.
+    /// </summary>
+    [DataField]
+    public string? VentReplacement;
 }

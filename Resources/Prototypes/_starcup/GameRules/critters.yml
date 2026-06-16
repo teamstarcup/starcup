@@ -113,77 +113,6 @@
 # hostiles
 
 - type: entity
-  id: SlimesSpawnLocalized
-  parent: BaseStationEventShortDelay
-  components:
-  - type: StationEvent
-    startAnnouncement: station-event-vent-creatures-start-announcement
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
-    earliestStart: 20
-    minimumPlayers: 15
-    weight: 5
-    duration: 30
-  - type: VentCrittersRuleLocalized
-    table: !type:GroupSelector
-      children:
-      - id: MobAdultSlimesBlueAngry
-      - id: MobAdultSlimesGreenAngry
-      - id: MobAdultSlimesYellowAngry
-
-- type: entity
-  id: SnakeSpawnLocalized
-  parent: BaseStationEventShortDelay
-  components:
-  - type: StationEvent
-    startAnnouncement: station-event-vent-creatures-start-announcement
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
-    earliestStart: 20
-    minimumPlayers: 15
-    weight: 5
-    duration: 30
-  - type: VentCrittersRuleLocalized
-    table: !type:GroupSelector
-      children:
-      - id: MobPurpleSnake
-      - id: MobSmallPurpleSnake
-      - id: MobCobraSpace
-
-- type: entity
-  id: SpiderSpawnLocalized
-  parent: BaseStationEventShortDelay
-  components:
-  - type: StationEvent
-    startAnnouncement: station-event-vent-creatures-start-announcement
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
-    earliestStart: 20
-    minimumPlayers: 15
-    weight: 5
-    duration: 30
-  - type: VentCrittersRuleLocalized
-    table:
-      id: MobGiantSpiderAngry
-
-- type: entity
-  id: SpiderClownSpawnLocalized
-  parent: BaseStationEventShortDelay
-  components:
-  - type: StationEvent
-    startAnnouncement: station-event-vent-creatures-start-announcement
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
-    earliestStart: 20
-    minimumPlayers: 20
-    weight: 1.5
-    duration: 30
-  - type: VentCrittersRuleLocalized
-    playerRatio: 25
-    table:
-      id: MobClownSpider
-
-- type: entity
   id: XenoVents
   parent: BaseGameRule
   components:
@@ -215,21 +144,31 @@
       prob: 0.0003
 
 - type: entity
-  id: MosquitoSpawnLocalized
+  id: MosquitoSpawnHorde
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAnnouncement: station-event-vent-creatures-start-horde-announcement
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-    minimumPlayers: 10
-    weight: 6
-    duration: 30
-  - type: VentCrittersRuleLocalized
-    table: !type:GroupSelector
+    minimumPlayers: 15
+    weight: 5
+    duration: 15
+    maxDuration: 30
+  - type: VentHordeRule
+    table: !type:AllSelector
       children:
-      - id: MobMosquitoSwarm
-        weight: 0.7
-      - id: MobGiantMosquito
-        weight: 0.3
+      - !type:GroupSelector
+        rolls: 6, 10
+        children:
+        - id: MobGiantMosquito
+        - id: MobMosquitoSwarm
+          weight: 0.3
+    passiveSound:
+      path: /Audio/_starcup/VentHordes/vent_mosquitoes.ogg
+    endSound:
+      collection: MetalBreak
+    ventBreakChance: 1.0
+    ventReplacement: GasVentPumpBroken
+
