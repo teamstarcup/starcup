@@ -9,7 +9,7 @@
       stationProto: StandardNanotrasenStation
       components:
         - type: StationEmergencyShuttle
-          emergencyShuttlePath: /Maps/_starcup/Shuttles/SYND_EvacShip.yml  # starcup: NTES_Basu.yml -> SYND_EvacShip.yml
+          emergencyShuttlePath: /Maps/_starcup/Shuttles/emergency_byoin.yml
         - type: StationNameSetup
           mapNameTemplate: '{0} Byōin Station {1}'
           nameGenerator:
@@ -39,7 +39,7 @@
             Mime: [ 1, 1 ]
             Librarian: [ 1, 1 ]
             ServiceWorker: [ 1, 1 ]
-            Boxer: [ 2, 2 ]
+#            Boxer: [ 2, 2 ]  # not supported by map
           #engineering
             AtmosphericTechnician: [ 2, 2 ]
             StationEngineer: [ 2, 2 ]
