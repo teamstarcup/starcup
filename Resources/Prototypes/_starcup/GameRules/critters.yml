@@ -274,6 +274,100 @@
     ventBreakChance: 1.0
     ventReplacement: GasVentPumpBroken
 
+- type: entity
+  id: AberrantFleshSpawnHorde
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-horde-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 20
+    minimumPlayers: 15
+    weight: 5
+    duration: 15
+    maxDuration: 30
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 4, 8
+        children:
+        - id: MobFleshJared
+        - id: MobFleshGolem
+        - id: MobFleshClamp
+        - id: MobFleshLover
+    passiveSound:
+      path: /Audio/_starcup/VentCritters/vent_flesh.ogg
+    endSound:
+      collection: MetalBreak
+    ventBreakChance: 1.0
+    ventReplacement: GasVentPumpBroken
+
+- type: entity
+  id: LeechSpawnHorde
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-horde-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 20
+    minimumPlayers: 15
+    weight: 5
+    duration: 15
+    maxDuration: 30
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 4, 8
+        children:
+        - id: MobTomatoKiller
+
+- type: entity
+  id: HivelordSpawnHorde
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-horde-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 20
+    minimumPlayers: 15
+    weight: 5
+    duration: 15
+    maxDuration: 30
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 1
+        children:
+        - id: MobHivelord
+        - id: MobHivelordColony
+
+- type: entity
+  id: SpaceTickSpawnHorde
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-horde-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 20
+    minimumPlayers: 15
+    weight: 5
+    duration: 15
+    maxDuration: 30
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 3, 5
+        children:
+        - id: MobTick
+
 # hostile (low pop variants)
 - type: entity
   id: SlimesSpawnHordeLowPop

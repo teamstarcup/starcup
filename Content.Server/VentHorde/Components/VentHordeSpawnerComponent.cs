@@ -54,7 +54,7 @@ public sealed partial class VentHordeSpawnerComponent : Component
     /// Plays on loop when a vent is selected as a spawner.
     /// </summary>
     [DataField]
-    public SoundSpecifier PassiveSound = new SoundPathSpecifier("/Audio/Machines/airlock_creaking.ogg")
+    public SoundSpecifier PassiveSound = new SoundCollectionSpecifier("VentCrawlGeneric") // starcup: new sound collection
     {
         Params = AudioParams.Default.WithVolume(-3f),
     };
