@@ -5,86 +5,92 @@
   id: CalmCritterEventsTable
   table: !type:AllSelector
     children:
+    - id: SnailMigration
     - id: SnailMigrationLowPop
     - id: CockroachMigration
     - id: MouseMigration
-    - id: MothroachSpawn
+    - id: MothroachMigration
+    - id: FliesMigration
+    - id: BeetleMigration
+    - !type:GroupSelector
+      children:
+      - id: MouseMigrationLocalized
+      - id: CockroachMigrationLocalized
+      - id: SnailMigrationLocalized
+      - id: BatMigrationLocalized
+      - id: RaccoonMigrationLocalized
+      - id: SnakeMigrationLocalized
+      - id: DionaNymphMigrationLocalized
+      - id: LizardMigrationLocalized
 
 - type: entityTable
   id: HostileCritterEventsTable
   table: !type:AllSelector
     children:
-    - id: SlimesSpawnLocalized
-    - id: SnakeSpawnLocalized
-    - id: SpiderSpawnLocalized
-    - id: SpiderClownSpawnLocalized
+    - id: SlimesSpawnHorde
+    - id: SnakeSpawnHorde
+    - id: SpiderSpawnHorde
+    #- id: SpiderClownSpawnHorde # Ugh it's so silly
+    - id: XenoSpawnHorde
+    - id: MosquitoSpawnHorde
+    - id: WaspSpawnHorde
+    - id: LeechSpawnHorde
+    - id: CarpSpawnHorde
+    - id: AberrantFleshSpawnHorde
+    - id: TomatoKillerSpawnHorde
+    - id: HivelordSpawnHorde
+    - id: SpaceTickSpawnHorde
+    # low pop variants
+    - id: SlimesSpawnHordeLowPop
+    - id: SnakeSpawnHordeLowPop
+    - id: SpiderSpawnHordeLowPop
+    - id: XenoSpawnHordeLowPop
+    - id: MosquitoSpawnHordeLowPop
+    - id: WaspSpawnHordeLowPop
+    - id: LeechSpawnHordeLowPop
+    - id: CarpSpawnHordeLowPop
+    - id: AberrantFleshSpawnHordeLowPop
+    - id: TomatoKillerSpawnHordeLowPop
+    - id: HivelordSpawnHordeLowPop
+    - id: SpaceTickSpawnHordeLowPop
 
-# pests
+# pests (widespread)
 
 - type: entity
-  id: MouseMigrationLocalized
+  id: FliesMigration
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    startAnnouncement: station-event-vent-creatures-start-announcement
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
     earliestStart: 15
-    weight: 6
-    duration: 30
-  - type: VentCrittersRuleLocalized
-    table: !type:GroupSelector
-      children:
-      - id: MobMouse
-      - id: MobMouse1
-      - id: MobMouse2
-
-- type: entity
-  id: CockroachMigrationLocalized
-  parent: BaseStationEventShortDelay
-  components:
-  - type: StationEvent
-    startAnnouncement: station-event-vent-creatures-start-announcement
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
-    weight: 6
-    duration: 30
-  - type: VentCrittersRuleLocalized
-    table: !type:GroupSelector
-      children:
-      - id: MobCockroach
-        weight: 0.9
-      - id: MobMothroach
-        weight: 0.1
-
-- type: entity
-  id: SnailMigrationLowPopLocalized
-  parent: BaseStationEventShortDelay
-  components:
-  - type: StationEvent
-    startAnnouncement: station-event-vent-creatures-start-announcement
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
+    minimumPlayers: 5 # starcup: 15 -> 5
     weight: 6
     duration: 50
-  - type: VentCrittersRuleLocalized
-    table: !type:GroupSelector
-      children:
-      - id: MobSnail
-        weight: 0.9
-      - id: MobSnailSpeed
-        weight: 0.05
-      - id: MobSnailMoth
-        weight: 0.05
+  - type: VentCrittersRule
+    entries:
+    - id: MobFlySwarm
+      prob: 0.02
 
 - type: entity
-  id: MothroachSpawn
+  id: BeetleMigration
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    earliestStart: 15
+    minimumPlayers: 5 # starcup: 15 -> 5
+    weight: 6
+    duration: 50
+  - type: VentCrittersRule
+    entries:
+    - id: MobBeetleStag
+    - id: MobBeetleRhino
+    - id: MobBeetleJune
+    - id: MobLadybug
+
+- type: entity
+  id: MothroachMigration # starcup: renamed from MothroachSpawn
   parent: BaseGameRule
   components:
   - type: StationEvent
-    startAnnouncement: station-event-vent-creatures-start-announcement
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
     earliestStart: 15
     minimumPlayers: 5 # starcup: 15 -> 5
     weight: 4
@@ -94,23 +100,206 @@
     - id: MobMothroach
       prob: 0.02
     - id: MobMoproach
-      prob: 0.0005
+      prob: 0.002 # starcup: 0.0005
+
+# pests (localized)
 
 - type: entity
-  id: FliesMigration
+  id: MouseMigrationLocalized
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAnnouncement: station-event-vent-creatures-start-announcement-deltav
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 15
+    weight: 6
+    duration: 30
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 4, 8
+        children:
+        - id: MobMouse
+        - id: MobMouse1
+        - id: MobMouse2
+    passiveSound:
+      path: /Audio/_DEN/VentCritters/vent_harmless_critter.ogg
+    endSound:
+      collection: MetalScrape
+    ventBreakChance: 0.5
+    ventReplacement: GasVentPumpDen
+
+- type: entity
+  id: CockroachMigrationLocalized
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement-deltav
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    weight: 6
+    duration: 30
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 4, 8
+        children:
+        - id: MobCockroach
+          weight: 0.9
+        - id: MobCockroachHL
+          weight: 0.9
+        - id: MobMothroach
+          weight: 0.1
+    passiveSound:
+      path: /Audio/_DEN/VentCritters/vent_harmless_critter.ogg
+
+- type: entity
+  id: SnailMigrationLocalized
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement-deltav
     startAudio:
       path: /Audio/Announcements/attention.ogg
     weight: 6
     duration: 50
-  - type: VentCrittersRule
-    entries:
-      - id: MobFlySwarm
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 2, 3
+        children:
+        - id: MobSnail
+          weight: 0.9
+        - id: MobSnailSpeed
+          weight: 0.05
+        - id: MobSnailMoth
+          weight: 0.05
+    passiveSound:
+      path: /Audio/_DEN/VentCritters/vent_harmless_critter.ogg
 
-# Hostiles
+- type: entity
+  id: BatMigrationLocalized
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement-deltav
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 15
+    weight: 6
+    duration: 30
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 4, 8
+        children:
+        - id: MobBat
+    passiveSound:
+      path: /Audio/_DEN/VentCritters/vent_harmless_critter.ogg
+    endSound:
+      collection: MetalScrape
+
+- type: entity
+  id: RaccoonMigrationLocalized
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement-deltav
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 15
+    weight: 6
+    duration: 30
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 4, 8
+        children:
+        - id: MobRaccoon
+    passiveSound:
+      path: /Audio/_DEN/VentCritters/vent_harmless_critter.ogg
+    endSound:
+      collection: MetalScrape
+
+- type: entity
+  id: SnakeMigrationLocalized
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement-deltav
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 15
+    weight: 6
+    duration: 30
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 4, 8
+        children:
+        - id: MobSnake
+    passiveSound:
+      path: /Audio/_DEN/VentCritters/vent_harmless_critter.ogg
+    endSound:
+      collection: MetalScrape
+
+- type: entity
+  id: DionaNymphMigrationLocalized
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement-deltav
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 15
+    weight: 6
+    duration: 30
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 3, 6
+        children:
+        - id: MobDionaNymphAccent
+    passiveSound:
+      path: /Audio/_DEN/VentCritters/vent_harmless_critter.ogg
+    endSound:
+      collection: MetalScrape
+
+- type: entity
+  id: LizardMigrationLocalized
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement-deltav
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 15
+    weight: 6
+    duration: 30
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 2, 3
+        children:
+        - id: MobSlug
+        - id: MobLizard
+          weight: 0.1
+    passiveSound:
+      path: /Audio/_DEN/VentCritters/vent_harmless_critter.ogg
+    endSound:
+      collection: MetalScrape
+
+# hostiles (localized)
+
 - type: entity
   id: XenoSpawnHorde
   parent: BaseStationEventShortDelay
@@ -170,7 +359,9 @@
     passiveSound:
       path: /Audio/_starcup/VentCritters/vent_mosquitoes.ogg
     endSound:
-      collection: MetalBreak
+      collection: MetalScrape
+      params:
+        volume: -5
     ventBreakChance: 0.5
     ventReplacement: GasVentPumpBroken
 
@@ -197,7 +388,9 @@
     passiveSound:
       path: /Audio/_starcup/VentCritters/vent_mosquitoes.ogg
     endSound:
-      collection: MetalBreak
+      collection: MetalScrape
+      params:
+        volume: -5
     ventBreakChance: 0.7
     ventReplacement: GasVentPumpBroken
 
@@ -302,10 +495,10 @@
     endSound:
       collection: MetalBreak
     ventBreakChance: 1.0
-    ventReplacement: GasVentPumpBroken
+    ventReplacement: GasVentPumpPulsating
 
 - type: entity
-  id: LeechSpawnHorde
+  id: TomatoKillerSpawnHorde
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
@@ -346,6 +539,10 @@
         children:
         - id: MobHivelord
         - id: MobHivelordColony
+    endSound:
+      collection: MetalScrape
+      params:
+        volume: -5
 
 - type: entity
   id: SpaceTickSpawnHorde
@@ -367,8 +564,13 @@
         rolls: 3, 5
         children:
         - id: MobTick
+    endSound:
+      collection: MetalScrape
+      params:
+        volume: -5
 
-# hostile (low pop variants)
+# hostile (localized, low pop variants)
+
 - type: entity
   id: SlimesSpawnHordeLowPop
   parent: SlimesSpawnHorde
@@ -392,6 +594,7 @@
   components:
   - type: StationEvent
     minimumPlayers: 7
+  - type: VentHordeRule
     table: !type:AllSelector
       children:
       - !type:GroupSelector
@@ -422,6 +625,7 @@
   components:
   - type: StationEvent
     minimumPlayers: 7
+  - type: VentHordeRule
     table: !type:AllSelector
       children:
       - !type:GroupSelector
@@ -442,6 +646,7 @@
   components:
   - type: StationEvent
     minimumPlayers: 7
+  - type: VentHordeRule
     table: !type:AllSelector
       children:
       - !type:GroupSelector
@@ -450,3 +655,109 @@
         - id: MobGiantMosquito
         - id: MobMosquitoSwarm
           weight: 0.3
+
+- type: entity
+  id: WaspSpawnHordeLowPop
+  parent: WaspSpawnHorde
+  components:
+  - type: StationEvent
+    minimumPlayers: 7
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 3, 5
+        children:
+        - id: MobGiantWasp
+
+- type: entity
+  id: LeechSpawnHordeLowPop
+  parent: LeechSpawnHorde
+  components:
+  - type: StationEvent
+    minimumPlayers: 7
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 3, 5
+        children:
+        - id: MobCharonicLeech
+
+- type: entity
+  id: CarpSpawnHordeLowPop
+  parent: CarpSpawnHorde
+  components:
+  - type: StationEvent
+    minimumPlayers: 7
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 2, 3
+        children:
+        - id: MobCarp
+        - id: MobCarpSplitfin
+        - id: MobCarpVampire
+        - id: MobCarpQueen
+        - !type:GroupSelector
+          weight: 0.5
+          rolls: 1
+          children:
+          - id: MobShark
+          - id: MobSharkBlue
+          - id: MobSharkBrown
+          - id: MobSharkGreen
+          - id: MobSharkFat
+          - id: MobSharkShelled
+          - id: MobSharkShelledBlue
+          - id: MobSharkShelledBrown
+          - id: MobSharkShelledGreen
+          - id: MobSharkVampire
+        - id: MobPike
+          weight: 0.1
+
+- type: entity
+  id: AberrantFleshSpawnHordeLowPop
+  parent: AberrantFleshSpawnHorde
+  components:
+  - type: StationEvent
+    minimumPlayers: 7
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 2, 3
+        children:
+        - id: MobFleshJared
+        - id: MobFleshGolem
+        - id: MobFleshClamp
+        - id: MobFleshLover
+
+- type: entity
+  id: TomatoKillerLowPop
+  parent: LeechSpawnHorde
+  components:
+  - type: StationEvent
+    minimumPlayers: 7
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 2, 3
+        children:
+        - id: MobTomatoKiller
+
+- type: entity
+  id: SpaceTickSpawnHordeLowPop
+  parent: SpaceTickSpawnHorde
+  components:
+  - type: StationEvent
+    minimumPlayers: 7
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 1, 2
+        children:
+        - id: MobTick
