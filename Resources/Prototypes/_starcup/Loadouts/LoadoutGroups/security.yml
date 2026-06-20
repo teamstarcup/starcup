@@ -83,6 +83,8 @@
   loadouts:
   - BrigmedicJumpsuit
   - BrigmedicJumpskirt
+  - JumpskirtOfLife
+  - FieldMedicJumpsuit
 
 - type: loadoutGroup
   id: BrigmedicOuterClothing
@@ -100,6 +102,7 @@
   loadouts:
   - LatexGloves
   - BlackGloves
+  - NitrileGloves
 
 - type: loadoutGroup
   id: BrigmedicShoes
@@ -130,6 +133,17 @@
   - EmergencyBoxMKC
 
 # Detective
+- type: loadoutGroup
+  parent: [ Glasses ]
+  id: DetectiveEyewear
+  name: loadout-group-detective-glasses
+  minLimit: 0
+  loadouts:
+  - SecurityGlasses
+  - SecurityHud
+  - SecurityEyePatchHud
+  - NoirGlasses
+
 - type: loadoutGroup
   id: DetectiveBackpack
   name: loadout-group-detective-backpack

@@ -42,6 +42,7 @@
           acts: [ "Destruction" ]
 
 - type: entity
+  parent: VascularSystemPlant # starcup: add a bloodstream-like mechanic to trees
   id: BaseTree
   description: Yep, it's a tree.
   abstract: true
@@ -173,7 +174,7 @@
         density: 2000
         layer:
         - WallLayer
-  # begin starcup: add stumps
+  # begin starcup: add stumps and a bloodstream-like mechanic to trees
   - type: Destructible
     thresholds:
     - trigger:
@@ -203,7 +204,14 @@
             min: 1
             max: 1
         offset: 0
-  # end starcup
+  - type: SolutionContainerManager
+    solutions:
+      pool:
+        maxVol: 50
+        reagents:
+        - ReagentId: Resin
+          Quantity: 50
+    # end starcup
 
 - type: entity
   parent: BaseTree

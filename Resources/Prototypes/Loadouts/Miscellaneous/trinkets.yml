@@ -317,12 +317,12 @@
 
 - type: loadout
   id: Cane
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobLibrarian
-      time: 3600 # 1hr same as Jamjar.
+#  effects: # starcup - removed job requirement, it's just an accessibility item!
+#  - !type:JobRequirementLoadoutEffect
+#    requirement:
+#      !type:RoleTimeRequirement
+#      role: JobLibrarian
+#      time: 3600 # 1hr same as Jamjar.
   storage:
     back:
     - Cane

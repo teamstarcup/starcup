@@ -182,6 +182,9 @@ marking-ScreenRainbowhoriz-screen_rainbowhoriz = Screen
 marking-ScreenBsod = BSOD
 marking-ScreenBsod-screen_bsod = Screen
 
+marking-ScreenDot = Dot
+markng-ScreenDot-screen_dot = Screen
+
 marking-ScreenRedtext = Red Text
 marking-ScreenRedtext-screen_redtext = Screen
 

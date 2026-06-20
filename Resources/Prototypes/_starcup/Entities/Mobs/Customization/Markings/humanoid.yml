@@ -1,0 +1,59 @@
+# Eyes
+- type: marking
+  id: EyesGlowing
+  bodyPart: Eyes
+  groupWhitelist: [Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Harpy]
+  sprites:
+  - sprite: Mobs/Customization/eyes.rsi
+    state: eyes
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  shaders:
+    eyes: unshaded
+
+- type: marking
+  id: TattooEyeRightGlowing
+  bodyPart: Eyes
+  groupWhitelist: [Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Harpy]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+          negative: true
+  sprites:
+  - sprite: Mobs/Customization/tattoos.rsi
+    state: tattoo_eye_r
+  shaders:
+    tattoo_eye_r: unshaded
+
+- type: marking
+  id: TattooEyeLeftGlowing
+  bodyPart: Eyes
+  groupWhitelist: [Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Harpy]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+          negative: true
+  sprites:
+  - sprite: Mobs/Customization/tattoos.rsi
+    state: tattoo_eye_l
+  shaders:
+    tattoo_eye_l: unshaded
+
+- type: marking
+  id: MakeupBlushGlowing
+  bodyPart: Head
+  groupWhitelist: [Human, Oni, Rodentia, Felinid, Vulpkanin, Reptilian, Slime, Harpy]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#d39394"
+  sprites:
+  - sprite: _DV/Mobs/Customization/makeup.rsi
+    state: blush
+  shaders:
+    blush: unshaded

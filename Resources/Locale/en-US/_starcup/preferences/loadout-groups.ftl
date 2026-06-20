@@ -7,6 +7,8 @@ loadout-group-technical-assistant-outerclothing = Technical assistant outer clot
 # Logistics
 loadout-group-cargo-technician-neck = Cargo technician neck
 
+loadout-group-logistics-gloves = Logistics gloves
+
 loadout-group-courier-belt = Courier belt
 loadout-group-courier-backpack = Courier backpack
 
@@ -43,6 +45,7 @@ loadout-group-brigmedic-backpack = Combat Medic backpack
 
 loadout-group-detective-backpack = Detective backpack
 loadout-group-detective-shoes = Detective shoes
+loadout-group-detective-glasses = Detective glasses
 
 loadout-group-security-cadet-outerclothing = Security cadet outer clothing
 
