@@ -114,7 +114,8 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 15
     weight: 6
-    duration: 30
+    duration: 15
+    maxDuration: 30
   - type: VentHordeRule
     table: !type:AllSelector
       children:
@@ -128,6 +129,8 @@
       path: /Audio/_DEN/VentCritters/vent_harmless_critter.ogg
     endSound:
       collection: MetalScrape
+      params:
+        volume: -5
     ventBreakChance: 0.5
     ventReplacement: GasVentPumpDen
 
@@ -140,7 +143,8 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     weight: 6
-    duration: 30
+    duration: 5
+    maxDuration: 17
   - type: VentHordeRule
     table: !type:AllSelector
       children:
@@ -154,7 +158,7 @@
         - id: MobMothroach
           weight: 0.1
     passiveSound:
-      path: /Audio/_DEN/VentCritters/vent_harmless_critter.ogg
+      path: /Audio/_starcup/VentCritters/vent_bugs.ogg
 
 - type: entity
   id: SnailMigrationLocalized
@@ -165,7 +169,8 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     weight: 6
-    duration: 50
+    duration: 5
+    maxDuration: 16
   - type: VentHordeRule
     table: !type:AllSelector
       children:
@@ -179,7 +184,7 @@
         - id: MobSnailMoth
           weight: 0.05
     passiveSound:
-      path: /Audio/_DEN/VentCritters/vent_harmless_critter.ogg
+      path: /Audio/_starcup/VentCritters/vent_bugs.ogg
 
 - type: entity
   id: BatMigrationLocalized
@@ -191,7 +196,8 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 15
     weight: 6
-    duration: 30
+    duration: 15
+    maxDuration: 30
   - type: VentHordeRule
     table: !type:AllSelector
       children:
@@ -203,6 +209,10 @@
       path: /Audio/_DEN/VentCritters/vent_harmless_critter.ogg
     endSound:
       collection: MetalScrape
+      params:
+        volume: -5
+    ventBreakChance: 0.5
+    ventReplacement: GasVentPumpDen
 
 - type: entity
   id: RaccoonMigrationLocalized
@@ -214,7 +224,8 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 15
     weight: 6
-    duration: 30
+    duration: 15
+    maxDuration: 30
   - type: VentHordeRule
     table: !type:AllSelector
       children:
@@ -226,6 +237,8 @@
       path: /Audio/_DEN/VentCritters/vent_harmless_critter.ogg
     endSound:
       collection: MetalScrape
+      params:
+        volume: -5
 
 - type: entity
   id: SnakeMigrationLocalized
@@ -237,7 +250,8 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 15
     weight: 6
-    duration: 30
+    duration: 15
+    maxDuration: 30
   - type: VentHordeRule
     table: !type:AllSelector
       children:
@@ -249,6 +263,8 @@
       path: /Audio/_DEN/VentCritters/vent_harmless_critter.ogg
     endSound:
       collection: MetalScrape
+      params:
+        volume: -5
 
 - type: entity
   id: DionaNymphMigrationLocalized
@@ -260,7 +276,8 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 15
     weight: 6
-    duration: 30
+    duration: 5
+    maxDuration: 16
   - type: VentHordeRule
     table: !type:AllSelector
       children:
@@ -269,9 +286,37 @@
         children:
         - id: MobDionaNymphAccent
     passiveSound:
-      path: /Audio/_DEN/VentCritters/vent_harmless_critter.ogg
+      path: /Audio/_starcup/VentCritters/vent_bugs.ogg
     endSound:
       collection: MetalScrape
+      params:
+        volume: -5
+
+- type: entity
+  id: DragonflyMigrationLocalized
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement-deltav
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 15
+    weight: 6
+    duration: 5
+    maxDuration: 16
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 3, 6
+        children:
+        - id: MobDragonfly
+    passiveSound:
+      path: /Audio/_starcup/VentCritters/vent_bugs.ogg
+    endSound:
+      collection: MetalScrape
+      params:
+        volume: -5
 
 - type: entity
   id: LizardMigrationLocalized
@@ -283,7 +328,8 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 15
     weight: 6
-    duration: 30
+    duration: 15
+    maxDuration: 30
   - type: VentHordeRule
     table: !type:AllSelector
       children:
@@ -297,6 +343,8 @@
       path: /Audio/_DEN/VentCritters/vent_harmless_critter.ogg
     endSound:
       collection: MetalScrape
+      params:
+        volume: -5
 
 # hostiles (localized)
 
@@ -564,6 +612,8 @@
         rolls: 3, 5
         children:
         - id: MobTick
+    passiveSound:
+      path: /Audio/_starcup/VentCritters/vent_bugs.ogg
     endSound:
       collection: MetalScrape
       params:
