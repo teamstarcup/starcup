@@ -85,6 +85,7 @@ loadout-group-mime-shoes = Mime shoes
 
 loadout-group-musician-glasses = Musician glasses
 loadout-group-musician-shoes = Musician shoes
+loadout-group-musician-head = Musician head
 
 loadout-group-passenger-glasses = Passenger eyewear
 
