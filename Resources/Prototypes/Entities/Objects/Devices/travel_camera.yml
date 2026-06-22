@@ -39,7 +39,7 @@
   parent: BasePaper
   id: BasePhotograph
   name: photograph
-  components:
+  components: # begin starcup
   - type: Paper
   - type: ActivatableUI
     key: enum.PaperUiKey.Key
@@ -47,13 +47,7 @@
   - type: UserInterface
     interfaces:
       enum.PaperUiKey.Key:
-        type: PaperBoundUserInterface
-  - type: FaxableObject
-  - type: PaperVisuals
-    backgroundImagePath: "/Textures/Interface/Paper/paper_background_book.svg.96dpi.png"
-    backgroundPatchMargin: 8.0, 8.0, 8.0, 8.0
-    contentMargin: 5.0, 5.0, 5.0, 5.0
-    resizable: true
+        type: PaperBoundUserInterface # should add faxable component once we get around to making it copy the actual photo, end starcup
 
 - type: entity
   parent: BasePhotograph
