@@ -39,6 +39,16 @@
   parent: BasePaper
   id: BasePhotograph
   name: photograph
+  components:
+  - type: Paper
+  - type: ActivatableUI
+    key: enum.PaperUiKey.Key
+    requiresComplex: false
+  - type: UserInterface
+    interfaces:
+      enum.PaperUiKey.Key:
+        type: PaperBoundUserInterface
+  - type: FaxableObject
 
 - type: entity
   parent: BasePhotograph
