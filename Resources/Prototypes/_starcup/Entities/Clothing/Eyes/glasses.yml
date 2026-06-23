@@ -23,3 +23,31 @@
     protectionTime: 3
   - type: IdentityBlocker
     coverage: EYES
+
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesSecBallistic
+  name: Security Ballistic Goggles
+  description: A pair of Surplus Ballistic goggles from the one of the many neocorporate wars', likely used by some company's Ground forces. Retrofitted with a civillian Security HUD, these eyewears were a common sight back during the wars, but nowerdays are out of fashion, due to the size. Despite their name, do not protect from ballistics.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Glasses/Security_Ballistic_goggles.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Glasses/Security_Ballistic_goggles.rsi
+  - type: FlashImmunity
+  - type: ShowJobIcons
+  - type: ShowMindShieldIcons
+  - type: ShowCriminalRecordIcons
+  - type: ShowContrabandDetails
+  - type: EyeProtection
+    protectionTime: 5
+  - type: GuideHelp
+    guides:
+    - Security
+    - Antagonists
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: Tag
+    tags:
+    - WhitelistChameleon
