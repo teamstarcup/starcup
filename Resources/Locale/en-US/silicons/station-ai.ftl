@@ -49,9 +49,25 @@ station-ai-icon-clown = Clownin' around
 station-ai-icon-dorf = Adventure awaits
 station-ai-icon-heartline = Lifeline
 station-ai-icon-smiley = All smiles
+# begin starcup
+station-ai-icon-carp = Space danger
+# end starcup
 
-station-ai-hologram-female = Female appearance
-station-ai-hologram-male = Male appearance
+# begin starcup: added "humanoid" for tone
+station-ai-hologram-female = Female humanoid appearance
+station-ai-hologram-male = Male humanoid appearance
+# end starcup
 station-ai-hologram-face = Disembodied head
 station-ai-hologram-cat = Cat form
 station-ai-hologram-dog = Corgi form
+# begin starcup: new additions
+station-ai-hologram-clown = Clown appearance
+station-ai-hologram-weh = Emotionally appeasing form
+station-ai-hologram-mothroach = Mothroach form
+station-ai-hologram-moth = Doptera appearance
+station-ai-hologram-lizard = Unathi appearance
+station-ai-hologram-arachnid = Arachnid appearance
+station-ai-hologram-vox = Vox appearance
+station-ai-hologram-nymph = Diona nymph form
+station-ai-hologram-carp = Carp form
+# end starcup
