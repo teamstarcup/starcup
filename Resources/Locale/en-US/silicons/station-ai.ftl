@@ -102,6 +102,15 @@ station-ai-icon-hourglass = Hourglass
 station-ai-icon-rat = Rat
 station-ai-icon-royal = Royal
 station-ai-icon-sillycon = Sillycon
+station-ai-icon-bloodylove = Bloodylove
+station-ai-icon-cheerful = Cheerful
+station-ai-icon-fabulous = Fabulous
+station-ai-icon-honeycomb = Honeycomb
+station-ai-icon-hourglass = Hourglass
+station-ai-icon-ravensdale = Ravensdale
+station-ai-icon-sheltered = Sheltered
+station-ai-icon-terminal = Terminal
+station-ai-icon-wasp = Wasp
 # end starcup
 
 # begin starcup: added "humanoid" for tone
@@ -144,4 +153,12 @@ station-ai-hologram-punkfemale = Punk female humanoid appearance
 station-ai-hologram-punkmale = Punk male humanoid appearance
 station-ai-hologram-purrfus = Purrfus form
 station-ai-hologram-rat = Rat form
+station-ai-hologram-algalone = Algal One form
+station-ai-hologram-fractalsnowflake = Fractal Snowflake form
+station-ai-hologram-hensonsnode = Henson's Node form
+station-ai-hologram-longrun = Long Run form
+station-ai-hologram-puredata = Pure Data form
+station-ai-hologram-rorschach = Rorschach form
+station-ai-hologram-seraphim = Seraphim appearance
+station-ai-hologram-tripleaffirmative = Triple Affirmative form
 # end starcup
