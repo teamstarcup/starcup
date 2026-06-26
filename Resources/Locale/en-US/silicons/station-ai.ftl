@@ -51,6 +51,18 @@ station-ai-icon-heartline = Lifeline
 station-ai-icon-smiley = All smiles
 # begin starcup
 station-ai-icon-carp = Space danger
+station-ai-icon-anima = Anima
+station-ai-icon-borb = Bird
+station-ai-icon-darkmatter = Shadow Cat
+station-ai-icon-firewall = Firewall
+station-ai-icon-fuzzy = The Static
+station-ai-icon-glitchman = Glitchman
+station-ai-icon-hal-9000 = Red dot
+station-ai-icon-lamp = Mothmaxxed
+station-ai-icon-liz = Lizard
+station-ai-icon-matrix = Falling green text
+station-ai-icon-triumvirate = Triumvirate
+station-ai-icon-vox = Vox
 # end starcup
 
 # begin starcup: added "humanoid" for tone
@@ -70,4 +82,13 @@ station-ai-hologram-arachnid = Arachnid appearance
 station-ai-hologram-vox = Vox appearance
 station-ai-hologram-nymph = Diona nymph form
 station-ai-hologram-carp = Carp form
+station-ai-hologram-cookie = Gingerbread form
+station-ai-hologram-diona = Diona appearance
+station-ai-hologram-vulpkanin = Vulpkanin appearance
+station-ai-hologram-angel = Angel appearance
+station-ai-hologram-devil = Devil appearance
+station-ai-hologram-archangel = Archangel appearance
+station-ai-hologram-borb = Bird form
+station-ai-hologram-cloudkat = Cloud cat form
+station-ai-hologram-frostphoenix = Frost phoenix form
 # end starcup
