@@ -1,18 +1,10 @@
 - type: entity
-  parent: BaseItem
+  parent: TravelCamera
   id: TravelCameraSafe
   name: travel camera
+  suffix: Safe
   description: A picture says more than a thousand words. Comes with a flash and an internal recharging photo roll.
   components:
-    # aptly named component for picture taking
-  - type: PictureTaker
-    photographs: !type:GroupSelector
-      children:
-      - !type:NestedSelector
-        tableId: TravelCameraPhotographs
-  - type: Sprite
-    sprite: Objects/Devices/travel_camera.rsi
-    state: icon
   - type: Flash
     flashOnRangedInteract: true
     meleeDuration: 0
@@ -21,18 +13,3 @@
     range: 0
     sound: !type:SoundPathSpecifier
       path: /Audio/Misc/camera_snap.ogg
-  - type: MeleeWeapon # allows using the camera in melee
-    damage:
-      types:
-        Blunt: 0
-  - type: LimitedCharges
-    maxCharges: 4
-  - type: AutoRecharge
-    rechargeDuration: 60
-  - type: UseDelay
-  - type: StaticPrice
-    price: 100
-  - type: Clothing
-    slots:
-    - NECK
-    sprite: Objects/Devices/travel_camera.rsi
