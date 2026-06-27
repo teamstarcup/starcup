@@ -1,0 +1,53 @@
+using System.Numerics;
+using Content.Shared._starcup.Overlays;
+using Robust.Client.Graphics;
+using Robust.Client.Player;
+using Robust.Shared.Enums;
+using Robust.Shared.Prototypes;
+
+namespace Content.Client._starcup.Overlays;
+
+public sealed partial class ScreenVisionOverlay : Overlay
+{
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] IEntityManager _entityManager = default!;
+
+    private static readonly ProtoId<ShaderPrototype> ScreenVision = "ScreenVision"; // starcup: use constant
+
+    public override bool RequestScreenTexture => true;
+    public override OverlaySpace Space => OverlaySpace.WorldSpace;
+    private readonly ShaderInstance _ultraVisionShader;
+
+    public ScreenVisionOverlay()
+    {
+        IoCManager.InjectDependencies(this);
+        _ultraVisionShader = _prototypeManager.Index(ScreenVision).Instance().Duplicate(); // starcup: use constant
+    }
+
+    protected override bool BeforeDraw(in OverlayDrawArgs args)
+    {
+        if (_playerManager.LocalEntity is not { Valid: true } player
+            || !_entityManager.HasComponent<ScreenVisionComponent>(player))
+        {
+            return false;
+        }
+
+        return base.BeforeDraw(in args);
+    }
+
+    protected override void Draw(in OverlayDrawArgs args)
+    {
+        if (ScreenTexture is null)
+            return;
+
+        _ultraVisionShader.SetParameter("SCREEN_TEXTURE", ScreenTexture);
+
+        var worldHandle = args.WorldHandle;
+        var viewport = args.WorldBounds;
+        worldHandle.SetTransform(Matrix3x2.Identity);
+        worldHandle.UseShader(_ultraVisionShader);
+        worldHandle.DrawRect(viewport, Color.White);
+        worldHandle.UseShader(null); // important - as of writing, construction overlay breaks without this
+    }
+}
