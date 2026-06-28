@@ -229,3 +229,87 @@
         loop: true
     positional: true
     predicted: true
+
+- type: entity
+  parent: GasVentPumpInfested
+  id: GasVentPumpHiveWasp
+  name: vent hive
+  suffix: giant wasps
+  description: Buzzing wings and clicking mandibles echo inside.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Piping/vent_destroyed.rsi
+    layers:
+    - sprite: Structures/Piping/Atmospherics/pipe.rsi
+      state: pipeUnaryConnectors
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: vent_hive
+      map: [ "enum.SubfloorLayers.FirstLayer" ]
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MobGiantWasp:
+            min: 1
+            max: 3
+        offset: 0
+  - type: TimedSpawner
+    prototypes:
+    - MobGiantWasp
+    chance: 0.1
+  - type: TriggerOnSpawn
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_starcup/Ambience/Objects/vent_den.ogg
+      params:
+        maxDistance: 4
+        loop: true
+    positional: true
+    predicted: true
+
+- type: entity
+  parent: GasVentPumpHiveWasp
+  id: GasVentPumpHiveSandwasp
+  name: vent hive
+  suffix: giant sandwasps
+  description: Buzzing wings and clicking mandibles echo inside.
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MobGiantSandwasp:
+            min: 0
+            max: 1
+        offset: 0
+  - type: TimedSpawner
+    prototypes:
+    - MobGiantSandwasp
+    chance: 0.05
+  - type: TriggerOnSpawn
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_starcup/Ambience/Objects/vent_den.ogg
+      params:
+        maxDistance: 4
+        loop: true
+    positional: true
+    predicted: true
