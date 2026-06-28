@@ -58,7 +58,7 @@
         reagents:
         - ReagentId: Sugar
           Quantity: 17
-        - ReagentId: Water
+        - ReagentId: PlantDetritus
           Quantity: 8
   - type: SolutionRegeneration
     solution: vasculature
@@ -66,7 +66,7 @@
       reagents:
       - ReagentId: Sugar
         Quantity: 0.003
-      - ReagentId: Water
+      - ReagentId: PlantDetritus
         Quantity: 0.001
 
 - type: entity
@@ -101,7 +101,7 @@
         reagents:
         - ReagentId: Sugar
           Quantity: 10
-        - ReagentId: Water
+        - ReagentId: PlantDetritus
           Quantity: 5
   - type: SolutionRegeneration
     solution: vasculature
@@ -109,7 +109,7 @@
       reagents:
       - ReagentId: Sugar
         Quantity: 0.003
-      - ReagentId: Water
+      - ReagentId: PlantDetritus
         Quantity: 0.001
 
 - type: entity
@@ -157,7 +157,7 @@
         reagents:
         - ReagentId: Sugar
           Quantity: 30
-        - ReagentId: Water
+        - ReagentId: PlantDetritus
           Quantity: 10
   - type: SolutionRegeneration
     solution: vasculature
@@ -165,7 +165,7 @@
       reagents:
       - ReagentId: Sugar
         Quantity: 0.003
-      - ReagentId: Water
+      - ReagentId: PlantDetritus
         Quantity: 0.001
 
 # Cacti species
@@ -196,6 +196,23 @@
         cactus02: ""
         cactus03: ""
         cactus04: ""
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 15
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 10
+        - ReagentId: Water
+          Quantity: 5
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 0.003
+      - ReagentId: Water
+        Quantity: 0.001
 
 - type: entity
   parent: BaseCactusGiant
@@ -215,6 +232,23 @@
         cactus02: ""
         cactus03: ""
         cactus04: ""
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 40
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 30
+        - ReagentId: Water
+          Quantity: 10
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 0.003
+      - ReagentId: Water
+        Quantity: 0.001
 
 - type: entity
   parent: BaseCactusGiant
@@ -242,7 +276,7 @@
         reagents:
         - ReagentId: Sugar
           Quantity: 20
-        - ReagentId: Water
+        - ReagentId: PlantDetritus
           Quantity: 10
         - ReagentId: Blood
           Quantity: 10
@@ -252,7 +286,7 @@
       reagents:
       - ReagentId: Sugar
         Quantity: 0.003
-      - ReagentId: Water
+      - ReagentId: PlantDetritus
         Quantity: 0.001
       - ReagentId: Blood
         Quantity: 0.001
@@ -289,7 +323,7 @@
         reagents:
         - ReagentId: Sugar
           Quantity: 35
-        - ReagentId: Water
+        - ReagentId: PlantDetritus
           Quantity: 18
         - ReagentId: Blood
           Quantity: 17
@@ -299,7 +333,7 @@
       reagents:
       - ReagentId: Sugar
         Quantity: 0.003
-      - ReagentId: Water
+      - ReagentId: PlantDetritus
         Quantity: 0.001
       - ReagentId: Blood
         Quantity: 0.001
@@ -320,7 +354,7 @@
         reagents:
         - ReagentId: Sugar
           Quantity: 35
-        - ReagentId: Water
+        - ReagentId: PlantDetritus
           Quantity: 18
         - ReagentId: UnstableMutagen
           Quantity: 17
@@ -330,7 +364,7 @@
       reagents:
       - ReagentId: Sugar
         Quantity: 0.003
-      - ReagentId: Water
+      - ReagentId: PlantDetritus
         Quantity: 0.001
       - ReagentId: UnstableMutagen
         Quantity: 0.001
@@ -359,7 +393,7 @@
         reagents:
         - ReagentId: Sugar
           Quantity: 35
-        - ReagentId: Water
+        - ReagentId: PlantDetritus
           Quantity: 18
         - ReagentId: UnstableMutagen
           Quantity: 17
@@ -369,7 +403,7 @@
       reagents:
       - ReagentId: Sugar
         Quantity: 0.003
-      - ReagentId: Water
+      - ReagentId: PlantDetritus
         Quantity: 0.001
       - ReagentId: UnstableMutagen
         Quantity: 0.001
