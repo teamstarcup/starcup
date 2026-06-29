@@ -11,9 +11,9 @@ public sealed partial class ScreenVisionOverlay : Overlay
 {
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
-    [Dependency] IEntityManager _entityManager = default!;
+    [Dependency] private readonly IEntityManager _entityManager = default!;
 
-    private static readonly ProtoId<ShaderPrototype> ScreenVision = "ScreenVision"; // starcup: use constant
+    private static readonly ProtoId<ShaderPrototype> ScreenVision = "ScreenVision";
 
     public override bool RequestScreenTexture => true;
     public override OverlaySpace Space => OverlaySpace.WorldSpace;
@@ -22,7 +22,7 @@ public sealed partial class ScreenVisionOverlay : Overlay
     public ScreenVisionOverlay()
     {
         IoCManager.InjectDependencies(this);
-        _ultraVisionShader = _prototypeManager.Index(ScreenVision).Instance().Duplicate(); // starcup: use constant
+        _ultraVisionShader = _prototypeManager.Index(ScreenVision).Instance().Duplicate();
     }
 
     protected override bool BeforeDraw(in OverlayDrawArgs args)
