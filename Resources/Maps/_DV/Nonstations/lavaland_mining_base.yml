@@ -4862,16 +4862,10 @@ entities:
 - proto: FaxMachineBase
   entities:
   - uid: 375
-    mapInit: true
-    paused: true
     components:
     - type: Transform
       pos: -5.5,1.5
       parent: 1
-    - type: DeviceNetwork
-      address: 322E-6013
-      transmitFrequency: 2640
-      receiveFrequency: 2640
     - type: FaxMachine
       name: Mining Base
 - proto: FireExtinguisher
