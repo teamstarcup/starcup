@@ -91,6 +91,24 @@
       - id: ClothingShoesTourist
       - id: ClothingUniformJumpsuitLoungewear
       - id: ClothingHeadHatCowboyRed
+      # begin starcup: corporate jackets
+      - id: ClothingCorpoJacketDiscountDans
+      - id: ClothingCorpoJacketGilthari
+      - id: ClothingCorpoJacketHephaestus
+      - id: ClothingCorpoJacketScarab
+      - id: ClothingCorpoJacketStarship
+      - id: ClothingCorpoJacketBishop
+      - !type:GroupSelector # rarer than the other jackets but not rare enouch for the uncommon thing
+        children:
+        - id: ClothingCorpoJacketCybersun
+        - id: ClothingCorpoJacketCybersunChalice
+        - id: ClothingCorpoJacketHawkmoon
+        - id: ClothingCorpoJacketInterdyne
+        - id: ClothingCorpoJacketElectra
+        - id: ClothingCorpoJacketDonkChef
+        - id: ClothingCorpoJacketDonkRoboticist
+        - id: ClothingCorpoJacketFPA
+      # end starcup
     # Uncommon Group
     - !type:GroupSelector
       weight: 23

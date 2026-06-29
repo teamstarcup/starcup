@@ -36,6 +36,7 @@
 # end starcup
   - BoxFolderPlasticClipboardThreePapers
   - BoxFolderClipboardThreePapers
+  - Camera # starcup
 # begin starcup: moved to Cosmetics
 #  - ClothingNeckLGBTPin
 #  - ClothingNeckAllyPin
@@ -172,8 +173,11 @@
   loadouts:
   - CaptainOuterClothing
   - CaptainWintercoat
-  - CommandSweater # starcup
-  - TrenchCoat # starcup
+  # begin starcup
+  - CommandSweater
+  - TrenchCoat
+  - CorpoJacketCybersun
+  # end starcup
 
 #- type: loadoutGroup
 #  id: CaptainJobTrinkets
@@ -223,8 +227,11 @@
   minLimit: 0
   loadouts:
   - HoPWintercoat
-  - CommandSweater # starcup
-  - TrenchCoat # starcup
+  # begin starcup
+  - CommandSweater
+  - TrenchCoat
+  - CorpoJacketCybersun
+  # end starcup
 
 #- type: loadoutGroup
 #  id: HoPJobTrinkets
@@ -379,6 +386,12 @@
   - WinterCoatWhite
   - WinterCoatYellow
   - TrenchCoat
+  - CorpoJacketCybersun
+  - CorpoJacketHawkmoon
+  - CorpoJacketInterdyne
+  - CorpoJacketElectra
+  - CorpoJacketDonkChef
+  - CorpoJacketDonkRoboticist
   # end starcup
 
 - type: loadoutGroup
@@ -448,6 +461,7 @@
   - BartenderApron
   - BartenderWintercoat
   - BartenderCuteApron # imp
+  - CorpoJacketGilthari # starcup
 
 - type: loadoutGroup
   id: BartenderJobTrinkets
@@ -494,6 +508,7 @@
   - ChefJacket
   - ChefWintercoat
   - ChefCuteApron # imp
+  - CorpoJacketDonkChef # starcup
 
 #- type: loadoutGroup
 #  id: ChefJobTrinkets
@@ -705,6 +720,7 @@
   loadouts:
   - BotanistApron
   - BotanistWintercoat
+  - CorpoJacketInterdyne # starcup
 
 #- type: loadoutGroup
 #  id: BotanistJobTrinkets
@@ -857,6 +873,7 @@
   - ClothingUniformMrSpaceWideSkirt
   - ClothingUniformNightclubSuit
   - ClothingUniformNightclubSuitSkirt
+  - PerformerJumpskirt
   # end starcup
 
 - type: loadoutGroup
@@ -945,6 +962,7 @@
   - QuartermasterLongcoat # DeltaV - Longcoats
   - QuartermasterWintercoat
   - TrenchCoat # starcup
+  - CorpoJacketHawkmoon # starcup
 
 - type: loadoutGroup
   parent: CargoTechnicianShoes # starcup
@@ -1002,6 +1020,7 @@
   - CargoTechnicianWintercoat
   - LogisticsSweater # starcup
   - BomberJacket # starcup
+  - CorpoJacketHawkmoon # starcup
 
 - type: loadoutGroup
   id: CargoTechnicianShoes
@@ -1044,6 +1063,7 @@
   minLimit: 0
   loadouts:
   - SalvageSpecialistWintercoat
+  - CorpoJacketHawkmoon # starcup
 
 - type: loadoutGroup
   parent: CargoTechnicianShoes # starcup
@@ -1096,6 +1116,7 @@
   loadouts:
   - ChiefEngineerLongcoat # DeltaV - Longcoats
   - ChiefEngineerWintercoat
+  - CorpoJacketElectra # starcup
 
 - type: loadoutGroup
   parent: StationEngineerShoes # starcup
@@ -1169,6 +1190,7 @@
   loadouts:
   - StationEngineerOuterVest
   - StationEngineerWintercoat
+  - CorpoJacketElectra # starcup
 
 - type: loadoutGroup
   id: StationEngineerShoes
@@ -1215,6 +1237,7 @@
   minLimit: 0
   loadouts:
   - AtmosphericTechnicianWintercoat
+  - CorpoJacketElectra # starcup
 
 - type: loadoutGroup
   id: AtmosphericTechnicianBackpack
@@ -1283,6 +1306,7 @@
   - ResearchDirectorLabCoat
   - ResearchDirectorLongcoat # DeltaV - Longcoats
   - ResearchDirectorWintercoat
+  - CorpoJacketElectra # starcup
 
 - type: loadoutGroup
   parent: ScientistShoes # starcup
@@ -1354,6 +1378,7 @@
   #- RoboticistLabCoat # starcup: moved to RoboticistOuterClothing
   #- RoboticistWintercoat # starcup: moved to RoboticistOuterClothing
   - SeniorResearcherLabCoat
+  - CorpoJacketElectra # starcup
 
 - type: loadoutGroup
   id: ScientistShoes
