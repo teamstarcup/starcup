@@ -1,0 +1,218 @@
+- type: entity
+  parent: BaseWall
+  id: WallBrambleGreenThick
+  name: thick brambles
+  suffix: green
+  description: These tough vines have grown tightly intertwined, blocking all sight of what's beyond.
+  components:
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: WoodenStructure
+  - type: Sprite
+    sprite: _starcup/Structures/Walls/flora_bramble_wall_green_thick.rsi
+  - type: Icon
+    sprite: _starcup/Structures/Walls/flora_bramble_wall_green_thick.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 3
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          WallBrambleGreen:
+            min: 1
+            max: 1
+        offset: 0
+  - type: IconSmooth
+    key: brambles
+    base: wood
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Weapons/slash.ogg"
+  - type: Flammable
+    fireSpread: true
+    damage:
+      types:
+        Heat: 3
+  - type: Reactive
+    groups:
+      Flammable: [Touch]
+      Extinguish: [Touch]
+    reactions:
+    - reagents: [WeedKiller, PlantBGone]
+      methods: [Touch]
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 10
+  - type: DamageOnInteract
+    damage:
+      types:
+        Piercing: 1
+    interactSound: /Audio/_starcup/Effects/hit_needle.ogg
+
+- type: entity
+  parent: WallBrambleGreenThick
+  id: WallBrambleGreen
+  name: brambles
+  suffix: green
+  description: Tough vines covered in thorns.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Walls/flora_bramble_wall_green.rsi
+  - type: Icon
+    sprite: _starcup/Structures/Walls/flora_bramble_wall_green.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 3
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          PlantDebrisGreen:
+            min: 1
+            max: 1
+        offset: 0
+  - type: Occluder
+    enabled: false
+
+- type: entity
+  parent: WallBrambleGreenThick
+  id: WallBrambleBrownThick
+  suffix: brown
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Walls/flora_bramble_wall_brown_thick.rsi
+  - type: Icon
+    sprite: _starcup/Structures/Walls/flora_bramble_wall_brown_thick.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 3
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          WallBrambleBrown:
+            min: 1
+            max: 1
+        offset: 0
+
+- type: entity
+  parent: WallBrambleGreen
+  id: WallBrambleBrown
+  suffix: brown
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Walls/flora_bramble_wall_brown.rsi
+  - type: Icon
+    sprite: _starcup/Structures/Walls/flora_bramble_wall_brown.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 3
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          PlantDebrisBrown:
+            min: 1
+            max: 1
+        offset: 0
+
+- type: entity
+  parent: WallBrambleGreenThick
+  id: WallBramblePurpleThick
+  suffix: purple
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Walls/flora_bramble_wall_purple_thick.rsi
+  - type: Icon
+    sprite: _starcup/Structures/Walls/flora_bramble_wall_purple_thick.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 3
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          WallBramblePurple:
+            min: 1
+            max: 1
+        offset: 0
+
+- type: entity
+  parent: WallBrambleGreen
+  id: WallBramblePurple
+  suffix: purple
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Walls/flora_bramble_wall_purple.rsi
+  - type: Icon
+    sprite: _starcup/Structures/Walls/flora_bramble_wall_purple.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 3
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          PlantDebrisPurple:
+            min: 1
+            max: 1
+        offset: 0
