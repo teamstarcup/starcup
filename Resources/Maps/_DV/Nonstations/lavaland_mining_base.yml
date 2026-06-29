@@ -1737,22 +1737,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 7.5,-0.5
       parent: 1
-- proto: EncryptionKeyCargo
-  entities:
-  - uid: 24
-    components:
-    - type: Transform
-      parent: 19
-    - type: Physics
-      canCollide: False
-- proto: EncryptionKeyCommon
-  entities:
-  - uid: 25
-    components:
-    - type: Transform
-      parent: 19
-    - type: Physics
-      canCollide: False
 - proto: FaxMachineBase
   entities:
   - uid: 225
@@ -3126,14 +3110,6 @@ entities:
           - InputB
     - type: InsideEntityStorage
       storage: 214
-- proto: MatterBinStockPart
-  entities:
-  - uid: 38
-    components:
-    - type: Transform
-      parent: 34
-    - type: Physics
-      canCollide: False
 - proto: MedicalBed
   entities:
   - uid: 60
@@ -3476,14 +3452,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 13.5,6.5
       parent: 1
-- proto: SheetSteel1
-  entities:
-  - uid: 20
-    components:
-    - type: Transform
-      parent: 19
-    - type: Physics
-      canCollide: False
 - proto: SignalControlledValve
   entities:
   - uid: 397
