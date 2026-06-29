@@ -32,7 +32,6 @@ entities:
     - type: MetaData
       name: Mining Base
     - type: Transform
-      parent: invalid
     - type: MapGrid
       chunks:
         0,0:
@@ -715,238 +714,6 @@ entities:
       chunkHistory: {}
     - type: ImplicitRoof
     - type: ExplosionAirtightGrid
-  - uid: 4
-    components:
-    - type: MetaData
-      name: solution - lvcable
-    - type: Transform
-      parent: 3
-    - type: Solution
-      solution:
-        maxVol: 5
-        name: lvcable
-        reagents:
-        - data: []
-          ReagentId: Iron
-          Quantity: 3
-        - data: []
-          ReagentId: Copper
-          Quantity: 2
-    - type: ContainedSolution
-      containerName: lvcable
-      container: 3
-  - uid: 11
-    components:
-    - type: MetaData
-      name: solution - smokable
-    - type: Transform
-      parent: 10
-    - type: Solution
-      solution:
-        maxVol: 20
-        name: smokable
-        reagents: []
-    - type: ContainedSolution
-      containerName: smokable
-      container: 10
-  - uid: 13
-    components:
-    - type: MetaData
-      name: solution - smokable
-    - type: Transform
-      parent: 12
-    - type: Solution
-      solution:
-        maxVol: 20
-        name: smokable
-        reagents: []
-    - type: ContainedSolution
-      containerName: smokable
-      container: 12
-  - uid: 21
-    components:
-    - type: MetaData
-      name: solution - steel
-    - type: Transform
-      parent: 20
-    - type: Solution
-      solution:
-        maxVol: 10
-        name: steel
-        reagents:
-        - data: []
-          ReagentId: Iron
-          Quantity: 9
-        - data: []
-          ReagentId: Carbon
-          Quantity: 1
-    - type: ContainedSolution
-      containerName: steel
-      container: 20
-  - uid: 23
-    components:
-    - type: MetaData
-      name: solution - lvcable
-    - type: Transform
-      parent: 22
-    - type: Solution
-      solution:
-        maxVol: 5
-        name: lvcable
-        reagents:
-        - data: []
-          ReagentId: Iron
-          Quantity: 3
-        - data: []
-          ReagentId: Copper
-          Quantity: 2
-    - type: ContainedSolution
-      containerName: lvcable
-      container: 22
-  - uid: 31
-    components:
-    - type: MetaData
-      name: solution - food
-    - type: Transform
-      parent: 30
-    - type: Solution
-      solution:
-        maxVol: 1
-        name: food
-        reagents:
-        - data: []
-          ReagentId: Fiber
-          Quantity: 1
-    - type: ContainedSolution
-      containerName: food
-      container: 30
-  - uid: 33
-    components:
-    - type: MetaData
-      name: solution - rod
-    - type: Transform
-      parent: 32
-    - type: Solution
-      solution:
-        maxVol: 5
-        name: rod
-        reagents:
-        - data: []
-          ReagentId: Iron
-          Quantity: 4.5
-        - data: []
-          ReagentId: Carbon
-          Quantity: 0.5
-    - type: ContainedSolution
-      containerName: rod
-      container: 32
-  - uid: 36
-    components:
-    - type: MetaData
-      name: solution - lvcable
-    - type: Transform
-      parent: 35
-    - type: Solution
-      solution:
-        maxVol: 5
-        name: lvcable
-        reagents:
-        - data: []
-          ReagentId: Iron
-          Quantity: 3
-        - data: []
-          ReagentId: Copper
-          Quantity: 2
-    - type: ContainedSolution
-      containerName: lvcable
-      container: 35
-  - uid: 42
-    components:
-    - type: MetaData
-      name: solution - mvcable
-    - type: Transform
-      parent: 41
-    - type: Solution
-      solution:
-        maxVol: 5
-        name: mvcable
-        reagents:
-        - data: []
-          ReagentId: Iron
-          Quantity: 3
-        - data: []
-          ReagentId: Copper
-          Quantity: 2
-    - type: ContainedSolution
-      containerName: mvcable
-      container: 41
-  - uid: 44
-    components:
-    - type: MetaData
-      name: solution - hvcable
-    - type: Transform
-      parent: 43
-    - type: Solution
-      solution:
-        maxVol: 6
-        name: hvcable
-        reagents:
-        - data: []
-          ReagentId: Iron
-          Quantity: 3
-        - data: []
-          ReagentId: Copper
-          Quantity: 2
-        - data: []
-          ReagentId: Carbon
-          Quantity: 1
-    - type: ContainedSolution
-      containerName: hvcable
-      container: 43
-  - uid: 46
-    components:
-    - type: MetaData
-      name: solution - battery
-    - type: Transform
-      parent: 45
-    - type: Solution
-      solution:
-        maxVol: 5
-        name: battery
-        reagents: []
-    - type: ContainedSolution
-      containerName: battery
-      container: 45
-- proto: ActionSleep
-  entities:
-  - uid: 55
-    components:
-    - type: Transform
-      parent: 54
-    - type: Action
-      originalIconColor: '#FFFFFFFF'
-      container: 54
-  - uid: 57
-    components:
-    - type: Transform
-      parent: 56
-    - type: Action
-      originalIconColor: '#FFFFFFFF'
-      container: 56
-  - uid: 59
-    components:
-    - type: Transform
-      parent: 58
-    - type: Action
-      originalIconColor: '#FFFFFFFF'
-      container: 58
-  - uid: 61
-    components:
-    - type: Transform
-      parent: 60
-    - type: Action
-      originalIconColor: '#FFFFFFFF'
-      container: 60
 - proto: AirAlarmAutoLink
   entities:
   - uid: 63
@@ -1158,16 +925,6 @@ entities:
     - type: Transform
       pos: -2.5,2.5
       parent: 1
-    - type: AccessReader
-      accessListsOriginal:
-      - - Engineering
-    - type: Battery
-      lastCharge: 50000
-    - type: PowerNetworkBattery
-      loadingNetworkDemand: 940
-      currentReceiving: 939.96185
-      currentSupply: 940
-      supplyRampPosition: 0.038146973
   - uid: 85
     components:
     - type: MetaData
@@ -1176,13 +933,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -1.5,-4.5
       parent: 1
-    - type: Battery
-      lastCharge: 50000
-    - type: PowerNetworkBattery
-      loadingNetworkDemand: 210
-      currentReceiving: 210.0002
-      currentSupply: 210
-      supplyRampPosition: -0.00019836426
   - uid: 86
     components:
     - type: MetaData
@@ -1191,13 +941,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 2.5,-4.5
       parent: 1
-    - type: Battery
-      lastCharge: 50000
-    - type: PowerNetworkBattery
-      loadingNetworkDemand: 111
-      currentReceiving: 110.97667
-      currentSupply: 111
-      supplyRampPosition: 0.023330688
   - uid: 87
     components:
     - type: MetaData
@@ -1206,13 +949,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -1.5,5.5
       parent: 1
-    - type: Battery
-      lastCharge: 50000
-    - type: PowerNetworkBattery
-      loadingNetworkDemand: 175
-      currentReceiving: 174.9611
-      currentSupply: 175
-      supplyRampPosition: 0.038879395
   - uid: 88
     components:
     - type: MetaData
@@ -1221,25 +957,12 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 2.5,5.5
       parent: 1
-    - type: Battery
-      lastCharge: 50000
-    - type: PowerNetworkBattery
-      loadingNetworkDemand: 1656
-      currentReceiving: 1655.9781
-      currentSupply: 1656
-      supplyRampPosition: 0.021972656
   - uid: 89
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 6.5,-1.5
       parent: 1
-    - type: Battery
-      lastCharge: 50000
-    - type: PowerNetworkBattery
-      loadingNetworkDemand: 1640
-      currentReceiving: 1640.0406
-      currentSupply: 1640
 - proto: AtmosDeviceFanDirectional
   entities:
   - uid: 90
@@ -1255,40 +978,16 @@ entities:
     - type: Transform
       pos: -6.5,-2.5
       parent: 1
-    - type: HealOnBuckle
-      sleepAction: 55
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 55
   - uid: 56
     components:
     - type: Transform
       pos: -6.5,-4.5
       parent: 1
-    - type: HealOnBuckle
-      sleepAction: 57
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 57
   - uid: 58
     components:
     - type: Transform
       pos: -6.5,-3.5
       parent: 1
-    - type: HealOnBuckle
-      sleepAction: 59
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 59
 - proto: BedsheetBlack
   entities:
   - uid: 91
@@ -1323,13 +1022,6 @@ entities:
     - type: Transform
       pos: 7.4469547,-4.492324
       parent: 1
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.14673
-        moles: {}
-      open: True
 - proto: BodyBagFolded
   entities:
   - uid: 95
@@ -1337,14 +1029,6 @@ entities:
     - type: Transform
       pos: 4.696921,-4.2438545
       parent: 1
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.147
-        moles:
-          Oxygen: 1.7459903
-          Nitrogen: 6.568249
 - proto: BorgCharger
   entities:
   - uid: 2
@@ -1352,39 +1036,6 @@ entities:
     - type: Transform
       pos: 4.5,3.5
       parent: 1
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.147
-        moles:
-          Oxygen: 1.7459903
-          Nitrogen: 6.568249
-    - type: ContainerContainer
-      containers:
-        entity_storage: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 5
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 6
-          - 3
-- proto: BorgChargerCircuitboard
-  entities:
-  - uid: 5
-    components:
-    - type: Transform
-      parent: 2
-    - type: Physics
-      canCollide: False
 - proto: BoxLatexGloves
   entities:
   - uid: 8
@@ -1723,56 +1374,6 @@ entities:
     - type: Transform
       pos: -2.5,0.5
       parent: 1
-- proto: CableApcStack1
-  entities:
-  - uid: 3
-    components:
-    - type: Transform
-      parent: 2
-    - type: Stack
-      count: 5
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - lvcable
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@lvcable: !type:ContainerSlot
-          ent: 4
-  - uid: 22
-    components:
-    - type: Transform
-      parent: 19
-    - type: Stack
-      count: 2
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - lvcable
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@lvcable: !type:ContainerSlot
-          ent: 23
-  - uid: 35
-    components:
-    - type: Transform
-      parent: 34
-    - type: Stack
-      count: 5
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - lvcable
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@lvcable: !type:ContainerSlot
-          ent: 36
 - proto: CableHV
   entities:
   - uid: 181
@@ -1795,24 +1396,6 @@ entities:
     - type: Transform
       pos: 8.5,3.5
       parent: 1
-- proto: CableHVStack1
-  entities:
-  - uid: 43
-    components:
-    - type: Transform
-      parent: 40
-    - type: Stack
-      count: 5
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - hvcable
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@hvcable: !type:ContainerSlot
-          ent: 44
 - proto: CableMV
   entities:
   - uid: 98
@@ -2010,48 +1593,6 @@ entities:
     - type: Transform
       pos: 1.5,0.5
       parent: 1
-- proto: CableMVStack1
-  entities:
-  - uid: 41
-    components:
-    - type: Transform
-      parent: 40
-    - type: Stack
-      count: 5
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - mvcable
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@mvcable: !type:ContainerSlot
-          ent: 42
-- proto: CapacitorStockPart
-  entities:
-  - uid: 6
-    components:
-    - type: Transform
-      parent: 2
-    - type: Stack
-      count: 2
-    - type: Physics
-      canCollide: False
-  - uid: 37
-    components:
-    - type: Transform
-      parent: 34
-    - type: Stack
-      count: 2
-    - type: Physics
-      canCollide: False
-  - uid: 47
-    components:
-    - type: Transform
-      parent: 40
-    - type: Physics
-      canCollide: False
 - proto: Catwalk
   entities:
   - uid: 201
@@ -3741,14 +3282,6 @@ entities:
     - type: Transform
       pos: 7.5,-2.5
       parent: 1
-    - type: HealOnBuckle
-      sleepAction: 61
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 61
 - proto: MiningWindow
   entities:
   - uid: 357
@@ -4321,33 +3854,6 @@ entities:
     - type: Transform
       pos: 5.5,-0.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 39
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 38
-          - 37
-          - 35
-    - type: SpaceHeater
-      mode: Cool
-    - type: GasThermoMachine
-      coefficientOfPerformance: 1
-      heatCapacity: 3500
-- proto: SpaceHeaterMachineCircuitBoard
-  entities:
-  - uid: 39
-    components:
-    - type: Transform
-      parent: 34
-    - type: Physics
-      canCollide: False
 - proto: SubstationBasic
   entities:
   - uid: 40
@@ -4357,35 +3863,6 @@ entities:
     - type: Transform
       pos: 7.5,3.5
       parent: 1
-    - type: Battery
-      lastCharge: 2500000
-    - type: PowerNetworkBattery
-      loadingNetworkDemand: 4731.919
-      currentReceiving: 4732.5044
-      currentSupply: 4731.919
-    - type: ContainerContainer
-      containers:
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 48
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 47
-          - 41
-          - 43
-          - 45
-- proto: SubstationMachineCircuitboard
-  entities:
-  - uid: 48
-    components:
-    - type: Transform
-      parent: 40
-    - type: Physics
-      canCollide: False
 - proto: SuitStorageSalv
   entities:
   - uid: 49
@@ -4487,27 +3964,6 @@ entities:
     - type: Transform
       pos: 3.5,3.5
       parent: 1
-    - type: PointLight
-      enabled: True
-    - type: ContainerContainer
-      containers:
-        key_slots: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 24
-          - 25
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 26
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 20
-          - 22
 - proto: TelecomServerCircuitboard
   entities:
   - uid: 26
@@ -5136,26 +4592,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -8.5,-4.5
       parent: 1
-- proto: WallmountGeneratorAPUElectronics
-  entities:
-  - uid: 302
-    components:
-    - type: Transform
-      parent: 301
-    - type: Physics
-      canCollide: False
-  - uid: 304
-    components:
-    - type: Transform
-      parent: 303
-    - type: Physics
-      canCollide: False
-  - uid: 306
-    components:
-    - type: Transform
-      parent: 305
-    - type: Physics
-      canCollide: False
 - proto: WarpPoint
   entities:
   - uid: 494
