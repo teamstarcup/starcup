@@ -26,6 +26,20 @@
     CherryLimeade: 5
 
 - type: reaction
+  id: Cheermime
+  requiredMixerCategories:
+  - Shake
+  reactants:
+    Nothing:
+      amount: 1
+    JuiceCherry:
+      amount: 1
+    SodaWater:
+      amount: 1
+  products:
+    Cheermime: 3
+
+- type: reaction
   id: EvilPrincess
   requiredMixerCategories:
   - Stir
@@ -433,3 +447,29 @@
       amount: 1
   products:
     Snakebite: 2
+
+- type: reaction
+  id: SilentNight
+  requiredMixerCategories:
+  - Shake
+  reactants:
+    Egg:
+      amount: 1
+    Milk:
+      amount: 1
+    Rum:
+      amount: 1
+    Nothing:
+      amount: 1
+  products:
+    SilentNight: 4
+
+- type: reaction
+  id: SilentNightNog
+  reactants:
+    Eggnog:
+      amount: 1
+    Nothing:
+      amount: 1
+  products:
+    SilentNight: 2

@@ -71,3 +71,23 @@
   metamorphicMaxFillLevels: 3
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+
+- type: reagent
+  id: Cheermime
+  name: reagent-name-cheermime
+  parent: BaseDrink
+  desc: reagent-desc-cheermime
+  physicalDesc: reagent-physical-desc-fizzy
+  flavor: cheermime
+  color: "#ff8071"
+  metabolisms:
+    Digestion:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/cheermime.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 6
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false

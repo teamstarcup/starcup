@@ -120,6 +120,38 @@
     sprite: _starcup/Objects/Consumable/Drinks/evilprincess.rsi
     state: icon
 
+- type: entity
+  parent: DrinkGlass
+  id: DrinkCheermime
+  suffix: cheermime
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Cheermime
+          Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/cheermime.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkSilentNight
+  suffix: silent night
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: SilentNight
+          Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/silent_night.rsi
+    state: icon
+
 # Alcohol
 - type: entity
   parent: DrinkGlass

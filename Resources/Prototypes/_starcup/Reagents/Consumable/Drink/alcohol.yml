@@ -601,3 +601,25 @@
   metamorphicMaxFillLevels: 6
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+
+- type: reagent
+  id: SilentNight
+  name: reagent-name-silent-night
+  parent: BaseDrink
+  desc: reagent-desc-silent-night
+  physicalDesc: reagent-physical-desc-creamy
+  flavor: silentnight
+  color: "#eadfca"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/silent_night.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Digestion:
+      metabolites:
+        Ethanol: 0.25
+      effects:
+      - !type:SatiateThirst
+        factor: 3

@@ -83,6 +83,9 @@ reagent-desc-sakura-martini = A frequent sight during moonlit seasonal festivals
 reagent-name-snakebite = snakebite
 reagent-desc-snakebite = First invented by a Gothic priestess, whose faith happens to have a fairly substantial amount of symbolism involving snakes and the consumption of apples.
 
+reagent-name-silent-night = silent night
+reagent-desc-silent-night = A festive eggnog based drink for mimes in the holiday spirit.
+
 # Rewritten Drinks
 reagent-desc-amasec-starcup = In the grim darkness of neocapitalism, there is only war.
 

@@ -25,3 +25,6 @@ reagent-desc-cherry-limeade = Lemonade's tart, fizzy cousin.
 
 reagent-name-evil-princess = evil princess
 reagent-desc-evil-princess = For holding daintily in one hand while dismissively sentencing people you don't like to the dungeon.
+
+reagent-name-cheermime = cheermime
+reagent-desc-cheermime = Isn't this just cherry soda... ?
