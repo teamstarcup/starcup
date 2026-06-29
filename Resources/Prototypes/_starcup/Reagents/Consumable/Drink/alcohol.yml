@@ -621,5 +621,50 @@
       metabolites:
         Ethanol: 0.25
       effects:
+      - !type:GenericStatusEffect
+        key: Muted
+        component: Muted
       - !type:SatiateThirst
         factor: 3
+
+- type: reagent
+  id: MimeTai
+  name: reagent-name-mime-tai
+  parent: BaseDrink
+  desc: reagent-desc-mime-tai
+  physicalDesc: reagent-physical-desc-creamy
+  flavor: mimetai
+  color: "#eadfca"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/mime_tai.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Digestion:
+      metabolites:
+        Ethanol: 0.3
+      effects:
+      - !type:GenericStatusEffect
+        key: Muted
+        component: Muted
+      - !type:SatiateThirst
+        factor: 2
+
+- type: reagent
+  id: BlackAndWhite
+  name: reagent-name-bnw
+  parent: BaseAlcohol
+  desc: reagent-desc-bnw
+  physicalDesc: reagent-physical-desc-bubbly
+  flavor: blackandwhite
+  color: "#d0d1a3"
+  recognizable: false
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/black_and_white.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 6
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  fizziness: 0.6

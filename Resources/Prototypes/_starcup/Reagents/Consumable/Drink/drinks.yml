@@ -83,6 +83,9 @@
   metabolisms:
     Digestion:
       effects:
+      - !type:GenericStatusEffect
+        key: Muted
+        component: Muted
       - !type:SatiateThirst
         factor: 2
   metamorphicSprite:

@@ -37,6 +37,8 @@ flavor-complex-sakura-martini = like delicate spring blossoms
 flavor-complex-snakebite = bitter with a sweet aftertaste
 flavor-complex-cheermime = cheerfully bubbly and sweet
 flavor-complex-silent-night = like the promise of a shooting star in a quiet evening
+flavor-complex-mime-tai = like an evocative suggestion of almonds
+flavor-complex-black-and-white = like the comfort needed to enjoy the silence
 
 # Drinks (Rewrites)
 flavor-complex-acidspit-starcup = like your tongue is on fire

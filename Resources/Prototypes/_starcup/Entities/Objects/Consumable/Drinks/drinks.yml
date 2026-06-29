@@ -600,3 +600,35 @@
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/snakebite.rsi
     state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkMimeTai
+  suffix: mime tai
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: MimeTai
+          Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/mime_tai.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkBlackAndWhite
+  suffix: black and white
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: BlackAndWhite
+          Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/black_and_white.rsi
+    state: icon

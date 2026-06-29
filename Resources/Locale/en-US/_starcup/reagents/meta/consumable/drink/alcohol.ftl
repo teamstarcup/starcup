@@ -84,7 +84,13 @@ reagent-name-snakebite = snakebite
 reagent-desc-snakebite = First invented by a Gothic priestess, whose faith happens to have a fairly substantial amount of symbolism involving snakes and the consumption of apples.
 
 reagent-name-silent-night = silent night
-reagent-desc-silent-night = A festive eggnog based drink for mimes in the holiday spirit.
+reagent-desc-silent-night = A festive eggnog-based drink for mimes in the holiday spirit.
+
+reagent-name-mime-tai = mime tai
+reagent-desc-mime-tai = Orgeat not available? Nothing is better than nothing.
+
+reagent-name-bnw = black and white
+reagent-desc-bnw = The classic beer cocktail, but the pale ale looks a little paler than usual? Must be Nothing.
 
 # Rewritten Drinks
 reagent-desc-amasec-starcup = In the grim darkness of neocapitalism, there is only war.
