@@ -92,3 +92,83 @@ names-moth-first-male-dataset-36 = Samuel
 names-moth-first-male-dataset-37 = Sebastian
 names-moth-first-male-dataset-38 = Silas
 names-moth-first-male-dataset-39 = Simon
+
+## begin starcup: more genus and species derivatives
+# Acosmeryx
+names-moth-first-male-dataset-40 = Cosmeryx
+names-moth-first-male-dataset-41 = Acteus
+names-moth-first-male-dataset-42 = Actus
+names-moth-first-male-dataset-43 = Arctus
+names-moth-first-male-dataset-44 = Anceus
+names-moth-first-male-dataset-45 = Miskin
+names-moth-first-male-dataset-46 = Sericeus
+names-moth-first-male-dataset-47 = Tenggar
+
+# Agrius
+names-moth-first-male-dataset-48 = Convolvu
+names-moth-first-male-dataset-49 = Godart
+names-moth-first-male-dataset-50 = Luctifer
+
+# Attacus
+names-moth-first-male-dataset-51 = Auran
+names-moth-first-male-dataset-52 = Aurantiacus
+names-moth-first-male-dataset-53 = Cramer
+names-moth-first-male-dataset-54 = Dohert
+names-moth-first-male-dataset-55 = Erebus
+names-moth-first-male-dataset-56 = Lorquin
+names-moth-first-male-dataset-57 = McMullen
+names-moth-first-male-dataset-58 = Taprobanis
+names-moth-first-male-dataset-59 = Wardi
+
+# Coscinocera
+names-moth-first-male-dataset-60 = Anteus
+names-moth-first-male-dataset-61 = Butler
+names-moth-first-male-dataset-62 = Heracles
+names-moth-first-male-dataset-63 = Heros
+names-moth-first-male-dataset-64 = Rothschild
+names-moth-first-male-dataset-65 = Titan
+
+# Itame
+names-moth-first-male-dataset-66 = Teknar
+names-moth-first-male-dataset-67 = Vinculus
+
+# Automeris
+names-moth-first-male-dataset-68 = Amon
+names-moth-first-male-dataset-69 = Annulos
+names-moth-first-male-dataset-70 = Averno
+names-moth-first-male-dataset-71 = Banus
+names-moth-first-male-dataset-72 = Basal
+names-moth-first-male-dataset-73 = Becker
+names-moth-first-male-dataset-74 = Castren
+names-moth-first-male-dataset-75 = Curvil
+names-moth-first-male-dataset-76 = Diavolo
+names-moth-first-male-dataset-77 = Egeus
+names-moth-first-male-dataset-78 = Falco
+names-moth-first-male-dataset-79 = Fletcher
+names-moth-first-male-dataset-80 = Hepner
+names-moth-first-male-dataset-81 = Innox
+names-moth-first-male-dataset-82 = Incarnus
+names-moth-first-male-dataset-83 = Janus
+names-moth-first-male-dataset-84 = Jivaros
+names-moth-first-male-dataset-85 = Melmon
+names-moth-first-male-dataset-86 = Oberth
+names-moth-first-male-dataset-87 = Orestes
+names-moth-first-male-dataset-88 = Pallidus
+names-moth-first-male-dataset-89 = Pallidor
+names-moth-first-male-dataset-90 = Styx
+names-moth-first-male-dataset-91 = Tridens
+
+# Eacles
+names-moth-first-male-dataset-92 = Cacicus
+names-moth-first-male-dataset-93 = Decoris
+names-moth-first-male-dataset-94 = Imperio
+names-moth-first-male-dataset-95 = Nobilis
+names-moth-first-male-dataset-96 = Pini
+
+# Arsenurinae
+names-moth-first-male-dataset-97 = Caio
+names-moth-first-male-dataset-98 = Copios
+names-moth-first-male-dataset-99 = Daemon
+names-moth-first-male-dataset-100 = Opteryx
+
+## end starcup

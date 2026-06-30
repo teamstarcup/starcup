@@ -57,3 +57,59 @@ names-moth-last-dataset-25 = Silktongue
 names-moth-last-dataset-26 = Sparkdrawn
 names-moth-last-dataset-27 = Stargazer
 names-moth-last-dataset-28 = Starseeker
+
+## begin starcup: more genus and species derivatives
+# Plagodis
+names-moth-last-dataset-29 = Hollowspot
+names-moth-last-dataset-30 = Reticula
+names-moth-last-dataset-31 = Serinara
+names-moth-last-dataset-32 = Umber
+
+# Temnora
+names-moth-last-dataset-33 = Albina
+names-moth-last-dataset-34 = Avinoff
+names-moth-last-dataset-35 = Curtula
+names-moth-last-dataset-36 = Funebris
+names-moth-last-dataset-37 = Nepheles
+names-moth-last-dataset-38 = Pylas
+names-moth-last-dataset-39 = Scitula
+
+# Funny names
+names-moth-last-dataset-40 = Ghostlight
+names-moth-last-dataset-41 = Umbra
+names-moth-last-dataset-42 = Astra
+names-moth-last-dataset-43 = Umberlight
+names-moth-last-dataset-44 = Ghosthollow
+names-moth-last-dataset-45 = Silksong
+names-moth-last-dataset-46 = Starlight
+names-moth-last-dataset-47 = Moonhollow
+names-moth-last-dataset-48 = Nightsong
+names-moth-last-dataset-49 = Dawnstar
+names-moth-last-dataset-50 = Denhollow
+names-moth-last-dataset-51 = Moonflame
+names-moth-last-dataset-52 = Stymphalos
+names-moth-last-dataset-53 = Cometfire
+names-moth-last-dataset-54 = Astera
+names-moth-last-dataset-55 = Silkflame
+names-moth-last-dataset-56 = Nightbond
+names-moth-last-dataset-57 = Spunwing
+names-moth-last-dataset-58 = Blackspot
+names-moth-last-dataset-59 = Nightwitch
+names-moth-last-dataset-60 = Moonwitch
+names-moth-last-dataset-61 = Witchlight
+names-moth-last-dataset-62 = Noctambula
+names-moth-last-dataset-63 = Nightwalker
+names-moth-last-dataset-64 = Starwing
+names-moth-last-dataset-65 = Lightspot
+names-moth-last-dataset-66 = Netherwing
+names-moth-last-dataset-67 = Whitestar
+names-moth-last-dataset-68 = Nocturne
+names-moth-last-dataset-69 = Paleshadow
+names-moth-last-dataset-70 = Moonshade
+names-moth-last-dataset-71 = Emberwing
+names-moth-last-dataset-72 = Eclipse
+names-moth-last-dataset-73 = Shadehollow
+names-moth-last-dataset-74 = Swallowtail
+names-moth-last-dataset-75 = Moonthread
+
+## end starcup
