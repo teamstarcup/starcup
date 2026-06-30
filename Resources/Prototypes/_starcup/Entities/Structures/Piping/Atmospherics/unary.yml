@@ -269,7 +269,7 @@
   - type: TriggerOnSpawn
   - type: EmitSoundOnTrigger
     sound:
-      path: /Audio/_starcup/Ambience/Objects/vent_den.ogg
+      path: /Audio/_starcup/Ambience/Objects/vent_hive.ogg
       params:
         maxDistance: 4
         loop: true
@@ -304,12 +304,3 @@
     prototypes:
     - MobGiantSandwasp
     chance: 0.05
-  - type: TriggerOnSpawn
-  - type: EmitSoundOnTrigger
-    sound:
-      path: /Audio/_starcup/Ambience/Objects/vent_den.ogg
-      params:
-        maxDistance: 4
-        loop: true
-    positional: true
-    predicted: true
