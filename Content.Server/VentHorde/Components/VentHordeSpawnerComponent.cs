@@ -79,11 +79,11 @@ public sealed partial class VentHordeSpawnerComponent : Component
     /// starcup: The chance that a vent will break when entities are spawned.
     /// </summary>
     [DataField]
-    public float VentBreakChance;
+    public bool ShouldBreakVent;
 
     /// <summary>
     /// starcup: The entity that will replace the vent when it breaks.
     /// </summary>
     [DataField]
-    public string? VentReplacement;
+    public string? Replacement;
 }

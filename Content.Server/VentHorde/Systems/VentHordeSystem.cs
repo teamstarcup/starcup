@@ -65,9 +65,9 @@ public sealed class VentHordeSystem : EntitySystem
     /// <param name="append">If an already active spawner is selected, will add entities to its list. Otherwise, will fail.</param>
     /// starcup: <param name="passiveSound">Will override the default sound in VentHordeSpawnerComponent if provided.</param>
     /// starcup: <param name="endSound">Will override the default sound in VentHordSpawnerComponent if provided.</param>
-    /// starcup: <param name="ventBreakChance">Will remove the vent horde spawner entity.</param>
-    /// starcup: <param name="ventReplacement">Spawns a new entity in place of the removed vent horde spawner entity.</param>
-    public void StartHordeSpawn(EntityUid uid, List<EntProtoId> spawns, TimeSpan spawnDelay, string? ventReplacement, bool append = true, SoundSpecifier? passiveSound = null, SoundSpecifier? endSound = null, float ventBreakChance = 0)
+    /// starcup: <param name="breakChance">Will remove the vent horde spawner entity.</param>
+    /// starcup: <param name="replacement">Spawns a new entity in place of the removed vent horde spawner entity.</param>
+    public void StartHordeSpawn(EntityUid uid, List<EntProtoId> spawns, TimeSpan spawnDelay, string? replacement, bool append = true, SoundSpecifier? passiveSound = null, SoundSpecifier? endSound = null, float breakChance = 0)
     {
         if (TryComp<VentHordeSpawnerComponent>(uid, out var hordeSpawner))
         {
@@ -88,9 +88,9 @@ public sealed class VentHordeSystem : EntitySystem
         if (endSound is not null)
             hordeSpawner.EndSound = endSound;
 
-        hordeSpawner.VentBreakChance = ventBreakChance;
+        hordeSpawner.ShouldBreakVent |= _random.Prob(breakChance);
 
-        hordeSpawner.VentReplacement = ventReplacement;
+        hordeSpawner.Replacement = replacement;
         // end starcup
 
         hordeSpawner.AudioStream = _audio.PlayPvs(hordeSpawner.PassiveSound, uid, hordeSpawner.PassiveSound.Params.WithLoop(true))?.Entity;
@@ -116,10 +116,10 @@ public sealed class VentHordeSystem : EntitySystem
         }
 
         // begin starcup: Remove the horde spawner entity and spawn a replacement (perhaps a broken version of it).
-        if (_random.Prob(entity.Comp.VentBreakChance))
+        if (entity.Comp.ShouldBreakVent)
         {
             var xform = Transform(entity);
-            var brokenVent = Spawn(entity.Comp.VentReplacement, xform.Coordinates);
+            var brokenVent = Spawn(entity.Comp.Replacement, xform.Coordinates);
             var newXform = Transform(brokenVent);
             newXform.LocalRotation = xform.LocalRotation;
             QueueDel(entity);
