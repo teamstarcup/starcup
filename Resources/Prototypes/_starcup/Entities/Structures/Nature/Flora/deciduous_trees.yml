@@ -274,6 +274,70 @@
         treestump1: ""
         treestump2: ""
 
+- type: entity
+  parent: FloraTreeDeadBrown
+  id: FloraTreeDeadThick
+  suffix: dead, thick
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_dead_trees_ms.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 2
+            max: 8
+          DeadStumpThick:
+            min: 1
+            max: 1
+        offset: 0
+
+- type: entity
+  parent: BaseStumpStarcup
+  id: DeadStumpThick
+  suffix: dead, thick
+  components:
+  - type: Sprite
+    offset: 0,0.95
+    sprite: _starcup/Structures/Nature/Flora/Trees/DeciduousTrees/flora_dead_trees_ms.rsi
+    layers:
+    - state: treestump1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""
+        treestump2: ""
+        treestump3: ""
+
 # Original trees
 - type: entity
   parent: BaseTree
@@ -326,13 +390,13 @@
         offset: 0
   - type: SolutionContainerManager
     solutions:
-      pool:
+      vasculature:
         maxVol: 45
         reagents:
         - ReagentId: Sap
           Quantity: 45
   - type: SolutionRegeneration
-    solution: pool
+    solution: vasculature
     generated:
       reagents:
       - ReagentId: Sap
