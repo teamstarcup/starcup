@@ -1,7 +1,6 @@
-# This list consolidates the male and female slime names from Paradise station into a single genderless one.
 # We like to think of these as 'traditional' slime names that modern slimes have, but keep to themselves in favor of using other names to blend in.
 
-# Onomatopeic
+# Onomatopoeic
 names-slime-dataset-1 = Anablop
 names-slime-dataset-2 = Alga
 names-slime-dataset-3 = Algae
