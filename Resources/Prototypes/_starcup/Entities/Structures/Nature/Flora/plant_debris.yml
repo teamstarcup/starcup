@@ -1,0 +1,147 @@
+- type: entity
+  name: plant debris
+  parent: BaseStructure
+  id: PlantDebrisGreen
+  suffix: green, structure
+  description: Messy remains of former plant life.
+  components:
+    - type: Produce
+    - type: Sprite
+      sprite: _starcup/Structures/Nature/Flora/plant_debris_green.rsi
+      layers:
+      - state: structure1
+        map: ["random"]
+    - type: RandomSprite
+      available:
+      - random:
+          structure1: ""
+          structure2: ""
+    - type: Transform
+      anchored: true
+    - type: Physics
+      bodyType: Static
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.2
+    - type: InteractionOutline
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: !type:GroupSelector
+          rolls: 3
+          children:
+          - id: PlantDebrisObjectGreen
+
+- type: entity
+  name: plant debris
+  parent: FoodProduceBase
+  id: PlantDebrisObjectGreen
+  suffix: green
+  description: A sticky mass of ruined plant refuse.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/plant_debris_green.rsi
+    state: object
+  - type: FlavorProfile
+    flavors:
+      - bitter
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Cellulose
+        Quantity: 5
+      - ReagentId: Resin
+        Quantity: 2
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 2
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 1
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+  - type: AtmosExposed
+  - type: Temperature
+    currentTemperature: 290
+  - type: TemperatureDamage
+  - type: InternalTemperature
+    thickness: 0.02
+    area: 0.02
+    conductivity: 0.43
+  - type: Tag
+    tags:
+    - Trash
+    - Recyclable
+
+- type: entity
+  parent: PlantDebrisGreen
+  id: PlantDebrisBrown
+  suffix: brown, structure
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/plant_debris_brown.rsi
+  - type: Gatherable
+    loot:
+      All: !type:GroupSelector
+        rolls: 2
+        children:
+        - id: PlantDebrisObjectBrown
+
+- type: entity
+  parent: PlantDebrisObjectGreen
+  id: PlantDebrisObjectBrown
+  suffix: brown
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/plant_debris_brown.rsi
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Cellulose
+        Quantity: 4
+      - ReagentId: Resin
+        Quantity: 3
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 1
+
+- type: entity
+  parent: PlantDebrisGreen
+  id: PlantDebrisPurple
+  suffix: purple, structure
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/plant_debris_purple.rsi
+  - type: Gatherable
+    loot:
+      All: !type:GroupSelector
+        rolls: 3
+        children:
+        - id: PlantDebrisObjectPurple
+
+- type: entity
+  parent: PlantDebrisObjectGreen
+  id: PlantDebrisObjectPurple
+  suffix: purple
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/plant_debris_purple.rsi

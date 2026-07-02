@@ -1,0 +1,22 @@
+- type: constructionGraph
+  id: GasUnaryBroken
+  start: start
+  graph:
+  - node: start
+    edges: []
+
+  - node: ventpumpbroken
+    entity: GasVentPumpBroken
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Welding
+        doAfter: 1

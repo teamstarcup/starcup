@@ -55,8 +55,8 @@
       prob: 0.02
     - id: MobMouse2
       prob: 0.02
-    - id: MobMouseCancer
-      prob: 0.001
+    #- id: MobMouseCancer # starcup: disable cancer mouse spawn
+      #prob: 0.001
     specialEntries:
     - id: SpawnPointGhostRatKing
       prob: 0.001
@@ -71,13 +71,15 @@
   - type: VentCrittersRule
     entries:
     - id: MobCockroach
-      prob: 0.03
+      prob: 0.02
+    # begin starcup
+    - id: MobCockroachHL
+      prob: 0.02
     - id: MobMothroach
       prob: 0.004 # starcup: 0.008 -> 0.004
     #- id: MobMoproach # starcup: move to mothroach event
     #  prob: 0.004
-    - id: MobMoproach
-      prob: 0.004
+    # end starcup
 
 - type: entity
   id: SnailMigrationLowPop
@@ -140,6 +142,7 @@
       - !type:GroupSelector
         children: # Increased chances for special roaches on purpose. Makes it a bit more interesting.
         - id: MobCockroach
+        - id: MobCockroachHL # starcup
         - id: MobMothroach
         - id: MobMoproach
           weight: 0.5

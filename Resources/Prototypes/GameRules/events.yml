@@ -460,15 +460,26 @@
     earliestStart: 20
     minimumPlayers: 15
     weight: 5
-    duration: 5
-    maxDuration: 20
+    duration: 15
+    maxDuration: 30 # starcup: the new sounds are longer
   - type: VentHordeRule
-    table: !type:GroupSelector
-      rolls: 4, 8
+    # begin starcup
+    table: !type:AllSelector
       children:
-      - id: MobAdultSlimesBlueAngry
-      - id: MobAdultSlimesGreenAngry
-      - id: MobAdultSlimesYellowAngry
+      - id: PuddleSlime
+      - !type:GroupSelector
+        rolls: 4, 8
+        children:
+        - id: MobAdultSlimesBlueAngry
+        - id: MobAdultSlimesGreenAngry
+        - id: MobAdultSlimesYellowAngry
+    passiveSound:
+      path: /Audio/_DEN/VentCritters/vent_slime.ogg
+    endSound:
+      collection: MetalBreak
+    breakChance: 1.0
+    replacement: GasVentPumpBroken
+    # end starcup
 
 - type: entity
   id: SnakeSpawnHorde
@@ -481,15 +492,25 @@
     earliestStart: 20
     minimumPlayers: 15
     weight: 5
-    duration: 5
-    maxDuration: 20
+    duration: 30
+    maxDuration: 30 # starcup: the new sounds are longer
   - type: VentHordeRule
-    table: !type:GroupSelector
-      rolls: 4, 8
+    # begin starcup
+    table: !type:AllSelector
       children:
-      - id: MobPurpleSnake
-      - id: MobSmallPurpleSnake
-      - id: MobCobraSpace
+      - !type:GroupSelector
+        rolls: 4, 8
+        children:
+        - id: MobPurpleSnake
+        - id: MobSmallPurpleSnake
+        - id: MobCobraSpace
+    passiveSound:
+      path: /Audio/_starcup/VentCritters/vent_snakes.ogg
+    endSound:
+      collection: MetalBreak
+    breakChance: 1.0
+    replacement: GasVentPumpBroken
+    # end starcup
 
 - type: entity
   id: SpiderSpawnHorde
@@ -502,13 +523,24 @@
     earliestStart: 20
     minimumPlayers: 15
     weight: 5
-    duration: 5
-    maxDuration: 20
+    duration: 30
+    maxDuration: 30 # starcup: the new sounds are longer
   - type: VentHordeRule
-    table: !type:GroupSelector
-      rolls: 4, 8
+    # begin starcup
+    table: !type:AllSelector
       children:
-      - id: MobGiantSpiderAngry
+      - id: SpiderWeb
+      - !type:GroupSelector
+        rolls: 4, 8
+        children:
+        - id: MobGiantSpiderAngry
+    passiveSound:
+      path: /Audio/_starcup/VentCritters/vent_spiders.ogg
+    endSound:
+      collection: MetalBreak
+    breakChance: 1.0
+    replacement: GasVentPumpBroken
+    # end starcup
 
 - type: entity
   id: SpiderClownSpawnHorde
@@ -524,10 +556,17 @@
     duration: 5
     maxDuration: 20
   - type: VentHordeRule
-    table: !type:GroupSelector
-      rolls: 4, 8
+    # begin starcup
+    table: !type:AllSelector
       children:
-      - id: MobClownSpider
+      - id: SpiderWebClown
+      - !type:GroupSelector
+        rolls: 4, 8
+        children:
+        - id: MobClownSpider
+    breakChance: 1.0
+    replacement: GasVentPumpBroken
+    # end starcup
 
 - type: entity
   id: ZombieOutbreak
