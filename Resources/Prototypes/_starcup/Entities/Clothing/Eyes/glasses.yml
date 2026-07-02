@@ -51,3 +51,98 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesSurplusBallisticSandy
+  name: Surplus Ballistic Goggles
+  description: A pair of Surplus Ballistic goggles from the one of the many neocorporate wars', likely used by some company's Oceanic forces. It's not really able to protect you from ballistic projectiles, at least. But they do function well as a hardy pair of goggles. More sealed, for the wetter enviroments!
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Sandy.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Sandy.rsi
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesGorlexBallistic
+  name: Gorlex Ballistic Goggles
+  description: A pair of Surplus Ballistic goggles from the one of the many neocorporate wars'. At least, these look like most surplus goggles. These are likely still in use, by most Gorlex Marauder forces. More likely, the type who can't let go of the battles they fought.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Gorlex.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Gorlex.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+  - type: GuideHelp
+    guides:
+    - Security
+    - Antagonists
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesSurplusBallisticInterdyne
+  name: Interdyne Breaker Ballistic Goggles
+  description: A pair of Surplus Ballistic goggles from the one of the Breaker armories of the Interdyne Neocorporation. While these are outdated, don't really protect all too much from the dangers that working for Interdyne bring as newer solutions, and are bulky, these have flooded the underground markets, for Frontier doctors, Bodyguards who prefer to have a medical readout of their VIPs, and, like you, station inhabitants.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Interdyne.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Interdyne.rsi
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: Tag
+  - type: ShowHealthBars
+    tags:
+    - HudMedical
+    - WhitelistChameleon
+
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesSurplusBallisticBartender
+  name: Hallmaster Surplus Balistic Goggles
+  description: A pair of Surplus Ballistic goggles from the one of the Many neocorporate wars, likely used by some Neocorporation's Canteen manager, this would typically be the type of thing the Mess-Hall Master would wear in order to get at least some degree of respect from the troopers, or, to protect from hot oil, boiling water, or wind. Although, nowerdays, there is not much of a reason to wear these other then style, nostalgia, or these being the only option.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Canteen.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Canteen.rsi
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: SolutionScanner
+  - type: ShowThirstIcons
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesSurplusBallisticSea
+  name: Surplus Ballistic Goggles
+  description: A pair of Surplus Ballistic goggles from the one of the many neocorporate wars', likely used by some company's Oceanic and other Waterborne forces. It's not really able to protect you from ballistic projectiles, at least. But they do function well as a hardy pair of goggles. Sealed for oceanic enviroments!
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Sea.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Sea.rsi
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: Tag
+    tags:
+    - WhitelistChameleon
