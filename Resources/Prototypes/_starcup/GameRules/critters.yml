@@ -12,6 +12,7 @@
     - id: MothroachMigration
     - id: FliesMigration
     - id: BeetleMigration
+    - id: RoingusMigration
     - !type:GroupSelector
       children:
       - id: MouseMigrationLocalized
@@ -24,6 +25,7 @@
       - id: DragonflyMigrationLocalized
       - id: LizardMigrationLocalized
       - id: SandwaspMigrationLocalized
+      - id: RoingusMigrationLocalized
 
 - type: entityTable
   id: HostileCritterEventsTable
@@ -103,6 +105,22 @@
       prob: 0.02
     - id: MobMoproach
       prob: 0.002 # starcup: 0.0005
+
+- type: entity
+  id: RoingusMigration
+  parent: BaseGameRule
+  components:
+  - type: StationEvent
+    earliestStart: 15
+    minimumPlayers: 5
+    weight: 4
+    duration: 50
+  - type: VentCrittersRule
+    entries:
+    - id: MobRoingus
+      prob: 0.02
+    - id: MobBoingus
+      prob: 0.01
 
 # pests (localized)
 - type: entity
@@ -393,6 +411,35 @@
         volume: -5
     breakChance: 1.0
     replacement: GasVentPumpHiveSandwasp
+
+
+- type: entity
+  id: RoingusMigrationLocalized
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement-deltav
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 15
+    weight: 6
+    duration: 15
+    maxDuration: 30
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 4, 8
+        children:
+        - id: MobRoingus
+        - id: MobBoingus
+          weight: 0.2
+    passiveSound:
+      path: /Audio/_DEN/VentCritters/vent_harmless_critter.ogg
+    endSound:
+      collection: MetalScrape
+      params:
+        volume: -5
 
 # hostiles (localized)
 
