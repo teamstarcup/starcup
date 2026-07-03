@@ -57,7 +57,7 @@
   parent: ClothingEyesBase
   id: ClothingEyesGlassesSurplusBallisticSandy
   name: Surplus Ballistic Goggles
-  description: A pair of Surplus Ballistic goggles from the one of the many neocorporate wars', likely used by some company's Oceanic forces. It's not really able to protect you from ballistic projectiles, at least. But they do function well as a hardy pair of goggles. More sealed, for the wetter enviroments!
+  description: A pair of Surplus Ballistic goggles from the one of the many neocorporate wars', likely used by some company's Ground forces. It's not really able to protect you from ballistic projectiles, at least. But they do function well as a hardy pair of goggles. More tinted, to protect from hot and sunny eviroments!
   components:
   - type: Sprite
     sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Sandy.rsi
@@ -97,7 +97,7 @@
   parent: ClothingEyesBase
   id: ClothingEyesGlassesSurplusBallisticInterdyne
   name: Interdyne Breaker Ballistic Goggles
-  description: A pair of Surplus Ballistic goggles from the one of the Breaker armories of the Interdyne Neocorporation. While these are outdated, don't really protect all too much from the dangers that working for Interdyne bring as newer solutions, and are bulky, these have flooded the underground markets, for Frontier doctors, Bodyguards who prefer to have a medical readout of their VIPs, and, like you, station inhabitants.
+  description: A pair of Surplus Ballistic goggles from the one of the Breaker armories of the Interdyne Neocorporation. While these are outdated, don't really protect all too much more then newer solutions, and are bulky, these have flooded the underground markets, making them a semi-common surplus find.
   components:
   - type: Sprite
     sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Interdyne.rsi
@@ -107,6 +107,7 @@
     coverage: EYES
   - type: Tag
   - type: ShowHealthBars
+  - type: ShowHealthIcons
     tags:
     - HudMedical
     - WhitelistChameleon
@@ -116,7 +117,7 @@
   parent: ClothingEyesBase
   id: ClothingEyesGlassesSurplusBallisticBartender
   name: Hallmaster Surplus Balistic Goggles
-  description: A pair of Surplus Ballistic goggles from the one of the Many neocorporate wars, likely used by some Neocorporation's Canteen manager, this would typically be the type of thing the Mess-Hall Master would wear in order to get at least some degree of respect from the troopers, or, to protect from hot oil, boiling water, or wind. Although, nowerdays, there is not much of a reason to wear these other then style, nostalgia, or these being the only option.
+  description: A pair of Surplus Ballistic goggles from the one of the Many neocorporate wars, retrofitted with a Thirst monitor. While there is near-to-no reason to keep using these, some dive bars, military locales, and groups, still use them. Sealed to protect from onion fumes and hot oil!
   components:
   - type: Sprite
     sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Canteen.rsi
@@ -141,6 +142,22 @@
     sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Sea.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Sea.rsi
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesSurplusBallisticForest
+  name: Surplus Ballistic Goggles
+  description: A pair of Surplus Ballistic goggles from the one of the many neocorporate wars', likely used by some company's Ground forces. It's not really able to protect you from ballistic projectiles, at least. But they do function well as a hardy pair of goggles. More tinted for the forest-y enviroments!
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Wooded.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Wooded.rsi
   - type: IdentityBlocker
     coverage: EYES
   - type: Tag
