@@ -42,6 +42,7 @@
     - id: TomatoKillerSpawnHorde
     - id: HivelordSpawnHorde
     - id: SpaceTickSpawnHorde
+    - id: RatSpawnHorde
     # low pop variants
     - id: SlimesSpawnHordeLowPop
     - id: SnakeSpawnHordeLowPop
@@ -54,9 +55,9 @@
     - id: AberrantFleshSpawnHordeLowPop
     - id: TomatoKillerSpawnHordeLowPop
     - id: SpaceTickSpawnHordeLowPop
+    - id: RatSpawnHordeLowPop
 
 # pests (widespread)
-
 - type: entity
   id: FliesMigration
   parent: BaseStationEventShortDelay
@@ -104,7 +105,6 @@
       prob: 0.002 # starcup: 0.0005
 
 # pests (localized)
-
 - type: entity
   id: MouseMigrationLocalized
   parent: BaseStationEventShortDelay
@@ -126,6 +126,24 @@
         - id: MobMouse
         - id: MobMouse1
         - id: MobMouse2
+        - id: MobFatMouse
+          weight: 0.5
+        - id: MobFatMouse1
+          weight: 0.5
+        - id: MobFatMouse2
+          weight: 0.5
+        - id: MobRat
+          weight: 0.5
+        - id: MobRatGray
+          weight: 0.5
+        - id: MobRatWhite
+          weight: 0.5
+        - id: MobRatLarge
+          weight: 0.2
+        - id: MobRatLargeBrown
+          weight: 0.2
+        - id: MobRatLargeBlue
+          weight: 0.2
     passiveSound:
       path: /Audio/_DEN/VentCritters/vent_harmless_critter.ogg
     endSound:
@@ -649,6 +667,46 @@
       params:
         volume: -5
 
+- type: entity
+  id: RatSpawnHorde
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-horde-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 20
+    minimumPlayers: 15
+    weight: 5
+    duration: 15
+    maxDuration: 30
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 5, 8
+        children:
+        - id: MobRatDire
+        - id: MobRatBristle
+        - id: MobRatLarge
+          weight: 0.03
+        - id: MobRatLargeBrown
+          weight: 0.03
+        - id: MobRatLargeBlue
+          weight: 0.03
+        - id: MobRat
+          prob: 0.01
+        - id: MobRatGray
+          prob: 0.01
+        - id: MobRatWhite
+          prob: 0.01
+    endSound:
+      collection: MetalBreak
+      params:
+        volume: -5
+    breakChance: 1
+    replacement: GasVentPumpDen
+
 # hostile (localized, low pop variants)
 
 - type: entity
@@ -816,7 +874,7 @@
 
 - type: entity
   id: TomatoKillerSpawnHordeLowPop
-  parent: LeechSpawnHorde
+  parent: TomatoKillerSpawnHorde
   components:
   - type: StationEvent
     minimumPlayers: 7
@@ -841,3 +899,24 @@
         rolls: 1, 2
         children:
         - id: MobTick
+
+- type: entity
+  id: RatSpawnHordeLowPop
+  parent: RatSpawnHorde
+  components:
+  - type: StationEvent
+    minimumPlayers: 5 # minimum number of player lowered on account that there's some passive prototypes
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 3, 4
+        children:
+        - id: MobRatDire
+        - id: MobRatBristle
+        - id: MobRatLarge
+          weight: 0.03
+        - id: MobRatLargeBrown
+          weight: 0.03
+        - id: MobRatLargeBlue
+          weight: 0.03

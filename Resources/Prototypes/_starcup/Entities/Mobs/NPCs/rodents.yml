@@ -1,5 +1,98 @@
+# Mice
+- type: entity
+  parent: MobMouse
+  id: MobMouseFat
+  name: fat mouse
+  description: A remarkably rotund rodent.
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Animals/Rodents/fat_mouse.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base", "movement"]
+      state: mouse-0
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: mouse-moving-0
+    noMovementLayers:
+      movement:
+        state: mouse-0
+  - type: Clothing
+    equippedPrefix: 0
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: mouse-0
+      Critical:
+        Base: dead-0
+      Dead:
+        Base: splat-0
+  - type: Item
+    size: Tiny
+    heldPrefix: 0
+
+- type: entity
+  parent: MobMouseFat
+  id: MobMouseFat1
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Animals/Rodents/fat_mouse.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base", "movement"]
+      state: mouse-1
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: mouse-moving-1
+    noMovementLayers:
+      movement:
+        state: mouse-1
+  - type: Clothing
+    equippedPrefix: 1
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: mouse-1
+      Critical:
+        Base: dead-1
+      Dead:
+        Base: splat-1
+  - type: Item
+    size: Tiny
+    heldPrefix: 1
+
+- type: entity
+  parent: MobMouseFat
+  id: MobMouseFat2
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Animals/Rodents/fat_mouse.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base", "movement"]
+      state: mouse-2
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: mouse-moving-2
+    noMovementLayers:
+      movement:
+        state: mouse-2
+  - type: Clothing
+    equippedPrefix: 2
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: mouse-2
+      Critical:
+        Base: dead-2
+      Dead:
+        Base: splat-2
+  - type: Item
+    size: Tiny
+    heldPrefix: 2
+
 # Rats
-# Normal rat is a modified copy of MobMouse.
+# MobRat is a modified copy of MobMouse, and unrelated to MobRatServant.
 - type: entity
   name: rat
   parent:
@@ -191,7 +284,7 @@
   - SimpleMobBase
   - BaseMobAnimal
   id: MobRatLarge
-  description: A remarkably rotund rodent.
+  description: A particularly portly pest.
   components:
   - type: Speech
     speechSounds: Squeak
@@ -206,10 +299,6 @@
   - type: NpcFactionMember
     factions:
     - Mouse
-  - type: HTN
-    constantlyReplan: false
-    rootTask:
-      task: MouseCompound
   - type: Physics
   - type: Fixtures
     fixtures:
@@ -233,8 +322,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      25: Critical
-      35: Dead
+      15: Critical
+      25: Dead
   - type: MovementSpeedModifier
     baseWalkSpeed : 2.5
     baseSprintSpeed : 5
@@ -323,7 +412,6 @@
       reagents:
       - ReagentId: Blood
         Quantity: 50
-  - type: CanEscapeInventory
   - type: BadFood
   - type: NonSpreaderZombie
   - type: FoodSequenceElement
@@ -340,9 +428,14 @@
       behaviors:
       - !type:GibBehavior
         recursive: false
-  - type: FelinidFood
   - type: Puller
     needsHands: false
+  - type: NPCRetaliation
+    attackMemoryLength: 5
+  - type: FactionException
+  - type: HTN
+    rootTask:
+      task: RuminantHostileCompound
 
 - type: entity
   parent: MobRatLarge
@@ -370,9 +463,9 @@
   description: Aggressive, overgrown vent vermin, with teeth that look like they could shear steel.
   components:
   - type: Speech
-    speechSounds: Squeak
+    speechSounds: PossumSpeechSounds
     speechVerb: SmallMob
-    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough']
+    allowedEmotes: ['CreatureHiss', 'CreatureYawn', 'CreatureCough','CreatureChitter', 'CreatureGrowl']
   - type: Sprite
     drawdepth: SmallMobs
     sprite: _starcup/Mobs/Animals/Rodents/dire_rat.rsi
@@ -452,12 +545,13 @@
     - id: FoodMeatRat
       amount: 3
   - type: ReplacementAccent
-    accent: mouse
+    accent: xeno
   - type: Tag
     tags:
     - Meat
     - CreatureEmotes
     - IgnoreTallGrass
+    - DoorBumpOpener
   - type: Respirator
     damage:
       types:
@@ -471,8 +565,8 @@
         Blunt: 0.1
   - type: Vocal
     sounds:
-      Unsexed: SqueakSpeechEmotes
-    screamId: CreatureSqueak
+      Unsexed: PossumSpeechEmotes
+    screamId: CreatureHiss
     screamAction: ActionEmitSound
     wilhelmProbability: 0.001
   - type: TypingIndicator
@@ -485,8 +579,8 @@
     animation: WeaponArcBite
     damage:
       types:
-        Piercing: 4.5
-        Structural: 6
+        Piercing: 5
+        Structural: 10
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
@@ -519,7 +613,6 @@
   - SimpleMobBase
   - BaseMobAnimal
   id: MobRatBristle
-  suffix: blue
   description: Also known as vent porcupines, they can fire their nasty quills at a distance.
   components:
   - type: Speech
@@ -538,7 +631,7 @@
   - type: HTN
     constantlyReplan: false
     rootTask:
-      task: SimpleHostileCompound
+      task: SimpleRangedHostileCompound
   - type: Physics
   - type: Fixtures
     fixtures:
@@ -611,6 +704,7 @@
     - Meat
     - CreatureEmotes
     - IgnoreTallGrass
+    - DoorBumpOpener
   - type: Respirator
     damage:
       types:
@@ -638,8 +732,8 @@
     animation: WeaponArcBite
     damage:
       types:
-        Piercing: 2
-        Structural: 4
+        Piercing: 3
+        Structural: 7
   - type: Gun
     fireRate: 0.4
     projectileSpeed: 15.0
@@ -697,7 +791,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 4
+        Piercing: 3
   - type: TimedDespawn
     lifetime: 3
 

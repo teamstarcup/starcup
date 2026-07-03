@@ -34,8 +34,29 @@
       prob: 0.02
     - id: MobMouse2
       prob: 0.02
-    # - id: MobMouseCancer # starcup: disable cancer mouse spawn
+    # begin starcup: add new prototypes and disable cancer mouse spawn for tone
+    # - id: MobMouseCancer
     #   prob: 0.001
+    - id: MobFatMouse
+      prob: 0.01
+    - id: MobFatMouse1
+      prob: 0.01
+    - id: MobFatMouse2
+      prob: 0.01
+    - id: MobRat
+      prob: 0.02
+    - id: MobRatGray
+      prob: 0.02
+    - id: MobRatWhite
+      prob: 0.02
+    - id: MobRatLarge
+      prob: 0.01
+    - id: MobRatLargeBrown
+      prob: 0.01
+    - id: MobRatLargeBlue
+      prob: 0.01
+    # end starcup
+
 # Events always spawn a critter regardless of Probability https://github.com/space-wizards/space-station-14/issues/28480 I added the Rat King to their own event with a player cap.
 
 - type: entity
@@ -49,14 +70,28 @@
     minimumPlayers: 30 # Hopefully this is enough for the Rat King's potential Army (it was not, raised from 15 -> 30)
   - type: VentCrittersRule # We don't use Horde here to make RK spawns less predictable.
     entries:
-    - id: MobMouse
+    # begin starcup: replace mice and disable cancer mouse spawn for tone
+    #- id: MobMouse
+    #  prob: 0.02
+    #- id: MobMouse1
+    #  prob: 0.02
+    #- id: MobMouse2
+    #  prob: 0.02
+    # - id: MobMouseCancer
+    #   prob: 0.001
+    - id: MobRat
       prob: 0.02
-    - id: MobMouse1
+    - id: MobRatGray
       prob: 0.02
-    - id: MobMouse2
+    - id: MobRatWhite
       prob: 0.02
-    #- id: MobMouseCancer # starcup: disable cancer mouse spawn
-      #prob: 0.001
+    - id: MobRatLarge
+      prob: 0.01
+    - id: MobRatLargeBrown
+      prob: 0.01
+    - id: MobRatLargeBlue
+      prob: 0.01
+    # end starcup
     specialEntries:
     - id: SpawnPointGhostRatKing
       prob: 0.001

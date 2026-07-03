@@ -209,20 +209,22 @@
     - SimpleHostile
   - type: Sprite
     drawdepth: SmallMobs
-    sprite: _starcup/Mobs/Animals/Rodents/rat.rsi # starcup
+    # begin starcup: changing sprite, no movement sprites
+    sprite: _Starlight/Mobs/Animals/rat.rsi # starcup
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base", "movement"]
-      state: rat
+    - map: ["enum.DamageStateVisualLayers.Base"] # starcup: removed movement map
+      state: smallrat
     - map: [ "enum.DamageStateVisualLayers.BaseUnshaded"]
-      state: eyes
+      state: smallrat_eyes
       shader: unshaded
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: rat-moving
-    noMovementLayers:
-      movement:
-        state: rat
+  #- type: SpriteMovement
+    #movementLayers:
+      #movement:
+        #state: rat-moving
+    #noMovementLayers:
+      #movement:
+        #state: rat
+  # end starcup
   - type: Physics
     bodyType: KinematicController
   - type: Fixtures
@@ -280,13 +282,15 @@
     baseDecayRate: 0.1
   - type: DamageStateVisuals
     states:
+      # begin starcup: changing sprite
       Alive:
-        Base: rat
-        BaseUnshaded: eyes
+        Base: smallrat
+        BaseUnshaded: smallrat_eyes
       Critical:
-        Base: dead
+        Base: smallrat_dead
       Dead:
-        Base: splat
+        Base: smallrat_splat
+    # end starcup
   - type: Butcherable
     spawned:
     - id: FoodMeatRat
