@@ -17,7 +17,7 @@
   id: SpawnPointGhostRatKing
   name: ghost role spawn point
   suffix: rat king
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup: we like our markers better
   components:
   - type: GhostRole
     name: ghost-role-information-rat-king-name
@@ -29,10 +29,10 @@
       settings: default
   - type: GhostRoleMobSpawner
     prototype: MobRatKing
-    selectablePrototypes: ["MobRatKing", "MobRatKingGray", "MobRatKingWhite"] # starcup: add variants
   - type: Sprite
-    sprite: Markers/jobs.rsi
+    #sprite: Markers/jobs.rsi # starcup: parented to our own marker
     layers:
+      - state: shadowgreen # starcup
       - state: green
       - sprite: Mobs/Animals/regalrat.rsi
         state: icon

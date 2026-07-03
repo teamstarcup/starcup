@@ -87,32 +87,6 @@
     defaultTarget: cooked capybara
 
 - type: entity
-  name: raw capybara cutlet
-  parent: FoodMeatBase
-  id: FoodMeatCapybaraCutlet
-  description: A cutlet of raw capybara meat.
-  components:
-  - type: Tag
-    tags:
-    - Raw
-    - Cutlet
-    - Meat
-  - type: Sprite
-    state: cutlet
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 3
-        - ReagentId: Fat
-          Quantity: 2
-  - type: Construction
-    graph: CapybaraCutlet
-    node: start
-    defaultTarget: capybara cutlet
-
-- type: entity
   name: cooked capybara
   parent: FoodMeatBase
   id: FoodMeatCapybaraCooked
@@ -144,7 +118,7 @@
 - type: entity
   name: capybara cutlet
   parent: FoodMeatBase
-  id: FoodMeatCapybaraCutletCooked
+  id: FoodMeatCapybaraCutlet
   description: A cutlet of cooked capybara meat.
   components:
   - type: Tag
@@ -162,6 +136,3 @@
           Quantity: 2
         - ReagentId: Protein
           Quantity: 2
-  - type: Construction
-    graph: CapybaraCutlet
-    node: capybara cutlet

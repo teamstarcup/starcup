@@ -37,11 +37,11 @@
     # begin starcup: add new prototypes and disable cancer mouse spawn for tone
     # - id: MobMouseCancer
     #   prob: 0.001
-    - id: MobFatMouse
+    - id: MobMouseFat
       prob: 0.01
-    - id: MobFatMouse1
+    - id: MobMouseFat1
       prob: 0.01
-    - id: MobFatMouse2
+    - id: MobMouseFat2
       prob: 0.01
     - id: MobRat
       prob: 0.02
@@ -94,6 +94,10 @@
     # end starcup
     specialEntries:
     - id: SpawnPointGhostRatKing
+      prob: 0.001
+    - id: SpawnPointGhostRatKingGray
+      prob: 0.001
+    - id: SpawnPointGhostRatKingWhite
       prob: 0.001
 
 - type: entity
