@@ -17,6 +17,14 @@
     noMovementLayers:
       movement:
         state: mouse-0
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      15: Critical
+      25: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2
+    baseSprintSpeed : 4
   - type: Clothing
     equippedPrefix: 0
   - type: DamageStateVisuals
