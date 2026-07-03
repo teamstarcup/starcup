@@ -819,7 +819,7 @@
   name: capybara
   parent: [ SimpleMobBase, StripableInventoryBase ]
   id: MobCapybara
-  description: One of the largest living rodents and a symbol of the fight against oppression.
+  description: One of the largest living rodents. Be chill. Become ungovernable.
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -858,8 +858,17 @@
     interactSuccessString: petting-success-generic
     interactFailureString: petting-failure-generic
     interactSuccessSpawn: EffectHearts
-  - type: Bloodstream
-    bloodMaxVolume: 50
+  - type: Speech
+    speechSounds: HamsterSpeechSounds
+    speechVerb: SmallMob
+    allowedEmotes: ['CreatureSqueak', 'CreaturePurr', 'CreatureTrill', 'CreatureYawn', 'CreatureCough']
+  - type: Vocal
+    sounds:
+      Unsexed: HamsterSpeechEmotes
+    screamId: CreatureTrill
+    screamAction: ActionEmitSound
+  - type: TypingIndicator
+    proto: rodentia
 
 - type: entity
   parent: MobCapybara
