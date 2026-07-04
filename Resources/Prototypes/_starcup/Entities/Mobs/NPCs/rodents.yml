@@ -782,7 +782,7 @@
     needsHands: false
 
 - type: entity
-  parent: BaseArrow
+  parent: BaseItem
   id: RatQuill
   name: bristle rat quill
   categories: [ HideSpawnMenu ]
@@ -796,7 +796,34 @@
     sprite: _starcup/Objects/Weapons/Guns/Projectiles/organic.rsi
     layers:
     - state: bristle
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeCircle
+          radius: 0.2
+        density: 5
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.3,0.1,-0.1"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+    embedOnThrow: false
+  - type: ThrowingAngle
+    angle: 0
+  - type: Ammo
+    muzzleFlash: null
   - type: Projectile
+    deleteOnCollide: false
+    onlyCollideWhenShot: true
     damage:
       types:
         Piercing: 3
