@@ -23,17 +23,16 @@
       tags:
         - HideContextMenu
 
-# begin starcup: replacing this with our own prototypes
-#- type: entity
-  #parent: CollideFloorTrap
-  #id: CollideFloorTrapSpawn
-  #name: floor trap spawn
-  #abstract: true
-  #components:
-    #- type: Sprite
-      #sprite: Tiles/Misc/floortrap.rsi
-      #state: floortrapspawn
-# end starcup
+# starcup: this prototype is currently unused as we're replacing it with our own
+- type: entity
+  parent: CollideFloorTrap
+  id: CollideFloorTrapSpawn
+  name: floor trap spawn
+  abstract: true
+  components:
+    - type: Sprite
+      sprite: Tiles/Misc/floortrap.rsi
+      state: floortrapspawn
 
 - type: entity
   parent: CollideFloorTrap
