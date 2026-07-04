@@ -65,6 +65,7 @@
   parent: CollideFloorTrap
   id: CollideFloorTrapSpawnBurrow
   name: burrowed creature
+  description: Something hides underground.
   abstract: true
   components:
   - type: Sprite
@@ -85,6 +86,8 @@
       path: /Audio/_starcup/Effects/Burrowing/burrow_off_large.ogg
     positional: true
     predicted: true
+  - type: InteractionOutline
+  - type: Clickable
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: burrowed
