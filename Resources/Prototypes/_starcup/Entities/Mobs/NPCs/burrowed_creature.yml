@@ -76,10 +76,11 @@
 # Entities resulting from the protoIDs
 - type: entity
   id: BurrowedCreatureSmall
+  categories: [ HideSpawnMenu ]
   name: burrowed creature
   suffix: small
   parent:
-    - BaseMob
+  - BaseMob
   description: Something hides underground.
   components:
   - type: Sprite
@@ -98,93 +99,31 @@
         burrowed4: ""
   - type: Fixtures
     fixtures:
-      fix1:
+      floortrap:
         shape:
           !type:PhysShapeCircle
           radius: 0.25
         mask:
         - Impassable
-  - type: Insulated
-  - type: Temperature
-    currentTemperature: 310.15
-  - type: TemperatureDamage
-    heatDamageThreshold: 360
-    coldDamageThreshold: -150
-  - type: Tag
-    tags:
-    - CannotSuicide
+        layer:
+        - SlipLayer
   - type: MovementSpeedModifier
     baseWalkSpeed : 0
     baseSprintSpeed : 0
-  - type: NoSlip
+  - type: Insulated
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: burrowed
-    # the components below were copied from MobDamageable, and maybe tweaked a little.
-    # the burrowed creature was not parented to it because MobDamageable has the pullable component.
-    # we don't want burrowed creatures to be pullable.
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTypeTrigger
-        damageType: Blunt
-        damage: 400
-      behaviors:
-      - !type:GibBehavior { }
-    - trigger:
-        !type:DamageTypeTrigger
-        damageType: Radiation
-        damage: 15
-      behaviors:
-      - !type:PopupBehavior
-        popup: mouth-taste-metal
-        popupType: LargeCaution
-        targetOnly: true
-    - trigger:
-        !type:DamageTypeTrigger
-        damageType: Radiation
-        damage: 40
-      behaviors:
-      - !type:VomitBehavior
-  - type: RadiationReceiver
-  - type: Stamina
-  - type: StunVisuals
   - type: MobState
   - type: MobThresholds
     thresholds:
       0: Alive
       45: Critical
-      50: Dead
-  - type: MobStateActions
-    actions:
-      Critical:
-      - ActionCritSuccumb
-      - ActionCritFakeDeath
-      - ActionCritLastWords
-  - type: Deathgasp
-  - type: HealthExaminable
-    examinableTypes:
-    - Blunt
-    - Slash
-    - Piercing
-    - Heat
-    - Shock
-    - Cold
-    - Caustic
-    - Asphyxiation
-    - Radiation
-  - type: DamageOnHighSpeedImpact
-    damage:
-      types:
-        Blunt: 5
-    soundHit:
-      path: /Audio/Effects/hit_kick.ogg
-  - type: LightningTarget
-    priority: 2
-    lightningExplode: false
+      60: Dead
 
 - type: entity
   id: BurrowedCreatureLarge
+  categories: [ HideSpawnMenu ]
   name: burrowed creature
   suffix: large
   parent: BurrowedCreatureSmall
@@ -205,4 +144,4 @@
     thresholds:
       0: Alive
       95: Critical
-      100: Dead
+      150: Dead
