@@ -130,7 +130,7 @@
   parent: GasVentPumpInfested
   id: GasVentPumpPulsating
   name: pulsating vent
-  description: Twinging tendons are creeping out of it...
+  description: Twinging tendons are creeping out of it.
   components:
   - type: SubFloorHide
     visibleLayers:
@@ -231,6 +231,9 @@
         loop: true
     positional: true
     predicted: true
+  - type: Construction
+    graph: GasUnaryBroken
+    node: ventpumpden
 
 - type: entity
   parent: GasVentPumpInfested
@@ -277,6 +280,9 @@
         loop: true
     positional: true
     predicted: true
+  - type: Construction
+    graph: GasUnaryBroken
+    node: ventpumphivewasp
 
 - type: entity
   parent: GasVentPumpHiveWasp
@@ -306,3 +312,6 @@
     prototypes:
     - MobGiantSandwasp
     chance: 0.05
+  - type: Construction
+    graph: GasUnaryBroken
+    node: ventpumphivesandwasp
