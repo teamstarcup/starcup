@@ -23,15 +23,17 @@
       tags:
         - HideContextMenu
 
-- type: entity
-  parent: CollideFloorTrap
-  id: CollideFloorTrapSpawn
-  name: floor trap spawn
-  abstract: true
-  components:
-    - type: Sprite
-      sprite: Tiles/Misc/floortrap.rsi
-      state: floortrapspawn
+# begin starcup: replacing this with our own prototypes
+#- type: entity
+  #parent: CollideFloorTrap
+  #id: CollideFloorTrapSpawn
+  #name: floor trap spawn
+  #abstract: true
+  #components:
+    #- type: Sprite
+      #sprite: Tiles/Misc/floortrap.rsi
+      #state: floortrapspawn
+# end starcup
 
 - type: entity
   parent: CollideFloorTrap
@@ -63,7 +65,7 @@
     - type: DeleteOnTrigger
 
 - type: entity
-  parent: CollideFloorTrapSpawn
+  parent: CollideFloorTrapSpawnAstralTear # starcup: floor trap spawn reworks
   id: SpawnFloorTrapCarp
   suffix: Carp
   components:
@@ -75,7 +77,7 @@
     - type: DeleteOnTrigger
 
 - type: entity
-  parent: CollideFloorTrapSpawn
+  parent: CollideFloorTrapSpawnAstralTear # starcup: floor trap spawn reworks
   id: SpawnFloorTrapBear
   suffix: Bear
   components:
@@ -87,7 +89,7 @@
     - type: DeleteOnTrigger
 
 - type: entity
-  parent: CollideFloorTrapSpawn
+  parent: CollideFloorTrapSpawnAstralTear # starcup: floor trap spawn reworks
   id: SpawnFloorTrapKangaroo
   suffix: Kangaroo
   components:
@@ -99,71 +101,25 @@
     - type: DeleteOnTrigger
 
 - type: entity
-  parent: CollideFloorTrapSpawn
+  parent: CollideFloorTrapSpawnBurrow # starcup: floor trap spawn reworks
   id: SpawnFloorTrapXenoDrone
   suffix: Xeno. Drone
   components:
     - type: TriggerOnCollide
       fixtureID: floortrap
       maxTriggers: 1
-  # begin starcup: add burrowing ability
-    - type: EmitSoundOnTrigger
-      sound:
-        path: /Audio/_starcup/Effects/Burrowing/burrow_off_large.ogg
-      positional: true
-      predicted: true
-  # end starcup
     - type: SpawnOnTrigger
       proto: MobXenoDrone
     - type: DeleteOnTrigger
-  # begin starcup: add burrowing ability
-    - type: Sprite
-      noRot: true
-      sprite: _starcup/Mobs/Special/burrowed_large.rsi
-      drawdepth: FloorObjects
-      layers:
-      - state: burrowed1
-        map: ["random"]
-    - type: RandomSprite
-      available:
-      - random:
-          burrowed1: ""
-          burrowed2: ""
-          burrowed3: ""
-          burrowed4: ""
-  # end starcup
 
 - type: entity
-  parent: CollideFloorTrapSpawn
+  parent: CollideFloorTrapSpawnBurrow # starcup: floor trap spawn reworks
   id: SpawnFloorTrapXenoBurrower
   suffix: Xeno. Burrower
   components:
     - type: TriggerOnCollide
       fixtureID: floortrap
       maxTriggers: 1
-  # begin starcup: add burrowing ability
-    - type: EmitSoundOnTrigger
-      sound:
-        path: /Audio/_starcup/Effects/Burrowing/burrow_off_large.ogg
-      positional: true
-      predicted: true
-  # end starcup
     - type: SpawnOnTrigger
       proto: MobXeno
     - type: DeleteOnTrigger
-  # begin starcup: add burrowing ability
-    - type: Sprite
-      noRot: true
-      sprite: _starcup/Mobs/Special/burrowed_large.rsi
-      drawdepth: FloorObjects
-      layers:
-      - state: burrowed1
-        map: ["random"]
-    - type: RandomSprite
-      available:
-      - random:
-          burrowed1: ""
-          burrowed2: ""
-          burrowed3: ""
-          burrowed4: ""
-  # end starcup
