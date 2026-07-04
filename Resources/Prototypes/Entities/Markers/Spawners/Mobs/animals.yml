@@ -206,16 +206,19 @@
     - MobMonkey
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup: use our own markers
   id: SpawnMobMouse
   name: Mouse Spawner
   components:
+  # begin starcup
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - sprite: Mobs/Animals/mouse.rsi
-      state: icon-2
+      state: icon-1
     - state: ai
+  # end starcup
   - type: ConditionalSpawner
     prototypes:
     - MobMouse

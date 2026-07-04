@@ -1,0 +1,163 @@
+# Mice
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobMouseFat
+  name: Fat Mouse Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - sprite: _starcup/Mobs/Animals/Rodents/fat_mouse.rsi
+      state: icon-1
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobMouseFat
+    - MobMouseFat1
+    - MobMouseFat2
+
+# Rat
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobRat
+  name: Rat Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - sprite: _starcup/Mobs/Animals/Rodents/rat.rsi
+      state: icon
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobRat
+    - MobRatGray
+    - MobRatWhite
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobRatLarge
+  name: Large Rat Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - sprite: _starcup/Mobs/Animals/Rodents/rat_big.rsi
+      state: icon
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobRatLarge
+    - MobRatLargeBlue
+    - MobRatLargeBrown
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobRatDire
+  name: Dire Rat Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - sprite: _starcup/Mobs/Animals/Rodents/dire_rat.rsi
+      state: icon
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobRatDire
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobRatBristle
+  name: Bristle Rat Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - sprite: _starcup/Mobs/Animals/Rodents/bristle_rat.rsi
+      state: icon
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobRatBristle
+
+# Other rodents
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobCapybara
+  name: Capybara Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - sprite: _starcup/Mobs/Animals/Rodents/capybara.rsi
+      state: icon
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobCapybara
+    - MobCapybaraLight
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobRoingus
+  name: Roingus Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - sprite: _starcup/Mobs/Animals/Rodents/roingus.rsi
+      state: icon
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobRoingus
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobBoingus
+  name: Boingus Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - sprite: _starcup/Mobs/Animals/Rodents/boingus.rsi
+      state: icon
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobBoingus
+
+#----------------------------------------------
+# Timed spawns
+- type: entity
+  id: RatTimedSpawner
+  name: Rat Timed Spawner
+  parent: TimedSpawnerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadow
+    - state: blue
+    - sprite: _starcup/Mobs/Animals/Rodents/generic_spawners.rsi
+      state: rats
+    - sprite: Markers/cross.rsi
+      state: timed
+  - type: TimedSpawner
+    prototypes:
+    - MobRat
+    - MobRatGray
+    - MobRatWhite
+    - MobRatLarge
+    - MobRatLargeBlue
+    - MobRatLargeBrown
+
+
