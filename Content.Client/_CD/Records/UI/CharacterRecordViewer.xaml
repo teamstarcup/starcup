@@ -76,6 +76,8 @@
                             <records:RecordLongItemDisplay Name="RecordContainerAllergies" Title="{Loc 'humanoid-profile-editor-cd-records-allergies'}"/>
                             <records:RecordLongItemDisplay Name="RecordContainerDrugAllergies" Title="{Loc 'humanoid-profile-editor-cd-records-drug-allergies'}"/>
                             <records:RecordLongItemDisplay Name="RecordContainerPostmortem" Title="{Loc 'humanoid-profile-editor-cd-records-postmortem'}"/>
+                            <!-- starcup Medical Needs -->
+                            <records:RecordLongItemDisplay Name="RecordContainerMedicalNeeds" Title="{Loc 'humanoid-profile-editor-cd-records-medical-needs'}"/>
                             <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
                                 <Label Text="{Loc 'cd-character-records-viewer-record-med-sex'}"/>
                                 <Control HorizontalExpand="True" />
@@ -85,6 +87,8 @@
                         <!-- Security -->
                         <BoxContainer Name="RecordContainerSecurity" Orientation="Vertical" HorizontalExpand="True" Visible="False" >
                             <records:RecordLongItemDisplay Name="RecordContainerIdentFeatures" Title="{Loc 'humanoid-profile-editor-cd-records-identifying-features'}"/>
+                            <!-- starcup Security Flags -->
+                            <records:RecordLongItemDisplay Name="RecordContainerSecurityFlags" Title="{Loc 'humanoid-profile-editor-cd-records-security-flags'}"/>
                             <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
                                 <Label Text="{Loc 'cd-character-records-viewer-record-sec-fingerprint'}"/>
                                 <Control HorizontalExpand="True" />
