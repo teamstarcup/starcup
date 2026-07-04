@@ -4,6 +4,7 @@
   id: CollideFloorTrapSpawnAstralTear
   name: astral tear
   abstract: true
+  description: A shimmering space-time fracture. Distant starts twinkle on the other side.
   components:
   - type: Sprite
     noRot: true
@@ -160,7 +161,7 @@
     fixtureID: floortrap
     maxTriggers: 1
   - type: SpawnOnTrigger
-    proto: MobSandwasp
+    proto: MobGiantSandwasp
   - type: DeleteOnTrigger
 
 - type: entity
