@@ -70,7 +70,7 @@ public sealed partial class AnomalyComponent : Component
     /// If the <see cref="Stability"/> of the anomaly exceeds this value, it
     /// becomes too unstable to support itself and starts decreasing in <see cref="Health"/>.
     /// </summary>
-    [DataField("decayhreshold"), ViewVariables(VVAccess.ReadWrite)]
+    [DataField("decayThreshold"), ViewVariables(VVAccess.ReadWrite)]
     public float DecayThreshold = 0.15f;
 
     /// <summary>
