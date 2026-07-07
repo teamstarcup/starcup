@@ -52,9 +52,9 @@
   description: Popular in the Submarine station.
   components:
   - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/sailor.rsi
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/sailor.rsi
   - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/sailor.rsi
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/sailor.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -63,9 +63,9 @@
   description: A red and white striped ensemble with dark suspenders.
   components:
   - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/striped_suit.rsi
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/striped_suit.rsi
   - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/striped_suit.rsi
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/striped_suit.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -74,8 +74,50 @@
   description: Black ripped jeans and a fishnet top. How punk.
   components:
   - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/rippedpunk.rsi
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/rippedpunk.rsi
   - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/rippedpunk.rsi
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/rippedpunk.rsi
 
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSuitBlueBlazer
+  name: blue blazer
+  description: A bold yet conservative outfit, red corduroys, navy blazer and a tie. # TODO
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/blue_blazer.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/blue_blazer.rsi
 
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitWaiter
+  name: waiter's outfit
+  description: Waiter! Waiter! More serves with that outfit please!
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/waiter.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/waiter.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSuitVictorianRedVest
+  name: red victorian suit # TODO
+  description: A Victorian-style suit, fancy! # TODO
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/victorian_red_vest.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/victorian_red_vest.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSuitVictorianVest
+  name: victorian suit # TODO
+  description: A Victorian-style suit, fancy! # TODO
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/victorian_vest.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/victorian_vest.rsi
