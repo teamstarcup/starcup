@@ -93,6 +93,7 @@
   - type: Clothing
     sprite: _starcup/Clothing/Uniforms/Jumpskirt/commandgenericsyndie.rsi
 
+## FASHION
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtPinstripeDress
@@ -103,3 +104,25 @@
     sprite: _starcup/Clothing/Uniforms/Jumpskirt/pinstripe_dress.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Uniforms/Jumpskirt/pinstripe_dress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtDisheveled
+  name: disheveled suitskirt
+  description: # TODO
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Uniforms/Jumpskirt/disheveled_skirt.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Uniforms/Jumpskirt/disheveled_skirt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtRippedPunk
+  name: ripped punk skirt
+  description: Black ripped jeans and a fishnet top. How punk. # TODO
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/rippedpunk.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/rippedpunk.rsi
