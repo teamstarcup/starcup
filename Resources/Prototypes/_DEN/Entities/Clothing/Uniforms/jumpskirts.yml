@@ -1,3 +1,37 @@
+## SUNDRESSES
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtDressSundress
+  name: sundress
+  description: Makes you want to frolic in a field of daisies.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/sundress.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/sundress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtDressSundressWhite
+  name: white sundress
+  description: A white sundress decorated with purple lilies.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/sundress_white.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/sundress_white.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtDressBlueSundress
+  name: long blue sundress
+  description: A long blue sun dress with white frills towards the bottom.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/blue_sundress.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/blue_sundress.rsi
+
 ## DINER
 - type: entity
   parent: ClothingUniformJumpsuitDinerTeal
@@ -152,4 +186,58 @@
     sprite: Clothing/Uniforms/Jumpskirt/cheongsamred.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/cheongsamred.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtDressVictorianBlack
+  name: black victorian dress # TODO
+  description: A black Victorian-style dress often paired with the black Victorian coat. # TODO
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/victorian_black_dress.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/victorian_black_dress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtDressVictorianRed
+  name: red victorian dress # TODO
+  description: A red Victorian-style dress often paired with the red Victorian coat. # TODO
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/victorian_red_dress.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/victorian_red_dress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtDressBlackTango
+  name: black tango dress
+  description: An earthen black tango dress.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/black_tango.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/black_tango.rsi
+
+- type: entity
+  parent: ClothingUniformJumpskirtDressBlackTango
+  id: ClothingUniformJumpskirtDressBlackTangoAlt
+  suffix: alternative
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/black_tango_alt.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/black_tango_alt.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtSuitBlueBlazer
+  name: blue blazer skirt
+  description: A bold yet conservative outfit, a red pencil skirt and a navy blazer. # TODO
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/blue_blazer.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/blue_blazer.rsi
 
