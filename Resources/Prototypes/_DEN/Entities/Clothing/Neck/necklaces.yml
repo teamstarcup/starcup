@@ -44,36 +44,20 @@
 
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckNecklacePendantGold
-  name: gold pendant necklace
-  description: A heavy gemstone tethered to a golden necklace by a chain.
+  id: ClothingNeckNecklacePendantGoldRuby
+  name: ruby pendant necklace
+  description: A heavy red gemstone tethered to a golden necklace by a chain. The gem is warm to the touch.
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Neck/Necklaces/pendant_gold.rsi
     layers:
     - state: icon
     - state: pendant-icon
+      color: "#ef5348" # courage of the heart is very rare.
   - type: Clothing
     sprite: _DEN/Clothing/Neck/Necklaces/pendant_gold.rsi
     clothingVisuals:
       neck:
       - state: equipped-NECK
       - state: pendant-equipped-NECK
-
-- type: entity
-  parent: ClothingNeckBase
-  id: ClothingNeckNecklacePendantGoldLarge
-  name: large gold pendant necklace
-  description: A large gemstone tethered to a golden necklace by a chain.
-  components:
-  - type: Sprite
-    sprite: _DEN/Clothing/Neck/Necklaces/pendant_gold_large.rsi
-    layers:
-    - state: icon
-    - state: pendant-icon
-  - type: Clothing
-    sprite: _DEN/Clothing/Neck/Necklaces/pendant_gold_large.rsi
-    clothingVisuals:
-      neck:
-      - state: equipped-NECK
-      - state: pendant-equipped-NECK
+        color: "#ef5348"
