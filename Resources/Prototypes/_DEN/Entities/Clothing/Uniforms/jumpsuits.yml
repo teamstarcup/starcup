@@ -144,6 +144,7 @@
   - type: Clothing
     sprite: _DEN/Clothing/Uniforms/Jumpsuit/lightblue_shirt.rsi
 
+## FLANNEL
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitFlannelKhakis
@@ -168,6 +169,29 @@
 
 - type: entity
   parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitFlannelBlackJeans
+  name: black flannel shirt and jeans
+  description: Not just any flannel, a flannel shirt that's black! Daring today, aren't we?
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/black_flannel_jeans.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/black_flannel_jeans.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitFlannelBlackKhakis
+  name: black flannel shirt and khakis
+  description: A black flannel shirt with tan khaki pants, a smart pairing.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/black_flannel_khakis.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/black_flannel_khakis.rsi
+
+## COWBOYS
+- type: entity
+  parent: ClothingUniformBase
   id: ClothingUniformJumpsuitCowboyBrown
   name: brown cowboy outfit
   description: Yeehaw, partner!
@@ -188,6 +212,7 @@
   - type: Clothing
     sprite: _DEN/Clothing/Uniforms/Jumpsuit/cowboygrey.rsi
 
+##
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitOliveSweater
@@ -198,3 +223,16 @@
     sprite: _DEN/Clothing/Uniforms/Jumpsuit/olive_sweater.rsi
   - type: Clothing
     sprite: _DEN/Clothing/Uniforms/Jumpsuit/olive_sweater.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBarber
+  name: barber jumpsuit
+  description: Makes you want to cut hair. # TODO
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/barber.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/barber.rsi
+
+
