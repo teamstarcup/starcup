@@ -1,7 +1,308 @@
 - type: entity
-  parent: GasVentPump
-  id: GasVentPumpNoSpawns
-  suffix: Pests Only
+  parent: GasUnaryBase
+  id: GasVentPumpBroken
+  name: broken vent
+  description: Something broke through it.
+  placement:
+    mode: SnapgridCenter
   components:
-   - type: VentCritterSpawnLocation
-     canSpawn: false
+  - type: SubFloorHide
+    visibleLayers:
+    - enum.SubfloorLayers.FirstLayer
+  - type: Sprite
+    drawdepth: FloorObjects
+    sprite: _starcup/Structures/Piping/vent_destroyed.rsi
+    layers:
+    - sprite: Structures/Piping/Atmospherics/pipe.rsi
+      state: pipeUnaryConnectors
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: vent_broken
+      map: [ "enum.SubfloorLayers.FirstLayer" ]
+  #- type: GasPassiveVent # Makes sense, but is also very dangerous, so it's deactivated for now.
+  - type: Construction
+    graph: GasUnaryBroken
+    node: ventpumpbroken
+  - type: AmbientSound
+    enabled: true
+    volume: -12
+    range: 5
+    sound:
+      path: /Audio/Ambience/Objects/gas_vent.ogg
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 15
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 1
+        offset: 0
+
+- type: entity
+  id: GasVentPumpInfested
+  name: infested vent
+  description: Something broke through it. Something still moves inside it...
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Visibility
+    layer: 1
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Transform
+    anchored: true
+  - type: SubFloorHide
+    visibleLayers:
+    - enum.SubfloorLayers.FirstLayer
+  - type: CollideOnAnchor
+  - type: Anchorable
+  - type: Rotatable
+  - type: Sprite
+    drawdepth: FloorObjects
+    sprite: _starcup/Structures/Piping/vent_destroyed.rsi
+    layers:
+    - sprite: Structures/Piping/Atmospherics/pipe.rsi
+      state: pipeUnaryConnectors
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: vent_infested
+      map: [ "enum.SubfloorLayers.FirstLayer" ]
+  - type: Physics
+    canCollide: false
+    bodyType: static
+    fixedRotation: false
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 20
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          PuddleFluorosulfuricAcidSmall:
+            min: 1
+            max: 2
+        offset: 0
+  - type: TimedSpawner
+    prototypes:
+    - MobXeno
+    - MobXenoDrone
+    - MobXenoRunner
+    - MobXenoSpitter
+    chance: 0.1
+  - type: TriggerOnSpawn
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_starcup/Ambience/Objects/vent_infested.ogg
+      params:
+        maxDistance: 4
+        loop: true
+    positional: true
+    predicted: true
+
+- type: entity
+  parent: GasVentPumpInfested
+  id: GasVentPumpPulsating
+  name: pulsating vent
+  description: Twinging tendons are creeping out of it...
+  components:
+  - type: SubFloorHide
+    visibleLayers:
+    - enum.SubfloorLayers.FirstLayer
+  - type: Sprite
+    sprite: _starcup/Structures/Piping/vent_destroyed.rsi
+    layers:
+    - sprite: Structures/Piping/Atmospherics/pipe.rsi
+      state: pipeUnaryConnectors
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: vent_pulsating
+      map: [ "enum.SubfloorLayers.FirstLayer" ]
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          PuddleBlood:
+            min: 1
+            max: 2
+        offset: 0
+  - type: TimedSpawner
+    prototypes:
+    - MobFleshJared
+    - MobFleshGolem
+    - MobFleshClamp
+    - MobFleshLover
+    - FleshKudzuWeak
+    chance: 0.1
+  - type: TriggerOnSpawn
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_starcup/Ambience/Objects/vent_pulsating.ogg
+      params:
+        maxDistance: 4
+        loop: true
+    positional: true
+    predicted: true
+
+- type: entity
+  parent: GasVentPumpInfested
+  id: GasVentPumpDen
+  name: vent den
+  description: Chitters and squeaks echo inside.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Piping/vent_destroyed.rsi
+    layers:
+    - sprite: Structures/Piping/Atmospherics/pipe.rsi
+      state: pipeUnaryConnectors
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: vent_den
+      map: [ "enum.SubfloorLayers.FirstLayer" ]
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MobMouse:
+            min: 1
+            max: 2
+          MobMouse1:
+            min: 0
+            max: 2
+          MobMouse2:
+            min: 0
+            max: 2
+        offset: 0
+  - type: TimedSpawner
+    prototypes:
+    - MobMouse
+    - MobMouse1
+    - MobMouse2
+    - MobBat
+    chance: 0.1
+  - type: TriggerOnSpawn
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_starcup/Ambience/Objects/vent_den.ogg
+      params:
+        maxDistance: 4
+        loop: true
+    positional: true
+    predicted: true
+
+- type: entity
+  parent: GasVentPumpInfested
+  id: GasVentPumpHiveWasp
+  name: vent hive
+  suffix: giant wasps
+  description: Buzzing wings and clicking mandibles echo inside.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Piping/vent_destroyed.rsi
+    layers:
+    - sprite: Structures/Piping/Atmospherics/pipe.rsi
+      state: pipeUnaryConnectors
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+    - state: vent_hive
+      map: [ "enum.SubfloorLayers.FirstLayer" ]
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MobGiantWasp:
+            min: 1
+            max: 3
+        offset: 0
+  - type: TimedSpawner
+    prototypes:
+    - MobGiantWasp
+    chance: 0.1
+  - type: TriggerOnSpawn
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_starcup/Ambience/Objects/vent_hive.ogg
+      params:
+        maxDistance: 4
+        loop: true
+    positional: true
+    predicted: true
+
+- type: entity
+  parent: GasVentPumpHiveWasp
+  id: GasVentPumpHiveSandwasp
+  name: vent hive
+  suffix: giant sandwasps
+  description: Buzzing wings and clicking mandibles echo inside.
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MobGiantSandwasp:
+            min: 0
+            max: 1
+        offset: 0
+  - type: TimedSpawner
+    prototypes:
+    - MobGiantSandwasp
+    chance: 0.05

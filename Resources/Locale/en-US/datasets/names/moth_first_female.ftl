@@ -95,8 +95,7 @@ names-moth-first-female-dataset-38 = Zoey
 ## begin starcup: more genus and species derivatives
 
 # Sphingidae
-names-moth-first-female-dataset-39 = Sphinx
-names-moth-first-female-dataset-40 = Sphynx
+names-moth-first-female-dataset-39 = Sphynx
 names-moth-first-female-dataset-40 = Sphinga
 names-moth-first-female-dataset-41 = Esfinice
 

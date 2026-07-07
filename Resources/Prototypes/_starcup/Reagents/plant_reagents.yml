@@ -1,0 +1,33 @@
+- type: reagent
+  id: Resin
+  name: reagent-name-resin
+  group: Biological
+  desc: reagent-desc-resin
+  flavor: bitter
+  color: "#cd7314"
+  recognizable: true
+  physicalDesc: reagent-physical-desc-sticky
+  viscosity: 0.30
+  tileReactions:
+  - !type:SpillTileReaction
+  footstepSound:
+    collection: FootstepSlime
+    params:
+      volume: 6
+
+- type: reagent
+  id: PlantDetritus
+  name: reagent-name-plantdetritus
+  group: Biological
+  desc: reagent-desc-plantdetritus
+  flavor: bitter
+  color: "#5a6b19"
+  recognizable: true
+  physicalDesc: reagent-physical-desc-sticky
+  viscosity: 0.20
+  tileReactions:
+  - !type:SpillTileReaction
+  footstepSound:
+    collection: FootstepSlime
+    params:
+      volume: 5
