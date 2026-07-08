@@ -44,12 +44,12 @@
   - type: Clothing
     sprite: _DEN/Clothing/Uniforms/Jumpsuit/diner_fastfood.rsi
 
-## OTHER
+## MISC
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitSailor
   name: sailor suit
-  description: Popular in the Submarine station.
+  description: Uneaten slice of jam toast not included. # starcup - replacing the Submarine station joke because I don't get it
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Uniforms/Jumpsuit/sailor.rsi
@@ -71,7 +71,7 @@
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitRippedPunk
   name: ripped punk jeans
-  description: Black ripped jeans and a fishnet top. How punk.
+  description: A fishnet top over black ripped jeans. Real punks always ignore the 'Dry Clean Only' tag. # starcup - rewrote
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Uniforms/Jumpsuit/rippedpunk.rsi
@@ -82,7 +82,7 @@
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitSuitBlueBlazer
   name: blue blazer
-  description: A bold yet conservative outfit, red corduroys, navy blazer and a tie. # TODO
+  description: A bold yet conservative outfit — red corduroys, navy blazer and a tie. # starcup - tweaked grammar
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Uniforms/Jumpsuit/blue_blazer.rsi
@@ -103,8 +103,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitSuitVictorianRedVest
-  name: red victorian suit # TODO
-  description: A Victorian-style suit, fancy! # TODO
+  name: old-fashioned red suit # starcup - queen victoria isn't real
+  description: A vintage red suit from a forgotten Terran civilization. # starcup - rewrote for anachronisms
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Uniforms/Jumpsuit/victorian_red_vest.rsi
@@ -114,8 +114,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitSuitVictorianVest
-  name: victorian suit # TODO
-  description: A Victorian-style suit, fancy! # TODO
+  name: victorian suit # starcup - queen victoria isn't real
+  description: A vintage black suit fit for an especially extravagant widower. # starcup - rewrote for anachronisms
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Uniforms/Jumpsuit/victorian_vest.rsi
@@ -126,7 +126,7 @@
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitDisheveled
   name: disheveled suit
-  description: What might pass as well-maintained formal attire, if you're blind. # TODO
+  description: Here, let me straighten your tie. # starcup - changed description
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Uniforms/Jumpsuit/disheveled.rsi
@@ -212,7 +212,6 @@
   - type: Clothing
     sprite: _DEN/Clothing/Uniforms/Jumpsuit/cowboygrey.rsi
 
-##
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitOliveSweater
@@ -228,11 +227,9 @@
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitBarber
   name: barber jumpsuit
-  description: Makes you want to cut hair. # TODO
+  description: Remember, it's quartet. Never centet. That's not a mistake you'll live to repeat. # starcup - shameless niche references
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Uniforms/Jumpsuit/barber.rsi
   - type: Clothing
     sprite: _DEN/Clothing/Uniforms/Jumpsuit/barber.rsi
-
-
