@@ -409,3 +409,18 @@
   chatMessages: ["chat-emote-msg-oink"]
   chatTriggers:
   - emotes
+
+- type: emote
+  id: CreatureSneeze
+  name: chat-emote-name-sneeze
+  category: Vocal
+  available: false
+  whitelist:
+    components:
+    - Vocal
+    tags:
+    - CreatureEmotes
+  icon: _starcup/Interface/Emotes/Creature/sneeze.png
+  chatMessages: ["chat-emote-msg-sneeze"]
+  chatTriggers:
+  - emotes
