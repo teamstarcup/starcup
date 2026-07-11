@@ -29,3 +29,6 @@ trait-narcolepsy-weak-desc = You fall asleep randomly, but not as often nor for 
 
 trait-screenvision-name = Screen Vision
 trait-screenvision-desc = Due to certain circumstances, your eyes are replaced with low-quality cybernetic replacements.
+
+trait-sleepy-name = Sleepy
+trait-sleepy-desc = You aren't that picky about where you rest your head. You are able to fall asleep wherever you feel like, whenever you feel like.
