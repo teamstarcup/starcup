@@ -1,0 +1,70 @@
+- type: constructionGraph
+  id: GasUnaryBroken
+  start: start
+  graph:
+  - node: start
+    edges: []
+
+  - node: ventpumpbroken
+    entity: GasVentPumpBroken
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Welding
+        doAfter: 1
+
+  - node: ventpumpden
+    entity: GasVentPumpDen
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Welding
+        doAfter: 1
+
+  - node: ventpumphivewasp
+    entity: GasVentPumpHiveWasp
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Welding
+        doAfter: 1
+
+  - node: ventpumphivesandwasp
+    entity: GasVentPumpHiveSandwasp
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 1
+      - !type:DeleteEntity
+      steps:
+      - tool: Welding
+        doAfter: 1

@@ -24,6 +24,22 @@
   - type: IdentityBlocker
     coverage: EYES
 
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesMasquerade
+  name: masquerade mask
+  description: A fancy mask used to hide your identity at high society events. Be warned, though, you'll look like an idiot if you wear this just to conceal your identity in public.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Glasses/masquerade.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Glasses/masquerade.rsi
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - PetWearable
+    - WhitelistChameleon
+  - type: IdentityBlocker # full coverage because they're meant to hide identities at events
 
 - type: entity
   parent: ClothingEyesBase

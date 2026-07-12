@@ -1,3 +1,4 @@
+# Footprints
 - type: entity
   name: footprint
   id: Footprint
@@ -111,3 +112,228 @@
       offset: *left
     - state: footprint-right-bare-human
       offset: *right
+
+##  Puddles
+# Water
+- type: entity
+  id: PuddleWater
+  parent: PuddleTemporary
+  suffix: Water (30u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Water
+          Quantity: 30
+
+- type: entity
+  id: PuddleWaterLarge
+  parent: PuddleTemporary
+  suffix: Water (100u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Water
+          Quantity: 100
+
+- type: entity
+  id: PuddleWaterVeryLarge
+  parent: PuddleTemporary
+  suffix: Water (200u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Water
+          Quantity: 200
+
+# Blood
+- type: entity
+  parent: PuddleTemporary
+  id: PuddleBloodSulfurSmall
+  suffix: Sulfur blood (5u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: SulfurBlood
+          Quantity: 5
+
+- type: entity
+  parent: PuddleTemporary
+  id: PuddleBloodSulfur
+  suffix: Sulfur blood (30u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: SulfurBlood
+          Quantity: 30
+
+- type: entity
+  parent: PuddleTemporary
+  id: PuddleBloodInsectSmall
+  suffix: Insect blood (5u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: InsectBlood
+          Quantity: 5
+
+- type: entity
+  parent: PuddleTemporary
+  id: PuddleBloodInsect
+  suffix: Insect blood (30u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: InsectBlood
+          Quantity: 30
+
+- type: entity
+  parent: PuddleTemporary
+  id: PuddleBloodAmmoniaSmall
+  suffix: Ammonia blood (5u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: AmmoniaBlood
+          Quantity: 5
+
+- type: entity
+  parent: PuddleTemporary
+  id: PuddleBloodAmmonia
+  suffix: Ammonia blood (30u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: AmmoniaBlood
+          Quantity: 30
+
+- type: entity
+  parent: PuddleTemporary
+  id: PuddleBloodCopperSmall
+  suffix: Copper blood (5u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: CopperBlood
+          Quantity: 5
+
+- type: entity
+  parent: PuddleTemporary
+  id: PuddleBloodCopper
+  suffix: Copper blood (30u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: CopperBlood
+          Quantity: 30
+
+# Misc
+- type: entity
+  parent: PuddleTemporary
+  id: PuddleOilSmall
+  suffix: Oil (5u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Oil
+          Quantity: 5
+
+- type: entity
+  parent: PuddleTemporary
+  id: PuddleOil
+  suffix: Oil (30u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Oil
+          Quantity: 30
+
+- type: entity
+  parent: PuddleTemporary
+  id: PuddleSapSmall
+  suffix: Sap (5u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Sap
+          Quantity: 5
+
+- type: entity
+  parent: PuddleTemporary
+  id: PuddleSap
+  suffix: Sap (30u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Sap
+          Quantity: 30
+
+- type: entity
+  parent: PuddleTemporary
+  id: PuddleSlimeSmall
+  suffix: Slime (5u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Slime
+          Quantity: 5
+
+- type: entity
+  parent: PuddleTemporary
+  id: PuddleSlime
+  suffix: Slime (30u)
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Slime
+          Quantity: 30

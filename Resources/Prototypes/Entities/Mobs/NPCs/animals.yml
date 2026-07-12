@@ -1027,6 +1027,7 @@
     growthDelay: 30
   - type: ExaminableHunger
   - type: Butcherable
+    butcheringType: Spike #starcup
     spawned:
     - id: FoodMeat
       amount: 5
@@ -1127,6 +1128,7 @@
       Dead:
         Base: dead
   - type: Butcherable
+    butcheringType: Spike # starcup
     spawned:
     - id: FoodMeatCrab
       amount: 2
@@ -1246,6 +1248,7 @@
     flavors:
     - fiber
   - type: Butcherable
+    butcheringType: Spike # starcup
     spawned:
     - id: FoodMeat
       amount: 4
@@ -1412,6 +1415,7 @@
       Dead:
         Base: dead
   - type: Butcherable
+    butcheringType: Spike # starcup
     spawned:
     - id: FoodMeat
       amount: 4
@@ -1516,6 +1520,7 @@
   - type: ReplacementAccent
     accent: kangaroo
   - type: Butcherable
+    butcheringType: Spike # starcup
     spawned:
     - id: FoodMeat
     dropOrgansOnButcher: true # starcup: butchering gives organs
@@ -2666,6 +2671,7 @@
       Dead:
         Base: penguin_dead
   - type: Butcherable
+    butcheringType: Spike # starcup
     spawned:
     - id: FoodMeatPenguin
       amount: 3
@@ -2888,6 +2894,7 @@
         layer:
         - MobLayer
   - type: Butcherable
+    butcheringType: Spike # starcup
     spawned:
     - id: FoodMeatSpider
       amount: 2
@@ -2948,7 +2955,7 @@
   - type: Tag
     tags:
     - DoorBumpOpener
-    - FootstepSound
+    #- FootstepSound # starcup
     - CreatureEmotes # starcup
     - IgnoreTallGrass # starcup
   - type: Prying # Open door from xeno.yml.
@@ -4263,6 +4270,7 @@
       Dead:
         Base: dead
   - type: Butcherable
+    butcheringType: Spike # starcup
     spawned:
     - id: FoodMeatBacon
       amount: 6
@@ -4440,6 +4448,7 @@
       Dead:
         Base: reindeer_buck_dead
   - type: Butcherable
+    butcheringType: Spike # starcup
     spawned:
     - id: FoodMeat
       amount: 4

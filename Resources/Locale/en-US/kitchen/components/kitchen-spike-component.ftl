@@ -1,4 +1,4 @@
-﻿comp-kitchen-spike-begin-hook-self = You begin dragging yourself onto { THE($hook) }!
+comp-kitchen-spike-begin-hook-self = You begin dragging yourself onto { THE($hook) }!
 comp-kitchen-spike-begin-hook-self-other = { CAPITALIZE(THE($victim)) } begins dragging { REFLEXIVE($victim) } onto { THE($hook) }!
 
 comp-kitchen-spike-begin-hook-other-self = You begin dragging { CAPITALIZE(THE($victim)) } onto { THE($hook) }!
@@ -30,7 +30,7 @@ comp-kitchen-spike-butcher = { CAPITALIZE(THE($user)) } butchered { THE($victim)
 
 comp-kitchen-spike-unhook-verb = Unhook
 
-comp-kitchen-spike-hooked = [color=red]{ CAPITALIZE(THE($victim)) } is on this spike![/color]
+comp-kitchen-spike-hooked = [color=red]{ CAPITALIZE(THE($victim)) } is on this butchering station![/color] # starcup
 
 comp-kitchen-spike-meat-name = { $name } ({ $victim })
 

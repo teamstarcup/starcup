@@ -398,6 +398,7 @@ public sealed partial class CharacterRecordViewer : FancyWindow
         RecordContainerAllergies.SetValue(cr.Allergies);
         RecordContainerDrugAllergies.SetValue(cr.DrugAllergies);
         RecordContainerPostmortem.SetValue(cr.PostmortemInstructions);
+        RecordContainerMedicalNeeds.SetValue(cr.MedicalNeeds); // starcup
         RecordContainerSex.Text = record.Sex.ToString();
     }
 
@@ -405,6 +406,7 @@ public sealed partial class CharacterRecordViewer : FancyWindow
     {
         RecordContainerSecurity.Visible = true;
         RecordContainerIdentFeatures.SetValue(record.PRecords.IdentifyingFeatures);
+        RecordContainerIdentFeatures.SetValue(record.PRecords.SecurityFlags); // starcup
         RecordContainerFingerprint.Text = record.Fingerprint ?? Loc.GetString("cd-character-records-viewer-unknown");
         RecordContainerDNA.Text = record.DNA ?? Loc.GetString("cd-character-records-viewer-unknown");
 

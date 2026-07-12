@@ -156,7 +156,7 @@
     damageOverlayGroups:
       Brute:
         sprite: Mobs/Effects/brute_damage.rsi
-        color: "#ccac1f"
+        color: "#FF0000" # starcup
       Burn:
         sprite: Mobs/Effects/burn_damage.rsi
   # - type: MessyDrinker # starcup
@@ -206,11 +206,13 @@
         pitch: 1.33
         volume: -5
         variation: 0.05
-  - type: Bloodstream
-    bloodReferenceSolution:
-      reagents:
-      - ReagentId: SulfurBlood
-        Quantity: 300
+  # begin starcup: vulpekin have red blood
+  #- type: Bloodstream
+    #bloodReferenceSolution:
+      #reagents:
+      #- ReagentId: SulfurBlood
+        #Quantity: 300
+  # end starcup
   - type: CreamPied
     sprite:
       sprite: Effects/creampie.rsi

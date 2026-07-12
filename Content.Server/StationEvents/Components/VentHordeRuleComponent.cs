@@ -36,4 +36,16 @@ public sealed partial class VentHordeRuleComponent : Component
     /// </summary>
     [DataField]
     public SoundSpecifier? EndSound;
+
+    /// <summary>
+    /// starcup: The chance that a vent will break when entities are spawned.
+    /// </summary>
+    [DataField]
+    public float BreakChance;
+
+    /// <summary>
+    /// starcup: The entity that will replace the vent when it breaks.
+    /// </summary>
+    [DataField]
+    public string? Replacement = "ScrapSteel";
 }
