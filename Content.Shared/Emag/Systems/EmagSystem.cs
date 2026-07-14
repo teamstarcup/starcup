@@ -1,3 +1,4 @@
+using Content.Shared._ES.Sparks;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Charges.Components;
 using Content.Shared.Charges.Systems;
@@ -25,6 +26,7 @@ public sealed class EmagSystem : EntitySystem
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly TagSystem _tag = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private readonly ESSparksSystem _sparks = default!; // Box Change: ES Sparks
 
     public override void Initialize()
     {
@@ -79,6 +81,8 @@ public sealed class EmagSystem : EntitySystem
         _popup.PopupPredicted(Loc.GetString("emag-success", ("target", Identity.Entity(target, EntityManager))), user, user, PopupType.Medium);
 
         _audio.PlayPredicted(ent.Comp.EmagSound, ent, ent);
+
+        _sparks.DoSparks(target, user: user, cooldown: false); // Box Change: ES Sparks
 
         _adminLogger.Add(LogType.Emag, LogImpact.High, $"{ToPrettyString(user):player} emagged {ToPrettyString(target):target} with flag(s): {typeToUse}");
 

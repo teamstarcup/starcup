@@ -41,11 +41,11 @@
         Blunt: 7
     bluntStaminaDamageFactor: 2.0
     angle: 60
-    wideAnimation: WeaponArcThrust
-# ES START
+    animation: WeaponArcThrust
+  # Box Change Start: ES Sparks on baton toggle, for aura
   - type: ESSparkOnItemToggle
     count: 1
-# ES END
+  # Box Change End
   - type: StaminaDamageOnHit
     damage: 35
     sound: /Audio/Weapons/egloves.ogg
