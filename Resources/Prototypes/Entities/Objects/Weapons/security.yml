@@ -13,12 +13,12 @@
     energyPerUse: 50
   - type: ItemToggle
     predictable: false
-# ES START
-#    soundActivate:
-#      collection: sparks
-#      params:
-#        variation: 0.250
-# ES END
+    # Box Change: Remove soundActivate in favour of ES sparks
+    #soundActivate:
+    #  collection: sparks
+    #  params:
+    #    variation: 0.250
+    # End Box Change
     soundDeactivate:
       collection: sparks
       params:
