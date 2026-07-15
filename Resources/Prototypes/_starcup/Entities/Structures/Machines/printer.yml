@@ -1,0 +1,11 @@
+- type: entity
+  parent: BaseLathe
+  id: PrinterDocFilled
+  name: document printer
+  suffix: Filled
+  components:
+  - type: MaterialStorage
+    storage: &StandardLatheFillContents
+      Paper: 3000
+    materialWhiteList: [Paper] # starcup
+
