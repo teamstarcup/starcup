@@ -1,0 +1,9 @@
+lathe-category-accesses = Access Management
+lathe-category-assessments = Assessments
+lathe-category-civilian = Civilian
+lathe-category-justice = Justice
+lathe-category-permits = Permits
+lathe-category-warrants = Warrants
+lathe-category-reports = Reports
+lathe-category-supply = Supply & Requisitions
+lathe-category-error = Contraband
