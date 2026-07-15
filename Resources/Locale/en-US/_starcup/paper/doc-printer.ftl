@@ -40,7 +40,7 @@ doc-text-printer-accesses-aco =
 
     {"["}bold]This filing guarantees that a stamped or signed copy of this document will be sent to SyndComm later to verify these processes. This copy need not be sent immediately, but must be completed by the end of the shift.[/bold]
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-accesses-jobapplication =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Job Application Form A-2[/head]
@@ -60,12 +60,12 @@ doc-text-printer-accesses-jobapplication =
 
     I agree to follow the department's Standard Operating Procedures, and I agree to return my current department's work equipment and gear upon transfer.
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-accesses-accessrequest =
-   ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Access Request Form A-3[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
-   ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
+    {"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Access Request Form A-3[/head]
+    {"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+    {"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
                     ACCESS REQUEST FORM
     ──────────────────────────────────────────
@@ -78,11 +78,11 @@ doc-text-printer-accesses-accessrequest =
     Reason for obtaining elevated access:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-accesses-nonstandardjob =
-   ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Nonstandard Application Form A-4[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+    {"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Nonstandard Application Form A-4[/head]
+    {"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
                      NONSTANDARD JOB APPLICATION
@@ -100,7 +100,7 @@ doc-text-printer-accesses-nonstandardjob =
     Reason for employment:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-accesses-promotionapp =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Promotion Application Form A-5[/head]
@@ -116,7 +116,7 @@ doc-text-printer-accesses-promotionapp =
     I, ________________, in the current position of ________________, request to be promoted within my department to the position of ________________.
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-accesses-actinghead =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Acting Head Application Form A-6[/head]
@@ -137,7 +137,7 @@ doc-text-printer-accesses-actinghead =
 
     {"["}font="Bitcount"]This form may only be approved by the Captain, a representative of Syndicate Communications, or the signatures of a majority of crew.[/font]
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-accesses-deputization =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Deputy Authorization Form A-7[/head]
@@ -163,7 +163,7 @@ doc-text-printer-accesses-deputization =
     {"["}font="Bitcount"]Any member of Command or the associated department may rescind this authorization at any time unless it bears the stamp of a member of Command (or the Warden, if the department is Security), in which case only the Captain or the relevant department head may rescind it.[/font]
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-accesses-restrictedequipment =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Restricted Equipment Permit A-8[/head]
@@ -187,7 +187,7 @@ doc-text-printer-accesses-restrictedequipment =
     {"["}font="Bitcount"]Any member of Command or the associated department may rescind this authorization at any time unless it bears the stamp of a member of Command, in which case only the Captain or the relevant department head may rescind it. Any use of this equipment for disruptive purposes automatically nullifies this permit.[/font]
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-accesses-resignation =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Letter of Resignation A-9[/head]
@@ -207,7 +207,7 @@ doc-text-printer-accesses-resignation =
     Reason for resignation:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-accesses-demotion =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Notice of Demotion A-10[/head]
@@ -223,7 +223,7 @@ doc-text-printer-accesses-demotion =
     I, ________________, in the position of ( ) Captain ( ) head of the associated department, order the demotion of the employee ________________ from the position of ________________ to the position of ________________ for the following reasons:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-accesses-accessremoval =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Access Removal Notice A-11[/head]
@@ -241,7 +241,7 @@ doc-text-printer-accesses-accessremoval =
     Reasons for removal:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 # ASSESSMENTS
 ## Documents focused on reviewing the performances of crew.
@@ -262,7 +262,7 @@ doc-text-printer-assessments-achievement =
     This certificate attests that the employee went above and beyond the call of duty for the good of their station, company, and crewmates.
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-assessments-department =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Departmental Review S-2[/head]
@@ -288,7 +288,7 @@ doc-text-printer-assessments-department =
     Overall condition of the department:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-assessments-employee =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Employee Performance Review S-3[/head]
@@ -306,7 +306,7 @@ doc-text-printer-assessments-employee =
 
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-assessments-certification =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Advanced Training Certificate S-4[/head]
@@ -324,7 +324,7 @@ doc-text-printer-assessments-certification =
     Employee ________________ is officially certified for the following work:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 ## CIVILIAN
 ### Documents covering common civilian priorities, like weddings, and getting the heck out of here.
@@ -349,7 +349,7 @@ doc-text-printer-civilian-evacuation =
     {"["}font="Bitcount"]If expedited, shuttle will arrive within 2-4 minutes, and only one launch order will be needed to trigger immediate departure.[/font]
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-civilian-marriage =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Marriage Certificate C-2[/head]
@@ -371,7 +371,7 @@ doc-text-printer-civilian-marriage =
     Following the wedding, the following full names will be assigned to the newlyweds:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-civilian-divorce =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Divorce Certificate C-3[/head]
@@ -393,7 +393,7 @@ doc-text-printer-civilian-divorce =
     Following the union's dissolution, the following full names will be assigned to the divorcees:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-civilian-menu =
     {"["}color=#639137]█▀░█░█░▄█░▀█  [head=3]Mess Hall Menu C-4[/head][/color]
@@ -491,7 +491,7 @@ doc-text-printer-civilian-changerecords =
     {"["}italic]Name           Pronouns          Preferred job/s[/italic]
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-civilian-documents =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Documentation Request Form C-6[/head]
@@ -511,7 +511,7 @@ doc-text-printer-civilian-documents =
     {"["}font="Bitcount"]To request the lifting of specific redactions from an existing document, see Form C-26.[/font]
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 ## JUSTICE
 ### Forms related to the work of processing miscreants and malefactors.
@@ -539,7 +539,7 @@ doc-text-printer-justice-confiscation =
     Narrative:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-justice-parole =
     {"["}color=DarkRed]█▀░░█▄▄█░░▀█  [head=3]Prisoner Parole Form J-2[/head][/color]
@@ -560,7 +560,7 @@ doc-text-printer-justice-parole =
     Parolee's supervisor:
     New accesses or equipment, if any (include Form A-3):
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-justice-confession =
     {"["}color=DarkRed]█▀░░█▄▄█░░▀█  [head=3]Criminal Confession Form J-3[/head][/color]
@@ -584,7 +584,8 @@ doc-text-printer-justice-confession =
     Full timeline of events:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+
 doc-text-printer-justice-verdict =
     {"["}color=DarkRed]█▀░░█▄▄█░░▀█  [head=3]Court Verdict J-4[/head][/color]
     {"["}color=DarkRed]█░░██▄▄██░░█  [bold]Station Security[/bold][/color]
@@ -614,7 +615,7 @@ doc-text-printer-justice-verdict =
     {"["}font="Bitcount"]Permanent suspensions, demotions, and Do Not Revive orders must be submitted to Syndicate Communications at the end of the shift for formal review.[/font]
 
     ──────────────────────────────────────────
-                               ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-justice-incidentreport =
     {"["}color=DarkRed]█▀░░█▄▄█░░▀█  [head=3]Incident Report Form J-5[/head][/color]
@@ -638,8 +639,8 @@ doc-text-printer-justice-incidentreport =
     Narrative:
 
 
-──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+    ──────────────────────────────────────────
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-justice-misconduct =
     {"["}color=DarkRed]█▀░░█▄▄█░░▀█  [head=3]Allegation of Misconduct Form J-6[/head][/color]
@@ -658,7 +659,7 @@ doc-text-printer-justice-misconduct =
     My account of events:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-justice-restraining =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Restraining Order Form J-7[/head]
@@ -690,7 +691,7 @@ doc-text-printer-justice-restraining =
     By filing for this restraining order, the Applicant agrees that they will not deliberately impede the Respondent's ability to cooperate with it.
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 ## PERMITS
 ### Documents used to prove someone's qualifications.
@@ -714,7 +715,7 @@ doc-text-printer-order-permits-sapience =
     Access levels issued to creature, if any:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-permits-building =
     {"["}color=#f39f27]█▀░░█▀░░▀█  [head=3]Building Permit P-2[/head][/color]
@@ -734,7 +735,7 @@ doc-text-printer-permits-building =
     Purpose for construction:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-permits-shuttleregister =
     {"["}color=#b18644]█▀░▄▄▄▄░▀█  [head=3]Shuttle Registration Form P-3[/head][/color]
@@ -756,7 +757,7 @@ doc-text-printer-permits-shuttleregister =
     Requested shuttle name:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-permits-prescription =
     {"["}color=#5b97bc]█▀░░██░░▀█  [head=3]Medication Prescription P-4[/head][/color]
@@ -777,7 +778,7 @@ doc-text-printer-permits-prescription =
     Instructions and dosage:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-permits-pilotslicense =
     {"["}color=#b18644]█▀░▄▄▄▄░▀█  [head=3]Temporary Pilot's License P-5[/head][/color]
@@ -802,7 +803,7 @@ doc-text-printer-permits-pilotslicense =
     {"["}font="Bitcount"]This form not valid unless signed by a Cargo Technician, the Captain, or the Quartermaster. To appoint an Acting Quartermaster, see Form A-6. To register a new shuttle, see Form P-3. For clearance to take this shuttle outside of the station's immediate periphery, see Form R-9.[/font]
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 ## WARRANTS
 ### Documents allowing departments to take extreme measures.
@@ -824,7 +825,7 @@ doc-text-printer-warrants-medicalintervention =
     Basis for the operation:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-warrants-search =
     {"["}color=DarkRed]█▀░░█▄▄█░░▀█  [head=3]Search Warrant W-2[/head][/color]
@@ -843,7 +844,7 @@ doc-text-printer-warrants-search =
     I, ________________, as the ( ) Captain, ( ) Head of Security, ( ) Warden, or ( ) head of the affected department, assert that the forced searching of a person or area is necessary for the safety of crew or security of the station. If necessary, proportionate use of force is authorized in pursuit of this.
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-warrants-arrest =
     {"["}color=DarkRed]█▀░░█▄▄█░░▀█  [head=3]Arrest Warrant W-3[/head][/color]
@@ -864,7 +865,7 @@ doc-text-printer-warrants-arrest =
     Supporting (circumstantial) evidence:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-warrants-execution =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Execution Warrant W-4[/head]
@@ -886,7 +887,7 @@ doc-text-printer-warrants-execution =
 
     I recognize that in the event that no qualified crewmember is willing to assist with the execution of this order, I will be expected to carry it out myself.
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-warrants-bodydisposal =
     {"["}color=#5b97bc]█▀░░██░░▀█  [head=3]Body Disposal Order W-5[/head][/color]
@@ -905,7 +906,7 @@ doc-text-printer-warrants-bodydisposal =
     ( ) Request of the deceased ( ) Do Not Revive order ( ) Other: ________________
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 ## REPORTS
 ### Documents summarizing the goings-on or the results of examinations.
@@ -937,7 +938,7 @@ doc-text-printer-reports-headmeeting =
     Decision of the Departmental Heads Meeting:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-reports-technical =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Technical Condition Report R-2[/head]
@@ -961,7 +962,7 @@ doc-text-printer-reports-technical =
     Repairs performed on object:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-reports-anomaly =
     {"["}color=#c96dbf]█▀  ▀▄▄▀  ▀█  [head=3]Anomalous Research Report R-3[/head][/color]
@@ -1014,7 +1015,7 @@ doc-text-printer-reports-anomaly =
     - ( ) [color=crimson]Coordinate instability was detected.[/color]
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-reports-situation =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Situation Report R-4[/head]
@@ -1036,7 +1037,7 @@ doc-text-printer-reports-situation =
     Current situation:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-reports-employeehealtheval =
     {"["}color=#5b97bc]█▀░░██░░▀█  [head=3]Employee Health Evaluation R-5[/head][/color]
@@ -1080,7 +1081,7 @@ doc-text-printer-reports-employeehealtheval =
     Recommended follow-up:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-reports-medicalanalysis =
     {"["}color=#5b97bc]█▀░░██░░▀█  [head=3]Detailed Medical Analysis R-6[/head][/color]
@@ -1150,7 +1151,7 @@ doc-text-printer-reports-medicalanalysis =
 
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-reports-deathcertificate =
     {"["}color=#5b97bc]█▀░░██░░▀█  [head=3]Death Certificate R-7[/head][/color]
@@ -1172,7 +1173,7 @@ doc-text-printer-reports-deathcertificate =
     The deceased's final words or requests:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-reports-neurorobotics =
     {"["}color=#c96dbf]█▀  ▀▄▄▀  ▀█  [head=3]Neurorobotic Evaluation R-8[/head][/color]
@@ -1246,7 +1247,7 @@ doc-text-printer-reports-neurorobotics =
     Overall conclusions:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-reports-evalogbook =
     {"["}color=#b18644]█▀░▄▄▄▄░▀█  [head=3]EVA Logbook R-9[/head][/color]
@@ -1350,7 +1351,7 @@ doc-text-printer-supply-budget =
     {"["}bold]Emergency Funds:[/bold]
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-supply-cargoorder =
     {"["}color=#b18644]█▀░▄▄▄▄░▀█  [head=3]Cargo Order Request Form U-2[/head][/color]
@@ -1370,7 +1371,7 @@ doc-text-printer-supply-cargoorder =
     Special instructions for order:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-supply-manufacturing =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Manufacturing Request Form U-3[/head]
@@ -1389,7 +1390,7 @@ doc-text-printer-supply-manufacturing =
     Reason:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 doc-text-printer-supply-constructionorder =
     {"["}color=#f39f27]█▀░░█▀░░▀█  [head=3]Construction Work Order Form U-4[/head][/color]
     {"["}color=#f39f27]█░░░██▀░░█  [bold]Station Engineering[/bold][/color]
@@ -1412,7 +1413,7 @@ doc-text-printer-supply-constructionorder =
     {"["}font="Bitcount"]This form should be submitted alongside a Form P-2.[/font]
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-supply-specialequipment =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Special Equipment Requisition U-5[/head]
@@ -1430,7 +1431,7 @@ doc-text-printer-supply-specialequipment =
     Reason for needing equipment:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-supply-armoryinventory =
     {"["}color=DarkRed]█▀░░█▄▄█░░▀█  [head=3]Armory Inventory Report U-6[/head][/color]
@@ -1464,7 +1465,7 @@ doc-text-printer-supply-armoryinventory =
     Amount:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-supply-vaultinventory =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Vault Inventory Report U-7[/head]
@@ -1497,7 +1498,7 @@ doc-text-printer-supply-vaultinventory =
     • ______________; Valued at:
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-supply-vaultwithdrawal =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Vault Withdrawal Request Form U-8[/head]
@@ -1520,7 +1521,7 @@ doc-text-printer-supply-vaultwithdrawal =
     {"["}font="Bitcount"]This form must be submitted to a Syndicate Communications for final evaluation either during or after the shift.[/font]
 
     ──────────────────────────────────────────
-                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 # TODO: CONTRABAND
 ### For now, all contraband forms will be left out, because there's just too much. Don't emag it for now.
@@ -1557,7 +1558,7 @@ doc-text-printer-supply-vaultwithdrawal =
 #
 #
 #    ──────────────────────────────────────────
-#                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+#                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 #
 #doc-text-printer-notice-of-liquidation =
 #   ⠀{"["}color=#B50F1D] ███░██████░███[/color]
@@ -1575,7 +1576,7 @@ doc-text-printer-supply-vaultwithdrawal =
 #    Reason for liquidation:
 #
 #    ──────────────────────────────────────────
-#                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+#                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 #
 #doc-text-printer-business-deal =
 #   ⠀{"["}color=#B50F1D] ███░██████░███[/color]
@@ -1594,7 +1595,7 @@ doc-text-printer-supply-vaultwithdrawal =
 #    Reason for fulfilling the terms of the deal:
 #
 #    ──────────────────────────────────────────
-#                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+#                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 #doc-text-printer-note-beginning-military-actions =
 #   ⠀{"["}color=#B50F1D] ███░██████░███[/color]
 #   ⠀{"["}color=#B50F1D] █░░░██░░░░░░░█[/color]     [head=3]Notice of Liquidation[/head]
@@ -1610,7 +1611,7 @@ doc-text-printer-supply-vaultwithdrawal =
 #    The Syndicate officially declares the start of military actions against you, as well as the beginning of an operation for your extermination.
 #
 #    ──────────────────────────────────────────
-#                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+#                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 #
 #doc-text-printer-reports-accomplishment-goals =
 #   ⠀{"["}color=#B50F1D] ███░██████░███[/color]
@@ -1628,7 +1629,7 @@ doc-text-printer-supply-vaultwithdrawal =
 #    Report:
 #
 #    ──────────────────────────────────────────
-#                           ⠀          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
+#                                          {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 #
 ## Factions
 #doc-text-printer-error-hawkmoon =
