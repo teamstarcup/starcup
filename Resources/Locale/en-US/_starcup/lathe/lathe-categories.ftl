@@ -5,5 +5,5 @@ lathe-category-justice = Justice
 lathe-category-permits = Permits
 lathe-category-warrants = Warrants
 lathe-category-reports = Reports
-lathe-category-supply = Supply & Requisitions
+#lathe-category-supply = Supply
 lathe-category-error = Contraband
