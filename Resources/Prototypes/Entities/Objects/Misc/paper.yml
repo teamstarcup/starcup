@@ -209,8 +209,8 @@
 - type: entity
   id: PaperNanoTaskItem
   parent: Paper
-  name: NanoTask item
-  description: A printed NanoTask item. Can be inserted into your PDA to add it to your tasks.
+  name: SyndieTask item # starcup - syndified
+  description: A printed SyndieTask item. Can be inserted into your PDA to add it to your tasks. # starcup - syndified
   components:
   - type: Tag
     tags:
@@ -232,7 +232,7 @@
       visible: false
   - type: PaperVisuals
     backgroundImagePath: "/Textures/Interface/Paper/paper_background_perforated.svg.96dpi.png"
-    headerImagePath: "/Textures/_starcup/Interface/Paper/paper_heading_syndietask.svg" # starcup
+    headerImagePath: "/Textures/_starcup/Interface/Paper/paper_heading_syndietask.svg.96dpi.png" # starcup
     headerMargin: 0.0, 0.0, 0.0, 6.0
     backgroundImageTile: true
     backgroundPatchMargin: 0.0, 6.0, 0.0, 6.0
