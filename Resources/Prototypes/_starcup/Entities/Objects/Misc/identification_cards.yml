@@ -162,6 +162,16 @@
   - type: IdCard
     jobTitle: job-alt-title-stooge
 
+# Courier
+
+- type: entity
+  parent: CourierIDCard
+  id: SeniorCourierIDCard
+  name: senior courier ID card
+  components:
+  - type: IdCard
+    jobTitle: job-alt-title-senior-courier
+
 # Janitor
 
 - type: entity
@@ -190,7 +200,7 @@
   - type: IdCard
     jobTitle: job-alt-title-volunteer
 
-# Counselor
+# Psychologist
 - type: entity
   parent: PsychologistIDCard
   id: CounselorIDCard

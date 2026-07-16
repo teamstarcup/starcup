@@ -29,11 +29,15 @@ job-alt-title-pharmacist = Pharmacist
 # Clown
 job-alt-title-stooge = Stooge
 
+# Courier
+job-alt-title-senior-courier = Senior Courier
+
 # Janitor
 job-alt-title-station-maid = Station Maid
 
 # Medical Doctor
 job-alt-title-nurse-practitioner = Nurse Practitioner
+job-alt-title-senior-physician = Senior Physician
 
 # Passenger
 job-alt-title-volunteer = Volunteer
@@ -48,6 +52,13 @@ job-alt-title-mechatronics = Mechatronics Specialist
 
 # Scientist
 job-alt-title-necrocosmicist = Necrocosmicist
+job-alt-title-senior-researcher = Senior Researcher
+
+# Security Officer
+job-alt-title-senior-officer = Senior Officer
+
+# Station Engineer
+job-alt-title-senior-engineer = Senior Engineer
 
 # SyndComm
 job-name-syndcomm-operator = SyndComm Operator
