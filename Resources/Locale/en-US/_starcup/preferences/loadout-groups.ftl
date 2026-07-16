@@ -111,3 +111,4 @@ loadout-group-plushies = Plushies
 loadout-group-survival-brigmedic = Combat Medic Survival Box
 loadout-group-accessibility = Accessibility
 loadout-group-cosmetics = Cosmetics
+loadout-group-neck-fashionable = Neck
