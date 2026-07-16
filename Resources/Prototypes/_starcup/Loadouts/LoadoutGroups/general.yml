@@ -64,6 +64,7 @@
   - CosmeticsPridePin
   - CosmeticsJewelry
   - CosmeticsTowel
+  - CosmeticsRibbons
   id: Cosmetics
   name: loadout-group-cosmetics
   minLimit: 0
@@ -86,12 +87,26 @@
   abstract: true
   id: RibbonsNeck
   loadouts:
-  - BowtieRed
-  - BowtieBlack
-  - RibbonRed
-  - RibbonBlack
-  - BowBlack
-  - BowRed
+  - BowtieRedNeck
+  - BowtieBlackNeck
+  - RibbonRedNeck
+  - RibbonBlackNeck
+  - BowBlackNeck
+  - BowRedNeck
+
+## Hair Ribbons & Bows
+- type: loadoutGroup
+  abstract: true
+  id: RibbonsHead
+  loadouts:
+  - BowtieRedHead
+  - BowtieBlackHead
+  - RibbonRedHead
+  - RibbonBlackHead
+  - BowBlackHead
+  - BowRedHead
+  - BowLargeBlackHead
+  - BowLargeRedHead
 
 ## Plushies
 - type: loadoutGroup
@@ -224,6 +239,20 @@
   - GoldRing
   - SilverRing
   - Wristwatch
+
+## Bows and Ribbons
+- type: loadoutGroup
+  abstract: true
+  id: CosmeticsRibbons
+  loadouts:
+  - BowtieRed
+  - BowtieBlack
+  - RibbonRed
+  - RibbonBlack
+  - BowBlack
+  - BowRed
+  - RibbonLargeBlack
+  - RibbonLargeRed
 
 - type: loadoutGroup
   abstract: true

@@ -375,6 +375,7 @@
 
 # Service Worker
 - type: loadoutGroup
+  parent: [ RibbonsHead ]
   id: ServiceWorkerHead
   name: loadout-group-service-worker-head
   minLimit: 0
@@ -443,7 +444,7 @@
 
 # Passenger
 - type: loadoutGroup
-  parent: PlushiesWorn
+  parent: [ PlushiesWorn, RibbonsHead ]
   id: PassengerHead
   name: loadout-group-assistant-head
   minLimit: 0
