@@ -19,6 +19,28 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Transform
     noRot: false
+  - type: Machine
+    board: PrinterDocMachineCircuitboard
+  - type: Lathe
+    producingSound: /Audio/Machines/scanning.ogg
+    idleState: icon
+    runningState: building
+    staticPacks:
+    - DocumentPrinterStaticStarcup # starcup
+  #  - type: EmagLatheRecipes # starcup - commented out for now until we add some
+  #    emagStaticPacks:
+  #    - DocumentPrinterStaticEmagImp
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.4,0.25,0.4"
+        density: 25
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
   - type: MaterialStorage
     storage: &StandardLatheFillContents
       Paper: 3000
