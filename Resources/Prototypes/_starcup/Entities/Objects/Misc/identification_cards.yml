@@ -85,6 +85,14 @@
 
 - type: entity
   parent: BotanistIDCard
+  id: MutageneticistIDCard
+  name: mutageneticist ID card
+  components:
+  - type: IdCard
+    jobTitle: job-alt-title-mutageneticist
+
+- type: entity
+  parent: BotanistIDCard
   id: FloristIDCard
   name: florist ID card
   components:
@@ -279,11 +287,11 @@
 
 - type: entity
   parent: ReporterIDCard
-  id: PlaywriteIDCard
-  name: playwrite ID card
+  id: PlaywrightIDCard
+  name: playwright ID card
   components:
   - type: IdCard
-    jobTitle: job-alt-title-playwrite
+    jobTitle: job-alt-title-playwright
 
 - type: entity
   parent: ReporterIDCard
