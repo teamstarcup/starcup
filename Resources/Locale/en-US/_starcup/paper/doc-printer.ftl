@@ -15,7 +15,7 @@
 
 doc-text-printer-accesses-aco =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]ACO Promotion Request Form A-1[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
             REQUEST FOR ACTING CAPTAIN PROMOTION
@@ -38,16 +38,16 @@ doc-text-printer-accesses-aco =
 
     {"["}bold]Additional details:[/bold]
 
-    {"["}bold]This filing guarantees that a stamped or signed copy of this document will be sent to SyndComm later to verify these processes. This copy need not be sent immediately, but must be completed by the end of the shift.[/bold]
+    {"["}font="Bitcount"]This filing guarantees that a stamped or signed copy of this document will be sent to SyndComm later to verify these processes. This copy need not be sent immediately, but must be completed by the end of the shift.[/font]
     ──────────────────────────────────────────
                                           {"["}font="Bitcount"]Stamp/s or signature/s below[/font]
 
 doc-text-printer-accesses-jobapplication =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Job Application Form A-2[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                        JOB APPLICATION
+                                    JOB APPLICATION
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -64,10 +64,10 @@ doc-text-printer-accesses-jobapplication =
 
 doc-text-printer-accesses-accessrequest =
     {"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Access Request Form A-3[/head]
-    {"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+    {"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
     {"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                    ACCESS REQUEST FORM
+                                  ACCESS REQUEST FORM
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -82,10 +82,10 @@ doc-text-printer-accesses-accessrequest =
 
 doc-text-printer-accesses-nonstandardjob =
     {"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Nonstandard Application Form A-4[/head]
-    {"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+    {"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                     NONSTANDARD JOB APPLICATION
+                          NONSTANDARD JOB APPLICATION
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -104,10 +104,10 @@ doc-text-printer-accesses-nonstandardjob =
 
 doc-text-printer-accesses-promotionapp =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Promotion Application Form A-5[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                           PROMOTION APPLICATION
+                                PROMOTION APPLICATION
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -120,7 +120,7 @@ doc-text-printer-accesses-promotionapp =
 
 doc-text-printer-accesses-actinghead =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Acting Head Application Form A-6[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
           APPLICATION FOR ACTING DEPARTMENT HEAD
@@ -141,10 +141,10 @@ doc-text-printer-accesses-actinghead =
 
 doc-text-printer-accesses-deputization =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Deputy Authorization Form A-7[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                            DEPUTY AUTHORIZATION
+                                 DEPUTY AUTHORIZATION
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -167,10 +167,10 @@ doc-text-printer-accesses-deputization =
 
 doc-text-printer-accesses-restrictedequipment =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Restricted Equipment Permit A-8[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                     RESTRICTED EQUIPMENT PERMIT
+                          RESTRICTED EQUIPMENT PERMIT
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -191,10 +191,10 @@ doc-text-printer-accesses-restrictedequipment =
 
 doc-text-printer-accesses-resignation =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Letter of Resignation A-9[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                           LETTER OF RESIGNATION
+                                LETTER OF RESIGNATION
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -211,10 +211,10 @@ doc-text-printer-accesses-resignation =
 
 doc-text-printer-accesses-demotion =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Notice of Demotion A-10[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                              NOTICE OF DEMOTION
+                                   NOTICE OF DEMOTION
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -227,10 +227,10 @@ doc-text-printer-accesses-demotion =
 
 doc-text-printer-accesses-accessremoval =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Access Removal Notice A-11[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                           ACCESS REMOVAL NOTICE
+                                ACCESS REMOVAL NOTICE
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -248,10 +248,10 @@ doc-text-printer-accesses-accessremoval =
 
 doc-text-printer-assessments-achievement =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Certificate of Achievement S-1[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                      CERTIFICATE OF ACHIEVEMENT
+                           CERTIFICATE OF ACHIEVEMENT
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -266,7 +266,7 @@ doc-text-printer-assessments-achievement =
 
 doc-text-printer-assessments-department =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Departmental Review S-2[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
                    DEPARTMENT PERFORMANCE REVIEW
@@ -292,10 +292,10 @@ doc-text-printer-assessments-department =
 
 doc-text-printer-assessments-employee =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Employee Performance Review S-3[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                     EMPLOYEE PERFORMANCE REVIEW
+                          EMPLOYEE PERFORMANCE REVIEW
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -310,7 +310,7 @@ doc-text-printer-assessments-employee =
 
 doc-text-printer-assessments-certification =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Advanced Training Certificate S-4[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
                CERTIFICATION IN ________________
@@ -331,10 +331,10 @@ doc-text-printer-assessments-certification =
 
 doc-text-printer-civilian-evacuation =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Evacuation Request C-1[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                              EVACUATION REQUEST
+                                   EVACUATION REQUEST
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -353,10 +353,10 @@ doc-text-printer-civilian-evacuation =
 
 doc-text-printer-civilian-marriage =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Marriage Certificate C-2[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                            MARRIAGE CERTIFICATE
+                                 MARRIAGE CERTIFICATE
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -375,10 +375,10 @@ doc-text-printer-civilian-marriage =
 
 doc-text-printer-civilian-divorce =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Divorce Certificate C-3[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                             DIVORCE CERTIFICATE
+                                  DIVORCE CERTIFICATE
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -400,7 +400,7 @@ doc-text-printer-civilian-menu =
     {"["}color=#639137]█░░▀▄▀░██░░█  [bold]Station Service[/bold][/color]
     {"["}color=#639137]█▄░░█░░░█░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                                  MESS HALL MENU
+                                       MESS HALL MENU
     ──────────────────────────────────────────
     {"["}head=1]Welcome to __________![/head]
 
@@ -454,10 +454,10 @@ doc-text-printer-civilian-menu =
 
 doc-text-printer-civilian-changerecords =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Record Change Request Form C-5[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                       CHANGE IN RECORDS REQUEST
+                            CHANGE IN RECORDS REQUEST
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -495,10 +495,10 @@ doc-text-printer-civilian-changerecords =
 
 doc-text-printer-civilian-documents =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Documentation Request Form C-6[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                           DOCUMENTATION REQUEST
+                                DOCUMENTATION REQUEST
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -521,7 +521,7 @@ doc-text-printer-justice-confiscation =
     {"["}color=DarkRed]█░░██▄▄██░░█  [bold]Station Security[/bold][/color]
     {"["}color=DarkRed]█▄░▀█▄▄█▀░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                            CONFISCATED PROPERTY
+                                 CONFISCATED PROPERTY
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -546,7 +546,7 @@ doc-text-printer-justice-parole =
     {"["}color=DarkRed]█░░██▄▄██░░█  [bold]Station Security[/bold][/color]
     {"["}color=DarkRed]█▄░▀█▄▄█▀░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                            PRISONER PAROLE FORM
+                                 PRISONER PAROLE FORM
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -567,7 +567,7 @@ doc-text-printer-justice-confession =
     {"["}color=DarkRed]█░░██▄▄██░░█  [bold]Station Security[/bold][/color]
     {"["}color=DarkRed]█▄░▀█▄▄█▀░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                        CRIMINAL CONFESSION FORM
+                             CRIMINAL CONFESSION FORM
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -591,7 +591,7 @@ doc-text-printer-justice-verdict =
     {"["}color=DarkRed]█░░██▄▄██░░█  [bold]Station Security[/bold][/color]
     {"["}color=DarkRed]█▄░▀█▄▄█▀░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                                   COURT VERDICT
+                                        COURT VERDICT
     ──────────────────────────────────────────
     Current shift time:
     Document author:
@@ -622,7 +622,7 @@ doc-text-printer-justice-incidentreport =
     {"["}color=DarkRed]█░░██▄▄██░░█  [bold]Station Security[/bold][/color]
     {"["}color=DarkRed]█▄░▀█▄▄█▀░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                                 INCIDENT REPORT
+                                      INCIDENT REPORT
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -647,7 +647,7 @@ doc-text-printer-justice-misconduct =
     {"["}color=DarkRed]█░░██▄▄██░░█  [bold]Station Security[/bold][/color]
     {"["}color=DarkRed]█▄░▀█▄▄█▀░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                        ALLEGATION OF MISCONDUCT
+                             ALLEGATION OF MISCONDUCT
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -663,7 +663,7 @@ doc-text-printer-justice-misconduct =
 
 doc-text-printer-justice-restraining =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Restraining Order Form J-7[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
               CIVIL HARASSMENT RESTRAINING ORDER
@@ -698,10 +698,10 @@ doc-text-printer-justice-restraining =
 
 doc-text-printer-order-permits-sapience =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Certification of Sapience P-1[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                       CERTIFICATION OF SAPIENCE
+                            CERTIFICATION OF SAPIENCE
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -722,7 +722,7 @@ doc-text-printer-permits-building =
     {"["}color=#f39f27]█░░░██▀░░█  [bold]Station Engineering[/bold][/color]
     {"["}color=#f39f27]█▄░██░░░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                                 BUILDING PERMIT
+                                      BUILDING PERMIT
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -764,7 +764,7 @@ doc-text-printer-permits-prescription =
     {"["}color=#5b97bc]█░▐████▌░█  [bold]Station Medical[/bold][/color]
     {"["}color=#5b97bc]█▄░░██░░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                         MEDICATION PRESCRIPTION
+                              MEDICATION PRESCRIPTION
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -785,7 +785,7 @@ doc-text-printer-permits-pilotslicense =
     {"["}color=#b18644]█░░█▄▄█░░█  [bold]Station Logistics[/bold][/color]
     {"["}color=#b18644]█▄░████░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                       TEMPORARY PILOT'S LICENSE
+                            TEMPORARY PILOT'S LICENSE
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -832,7 +832,7 @@ doc-text-printer-warrants-search =
     {"["}color=DarkRed]█░░██▄▄██░░█  [bold]Station Security[/bold][/color]
     {"["}color=DarkRed]█▄░▀█▄▄█▀░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                                  Search Warrant
+                                       Search Warrant
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -851,7 +851,7 @@ doc-text-printer-warrants-arrest =
     {"["}color=DarkRed]█░░██▄▄██░░█  [bold]Station Security[/bold][/color]
     {"["}color=DarkRed]█▄░▀█▄▄█▀░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                                  ARREST WARRANT
+                                       ARREST WARRANT
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -869,10 +869,10 @@ doc-text-printer-warrants-arrest =
 
 doc-text-printer-warrants-execution =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Execution Warrant W-4[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                               EXECUTION WARRANT
+                                    EXECUTION WARRANT
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -894,7 +894,7 @@ doc-text-printer-warrants-bodydisposal =
     {"["}color=#5b97bc]█░▐████▌░█  [bold]Station Medical[/bold][/color]
     {"["}color=#5b97bc]█▄░░██░░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                         ORDER FOR BODY DISPOSAL
+                              ORDER FOR BODY DISPOSAL
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -913,7 +913,7 @@ doc-text-printer-warrants-bodydisposal =
 
 doc-text-printer-reports-headmeeting =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Head Meeting Report R-1[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
                DEPARTMENTAL HEADS MEETING REPORT
@@ -942,10 +942,10 @@ doc-text-printer-reports-headmeeting =
 
 doc-text-printer-reports-technical =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Technical Condition Report R-2[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                      TECHNICAL CONDITION REPORT
+                           TECHNICAL CONDITION REPORT
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -969,7 +969,7 @@ doc-text-printer-reports-anomaly =
     {"["}color=#c96dbf]█    █  █   █  [bold]Station Research & Development[/bold][/color]
     {"["}color=#c96dbf]█▄  ▄▀▀▄  ▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                       ANOMALOUS RESEARCH REPORT
+                            ANOMALOUS RESEARCH REPORT
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -1019,10 +1019,10 @@ doc-text-printer-reports-anomaly =
 
 doc-text-printer-reports-situation =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Situation Report R-4[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                                SITUATION REPORT
+                                     SITUATION REPORT
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -1044,7 +1044,7 @@ doc-text-printer-reports-employeehealtheval =
     {"["}color=#5b97bc]█░▐████▌░█  [bold]Station Medical[/bold][/color]
     {"["}color=#5b97bc]█▄░░██░░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                       EMPLOYEE HEALTH EVALUATION
+                            EMPLOYEE HEALTH EVALUATION
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -1088,7 +1088,7 @@ doc-text-printer-reports-medicalanalysis =
     {"["}color=#5b97bc]█░▐████▌░█  [bold]Station Medical[/bold][/color]
     {"["}color=#5b97bc]█▄░░██░░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                       DETAILED MEDICAL ANALYSIS
+                            DETAILED MEDICAL ANALYSIS
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -1158,7 +1158,7 @@ doc-text-printer-reports-deathcertificate =
     {"["}color=#5b97bc]█░▐████▌░█  [bold]Station Medical[/bold][/color]
     {"["}color=#5b97bc]█▄░░██░░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                               DEATH CERTIFICATE
+                                    DEATH CERTIFICATE
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -1254,7 +1254,7 @@ doc-text-printer-reports-evalogbook =
     {"["}color=#b18644]█░░█▄▄█░░█  [bold]Station Logistics[/bold][/color]
     {"["}color=#b18644]█▄░████░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                                     EVA LOGBOOK
+                                          EVA LOGBOOK
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -1302,7 +1302,7 @@ doc-text-printer-supply-budget =
     {"["}color=#b18644]█░░█▄▄█░░█  [bold]Station Logistics[/bold][/color]
     {"["}color=#b18644]█▄░████░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                             SHIFT BUDGET REPORT
+                                  SHIFT BUDGET REPORT
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -1358,7 +1358,7 @@ doc-text-printer-supply-cargoorder =
     {"["}color=#b18644]█░░█▄▄█░░█  [bold]Station Logistics[/bold][/color]
     {"["}color=#b18644]█▄░████░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                             CARGO ORDER REQUEST
+                                  CARGO ORDER REQUEST
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -1375,10 +1375,10 @@ doc-text-printer-supply-cargoorder =
 
 doc-text-printer-supply-manufacturing =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Manufacturing Request Form U-3[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                      MANUFACTURING REQUEST FORM
+                           MANUFACTURING REQUEST FORM
     ──────────────────────────────────────────
 
     Current shift time:
@@ -1396,7 +1396,7 @@ doc-text-printer-supply-constructionorder =
     {"["}color=#f39f27]█░░░██▀░░█  [bold]Station Engineering[/bold][/color]
     {"["}color=#f39f27]█▄░██░░░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                         CONSTRUCTION WORK ORDER
+                              CONSTRUCTION WORK ORDER
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -1417,7 +1417,7 @@ doc-text-printer-supply-constructionorder =
 
 doc-text-printer-supply-specialequipment =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Special Equipment Requisition U-5[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
                    SPECIAL EQUIPMENT REQUISITION
@@ -1438,7 +1438,7 @@ doc-text-printer-supply-armoryinventory =
     {"["}color=DarkRed]█░░██▄▄██░░█  [bold]Station Security[/bold][/color]
     {"["}color=DarkRed]█▄░▀█▄▄█▀░▄█  [bold]Chalice Sector[/bold][/color]
     ──────────────────────────────────────────
-                                ARMORY INVENTORY
+                                     ARMORY INVENTORY
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -1469,10 +1469,10 @@ doc-text-printer-supply-armoryinventory =
 
 doc-text-printer-supply-vaultinventory =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Vault Inventory Report U-7[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                                VAULT INVENTORY
+                                     VAULT INVENTORY
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:
@@ -1502,10 +1502,10 @@ doc-text-printer-supply-vaultinventory =
 
 doc-text-printer-supply-vaultwithdrawal =
    ⠀{"["}color=#7d1e20]█▀ █▀▀ ▀█ [/color]      [head=3]Vault Withdrawal Request Form U-8[/head]
-   ⠀{"["}color=#7d1e20]█   ▀▀█      █[/color]       [head=3]SyndComm[/head]
+   ⠀{"["}color=#7d1e20]█   ▀▀█     █[/color]       [head=3]SyndComm[/head]
    ⠀{"["}color=#7d1e20]▀▀ ▀▀▀ ▀▀       [/color][bold]Chalice Sector[/bold]
     ──────────────────────────────────────────
-                           VAULT WITHDRAWAL FORM
+                                VAULT WITHDRAWAL FORM
     ──────────────────────────────────────────
     Current shift time:
     Filer's name and department:

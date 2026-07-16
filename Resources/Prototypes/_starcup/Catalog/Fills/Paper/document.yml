@@ -12,7 +12,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentAccessACOPromotion
-  name: ACO Promotion Request Form A1
+  name: A1 ACO Promotion Request Form
   components:
   - type: Paper
     content: doc-text-printer-accesses-aco
@@ -20,7 +20,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentAccessJobApplication
-  name: Job Application Form A2
+  name: A2 Job Application Form
   components:
   - type: Paper
     content: doc-text-printer-accesses-jobapplication
@@ -28,7 +28,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentAccessRequest
-  name: Access Request Form A3
+  name: A3 Access Request Form
   components:
   - type: Paper
     content: doc-text-printer-accesses-accessrequest
@@ -36,7 +36,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentAccessNonstandard
-  name: Nonstandard Application Form A4
+  name: A4 Nonstandard Application Form
   components:
   - type: Paper
     content: doc-text-printer-accesses-nonstandardjob
@@ -44,7 +44,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentAccessPromotion
-  name: Promotion Application Form A5
+  name: A5 Promotion Application Form
   components:
   - type: Paper
     content: doc-text-printer-accesses-promotionapp
@@ -52,7 +52,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentAccessActingHead
-  name: Acting Head Application Form A6
+  name: A6 Acting Head Application Form
   components:
   - type: Paper
     content: doc-text-printer-accesses-actinghead
@@ -60,7 +60,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentAccessDeputization
-  name: Deputy Authorization Form A7
+  name: A7 Deputy Authorization Form
   components:
   - type: Paper
     content: doc-text-printer-accesses-deputization
@@ -68,7 +68,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentAccessEquipment
-  name: Restricted Equipment Permit A8 # kinda a permit but we're already here
+  name: A8 Restricted Equipment Permit # kinda a permit but we're already here
   components:
   - type: Paper
     content: doc-text-printer-accesses-restrictedequipment
@@ -76,7 +76,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentAccessResignation
-  name: Letter of Resignation A9
+  name: A9 Letter of Resignation
   components:
   - type: Paper
     content: doc-text-printer-accesses-resignation
@@ -84,16 +84,15 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentAccessDemotion
-  name: Notice of Demotion A10
+  name: A10 Notice of Demotion
   components:
   - type: Paper
     content: doc-text-printer-accesses-demotion
 
-
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentAccessRemoval
-  name: Access Removal Notice A11
+  name: A11 Access Removal Notice
   components:
   - type: Paper
     content: doc-text-printer-accesses-accessremoval
@@ -103,7 +102,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentAssessmentAchievement
-  name: Certificate of Achievement S1
+  name: S1 Certificate of Achievement
   components:
   - type: Paper
     content: doc-text-printer-assessments-achievement
@@ -111,7 +110,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentAssessmentDepartment
-  name: Departmental Review S2
+  name: S2 Departmental Review
   components:
   - type: Paper
     content: doc-text-printer-assessments-department
@@ -119,7 +118,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentAssessmentEmployee
-  name: Employee Performance Review S3
+  name: S3 Employee Performance Review
   components:
   - type: Paper
     content: doc-text-printer-assessments-employee
@@ -127,7 +126,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentAssessmentCertification
-  name: Advanced Training Certificate S4 # kinda goes in permits but we're already here, it's gray
+  name: S4 Advanced Training Certificate # kinda goes in permits but we're already here, it's gray
   components:
   - type: Paper
     content: doc-text-printer-assessments-certification
@@ -137,7 +136,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentCivilianEvacuation
-  name: Evacuation Request C1
+  name: C1 Evacuation Request
   components:
   - type: Paper
     content: doc-text-printer-civilian-evacuation
@@ -145,7 +144,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentCivilianMarriage
-  name: Marriage Certificate C2
+  name: C2 Marriage Certificate
   components:
   - type: Paper
     content: doc-text-printer-civilian-marriage
@@ -153,7 +152,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentCivilianDivorce
-  name: Divorce Certificate C3
+  name: C3 Divorce Certificate
   components:
   - type: Paper
     content: doc-text-printer-civilian-divorce
@@ -161,7 +160,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentCivilianMenu
-  name: Mess Hall Menu C4
+  name: C4 Mess Hall Menu
   components:
   - type: Paper
     content: doc-text-printer-civilian-menu
@@ -169,7 +168,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentCivilianChangeRecords
-  name: Record Change Request Form C5
+  name: C5 Record Change Request Form
   components:
   - type: Paper
     content: doc-text-printer-civilian-changerecords
@@ -177,7 +176,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentCivilianDocuments
-  name: Documentation Request Form C6
+  name: C6 Documentation Request Form
   components:
   - type: Paper
     content: doc-text-printer-civilian-documents
@@ -187,7 +186,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentJusticeConfiscation
-  name: Confiscated Property Form J1
+  name: J1 Confiscated Property Form
   components:
   - type: Paper
     content: doc-text-printer-justice-confiscation
@@ -195,7 +194,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentJusticeParole
-  name: Prisoner Parole Form J2
+  name: J2 Prisoner Parole Form
   components:
   - type: Paper
     content: doc-text-printer-justice-parole
@@ -203,7 +202,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentJusticeConfession
-  name: Criminal Confession Form J3
+  name: J3 Criminal Confession Form
   components:
   - type: Paper
     content: doc-text-printer-justice-confession
@@ -211,7 +210,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentJusticeVerdict
-  name: Court Verdict J4
+  name: J4 Court Verdict
   components:
   - type: Paper
     content: doc-text-printer-justice-verdict
@@ -219,7 +218,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentJusticeIncident
-  name: Incident Report Form J5
+  name: J5 Incident Report Form
   components:
   - type: Paper
     content: doc-text-printer-justice-incidentreport
@@ -227,7 +226,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentJusticeMisconduct
-  name: Allegation of Misconduct Form J6
+  name: J6 Allegation of Misconduct Form
   components:
   - type: Paper
     content: doc-text-printer-justice-misconduct
@@ -235,7 +234,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentJusticeRestraining
-  name: Restraining Order Form J7
+  name: J7 Restraining Order Form
   components:
   - type: Paper
     content: doc-text-printer-justice-restraining
@@ -245,7 +244,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentPermitSapience
-  name: Certification of Sapience P1
+  name: P1 Certification of Sapience
   components:
   - type: Paper
     content: doc-text-printer-permits-sapience
@@ -253,7 +252,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentPermitBuilding
-  name: Building Permit P2
+  name: P2 Building Permit
   components:
   - type: Paper
     content: doc-text-printer-permits-building
@@ -261,7 +260,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentPermitShuttleRegister
-  name: Shuttle Registration Form P3
+  name: P3 Shuttle Registration Form
   components:
   - type: Paper
     content: doc-text-printer-permits-shuttleregister
@@ -269,7 +268,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentPermitPrescription
-  name: Medication Prescription P4
+  name: P4 Medication Prescription
   components:
   - type: Paper
     content: doc-text-printer-permits-prescription
@@ -277,7 +276,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentPermitPilotsLicense
-  name: Temporary Pilot's License P5
+  name: P5 Temporary Pilot's License
   components:
   - type: Paper
     content: doc-text-printer-permits-pilotslicense
@@ -287,7 +286,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentWarrantMedicalIntervention
-  name: Medical Intervention Form W1
+  name: W1 Medical Intervention Form
   components:
   - type: Paper
     content: doc-text-printer-warrants-medicalintervention
@@ -295,7 +294,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentWarrantSearch
-  name: Search Warrant W2
+  name: W2 Search Warrant
   components:
   - type: Paper
     content: doc-text-printer-warrants-search
@@ -303,7 +302,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentWarrantArrest
-  name: Arrest Warrant W3
+  name: W3 Arrest Warrant
   components:
   - type: Paper
     content: doc-text-printer-warrants-arrest
@@ -311,7 +310,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentWarrantExecution
-  name: Execution Warrant W4
+  name: W4 Execution Warrant
   components:
   - type: Paper
     content: doc-text-printer-warrants-execution
@@ -319,7 +318,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentWarrantBodyDisposal
-  name: Body Disposal Order W5
+  name: W5 Body Disposal Order
   components:
   - type: Paper
     content: doc-text-printer-warrants-bodydisposal
@@ -329,7 +328,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentReportHeadMeeting
-  name: Head Meeting Report R1
+  name: R1 Head Meeting Report
   components:
   - type: Paper
     content: doc-text-printer-reports-headmeeting
@@ -337,7 +336,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentReportTechnical
-  name: Technical Condition Report R2
+  name: R2 Technical Condition Report
   components:
   - type: Paper
     content: doc-text-printer-reports-technical
@@ -345,7 +344,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentReportAnomaly
-  name: Anomalous Research Report R3
+  name: R3 Anomalous Research Report
   components:
   - type: Paper
     content: doc-text-printer-reports-anomaly
@@ -353,7 +352,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentReportSituation
-  name: Situation Report R4
+  name: R4 Situation Report
   components:
   - type: Paper
     content: doc-text-printer-reports-situation
@@ -361,7 +360,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentReportEmployeeHealth
-  name: Employee Health Evaluation R5
+  name: R5 Employee Health Evaluation
   components:
   - type: Paper
     content: doc-text-printer-reports-employeehealtheval
@@ -369,7 +368,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentReportMedicalAnalysis
-  name: Detailed Medical Analysis R6
+  name: R6 Detailed Medical Analysis
   components:
   - type: Paper
     content: doc-text-printer-reports-medicalanalysis
@@ -377,7 +376,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentReportDeath
-  name: Death Certificate R7
+  name: R7 Death Certificate
   components:
   - type: Paper
     content: doc-text-printer-reports-deathcertificate
@@ -385,7 +384,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentReportNeurorobotics
-  name: Neurorobotic Evaluation R8
+  name: R8 Neurorobotic Evaluation
   components:
   - type: Paper
     content: doc-text-printer-reports-neurorobotics
@@ -393,7 +392,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentReportEVALogbook
-  name: EVA Logbook R9
+  name: R9 EVA Logbook
   components:
   - type: Paper
     content: doc-text-printer-reports-evalogbook
@@ -402,7 +401,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentSupplyBudget
-  name: Shift Budget Report U1
+  name: U1 Shift Budget Report
   components:
   - type: Paper
     content: doc-text-printer-supply-budget
@@ -410,7 +409,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentSupplyCargoOrder
-  name: Cargo Order Request Form U2
+  name: U2 Cargo Order Request Form
   components:
   - type: Paper
     content: doc-text-printer-supply-cargoorder
@@ -418,7 +417,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentSupplyManufacturing
-  name: Manufacturing Request Form U3
+  name: U3 Manufacturing Request Form
   components:
   - type: Paper
     content: doc-text-printer-supply-manufacturing
@@ -426,7 +425,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentSupplyConstructionOrder
-  name: Construction Work Order Form U4
+  name: U4 Construction Work Order Form
   components:
   - type: Paper
     content: doc-text-printer-supply-constructionorder
@@ -434,7 +433,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentSupplySpecialEquipment
-  name: Special Equipment Requisition U5
+  name: U5 Special Equipment Requisition
   components:
   - type: Paper
     content: doc-text-printer-supply-specialequipment
@@ -442,7 +441,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentSupplyArmoryInventory
-  name: Armory Inventory Report U6
+  name: U6 Armory Inventory Report
   components:
   - type: Paper
     content: doc-text-printer-supply-armoryinventory
@@ -450,7 +449,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentSupplyVaultInventory
-  name: Vault Inventory Report U7
+  name: U7 Vault Inventory Report
   components:
   - type: Paper
     content: doc-text-printer-supply-vaultinventory
@@ -458,7 +457,7 @@
 - type: entity
   parent: PrintedDocument
   id: PrintedDocumentSupplyVaultWithdrawal
-  name: Vault Withdrawal Request Form U8
+  name: U8 Vault Withdrawal Request Form
   components:
   - type: Paper
     content: doc-text-printer-supply-vaultwithdrawal
