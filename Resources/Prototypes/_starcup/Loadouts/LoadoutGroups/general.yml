@@ -65,6 +65,7 @@
   - CosmeticsJewelry
   - CosmeticsTowel
   - CosmeticsRibbons
+  - CosmeticsHairpins
   id: Cosmetics
   name: loadout-group-cosmetics
   minLimit: 0
@@ -108,7 +109,17 @@
   - BowLargeBlackHead
   - BowLargeRedHead
 
-## Plushies
+## Hairpins
+- type: loadoutGroup
+  abstract: true
+  id: HairpinsWorn
+  loadouts:
+  - HairpinWorn
+  - HairpinCloverWorn
+  - HairpinButterflyWorn
+  - HairpinMagneticWorn
+
+  ## Plushies
 - type: loadoutGroup
   abstract: true
   id: PlushiesWorn
@@ -239,6 +250,21 @@
   - GoldRing
   - SilverRing
   - Wristwatch
+  - NecklaceChainSilver
+  - NecklaceChainGold
+  - NecklaceSilver
+  - ClothingNeckNecklaceGold
+  - PendantGoldRuby
+
+## Hairpins
+- type: loadoutGroup
+  abstract: true
+  id: CosmeticsHairpins
+  loadouts:
+  - Hairpin
+  - HairpinClover
+  - HairpinButterfly
+  - HairpinMagnetic
 
 ## Bows and Ribbons
 - type: loadoutGroup
