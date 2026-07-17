@@ -84,7 +84,6 @@ station-ai-icon-malicious = Malicious
 station-ai-icon-matrix = Falling green text
 station-ai-icon-meow = Meow
 station-ai-icon-monochrome = Monochrome
-station-ai-icon-murica = Once, Fifty
 station-ai-icon-nadburn = Nad Burn!
 station-ai-icon-not-malf = All Nominal
 station-ai-icon-plain = Plain
