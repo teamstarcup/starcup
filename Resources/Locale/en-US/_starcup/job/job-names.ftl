@@ -12,7 +12,7 @@ job-alt-title-florist = Florist
 job-alt-title-gardener = Gardener
 job-alt-title-farmer = Farmer
 job-alt-title-herbalist = Herbalist
-job-alt-title-mutageneticist = Mutagenicist
+job-alt-title-mutageneticist = Mutageneticist
 
 # Cargo Technician
 job-alt-title-cargo-pilot = Pilot
