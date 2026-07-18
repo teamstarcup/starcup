@@ -113,6 +113,16 @@
     - state: footprint-right-bare-human
       offset: *right
 
+- type: footprint
+  id: rollerskateFootprint
+  parent: [baseFootprint]
+  maxVolume: 2
+  distance: 0.8
+  localRotation: false
+  prints: !type:RandomFootprint
+    layers:
+    - state: dragging-4
+
 ##  Puddles
 # Water
 - type: entity
