@@ -108,6 +108,7 @@
   - BaseMobAnimal
   id: MobRat
   description: Slightly bigger and braver than your average mouse.
+  suffix: Friendly
   components:
   - type: Speech
     speechSounds: Squeak
@@ -273,7 +274,7 @@
 - type: entity
   parent: MobRat
   id: MobRatGray
-  suffix: gray
+  suffix: Friendly, Gray
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Animals/Rodents/rat_gray.rsi
@@ -281,7 +282,7 @@
 - type: entity
   parent: MobRat
   id: MobRatWhite
-  suffix: white
+  suffix: Friendly, White
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Animals/Rodents/rat_white.rsi
@@ -293,6 +294,7 @@
   - BaseMobAnimal
   id: MobRatLarge
   description: A particularly portly pest.
+  suffix: Neutral
   components:
   - type: Speech
     speechSounds: Squeak
@@ -448,7 +450,7 @@
 - type: entity
   parent: MobRatLarge
   id: MobRatLargeBlue
-  suffix: blue
+  suffix: Neutral, Blue
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Animals/Rodents/rat_big_blue.rsi
@@ -456,7 +458,7 @@
 - type: entity
   parent: MobRatLarge
   id: MobRatLargeBrown
-  suffix: brown
+  suffix: Neutral, Brown
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Animals/Rodents/rat_big_brown.rsi
@@ -469,6 +471,7 @@
   - BaseMobAnimal
   id: MobRatDire
   description: Aggressive, overgrown vent vermin, with teeth that look like they could shear steel.
+  suffix: Hostile
   components:
   - type: Speech
     speechSounds: PossumSpeechSounds
@@ -622,6 +625,7 @@
   - BaseMobAnimal
   id: MobRatBristle
   description: Also known as vent porcupines, they can fire their nasty quills at a distance.
+  suffix: Hostile
   components:
   - type: Speech
     speechSounds: Squeak
