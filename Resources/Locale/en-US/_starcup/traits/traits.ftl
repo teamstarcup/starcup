@@ -26,3 +26,6 @@ trait-uncloneable-desc = Due to some quirk in your physical composition, you can
 
 trait-narcolepsy-weak-name = Narcolepsy (Weak)
 trait-narcolepsy-weak-desc = You fall asleep randomly, but not as often nor for as long as other narcoleptics.
+
+trait-sleepy-name = Sleepy
+trait-sleepy-desc = You aren't that picky about where you rest your head. You are able to fall asleep wherever you feel like, whenever you feel like.

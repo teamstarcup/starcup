@@ -17,7 +17,7 @@
   - type: Speech
     speechSounds: BatSpeechSounds
     speechVerb: SmallMob
-    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureYawn', 'CreatureCough']
+    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze']
   # end starcup
   - type: Fixtures
     fixtures:
@@ -1027,6 +1027,7 @@
     growthDelay: 30
   - type: ExaminableHunger
   - type: Butcherable
+    butcheringType: Spike #starcup
     spawned:
     - id: FoodMeat
       amount: 5
@@ -1067,7 +1068,7 @@
   - type: Speech
     speechVerb: LargeMob
     speechSounds: CowSpeechSounds
-    allowedEmotes: ['CreatureScream', 'CreatureCough', 'CreatureMoo']
+    allowedEmotes: ['CreatureScream', 'CreatureCough', 'CreatureMoo', 'CreatureSneeze']
   - type: Vocal
     sounds:
       Unsexed: CowSpeechEmotes
@@ -1127,6 +1128,7 @@
       Dead:
         Base: dead
   - type: Butcherable
+    butcheringType: Spike # starcup
     spawned:
     - id: FoodMeatCrab
       amount: 2
@@ -1246,6 +1248,7 @@
     flavors:
     - fiber
   - type: Butcherable
+    butcheringType: Spike # starcup
     spawned:
     - id: FoodMeat
       amount: 4
@@ -1257,7 +1260,7 @@
     speechSounds: Goat
     speechVerb: Goat
   # begin starcup
-    allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureCough', 'CreatureBleat'] # starcup
+    allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureCough', 'CreatureBleat', 'CreatureSneeze'] # starcup
   - type: Vocal
     sounds:
       Unsexed: GoatSpeechEmotes
@@ -1412,6 +1415,7 @@
       Dead:
         Base: dead
   - type: Butcherable
+    butcheringType: Spike # starcup
     spawned:
     - id: FoodMeat
       amount: 4
@@ -1516,6 +1520,7 @@
   - type: ReplacementAccent
     accent: kangaroo
   - type: Butcherable
+    butcheringType: Spike # starcup
     spawned:
     - id: FoodMeat
     dropOrgansOnButcher: true # starcup: butchering gives organs
@@ -1993,7 +1998,7 @@
   - type: Speech
     speechSounds: Squeak
     speechVerb: SmallMob
-    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough'] # starcup
+    allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze'] # starcup
   - type: Sprite
     drawdepth: SmallMobs
     sprite: Mobs/Animals/mouse.rsi
@@ -2666,6 +2671,7 @@
       Dead:
         Base: penguin_dead
   - type: Butcherable
+    butcheringType: Spike # starcup
     spawned:
     - id: FoodMeatPenguin
       amount: 3
@@ -2888,6 +2894,7 @@
         layer:
         - MobLayer
   - type: Butcherable
+    butcheringType: Spike # starcup
     spawned:
     - id: FoodMeatSpider
       amount: 2
@@ -2948,7 +2955,7 @@
   - type: Tag
     tags:
     - DoorBumpOpener
-    - FootstepSound
+    #- FootstepSound # starcup
     - CreatureEmotes # starcup
     - IgnoreTallGrass # starcup
   - type: Prying # Open door from xeno.yml.
@@ -3172,7 +3179,7 @@
   # begin starcup
   - type: Speech
     speechSounds: PossumSpeechSounds
-    allowedEmotes: ['CreatureHiss', 'CreatureYawn', 'CreatureCough','CreatureChitter', 'CreatureGrowl', 'CreatureLaugh']
+    allowedEmotes: ['CreatureHiss', 'CreatureYawn', 'CreatureCough','CreatureChitter', 'CreatureGrowl', 'CreatureLaugh', 'CreatureSneeze']
   - type: Vocal
     sounds:
       Unsexed: PossumSpeechEmotes
@@ -3265,7 +3272,7 @@
   # begin starcup
   - type: Speech
     speechSounds: RaccoonSpeechSounds
-    allowedEmotes: ['CreatureScream', 'CreatureChitter', 'CreatureBark', 'CreatureWhimper', 'CreatureYawn', 'CreatureCough']
+    allowedEmotes: ['CreatureScream', 'CreatureChitter', 'CreatureBark', 'CreatureWhimper', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
     sounds:
       Unsexed: RaccoonSpeechEmotes
@@ -3366,7 +3373,7 @@
   # begin starcup
   - type: Speech
     speechSounds: FoxSpeechSounds
-    allowedEmotes: ['CreatureScream', 'CreatureBark', 'CreatureWhimper', 'CreatureCough', 'Shake']
+    allowedEmotes: ['CreatureScream', 'CreatureBark', 'CreatureWhimper', 'CreatureCough', 'Shake', 'CreatureSneeze']
   - type: Vocal
     sounds:
       Unsexed: FoxSpeechEmotes
@@ -3397,7 +3404,7 @@
   - type: Speech
     speechVerb: Canine
     speechSounds: DogSpeechSounds
-    allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'CreatureCough', 'Snuffle', 'Pant', 'Shake']
+    allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'CreatureCough', 'CreatureSneeze', 'Snuffle', 'Pant', 'Shake']
   - type: Vocal
     sounds:
       Unsexed: SmallDogSpeechEmotes
@@ -3575,7 +3582,7 @@
   - type: Speech
     speechVerb: Canine
     speechSounds: PuppySpeechSounds
-    allowedEmotes: ['CreatureBark', 'CreatureWhimper', 'CreatureYawn', 'CreatureCough', 'Snuffle', 'Pant', 'Shake']
+    allowedEmotes: ['CreatureBark', 'CreatureWhimper', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze', 'Snuffle', 'Pant', 'Shake']
   - type: Vocal
     sounds:
       Unsexed: PuppySpeechEmotes
@@ -3622,7 +3629,7 @@
   - type: Speech
     speechSounds: CatSpeechSounds
     speechVerb: SmallMob
-    allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureCough']
+    allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
     sounds:
       Unsexed: CatSpeechEmotes
@@ -3843,7 +3850,7 @@
   - type: Speech
     speechSounds: CaracalSpeechSounds
     speechVerb: SmallMob
-    allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureCough']
+    allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
     sounds:
       Unsexed: CaracalSpeechEmotes
@@ -3895,7 +3902,7 @@
   - type: Speech
     speechSounds: KittenSpeechSounds
     speechVerb: SmallMob
-    allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss']
+    allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureSneeze']
   - type: Vocal
     sounds:
       Unsexed: KittenSpeechEmotes
@@ -3967,7 +3974,7 @@
   - type: Speech
     speechSounds: SlothSpeechSounds
     speechVerb: SilentVerb
-    allowedEmotes: ['CreatureBark', 'CreatureScream', 'CreatureSqueak', 'CreatureYawn', 'CreatureCough']
+    allowedEmotes: ['CreatureBark', 'CreatureScream', 'CreatureSqueak', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
     sounds:
       Unsexed: SlothSpeechEmotes
@@ -4041,7 +4048,7 @@
   - type: Speech
     speechSounds: FerretSpeechSounds
     speechVerb: SmallMob
-    allowedEmotes: ['CreatureSqueak', 'CreatureWhimper', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough']
+    allowedEmotes: ['CreatureSqueak', 'CreatureWhimper', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
     screamId: CreatureWhimper
     screamAction: ActionEmitSound
@@ -4067,7 +4074,7 @@
   - type: Speech
     speechSounds: HamsterSpeechSounds
     speechVerb: SmallMob
-    allowedEmotes: ['CreatureSqueak', 'CreaturePurr', 'CreatureTrill', 'CreatureYawn', 'CreatureCough']
+    allowedEmotes: ['CreatureSqueak', 'CreaturePurr', 'CreatureTrill', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
     sounds:
       Unsexed: HamsterSpeechEmotes
@@ -4263,6 +4270,7 @@
       Dead:
         Base: dead
   - type: Butcherable
+    butcheringType: Spike # starcup
     spawned:
     - id: FoodMeatBacon
       amount: 6
@@ -4290,7 +4298,7 @@
   # begin starcup
   - type: Speech
     speechSounds: PigSpeechSounds
-    allowedEmotes: ['CreatureScream', 'CreatureCough', 'CreatureOink']
+    allowedEmotes: ['CreatureScream', 'CreatureCough', 'CreatureOink', 'CreatureSneeze']
   - type: Vocal
     sounds:
       Unsexed: PigSpeechEmotes
@@ -4440,6 +4448,7 @@
       Dead:
         Base: reindeer_buck_dead
   - type: Butcherable
+    butcheringType: Spike # starcup
     spawned:
     - id: FoodMeat
       amount: 4

@@ -8,3 +8,102 @@
     sprite: _starcup/Structures/Storage/Crates/nanotrasen.rsi
   - type: Sprite
     sprite: _starcup/Structures/Storage/Crates/nanotrasen.rsi
+
+- type: entity
+  parent: CrateGeneric
+  id: CrateDressup
+  name: dressup crate
+  description: A pink-and-blue crate stuffed full of pretty dresses.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Storage/dressupcrate.rsi
+    layers:
+    - state: crate
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: crate_door
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: paper
+      sprite: Structures/Storage/Crates/labels.rsi
+      offset: "0.0,-0.09375"
+      map: ["enum.PaperLabelVisuals.Layer"]
+  - type: Icon
+    sprite: _starcup/Objects/Storage/dressupcrate.rsi
+    state: crate_icon
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateDoorOpen: crate_open
+    stateDoorClosed: crate_door
+
+- type: entity
+  id: CrateDressupFilled
+  parent: CrateDressup
+  name: dressup crate
+  suffix: filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: BarberScissors
+        - !type:GroupSelector # flowers/hairpins
+          rolls: 2
+          children:
+          - id: FoodLilySeedless
+          - id: RoseSeedless
+          - id: ClothingHeadHatFlowerWreath
+            weight: 0.05
+          - id: RoseBlackSeedless
+            weight: 0.01
+          - id: ClothingHeadHatPinButterfly
+        - !type:GroupSelector # hairbows
+          rolls: 2
+          children:
+          - id: ClothingHeadHatRibbonBlack
+          - id: ClothingHeadHatRibbonRed
+          - id: ClothingHeadHatRibbonLargeRed
+          - id: ClothingHeadHatRibbonLargeBlack
+          - id: ClothingHeadHatBowRed
+          - id: ClothingHeadHatBowBlack
+        - !type:GroupSelector # jewelry
+          children:
+          - id: ClothingNeckNecklaceGold
+          - id: ClothingNeckNecklaceSilver
+          - id: ClothingNeckNecklacePendantGoldRuby
+            weight: 0.01
+        - !type:GroupSelector # sundresses
+          children:
+          - id: ClothingUniformJumpskirtDressSundressWhite
+          - id: ClothingUniformJumpskirtDressSundressWhite
+          - id: ClothingUniformJumpskirtDressBlueSundress
+        - id: ClothingUniformJumpskirtRippedPunk
+        - id: ClothingUniformJumpskirtSailor
+        - id: ClothingUniformJumpskirtDressFormalRed
+        - id: ClothingUniformJumpskirtDressVictorianBlack
+        - id: ClothingUniformJumpskirtDressVictorianRed
+        - id: ClothingUniformJumpskirtDressYellowSwoop
+        - id: ClothingUniformJumpskirtDressRedSwept
+        - id: ClothingUniformJumpskirtTacticool
+        - !type:GroupSelector # saris
+          children:
+          - id: ClothingUniformJumpskirtDressSariGreen
+          - id: ClothingUniformJumpskirtDressSariRed
+        - !type:GroupSelector # which maid dress?
+          children:
+          - id: ClothingUniformJumpskirtJanimaidmini
+          - id: ClothingUniformJumpskirtJanimaid
+        - id: ClothingHeadHatMaidLaceHeadpiece
+        - !type:GroupSelector
+          prob: 0.1
+          children:
+          - id: ClothingHeadHatCatEarsNoTail
+          - id: ClothingHeadHatDogEarsNoTail
+          - id: ClothingHeadHatCatEars
+            weight: 0.1
+          - id: ClothingHeadHatDogEars
+            weight: 0.1
+        - !type:NestedSelector
+          tableId: DresserMainLootEntityTable
+          rolls: 2

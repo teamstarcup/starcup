@@ -58,6 +58,47 @@
   - type: IdCard
     jobTitle: job-alt-title-seniorbartender
 
+# Botanist
+- type: entity
+  parent: BotanistIDCard
+  id: HerbalistIDCard
+  name: herbalist ID card
+  components:
+  - type: IdCard
+    jobTitle: job-alt-title-herbalist
+
+- type: entity
+  parent: BotanistIDCard
+  id: FarmerIDCard
+  name: farmer ID card
+  components:
+  - type: IdCard
+    jobTitle: job-alt-title-farmer
+
+- type: entity
+  parent: BotanistIDCard
+  id: GardenerIDCard
+  name: gardener ID card
+  components:
+  - type: IdCard
+    jobTitle: job-alt-title-gardener
+
+- type: entity
+  parent: BotanistIDCard
+  id: MutageneticistIDCard
+  name: mutageneticist ID card
+  components:
+  - type: IdCard
+    jobTitle: job-alt-title-mutageneticist
+
+- type: entity
+  parent: BotanistIDCard
+  id: FloristIDCard
+  name: florist ID card
+  components:
+  - type: IdCard
+    jobTitle: job-alt-title-florist
+
 # Cargo Technician
 - type: entity
   parent: CargoIDCard
@@ -66,6 +107,14 @@
   components:
   - type: IdCard
     jobTitle: job-alt-title-cargo-pilot
+
+- type: entity
+  parent: CargoIDCard
+  id: MechPilotIDCard
+  name: mechatronics pilot ID card
+  components:
+  - type: IdCard
+    jobTitle: job-alt-title-mech-pilot
 
 # Chaplain
 - type: entity
@@ -78,11 +127,11 @@
 
 - type: entity
   parent: ChaplainIDCard
-  id: DeusDerelictionIDCard
-  name: Deus dereliction ID card
+  id: DeusDerelictianIDCard
+  name: Deus derelictian ID card
   components:
   - type: IdCard
-    jobTitle: job-alt-title-deus-dereliction
+    jobTitle: job-alt-title-deus-derelictian
 
 - type: entity
   parent: ChaplainIDCard
@@ -162,6 +211,16 @@
   - type: IdCard
     jobTitle: job-alt-title-stooge
 
+# Courier
+
+- type: entity
+  parent: CourierIDCard
+  id: SeniorCourierIDCard
+  name: senior courier ID card
+  components:
+  - type: IdCard
+    jobTitle: job-alt-title-senior-courier
+
 # Janitor
 
 - type: entity
@@ -171,6 +230,24 @@
   components:
   - type: IdCard
     jobTitle: job-alt-title-station-maid
+
+# Lawyer
+
+- type: entity
+  parent: LawyerIDCard
+  id: AdvocateIDCard
+  name: advocate ID card
+  components:
+  - type: IdCard
+    jobTitle: job-alt-title-advocate
+
+- type: entity
+  parent: LawyerIDCard
+  id: CaseworkerIDCard
+  name: caseworker ID card
+  components:
+  - type: IdCard
+    jobTitle: job-alt-title-caseworker
 
 # Medical Doctor
 - type: entity
@@ -190,7 +267,7 @@
   - type: IdCard
     jobTitle: job-alt-title-volunteer
 
-# Counselor
+# Psychologist
 - type: entity
   parent: PsychologistIDCard
   id: CounselorIDCard
@@ -198,6 +275,31 @@
   components:
   - type: IdCard
     jobTitle: job-alt-title-counselor
+
+# Reporter
+- type: entity
+  parent: ReporterIDCard
+  id: BiographerIDCard
+  name: biographer ID card
+  components:
+  - type: IdCard
+    jobTitle: job-alt-title-biographer
+
+- type: entity
+  parent: ReporterIDCard
+  id: PlaywrightIDCard
+  name: playwright ID card
+  components:
+  - type: IdCard
+    jobTitle: job-alt-title-playwright
+
+- type: entity
+  parent: ReporterIDCard
+  id: DocumentarianIDCard
+  name: documentarian ID card
+  components:
+  - type: IdCard
+    jobTitle: job-alt-title-documentarian
 
 # Roboticist
 

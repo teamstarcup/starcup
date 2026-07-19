@@ -1,0 +1,463 @@
+# Access Management (A)
+# Assessments (S)
+# Civilian (C)
+# Justice (J)
+# Permits (P)
+# Warrants (W)
+# Reports (R)
+# Supply & Requisitions (U)
+# Contraband # TODO!
+
+# Access Management documents
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentAccessACOPromotion
+  name: A1 ACO Promotion Request Form
+  components:
+  - type: Paper
+    content: doc-text-printer-accesses-aco
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentAccessJobApplication
+  name: A2 Job Application Form
+  components:
+  - type: Paper
+    content: doc-text-printer-accesses-jobapplication
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentAccessRequest
+  name: A3 Access Request Form
+  components:
+  - type: Paper
+    content: doc-text-printer-accesses-accessrequest
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentAccessNonstandard
+  name: A4 Nonstandard Application Form
+  components:
+  - type: Paper
+    content: doc-text-printer-accesses-nonstandardjob
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentAccessPromotion
+  name: A5 Promotion Application Form
+  components:
+  - type: Paper
+    content: doc-text-printer-accesses-promotionapp
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentAccessActingHead
+  name: A6 Acting Head Application Form
+  components:
+  - type: Paper
+    content: doc-text-printer-accesses-actinghead
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentAccessDeputization
+  name: A7 Deputy Authorization Form
+  components:
+  - type: Paper
+    content: doc-text-printer-accesses-deputization
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentAccessEquipment
+  name: A8 Restricted Equipment Permit # kinda a permit but we're already here
+  components:
+  - type: Paper
+    content: doc-text-printer-accesses-restrictedequipment
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentAccessResignation
+  name: A9 Letter of Resignation
+  components:
+  - type: Paper
+    content: doc-text-printer-accesses-resignation
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentAccessDemotion
+  name: A10 Notice of Demotion
+  components:
+  - type: Paper
+    content: doc-text-printer-accesses-demotion
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentAccessRemoval
+  name: A11 Access Removal Notice
+  components:
+  - type: Paper
+    content: doc-text-printer-accesses-accessremoval
+
+# Assessment documents
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentAssessmentAchievement
+  name: S1 Certificate of Achievement
+  components:
+  - type: Paper
+    content: doc-text-printer-assessments-achievement
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentAssessmentDepartment
+  name: S2 Departmental Review
+  components:
+  - type: Paper
+    content: doc-text-printer-assessments-department
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentAssessmentEmployee
+  name: S3 Employee Performance Review
+  components:
+  - type: Paper
+    content: doc-text-printer-assessments-employee
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentAssessmentCertification
+  name: S4 Advanced Training Certificate # kinda goes in permits but we're already here, it's gray
+  components:
+  - type: Paper
+    content: doc-text-printer-assessments-certification
+
+# Civilian documents
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentCivilianEvacuation
+  name: C1 Evacuation Request
+  components:
+  - type: Paper
+    content: doc-text-printer-civilian-evacuation
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentCivilianMarriage
+  name: C2 Marriage Certificate
+  components:
+  - type: Paper
+    content: doc-text-printer-civilian-marriage
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentCivilianDivorce
+  name: C3 Divorce Certificate
+  components:
+  - type: Paper
+    content: doc-text-printer-civilian-divorce
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentCivilianMenu
+  name: C4 Mess Hall Menu
+  components:
+  - type: Paper
+    content: doc-text-printer-civilian-menu
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentCivilianChangeRecords
+  name: C5 Record Change Request Form
+  components:
+  - type: Paper
+    content: doc-text-printer-civilian-changerecords
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentCivilianDocuments
+  name: C6 Documentation Request Form
+  components:
+  - type: Paper
+    content: doc-text-printer-civilian-documents
+
+# Justice documents
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentJusticeConfiscation
+  name: J1 Confiscated Property Form
+  components:
+  - type: Paper
+    content: doc-text-printer-justice-confiscation
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentJusticeParole
+  name: J2 Prisoner Parole Form
+  components:
+  - type: Paper
+    content: doc-text-printer-justice-parole
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentJusticeConfession
+  name: J3 Criminal Confession Form
+  components:
+  - type: Paper
+    content: doc-text-printer-justice-confession
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentJusticeVerdict
+  name: J4 Court Verdict
+  components:
+  - type: Paper
+    content: doc-text-printer-justice-verdict
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentJusticeIncident
+  name: J5 Incident Report Form
+  components:
+  - type: Paper
+    content: doc-text-printer-justice-incidentreport
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentJusticeMisconduct
+  name: J6 Allegation of Misconduct Form
+  components:
+  - type: Paper
+    content: doc-text-printer-justice-misconduct
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentJusticeRestraining
+  name: J7 Restraining Order Form
+  components:
+  - type: Paper
+    content: doc-text-printer-justice-restraining
+
+# Permit documents
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentPermitSapience
+  name: P1 Certification of Sapience
+  components:
+  - type: Paper
+    content: doc-text-printer-permits-sapience
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentPermitBuilding
+  name: P2 Building Permit
+  components:
+  - type: Paper
+    content: doc-text-printer-permits-building
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentPermitShuttleRegister
+  name: P3 Shuttle Registration Form
+  components:
+  - type: Paper
+    content: doc-text-printer-permits-shuttleregister
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentPermitPrescription
+  name: P4 Medication Prescription
+  components:
+  - type: Paper
+    content: doc-text-printer-permits-prescription
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentPermitPilotsLicense
+  name: P5 Temporary Pilot's License
+  components:
+  - type: Paper
+    content: doc-text-printer-permits-pilotslicense
+
+# Warrant documents
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentWarrantMedicalIntervention
+  name: W1 Medical Intervention Form
+  components:
+  - type: Paper
+    content: doc-text-printer-warrants-medicalintervention
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentWarrantSearch
+  name: W2 Search Warrant
+  components:
+  - type: Paper
+    content: doc-text-printer-warrants-search
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentWarrantArrest
+  name: W3 Arrest Warrant
+  components:
+  - type: Paper
+    content: doc-text-printer-warrants-arrest
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentWarrantExecution
+  name: W4 Execution Warrant
+  components:
+  - type: Paper
+    content: doc-text-printer-warrants-execution
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentWarrantBodyDisposal
+  name: W5 Body Disposal Order
+  components:
+  - type: Paper
+    content: doc-text-printer-warrants-bodydisposal
+
+# Report documents
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentReportHeadMeeting
+  name: R1 Head Meeting Report
+  components:
+  - type: Paper
+    content: doc-text-printer-reports-headmeeting
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentReportTechnical
+  name: R2 Technical Condition Report
+  components:
+  - type: Paper
+    content: doc-text-printer-reports-technical
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentReportAnomaly
+  name: R3 Anomalous Research Report
+  components:
+  - type: Paper
+    content: doc-text-printer-reports-anomaly
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentReportSituation
+  name: R4 Situation Report
+  components:
+  - type: Paper
+    content: doc-text-printer-reports-situation
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentReportEmployeeHealth
+  name: R5 Employee Health Evaluation
+  components:
+  - type: Paper
+    content: doc-text-printer-reports-employeehealtheval
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentReportMedicalAnalysis
+  name: R6 Detailed Medical Analysis
+  components:
+  - type: Paper
+    content: doc-text-printer-reports-medicalanalysis
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentReportDeath
+  name: R7 Death Certificate
+  components:
+  - type: Paper
+    content: doc-text-printer-reports-deathcertificate
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentReportNeurorobotics
+  name: R8 Neurorobotic Evaluation
+  components:
+  - type: Paper
+    content: doc-text-printer-reports-neurorobotics
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentReportEVALogbook
+  name: R9 EVA Logbook
+  components:
+  - type: Paper
+    content: doc-text-printer-reports-evalogbook
+
+# Supply & Requisition documents
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentSupplyBudget
+  name: U1 Shift Budget Report
+  components:
+  - type: Paper
+    content: doc-text-printer-supply-budget
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentSupplyCargoOrder
+  name: U2 Cargo Order Request Form
+  components:
+  - type: Paper
+    content: doc-text-printer-supply-cargoorder
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentSupplyManufacturing
+  name: U3 Manufacturing Request Form
+  components:
+  - type: Paper
+    content: doc-text-printer-supply-manufacturing
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentSupplyConstructionOrder
+  name: U4 Construction Work Order Form
+  components:
+  - type: Paper
+    content: doc-text-printer-supply-constructionorder
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentSupplySpecialEquipment
+  name: U5 Special Equipment Requisition
+  components:
+  - type: Paper
+    content: doc-text-printer-supply-specialequipment
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentSupplyArmoryInventory
+  name: U6 Armory Inventory Report
+  components:
+  - type: Paper
+    content: doc-text-printer-supply-armoryinventory
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentSupplyVaultInventory
+  name: U7 Vault Inventory Report
+  components:
+  - type: Paper
+    content: doc-text-printer-supply-vaultinventory
+
+- type: entity
+  parent: PrintedDocument
+  id: PrintedDocumentSupplyVaultWithdrawal
+  name: U8 Vault Withdrawal Request Form
+  components:
+  - type: Paper
+    content: doc-text-printer-supply-vaultwithdrawal
