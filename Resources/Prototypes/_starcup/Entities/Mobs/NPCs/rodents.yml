@@ -944,6 +944,18 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.5
     baseSprintSpeed: 4.5
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 30
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
   - type: DamageStateVisuals
     states:
       Alive:
@@ -984,6 +996,7 @@
   name: boingus
   parent: MobRoingus
   id: MobBoingus
+  description: The unassuming kangaroo mouse is the true master of adaption and survival, or so say the free people of stars distant.
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Animals/Rodents/boingus.rsi
