@@ -41,6 +41,9 @@ public sealed partial class PlayerProvidedCharacterRecords
     [DataField]
     public string IdentifyingFeatures { get; private set; }
 
+    [DataField] // starcup
+    public string SecurityFlags { get; private set; } = "N/A";
+
     // Medical
     [DataField]
     public string Allergies { get; private set; }
@@ -49,6 +52,8 @@ public sealed partial class PlayerProvidedCharacterRecords
     [DataField]
     public string PostmortemInstructions { get; private set; }
     // history, prescriptions, etc. would be a record below
+    [DataField] // starcup
+    public string MedicalNeeds { get; private set; } = "N/A";
 
     // "incidents"
     [DataField, JsonIgnore]
@@ -104,8 +109,10 @@ public sealed partial class PlayerProvidedCharacterRecords
         string birthday, // TheDen
         string emergencyContactName,
         string identifyingFeatures,
+        string securityFlags, // starcup
         string allergies, string drugAllergies,
         string postmortemInstructions,
+        string medicalNeeds, // starcup
         List<RecordEntry> medicalEntries,
         List<RecordEntry> securityEntries,
         List<RecordEntry> employmentEntries,
@@ -117,9 +124,11 @@ public sealed partial class PlayerProvidedCharacterRecords
         Birthday = birthday; // TheDen
         EmergencyContactName = emergencyContactName;
         IdentifyingFeatures = identifyingFeatures;
+        SecurityFlags = securityFlags; // starcup
         Allergies = allergies;
         DrugAllergies = drugAllergies;
         PostmortemInstructions = postmortemInstructions;
+        MedicalNeeds = medicalNeeds; // starcup
         MedicalEntries = medicalEntries;
         SecurityEntries = securityEntries;
         EmploymentEntries = employmentEntries;
@@ -134,9 +143,11 @@ public sealed partial class PlayerProvidedCharacterRecords
         EmergencyContactName = other.EmergencyContactName;
         HasWorkAuthorization = other.HasWorkAuthorization;
         IdentifyingFeatures = other.IdentifyingFeatures;
+        SecurityFlags = other.SecurityFlags; // starcup
         Allergies = other.Allergies;
         DrugAllergies = other.DrugAllergies;
         PostmortemInstructions = other.PostmortemInstructions;
+        MedicalNeeds = other.MedicalNeeds; // starcup
         MedicalEntries = other.MedicalEntries.Select(x => new RecordEntry(x)).ToList();
         SecurityEntries = other.SecurityEntries.Select(x => new RecordEntry(x)).ToList();
         EmploymentEntries = other.EmploymentEntries.Select(x => new RecordEntry(x)).ToList();
@@ -151,9 +162,11 @@ public sealed partial class PlayerProvidedCharacterRecords
             birthday: "N/A", // TheDen
             emergencyContactName: "",
             identifyingFeatures: "",
+            securityFlags: "", // starcup
             allergies: "None",
             drugAllergies: "None",
             postmortemInstructions: "Return home",
+            medicalNeeds: "", // starcup
             medicalEntries: new List<RecordEntry>(),
             securityEntries: new List<RecordEntry>(),
             employmentEntries: new List<RecordEntry>(),
@@ -170,9 +183,11 @@ public sealed partial class PlayerProvidedCharacterRecords
                    && Birthday == other.Birthday // TheDen
                    && HasWorkAuthorization == other.HasWorkAuthorization
                    && IdentifyingFeatures == other.IdentifyingFeatures
+                   && SecurityFlags == other.SecurityFlags // starcup
                    && Allergies == other.Allergies
                    && DrugAllergies == other.DrugAllergies
-                   && PostmortemInstructions == other.PostmortemInstructions;
+                   && PostmortemInstructions == other.PostmortemInstructions
+                   && MedicalNeeds == other.MedicalNeeds; // starcup
         if (!test)
             return false;
         if (MedicalEntries.Count != other.MedicalEntries.Count)
@@ -232,9 +247,11 @@ public sealed partial class PlayerProvidedCharacterRecords
         EmergencyContactName =
             ClampString(EmergencyContactName, TextMedLen);
         IdentifyingFeatures = ClampString(IdentifyingFeatures, TextMedLen);
+        SecurityFlags = ClampString(SecurityFlags, TextMedLen); // starcup
         Allergies = ClampString(Allergies, TextMedLen);
         DrugAllergies = ClampString(DrugAllergies, TextMedLen);
         PostmortemInstructions = ClampString(PostmortemInstructions, TextMedLen);
+        MedicalNeeds = ClampString(MedicalNeeds, TextMedLen); // starcup
 
         EnsureValidEntries(EmploymentEntries);
         EnsureValidEntries(MedicalEntries);
@@ -266,6 +283,12 @@ public sealed partial class PlayerProvidedCharacterRecords
     {
         return new(this) { IdentifyingFeatures = feat};
     }
+
+    public PlayerProvidedCharacterRecords WithSecurityFlags(string flags) // starcup
+    {
+        return new(this) { SecurityFlags = flags};
+    }
+
     public PlayerProvidedCharacterRecords WithAllergies(string s)
     {
         return new(this) { Allergies = s };
@@ -274,10 +297,17 @@ public sealed partial class PlayerProvidedCharacterRecords
     {
         return new(this) { DrugAllergies = s };
     }
+
     public PlayerProvidedCharacterRecords WithPostmortemInstructions(string s)
     {
         return new(this) { PostmortemInstructions = s};
     }
+
+    public PlayerProvidedCharacterRecords WithMedicalNeeds(string needs) // starcup
+    {
+        return new(this) { MedicalNeeds = needs};
+    }
+
     public PlayerProvidedCharacterRecords WithEmploymentEntries(List<RecordEntry> entries)
     {
         return new(this) { EmploymentEntries = entries};

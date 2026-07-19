@@ -2,3 +2,40 @@
   id: BotanistWinterBoots
   equipment:
     shoes: ClothingShoesBootsWinterHydro
+
+# ID
+- type: loadout
+  id: BotanistPDA
+  equipment:
+    id: BotanistPDA
+
+- type: loadout
+  id: FarmerPDA
+  equipment:
+    id: FarmerPDA
+
+- type: loadout
+  id: FloristPDA
+  equipment:
+    id: FloristPDA
+
+- type: loadout
+  id: GardenerPDA
+  equipment:
+    id: GardenerPDA
+
+- type: loadout
+  id: HerbalistPDA
+  equipment:
+    id: HerbalistPDA
+
+- type: loadout
+  id: MutageneticistPDA
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobBotanist
+      time: 72000 # 20hr
+  equipment:
+    id: MutageneticistPDA

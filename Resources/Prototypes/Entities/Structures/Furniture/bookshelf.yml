@@ -11,6 +11,31 @@
       - state: base
       - state: book-0
       - map: ["enum.StorageFillLayers.Fill"]
+        # begin Funky Station
+      - state: paper
+        sprite: Structures/Furniture/bookshelf.rsi
+        map: [ "enum.PaperLabelVisuals.Layer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.PaperLabelVisuals.HasLabel:
+        enum.PaperLabelVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+      enum.PaperLabelVisuals.LabelType:
+        enum.PaperLabelVisuals.Layer:
+          Paper: { state: paper }
+          PaperDyedPink: { state: PaperDyedPink }
+          PaperDyedRed: { state: PaperDyedRed }
+          PaperDyedOrange: { state: PaperDyedOrange }
+          PaperDyedYellow: { state: PaperDyedYellow }
+          PaperDyedGrass: { state: PaperDyedGrass }
+          PaperDyedGreen: { state: PaperDyedGreen }
+          PaperDyedOcean: { state: PaperDyedOcean }
+          PaperDyedSky: { state: PaperDyedSky }
+          PaperDyedPurple: { state: PaperDyedPurple }
+          PaperDyedTan: { state: PaperDyedTan }
+          PaperDyedBrown: { state: PaperDyedBrown }
+# end Funky Station
   - type: Appearance
   - type: StorageFillVisualizer
     maxFillLevels: 21
@@ -56,8 +81,10 @@
   - type: Pullable
   - type: Occluder
   - type: Storage
-    grid:
-    - 0,0,9,3
+    grid: # Funky Station - changed from 0,0,9,3
+    - 0,0,9,1
+    - 0,3,9,4
+    - 0,6,9,7
     maxItemSize: Normal
     whitelist:
       tags:
@@ -74,7 +101,21 @@
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
+      paper_label: !type:ContainerSlot # Funky Station
   - type: Construction
     graph: Bookshelf
     node: bookshelf
   - type: BlockWeather
+# begin Funky Station
+  - type: ItemSlots
+  - type: PaperLabel
+    labelSlot:
+      insertVerbText: comp-paper-label-insert
+      ejectVerbText: comp-paper-label-eject
+      whitelist:
+        components:
+        - Paper
+      blacklist:
+        tags:
+        - Book
+# end Funky Station

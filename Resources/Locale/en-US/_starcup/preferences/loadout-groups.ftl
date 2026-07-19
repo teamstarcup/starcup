@@ -56,6 +56,7 @@ loadout-group-bartender-glasses = Bartender glasses
 loadout-group-bartender-shoes = Bartender shoes
 
 loadout-group-botanist-shoes = Botanist shoes
+loadout-group-botanist-id-starcup = Botanist ID
 
 loadout-group-boxer-head = Boxer head
 loadout-group-boxer-jumpsuit = Boxer jumpsuit
@@ -77,6 +78,7 @@ loadout-group-janitor-light = Janitor flashlight
 
 loadout-group-lawyer-outerclothing = Lawyer outer clothing
 loadout-group-lawyer-shoes = Lawyer shoes
+loadout-group-lawyer-id-starcup = Lawyer ID
 
 loadout-group-librarian-outerclothing = Librarian outer clothing
 loadout-group-librarian-shoes = Librarian shoes
@@ -92,6 +94,7 @@ loadout-group-passenger-glasses = Passenger eyewear
 loadout-group-reporter-outer-clothing = Reporter outer clothing
 loadout-group-reporter-shoes = Reporter shoes
 loadout-group-reporter-glasses = Reporter eyewear
+loadout-group-reporter-id-starcup = Reporter ID
 
 loadout-group-service-worker-head = Service worker head
 loadout-group-service-worker-jumpsuit = Service worker jumpsuit
@@ -108,3 +111,4 @@ loadout-group-plushies = Plushies
 loadout-group-survival-brigmedic = Combat Medic Survival Box
 loadout-group-accessibility = Accessibility
 loadout-group-cosmetics = Cosmetics
+loadout-group-neck-fashionable = Neck

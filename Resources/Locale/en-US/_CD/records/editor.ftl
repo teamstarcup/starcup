@@ -14,11 +14,15 @@ humanoid-profile-editor-cd-records-work-authorization = Work Authorization:
 
 # Security
 humanoid-profile-editor-cd-records-identifying-features = Identifying Features:
+# starcup - added Security Flags
+humanoid-profile-editor-cd-records-security-flags = Security Flags:
 
 # Medical
 humanoid-profile-editor-cd-records-allergies = Allergies:
 humanoid-profile-editor-cd-records-drug-allergies = Drug Allergies:
 humanoid-profile-editor-cd-records-postmortem = Postmortem Instructions:
+# starcup - added Medical Needs
+humanoid-profile-editor-cd-records-medical-needs = Medical Needs:
 
 # Admin
 # starcup: change name from admin to ooc

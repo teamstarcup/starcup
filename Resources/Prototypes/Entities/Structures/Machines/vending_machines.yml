@@ -178,6 +178,7 @@
   id: VendingMachineCondiments
   name: condiment station
   description: Slather these thick gooey substances on your food for a full flavor effect.
+  suffix: Kitchen Vendor # starcup
   components:
   - type: VendingMachine
     pack: CondimentInventory
@@ -218,6 +219,7 @@
   id: VendingMachineAmmo
   name: liberation station
   description: An overwhelming amount of ancient patriotism washes over you just by looking at the machine.
+  suffix: Security Vendor # starcup
   components:
   - type: VendingMachine
     pack: AmmoVendInventory
@@ -244,6 +246,7 @@
   id: VendingMachineBooze
   name: Booze-O-Mat
   description: A technological marvel, supposedly able to mix just the mixture you'd like to drink the moment you ask for one.
+  suffix: Bar Vendor # starcup
   components:
   - type: VendingMachine
     pack: BoozeOMatInventory
@@ -278,6 +281,7 @@
   id: VendingMachineBoozeSyndicate # syndie booze-o-mat for nukie outpost
   name: Bruise-O-Mat
   description: A refurbished Booze-O-Mat for boosting operative morale. An imprint of a blood-red hardsuit is visible on one side, and the paint seems ashed off on the other side.
+  suffix: Misc Vendor # starcup
   components:
   - type: VendingMachine
     pack: BoozeOMatInventory
@@ -312,6 +316,7 @@
   id: VendingMachineCart
   name: PTech
   description: PTech vending! Providing a ROBUST selection of PDAs, cartridges, and anything else a dull paper pusher needs!
+  suffix: HoP Vendor # starcup
   components:
   - type: VendingMachine
     pack: PTechInventory
@@ -342,6 +347,7 @@
   id: VendingMachineChefvend
   name: ChefVend
   description: An ingredient vendor for all your cheffin needs.
+  suffix: Kitchen Vendor # starcup
   components:
   - type: VendingMachine
     pack: ChefvendInventory
@@ -375,6 +381,7 @@
   id: VendingMachineCigs
   name: ShadyCigs Deluxe
   description: Proliferation of these across Syndicate stations is the result of heavy and controversial neocorporate lobbying. # starcup: rewritten for tone
+  suffix: Misc Vendor # starcup
   components:
   - type: VendingMachine
     pack: CigaretteMachineInventory
@@ -410,6 +417,7 @@
   id: VendingMachineClothing
   name: ClothesMate
   description: A vending machine for clothing.
+  suffix: Fashion Vendor # starcup
   components:
   - type: VendingMachine
     pack: ClothesMateInventory
@@ -441,6 +449,7 @@
   id: VendingMachineWinter
   name: WinterDrobe
   description: The best place to enjoy the cold!
+  suffix: Fashion Vendor # starcup
   components:
   - type: VendingMachine
     pack: WinterDrobeInventory
@@ -472,6 +481,7 @@
   id: VendingMachineCoffee
   name: Solar's Best Hot Drinks
   description: Served boiling so it stays hot all shift!
+  suffix: Drinks Vendor # starcup
   components:
   - type: VendingMachine
     pack: HotDrinksMachineInventory
@@ -513,6 +523,7 @@
   id: VendingMachineCola
   name: Robust Softdrinks
   description: A softdrink vendor provided by Robust Industries, LLC.
+  suffix: Drinks Vendor # starcup
   components:
   - type: VendingMachine
     pack: RobustSoftdrinksInventory
@@ -547,7 +558,7 @@
 - type: entity
   parent: VendingMachineCola
   id: VendingMachineColaBlack
-  suffix: Black
+  suffix: Black, Drinks Vendor # starcup - added Drinks Vendor
   components:
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/cola-black.rsi
@@ -569,6 +580,7 @@
   id: VendingMachineColaRed
   name: Space Cola Vendor
   description: It vends cola, in space.
+  suffix: Drinks Vendor # starcup
   components:
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/cola-red.rsi
@@ -590,6 +602,7 @@
   id: VendingMachineSpaceUp
   name: Space-Up! Vendor
   description: Indulge in an explosion of flavor.
+  suffix: Drinks Vendor # starcup
   components:
   - type: VendingMachine
     pack: SpaceUpInventory
@@ -611,7 +624,7 @@
 - type: entity
   parent: VendingMachineCola
   id: VendingMachineSoda
-  suffix: Soda
+  suffix: Soda, Drinks Vendor # starcup - added drinks vendor
   components:
   - type: VendingMachine
     pack: SodaInventory
@@ -635,6 +648,7 @@
   id: VendingMachineStarkist
   name: Star-kist Vendor
   description: The taste of a star in liquid form.
+  suffix: Drinks Vendor # starcup
   components:
   - type: VendingMachine
     pack: StarkistInventory
@@ -658,6 +672,7 @@
   id: VendingMachineShamblersJuice
   name: Shambler's Juice Vendor
   description: ~Shake me up some of that Shambler's Juice!~
+  suffix: Drinks Vendor # starcup
   components:
   - type: VendingMachine
     pack: ShamblersJuiceInventory
@@ -692,6 +707,7 @@
   id: VendingMachinePwrGame
   name: Pwr Game Vendor
   description: You want it, we got it. Brought to you in partnership with Vlad's Salads.
+  suffix: Drinks Vendor # starcup
   components:
   - type: VendingMachine
     pack: PwrGameInventory
@@ -728,6 +744,7 @@
   id: VendingMachineDrGibb
   name: Dr. Gibb Vendor
   description: Canned explosion of different flavors in this very vendor!
+  suffix: Drinks Vendor # starcup
   components:
   - type: VendingMachine
     pack: DrGibbInventory
@@ -764,6 +781,7 @@
   id: VendingMachineSmite
   name: Smite Vendor
   description: Popular with the administration.
+  suffix: Drinks Vendor # starcup
   components:
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/smite.rsi
@@ -800,6 +818,7 @@
   id: VendingMachineDinnerware
   name: Plasteel Chef's Dinnerware Vendor
   description: A kitchen and restaurant equipment vendor.
+  suffix: Kitchen Vendor # starcup
   components:
   - type: VendingMachine
     pack: DinnerwareInventory
@@ -833,6 +852,7 @@
   id: VendingMachineMagivend
   name: MagiVend
   description: A magic vending machine.
+  suffix: Misc Vendor # starcup
   components:
   - type: VendingMachine
     pack: MagiVendInventory
@@ -863,6 +883,7 @@
   id: VendingMachineDiscount
   name: Discount Dan's
   description: A vending machine containing discount snacks from the infamous 'Discount Dan' franchise.
+  suffix: Snacks Vendor # starcup
   components:
   - type: VendingMachine
     pack: DiscountDansInventory
@@ -896,6 +917,7 @@
   id: VendingMachineEngivend
   name: Engi-Vend
   description: Spare tool vending. What? Did you expect some witty description?
+  suffix: Engineering Vendor # starcup
   components:
   - type: VendingMachine
     pack: EngiVendInventory
@@ -926,6 +948,7 @@
   id: VendingMachineMedicalBase
   name: Interdyne PharmAssist Civilian # starcup: NanoMed to Interdyne PharmAssist
   description: It's a medical drug dispenser. Natural chemicals only!
+  suffix: Medical Vendor # starcup
   components:
   - type: VendingMachine
     pack: NanoMedCivilianInventory
@@ -961,6 +984,7 @@
   parent: VendingMachineMedicalBase
   id: VendingMachineMedical
   name: Interdyne PharmAssist Plus # starcup: NanoMed to Interdyne PharmAssist
+  suffix: Medical Vendor # starcup
   components:
   - type: VendingMachine
     pack: NanoMedPlusInventory
@@ -982,6 +1006,7 @@
   id: VendingMachineNutri
   name: NutriMax
   description: A vending machine containing nutritional substances for plants and botanical tools.
+  suffix: Botany Vendor # starcup
   components:
   - type: VendingMachine
     pack: NutriMaxInventory
@@ -1016,6 +1041,7 @@
   id: VendingMachineSec
   name: SecTech
   description: A vending machine containing Security equipment. A label reads SECURITY PERSONNEL ONLY.
+  suffix: Security Vendor # starcup
   components:
   - type: VendingMachine
     pack: SecTechInventory
@@ -1054,7 +1080,7 @@
   id: VendingMachineSeedsUnlocked
   name: MegaSeed Servitor
   description: For when you need seeds fast. Hands down the best seed selection on the station!
-  suffix: Unlocked
+  suffix: Unlocked, Brig Vendor # starcup - added Brig Vendor (maybe Botany would be more intuitive, but)
   components:
   - type: VendingMachine
     pack: MegaSeedServitorInventory
@@ -1085,7 +1111,7 @@
 - type: entity
   parent: VendingMachineSeedsUnlocked
   id: VendingMachineSeeds
-  suffix: Hydroponics
+  suffix: Hydroponics, Botany Vendor # starcup - added Botany Vendor
   components:
   - type: AccessReader
     access: [["Hydroponics"]]
@@ -1095,6 +1121,7 @@
   id: VendingMachineSnack
   name: Getmore Chocolate Corp
   description: A snack machine courtesy of the Getmore Chocolate Corporation, based out of Mars.
+  suffix: Snacks Vendor # starcup
   components:
   - type: VendingMachine
     pack: GetmoreChocolateCorpInventory
@@ -1130,6 +1157,7 @@
   id: VendingMachineSustenance
   name: Sustenance Vendor
   description: A vending machine which vends food, as required by section 47-C of the Cybersun-Electra Ethical Treatment of Prisoners Treaty following the 37th Neocorporate War. # starcup - NT-SC swap
+  suffix: Brig Vendor # starcup
   components:
   - type: VendingMachine
     pack: SustenanceInventory
@@ -1159,7 +1187,7 @@
 - type: entity
   parent: VendingMachineSnack
   id: VendingMachineSnackBlue
-  suffix: Blue
+  suffix: Blue, Snacks Vendor # starcup - added Snacks Vendor
   components:
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/snack-blue.rsi
@@ -1179,7 +1207,7 @@
 - type: entity
   parent: VendingMachineSnack
   id: VendingMachineSnackOrange
-  suffix: Orange
+  suffix: Orange, Snacks Vendor # starcup - added Snacks Vendor
   components:
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/snack-orange.rsi
@@ -1199,7 +1227,7 @@
 - type: entity
   parent: VendingMachineSnack
   id: VendingMachineSnackGreen
-  suffix: Green
+  suffix: Green, Snacks Vendor # starcup - added Snacks Vendor
   components:
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/snack-green.rsi
@@ -1219,7 +1247,7 @@
 - type: entity
   parent: VendingMachineSnack
   id: VendingMachineSnackTeal
-  suffix: Teal
+  suffix: Teal, Snacks Vendor # starcup - added Snacks Vendor
   components:
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/snack-teal.rsi
@@ -1241,7 +1269,7 @@
   id: VendingMachineSovietSoda
   name: ВОДА
   description: An old vending machine containing sweet water.
-  suffix: VODA
+  suffix: VODA, Drinks Vendor # starcup - added Drinks Vendor
   components:
   - type: VendingMachine
     pack: BodaInventory
@@ -1278,6 +1306,7 @@
   id: VendingMachineTheater
   name: TheaterDrobe # starcup: renamed for consistency
   description: A vending machine containing costumes.
+  suffix: Fashion Vendor # starcup
   components:
   - type: VendingMachine
     pack: AutoDrobeInventory
@@ -1314,6 +1343,7 @@
   id: VendingMachineVendomat
   name: Vendomat
   description: Only the finest robust equipment in space!
+  suffix: Engineering Vendor # starcup - debatable
   components:
   - type: VendingMachine
     pack: VendomatInventory
@@ -1350,6 +1380,7 @@
   id: VendingMachineRobotics
   name: Robotech Deluxe
   description: All the tools you need to create your own robot army.
+  suffix: Robotics Vendor # starcup
   components:
   - type: VendingMachine
     pack: RoboticsInventory
@@ -1387,6 +1418,7 @@
   id: VendingMachineYouTool
   name: YouTool
   description: "A vending machine containing standard tools. A label reads: Tools for tools."
+  suffix: Engineering Vendor # starcup
   components:
   - type: VendingMachine
     pack: YouToolInventory
@@ -1415,6 +1447,7 @@
   id: VendingMachineGames
   name: Good Clean Fun
   description: Helps supply the crew with recreation and some much-needed boosts to morale. Except when you roll three natural 1s in a row. # starcup: rewritten for tone
+  suffix: Misc Vendor # starcup
   components:
   - type: VendingMachine
     pack: GoodCleanFunInventory
@@ -1447,6 +1480,7 @@
   id: VendingMachineChang
   name: Mr. Chang
   description: A self-serving Chinese food machine, for all your Chinese food needs.
+  suffix: Snacks Vendor # starcup
   components:
   - type: VendingMachine
     pack: ChangInventory
@@ -1479,7 +1513,8 @@
   parent: VendingMachine
   id: VendingMachineSalvage
   name: Salvage Vendor
-  description: A dwarf's best friend!
+  description: Hawkmoon Acquisitions believes that giant axes are a privilege, not a right. Mine more ores to earn better equipment! # starcup - removed dwarves reference
+  suffix: Logistics Vendor # starcup
   components:
   #- type: VendingMachine # DeltaV: Use mining points instead of limited stock
   #  pack: SalvageEquipmentInventory
@@ -1527,6 +1562,7 @@
   id: VendingMachineDonut
   name: Monkin' Donuts
   description: A donut vendor provided by Robust Industries, LLC.
+  suffix: Snacks Vendor # starcup
   components:
   - type: VendingMachine
     pack: DonutInventory
@@ -1562,6 +1598,7 @@
   id: VendingMachineHydrobe
   name: HyDrobe
   description: A machine with a catchy name. It dispenses botany related clothing and gear.
+  suffix: Botany Vendor # starcup
   components:
   - type: VendingMachine
     pack: HyDrobeInventory
@@ -1594,6 +1631,7 @@
   id: VendingMachineLawDrobe
   name: LawDrobe
   description: Objection! This wardrobe dispenses the rule of law... and lawyer clothing..
+  suffix: Lawyer Vendor # starcup
   components:
   - type: VendingMachine
     pack: LawDrobeInventory
@@ -1622,6 +1660,7 @@
   id: VendingMachineSecDrobe
   name: SecDrobe
   description: A vending machine for security and security-related clothing!
+  suffix: Security Vendor # starcup
   components:
   - type: VendingMachine
     pack: SecDrobeInventory
@@ -1654,6 +1693,7 @@
   id: VendingBarDrobe
   name: BarDrobe
   description: A stylish vendor to dispense the most stylish bar clothing!
+  suffix: Bar Vendor # starcup
   components:
   - type: VendingMachine
     pack: BarDrobeInventory
@@ -1681,6 +1721,7 @@
   parent: VendingMachine
   id: VendingMachineChapel
   name: PietyVend
+  suffix: Chapel Vendor # starcup
   components:
   - type: VendingMachine
     pack: PietyVendInventory
@@ -1710,6 +1751,7 @@
   id: VendingMachineCargoDrobe
   name: LogiDrobe # DeltaV - Logistics Department replacing Cargo
   description: A highly advanced vending machine for buying logistics related clothing for free. # DeltaV - Logistics Department replacing Cargo
+  suffix: Logistics Vendor # starcup
   components:
   - type: VendingMachine
     pack: CargoDrobeInventory
@@ -1742,6 +1784,7 @@
   id: VendingMachineMediDrobe
   name: MediDrobe
   description: A vending machine rumoured to be capable of dispensing clothing for medical personnel.
+  suffix: Medical Vendor # starcup
   components:
   - type: VendingMachine
     pack: MediDrobeInventory
@@ -1770,6 +1813,7 @@
   id: VendingMachineChemDrobe
   name: ChemDrobe
   description: A vending machine for dispensing chemistry related clothing.
+  suffix: Chemistry Vendor # starcup
   components:
   - type: VendingMachine
     pack: ChemDrobeInventory
@@ -1798,6 +1842,7 @@
   id: VendingMachineCuraDrobe
   name: CuraDrobe
   description: A lowstock vendor only capable of vending clothing for curators and librarians.
+  suffix: Library Vendor # starcup
   components:
   - type: VendingMachine
     pack: CuraDrobeInventory
@@ -1826,6 +1871,7 @@
   id: VendingMachineAtmosDrobe
   name: AtmosDrobe
   description: Dispenses fashionable clothing for Atmospherics Technicians, a notable perk for what can be a rather thankless job. # starcup: rewritten for tone
+  suffix: Atmos Vendor # starcup
   components:
   - type: VendingMachine
     pack: AtmosDrobeInventory
@@ -1858,6 +1904,7 @@
   id: VendingMachineEngiDrobe
   name: EngiDrobe
   description: A vending machine renowned for vending industrial grade clothing.
+  suffix: Engineering Vendor # starcup
   components:
   - type: VendingMachine
     pack: EngiDrobeInventory
@@ -1890,6 +1937,7 @@
   id: VendingMachineChefDrobe
   name: ChefDrobe
   description: This vending machine might not dispense meat, but it certainly dispenses chef related clothing.
+  suffix: Kitchen Vendor # starcup
   components:
   - type: VendingMachine
     pack: ChefDrobeInventory
@@ -1918,6 +1966,7 @@
   id: VendingMachineDetDrobe
   name: DetDrobe
   description: A machine for all your detective needs, as long as you need clothes.
+  suffix: Detective Vendor # starcup
   components:
   - type: VendingMachine
     pack: DetDrobeInventory
@@ -1946,6 +1995,7 @@
   id: VendingMachineJaniDrobe
   name: JaniDrobe
   description: A self cleaning vending machine capable of dispensing clothing for janitors.
+  suffix: Janitor Vendor # starcup
   components:
   - type: VendingMachine
     pack: JaniDrobeInventory
@@ -1978,6 +2028,7 @@
   id: VendingMachineSciDrobe
   name: SciDrobe
   description: A simple vending machine suitable to dispense well tailored Science clothing. # starcup: rewritten for tone
+  suffix: Science Vendor # starcup
   components:
   - type: VendingMachine
     pack: SciDrobeInventory
@@ -2006,6 +2057,7 @@
   id: VendingMachineSyndieDrobe
   name: SyndieDrobe
   description: Wardrobe machine encoded by the syndicate, contains elite outfits for various operations.
+  suffix: Fashion Vendor # starcup
   components:
   - type: VendingMachine
     pack: SyndieDrobeInventory
@@ -2038,6 +2090,7 @@
   id: VendingMachineRoboDrobe
   name: RoboDrobe
   description: A vending machine designed to dispense clothing known only to roboticists.
+  suffix: Robotics Vendor # starcup
   components:
   - type: VendingMachine
     pack: RoboDrobeInventory
@@ -2066,6 +2119,7 @@
   id: VendingMachineGeneDrobe
   name: GeneDrobe
   description: A machine for dispensing clothing related to genetics.
+  suffix: Medical Vendor # starcup
   components:
   - type: VendingMachine
     pack: GeneDrobeInventory
@@ -2094,6 +2148,7 @@
   id: VendingMachineViroDrobe
   name: ViroDrobe
   description: An unsterilized machine for dispending virology related clothing.
+  suffix: Medical Vendor # starcup
   components:
   - type: VendingMachine
     pack: ViroDrobeInventory
@@ -2121,7 +2176,8 @@
   parent: VendingMachine
   id: VendingMachineCentDrobe
   name: CentDrobe
-  description: A one-of-a-kind vending machine for all your centcomm aesthetic needs!
+  description: A one-of-a-kind vending machine for all your CentComm aesthetic needs! # starcup - fixed caps
+  suffix: CentComm Vendor # starcup
   components:
   - type: VendingMachine
     pack: CentDrobeInventory
@@ -2149,7 +2205,8 @@
   parent: VendingMachine
   id: VendingMachineHappyHonk
   name: Happy Honk Dispenser
-  description: A happy honk meal box dispenser made by honk! co.
+  description: A Happy Honk meal box dispenser made by Honk! Co. # starcup - fixed caps
+  suffix: Kitchen Vendor # starcup
   components:
   - type: VendingMachine
     pack: HappyHonkDispenserInventory
@@ -2190,6 +2247,7 @@
   id: VendingMachinePride
   name: Pride-O-Mat
   description: A vending machine containing pride.
+  suffix: Fashion Vendor # starcup
   components:
   - type: VendingMachine
     pack: PrideDrobeInventory
@@ -2221,7 +2279,7 @@
 - type: entity
   parent: VendingMachine
   id: VendingMachineTankDispenserEVA
-  suffix: EVA [O2, N2]
+  suffix: EVA [O2, N2], Engineering Vendor # starcup - added Engineering Vendor
   name: gas tank dispenser
   description: A vendor for dispensing gas tanks.
   components:
@@ -2234,7 +2292,7 @@
 - type: entity
   parent: VendingMachine
   id: VendingMachineTankDispenserEngineering
-  suffix: ENG [O2, Plasma]
+  suffix: ENG [O2, Plasma], Engineering Vendor # starcup - added Engineering Vendor
   name: gas tank dispenser
   description: A vendor for dispensing gas tanks. This one has an engineering livery.
   components:
@@ -2251,6 +2309,7 @@
   id: VendingMachineChemicals
   name: ChemVend
   description: Probably not the coffee machine.
+  suffix: Chemistry Vendor # starcup
   components:
   - type: VendingMachine
     pack: ChemVendInventory
@@ -2279,7 +2338,8 @@
   parent: VendingMachineChemicals
   id: VendingMachineChemicalsSyndicate
   name: SyndieJuice
-  description: Not made with freshly squeezed syndies I hope.
+  description: Not made with freshly squeezed Syndies, I hope. # starcup - caps+comma
+  suffix: Misc Vendor # starcup
   components:
   - type: VendingMachine
     pack: ChemVendInventorySyndicate
@@ -2297,6 +2357,7 @@
   id: VendingMachineWallMedicalCivilian
   name: Interdyne PharmAssist band-aid # starcup: NanoMed to Interdyne PharmAssist
   description: It's a wall-mounted medical equipment dispenser. Natural chemicals only!
+  suffix: Medical Vendor # starcup
   components:
   - type: VendingMachine
     pack: NanoMedCivilianWallInventory
@@ -2326,6 +2387,7 @@
   parent: VendingMachineWallMedicalCivilian
   id: VendingMachineWallMedical
   name: Interdyne PharmAssist # starcup: NanoMed to Interdyne PharmAssist
+  suffix: Medical Vendor # starcup
   components:
   - type: VendingMachine
     pack: NanoMedInventory

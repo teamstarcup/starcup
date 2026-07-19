@@ -85,6 +85,10 @@
   # imp edit end
   - GlassesJamjar
   - GlassesJensen
+  # Mothees Surplus Goggles Bonanza starts here. here's hoping its gonna be the last time I make an edit.
+  - SurpBallisticY
+  - SurpBallisticG
+  - SurpBallisticB
 
 - type: loadoutGroup
   id: GroupTankHarness
@@ -294,6 +298,46 @@
   - SyndieRecruitJumpsuit
   - SyndieFormalDress
   - SyndieFormalJumpsuit
+  - FormalRedDress
+  - SailorSkirt
+  - BlueSundress
+  - WhiteSundress
+  - DaisySundress
+  - RippedPunkSkirt
+  - PinstripeDress
+  - GothicDress
+  - FireDress
+  - BlueCheongsam
+  - GreenCheongsam
+  - PurpleCheongsam
+  - RedCheongsam
+  - OldRedDress
+  - OldBlackDress
+  - OldRedVest
+  - OldBlackVest
+  - GymBraPencilSkirt
+  - BlueBlazerSkirt
+  - YellowSwoopDress
+  - RedSwoopDress
+  - QipaoSkirt
+  - QipaoSkirtSlim
+  - RedSariDress
+  - GreenSariDress
+  - FlamencoDress
+  - TangoDress
+  - OldBlackVest
+  - OldRedVest
+  - SailorSuit
+  - RippedPunkJeans
+  - StripedSuit
+  - BlueBlazer
+  - LightBlueShirt
+  - BlackFlannelKhakis
+  - RedFlannelKhakis
+  - RedFlannelJeans
+  - BlackFlannelJeans
+  - OliveSweater
+  - BarberSuit
   # end starcup
 
 - type: loadoutGroup
@@ -334,6 +378,7 @@
   - WhiteGloves
   - BlackGloves
   - FingerlessGloves
+  - EveningGloves
   # End starcup additions
 
 - type: loadoutGroup
@@ -346,7 +391,7 @@
   - LeatherSatchel # starcup
 
 - type: loadoutGroup
-  parent: [ Scarfs ] # starcup
+  parent: [ NeckFashionable ] # starcup
   id: PassengerNeck
   name: loadout-group-passenger-neck
   minLimit: 0
@@ -389,6 +434,8 @@
   - WinterCoatWhite
   - WinterCoatYellow
   - TrenchCoat
+  - OldBlackCoat
+  - OldRedCoat
   - BartenderVest
   - CorpoJacketCybersun
   - CorpoJacketHawkmoon
@@ -534,6 +581,11 @@
   - ClothingUniformBrownSuit
   - ClothingUniformBrownSuitSkirt
   - LibrarianSpaceDress
+  - DaisySundress
+  - OldRedDress
+  - OldBlackDress
+  - OldBlackVest
+  - OldRedVest
   # end starcup
 
 #- type: loadoutGroup
@@ -561,10 +613,12 @@
   - RedElegantDress
   - ClothingUniformCreamSuit
   - ClothingUniformCreamSuitSkirt
+  - DisheveledSuitSkirt
+  - DisheveledSuit
   # end starcup
 
 - type: loadoutGroup
-  parent: [ Scarfs ] # starcup
+  parent: [ NeckFashionable ] # starcup
   id: LawyerNeck
   name: loadout-group-lawyer-neck
   minLimit: 0
@@ -609,6 +663,11 @@
   - PurpleElegantDress
   - ClothingUniformFuneralSuit
   - ClothingUniformFuneralSuitSkirt
+  - OldRedDress
+  - OldBlackDress
+  - OldBlackVest
+  - OldRedVest
+  - GothicDress
   # end starcup
 
 - type: loadoutGroup
@@ -621,6 +680,8 @@
   - ChaplainBlackHoodie
   - ChaplainHoodie
   - WinterCoatBlack # starcup
+  - OldRedCoat
+  - OldBlackCoat
 
 - type: loadoutGroup
   parent: [ Scarfs ] # starcup
@@ -649,6 +710,7 @@
   - BibleNarsie
 
 - type: loadoutGroup
+  parent: [ RibbonsHead ] # starcup
   id: JanitorHead
   name: loadout-group-janitor-head
   minLimit: 0
@@ -677,6 +739,7 @@
   - PurpleGloves
   - WhiteGloves # starcup - to match maid outfit
   - TacticoolMaidGloves # starcup - fake tac maid gloves that arent insuls
+  - EveningGloves # starcup - to match maid outfit
 
 - type: loadoutGroup
   id: JanitorOuterClothing
@@ -734,6 +797,7 @@
 #  loadouts:
 
 - type: loadoutGroup
+  parent: [ RibbonsHead ] # starcup
   id: ClownHead
   name: loadout-group-clown-head
   minLimit: 0
@@ -879,6 +943,12 @@
   - ClothingUniformNightclubSuit
   - ClothingUniformNightclubSuitSkirt
   - PerformerJumpskirt
+  - PinstripeDress
+  - StripedSuit
+  - RippedPunkSkirt
+  - RippedPunkJeans
+  - TangoDress
+  - AltTangoDress
   # end starcup
 
 - type: loadoutGroup
@@ -1046,6 +1116,7 @@
   - DeckWorkerPDA
   - InventoryAssociatePDA
   - CargoPilotPDA
+  - MechPilotPDA
   # end starcup
 
 #- type: loadoutGroup
@@ -1673,8 +1744,12 @@
   - LawyerJumpskirt
   - LawyerJumpsuitRed
   - LawyerJumpskirtRed
+  - DisheveledSuitSkirt
+  - DisheveledSuit
   - ClothingUniformBrosBlazer
   - ClothingUniformBrosBlazerSkirt
+  - BlueBlazer
+  - BlueBlazerSkirt
   # end starcup
 
 - type: loadoutGroup
@@ -1710,6 +1785,8 @@
   - LawyerJumpskirt
   - LawyerJumpsuitBlue
   - LawyerJumpskirtBlue
+  - DisheveledSuitSkirt
+  - DisheveledSuit
   # end starcup
 
 #- type: loadoutGroup

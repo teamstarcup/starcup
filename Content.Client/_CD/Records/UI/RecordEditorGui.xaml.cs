@@ -69,6 +69,11 @@ public sealed partial class RecordEditorGui : Control
             UpdateRecords(_records.WithIdentifyingFeatures(args.Text));
         };
 
+        SecurityFlagsEdit.OnTextChanged += args => // starcup
+        {
+            UpdateRecords(_records.WithSecurityFlags(args.Text));
+        };
+
         #endregion
 
         #region Medical
@@ -86,6 +91,11 @@ public sealed partial class RecordEditorGui : Control
         PostmortemEdit.OnTextChanged += args =>
         {
             UpdateRecords(_records.WithPostmortemInstructions(args.Text));
+        };
+
+        MedicalNeedsEdit.OnTextChanged += args => // starcup
+        {
+            UpdateRecords(_records.WithMedicalNeeds(args.Text));
         };
 
         #endregion
@@ -150,10 +160,12 @@ public sealed partial class RecordEditorGui : Control
         WorkAuthCheckBox.Pressed = _records.HasWorkAuthorization;
 
         IdentifyingFeaturesEdit.SetText(_records.IdentifyingFeatures);
+        SecurityFlagsEdit.SetText(_records.SecurityFlags); // starcup
 
         AllergiesEdit.SetText(_records.Allergies);
         DrugAllergiesEdit.SetText(_records.DrugAllergies);
         PostmortemEdit.SetText(_records.PostmortemInstructions);
+        MedicalNeedsEdit.SetText(_records.MedicalNeeds); // starcup
     }
 
     private void UpdateImperialHeight(int newHeight)
