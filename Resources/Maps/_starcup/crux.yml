@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 07/18/2026 20:31:15
-  entityCount: 14228
+  entityCount: 14229
 maps:
 - 1
 grids:
@@ -71737,6 +71737,13 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -7.5,-7.5
+      parent: 2
+- proto: BookshelfGuidebooksFilled
+  entities:
+  - uid: 14229
+    components:
+    - type: Transform
+      pos: -12.5,-5.5
       parent: 2
 - proto: PrinterDocFilled
   entities:
