@@ -1984,6 +1984,7 @@
   - BaseMobAnimal
   id: MobMouse
   description: Squeak!
+  suffix: white # starcup
   components:
   - type: GhostRole
     makeSentient: true
@@ -2207,6 +2208,7 @@
 - type: entity
   parent: MobMouse
   id: MobMouse1
+  suffix: brown # starcup
   components:
   - type: Sprite
     layers:
@@ -2236,6 +2238,7 @@
 - type: entity
   parent: MobMouse
   id: MobMouse2
+  suffix: gray # starcup
   components:
   - type: Sprite
     layers:
@@ -2263,7 +2266,7 @@
     heldPrefix: 2
 
 - type: entity
-  name: cancer mouse
+  name: radioactive mouse # starcup: changed for tone
   description: Toxic. Squeak!
   parent: MobMouse
   id: MobMouseCancer

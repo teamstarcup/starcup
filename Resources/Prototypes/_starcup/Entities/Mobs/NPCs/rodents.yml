@@ -4,6 +4,7 @@
   id: MobMouseFat
   name: fat mouse
   description: A remarkably rotund rodent.
+  suffix: white
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Animals/Rodents/fat_mouse.rsi
@@ -42,6 +43,7 @@
 - type: entity
   parent: MobMouseFat
   id: MobMouseFat1
+  suffix: brown
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Animals/Rodents/fat_mouse.rsi
@@ -72,6 +74,7 @@
 - type: entity
   parent: MobMouseFat
   id: MobMouseFat2
+  suffix: gray
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Animals/Rodents/fat_mouse.rsi
@@ -102,13 +105,13 @@
 # Rats
 # MobRat is a modified copy of MobMouse, and unrelated to MobRatServant.
 - type: entity
-  name: rat
   parent:
   - SimpleMobBase
   - BaseMobAnimal
   id: MobRat
+  name: rat
   description: Slightly bigger and braver than your average mouse.
-  suffix: Friendly
+  suffix: friendly, mossy gray
   components:
   - type: Speech
     speechSounds: Squeak
@@ -274,7 +277,7 @@
 - type: entity
   parent: MobRat
   id: MobRatGray
-  suffix: Friendly, Gray
+  suffix: friendly, gray
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Animals/Rodents/rat_gray.rsi
@@ -282,19 +285,19 @@
 - type: entity
   parent: MobRat
   id: MobRatWhite
-  suffix: Friendly, White
+  suffix: friendly, white
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Animals/Rodents/rat_white.rsi
 
 - type: entity
-  name: large rat
   parent:
   - SimpleMobBase
   - BaseMobAnimal
   id: MobRatLarge
+  name: large rat
   description: A particularly portly pest.
-  suffix: Neutral
+  suffix: neutral, mossy gray
   components:
   - type: Speech
     speechSounds: Squeak
@@ -450,7 +453,7 @@
 - type: entity
   parent: MobRatLarge
   id: MobRatLargeBlue
-  suffix: Neutral, Blue
+  suffix: neutral, blue
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Animals/Rodents/rat_big_blue.rsi
@@ -458,20 +461,20 @@
 - type: entity
   parent: MobRatLarge
   id: MobRatLargeBrown
-  suffix: Neutral, Brown
+  suffix: neutral, brown
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Animals/Rodents/rat_big_brown.rsi
 
 # Monster rats
 - type: entity
-  name: dire rat
   parent:
   - SimpleMobBase
   - BaseMobAnimal
   id: MobRatDire
+  name: dire rat
   description: Aggressive, overgrown vent vermin, with teeth that look like they could shear steel.
-  suffix: Hostile
+  suffix: hostile
   components:
   - type: Speech
     speechSounds: PossumSpeechSounds
@@ -620,13 +623,13 @@
     actionProto: ActionToggleSneakMode
 
 - type: entity
-  name: bristle rat
   parent:
   - SimpleMobBase
   - BaseMobAnimal
   id: MobRatBristle
+  name: bristle rat
   description: Also known as vent porcupines, they can fire their nasty quills at a distance.
-  suffix: Hostile
+  suffix: hostile
   components:
   - type: Speech
     speechSounds: Squeak
@@ -837,29 +840,30 @@
 
 # Rat King variants
 - type: entity
+  parent: MobRatKing
+  id: MobRatKingGray
   name: rat king
   suffix: gray
-  id: MobRatKingGray
-  parent: MobRatKing
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Animals/Rodents/regalrat_gray.rsi
 
 - type: entity
+  parent: MobRatKing
+  id: MobRatKingWhit
   name: rat king
   suffix: white
-  id: MobRatKingWhite
-  parent: MobRatKing
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Animals/Rodents/regalrat_white.rsi
 
 # Other rodents
 - type: entity
-  name: capybara
   parent: [ SimpleMobBase, StripableInventoryBase ]
   id: MobCapybara
+  name: capybara
   description: One of the largest living rodents. Be chill. Become ungovernable.
+  suffix: bronw
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -915,7 +919,7 @@
 - type: entity
   parent: MobCapybara
   id: MobCapybaraLight
-  suffix: light
+  suffix: pale
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -925,10 +929,10 @@
       sprite: _starcup/Mobs/Animals/Rodents/capybara_light.rsi
 
 - type: entity
-  name: roingus
   parent: MobMouse
   id: MobRoingus
-  description: Wise in the ways of the desert. Sometimes referred to as "jerboa" by planetside populations.
+  name: roingus
+  description: Wise in the ways of the desert. Also known as 'jerboa' by planetside populations.
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Animals/Rodents/roingus.rsi
@@ -999,10 +1003,10 @@
         variation: 0.05
 
 - type: entity
-  name: boingus
   parent: MobRoingus
   id: MobBoingus
-  description: The unassuming kangaroo mouse is the true master of adaption and survival, or so say the free people of stars distant.
+  name: boingus
+  description: The unassuming kangaroo mouse is the true master of adaption and survival, or so say the free peoples of stars distant.
   components:
   - type: Sprite
     sprite: _starcup/Mobs/Animals/Rodents/boingus.rsi
