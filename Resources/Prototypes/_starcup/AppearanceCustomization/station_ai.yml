@@ -1,6 +1,16 @@
 ## Iconography
+# First, a base to re-parent all the ported prototypes with no bespoke dead sprites.
 - type: stationAiCustomization
+  abstract: true
   parent: StationAiIconBase
+  id: StationAiIconBaseStarcup
+  layerData:
+    Dead:
+      sprite: Mobs/Silicon/station_ai.rsi
+      state: ai_dead
+
+- type: stationAiCustomization
+  parent: StationAiIconBaseStarcup
   id: StationAiIconSnake
   name: station-ai-icon-snake
   layerData:
@@ -12,7 +22,7 @@
       state: ai_dead
 
 - type: stationAiCustomization
-  parent: StationAiIconBase
+  parent: StationAiIconBaseStarcup
   id: StationAiIconSyndicate
   name: station-ai-icon-syndicate
   layerData:
