@@ -2,12 +2,21 @@
   parent: ClothingBackpackSatchelCaptain
   id: ClothingBackpackSatchelCaptainSyndie
   description: An exclusive satchel for Syndicate officers.
-  suffix: Syndicate
   components:
   - type: Sprite
     sprite: _starcup/Clothing/Back/Satchels/captain_syndi.rsi
 
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackPurse
+  name: white purse
+  description: A small, fashionable bag typically worn over the shoulder. # Copied form The Den
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Back/Misc/purse.rsi
+
 # Color variants
+# Satchels
 - type: entity
   parent: ClothingBackpackSatchel
   id: ClothingBackpackSatchelBlue
@@ -55,3 +64,50 @@
   components:
   - type: Sprite
     sprite: _starcup/Clothing/Back/Satchels/satchel_yellow.rsi
+
+# Purses
+- type: entity
+  parent: ClothingBackpackPurse
+  id: ClothingBackpackPurseBlack
+  name: black purse
+  components:
+  - type: Sprite
+    color: "#373737"
+
+- type: entity
+  parent: ClothingBackpackPurse
+  id: ClothingBackpackPurseBlue
+  name: blue purse
+  components:
+  - type: Sprite
+    color: "#476977"
+
+- type: entity
+  parent: ClothingBackpackPurse
+  id: ClothingBackpackPurseBlue
+  name: blue purse
+  components:
+  - type: Sprite
+    color: "#476977"
+
+
+  Black
+  4e4e4e
+  Blue
+  476977
+  Brown
+  775547
+  Green
+  587649
+  Orange
+  e78c66
+  Pink
+  e282b4
+  Purple
+  6e4877
+  Red
+  813946
+  Teal
+  3ebeca
+  Yellow
+  8f7e2e
