@@ -162,6 +162,6 @@ station-ai-hologram-semi = SEMI appearance
 station-ai-hologram-seraphim = Seraphim appearance
 station-ai-hologram-tripleaffirmative = Triple affirmative
 station-ai-hologram-vox = Vox appearance
-station-ai-hologram-vulpkanin = Vulpkanin appearance
+station-ai-hologram-vulpkanin = Vulpekin appearance
 station-ai-hologram-weh = Emotionally appeasing form
 # end starcup
