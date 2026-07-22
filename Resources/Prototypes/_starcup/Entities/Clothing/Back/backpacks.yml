@@ -7,7 +7,7 @@
   - type: Sprite
     sprite: _starcup/Clothing/Back/Backpacks/captain_syndi.rsi
 
-#Syndicate
+# Syndicate
 - type: entity
   parent: [BaseNanotrasenContraband, ClothingBackpackSyndicate]
   id: ClothingBackpackNanotrasen
@@ -18,3 +18,52 @@
     sprite: _starcup/Clothing/Back/Backpacks/nanotrasen.rsi
   - type: ExaminableClothing
     examineText: clothing-nanotrasen-backpack
+
+# Color variants
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackBlue
+  name: blue backpack
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Backpacks/backpack_blue.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackBrown
+  name: brown backpack
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Backpacks/backpack_brown.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackGreen
+  name: green backpack
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Backpacks/backpack_green.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackPurple
+  name: purple backpack
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Backpacks/backpack_purple.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackRed
+  name: red backpack
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Backpacks/backpack_red.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackYellow
+  name: yellow backpack
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Backpacks/backpack_yellow.rsi
