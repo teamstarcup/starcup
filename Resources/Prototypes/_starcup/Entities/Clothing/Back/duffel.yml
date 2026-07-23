@@ -81,45 +81,18 @@
   id: ClothingBackpackDuffelBlue
   name: blue duffel bag
   components:
+  - type: Item
+    sprite: _starcup/Clothing/Back/Duffels/duffel_colorable.rsi
+    layers:
+    - state: inhand-left
+    - state: inhand-left_colored
+      color: "#476977"
+    - state: inhand-right
+    - state: inhand-right_colored
+      color: "#476977"
   - type: Sprite
-    sprite: _starcup/Clothing/Back/Duffels/duffel_blue.rsi
-
-- type: entity
-  parent: ClothingBackpackDuffel
-  id: ClothingBackpackDuffelBrown
-  name: brown duffel bag
-  components:
-  - type: Sprite
-    sprite: _starcup/Clothing/Back/Duffels/duffel_brown.rsi
-
-- type: entity
-  parent: ClothingBackpackDuffel
-  id: ClothingBackpackDuffelGreen
-  name: green duffel bag
-  components:
-  - type: Sprite
-    sprite: _starcup/Clothing/Back/Duffels/duffel_green.rsi
-
-- type: entity
-  parent: ClothingBackpackDuffel
-  id: ClothingBackpackDuffelPurple
-  name: purple duffel bag
-  components:
-  - type: Sprite
-    sprite: _starcup/Clothing/Back/Duffels/duffel_purple.rsi
-
-- type: entity
-  parent: ClothingBackpackDuffel
-  id: ClothingBackpackDuffelRed
-  name: red duffel bag
-  components:
-  - type: Sprite
-    sprite: _starcup/Clothing/Back/Duffels/duffel_red.rsi
-
-- type: entity
-  parent: ClothingBackpackDuffel
-  id: ClothingBackpackDuffelYellow
-  name: yellow duffel bag
-  components:
-  - type: Sprite
-    sprite: _starcup/Clothing/Back/Duffels/duffel_yellow.rsi
+    sprite: _starcup/Clothing/Back/Duffels/duffel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#476977"
