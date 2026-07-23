@@ -21,49 +21,82 @@
 
 # Color variants
 - type: entity
+  abstract: true
   parent: ClothingBackpack
+  id: ClothingBackpackColorable
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Backpacks/backpack_colorable.rsi
+
+- type: entity
+  parent: ClothingBackpackColorable
   id: ClothingBackpackBlue
   name: blue backpack
   components:
   - type: Sprite
-    sprite: _starcup/Clothing/Back/Backpacks/backpack_blue.rsi
+    sprite: _starcup/Clothing/Back/Backpacks/backpack_colorable.rsi
+    color: "#476977"
 
 - type: entity
-  parent: ClothingBackpack
+  parent: ClothingBackpackColorable
   id: ClothingBackpackBrown
   name: brown backpack
   components:
   - type: Sprite
-    sprite: _starcup/Clothing/Back/Backpacks/backpack_brown.rsi
+    color: "#775547"
 
 - type: entity
-  parent: ClothingBackpack
+  parent: ClothingBackpackColorable
   id: ClothingBackpackGreen
   name: green backpack
   components:
   - type: Sprite
-    sprite: _starcup/Clothing/Back/Backpacks/backpack_green.rsi
+    color: "#587649"
 
 - type: entity
-  parent: ClothingBackpack
+  parent: ClothingBackpackColorable
+  id: ClothingBackpackOrange
+  name: orange backpack
+  components:
+  - type: Sprite
+    color: "#e78c66"
+
+- type: entity
+  parent: ClothingBackpackColorable
+  id: ClothingBackpackPink
+  name: pink backpack
+  components:
+  - type: Sprite
+    color: "#e282b4"
+
+- type: entity
+  parent: ClothingBackpackColorable
   id: ClothingBackpackPurple
   name: purple backpack
   components:
   - type: Sprite
-    sprite: _starcup/Clothing/Back/Backpacks/backpack_purple.rsi
+    color: "#6e4877"
 
 - type: entity
-  parent: ClothingBackpack
+  parent: ClothingBackpackColorable
   id: ClothingBackpackRed
   name: red backpack
   components:
   - type: Sprite
-    sprite: _starcup/Clothing/Back/Backpacks/backpack_red.rsi
+    color: "#813946"
 
 - type: entity
-  parent: ClothingBackpack
+  parent: ClothingBackpackColorable
+  id: ClothingBackpackTeal
+  name: teal backpack
+  components:
+  - type: Sprite
+    color: "#3ebeca"
+
+- type: entity
+  parent: ClothingBackpackColorable
   id: ClothingBackpackYellow
   name: yellow backpack
   components:
   - type: Sprite
-    sprite: _starcup/Clothing/Back/Backpacks/backpack_yellow.rsi
+    color: "#8f7e2e"

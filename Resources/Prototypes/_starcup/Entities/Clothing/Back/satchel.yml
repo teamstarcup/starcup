@@ -6,17 +6,7 @@
   - type: Sprite
     sprite: _starcup/Clothing/Back/Satchels/captain_syndi.rsi
 
-- type: entity
-  parent: ClothingBackpackSatchel
-  id: ClothingBackpackPurse
-  name: white purse
-  description: A small, fashionable bag typically worn over the shoulder. # Copied form The Den
-  components:
-  - type: Sprite
-    sprite: _DEN/Clothing/Back/Misc/purse.rsi
-
-# Color variants
-# Satchels
+# Satchel color variants
 - type: entity
   parent: ClothingBackpackSatchel
   id: ClothingBackpackSatchelBlue
@@ -67,6 +57,16 @@
 
 # Purses
 - type: entity
+  abstract: true
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackPurse
+  name: purse
+  description: A small, fashionable bag typically worn over the shoulder. # Copied form The Den
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Back/Misc/purse.rsi
+
+- type: entity
   parent: ClothingBackpackPurse
   id: ClothingBackpackPurseBlack
   name: black purse
@@ -84,11 +84,72 @@
 
 - type: entity
   parent: ClothingBackpackPurse
-  id: ClothingBackpackPurseBlue
-  name: blue purse
+  id: ClothingBackpackPurseBrown
+  name: brown purse
   components:
   - type: Sprite
-    color: "#476977"
+    color: "#775547"
+
+- type: entity
+  parent: ClothingBackpackPurse
+  id: ClothingBackpackPurseGreen
+  name: green purse
+  components:
+  - type: Sprite
+    color: "#587649"
+
+- type: entity
+  parent: ClothingBackpackPurse
+  id: ClothingBackpackPurseOrange
+  name: orange purse
+  components:
+  - type: Sprite
+    color: "#e78c66"
+
+- type: entity
+  parent: ClothingBackpackPurse
+  id: ClothingBackpackPursePink
+  name: pink purse
+  components:
+  - type: Sprite
+    color: "#e282b4"
+
+- type: entity
+  parent: ClothingBackpackPurse
+  id: ClothingBackpackPursePurple
+  name: purple purse
+  components:
+  - type: Sprite
+    color: "#6e4877"
+
+- type: entity
+  parent: ClothingBackpackPurse
+  id: ClothingBackpackPurseRed
+  name: red purse
+  components:
+  - type: Sprite
+    color: "#813946"
+
+- type: entity
+  parent: ClothingBackpackPurse
+  id: ClothingBackpackPurseTeal
+  name: teal purse
+  components:
+  - type: Sprite
+    color: "#3ebeca"
+
+- type: entity
+  parent: ClothingBackpackPurse
+  id: ClothingBackpackPurseYellow
+  name: yellow purse
+  components:
+  - type: Sprite
+    color: "#8f7e2e"
+
+- type: entity
+  parent: ClothingBackpackPurse
+  id: ClothingBackpackPurseWhite
+  name: white purse
 
 
   Black
