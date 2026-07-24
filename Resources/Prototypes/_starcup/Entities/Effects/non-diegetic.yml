@@ -1,0 +1,82 @@
+- type: entity
+  id: EffectNonDiegeticBase
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _starcup/Effects/non-diegetic.rsi
+    layers:
+    - map: [ "effect" ]
+      state: exclamation
+      offset: 0,0.3
+      shader: unshaded
+    drawdepth: Overlays
+  - type: TimedDespawn
+    lifetime: 0.8
+  - type: EmitSoundOnSpawn
+    sound:
+      collection: WindChime
+
+- type: entity
+  id: EffectExclamationMark
+  parent: EffectNonDiegeticBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "effect" ]
+      state: exclamation
+      offset: 0,0.3
+      shader: unshaded
+
+- type: entity
+  id: EffectQuestionMark
+  parent: EffectNonDiegeticBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "effect" ]
+      state: question
+      offset: 0,0.3
+      shader: unshaded
+
+- type: entity
+  id: EffectCheckmark
+  parent: EffectNonDiegeticBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "effect" ]
+      state: checkmark
+      offset: 0,0.3
+      shader: unshaded
+
+- type: entity
+  id: EffectCross
+  parent: EffectNonDiegeticBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "effect" ]
+      state: cross
+      offset: 0,0.3
+      shader: unshaded
+
+- type: entity
+  id: EffectRipple
+  parent: EffectNonDiegeticBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "effect" ]
+      state: ripple
+      offset: 0,0
+      shader: unshaded
+  - type: TimedDespawn
+    lifetime: 0.9
+  - type: EmitSoundOnSpawn
+    enabled: false

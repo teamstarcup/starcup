@@ -1,0 +1,39 @@
+- type: entity
+  id: AdminInstantEffectNonDiegeticExclamation
+  suffix: non-diegetic, exclamation mark
+  parent: AdminInstantEffectBase
+  components:
+  - type: SpawnOnTrigger
+    proto: EffectExclamationMark
+
+- type: entity
+  id: AdminInstantEffectNonDiegeticQuestion
+  suffix: non-diegetic, question mark
+  parent: AdminInstantEffectBase
+  components:
+  - type: SpawnOnTrigger
+    proto: EffectQuestionMark
+
+- type: entity
+  id: AdminInstantEffectNonDiegeticCheckmark
+  suffix: non-diegetic, checkmark
+  parent: AdminInstantEffectBase
+  components:
+  - type: SpawnOnTrigger
+    proto: EffectCheckmark
+
+- type: entity
+  id: AdminInstantEffectNonDiegeticCross
+  suffix: non-diegetic, cross
+  parent: AdminInstantEffectBase
+  components:
+  - type: SpawnOnTrigger
+    proto: EffectCross
+
+- type: entity
+  id: AdminInstantEffectNonDiegeticRipple
+  suffix: non-diegetic, ripple
+  parent: AdminInstantEffectBase
+  components:
+  - type: SpawnOnTrigger
+    proto: EffectRipple
