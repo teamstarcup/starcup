@@ -66,6 +66,30 @@
       shader: unshaded
 
 - type: entity
+  id: EffectHourglass
+  parent: EffectNonDiegeticBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "effect" ]
+      state: hourglass
+      offset: 0,0.3
+      shader: unshaded
+
+- type: entity
+  id: EffectSkull
+  parent: EffectNonDiegeticBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "effect" ]
+      state: skull
+      offset: 0,0.3
+      shader: unshaded
+
+- type: entity
   id: EffectRipple
   parent: EffectNonDiegeticBase
   categories: [ HideSpawnMenu ]
