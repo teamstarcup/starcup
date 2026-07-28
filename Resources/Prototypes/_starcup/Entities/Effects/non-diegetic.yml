@@ -1,6 +1,7 @@
 - type: entity
   id: EffectNonDiegeticBase
   abstract: true
+  name: instant effect
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
@@ -18,9 +19,10 @@
       collection: WindChime
 
 - type: entity
-  id: EffectExclamationMark
   parent: EffectNonDiegeticBase
-  categories: [ HideSpawnMenu ]
+  id: EffectNonDiegeticExclamationMark
+  description: A short animation. Could be used to alert players of something important.
+  suffix: Exclamation
   components:
   - type: Sprite
     layers:
@@ -30,9 +32,10 @@
       shader: unshaded
 
 - type: entity
-  id: EffectQuestionMark
   parent: EffectNonDiegeticBase
-  categories: [ HideSpawnMenu ]
+  id: EffectNonDiegeticQuestionMark
+  description: A short animation. Could be used to point to a clue.
+  suffix: Question
   components:
   - type: Sprite
     layers:
@@ -42,9 +45,10 @@
       shader: unshaded
 
 - type: entity
-  id: EffectCheckmark
   parent: EffectNonDiegeticBase
-  categories: [ HideSpawnMenu ]
+  id: EffectNonDiegeticCheckmark
+  description: A short animation. Could be used to mark a completed objective.
+  suffix: Check
   components:
   - type: Sprite
     layers:
@@ -54,9 +58,10 @@
       shader: unshaded
 
 - type: entity
-  id: EffectCross
   parent: EffectNonDiegeticBase
-  categories: [ HideSpawnMenu ]
+  id: EffectNonDiegeticXMark
+  description: A short animation. Could be used to steer players away from the wrong path or conclusion.
+  suffix: X-mark
   components:
   - type: Sprite
     layers:
@@ -66,9 +71,10 @@
       shader: unshaded
 
 - type: entity
-  id: EffectHourglass
   parent: EffectNonDiegeticBase
-  categories: [ HideSpawnMenu ]
+  id: EffectNonDiegeticHourglass
+  description: A short animation. Should be used to tell players to wait, NEVER to hurry them up.
+  suffix: Hourglass
   components:
   - type: Sprite
     layers:
@@ -78,9 +84,10 @@
       shader: unshaded
 
 - type: entity
-  id: EffectSkull
   parent: EffectNonDiegeticBase
-  categories: [ HideSpawnMenu ]
+  id: EffectNonDiegeticSkull
+  description: A short animation. Could be used to mark serious danger or a point of no return.
+  suffix: Skull
   components:
   - type: Sprite
     layers:
@@ -90,9 +97,10 @@
       shader: unshaded
 
 - type: entity
-  id: EffectRipple
   parent: EffectNonDiegeticBase
-  categories: [ HideSpawnMenu ]
+  id: EffectNonDiegeticRipple
+  description: A short animation. Could be used to draw attention to something.
+  suffix: Ripple
   components:
   - type: Sprite
     layers:
