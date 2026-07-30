@@ -8,7 +8,7 @@
 
 using System.Numerics;
 
-namespace Content.Server.Traits.Assorted;
+namespace Content.Shared.Traits.Assorted;
 
 /// <summary>
 /// This is used for the narcolepsy trait.

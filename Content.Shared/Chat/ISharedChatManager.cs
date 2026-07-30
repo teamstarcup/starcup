@@ -1,3 +1,5 @@
+using Robust.Shared.Network; // starcup
+
 namespace Content.Shared.Chat;
 
 public interface ISharedChatManager
@@ -27,4 +29,18 @@ public interface ISharedChatManager
     /// could clink on.
     /// </summary>
     void SendAdminAlertNoFormatOrEscape(string message);
+
+// starcup - # TODO no way this works
+    public void ChatMessageToOne(ChatChannel channel,
+        string message,
+        string wrappedMessage,
+        EntityUid source,
+        bool hideChat,
+        INetChannel client,
+        Color? colorOverride = null,
+        bool recordReplay = false,
+        string? audioPath = null,
+        float audioVolume = 0,
+        NetUserId? author = null);
+
 }

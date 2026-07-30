@@ -7,7 +7,6 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
 
-using Content.Server.Chat.Managers;
 using Content.Shared.Bed.Sleep;
 using Content.Shared.Chat;
 using Content.Shared.Popups;
@@ -15,7 +14,7 @@ using Content.Shared.StatusEffect;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 
-namespace Content.Server.Traits.Assorted;
+namespace Content.Shared.Traits.Assorted;
 
 /// <summary>
 /// This handles narcolepsy, causing the affected to fall asleep uncontrollably at a random interval.
@@ -25,7 +24,7 @@ public sealed class NarcolepsySystem : EntitySystem
     [ValidatePrototypeId<StatusEffectPrototype>]
     private const string StatusEffectKey = "ForcedSleep"; // Same one used by N2O and other sleep chems.
 
-    [Dependency] private readonly IChatManager _chatMan = default!;
+    [Dependency] private readonly ISharedChatManager _chatMan = default!; // starcup Narcolepsy
     [Dependency] private readonly SharedPopupSystem _popups = default!;
     [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
@@ -120,7 +119,12 @@ public sealed class NarcolepsySystem : EntitySystem
         var popup = Loc.GetString($"{prefix}-{_random.Next(1, count + 1)}");
         _popups.PopupEntity(popup, uid, uid, PopupType.MediumCaution);
         // This should use ChatChannel.Visual, but it's not displayed on the client.
-        _chatMan.ChatMessageToOne(ChatChannel.Notifications, popup, popup, uid, false,
-            actor.PlayerSession.Channel, Color.IndianRed);
+        _chatMan.ChatMessageToOne(ChatChannel.Notifications,
+            popup,
+            popup,
+            uid,
+            false,
+            actor.PlayerSession.Channel,
+            Color.IndianRed);
     }
 }
