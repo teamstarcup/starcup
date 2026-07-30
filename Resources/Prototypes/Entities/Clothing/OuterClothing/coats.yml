@@ -115,6 +115,9 @@
     sprite: Clothing/OuterClothing/Coats/jensencoat.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodChaplainHood
+  - type: TemperatureProtection # starcup
+    heatingCoefficient: 1.05
+    coolingCoefficient: 0.7
 
 - type: entity
   parent: ClothingOuterCoatJensen
@@ -137,8 +140,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/trenchcoat.rsi
   - type: TemperatureProtection
-    heatingCoefficient: 0.1
-    coolingCoefficient: 0.1
+    heatingCoefficient: 1.1 # starcup - nerfed from 0.1 (why would it keep you cool?)
+    coolingCoefficient: 0.6  # starcup: nerf cold protection on winter coats (0.1 -> 0.6)
   - type: Armor
     modifiers:
       coefficients:
@@ -395,6 +398,9 @@
     sprite: Clothing/OuterClothing/Coats/windbreaker_paramedic.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/windbreaker_paramedic.rsi
+  - type: TemperatureProtection # starcup
+    heatingCoefficient: 1.05
+    coolingCoefficient: 0.7
 
 - type: entity
   parent: ClothingOuterStorageBase # starcup: remove syndicate contraband label
@@ -498,6 +504,9 @@
     sprite: Clothing/OuterClothing/Coats/expensive_coat.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/expensive_coat.rsi
+  - type: TemperatureProtection # starcup
+    heatingCoefficient: 1.1
+    coolingCoefficient: 0.6
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatExpensive]

@@ -10,8 +10,9 @@
     sprite: _DV/Clothing/Misc/hoodie_white.rsi
   - type: Clothing
     sprite: _DV/Clothing/Misc/hoodie_white.rsi
-  #- type: TemperatureProtection # starcup
-  #  coolingCoefficient: 0.4
+  - type: TemperatureProtection
+    heatingCoefficient: 1.05 # starcup
+    coolingCoefficient: 0.7 # starcup - 0.4 -> 0.7
 
 - type: entity
   parent: ClothingOuterWinterCoat # starcup: was ClothingOuterStorageBase
@@ -23,8 +24,9 @@
     sprite: _DV/Clothing/Misc/black_top_coat.rsi
   - type: Clothing
     sprite: _DV/Clothing/Misc/black_top_coat.rsi
-  #- type: TemperatureProtection # starcup
-  #  coolingCoefficient: 0.4
+  - type: TemperatureProtection
+    heatingCoefficient: 1.05 # starcup
+    coolingCoefficient: 0.7 # starcup - 0.4 -> 0.7
 
 - type: entity
   parent: ClothingOuterWinterCoat # starcup: was ClothingOuterStorageBase
@@ -36,5 +38,6 @@
     sprite: _DV/Clothing/Misc/black_jacket.rsi
   - type: Clothing
     sprite: _DV/Clothing/Misc/black_jacket.rsi
-  #- type: TemperatureProtection # starcup
-  #  coolingCoefficient: 0.4
+  - type: TemperatureProtection
+    heatingCoefficient: 1.05 # starcup
+    coolingCoefficient: 0.7 # starcup - 0.4 -> 0.7

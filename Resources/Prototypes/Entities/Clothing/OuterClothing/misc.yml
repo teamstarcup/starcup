@@ -82,6 +82,9 @@
     sprite: Clothing/OuterClothing/Misc/black_hoodie.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/black_hoodie.rsi
+  - type: TemperatureProtection # starcup - hoodies warm you a little
+    heatingCoefficient: 1.05
+    coolingCoefficient: 0.7
 
 - type: entity
   parent: ClothingOuterBase
@@ -93,6 +96,9 @@
     sprite: Clothing/OuterClothing/Misc/grey_hoodie.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/grey_hoodie.rsi
+  - type: TemperatureProtection # starcup - hoodies warm you a little
+    heatingCoefficient: 1.05
+    coolingCoefficient: 0.7
 
 - type: entity
   parent: ClothingOuterBase
@@ -122,6 +128,9 @@
     sprite: Clothing/OuterClothing/Misc/chaplain_hoodie.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodChaplainHood
+  - type: TemperatureProtection # starcup - hoodies warm you a little
+    heatingCoefficient: 1.05
+    coolingCoefficient: 0.7
 
 - type: entity
   parent: ClothingOuterBase
@@ -135,6 +144,9 @@
     sprite: Clothing/OuterClothing/Misc/classicponcho.rsi
 #  - type: AddAccentClothing # DeltaV - remove clothing-forced accents
 #    accent: SpanishAccent
+  - type: TemperatureProtection # starcup - full ponchos warm you like coats
+    heatingCoefficient: 1.1
+    coolingCoefficient: 0.6
 
 - type: entity
   parent: ClothingOuterBase
@@ -170,6 +182,9 @@
     sprite: Clothing/OuterClothing/Misc/poncho.rsi
 #  - type: AddAccentClothing # DeltaV - remove clothing-forced accents
 #    accent: SpanishAccent
+  - type: TemperatureProtection # starcup - full ponchos warm you like coats
+    heatingCoefficient: 1.1
+    coolingCoefficient: 0.6
 
 - type: entity
   parent: ClothingOuterBase
@@ -181,6 +196,9 @@
     sprite: Clothing/OuterClothing/Misc/santa.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/santa.rsi
+  - type: TemperatureProtection # starcup - this is just a winter coat
+    heatingCoefficient: 1.1
+    coolingCoefficient: 0.6
 
 - type: entity
   abstract: true
@@ -325,8 +343,9 @@
         color: "#670a09"
       - state: equipped-OUTERCLOTHING-lines
         color: "#000000"
-  - type: TemperatureProtection
-    coolingCoefficient: 0.3
+  - type: TemperatureProtection # starcup - nerfed to be more like a coat
+    heatingCoefficient: 1.05
+    coolingCoefficient: 0.65
 
 - type: entity
   parent: ClothingOuterBase
@@ -361,8 +380,9 @@
         color: "#3232a6"
       - state: equipped-OUTERCLOTHING-lines
         color: "#000000"
-  - type: TemperatureProtection
-    coolingCoefficient: 0.3
+  - type: TemperatureProtection # starcup - nerfed to be more like a coat
+    heatingCoefficient: 1.05
+    coolingCoefficient: 0.65
 
 - type: entity
   parent: ClothingOuterBase
@@ -397,8 +417,9 @@
         color: "#164d0f"
       - state: equipped-OUTERCLOTHING-lines
         color: "#000000"
-  - type: TemperatureProtection
-    coolingCoefficient: 0.3
+  - type: TemperatureProtection # starcup - nerfed to be more like a coat
+    heatingCoefficient: 1.05
+    coolingCoefficient: 0.65
 
 - type: entity
   parent: ClothingOuterBase
