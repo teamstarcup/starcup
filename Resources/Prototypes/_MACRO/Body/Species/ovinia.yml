@@ -166,6 +166,13 @@
     - CanPilot
     - FootstepSound
     - AnomalyHost
+  # begin starcup: no flat foot sound
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepGeneric
+      params:
+        volume: -6
+  # end starcup
 
   - type: NpcFactionMember
     factions:
