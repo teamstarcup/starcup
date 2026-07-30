@@ -88,6 +88,16 @@
           32:
             sprite: _MACRO/Mobs/Species/Ovinia/displacement.rsi
             state: jumpsuit-female
+      shoes:
+        sizeMaps:
+          32:
+            sprite: _MACRO/Mobs/Species/Ovinia/displacement.rsi
+            state: shoes
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _MACRO/Mobs/Species/Ovinia/displacement.rsi
+            state: outerclothing-hardsuit
   - type: InitialBody
     organs:
       Torso: OrganOviniaTorso
@@ -122,12 +132,17 @@
   components:
   - type: TypingIndicator
     proto: ovinia
+  # begin starcup
   - type: Vocal
-    emoteSounds: MaleOvinia
+    sounds:
+      Male: MaleOvinia
+      Female: FemaleOvinia
+      Unsexed: FemaleOvinia
+  # end starcup
   - type: Speech
-    speechSounds: Ovinia
+    speechSounds: OviniaSpeechSounds # starcup: renamed for consistency, easier id to search for
     speechVerb: Ovinia
-    allowedEmotes: [ 'Baa', 'Moo' ]
+    allowedEmotes: [ 'Baa' ]
   - type: Damageable
     damageModifierSet: Ovinia
   - type: Flammable
@@ -146,7 +161,7 @@
   - type: ProtectedFromStepTriggers
   - type: Tag
     tags:
-    - OviniaEmotes
+    #- OviniaEmotes # starcup: we don't have this tag, emotes are manually assigned to the prototype
     - DoorBumpOpener
     - CanPilot
     - FootstepSound

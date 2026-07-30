@@ -8,7 +8,7 @@
   - chat-speech-verb-ovinia-4
 
 - type: speechSounds
-  id: Ovinia
+  id: OviniaSpeechSounds # starcup: naming consistency, and easier id to search for
   saySound:
     path: /Audio/_MACRO/Voice/Ovinia/ovinia_say.ogg
   askSound:
@@ -22,33 +22,35 @@
     variation: 0.125
   sounds:
     Scream:
-      path: /Audio/_MACRO/Voice/Ovinia/ovinia_scream.ogg
+      collection: GoatScream # starcup
     Laugh:
       collection: MaleLaugh
     Sneeze:
-      collection: MaleSneezes
+      path: /Audio/_starcup/Animals/Goat/goat_sneeze.ogg # starcup
     Cough:
-      collection: MaleCoughs
+      path: /Audio/_starcup/Animals/Goat/goat_sneeze.ogg # starcup
     Yawn:
       collection: MaleYawn
     Snore:
       collection: Snores
-    Honk:
-      collection: BikeHorn
+    #Honk:
+      #collection: BikeHorn
     Sigh:
       collection: MaleSigh
     Crying:
       collection: MaleCry
     Whistle:
       collection: Whistles
-    Weh:
-      collection: Weh
-    Hew:
-      collection: Hew
+    # begin starcup: we consider weh and hew to be lizard emotes
+    #Weh:
+      #collection: Weh
+    #Hew:
+      #collection: Hew
     Baa:
-      collection: OviniaBaa
-    Moo:
-      collection: CowMoo
+      collection: GoatSpeech # starcup
+    #Moo:
+      #collection: CowMoo
+    # end starcup
     Gasp:
       collection: MaleGasp
     DefaultDeathgasp:
