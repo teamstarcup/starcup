@@ -59,7 +59,7 @@ public sealed class NarcolepsySystem : EntitySystem
         PrepareNextIncident(ent);
     }
 
-    public void AdjustNarcolepsyTimer(EntityUid uid, float setTime, NarcolepsyComponent? narcolepsy = null)
+    public void AdjustNarcolepsyTimer(EntityUid uid, float setTime, NarcolepsyComponent? narcolepsy = null) // starcup - Den narcolepsy port
     {
         if (!Resolve(uid, ref narcolepsy, false) || narcolepsy.NextIncidentTime > setTime)
             return;

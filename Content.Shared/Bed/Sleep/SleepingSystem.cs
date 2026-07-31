@@ -390,4 +390,3 @@ public record struct SleepStateChangedEvent // Den Narcolepsy changes.
         TimeSlept = timeSlept; // DeltaV
     }
 }
-
