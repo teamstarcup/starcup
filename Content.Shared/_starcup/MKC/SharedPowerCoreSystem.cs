@@ -109,14 +109,14 @@ public abstract class SharedPowerCoreSystem : EntitySystem
     /// <summary>
     /// Attempts to find the power core organ inside a mob.
     /// </summary>
-    /// <param name="character">mob to search</param>
+    /// <param name="mob">mob to search</param>
     /// <param name="powerCore">power core organ</param>
     /// <returns></returns>
-    private bool TryGetPowerCore(EntityUid character, [NotNullWhen(true)] out Entity<PowerCoreComponent>? powerCore)
+    private bool TryGetPowerCore(EntityUid mob, [NotNullWhen(true)] out Entity<PowerCoreComponent>? powerCore)
     {
         powerCore = null;
 
-        if (!TryComp<BodyComponent>(character, out var body))
+        if (!TryComp<BodyComponent>(mob, out var body))
             return false;
 
         if (body.Organs == null)
@@ -175,7 +175,7 @@ public abstract class SharedPowerCoreSystem : EntitySystem
     }
 
     /// <summary>
-    /// Allows MKCs to use alt-E to drain from APCs and power cells.
+    /// Allows MKCs to use alt-E to drain from entities in the world.
     /// </summary>
     /// <param name="uid"></param>
     /// <param name="drinkable"></param>
@@ -203,7 +203,7 @@ public abstract class SharedPowerCoreSystem : EntitySystem
     }
 
     /// <summary>
-    /// Allows MKCs to hit Z or left-click on a handheld power cell to drain from it.
+    /// Allows MKCs to hit Z or left-click on a held entity to drain from it.
     /// </summary>
     /// <param name="entity"></param>
     /// <param name="args"></param>
