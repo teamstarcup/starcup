@@ -27,3 +27,16 @@
     sprite: _starcup/Clothing/Hands/Gloves/KnuckleDusters/nanotrasenknuckleduster.rsi
   - type: ExaminableClothing
     examineText: clothing-nanotrasen-knuckle-dusters
+
+- type: entity
+  parent: ClothingHandsGlovesSyntheticBase
+  id: ClothingHandsTacticalMaidGlovesFake
+  name: tacticool maid gloves
+  description: Tacticool maid gloves with no tactical advantages whatsoever.
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/tacticalmaidgloves.rsi
+  - type: Clothing
+    sprite: Clothing/Hands/Gloves/tacticalmaidgloves.rsi
+  - type: Fiber
+    fiberColor: fibers-black

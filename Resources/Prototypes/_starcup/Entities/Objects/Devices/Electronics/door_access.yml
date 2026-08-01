@@ -85,3 +85,11 @@
   components:
   - type: AccessReader
     access: [["SyndicateCommunications"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsArmoryVault
+  suffix: Command, Armory, Locked
+  components:
+  - type: AccessReader
+    access: [["Command"], ["Armory"]]

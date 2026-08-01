@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   parent: BaseItem
   id: BasePDACartridge
   abstract: true
@@ -28,7 +28,7 @@
 - type: entity
   parent: BasePDACartridge
   id: NanoTaskCartridge
-  name: NanoTask cartridge
+  name: SyndieTask cartridge # starcup - renamed NanoTask
   description: A program that allows you to keep a list of tasks to do.
   components:
   - type: Sprite
@@ -72,7 +72,7 @@
     - type: Cartridge
       programName: crew-manifest-program-name
       icon:
-        sprite: Interface/Misc/program_icons.rsi
+        sprite: _starcup/Interface/Misc/program_icons.rsi # starcup
         state: crew_manifest
     - type: CrewManifestCartridge
 

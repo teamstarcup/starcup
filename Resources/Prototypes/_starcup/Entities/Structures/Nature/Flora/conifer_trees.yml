@@ -268,3 +268,124 @@
     - random:
         treestump1: ""
         treestump2: ""
+
+# N14 conifers
+- type: entity
+  parent: FloraTreeConiferDead
+  id: FloraTreeConiferMS
+  name: conifer
+  suffix: vibrant
+  description: Plumes of spines green sway subtle in the breeze.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/ConiferTrees/flora_pine_trees_ms.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+        tree04: ""
+        tree05: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 1
+            max: 2
+          ConiferMSStump:
+            min: 1
+            max: 1
+        offset: 0
+
+- type: entity
+  parent: TamarackStump
+  id: ConiferMSStump
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/ConiferTrees/flora_pine_trees_ms.rsi
+
+- type: entity
+  parent: FloraTreeConiferMS
+  id: FloraTreeConiferMSSnow
+  suffix: vibrant, snowed
+  description: Snow-crested plumes of spines green sway subtle in the breeze.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Trees/ConiferTrees/flora_pine_trees_ms_snow.rsi
+    layers:
+    - state: tree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tree01: ""
+        tree02: ""
+        tree03: ""
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: TreeFall
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 1
+            max: 2
+          ConiferMSStumpSnow:
+            min: 1
+            max: 1
+        offset: 0
+
+- type: entity
+  parent: ConiferMSStump
+  id: ConiferMSStumpSnow
+  components:
+  - type: Sprite
+    offset: 0,1.1
+    sprite: _starcup/Structures/Nature/Flora/Trees/ConiferTrees/flora_pine_trees_ms_snow.rsi
+    state: treestump
+    layers:
+    - state: treestump1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        treestump1: ""

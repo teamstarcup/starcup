@@ -1,0 +1,37 @@
+- type: entity
+  parent: Rose
+  id: RoseSeedless
+  suffix: seedless
+  components:
+  - type: Produce
+    seed:
+      seedless: true
+      plantRsi: _Impstation/Objects/Specific/Hydroponics/rose.rsi
+
+- type: entity
+  parent: Rose # starcup - reparenting so it's not contraband
+  id: RoseBlackSeedless
+  name: black rose
+  suffix: seedless
+  components:
+  - type: Clothing # starcup - reparenting
+    sprite: _Impstation/Objects/Specific/Hydroponics/blackRose.rsi
+  - type: Sprite
+    sprite: _Impstation/Objects/Specific/Hydroponics/blackRose.rsi
+  - type: Item
+    sprite: _Impstation/Objects/Specific/Hydroponics/blackRose.rsi
+  - type: Produce
+    seedId: blackRose
+    seed:
+      seedless: true
+      plantRsi: _Impstation/Objects/Specific/Hydroponics/blackRose.rsi
+
+- type: entity
+  parent: FoodLily
+  id: FoodLilySeedless
+  suffix: seedless
+  components:
+  - type: Produce
+    seed:
+      seedless: true
+      plantRsi: Objects/Specific/Hydroponics/lily.rsi

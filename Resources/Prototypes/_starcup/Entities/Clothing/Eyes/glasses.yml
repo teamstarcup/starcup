@@ -23,3 +23,159 @@
     protectionTime: 3
   - type: IdentityBlocker
     coverage: EYES
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesMasquerade
+  name: masquerade mask
+  description: A fancy mask used to hide your identity at high society events. Be warned, though, you'll look like an idiot if you wear this just to conceal your identity in public.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Glasses/masquerade.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Glasses/masquerade.rsi
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - PetWearable
+    - WhitelistChameleon
+  - type: IdentityBlocker # full coverage because they're meant to hide identities at events
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesSecBallistic
+  name: security ballistic goggles
+  description: A pair of surplus ballistic goggles from the Neocorporate Wars, likely used by ground forces. Retrofitted with a civilian security HUD. Surprisingly useless against actual ballistics.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Glasses/Security_Ballistic_goggles.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Glasses/Security_Ballistic_goggles.rsi
+  - type: FlashImmunity
+  - type: ShowJobIcons
+  - type: ShowMindShieldIcons
+  - type: ShowCriminalRecordIcons
+  - type: ShowContrabandDetails
+  - type: EyeProtection
+    protectionTime: 5
+  - type: GuideHelp
+    guides:
+    - Security
+    - Antagonists
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesSurplusBallisticSandy
+  name: surplus ballistic goggles
+  description: A pair of surplus ballistic goggles from the Neocorporate Wars, likely used by ground forces. Surprisingly useless against actual ballistics, but at least the dark tint keeps the sun out of your eyes.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Sandy.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Sandy.rsi
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesGorlexBallistic
+  name: Gorlex ballistic goggles
+  description:  A pair of surplus ballistic goggles from the Neocorporate Wars. Despite their outdated design making them little use against modern-day ballistics, they remain popular with Gorlex veterans who have trouble letting go of the past.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Gorlex.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Gorlex.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+  - type: GuideHelp
+    guides:
+    - Security
+    - Antagonists
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesSurplusBallisticInterdyne
+  name: Interdyne ballistic goggles
+  description: A pair of surplus ballistic goggles as issued to Interdyne Pharmaceuticals's troops. Bulky, outdated, and surprisingly ineffective against ballistic projectiles, they have nevertheless flooded the underground markets.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Interdyne.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Interdyne.rsi
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: ShowHealthBars
+  - type: ShowHealthIcons
+  - type: Tag
+    tags:
+    - HudMedical
+    - WhitelistChameleon
+
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesSurplusBallisticSea
+  name: surplus ballistic goggles
+  description: A pair of surplus ballistic goggles from the Neocorporate Wars, likely used by naval forces. It's not really able to protect you from ballistic projectiles, but they do function well as a hardy pair of goggles. Sealed for oceanic environments!
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Sea.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Sea.rsi
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesSurplusBallisticForest
+  name: surplus ballistic goggles
+  description: A pair of surplus ballistic goggles from the Neocorporate Wars, likely used by ground forces. It's not really able to protect you from ballistic projectiles, but they do function well as a hardy pair of goggles. Tinted green to blend in with forest environments!
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Wooded.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Wooded.rsi
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesSurplusBallisticCanteen
+  name: hallmaster surplus balistic goggles
+  description: A pair of surplus ballistic goggles from the Neocorporate Wars retrofitted with a thirst monitor. Surprisingly useless against actual ballistics, they've found some popularity in dive bars. Sealed to protect from hot oil and onion fumes!
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Canteen.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Canteen.rsi
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: SolutionScanner
+  - type: ShowThirstIcons
+  - type: Tag
+    tags:
+    - WhitelistChameleon

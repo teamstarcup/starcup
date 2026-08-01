@@ -95,3 +95,8 @@
   - type: LightningTarget
     priority: 1
     lightningExplode: false
+  - type: MobThresholds
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+      Dead: BorgDead

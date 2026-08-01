@@ -1,0 +1,15 @@
+- type: entity
+  parent: TravelCamera
+  id: TravelCameraSafe
+  name: travel camera
+  suffix: Safe
+  description: A picture says more than a thousand words. Comes with a flash and an internal recharging photo roll.
+  components:
+  - type: Flash
+    flashOnRangedInteract: true
+    meleeDuration: 0
+    aoeFlashDuration: 0
+    meleeStunDuration: 0
+    range: 0
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Misc/camera_snap.ogg

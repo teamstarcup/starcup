@@ -1,3 +1,21 @@
+- type: loadoutEffectGroup
+  id: SalvageSupreme
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSalvageSpecialist
+      time: 25h
+
+# Neck
+- type: loadout
+  id: SupremeSalvagerCloak
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SalvageVeteran
+  equipment:
+    neck: ClothingNeckCloakSalvagerSupreme
+
 # Shoes
 - type: loadout
   id: LogisticsOfficerWinterBoots

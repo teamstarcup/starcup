@@ -1,0 +1,17 @@
+- type: entity
+  parent: MarkerBase
+  id: SpawnBigBox
+  name: big box spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: Structures/Storage/closet.rsi
+      state: cardboard
+      map: ["enum.StorageVisualLayers.Base"]
+    - sprite: Structures/Storage/closet.rsi
+      state: cardboard_open
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: ConditionalSpawner
+    prototypes:
+    - BigBox

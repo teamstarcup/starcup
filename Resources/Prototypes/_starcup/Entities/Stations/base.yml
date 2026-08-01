@@ -1,0 +1,28 @@
+# Terrestrial Stations with a Charonic surface trading outpost
+- type: entity
+  id: BaseTerrestrialStationTradingCharonic
+  abstract: true
+  components:
+  - type: GridSpawn
+    groups:
+      trade: !type:GridSpawnGroup
+        addComponents:
+        - type: ProtectedGrid
+        - type: TradeStation
+        paths:
+        - /Maps/_starcup/Events/SilentMoonGrids/T1-ats-9x9.yml
+
+# Terrestrial Stations with a snowy surface trading outpost
+- type: entity
+  id: BaseTerrestrialStationTradingSnowy
+  abstract: true
+  components:
+  - type: GridSpawn
+    groups:
+      trade: !type:GridSpawnGroup
+        addComponents:
+        - type: ProtectedGrid
+        - type: TradeStation
+        paths:
+        - /Maps/_starcup/Shuttles/snowy_trade_outpost.yml
+# could add custom ruins later

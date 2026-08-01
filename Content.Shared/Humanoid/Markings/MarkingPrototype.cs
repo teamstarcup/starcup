@@ -36,10 +36,13 @@ namespace Content.Shared.Humanoid.Markings
         [DataField("sprites", required: true)]
         public List<SpriteSpecifier> Sprites { get; private set; } = default!;
 
-        // impstation edit - allow markings to support shaders
-        [DataField("shader")]
-        public string? Shader { get; private set; } = null;
-        // end impstation edit
+        // MACRO ADDITION
+        /// <summary>
+        ///     Optional dictionary allowing assignment of shaders to sprite layers in a marking.
+        ///     This implementation is very messy but unfortunately Robust doesn't like shaders in SpriteSpecifiers.
+        /// </summary>
+        [DataField]
+        public Dictionary<string, string>? Shaders { get; private set; }
 
         public Marking AsMarking()
         {

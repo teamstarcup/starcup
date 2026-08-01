@@ -73,35 +73,29 @@
     damageContainer: Biological
   - type: Destructible
     thresholds:
-    # begin starcup: reintroduce blunt damage gibbing
     - trigger:
         !type:DamageTypeTrigger
         damageType: Blunt
         damage: 400
       behaviors:
       - !type:GibBehavior { }
-    # end starcup
-    - trigger:
-        !type:DamageTypeTrigger
-        damageType: Blunt
-        damage: 400
-      behaviors:
-      - !type:GibBehavior { }
-    - trigger:
-        !type:DamageTypeTrigger
-        damageType: Heat
-        damage: 1500
-      behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawnInContainer: true
-        spawn:
-          Ash:
-            min: 1
-            max: 1
-      - !type:BurnBodyBehavior
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MeatLaserImpact
+    # begin starcup: remove ashing
+#    - trigger:
+#        !type:DamageTypeTrigger
+#        damageType: Heat
+#        damage: 1500
+#      behaviors:
+#      - !type:SpawnEntitiesBehavior
+#        spawnInContainer: true
+#        spawn:
+#          Ash:
+#            min: 1
+#            max: 1
+#      - !type:BurnBodyBehavior
+#      - !type:PlaySoundBehavior
+#        sound:
+#          collection: MeatLaserImpact
+# end starcup
     - trigger:
         !type:DamageTypeTrigger
         damageType: Radiation

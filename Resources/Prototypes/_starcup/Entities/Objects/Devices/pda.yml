@@ -98,6 +98,52 @@
   - type: Pda
     id: SeniorBartenderIDCard
 
+# Botanist
+- type: entity
+  parent: BotanistPDA
+  id: FarmerPDA
+  name: farmer PDA
+  description: It smells a little like musty straw and overripe apples.
+  components:
+  - type: Pda
+    id: FarmerIDCard
+
+- type: entity
+  parent: BotanistPDA
+  id: FloristPDA
+  name: florist PDA
+  description: Judging by the scratches, it looks like its last owner tried mutating thistles.
+  components:
+  - type: Pda
+    id: FloristIDCard
+
+- type: entity
+  parent: BotanistPDA
+  id: GardenerPDA
+  name: gardener PDA
+  description: This PDA is always right where you left it, somewhat faded but still in good condition.
+  components:
+  - type: Pda
+    id: GardenerIDCard
+
+- type: entity
+  parent: BotanistPDA
+  id: HerbalistPDA
+  name: herbalist PDA
+  description: The screen is stained with aloe juice from someone's incautious use of a mortar and pestle.
+  components:
+  - type: Pda
+    id: HerbalistIDCard
+
+- type: entity
+  parent: BotanistPDA
+  id: MutageneticistPDA
+  name: mutageneticist PDA
+  description: The PDA of an experienced botanical scientist. The bearer of this PDA could probably grow potatoes on Lavaland.
+  components:
+  - type: Pda
+    id: MutageneticistIDCard
+
 # Cargo Technician
 - type: entity
   parent: CargoPDA
@@ -107,6 +153,15 @@
   components:
   - type: Pda
     id: CargoPilotIDCard
+
+- type: entity
+  parent: CargoPDA
+  id: MechPilotPDA
+  name: mechatronics pilot PDA
+  description: There are a lot of warning labels about toxic relationships on this thing. They've mostly been scratched out.
+  components:
+  - type: Pda
+    id: MechPilotIDCard
 
 # Chaplain
 - type: entity
@@ -120,12 +175,12 @@
 
 - type: entity
   parent: ChaplainPDA
-  id: DeusDerelictionPDA
-  name: Deus dereliction PDA
+  id: DeusDerelictianPDA
+  name: Deus derelictian PDA
   description: Perhaps one day, even this tiny plastic box may be blessed by the Singular.
   components:
   - type: Pda
-    id: DeusDerelictionIDCard
+    id: DeusDerelictianIDCard
 
 - type: entity
   parent: ChaplainPDA
@@ -230,6 +285,25 @@
   - type: Pda
     id: StationMaidIDCard
 
+# Lawyer
+- type: entity
+  parent: LawyerPDA
+  id: AdvocatePDA
+  name: advocate PDA
+  description: Someone's got to stick up for the little guy.
+  components:
+  - type: Pda
+    id: AdvocateIDCard
+
+- type: entity
+  parent: LawyerPDA
+  id: CaseworkerPDA
+  name: caseworker PDA
+  description: The PDA of a social worker assigned by the company to help struggling crewmembers.
+  components:
+  - type: Pda
+    id: CaseworkerIDCard
+
 # Medical Doctor
 - type: entity
   parent: MedicalPDA
@@ -259,6 +333,34 @@
   components:
   - type: Pda
     id: CounselorIDCard
+
+# Reporter
+- type: entity
+  parent: ReporterPDA
+  id: PlaywrightPDA
+  name: playwright PDA
+  description: It's an old song, but they're going to sing it again.
+  components:
+  - type: Pda
+    id: PlaywrightIDCard
+
+- type: entity
+  parent: ReporterPDA
+  id: BiographerPDA
+  name: biographer PDA
+  description: There are crewmembers on this station with stories that deserve to be told. Whether they like it or not.
+  components:
+  - type: Pda
+    id: BiographerIDCard
+
+- type: entity
+  parent: ReporterPDA
+  id: DocumentarianPDA
+  name: documentarian PDA
+  description: There's nothing in the world more powerful than a good story.
+  components:
+  - type: Pda
+    id: DocumentarianIDCard
 
 # Roboticist
 
@@ -321,7 +423,6 @@
   components:
   - type: Pda
     id: NecrocosmicistIDCard
-
 
 # Syndicate Communications
 

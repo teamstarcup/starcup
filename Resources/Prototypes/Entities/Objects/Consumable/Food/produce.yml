@@ -775,9 +775,16 @@
       reagents:
       - ReagentId: JuiceOrange
         Quantity: 10
+  # begin starcup: wearable oranges
+  - type: Clothing
+    sprite: _starcup/Objects/Specific/Hydroponics/orange.rsi
+    slots:
+    - HEAD
+  # end starcup
   - type: Tag
     tags:
     - Fruit
+    - CapybaraWearable # starcup
   - type: FoodSequenceElement
     entries:
       Burger: Orange

@@ -1,0 +1,192 @@
+# the big five
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingCorpoJacketCybersun
+  name: off-sector Cybersun jacket
+  description: A jacket in the colors of Cybersun's branches in sectors other than the Chalice.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/OuterClothing/WinterCoats/corpo_jacket_cybersun.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/OuterClothing/WinterCoats/corpo_jacket_cybersun.rsi
+
+- type: entity
+  parent: ClothingCorpoJacketCybersun
+  id: ClothingCorpoJacketCybersunChalice
+  name: Cybersun jacket
+  description: Vibrant PR colors for the most aristocratic of robotics neocorporations. Chin up, eyes forward, to the next dawn.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/corpo_jacket_cybersun.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/corpo_jacket_cybersun.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingCorpoJacketHawkmoon
+  name: Hawkmoon Acquisitions jacket
+  description: Cozy and comfortable, with big kangaroo pockets. The perfect jacket to fall asleep in during faster-than-light travel.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/OuterClothing/WinterCoats/corpo_jacket_hawkmoon_aquisitions.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/OuterClothing/WinterCoats/corpo_jacket_hawkmoon_aquisitions.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingCorpoJacketInterdyne
+  name: Interdyne Labs jacket
+  description: A jacket belonging to your beloved health care and high quality cosmetics provider. It is NOT in fact resistant to fluorosulfuric acid.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/OuterClothing/WinterCoats/corpo_jacket_interdyne.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/OuterClothing/WinterCoats/corpo_jacket_interdyne.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingCorpoJacketElectra
+  name: Electra Dynamics jacket
+  description: Electra Dynamics. Old and reliable meets the new and the bold.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/corpo_jacket_electra_dynamics.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/corpo_jacket_electra_dynamics.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingCorpoJacketDonkChef
+  name: DONK flavorist jacket
+  description: DONK Co.'s chefs' dedication to flavor permeates every facet of their lives. That's why they go to work looking like they're wearing a pizza.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/corpo_jacket_donk_flavorist.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/corpo_jacket_donk_flavorist.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingCorpoJacketDonkRoboticist
+  name: DONK toymaker jacket
+  description: It's a DONK Co. roboticist! Oh, what joy. Delightful devices and gizmos galore!
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/corpo_jacket_donk_toymaker.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/corpo_jacket_donk_toymaker.rsi
+
+
+# minor companies
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingCorpoJacketDiscountDans
+  name: Discount Dan's jacket
+  description: Even Discount Dan's designers are affordable. It's warm, it's got the logo, what else do you need?
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/OuterClothing/WinterCoats/corpo_jacket_discount_dans.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/OuterClothing/WinterCoats/corpo_jacket_discount_dans.rsi
+
+- type: entity
+  parent:
+  - ClothingOuterWinterCoat
+  - BaseMinorContraband
+  id: ClothingCorpoJacketFPA
+  name: Five Points Armory jacket
+  description: You might not want to be seen rocking the colors and logo of NanoTrasen's primary local weapons subsidiary around here.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/OuterClothing/WinterCoats/corpo_jacket_five_points_armory.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/OuterClothing/WinterCoats/corpo_jacket_five_points_armory.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingCorpoJacketGilthari
+  name: Gilthari Exports jacket
+  description: An extravagant jacket for an entertainment and luxury goods purveyor trying to dazzle the sector.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/OuterClothing/WinterCoats/corpo_jacket_gilthari_exports.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/OuterClothing/WinterCoats/corpo_jacket_gilthari_exports.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingCorpoJacketHephaestus
+  name: Hephaestus Industries jacket
+  description: A jacket belonging to a company that made some profit scurrying between the legs of the Big Five during the wars. Virtually unheard of after their buyout by Cybersun.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/OuterClothing/WinterCoats/corpo_jacket_hephestus_industries.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/OuterClothing/WinterCoats/corpo_jacket_hephestus_industries.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingCorpoJacketZengHu
+  name: Zeng-Hu Pharma jacket
+  description: An unfamiliar jacket supposedly belonging to some Interdyne competitor. Probably just another of NanoTrasen's many corporate lackeys.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/OuterClothing/WinterCoats/corpo_jacket_zeng_hu_pharma.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/OuterClothing/WinterCoats/corpo_jacket_zeng_hu_pharma.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingCorpoJacketGorlex
+  name: Gorlex liason jacket
+  description: Gaudy red and poison green, with the black snake on the back so everyone knows whose side they're not on.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/corpo_jacket_gorlex_liason.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/corpo_jacket_gorlex_liason.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingCorpoJacketScarab
+  name: Scarab Security jacket
+  description: A jacket belonging to an old company of traitors and strikebreakers. The quality is as shoddy as their sense of dignity.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/corpo_jacket_scarab_security.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/corpo_jacket_scarab_security.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingCorpoJacketStarship
+  name: defunct starship company jacket
+  description: Pretty old, with faded colors and scratched-off logo. Probably not worth dwelling on.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/OuterClothing/WinterCoats/corpo_jacket_defunct_starship_company.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/OuterClothing/WinterCoats/corpo_jacket_defunct_starship_company.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingCorpoJacketBishop
+  name: Bishop Cybernetics jacket
+  description: An old jacket with a logo most would rather forget about. Perfect if barfights are your choice of poison.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/corpo_jacket_bishop_cybernetics.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/corpo_jacket_bishop_cybernetics.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingCorpoJacketSyndComm
+  name: Syndicate Communications jacket
+  description: Some speculate these will be nice collector's items in a couple of years when this whole "SyndComm" sham blows over.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/corpo_jacket_syndicate_communications.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/WinterCoats/corpo_jacket_syndicate_communications.rsi

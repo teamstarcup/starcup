@@ -1,0 +1,211 @@
+# new parents
+- type: entity
+  parent: CollideFloorTrap
+  id: CollideFloorTrapSpawnAstralTear
+  name: astral tear
+  abstract: true
+  description: A shimmering space-time fracture. Distant stars twinkle on the other side.
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _starcup/Effects/astral_tear.rsi
+    drawdepth: OverMobs
+    layers:
+    - state: tear_1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        tear_1: ""
+        tear_2: ""
+        tear_3: ""
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: WarpIn
+      params:
+        variation: 0.05
+    positional: true
+    predicted: true
+  - type: PointLight
+    radius: 3.0
+    energy: 2
+    color: "#6797c8"
+  - type: Fixtures
+    fixtures:
+      floortrap:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 1000
+        mask:
+          - MobMask
+        layer:
+          - WallLayer
+  - type: Physics
+    bodyType: Static
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Damageable
+    damageContainer: ShadowHaze
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 30
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WarpIn
+          params:
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: CollideFloorTrap
+  id: CollideFloorTrapSpawnBurrow
+  name: burrowed creature
+  description: Something hides underground.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _starcup/Mobs/Special/burrowed_large.rsi
+    drawdepth: FloorObjects
+    layers:
+    - state: burrowed1
+      map: [ "random" ]
+  - type: RandomSprite
+    available:
+    - random:
+        burrowed1: ""
+        burrowed2: ""
+        burrowed3: ""
+        burrowed4: ""
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_starcup/Effects/Burrowing/burrow_off_large.ogg
+    positional: true
+    predicted: true
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: burrowed
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/rock_break.ogg
+          params:
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+# astral tear creatures
+- type: entity
+  parent: CollideFloorTrapSpawnAstralTear
+  id: SpawnFloorTrapSpider
+  suffix: Spider
+  components:
+  - type: TriggerOnCollide
+    fixtureID: floortrap
+    maxTriggers: 1
+  - type: SpawnOnTrigger
+    proto: MobSpiderSpace
+  - type: DeleteOnTrigger
+
+- type: entity
+  parent: CollideFloorTrapSpawnAstralTear
+  id: SpawnFloorTrapCobra
+  suffix: Cobra
+  components:
+  - type: TriggerOnCollide
+    fixtureID: floortrap
+    maxTriggers: 1
+  - type: SpawnOnTrigger
+    proto: MobCobraSpace
+  - type: DeleteOnTrigger
+
+- type: entity
+  parent: CollideFloorTrapSpawnAstralTear
+  id: SpawnFloorTrapShark
+  suffix: Abyssal sharkminnow
+  components:
+  - type: TriggerOnCollide
+    fixtureID: floortrap
+    maxTriggers: 1
+  - type: SpawnOnTrigger
+    proto: MobSharkAbyssal
+  - type: DeleteOnTrigger
+
+# burrowed creatures
+- type: entity
+  parent: CollideFloorTrapSpawnBurrow
+  id: SpawnFloorTrapGoliath
+  suffix: Goliath
+  components:
+  - type: TriggerOnCollide
+    fixtureID: floortrap
+    maxTriggers: 1
+  - type: SpawnOnTrigger
+    proto: MobGoliath
+  - type: DeleteOnTrigger
+
+- type: entity
+  parent: CollideFloorTrapSpawnBurrow
+  id: SpawnFloorTrapSandwasp
+  suffix: Sandwasp
+  components:
+  - type: TriggerOnCollide
+    fixtureID: floortrap
+    maxTriggers: 1
+  - type: SpawnOnTrigger
+    proto: MobGiantSandwasp
+  - type: DeleteOnTrigger
+
+- type: entity
+  parent: CollideFloorTrapSpawnBurrow
+  id: SpawnFloorTrapTick
+  suffix: Tick
+  components:
+  - type: TriggerOnCollide
+    fixtureID: floortrap
+    maxTriggers: 1
+  - type: SpawnOnTrigger
+    proto: MobTick
+  - type: DeleteOnTrigger
+  - type: Sprite
+    sprite: _starcup/Mobs/Special/burrowed_small.rsi
+
+- type: entity
+  parent: CollideFloorTrapSpawnBurrow
+  id: SpawnFloorTrapBunny
+  suffix: Bunny
+  components:
+  - type: TriggerOnCollide
+    fixtureID: floortrap
+    maxTriggers: 1
+  - type: SpawnOnTrigger
+    proto: MobBunny
+  - type: DeleteOnTrigger
+  - type: Sprite
+    sprite: _starcup/Mobs/Special/burrowed_small.rsi
+
+- type: entity
+  parent: CollideFloorTrapSpawnBurrow
+  id: SpawnFloorTrapBeetle
+  suffix: Beetle
+  components:
+  - type: TriggerOnCollide
+    fixtureID: floortrap
+    maxTriggers: 1
+  - type: SpawnOnTrigger
+    proto: MobBeetleStag
+  - type: DeleteOnTrigger
+  - type: Sprite
+    sprite: _starcup/Mobs/Special/burrowed_small.rsi

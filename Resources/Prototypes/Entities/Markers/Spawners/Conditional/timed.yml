@@ -40,19 +40,26 @@
 - type: entity
   name: Mouse Timed Spawner
   id: MouseTimedSpawner
-  parent: MarkerBase
+  parent: TimedSpawnerBaseStarcup # starcup
   components:
     - type: Sprite
       layers:
+      # begin starcup: add rodent variants
+        - state: shadow
         - state: blue
-        - sprite: Mobs/Animals/mouse.rsi
-          state: icon-2
-        - state: timed
+        - sprite: _starcup/Mobs/Animals/Rodents/generic_spawners.rsi
+          state: mice
+        - sprite: Markers/cross.rsi
+          state: timed
     - type: TimedSpawner
       prototypes:
         - MobMouse
         - MobMouse1
         - MobMouse2
+        - MobMouseFat
+        - MobMouseFat1
+        - MobMouseFat2
+        # end starcup
       # round ~90m
       # one spawner should only spawn ~5 mice for sanity reasons
       # therefore 18m

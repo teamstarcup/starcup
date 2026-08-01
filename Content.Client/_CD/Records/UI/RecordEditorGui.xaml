@@ -44,6 +44,12 @@
                      <Control HorizontalExpand="True" />
                      <LineEdit Name="IdentifyingFeaturesEdit" HorizontalAlignment="Right" MinSize="350 0"/>
                  </BoxContainer>
+                    <!-- starcup Security Flags -->
+                 <BoxContainer Orientation="Horizontal">
+                     <Label Text="{Loc 'humanoid-profile-editor-cd-records-security-flags'}" />
+                     <Control HorizontalExpand="True" />
+                     <LineEdit Name="SecurityFlagsEdit" HorizontalAlignment="Right" MinSize="350 0"/>
+                 </BoxContainer>
                  <Control MinSize="0 20"/>
                  <!-- Medical stuff -->
                  <BoxContainer Orientation="Horizontal">
@@ -60,6 +66,12 @@
                      <Label Text="{Loc 'humanoid-profile-editor-cd-records-postmortem'}" />
                      <Control HorizontalExpand="True" />
                      <LineEdit Name="PostmortemEdit" HorizontalAlignment="Right" MinSize="350 0"/>
+                 </BoxContainer>
+                 <!-- starcup Medical Needs -->
+                 <BoxContainer Orientation="Horizontal">
+                     <Label Text="{Loc 'humanoid-profile-editor-cd-records-medical-needs'}" />
+                     <Control HorizontalExpand="True" />
+                     <LineEdit Name="MedicalNeedsEdit" HorizontalAlignment="Right" MinSize="350 0"/>
                  </BoxContainer>
                  <Control MinSize="0 20"/>
                  <!-- Entry editor -->

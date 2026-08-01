@@ -2,7 +2,7 @@
   id: Wristwatch
   parent: BaseItem
   name: wristwatch
-  description: A cheap watch for telling time. How much did you waste playing Space Station 14?
+  description: An old or cheap watch for telling time. How much did you waste playing that block game? # starcup - removed fourth wall break
   components:
   - type: Sprite
     sprite: Objects/Devices/wristwatch.rsi
@@ -41,6 +41,7 @@
   - type: PhysicalComposition
     materialComposition:
       Steel: 300
+  - type: Engraveable # starcup
 
 - type: entity
   id: WristwatchGold

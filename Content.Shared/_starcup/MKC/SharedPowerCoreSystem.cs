@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using Content.Shared.Body;
 using Content.Shared.DoAfter;
+using Content.Shared.Interaction.Events;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Power;
@@ -30,7 +31,6 @@ public abstract class SharedPowerCoreSystem : EntitySystem
     [Dependency] private readonly MovementSpeedModifierSystem _movementSpeed = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
 
-    private const float MaxEnergyDrainDistance = 32.0f;
     private readonly SoundSpecifier? _drainSounds = new SoundCollectionSpecifier("sparks");
 
     public override void Initialize()
@@ -39,6 +39,8 @@ public abstract class SharedPowerCoreSystem : EntitySystem
 
         SubscribeLocalEvent<PowerCoreComponent, MapInitEvent>(OnMapInit);
 
+        SubscribeLocalEvent<PowerDrinkableComponent, GetVerbsEvent<AlternativeVerb>>(OnAlternativeVerbs);
+        SubscribeLocalEvent<PowerDrinkableComponent, UseInHandEvent>(OnUseInHand);
         SubscribeLocalEvent<PowerCoreComponent, BodyRelayedEvent<GetVerbsEvent<InnateVerb>>>(AddEnergyDrainVerb);
         SubscribeLocalEvent<PowerCoreComponent, PowerCoreDoAfterEvent>(OnDoAfter);
 
@@ -104,6 +106,34 @@ public abstract class SharedPowerCoreSystem : EntitySystem
         return true;
     }
 
+    /// <summary>
+    /// Attempts to find the power core organ inside a mob.
+    /// </summary>
+    /// <param name="mob">mob to search</param>
+    /// <param name="powerCore">power core organ</param>
+    /// <returns></returns>
+    private bool TryGetPowerCore(EntityUid mob, [NotNullWhen(true)] out Entity<PowerCoreComponent>? powerCore)
+    {
+        powerCore = null;
+
+        if (!TryComp<BodyComponent>(mob, out var body))
+            return false;
+
+        if (body.Organs == null)
+            return false;
+
+        foreach (var organ in body.Organs.ContainedEntities)
+        {
+            if (!TryComp<PowerCoreComponent>(organ, out var comp))
+                continue;
+
+            powerCore = (organ, comp);
+            return true;
+        }
+
+        return false;
+    }
+
     private void UpdateMoveSpeedModifier(Entity<PowerCoreComponent> powerCore, ref BodyRelayedEvent<RefreshMovementSpeedModifiersEvent> args)
     {
         Entity<BatteryComponent?> battery = (powerCore.Owner, null);
@@ -129,11 +159,14 @@ public abstract class SharedPowerCoreSystem : EntitySystem
         if (!HasComp<BatteryComponent>(args.Args.Target))
             return;
 
+        if (HasComp<PowerDrinkableComponent>(args.Args.Target))
+            return;
+
         var target = args.Args.Target;
 
         InnateVerb verb = new()
         {
-            Act = () => StartDraining(powerCore, target),
+            Act = () => TryStartDraining(powerCore, target),
             Text = Loc.GetString("power-core-verb"),
             IconEntity = GetNetEntity(powerCore),
             Priority = 2,
@@ -141,18 +174,65 @@ public abstract class SharedPowerCoreSystem : EntitySystem
         args.Args.Verbs.Add(verb);
     }
 
-    private void StartDraining(Entity<PowerCoreComponent> powerCore, EntityUid target)
+    /// <summary>
+    /// Allows MKCs to use alt-E to drain from entities in the world.
+    /// </summary>
+    /// <param name="uid"></param>
+    /// <param name="drinkable"></param>
+    /// <param name="args"></param>
+    private void OnAlternativeVerbs(EntityUid uid, PowerDrinkableComponent drinkable, GetVerbsEvent<AlternativeVerb> args)
+    {
+        if (!args.CanInteract || !args.CanAccess)
+            return;
+
+        if (!HasComp<BatteryComponent>(args.Target))
+            return;
+
+        if (!TryGetPowerCore(args.User, out var powerCore))
+            return;
+
+        var verb = new AlternativeVerb
+        {
+            Act = () => TryStartDraining(powerCore.Value, args.Target),
+            Text = Loc.GetString("power-core-verb"),
+            IconEntity = GetNetEntity(powerCore),
+            Priority = 3,
+        };
+
+        args.Verbs.Add(verb);
+    }
+
+    /// <summary>
+    /// Allows MKCs to hit Z or left-click on a held entity to drain from it.
+    /// </summary>
+    /// <param name="entity"></param>
+    /// <param name="args"></param>
+    private void OnUseInHand(Entity<PowerDrinkableComponent> entity, ref UseInHandEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        if (!HasComp<BatteryComponent>(entity))
+            return;
+
+        if (!TryGetPowerCore(args.User, out var powerCore))
+            return;
+
+        args.Handled = TryStartDraining(powerCore.Value, entity);
+    }
+
+    private bool TryStartDraining(Entity<PowerCoreComponent> powerCore, EntityUid target)
     {
         if (!TryGetContainingBody(powerCore, out var bodyUid))
-            return;
+            return false;
 
         Entity<BatteryComponent?> powerCoreBattery = (powerCore.Owner, null);
         if (!Resolve(powerCoreBattery, ref powerCoreBattery.Comp))
-            return;
+            return false;
 
         Entity<BatteryComponent?> targetBattery = (target, null);
         if (!Resolve(targetBattery, ref targetBattery.Comp))
-            return;
+            return false;
 
         if (_battery.IsFull(powerCoreBattery))
         {
@@ -161,7 +241,7 @@ public abstract class SharedPowerCoreSystem : EntitySystem
                 bodyUid.Value,
                 bodyUid.Value
                 );
-            return;
+            return false;
         }
 
         if (MathHelper.CloseToPercent(_battery.GetCharge(targetBattery), 0) && targetBattery.Comp.NetSyncEnabled)
@@ -171,18 +251,17 @@ public abstract class SharedPowerCoreSystem : EntitySystem
                 bodyUid.Value,
                 bodyUid.Value
                 );
-            return;
+            return false;
         }
 
         _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, bodyUid.Value, powerCore.Comp.Delay, new PowerCoreDoAfterEvent(), powerCore, target: target, used: powerCore)
         {
             DuplicateCondition = DuplicateConditions.SameEvent,
-            BreakOnMove = true,
+            BreakOnMove = false,
             BreakOnHandChange = false,
             BreakOnDamage = true,
-            MovementThreshold = 0.01f,
-            DistanceThreshold = MaxEnergyDrainDistance,
         });
+        return true;
     }
 
     private void OnDoAfter(Entity<PowerCoreComponent> powerCore, ref PowerCoreDoAfterEvent args)

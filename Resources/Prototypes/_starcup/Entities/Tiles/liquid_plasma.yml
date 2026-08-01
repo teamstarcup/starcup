@@ -1,0 +1,16 @@
+- type: entity
+  parent: FloorLiquidPlasmaEntity
+  id: FloorLiquidPlasmaIceEntity
+  suffix: Ice
+  name: liquid plasma
+  description: Sweet, expensive nectar. Don't consume.
+  components:
+  - type: Sprite
+    sprite: _starcup/Tiles/Planet/ice_liquid_plasma.rsi
+    drawdepth: BelowFloor
+    layers:
+    - state: plasma
+      shader: unshaded
+  - type: Icon
+    sprite: _starcup/Tiles/Planet/ice_liquid_plasma.rsi
+    state: full

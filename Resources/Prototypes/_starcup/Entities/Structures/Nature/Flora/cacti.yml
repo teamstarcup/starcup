@@ -1,0 +1,409 @@
+# Base cacti
+- type: entity
+  parent: BaseTree
+  id: BaseCactus
+  abstract: true
+  name: cactus
+  description: Hardy plant that can store fluids and thrives across the galaxy.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Cacti/flora_cactus.rsi
+    layers:
+    - state: cactus01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        cactus01: ""
+        cactus02: ""
+        cactus03: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.1,0.1,0.3"
+        density: 4000
+        layer:
+        - WallLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 65
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 3
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: DamageOnInteract
+    damage:
+      types:
+        Piercing: 1
+    interactSound: /Audio/_starcup/Effects/hit_needle.ogg
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 25
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 17
+        - ReagentId: PlantDetritus
+          Quantity: 8
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 0.003
+      - ReagentId: PlantDetritus
+        Quantity: 0.001
+
+- type: entity
+  parent: BaseCactus
+  id: BaseCactusSmall
+  abstract: true
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 2
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 15
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 10
+        - ReagentId: PlantDetritus
+          Quantity: 5
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 0.003
+      - ReagentId: PlantDetritus
+        Quantity: 0.001
+
+- type: entity
+  parent: BaseCactus
+  id: BaseCactusGiant
+  abstract: true
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.3,0.4,0"
+        density: 4000
+        layer:
+        - WallLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 3
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: DamageOnInteract
+    damage:
+      types:
+        Piercing: 1.5
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 40
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 30
+        - ReagentId: PlantDetritus
+          Quantity: 10
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 0.003
+      - ReagentId: PlantDetritus
+        Quantity: 0.001
+
+# Cacti species
+- type: entity
+  parent: BaseCactus
+  id: FloraCactus
+  name: lesser saguaro cactus
+  description: A hardy plant that can store fluids and thrives across the galaxy. This species is a smaller cousin to the much larger saguaros that grow on some planets.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Cacti/flora_cactus.rsi
+
+- type: entity
+  parent: BaseCactusSmall
+  id: FloraCactusBarrel
+  name: barrel cactus
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Cacti/flora_barrel_cactus.rsi
+    offset: 0,0
+    layers:
+    - state: cactus01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        cactus01: ""
+        cactus02: ""
+        cactus03: ""
+        cactus04: ""
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 15
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 10
+        - ReagentId: Water
+          Quantity: 5
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 0.003
+      - ReagentId: Water
+        Quantity: 0.001
+
+- type: entity
+  parent: BaseCactusGiant
+  id: FloraCactusBarrelGiant
+  name: giant barrel cactus
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Cacti/flora_giant_cactus.rsi
+    offset: 0,0
+    layers:
+    - state: cactus01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        cactus01: ""
+        cactus02: ""
+        cactus03: ""
+        cactus04: ""
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 40
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 30
+        - ReagentId: Water
+          Quantity: 10
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 0.003
+      - ReagentId: Water
+        Quantity: 0.001
+
+- type: entity
+  parent: BaseCactusGiant
+  id: FloraCactusBloodthorn
+  name: bloodthorn cactus
+  description: A large, tough, extremely pokey-looking cactus, often seen thriving in war-torn areas of the galaxy.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Cacti/flora_giant_cactus_gr.rsi
+    offset: 0,0
+    layers:
+    - state: cactus01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        cactus01: ""
+        cactus02: ""
+        cactus03: ""
+        cactus04: ""
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 40
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 20
+        - ReagentId: PlantDetritus
+          Quantity: 10
+        - ReagentId: Blood
+          Quantity: 10
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 0.003
+      - ReagentId: PlantDetritus
+        Quantity: 0.001
+      - ReagentId: Blood
+        Quantity: 0.001
+
+- type: entity
+  parent: FloraCactusBloodthorn
+  id: FloraCactusBloodthornGiant
+  suffix: giant
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Cacti/flora_giant_cactus_gr_large.rsi
+    offset: 0,1
+    layers:
+    - state: cactus01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        cactus01: ""
+        cactus02: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.3,0.4,0.4"
+        density: 4000
+        layer:
+        - WallLayer
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 70
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 35
+        - ReagentId: PlantDetritus
+          Quantity: 18
+        - ReagentId: Blood
+          Quantity: 17
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 0.003
+      - ReagentId: PlantDetritus
+        Quantity: 0.001
+      - ReagentId: Blood
+        Quantity: 0.001
+
+- type: entity
+  parent: FloraCactusBloodthorn
+  id: FloraCactusChaosthorn
+  name: mutant bloodthorn cactus
+  suffix: DO NOT MAP
+  description: A large, tough, heavily mutated cactus of a species often seen thriving in war-torn areas of the galaxy.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Cacti/flora_giant_cactus_py.rsi
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 50
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 35
+        - ReagentId: PlantDetritus
+          Quantity: 18
+        - ReagentId: UnstableMutagen
+          Quantity: 17
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 0.003
+      - ReagentId: PlantDetritus
+        Quantity: 0.001
+      - ReagentId: UnstableMutagen
+        Quantity: 0.001
+
+- type: entity
+  parent: FloraCactusBloodthornGiant
+  id: FloraCactusChaosthornGiant
+  suffix: giant, DO NOT MAP
+  name: mutant bloodthorn cactus
+  description: A large, tough, heavily mutated cactus of a species often seen thriving in war-torn areas of the galaxy.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Nature/Flora/Cacti/flora_giant_cactus_py_large.rsi
+    layers:
+    - state: cactus01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        cactus01: ""
+        cactus02: ""
+  - type: SolutionContainerManager
+    solutions:
+      vasculature:
+        maxVol: 70
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 35
+        - ReagentId: PlantDetritus
+          Quantity: 18
+        - ReagentId: UnstableMutagen
+          Quantity: 17
+  - type: SolutionRegeneration
+    solution: vasculature
+    generated:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 0.003
+      - ReagentId: PlantDetritus
+        Quantity: 0.001
+      - ReagentId: UnstableMutagen
+        Quantity: 0.001

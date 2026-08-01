@@ -2,6 +2,7 @@ using Content.Server.VentHorde.Components;
 using Content.Shared.Destructible;
 using Content.Shared.Jittering;
 using Content.Shared.Throwing;
+using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -62,7 +63,11 @@ public sealed class VentHordeSystem : EntitySystem
     /// <param name="spawns">List of entities to spawn.</param>
     /// <param name="spawnDelay">Time after which to spawn the entities.</param>
     /// <param name="append">If an already active spawner is selected, will add entities to its list. Otherwise, will fail.</param>
-    public void StartHordeSpawn(EntityUid uid, List<EntProtoId> spawns, TimeSpan spawnDelay, bool append = true)
+    /// starcup: <param name="passiveSound">Will override the default sound in VentHordeSpawnerComponent if provided.</param>
+    /// starcup: <param name="endSound">Will override the default sound in VentHordSpawnerComponent if provided.</param>
+    /// starcup: <param name="breakChance">Will remove the vent horde spawner entity.</param>
+    /// starcup: <param name="replacement">Spawns a new entity in place of the removed vent horde spawner entity.</param>
+    public void StartHordeSpawn(EntityUid uid, List<EntProtoId> spawns, TimeSpan spawnDelay, string? replacement, bool append = true, SoundSpecifier? passiveSound = null, SoundSpecifier? endSound = null, float breakChance = 0)
     {
         if (TryComp<VentHordeSpawnerComponent>(uid, out var hordeSpawner))
         {
@@ -75,6 +80,18 @@ public sealed class VentHordeSystem : EntitySystem
         }
 
         hordeSpawner = EnsureComp<VentHordeSpawnerComponent>(uid);
+
+        // begin starcup: allow rules to set custom sounds
+        if (passiveSound is not null)
+            hordeSpawner.PassiveSound = passiveSound;
+
+        if (endSound is not null)
+            hordeSpawner.EndSound = endSound;
+
+        hordeSpawner.ShouldBreakVent |= _random.Prob(breakChance);
+
+        hordeSpawner.Replacement = replacement;
+        // end starcup
 
         hordeSpawner.AudioStream = _audio.PlayPvs(hordeSpawner.PassiveSound, uid, hordeSpawner.PassiveSound.Params.WithLoop(true))?.Entity;
 
@@ -90,8 +107,6 @@ public sealed class VentHordeSystem : EntitySystem
     {
         entity.Comp.AudioStream = _audio.Stop(entity.Comp.AudioStream);
 
-        _audio.PlayPvs(entity.Comp.EndSound, entity);
-
         foreach (var spawn in entity.Comp.Entities)
         {
             var spawned = Spawn(spawn, Transform(entity).Coordinates);
@@ -99,6 +114,22 @@ public sealed class VentHordeSystem : EntitySystem
             var throwSpeed = _random.NextFloat(entity.Comp.MinThrowSpeed, entity.Comp.MaxThrowSpeed);
             _throwing.TryThrow(spawned, direction, throwSpeed);
         }
+
+        // begin starcup: Remove the horde spawner entity and spawn a replacement (perhaps a broken version of it).
+        if (entity.Comp.ShouldBreakVent)
+        {
+            var xform = Transform(entity);
+            var brokenVent = Spawn(entity.Comp.Replacement, xform.Coordinates);
+            var newXform = Transform(brokenVent);
+            newXform.LocalRotation = xform.LocalRotation;
+            QueueDel(entity);
+            _audio.PlayPvs(entity.Comp.EndSound, brokenVent);
+        }
+        else
+        {
+            _audio.PlayPvs(entity.Comp.EndSound, entity);
+        }
+        // end starcup
 
         RemCompDeferred<VentHordeSpawnerComponent>(entity);
     }

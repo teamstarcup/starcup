@@ -43,15 +43,19 @@
   - OffsetCaneSyndie
   - Cane
   - WhiteCane
-  - PillCanisterNeurozeniumLoadout
-  - PillCanisterSoretizoneLoadout
-  - PillCanisterCalmafluxineLoadout
-  - PillCanisterEthyloxyephedrineLoadout
-  - PillCanisterAgonolexyneLoadout
+  - PillCanisterNeurozenium
+  - PillCanisterSoretizone
+  - PillCanisterCalmafluxine
+  - PillCanisterEthyloxyephedrine
+  - PillCanisterAgonolexyne
+  - SmokingPipe
+  - Joint
+  - CigPackCandy
   - CigPackGreen
   - CigPackRed
   - CigPackBlue
   - CigPackBlack
+  - CigPackPurple
   - CigarCase
   - CigarGold
 
@@ -60,6 +64,8 @@
   - CosmeticsPridePin
   - CosmeticsJewelry
   - CosmeticsTowel
+  - CosmeticsRibbons
+  - CosmeticsHairpins
   id: Cosmetics
   name: loadout-group-cosmetics
   minLimit: 0
@@ -67,10 +73,53 @@
   loadouts:
   - FlowerWreath
   - Hairflower
+  - RoseSeedless
+  - RoseBlackSeedless
+  - FoodLilySeedless
   - Headphones
+  - MimeMaskTrinket
+  - MimeMaskSadTrinket
+  - MimeMaskScaredTrinket
 
 # Abstract Groups (for parenting purposes)
-## Plushies
+
+## Neck Ribbons & Bows
+- type: loadoutGroup
+  abstract: true
+  id: RibbonsNeck
+  loadouts:
+  - BowtieRedNeck
+  - BowtieBlackNeck
+  - RibbonRedNeck
+  - RibbonBlackNeck
+  - BowBlackNeck
+  - BowRedNeck
+
+## Hair Ribbons & Bows
+- type: loadoutGroup
+  abstract: true
+  id: RibbonsHead
+  loadouts:
+  - BowtieRedHead
+  - BowtieBlackHead
+  - RibbonRedHead
+  - RibbonBlackHead
+  - BowBlackHead
+  - BowRedHead
+  - RibbonLargeBlackHead
+  - RibbonLargeRedHead
+
+## Hairpins
+- type: loadoutGroup
+  abstract: true
+  id: HairpinsWorn
+  loadouts:
+  - HairpinWorn
+  - HairpinCloverWorn
+  - HairpinButterflyWorn
+  - HairpinMagneticWorn
+
+  ## Plushies
 - type: loadoutGroup
   abstract: true
   id: PlushiesWorn
@@ -156,18 +205,27 @@
   id: TrinketsUtility
   loadouts:
   - TapeRecorder
+  - BarFlask
+  - Pillow
 
 - type: loadoutGroup
   abstract: true
   id: TrinketsTreat
   loadouts:
   - LollipopBubblegum
+  - LollipopBlueRaspberry
+  - LollipopButterscotch
+  - LollipopSourApple
+  - LollipopStrawberry
 
 - type: loadoutGroup
   abstract: true
   id: TrinketsToy
   loadouts:
   - CardBoxSparot
+  - CardBoxSyndicate
+  - CardBoxBlack
+  - BookRandomStory
 
 - type: loadoutGroup
   abstract: true
@@ -191,6 +249,36 @@
   - HeartLocket
   - GoldRing
   - SilverRing
+  - Wristwatch
+  - NecklaceChainSilver
+  - NecklaceChainGold
+  - NecklaceSilver
+  - NecklaceGold
+  - PendantGoldRuby
+
+## Hairpins
+- type: loadoutGroup
+  abstract: true
+  id: CosmeticsHairpins
+  loadouts:
+  - Hairpin
+  - HairpinClover
+  - HairpinButterfly
+  - HairpinMagnetic
+
+## Bows and Ribbons
+- type: loadoutGroup
+  abstract: true
+  id: CosmeticsRibbons
+  loadouts:
+  - BowtieRed
+  - BowtieBlack
+  - RibbonRed
+  - RibbonBlack
+  - BowBlack
+  - BowRed
+  - RibbonLargeBlack
+  - RibbonLargeRed
 
 - type: loadoutGroup
   abstract: true
@@ -306,3 +394,12 @@
   - BrownTurtleneckSkirt
   - MaroonTurtleneckSuit
   - MaroonTurtleneckSkirt
+
+## Goggles
+- type: loadoutGroup
+  abstract: true
+  id: SurplusGoggles
+  loadouts:
+  - SurpBallisticsB
+  - SurpBallisticsG
+  - SurpBallisticsY

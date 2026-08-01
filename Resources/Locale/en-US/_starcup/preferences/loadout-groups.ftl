@@ -7,6 +7,8 @@ loadout-group-technical-assistant-outerclothing = Technical assistant outer clot
 # Logistics
 loadout-group-cargo-technician-neck = Cargo technician neck
 
+loadout-group-logistics-gloves = Logistics gloves
+
 loadout-group-courier-belt = Courier belt
 loadout-group-courier-backpack = Courier backpack
 
@@ -43,6 +45,7 @@ loadout-group-brigmedic-backpack = Combat Medic backpack
 
 loadout-group-detective-backpack = Detective backpack
 loadout-group-detective-shoes = Detective shoes
+loadout-group-detective-glasses = Detective glasses
 
 loadout-group-security-cadet-outerclothing = Security cadet outer clothing
 
@@ -53,6 +56,7 @@ loadout-group-bartender-glasses = Bartender glasses
 loadout-group-bartender-shoes = Bartender shoes
 
 loadout-group-botanist-shoes = Botanist shoes
+loadout-group-botanist-id-starcup = Botanist ID
 
 loadout-group-boxer-head = Boxer head
 loadout-group-boxer-jumpsuit = Boxer jumpsuit
@@ -74,6 +78,7 @@ loadout-group-janitor-light = Janitor flashlight
 
 loadout-group-lawyer-outerclothing = Lawyer outer clothing
 loadout-group-lawyer-shoes = Lawyer shoes
+loadout-group-lawyer-id-starcup = Lawyer ID
 
 loadout-group-librarian-outerclothing = Librarian outer clothing
 loadout-group-librarian-shoes = Librarian shoes
@@ -82,12 +87,14 @@ loadout-group-mime-shoes = Mime shoes
 
 loadout-group-musician-glasses = Musician glasses
 loadout-group-musician-shoes = Musician shoes
+loadout-group-musician-head = Musician head
 
 loadout-group-passenger-glasses = Passenger eyewear
 
 loadout-group-reporter-outer-clothing = Reporter outer clothing
 loadout-group-reporter-shoes = Reporter shoes
 loadout-group-reporter-glasses = Reporter eyewear
+loadout-group-reporter-id-starcup = Reporter ID
 
 loadout-group-service-worker-head = Service worker head
 loadout-group-service-worker-jumpsuit = Service worker jumpsuit
@@ -104,3 +111,4 @@ loadout-group-plushies = Plushies
 loadout-group-survival-brigmedic = Combat Medic Survival Box
 loadout-group-accessibility = Accessibility
 loadout-group-cosmetics = Cosmetics
+loadout-group-neck-fashionable = Neck

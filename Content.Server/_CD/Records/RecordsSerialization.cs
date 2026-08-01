@@ -69,9 +69,11 @@ public static class RecordsSerialization
             emergencyContactName: DeserializeString(e, nameof(def.EmergencyContactName), def.EmergencyContactName),
             hasWorkAuthorization: DeserializeBool(e, nameof(def.HasWorkAuthorization), def.HasWorkAuthorization),
             identifyingFeatures: DeserializeString(e, nameof(def.IdentifyingFeatures), def.IdentifyingFeatures),
+            securityFlags: DeserializeString(e, nameof(def.SecurityFlags), def.SecurityFlags), // starcup
             allergies: DeserializeString(e, nameof(def.Allergies), def.Allergies),
             drugAllergies: DeserializeString(e, nameof(def.DrugAllergies), def.DrugAllergies),
             postmortemInstructions: DeserializeString(e, nameof(def.PostmortemInstructions), def.PostmortemInstructions),
+            medicalNeeds: DeserializeString(e, nameof(def.MedicalNeeds), def.MedicalNeeds), // starcup
             medicalEntries: DeserializeEntries(entries, CDModel.DbRecordEntryType.Medical),
             securityEntries: DeserializeEntries(entries, CDModel.DbRecordEntryType.Security),
             employmentEntries: DeserializeEntries(entries, CDModel.DbRecordEntryType.Employment),

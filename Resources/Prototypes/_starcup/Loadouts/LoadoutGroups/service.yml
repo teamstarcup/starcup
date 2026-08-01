@@ -24,6 +24,8 @@
   - BeerEyePatchHud
   - Sunglasses
   - Mirrorshades
+  - CheapSunglassesBig
+  - HallmasterSurplusBallisticGoggles
 
 - type: loadoutGroup
   id: BartenderID
@@ -46,6 +48,17 @@
   - CombatBoots
   - BotanistWinterBoots
 
+- type: loadoutGroup
+  id: BotanistID
+  name: loadout-group-botanist-id-starcup
+  loadouts:
+  - BotanistPDA
+  - FarmerPDA
+  - FloristPDA
+  - GardenerPDA
+  - HerbalistPDA
+  - MutageneticistPDA
+
 # Boxer
 - type: loadoutGroup
   id: BoxerHead
@@ -64,6 +77,8 @@
   - GladiatorUniform
   - KendoHakama
   - MNKGymBra
+  - SailorSkirt
+  - GymBraPencilSkirt
 
 - type: loadoutGroup
   id: BoxerBelt
@@ -121,7 +136,7 @@
   loadouts:
   - ChaplainPDA
   - AtheistShepherdPDA
-  - DeusDerelictionPDA
+  - DeusDerelictianPDA
   - DruidPDA
   - EpistemicSibylPDA
   - GoshanPreacherPDA
@@ -143,10 +158,10 @@
   - JanitorLantern
   - PumpkinLantern
   - BikeHorn
-  - Wristwatch
   - AnomalyCoreShadowInert
   - AnomalyCoreFleshInert
   - AnomalyCoreTechInert
+  - CrystalCyan
 
 # Chef
 - type: loadoutGroup
@@ -242,6 +257,8 @@
   loadouts:
   - WinterCoatBlack
   - WinterCoatBlue
+  - WinterCoatBlack
+  - CorpoJacketCybersun
 
 - type: loadoutGroup
   id: LawyerShoes
@@ -254,6 +271,14 @@
   - BlueHeels
   - WinterBoots
 
+- type: loadoutGroup
+  id: LawyerID
+  name: loadout-group-lawyer-id-starcup
+  loadouts:
+  - LawyerPDA
+  - AdvocatePDA
+  - CaseworkerPDA
+
 # Librarian
 - type: loadoutGroup
   id: LibrarianOuterClothing
@@ -262,6 +287,8 @@
   loadouts:
   - WinterCoatLightBrown
   - WinterCoatBrown
+  - OldBlackCoat
+  - OldRedCoat
 
 - type: loadoutGroup
   id: LibrarianShoes
@@ -300,6 +327,7 @@
   - BlackHeels
   - HighHeels
   - WinterBoots
+  - PerformerBoots
 
 - type: loadoutGroup
   parent: [ Glasses ]
@@ -309,6 +337,16 @@
   loadouts:
   - Sunglasses
   - Mirrorshades
+  - CheapSunglassesBig
+  - MasqueradeMask # sing once again with me our strange duet
+
+- type: loadoutGroup
+  id: MusicianHead
+  name: loadout-group-musician-head
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - PerformerWig
 
 # Reporter
 - type: loadoutGroup
@@ -332,9 +370,20 @@
   loadouts:
   - Sunglasses
   - Mirrorshades
+  - CheapSunglassesBig
+
+- type: loadoutGroup
+  id: ReporterID
+  name: loadout-group-reporter-id-starcup
+  loadouts:
+  - ReporterPDA
+  - BiographerPDA
+  - DocumentarianPDA
+  - PlaywrightPDA
 
 # Service Worker
 - type: loadoutGroup
+  parent: [ RibbonsHead ]
   id: ServiceWorkerHead
   name: loadout-group-service-worker-head
   minLimit: 0
@@ -400,10 +449,11 @@
   loadouts:
   - Sunglasses
   - Mirrorshades
+  - CheapSunglassesBig
 
 # Passenger
 - type: loadoutGroup
-  parent: PlushiesWorn
+  parent: [ PlushiesWorn, RibbonsHead, HairpinsWorn ]
   id: PassengerHead
   name: loadout-group-assistant-head
   minLimit: 0
@@ -439,6 +489,7 @@
   - WitchHat
   - PirateHat
   - WarningCone
+  - SyndieCap
 
 - type: loadoutGroup
   parent: [ Glasses ]
@@ -447,6 +498,7 @@
   minLimit: 0
   loadouts:
   - CheapSunglasses
+  - CheapSunglassesBig
 
 - type: loadoutGroup
   id: PassengerID
@@ -458,3 +510,9 @@
   - OffDutyCrewPDA
   - StudentPDA
   - VolunteerPDA
+
+# Misc
+- type: loadoutGroup
+  parent: [ Scarfs, RibbonsNeck ] # starcup
+  id: NeckFashionable
+  name: loadout-group-neck-fashionable

@@ -29,3 +29,14 @@
     sprite: _starcup/Clothing/Shoes/Boots/winterbootssyndcomm.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Shoes/Boots/winterbootssyndcomm.rsi
+
+- type: entity
+  parent:
+  - ClothingShoesBootsWinterWarden
+  id: ClothingShoesBootsWinterWardenFilled
+  suffix: Filled
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - CombatKnife

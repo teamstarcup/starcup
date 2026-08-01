@@ -41,7 +41,7 @@
   container:
     entity: WrappedParcel
     containerId: contents
-  cost: 3740 # starcup: this changes almost every time more clothes are added; it should generally only increase
+  cost: 3800 # starcup: this changes almost every time more clothes are added; it should generally only increase
   category: cargoproduct-category-name-service
   group: market
 
@@ -54,7 +54,7 @@
   container:
     entity: WrappedParcel
     containerId: contents
-  cost: 2500
+  cost: 2650 # starcup - +120 for various additions
   category: cargoproduct-category-name-service
   group: market
 
@@ -323,3 +323,17 @@
   cost: 600
   category: cargoproduct-category-name-service
   group: market
+
+- type: cargoProduct
+  id: CrateVendingMachineRestockSustenance
+  icon:
+    sprite: Objects/Specific/Service/vending_machine_restock.rsi
+    state: base
+  product: VendingMachineRestockSustenanceVendor
+  container:
+    entity: WrappedParcel
+    containerId: contents
+  cost: 800
+  category: cargoproduct-category-name-service
+  group: market
+

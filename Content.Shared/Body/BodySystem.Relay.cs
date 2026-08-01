@@ -24,6 +24,7 @@ public sealed partial class BodySystem
 
         // begin starcup
         SubscribeLocalEvent<BodyComponent, GetVerbsEvent<InnateVerb>>(RelayBodyEvent);
+        SubscribeLocalEvent<BodyComponent, GetVerbsEvent<AlternativeVerb>>(RelayBodyEvent);
         SubscribeLocalEvent<BodyComponent, LocalPlayerAttachedEvent>(RelayBodyEvent);
         SubscribeLocalEvent<BodyComponent, LocalPlayerDetachedEvent>(RelayBodyEvent);
         SubscribeLocalEvent<BodyComponent, RefreshMovementSpeedModifiersEvent>(RelayBodyEvent);

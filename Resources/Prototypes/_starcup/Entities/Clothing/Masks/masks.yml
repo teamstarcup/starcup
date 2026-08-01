@@ -33,3 +33,66 @@
     sprite: _starcup/Clothing/Mask/gassyndcomm.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Mask/gassyndcomm.rsi
+
+- type: entity
+  parent: ClothingMaskPullableBase
+  id: ClothingMaskBlackFelt
+  name: black facemask
+  description: A black felt mask. It's good for stopping disease, but can also be worn as a fashion piece. The bands wrap around the head to avoid hurting the wearer's ears from prolonged use.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Mask/blackfacemask.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Mask/blackfacemask.rsi
+  - type: IngestionBlocker
+  - type: Item
+    size: Tiny
+  - type: IdentityBlocker
+    coverage: MOUTH
+  - type: PhysicalComposition
+    materialComposition:
+      Cloth: 1
+  - type: StaticPrice
+    price: 5
+
+- type: entity
+  parent: ClothingMaskPullableBase
+  id: ClothingMaskRedFelt
+  name: red facemask
+  description: A red felt mask. It's good for stopping disease, but can also be worn as a fashion piece. The bands wrap around the head to avoid hurting the wearer's ears from prolonged use.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Mask/redfacemask.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Mask/redfacemask.rsi
+  - type: IngestionBlocker
+  - type: Item
+    size: Tiny
+  - type: IdentityBlocker
+    coverage: MOUTH
+  - type: PhysicalComposition
+    materialComposition:
+      Cloth: 1
+  - type: StaticPrice
+    price: 5
+
+- type: entity
+  parent: ClothingMaskPullableBase
+  id: ClothingMaskWhiteFelt
+  name: white facemask
+  description: A white felt mask. It's good for stopping disease, but can also be worn as a fashion piece. The bands wrap around the head to avoid hurting the wearer's ears from prolonged use.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Mask/whitefacemask.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Mask/whitefacemask.rsi
+  - type: IngestionBlocker
+  - type: Item
+    size: Tiny
+  - type: IdentityBlocker
+    coverage: MOUTH
+  - type: PhysicalComposition
+    materialComposition:
+      Cloth: 1
+  - type: StaticPrice
+    price: 5

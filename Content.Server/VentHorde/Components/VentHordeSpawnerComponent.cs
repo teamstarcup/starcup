@@ -54,7 +54,7 @@ public sealed partial class VentHordeSpawnerComponent : Component
     /// Plays on loop when a vent is selected as a spawner.
     /// </summary>
     [DataField]
-    public SoundSpecifier PassiveSound = new SoundPathSpecifier("/Audio/Machines/airlock_creaking.ogg")
+    public SoundSpecifier PassiveSound = new SoundCollectionSpecifier("VentCrawlGeneric") // starcup: new sound collection
     {
         Params = AudioParams.Default.WithVolume(-3f),
     };
@@ -74,4 +74,16 @@ public sealed partial class VentHordeSpawnerComponent : Component
     [DataField]
     [ViewVariables(VVAccess.ReadOnly)]
     public EntityUid? AudioStream;
+
+    /// <summary>
+    /// starcup: The chance that a vent will break when entities are spawned.
+    /// </summary>
+    [DataField]
+    public bool ShouldBreakVent;
+
+    /// <summary>
+    /// starcup: The entity that will replace the vent when it breaks.
+    /// </summary>
+    [DataField]
+    public string? Replacement;
 }

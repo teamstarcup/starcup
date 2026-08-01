@@ -73,7 +73,7 @@
     containers:
       board: [ DoorElectronicsParamedic ]
   - type: Sprite
-    sprite: _starcup/Structures/Doors/Airlocks/Glass/paramedic.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Standard/paramedic.rsi
 
 - type: entity
   parent: AirlockMedicalLocked
@@ -251,7 +251,7 @@
     containers:
       board: [ DoorElectronicsParamedic ]
   - type: Sprite
-    sprite: _starcup/Structures/Doors/Airlocks/Standard/paramedic.rsi
+    sprite: _starcup/Structures/Doors/Airlocks/Glass/paramedic.rsi
 
 - type: entity
   parent: AirlockMedicalGlassLocked
@@ -429,6 +429,15 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsSyndicateCommunications ]
+
+- type: entity
+  parent: HighSecCommandLocked
+  id: HighSecArmoryVault # for small stations where the Armory and Vault are combined.
+  suffix: Command, Armory
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsArmoryVault ]
 
 # Charon-epsilon only (spawns the C-E surface shuttle)
 - type: entity

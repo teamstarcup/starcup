@@ -1,0 +1,28 @@
+# Regal rats
+- type: entity
+  id: SpawnPointGhostRatKingGray
+  suffix: rat king, gray
+  parent: SpawnPointGhostRatKing
+  components:
+  - type: GhostRoleMobSpawner
+    prototype: MobRatKingGray
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - sprite: _starcup/Mobs/Animals/Rodents/regalrat_gray.rsi
+      state: icon
+
+- type: entity
+  id: SpawnPointGhostRatKingWhite
+  suffix: rat king, white
+  parent: SpawnPointGhostRatKing
+  components:
+  - type: GhostRoleMobSpawner
+    prototype: MobRatKingGray
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - sprite: _starcup/Mobs/Animals/Rodents/regalrat_white.rsi
+      state: icon
