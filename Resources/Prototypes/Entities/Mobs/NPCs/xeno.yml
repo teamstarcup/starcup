@@ -69,16 +69,16 @@
       - ActionCritSuccumb
       - ActionCritFakeDeath
       - ActionCritLastWords
-  # starcup - exomorph buff
+  # starcup - exomorph buffs
   - type: MobThresholds
     thresholds:
       0: Alive
-      75: Dead
+      100: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
       #25: 0.5
-      35: 0.8
-      60: 0.5
+      60: 0.8
+      80: 0.5
   # end starcup
   - type: Stamina
     baseCritThreshold: 200
@@ -236,7 +236,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      100: Dead # starcup
+      160: Dead # starcup
   - type: SlowOnDamage
     speedModifierThresholds:
 # begin starcup
@@ -387,12 +387,10 @@
     #offset: 0,0.6 # starcup
   - type: MovementSpeedModifier
     baseSprintSpeed: 6.0
-  # begin starcup: use default MobXeno attack
-  #- type: MeleeWeapon
-    #damage:
-    #groups:
-       #Brute: 5
-  # end starcup
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 5
   - type: Fixtures
     fixtures:
       fix1:
@@ -485,7 +483,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      120: Dead # starcup: exomorph reworks
+      160: Dead # starcup: exomorph reworks
   - type: MovementSpeedModifier
     baseSprintSpeed: 3 # starcup: making them slower to offset ranged attack
   - type: SlowOnDamage

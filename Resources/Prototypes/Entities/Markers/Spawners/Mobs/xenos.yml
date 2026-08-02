@@ -1,11 +1,12 @@
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SpawnMobXenoBurrower
   name: Xeno Spawner
   suffix: Burrower
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
     - sprite: Mobs/Aliens/Xenos/burrower.rsi
       state: running
@@ -15,13 +16,14 @@
     - MobXenoBurrower # starcup
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SpawnMobXenoDrone
   name: Xeno Spawner
   suffix: Drone
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
     - sprite: Mobs/Aliens/Xenos/drone.rsi
       state: running
@@ -31,13 +33,14 @@
     - MobXenoDrone
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SpawnMobXenoPraetorian
   name: Xeno Spawner
   suffix: Praetorian
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
     - sprite: Mobs/Aliens/Xenos/praetorian.rsi
       state: running
@@ -47,13 +50,14 @@
     - MobXenoPraetorian
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SpawnMobXenoQueen
   name: Xeno Spawner
   suffix: Queen
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
     - sprite: Mobs/Aliens/Xenos/queen.rsi
       state: running
@@ -63,13 +67,14 @@
     - MobXenoQueen
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SpawnMobXenoRavager
   name: Xeno Spawner
   suffix: Ravager
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
     - sprite: Mobs/Aliens/Xenos/ravager.rsi
       state: running
@@ -79,13 +84,14 @@
     - MobXenoRavager
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SpawnMobXenoRunner
   name: Xeno Spawner
   suffix: Runner
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
     - sprite: Mobs/Aliens/Xenos/runner.rsi
       state: running
@@ -95,13 +101,14 @@
     - MobXenoRunner
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SpawnMobXenoSpitter
   name: Xeno Spawner
   suffix: Spitter
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
     - sprite: Mobs/Aliens/Xenos/spitter.rsi
       state: running
@@ -111,13 +118,14 @@
     - MobXenoSpitter
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SpawnMobXenoLonePraetorian
   name: Xeno Spawner
   suffix: Lone Praetorian, Exo Station
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
     - sprite: Mobs/Aliens/Xenos/praetorian.rsi
       state: running
