@@ -62,14 +62,7 @@
     allowedStates:
     - Alive
     - Dead
-  # begin starcup
-  - type: MobStateActions
-    actions:
-      Critical:
-      - ActionCritSuccumb
-      - ActionCritFakeDeath
-      - ActionCritLastWords
-  # starcup - exomorph buffs
+  # begin starcup exomorph buffs
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -402,11 +395,19 @@
         - MobMask
         layer:
         - MobLayer
-  # begin starcup: exomorph reworks
+  # begin starcup exomorph buffs
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      80: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.8
+      70: 0.5
   - type: JumpAbility
     action: ActionXenoPounce
     canCollide: true
-    jumpDistance: 3
+    jumpDistance: 5
     jumpSound:
       collection: AlienPounce
   # end starcup
