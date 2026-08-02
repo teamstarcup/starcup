@@ -19,9 +19,15 @@
     Shock: 1.3
 
 - type: damageModifierSet
-  id: XenoCrest
+  id: Exomorph
+  coefficients:
+    Airloss: 0
+    Heat: 0.7 # Resistant to
+
+- type: damageModifierSet
+  id: ExomorphDefense # used for structures as well as future defensive abilities
   coefficients:
     Blunt: 0.5
     Slash: 0.5
     Piercing: 0.7
-    Heat: 0.6
+    Heat: 0.5

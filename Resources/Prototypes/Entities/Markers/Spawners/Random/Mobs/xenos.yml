@@ -1,11 +1,12 @@
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobXenoEasy
   name: Xeno Spawner
   suffix: Easy, Random
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
     - sprite: Mobs/Aliens/Xenos/drone.rsi
       state: running
@@ -15,10 +16,9 @@
     - MobXenoBurrower # starcup
     - MobXenoDrone
     - MobXenoRunner
-    - MobXenoSkulker # starcup
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobXenoHard
   name: Xeno Spawner
   suffix: Hard, Random

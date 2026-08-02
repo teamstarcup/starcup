@@ -111,3 +111,10 @@ accent-words-raptor-4 = Grraawhrkh.
 accent-words-buzz-1 = Bzzz!
 accent-words-buzz-2 = Bzzz?
 accent-words-buzz-3 = Bzzz bzzz.
+
+# Rouny
+accent-words-rouny-1 = Reeow!
+accent-words-rouny-2 = Rrow... ?
+accent-words-rouny-3 = Awrf!
+accent-words-rouny-4 = Rawr!
+accent-words-rouny-5 = Rawrf...

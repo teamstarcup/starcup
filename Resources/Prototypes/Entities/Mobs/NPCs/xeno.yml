@@ -69,14 +69,17 @@
       - ActionCritSuccumb
       - ActionCritFakeDeath
       - ActionCritLastWords
-  # end starcup
+  # starcup - exomorph buff
   - type: MobThresholds
     thresholds:
       0: Alive
-      70: Dead # starcup - exomorph buff
+      75: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
-      25: 0.5
+      #25: 0.5
+      35: 0.8
+      60: 0.5
+  # end starcup
   - type: Stamina
     baseCritThreshold: 200
   - type: Bloodstream
@@ -91,8 +94,8 @@
       collection: AlienClaw
     animation: WeaponArcBite
     damage:
-      groups:
-        Brute: 6
+      types:
+        Piercing: 8 # starcup: was 6
   - type: DamageStateVisuals
     states:
       Alive:
@@ -144,15 +147,14 @@
       Male: Xeno
       Female: Xeno
       Unsexed: Xeno
+    screamId: CreatureScream
+    screamAction: ActionEmitSound
+  - type: ReplacementAccent
+    accent: xeno
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBird # look, it's a clawed foot. it works.
   - type: IgnoreSpiderWeb
-  # end starcup
-
-  # begin starcup: exomorph reworks
-- type: entity
-  id: MobXenoRest
-  abstract: true
-  description: They mostly come at night. Mostly.
-  components:
   - type: Rest
     restAction: RestActionXeno
     sleepingLayers:
@@ -163,18 +165,20 @@
         state: alive
   - type: HealOnSleep
     damage:
-      groups:
-        Brute: -0.3
-        Burn: -0.1
+      types:
+        Poison: -0.2
+        Heat: -0.3
+        Cold: -0.3
+        Blunt: -0.35
+        Piercing: -0.35
+        Slash: -0.35
+  - type: Damageable
+    damageModifierSet: XenoBody
   # end starcup
 
 - type: entity
   name: praetorian
-  parent:
-  # begin starcup
-  - MobXeno
-  - MobXenoRest
-  # end starcup
+  parent: MobXeno
   id: MobXenoPraetorian
   description: Exomorph brute. Swift and powerful guardian of the lair. # starcup
   components:
@@ -185,14 +189,18 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      200: Dead # starcup
+      250: Dead # starcup
   - type: Stamina
     critThreshold: 300
   - type: MovementSpeedModifier # starcup
     baseSprintSpeed: 5 # starcup - big fast scary dude
+  # begin starcup: praetorians are tanks, not easily slowed down
   - type: SlowOnDamage
     speedModifierThresholds:
-      50: 0.7
+      #50: 0.7
+      200: 0.8
+      240: 0.5
+  # end starcup
   - type: Fixtures
     fixtures:
       fix1:
@@ -217,11 +225,7 @@
 
 - type: entity
   name: drone
-  parent:
-  # begin starcup
-  - MobXeno
-  - MobXenoRest
-  # end starcup
+  parent: MobXeno
   id: MobXenoDrone
   description: Exomorph laborer. Stocky and resistant. # starcup: exomorph reworks
   components:
@@ -236,11 +240,13 @@
   - type: SlowOnDamage
     speedModifierThresholds:
 # begin starcup
-      40: 0.7
+      #40: 0.7
+      90: 0.8
   - type: MeleeWeapon
+    attackRate: 0.75
     soundHit:
-      collection: AlienClaw
-    animation: WeaponArcPunch # headbutter
+      collection: MetalThud
+    animation: WeaponArcPunch
     damage:
       types:
         Blunt: 6
@@ -258,7 +264,7 @@
   - type: BuildXenoWall
   # end starcup
   - type: MovementSpeedModifier
-    baseSprintSpeed: 4
+    baseSprintSpeed: 3 # starcup: drones are tough but lumbering
   - type: Fixtures
     fixtures:
       fix1:
@@ -273,11 +279,7 @@
 
 - type: entity
   name: queen
-  parent:
-  # begin starcup
-  - MobXeno
-  - MobXenoRest
-  # end starcup
+  parent: MobXeno
   id: MobXenoQueen
   description: The deadly ruler of the exomorph colony. Long may she reign. # starcup
   components:
@@ -289,13 +291,17 @@
     thresholds:
       0: Alive
       450: Dead # starcup: the queen is a boss monster
+  # begin starcup: exomorph buffs
   - type: SlowOnDamage
     speedModifierThresholds:
-      150: 0.7
+      #150: 0.7
+      300: 0.7
+      400: 0.5
   - type: MeleeWeapon
     damage:
-     groups:
-       Brute: 12
+      types:
+        Slash: 12
+  # end starcup
   - type: MovementSpeedModifier
     baseSprintSpeed: 5 # starcup: Queen should be hard to outrun
   - type: Fixtures
@@ -324,11 +330,7 @@
 
 - type: entity
   name: ravager
-  parent:
-  # begin starcup
-  - MobXeno
-  - MobXenoRest
-  # end starcup
+  parent: MobXeno
   id: MobXenoRavager
   description: Ferocious exomorph striker. Hacks their enemies apart. # starcup
   components:
@@ -339,7 +341,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      130: Dead # starcup
+      200: Dead # starcup
   - type: MovementSpeedModifier
     baseSprintSpeed: 4
   - type: MeleeWeapon
@@ -347,10 +349,14 @@
     attackRate: 1.5 # starcup: they are remarkably ferocious
     damage:
      types:
-       Slash: 6 # starcup: small damage nerf to offset the faster attack rate
+       Slash: 8 # starcup: small damage nerf to offset the faster attack rate just a little
+  # begin starcup: praetorians are tanks, not easily slowed down
   - type: SlowOnDamage
     speedModifierThresholds:
-      50: 0.7
+      #50: 0.7
+      150: 0.8
+      175: 0.5
+  # end starcup
   - type: Fixtures
     fixtures:
       fix1:
@@ -371,24 +377,22 @@
 
 - type: entity
   name: runner
-  parent:
-  # begin starcup
-  - MobXeno
-  - MobXenoRest
-  # end starcup
+  parent: MobXeno
   id: MobXenoRunner
   description: Fast exomorph skirmisher. Can quickly catch up to and pounce prey. # starcup
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: _RMC14/Mobs/OldXenonids/Runner/runner.rsi # starcup
-    offset: 0,0.6
+    sprite: _starcup/Mobs/Aliens/Xenos/runner.rsi # starcup
+    #offset: 0,0.6 # starcup
   - type: MovementSpeedModifier
     baseSprintSpeed: 6.0
-  - type: MeleeWeapon
-    damage:
-     groups:
-       Brute: 5
+  # begin starcup: use default MobXeno attack
+  #- type: MeleeWeapon
+    #damage:
+    #groups:
+       #Brute: 5
+  # end starcup
   - type: Fixtures
     fixtures:
       fix1:
@@ -400,14 +404,18 @@
         - MobMask
         layer:
         - MobLayer
+  # begin starcup: exomorph reworks
+  - type: JumpAbility
+    action: ActionXenoPounce
+    canCollide: true
+    jumpDistance: 3
+    jumpSound:
+      collection: AlienPounce
+  # end starcup
 
 - type: entity
   name: rouny
-  parent:
-  # begin starcup
-  - MobXeno
-  - MobXenoRest
-  # end starcup
+  parent: MobXeno
   id: MobXenoRouny
   description: Curious exomorph strain. Not very imposing. # starcup
   components:
@@ -438,7 +446,9 @@
     canCollide: true
     jumpDistance: 3
     jumpSound:
-      collection: AlienPounce
+      path: /Audio/_starcup/Weapons/Xeno/rounypounce.ogg
+  - type: ReplacementAccent
+    accent: RounyAccent
   # begin starcup: rouny's still using the upstream rsi, so state is "running" rather than "alive"
   - type: DamageStateVisuals
     states:
@@ -456,15 +466,15 @@
     awakeLayers:
       sleeping:
         state: running
+  - type: MeleeWeapon # weaker strain
+    damage:
+      types:
+        Piercing: 5
   # end starcup
 
 - type: entity
   name: spitter
-  parent:
-  # begin starcup
-  - MobXeno
-  - MobXenoRest
-  # end starcup
+  parent: MobXeno
   id: MobXenoSpitter
   description: Ranged exomorph soldier. Spits acid from a distance. # starcup
   components:
@@ -475,12 +485,12 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      100: Dead # starcup: exomorph reworks
+      120: Dead # starcup: exomorph reworks
   - type: MovementSpeedModifier
     baseSprintSpeed: 3 # starcup: making them slower to offset ranged attack
   - type: SlowOnDamage
     speedModifierThresholds:
-      25: 0.7
+      85: 0.7
   - type: HTN
     rootTask:
       task: SimpleRangedHostileCompound

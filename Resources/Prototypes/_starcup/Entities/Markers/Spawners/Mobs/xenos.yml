@@ -1,15 +1,16 @@
 - type: entity
-  parent: MarkerBase
-  id: SpawnMobXenoSkulker
+  parent: MarkerBaseStarcup
+  id: SpawnMobXenoBurrower
   name: Xeno Spawner
-  suffix: Skulker
+  suffix: Burrower
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
-    - sprite: _starcup/Mobs/Aliens/Xenos/skulker.rsi
-      state: alive
+    - sprite: Mobs/Aliens/Xenos/burrower.rsi
+      state: running
     - state: ai
   - type: ConditionalSpawner
     prototypes:
-    - MobXenoSkulker
+    - MobXenoBurrower
