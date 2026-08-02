@@ -22,7 +22,7 @@
     anchored: true
   - type: Physics
   - type: Damageable
-    damageModifierSet: XenoCrest
+    damageModifierSet: ExomorphDefense
   - type: Temperature
     heatDamage:
       types:
@@ -99,10 +99,10 @@
     - Structure
   - type: Sprite
     sprite: _RMC14/Structures/Xenos/xeno_resin_wall.rsi
-  - type: Icon
-    sprite: _RMC14/Structures/Xenos/xeno_resin_wall.rsi
+  #- type: Icon
+    #sprite: _RMC14/Structures/Xenos/xeno_resin_wall.rsi
   - type: Damageable
-    damageModifierSet: XenoCrest
+    damageModifierSet: ExomorphDefense
   - type: Destructible
     thresholds:
     - trigger:
@@ -148,7 +148,7 @@
     - state: wardingtower-unshaded
       shader: unshaded
   - type: Damageable
-    damageModifierSet: XenoCrest
+    damageModifierSet: ExomorphDefense
   - type: Destructible
     thresholds:
     - trigger:

@@ -166,7 +166,7 @@
         Piercing: -0.35
         Slash: -0.35
   - type: Damageable
-    damageModifierSet: XenoBody
+    damageModifierSet: Exomorph
   # end starcup
 
 - type: entity
@@ -184,7 +184,7 @@
       0: Alive
       250: Dead # starcup
   - type: Stamina
-    critThreshold: 300
+    basecritThreshold: 300
   - type: MovementSpeedModifier # starcup
     baseSprintSpeed: 5 # starcup - big fast scary dude
   # begin starcup: praetorians are tanks, not easily slowed down
@@ -680,8 +680,8 @@
      collection: AlienClaw
     animation: WeaponArcBite
     damage:
-     groups:
-       Brute: 5
+      types:
+        Piercing: 6
   - type: DamageStateVisuals
     states:
       Alive:

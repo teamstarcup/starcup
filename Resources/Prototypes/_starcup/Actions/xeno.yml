@@ -5,7 +5,7 @@
   description: Expand the hive, and slow assailants down.
   components:
   - type: Action
-    icon: _RMC14/Actions/xeno_actions.rsi/plant_weeds.png
+    icon: { sprite: _RMC14/Actions/xeno_actions.rsi, state: plant_weeds }
     useDelay: 30
     sound: !type:SoundCollectionSpecifier
       collection: AlienDrool
@@ -19,7 +19,7 @@
   description: Expand the hive and slow assailants down.
   components:
   - type: Action
-    icon: _RMC14/Actions/xeno_actions.rsi/plant_weeds.png
+    icon: { sprite: _RMC14/Actions/xeno_actions.rsi, state: plant_weeds }
     useDelay: 20
   - type: InstantAction
     event: !type:SpiderWebActionEvent
