@@ -1,5 +1,5 @@
 - type: speechSounds
-  id: Xeno
+  id: XenoSpeechSounds
   saySound:
     collection: AlienTalk
   askSound:
@@ -8,7 +8,7 @@
     collection: AlienTalk
 
 - type: emoteSounds
-  id: Xeno
+  id: XenoEmotes
   params:
     variation: 0.125
   sounds:
@@ -27,17 +27,8 @@
     DefaultDeathgasp:
       path: /Audio/_RMC14/Xeno/alien_death2.ogg
 
-- type: speechSounds
-  id: XenoLarge
-  saySound:
-    collection: AlienTalk
-  askSound:
-    collection: AlienTalk
-  exclaimSound:
-    collection: AlienTalk
-
 - type: emoteSounds
-  id: XenoLarge
+  id: XenoLargeEmotes
   params:
     variation: 0.125
   sounds:
@@ -57,7 +48,7 @@
       path: /Audio/_RMC14/Xeno/alien_death.ogg
 
 - type: speechSounds
-  id: XenoParasite
+  id: XenoParasiteSpeechSounds
   saySound:
     collection: AlienParasite
   askSound:
@@ -66,7 +57,7 @@
     collection: AlienParasite
 
 - type: emoteSounds
-  id: XenoParasite
+  id: XenoParasiteEmotes
   params:
     variation: 0.125
   sounds:
@@ -74,7 +65,7 @@
       collection: AlienLarvaScream
 
 - type: speechSounds
-  id: XenoLarva
+  id: XenoLarvaSpeechSounds
   saySound:
     collection: AlienLarvaTalk
   askSound:
@@ -83,7 +74,7 @@
     collection: AlienLarvaTalk
 
 - type: emoteSounds
-  id: XenoLarva
+  id: XenoLarvaEmotes
   params:
     variation: 0.125
   sounds:
@@ -91,7 +82,7 @@
       collection: AlienLarvaScream
 
 - type: speechSounds
-  id: XenoRouny
+  id: XenoRounySpeechSounds
   saySound:
     collection: RounyTalk
   askSound:
@@ -100,7 +91,7 @@
     collection: RounyTalk
 
 - type: emoteSounds
-  id: XenoRouny
+  id: XenoRounyEmotes
   params:
     variation: 0.125
   sounds:
@@ -117,4 +108,4 @@
     CreatureRoar:
       collection: RounyRoar
     DefaultDeathgasp:
-      collection: RounySnarl
+      path: \Audio\_starcup\Monsters\Xeno\rouny_death.ogg

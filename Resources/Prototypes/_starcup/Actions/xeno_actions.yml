@@ -1,8 +1,9 @@
+# Nest building
 - type: entity
   parent: BaseAction
   id: ActionXenoWeeds
   name: Plant weeds
-  description: Expand the hive, and slow assailants down.
+  description: Expand the hive and slow assailants down.
   components:
   - type: Action
     icon: { sprite: _RMC14/Actions/xeno_actions.rsi, state: plant_weeds }
@@ -26,58 +27,18 @@
 
 - type: entity
   parent: BaseAction
-  id: ActionXenoSnot
-  name: Produce mucuous
-  description: Secrete semi-solid mucuous for construction.
+  id: ActionXenoResinWall
+  name: Resin wall
+  description: Fortify the hive. Spawns a wall where you stand.
   components:
   - type: Action
-    icon: Interface/Actions/web.png
-    useDelay: 20
-  - type: InstantAction
-    event: !type:SericultureActionEvent
-
-- type: entity
-  parent: [BaseAction, BaseDoAfterAction]
-  id: ActionResinWall
-  name: resin wall
-  description: Fortify the hive.
-  components:
-  - type: Action
-    useDelay: 23
-    sound: !type:SoundCollectionSpecifier
-      collection: AlienBuild
     icon:
       sprite: _RMC14/Actions/xeno_actions.rsi
       state: resin_wall
   - type: InstantAction
-    event: !type:InstantSpawnSpellEvent
-      prototype: WallResin
-      preventCollideWithCaster: false
-      posData: !type:TargetInFrontSingle
-  - type: DoAfterArgs
-    delay: 7
+    event: !type:SpawnWallActionEvent
 
-- type: entity
-  parent: [BaseAction, BaseDoAfterAction]
-  id: ActionResinWallRoyal
-  name: resin wall
-  description: Fortify the hive.
-  components:
-  - type: Action
-    useDelay: 35
-    sound: !type:SoundCollectionSpecifier
-      collection: AlienBuild
-    icon:
-      sprite: _RMC14/Actions/xeno_actions.rsi
-      state: resin_wall
-  - type: InstantAction
-    event: !type:InstantSpawnSpellEvent
-      prototype: WallResin
-      preventCollideWithCaster: false
-      posData: !type:TargetInFront
-  - type: DoAfterArgs
-    delay: 10
-
+# Other abilities
 - type: entity
   parent: BaseAction
   id: ActionXenoPounce

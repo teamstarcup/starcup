@@ -126,6 +126,7 @@
       - CannotSuicide
       - DoorBumpOpener
       - FootstepSound
+      - FootstepSound
       - CreatureEmotes # starcup
   - type: NoSlip
   - type: Perishable #Ummmm the acid kills a lot of the bacteria or something
@@ -133,13 +134,11 @@
   # begin starcup: exomorph reworks
   - type: Speech
     speechVerb: Xeno
-    speechSounds: Xeno
+    speechSounds: XenoSpeechSounds
     allowedEmotes: [ "TailWhip", "Drool", "CreatureHiss", "CreatureGrowl", "CreatureRoar", "CreatureScream" ]
   - type: Vocal
     sounds:
-      Male: Xeno
-      Female: Xeno
-      Unsexed: Xeno
+      Unsexed: XenoEmotes
     screamId: CreatureScream
     screamAction: ActionEmitSound
   - type: ReplacementAccent
@@ -167,6 +166,7 @@
         Slash: -0.35
   - type: Damageable
     damageModifierSet: Exomorph
+  - type: Deathgasp
   # end starcup
 
 - type: entity
@@ -178,7 +178,7 @@
   - type: Sprite
     drawdepth: Mobs
     sprite: _RMC14/Mobs/OldXenonids/Praetorian/praetorian.rsi # starcup
-    offset: 0,0.4
+    #offset: 0,0.4
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -206,10 +206,9 @@
         layer:
         - MobLayer
   # begin starcup: exomorph reworks
-  - type: Speech
-    speechVerb: Xeno
-    speechSounds: XenoLarge
-    allowedEmotes: [ "TailWhip", "Drool", "CreatureHiss", "CreatureGrowl", "CreatureRoar", "CreatureScream" ]
+  - type: Vocal
+    sounds:
+      Unsexed: XenoLargeEmotes
   - type: Rest
     awakeLayers:
       sleeping:
@@ -225,7 +224,7 @@
   - type: Sprite
     drawdepth: Mobs
     sprite: _RMC14/Mobs/OldXenonids/Drone/drone.rsi # starcup
-    offset: 0,0.2
+    #offset: 0,0.2
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -254,7 +253,23 @@
   - type: Spider
     webAction: ActionXenoWeeds
     webPrototype: XenoWeeds
-  - type: BuildXenoWall
+  - type: Hunger
+    thresholds:
+      Overfed: 100
+      Okay: 50
+      Peckish: 25
+      Starving: 10
+      Dead: 0
+    baseDecayRate: 0.00925925925926
+  - type: SpawnWall
+    productionLength: 15
+    entityProduced: WallXenoResin
+    hungerCost: 8
+    minHungerThreshold: Starving
+    soundProgress:
+      path: /Audio/_starcup/Effects/resin_secretion.ogg
+    soundFinished:
+      collection: AlienBuild
   # end starcup
   - type: MovementSpeedModifier
     baseSprintSpeed: 3 # starcup: drones are tough but lumbering
@@ -279,7 +294,7 @@
   - type: Sprite
     drawdepth: Mobs
     sprite: _RMC14/Mobs/OldXenonids/Queen/queen.rsi # starcup
-    offset: 0,0.4
+    #offset: 0,0.4
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -308,17 +323,15 @@
         - MobMask
         layer:
         - MobLayer
-  - type: Tag
-    tags:
-    - CannotSuicide
   # begin starcup: exomorph reworks
-  - type: Speech
-    speechVerb: Xeno
-    speechSounds: XenoLarge
-    allowedEmotes: [ "TailWhip", "Drool", "CreatureHiss", "CreatureGrowl", "CreatureRoar", "CreatureScream" ]
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: AlienFootstepLarge
+  #- type: Tag
+    #tags:
+    #- CannotSuicide
+  - type: Vocal
+    sounds:
+      Unsexed: XenoLargeEmotes
+  - type: Spider
+    webAction: ActionXenoWeedsRoyal
   # end starcup
 
 - type: entity
@@ -330,7 +343,7 @@
   - type: Sprite
     drawdepth: Mobs
     sprite: _RMC14/Mobs/OldXenonids/Ravager/ravager.rsi
-    offset: 0,0.5
+    #offset: 0,0.5
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -343,7 +356,7 @@
     damage:
      types:
        Slash: 8 # starcup: small damage nerf to offset the faster attack rate just a little
-  # begin starcup: praetorians are tanks, not easily slowed down
+  # begin starcup
   - type: SlowOnDamage
     speedModifierThresholds:
       #50: 0.7
@@ -361,11 +374,10 @@
         - MobMask
         layer:
         - MobLayer
-  # begin starcup: give exomorphs a voice
-  - type: Speech
-    speechVerb: Xeno
-    speechSounds: XenoLarge
-    allowedEmotes: [ "TailWhip", "Drool", "CreatureHiss", "CreatureGrowl", "CreatureRoar", "CreatureScream" ]
+  # begin starcup
+  - type: Vocal
+    sounds:
+      Unsexed: XenoLargeEmotes
   # end starcup
 
 - type: entity
@@ -406,7 +418,7 @@
       70: 0.5
   - type: JumpAbility
     action: ActionXenoPounce
-    canCollide: true
+    canCollide: false
     jumpDistance: 5
     jumpSound:
       collection: AlienPounce
@@ -433,13 +445,13 @@
       amount: 3
   - type: Speech
     speechVerb: Xeno
-    speechSounds: XenoRouny
+    speechSounds: XenoRounySpeechSounds
     allowedEmotes: [ "TailWhip", "Drool", "CreatureHiss", "CreatureGrowl", "CreatureRoar", "CreatureScream" ]
   - type: Vocal
     sounds:
-      Male: XenoRouny
-      Female: XenoRouny
-      Unsexed: XenoRouny
+      Male: XenoRounyEmotes
+      Female: XenoRounyEmotes
+      Unsexed: XenoRounyEmotes
   - type: JumpAbility
     action: ActionXenoPounce
     canCollide: true
@@ -480,7 +492,7 @@
   - type: Sprite
     drawdepth: Mobs
     sprite: _RMC14/Mobs/OldXenonids/Spitter/spitter.rsi
-    offset: 0,0.3
+    #offset: 0,0.3
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -711,7 +723,7 @@
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Aliens/Xenos/praetorian.rsi
-    offset: 0,0.4
+    #offset: 0,0.4
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: running

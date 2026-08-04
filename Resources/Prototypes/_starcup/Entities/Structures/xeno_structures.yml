@@ -69,11 +69,6 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          MaterialWebSilk:
-            min: 0
-            max: 1
   - type: SpeedModifierContacts
     walkSpeedModifier: 0.5
     sprintSpeedModifier: 0.5
@@ -83,7 +78,7 @@
 
 - type: entity
   parent: BaseWall
-  id: WallResin
+  id: WallXenoResin
   name: resin wall
   description: Shell of the exomorph hive.
   components:
@@ -103,14 +98,95 @@
         !type:DamageTrigger
         damage: 200
       behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
       - !type:PlaySoundBehavior
         sound:
           collection: OrganicDestroy
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          XenoWeeds:
+            min: 1
   - type: IconSmooth
     key: walls
     base: resin
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/_RMC14/Xeno/alien_claw_block.ogg"
+  - type: RangedDamageSound
+    soundGroups:
+      Brute:
+        collection:
+          MeatBulletImpact
+    soundTypes:
+      Heat:
+        collection:
+          MeatLaserImpact
+
+- type: entity
+  id: XenoResinDoor
+  parent: BaseMaterialDoorNavMap
+  name: resin door
+  description: A slick, sealing gateway in and out of the hive.
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/_RMC14/Xeno/alien_claw_block.ogg"
+  - type: RangedDamageSound
+    soundGroups:
+      Brute:
+        collection:
+          MeatBulletImpact
+    soundTypes:
+      Heat:
+        collection:
+          MeatLaserImpact
+  - type: Sprite
+    sprite: _RMC14/Structures/Xenos/xeno_resin_door.rsi
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+  - type: AnimationPlayer
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,0.49" # don't want this colliding with walls or they won't close
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - AirlockLayer
+  - type: Door
+    openSound:
+      path: /Audio/_RMC14/Xeno/alien_resin_move1.ogg
+    closeSound:
+      path: /Audio/_RMC14/Xeno/alien_resin_move2.ogg
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: ExomorphDefense
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: OrganicDestroy
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          XenoWeeds:
+            min: 1
+            max: 1
 
 - type: entity
   id: XenoBioluminiscentGrowth
@@ -149,11 +225,16 @@
         !type:DamageTrigger
         damage: 75
       behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
       - !type:PlaySoundBehavior
         sound:
           collection: OrganicDestroy
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          XenoWeeds:
+            min: 1
+            max: 1
   - type: Physics
     bodyType: Static
   - type: Fixtures
@@ -171,6 +252,11 @@
     radius: 5
     energy: 1
     color: "#f1fa89"
+  - type: SpamEmitSound
+    minInterval: 60
+    maxInterval: 360
+    sound:
+      collection: AlienBuildTwitch
 
 - type: entity
   id: XenoBioluminiscentGrowthBlue
