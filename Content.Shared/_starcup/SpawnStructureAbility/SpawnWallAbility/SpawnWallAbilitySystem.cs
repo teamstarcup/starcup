@@ -13,13 +13,13 @@ using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Timing;
 
-namespace Content.Shared.SpawnWall;
+namespace Content.Shared.SpawnWallAbility;
 
 /// <summary>
 /// This is a modified duplicate of SericultureSystem.
-/// Allows mobs to spawn structures with <see cref="SpawnWallComponent"/>.
+/// Allows mobs to spawn structures with <see cref="SpawnWallAbilityComponent"/>.
 /// </summary>
-public abstract partial class SharedSpawnWallSystem : EntitySystem
+public abstract partial class SharedSpawnWallAbilitySystem : EntitySystem
 {
     // Managers
     [Dependency] private readonly INetManager _netManager = default!;
@@ -39,20 +39,20 @@ public abstract partial class SharedSpawnWallSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<SpawnWallComponent, MapInitEvent>(OnMapInit);
-        SubscribeLocalEvent<SpawnWallComponent, ComponentShutdown>(OnCompRemove);
-        SubscribeLocalEvent<SpawnWallComponent, SpawnWallActionEvent>(OnSpawnWallStart);
-        SubscribeLocalEvent<SpawnWallComponent, SpawnWallDoAfterEvent>(OnSpawnWallDoAfter);
-        SubscribeLocalEvent<SpawnWallComponent, CloningEvent>(OnClone);
+        SubscribeLocalEvent<SpawnWallAbilityComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<SpawnWallAbilityComponent, ComponentShutdown>(OnCompRemove);
+        SubscribeLocalEvent<SpawnWallAbilityComponent, SpawnWallAbilityActionEvent>(OnSpawnWallAbilityStart);
+        SubscribeLocalEvent<SpawnWallAbilityComponent, SpawnWallAbilityDoAfterEvent>(OnSpawnWallAbilityDoAfter);
+        SubscribeLocalEvent<SpawnWallAbilityComponent, CloningEvent>(OnClone);
     }
 
-    private void OnClone(Entity<SpawnWallComponent> ent, ref CloningEvent args)
+    private void OnClone(Entity<SpawnWallAbilityComponent> ent, ref CloningEvent args)
     {
         if (!args.Settings.EventComponents.Contains(Factory.GetRegistration(ent.Comp.GetType()).Name))
             return;
 
         // Make sure to set the datafields before adding the component so that the correct action gets spawned on map init.
-        var cloneComp = Factory.GetComponent<SpawnWallComponent>();
+        var cloneComp = Factory.GetComponent<SpawnWallAbilityComponent>();
         cloneComp.PopupText = ent.Comp.PopupText;
         cloneComp.EntityProduced = ent.Comp.EntityProduced;
         cloneComp.Action = ent.Comp.Action;
@@ -65,7 +65,7 @@ public abstract partial class SharedSpawnWallSystem : EntitySystem
     /// <summary>
     /// Gives the action to preform the spawning on the entity
     /// </summary>
-    private void OnMapInit(EntityUid uid, SpawnWallComponent comp, MapInitEvent args)
+    private void OnMapInit(EntityUid uid, SpawnWallAbilityComponent comp, MapInitEvent args)
     {
         _actionsSystem.AddAction(uid, ref comp.ActionEntity, comp.Action);
     }
@@ -73,12 +73,12 @@ public abstract partial class SharedSpawnWallSystem : EntitySystem
     /// <summary>
     /// Takes away the action to preform the spawning from the entity.
     /// </summary>
-    private void OnCompRemove(EntityUid uid, SpawnWallComponent comp, ComponentShutdown args)
+    private void OnCompRemove(EntityUid uid, SpawnWallAbilityComponent comp, ComponentShutdown args)
     {
         _actionsSystem.RemoveAction(uid, comp.ActionEntity);
     }
 
-    private void OnSpawnWallStart(EntityUid uid, SpawnWallComponent comp, SpawnWallActionEvent args)
+    private void OnSpawnWallAbilityStart(EntityUid uid, SpawnWallAbilityComponent comp, SpawnWallAbilityActionEvent args)
     {
         if (!TryComp<HungerComponent>(uid, out var hungerComp)
             || _hungerSystem.IsHungerBelowState(uid,
@@ -90,7 +90,7 @@ public abstract partial class SharedSpawnWallSystem : EntitySystem
             return;
         }
 
-        var doAfter = new DoAfterArgs(EntityManager, uid, comp.ProductionLength, new SpawnWallDoAfterEvent(), uid)
+        var doAfter = new DoAfterArgs(EntityManager, uid, comp.ProductionLength, new SpawnWallAbilityDoAfterEvent(), uid)
         {
             // I'm not sure if more things should be put here, but imo ideally it should probably be set in the component/YAML. Not sure if this is currently possible.
             BreakOnMove = true,
@@ -121,7 +121,7 @@ public abstract partial class SharedSpawnWallSystem : EntitySystem
         return _mapSystem.GridTileToLocal(transform.GridUid.Value, mapGrid, tileIndex);
     }
 
-    private void OnSpawnWallDoAfter(EntityUid uid, SpawnWallComponent comp, SpawnWallDoAfterEvent args)
+    private void OnSpawnWallAbilityDoAfter(EntityUid uid, SpawnWallAbilityComponent comp, SpawnWallAbilityDoAfterEvent args)
     {
         if (_timing.IsFirstTimePredicted)
             comp.SpawnStream = _audio.Stop(comp.SpawnStream); // starcup audio stuff
@@ -159,11 +159,11 @@ public abstract partial class SharedSpawnWallSystem : EntitySystem
 /// <summary>
 /// Should be relayed upon using the action.
 /// </summary>
-public sealed partial class SpawnWallActionEvent : InstantActionEvent { }
+public sealed partial class SpawnWallAbilityActionEvent : InstantActionEvent { }
 
 /// <summary>
 /// Is relayed at the end of the spawning doafter.
 /// </summary>
 [Serializable, NetSerializable]
-public sealed partial class SpawnWallDoAfterEvent : SimpleDoAfterEvent { }
+public sealed partial class SpawnWallAbilityDoAfterEvent : SimpleDoAfterEvent { }
 

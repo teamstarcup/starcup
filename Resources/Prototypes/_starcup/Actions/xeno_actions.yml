@@ -17,7 +17,7 @@
   parent: BaseAction
   id: ActionXenoWeedsRoyal
   name: Plant weeds
-  description: Expand the hive and slow assailants down.
+  description: Consolidate the hive. Slow assailants down.
   components:
   - type: Action
     icon: { sprite: _RMC14/Actions/xeno_actions.rsi, state: plant_weeds }
@@ -29,14 +29,53 @@
   parent: BaseAction
   id: ActionXenoResinWall
   name: Resin wall
-  description: Fortify the hive. Spawns a wall where you stand.
+  description: Fortify the hive. Build a wall in front of you.
   components:
   - type: Action
     icon:
       sprite: _RMC14/Actions/xeno_actions.rsi
       state: resin_wall
   - type: InstantAction
-    event: !type:SpawnWallActionEvent
+    event: !type:SpawnWallAbilityActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionXenoResinWindow
+  name: Resin window
+  description: Connect the hive. Build a window in front of you.
+  components:
+  - type: Action
+    icon:
+      sprite: Structures/Windows/xeno_resin.rsi
+      state: full
+  - type: InstantAction
+    event: !type:SpawnWindowAbilityActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionXenoResinDoor
+  name: Resin door
+  description: Expand the hive. Build a door in front of you.
+  components:
+  - type: Action
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: resin_door
+  - type: InstantAction
+    event: !type:SpawnDoorAbilityActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionXenoBioGrowth
+  name: Bioluminiscent growth
+  description: Guide the hive. Plant a bioluminiscent organic growth in front of you.
+  components:
+  - type: Action
+    icon:
+      sprite: _starcup/Structures/XenoHive/xeno_tower.rsi
+      state: wardingtower
+  - type: InstantAction
+    event: !type:SpawnBioGrowthAbilityActionEvent
 
 # Other abilities
 - type: entity

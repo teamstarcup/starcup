@@ -261,9 +261,36 @@
       Starving: 10
       Dead: 0
     baseDecayRate: 0.00925925925926
-  - type: SpawnWall
-    productionLength: 15
+  - type: SpawnWallAbility
+    productionLength: 12
     entityProduced: WallXenoResin
+    hungerCost: 12
+    minHungerThreshold: Starving
+    soundProgress:
+      path: /Audio/_starcup/Effects/resin_secretion.ogg
+    soundFinished:
+      collection: AlienBuild
+  - type: SpawnWindowAbility
+    productionLength: 8
+    entityProduced: XenoResinWindow
+    hungerCost: 8
+    minHungerThreshold: Starving
+    soundProgress:
+      path: /Audio/_starcup/Effects/resin_secretion.ogg
+    soundFinished:
+      collection: AlienBuild
+  - type: SpawnDoorAbility
+    productionLength: 8
+    entityProduced: XenoResinDoor
+    hungerCost: 8
+    minHungerThreshold: Starving
+    soundProgress:
+      path: /Audio/_starcup/Effects/resin_secretion.ogg
+    soundFinished:
+      collection: AlienBuild
+  - type: SpawnBioGrowthAbility
+    productionLength: 8
+    entityProduced: XenoBioluminiscentGrowth
     hungerCost: 8
     minHungerThreshold: Starving
     soundProgress:

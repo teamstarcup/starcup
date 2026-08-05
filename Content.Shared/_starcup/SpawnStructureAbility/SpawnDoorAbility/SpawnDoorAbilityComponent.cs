@@ -4,15 +4,15 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 using Robust.Shared.Audio;
 
-namespace Content.Shared.SpawnWall;
+namespace Content.Shared.SpawnDoorAbility;
 
 /// <summary>
 /// This is a modified duplicate of SericultureComponent.
 /// Should be applied to any mob that you want to be able to spawn a structure with an action and the cost of hunger.
 /// TODO: Probably adjust this to utilize organs?
 /// </summary>
-[RegisterComponent, NetworkedComponent, Access(typeof(SharedSpawnWallSystem)), AutoGenerateComponentState]
-public sealed partial class SpawnWallComponent : Component
+[RegisterComponent, NetworkedComponent, Access(typeof(SharedSpawnDoorAbilitySystem)), AutoGenerateComponentState]
+public sealed partial class SpawnDoorAbilityComponent : Component
 {
     /// <summary>
     /// The text that pops up whenever the spawning fails for not having enough hunger.
@@ -20,7 +20,7 @@ public sealed partial class SpawnWallComponent : Component
     [DataField("popupText")]
     [ViewVariables(VVAccess.ReadWrite)]
     [AutoNetworkedField]
-    public string PopupText = "sericulture-failure-hunger";
+    public string PopupText = "building-failure-hunger";
 
     /// <summary>
     /// What will be spawned at the end of the action.
@@ -36,7 +36,7 @@ public sealed partial class SpawnWallComponent : Component
     [DataField]
     [ViewVariables(VVAccess.ReadWrite)]
     [AutoNetworkedField]
-    public EntProtoId Action = "ActionXenoResinWall";
+    public EntProtoId Action = "ActionXenoResinDoor";
 
     [AutoNetworkedField]
     [DataField("actionEntity")]
