@@ -166,4 +166,3 @@ public sealed partial class SpawnWindowAbilityActionEvent : InstantActionEvent {
 /// </summary>
 [Serializable, NetSerializable]
 public sealed partial class SpawnWindowAbilityDoAfterEvent : SimpleDoAfterEvent { }
-

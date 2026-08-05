@@ -166,4 +166,3 @@ public sealed partial class SpawnBioGrowthAbilityActionEvent : InstantActionEven
 /// </summary>
 [Serializable, NetSerializable]
 public sealed partial class SpawnBioGrowthAbilityDoAfterEvent : SimpleDoAfterEvent { }
-
