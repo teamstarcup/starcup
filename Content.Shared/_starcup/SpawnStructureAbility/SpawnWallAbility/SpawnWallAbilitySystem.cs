@@ -196,4 +196,3 @@ public sealed partial class SpawnWallAbilityActionEvent : InstantActionEvent { }
 /// </summary>
 [Serializable, NetSerializable]
 public sealed partial class SpawnWallAbilityDoAfterEvent : SimpleDoAfterEvent { }
-
