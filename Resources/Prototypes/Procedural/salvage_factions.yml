@@ -6,13 +6,13 @@
     - proto: MobXenoDrone
       cost: 2
     - proto: MobXenoPraetorian
-      cost: 5
+      cost: 8 # starcup: exomorph buffs
       prob: 0.1
     - proto: MobXenoQueen
-      cost: 10
+      cost: 12 # starcup: exomorph buffs
       prob: 0.02
     - proto: MobXenoRavager
-      cost: 5
+      cost: 8 # starcup: exomorph buffs
     - proto: MobXenoRouny
       cost: 3
       prob: 0.02
@@ -20,7 +20,7 @@
     - proto: WeaponTurretXeno
       prob: 0.1
   configs:
-    DefenseStructure: XenoWardingTower
+    DefenseStructure: ActionXenoBioGrowth # starcup
     Megafauna: MobXenoQueen
 
 - type: salvageFaction

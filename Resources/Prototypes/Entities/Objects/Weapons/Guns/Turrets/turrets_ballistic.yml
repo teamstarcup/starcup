@@ -84,11 +84,15 @@
     - AllHostile
 
 - type: entity
-  parent: BaseWeaponBallisticTurret
+  parent:
+  - BaseWeaponBallisticTurret
+  - XenoStructureBase
   id: WeaponTurretXeno
-  name: xeno turret
-  suffix: Xeno
-  description: Shoots 9mm acid projectiles.
+  # begin starcup
+  name: spore launcher
+  suffix: Xeno turret
+  description: Stationary defender of the exomorph hive. Spits globs of corrosive acid at interlopers. # Used to be 'Shoots 9mm acid projectiles.' which is genuinely a good joke, but not consistent with our other descriptions.
+  # end starcup
   components:
   - type: NpcFactionMember
     factions:
@@ -99,12 +103,17 @@
     layers:
     - state: acid_turret
   - type: BallisticAmmoProvider
-    proto: BulletAcid
+    proto: AcidSpittle # starcup
     capacity: 500
   - type: Gun
     fireRate: 1
     selectedMode: FullAuto
-    soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
+    # begin starcup
+    soundGunshot:
+      collection: AlienSpitAttack
+    soundEmpty:
+      path: AlienBuildTwitch
+    # end starcup
   - type: HTN
     rootTask:
       task: TurretCompound
@@ -121,14 +130,19 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+      # begin starcup
       - !type:PlaySoundBehavior
         sound:
-          path: /Audio/Effects/gib1.ogg
+          collection: OrganicDestroy
       - !type:SpawnEntitiesBehavior
         spawn:
           FoodMeatXeno:
-            min: 3
-            max: 5
+            min: 1
+            max: 3
+          XenoWeeds:
+            min: 1
+            max: 1
+      # begin starcup
   - type: InteractionPopup
     interactDelay: 1.0
     successChance: 0.8

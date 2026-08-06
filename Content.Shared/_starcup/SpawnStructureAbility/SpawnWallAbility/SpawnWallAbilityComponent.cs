@@ -17,10 +17,16 @@ public sealed partial class SpawnWallAbilityComponent : Component
     /// <summary>
     /// The text that pops up whenever the spawning fails for not having enough hunger.
     /// </summary>
-    [DataField("popupText")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     [AutoNetworkedField]
-    public string PopupText = "building-failure-hunger";
+    public string PopupTextHunger = "building-failure-hunger";
+
+    /// <summary>
+    /// The text that pops up whenever the spawning fails because the tile is blocked.
+    /// </summary>
+    [DataField]
+    [AutoNetworkedField]
+    public string PopupTextBlocked = "building-failure-blocked";
 
     /// <summary>
     /// What will be spawned at the end of the action.

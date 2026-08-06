@@ -4,3 +4,4 @@ burrowing-revert-popup-generic = {CAPITALIZE(THE($parent))} emerged from the gro
 
 # Structure spawning
 building-failure-hunger = You need to feed before you can build this structure!
+building-failure-blocked = The tile is blocked!

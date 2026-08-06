@@ -7,7 +7,9 @@ using Robust.Shared.Serialization;
 using Content.Shared.Popups;
 using Robust.Shared.Network;
 using Content.Shared.Nutrition.Components;
+using Content.Shared.Physics;
 using Content.Shared.Stacks;
+using Content.Shared.Weapons.Melee.Components;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
@@ -29,11 +31,12 @@ public abstract partial class SharedSpawnWallAbilitySystem : EntitySystem
     [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
     [Dependency] private readonly HungerSystem _hungerSystem = default!;
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
-    [Dependency] private readonly SharedStackSystem _stackSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!; // starcup audio stuff
     [Dependency] private readonly TurfSystem _turf = default!;
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private readonly IMapManager _mapManager = default!;
 
     public override void Initialize()
     {
@@ -53,7 +56,8 @@ public abstract partial class SharedSpawnWallAbilitySystem : EntitySystem
 
         // Make sure to set the datafields before adding the component so that the correct action gets spawned on map init.
         var cloneComp = Factory.GetComponent<SpawnWallAbilityComponent>();
-        cloneComp.PopupText = ent.Comp.PopupText;
+        cloneComp.PopupTextHunger = ent.Comp.PopupTextHunger;
+        cloneComp.PopupTextBlocked = ent.Comp.PopupTextBlocked;
         cloneComp.EntityProduced = ent.Comp.EntityProduced;
         cloneComp.Action = ent.Comp.Action;
         cloneComp.ProductionLength = ent.Comp.ProductionLength;
@@ -80,19 +84,34 @@ public abstract partial class SharedSpawnWallAbilitySystem : EntitySystem
 
     private void OnSpawnWallAbilityStart(EntityUid uid, SpawnWallAbilityComponent comp, SpawnWallAbilityActionEvent args)
     {
+        var coordinates = GetForwardTile(Transform(uid));
+        if (coordinates is null)
+            return;
+
+        var gridUid = _transform.GetGrid(coordinates.Value);
+        if (gridUid is null)
+            return;
+
+        if (_turf.IsTileBlocked(gridUid.Value,
+                coordinates.Value.ToVector2i(EntityManager, _mapManager, _transform),
+                CollisionGroup.MobMask))
+        {
+            _popupSystem.PopupClient(Loc.GetString(comp.PopupTextBlocked), uid, uid);
+            return;
+        }
+
         if (!TryComp<HungerComponent>(uid, out var hungerComp)
             || _hungerSystem.IsHungerBelowState(uid,
                 comp.MinHungerThreshold,
                 _hungerSystem.GetHunger(hungerComp) - comp.HungerCost,
                 hungerComp))
         {
-            _popupSystem.PopupClient(Loc.GetString(comp.PopupText), uid, uid);
+            _popupSystem.PopupClient(Loc.GetString(comp.PopupTextHunger), uid, uid);
             return;
         }
 
         var doAfter = new DoAfterArgs(EntityManager, uid, comp.ProductionLength, new SpawnWallAbilityDoAfterEvent(), uid)
         {
-            // I'm not sure if more things should be put here, but imo ideally it should probably be set in the component/YAML. Not sure if this is currently possible.
             BreakOnMove = true,
             BlockDuplicate = true,
             BreakOnDamage = true,
@@ -129,6 +148,22 @@ public abstract partial class SharedSpawnWallAbilitySystem : EntitySystem
         if (args.Cancelled || args.Handled || comp.Deleted)
             return;
 
+        var coordinates = GetForwardTile(Transform(uid));
+        if (coordinates is null)
+            return;
+
+        var gridUid = _transform.GetGrid(coordinates.Value);
+        if (gridUid is null)
+            return;
+
+        if (_turf.IsTileBlocked(gridUid.Value,
+                coordinates.Value.ToVector2i(EntityManager, _mapManager, _transform),
+                CollisionGroup.MobMask))
+        {
+            _popupSystem.PopupClient(Loc.GetString(comp.PopupTextBlocked), uid, uid);
+            return;
+        }
+
         if (!TryComp<HungerComponent>(uid,
                 out var hungerComp) // A check, just incase the doafter is somehow performed when the entity is not in the right hunger state.
             || _hungerSystem.IsHungerBelowState(uid,
@@ -136,7 +171,7 @@ public abstract partial class SharedSpawnWallAbilitySystem : EntitySystem
                 _hungerSystem.GetHunger(hungerComp) - comp.HungerCost,
                 hungerComp))
         {
-            _popupSystem.PopupClient(Loc.GetString(comp.PopupText), uid, uid);
+            _popupSystem.PopupClient(Loc.GetString(comp.PopupTextHunger), uid, uid);
             return;
         }
 
@@ -144,15 +179,10 @@ public abstract partial class SharedSpawnWallAbilitySystem : EntitySystem
 
         _audio.PlayPredicted(comp.SoundFinished, uid, uid); // starcup audio stuff
 
-        if (!_netManager.IsClient) // Have to do this because spawning stuff in shared is CBT.
-        {
-            var coordinates = GetForwardTile(Transform(uid));
-            if (coordinates is not null)
-            {
-                Spawn(comp.EntityProduced, coordinates.Value);
-            }
-        }
-        args.Repeat = true;
+        if (_netManager.IsClient)
+            return;
+
+        Spawn(comp.EntityProduced, coordinates.Value);
     }
 }
 

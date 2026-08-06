@@ -84,8 +84,8 @@
     altDisarm: false
     angle: 0
     soundHit:
-      collection: AlienClaw
-    animation: WeaponArcBite
+      collection: AlienClawSnarl # starcup
+    animation: WeaponArcClaw
     damage:
       types:
         Piercing: 8 # starcup: was 6
@@ -270,33 +270,6 @@
       path: /Audio/_starcup/Effects/resin_secretion.ogg
     soundFinished:
       collection: AlienBuild
-  - type: SpawnWindowAbility
-    productionLength: 8
-    entityProduced: XenoResinWindow
-    hungerCost: 8
-    minHungerThreshold: Starving
-    soundProgress:
-      path: /Audio/_starcup/Effects/resin_secretion.ogg
-    soundFinished:
-      collection: AlienBuild
-  - type: SpawnDoorAbility
-    productionLength: 8
-    entityProduced: XenoResinDoor
-    hungerCost: 8
-    minHungerThreshold: Starving
-    soundProgress:
-      path: /Audio/_starcup/Effects/resin_secretion.ogg
-    soundFinished:
-      collection: AlienBuild
-  - type: SpawnBioGrowthAbility
-    productionLength: 8
-    entityProduced: XenoBioluminiscentGrowth
-    hungerCost: 8
-    minHungerThreshold: Starving
-    soundProgress:
-      path: /Audio/_starcup/Effects/resin_secretion.ogg
-    soundFinished:
-      collection: AlienBuild
   # end starcup
   - type: MovementSpeedModifier
     baseSprintSpeed: 3 # starcup: drones are tough but lumbering
@@ -336,6 +309,7 @@
     damage:
       types:
         Slash: 12
+    animation: WeaponArcBite
   # end starcup
   - type: MovementSpeedModifier
     baseSprintSpeed: 5 # starcup: Queen should be hard to outrun
@@ -378,7 +352,7 @@
   - type: MovementSpeedModifier
     baseSprintSpeed: 4
   - type: MeleeWeapon
-    animation: WeaponArcSlash
+    animation: WeaponArcSlice
     attackRate: 1.5 # starcup: they are remarkably ferocious
     damage:
      types:
@@ -423,6 +397,7 @@
     damage:
       types:
         Slash: 5
+    animation: WeaponArcBite
   - type: Fixtures
     fixtures:
       fix1:
@@ -508,6 +483,7 @@
     damage:
       types:
         Piercing: 5
+    animation: WeaponArcBite
   # end starcup
 
 - type: entity
@@ -544,7 +520,12 @@
     selectedMode: FullAuto
     availableModes:
       - FullAuto
-    soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
+    # begin starcup
+    soundGunshot:
+      collection: AlienSpitAttack
+    soundEmpty:
+      path: AlienBuildTwitch
+    # end starcup
   - type: Fixtures
     fixtures:
       fix1:

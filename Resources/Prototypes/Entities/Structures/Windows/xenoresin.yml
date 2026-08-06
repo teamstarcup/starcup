@@ -1,5 +1,7 @@
 - type: entity
-  parent: ReinforcedWindow
+  parent:
+  - ReinforcedWindow
+  - XenoStructureBase
   id: XenoResinWindow
   name: resin window
   description: Transparent and hardened, yet slightly sticky to the touch. Slightly stronger than a normal reinforced window.
@@ -30,12 +32,19 @@
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          collection: OrganicDestroy # starcup
+      # begin starcup
+          collection: OrganicDestroy
       #- !type:SpawnEntitiesBehavior # they're not made of glass
         #spawn:
           #ShardGlassReinforced:
             #min: 1
             #max: 2
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          XenoWeeds:
+            min: 1
+            max: 1
+        # end starcup
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: IconSmooth

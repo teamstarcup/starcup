@@ -1093,7 +1093,9 @@
         acts: ["Destruction"]
 
 - type: entity
-  parent: BaseWall
+  parent:
+  - BaseWall
+  - XenoStructureBase # starcup
   id: WallSolidChitin
   name: solid chitin
   components:
@@ -1110,16 +1112,24 @@
         acts: ["Destruction"]
       - !type:PlaySoundBehavior
         sound:
-          collection: MetalSlam
+          collection: OrganicDestroy # starcup
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 300 # starcup: was 200. buffed so it's tougher than our resin walls
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          collection: MetalSlam
-      - !type:ChangeConstructionNodeBehavior
-        node: girder
+      # begin starcup
+          collection: OrganicDestroy
+      #- !type:ChangeConstructionNodeBehavior
+        #node: girder
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          XenoWeeds:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+      # end starcup
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: Sprite
@@ -1129,16 +1139,20 @@
   - type: IconSmooth
     key: chitin
     base: solid
-  - type: Construction
-    graph: Girder
-    node: wallChitin
-  - type: RCDDeconstructable
-    cost: 6
-    delay: 8
-    fx: EffectRCDDeconstruct8
+  # begin starcup: why would the crew build xeno walls?
+  #- type: Construction
+    #graph: Girder
+    #node: wallChitin
+  #- type: RCDDeconstructable
+    #cost: 6
+    #delay: 8
+    #fx: EffectRCDDeconstruct8
+  # end starcup
 
 - type: entity
-  parent: BaseWall
+  parent:
+  - BaseWall
+  - XenoStructureBase # starcup
   id: WallReinforcedChitin
   name: reinforced chitin
   components:
@@ -1160,16 +1174,24 @@
         acts: ["Destruction"]
       - !type:PlaySoundBehavior
         sound:
-          collection: MetalSlam
+          collection: OrganicDestroy # starcup
     - trigger:
         !type:DamageTrigger
         damage: 400
       behaviors:
       - !type:PlaySoundBehavior
         sound:
-          collection: MetalSlam
-      - !type:ChangeConstructionNodeBehavior
-        node: girder
+      # begin starcup
+          collection: OrganicDestroy
+      #- !type:ChangeConstructionNodeBehavior
+        #node: girder
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          XenoWeeds:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+      # end starcup
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: Appearance
@@ -1191,9 +1213,11 @@
   - type: IconSmooth
     key: chitin
     base: reinf_over
-  - type: Construction
-    graph: Girder
-    node: reinforcedWallChitin
+  # begin starcup: why would the crew build xeno walls?
+  #- type: Construction
+    #graph: Girder
+    #node: reinforcedWallChitin
+  # end starcup
 
 - type: entity
   parent: WallPlastitanium
