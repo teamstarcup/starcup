@@ -25,27 +25,33 @@
     CreatureRoar:
       collection: AlienRoar
     DefaultDeathgasp:
-      path: /Audio/_RMC14/Xeno/alien_death2.ogg
+      collection: AlienDeath
 
 - type: emoteSounds
   id: XenoLargeEmotes
+  parent: XenoEmotes
   params:
     variation: 0.125
   sounds:
-    Drool:
-      collection: AlienDrool
     TailWhip:
       collection: AlienTailLarge
-    CreatureScream:
-      collection: AlienScream
     CreatureHiss:
       collection: AlienHissLarge
     CreatureGrowl:
       collection: AlienGrowlLarge
-    CreatureRoar:
-      collection: AlienRoar
     DefaultDeathgasp:
-      path: /Audio/_RMC14/Xeno/alien_death.ogg
+      collection: AlienDeathLarge
+    QueenDeathgasp:
+      collection: AlienDeathQueen
+
+- type: emoteSounds
+  id: XenoQueenEmotes
+  parent: XenoLargeEmotes
+  params:
+    variation: 0.125
+  sounds:
+    DefaultDeathgasp:
+      collection: AlienDeathQueen
 
 - type: speechSounds
   id: XenoParasiteSpeechSounds
@@ -55,14 +61,6 @@
     collection: AlienParasite
   exclaimSound:
     collection: AlienParasite
-
-- type: emoteSounds
-  id: XenoParasiteEmotes
-  params:
-    variation: 0.125
-  sounds:
-    CreatureScream:
-      collection: AlienLarvaScream
 
 - type: speechSounds
   id: XenoLarvaSpeechSounds
@@ -80,6 +78,8 @@
   sounds:
     CreatureScream:
       collection: AlienLarvaScream
+    DefaultDeathgasp:
+      collection: AlienLarvaScream
 
 - type: speechSounds
   id: XenoRounySpeechSounds
@@ -92,17 +92,12 @@
 
 - type: emoteSounds
   id: XenoRounyEmotes
+  parent: XenoEmotes
   params:
     variation: 0.125
   sounds:
-    Drool:
-      collection: AlienDrool
-    TailWhip:
-      collection: AlienTail
     CreatureScream:
       collection: RounyScream
-    CreatureHiss:
-      collection: AlienHiss
     CreatureGrowl:
       collection: RounyGrowl
     CreatureRoar:

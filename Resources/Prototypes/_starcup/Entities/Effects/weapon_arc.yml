@@ -49,3 +49,14 @@
     state: slice
   - type: TimedDespawn
     lifetime: 0.399
+
+- type: entity
+  id: WeaponArcScythe
+  parent: WeaponArcStatic
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: WeaponArcVisuals
+    animation: Slash
+  - type: Sprite
+    sprite: _starcup/Effects/arcs.rsi
+    state: scythe

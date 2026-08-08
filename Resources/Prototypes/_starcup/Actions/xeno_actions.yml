@@ -49,7 +49,7 @@
       sprite: Structures/Windows/xeno_resin.rsi
       state: full
   - type: InstantAction
-    event: !type:SpawnWindowAbilityActionEvent
+    event: !type:SpawnWallAbilityActionEvent
 
 - type: entity
   parent: BaseAction
@@ -62,7 +62,7 @@
       sprite: _RMC14/Actions/xeno_actions.rsi
       state: resin_door
   - type: InstantAction
-    event: !type:SpawnDoorAbilityActionEvent
+    event: !type:SpawnWallAbilityActionEvent
 
 - type: entity
   parent: BaseAction
@@ -75,7 +75,7 @@
       sprite: _starcup/Structures/XenoHive/xeno_tower.rsi
       state: wardingtower
   - type: InstantAction
-    event: !type:SpawnBioGrowthAbilityActionEvent
+    event: !type:SpawnWallAbilityActionEvent
 
 # Other abilities
 - type: entity
@@ -123,3 +123,16 @@
   - type: InstantAction
     event: !type:PolymorphActionEvent
       protoId: BurrowedLarge
+
+- type: entity
+  parent: BaseAction
+  id: ActionXenoCallMinion
+  name: Resin wall
+  description: Call forth your brood's weaker forces.
+  components:
+  - type: Action
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: resin_wall
+  - type: InstantAction
+    event: !type:SpawnWallAbilityActionEvent

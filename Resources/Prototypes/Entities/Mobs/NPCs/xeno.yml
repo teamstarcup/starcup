@@ -66,7 +66,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      100: Dead
+      100: Critical
+      130: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
       #25: 0.5
@@ -167,6 +168,7 @@
   - type: Damageable
     damageModifierSet: Exomorph
   - type: Deathgasp
+    needsCritical: false
   # end starcup
 
 - type: entity
@@ -182,16 +184,17 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      250: Dead # starcup
+  # begin starcup
+      250: Critical
+      280: Dead
   - type: Stamina
     baseCritThreshold: 200
-  - type: MovementSpeedModifier # starcup
-    baseSprintSpeed: 5 # starcup - big fast scary dude
-  # begin starcup: praetorians are tanks, not easily slowed down
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 5 # big fast scary dude
   - type: SlowOnDamage
     speedModifierThresholds:
       #50: 0.7
-      200: 0.8
+      200: 0.8 # praetorians are tanks, not easily slowed down
       240: 0.5
   # end starcup
   - type: Fixtures
@@ -213,6 +216,12 @@
     awakeLayers:
       sleeping:
         state: alive
+  - type: MeleeWeapon
+    angle: 20
+  - type: Prying
+    speedModifier: 2
+    useSound:
+      path: /Audio/Items/crowbar.ogg
   # end starcup
 
 - type: entity
@@ -228,10 +237,11 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      160: Dead # starcup
+  # begin starcup
+      160: Critical
+      190: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
-# begin starcup
       #40: 0.7
       90: 0.8
   - type: MeleeWeapon
@@ -298,7 +308,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      450: Dead # starcup: the queen is a boss monster
+      450: Critical # the queen is a boss monster
+      480: Dead
   # begin starcup: exomorph buffs
   - type: SlowOnDamage
     speedModifierThresholds:
@@ -330,7 +341,7 @@
     #- CannotSuicide
   - type: Vocal
     sounds:
-      Unsexed: XenoLargeEmotes
+      Unsexed: XenoQueenEmotes
   - type: Spider
     webAction: ActionXenoWeedsRoyal
   # end starcup
@@ -348,16 +359,19 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      200: Dead # starcup
+  # begin starcup
+      200: Critical
+      230: Dead
   - type: MovementSpeedModifier
     baseSprintSpeed: 4
   - type: MeleeWeapon
+    angle: 40 # used to be 0 (just delete the datafield)
     animation: WeaponArcSlice
-    attackRate: 1.5 # starcup: they are remarkably ferocious
+    wideAnimation: WeaponArcScythe
+    attackRate: 1.5 # they are remarkably ferocious
     damage:
      types:
-       Slash: 8 # starcup: small damage nerf to offset the faster attack rate just a little
-  # begin starcup
+       Slash: 6 # small damage nerf to offset the faster attack rate just a little
   - type: SlowOnDamage
     speedModifierThresholds:
       #50: 0.7
@@ -413,7 +427,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      80: Dead
+      80: Critical
+      100: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
       60: 0.8
@@ -499,9 +514,12 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      160: Dead # starcup: exomorph reworks
+  # begin starcup
+      160: Critical
+      190: Dead
   - type: MovementSpeedModifier
-    baseSprintSpeed: 3 # starcup: making them slower to offset ranged attack
+    baseSprintSpeed: 3 # making them slower to offset ranged attack
+  # end starcup
   - type: SlowOnDamage
     speedModifierThresholds:
       85: 0.7
