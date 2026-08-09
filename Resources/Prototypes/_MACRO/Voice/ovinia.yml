@@ -48,6 +48,8 @@
       #collection: Hew
     Baa:
       collection: GoatSpeech # starcup
+    Bark:
+      collection: DeerBarks # starcup
     #Moo:
       #collection: CowMoo
     # end starcup
@@ -58,33 +60,18 @@
 
 - type: emoteSounds
   id: FemaleOvinia
+  parent: MaleOvinia
   params:
     variation: 0.125
   sounds:
-    Scream:
-      path: /Audio/_MACRO/Voice/Ovinia/ovinia_scream.ogg
     Laugh:
       collection: FemaleLaugh
-    Sneeze:
-      collection: FemaleSneezes
-    Cough:
-      collection: FemaleCoughs
     Yawn:
       collection: FemaleYawn
-    Snore:
-      collection: Snores
-    Honk:
-      collection: BikeHorn
     Sigh:
       collection: FemaleSigh
     Crying:
       collection: FemaleCry
-    Whistle:
-      collection: Whistles
-    Baa:
-      collection: OviniaBaa
-    Moo:
-      collection: CowMoo
     Gasp:
       collection: FemaleGasp
     DefaultDeathgasp:

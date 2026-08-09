@@ -3,19 +3,19 @@
   onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Hair:
-      limit: 1
+      limit: 2 # starcup
       required: false
     enum.HumanoidVisualLayers.FacialHair:
       limit: 1
       required: false
     enum.HumanoidVisualLayers.Head:
-      limit: 6
+      limit: 4 # starcup
       required: false
     enum.HumanoidVisualLayers.HeadTop:
-      limit: 1
+      limit: 2 # starcup
       required: false
     enum.HumanoidVisualLayers.HeadSide:
-      limit: 1
+      limit: 2 # starcup
       default: [ OviniaEars ]
       required: true
     enum.HumanoidVisualLayers.UndergarmentTop:
@@ -25,7 +25,7 @@
       limit: 1
       required: false
     enum.HumanoidVisualLayers.Chest:
-      limit: 6
+      limit: 4 # starcup
       required: false
     enum.HumanoidVisualLayers.Snout:
       limit: 1
@@ -36,28 +36,28 @@
       required: true
       default: [ OviniaTail ]
     enum.HumanoidVisualLayers.LArm:
-      limit: 6
+      limit: 2 # starcup
       required: false
     enum.HumanoidVisualLayers.RArm:
-      limit: 6
+      limit: 2 # starcup
       required: false
     enum.HumanoidVisualLayers.LHand:
-      limit: 6
+      limit: 2 # starcup
       required: false
     enum.HumanoidVisualLayers.RHand:
-      limit: 6
+      limit: 2 # starcup
       required: false
     enum.HumanoidVisualLayers.LLeg:
-      limit: 6
+      limit: 2 # starcup
       required: false
     enum.HumanoidVisualLayers.RLeg:
-      limit: 6
+      limit: 2 # starcup
       required: false
     enum.HumanoidVisualLayers.LFoot:
-      limit: 6
+      limit: 2 # starcup
       required: false
     enum.HumanoidVisualLayers.RFoot:
-      limit: 6
+      limit: 2 # starcup
       required: false
 
 - type: entity
@@ -142,18 +142,22 @@
   - type: Speech
     speechSounds: OviniaSpeechSounds # starcup: renamed for consistency, easier id to search for
     speechVerb: Ovinia
-    allowedEmotes: [ 'Baa' ]
+    allowedEmotes: [ 'Baa', 'Bark' ]
   - type: Damageable
     damageModifierSet: Ovinia
-  - type: Flammable
-  - type: FireStackModifier
-    modifier: 0.75 # less fire stacks!
+  # begin starcup
+  #- type: Flammable: replaced with temperature tolerance
+  #- type: FireStackModifier
+    #modifier: 0.75 # less fire stacks!
+  # end starcup
   - type: EatTimeModifier
-    modifier: 1.2 # quite slow eaters
-  - type: Hunger
-    baseDecayRate: 0.0083 # slower than normal (chewin they cud)
-  - type: Thirst
-    baseDecayRate: 0.0083 # slower than normal
+    modifier: 1.4 # starcup: even slower eaters
+  # begin starcup
+  #- type: Hunger
+    #baseDecayRate: 0.0083 # slower than normal (chewin they cud)
+  #- type: Thirst
+    #baseDecayRate: 0.0083 # slower than normal
+  # end starcup
   - type: SleepTimeModifier
     modifier: 2
   - type: PettingChanceModifier
@@ -166,17 +170,26 @@
     - CanPilot
     - FootstepSound
     - AnomalyHost
-  # begin starcup: no flat foot sound
+  # begin starcup
+  #- type: NpcFactionMember
+    #factions:
+    #- AnimalFriend
   - type: FootstepModifier
     footstepSoundCollection:
-      collection: FootstepGeneric
+      collection: FootstepHighHeels
       params:
         volume: -6
+        variation: 0.09
+  - type: TemperatureProtection # Temperature tolerance
+    heatingCoefficient: 0.4
+    coolingCoefficient: 0.2
+  - type: Rest # Sleepy sheepies
+  - type: SlowOnDamage # Prey animal adrenaline
+    speedModifierThresholds:
+      30: 1.2
+      55: 0.7
+      75: 0.5
   # end starcup
-
-  - type: NpcFactionMember
-    factions:
-    - AnimalFriend
 
 - type: entity
   parent: OrganBase
@@ -312,6 +325,17 @@
 - type: entity
   parent: [ OrganBaseStomach, OrganOviniaInternal, OrganOviniaMetabolizer ]
   id: OrganOviniaStomach
+  components:
+  - type: Stomach # Browser stomach
+    specialDigestible:
+      tags:
+      - Ruminant
+      - BananaPeel
+      - Bread
+      - Flower
+      - Fruit
+      - Vegetable
+      - Wheat
 
 - type: entity
   parent: [ OrganBaseLiver, OrganOviniaInternal, OrganOviniaMetabolizer ]
