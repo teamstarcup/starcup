@@ -142,7 +142,7 @@
   - type: Speech
     speechSounds: OviniaSpeechSounds # starcup: renamed for consistency, easier id to search for
     speechVerb: Ovinia
-    allowedEmotes: [ 'Baa', 'Bark' ]
+    allowedEmotes: [ 'Baa', 'Bark', 'Snort' ]
   - type: Damageable
     damageModifierSet: Ovinia
   # begin starcup
@@ -171,9 +171,6 @@
     - FootstepSound
     - AnomalyHost
   # begin starcup
-  #- type: NpcFactionMember
-    #factions:
-    #- AnimalFriend
   - type: TemperatureProtection # Temperature tolerance
     heatingCoefficient: 0.4
     coolingCoefficient: 0.2
