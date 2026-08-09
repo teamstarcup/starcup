@@ -359,6 +359,10 @@
       path: /Audio/_RMC14/Xeno/alien_resin_move2.ogg
     denySound:
       collection: AlienBuildTwitch
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: ExomorphDefense
+  - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
