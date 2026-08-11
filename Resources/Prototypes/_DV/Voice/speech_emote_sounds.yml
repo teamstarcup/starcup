@@ -124,14 +124,14 @@
       collection: HarpyPurrs
     HarpyRing:
       collection: HarpyRings
-    HarpyHonk:
-      collection: HarpyHonks
+    #HarpyHonk:
+      #collection: HarpyHonks # starcup: messes with other emotes
     HarpyPew:
       collection: HarpyPews
     HarpyBang:
       collection: HarpyBangs
-    HarpyBeep:
-      collection: HarpyBeeps
+    #HarpyBeep:
+      #collection: HarpyBeeps # starcup: messes with other emotes
     HarpyRev:
       collection: HarpyRevs
     Click:
@@ -142,8 +142,8 @@
       collection: HarpySqueak
     HarpyCaw:
       collection: HarpyCaws
-    HarpySquish:
-      collection: Squishes
+    #HarpySquish:
+      #collection: Squishes # starcup: messes with other emotes
     Chirp:
       collection: HarpyChirps
     Snarl:
@@ -156,14 +156,20 @@
       collection: VulpkaninHowls
     Awoo:
       collection: VulpkaninHowls
-#    Honk:
-#      collection: BikeHorn
+    Honk:
+      collection: BikeHorn
     Weh:
       collection: Weh
     Gasp:
       collection: HarpyGasp
     DefaultDeathgasp:
       collection: DeathGasp
+    # begin starcup: add normal emotes instead of dedicated harpy variants
+    Beep:
+      collection: HarpyBeeps
+    Squish:
+      collection: Squishes
+    # end starcup
 
 - type: emoteSounds
   id: MaleRodentia
