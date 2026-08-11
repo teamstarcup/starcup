@@ -3831,12 +3831,12 @@
   name: caracal cat
   id: MobCatCaracal
   parent: MobCat
-  description: Hilarious.
+  description: A medium feline accustomed to living in sparse, dry environments. # starcup: changed for tone.
   components:
   - type: Sprite
     sprite: Mobs/Pets/caracal.rsi
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
+    - map: ["enum.DamageStateVisualLayers.Base", "sleeping"] # starcup: added sleeping layer
       state: caracal_flop
   - type: DamageStateVisuals
     states:
@@ -3846,10 +3846,16 @@
         Base: caracal_dead
       Dead:
         Base: caracal_dead
-  # begin starcup: disable sprite change as there is not a resting sprite for caracal cats
+  # begin starcup: added resting sprite for caracal cats
   - type: Rest
-    sleepingLayers: {}
-    awakeLayers: {}
+    sleepingLayers:
+      sleeping:
+        sprite: _starcup/Mobs/Animals/Felines/caracal.rsi
+        state: caracal_rest
+    awakeLayers:
+      sleeping:
+        sprite: Mobs/Pets/caracal.rsi
+        state: caracal_flop
   # starcup: give caracals their own sounds
   - type: Speech
     speechSounds: CaracalSpeechSounds

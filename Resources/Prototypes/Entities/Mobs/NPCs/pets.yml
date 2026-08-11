@@ -258,7 +258,7 @@
     drawdepth: Mobs
     sprite: Mobs/Pets/bingus.rsi
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
+    - map: ["enum.DamageStateVisualLayers.Base", "sleeping"] # starcup: add sleeping
       state: bingus
   - type: Physics
   - type: Fixtures
@@ -320,6 +320,15 @@
     screamAction: ActionEmitSound
   - type: ReplacementAccent
     accent: cat
+  - type: Rest
+    sleepingLayers:
+      sleeping:
+        sprite: _starcup/Mobs/Animals/Felines/bingus.rsi
+        state: bingus_rest
+    awakeLayers:
+      sleeping:
+        sprite: Mobs/Pets/bingus.rsi
+        state: bingus
   # end starcup
 
 - type: entity
