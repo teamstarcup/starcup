@@ -1,8 +1,18 @@
+// SPDX-FileCopyrightText: 2022 Moony <moony@hellomouse.net>
+// SPDX-FileCopyrightText: 2023 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Scribbles0 <91828755+Scribbles0@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Vordenburg <114301317+Vordenburg@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Mnemotechnican <69920617+Mnemotechnician@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
 using Content.Shared.Bed.Sleep;
-using Content.Shared.Random.Helpers;
-using Content.Shared.StatusEffectNew;
+using Content.Shared.Chat;
+using Content.Shared.Popups;
+using Content.Shared.StatusEffect;
+using Robust.Shared.Player;
 using Robust.Shared.Random;
-using Robust.Shared.Timing;
 
 namespace Content.Shared.Traits.Assorted;
 
@@ -11,34 +21,50 @@ namespace Content.Shared.Traits.Assorted;
 /// </summary>
 public sealed class NarcolepsySystem : EntitySystem
 {
+    [ValidatePrototypeId<StatusEffectPrototype>]
+    private const string StatusEffectKey = "ForcedSleep"; // Same one used by N2O and other sleep chems.
+
+    [Dependency] private readonly ISharedChatManager _chatMan = default!; // starcup Narcolepsy
+    [Dependency] private readonly SharedPopupSystem _popups = default!;
     [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
 
     /// <inheritdoc/>
     public override void Initialize()
     {
-        base.Initialize();
-
-        SubscribeLocalEvent<NarcolepsyComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<NarcolepsyComponent, ComponentStartup>(SetupNarcolepsy);
+        SubscribeLocalEvent<NarcolepsyComponent, SleepStateChangedEvent>(OnSleepChanged);
     }
 
-    private void OnMapInit(Entity<NarcolepsyComponent> ent, ref MapInitEvent args)
+    private void SetupNarcolepsy(EntityUid uid, NarcolepsyComponent component, ComponentStartup args)
     {
-        ent.Comp.NextIncidentTime = _timing.CurTime + _random.Next(ent.Comp.MinTimeBetweenIncidents, ent.Comp.MaxTimeBetweenIncidents);
-        DirtyField(ent, ent.Comp, nameof(ent.Comp.NextIncidentTime));
+        PrepareNextIncident((uid, component));
     }
 
-    /// <summary>
-    /// Changes the time until the next incident.
-    /// </summary>
-    public void AdjustNarcolepsyTimer(Entity<NarcolepsyComponent?> ent, TimeSpan time)
+    private void OnSleepChanged(Entity<NarcolepsyComponent> ent, ref SleepStateChangedEvent args)
     {
-        if (!Resolve(ent, ref ent.Comp, false))
+        // When falling asleep while an incident is nigh, force it to happen immediately.
+        if (args.FellAsleep)
+        {
+            if (ent.Comp.NextIncidentTime < ent.Comp.TimeBeforeWarning)
+                StartIncident(ent);
+            return;
+        }
+
+        // When waking up after sleeping for at least the minimum time of an incident, reset the incident timer and show a popup.
+        if (args.TimeSlept is null || args.TimeSlept.Value.TotalSeconds < ent.Comp.DurationOfIncident.X)
             return;
 
-        ent.Comp.NextIncidentTime = _timing.CurTime + time;
-        DirtyField(ent, ent.Comp, nameof(ent.Comp.NextIncidentTime));
+        ShowRandomPopup(ent, ent.Comp.WakeupLocaleBase, ent.Comp.WakeupLocaleCount);
+        PrepareNextIncident(ent);
+    }
+
+    public void AdjustNarcolepsyTimer(EntityUid uid, float setTime, NarcolepsyComponent? narcolepsy = null) // starcup - Den narcolepsy port
+    {
+        if (!Resolve(uid, ref narcolepsy, false) || narcolepsy.NextIncidentTime > setTime)
+            return;
+
+        narcolepsy.NextIncidentTime = setTime;
     }
 
     public override void Update(float frameTime)
@@ -46,22 +72,59 @@ public sealed class NarcolepsySystem : EntitySystem
         base.Update(frameTime);
 
         var query = EntityQueryEnumerator<NarcolepsyComponent>();
-
         while (query.MoveNext(out var uid, out var narcolepsy))
         {
-            if (narcolepsy.NextIncidentTime > _timing.CurTime)
+            if (HasComp<SleepingComponent>(uid))
                 continue;
 
-            var rand = SharedRandomExtensions.PredictedRandom(_timing, GetNetEntity(uid));
+            narcolepsy.NextIncidentTime -= frameTime;
+            if (narcolepsy.NextIncidentTime <= narcolepsy.TimeBeforeWarning && narcolepsy.NextIncidentTime < narcolepsy.LastWarningRollTime - 1f)
+            {
+                // Roll for showing a popup. There should really be a class for doing this.
+                narcolepsy.LastWarningRollTime = narcolepsy.NextIncidentTime;
+                if (_random.Prob(narcolepsy.WarningChancePerSecond))
+                {
+                    ShowRandomPopup(uid, narcolepsy.WarningLocaleBase, narcolepsy.WakeupLocaleCount);
+                    narcolepsy.LastWarningRollTime = 0f; // Do not show any more popups for the upcoming incident
+                }
+            }
 
-            var duration = narcolepsy.MinDurationOfIncident + (narcolepsy.MaxDurationOfIncident - narcolepsy.MinDurationOfIncident) * rand.NextDouble();
+            if (narcolepsy.NextIncidentTime >= 0)
+                continue;
 
-            // Set the new time.
-            narcolepsy.NextIncidentTime +=
-                narcolepsy.MinTimeBetweenIncidents + (narcolepsy.MaxTimeBetweenIncidents - narcolepsy.MinTimeBetweenIncidents) * rand.NextDouble() + duration;
-            DirtyField(uid, narcolepsy, nameof(narcolepsy.NextIncidentTime));
-
-            _statusEffects.TryAddStatusEffectDuration(uid, SleepingSystem.StatusEffectForcedSleeping, duration);
+            StartIncident((uid, narcolepsy));
         }
+    }
+
+    public void StartIncident(Entity<NarcolepsyComponent> ent)
+    {
+        var duration = _random.NextFloat(ent.Comp.DurationOfIncident.X, ent.Comp.DurationOfIncident.Y);
+        PrepareNextIncident(ent, duration);
+
+        _statusEffects.TryAddStatusEffect<ForcedSleepingStatusEffectComponent>(ent, StatusEffectKey, TimeSpan.FromSeconds(duration), false);
+    }
+
+    private void PrepareNextIncident(Entity<NarcolepsyComponent> ent, float startingFrom = 0f)
+    {
+        var time = _random.NextFloat(ent.Comp.TimeBetweenIncidents.X, ent.Comp.TimeBetweenIncidents.Y);
+        ent.Comp.NextIncidentTime = startingFrom + time;
+        ent.Comp.LastWarningRollTime = float.MaxValue;
+    }
+
+    private void ShowRandomPopup(EntityUid uid, string prefix, int count)
+    {
+        if (count <= 0 || !TryComp<ActorComponent>(uid, out var actor))
+            return;
+
+        var popup = Loc.GetString($"{prefix}-{_random.Next(1, count + 1)}");
+        _popups.PopupEntity(popup, uid, uid, PopupType.MediumCaution);
+        // This should use ChatChannel.Visual, but it's not displayed on the client.
+        _chatMan.ChatMessageToOne(ChatChannel.Notifications,
+            popup,
+            popup,
+            uid,
+            false,
+            actor.PlayerSession.Channel,
+            Color.IndianRed);
     }
 }

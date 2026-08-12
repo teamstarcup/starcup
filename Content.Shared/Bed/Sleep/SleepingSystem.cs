@@ -145,10 +145,12 @@ public sealed partial class SleepingSystem : EntitySystem
 
     private void OnCompInit(Entity<SleepingComponent> ent, ref ComponentInit args)
     {
-        var ev = new SleepStateChangedEvent(true);
+        ent.Comp.SleepingSince = _gameTiming.CurTime; // Den Narcolepsy
+        var ev = new SleepStateChangedEvent(true); // Den
         RaiseLocalEvent(ent, ref ev);
         _blindableSystem.UpdateIsBlind(ent.Owner);
         _actionsSystem.AddAction(ent, ref ent.Comp.WakeAction, WakeActionId, ent);
+        _actionsSystem.SetCooldown(ent.Comp.WakeAction, _gameTiming.CurTime, _gameTiming.CurTime + TimeSpan.FromSeconds(2f)); // DeltaV port from EE
     }
 
     private void OnComponentRemoved(Entity<SleepingComponent> ent, ref ComponentRemove args)
@@ -373,4 +375,18 @@ public sealed partial class WakeActionEvent : InstantActionEvent;
 /// Raised on an entity when they fall asleep or wake up.
 /// </summary>
 [ByRefEvent]
-public record struct SleepStateChangedEvent(bool FellAsleep);
+public record struct SleepStateChangedEvent // Den Narcolepsy changes.
+{
+    public bool FellAsleep = false;
+
+    /// <summary>
+    ///     The amount of time this entity slept for. Null if <see cref="FellAsleep"/> is true.
+    /// </summary>
+    public TimeSpan? TimeSlept;
+
+    public SleepStateChangedEvent(bool fellAsleep, TimeSpan? timeSlept = null)
+    {
+        FellAsleep = fellAsleep;
+        TimeSlept = timeSlept; // DeltaV
+    }
+}

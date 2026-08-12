@@ -1,8 +1,22 @@
+// SPDX-FileCopyrightText: 2022 Francesco
+// SPDX-FileCopyrightText: 2022 Rane
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2024 Mnemotechnican
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2024 Tayrtahn
+// SPDX-FileCopyrightText: 2025 bigsantino1
+// SPDX-FileCopyrightText: 2025 sleepyyapril
+//
+// SPDX-License-Identifier: MIT AND AGPL-3.0-or-later
+
 using Content.Shared.Dataset;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
+
 
 namespace Content.Shared.Bed.Sleep;
 
@@ -28,6 +42,13 @@ public sealed partial class SleepingComponent : Component
     [DataField]
     [AutoNetworkedField, AutoPausedField]
     public TimeSpan CooldownEnd;
+
+    /// <summary>
+    /// DeltaV:  The moment this entity went to sleep. Initialized on MapInit.
+    /// </summary>
+    ///
+    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoPausedField]
+    public TimeSpan SleepingSince;
 
     [DataField]
     [AutoNetworkedField]
