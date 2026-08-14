@@ -1,0 +1,160 @@
+#region Encumbrance
+# Pistols / Revolvers
+- type: entity
+  id: NFBaseWeaponEncumbrancePistol
+  abstract: true
+  components:
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Belt
+    - suitStorage
+  - type: Tag
+    tags:
+    - Sidearm
+
+#region Melee attacks
+- type: entity
+  abstract: true
+  id: NFBaseGunMeleeAttackLow
+  components:
+  - type: AltFireMelee
+    attackType: Heavy # Swing
+  - type: MeleeWeapon
+    attackRate: 1.1
+    damage:
+      types:
+        Blunt: 6
+        Structural: 4
+    angle: 30
+    wideAnimationRotation: 90
+    animation: WeaponArcThrust
+    soundHit:
+      collection: MetalThud
+
+#region frame
+- type: entity
+  abstract: true
+  parent: [ NFBaseWeaponEncumbrancePistol, NFBaseGunMeleeAttackLow, BaseWeaponBatterySmall ]
+  id: NFBaseWeaponFrameEnergyPistol
+  suffix: Frontier
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance
+  - type: Gun
+    projectileSpeed: 30
+    minAngle: 1.8
+    maxAngle: 9
+    angleIncrease: 0.5
+    angleDecay: 2.5
+    fireRate: 3
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+  - type: Battery # Default: 16 shots with 60 fireCost
+    maxCharge: 960
+    startingCharge: 960
+  - type: BatterySelfRecharger
+    # autoRecharge: true # Box Change: Remove deprecated field
+    autoRechargeRate: 3 # Default recharge rate: 1 shot per 20 seconds with 60 fireCost
+  - type: StaticPrice
+    price: 250
+  #- type: NFWeaponDetails
+  #  class: weapon-details-class-pistol
+
+#region Holoflare pistol
+- type: entity
+  id: NFWeaponHoloflareGun
+  parent: [ NFBaseWeaponFrameEnergyPistol ]
+  name: holoflare pistol
+  description: |-
+    A modification of a civilian-grade laser pistol that can project holoflares onto surfaces.
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Battery/holoflare_pistol.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-2
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+    - state: mode-cyan
+      shader: unshaded
+      map: [ "Firemode" ]
+  - type: Item
+    size: Small
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left-unshaded
+        shader: unshaded
+      right:
+      - state: inhand-right
+      - state: inhand-right-unshaded
+        shader: unshaded
+  - type: Gun
+    # examineCaliber: gun-examine-energybolt-holoflare # Box Change: frontier field
+    selectedMode: SemiAuto
+    fireRate: 2
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/flaregun.ogg
+    projectileSpeed: 15
+  - type: Battery
+    maxCharge: 1200
+    startingCharge: 1200
+  - type: BatterySelfRecharger
+    # autoRecharge: true # Box Change: Remove deprecated field
+    autoRechargeRate: 10
+  - type: BatteryAmmoProvider # Box Change: Update component name
+    proto: HoloFlareCyan
+    fireCost: 240
+  - type: BatteryWeaponFireModes # Box Change: Update component name
+    fireModes:
+    # Start Box Change: Unused fields
+    - proto: HoloFlareCyan
+      fireCost: 240
+      #name: cyan
+      #state: cyan
+    - proto: HoloFlareRed
+      fireCost: 240
+      #name: red
+      #state: red
+    - proto: HoloFlareYellow
+      fireCost: 240
+      #name: yellow
+      #state: yellow
+    # End Box Change
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: true
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.BatteryWeaponFireModeVisuals.State: # Box Change: Update name
+        Firemode:
+          # Start Box Change: Use prototype names
+          HoloFlareCyan: { state: mode-cyan }
+          HoloFlareRed: { state: mode-red }
+          HoloFlareYellow: { state: mode-yellow }
+          # End Box Change
+  - type: PacifismAllowedGun # harmless
+  - type: StaticPrice
+    price: 250
