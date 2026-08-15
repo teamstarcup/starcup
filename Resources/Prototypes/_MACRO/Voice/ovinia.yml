@@ -18,6 +18,7 @@
 
 - type: emoteSounds
   id: MaleOvinia
+  voiceSelectorName: humanoid-profile-editor-voice-masculine # starcup
   params:
     variation: 0.125
   sounds:
@@ -62,18 +63,35 @@
 
 - type: emoteSounds
   id: FemaleOvinia
-  parent: MaleOvinia
+  voiceSelectorName: humanoid-profile-editor-voice-feminine
+#  parent: MaleOvinia # starcup - seems irregular
   params:
     variation: 0.125
   sounds:
     Laugh:
       collection: FemaleLaugh
+    # begin starcup:
+    Sneeze:
+      path: /Audio/_starcup/Animals/Goat/goat_sneeze.ogg
+    Cough:
+      path: /Audio/_starcup/Animals/Goat/goat_sneeze.ogg
+    # end starcup
     Yawn:
       collection: FemaleYawn
     Sigh:
       collection: FemaleSigh
     Crying:
       collection: FemaleCry
+    # begin starcup:
+    Whistle:
+      collection: Whistles
+    Baa:
+      collection: GoatSpeech
+    Bark:
+      collection: DeerBarks
+    Snort:
+      path: /Audio/_starcup/Animals/chuff.ogg
+    # end starcup
     Gasp:
       collection: FemaleGasp
     DefaultDeathgasp:

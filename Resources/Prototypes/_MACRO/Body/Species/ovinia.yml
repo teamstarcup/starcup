@@ -4,6 +4,7 @@
   limits:
     enum.HumanoidVisualLayers.Hair:
       limit: 2 # starcup
+      onlyGroupWhitelisted: false # starcup
       required: false
     enum.HumanoidVisualLayers.FacialHair:
       limit: 1
@@ -134,10 +135,7 @@
     proto: ovinia
   # begin starcup
   - type: Vocal
-    sounds:
-      Male: MaleOvinia
-      Female: FemaleOvinia
-      Unsexed: FemaleOvinia
+    emoteSounds: FemaleOvinia
   # end starcup
   - type: Speech
     speechSounds: OviniaSpeechSounds # starcup: renamed for consistency, easier id to search for
@@ -171,11 +169,10 @@
     - FootstepSound
     - AnomalyHost
   # begin starcup
-  - type: TemperatureProtection # Temperature tolerance
-    heatingCoefficient: 0.4
-    coolingCoefficient: 0.2
+  - type: TemperatureProtection # Temperature tolerance equivalent of a winter coat
+    coefficient: 0.6
   - type: Rest # Sleepy sheepies
-  - type: SlowOnDamage # Prey animal adrenaline
+  - type: SlowOnDamage # Prey animal adrenaline; speed up at 30-54 damage but slowdown a bit faster
     speedModifierThresholds:
       30: 1.2
       55: 0.7
