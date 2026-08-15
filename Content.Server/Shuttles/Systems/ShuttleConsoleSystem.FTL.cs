@@ -2,14 +2,11 @@ using Content.Server.Popups; // starcup
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Shared.Popups; // starcup
-using Content.Shared.Shuttles.BUIStates;
-using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Events;
 using Content.Shared.Shuttles.UI.MapObjects;
 using Robust.Server.Audio; // starcup
 using Robust.Shared.Audio; // starcup
 using Robust.Shared.Map;
-using Robust.Shared.Map.Components;
 using Robust.Shared.Physics.Components;
 
 namespace Content.Server.Shuttles.Systems;
@@ -17,8 +14,8 @@ namespace Content.Server.Shuttles.Systems;
 public sealed partial class ShuttleConsoleSystem
 {
     // begin starcup
-    [Dependency] private readonly PopupSystem _popupSystem = default!;
-    [Dependency] private readonly AudioSystem _audio = default!;
+    [Dependency] private PopupSystem _popupSystem = default!;
+    [Dependency] private AudioSystem _audio = default!;
     // end starcup
 
     private void InitializeFTL()
@@ -47,7 +44,7 @@ public sealed partial class ShuttleConsoleSystem
     private void OnBeaconFTLMessage(Entity<ShuttleConsoleComponent> ent, ref ShuttleConsoleFTLBeaconMessage args)
     {
         var beaconEnt = GetEntity(args.Beacon);
-        if (!_xformQuery.TryGetComponent(beaconEnt, out var targetXform))
+        if (!TryComp(beaconEnt, out TransformComponent? targetXform))
         {
             return;
         }
@@ -91,14 +88,14 @@ public sealed partial class ShuttleConsoleSystem
 
         while (beaconQuery.MoveNext(out var destUid, out _))
         {
-            var meta = _metaQuery.GetComponent(destUid);
+            var meta = MetaData(destUid);
             var name = meta.EntityName;
 
             if (string.IsNullOrEmpty(name))
                 name = Loc.GetString("shuttle-console-unknown");
 
             // Can't travel to same map (yet)
-            var destXform = _xformQuery.GetComponent(destUid);
+            var destXform = Transform(destUid);
             beacons ??= new List<ShuttleBeaconObject>();
             beacons.Add(new ShuttleBeaconObject(GetNetEntity(destUid), GetNetCoordinates(destXform.Coordinates), name));
         }
@@ -128,7 +125,7 @@ public sealed partial class ShuttleConsoleSystem
         if (consoleUid == null)
             return;
 
-        var shuttleUid = _xformQuery.GetComponent(consoleUid.Value).GridUid;
+        var shuttleUid = Transform(consoleUid.Value).GridUid;
 
         if (!TryComp(shuttleUid, out ShuttleComponent? shuttleComp))
             return;

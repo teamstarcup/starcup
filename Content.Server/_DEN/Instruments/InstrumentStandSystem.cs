@@ -9,8 +9,8 @@ namespace Content.Shared._DEN.Instruments;
 
 public sealed partial class InstrumentStandSystem : EntitySystem
 {
-    [Dependency] private readonly ActivatableUISystem _activatableUI = default!;
-    [Dependency] private readonly ItemSlotsSystem _itemSlots = default!;
+    [Dependency] private ActivatableUISystem _activatableUI = default!;
+    [Dependency] private ItemSlotsSystem _itemSlots = default!;
 
     public override void Initialize()
     {

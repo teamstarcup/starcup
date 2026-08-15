@@ -108,7 +108,6 @@
       types:
         Heat: 0.6 # from 0.1, blunt damage removed
   - type: Temperature
-    currentTemperature: 310.15
     specificHeat: 42
   - type: TemperatureDamage # mirrored from parent, changes noted
     heatDamageThreshold: 365 # from 325
@@ -151,6 +150,8 @@
     emote: Buzz-Two
   - type: Uncloneable
   - type: ScreenVision
+  - type: Vocal
+    emoteSounds: HumanoidSilicon
 
 - type: entity
   parent: OrganBase
@@ -277,7 +278,7 @@
 
 - type: entity
   id: OrganMKCCore
-  parent: OrganMKCInternal
+  parent: [ OrganBaseChildInternal, OrganMKCInternal ]
   name: power core
   description: Stores and provides electricity to power an MKC's chassis.
   components:
@@ -293,7 +294,7 @@
 
 - type: entity
   id: OrganMKCPump
-  parent: OrganMKCInternal
+  parent: [ OrganBaseChildInternal, OrganMKCInternal ]
   name: micro pump
   description: Small, but powerful hydraulics allow this little miracle of robotics to distribute lubricant across an MKC's chassis.
   components:
@@ -350,7 +351,7 @@
 
 - type: entity
   id: OrganMKCFluidRegulator
-  parent: OrganMKCInternal
+  parent: [ OrganBaseChildInternal, OrganMKCInternal ]
   name: fluid regulator
   description: Collects built-up fluids from across an MKC's body, then violently expels them.
   components:

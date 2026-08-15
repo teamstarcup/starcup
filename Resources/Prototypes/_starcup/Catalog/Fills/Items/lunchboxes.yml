@@ -104,9 +104,9 @@
     - id: FoodCakeSpacemanSlice
       weight: 0.25
     - id: FoodCakeBerryDelightSlice
-    - id: FoodTartGrape
-    - id: FoodTartMime
-    - id: FoodTartGapple
+    # - id: FoodTartGrape # too large, failing to insert
+    - id: FoodTartMimeSlice
+    # - id: FoodTartGapple # too large, failing to insert
     - id: FoodDonkpocket
     - id: FoodDonkpocketDank
     - id: FoodDonkpocketSpicy
@@ -171,11 +171,11 @@
   table: !type:AllSelector
     children:
     - !type:NestedSelector
-      tableId: LunchboxFillEntreTreat
-    - !type:NestedSelector
       tableId: LunchboxFillSnackTreat
     - !type:NestedSelector
       tableId: LunchboxFillDrinkTreat
+    - !type:NestedSelector
+      tableId: LunchboxFillEntreTreat
     - id: PaperWrittenNoteFromMumUnhealthy
       prob: 0.1
 

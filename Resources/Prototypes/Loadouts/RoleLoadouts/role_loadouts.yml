@@ -161,6 +161,7 @@
   - LibrarianOuterClothing # starcup
   - LibrarianShoes # starcup
   - Glasses
+  # - AssistiveItems
   - Survival
   - Accessibility # starcup
   - Cosmetics # starcup
@@ -202,6 +203,7 @@
   - ChaplainShoes # starcup
   - ChaplainPDAstarcup
   - Glasses
+  # - AssistiveItems
   - Survival
   - Accessibility # starcup
   - Cosmetics # starcup
@@ -331,6 +333,7 @@
   - LogisticsGloves # starcup
   - QuartermasterShoes
   - Glasses
+  # - AssistiveItems
   - Survival
   - Accessibility # starcup
   - Cosmetics # starcup
@@ -389,6 +392,7 @@
   - StationEngineerBackpack
   - ChiefEngineerOuterClothing
   - ChiefEngineerShoes
+  # - AssistiveItems
   - SurvivalExtended
   - Accessibility # starcup
   - Cosmetics # starcup
@@ -426,6 +430,7 @@
   - StationEngineerOuterClothing
   - StationEngineerShoes
   - StationEngineerID
+  # - AssistiveItems
   - SurvivalExtended
   - Accessibility # starcup
   - Cosmetics # starcup
@@ -466,6 +471,7 @@
   - ScientistGloves
   - ResearchDirectorShoes
   - Glasses
+  # - AssistiveItems
   - Survival
   - Accessibility # starcup
   - Cosmetics # starcup
@@ -505,6 +511,7 @@
   - ResearchAssistantOuterClothing # starcup
   - ScientistShoes # starcup
   - Glasses
+  # - AssistiveItems
   - Survival
   - Accessibility # starcup
   - Cosmetics # starcup
@@ -662,6 +669,21 @@
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
+- type: roleLoadout
+  id: JobTramDriver
+  groups:
+  - GroupTankHarness
+  - CommonBackpack
+  - TramDriverJumpsuit
+  - TramDriverOuterClothing #Vest and such
+  - TramDriverHat
+  - TramDriverGloves
+  - Glasses
+  - Survival
+  - Trinkets
+  #- TramDriverJobTrinkets
+  - GroupSpeciesBreathTool
+
 # These loadouts are used for non-crew spawns, like off-station antags and event mobs
 # They will be used without player configuration, thus they will only ever apply what is forced by MinLimit
 
@@ -697,6 +719,13 @@
   id: RoleSurvivalExtended
   groups:
   - SurvivalExtended
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
+  id: RoleSurvivalExtendedAntag # Used by antagonists that spawn off-station (e.g wizards)
+  groups:
+  - SurvivalExtendedAntag
   - GroupSpeciesBreathTool
   - GroupTankHarness
 
@@ -738,6 +767,12 @@
   groups:
   - GroupEVATank
   - SurvivalExtended
+
+- type: roleLoadout
+  id: RoleSurvivalEVAAntag # Used by antagonists that spawn off-station AND in space (e.g ninjas)
+  groups:
+  - GroupEVATank
+  - SurvivalExtendedAntag
 
 - type: roleLoadout
   id: RoleSurvivalSpaceNinja

@@ -7,10 +7,11 @@
   - type: Action
     sound: !type:SoundPathSpecifier
       path: /Audio/_starcup/Magic/sanctify.ogg
-    icon:
-      sprite: _starcup/Interface/Actions/actions_chaplain.rsi
-      state: sanctify
     useDelay: 5
+  - type: Sprite
+    sprite: _starcup/Interface/Actions/actions_chaplain.rsi
+    layers:
+    - state: sanctify
   - type: EntityTargetAction
     event: !type:SanctifyItemEvent
     whitelist:
@@ -29,10 +30,11 @@
   - type: Action
     sound: !type:SoundPathSpecifier
       path: /Audio/Magic/staff_healing.ogg
-    icon:
-      sprite: _starcup/Interface/Actions/actions_chaplain.rsi
-      state: heal
     useDelay: 10
+  - type: Sprite
+    sprite: _starcup/Interface/Actions/actions_chaplain.rsi
+    layers:
+    - state: heal
   - type: EntityTargetAction
     event: !type:BlessedHealingEvent
     whitelist:

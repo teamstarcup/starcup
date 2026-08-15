@@ -1,4 +1,4 @@
-﻿- type: reagent
+- type: reagent
   id: Jaegermister
   name: reagent-name-jaegermister
   parent: BaseAlcohol
@@ -17,7 +17,8 @@
       metabolites:
         Ethanol: 0.4
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   fizziness: 0.25
 
@@ -40,7 +41,8 @@
       metabolites:
         Ethanol: 0.2
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   fizziness: 0.25
 
@@ -63,7 +65,8 @@
       metabolites:
         Ethanol: 0.27 # starcup: increased from 0.2
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   fizziness: 0.25
 
@@ -86,7 +89,8 @@
       metabolites:
         Ethanol: 0.22 # starcup: increased from 0.12
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   fizziness: 0.25
 
@@ -110,7 +114,8 @@
         Ethanol: 0.15 # starcup: decreased from 0.3
         MindbreakerToxin: 0.24
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   fizziness: 0.25
 
@@ -133,7 +138,8 @@
       metabolites:
         Ethanol: 0.2 # starcup: increased from 0.16
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   fizziness: 0.25
 
@@ -156,7 +162,8 @@
       metabolites:
         Ethanol: 0.2 # starcup: increased from 0.16
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   fizziness: 0.25
 
@@ -179,7 +186,8 @@
       metabolites:
         Ethanol: 0.13 # starcup: down from 0.16
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   fizziness: 0.25
 
@@ -202,7 +210,8 @@
       metabolites:
         Ethanol: 0.13 # starcup: increased from 0.12
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   fizziness: 0.25
 
@@ -225,7 +234,8 @@
       metabolites:
         Ethanol: 0.13 # starcup: decreased from 0.3
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   fizziness: 0.25
 
@@ -248,7 +258,8 @@
       metabolites:
         Ethanol: 0.4
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
       - !type:GenericStatusEffect
         key: Drowsiness
@@ -281,7 +292,8 @@
       metabolites:
         Ethanol: 0.16 # starcup: increased from 0.12
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   fizziness: 0.25
 
@@ -304,7 +316,8 @@
       metabolites:
         Ethanol: 0.2 # starcup: increased from 0.16
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   fizziness: 0.25
 
@@ -327,7 +340,8 @@
       metabolites:
         Ethanol: 0.23 # starcup: increased from 0.2
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   fizziness: 0.25
 
@@ -350,7 +364,8 @@
       metabolites:
         Ethanol: 0.16 # starcup: decreased from 0.32
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   fizziness: 0.25
 
@@ -373,7 +388,8 @@
       metabolites:
         Ethanol: 0.18 # starcup: increased from 0.12
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   fizziness: 0.25
 
@@ -396,7 +412,8 @@
       metabolites:
         Ethanol: 0.36 # starcup: increased from 0.2
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   fizziness: 0.25
 
@@ -419,6 +436,7 @@
       metabolites:
         Ethanol: 0.13 # starcup: decreased from 0.2
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   fizziness: 0.25

@@ -28,7 +28,6 @@
   - type: Fingerprint
   - type: Blindable
   - type: Temperature
-    currentTemperature: 310.15
     specificHeat: 42
   - type: TemperatureDamage
     heatDamageThreshold: 325
@@ -64,8 +63,9 @@
     - AnomalyHost
     - SiliconEmotes # added
   - type: Damageable
-    damageContainer: HumanoidSilicon
     damageModifierSet: HumanoidSilicon
+  - type: Injurable
+    damageContainer: HumanoidSilicon
   - type: ZombieImmune
   - type: Deathgasp
     prototype: SiliconDeathgasp
@@ -79,10 +79,6 @@
   - type: Speech
     speechSounds: Pai
   - type: Vocal
-    sounds:
-      Male: HumanoidSilicon
-      Female: HumanoidSilicon
-      Unsexed: HumanoidSilicon
   - type: TypingIndicator
     proto: robot
   - type: DamageVisuals

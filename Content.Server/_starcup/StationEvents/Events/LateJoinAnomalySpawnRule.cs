@@ -14,12 +14,12 @@ namespace Content.Server._starcup.StationEvents.Events;
 ///
 /// Spawns several anomalies around the station, pulses them a few times, and sometimes makes them go critical.
 /// </summary>
-public sealed class LateJoinAnomalySpawnRule : VariationPassSystem<LateJoinAnomalySpawnComponent>
+public sealed partial class LateJoinAnomalySpawnRule : VariationPassSystem<LateJoinAnomalySpawnComponent>
 {
-    [Dependency] private readonly AnomalySystem _anomaly = default!;
-    [Dependency] private readonly StationSystem _station = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly EntityTableSystem _entityTable = default!;
+    [Dependency] private AnomalySystem _anomaly = default!;
+    [Dependency] private StationSystem _station = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private EntityTableSystem _entityTable = default!;
 
     protected override void ApplyVariation(Entity<LateJoinAnomalySpawnComponent> entity, ref StationVariationPassEvent args)
     {

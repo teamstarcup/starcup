@@ -5,6 +5,7 @@
     enum.HumanoidVisualLayers.Hair:
       limit: 2 # starcup: up from 1
       required: false
+      weight: 1
     enum.HumanoidVisualLayers.FacialHair:
       limit: 1
       required: false
@@ -97,6 +98,7 @@
       FootLeft: OrganSlimePersonFootLeft
       FootRight: OrganSlimePersonFootRight
       Brain: OrganSlimePersonCore
+      Eyes: OrganSlimePersonEyes
       Lungs: OrganSlimePersonLungs
   - type: HumanoidProfile
     species: SlimePerson
@@ -138,10 +140,7 @@
   - type: TypingIndicator
     proto: slime
   - type: Vocal
-    sounds:
-      Male: MaleSlime
-      Female: FemaleSlime
-      Unsexed: MaleSlime
+    emoteSounds: MaleSlime
   - type: Damageable
     damageModifierSet: Slime
   - type: PassiveDamage # Around 8 damage a minute healed
@@ -164,7 +163,7 @@
     bloodReferenceSolution: # TODO Color slime blood based on their slime color or smth
       reagents:
       - ReagentId: Slime
-        Quantity: 300
+        Quantity: 600
   - type: Barotrauma
     damage:
       types:
@@ -193,7 +192,6 @@
         probability: 0.25
 # begin starcup: people are not food
 #  - type: Butcherable
-#    butcheringType: Spike
 #    spawned:
 #    - id: FoodMeatSlime
 #      amount: 5
@@ -206,9 +204,13 @@
       types:
         Asphyxiation: -1.0
     maxSaturation: 15
+  # begin starcup
+  - type: BodyEmotes
+    soundsId: SlimeBodyEmotes
+  # end starcup
 
 - type: entity
-  parent: OrganBase
+  parent: OrganBaseOrganic
   id: OrganSlimePerson
   abstract: true
   suffix: slime person
@@ -249,21 +251,18 @@
 - type: entity
   parent: [ OrganBaseHead, OrganSlimePersonExternal ]
   id: OrganSlimePersonHead
-  # begin starcup: put new eye layers on the head
   components:
   - type: VisualOrganMarkings
     markingData:
       layers:
       - HeadBase
       - Head
-      - Eyes # added
       - Hair
       - FacialHair
       - Snout
       - SnoutCover
       - HeadSide
       - HeadTop
-  # end starcup
 
 - type: entity
   parent: [ OrganBaseArmLeft, OrganSlimePersonExternal ]
@@ -302,15 +301,22 @@
   id: OrganSlimePersonCore
   name: sentient slime core
   components:
-  - type: SolutionContainerManager
+  - type: SolutionManager
     solutions:
-      stomach:
-        maxVol: 50.0
+    - SolutionStomach
   - type: Stomach
   - type: Metabolizer
     maxReagents: 6
     metabolizerTypes: [ Slime ]
     stages: [ Digestion, Bloodstream, Metabolites ]
+
+- type: entity
+  parent: [ OrganBaseEyes, OrganSlimePersonInternal, OrganSlimePersonExternal ]
+  id: OrganSlimePersonEyes
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Customization/eyes.rsi
 
 - type: entity
   parent: [ OrganBaseLungs, OrganSlimePersonInternal, OrganSlimePersonMetabolizer ]

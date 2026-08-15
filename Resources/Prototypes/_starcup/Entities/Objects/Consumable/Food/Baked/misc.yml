@@ -59,7 +59,7 @@
 
 - type: entity
   name: imitation chocolate brownies
-  parent: FoodBakedBrownieBatch
+  parent: [ FoodBakedBrownieBatch, BaseSlicingRefinableFood ]
   id: FoodBakedBrownieBatchImitation
   description: A pan of imitation chocolate brownies.
   components:
@@ -74,9 +74,10 @@
         reagents:
         - ReagentId: Nutriment
           Quantity: 30
-  - type: SliceableFood
-    count: 6
-    slice: FoodBakedBrownieImitation
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodBakedBrownieImitation
+      amount: 6
 
 - type: entity
   name: imitation chocolate brownie
@@ -98,7 +99,7 @@
 
 - type: entity
   name: imitation chocolate special brownies
-  parent: FoodBakedCannabisBrownieBatch
+  parent: [ FoodBakedCannabisBrownieBatch, BaseSlicingRefinableFood]
   id: FoodBakedCannabisBrownieBatchImitation
   components:
   - type: FlavorProfile
@@ -115,9 +116,10 @@
           Quantity: 30
         - ReagentId: THC
           Quantity: 150
-  - type: SliceableFood
-    count: 6
-    slice: FoodBakedCannabisBrownieImitation
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodBakedCannabisBrownieImitation
+      amount: 6
 
 - type: entity
   name: imitation chocolate special brownie

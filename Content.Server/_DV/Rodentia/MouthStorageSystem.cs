@@ -1,12 +1,12 @@
-using Content.Server.Speech.EntitySystems;  // starcup: fixed for upstream merge
 using Content.Shared._DV.Rodentia;
 using Content.Shared.Speech;
+using Content.Shared.Speech.EntitySystems;
 
 namespace Content.Server._DV.Rodentia;
 
-public sealed class MouthStorageSystem : SharedMouthStorageSystem
+public sealed partial class MouthStorageSystem : SharedMouthStorageSystem
 {
-    [Dependency] private readonly ReplacementAccentSystem _replacement = default!;
+    [Dependency] private ReplacementAccentSystem _replacement = default!;
 
     public override void Initialize()
     {

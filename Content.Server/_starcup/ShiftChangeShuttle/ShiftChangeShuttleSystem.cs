@@ -23,19 +23,19 @@ using Robust.Shared.Utility;
 
 namespace Content.Server._starcup.Shuttles;
 
-public sealed class ShiftChangeShuttleSystem : EntitySystem
+public sealed partial class ShiftChangeShuttleSystem : EntitySystem
 {
 
     private static readonly Vector2 ShuttleSpawnOffset = new(9000, 9000);
 
-    [Dependency] private readonly MapLoaderSystem _loader = default!;
-    [Dependency] private readonly ShuttleSystem _shuttle = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly DeviceNetworkSystem _deviceNetworkSystem = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly ActorSystem _actor = default!;
-    [Dependency] private readonly IChatManager _chatManager = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private MapLoaderSystem _loader = default!;
+    [Dependency] private ShuttleSystem _shuttle = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private DeviceNetworkSystem _deviceNetworkSystem = default!;
+    [Dependency] private SharedTransformSystem _transform = default!;
+    [Dependency] private ActorSystem _actor = default!;
+    [Dependency] private IChatManager _chatManager = default!;
+    [Dependency] private IRobustRandom _random = default!;
 
     public override void Initialize()
     {

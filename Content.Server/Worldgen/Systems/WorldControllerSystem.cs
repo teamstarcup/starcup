@@ -1,6 +1,7 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Server.Worldgen.Components;
 using Content.Shared.Ghost;
+using Content.Shared.Ghost.Components;
 using Content.Shared.Mind.Components;
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
@@ -12,12 +13,12 @@ namespace Content.Server.Worldgen.Systems;
 /// <summary>
 ///     This handles putting together chunk entities and notifying them about important changes.
 /// </summary>
-public sealed class WorldControllerSystem : EntitySystem
+public sealed partial class WorldControllerSystem : EntitySystem
 {
-    [Dependency] private readonly TransformSystem _xformSys = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly ILogManager _logManager = default!;
-    [Dependency] private readonly MetaDataSystem _metaData = default!;
+    [Dependency] private TransformSystem _xformSys = default!;
+    [Dependency] private IGameTiming _gameTiming = default!;
+    [Dependency] private ILogManager _logManager = default!;
+    [Dependency] private MetaDataSystem _metaData = default!;
 
     private const int PlayerLoadRadius = 2;
 

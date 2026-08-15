@@ -76,7 +76,7 @@
       path: /Audio/Effects/unwrap.ogg
 
 - type: entity
-  parent: FoodSnackBase
+  parent: [ FoodSnackBase, BaseSlicingRefinableFood ] # starcup - SlicableFood breaking change
   id: FoodSnackChocolateBarLarjUnwrapped
   name: Larj bar
   description: A massive chocolate bar, Larj enough to split with your friends.
@@ -99,12 +99,13 @@
           Quantity: 6
         - ReagentId: CocoaPowder
           Quantity: 3
-  - type: SliceableFood
-    slice: FoodSnackChocolateBarLarjChunk
-    count: 3
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodSnackChocolateBarLarjChunk
+      amount: 3
 
 - type: entity
-  parent: FoodSnackBase
+  parent: [ FoodSnackBase, BaseSlicingRefinableFood ] # starcup - SlicableFood breaking change
   id: FoodSnackChocolateBarLarjChunk
   name: Larj bar chunk
   description: One third of a Larj bar, bringing it to a more reasonable size.
@@ -127,9 +128,10 @@
           Quantity: 2
         - ReagentId: CocoaPowder
           Quantity: 1
-  - type: SliceableFood
-    slice: FoodSnackChocolateBarLarjPiece
-    count: 4
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodSnackChocolateBarLarjPiece
+      amount: 4
 
 - type: entity
   parent: FoodSnackBase
@@ -230,7 +232,7 @@
     state: green
   - type: FlavorProfile
     flavors:
-    - lime # starcup: remove "artificial" flavors
+    - sour # starcup: remove "artificial" flavors
 
 - type: entity
   parent: FoodSnackWrappedCandyBase

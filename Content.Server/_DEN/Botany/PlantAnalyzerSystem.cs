@@ -2,10 +2,11 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Server._DEN.AbstractAnalyzer;
 using Content.Server._DEN.Botany.Components;
-using Content.Server.Botany.Components;
 using Content.Server.Botany.Systems;
 using Content.Server.Popups;
 using Content.Shared._DEN.Botany.PlantAnalyzer;
+using Content.Shared.Botany.Systems;
+using Content.Shared.Botany.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction;
 using Content.Shared.Labels.EntitySystems;
@@ -18,17 +19,17 @@ using Robust.Shared.Timing;
 
 namespace Content.Server._DEN.Botany;
 
-public sealed class PlantAnalyzerSystem : AbstractAnalyzerSystem<PlantAnalyzerComponent, PlantAnalyzerDoAfterEvent>
+public sealed partial class PlantAnalyzerSystem : AbstractAnalyzerSystem<PlantAnalyzerComponent, PlantAnalyzerDoAfterEvent>
 {
-    [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
-    [Dependency] private readonly IEntityManager _entityManager = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly PopupSystem _popupSystem = default!;
-    [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
-    [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
-    [Dependency] private readonly PaperSystem _paperSystem = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly LabelSystem _labelSystem = default!;
+    [Dependency] private UserInterfaceSystem _uiSystem = default!;
+    [Dependency] private IEntityManager _entityManager = default!;
+    [Dependency] private IGameTiming _gameTiming = default!;
+    [Dependency] private PopupSystem _popupSystem = default!;
+    [Dependency] private SharedHandsSystem _handsSystem = default!;
+    [Dependency] private SharedAudioSystem _audioSystem = default!;
+    [Dependency] private PaperSystem _paperSystem = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private LabelSystem _labelSystem = default!;
 
     public override void Initialize()
     {
@@ -57,50 +58,51 @@ public sealed class PlantAnalyzerSystem : AbstractAnalyzerSystem<PlantAnalyzerCo
         PlantAnalyzerProduceData? produceData = null;
         if (_entityManager.TryGetComponent<PlantHolderComponent>(target, out var plantHolder))
         {
-            if (plantHolder.Seed is not null)
-            {
-                plantData = new PlantAnalyzerPlantData(
-                    seedDisplayName: plantHolder.Seed.DisplayName,
-                    health: plantHolder.Health,
-                    endurance: plantHolder.Seed.Endurance,
-                    age: plantHolder.Age,
-                    lifespan: plantHolder.Seed.Lifespan,
-                    dead: plantHolder.Dead,
-                    viable: plantHolder.Seed.Viable,
-                    mutating: plantHolder.MutationLevel > 0f,
-                    kudzu: plantHolder.Seed.TurnIntoKudzu
-                );
-                tolerancesData = new PlantAnalyzerTolerancesData(
-                    waterConsumption: plantHolder.Seed.WaterConsumption,
-                    nutrientConsumption: plantHolder.Seed.NutrientConsumption,
-                    toxinsTolerance: plantHolder.Seed.ToxinsTolerance,
-                    pestTolerance: plantHolder.Seed.PestTolerance,
-                    weedTolerance: plantHolder.Seed.WeedTolerance,
-                    lowPressureTolerance: plantHolder.Seed.LowPressureTolerance,
-                    highPressureTolerance: plantHolder.Seed.HighPressureTolerance,
-                    idealHeat: plantHolder.Seed.IdealHeat,
-                    heatTolerance: plantHolder.Seed.HeatTolerance,
-                    idealLight: plantHolder.Seed.IdealLight,
-                    lightTolerance: plantHolder.Seed.LightTolerance,
-                    consumeGasses: [.. plantHolder.Seed.ConsumeGasses.Keys]
-                );
-                produceData = new PlantAnalyzerProduceData(
-                    yield: plantHolder.Seed.ProductPrototypes.Count == 0 ? 0 : BotanySystem.CalculateTotalYield(plantHolder.Seed.Yield, plantHolder.YieldMod),
-                    potency: plantHolder.Seed.Potency,
-                    chemicals: [.. plantHolder.Seed.Chemicals.Keys],
-                    produce: plantHolder.Seed.ProductPrototypes,
-                    exudeGasses: [.. plantHolder.Seed.ExudeGasses.Keys],
-                    seedless: plantHolder.Seed.Seedless
-                );
-            }
-            trayData = new PlantAnalyzerTrayData(
-                waterLevel: plantHolder.WaterLevel,
-                nutritionLevel: plantHolder.NutritionLevel,
-                toxins: plantHolder.Toxins,
-                pestLevel: plantHolder.PestLevel,
-                weedLevel: plantHolder.WeedLevel,
-                chemicals: plantHolder.SoilSolution?.Comp.Solution.Contents.Select(r => r.Reagent.Prototype).ToList()
-            );
+            // FIXME: Botany has been refactored, these fields have been relocated to other components
+            // if (plantHolder.Seed is not null)
+            // {
+            //     plantData = new PlantAnalyzerPlantData(
+            //         seedDisplayName: plantHolder.Seed.DisplayName,
+            //         health: plantHolder.Health,
+            //         endurance: plantHolder.Seed.Endurance,
+            //         age: plantHolder.Age,
+            //         lifespan: plantHolder.Seed.Lifespan,
+            //         dead: plantHolder.Dead,
+            //         viable: plantHolder.Seed.Viable,
+            //         mutating: plantHolder.MutationLevel > 0f,
+            //         kudzu: plantHolder.Seed.TurnIntoKudzu
+            //     );
+            //     tolerancesData = new PlantAnalyzerTolerancesData(
+            //         waterConsumption: plantHolder.Seed.WaterConsumption,
+            //         nutrientConsumption: plantHolder.Seed.NutrientConsumption,
+            //         toxinsTolerance: plantHolder.Seed.ToxinsTolerance,
+            //         pestTolerance: plantHolder.Seed.PestTolerance,
+            //         weedTolerance: plantHolder.Seed.WeedTolerance,
+            //         lowPressureTolerance: plantHolder.Seed.LowPressureTolerance,
+            //         highPressureTolerance: plantHolder.Seed.HighPressureTolerance,
+            //         idealHeat: plantHolder.Seed.IdealHeat,
+            //         heatTolerance: plantHolder.Seed.HeatTolerance,
+            //         idealLight: plantHolder.Seed.IdealLight,
+            //         lightTolerance: plantHolder.Seed.LightTolerance,
+            //         consumeGasses: [.. plantHolder.Seed.ConsumeGasses.Keys]
+            //     );
+            //     produceData = new PlantAnalyzerProduceData(
+            //         yield: plantHolder.Seed.ProductPrototypes.Count == 0 ? 0 : PlantHarvestSystem.CalculateTotalYield(plantHolder.Seed.Yield, plantHolder.YieldMod),
+            //         potency: plantHolder.Seed.Potency,
+            //         chemicals: [.. plantHolder.Seed.Chemicals.Keys],
+            //         produce: plantHolder.Seed.ProductPrototypes,
+            //         exudeGasses: [.. plantHolder.Seed.ExudeGasses.Keys],
+            //         seedless: plantHolder.Seed.Seedless
+            //     );
+            // }
+            // trayData = new PlantAnalyzerTrayData(
+            //     waterLevel: plantHolder.WaterLevel,
+            //     nutritionLevel: plantHolder.NutritionLevel,
+            //     toxins: plantHolder.Toxins,
+            //     pestLevel: plantHolder.PestLevel,
+            //     weedLevel: plantHolder.WeedLevel,
+            //     chemicals: plantHolder.SoilSolution?.Comp.Solution.Contents.Select(r => r.Reagent.Prototype).ToList()
+            // );
         }
 
         return new PlantAnalyzerScannedUserMessage(

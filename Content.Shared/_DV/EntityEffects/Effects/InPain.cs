@@ -5,7 +5,7 @@ namespace Content.Shared.EntityEffects.Effects;
 
 public sealed partial class InPainEntityEffectSystem : EntityEffectSystem<MetaDataComponent, InPain>
 {
-    [Dependency] private readonly SharedPainSystem _painSystem = default!;
+    [Dependency] private SharedPainSystem _painSystem = default!;
 
     protected override void Effect(Entity<MetaDataComponent> entity, ref EntityEffectEvent<InPain> args)
     {

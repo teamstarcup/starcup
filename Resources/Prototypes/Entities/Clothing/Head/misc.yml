@@ -71,7 +71,7 @@
     enabled: false
     radius: 3
     energy: 1
-    mask: /Textures/Effects/LightMasks/cone.png
+    lightMask: ConeSingle
     autoRot: true
     color: "#cc6600"
     netsync: false
@@ -202,8 +202,8 @@
     proto: regal
   - type: StaticPrice
     price: 3000
-#  - type: AddAccentClothing # DeltaV - remove clothing-forced accents
-#    accent: MobsterAccent
+  # - type: MobsterAccent # DeltaV - remove clothing-forced accents
+  #   relayAccent: true
 
 - type: entity
   parent: ClothingHeadBase # starcup: remove contraband label
@@ -264,8 +264,8 @@
     sprite: Clothing/Head/Hats/dogears.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/dogears.rsi
-#  - type: AddAccentClothing # DeltaV - remove clothing-forced accents
-#    accent: BarkAccent
+  # - type: BarkAccent # DeltaV - remove clothing-forced accents
+  #   relayAccent: true
 
 - type: entity
   parent: ClothingHeadBase
@@ -304,7 +304,7 @@
     - FacialHair
 
 - type: entity
-  parent: Clothing
+  parent: [SolutionDrink, Clothing]
   id: WaterDropletHat
   name: water droplet
   description: Makes 8-eyed friends 8 times more adorable!
@@ -330,19 +330,19 @@
       - water
   - type: DrainableSolution
     solution: drink
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 2
-        reagents:
-        - ReagentId: Water
-          Quantity: 2
+  - type: Solution
+    solution:
+      maxVol: 2 # Droplets are pretty small.
+      reagents:
+      - ReagentId: Water
+        Quantity: 2
   - type: DamageOnHighSpeedImpact
     minimumSpeed: 0.1
     damage:
       types:
         Blunt: 1
   - type: Damageable
+  - type: Injurable
     damageContainer: Biological
   - type: Destructible
     thresholds:

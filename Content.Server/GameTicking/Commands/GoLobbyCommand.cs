@@ -9,11 +9,11 @@ using Robust.Shared.Timing;
 namespace Content.Server.GameTicking.Commands
 {
     [AdminCommand(AdminFlags.Round)]
-    public sealed class GoLobbyCommand : LocalizedEntityCommands
+    public sealed partial class GoLobbyCommand : LocalizedEntityCommands
     {
-        [Dependency] private readonly IConfigurationManager _configManager = default!;
-        [Dependency] private readonly GameTicker _gameTicker = default!;
-        [Dependency] private readonly IGameTiming _time = default!; // L5
+        [Dependency] private IConfigurationManager _configManager = default!;
+        [Dependency] private GameTicker _gameTicker = default!;
+        [Dependency] private IGameTiming _time = default!; // L5
 
         public override string Command => "golobby";
 

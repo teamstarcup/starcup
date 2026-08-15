@@ -1,6 +1,6 @@
 - type: entity
   id: Wristwatch
-  parent: BaseItem
+  parent: [ BaseItem, BaseItemDestructible ]
   name: wristwatch
   description: An old or cheap watch for telling time. How much did you waste playing that block game? # starcup - removed fourth wall break
   components:
@@ -20,21 +20,16 @@
     - gloves
   - type: Appearance
   - type: Damageable
+  - type: Injurable
     damageContainer: Inorganic
   - type: StaticPrice
     price: 50
   - type: Destructible
     thresholds:
     - trigger:
-        !type:DamageTrigger
-        damage: 100
-      behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-    - trigger:
         !type:DamageGroupTrigger
         damageGroup: Brute
-        damage: 25
+        damage: 5
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Breakage" ]

@@ -1,7 +1,7 @@
-﻿- type: entity
+- type: entity
   name: basic slime
   id: BaseMobAdultSlimes
-  parent: [ BaseMobSlimes, SimpleMobBase, MobCombat ]
+  parent: [ BaseMobSlimes, SimpleMobBase, MobCombat, BaseSlicingRefinable, MobNightVision, BaseMobDestructible ]
   abstract: true
   description: It looks so much like jelly. I wonder what it tastes like?
   components:
@@ -37,12 +37,10 @@
     - FootstepSound
     - DoorBumpOpener
     - CreatureEmotes # starcup
-  - type: Butcherable
-    butcheringType: Knife
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeatSlime
       amount: 2
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Respirator
     damage:
       types:
@@ -52,7 +50,6 @@
         Asphyxiation: -1.0
     maxSaturation: 15
   - type: Damageable
-    damageContainer: Biological
     damageModifierSet: Slime
   - type: Bloodstream
     bloodReferenceSolution:
@@ -136,11 +133,10 @@
   - type: TypingIndicator
     proto: slime
   - type: Vocal
-    sounds:
     # begin starcup
-      Unsexed: FeralSlimeSpeechEmotes
+    emoteSounds: FeralSlimeSpeechEmotes
     screamId: Simmer
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: AutoEmote
     emotes:
     - BubbleAutoEmote

@@ -19,8 +19,7 @@
     speechSounds: SlothSpeechSounds
     speechVerb: SilentVerb
   - type: Vocal
-    sounds:
-      Unsexed: MimeletSpeechEmotes
+    emoteSounds: MimeletSpeechEmotes
   - type: AutoEmote
     emotes:
     - SqueakAutoEmote
@@ -174,6 +173,22 @@
     - CreatureEmotes
 
 - type: entity
+  parent: [ SolutionWeapon ]
+  id: SolutionVenomGloom
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Omnizine
+        Quantity: 0.5
+  - type: SolutionRegeneration
+    generated:
+      reagents:
+      - ReagentId: MuteToxin # Charon-Epsilon lives.
+        Quantity: 0.01
+
+- type: entity
   name: Gloom
   parent: MobAdultSlimes
   id: MobGloom
@@ -210,7 +225,6 @@
       amount: 4 # enough to create a skull mask
     - id: MaterialSmileExtract
       amount: 1
-    dropOrgansOnButcher: true
   - type: MovementSpeedModifier
     baseWalkSpeed: 1.5
     baseSprintSpeed: 3
@@ -227,16 +241,9 @@
     damage:
       types:
         Caustic: 3
-  - type: SolutionContainerManager
+  - type: SolutionManager
     solutions:
-      melee:
-        maxVol: 0.5
-  - type: SolutionRegeneration
-    solution: melee
-    generated:
-      reagents:
-      - ReagentId: MuteToxin # Charon-Epsilon lives.
-        Quantity: 0.01
+    - SolutionVenomGloom
   - type: MeleeChemicalInjector
     transferAmount: 0.1
     solution: melee

@@ -46,7 +46,7 @@
     state: double-unfrosted
 
 - type: entity
-  parent: FoodCakeTieredBase
+  parent: [ FoodCakeTieredBase, BaseSlicingRefinableFood ] # starcup - SliceableFood -> BaseSlicingRefinableFood
   id: FoodCakeTieredDouble
   name: celebration cake
   description: A huge cake for special occasions. Too large to eat without slicing.
@@ -67,9 +67,10 @@
           Quantity: 36
         - ReagentId: Vitamin
           Quantity: 12
-  - type: SliceableFood
-    slice: FoodCakeTieredSlice
-    count: 12
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodCakeTieredSlice
+      amount: 12
 
 - type: entity
   parent: FoodCakeTieredBase
@@ -83,7 +84,7 @@
     state: triple-unfrosted
 
 - type: entity
-  parent: FoodCakeTieredBase
+  parent: [ FoodCakeTieredBase, BaseSlicingRefinableFood ] # starcup - BaseSlicingRefinableFood
   id: FoodCakeTieredTriple
   name: wedding cake
   description: A gargantuan decorated cake for weddings. Too large to eat without slicing.
@@ -104,9 +105,10 @@
           Quantity: 54
         - ReagentId: Vitamin
           Quantity: 18
-  - type: SliceableFood
-    slice: FoodCakeTieredSlice
-    count: 18
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodCakeTieredSlice
+      amount: 18
 
 - type: entity
   name: slice of cake

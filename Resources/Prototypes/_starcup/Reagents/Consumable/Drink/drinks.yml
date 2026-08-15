@@ -11,7 +11,8 @@
     Digestion:
       metabolites: null
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/coffeeglass.rsi
@@ -29,7 +30,8 @@
     Digestion:
       metabolites: null
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
 
 - type: reagent
@@ -43,7 +45,8 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 3
   metamorphicSprite:
     sprite: _starcup/Objects/Consumable/Drinks/cherrylimeade.rsi
@@ -63,7 +66,8 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
   metamorphicSprite:
     sprite: _starcup/Objects/Consumable/Drinks/evilprincess.rsi

@@ -18,8 +18,9 @@
     sprite: _DV/Objects/Storage/barrel.rsi
     state: base
   - type: Damageable
-    damageContainer: StructuralInorganic
     damageModifierSet: Wood
+  - type: Injurable
+    damageContainer: StructuralInorganic
   - type: Destructible
     thresholds:
     - trigger:
@@ -104,8 +105,9 @@
     - state: base
       map: ["enum.StorageVisualLayers.Base"]
   - type: Damageable
-    damageContainer: StructuralInorganic
     damageModifierSet: Wood
+  - type: Injurable
+    damageContainer: StructuralInorganic
   - type: StaticPrice
     price: 50
   - type: Construction
@@ -134,7 +136,7 @@
   id: WoodenKegRootBeer
   components:
   - type: Label
-    currentLabel: reagent-name-root-beer
+    localizedLabel: reagent-name-root-beer
   - type: SolutionContainerManager
     solutions:
       tank:
@@ -149,7 +151,7 @@
   id: WoodenKegBeer
   components:
   - type: Label
-    currentLabel: reagent-name-beer
+    localizedLabel: reagent-name-beer
   - type: SolutionContainerManager
     solutions:
       tank:
@@ -164,7 +166,7 @@
   id: WoodenKegWine
   components:
   - type: Label
-    currentLabel: reagent-name-wine
+    localizedLabel: reagent-name-wine
   - type: SolutionContainerManager
     solutions:
       tank:

@@ -180,23 +180,12 @@
   - type: FlavorProfile
     flavors:
     - meaty
-  - type: Thirst
-    startingThirst: 25
-    thresholds:
-      OverHydrated: 35
-      Okay: 25
-      Thirsty: 15
-      Parched: 5
-      Dead: 0
-    baseDecayRate: 0.04
-  - type: Hunger
-    thresholds:
-      Overfed: 35
-      Okay: 25
-      Peckish: 12.5
-      Starving: 5
-      Dead: 0
-    baseDecayRate: 0.05
+  - type: Satiation
+    satiations:
+      Hunger:
+        prototype: SnailHunger
+      Thirst:
+        prototype: MouseThirst
   - type: Extractable
     grindableSolutionName: food
   - type: SolutionContainerManager
@@ -232,10 +221,9 @@
       types:
         Blunt: 0.1
   - type: Vocal
-    sounds:
-      Unsexed: SqueakSpeechEmotes
+    emoteSounds: SqueakSpeechEmotes
     screamId: CreatureSqueak
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
     wilhelmProbability: 0.001
   - type: TypingIndicator
     proto: rodentia
@@ -352,23 +340,12 @@
   - type: FlavorProfile
     flavors:
     - meaty
-  - type: Thirst
-    startingThirst: 25
-    thresholds:
-      OverHydrated: 35
-      Okay: 25
-      Thirsty: 15
-      Parched: 5
-      Dead: 0
-    baseDecayRate: 0.04
-  - type: Hunger
-    thresholds:
-      Overfed: 35
-      Okay: 25
-      Peckish: 12.5
-      Starving: 5
-      Dead: 0
-    baseDecayRate: 0.05
+  - type: Satiation
+    satiations:
+      Hunger:
+        prototype: SnailHunger
+      Thirst:
+        prototype: MouseThirst
   - type: Extractable
     grindableSolutionName: food
   - type: SolutionContainerManager
@@ -404,10 +381,9 @@
       types:
         Blunt: 0.1
   - type: Vocal
-    sounds:
-      Unsexed: SqueakSpeechEmotes
+    emoteSounds: SqueakSpeechEmotes
     screamId: CreatureSqueak
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
     wilhelmProbability: 0.001
   - type: TypingIndicator
     proto: rodentia
@@ -529,23 +505,12 @@
         Base: dead
       Dead:
         Base: splat
-  - type: Thirst
-    startingThirst: 25
-    thresholds:
-      OverHydrated: 35
-      Okay: 25
-      Thirsty: 15
-      Parched: 5
-      Dead: 0
-    baseDecayRate: 0.04
-  - type: Hunger
-    thresholds:
-      Overfed: 35
-      Okay: 25
-      Peckish: 12.5
-      Starving: 5
-      Dead: 0
-    baseDecayRate: 0.05
+  - type: Satiation
+    satiations:
+      Hunger:
+        prototype: SnailHunger
+      Thirst:
+        prototype: MouseThirst
   - type: Extractable
     grindableSolutionName: food
   - type: SolutionContainerManager
@@ -555,7 +520,6 @@
         - ReagentId: UncookedAnimalProteins
           Quantity: 3
   - type: Butcherable
-    butcheringType: Spike
     spawned:
     - id: FoodMeatRat
       amount: 3
@@ -579,10 +543,9 @@
       types:
         Blunt: 0.1
   - type: Vocal
-    sounds:
-      Unsexed: PossumSpeechEmotes
+    emoteSounds: PossumSpeechEmotes
     screamId: CreatureHiss
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
     wilhelmProbability: 0.001
   - type: TypingIndicator
     proto: rodentia
@@ -684,23 +647,12 @@
         Base: dead
       Dead:
         Base: splat
-  - type: Thirst
-    startingThirst: 25
-    thresholds:
-      OverHydrated: 35
-      Okay: 25
-      Thirsty: 15
-      Parched: 5
-      Dead: 0
-    baseDecayRate: 0.04
-  - type: Hunger
-    thresholds:
-      Overfed: 35
-      Okay: 25
-      Peckish: 12.5
-      Starving: 5
-      Dead: 0
-    baseDecayRate: 0.05
+  - type: Satiation
+    satiations:
+      Hunger:
+        prototype: SnailHunger
+      Thirst:
+        prototype: MouseThirst
   - type: Extractable
     grindableSolutionName: food
   - type: SolutionContainerManager
@@ -733,10 +685,9 @@
       types:
         Blunt: 0.1
   - type: Vocal
-    sounds:
-      Unsexed: SqueakSpeechEmotes
+    emoteSounds: SqueakSpeechEmotes
     screamId: CreatureSqueak
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
     wilhelmProbability: 0.001
   - type: TypingIndicator
     proto: rodentia
@@ -895,7 +846,6 @@
       Dead:
         Base: dead
   - type: Butcherable
-    butcheringType: Spike
     spawned:
     - id: FoodMeatCapybara
       amount: 3
@@ -909,10 +859,9 @@
     speechVerb: SmallMob
     allowedEmotes: ['CreatureSqueak', 'CreaturePurr', 'CreatureTrill', 'CreatureYawn', 'CreatureCough']
   - type: Vocal
-    sounds:
-      Unsexed: HamsterSpeechEmotes
+    emoteSounds: HamsterSpeechEmotes
     screamId: CreatureTrill
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: TypingIndicator
     proto: rodentia
 

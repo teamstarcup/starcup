@@ -1,7 +1,6 @@
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
 using Content.Shared.Radio.Components; // starcup
-using Content.Server.Speech.Components;
 using Content.Shared._DV.AACTablet;
 using Content.Shared.Chat;
 using Content.Shared.Database;
@@ -9,16 +8,17 @@ using Content.Shared.IdentityManagement;
 using Robust.Server.GameObjects; // starcup
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+using Content.Shared.Speech.Components;
 
 namespace Content.Server._DV.AACTablet;
 
 public sealed partial class AACTabletSystem : EntitySystem // starcup: made partial
 {
-    [Dependency] private readonly ChatSystem _chat = default!;
-    [Dependency] private readonly IAdminLogManager _adminLogger = default!; // L5
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
-    [Dependency] private readonly UserInterfaceSystem _userInterface = default!; // starcup
+    [Dependency] private ChatSystem _chat = default!;
+    [Dependency] private IAdminLogManager _adminLogger = default!; // L5
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private UserInterfaceSystem _userInterface = default!; // starcup
 
     private readonly List<string> _localisedPhrases = [];
 

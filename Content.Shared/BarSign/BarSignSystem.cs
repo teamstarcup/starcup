@@ -5,14 +5,14 @@ using Robust.Shared.Random;
 
 namespace Content.Shared.BarSign;
 
-public sealed class BarSignSystem : EntitySystem
+public sealed partial class BarSignSystem : EntitySystem
 {
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly MetaDataSystem _metaData = default!;
-    [Dependency] private readonly SharedUserInterfaceSystem _ui = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly SharedPointLightSystem _pointLight = default!;  // starcup
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private MetaDataSystem _metaData = default!;
+    [Dependency] private SharedUserInterfaceSystem _ui = default!;
+    [Dependency] private SharedAppearanceSystem _appearance = default!;
+    [Dependency] private SharedPointLightSystem _pointLight = default!;  // starcup
+
 
     public override void Initialize()
     {
@@ -32,8 +32,8 @@ public sealed class BarSignSystem : EntitySystem
     {
         BarSignPrototype? newPrototype;
         if (ent.Comp.Current is null)
-            newPrototype = _random.Pick(GetAllBarSigns(_prototypeManager));
-        else if (!_prototypeManager.Resolve(ent.Comp.Current, out newPrototype))
+            newPrototype = _random.Pick(GetAllBarSigns(ProtoMan));
+        else if (!ProtoMan.Resolve(ent.Comp.Current, out newPrototype))
             return;
 
         _pointLight.SetColor(ent.Owner, newPrototype.Color); // starcup: bar signs emit light
@@ -50,7 +50,7 @@ public sealed class BarSignSystem : EntitySystem
 
     private void OnSetBarSignMessage(Entity<BarSignComponent> ent, ref SetBarSignMessage args)
     {
-        if (!_prototypeManager.Resolve(args.Sign, out var signPrototype))
+        if (!ProtoMan.Resolve(args.Sign, out var signPrototype))
             return;
 
         if (signPrototype.Hidden)
@@ -61,7 +61,7 @@ public sealed class BarSignSystem : EntitySystem
 
     private void OnEmpPulse(Entity<BarSignComponent> ent, ref EmpPulseEvent args)
     {
-        if (!_prototypeManager.Resolve(ent.Comp.Emped, out var empedPrototype))
+        if (!ProtoMan.Resolve(ent.Comp.Emped, out var empedPrototype))
             return;
 
         SetBarSign(ent, empedPrototype);

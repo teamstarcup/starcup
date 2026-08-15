@@ -34,15 +34,13 @@
     radius: 2.0
     energy: 1.5
     color: "#ecca87"
-  - type: SolutionContainerManager
-    solutions:
-      vasculature:
-        maxVol: 30
-        reagents:
-        - ReagentId: Honey
-          Quantity: 30
+  - type: Solution
+    solution:
+      maxVol: 30
+      reagents:
+      - ReagentId: Honey
+        Quantity: 30
   - type: SolutionRegeneration
-    solution: vasculature
     generated:
       reagents:
       - ReagentId: Honey

@@ -38,7 +38,7 @@
   components:
   - type: FlavorProfile
     flavors:
-    - bland
+    - bitter
     - salty
   - type: Sprite
     sprite: _starcup/Objects/Consumable/Food/meat.rsi
@@ -64,7 +64,7 @@
 # Red meat
 - type: entity
   name: raw capybara meat
-  parent: FoodMeatRawBase
+  parent: [ FoodMeatRawBase, BaseSlicingRefinable ]
   id: FoodMeatCapybara
   description: A slab of raw capybara meat.
   components:
@@ -78,9 +78,10 @@
           Quantity: 9
         - ReagentId: Fat
           Quantity: 9
-  - type: SliceableFood
-    count: 3
-    slice: FoodMeatCapybaraCutlet
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodMeatCapybaraCutlet
+      amount: 3
   - type: Construction
     graph: CapybaraSteak
     node: start
@@ -88,7 +89,7 @@
 
 - type: entity
   name: cooked capybara
-  parent: FoodMeatBase
+  parent: [ FoodMeatBase, BaseSlicingRefinable ]
   id: FoodMeatCapybaraCooked
   description: A cooked slab of capybara meat.
   components:
@@ -108,9 +109,10 @@
           Quantity: 10
         - ReagentId: Protein
           Quantity: 5
-  - type: SliceableFood
-    count: 3
-    slice: FoodMeatCapybaraCutlet
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodMeatCapybaraCutlet
+      amount: 3
   - type: Construction
     graph: CapybaraSteak
     node: cooked capybara

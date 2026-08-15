@@ -17,7 +17,8 @@
       metabolites:
         Ethanol: 0.3
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
 
 - type: reagent
@@ -39,7 +40,8 @@
       metabolites:
         Ethanol: 0.12 # starcup: increased from 0.1
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
 
 - type: reagent
@@ -61,7 +63,8 @@
       metabolites:
         Ethanol: 0.17 # starcup: increased from 0.125
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
 
 - type: reagent
@@ -93,7 +96,8 @@
         damage:
           types:
             Caustic: 0.25
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
 
 - type: reagent
@@ -115,7 +119,8 @@
       metabolites:
         Ethanol: 0.12 # starcup: increased from 0.05
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
 
 - type: reagent
@@ -137,7 +142,8 @@
       metabolites:
         Ethanol: 0.13 # starcup: increased from 0.125
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
       - !type:Emote #It's very funny
         emote: Laugh
@@ -162,7 +168,8 @@
       metabolites:
         Ethanol: 0.12 # starcup: decreased from 0.13
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
       - !type:AdjustTemperature
         amount: 75 # thermal energy, not temperature!
@@ -186,7 +193,8 @@
       metabolites:
         Ethanol: 0.12 # starcup: increased from 0.06
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
 
 - type: reagent
@@ -203,5 +211,6 @@
       metabolites:
         Ethanol: 0.4 # starcup: increased from 0.12
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 1

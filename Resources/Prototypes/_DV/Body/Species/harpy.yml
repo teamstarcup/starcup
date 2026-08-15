@@ -225,10 +225,7 @@
     speechVerb: Harpy
     allowedEmotes: ['Meow', 'Hiss', 'Mew', 'Purr', 'Growl', 'Bark', 'Snarl', 'Whine', 'Howl', 'Awoo', 'HarpyHonk', 'HarpyRing', 'HarpyPew', 'HarpyBang', 'HarpyBeep', 'HarpyRev', 'HarpyCaw', 'HarpySquish', 'Chitter', 'Chirp', 'Squeak', 'Click']
   - type: Vocal
-    sounds:
-      Male: SoundsHarpy
-      Female: SoundsHarpy
-      Unsexed: SoundsHarpy
+    emoteSounds: SoundsHarpy # starcup
   - type: InstrumentVisuals
   - type: GenericVisualizer
     visuals:
@@ -355,7 +352,9 @@
   components:
   - type: Action # starcup: rewritten for action refactor
     checkCanInteract: false
-    icon: _DV/Interface/Actions/harpy_sing.png
+  - type: Sprite
+    layers:
+    - texture: _DV/Interface/Actions/harpy_sing.png
   - type: InstantAction # starcup: rewritten for action refactor
     event: !type:OpenUiActionEvent
       key: enum.InstrumentUiKey.Key

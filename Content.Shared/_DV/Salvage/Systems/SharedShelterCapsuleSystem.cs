@@ -9,10 +9,10 @@ namespace Content.Shared._DV.Salvage.Systems;
 /// Handles interaction for shelter capsules.
 /// Room spawning is done serverside.
 /// </summary>
-public abstract class SharedShelterCapsuleSystem : EntitySystem
+public abstract partial class SharedShelterCapsuleSystem : EntitySystem
 {
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
 
     public override void Initialize()
     {

@@ -11,7 +11,8 @@
       metabolites:
         UncookedAnimalProteins: 0.1
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2.0
         conditions:
         - !type:MetabolizerTypeCondition

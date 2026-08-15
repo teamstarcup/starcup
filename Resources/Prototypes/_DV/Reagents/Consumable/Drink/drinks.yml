@@ -17,7 +17,8 @@
       metabolites:
         Radium: 0.02
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 3
 
 - type: reagent
@@ -56,7 +57,8 @@
         Nutriment: 0.2
         Theobromine: 0.1 # starcup: added
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 3
 
 - type: reagent
@@ -78,7 +80,8 @@
       metabolites:
         Ethanol: 0.6
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
       - !type:PopupMessage
         conditions:
@@ -115,7 +118,8 @@
       metabolites:
         Ethanol: 0.13 # starcup: decreased from 0.4
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
       - !type:HealthChange
         damage:
@@ -140,7 +144,8 @@
       metabolites:
         Ethanol: 0.16 # starcup: decreased from 0.3
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
 
 - type: reagent
@@ -176,7 +181,8 @@
       metabolites:
         Ethanol: 0.6
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
       - !type:HealthChange
         damage:
@@ -224,7 +230,8 @@
         Ethanol: 0.5
         Caffeine: 0.1
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2
       - !type:Jitter
 
@@ -262,5 +269,6 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 2

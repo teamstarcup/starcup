@@ -13,16 +13,16 @@ using Robust.Shared.Prototypes;
 namespace Content.Server._starcup.Administration.Commands;
 
 [AdminCommand(AdminFlags.Admin)]
-public sealed class SpawnPlayer : LocalizedEntityCommands
+public sealed partial class SpawnPlayer : LocalizedEntityCommands
 {
-    [Dependency] private readonly IEntityManager _entityManager = default!;
-    [Dependency] private readonly IServerPreferencesManager _prefs = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private IEntityManager _entityManager = default!;
+    [Dependency] private IServerPreferencesManager _prefs = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
 
-    [Dependency] private readonly SharedMindSystem _mindSystem = default!;
-    [Dependency] private readonly StationSpawningSystem _spawningSystem = default!;
-    [Dependency] private readonly GameTicker _gameTicker = default!;
+    [Dependency] private SharedMindSystem _mindSystem = default!;
+    [Dependency] private StationSpawningSystem _spawningSystem = default!;
+    [Dependency] private GameTicker _gameTicker = default!;
 
     public override string Command => "spawnplayer";
 

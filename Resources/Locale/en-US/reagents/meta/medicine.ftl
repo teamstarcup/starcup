@@ -100,6 +100,8 @@ reagent-desc-cognizine = A mysterious chemical which is able to make any non-sen
 
 reagent-name-ethyloxyephedrine = ethyloxyephedrine
 reagent-desc-ethyloxyephedrine = A mildly unstable medicine derived from desoxyephedrine, primarily used to combat narcolepsy.
+# starcup: pill label
+pill-label-ethyloxyephedrine-10u = { reagent-name-ethyloxyephedrine } 10u
 
 reagent-name-diphenylmethylamine = diphenylmethylamine
 reagent-desc-diphenylmethylamine = A more stable medicine than ethyloxyephedrine. Useful for keeping someone awake.

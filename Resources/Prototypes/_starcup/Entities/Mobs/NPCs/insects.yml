@@ -74,10 +74,9 @@
     speechSounds: FlyingSwarmSpeechSounds
     allowedEmotes: ['BuzzNonSilicon']
   - type: Vocal
-    sounds:
-      Unsexed: FlyingSwarmSpeechEmotes
+    emoteSounds: FlyingSwarmSpeechEmotes
     screamId: BuzzNonSilicon
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: ReplacementAccent
     accent: BuzzAccent
 
@@ -168,12 +167,22 @@
     speechSounds: GiantFlyingBugSpeechSounds
     allowedEmotes: ['BuzzNonSilicon']
   - type: Vocal
-    sounds:
-      Unsexed: GiantFlyingBugSpeechEmotes
+    emoteSounds: GiantFlyingBugSpeechEmotes
     screamId: BuzzNonSilicon
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: ReplacementAccent
     accent: BuzzAccent
+
+- type: entity
+  parent: [SolutionWeapon, SolutionTiny]
+  id: SolutionVenomBee
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SolutionRegeneration
+    generated:
+      reagents:
+      - ReagentId: Histamine
+        Quantity: 3
 
 - type: entity
   name: bees
@@ -210,20 +219,14 @@
         Base: dead
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
+  - type: SolutionManager
     solutions:
-      food:
-        reagents:
-        - ReagentId: GroundBee
-          Quantity: 5
-      melee:
-        maxVol: 30
-  - type: SolutionRegeneration
-    solution: melee
-    generated:
+    - SolutionVenomBee
+  - type: Solution
+    solution:
       reagents:
-      - ReagentId: Histamine
-        Quantity: 3
+      - ReagentId: GroundBee
+        Quantity: 5
   - type: MeleeChemicalInjector
     transferAmount: 0.75
     solution: melee
@@ -242,10 +245,9 @@
     speechSounds: FlyingSwarmSpeechSounds
     allowedEmotes: ['BuzzNonSilicon']
   - type: Vocal
-    sounds:
-      Unsexed: FlyingSwarmSpeechEmotes
+    emoteSounds: FlyingSwarmSpeechEmotes
     screamId: BuzzNonSilicon
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: ReplacementAccent
     accent: BuzzAccent
   - type: MeleeWeapon
@@ -446,10 +448,9 @@
     speechSounds: GiantFlyingBugSpeechSounds
     allowedEmotes: ['BuzzNonSilicon']
   - type: Vocal
-    sounds:
-      Unsexed: GiantFlyingBugSpeechEmotes
+    emoteSounds: GiantFlyingBugSpeechEmotes
     screamId: BuzzNonSilicon
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
 
 - type: entity
   name: giant bee
@@ -470,16 +471,9 @@
     damage:
       types:
         Piercing: 4
-  - type: SolutionContainerManager
+  - type: SolutionManager
     solutions:
-      melee:
-        maxVol: 30
-  - type: SolutionRegeneration
-    solution: melee
-    generated:
-      reagents:
-      - ReagentId: Histamine
-        Quantity: 3
+    - SolutionVenomBee
   - type: MeleeChemicalInjector
     transferAmount: 0.75
     solution: melee
@@ -628,22 +622,12 @@
   - type: FlavorProfile
     flavors:
     - chewy
-  - type: Thirst
-    startingThirst: 25
-    thresholds:
-      OverHydrated: 30
-      Okay: 20
-      Thirsty: 10
-      Parched: 5
-      Dead: 0
-  - type: Hunger
-    thresholds:
-      Overfed: 30
-      Okay: 20
-      Peckish: 10
-      Starving: 5
-      Dead: 0
-    baseDecayRate: 0.1
+  - type: Satiation
+    satiations:
+      Hunger:
+        prototype: SnailHunger
+      Thirst:
+        prototype: MouseThirst
   - type: Extractable
     grindableSolutionName: food
   - type: SolutionContainerManager
@@ -656,8 +640,9 @@
     spawned:
     - id: FoodMeatSlime
   - type: Damageable
-    damageContainer: Biological
     damageModifierSet: Cockroach
+  - type: Injurable
+    damageContainer: Biological
   - type: Tag
     tags:
     - Trash
@@ -694,10 +679,9 @@
     speechSounds: BeetleSpeechSounds
     allowedEmotes: ['CreatureChirp', 'BuzzNonSilicon']
   - type: Vocal
-    sounds:
-      Unsexed: BeetleSpeechEmotes
+    emoteSounds: BeetleSpeechEmotes
     screamId: CreatureChirp
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: ReplacementAccent
     accent: crab
   - type: FootstepModifier
@@ -719,10 +703,9 @@
     speechSounds: BeetleSpeechSounds
     allowedEmotes: ['CreatureChirp', 'BuzzNonSilicon', 'MandibleSnap']
   - type: Vocal
-    sounds:
-      Unsexed: BeetleSpeechEmotes
+    emoteSounds: BeetleSpeechEmotes
     screamId: MandibleSnap
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
 
 - type: entity
   name: rhinoceros beetle
