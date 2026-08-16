@@ -51,17 +51,15 @@
       types:
         Piercing: 1
     interactSound: /Audio/_starcup/Effects/hit_needle.ogg
-  - type: SolutionContainerManager
-    solutions:
-      vasculature:
-        maxVol: 25
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 17
-        - ReagentId: PlantDetritus
-          Quantity: 8
+  - type: Solution
+    solution:
+      maxVol: 25
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 17
+      - ReagentId: PlantDetritus
+        Quantity: 8
   - type: SolutionRegeneration
-    solution: vasculature
     generated:
       reagents:
       - ReagentId: Sugar
@@ -94,17 +92,15 @@
             variation: 0.05
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: SolutionContainerManager
-    solutions:
-      vasculature:
-        maxVol: 15
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 10
-        - ReagentId: PlantDetritus
-          Quantity: 5
+  - type: Solution
+    solution:
+      maxVol: 15
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 10
+      - ReagentId: PlantDetritus
+        Quantity: 5
   - type: SolutionRegeneration
-    solution: vasculature
     generated:
       reagents:
       - ReagentId: Sugar
@@ -150,17 +146,15 @@
     damage:
       types:
         Piercing: 1.5
-  - type: SolutionContainerManager
-    solutions:
-      vasculature:
-        maxVol: 40
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 30
-        - ReagentId: PlantDetritus
-          Quantity: 10
+  - type: Solution
+    solution:
+      maxVol: 40
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 30
+      - ReagentId: PlantDetritus
+        Quantity: 10
   - type: SolutionRegeneration
-    solution: vasculature
     generated:
       reagents:
       - ReagentId: Sugar
@@ -196,17 +190,15 @@
         cactus02: ""
         cactus03: ""
         cactus04: ""
-  - type: SolutionContainerManager
-    solutions:
-      vasculature:
-        maxVol: 15
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 10
-        - ReagentId: Water
-          Quantity: 5
+  - type: Solution
+    solution:
+      maxVol: 15
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 10
+      - ReagentId: Water
+        Quantity: 5
   - type: SolutionRegeneration
-    solution: vasculature
     generated:
       reagents:
       - ReagentId: Sugar
@@ -232,17 +224,15 @@
         cactus02: ""
         cactus03: ""
         cactus04: ""
-  - type: SolutionContainerManager
-    solutions:
-      vasculature:
-        maxVol: 40
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 30
-        - ReagentId: Water
-          Quantity: 10
+  - type: Solution
+    solution:
+      maxVol: 40
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 30
+      - ReagentId: Water
+        Quantity: 10
   - type: SolutionRegeneration
-    solution: vasculature
     generated:
       reagents:
       - ReagentId: Sugar
@@ -269,19 +259,17 @@
         cactus02: ""
         cactus03: ""
         cactus04: ""
-  - type: SolutionContainerManager
-    solutions:
-      vasculature:
-        maxVol: 40
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 20
-        - ReagentId: PlantDetritus
-          Quantity: 10
-        - ReagentId: Blood
-          Quantity: 10
+  - type: Solution
+    solution:
+      maxVol: 40
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 20
+      - ReagentId: PlantDetritus
+        Quantity: 10
+      - ReagentId: Blood
+        Quantity: 10
   - type: SolutionRegeneration
-    solution: vasculature
     generated:
       reagents:
       - ReagentId: Sugar
@@ -316,19 +304,17 @@
         density: 4000
         layer:
         - WallLayer
-  - type: SolutionContainerManager
-    solutions:
-      vasculature:
-        maxVol: 70
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 35
-        - ReagentId: PlantDetritus
-          Quantity: 18
-        - ReagentId: Blood
-          Quantity: 17
+  - type: Solution
+    solution:
+      maxVol: 70
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 35
+      - ReagentId: PlantDetritus
+        Quantity: 18
+      - ReagentId: Blood
+        Quantity: 17
   - type: SolutionRegeneration
-    solution: vasculature
     generated:
       reagents:
       - ReagentId: Sugar
@@ -347,19 +333,17 @@
   components:
   - type: Sprite
     sprite: _starcup/Structures/Nature/Flora/Cacti/flora_giant_cactus_py.rsi
-  - type: SolutionContainerManager
-    solutions:
-      vasculature:
-        maxVol: 50
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 35
-        - ReagentId: PlantDetritus
-          Quantity: 18
-        - ReagentId: UnstableMutagen
-          Quantity: 17
+  - type: Solution
+    solution:
+      maxVol: 50
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 35
+      - ReagentId: PlantDetritus
+        Quantity: 18
+      - ReagentId: UnstableMutagen
+        Quantity: 17
   - type: SolutionRegeneration
-    solution: vasculature
     generated:
       reagents:
       - ReagentId: Sugar
@@ -386,19 +370,17 @@
     - random:
         cactus01: ""
         cactus02: ""
-  - type: SolutionContainerManager
-    solutions:
-      vasculature:
-        maxVol: 70
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 35
-        - ReagentId: PlantDetritus
-          Quantity: 18
-        - ReagentId: UnstableMutagen
-          Quantity: 17
+  - type: Solution
+    solution:
+      maxVol: 70
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 35
+      - ReagentId: PlantDetritus
+        Quantity: 18
+      - ReagentId: UnstableMutagen
+        Quantity: 17
   - type: SolutionRegeneration
-    solution: vasculature
     generated:
       reagents:
       - ReagentId: Sugar

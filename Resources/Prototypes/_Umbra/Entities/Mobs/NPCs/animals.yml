@@ -43,10 +43,9 @@
     speechSounds: KangarooSpeechSounds
     allowedEmotes: ['CreatureScream', 'CreatureSqueak', 'CreatureYawn', 'CreatureCough', 'ThumpFootSoft', 'ThumpFootMany', 'ThumpFootLoud']
   - type: Vocal
-    sounds:
-      Unsexed: SqueakSpeechEmotes
+    emoteSounds: SqueakSpeechEmotes
     screamId: ThumpFootSoft
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: ReplacementAccent
     accent: kangaroo
   - type: AutoEmote
@@ -62,6 +61,7 @@
     baseWalkSpeed : 2.5
     baseSprintSpeed : 4
   - type: Damageable
+  - type: Injurable
     damageContainer: Biological
   - type: Butcherable
     spawned:

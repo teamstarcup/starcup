@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   name: piano
   suffix: Large Instrument, Keyboard Instrument # starcup
   parent: BasePlaceableInstrumentRotatable
@@ -196,3 +196,16 @@
     energy: 1.5
     color: green
   # End Den additions
+
+- type: entity
+  parent: BasePlaceableInstrumentRotatable
+  id: BigDrumsInstrument
+  name: drum kit
+  description: Ba dum tss!
+  components:
+  - type: Instrument
+    program: 7
+    bank: 100 # Defined in space-station-14.sf2
+    allowPercussion: true
+  - type: Sprite
+    state: drum

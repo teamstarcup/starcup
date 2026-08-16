@@ -10,6 +10,7 @@
     enum.HumanoidVisualLayers.Hair:
       limit: 2
       required: false
+      weight: 1
     enum.HumanoidVisualLayers.FacialHair:
       limit: 1
       required: false
@@ -103,7 +104,7 @@
   # end starcup
 
 - type: entity
-  parent: OrganBase
+  parent: OrganBaseOrganic
   id: OrganHuman
   abstract: true
   suffix: human
@@ -156,6 +157,7 @@
     - enum.HumanoidVisualLayers.Hair
     - enum.HumanoidVisualLayers.Snout
     - enum.HumanoidVisualLayers.HeadTop # starcup
+    - enum.HumanoidVisualLayers.FacialHair
 
 - type: entity
   parent: [ OrganBaseArmLeft, OrganHumanExternal ]

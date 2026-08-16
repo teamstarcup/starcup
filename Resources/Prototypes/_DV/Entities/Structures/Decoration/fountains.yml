@@ -12,12 +12,11 @@
     layers:
       - state: large-round-base
       - state: large-round-base-water
-  - type: SolutionContainerManager
-    solutions:
-      fountain:
-        maxVol: 100
+  - type: Solution
+    id: fountain
+    solution:
+      maxVol: 100
   - type: SolutionRegeneration
-    solution: fountain
     generated:
       reagents:
       - ReagentId: Water

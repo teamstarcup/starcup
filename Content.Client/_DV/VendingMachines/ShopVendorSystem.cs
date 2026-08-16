@@ -1,14 +1,16 @@
 using Content.Shared._DV.VendingMachines;
-using Content.Shared.VendingMachines;
 using Robust.Client.Animations;
 using Robust.Client.GameObjects;
+using Content.Client.VendingMachines;
+using Content.Shared.Power.EntitySystems;
 
 namespace Content.Client._DV.VendingMachines;
 
-public sealed class ShopVendorSystem : SharedShopVendorSystem
+public sealed partial class ShopVendorSystem : SharedShopVendorSystem
 {
-    [Dependency] private readonly AnimationPlayerSystem _animationPlayer = default!;
-    [Dependency] private readonly AppearanceSystem _appearance = default!;
+    [Dependency] private AnimationPlayerSystem _animationPlayer = default!;
+    // [Dependency] private AppearanceSystem _appearance = default!; // starcup: merge-fix
+    [Dependency] private SharedPowerReceiverSystem _receiver = default!; // starcup: merge-fix
 
     public override void Initialize()
     {
@@ -29,13 +31,30 @@ public sealed class ShopVendorSystem : SharedShopVendorSystem
         UpdateAppearance((ent, ent.Comp, args.Sprite));
     }
 
+    // starcup: quick merge-fix
+    private VendingMachineVisualState GetVisualState(Entity<ShopVendorComponent> ent)
+    {
+        if (ent.Comp.Broken)
+            return VendingMachineVisualState.Broken;
+
+        if (ent.Comp.Ejecting is not null)
+            return VendingMachineVisualState.Eject;
+
+        if (ent.Comp.Denying)
+            return VendingMachineVisualState.Deny;
+
+        if (!_receiver.IsPowered(ent.AsType()))
+            return VendingMachineVisualState.Off;
+
+        return VendingMachineVisualState.Normal;
+    }
+
     private void UpdateAppearance(Entity<ShopVendorComponent, SpriteComponent?> ent)
     {
         if (!Resolve(ent, ref ent.Comp2))
             return;
 
-        if (!_appearance.TryGetData<VendingMachineVisualState>(ent, VendingMachineVisuals.VisualState, out var state))
-            state = VendingMachineVisualState.Normal;
+        var state = GetVisualState(ent);
 
         var sprite = ent.Comp2;
         SetLayerState(VendingMachineVisualLayers.Base, ent.Comp1.OffState, sprite);

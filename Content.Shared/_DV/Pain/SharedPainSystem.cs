@@ -3,9 +3,9 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._DV.Pain;
 
-public abstract class SharedPainSystem : EntitySystem // starcup: make abstract
+public abstract partial class SharedPainSystem : EntitySystem // starcup: make abstract
 {
-    [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
+    [Dependency] private StatusEffectsSystem _statusEffects = default!;
 
     public ProtoId<StatusEffectPrototype> StatusEffectKey = "InPain";
 

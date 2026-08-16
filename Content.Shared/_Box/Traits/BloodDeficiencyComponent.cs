@@ -7,7 +7,7 @@ namespace Content.Shared._Box.Traits.Assorted;
 /// Used for the blood deficiency trait. BloodstreamSystem will check for this component and modify blood regen amount accordingly.
 /// </summary>
 [RegisterComponent, NetworkedComponent]
-[Access(typeof(SharedBloodstreamSystem))]
+[Access(typeof(BloodstreamSystem))] // merge-fix: SharedBloodstream -> Bloodstream
 public sealed partial class BloodDeficiencyComponent : Component
 {
     /// <summary>

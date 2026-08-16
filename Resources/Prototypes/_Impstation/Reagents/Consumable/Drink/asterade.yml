@@ -10,7 +10,8 @@
   metabolisms:
     Digestion:
       effects:
-        - !type:SatiateThirst
+        - !type:Satiate
+          satiationType: Thirst
           factor: 3 # starcup: was 6
         - !type:ModifyBloodLevel
           amount: 1 # starcup: was 3

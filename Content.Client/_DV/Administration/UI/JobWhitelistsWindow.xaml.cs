@@ -19,7 +19,7 @@ namespace Content.Client._DV.Administration.UI;
 [GenerateTypedNameReferences]
 public sealed partial class JobWhitelistsWindow : FancyWindow
 {
-    [Dependency] private readonly IPrototypeManager _proto = default!;
+    [Dependency] private IPrototypeManager _proto = default!;
 
     public Action<ProtoId<JobPrototype>, bool>? OnSetJob;
 

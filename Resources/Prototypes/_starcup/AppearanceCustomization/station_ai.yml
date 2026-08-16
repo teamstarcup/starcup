@@ -1,0 +1,71 @@
+## Iconography
+# First, a base to re-parent all the ported prototypes with no bespoke dead sprites.
+- type: stationAiCustomization
+  abstract: true
+  parent: StationAiIconBase
+  id: StationAiIconBaseStarcup
+  layerData:
+    Dead:
+      sprite: Mobs/Silicon/station_ai.rsi
+      state: ai_dead
+
+- type: stationAiCustomization
+  parent: StationAiIconBaseStarcup
+  id: StationAiIconSnake
+  name: station-ai-icon-snake
+  layerData:
+    Occupied:
+      sprite: _starcup/Mobs/Silicon/station_ai.rsi
+      state: ai_snake
+    Dead:
+      sprite: Mobs/Silicon/station_ai.rsi
+      state: ai_dead
+
+- type: stationAiCustomization
+  parent: StationAiIconBaseStarcup
+  id: StationAiIconSyndicate
+  name: station-ai-icon-syndicate
+  layerData:
+    Occupied:
+      sprite: _starcup/Mobs/Silicon/station_ai.rsi
+      state: ai_syndicate
+    Dead:
+      sprite: Mobs/Silicon/station_ai.rsi
+      state: ai_dead
+
+# Holograms
+- type: stationAiCustomization
+  id: StationAiHologramEye
+  name: station-ai-hologram-eye
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _starcup/Mobs/Silicon/holograms.rsi
+      state: ai_eye
+
+- type: stationAiCustomization
+  id: StationAiHologramFairy
+  name: station-ai-hologram-fairy
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _starcup/Mobs/Silicon/holograms.rsi
+      state: ai_fairy
+
+- type: stationAiCustomization
+  id: StationAiHologramHydra
+  name: station-ai-hologram-hydra
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _starcup/Mobs/Silicon/holograms.rsi
+      state: ai_hydra
+
+- type: stationAiCustomization
+  id: StationAiHologramOrb
+  name: station-ai-hologram-orb
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _starcup/Mobs/Silicon/holograms.rsi
+      state: ai_orb

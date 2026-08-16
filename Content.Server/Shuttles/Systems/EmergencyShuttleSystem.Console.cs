@@ -16,18 +16,18 @@ using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Timer = Robust.Shared.Timing.Timer;
-using Robust.Shared.Random;
+using Robust.Shared.Audio;
 
 namespace Content.Server.Shuttles.Systems;
 
 // TODO full game saves
 // Move state data into the emergency shuttle component
+
+/// <summary>
+/// Handles the emergency shuttle's console and early launching.
+/// </summary>
 public sealed partial class EmergencyShuttleSystem
 {
-    /*
-     * Handles the emergency shuttle's console and early launching.
-     */
-
     /// <summary>
     /// Has the emergency shuttle arrived?
     /// </summary>
@@ -39,21 +39,11 @@ public sealed partial class EmergencyShuttleSystem
     /// How much time remaining until the shuttle consoles for emergency shuttles are unlocked?
     /// </summary>
     private float _consoleAccumulator = float.MinValue;
-    private readonly TimeSpan _bufferTime = TimeSpan.FromSeconds(5);
-    public float TransitTime;
-    private float _authorizeTime;
-
-    private CancellationTokenSource? _roundEndCancelToken;
-
-    private static readonly ProtoId<AccessLevelPrototype> EmergencyRepealAllAccess = "EmergencyShuttleRepealAll";
-    private static readonly Color DangerColor = Color.Red;
-    private bool _launchedShuttles;
-    public bool ShuttlesLeft;
-    private bool _announced;
 
     /// <summary>
     /// How long after the transit is over to end the round.
     /// </summary>
+    private readonly TimeSpan _bufferTime = TimeSpan.FromSeconds(5);
 
     /// <summary>
     /// <see cref="CCVars.EmergencyShuttleMinTransitTime"/>
@@ -68,22 +58,33 @@ public sealed partial class EmergencyShuttleSystem
     /// <summary>
     /// How long it will take for the emergency shuttle to arrive at CentComm.
     /// </summary>
+    public float TransitTime;
 
     /// <summary>
     /// <see cref="CCVars.EmergencyShuttleAuthorizeTime"/>
     /// </summary>
+    private float _authorizeTime;
+
+    private CancellationTokenSource? _roundEndCancelToken;
+
+    private static readonly ProtoId<AccessLevelPrototype> EmergencyRepealAllAccess = "EmergencyShuttleRepealAll";
+    private static readonly Color DangerColor = Color.Red;
+    private static readonly SoundPathSpecifier AnnounceStartSound = new SoundPathSpecifier("/Audio/Misc/notice1.ogg");
 
     /// <summary>
     /// Have the emergency shuttles been authorised to launch at CentCom?
     /// </summary>
+    private bool _launchedShuttles;
 
     /// <summary>
     /// Have the emergency shuttles left for CentCom?
     /// </summary>
+    public bool ShuttlesLeft;
 
     /// <summary>
     /// Have we announced the launch?
     /// </summary>
+    private bool _announced;
 
     private void InitializeEmergencyConsole()
     {
@@ -297,7 +298,7 @@ public sealed partial class EmergencyShuttleSystem
                 playSound: false, colorOverride: DangerColor);
 
         if (!CheckForLaunch(component))
-            _audio.PlayGlobal("/Audio/Misc/notice1.ogg", Filter.Broadcast(), recordReplay: true);
+            _audio.PlayGlobal(AnnounceStartSound, Filter.Broadcast(), recordReplay: true);
 
         UpdateAllEmergencyConsoles();
     }
@@ -401,7 +402,7 @@ public sealed partial class EmergencyShuttleSystem
             playSound: false,
             colorOverride: DangerColor);
 
-        _audio.PlayGlobal("/Audio/Misc/notice1.ogg", Filter.Broadcast(), recordReplay: true);
+        _audio.PlayGlobal(AnnounceStartSound, Filter.Broadcast(), recordReplay: true);
     }
 
     public bool DelayEmergencyRoundEnd()

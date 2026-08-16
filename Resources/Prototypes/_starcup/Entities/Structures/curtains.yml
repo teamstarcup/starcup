@@ -3,8 +3,9 @@
   parent: BaseCurtains
   abstract: true
   components:
-  - type: OrientationHint
-    direction: 180
+  - type: DirectionalArrowIndicator
+    arrows:
+    - rotation: 180
   - type: WallMount
     arc: 90
   - type: Clickable
@@ -18,11 +19,17 @@
   id: HospitalCurtainsDirectional
   parent: [ BaseCurtainsDirectional, HospitalCurtains ]
   suffix: Hospital, Directional
+  components:
+  - type: Sprite
+    snapCardinals: false
 
 - type: entity
   id: HospitalCurtainsOpenDirectional
   parent: [ BaseCurtainsDirectional, HospitalCurtainsOpen ]
   suffix: Hospital, Open, Directional
+  components:
+  - type: Sprite
+    snapCardinals: false
 
 - type: entity
   id: CurtainsBlackDirectional

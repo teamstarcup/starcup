@@ -128,8 +128,6 @@
   id: MobRodentia
   name: Urist McRat
   components:
-  - type: Hunger
-    baseDecayRate: 0.03325 # starcup: adjusted for changed base rate (still 33% faster than normal)
   - type: Speech
     speechVerb: Rodentia
     speechSounds: Squeak
@@ -164,10 +162,7 @@
   - type: TypingIndicator
     proto: rodentia
   - type: Vocal
-    sounds:
-      Male: MaleRodentia
-      Female: FemaleRodentia
-      Unsexed: MaleRodentia
+    emoteSounds: FemaleRodentia # starcup
   - type: Rummager
   - type: AlwaysTriggerMousetrap
   - type: PseudoItem

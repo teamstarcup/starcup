@@ -5,15 +5,13 @@
   id: VascularSystemPlant
   abstract: true
   components:
-  - type: SolutionContainerManager
-    solutions:
-      pool:
-        maxVol: 30
-        reagents:
-        - ReagentId: Resin
-          Quantity: 30
+  - type: Solution
+    id: vasculature
+    solution:
+      reagents:
+      - ReagentId: Resin
+        Quantity: 30
   - type: SolutionRegeneration
-    solution: vasculature
     generated:
       reagents:
       - ReagentId: Resin

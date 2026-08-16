@@ -1,5 +1,4 @@
 using Content.Server.Instruments;
-using Content.Server.Speech.Components;
 using Content.Server.UserInterface;
 using Content.Shared.Instruments;
 using Content.Shared.Instruments.UI;
@@ -20,16 +19,17 @@ using Content.Shared.Zombies;
 using Robust.Server.GameObjects;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+using Content.Shared.Speech.Components;
 
 namespace Content.Server._DV.Harpy
 {
-    public sealed class HarpySingerSystem : EntitySystem
+    public sealed partial class HarpySingerSystem : EntitySystem
     {
-        [Dependency] private readonly InstrumentSystem _instrument = default!;
-        [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
-        [Dependency] private readonly InventorySystem _inventorySystem = default!;
-        [Dependency] private readonly ActionBlockerSystem _blocker = default!;
-        [Dependency] private readonly IPrototypeManager _prototype = default!;
+        [Dependency] private InstrumentSystem _instrument = default!;
+        [Dependency] private SharedPopupSystem _popupSystem = default!;
+        [Dependency] private InventorySystem _inventorySystem = default!;
+        [Dependency] private ActionBlockerSystem _blocker = default!;
+        [Dependency] private IPrototypeManager _prototype = default!;
 
         public override void Initialize()
         {
@@ -53,9 +53,7 @@ namespace Content.Server._DV.Harpy
         {
             // Check if an item that makes the singer mumble is equipped to their face
             // (not their pockets!). As of writing, this should just be the muzzle.
-            if (TryComp<AddAccentClothingComponent>(args.Equipment, out var accent) &&
-                accent.ReplacementPrototype == "mumble" &&
-                args.Slot == "mask")
+            if (TryComp<MumbleAccentComponent>(args.Equipment, out var accent) && accent.RelayAccent)
             {
                 CloseMidiUi(args.EquipTarget); // starcup: breaking Equipee -> EquipTarget
             }
@@ -145,8 +143,8 @@ namespace Content.Server._DV.Harpy
             var canNotSpeak = !_blocker.CanSpeak(uid);
             var zombified = TryComp<ZombieComponent>(uid, out var _);
             var muzzled = _inventorySystem.TryGetSlotEntity(uid, "mask", out var maskUid) &&
-                TryComp<AddAccentClothingComponent>(maskUid, out var accent) &&
-                accent.ReplacementPrototype == "mumble";
+                TryComp<MumbleAccentComponent>(maskUid, out var accent) &&
+                accent.RelayAccent;
 
             // Set this event as handled when the singer should be incapable of singing in order
             // to stop the ActivatableUISystem event from opening the MIDI UI.

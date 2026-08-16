@@ -62,8 +62,9 @@
         layer:
           - Opaque
   - type: Damageable
-    damageContainer: Inorganic
     damageModifierSet: LivingLight
+  - type: Injurable
+    damageContainer: Inorganic
   - type: PassiveDamage
     allowedStates:
     - Alive
@@ -89,10 +90,9 @@
     speechSounds: LuminousSpeechSounds
     allowedEmotes: ['CreatureLaugh', 'CreatureScream']
   - type: Vocal
-    sounds:
-      Unsexed: LuminousSpeechEmotes
+    emoteSounds: LuminousSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: AutoEmote
     emotes:
     - LaughAutoEmote
@@ -104,15 +104,15 @@
       - CreatureEmotes # starcup
   - type: Destructible
     thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 25
-        behaviors:
-          - !type:DoActsBehavior
-            acts: [ "Destruction" ]
-          - !type:PlaySoundBehavior
-            sound:
-              collection: GlassBreak
+    - trigger:
+        !type:DamageTrigger
+        damage: 25
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
 
 - type: entity
   id: MobLuminousPerson

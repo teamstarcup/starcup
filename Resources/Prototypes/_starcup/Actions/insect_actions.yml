@@ -6,8 +6,9 @@
   components:
   - type: Action
     useDelay: 8
-    icon:
-      sprite: _starcup/Interface/Actions/jump.rsi
-      state: icon_bug
+  - type: Sprite
+    sprite: _starcup/Interface/Actions/jump.rsi
+    layers:
+    - state: icon_bug
   - type: InstantAction
     event: !type:GravityJumpEvent {}

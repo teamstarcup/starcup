@@ -128,23 +128,12 @@
       damage:
         types:
           Piercing: 6 #take dmg to heal dmg
-    - type: SolutionContainerManager
+    - type: SolutionManager
       solutions:
-        melee:
-          maxVol: 30
-          reagents:
-          - ReagentId: Omnizine
-            Quantity: 30 #5 bites to heal 90hp/1 min
+      - SolutionVenomSilvia
     - type: MeleeChemicalInjector
       solution: melee
       transferAmount: 6 #heals 24 burn/brute/air/toxin in 12seconds/minus 6 brute per bite
-    - type: SolutionRegeneration
-      solution: melee
-      duration: 30 #regen 1u every 30 seconds. 15 mins to full
-      generated:
-        reagents:
-        - ReagentId: Omnizine
-          Quantity: 1
     - type: ReplacementAccent
       accent: xeno #Add cool snake accent later. wyci
     - type: PointLight
@@ -192,3 +181,22 @@
       - CreatureEmotes
 #    - type: StealTarget
 #      stealGroup: AnimalSilvia
+
+# begin starcup: solutions update
+- type: entity
+  parent: [SolutionWeapon, SolutionTiny]
+  id: SolutionVenomSilvia
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Omnizine
+        Quantity: 30 #5 bites to heal 90hp/1 min
+  - type: SolutionRegeneration
+    duration: 30 #regen 1u every 30 seconds. 15 mins to full
+    generated:
+      reagents:
+      - ReagentId: Omnizine
+        Quantity: 1
+# end starcup

@@ -15,13 +15,13 @@ using Robust.Shared.Map.Components;
 
 namespace Content.Server._DV.Shuttles.Systems;
 
-public sealed class DockingConsoleSystem : SharedDockingConsoleSystem
+public sealed partial class DockingConsoleSystem : SharedDockingConsoleSystem
 {
-    [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
-    // [Dependency] private readonly SharedMapSystem _map = default!; // starcup: unused
-    [Dependency] private readonly SharedUserInterfaceSystem _ui = default!;
-    [Dependency] private readonly ShuttleSystem _shuttle = default!;
-    [Dependency] private readonly StationSystem _station = default!;
+    [Dependency] private EntityWhitelistSystem _whitelist = default!;
+    // [Dependency] private SharedMapSystem _map = default!; // starcup: unused
+    [Dependency] private SharedUserInterfaceSystem _ui = default!;
+    [Dependency] private ShuttleSystem _shuttle = default!;
+    [Dependency] private StationSystem _station = default!;
 
     public override void Initialize()
     {

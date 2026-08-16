@@ -4,9 +4,9 @@ using Content.Shared.GameTicking.Components;
 
 namespace Content.Server._starcup.GameRules;
 
-public sealed class ReturnShiftChangeShuttleRuleSystem : GameRuleSystem<ReturnShiftChangeShuttleRuleComponent>
+public sealed partial class ReturnShiftChangeShuttleRuleSystem : GameRuleSystem<ReturnShiftChangeShuttleRuleComponent>
 {
-    [Dependency] private readonly ShiftChangeShuttleSystem _shiftChangeShuttle = default!;
+    [Dependency] private ShiftChangeShuttleSystem _shiftChangeShuttle = default!;
 
     protected override void Started(EntityUid uid, ReturnShiftChangeShuttleRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
     {

@@ -46,6 +46,7 @@
   - type: InteractionOutline
   - type: Clickable
   - type: Damageable
+  - type: Injurable
     damageContainer: ShadowHaze
   - type: Destructible
     thresholds:
@@ -90,8 +91,9 @@
   - type: InteractionOutline
   - type: Clickable
   - type: Damageable
-    damageContainer: Biological
     damageModifierSet: burrowed
+  - type: Injurable
+    damageContainer: Biological
   - type: Destructible
     thresholds:
     - trigger:

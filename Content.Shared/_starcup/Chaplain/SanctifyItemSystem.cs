@@ -13,15 +13,15 @@ using Robust.Shared.Serialization.Manager;
 
 namespace Content.Shared._starcup.Chaplain;
 
-public sealed class SanctifyItemSystem : EntitySystem
+public sealed partial class SanctifyItemSystem : EntitySystem
 {
-    [Dependency] private readonly ISerializationManager _seriMan = default!;
-    [Dependency] private readonly IPrototypeManager _protoMan = default!;
-    [Dependency] private readonly IComponentFactory _componentFactory = default!;
-    [Dependency] private readonly SharedActionsSystem _actions = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly NameModifierSystem _nameMod = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private ISerializationManager _seriMan = default!;
+    [Dependency] private IPrototypeManager _protoMan = default!;
+    [Dependency] private IComponentFactory _componentFactory = default!;
+    [Dependency] private SharedActionsSystem _actions = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private NameModifierSystem _nameMod = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
 
     public static readonly EntProtoId BaseSanctifiedItemProtoId = "BaseSanctifiedItem";
     public static readonly EntProtoId SanctifyActionProtoId = "ActionSanctifyItem";

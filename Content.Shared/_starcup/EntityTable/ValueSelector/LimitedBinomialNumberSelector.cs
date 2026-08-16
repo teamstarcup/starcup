@@ -11,7 +11,7 @@ public sealed partial class LimitedBinomialNumberSelector : BinomialNumberSelect
     [DataField]
     public int Minimum = 1;
 
-    public override int Get(System.Random rand)
+    public override int Get(IRobustRandom rand)
     {
         var amount = base.Get(rand);
         return Math.Max(amount, Minimum);

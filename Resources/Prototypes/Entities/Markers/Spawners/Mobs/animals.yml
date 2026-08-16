@@ -206,16 +206,19 @@
     - MobMonkey
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup: use our own markers
   id: SpawnMobMouse
   name: Mouse Spawner
   components:
+  # begin starcup
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - sprite: Mobs/Animals/mouse.rsi
-      state: icon-2
+      state: icon-1
     - state: ai
+  # end starcup
   - type: ConditionalSpawner
     prototypes:
     - MobMouse
@@ -277,6 +280,80 @@
   - type: ConditionalSpawner
     prototypes:
     - MobReindeerDoe
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobSheep
+  name: Sheep Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: sheep_bare
+      sprite: Mobs/Animals/sheep.rsi
+    - state: sheep_wool
+      sprite: Mobs/Animals/sheep.rsi
+  - type: EntityTableSpawner
+    table:
+      id: MobSheep
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobSheepRainbow
+  name: Rainbow Sheep Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: sheep_bare
+      sprite: Mobs/Animals/sheep.rsi
+    - state: sheep_wool
+      sprite: Mobs/Animals/sheep.rsi
+  - type: EntityTableSpawner
+    table:
+      id: MobSheepRainbow
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnMobSheepSpace
+  name: Space Sheep Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: space_sheep_bare
+      sprite: Mobs/Animals/sheep.rsi
+    - state: space_sheep_wool_glowmask
+      sprite: Mobs/Animals/sheep.rsi
+  - type: EntityTableSpawner
+    table:
+      id: MobSheepSpace
+
+- type: entity
+  parent: MarkerBase
+  id: SpawnWoolyAnimalGeneric
+  name: Wooly Animal Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: sheep_bare
+      sprite: Mobs/Animals/sheep.rsi
+    - state: sheep_wool
+      sprite: Mobs/Animals/sheep.rsi
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - !type:GroupSelector
+        weight: 80
+        children:
+        - id: SpawnMobSheep
+        - id: SpawnMobGoat
+      - !type:GroupSelector
+        weight: 20
+        children:
+        - id: SpawnMobSheepRainbow
+        - id: SpawnMobSheepSpace
 
 - type: entity
   parent: MarkerBase

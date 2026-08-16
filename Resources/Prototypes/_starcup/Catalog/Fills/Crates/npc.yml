@@ -8,3 +8,15 @@
       entity_storage: !type:AllSelector
         children:
         - id: MobHamsterHamletMime
+
+- type: entity
+  id: CrateNPCCapybara
+  parent: CrateLivestock
+  name: capybara crate
+  description: A crate containing a single capybara.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: MobCapybara

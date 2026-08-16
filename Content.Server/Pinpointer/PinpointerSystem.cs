@@ -5,21 +5,18 @@ using System.Numerics;
 using Robust.Shared.Utility;
 using Content.Server.Shuttles.Events;
 using Content.Shared.IdentityManagement;
-using Content.Server.Bible.Components; // #IMP
+using Content.Shared.Bible.Components; // #IMP
 
 namespace Content.Server.Pinpointer;
 
-public sealed class PinpointerSystem : SharedPinpointerSystem
+public sealed partial class PinpointerSystem : SharedPinpointerSystem
 {
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-
-    private EntityQuery<TransformComponent> _xformQuery;
+    [Dependency] private SharedTransformSystem _transform = default!;
+    [Dependency] private SharedAppearanceSystem _appearance = default!;
 
     public override void Initialize()
     {
         base.Initialize();
-        _xformQuery = GetEntityQuery<TransformComponent>();
 
         SubscribeLocalEvent<PinpointerComponent, ActivateInWorldEvent>(OnActivate);
         SubscribeLocalEvent<FTLCompletedEvent>(OnLocateTarget);
@@ -143,7 +140,7 @@ public sealed class PinpointerSystem : SharedPinpointerSystem
 
         foreach (var (otherUid, _) in EntityManager.GetAllComponents(whitelist))
         {
-            if (!_xformQuery.TryGetComponent(otherUid, out var compXform) || compXform.MapID != mapId)
+            if (!TryComp(otherUid, out TransformComponent? compXform) || compXform.MapID != mapId)
                 continue;
 
             var dist = (_transform.GetWorldPosition(compXform) - worldPos).LengthSquared();
@@ -197,12 +194,10 @@ public sealed class PinpointerSystem : SharedPinpointerSystem
     /// <returns>Null if failed to calculate distance between two entities</returns>
     private Vector2? CalculateDirection(EntityUid pinUid, EntityUid trgUid)
     {
-        var xformQuery = GetEntityQuery<TransformComponent>();
-
         // check if entities have transform component
-        if (!xformQuery.TryGetComponent(pinUid, out var pin))
+        if (!TryComp(pinUid, out TransformComponent? pin))
             return null;
-        if (!xformQuery.TryGetComponent(trgUid, out var trg))
+        if (!TryComp(trgUid, out TransformComponent? trg))
             return null;
 
         // check if they are on same map
@@ -210,7 +205,7 @@ public sealed class PinpointerSystem : SharedPinpointerSystem
             return null;
 
         // get world direction vector
-        var dir = _transform.GetWorldPosition(trg, xformQuery) - _transform.GetWorldPosition(pin, xformQuery);
+        var dir = _transform.GetWorldPosition(trg) - _transform.GetWorldPosition(pin);
         return dir;
     }
 

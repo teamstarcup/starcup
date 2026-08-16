@@ -14,18 +14,18 @@ using Robust.Shared.Timing;
 
 namespace Content.Shared._DV.VendingMachines;
 
-public abstract class SharedShopVendorSystem : EntitySystem
+public abstract partial class SharedShopVendorSystem : EntitySystem
 {
-    [Dependency] private readonly AccessReaderSystem _access = default!;
-    [Dependency] private readonly MiningPointsSystem _points = default!;
-    [Dependency] protected readonly IGameTiming Timing = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly SharedPointLightSystem _light = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly SharedPowerReceiverSystem _power = default!;
-    [Dependency] private readonly SharedSpeakOnUIClosedSystem _speakOnUIClosed = default!;
+    [Dependency] private AccessReaderSystem _access = default!;
+    [Dependency] private MiningPointsSystem _points = default!;
+    [Dependency] protected IGameTiming Timing = default!;
+    [Dependency] private IPrototypeManager _proto = default!;
+    // [Dependency] private SharedAppearanceSystem _appearance = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private SharedPointLightSystem _light = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private SharedPowerReceiverSystem _power = default!;
+    [Dependency] private SharedSpeakOnUIClosedSystem _speakOnUIClosed = default!;
 
     public override void Initialize()
     {
@@ -140,29 +140,9 @@ public abstract class SharedShopVendorSystem : EntitySystem
 
     protected void UpdateVisuals(Entity<ShopVendorComponent> ent)
     {
-        var state = VendingMachineVisualState.Normal;
-        var lit = true;
-        if (ent.Comp.Broken)
-        {
-            state = VendingMachineVisualState.Broken;
-            lit = false;
-        }
-        else if (ent.Comp.Ejecting != null)
-        {
-            state = VendingMachineVisualState.Eject;
-        }
-        else if (ent.Comp.Denying)
-        {
-            state = VendingMachineVisualState.Deny;
-        }
-        else if (!_power.IsPowered(ent.Owner))
-        {
-            state = VendingMachineVisualState.Off;
-            lit = true;
-        }
-
+        // starcup: removed most of this - upstream changes
+        var lit = !ent.Comp.Broken;
         _light.SetEnabled(ent, lit);
-        _appearance.SetData(ent, VendingMachineVisuals.VisualState, state);
     }
 }
 

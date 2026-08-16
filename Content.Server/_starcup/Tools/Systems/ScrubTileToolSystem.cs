@@ -7,10 +7,10 @@ using Robust.Shared.Map.Components;
 
 namespace Content.Server._starcup.Tools.Systems;
 
-public sealed class ScrubTileToolSystem : SharedScrubTileToolSystem
+public sealed partial class ScrubTileToolSystem : SharedScrubTileToolSystem
 {
-    [Dependency] private readonly DecalSystem _decalSystem = default!;
-    [Dependency] private readonly EntityLookupSystem _lookupSystem = default!;
+    [Dependency] private DecalSystem _decalSystem = default!;
+    [Dependency] private EntityLookupSystem _lookupSystem = default!;
 
     public override bool TryDoScrub(TileRef tileRef, MapGridComponent grid, DecalGridComponent decalGrid)
     {
@@ -20,7 +20,7 @@ public sealed class ScrubTileToolSystem : SharedScrubTileToolSystem
         foreach (var decal in decals)
         {
             if (decal.Decal.Cleanable)
-                _decalSystem.RemoveDecal(tileRef.GridUid, decal.Index, decalGrid);
+                _decalSystem.RemoveDecal(tileRef.GridUid, decal.Index);
         }
         return true;
     }

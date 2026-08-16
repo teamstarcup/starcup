@@ -5,10 +5,10 @@ using Robust.Shared.Audio.Systems;
 
 namespace Content.Shared._DV.Salvage.Systems;
 
-public sealed class MiningPointsSystem : EntitySystem
+public sealed partial class MiningPointsSystem : EntitySystem
 {
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly SharedIdCardSystem _idCard = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private SharedIdCardSystem _idCard = default!;
 
     private EntityQuery<MiningPointsComponent> _query;
 

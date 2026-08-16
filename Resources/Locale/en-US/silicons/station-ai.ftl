@@ -50,8 +50,10 @@ station-ai-icon-dorf = Adventure awaits
 station-ai-icon-heartline = Lifeline
 station-ai-icon-smiley = All smiles
 
-station-ai-hologram-female = Female appearance
-station-ai-hologram-male = Male appearance
+# begin starcup: added "humanoid" for tone
+station-ai-hologram-female = Female humanoid appearance
+station-ai-hologram-male = Male humanoid appearance
+# end starcup
 station-ai-hologram-face = Disembodied head
 station-ai-hologram-cat = Cat form
 station-ai-hologram-dog = Corgi form

@@ -7,6 +7,7 @@
     groups:
       Acidic: [Touch]
   - type: Damageable
+  - type: Injurable
     damageContainer: Inorganic
   - type: MovementSpeedModifier
     baseWalkSpeed : 2
@@ -67,17 +68,16 @@
   - type: NpcFactionMember
     factions:
       - SimpleHostile
-  - type: Damageable
+  - type: Injurable
     damageContainer: StructuralInorganic
   # begin starcup
   - type: Speech
     speechSounds: OreCrabSpeechSounds
     allowedEmotes: ['CreatureChitter', 'ClawSnap']
   - type: Vocal
-    sounds:
-      Unsexed: OreCrabSpeechEmotes
+    emoteSounds: OreCrabSpeechEmotes
     screamId: ClawSnap
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepBug

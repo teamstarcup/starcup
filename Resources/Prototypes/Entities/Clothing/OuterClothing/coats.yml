@@ -104,7 +104,7 @@
   # end starcup
 
 - type: entity
-  parent: ClothingOuterStorageToggleableBase
+  parent: [ ClothingOuterJacketToggleableBase, TemperatureProtectionMinimal ] # starcup: temp protection
   id: ClothingOuterCoatJensen
   name: jensen coat
   description: A jensen coat.
@@ -127,7 +127,7 @@
         id: SyndieHandyFlag
 
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: [ ClothingOuterStorageBase, TemperatureProtection ] # starcup: temp protection
   id: ClothingOuterCoatTrench
   name: trench coat
   description: A comfy trench coat.
@@ -137,8 +137,6 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/trenchcoat.rsi
   - type: TemperatureProtection
-    heatingCoefficient: 0.1
-    coolingCoefficient: 0.1
   - type: Armor
     modifiers:
       coefficients:
@@ -386,7 +384,7 @@
   # end starcup
 
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: [ ClothingOuterStorageBase, TemperatureProtectionMinimal ] # starcup: temperature protection
   id: ClothingOuterCoatParamedicWB
   name: paramedic windbreaker
   description: A paramedic's trusty windbreaker, for all the space wind.
@@ -489,7 +487,7 @@
     sprite: Clothing/OuterClothing/Coats/space_asshole.rsi
 
 - type: entity
-  parent: ClothingOuterStorageFoldableBase
+  parent: [ ClothingOuterStorageFoldableBase, TemperatureProtection ] # starcup: temp protection
   id: ClothingOuterCoatExpensive
   name: expensive coat
   description: Very fluffy pink coat, made out of very expensive fur (clearly).

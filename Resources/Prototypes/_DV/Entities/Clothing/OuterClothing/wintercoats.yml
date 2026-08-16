@@ -1,11 +1,8 @@
 - type: entity
   abstract: true
-  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing]
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, TemperatureProtection ] # upstream: temperature protection
   id: ClothingOuterArmoredWinterCoat
   components:
-  - type: TemperatureProtection
-    heatingCoefficient: 1.1
-    coolingCoefficient: 0.1
   - type: Item
     size: Normal
   - type: Armor

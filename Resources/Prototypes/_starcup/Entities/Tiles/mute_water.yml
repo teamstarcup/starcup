@@ -54,15 +54,14 @@
           - ItemMask
         density: 1000
         hard: false
-  - type: SolutionContainerManager
-    solutions:
-      pool:
-        maxVol: 9999999 # same as water.
-        reagents:
-        - ReagentId: MuteToxin
-          Quantity: 9999999
+  - type: Solution
+    id: pool
+    solution:
+      maxVol: 9999999 # same as water.
+      reagents:
+      - ReagentId: MuteToxin
+        Quantity: 9999999
   - type: SolutionRegeneration
-    solution: tank
     generated:
       reagents:
       - ReagentId: MuteToxin

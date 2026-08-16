@@ -73,10 +73,9 @@
     speechSounds: LeechSpeechSounds
     allowedEmotes: ['CreatureGrowl', 'CreatureScream']
   - type: Vocal
-    sounds:
-      Unsexed: LeechSpeechEmotes
+    emoteSounds: LeechSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: AutoEmote
     emotes:
     - GrowlAutoEmote
@@ -133,6 +132,7 @@
         FollowRange: !type:Single
           2.0
     - type: Damageable
+    - type: Injurable
       damageContainer: Inorganic
     - type: Destructible
       thresholds:
@@ -208,8 +208,9 @@
           state: alive
           color: "#1f2e2c"
     - type: Damageable
-      damageContainer: Inorganic # to make it immune to caustic/radiation
       damageModifierSet: Slime
+    - type: Injurable
+      damageContainer: Inorganic # to make it immune to caustic/radiation
     - type: MobState
       allowedStates:
       - Alive
@@ -268,10 +269,9 @@
     - type: TypingIndicator
       proto: slime
     - type: Vocal
-      sounds:
-        Unsexed: FeralSlimeSpeechEmotes
+      emoteSounds: FeralSlimeSpeechEmotes
       screamId: Simmer
-      screamAction: ActionEmitSound
+      emoteAction: ActionEmitSound
 
 - type: entity
   id: MobSpawnCharonicSlime

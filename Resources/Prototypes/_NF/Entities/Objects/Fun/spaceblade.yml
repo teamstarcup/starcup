@@ -1,14 +1,14 @@
 - type: entity
   id: SpaceBlade
-  parent: GasTankBase
+  parent: BaseItem # starcup: Reparent to avoid upstream's pressure visuals
   name: SpaceBlade
   description: Let it drip!
   abstract: true
   components:
   - type: GasTank
-    outputPressure: 0.1
-    maxOutputPressure: 0.1
-    valveOutputRate: 50
+    releasePressure: 0.1
+    maxReleasePressure: 0.1
+    minReleasePressure: 0.1
     air:
       volume: 1
       moles:
@@ -46,6 +46,18 @@
     damage:
       types:
         Slash: 2
+  # begin starcup: necessary gas tank components from parent change
+  - type: UseDelay
+    delays:
+      gasTank:
+        length: 1.0
+  - type: ActivatableUI
+    key: enum.SharedGasTankUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.SharedGasTankUiKey.Key:
+        type: GasTankBoundUserInterface
+  # end starcup
 
 # starcup - added new names and descriptions.
 
@@ -278,9 +290,9 @@
   - type: CollisionWake
     enabled: false
   - type: GasTank
-    outputPressure: 0.1
-    maxOutputPressure: 0.1
-    valveOutputRate: 50
+    releasePressure: 0.1
+    maxReleasePressure: 0.1
+    minReleasePressure: 0.1
     air:
       volume: 1
       moles:

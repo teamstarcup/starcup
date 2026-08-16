@@ -7,6 +7,7 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
+using Content.Shared.Tools;
 
 namespace Content.Shared.Kitchen.Components;
 
@@ -27,6 +28,12 @@ public sealed partial class KitchenSpikeComponent : Component
     /// Default sound to play when the victim is butchered.
     /// </summary>
     private static readonly SoundSpecifier DefaultSpikeButcher = new SoundPathSpecifier("/Audio/Items/Culinary/chop.ogg"); /// starcup
+
+    /// <summary>
+    /// Tool quality that required for the entity that used for butchering.
+    /// </summary>
+    [DataField]
+    public ProtoId<ToolQualityPrototype> RequiredToolQuality = "Slicing";
 
     /// <summary>
     /// ID of the container where the victim will be stored.

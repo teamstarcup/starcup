@@ -111,7 +111,10 @@
   name: crusher
   description: An early design of the proto-kinetic accelerator.
   components:
-  - type: Sharp
+  - type: Tool
+    qualities:
+    - Slicing
+    - Mining # starcup: mining quality to remove stone floors
   - type: Execution
     doAfterDuration: 4.0
   - type: UnpoweredFlashlight
@@ -120,9 +123,6 @@
     enabled: false
     radius: 4
   # begin starcup: mining quality to remove stone floors
-  - type: Tool
-    qualities:
-    - Mining
   - type: ToolTileCompatible
     delay: 3
   - type: Prying
@@ -141,6 +141,9 @@
     state: icon
   - type: Item
     size: Ginormous
+    shape:
+    - 0,0,3,6
+    storedRotation: -45
     sprite: Objects/Weapons/Melee/crusher-inhands.rsi
   - type: Clothing
     sprite: Objects/Weapons/Melee/crusher.rsi
@@ -255,6 +258,9 @@
     state: icon
   - type: Item
     size: Ginormous
+    shape:
+    - 0,0,3,6
+    storedRotation: -45
     sprite: Objects/Weapons/Melee/crusher_glaive-inhands.rsi
   - type: Clothing
     sprite: Objects/Weapons/Melee/crusher_glaive.rsi

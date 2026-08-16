@@ -14,5 +14,4 @@ delta-chat-emote-name-bark = Bark
 delta-chat-emote-name-snarl = Snarl
 delta-chat-emote-name-whine = Whine
 delta-chat-emote-name-howl = Howl
-delta-chat-emote-name-awoo = Awoo
 delta-chat-emote-name-harpysquish = Squish

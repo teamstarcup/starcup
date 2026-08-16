@@ -79,6 +79,7 @@
   - type: Item
     size: Tiny
   - type: Damageable
+  - type: Injurable
   - type: TapeCassette
     maxCapacity: 600 # starcup: 180 (3 minutes) -> 600 (10 minutes)
     repairWhitelist:
@@ -105,7 +106,7 @@
 #  id: CassetteTapeInterview
 #  components:
 #  - type: Label
-#    currentLabel: Interview with Garry Smosh
+#    localizedLabel: Interview with Garry Smosh
 #  - type: TapeCassette
 #    recordedData:
 #      - timestamp: 2

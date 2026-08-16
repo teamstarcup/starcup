@@ -33,8 +33,9 @@
         layer:
         - WallLayer
   - type: Damageable
-    damageContainer: StructuralInorganic
     damageModifierSet: WoodenStructure
+  - type: Injurable
+    damageContainer: StructuralInorganic
   - type: MeleeSound
     soundGroups:
       Brute:
@@ -156,15 +157,13 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: SolutionContainerManager
-    solutions:
-      vasculature:
-        maxVol: 25
-        reagents:
-        - ReagentId: Sap
-          Quantity: 25
+  - type: Solution
+    solution:
+      maxVol: 25
+      reagents:
+      - ReagentId: Sap
+        Quantity: 25
   - type: SolutionRegeneration
-    solution: vasculature
     generated:
       reagents:
       - ReagentId: Sap
@@ -460,19 +459,17 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: SolutionContainerManager
-    solutions:
-      vasculature:
-        maxVol: 30
-        reagents:
-        - ReagentId: PlantDetritus
-          Quantity: 20
-        - ReagentId: SpaceDrugs
-          Quantity: 5
-        - ReagentId: Stellibinin
-          Quantity: 5
+  - type: Solution
+    solution:
+      maxVol: 30
+      reagents:
+      - ReagentId: PlantDetritus
+        Quantity: 20
+      - ReagentId: SpaceDrugs
+        Quantity: 5
+      - ReagentId: Stellibinin
+        Quantity: 5
   - type: SolutionRegeneration
-    solution: vasculature
     generated:
       reagents:
       - ReagentId: PlantDetritus
@@ -497,19 +494,17 @@
     - random:
         tree01: ""
         tree02: ""
-  - type: SolutionContainerManager
-    solutions:
-      vasculature:
-        maxVol: 30
-        reagents:
-        - ReagentId: PlantDetritus
-          Quantity: 10
-        - ReagentId: SpaceDrugs
-          Quantity: 10
-        - ReagentId: Stellibinin
-          Quantity: 10
+  - type: Solution
+    solution:
+      maxVol: 30
+      reagents:
+      - ReagentId: PlantDetritus
+        Quantity: 10
+      - ReagentId: SpaceDrugs
+        Quantity: 10
+      - ReagentId: Stellibinin
+        Quantity: 10
   - type: SolutionRegeneration
-    solution: vasculature
     generated:
       reagents:
       - ReagentId: PlantDetritus
@@ -604,17 +599,15 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: SolutionContainerManager
-    solutions:
-      vasculature:
-        maxVol: 30
-        reagents:
-        - ReagentId: PlantDetritus
-          Quantity: 25
-        - ReagentId: Sigynate
-          Quantity: 5
+  - type: Solution
+    solution:
+      maxVol: 30
+      reagents:
+      - ReagentId: PlantDetritus
+        Quantity: 25
+      - ReagentId: Sigynate
+        Quantity: 5
   - type: SolutionRegeneration
-    solution: vasculature
     generated:
       reagents:
       - ReagentId: PlantDetritus
@@ -636,17 +629,15 @@
     available:
     - random:
         tree01: ""
-  - type: SolutionContainerManager
-    solutions:
-      vasculature:
-        maxVol: 30
-        reagents:
-        - ReagentId: PlantDetritus
-          Quantity: 20
-        - ReagentId: Sigynate
-          Quantity: 10
+  - type: Solution
+    solution:
+      maxVol: 30
+      reagents:
+      - ReagentId: PlantDetritus
+        Quantity: 20
+      - ReagentId: Sigynate
+        Quantity: 10
   - type: SolutionRegeneration
-    solution: vasculature
     generated:
       reagents:
       - ReagentId: PlantDetritus

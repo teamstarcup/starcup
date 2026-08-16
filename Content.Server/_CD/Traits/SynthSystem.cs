@@ -1,20 +1,20 @@
-using Content.Server.Body.Systems;
 using Content.Server.Database;
 using Content.Shared.Body.Components;
+using Content.Shared.Body.Systems;
 using Content.Shared.Chat.TypingIndicator;
 using Content.Shared.Chemistry.Reagent;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server._CD.Traits;
 
-public sealed class SynthSystem : EntitySystem
+public sealed partial class SynthSystem : EntitySystem
 {
     // Begin DeltaV - make strings static readonly
     private static readonly ProtoId<TypingIndicatorPrototype> RobotTypingIndicator = "robot";
     private static readonly ProtoId<ReagentPrototype> SynthBloodReagent = "SynthBlood";
     // End DeltaV
 
-    [Dependency] private readonly BloodstreamSystem _bloodstream = default!;
+    [Dependency] private BloodstreamSystem _bloodstream = default!;
 
     public override void Initialize()
     {

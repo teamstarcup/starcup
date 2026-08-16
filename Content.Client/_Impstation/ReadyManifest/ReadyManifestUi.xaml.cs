@@ -79,7 +79,8 @@ public sealed partial class ReadyManifestUi : DefaultWindow
                     .Where(job => job.SetPreference)
                     .ToArray();
 
-            Array.Sort(jobs, JobUIComparer.Instance);
+            if (JobUIComparer.TryCreate(_prototypeManager, null, out var jobUIComparer))
+                Array.Sort(jobs, jobUIComparer);
 
             foreach (var job in jobs)
             {

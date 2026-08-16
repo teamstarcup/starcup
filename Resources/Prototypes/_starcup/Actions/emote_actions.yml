@@ -1,4 +1,4 @@
-# This action is pointed to in the "screamAction:" field of the Vocal component to replace the default scream.
+# This action is pointed to in the "emoteAction:" field of the Vocal component to replace the default scream.
 
 - type: entity
   parent: BaseAction
@@ -8,9 +8,11 @@
   components:
   - type: Action
     useDelay: 10
-    icon:
-      sprite: _starcup/Interface/Actions/actions_general.rsi
-      state: emit_sound
     checkCanInteract: false
+  - type: Sprite
+    sprite: _starcup/Interface/Actions/actions_general.rsi
+    layers:
+    - state: emit_sound
   - type: InstantAction
-    event: !type:ScreamActionEvent
+    event: !type:EmoteActionEvent
+      emote: Scream

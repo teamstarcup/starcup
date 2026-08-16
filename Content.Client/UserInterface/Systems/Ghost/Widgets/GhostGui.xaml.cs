@@ -12,8 +12,8 @@ namespace Content.Client.UserInterface.Systems.Ghost.Widgets;
 [GenerateTypedNameReferences]
 public sealed partial class GhostGui : UIWidget
 {
-    [Dependency] private readonly IGameTiming _gameTiming = default!; // Frontier
-    // [Dependency] private readonly IConfigurationManager _configurationManager = default!; // Frontier // starcup - remove unused
+    [Dependency] private IGameTiming _gameTiming = default!; // Frontier
+    // [Dependency] private IConfigurationManager _configurationManager = default!; // Frontier // starcup - remove unused
 
     private TimeSpan? _respawnTime; // Frontier
 

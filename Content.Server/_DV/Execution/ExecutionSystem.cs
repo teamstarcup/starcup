@@ -3,6 +3,7 @@ using Content.Server.Kitchen.Components;
 using Content.Server.Weapons.Ranged.Systems;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Clumsy;
+using Content.Shared.Clumsy.Components;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Systems;
@@ -34,20 +35,20 @@ namespace Content.Server.Execution;
 /// <remarks>
 /// Upstream won't have this for years so it goes in the DeltaV folder.
 /// </remarks>
-public sealed class ExecutionSystem : EntitySystem
+public sealed partial class ExecutionSystem : EntitySystem
 {
-    [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
-    [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
-    [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
-    // [Dependency] private readonly InteractionSystem _interactionSystem = default!; // starcup: unused
-    [Dependency] private readonly ActionBlockerSystem _actionBlockerSystem = default!;
-    [Dependency] private readonly DamageableSystem _damageableSystem = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly IComponentFactory _componentFactory = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearanceSystem = default!;
-    [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
-    [Dependency] private readonly GunSystem _gunSystem = default!;
+    [Dependency] private SharedDoAfterSystem _doAfterSystem = default!;
+    [Dependency] private SharedPopupSystem _popupSystem = default!;
+    [Dependency] private MobStateSystem _mobStateSystem = default!;
+    // [Dependency] private InteractionSystem _interactionSystem = default!; // starcup: unused
+    [Dependency] private ActionBlockerSystem _actionBlockerSystem = default!;
+    [Dependency] private DamageableSystem _damageableSystem = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private IComponentFactory _componentFactory = default!;
+    [Dependency] private SharedAppearanceSystem _appearanceSystem = default!;
+    [Dependency] private SharedAudioSystem _audioSystem = default!;
+    [Dependency] private GunSystem _gunSystem = default!;
 
     private const float GunExecutionTime = 6.0f;
     private const float DamageModifier = 9.0f;
@@ -270,7 +271,7 @@ public sealed class ExecutionSystem : EntitySystem
 
         // Clumsy people have a chance to shoot themselves
         if (!component.ClumsyProof &&
-            TryComp<ClumsyComponent>(attacker, out var clumsy) &&
+            TryComp<ClumsyGunStatusEffectComponent>(attacker, out var clumsy) &&
             _random.Prob(1f/3f))
         {
             ShowExecutionPopup("execution-popup-gun-clumsy-internal", Filter.Entities(attacker), PopupType.Medium, attacker, victim, weapon);

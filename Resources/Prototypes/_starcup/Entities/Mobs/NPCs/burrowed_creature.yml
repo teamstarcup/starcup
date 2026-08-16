@@ -10,9 +10,10 @@
   components:
   - type: Action
     useDelay: 2
-    icon:
-      sprite: _starcup/Interface/Actions/actions_general.rsi
-      state: burrow
+  - type: Sprite
+    sprite: _starcup/Interface/Actions/actions_general.rsi
+    layers:
+    - state: burrow
   - type: InstantAction
     event: !type:PolymorphActionEvent
       protoId: BurrowedSmall
@@ -28,9 +29,10 @@
   components:
   - type: Action
     useDelay: 3
-    icon:
-      sprite: _starcup/Interface/Actions/actions_general.rsi
-      state: burrow
+  - type: Sprite
+    sprite: _starcup/Interface/Actions/actions_general.rsi
+    layers:
+    - state: burrow
   - type: InstantAction
     event: !type:PolymorphActionEvent
       protoId: BurrowedLarge
@@ -112,8 +114,9 @@
     baseSprintSpeed : 0
   - type: Insulated
   - type: Damageable
-    damageContainer: Biological
     damageModifierSet: burrowed
+  - type: Injurable
+    damageContainer: Biological
   - type: MobState
   - type: MobThresholds
     thresholds:

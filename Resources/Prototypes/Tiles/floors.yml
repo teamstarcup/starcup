@@ -1,11 +1,12 @@
 - type: tile
-  id: BaseStationTile
   abstract: true
+  id: BaseStationTile
   isSubfloor: false
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
   heatCapacity: 10000
+  weather: false
   baseTurf: Plating
   baseWhitelist:
   - PlatingBrass
@@ -52,11 +53,6 @@
   name: tiles-steel-floor
   sprite: /Textures/Tiles/steel.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemSteel
 
 - type: tile
@@ -65,11 +61,6 @@
   name: tiles-steel-floor-checker-light
   sprite: /Textures/Tiles/cafeteria.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemSteelCheckerLight
 
 - type: tile
@@ -78,11 +69,6 @@
   name: tiles-steel-floor-checker-dark
   sprite: /Textures/Tiles/checker_dark.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemSteelCheckerDark
 
 - type: tile
@@ -91,11 +77,6 @@
   name: tiles-steel-floor-mini
   sprite: /Textures/Tiles/steel_mini.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemSteelMini
 
 - type: tile
@@ -104,11 +85,6 @@
   name: tiles-steel-floor-pavement
   sprite: /Textures/Tiles/steel_pavement.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemSteelPavement
 
 - type: tile
@@ -117,11 +93,6 @@
   name: tiles-steel-floor-diagonal
   sprite: /Textures/Tiles/steel_diagonal.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemSteelDiagonal
 
 - type: tile
@@ -137,11 +108,6 @@
   name: tiles-steel-floor-mono
   sprite: /Textures/Tiles/steel_mono.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemSteelMono
 
 - type: tile
@@ -150,11 +116,6 @@
   name: tiles-steel-floor-pavement-vertical
   sprite: /Textures/Tiles/steel_pavement_vertical.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemSteelPavementVertical
 
 - type: tile
@@ -163,11 +124,6 @@
   name: tiles-steel-floor-herringbone
   sprite: /Textures/Tiles/steel_herringbone.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemSteelHerringbone
 
 - type: tile
@@ -176,11 +132,6 @@
   name: tiles-steel-floor-diagonal-mini
   sprite: /Textures/Tiles/steel_diagonal_mini.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemSteelDiagonalMini
 
 - type: tile
@@ -189,11 +140,6 @@
   name: tiles-steel-floor-slats-continuous
   sprite: /Textures/Tiles/steel_slats_continuous.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemSteelSlatsContinuous
   allowRotationMirror: true
 
@@ -203,11 +149,6 @@
   name: tiles-steel-floor-vertical-slats-bordered
   sprite: /Textures/Tiles/steel_vertical_slats_bordered.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemSteelVerticalSlatsBordered
 
 - type: tile
@@ -216,11 +157,6 @@
   name: tiles-steel-floor-horizontal-slats-bordered
   sprite: /Textures/Tiles/steel_horizontal_slats_bordered.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemSteelHorizontalSlatsBordered
 
 - type: tile
@@ -247,11 +183,6 @@
   name: tiles-plastic-floor
   sprite: /Textures/Tiles/plastic.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemSteel
 
 - type: tile
@@ -260,11 +191,6 @@
   name: tiles-wood
   sprite: /Textures/Tiles/wood.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepWood
   barestepSounds:
@@ -277,11 +203,6 @@
   name: tiles-white-floor
   sprite: /Textures/Tiles/white.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhite
@@ -292,11 +213,6 @@
   name: tiles-white-floor-mini
   sprite: /Textures/Tiles/white_mini.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhiteMini
@@ -307,11 +223,6 @@
   name: tiles-white-floor-slats-continuous
   sprite: /Textures/Tiles/white_slats_continuous.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemWhiteSlatsContinuous
   allowRotationMirror: true
 
@@ -321,11 +232,6 @@
   name: tiles-white-floor-vertical-slats-bordered
   sprite: /Textures/Tiles/white_vertical_slats_bordered.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemWhiteVerticalSlatsBordered
 
 - type: tile
@@ -334,11 +240,6 @@
   name: tiles-white-floor-horizontal-slats-bordered
   sprite: /Textures/Tiles/white_horizontal_slats_bordered.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemWhiteHorizontalSlatsBordered
 
 - type: tile
@@ -347,11 +248,6 @@
   name: tiles-white-floor-pavement
   sprite: /Textures/Tiles/white_pavement.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhitePavement
@@ -362,11 +258,6 @@
   name: tiles-white-floor-diagonal
   sprite: /Textures/Tiles/white_diagonal.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhiteDiagonal
@@ -386,11 +277,6 @@
   name: tiles-white-floor-mono
   sprite: /Textures/Tiles/white_mono.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhiteMono
@@ -401,11 +287,6 @@
   name: tiles-white-floor-pavement-vertical
   sprite: /Textures/Tiles/white_pavement_vertical.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhitePavementVertical
@@ -416,11 +297,6 @@
   name: tiles-white-floor-herringbone
   sprite: /Textures/Tiles/white_herringbone.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhiteHerringbone
@@ -431,11 +307,6 @@
   name: tiles-white-floor-diagonal-mini
   sprite: /Textures/Tiles/white_diagonal_mini.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhiteDiagonalMini
@@ -446,11 +317,6 @@
   name: tiles-plastic-white-floor
   sprite: /Textures/Tiles/white_plastic.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhite
@@ -461,11 +327,6 @@
   name: tiles-dark-floor
   sprite: /Textures/Tiles/dark.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDark
@@ -476,11 +337,6 @@
   name: tiles-dark-floor-mini
   sprite: /Textures/Tiles/dark_mini.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDarkMini
@@ -491,11 +347,6 @@
   name: tiles-dark-floor-slats-continuous
   sprite: /Textures/Tiles/dark_slats_continuous.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemDarkSlatsContinuous
   allowRotationMirror: true
 
@@ -505,11 +356,6 @@
   name: tiles-dark-floor-vertical-slats-bordered
   sprite: /Textures/Tiles/dark_vertical_slats_bordered.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemDarkVerticalSlatsBordered
 
 - type: tile
@@ -518,11 +364,6 @@
   name: tiles-dark-floor-horizontal-slats-bordered
   sprite: /Textures/Tiles/dark_horizontal_slats_bordered.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemDarkHorizontalSlatsBordered
 
 - type: tile
@@ -531,11 +372,6 @@
   name: tiles-dark-floor-pavement
   sprite: /Textures/Tiles/dark_pavement.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDarkPavement
@@ -546,11 +382,6 @@
   name: tiles-dark-floor-diagonal
   sprite: /Textures/Tiles/dark_diagonal.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDarkDiagonal
@@ -570,11 +401,6 @@
   name: tiles-dark-floor-mono
   sprite: /Textures/Tiles/dark_mono.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDarkMono
@@ -585,11 +411,6 @@
   name: tiles-dark-floor-pavement-vertical
   sprite: /Textures/Tiles/dark_pavement_vertical.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDarkPavementVertical
@@ -600,11 +421,6 @@
   name: tiles-dark-floor-herringbone
   sprite: /Textures/Tiles/dark_herringbone.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDarkHerringbone
@@ -615,11 +431,6 @@
   name: tiles-dark-floor-diagonal-mini
   sprite: /Textures/Tiles/dark_diagonal_mini.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDarkDiagonalMini
@@ -630,11 +441,6 @@
   name: tiles-plastic-dark-floor
   sprite: /Textures/Tiles/dark_plastic.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemDark
@@ -690,11 +496,6 @@
   name: tiles-dirty-steel-floor
   sprite: /Textures/Tiles/steel_dirty.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepPlating
   itemDrop: FloorTileItemDirty
@@ -741,11 +542,6 @@
   name: tiles-lime-floor
   sprite: /Textures/Tiles/lime.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemLime
 
 - type: tile
@@ -805,11 +601,6 @@
   name: tiles-bar-floor
   sprite: /Textures/Tiles/bar.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemBar
 
 - type: tile
@@ -850,12 +641,6 @@
   name: tiles-steel-floor
   sprite: /Textures/Tiles/steel_damaged.png
   variants: 5
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemSteel #This should probably be made null when it becomes possible to make it such, in SS13 prying destroyed tiles wouldn't give you anything.
 
 # Concrete
@@ -865,11 +650,6 @@
   name: tiles-concrete-tile
   sprite: /Textures/Tiles/Planet/Concrete/concrete.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemConcrete
@@ -880,11 +660,6 @@
   name: tiles-concrete-slab
   sprite: /Textures/Tiles/Planet/Concrete/concrete_mono.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemConcreteMono
@@ -895,11 +670,6 @@
   name: tiles-concrete-smooth
   sprite: /Textures/Tiles/Planet/Concrete/concrete_smooth.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemConcreteSmooth
@@ -910,11 +680,6 @@
   name: tiles-gray-concrete-tile
   sprite: /Textures/Tiles/Planet/Concrete/grayconcrete.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemGrayConcrete
@@ -925,11 +690,6 @@
   name: tiles-gray-concrete-slab
   sprite: /Textures/Tiles/Planet/Concrete/grayconcrete_mono.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemGrayConcreteMono
@@ -940,11 +700,6 @@
   name: tiles-gray-concrete-smooth
   sprite: /Textures/Tiles/Planet/Concrete/grayconcrete_smooth.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemGrayConcreteSmooth
@@ -955,11 +710,6 @@
   name: tiles-old-concrete-tile
   sprite: /Textures/Tiles/Planet/Concrete/oldconcrete.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemOldConcrete
@@ -970,11 +720,6 @@
   name: tiles-old-concrete-slab
   sprite: /Textures/Tiles/Planet/Concrete/oldconcrete_mono.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemOldConcreteMono
@@ -985,11 +730,6 @@
   name: tiles-old-concrete-smooth
   sprite: /Textures/Tiles/Planet/Concrete/oldconcrete_smooth.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemOldConcreteSmooth
@@ -1073,11 +813,6 @@
   name: tiles-boxing-ring-floor
   sprite: /Textures/Tiles/boxing.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   friction: 1.25
   itemDrop: FloorTileItemBoxing
 
@@ -1087,11 +822,6 @@
   name: tiles-gym-floor
   sprite: /Textures/Tiles/gym.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   friction: 1.25
   itemDrop: FloorTileItemGym
 
@@ -1102,11 +832,6 @@
   name: tiles-white-shuttle-floor
   sprite: /Textures/Tiles/shuttlewhite.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemShuttleWhite
 
 - type: tile
@@ -1115,11 +840,6 @@
   name: tiles-grey-shuttle-floor
   sprite: /Textures/Tiles/shuttlegrey.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemShuttleGrey
 
 - type: tile
@@ -1128,11 +848,6 @@
   name: tiles-black-shuttle-floor
   sprite: /Textures/Tiles/shuttleblack.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemShuttleBlack
 
 - type: tile
@@ -1141,11 +856,6 @@
   name: tiles-blue-shuttle-floor
   sprite: /Textures/Tiles/shuttleblue.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemShuttleBlue
 
 - type: tile
@@ -1154,11 +864,6 @@
   name: tiles-orange-shuttle-floor
   sprite: /Textures/Tiles/shuttleorange.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemShuttleOrange
 
 - type: tile
@@ -1167,11 +872,6 @@
   name: tiles-purple-shuttle-floor
   sprite: /Textures/Tiles/shuttlepurple.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemShuttlePurple
 
 - type: tile
@@ -1180,11 +880,6 @@
   name: tiles-red-shuttle-floor
   sprite: /Textures/Tiles/shuttlered.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemShuttleRed
 
 
@@ -1213,11 +908,6 @@
   name: tiles-glass-floor
   sprite: /Textures/Tiles/glass.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: SheetGlass1
@@ -1228,11 +918,6 @@
   name: tiles-reinforced-glass-floor
   sprite: /Textures/Tiles/rglass.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   itemDrop: SheetRGlass1
@@ -1242,9 +927,6 @@
   parent: BaseStationTile
   name: tiles-metal-foam
   sprite: /Textures/Tiles/foammetal.png
-  variants: 1
-  placementVariants:
-  - 1.0
   footstepSounds:
     collection: FootstepHull
   itemDrop: SheetSteel1
@@ -1283,17 +965,6 @@
   name: tiles-asphalt
   sprite: /Textures/Tiles/Planet/Concrete/asphalt.png
   variants: 10
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   baseTurf: FloorDirt
   isSubfloor: true
   footstepSounds:
@@ -1330,11 +1001,6 @@
   name: tiles-dark-grass-floor
   sprite: /Textures/Tiles/grassdark.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   baseTurf: FloorDirt
   isSubfloor: true
   footstepSounds:
@@ -1347,11 +1013,6 @@
   name: tiles-light-grass-floor
   sprite: /Textures/Tiles/grasslight.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   baseTurf: FloorDirt
   isSubfloor: true
   footstepSounds:
@@ -1364,11 +1025,6 @@
   name: tiles-dirt-floor
   sprite: /Textures/Tiles/dirt.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   baseTurf: Plating
   isSubfloor: true
   footstepSounds:
@@ -1384,19 +1040,19 @@
   sprite: /Textures/Tiles/Asteroid/asteroid.png
   variants: 13
   placementVariants:
-    - 0.8
-    - 0.0166 #Should be roughly 20%.... I think??? I don't know dude, I'm just a YAML monkey.
-    - 0.0166
-    - 0.0166
-    - 0.0166
-    - 0.0166
-    - 0.0166
-    - 0.0166
-    - 0.0166
-    - 0.0166
-    - 0.0166
-    - 0.0116
-    - 0.0116
+  - 0.8
+  - 0.0166 #Should be roughly 20%.... I think??? I don't know dude, I'm just a YAML monkey.
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  - 0.0166
+  - 0.0116
+  - 0.0116
   baseTurf: Space
   isSubfloor: true
   footstepSounds:
@@ -1503,22 +1159,6 @@
   name: tiles-asteroid-ironsand-borderless
   sprite: /Textures/Tiles/Asteroid/ironsand.png
   variants: 15
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   baseTurf: Space
   isSubfloor: true
   footstepSounds:
@@ -1599,14 +1239,6 @@
   name: tiles-cave
   sprite: /Textures/Tiles/cave.png
   variants: 7
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   baseTurf: Space
   isSubfloor: true
   footstepSounds:
@@ -1618,15 +1250,6 @@
   name: tiles-cave-drought
   sprite: /Textures/Tiles/cavedrought.png
   variants: 8
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   baseTurf: Space
   isSubfloor: true
   footstepSounds:
@@ -1639,11 +1262,6 @@
   name: tiles-flesh-floor
   sprite: /Textures/Tiles/meat.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepBlood
   itemDrop: FloorTileItemFlesh
@@ -1664,11 +1282,6 @@
   name: tiles-techmaint3-floor
   sprite: /Textures/Tiles/grating_maint.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepHull
   itemDrop: FloorTileItemGratingMaint
@@ -1679,11 +1292,6 @@
   name: tiles-wood2
   sprite: /Textures/Tiles/wood_tile.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepWood
   barestepSounds:
@@ -1696,14 +1304,6 @@
   name: tiles-wood3
   sprite: /Textures/Tiles/wood_broken.png
   variants: 7
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepWood
   barestepSounds:
@@ -1726,14 +1326,6 @@
   name: tiles-chromite
   sprite: /Textures/Tiles/chromite.png
   variants: 7
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   baseTurf: Space
   isSubfloor: true
   footstepSounds:
@@ -1763,16 +1355,11 @@
 
 # Grass
 - type: tile
-  id: FloorAstroGrass
   parent: BaseStationTile
+  id: FloorAstroGrass
   name: tiles-astro-grass
   sprite: /Textures/Tiles/Planet/Grass/grass.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   edgeSpritePriority: 1
   edgeSprites:
     SouthEast: /Textures/Tiles/Planet/Grass/single_edge.png
@@ -1789,79 +1376,94 @@
   itemDrop: FloorTileItemAstroGrass
 
 - type: tile
-  id: FloorMowedAstroGrass
   parent: [ BaseStationTile, FloorGrass ]
+  id: FloorMowedAstroGrass
   name: tiles-mowed-astro-grass
   isSubfloor: false
   deconstructTools: [ Digging ] # starcup
+  footstepSounds:
+    collection: FootstepGrass
   itemDrop: FloorTileItemMowedAstroGrass
 
 - type: tile
-  id: FloorJungleAstroGrass
   parent: [ BaseStationTile, FloorGrassJungle ]
+  id: FloorJungleAstroGrass
   name: tiles-jungle-astro-grass
   isSubfloor: false
   deconstructTools: [ Digging ] # starcup
+  footstepSounds:
+    collection: FootstepGrass
   itemDrop: FloorTileItemJungleAstroGrass
 
 - type: tile
-  parent: FloorGrassDark
+  parent: [ BaseStationTile, FloorGrassDark ]
   id: FloorDarkAstroGrass
   name: tiles-dark-astro-grass
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Digging ] # starcup
+  footstepSounds:
+    collection: FootstepGrass
   itemDrop: FloorTileItemDarkAstroGrass
 
 - type: tile
-  parent: FloorGrassLight
+  parent: [ BaseStationTile, FloorGrassLight ]
   id: FloorLightAstroGrass
   name: tiles-light-astro-grass
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Digging ] # starcup
+  footstepSounds:
+    collection: FootstepGrass
   itemDrop: FloorTileItemLightAstroGrass
 
 # Ice
 - type: tile
-  id: FloorAstroIce
   parent: BaseStationTile
+  id: FloorAstroIce
   name: tiles-astro-ice
   sprite: /Textures/Tiles/Planet/Snow/ice.png
   friction: 0.05
   mobFriction: 0.05
   mobAcceleration: 0.1
+  footstepSounds: null
   itemDrop: FloorTileItemAstroIce
 
 - type: tile
-  id: FloorAstroSnow
   parent: [ BaseStationTile, FloorSnow ]
+  id: FloorAstroSnow
   name: tiles-astro-snow
   isSubfloor: false
   deconstructTools: [ Digging ] # starcup
+  footstepSounds:
+    collection: FootstepSnow
   itemDrop: FloorTileItemAstroSnow
 
 # Asteroid Sand
 - type: tile
-  id: FloorAstroAsteroidSand
   parent: [ BaseStationTile, FloorAsteroidSand ]
+  id: FloorAstroAsteroidSand
   name: tiles-astro-asteroid-sand
   isSubfloor: false
   deconstructTools: [ Digging ] # starcup
   itemDrop: FloorTileItemAstroAsteroidSand
 # weather: false  # starcup: early merge of #38638
+  footstepSounds:
+    collection: FootstepAsteroid
 
 - type: tile
-  id: FloorAstroAsteroidSandBorderless
   parent: [ BaseStationTile, FloorAsteroidSandBorderless ]
+  id: FloorAstroAsteroidSandBorderless
   name: tiles-astro-asteroid-sand-borderless
   isSubfloor: false
   deconstructTools: [ Digging ] # starcup
   itemDrop: FloorTileItemAstroAsteroidSand
 # weather: false  # starcup: early merge of #38638
+  footstepSounds:
+    collection: FootstepAsteroid
 
 - type: tile
-  parent: FloorDesert
+  parent: [ BaseStationTile, FloorDesert ]
   id: FloorDesertAstroSand
   name: tiles-desert-astro-sand
   baseTurf: Plating
@@ -1869,24 +1471,24 @@
   deconstructTools: [ Digging ] # starcup
   itemDrop: FloorTileItemDesertAstroSand
 #  weather: false  # starcup: early merge of #38638
+  footstepSounds:
+    collection: FootstepAsteroid
 
 - type: tile
+  parent: [ BaseStationTile, FloorAsteroidIronsand ]
   id: FloorAstroIronsand
   name: tiles-astro-ironsand
-  parent: FloorAsteroidIronsand
-  baseTurf: Plating
-  isSubfloor: false
-  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepAsteroid
   itemDrop: FloorTileItemAstroIronsand
 #  weather: false  # starcup: early merge of #38638
 
 - type: tile
+  parent: [ BaseStationTile, FloorAsteroidIronsandBorderless ]
   id: FloorAstroIronsandBorderless
   name: tiles-astro-ironsand-borderless
-  parent: FloorAsteroidIronsandBorderless
-  baseTurf: Plating
-  isSubfloor: false
-  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepAsteroid
   itemDrop: FloorTileItemAstroIronsandBorderless
 #  weather: false  # starcup: early merge of #38638
 
@@ -1896,11 +1498,6 @@
   name: tiles-wood-large
   sprite: /Textures/Tiles/wood_large.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepWood
   barestepSounds:
@@ -1954,11 +1551,6 @@
   name: tiles-dark-squiggly
   sprite: /Textures/Tiles/dark_squiggly.png
   variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   itemDrop: FloorTileItemDarkSquiggly
   allowRotationMirror: true
 
@@ -1977,15 +1569,6 @@
   name: tiles-white-marble
   sprite: /Textures/Tiles/white_marble.png
   variants: 8
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   friction: 0.8
@@ -1997,15 +1580,6 @@
   name: tiles-dark-marble
   sprite: /Textures/Tiles/dark_marble.png
   variants: 8
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   friction: 0.8
@@ -2017,15 +1591,6 @@
   name: tiles-plasma-marble
   sprite: /Textures/Tiles/plasmarble.png
   variants: 8
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   friction: 0.8
@@ -2037,15 +1602,6 @@
   name: tiles-uranium-marble
   sprite: /Textures/Tiles/uranium_marble.png
   variants: 8
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
   footstepSounds:
     collection: FootstepTile
   friction: 0.8

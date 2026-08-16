@@ -7,9 +7,9 @@ using Content.Shared.Tag;
 namespace Content.Server._Impstation.Anomaly.Effects;
 
 // this is all very hacky, yes.
-public sealed class WallAnomalySystem : SharedWallAnomalySystem
+public sealed partial class WallAnomalySystem : SharedWallAnomalySystem
 {
-    [Dependency] private readonly EntityLookupSystem _lookup = default!;
+    [Dependency] private EntityLookupSystem _lookup = default!;
 
     /// <inheritdoc/>
     public override void Initialize()

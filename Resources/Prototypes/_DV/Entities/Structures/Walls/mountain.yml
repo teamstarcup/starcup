@@ -13,8 +13,9 @@
     sprite: _DV/Structures/Walls/asteroid_rock.rsi
     state: full
   - type: Damageable
-    damageContainer: Inorganic
     damageModifierSet: Metallic
+  - type: Injurable
+    damageContainer: Inorganic
   - type: Destructible
     thresholds:
     - trigger:
@@ -43,9 +44,7 @@
     oreChance: 0.2
     oreRarityPrototypeId: RandomOreDistributionStandard
   - type: IsRoof # starcup: weather and lighting enhancements
-  - type: Tag # starcup: rock walls display correctly on station maps
-    tags:
-    - Wall
+  - type: Wall # starcup: rock walls display correctly on station maps
   - type: PlacementReplacement # starcup: quick replacing
     key: walls
 
@@ -82,8 +81,9 @@
     sprite: _DV/Structures/Walls/mountain_rock.rsi
     state: full
   - type: Damageable
-    damageContainer: Inorganic
     damageModifierSet: StrongMetallic
+  - type: Injurable
+    damageContainer: Inorganic
   - type: Destructible
     thresholds:
     - trigger:
@@ -109,9 +109,7 @@
     key: walls
     base: rock_
   - type: IsRoof # starcup: weather and lighting enhancements
-  - type: Tag # starcup: rock walls display correctly on station maps
-    tags:
-    - Wall
+  - type: Wall # starcup: rock walls display correctly on station maps
   - type: PlacementReplacement # starcup: quick replacing
     key: walls
 

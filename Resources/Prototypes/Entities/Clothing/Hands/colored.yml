@@ -4,7 +4,7 @@
 
 # Purple Gloves
 - type: entity
-  parent: ClothingHandsGlovesSyntheticBase
+  parent: [ ClothingHandsGlovesSyntheticBase, TemperatureProtectionMinimal ] # starcup: minimal temp protection
   id: ClothingHandsGlovesColorPurple
   name: purple gloves
   description: Regular purple gloves that do not keep you from frying.
@@ -33,7 +33,7 @@
 
 # Red Gloves
 - type: entity
-  parent: ClothingHandsGlovesSyntheticBase
+  parent: [ ClothingHandsGlovesSyntheticBase, TemperatureProtectionMinimal ] # starcup: minimal temp protection
   id: ClothingHandsGlovesColorRed
   name: red gloves
   description: Regular red gloves that do not keep you from frying.
@@ -62,7 +62,7 @@
 
 # Blue Gloves
 - type: entity
-  parent: ClothingHandsGlovesSyntheticBase
+  parent: [ ClothingHandsGlovesSyntheticBase, TemperatureProtectionMinimal ] # starcup: minimal temp protection
   id: ClothingHandsGlovesColorBlue
   name: blue gloves
   description: Regular blue gloves that do not keep you from frying.
@@ -91,7 +91,7 @@
 
 # Teal Gloves
 - type: entity
-  parent: ClothingHandsGlovesSyntheticBase
+  parent: [ ClothingHandsGlovesSyntheticBase, TemperatureProtectionMinimal ] # starcup: minimal temp protection
   id: ClothingHandsGlovesColorTeal
   name: teal gloves
   description: Regular teal gloves that do not keep you from frying.
@@ -120,7 +120,7 @@
 
 # Brown Gloves
 - type: entity
-  parent: ClothingHandsGlovesSyntheticBase
+  parent: [ ClothingHandsGlovesSyntheticBase, TemperatureProtectionMinimal ] # starcup: minimal temp protection
   id: ClothingHandsGlovesColorBrown
   name: brown gloves
   description: Regular brown gloves that do not keep you from frying.
@@ -149,7 +149,7 @@
 
 # Grey Gloves
 - type: entity
-  parent: ClothingHandsGlovesSyntheticBase
+  parent: [ ClothingHandsGlovesSyntheticBase, TemperatureProtectionMinimal ] # starcup: minimal temp protection
   id: ClothingHandsGlovesColorGray
   name: grey gloves
   description: Regular grey gloves that do not keep you from frying.
@@ -178,7 +178,7 @@
 
 # Green Gloves
 - type: entity
-  parent: ClothingHandsGlovesSyntheticBase
+  parent: [ ClothingHandsGlovesSyntheticBase, TemperatureProtectionMinimal ] # starcup: minimal temp protection
   id: ClothingHandsGlovesColorGreen
   name: green gloves
   description: Regular green gloves that do not keep you from frying.
@@ -207,7 +207,7 @@
 
 # Light Brown Gloves
 - type: entity
-  parent: ClothingHandsGlovesSyntheticBase
+  parent: [ ClothingHandsGlovesSyntheticBase, TemperatureProtectionMinimal ] # starcup: minimal temp protection
   id: ClothingHandsGlovesColorLightBrown
   name: light brown gloves
   description: Regular light brown gloves that do not keep you from frying.
@@ -236,7 +236,7 @@
 
 # Orange Gloves
 - type: entity
-  parent: ClothingHandsGlovesSyntheticBase
+  parent: [ ClothingHandsGlovesSyntheticBase, TemperatureProtectionMinimal ] # starcup: minimal temp protection
   id: ClothingHandsGlovesColorOrange
   name: orange gloves
   description: Regular orange gloves that do not keep you from frying.
@@ -265,7 +265,7 @@
 
 # White Gloves
 - type: entity
-  parent: ClothingHandsGlovesSyntheticBase
+  parent: [ ClothingHandsGlovesSyntheticBase, TemperatureProtectionMinimal ] # starcup: minimal temp protection
   id: ClothingHandsGlovesColorWhite
   name: white gloves
   description: Regular white gloves that do not keep you from frying.
@@ -295,7 +295,7 @@
 # Black Gloves
 # TECHNICALLY, if you ported the worn state to the RSI, this could be greyscaled, but I do not really feel like doing that.
 - type: entity
-  parent: ClothingHandsGlovesSyntheticBase
+  parent: [ ClothingHandsGlovesSyntheticBase, BaseSlicingRefinable, TemperatureProtectionMinimal ] # starcup: minimal temp protection
   id: ClothingHandsGlovesColorBlack
   name: black gloves
   description: Regular black gloves that do not keep you from frying.
@@ -310,9 +310,8 @@
       - state: inhand-right
   - type: Clothing
     sprite: Clothing/Hands/Gloves/Color/black.rsi
-  - type: Butcherable
-    butcheringType: Knife
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: ClothingHandsGlovesFingerless
   - type: Fiber
     fiberColor: fibers-black
@@ -320,7 +319,7 @@
 # Insulated Gloves (Yellow Gloves)
 # Currently can not be greyscaled without looking like shit.
 - type: entity
-  parent: [ ClothingHandsBase, BaseEngineeringContraband, BaseExaminableClothing ] # starcup: added contraband label, examinable clothing
+  parent: [ ClothingHandsBase, BaseSlicingRefinable, BaseEngineeringContraband, BaseExaminableClothing ] # starcup: added contraband label, examinable clothing
   id: ClothingHandsGlovesColorYellow
   name: insulated gloves
   description: These gloves will protect the wearer from electric shocks.
@@ -330,9 +329,8 @@
     sprite: Clothing/Hands/Gloves/Color/yellow.rsi
   - type: Clothing
     sprite: Clothing/Hands/Gloves/Color/yellow.rsi
-  - type: Butcherable
-    butcheringType: Knife
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: ClothingHandsGlovesFingerlessInsulated
   - type: Insulated
   - type: Fiber

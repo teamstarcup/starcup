@@ -19,11 +19,23 @@
         sprite:
           sprite: _starcup/Objects/Tools/jaws_of_life.rsi
           state: nt_jaws_pry
-        useSound: /Audio/Items/jaws_pry.ogg
-        changeSound: /Audio/Items/change_jaws.ogg
+        useSound: !type:SoundPathSpecifier
+          path: /Audio/Items/jaws_pry.ogg
+          params:
+            volume: -2
+        changeSound: !type:SoundPathSpecifier
+          path: /Audio/Items/change_jaws.ogg
+          params:
+            volume: -5
       - behavior: Cutting
         sprite:
           sprite: _starcup/Objects/Tools/jaws_of_life.rsi
           state: nt_jaws_cutter
-        useSound: /Audio/Items/jaws_cut.ogg
-        changeSound: /Audio/Items/change_jaws.ogg
+        useSound: !type:SoundPathSpecifier
+          path: /Audio/Items/jaws_cut.ogg
+          params:
+            volume: -4
+        changeSound: !type:SoundPathSpecifier
+          path: /Audio/Items/change_jaws.ogg
+          params:
+            volume: -5

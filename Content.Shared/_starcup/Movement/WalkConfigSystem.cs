@@ -10,9 +10,9 @@ namespace Content.Shared._starcup.Movement;
 
 public sealed partial class InputMoverSystem : EntitySystem
 {
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly INetConfigurationManager _netCfg = default!;
-    [Dependency] private readonly ISharedPlayerManager _playerMan = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private INetConfigurationManager _netCfg = default!;
+    [Dependency] private ISharedPlayerManager _playerMan = default!;
 
     private const MoveButtons WhenWalkPressed = MoveButtons.Walk;
     private const MoveButtons WhenWalkReleased = MoveButtons.None;

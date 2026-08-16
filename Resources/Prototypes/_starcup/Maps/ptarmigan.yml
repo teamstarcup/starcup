@@ -4,8 +4,8 @@
   mapPath: /Maps/_starcup/ptarmigan.yml
   maxRandomOffset: 0
   randomRotation: false
-  minPlayers: 0
-  maxPlayers: 15
+  minPlayers: 50 # starcup: 0->50, too buggy for regular use at the moment, fine for events.
+  maxPlayers: 51 # starcup: 15-51, changed to prevent errors
   stations:
     Ptarmigan:
       stationProto: StandardTerrestrialStationTradingSnowy

@@ -1,12 +1,12 @@
 using System.Numerics;
-using Content.Server.Forensics;
 using Content.Server.GameTicking;
-using Content.Server.StationRecords.Systems;
 using Content.Server.StationRecords;
 using Content.Shared.Inventory;
 using Content.Shared.PDA;
 using Content.Shared.Roles;
 using Content.Shared.StationRecords;
+using Content.Shared.StationRecords.Systems;
+using Content.Shared.StationRecords.Components;
 using Content.Shared._CD.Records;
 using Content.Shared.Forensics.Components;
 using Content.Shared.GameTicking;
@@ -16,12 +16,12 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Server._CD.Records;
 
-public sealed class CharacterRecordsSystem : EntitySystem
+public sealed partial class CharacterRecordsSystem : EntitySystem
 {
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
-    [Dependency] private readonly InventorySystem _inventory = default!;
-    [Dependency] private readonly StationRecordsSystem _records = default!;
-    [Dependency] private readonly SharedScaleVisualsSystem _scaleVisuals = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private InventorySystem _inventory = default!;
+    [Dependency] private StationRecordsSystem _records = default!;
+    [Dependency] private SharedScaleVisualsSystem _scaleVisuals = default!;
 
     public override void Initialize()
     {

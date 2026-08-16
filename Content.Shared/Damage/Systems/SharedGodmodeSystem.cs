@@ -1,21 +1,20 @@
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Events;
 using Content.Shared.Destructible;
+using Content.Shared.Glue;
+using Content.Shared.Lube;
+using Content.Shared.Nutrition;
 using Content.Shared.Prototypes;
 using Content.Shared.Rejuvenate;
 using Content.Shared.Slippery;
 using Content.Shared.StatusEffect;
 using Content.Shared.StatusEffectNew;
 using Content.Shared.StatusEffectNew.Components;
-using Robust.Shared.Prototypes;
-using Content.Shared.Nutrition;
 
 namespace Content.Shared.Damage.Systems;
 
-public abstract class SharedGodmodeSystem : EntitySystem
+public abstract partial class SharedGodmodeSystem : EntitySystem
 {
-    [Dependency] private readonly IPrototypeManager _protoMan = default!;
-
     public override void Initialize()
     {
         base.Initialize();
@@ -41,7 +40,7 @@ public abstract class SharedGodmodeSystem : EntitySystem
 
     private void OnBeforeStatusEffect(EntityUid uid, GodmodeComponent component, ref BeforeStatusEffectAddedEvent args)
     {
-        if (_protoMan.Index(args.Effect).HasComponent<RejuvenateRemovedStatusEffectComponent>(Factory))
+        if (ProtoMan.Index(args.Effect).HasComp<RejuvenateRemovedStatusEffectComponent>(Factory))
             args.Cancelled = true;
     }
 
@@ -56,14 +55,26 @@ public abstract class SharedGodmodeSystem : EntitySystem
         args.Cancelled = true;
     }
 
+    private void OnDestruction(Entity<GodmodeComponent> ent, ref DestructionAttemptEvent args)
+    {
+        args.Cancel();
+    }
+
     private void BeforeEdible(Entity<GodmodeComponent> ent, ref IngestibleEvent args)
     {
         args.Cancelled = true;
     }
 
-    private void OnDestruction(Entity<GodmodeComponent> ent, ref DestructionAttemptEvent args)
+    [SubscribeLocalEvent]
+    private void OnGluedEffectAttemptEvent(Entity<GodmodeComponent> entity, ref GluedEffectAttemptEvent args)
     {
-        args.Cancel();
+        args.Cancelled = true;
+    }
+
+    [SubscribeLocalEvent]
+    private void OnGluedEffectAttemptEvent(Entity<GodmodeComponent> entity, ref LubedEffectAttemptEvent args)
+    {
+        args.Cancelled = true;
     }
 
     public virtual void EnableGodmode(EntityUid uid, GodmodeComponent? godmode = null)

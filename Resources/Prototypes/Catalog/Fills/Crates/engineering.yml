@@ -117,7 +117,7 @@
   parent: CrateElectrical
   id: CrateEngineeringElectricalSupplies
   name: electrical supplies crate
-  description: Two electrical toolboxes and two pairs of insulated gloves, for rewiring and repairs. A spare set of insulated gloves is included for the Mime. # starcup: rewritten for tone
+  description: NT is not responsible for any workplace infighting relating to the insulated gloves included within these crates.
   components:
   - type: EntityTableContainerFill
     containers:
@@ -141,30 +141,6 @@
         amount: 5
 
 - type: entity
-  parent: CrateGenericSteel
-  id: CrateEngineeringJetpack
-  name: jetpack crate
-  description: Two jetpacks for off-station expeditions. Some salvagers prefer to just grab the nearest fire extinguisher. # starcup: rewritten for tone
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: JetpackBlue
-        amount: 2
-
-- type: entity
-  parent: CrateGenericSteel
-  id: CrateEngineeringMiniJetpack
-  name: mini jetpack crate
-  description: Two mini jetpacks for those who want an extra challenge.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: JetpackMini
-        amount: 2
-
-- type: entity
   parent: CrateEngineering
   id: CrateAirlockKit
   name: airlock kit
@@ -178,21 +154,6 @@
         - id: CableApcStack
         - id: DoorElectronics
           amount: 6
-
-- type: entity
-  parent: CrateCommandSecure
-  id: CrateEvaKit
-  name: EVA kit
-  description: A set consisting of two prestigious EVA suits and helmets.
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: ClothingHeadHelmetEVA
-          amount: 2
-        - id: ClothingOuterHardsuitEVA
-          amount: 2
 
 - type: entity
   parent: CrateEngineering

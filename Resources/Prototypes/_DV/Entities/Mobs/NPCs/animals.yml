@@ -50,10 +50,9 @@
     speechSounds: FoxSpeechSounds
     allowedEmotes: ['CreatureScream', 'CreatureBark', 'CreatureWhimper', 'CreatureCough', 'Shake']
   - type: Vocal
-    sounds:
-      Unsexed: FoxSpeechEmotes
+    emoteSounds: FoxSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: ReplacementAccent
     accent: FoxAccent
   - type: AutoEmote
@@ -173,10 +172,9 @@
     speechSounds: DogSpeechSounds
     allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'CreatureCough', 'CreatureSneeze', 'Snuffle', 'Pant', 'Shake']
   - type: Vocal
-    sounds:
-      Unsexed: LargeDogSpeechEmotes
+    emoteSounds: LargeDogSpeechEmotes
     screamId: CreatureBark
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: ReplacementAccent
     accent: DogAccent
   - type: AutoEmote

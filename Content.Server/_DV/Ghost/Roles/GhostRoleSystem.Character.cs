@@ -1,11 +1,11 @@
-﻿// begin starcup - SetOutfit is in outfitSystem instead of SetOutfitCommand
+// begin starcup - SetOutfit is in outfitSystem instead of SetOutfitCommand
 // using Content.Server.Administration.Commands;
 using Content.Server.Clothing.Systems;
 // end starcup
 using Content.Server.Ghost.Roles.Components;
-using Content.Server.Ghost.Roles.Events;
 using Content.Server.Preferences.Managers;
 using Content.Server.Station.Systems;
+using Content.Shared.Ghost;
 using Content.Shared.Mind.Components;
 using Content.Shared.Preferences;
 
@@ -13,8 +13,8 @@ namespace Content.Server.Ghost.Roles
 {
     public sealed partial class GhostRoleSystem
     {
-        [Dependency] private readonly IServerPreferencesManager _prefs = default!;
-        [Dependency] private readonly OutfitSystem _outfitSystem = default!; // starcup - SetOutfit is in outfitSystem instead of SetOutfitCommand
+        [Dependency] private IServerPreferencesManager _prefs = default!;
+        [Dependency] private OutfitSystem _outfitSystem = default!; // starcup - SetOutfit is in outfitSystem instead of SetOutfitCommand
 
         private void OnSpawnerTakeCharacter(Entity<GhostRoleCharacterSpawnerComponent> ent,
             ref TakeGhostRoleEvent args)
@@ -36,7 +36,7 @@ namespace Content.Server.Ghost.Roles
             _transform.AttachToGridOrMap(mob);
 
             var spawnedEvent = new GhostRoleSpawnerUsedEvent(uid, mob);
-            RaiseLocalEvent(mob, spawnedEvent);
+            RaiseLocalEvent(mob, ref spawnedEvent);
 
             EnsureComp<MindContainerComponent>(mob);
 

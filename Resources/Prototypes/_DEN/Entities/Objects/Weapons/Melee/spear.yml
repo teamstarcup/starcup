@@ -26,7 +26,9 @@
         - ItemMask
         restitution: 0.3
         friction: 0.2
-  - type: Sharp
+  - type: Tool # starcup: Sharp -> Tool with Slicing quality
+    qualities:
+    - Slicing
   - type: Sprite
     sprite: _DEN/Objects/Weapons/Melee/harpoon.rsi
     layers:

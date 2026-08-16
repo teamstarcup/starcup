@@ -4,7 +4,6 @@
   id: CrashAxe
   description: A serviceable blade with a prying tip.
   components:
-  - type: Sharp
   - type: Sprite
     sprite: _starcup/Objects/Weapons/Melee/crash_axe.rsi
     state: icon
@@ -29,6 +28,7 @@
   - type: Tool
     qualities:
     - Prying
+    - Slicing
     useSound:
       path: /Audio/Items/crowbar.ogg
   - type: ToolTileCompatible
@@ -44,7 +44,9 @@
   id: ClimbingAxe
   description: Also called an ice axe. It has a sharp tip to chip and cling to hard surfaces.
   components:
-  - type: Sharp
+  - type: Tool
+    qualities:
+    - Slicing
   - type: Sprite
     sprite: _starcup/Objects/Weapons/Melee/climbing_axe.rsi
     state: icon

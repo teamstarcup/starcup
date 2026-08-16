@@ -10,7 +10,7 @@ namespace Content.Client._DV.Options.UI.Tabs;
 [GenerateTypedNameReferences]
 public sealed partial class DeltaTab : Control
 {
-    // [Dependency] private readonly IConfigurationManager _cfg = default!; // starcup - remove unused
+    // [Dependency] private IConfigurationManager _cfg = default!; // starcup - remove unused
 
     public DeltaTab()
     {

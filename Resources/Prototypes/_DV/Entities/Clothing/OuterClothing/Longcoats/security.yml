@@ -26,6 +26,13 @@
   # begin starcup: examinable clothing
   - type: ExaminableClothing
     examineText: clothing-security-longcoat
+  - type: Armor # should be as good as an armored coat
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85 # DeltaV - not as resistant as pre-rebase, but still better than nothing
+        Heat: 0.75
   # end starcup
 
 - type: entity
@@ -38,3 +45,11 @@
     sprite: _Floof/Clothing/OuterClothing/Longcoats/corpsman.rsi
   - type: Clothing
     sprite: _Floof/Clothing/OuterClothing/Longcoats/corpsman.rsi
+  - type: Armor # starcup - bring to parity with their armored medical gown
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.85
+        Piercing: 0.65
+        Heat: 0.85
+        Caustic: 0.75

@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingNeckBase
+  parent: [ ClothingNeckBase, TemperatureProtection ] # upstream: temperature protection
   id: ClothingNeckCWPSec
   name: security cold weather poncho
   description: The Cold Weather Poncho, advertised as a masterpiece of elemental protection. The truth is that it's itchy, stuffy, and a little baggy - but at least it's not cold. This one is grey with Station Security markings.
@@ -10,9 +10,6 @@
     sprite: _DV/Clothing/Neck/Misc/cwpsec.rsi
   - type: Item
     size: Normal
-  - type: TemperatureProtection
-    heatingCoefficient: 1.1
-    coolingCoefficient: 0.1
   - type: Armor
     modifiers:
       coefficients:

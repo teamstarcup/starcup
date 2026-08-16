@@ -16,12 +16,12 @@ namespace Content.Server._Wizden.DeviceLinking.Systems;
  * This file is obsolete if that PR has been merged.
  */
 
-public sealed class AlarmAutoLinkSystem : EntitySystem
+public sealed partial class AlarmAutoLinkSystem : EntitySystem
 {
-    [Dependency] private readonly DeviceListSystem _deviceListSystem = default!;
-    [Dependency] private readonly MapSystem _mapSystem = default!;
-    [Dependency] private readonly EntityLookupSystem _entityLookupSystem = default!;
-    [Dependency] private readonly TurfSystem _turf = default!;
+    [Dependency] private DeviceListSystem _deviceListSystem = default!;
+    [Dependency] private MapSystem _mapSystem = default!;
+    [Dependency] private EntityLookupSystem _entityLookupSystem = default!;
+    [Dependency] private TurfSystem _turf = default!;
 
     /// <inheritdoc/>
     public override void Initialize()

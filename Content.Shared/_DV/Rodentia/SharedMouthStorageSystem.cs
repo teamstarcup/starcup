@@ -21,15 +21,15 @@ using Robust.Shared.Player;
 
 namespace Content.Shared._DV.Rodentia;
 
-public abstract class SharedMouthStorageSystem : EntitySystem
+public abstract partial class SharedMouthStorageSystem : EntitySystem
 {
-    // [Dependency] private readonly DumpableSystem _dumpableSystem = default!;  // starcup: removed for refactor
-    [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
-    [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
+    // [Dependency] private DumpableSystem _dumpableSystem = default!;  // starcup: removed for refactor
+    [Dependency] private SharedContainerSystem _containerSystem = default!;
+    [Dependency] private SharedActionsSystem _actionsSystem = default!;
     // begin starcup: additions for DropAllContents refactor
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
-    [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private SharedPopupSystem _popupSystem = default!;
+    [Dependency] private SharedTransformSystem _transformSystem = default!;
     // end starcup
 
     public override void Initialize()

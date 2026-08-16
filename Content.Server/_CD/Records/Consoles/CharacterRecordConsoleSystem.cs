@@ -1,24 +1,25 @@
 using Content.Server.CriminalRecords.Systems; // DeltaV - i hate this, forward to criminal records console
 using Content.Server.Station.Systems;
-using Content.Server.StationRecords.Systems;
 using Content.Server.StationRecords;
 using Content.Shared.CriminalRecords;
 using Content.Shared.CriminalRecords.Components; // DeltaV - i hate this, forward to criminal records console
 using Content.Shared.Security;
 using Content.Shared.StationRecords;
+using Content.Shared.StationRecords.Systems;
+using Content.Shared.StationRecords.Components;
 using Content.Shared._CD.Records;
 using Robust.Server.GameObjects;
 
 namespace Content.Server._CD.Records.Consoles;
 
-public sealed class CharacterRecordConsoleSystem : EntitySystem
+public sealed partial class CharacterRecordConsoleSystem : EntitySystem
 {
-    [Dependency] private readonly CharacterRecordsSystem _characterRecords = default!;
-    [Dependency] private readonly CriminalRecordsConsoleSystem _criminalRecordsConsole = default!; // DeltaV - i hate this, forward to criminal records console
-    [Dependency] private readonly IEntityManager _entity = default!;
-    [Dependency] private readonly StationRecordsSystem _records = default!;
-    [Dependency] private readonly StationSystem _station = default!;
-    [Dependency] private readonly UserInterfaceSystem _ui = default!;
+    [Dependency] private CharacterRecordsSystem _characterRecords = default!;
+    [Dependency] private CriminalRecordsConsoleSystem _criminalRecordsConsole = default!; // DeltaV - i hate this, forward to criminal records console
+    [Dependency] private IEntityManager _entity = default!;
+    [Dependency] private StationRecordsSystem _records = default!;
+    [Dependency] private StationSystem _station = default!;
+    [Dependency] private UserInterfaceSystem _ui = default!;
 
     public override void Initialize()
     {

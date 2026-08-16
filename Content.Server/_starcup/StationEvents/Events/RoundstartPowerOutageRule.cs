@@ -11,10 +11,10 @@ namespace Content.Server._starcup.StationEvents.Events;
 /// <summary>
 /// Drains the power from every APC, Substation, and SMES from the station at round start.
 /// </summary>
-public sealed class RoundstartPowerOutageRule : VariationPassSystem<RoundstartPowerOutageComponent>
+public sealed partial class RoundstartPowerOutageRule : VariationPassSystem<RoundstartPowerOutageComponent>
 {
-    [Dependency] private readonly StationSystem _station = default!;
-    [Dependency] private readonly BatterySystem _battery = default!;
+    [Dependency] private StationSystem _station = default!;
+    [Dependency] private BatterySystem _battery = default!;
 
     protected override void ApplyVariation(Entity<RoundstartPowerOutageComponent> ent, ref StationVariationPassEvent args)
     {

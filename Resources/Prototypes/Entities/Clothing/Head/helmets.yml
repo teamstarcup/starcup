@@ -27,21 +27,34 @@
         Piercing: 0.9
         Heat: 0.9
 
-#Basic Helmet (Security Helmet)
+#Security Helmet
 - type: entity
-  parent: [ClothingHeadHelmetArmoredBase, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
+  parent: [ClothingHeadHelmetArmoredBase, BaseFoldable, BaseSecurityContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingHeadHelmetBasic
-  name: helmet
-  description: Standard security gear. Protects the head from impacts.
+  name: security helmet
+  description: Standard security gear. Protects the head from impacts, and comes with a visor which can be lowered to protect the eyes.
   components:
   - type: Sprite
     sprite: Clothing/Head/Helmets/security.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon-visor
+      map: [ "foldedLayer" ]
+      visible: false
   - type: Clothing
     sprite: Clothing/Head/Helmets/security.rsi
   - type: Tag
     tags:
     - WhitelistChameleon
     - SecurityHelmet
+  - type: Foldable
+    canFoldInsideContainer: true
+    unfoldVerbText: fold-raise-visor-verb
+    foldVerbText: fold-lower-visor-verb
+  - type: FoldableClothing
+    foldedEquippedPrefix: visor
+    foldedHeldPrefix: visor
   - type: HideLayerClothing
     layers:
       Hair: HEAD
@@ -283,7 +296,7 @@
 
 #Fire Helmet
 - type: entity
-  parent: ClothingHeadLightBase
+  parent: [ClothingHeadLightBase, TemperatureProtection]
   id: ClothingHeadHelmetFire
   name: fire helmet
   description: An atmos tech's best friend. Provides some heat resistance and looks cool.
@@ -294,11 +307,13 @@
     sprite: Clothing/Head/Helmets/firehelmet.rsi
     quickEquip: true
   - type: IngestionBlocker
-  - type: TemperatureProtection
-    heatingCoefficient: 0.5
-    coolingCoefficient: 0.8
   - type: FireProtection
     reduction: 0.15 # not fully sealed so less protection
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellSmall
   - type: IdentityBlocker
   - type: Tag
     tags:
@@ -311,7 +326,7 @@
 
 #Atmos Fire Helmet
 - type: entity
-  parent: [ClothingHeadLightBase, BaseEngineeringContraband, BaseExaminableClothing] # starcup: examinable clothing
+  parent: [ClothingHeadLightBase, TemperatureProtection, BaseEngineeringContraband, BaseExaminableClothing] # starcup: examinable clothing
   id: ClothingHeadHelmetAtmosFire
   name: atmos fire helmet
   description: An atmos fire helmet, able to keep the user cool in any situation.
@@ -322,9 +337,6 @@
     sprite: Clothing/Head/Helmets/atmos_firehelmet.rsi
     quickEquip: true
   - type: IngestionBlocker
-  - type: TemperatureProtection
-    heatingCoefficient: 0.3
-    coolingCoefficient: 0.8
   - type: FireProtection
     reduction: 0.2
   - type: PressureProtection
@@ -505,7 +517,7 @@
 
 #Justice Helmet
 - type: entity
-  parent: ClothingHeadHelmetBasic
+  parent: [ClothingHeadHelmetArmoredBase, BaseSecurityContraband]
   id: ClothingHeadHelmetJustice
   name: justice helm
   description: Advanced security gear. Protects the station from ne'er-do-wells.
@@ -554,7 +566,7 @@
     energy: 2.5
     color: red
     netsync: false
-    mask: /Textures/Effects/LightMasks/double_cone.png
+    lightMask: ConeDouble
   - type: RotatingLight
     speed: 360
   - type: PowerCellSlot
@@ -576,6 +588,10 @@
   - type: HideLayerClothing
     layers:
       Hair: HEAD
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - SecurityHelmet
 
 - type: entity
   parent: ClothingHeadHelmetJustice

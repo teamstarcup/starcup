@@ -15,6 +15,7 @@
   metabolisms:
     Digestion: # starcup
       effects:
-      - !type:SatiateThirst
+      - !type:Satiate
+        satiationType: Thirst
         factor: 3
   fizziness: 0.1 # starcup - formatting nitpick

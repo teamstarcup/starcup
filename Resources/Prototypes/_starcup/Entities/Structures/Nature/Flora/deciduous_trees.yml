@@ -388,15 +388,13 @@
             min: 1
             max: 1
         offset: 0
-  - type: SolutionContainerManager
-    solutions:
-      vasculature:
-        maxVol: 45
-        reagents:
-        - ReagentId: Sap
-          Quantity: 45
+  - type: Solution
+    solution:
+      maxVol: 45
+      reagents:
+      - ReagentId: Sap
+        Quantity: 45
   - type: SolutionRegeneration
-    solution: vasculature
     generated:
       reagents:
       - ReagentId: Sap
