@@ -98,13 +98,13 @@ public sealed partial class InteractionPopupSystem : EntitySystem
         // TODO: this is a very generic system. we probably need a whitelist of some kind
         var successChance = component.SuccessChance;
 
-        if (TryComp<PettingChanceModifierComponent>(uid, out var pettingChance)
+        if (TryComp<PettingChanceModifierComponent>(user, out var pettingChance) // starcup - uid -> user, needs to look at the holder of the component
             && _entityWhitelist.IsWhitelistPassOrNull(pettingChance.TargetWhitelist, target)
             && _entityWhitelist.IsWhitelistFailOrNull(pettingChance.TargetBlacklist, target))
             successChance *= pettingChance.Modifier;
         // MACRO END
 
-        if (_random.Prob(successChance)) // MACRO: component.SuccessChance -> successChance
+        if (_random.NextDouble() < successChance) // MACRO: component.SuccessChance -> successChance // starcup - prob -> NextDouble to avoid bool issues
         {
             if (component.InteractSuccessString != null)
                 msg = Loc.GetString(component.InteractSuccessString, ("target", Identity.Entity(uid, EntityManager))); // Success message (localized).
