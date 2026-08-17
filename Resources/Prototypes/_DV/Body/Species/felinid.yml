@@ -96,6 +96,15 @@
     speechSounds: FelinidSpeechSounds # starcup
     speechVerb: Felinid
     allowedEmotes: ['Meow', 'Hiss', 'Mew', 'Purr', 'Growl', 'Trill'] # starcup: added Trill
+# begin starcup: silent footsteps
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: BarestepCarpet # TODO: we should really give all species base sounds and all shoes modify them
+      params:
+       volume: -8
+       variation: 0.17
+
+# end starcup
   - type: DamageOnHighSpeedImpact # Landing on all fours!
     damage:
       types:
