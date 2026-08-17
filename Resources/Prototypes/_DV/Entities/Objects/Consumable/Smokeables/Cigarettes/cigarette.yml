@@ -27,9 +27,12 @@
   - type: FlavorProfile
     flavors:
     - sweet
-  - type: SolutionManager # starcup - remove SolutionContainerManager (I tried to figure out splitting food/smoke; didn't work out)
+  - type: Solution # starcup - remove SolutionContainerManager
     solutions:
-      maxVol: 20
+      maxVol: 10
       reagents:
       - ReagentId: Sugar
-        Quantity: 20
+        Quantity: 10
+  - type: SolutionManager # starcup
+    solutions:
+    - SolutionCandy
