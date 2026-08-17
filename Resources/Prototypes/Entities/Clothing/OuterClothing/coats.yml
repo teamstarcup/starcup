@@ -143,12 +143,13 @@
         Slash: 0.95
   - type: Edible
     requiresSpecialDigestion: true
-  - type: Solution
-    solution:
-      maxVol: 20
-      reagents:
-      - ReagentId: Fiber
-        Quantity: 20
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 20
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
