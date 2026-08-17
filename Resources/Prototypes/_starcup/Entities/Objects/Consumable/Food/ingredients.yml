@@ -10,17 +10,16 @@
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/cocoa.rsi
     state: produce-beans
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 14
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 2
-        - ReagentId: Vitamin
-          Quantity: 1
-        - ReagentId: CocoaPowderImitation
-          Quantity: 2
+  - type: Solution
+    solution:
+      maxVol: 14
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 2
+      - ReagentId: Vitamin
+        Quantity: 1
+      - ReagentId: CocoaPowderImitation
+        Quantity: 2
   - type: Extractable
     juiceSolution:
       reagents:

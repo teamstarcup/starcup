@@ -4,12 +4,11 @@
   name: decaf coffee
   description: The process of decaffeination was a collaborative achivement across many species throughout the galaxy. Now, thanks to their efforts, everyone can enjoy the taste of a hellish morning at work!
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: CoffeeDecaf
-          Quantity: 20
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: CoffeeDecaf
+        Quantity: 20
   - type: Icon
     sprite: Objects/Consumable/Drinks/mug_red.rsi
     state: icon
@@ -28,12 +27,11 @@
   name: imitation hot chocolate
   description: Smells like fond memories of caroling catgirls.
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: HotCocoaImitation
-          Quantity: 20
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: HotCocoaImitation
+        Quantity: 20
   - type: Icon
     sprite: Objects/Consumable/Drinks/mug_blue.rsi
     state: icon

@@ -500,10 +500,9 @@
       types:
         Radiation: 0
   # end starcup
-  - type: SolutionContainerManager
-    solutions:
-      anomaly:
-        maxVol: 1500
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 1500
   - type: MeleeChemicalInjector
     solution: anomaly
     transferAmount: 6

@@ -12,12 +12,11 @@
   - type: Sprite
     sprite: _starcup/Objects/Consumable/Food/meat.rsi
     state: abyssalfish
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: CarpoToxin
-          Quantity: 8
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: CarpoToxin
+        Quantity: 8
   - type: Extractable
     juiceSolution:
       reagents:
@@ -43,12 +42,11 @@
   - type: Sprite
     sprite: _starcup/Objects/Consumable/Food/meat.rsi
     state: badfish
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: CarpoToxin
-          Quantity: 2
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: CarpoToxin
+        Quantity: 2
   - type: Extractable
     juiceSolution:
       reagents:
@@ -70,14 +68,13 @@
   components:
   - type: Sprite
     state: plain
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 9
-        - ReagentId: Fat
-          Quantity: 9
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: UncookedAnimalProteins
+        Quantity: 9
+      - ReagentId: Fat
+        Quantity: 9
   - type: ToolRefinable
     refineResult:
     - id: FoodMeatCapybaraCutlet
@@ -101,14 +98,13 @@
   - type: Sprite
     layers:
     - state: plain-cooked
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 10
-        - ReagentId: Protein
-          Quantity: 5
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 10
+      - ReagentId: Protein
+        Quantity: 5
   - type: ToolRefinable
     refineResult:
     - id: FoodMeatCapybaraCutlet
@@ -130,11 +126,10 @@
     - Meat
   - type: Sprite
     state: cutlet-cooked
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 2
-        - ReagentId: Protein
-          Quantity: 2
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 2
+      - ReagentId: Protein
+        Quantity: 2

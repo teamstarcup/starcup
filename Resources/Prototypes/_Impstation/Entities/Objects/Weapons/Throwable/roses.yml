@@ -44,10 +44,9 @@
   - type: Item
     sprite: _Impstation/Objects/Specific/Hydroponics/rose.rsi
     size: Small
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 2
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 2
   - type: MeleeChemicalInjector
     solution: food
   - type: InjectableSolution

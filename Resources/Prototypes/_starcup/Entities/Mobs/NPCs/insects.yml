@@ -40,10 +40,9 @@
         Base: dead
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
+  - type: Solution
+    solution:
+      reagents:
         - ReagentId: GroundInsect
           Quantity: 5
   - type: Butcherable
@@ -131,12 +130,11 @@
         Base: dead
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: Slime
-          Quantity: 5
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Slime
+        Quantity: 5
   - type: Tag
     tags:
     - CreatureEmotes
@@ -281,12 +279,11 @@
     damage:
       types:
         Piercing: 2
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: GroundInsect
-          Quantity: 5
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: GroundInsect
+        Quantity: 5
 
 - type: entity
   name: flies
@@ -312,12 +309,11 @@
         - FlyingMobMask
         layer:
         - FlyingMobLayer
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: GroundInsect
-          Quantity: 5
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: GroundInsect
+        Quantity: 5
 
 - type: entity
   name: mosquitoes
@@ -342,12 +338,11 @@
     damage:
       types:
         Piercing: 1
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: GroundInsect
-          Quantity: 5
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: GroundInsect
+        Quantity: 5
 
 - type: entity
   name: fireflies
@@ -630,12 +625,11 @@
         prototype: MouseThirst
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: Slime
-          Quantity: 5
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: Slime
+        Quantity: 5
   - type: Butcherable
     spawned:
     - id: FoodMeatSlime

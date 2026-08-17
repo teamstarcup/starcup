@@ -9074,17 +9074,16 @@ entities:
     - type: Transform
       pos: -7.3135357,-4.6884913
       parent: 2
-    - type: SolutionContainerManager
-      solutions:
-        beaker:
-          temperature: 293.15
-          canReact: True
-          maxVol: 50
-          name: null
-          reagents:
-          - data: null
-            ReagentId: TableSalt
-            Quantity: 25
+    - type: Solution
+      solution:
+        temperature: 293.15
+        canReact: True
+        maxVol: 50
+        name: null
+        reagents:
+        - data: null
+          ReagentId: TableSalt
+          Quantity: 25
   - uid: 606
     components:
     - type: Transform

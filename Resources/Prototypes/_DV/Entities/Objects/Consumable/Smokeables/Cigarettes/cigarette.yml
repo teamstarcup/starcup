@@ -4,15 +4,14 @@
   suffix: olive
   description: A roll of tobacco and nicotine soaked in some chemical, smells like olives.
   components:
-  - type: SolutionContainerManager
-    solutions:
-      smokable:
-        maxVol: 15
-        reagents:
-          - ReagentId: Nicotine
-            Quantity: 10
-          - ReagentId: OilOlive
-            Quantity: 5
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 15
+      reagents:
+      - ReagentId: Nicotine
+        Quantity: 10
+      - ReagentId: OilOlive
+        Quantity: 5
 
 - type: entity
   parent: [Cigarette, FoodBase]
@@ -28,15 +27,9 @@
   - type: FlavorProfile
     flavors:
     - sweet
-  - type: SolutionContainerManager
+  - type: Solution
     solutions:
-      smokable:
-        maxVol: 10
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 10
-      food:
-        maxVol: 10
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 10
+      maxVol: 20
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 20

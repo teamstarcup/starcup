@@ -56,17 +56,16 @@
     node: doubleFrosted
   - type: Sprite
     state: double
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 130
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 72
-        - ReagentId: Sugar
-          Quantity: 36
-        - ReagentId: Vitamin
-          Quantity: 12
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 130
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 72
+      - ReagentId: Sugar
+        Quantity: 36
+      - ReagentId: Vitamin
+        Quantity: 12
   - type: ToolRefinable
     refineResult:
     - id: FoodCakeTieredSlice

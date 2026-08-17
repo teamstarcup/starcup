@@ -18,13 +18,12 @@
     available:
     - enum.DamageStateVisualLayers.Base:
         chalkheartcolorable: Pastel
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 2 # starcup - allows tiny injections
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 1
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 2 # starcup - allows tiny injections
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 1
   - type: RandomMetadata
     descriptionSegments: [ConversationHeartDescriptions]
   - type: Tag
@@ -64,17 +63,16 @@
     sprite: _Impstation/Objects/Consumable/Food/candy.rsi
     layers:
     - state: chocolateheart
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 2
-        - ReagentId: CocoaPowder
-          Quantity: 2
-        - ReagentId: Theobromine
-          Quantity: 1
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 5
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 2
+      - ReagentId: CocoaPowder
+        Quantity: 2
+      - ReagentId: Theobromine
+        Quantity: 1
   - type: Tag
     tags:
     - FoodSnack
@@ -150,17 +148,16 @@
     sprite: _Impstation/Objects/Consumable/Food/candy.rsi
     layers:
     - state: homemadechocolate
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 15 # extra space for poison purposes
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 2
-        - ReagentId: CocoaPowder
-          Quantity: 2
-        - ReagentId: Theobromine
-          Quantity: 1
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 15 # extra space for poison purposes
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 2
+      - ReagentId: CocoaPowder
+        Quantity: 2
+      - ReagentId: Theobromine
+        Quantity: 1
 
 - type: entity
   name: berry macaron
@@ -173,15 +170,14 @@
   - type: Sprite
     sprite: _Impstation/Objects/Consumable/Food/candy.rsi
     state: macaronberry
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 7 # starcup - for pumping in extra flavor
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 3
-        - ReagentId: JuiceBerry
-          Quantity: 2
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 7 # starcup - for pumping in extra flavor
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 3
+      - ReagentId: JuiceBerry
+        Quantity: 2
   - type: Tag
     tags:
     - FoodSnack
@@ -195,15 +191,14 @@
   components:
   - type: Sprite
     state: macaroncherry
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 7 # starcup - for pumping in extra flavor
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 3
-        - ReagentId: JuiceCherry
-          Quantity: 2
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 7 # starcup - for pumping in extra flavor
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 3
+      - ReagentId: JuiceCherry
+        Quantity: 2
 
 - type: entity
   name: cotton macaron
@@ -215,15 +210,14 @@
     requiresSpecialDigestion: true
   - type: Sprite
     state: macaroncotton
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 7 # starcup - for pumping in extra flavor
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 3
-        - ReagentId: Fiber
-          Quantity: 2
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 7 # starcup - for pumping in extra flavor
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 3
+      - ReagentId: Fiber
+        Quantity: 2
   - type: Tag
     tags:
     - FoodSnack
@@ -236,15 +230,14 @@
   components:
   - type: Sprite
     state: macaronlemon
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 7 # starcup - for pumping in extra flavor
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 3
-        - ReagentId: JuiceLemon
-          Quantity: 2
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 7 # starcup - for pumping in extra flavor
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 3
+      - ReagentId: JuiceLemon
+        Quantity: 2
 
 - type: entity
   name: mimana macaron
@@ -254,15 +247,14 @@
   components:
   - type: Sprite
     state: macaronmimana
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 7 # starcup - for pumping in extra nothingness
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 3
-        - ReagentId: MuteToxin
-          Quantity: 2
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 7 # starcup - for pumping in extra nothingness
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 3
+      - ReagentId: MuteToxin
+        Quantity: 2
 
 - type: entity
   name: box of macarons

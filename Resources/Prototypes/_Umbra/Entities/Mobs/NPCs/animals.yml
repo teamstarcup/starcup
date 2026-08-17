@@ -69,12 +69,11 @@
       amount: 1
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 3
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: UncookedAnimalProteins
+        Quantity: 3
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:

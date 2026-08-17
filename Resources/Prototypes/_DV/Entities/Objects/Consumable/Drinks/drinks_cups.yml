@@ -4,12 +4,11 @@
   name: sakazuki
   description: A ceremonial white cup for drinking sake.
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Sake
-          Quantity: 20
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: Sake
+        Quantity: 20
   - type: Sprite
     sprite: _DV/Objects/Consumable/Drinks/sakecup.rsi
     state: icon
