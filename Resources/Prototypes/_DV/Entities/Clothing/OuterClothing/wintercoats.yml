@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, TemperatureProtection ] # upstream: temperature protection
+  parent: [ClothingOuterJacketBase, AllowSuitStorageClothing, TemperatureProtection ] # upstream: temperature protection, Jacket parent
   id: ClothingOuterArmoredWinterCoat
   components:
   - type: Item
@@ -102,13 +102,6 @@
     sprite: _DV/Clothing/OuterClothing/WinterCoats/detcoat.rsi
   - type: Clothing
     sprite: _DV/Clothing/OuterClothing/WinterCoats/detcoat.rsi
-  - type: Solution # starcup - trying to clear some weird errors, no way this works but
-    id: food
-    solution:
-      maxVol: 30
-      reagents:
-      - ReagentId: Fiber
-        Quantity: 30
 
 - type: entity
   parent: ClothingOuterWinterCoatLong

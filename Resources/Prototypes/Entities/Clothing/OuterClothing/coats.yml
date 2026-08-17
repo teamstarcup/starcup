@@ -127,7 +127,7 @@
         id: SyndieHandyFlag
 
 - type: entity
-  parent: [ ClothingOuterStorageBase, TemperatureProtection ] # starcup: temp protection
+  parent: [ ClothingOuterJacketBase, TemperatureProtection ] # starcup: temp protection
   id: ClothingOuterCoatTrench
   name: trench coat
   description: A comfy trench coat.
@@ -141,15 +141,6 @@
     modifiers:
       coefficients:
         Slash: 0.95
-  - type: Edible
-    requiresSpecialDigestion: true
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 20
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
