@@ -23072,17 +23072,12 @@ entities:
     - type: Transform
       pos: -0.344872,-9.4933405
       parent: 2
-    - type: SolutionContainerManager
-      solutions:
-        beaker:
-          temperature: 293.15
-          canReact: True
-          maxVol: 50
-          name: null
-          reagents:
-          - data: null
-            ReagentId: Cryoxadone
-            Quantity: 50
+    - type: Solution
+      solution:
+        maxVol: 50
+        reagents:
+        - ReagentId: Cryoxadone
+          Quantity: 50
   - uid: 17529
     components:
     - type: Transform
@@ -97889,7 +97884,7 @@ entities:
       pos: -0.6750982,-9.144404
       parent: 2
     - type: Solution
-      solutions:
+      solution:
         maxVol: 100
         reagents:
         - ReagentId: Cryoxadone

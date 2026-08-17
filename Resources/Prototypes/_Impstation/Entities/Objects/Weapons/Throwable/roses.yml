@@ -118,7 +118,7 @@
       types:
         Piercing: 5
   - type: Solution # starcup - remove SolutionContainerManager
-    solutions:
+    solution:
       maxVol: 3
       reagents:
       - ReagentId: SulfuricAcid
@@ -140,12 +140,11 @@
       types:
         Piercing: 5
         Slash: 3
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: Tazinide
-          Quantity: 2
-        - ReagentId: PolytrinicAcid
-          Quantity: 3
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 5
+      reagents:
+      - ReagentId: Tazinide
+        Quantity: 2
+      - ReagentId: PolytrinicAcid
+        Quantity: 3
