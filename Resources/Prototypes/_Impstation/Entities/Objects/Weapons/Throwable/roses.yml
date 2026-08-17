@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseItem
+  parent: [ BaseItem, SolutionFood ] # starcup - SolutionFood
   id: Rose
   name: rose # starcup - lowercase
   description: Smells like love.
@@ -141,7 +141,6 @@
         Piercing: 5
         Slash: 3
   - type: Solution # starcup - remove SolutionContainerManager
-    id: food
     solution:
       maxVol: 5
       reagents:
