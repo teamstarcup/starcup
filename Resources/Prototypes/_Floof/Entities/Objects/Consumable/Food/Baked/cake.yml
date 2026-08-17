@@ -93,17 +93,16 @@
     node: tripleFrosted
   - type: Sprite
     state: triple
-  - type: SolutionContainerManager
+  - type: Solution # starcup - remove SolutionContainerManager
     solutions:
-      food:
-        maxVol: 200
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 108
-        - ReagentId: Sugar
-          Quantity: 54
-        - ReagentId: Vitamin
-          Quantity: 18
+      maxVol: 200
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 108
+      - ReagentId: Sugar
+        Quantity: 54
+      - ReagentId: Vitamin
+        Quantity: 18
   - type: ToolRefinable
     refineResult:
     - id: FoodCakeTieredSlice
@@ -117,14 +116,13 @@
   - type: Sprite
     sprite: _Floof/Objects/Consumable/Food/Baked/cake_tiered.rsi
     state: slice
-  - type: SolutionContainerManager
+  - type: Solution # starcup - remove SolutionContainerManager
     solutions:
-      food:
-        maxVol: 15
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 6
-        - ReagentId: Sugar
-          Quantity: 3
-        - ReagentId: Vitamin
-          Quantity: 1
+      maxVol: 15
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 6
+      - ReagentId: Sugar
+        Quantity: 3
+      - ReagentId: Vitamin
+        Quantity: 1

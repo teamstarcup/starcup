@@ -150,12 +150,11 @@
   components:
   - type: Label
     localizedLabel: reagent-name-beer
-  - type: SolutionContainerManager
+  - type: Solution # starcup - remove SolutionContainerManager
     solutions:
-      tank:
-        reagents:
-        - ReagentId: Beer
-          Quantity: 500
+      reagents:
+      - ReagentId: Beer
+        Quantity: 500
 
 - type: entity
   parent: WoodenKeg
@@ -165,9 +164,8 @@
   components:
   - type: Label
     localizedLabel: reagent-name-wine
-  - type: SolutionContainerManager
+  - type: Solution # starcup - remove SolutionContainerManager
     solutions:
-      tank:
-        reagents:
-        - ReagentId: Wine
-          Quantity: 500
+      reagents:
+      - ReagentId: Wine
+        Quantity: 500

@@ -5,26 +5,24 @@
   parent: Syringe
   name: cognizine syringe
   components:
-  - type: SolutionContainerManager
+  - type: Solution # starcup - remove SolutionContainerManager
     solutions:
-      drink:
-        maxVol: 15
-        reagents:
-        - ReagentId: Cognizine
-          Quantity: 15 # Surely three friends is enough.
+      maxVol: 15
+      reagents:
+      - ReagentId: Cognizine
+        Quantity: 15 # Surely three friends is enough.
 
 - type: entity
   id: SyringeOpporozidone
   parent: Syringe
   name: opporozidone syringe
   components:
-  - type: SolutionContainerManager
+  - type: Solution # starcup - remove SolutionContainerManager
     solutions:
-      drink:
-        maxVol: 15
-        reagents:
-        - ReagentId: Opporozidone
-          Quantity: 15
+      maxVol: 15
+      reagents:
+      - ReagentId: Opporozidone
+        Quantity: 15
 
 # begin starcup: Necrosol was removed upstream
 # - type: entity

@@ -278,13 +278,12 @@
       map: ["enum.OpenableVisuals.Layer"]
     - state: overlay-container
       color: "#A9536C"
-  - type: SolutionContainerManager
+  - type: Solution # starcup - remove SolutionContainerManager
     solutions:
-      food:
-        maxVol: 50
-        reagents:
-        - ReagentId: PowderedJuiceCherry
-          Quantity: 50
+      maxVol: 50
+      reagents:
+      - ReagentId: PowderedJuiceCherry
+        Quantity: 50
 
 - type: entity
   parent: ReagentTinBase
@@ -299,13 +298,12 @@
       map: ["enum.OpenableVisuals.Layer"]
     - state: overlay-container
       color: "#FFA06B"
-  - type: SolutionContainerManager
+  - type: Solution # starcup - remove SolutionContainerManager
     solutions:
-      food:
-        maxVol: 50
-        reagents:
-        - ReagentId: PowderedJuiceCarrot
-          Quantity: 50
+      maxVol: 50
+      reagents:
+      - ReagentId: PowderedJuiceCarrot
+        Quantity: 50
 
 - type: entity
   parent: ReagentTinBase
@@ -320,10 +318,9 @@
       map: ["enum.OpenableVisuals.Layer"]
     - state: overlay-container
       color: "#D85553"
-  - type: SolutionContainerManager
+  - type: Solution # starcup - remove SolutionContainerManager
     solutions:
-      food:
-        maxVol: 50
-        reagents:
-        - ReagentId: PowderedJuiceTomato
-          Quantity: 50
+      maxVol: 50
+      reagents:
+      - ReagentId: PowderedJuiceTomato
+        Quantity: 50

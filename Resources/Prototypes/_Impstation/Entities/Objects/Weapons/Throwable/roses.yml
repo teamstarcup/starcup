@@ -117,15 +117,14 @@
     damage:
       types:
         Piercing: 5
-  - type: SolutionContainerManager
+  - type: Solution # starcup - remove SolutionContainerManager
     solutions:
-      food:
-        maxVol: 3
-        reagents:
-        - ReagentId: SulfuricAcid
-          Quantity: 1
-        - ReagentId: Razorium
-          Quantity: 1
+      maxVol: 3
+      reagents:
+      - ReagentId: SulfuricAcid
+        Quantity: 1
+      - ReagentId: Razorium
+        Quantity: 1
 
 - type: entity
   parent: [ Rose, BaseMajorContraband ] # starcup - Tier3Contraband -> BaseMajorContraband
