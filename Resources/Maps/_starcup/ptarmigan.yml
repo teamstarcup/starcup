@@ -38433,12 +38433,16 @@ entities:
     components:
     - type: Transform
       parent: 6634
+    - type: Physics
+      canCollide: False
     - type: InsideEntityStorage
       storage: 6634
   - uid: 6637
     components:
     - type: Transform
       parent: 6636
+    - type: Physics
+      canCollide: False
     - type: InsideEntityStorage
       storage: 6636
 - proto: ClothingOuterHardsuitEngineering
@@ -52488,6 +52492,16 @@ entities:
       pos: 14.5,18.5
       parent: 2
     - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+          Oxygen: 1.7459903
+          Nitrogen: 6.568249
+    - type: AccessReader
+      accessListsOriginal:
+      - - Detective
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -52495,12 +52509,23 @@ entities:
           occludes: True
           ents:
           - 6635
+        paper_label: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
   - uid: 6636
     components:
     - type: Transform
       pos: 11.5,18.5
       parent: 2
     - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+          Oxygen: 1.7459903
+          Nitrogen: 6.568249
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -52508,6 +52533,10 @@ entities:
           occludes: True
           ents:
           - 6637
+        paper_label: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
 - proto: LockerEngineerFilledHardsuit
   entities:
   - uid: 8623
