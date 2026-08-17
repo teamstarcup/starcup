@@ -5,6 +5,7 @@
   parent:
   - SimpleMobBase
   - BaseMobAnimal
+  - SolutionVermin # starcup
   id: MobBunny
   description: Tiny, fluffy, and full of attitude.
   components:
@@ -69,11 +70,11 @@
       amount: 1
   - type: Extractable
     grindableSolutionName: food
-  - type: Solution # starcup - remove SolutionContainerManager
-    solution:
-      reagents:
-      - ReagentId: UncookedAnimalProteins
-        Quantity: 3
+#  - type: Solution # starcup - remove this and reparent instead
+#    solution:
+#      reagents:
+#      - ReagentId: UncookedAnimalProteins
+#        Quantity: 3
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
