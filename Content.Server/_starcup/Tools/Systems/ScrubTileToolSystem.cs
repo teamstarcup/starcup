@@ -12,7 +12,7 @@ public sealed partial class ScrubTileToolSystem : SharedScrubTileToolSystem
     [Dependency] private DecalSystem _decalSystem = default!;
     [Dependency] private EntityLookupSystem _lookupSystem = default!;
 
-    public override bool TryDoScrub(TileRef tileRef, MapGridComponent grid, DecalGridComponent decalGrid)
+    public override bool TryDoScrub(TileRef tileRef, MapGridComponent grid)
     {
         var bounds = _lookupSystem.GetLocalBounds(tileRef, grid.TileSize).Translated(new Vector2(-0.5f, -0.5f));
         var decals = _decalSystem.GetDecalsIntersecting(tileRef.GridUid, bounds);

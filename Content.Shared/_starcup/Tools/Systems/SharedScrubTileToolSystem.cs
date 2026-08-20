@@ -78,12 +78,10 @@ public abstract partial class SharedScrubTileToolSystem : EntitySystem
             Log.Error("Attempted to scrub a tile on a non-existant grid?");
             return;
         }
-        if (!TryComp<DecalGridComponent>(gridUid, out var decalGrid))
-            return;
 
         var tileRef = _maps.GetTileRef(gridUid, grid, args.GridTile);
 
-        if (!TryDoScrub(tileRef, grid, decalGrid))
+        if (!TryDoScrub(tileRef, grid))
             return;
 
         args.Handled = true;
@@ -97,7 +95,7 @@ public abstract partial class SharedScrubTileToolSystem : EntitySystem
         return qualities.Contains(ScrubQuality);
     }
 
-    public virtual bool TryDoScrub(TileRef tileRef, MapGridComponent grid, DecalGridComponent decalGrid)
+    public virtual bool TryDoScrub(TileRef tileRef, MapGridComponent grid)
     {
         // Don't bother on the client, decals only remove on the server
         return true;
