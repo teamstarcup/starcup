@@ -27,3 +27,21 @@
     - bleats
     - bleated
     - bleating
+
+- type: emote
+  id: Moo
+  name: chat-emote-name-moo
+  category: Vocal
+  icon: _starcup/Interface/Emotes/moo.png
+  available: false
+  whitelist:
+    components:
+    - Vocal
+    #tags:
+    #- OviniaEmotes # starcup: we assign the emote manually, no need for the tag
+  chatMessages: [ chat-emote-msg-moo ]
+  chatTriggers:
+  - moos
+  - moo
+  - mooed
+  - moo'd
