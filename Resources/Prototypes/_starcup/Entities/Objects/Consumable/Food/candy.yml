@@ -420,17 +420,3 @@
         Quantity: 2
       - ReagentId: Nutriment
         Quantity: 1
-
-# Solutions
-- type: entity
-  parent: SolutionFood
-  id: SolutionCandy
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Solution
-    id: food
-    solution:
-      maxVol: 10
-      reagents:
-      - ReagentId: Sugar
-        Quantity: 10
