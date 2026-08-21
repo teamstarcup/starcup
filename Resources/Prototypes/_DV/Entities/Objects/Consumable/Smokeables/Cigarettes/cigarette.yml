@@ -36,3 +36,19 @@
   - type: SolutionManager # starcup
     solutions:
     - SolutionCandy
+
+# begin starcup
+# Solutions
+- type: entity
+  parent: SolutionFood
+  id: SolutionCandy
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    id: food
+    solution:
+      maxVol: 10
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 10
+# end starcup
