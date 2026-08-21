@@ -262,10 +262,10 @@
 - type: marking
   id: OviniaTailAnimated
   bodyPart: Tail
-  groupWhitelist: [ Ovinia ]
+  groupWhitelist: [] # starcup - can't be picked normally, use the tailwag emote
   sprites:
-    - sprite: _MACRO/Mobs/Customization/Ovinia/tail_markings.rsi
-      state: ovinia-tail_wag
+  - sprite: _MACRO/Mobs/Customization/Ovinia/tail_markings.rsi
+    state: ovinia-tail_wag
 
 - type: marking
   id: OviniaTail
