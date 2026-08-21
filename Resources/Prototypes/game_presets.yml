@@ -37,7 +37,7 @@
     - Nukeops
     - Traitor
     - Revolutionary
-    - Zombie
+    # - Zombie # starcup: no roundstart zombies
     - Wizard
     - Xenoborgs
     - KesslerSyndromeScheduler
@@ -59,7 +59,7 @@
     - Nukeops
     - Traitor
     - Revolutionary
-    - Zombie
+    # - Zombie # starcup: no roundstart zombies
     - Wizard
     - Xenoborgs
     - BasicStationEventScheduler
@@ -230,36 +230,38 @@
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
 
-- type: gamePreset
-  id: Zombie
-  alias:
-  - zombie
-  - zombies
-  - Zombies
-  - zz14
-  - zomber
-  name: zombie-title
-  description: zombie-description
-  showInVote: false
-  rules:
-  - Zombie
-  - BasicStationEventScheduler
-  - MeteorSwarmScheduler
-  - SpaceTrafficControlEventScheduler
-  - BasicRoundstartVariation
+# begin starcup: No zombies gamemode
+# - type: gamePreset
+#   id: Zombie
+#   alias:
+#   - zombie
+#   - zombies
+#   - Zombies
+#   - zz14
+#   - zomber
+#   name: zombie-title
+#   description: zombie-description
+#   showInVote: false
+#   rules:
+#   - Zombie
+#   - BasicStationEventScheduler
+#   - MeteorSwarmScheduler
+#   - SpaceTrafficControlEventScheduler
+#   - BasicRoundstartVariation
 
-- type: gamePreset
-  id: Zombieteors
-  alias:
-  - zombieteors
-  - zombombies
-  - meteombies
-  name: zombieteors-title
-  description: zombieteors-description
-  showInVote: false
-  rules:
-  - Zombie
-  - BasicStationEventScheduler
-  - KesslerSyndromeScheduler
-  - SpaceTrafficControlEventScheduler
-  - BasicRoundstartVariation
+# - type: gamePreset
+#   id: Zombieteors
+#   alias:
+#   - zombieteors
+#   - zombombies
+#   - meteombies
+#   name: zombieteors-title
+#   description: zombieteors-description
+#   showInVote: false
+#   rules:
+#   - Zombie
+#   - BasicStationEventScheduler
+#   - KesslerSyndromeScheduler
+#   - SpaceTrafficControlEventScheduler
+#   - BasicRoundstartVariation
+# end starcup

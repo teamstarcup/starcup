@@ -45,6 +45,14 @@
   - StarcupSpaceTrafficControlAllEventScheduler
   - BasicRoundstartVariation
 
+- type: entity
+  parent: BaseGameRule
+  id: SubGamemodesRuleThief
+  components:
+  - type: SubGamemodes
+    rules:
+    - id: Thief
+
 - type: gamePreset
   id: Thief
   alias:
@@ -54,7 +62,7 @@
   showInVote: false
   rules:
   - DummyNonAntagChance
-  - Thief
+  - SubGamemodesRuleThief
   - TroubleStationEventScheduler
   - StarcupSpaceTrafficControlAllEventScheduler
   - BasicRoundstartVariation

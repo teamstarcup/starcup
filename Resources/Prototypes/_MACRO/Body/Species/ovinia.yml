@@ -1,0 +1,336 @@
+- type: markingsGroup
+  id: Ovinia
+  onlyGroupWhitelisted: true
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 2 # starcup
+      onlyGroupWhitelisted: false # starcup
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Head:
+      limit: 4 # starcup
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 2 # starcup
+      required: false
+    enum.HumanoidVisualLayers.HeadSide:
+      limit: 2 # starcup
+      default: [ OviniaEars ]
+      required: true
+    enum.HumanoidVisualLayers.UndergarmentTop:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.UndergarmentBottom:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Chest:
+      limit: 4 # starcup
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
+      required: true
+      default: [ OviniaSnout ]
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [ OviniaTail ]
+    enum.HumanoidVisualLayers.LArm:
+      limit: 2 # starcup
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 2 # starcup
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 2 # starcup
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 2 # starcup
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 2 # starcup
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 2 # starcup
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 2 # starcup
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 2 # starcup
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceOvinia
+  name: ovinia appearance
+  components:
+  - type: Inventory
+    displacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _MACRO/Mobs/Species/Ovinia/displacement.rsi
+            state: jumpsuit
+      shoes:
+        sizeMaps:
+          32:
+            sprite: _MACRO/Mobs/Species/Ovinia/displacement.rsi
+            state: shoes
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _MACRO/Mobs/Species/Ovinia/displacement.rsi
+            state: outerclothing-hardsuit
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _MACRO/Mobs/Species/Ovinia/displacement.rsi
+            state: jumpsuit-female
+      shoes:
+        sizeMaps:
+          32:
+            sprite: _MACRO/Mobs/Species/Ovinia/displacement.rsi
+            state: shoes
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _MACRO/Mobs/Species/Ovinia/displacement.rsi
+            state: outerclothing-hardsuit
+  - type: InitialBody
+    organs:
+      Torso: OrganOviniaTorso
+      Head: OrganOviniaHead
+      ArmLeft: OrganOviniaArmLeft
+      ArmRight: OrganOviniaArmRight
+      HandRight: OrganOviniaHandRight
+      HandLeft: OrganOviniaHandLeft
+      LegLeft: OrganOviniaLegLeft
+      LegRight: OrganOviniaLegRight
+      FootLeft: OrganOviniaFootLeft
+      FootRight: OrganOviniaFootRight
+      Brain: OrganOviniaBrain
+      Eyes: OrganOviniaEyes
+      Tongue: OrganOviniaTongue
+      Appendix: OrganOviniaAppendix
+      Ears: OrganOviniaEars
+      Lungs: OrganOviniaLungs
+      Heart: OrganOviniaHeart
+      Stomach: OrganOviniaStomach
+      Liver: OrganOviniaLiver
+      Kidneys: OrganOviniaKidneys
+  - type: HumanoidProfile
+    species: Ovinia
+
+- type: entity
+  parent:
+  - AppearanceOvinia
+  - BaseSpeciesMobOrganic
+  id: MobOvinia
+  name: Urist McSheepie
+  components:
+  - type: TypingIndicator
+    proto: ovinia
+  # begin starcup
+  - type: Vocal
+    emoteSounds: FemaleOvinia
+  # end starcup
+  - type: Speech
+    speechSounds: OviniaSpeechSounds # starcup: renamed for consistency, easier id to search for
+    speechVerb: Ovinia
+    allowedEmotes: [ 'Baa', 'Bark', 'Snort', 'Moo' ]
+  - type: Damageable
+    damageModifierSet: Ovinia
+  # begin starcup
+  #- type: Flammable: replaced with temperature tolerance
+  #- type: FireStackModifier
+    #modifier: 0.75 # less fire stacks!
+  # end starcup
+  - type: EatTimeModifier
+    modifier: 1.4 # starcup: even slower eaters
+  # begin starcup
+  #- type: Hunger
+    #baseDecayRate: 0.0083 # slower than normal (chewin they cud)
+  #- type: Thirst
+    #baseDecayRate: 0.0083 # slower than normal
+  # end starcup
+  - type: SleepTimeModifier
+    modifier: 2
+  - type: PettingChanceModifier
+    modifier: 1.2
+  - type: ProtectedFromStepTriggers
+  - type: Tag
+    tags:
+    #- OviniaEmotes # starcup: we don't have this tag, emotes are manually assigned to the prototype
+    - DoorBumpOpener
+    - CanPilot
+    - FootstepSound
+    - AnomalyHost
+  # begin starcup
+  - type: TemperatureProtection # Temperature tolerance equivalent of a winter coat
+    coefficient: 0.6
+  - type: Rest # Sleepy sheepies
+  - type: SlowOnDamage # Prey animal adrenaline; speed up at 30-54 damage but slowdown a bit faster
+    speedModifierThresholds:
+      30: 1.2
+      55: 0.7
+      75: 0.5
+  - type: Wagging
+    action: ActionToggleWaggingOvinia
+  # end starcup
+
+- type: entity
+  parent: OrganBase
+  id: OrganOvinia
+  abstract: true
+  suffix: ovinia
+
+- type: entity
+  id: OrganOviniaMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Animal ]
+
+- type: entity
+  id: OrganOviniaVisual
+  abstract: true
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _MACRO/Mobs/Species/Ovinia/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Ovinia
+
+- type: entity
+  parent: OrganOvinia
+  id: OrganOviniaExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _MACRO/Mobs/Species/Ovinia/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _MACRO/Mobs/Species/Ovinia/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Ovinia
+
+- type: entity
+  parent: OrganOvinia
+  id: OrganOviniaInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+
+- type: entity
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganOviniaExternal]
+  id: OrganOviniaTorso
+
+- type: entity
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganOviniaExternal ]
+  id: OrganOviniaHead
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Snout
+    - enum.HumanoidVisualLayers.HeadTop
+    - enum.HumanoidVisualLayers.HeadSide
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.FacialHair
+    dependentHidingLayers:
+      enum.HumanoidVisualLayers.Snout:
+      - enum.HumanoidVisualLayers.SnoutCover
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganOviniaExternal ]
+  id: OrganOviniaArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganOviniaExternal ]
+  id: OrganOviniaArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganOviniaExternal ]
+  id: OrganOviniaHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganOviniaExternal ]
+  id: OrganOviniaHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganOviniaExternal ]
+  id: OrganOviniaLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganOviniaExternal ]
+  id: OrganOviniaLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganOviniaExternal ]
+  id: OrganOviniaFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganOviniaExternal ]
+  id: OrganOviniaFootRight
+
+- type: entity
+  parent: [ OrganBaseBrain, OrganSpriteHumanInternal, OrganOviniaInternal ]
+  id: OrganOviniaBrain
+
+- type: entity
+  parent: [ OrganOviniaVisual, OrganBaseEyes, OrganOviniaInternal ]
+  id: OrganOviniaEyes
+  components:
+  - type: VisualOrgan
+    layer: enum.HumanoidVisualLayers.Eyes
+    data:
+      sprite: _MACRO/Mobs/Species/Ovinia/parts.rsi
+      state: eyes
+
+- type: entity
+  parent: [ OrganBaseTongue, OrganOviniaInternal ]
+  id: OrganOviniaTongue
+
+- type: entity
+  parent: [ OrganBaseAppendix, OrganOviniaInternal ]
+  id: OrganOviniaAppendix
+
+- type: entity
+  parent: [ OrganBaseEars, OrganOviniaInternal ]
+  id: OrganOviniaEars
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganOviniaInternal, OrganOviniaMetabolizer ]
+  id: OrganOviniaLungs
+
+- type: entity
+  parent: [ OrganBaseHeart, OrganOviniaInternal, OrganOviniaMetabolizer ]
+  id: OrganOviniaHeart
+
+- type: entity
+  parent: [ OrganBaseStomach, OrganOviniaInternal, OrganOviniaMetabolizer ]
+  id: OrganOviniaStomach
+  components:
+  - type: Stomach # Browser stomach
+    specialDigestible:
+      tags:
+      - Ruminant
+      - BananaPeel
+      - Bread
+      - Flower
+      - Fruit
+      - Vegetable
+      - Wheat
+
+- type: entity
+  parent: [ OrganBaseLiver, OrganOviniaInternal, OrganOviniaMetabolizer ]
+  id: OrganOviniaLiver
+
+- type: entity
+  parent: [ OrganBaseKidneys, OrganOviniaInternal, OrganOviniaMetabolizer ]
+  id: OrganOviniaKidneys

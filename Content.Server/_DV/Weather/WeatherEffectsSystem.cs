@@ -18,13 +18,13 @@ namespace Content.Shared._DV.Weather;
 /// </summary>
 public sealed partial class WeatherEffectsSystem : EntitySystem
 {
-    [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    // [Dependency] private readonly IPrototypeManager _proto = default!; // starcup: unused
-    [Dependency] private readonly SharedMapSystem _map = default!;
-    [Dependency] private readonly SharedWeatherSystem _weather = default!;
-    [Dependency] private readonly StatusEffectsSystem _statusEffects = default!; // starcup
+    [Dependency] private DamageableSystem _damageable = default!;
+    [Dependency] private EntityWhitelistSystem _whitelist = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    // [Dependency] private IPrototypeManager _proto = default!; // starcup: unused
+    [Dependency] private SharedMapSystem _map = default!;
+    [Dependency] private SharedWeatherSystem _weather = default!;
+    [Dependency] private StatusEffectsSystem _statusEffects = default!; // starcup
 
     private EntityQuery<MapGridComponent> _gridQuery;
 

@@ -6,7 +6,7 @@
     sprite: _DV/Structures/Storage/closet.rsi
 
 - type: entity
-  parent: [ LockerBaseDeltaV, LockerBaseSecure ]
+  parent: [ LockerBaseDeltaV, LockerBase ]
   id: LockerBaseSecureDeltaV
 
 - type: entity
@@ -46,7 +46,7 @@
     access: [["Janitor"]]
 
 - type: entity
-  parent: LockerBaseSecure
+  parent: LockerBase
   id: LockerLogistics # Wizden has sprites for this but doesn't have an entity that uses them?
   name: logistics locker
   components:

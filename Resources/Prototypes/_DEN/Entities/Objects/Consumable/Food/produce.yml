@@ -4,9 +4,8 @@
   suffix: seedless
   components:
   - type: Produce
-    seed:
-      seedless: true
-      plantRsi: _Impstation/Objects/Specific/Hydroponics/rose.rsi
+    plantId: RosePlants
+  - type: PlantTraitSeedless
 
 - type: entity
   parent: Rose # starcup - reparenting so it's not contraband
@@ -21,17 +20,12 @@
   - type: Item
     sprite: _Impstation/Objects/Specific/Hydroponics/blackRose.rsi
   - type: Produce
-    seedId: blackRose
-    seed:
-      seedless: true
-      plantRsi: _Impstation/Objects/Specific/Hydroponics/blackRose.rsi
+    plantId: BlackRosePlants
+  - type: PlantTraitSeedless
 
 - type: entity
   parent: FoodLily
   id: FoodLilySeedless
   suffix: seedless
   components:
-  - type: Produce
-    seed:
-      seedless: true
-      plantRsi: Objects/Specific/Hydroponics/lily.rsi
+  - type: PlantTraitSeedless

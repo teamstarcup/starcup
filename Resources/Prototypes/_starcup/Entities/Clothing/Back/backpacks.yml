@@ -7,7 +7,7 @@
   - type: Sprite
     sprite: _starcup/Clothing/Back/Backpacks/captain_syndi.rsi
 
-#Syndicate
+# Syndicate
 - type: entity
   parent: [BaseNanotrasenContraband, ClothingBackpackSyndicate]
   id: ClothingBackpackNanotrasen
@@ -18,3 +18,201 @@
     sprite: _starcup/Clothing/Back/Backpacks/nanotrasen.rsi
   - type: ExaminableClothing
     examineText: clothing-nanotrasen-backpack
+
+# Color variants
+- type: entity
+  id: ClothingBackpackColorable
+  parent: ClothingBackpack
+  name: white backpack
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Backpacks/backpack_colorable.rsi
+
+- type: entity
+  id: ClothingBackpackBlue
+  parent: ClothingBackpackColorable
+  name: blue backpack
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#4694d2"
+      right:
+      - state: inhand-right
+        color: "#4694d2"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#4694d2"
+  - type: Sprite
+    color: "#4694d2"
+
+- type: entity
+  id: ClothingBackpackBrown
+  parent: ClothingBackpackColorable
+  name: brown backpack
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#8e7167"
+      right:
+      - state: inhand-right
+        color: "#8e7167"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#8e7167"
+  - type: Sprite
+    color: "#8e7167"
+
+- type: entity
+  id: ClothingBackpackGreen
+  parent: ClothingBackpackColorable
+  name: green backpack
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#838e49"
+      right:
+      - state: inhand-right
+        color: "#838e49"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#838e49"
+  - type: Sprite
+    color: "#838e49"
+
+- type: entity
+  id: ClothingBackpackOrange
+  parent: ClothingBackpackColorable
+  name: orange backpack
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#f7742a"
+      right:
+      - state: inhand-right
+        color: "#f7742a"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#f7742a"
+  - type: Sprite
+    color: "#f7742a"
+
+- type: entity
+  id: ClothingBackpackPink
+  parent: ClothingBackpackColorable
+  name: pink backpack
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#d69aaa"
+      right:
+      - state: inhand-right
+        color: "#d69aaa"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#d69aaa"
+  - type: Sprite
+    color: "#d69aaa"
+
+- type: entity
+  id: ClothingBackpackPurple
+  parent: ClothingBackpackColorable
+  name: purple backpack
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#8362ac"
+      right:
+      - state: inhand-right
+        color: "#8362ac"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#8362ac"
+  - type: Sprite
+    color: "#8362ac"
+
+- type: entity
+  id: ClothingBackpackRed
+  parent: ClothingBackpackColorable
+  name: red backpack
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#f72216"
+      right:
+      - state: inhand-right
+        color: "#f72216"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#f72216"
+  - type: Sprite
+    color: "#f72216"
+
+- type: entity
+  id: ClothingBackpackTeal
+  parent: ClothingBackpackColorable
+  name: teal backpack
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#40bdc7"
+      right:
+      - state: inhand-right
+        color: "#40bdc7"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#40bdc7"
+  - type: Sprite
+    color: "#40bdc7"
+
+- type: entity
+  id: ClothingBackpackYellow
+  parent: ClothingBackpackColorable
+  name: yellow backpack
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#f2c641"
+      right:
+      - state: inhand-right
+        color: "#f2c641"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#f2c641"
+  - type: Sprite
+    color: "#f2c641"

@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, TemperatureProtectionMinimal ] # starcup: minimal temp protection
   id: ClothingOuterCoatVictorian
   name: old-fashioned black coat # starcup - removed anachronisms
   description: A posh black coat with bright brass buttons. # starcup - removed anachronisms
@@ -10,7 +10,7 @@
     sprite: _DEN/Clothing/OuterClothing/Coats/victorian_coat.rsi
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, TemperatureProtectionMinimal ] # starcup: minimal temp protection
   id: ClothingOuterCoatVictorianRed
   name: old-fashioned red coat # starcup - removed anachronisms
   description: A posh red coat with bright brass buttons. # starcup - removed anachronisms

@@ -1,11 +1,8 @@
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, TemperatureProtection ]
   id: ClothingOuterSweaterBase
   abstract: true
   components:
-  - type: TemperatureProtection
-    heatingCoefficient: 1.1
-    coolingCoefficient: 0.6
   - type: Item
     size: Normal
   - type: Edible

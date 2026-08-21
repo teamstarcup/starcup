@@ -2,7 +2,508 @@
   parent: ClothingBackpackSatchelCaptain
   id: ClothingBackpackSatchelCaptainSyndie
   description: An exclusive satchel for Syndicate officers.
-  suffix: Syndicate
   components:
   - type: Sprite
     sprite: _starcup/Clothing/Back/Satchels/captain_syndi.rsi
+
+# Satchel color variants
+- type: entity
+  id: ClothingBackpackSatchelBlue
+  parent: ClothingBackpackSatchel
+  name: blue satchel
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+        color: "#4694d2"
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+        color: "#4694d2"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+        color: "#4694d2"
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Satchels/satchel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#4694d2"
+
+- type: entity
+  id: ClothingBackpackSatchelBrown
+  parent: ClothingBackpackSatchel
+  name: brown satchel
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+        color: "#8e7167"
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+        color: "#8e7167"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+        color: "#8e7167"
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Satchels/satchel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#8e7167"
+
+- type: entity
+  id: ClothingBackpackSatchelGreen
+  parent: ClothingBackpackSatchel
+  name: green satchel
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+        color: "#838e49"
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+        color: "#838e49"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+        color: "#838e49"
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Satchels/satchel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#838e49"
+
+- type: entity
+  id: ClothingBackpackSatchelOrange
+  parent: ClothingBackpackSatchel
+  name: orange satchel
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+        color: "#f7742a"
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+        color: "#f7742a"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+        color: "#f7742a"
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Satchels/satchel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#f7742a"
+
+- type: entity
+  id: ClothingBackpackSatchelPink
+  parent: ClothingBackpackSatchel
+  name: pink satchel
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+        color: "#d69aaa"
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+        color: "#d69aaa"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+        color: "#d69aaa"
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Satchels/satchel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#d69aaa"
+
+- type: entity
+  id: ClothingBackpackSatchelPurple
+  parent: ClothingBackpackSatchel
+  name: purple satchel
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+        color: "#8362ac"
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+        color: "#8362ac"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+        color: "#8362ac"
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Satchels/satchel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#8362ac"
+
+- type: entity
+  id: ClothingBackpackSatchelRed
+  parent: ClothingBackpackSatchel
+  name: red satchel
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+        color: "#f72216"
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+        color: "#f72216"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+        color: "#f72216"
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Satchels/satchel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#f72216"
+
+- type: entity
+  id: ClothingBackpackSatchelTeal
+  parent: ClothingBackpackSatchel
+  name: teal satchel
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+        color: "#40bdc7"
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+        color: "#40bdc7"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+        color: "#40bdc7"
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Satchels/satchel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#40bdc7"
+
+- type: entity
+  id: ClothingBackpackSatchelYellow
+  parent: ClothingBackpackSatchel
+  name: yellow satchel
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+        color: "#f2c641"
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+        color: "#f2c641"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+        color: "#f2c641"
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Satchels/satchel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#f2c641"
+- type: entity
+  id: ClothingBackpackSatchelWhite
+  parent: ClothingBackpackSatchel
+  name: white satchel
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Satchels/satchel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+
+# Purses
+- type: entity
+  id: ClothingBackpackPurse
+  abstract: true
+  parent: ClothingBackpackSatchel
+  name: purse
+  description: A small, fashionable bag typically worn over the shoulder. # Copied form The Den
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Back/Misc/purse.rsi
+
+- type: entity
+  id: ClothingBackpackPurseBlack
+  parent: ClothingBackpackPurse
+  name: black purse
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#373737"
+      right:
+      - state: inhand-right
+        color: "#373737"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#373737"
+  - type: Sprite
+    color: "#373737"
+
+- type: entity
+  id: ClothingBackpackPurseBlue
+  parent: ClothingBackpackPurse
+  name: blue purse
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#476977"
+      right:
+      - state: inhand-right
+        color: "#476977"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#476977"
+  - type: Sprite
+    color: "#476977"
+
+- type: entity
+  id: ClothingBackpackPurseBrown
+  parent: ClothingBackpackPurse
+  name: brown purse
+  components:
+  - type: Sprite
+    color: "#775547"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#8e7167"
+      right:
+      - state: inhand-right
+        color: "#8e7167"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#8e7167"
+
+- type: entity
+  id: ClothingBackpackPurseGreen
+  parent: ClothingBackpackPurse
+  name: green purse
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#587649"
+      right:
+      - state: inhand-right
+        color: "#587649"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#587649"
+  - type: Sprite
+    color: "#587649"
+
+- type: entity
+  id: ClothingBackpackPurseOrange
+  parent: ClothingBackpackPurse
+  name: orange purse
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#e78c66"
+      right:
+      - state: inhand-right
+        color: "#e78c66"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#e78c66"
+  - type: Sprite
+    color: "#e78c66"
+
+- type: entity
+  id: ClothingBackpackPursePink
+  parent: ClothingBackpackPurse
+  name: pink purse
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#e282b4"
+      right:
+      - state: inhand-right
+        color: "#e282b4"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#e282b4"
+  - type: Sprite
+    color: "#e282b4"
+
+- type: entity
+  id: ClothingBackpackPursePurple
+  parent: ClothingBackpackPurse
+  name: purple purse
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#6e4877"
+      right:
+      - state: inhand-right
+        color: "#6e4877"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#6e4877"
+  - type: Sprite
+    color: "#6e4877"
+
+- type: entity
+  id: ClothingBackpackPurseRed
+  parent: ClothingBackpackPurse
+  name: red purse
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#813946"
+      right:
+      - state: inhand-right
+        color: "#813946"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#813946"
+  - type: Sprite
+    color: "#813946"
+
+- type: entity
+  id: ClothingBackpackPurseTeal
+  parent: ClothingBackpackPurse
+  name: teal purse
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#3ebeca"
+      right:
+      - state: inhand-right
+        color: "#3ebeca"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#3ebeca"
+  - type: Sprite
+    color: "#3ebeca"
+
+- type: entity
+  id: ClothingBackpackPurseYellow
+  parent: ClothingBackpackPurse
+  name: yellow purse
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#8f7e2e"
+      right:
+      - state: inhand-right
+        color: "#8f7e2e"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+        color: "#8f7e2e"
+  - type: Sprite
+    color: "#8f7e2e"
+
+- type: entity
+  id: ClothingBackpackPurseWhite
+  parent: ClothingBackpackPurse
+  name: white purse

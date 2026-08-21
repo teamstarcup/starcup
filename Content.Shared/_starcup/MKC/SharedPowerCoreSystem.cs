@@ -21,15 +21,15 @@ namespace Content.Shared._starcup.MKC;
 /// that they need to keep charged to avoid hunger-like effects. They are able to replenish charge by draining anything
 /// with BatteryComponent.
 /// </summary>
-public abstract class SharedPowerCoreSystem : EntitySystem
+public abstract partial class SharedPowerCoreSystem : EntitySystem
 {
-    [Dependency] protected readonly SharedBatterySystem _battery = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly SharedJetpackSystem _jetpack = default!;
-    [Dependency] private readonly MovementSpeedModifierSystem _movementSpeed = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] protected SharedBatterySystem _battery = default!;
+    [Dependency] private SharedDoAfterSystem _doAfter = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private SharedJetpackSystem _jetpack = default!;
+    [Dependency] private MovementSpeedModifierSystem _movementSpeed = default!;
+    [Dependency] private IGameTiming _timing = default!;
 
     private readonly SoundSpecifier? _drainSounds = new SoundCollectionSpecifier("sparks");
 

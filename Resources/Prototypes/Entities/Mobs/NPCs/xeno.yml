@@ -3,6 +3,7 @@
 - type: entity
   name: base exomorph # starcup - splitting burrower off
   id: MobXeno
+  parent: [ SimpleSpaceMobBase, MobNightVision, BaseMobDestructible ]
   abstract: true # starcup
   parent: SimpleSpaceMobBase
   description: They mostly come at night. Mostly.
@@ -80,7 +81,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: FluorosulfuricAcid
-        Quantity: 650
+        Quantity: 1300
   - type: MeleeWeapon
     altDisarm: false
     angle: 0
@@ -117,8 +118,6 @@
   - type: GhostTakeoverAvailable
   - type: TypingIndicator
     proto: alien
-  - type: Temperature
-    currentTemperature: 310.15
   - type: TemperatureDamage
     heatDamageThreshold: 360
     coldDamageThreshold: -150
@@ -558,7 +557,7 @@
 
 - type: entity
   name: space adder
-  parent: SimpleSpaceMobBase
+  parent: [SimpleSpaceMobBase, BaseSlicingRefinable, BaseMobDestructible]
   id: MobPurpleSnake
   description: A menacing purple snake from Kepler-283c.
   components:
@@ -576,8 +575,8 @@
         Base: dead_purple_snake
       Dead:
         Base: dead_purple_snake
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeatSnake
       amount: 4
   - type: Grammar
@@ -599,12 +598,9 @@
     damage:
       types:
         Piercing: 5
-  - type: SolutionContainerManager
+  - type: SolutionManager
     solutions:
-      melee:
-        reagents:
-        - ReagentId: Toxin
-          Quantity: 50
+    - SolutionVenomPurpleSnake
   - type: MeleeChemicalInjector
     solution: melee
   - type: Fixtures
@@ -632,10 +628,9 @@
     speechVerb: Reptilian
     allowedEmotes: ['CreatureHiss']
   - type: Vocal
-    sounds:
-      Unsexed: SpaceSnakeSpeechEmotes
+    emoteSounds: SpaceSnakeSpeechEmotes
     screamId: CreatureHiss
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: TypingIndicator
     proto: alien
   - type: ReplacementAccent
@@ -643,8 +638,19 @@
     # end starcup
 
 - type: entity
+  parent: [SolutionWeapon, SolutionTiny]
+  id: SolutionVenomPurpleSnake
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Toxin
+        Quantity: 30
+
+- type: entity
   name: space adder
-  parent: MobPurpleSnake
+  parent: [MobPurpleSnake, BaseSlicingRefinable]
   id: MobSmallPurpleSnake
   suffix: small
   description: A smaller version of the menacing purple snake from Kepler-283c.
@@ -663,8 +669,8 @@
         Base: dead_small_purple_snake
       Dead:
         Base: dead_small_purple_snake
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeatSnake
       amount: 2
   - type: SolutionTransfer
@@ -675,7 +681,7 @@
 - type: entity
   name: '"Dale"'
   description: A praetorian left over from the station's initial security sweep. Has a pair of bloodied dog tags engraved with the name "Pvt. Dale" stuck in its maw.
-  parent: SimpleSpaceMobBase
+  parent: [SimpleSpaceMobBase, BaseMobDestructible]
   id: MobXenoLonePraetorianNoGhost
   components:
   - type: Insulated
@@ -710,7 +716,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: FluorosulfuricAcid
-        Quantity: 300
+        Quantity: 600
   - type: MeleeWeapon
     altDisarm: false
     angle: 0
@@ -719,7 +725,7 @@
     animation: WeaponArcBite
     damage:
       types:
-        Piercing: 6
+        Slash: 5
   - type: DamageStateVisuals
     states:
       Alive:
@@ -730,14 +736,11 @@
         Base: dead
   - type: Puller
   - type: Butcherable
-    butcheringType: Spike
     spawned:
     - id: FoodMeatXeno
       amount: 5
   - type: TypingIndicator
     proto: alien
-  - type: Temperature
-    currentTemperature: 310.15
   - type: TemperatureDamage
     heatDamageThreshold: 360
     coldDamageThreshold: -150
@@ -749,7 +752,7 @@
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Aliens/Xenos/praetorian.rsi
-    #offset: 0,0.4
+    #offset: 0,0.4 # starcup: unnecessary???
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: running
@@ -777,16 +780,24 @@
   - type: Tag
     tags:
     - CannotSuicide
-  - type: SolutionContainerManager # Being hit speeds you up so you can escape
+  - type: SolutionManager # Being hit speeds you up so you can escape
     solutions:
-      bite:
-        reagents:
-        - ReagentId: Stimulants
-          Quantity: 50
-        - ReagentId: TranexamicAcid
-          Quantity: 50
+    - SolutionVenomDale
   - type: MeleeChemicalInjector
     transferAmount: 1
-    solution: bite
+    solution: melee
     pierceArmor: true
   - type: ItemOffer # starcup: item offering
+
+- type: entity
+  parent: [SolutionWeapon, SolutionNormal]
+  id: SolutionVenomDale
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Stimulants
+        Quantity: 50
+      - ReagentId: TranexamicAcid
+        Quantity: 50

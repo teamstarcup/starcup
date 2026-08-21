@@ -5,9 +5,9 @@ using Robust.Shared.GameStates;
 namespace Content.Shared.Nutrition.Components;
 
 /// <summary>
-/// Indicates that the entity can be butchered.
+/// Indicates that the entity can be butchered through use of butcher hook.
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState, Access(typeof(SharedKitchenSpikeSystem))]
 public sealed partial class ButcherableComponent : Component
 {
     /// <summary>
@@ -25,35 +25,4 @@ public sealed partial class ButcherableComponent : Component
     [DataField, AutoNetworkedField]
     public float ButcherDelay = 8.0f;
 
-    // starcup: make butchering certain mobs yield organs
-    /// <summary>
-    /// Will the mob drop its organs upon being butchered with a knife?
-    /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField]
-    public bool DropOrgansOnButcher;
-    // end starcup
-
-    /// <summary>
-    /// Tool type used to butcher that entity.
-    /// </summary>
-    [DataField("butcheringType"), AutoNetworkedField]
-    public ButcheringType Type = ButcheringType.Knife;
-}
-
-public enum ButcheringType : byte
-{
-    /// <summary>
-    /// E.g. goliaths.
-    /// </summary>
-    Knife,
-
-    /// <summary>
-    /// E.g. monkeys.
-    /// </summary>
-    Spike,
-
-    /// <summary>
-    /// E.g. humans.
-    /// </summary>
-    Gibber // TODO
 }

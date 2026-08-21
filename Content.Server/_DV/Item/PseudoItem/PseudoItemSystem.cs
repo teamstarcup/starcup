@@ -15,13 +15,13 @@ using Content.Shared.Verbs;
 
 namespace Content.Server._DV.Item.PseudoItem;
 
-public sealed class PseudoItemSystem : SharedPseudoItemSystem
+public sealed partial class PseudoItemSystem : SharedPseudoItemSystem
 {
-    // [Dependency] private readonly StorageSystem _storage = default!; // starcup: unused
-    // [Dependency] private readonly ItemSystem _item = default!; // starcup: unused
-    // [Dependency] private readonly DoAfterSystem _doAfter = default!; // starcup: unused
-    [Dependency] private readonly CarryingSystem _carrying = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
+    // [Dependency] private StorageSystem _storage = default!; // starcup: unused
+    // [Dependency] private ItemSystem _item = default!; // starcup: unused
+    // [Dependency] private DoAfterSystem _doAfter = default!; // starcup: unused
+    [Dependency] private CarryingSystem _carrying = default!;
+    [Dependency] private PopupSystem _popup = default!;
 
     public override void Initialize()
     {

@@ -58,6 +58,7 @@
   - type: SolutionTransfer
     maxTransferAmount: 2
   - type: Damageable
+  - type: Injurable
     damageContainer: Inorganic
   - type: Destructible
     thresholds:
@@ -88,7 +89,7 @@
     - HEAD
     - MASK
   - type: Produce
-    seedId: rose
+    plantId: RosePlants
   - type: Extractable
     grindableSolutionName: food
   - type: Edible # starcup - FoodComponent -> EdibleComponent
@@ -112,7 +113,7 @@
   - type: Item
     sprite: _Impstation/Objects/Specific/Hydroponics/blackRose.rsi
   - type: Produce
-    seedId: blackRose
+    plantId: BlackRosePlants
   - type: DamageOtherOnHit
     damage:
       types:

@@ -6,8 +6,8 @@ namespace Content.Client._DV.Overlays;
 
 public sealed partial class PainSystem : EntitySystem
 {
-    [Dependency] private readonly IOverlayManager _overlayMan = default!;
-    [Dependency] private readonly ISharedPlayerManager _playerMan = default!;
+    [Dependency] private IOverlayManager _overlayMan = default!;
+    [Dependency] private ISharedPlayerManager _playerMan = default!;
 
     private PainOverlay _overlay = default!;
 

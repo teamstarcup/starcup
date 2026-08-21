@@ -1,6 +1,6 @@
 - type: entity
   name: bat
-  parent: [ SimpleMobBase, FlyingMobBase, MobCombat ]
+  parent: [ SimpleMobBase, FlyingMobBase, MobCombat, BaseSlicingRefinable, MobNightVision ]
   id: MobBat
   description: Some cultures find them terrifying, others crunchy on the teeth.
   components:
@@ -38,8 +38,8 @@
         Base: dead
       Dead:
         Base: dead
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeat
       amount: 1
   - type: InteractionPopup
@@ -86,10 +86,9 @@
     - CreatureEmotes # starcup
   # begin starcup: give animals a voice
   - type: Vocal
-    sounds:
-      Unsexed: BatSpeechEmotes
+    emoteSounds: BatSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: TypingIndicator
     proto: rodentia
   - type: AutoEmote
@@ -99,7 +98,7 @@
 
 - type: entity
   name: bee
-  parent: [ SimpleMobBase, FlyingMobBase ]
+  parent: [ SolutionFood, SolutionTiny, SimpleMobBase, FlyingMobBase, BaseSlicingRefinable ]
   id: MobBee
   description: Nice to have, but you can't build a civilization on a foundation of honey alone.
   components:
@@ -142,15 +141,13 @@
         Base: dead
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: GroundBee
-          Quantity: 1
-  - type: Butcherable
-    spawned:
-    - id: null # Should give nothing when you butcher it so we set the item id it needs to spawn to null
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: GroundBee
+        Quantity: 1
+  - type: ToolRefinable
+    refineResult: [] # Should give nothing when you butcher it so we set the item id it needs to spawn to null
   - type: Item
     size: Tiny
   - type: Tag
@@ -217,7 +214,7 @@
 
 - type: entity
   name: chicken
-  parent: SimpleMobBase
+  parent: [SimpleMobBase, BaseSlicingRefinable, BaseMobDestructible, BaseExaminableHunger]
   id: MobChicken
   description: Comes before an egg, and IS a dinosaur!
   components:
@@ -259,6 +256,7 @@
     breedChance: 0.05
     birthPopup: reproductive-laid-egg-popup
     makeOffspringInfant: false
+    minHungerThreshold: Peckish
     partnerWhitelist:
       tags:
       - Chicken
@@ -275,11 +273,10 @@
         Base: dead-0
       Dead:
         Base: dead-0
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeatChicken
       amount: 1
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.8
     interactSuccessString: petting-success-bird
@@ -295,7 +292,6 @@
   - type: EggLayer
     eggSpawn:
     - id: FoodEgg
-  - type: ExaminableHunger
   - type: ReplacementAccent
     accent: chicken
   - type: SentienceTarget
@@ -305,10 +301,9 @@
     - Passive
   # begin starcup: give animals a voice
   - type: Vocal
-    sounds:
-      Unsexed: CluckSpeechEmotes
+    emoteSounds: CluckSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: AutoEmote
     emotes:
     - CluckAutoEmote
@@ -375,17 +370,13 @@
     - MobChicken1
     - MobChicken2
     intervalSeconds: 20
-    minimumEntitiesSpawned: 1
-    maximumEntitiesSpawned: 1
   - type: TimedDespawn #delete the egg after the chicken spawns
     lifetime: 21
 
 - type: entity
-  name: cockroach
-  parent:
-  - SimpleMobBase
-  - BaseMobAnimal # starcup
-  id: MobCockroach
+  abstract: true
+  parent: [SolutionFood, SolutionTiny, SimpleMobBase, BaseSlicingRefinable, MobNightVision, BaseMobAnimal] # starcup: BaseMobAnimal
+  id: BaseCockroach
   description: This station is just crawling with bugs.
   components:
   # begin starcup: Bug faction to not be attacked by bloodsuckers
@@ -425,14 +416,6 @@
   - type: MovementSpeedModifier
     baseWalkSpeed : 2.5
     baseSprintSpeed : 5
-  - type: DamageStateVisuals
-    states:
-      Alive:
-        Base: cockroach
-      Critical:
-        Base: cockroach_dead
-      Dead:
-        Base: cockroach_dead
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
@@ -444,37 +427,21 @@
     - horrible
     - terrible
     - chewy
-  # begin starcup: make less voracious
-  - type: Thirst
-    startingThirst: 25  # spawn with Okay thirst state
-    thresholds:
-      OverHydrated: 30
-      Okay: 20
-      Thirsty: 10
-      Parched: 5
-      Dead: 0
-  - type: Hunger
-    thresholds:
-      Overfed: 30
-      Okay: 20
-      Peckish: 10
-      Starving: 5
-      Dead: 0
-    baseDecayRate: 0.1
-    # end starcup
+  - type: Satiation
+    satiations:
+      Hunger:
+        prototype: CockroachHunger
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: Slime
-          Quantity: 5
-  - type: Butcherable
-    spawned:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Slime
+        Quantity: 10
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeatSlime
   - type: Damageable
-    damageContainer: Biological
     damageModifierSet: Cockroach
   - type: Tag
     tags:
@@ -485,15 +452,6 @@
     - CreatureEmotes
     - IgnoreTallGrass
     # end starcup
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTypeTrigger
-        damageType: Blunt
-        damage: 10
-      behaviors:
-      - !type:GibBehavior
-        recursive: false
   - type: NonSpreaderZombie
   - type: StepTrigger
     requiredTriggeredSpeed: 1
@@ -516,10 +474,9 @@
     speechSounds: BeetleSpeechSounds
     allowedEmotes: ['BuzzNonSilicon']
   - type: Vocal
-    sounds:
-      Unsexed: BeetleSpeechEmotes
+    emoteSounds: BeetleSpeechEmotes
     screamId: BuzzNonSilicon
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: ReplacementAccent
     accent: crab
   - type: FootstepModifier
@@ -531,6 +488,35 @@
       path: /Audio/_starcup/Arthropods/Beetle/beetle_buzz.ogg
 
   # end starcup
+
+- type: entity
+  parent: BaseCockroach
+  id: MobCockroach
+  name: cockroach
+  description: This station is just crawling with bugs.
+  components:
+  - type: Sprite
+    sprite: Mobs/Animals/cockroach.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: cockroach
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: cockroach
+      Critical:
+        Base: cockroach_dead
+      Dead:
+        Base: cockroach_dead
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 10
+      behaviors:
+      - !type:GibBehavior
+        recursive: false
 
 - type: entity
   name: glockroach
@@ -560,13 +546,10 @@
   - type: NpcFactionMember
     factions:
     - SimpleHostile
-  - type: Butcherable
-    spawned:
-    - id: FoodMeatSlime
 
 - type: entity
   name: mothroach
-  parent: [ BaseMobMothroach, MobCockroach ]
+  parent: [ BaseMobMothroach, BaseCockroach, BaseSlicingRefinable ]
   id: MobMothroach
   description: This is the adorable by-product of multiple attempts at genetically mixing dopterae with cockroaches. # starcup: moth to doptera
   components:
@@ -638,8 +621,9 @@
     weightlessAcceleration: 1.5
     weightlessFriction: 1
     baseWeightlessModifier: 1
+  - type: NameIdentifier
+    group: AdjectivePrefix
   - type: Damageable
-    damageContainer: Biological
     damageModifierSet: Moth
   - type: Bloodstream
     bloodReferenceSolution:
@@ -654,8 +638,13 @@
       types:
         Asphyxiation: -0.5
   - type: CombatMode
-  - type: Butcherable
-    spawned:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Slime
+        Quantity: 20
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeatSlime
       amount: 2
   - type: Extractable
@@ -666,10 +655,9 @@
     accent: zombieMoth
   - type: Vocal
     # begin starcup
-    sounds:
-      Unsexed: MothroachSpeechEmotes
+    emoteSounds: MothroachSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
     wilhelmProbability: 0.001
   - type: AutoEmote
     emotes:
@@ -745,7 +733,7 @@
 
 - type: entity
   name: mallard duck #Quack
-  parent: SimpleMobBase
+  parent: [SimpleMobBase, BaseSlicingRefinable, BaseMobDestructible, BaseExaminableHunger]
   id: MobDuckMallard
   description: An adorable mallard duck, it's fluffy and soft!
   components:
@@ -776,6 +764,7 @@
     breedChance: 0.05
     birthPopup: reproductive-laid-egg-popup
     makeOffspringInfant: false
+    minHungerThreshold: Peckish
     partnerWhitelist:
       tags:
       - Duck
@@ -792,11 +781,10 @@
         Base: dead-0
       Dead:
         Base: dead-0
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeatDuck
       amount: 1
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.9
     interactSuccessString: petting-success-bird
@@ -812,7 +800,6 @@
   - type: EggLayer
     eggSpawn:
     - id: FoodEgg
-  - type: ExaminableHunger
   - type: ReplacementAccent
     accent: duck
   - type: SentienceTarget
@@ -826,10 +813,9 @@
     speechSounds: DuckSpeechSounds
     allowedEmotes: ['Flutter', 'CreatureQuack', 'CreatureLaugh', 'CreatureScream']
   - type: Vocal
-    sounds:
-      Unsexed: DuckSpeechEmotes
+    emoteSounds: DuckSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: AutoEmote
     emotes:
     - QuackAutoEmote
@@ -885,14 +871,12 @@
       - MobDuckWhite
       - MobDuckBrown
       intervalSeconds: 20
-      minimumEntitiesSpawned: 1
-      maximumEntitiesSpawned: 1
     - type: TimedDespawn #delete the egg after the chicken spawns
       lifetime: 21
 
 - type: entity
   name: butterfly
-  parent: [ SimpleMobBase, FlyingMobBase ]
+  parent: [ SolutionFood, SolutionTiny, SimpleMobBase, FlyingMobBase, BaseSlicingRefinable ]
   id: MobButterfly
   description: Despite popular misconceptions, it's not actually made of butter.
   components:
@@ -935,15 +919,13 @@
         Base: dead
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 1
-  - type: Butcherable
-    spawned:
-    - id: null # Should give nothing when you butcher it so we set the item id it needs to spawn to null
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: UncookedAnimalProteins
+        Quantity: 1
+  - type: ToolRefinable
+    refineResult: [] # Should give nothing when you butcher it so we set the item id it needs to spawn to null
   - type: Item
     size: Tiny
   - type: Tag
@@ -969,7 +951,7 @@
 
 - type: entity
   name: cow
-  parent: [ SimpleMobBase, BaseMobRuminant ]
+  parent: [ BaseMobRuminant, SimpleMobBase, BaseSlicingRefinable, BaseMobDestructible, BaseExaminableHunger ]
   id: MobCow
   description: Moo.
   components:
@@ -988,6 +970,7 @@
     - CreatureEmotes
     # end starcup
   - type: Reproductive
+    minHungerThreshold: Peckish
     partnerWhitelist:
       tags:
       - Cow
@@ -1014,24 +997,18 @@
         Base: dead
       Dead:
         Base: dead
-  - type: SolutionContainerManager
+  - type: SolutionManager
     solutions:
-      udder:
-        maxVol: 250
-        reagents:
-        - ReagentId: Milk
-          Quantity: 30
+    - SolutionUdder
   - type: Udder
+    minHungerThreshold: Peckish
     reagentId: Milk
     quantityPerUpdate: 25
     growthDelay: 30
-  - type: ExaminableHunger
-  - type: Butcherable
-    butcheringType: Spike #starcup
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeat
       amount: 5
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Grammar
     attributes:
       gender: female # Here because of UdderComponent
@@ -1070,10 +1047,9 @@
     speechSounds: CowSpeechSounds
     allowedEmotes: ['CreatureScream', 'CreatureCough', 'CreatureMoo', 'CreatureSneeze']
   - type: Vocal
-    sounds:
-      Unsexed: CowSpeechEmotes
+    emoteSounds: CowSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: AutoEmote
     emotes:
     - MooAutoEmote
@@ -1083,8 +1059,20 @@
   # end starcup
 
 - type: entity
+  parent: SolutionLarge
+  id: SolutionUdder
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    id: udder # TODO This should really use a different id...
+    solution:
+      reagents:
+      - ReagentId: Milk
+        Quantity: 30
+
+- type: entity
   name: crab
-  parent: [ SimpleMobBase, BaseMobHemocyanin ]
+  parent: [ SimpleMobBase, BaseMobHemocyanin, BaseSlicingRefinable, BaseMobDestructible ]
   id: MobCrab
   description: A folk legend goes around that his claw snaps spacemen out of existence over distasteful remarks. Be polite and tolerant for your own safety.
   components:
@@ -1127,9 +1115,8 @@
         Base: dead
       Dead:
         Base: dead
-  - type: Butcherable
-    butcheringType: Spike # starcup
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeatCrab
       amount: 2
   - type: InteractionPopup
@@ -1169,15 +1156,14 @@
     footstepSoundCollection:
       collection: FootstepBug
   - type: Vocal
-    sounds:
-      Unsexed: CrabSpeechEmotes
+    emoteSounds: CrabSpeechEmotes
     screamId: ClawSnap
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   # end starcup
 
 - type: entity
   name: goat
-  parent: [ SimpleMobBase, BaseMobRuminant ]
+  parent: [ BaseMobRuminant, SimpleMobBase, BaseSlicingRefinable, BaseMobDestructible, BaseExaminableHunger ]
   id: MobGoat
   description: Her spine consists of long sharp segments, no wonder she is so grumpy.
   components:
@@ -1209,6 +1195,7 @@
     - CreatureEmotes
     # end starcup
   - type: Reproductive
+    minHungerThreshold: Peckish
     partnerWhitelist:
       tags:
       - Goat
@@ -1224,21 +1211,17 @@
         Base: dead
       Dead:
         Base: dead
-  - type: SolutionContainerManager
+  - type: SolutionManager
     solutions:
-      udder:
-        maxVol: 250
-        reagents:
-        - ReagentId: MilkGoat
-          Quantity: 30
-      wool:
-        maxVol: 250
+    - SolutionUdderGoat
+    - SolutionWool
   - type: Udder
+    minHungerThreshold: Peckish
     reagentId: MilkGoat
     quantityPerUpdate: 25
     growthDelay: 20
-  - type: ExaminableHunger
   - type: Wooly
+    minHungerThreshold: Peckish
   - type: Edible
     destroyOnEmpty: false
     solution: wool
@@ -1247,12 +1230,10 @@
   - type: FlavorProfile
     flavors:
     - fiber
-  - type: Butcherable
-    butcheringType: Spike # starcup
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeat
       amount: 4
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Grammar
     attributes:
       gender: female # Here because of UdderComponent
@@ -1262,10 +1243,9 @@
   # begin starcup
     allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureCough', 'CreatureBleat', 'CreatureSneeze'] # starcup
   - type: Vocal
-    sounds:
-      Unsexed: GoatSpeechEmotes
+    emoteSounds: GoatSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: AutoEmote
     emotes:
     - BleatAutoEmote
@@ -1302,10 +1282,222 @@
       collection: FootstepGeneric
   # end starcup
 
+- type: entity
+  parent: SolutionUdder
+  id: SolutionUdderGoat
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: MilkGoat
+        Quantity: 30
+
+- type: entity
+  parent: SolutionLarge
+  id: SolutionWool
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    id: wool
+
+- type: entity
+  abstract: true
+  parent: [BaseMobRuminant, BaseSlicingRefinable, BaseExaminableHunger]
+  id: MobSheepBase
+  name: sheepBase
+  description: A sheep.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - state: sheep_bare
+      map: [ "enum.DamageStateVisualLayers.Base" ]
+      visible: true
+      sprite: Mobs/Animals/sheep.rsi
+    # this wooly layer relates to the shearable component.
+    - state: sheep_wool
+      map: [ "wooly" ]
+      visible: true
+      sprite: Mobs/Animals/sheep.rsi
+  - type: GenericVisualizer
+    visuals:
+      enum.ShearableVisuals.Shearable:
+        wooly:
+          True: {visible: true}
+          False: {visible: false}
+      enum.MobStateVisuals.State:
+        wooly:
+          Alive: {state: sheep_wool}
+          Dead: {state: sheep_wool_dead}
+          Critical: {state: sheep_wool_dead}
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 150
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Tag
+    tags:
+    # let moths eat wool directly
+    - ClothMade
+    - DoorBumpOpener
+    - Sheep
+  - type: Reproductive
+    partnerWhitelist:
+      tags:
+      - Sheep
+    offspring:
+    - id: MobSheep
+  - type: ReproductivePartner
+  - type: Appearance
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: sheep_bare
+      Critical:
+        Base: sheep_dead
+      Dead:
+        Base: sheep_dead
+  - type: SolutionManager
+    solutions:
+    - SolutionUdderSheep
+    - SolutionWoolSheep
+  - type: Udder
+    reagentId: MilkSheep
+    quantityPerUpdate: 25
+    growthDelay: 20
+    minHungerThreshold: Peckish
+  - type: Wooly
+    minHungerThreshold: Peckish
+  - type: Shearable
+    targetSolutionName: wool
+    shearedProductId: MaterialCotton1 # Cotton is spawned because there is no wool item.
+    solutionPerProduct: 2.5 # 1 Cotton contains 2.5 Fibre, therefore this is the same.
+    toolQuality: Shearing
+    shearableMarkupText: sheep-shearable-examine-markup
+    unShearableMarkupText: sheep-not-shearable-examine-markup
+  - type: Edible
+    destroyOnEmpty: false
+    solution: wool
+    requiresSpecialDigestion: true
+    requireDead: false
+  - type: ToolRefinable
+    refineResult:
+    - id: FoodMeat
+      amount: 4
+  - type: Grammar
+    attributes:
+      gender: female # Here because of UdderComponent
+  - type: Speech
+    speechSounds: Sheep
+    speechVerb: Sheep
+  - type: Vocal
+    emoteSounds: Sheep
+  - type: BleatingAccent
+  - type: InteractionPopup
+    successChance: 0.8 #SHEEP so FRIEND!!! HUG! SQUISHY! SOFT!
+    interactDelay: 1
+    interactSuccessString: petting-success-sheep
+    interactFailureString: petting-failure-sheep
+    interactSuccessSpawn: EffectHearts #🥰
+    interactSuccessSound:
+      collection: Sheep
+      params:
+        variation: 0.05
+  - type: Perishable
+    molsPerSecondPerUnitMass: 0.0015
+  - type: NpcFactionMember
+    factions:
+    - Passive
+  - type: HTN
+    rootTask:
+      task: RuminantCompound
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 0.6
+    baseSprintSpeed: 0.8
+  - type: GuideHelp
+    guides:
+    - Chef
+    - FoodRecipes
+
+- type: entity
+  parent: SolutionUdder
+  id: SolutionUdderSheep
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: MilkSheep
+        Quantity: 25
+
+- type: entity
+  parent: SolutionWool
+  id: SolutionWoolSheep
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 25
+
+- type: entity
+  parent: SolutionWool
+  id: SolutionWoolSheepRainbow
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: SpaceDrugs
+        Quantity: 25
+
+- type: entity
+  parent: [ MobSheepBase, SimpleMobBase, BaseMobDestructible ]
+  id: MobSheep
+  name: sheep
+  description: An adorable genetically engineered chemical factory producing milk and cotton.
+
+- type: entity
+  parent: MobSheep
+  id: MobSheepRainbow
+  name: rainbow sheep
+  description: A sheep; this one seems... glowy.
+  components:
+  - type: PointLight
+    radius: 1.5
+    energy: 0.5
+  - type: RgbLightController
+    layers: [ 1 ]
+  - type: Wooly
+    reagentId: SpaceDrugs
+  - type: Shearable
+    targetSolutionName: wool
+    shearedProductId: LeavesCannabisRainbow
+    solutionPerProduct: 6 # How much solution should it take to spawn 1 product?
+    toolQuality: Shearing
+    shearableMarkupText: rainbow-sheep-shearable-examine-markup
+    unShearableMarkupText: rainbow-sheep-not-shearable-examine-markup
+    verb: rainbow-sheep-shearable-verb
+  - type: SolutionManager
+    solutions:
+    - SolutionUdderSheep
+    - SolutionWoolSheepRainbow
+  - type: FlavorProfile
+    flavors:
+    - leafy
+
 # Note that we gotta make this bitch vomit someday when you feed it anthrax or sumthin. Needs to be a small item thief too and aggressive if attacked.
 - type: entity
   name: goose
-  parent: SimpleMobBase
+  parent: [SimpleMobBase, BaseSlicingRefinable, BaseMobDestructible]
   id: MobGoose
   description: Its stomach and mind are an enigma beyond human comprehension.
   components:
@@ -1334,11 +1526,10 @@
         Base: dead
       Dead:
         Base: dead
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeatChicken
       amount: 2
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup # TODO: Make it so there's a separate chance to make certain animals outright hostile towards you.
     successChance: 0.1 # Yeah, good luck with that.
     interactSuccessString: petting-success-goose
@@ -1372,10 +1563,9 @@
     speechSounds: GooseSpeechSounds
     allowedEmotes: ['CreatureScream', 'CreatureHonk', 'Flutter']
   - type: Vocal
-    sounds:
-      Unsexed: GooseSpeechEmotes
+    emoteSounds: GooseSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: AutoEmote
     emotes:
     - HonkAutoEmote
@@ -1384,7 +1574,7 @@
 
 - type: entity
   name: gorilla
-  parent: [ SimpleMobBase, MobCombat ]
+  parent: [ SimpleMobBase, MobCombat, BaseMobDestructible ]
   id: MobGorilla
   description: Smashes, roars, looks cool. Don't stand near one.
   components:
@@ -1414,12 +1604,10 @@
         Base: dead
       Dead:
         Base: dead
-  - type: Butcherable
-    butcheringType: Spike # starcup
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeat
       amount: 4
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
@@ -1474,10 +1662,9 @@
     speechSounds: GorillaSpeechSounds
     allowedEmotes: ['CreatureScream', 'CreatureOok', 'CreatureGrowl', 'ChestBeating', 'CreatureCough', 'ThumpFistLoud']
   - type: Vocal
-    sounds:
-      Unsexed: GorillaSpeechEmotes
+    emoteSounds: GorillaSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: AutoEmote
     emotes:
     - OokAutoEmote
@@ -1490,6 +1677,8 @@
   - SimpleMobBase
   - MobCombat
   - StripableInventoryBase
+  - BaseSlicingRefinable
+  - BaseMobDestructible
   id: MobKangaroo
   description: A large marsupial herbivore. It has powerful hind legs, with nails that resemble long claws.
   components:
@@ -1519,11 +1708,9 @@
     templateId: kangaroo
   - type: ReplacementAccent
     accent: kangaroo
-  - type: Butcherable
-    butcheringType: Spike # starcup
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeat
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: DamageStateVisuals
     states:
       Alive:
@@ -1545,11 +1732,10 @@
     rules: ghost-role-information-nonantagonist-rules
   - type: GhostTakeoverAvailable
   - type: Vocal
-    sounds:
+    emoteSounds: KangarooSpeechEmotes # starcup
   # begin starcup
-      Unsexed: KangarooSpeechEmotes
     screamId: CreatureGrowl
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: Speech
     speechVerb: LargeMob
     speechSounds: KangarooSpeechSounds
@@ -1593,7 +1779,7 @@
 - type: entity
   name: genetic ancestor
   id: MobBaseAncestor
-  parent: [BaseMobAnimal, SimpleMobBase, StripableInventoryBase]
+  parent: [BaseMobAnimal, SimpleMobBase, StripableInventoryBase, BaseMobDestructible]
   description: The genetic bipedal ancestor of... Uh... Something. Yeah, there's definitely something on the station that descended from whatever this is.
   abstract: true
   components:
@@ -1671,7 +1857,6 @@
         Piercing: 3
   # begin starcup: monkeys are not food
   # - type: Butcherable
-  #   butcheringType: Spike
   #   spawned:
   #   - id: FoodMeat
   #     amount: 3
@@ -1687,7 +1872,10 @@
       - Passive
   - type: HTN
     rootTask:
-      task: SimpleHostileCompound
+      task: MonkeyCompound
+    blackboard:
+      NavInteract: !type:Bool
+        true
   - type: IdExaminable
   - type: Tag
     tags:
@@ -1719,10 +1907,9 @@
     group: Monkey
   # begin starcup
   - type: Vocal
-    sounds:
-      Unsexed: MonkeySpeechEmotes
+    emoteSounds: MonkeySpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: Speech
     speechSounds: MonkeySpeechSounds
     speechVerb: Monkey
@@ -1742,18 +1929,9 @@
     description: ghost-role-information-monkey-description
     rules: ghost-role-information-nonantagonist-rules
   - type: GhostTakeoverAvailable
-  - type: Clumsy
-    gunShootFailDamage:
-      types:
-        Blunt: 5
-        Piercing: 4
-        Heat: 3
-    catchingFailDamage:
-      types:
-        Blunt: 1
-    clumsySound:
-      path: /Audio/Animals/monkey_scream.ogg
-
+  - type: PermanentStatusEffects
+    statusEffects:
+    - StatusEffectClumsyMonkey
 
 - type: entity
   name: monkey
@@ -1902,7 +2080,6 @@
 #          horns_double: Inherit
 #          horns_kobold_ears: Inherit
 #  - type: Butcherable
-#    butcheringType: Spike
 #    spawned:
 #    - id: FoodMeat
 #      amount: 2
@@ -1979,9 +2156,7 @@
 
 - type: entity
   name: mouse
-  parent:
-  - SimpleMobBase
-  - BaseMobAnimal
+  parent: [SimpleMobBase, BaseMobAnimal, SolutionVermin, BaseSlicingRefinable, MobNightVision]
   id: MobMouse
   description: Squeak!
   suffix: white # starcup
@@ -2059,6 +2234,8 @@
   - type: MovementSpeedModifier
     baseWalkSpeed : 2.5
     baseSprintSpeed : 5
+  - type: NameIdentifier
+    group: AdjectivePrefix
   - type: DamageStateVisuals
     states:
       Alive:
@@ -2071,33 +2248,16 @@
   - type: FlavorProfile
     flavors:
     - meaty
-  - type: Thirst
-    startingThirst: 25  # spawn with Okay thirst state
-    thresholds:
-      OverHydrated: 35
-      Okay: 25
-      Thirsty: 15
-      Parched: 5 # starcup: was 10
-      Dead: 0
-    baseDecayRate: 0.04
-  - type: Hunger
-    thresholds:
-      Overfed: 35
-      Okay: 25
-      Peckish: 12.5 # starcup: was 15
-      Starving: 5 # starcup: was 10
-      Dead: 0
-    baseDecayRate: 0.05 # starcup, was 0.5
+  - type: Satiation
+    satiations:
+      Hunger:
+        prototype: MouseHunger
+      Thirst:
+        prototype: MouseThirst
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 3
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeatRat
       amount: 1
   - type: ReplacementAccent
@@ -2124,10 +2284,9 @@
         Blunt: 0.1
   # begin starcup: give animals a voice
   - type: Vocal
-    sounds:
-      Unsexed: SqueakSpeechEmotes
+    emoteSounds: SqueakSpeechEmotes # starcup
     screamId: CreatureSqueak
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
     wilhelmProbability: 0.001
   - type: TypingIndicator
     proto: rodentia
@@ -2174,6 +2333,17 @@
     needsHands: false # starcup - let the rat drag the pizza slice (improves ghostrole gameplay and makes sense)
 
 - type: entity
+  abstract: true
+  parent: [SolutionFood, SolutionTiny]
+  id: SolutionVermin
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: UncookedAnimalProteins
+        Quantity: 15
+
+- type: entity
   parent: MobMouse
   suffix: Dead
   save: false
@@ -2188,22 +2358,6 @@
         Asphyxiation: 4
         Slash: 7
         Blunt: 3
-
-- type: entity
-  parent: MobMouse
-  id: MobMouseAdmeme
-  suffix: Admeme
-  components:
-  # allow admeme mouse to eat pills
-  - type: IgnoreBadFood
-  # intended for swarms that eat pills so only temporary
-  - type: TimedDespawn
-    lifetime: 60
-  - type: Hunger
-    baseDecayRate: 10 # always hungry
-    starvingSlowdownModifier: 1
-  - type: Thirst
-    baseDecayRate: 10 # always thirsty
 
 - type: entity
   parent: MobMouse
@@ -2232,7 +2386,6 @@
       Dead:
         Base: splat-1
   - type: Item
-    size: Tiny
     heldPrefix: 1
 
 - type: entity
@@ -2262,7 +2415,6 @@
       Dead:
         Base: splat-2
   - type: Item
-    size: Tiny
     heldPrefix: 2
 
 - type: entity
@@ -2292,27 +2444,25 @@
       reagents:
       - ReagentId: UnstableMutagen
         Quantity: 50
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 3
-        - ReagentId: Uranium
-          Quantity: 10
-  - type: Butcherable
-    spawned:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: UncookedAnimalProteins
+        Quantity: 5
+      - ReagentId: Uranium
+        Quantity: 10
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeatRat
       amount: 1
     - id: SheetUranium1
       amount: 1
   - type: Damageable
-    damageContainer: Biological
     damageModifierSet: Zombie
 
 - type: entity
   name: lizard #Weh
-  parent: SimpleMobBase
+  parent: [SimpleMobBase, BaseSlicingRefinable, BaseMobDestructible]
   id: MobLizard
   description: A harmless dragon.
   components:
@@ -2322,10 +2472,9 @@
     speechVerb: Reptilian
     allowedEmotes: ['CreatureScream', 'CreatureGrowl', 'CreatureHiss', 'CreatureWhimper', 'ThumpTailSoft', 'ThumpTailMany', 'ThumpTailLoud', 'TailWhip'] # Can't thump tail because no body component  # starcup: Hiss -> LizardHiss -> CreatureHiss
   - type: Vocal # Imp edit # no it's starcup again babyyy
-    sounds:
-      Unsexed: LizardSpeechEmotes
+    emoteSounds: LizardSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: ReplacementAccent
     accent: LizardAccent
   # end starcup
@@ -2358,11 +2507,10 @@
         Base: dead
       Dead:
         Base: dead
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeatLizard
       amount: 1
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.3
     interactSuccessString: petting-success-reptile
@@ -2376,7 +2524,6 @@
       - ReagentId: Blood
         Quantity: 150
   - type: Damageable
-    damageContainer: Biological
     damageModifierSet: Scale
   - type: Tag
     tags:
@@ -2384,10 +2531,9 @@
     - CreatureEmotes # starcup
     - IgnoreTallGrass # starcup
 
-
 - type: entity
   name: slug
-  parent: SimpleMobBase
+  parent: [SimpleMobBase, BaseSlicingRefinable, BaseMobDestructible]
   id: MobSlug
   description: And they called this a lizard?
   components:
@@ -2420,8 +2566,8 @@
         Base: dead
       Dead:
         Base: dead
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeat
       amount: 1
   - type: InteractionPopup
@@ -2445,17 +2591,16 @@
     speechVerb: Reptilian
     allowedEmotes: ['CreatureScream', 'CreatureWhimper', 'CreatureSqueak', 'ThumpTailSoft']
   - type: Vocal
-    sounds:
-      Unsexed: LizardTinySpeechEmotes
+    emoteSounds: LizardTinySpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: ReplacementAccent
     accent: GeckoAccent
   # end starcup
 
 - type: entity
   name: frog
-  parent: SimpleMobBase
+  parent: [SimpleMobBase, BaseSlicingRefinable]
   id: MobFrog
   description: Hop hop hop. Lookin' moist.
   components:
@@ -2495,8 +2640,8 @@
         Base: dead
       Dead:
         Base: dead
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeat
       amount: 1
   - type: InteractionPopup
@@ -2530,10 +2675,9 @@
     speechVerb: Reptilian
     allowedEmotes: ['CreatureWhimper', 'CreatureCroak']
   - type: Vocal
-    sounds:
-      Unsexed: FrogSpeechEmotes
+    emoteSounds: FrogSpeechEmotes
     screamId: CreatureWhimper
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: ReplacementAccent
     accent: FrogAccent
   - type: AutoEmote
@@ -2543,7 +2687,7 @@
 
 # Would be cool to have some functionality for the parrot to be able to sit on stuff
 - type: entity
-  parent: [ SimpleMobBase, FlyingMobBase ]
+  parent: [ SimpleMobBase, FlyingMobBase, BaseSlicingRefinable, BaseMobDestructible ]
   id: MobParrotBase
   name: parrot
   abstract: true
@@ -2577,21 +2721,19 @@
         Base: dead
       Dead:
         Base: dead
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeat
       amount: 1
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   # begin starcup
   - type: Speech
     speechSounds: ParrotSpeechSounds
     speechVerb: Parrot
     allowedEmotes: ['CreatureScream', 'CreatureGrowl', 'CreatureSqueak', 'Flutter']
   - type: Vocal
-    sounds:
-      Unsexed: ParrotSpeechEmotes
+    emoteSounds: ParrotSpeechEmotes # starcup
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: Tag
     tags:
     - CreatureEmotes
@@ -2644,7 +2786,7 @@
 
 - type: entity
   name: penguin
-  parent: SimpleMobBase
+  parent: [SimpleMobBase, BaseSlicingRefinable, BaseMobDestructible]
   id: MobPenguin
   description: Their lives are constant pain due to their inner-body knees.
   components:
@@ -2674,12 +2816,10 @@
         Base: penguin_dead
       Dead:
         Base: penguin_dead
-  - type: Butcherable
-    butcheringType: Spike # starcup
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeatPenguin
       amount: 3
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-bird
@@ -2694,9 +2834,6 @@
   - type: NpcFactionMember
     factions:
     - Passive
-  - type: Temperature
-    currentTemperature: 310.15
-    specificHeat: 46
   - type: TemperatureDamage
     heatDamageThreshold: 335
     coldDamageThreshold: 230
@@ -2711,10 +2848,9 @@
     speechSounds: PenguinSpeechSounds
     allowedEmotes: ['CreatureScream', 'CreatureChitter']
   - type: Vocal
-    sounds:
-      Unsexed: PenguinSpeechEmotes
+    emoteSounds: PenguinSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: ReplacementAccent
     accent: PenguinAccent
   - type: AutoEmote
@@ -2801,7 +2937,7 @@
   # I have included a snake_hiss.ogg sound file so if you want to use that be my guest
 - type: entity
   name: snake
-  parent: SimpleMobBase
+  parent: [SimpleMobBase, BaseSlicingRefinable, BaseMobDestructible]
   id: MobSnake
   description: Hissss! Bites aren't poisonous.
   components:
@@ -2831,11 +2967,10 @@
         Base: dead
       Dead:
         Base: dead
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeatSnake
       amount: 1
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.6
     interactSuccessString: petting-success-reptile
@@ -2849,7 +2984,6 @@
       - ReagentId: Blood
         Quantity: 50
   - type: Damageable
-    damageContainer: Biological
     damageModifierSet: Scale
   # begin starcup
   - type: Speech
@@ -2857,10 +2991,9 @@
     speechVerb: Reptilian
     allowedEmotes: ['CreatureHiss']
   - type: Vocal
-    sounds:
-      Unsexed: SnakeSpeechEmotes
+    emoteSounds: SnakeSpeechEmotes
     screamId: CreatureHiss
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: ReplacementAccent
     accent: xeno
   - type: Tag
@@ -2874,7 +3007,7 @@
 # Code unique spider prototypes or combine them all into one spider and get a
 # random sprite state when you spawn it.
 - type: entity
-  parent: [ SimpleMobBase, BaseMobHemocyanin, MobCombat ]
+  parent: [ SimpleMobBase, BaseMobHemocyanin, MobCombat, BaseSlicingRefinable, MobNightVision, BaseMobDestructible ]
   id: MobSpiderBase
   abstract: true
   components:
@@ -2897,27 +3030,18 @@
         - MobMask
         layer:
         - MobLayer
-  - type: Butcherable
-    butcheringType: Spike # starcup
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeatSpider
       amount: 2
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: CombatMode
   - type: MobThresholds
     thresholds:
       0: Alive
       90: Dead
-  - type: SolutionContainerManager
+  - type: SolutionManager
     solutions:
-      melee:
-        maxVol: 30
-  - type: SolutionRegeneration
-    solution: melee
-    generated:
-      reagents:
-      - ReagentId: Mechanotoxin
-        Quantity: 1
+    - SolutionVenomSpider
   - type: MeleeChemicalInjector
     transferAmount: 0.75
     solution: melee
@@ -2945,11 +3069,10 @@
     speechSounds: Arachnid
     allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureClick', 'CreatureChitter'] # starcup
   - type: Vocal
-    sounds:
+    emoteSounds: SpiderSpeechEmotes # starcup
     # begin starcup
-      Unsexed: SpiderSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: AutoEmote
     emotes:
     - ChitterAutoEmote
@@ -2991,6 +3114,17 @@
     footstepSoundCollection:
       collection: FootstepGiantBug
   # end starcup
+
+- type: entity
+  parent: [SolutionWeapon, SolutionTiny]
+  id: SolutionVenomSpider
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SolutionRegeneration
+    generated:
+      reagents:
+      - ReagentId: Mechanotoxin
+        Quantity: 1
 
 - type: entity
   parent: MobSpiderBase
@@ -3068,7 +3202,7 @@
 
 - type: entity
   name: clown spider
-  parent: MobSpiderAngryBase
+  parent: [MobSpiderAngryBase, BaseSlicingRefinable]
   id: MobClownSpider
   description: Combines the two most terrifying things in existence, spiders and clowns.
   components:
@@ -3078,10 +3212,10 @@
       - map: ["enum.DamageStateVisualLayers.Base"]
         state: clown
         sprite: Mobs/Animals/clownspider.rsi
-    - type: Butcherable
-      spawned:
-        - id: MaterialBananium1
-          amount: 1
+    - type: ToolRefinable
+      refineResult:
+      - id: MaterialBananium1
+        amount: 1
     - type: DamageStateVisuals
       states:
         Alive:
@@ -3115,6 +3249,7 @@
         reagents:
         - ReagentId: Laughter
           Quantity: 150
+
 - type: entity
   name: wizard spider
   parent: MobGiantSpider
@@ -3129,7 +3264,7 @@
 
 - type: entity
   name: possum
-  parent: [SimpleMobBase, StripableInventoryBase]
+  parent: [SimpleMobBase, StripableInventoryBase, BaseSlicingRefinable, BaseMobDestructible]
   id: MobPossum
   description: '"O Possum! My Possum!" -- Walt Whitman, 1865'
   components:
@@ -3162,11 +3297,10 @@
         Base: possum_dead
       Dead:
         Base: possum_dead
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeat
       amount: 3
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.2 # Low when undomesticated.
     interactSuccessString: petting-success-possum # Possums don't really make much noise when they're happy. They make clicking noises as a mating call, but that is NOT the same thing!
@@ -3185,10 +3319,9 @@
     speechSounds: PossumSpeechSounds
     allowedEmotes: ['CreatureHiss', 'CreatureYawn', 'CreatureCough','CreatureChitter', 'CreatureGrowl', 'CreatureLaugh', 'CreatureSneeze']
   - type: Vocal
-    sounds:
-      Unsexed: PossumSpeechEmotes
+    emoteSounds: PossumSpeechEmotes
     screamId: CreatureHiss
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: ReplacementAccent
     accent: xeno
   - type: AutoEmote
@@ -3219,7 +3352,7 @@
 
 - type: entity
   name: raccoon
-  parent: [SimpleMobBase, StripableInventoryBase]
+  parent: [SimpleMobBase, StripableInventoryBase, BaseSlicingRefinable, BaseMobDestructible]
   id: MobRaccoon
   description: Trash panda!
   components:
@@ -3252,11 +3385,10 @@
         Base: raccoon_dead
       Dead:
         Base: raccoon_dead
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeat
       amount: 3
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.2 # Low when undomesticated.
     interactSuccessString: petting-success-soft-floofy
@@ -3278,10 +3410,9 @@
     speechSounds: RaccoonSpeechSounds
     allowedEmotes: ['CreatureScream', 'CreatureChitter', 'CreatureBark', 'CreatureWhimper', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
-    sounds:
-      Unsexed: RaccoonSpeechEmotes
+    emoteSounds: RaccoonSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: ReplacementAccent
     accent: RaccoonAccent
   - type: AutoEmote
@@ -3291,7 +3422,7 @@
 
 - type: entity
   name: fox
-  parent: [SimpleMobBase, StripableInventoryBase]
+  parent: [SimpleMobBase, StripableInventoryBase, BaseSlicingRefinable, BaseMobDestructible]
   id: MobFox
   description: They're a fox.
   components:
@@ -3331,11 +3462,10 @@
         Base: fox_dead
       Dead:
         Base: fox_dead
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeat
       amount: 3
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-soft-floofy
@@ -3379,10 +3509,9 @@
     speechSounds: FoxSpeechSounds
     allowedEmotes: ['CreatureScream', 'CreatureBark', 'CreatureWhimper', 'CreatureCough', 'Shake', 'CreatureSneeze']
   - type: Vocal
-    sounds:
-      Unsexed: FoxSpeechEmotes
+    emoteSounds: FoxSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: ReplacementAccent
     accent: FoxAccent
   - type: AutoEmote
@@ -3392,7 +3521,7 @@
 
 - type: entity
   abstract: true
-  parent: [SimpleMobBase, StripableInventoryBase]
+  parent: [SimpleMobBase, StripableInventoryBase, BaseMobDestructible]
   id: MobCorgiBase
   name: corgi
   description: Finally, a space corgi!
@@ -3410,10 +3539,9 @@
     speechSounds: DogSpeechSounds
     allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'CreatureCough', 'CreatureSneeze', 'Snuffle', 'Pant', 'Shake']
   - type: Vocal
-    sounds:
-      Unsexed: SmallDogSpeechEmotes
+    emoteSounds: SmallDogSpeechEmotes
     screamId: CreatureBark
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: ReplacementAccent
     accent: DogAccent
   - type: Tag
@@ -3436,7 +3564,28 @@
         - MobLayer
   - type: Inventory
     speciesId: dog
-    templateId: pet
+    templateId: Corgi
+    displacements:
+      belt:
+        sizeMaps:
+          32:
+            sprite: Mobs/Pets/displacements.rsi
+            state: corgi_belt_displacement
+      ears:
+        sizeMaps:
+          32:
+            sprite: Mobs/Pets/displacements.rsi
+            state: corgi_belt_displacement
+      head:
+        sizeMaps:
+          32:
+            sprite: Mobs/Pets/displacements.rsi
+            state: corgi_head_displacement
+      mask:
+        sizeMaps:
+          32:
+            sprite: Mobs/Pets/displacements.rsi
+            state: corgi_mask_displacement
   - type: InteractionPopup
     interactSuccessString: petting-success-dog
     interactFailureString: petting-failure-generic
@@ -3458,7 +3607,7 @@
   #    state: creampie_corgi
 
 - type: entity
-  parent: MobCorgiBase
+  parent: [MobCorgiBase, BaseSlicingRefinable]
   id: MobCorgi
   components:
   - type: DamageStateVisuals
@@ -3469,11 +3618,10 @@
         Base: corgi_dead
       Dead:
         Base: corgi_dead
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeat
       amount: 2
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   # begin starcup: all this made irrelevant by modifying MobCorgiBase
   #- type: ReplacementAccent
     #accent: dog
@@ -3532,11 +3680,9 @@
       - ReagentId: DemonsBlood
         Quantity: 150
   - type: Damageable
-    damageContainer: BiologicalMetaphysical
     damageModifierSet: Infernal
-  - type: Temperature
-    currentTemperature: 310.15
-    specificHeat: 42
+  - type: Injurable
+    damageContainer: BiologicalMetaphysical
   - type: TemperatureDamage
     heatDamageThreshold: 4000 #They come from hell, so..
     coldDamageThreshold: 260
@@ -3552,8 +3698,7 @@
     speechSounds: HellhoundSpeechSounds
     allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'Snuffle', 'Pant', 'Shake']
   - type: Vocal
-    sounds:
-      Unsexed: SmallHellhoundSpeechEmotes
+    emoteSounds: SmallHellhoundSpeechEmotes
   # end starcup
 
 - type: entity
@@ -3588,15 +3733,14 @@
     speechSounds: PuppySpeechSounds
     allowedEmotes: ['CreatureBark', 'CreatureWhimper', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze', 'Snuffle', 'Pant', 'Shake']
   - type: Vocal
-    sounds:
-      Unsexed: PuppySpeechEmotes
+    emoteSounds: PuppySpeechEmotes
     screamId: CreatureBark
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   # end starcup
 
 - type: entity
   name: cat
-  parent: [SimpleMobBase, StripableInventoryBase]
+  parent: [SimpleMobBase, StripableInventoryBase, BaseSlicingRefinable, BaseMobDestructible]
   id: MobCat
   description: Feline pet, very funny.
   components:
@@ -3635,19 +3779,17 @@
     speechVerb: SmallMob
     allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
-    sounds:
-      Unsexed: CatSpeechEmotes
+    emoteSounds: CatSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: AutoEmote
     emotes:
     - MeowAutoEmote
   # end starcup
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeat
       amount: 3
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
     accent: cat
   - type: InteractionPopup
@@ -3781,7 +3923,7 @@
 - type: entity
   name: space cat
   id: MobCatSpace
-  parent: MobCat
+  parent: [MobCat, BaseSlicingRefinable]
   description: Feline pet, prepared for the worst.
   components:
   - type: Sprite
@@ -3805,7 +3947,9 @@
       - DoorBumpOpener
       - CreatureEmotes # starcup
   - type: MovementAlwaysTouching
-  - type: PressureImmunity
+  - type: PermanentStatusEffects
+    statusEffects:
+    - StatusEffectPressureImmunity
   - type: ProtectedFromStepTriggers
   - type: Insulated
   - type: InteractionPopup
@@ -3831,12 +3975,12 @@
   name: caracal cat
   id: MobCatCaracal
   parent: MobCat
-  description: Hilarious.
+  description: A medium feline accustomed to living in sparse, dry environments. # starcup: changed for tone.
   components:
   - type: Sprite
     sprite: Mobs/Pets/caracal.rsi
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
+    - map: ["enum.DamageStateVisualLayers.Base", "sleeping"] # starcup: added sleeping layer
       state: caracal_flop
   - type: DamageStateVisuals
     states:
@@ -3846,20 +3990,25 @@
         Base: caracal_dead
       Dead:
         Base: caracal_dead
-  # begin starcup: disable sprite change as there is not a resting sprite for caracal cats
+  # begin starcup: added resting sprite for caracal cats
   - type: Rest
-    sleepingLayers: {}
-    awakeLayers: {}
+    sleepingLayers:
+      sleeping:
+        sprite: _starcup/Mobs/Animals/Felines/caracal.rsi
+        state: caracal_rest
+    awakeLayers:
+      sleeping:
+        sprite: Mobs/Pets/caracal.rsi
+        state: caracal_flop
   # starcup: give caracals their own sounds
   - type: Speech
     speechSounds: CaracalSpeechSounds
     speechVerb: SmallMob
     allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
-    sounds:
-      Unsexed: CaracalSpeechEmotes
+    emoteSounds: CaracalSpeechEmotes
     screamId: CreatureHiss
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   # end starcup
 
 - type: entity
@@ -3880,11 +4029,10 @@
         Base: kitten_dead
       Dead:
         Base: kitten_dead
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeat
       amount: 1
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: MobPrice
     price: 100
   - type: MeleeWeapon
@@ -3908,15 +4056,14 @@
     speechVerb: SmallMob
     allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureSneeze']
   - type: Vocal
-    sounds:
-      Unsexed: KittenSpeechEmotes
+    emoteSounds: KittenSpeechEmotes
     screamId: CreatureWhimper
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   # end starcup
 
 - type: entity
   name: sloth
-  parent: [SimpleMobBase, StripableInventoryBase]
+  parent: [SimpleMobBase, StripableInventoryBase, BaseSlicingRefinable, BaseMobDestructible]
   id: MobSloth
   description: Very slow animal. For people with low energy.
   components:
@@ -3952,11 +4099,10 @@
         Base: sloth_dead
       Dead:
         Base: sloth_dead
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeat
       amount: 3
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.9
     interactSuccessString: petting-success-sloth
@@ -3980,10 +4126,9 @@
     speechVerb: SilentVerb
     allowedEmotes: ['CreatureBark', 'CreatureScream', 'CreatureSqueak', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
-    sounds:
-      Unsexed: SlothSpeechEmotes
+    emoteSounds: SlothSpeechEmotes
     screamId: CreatureSqueak
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: AutoEmote
     emotes:
     - SqueakAutoEmote
@@ -3992,7 +4137,7 @@
 
 - type: entity
   name: ferret
-  parent: [SimpleMobBase, StripableInventoryBase]
+  parent: [SimpleMobBase, StripableInventoryBase, BaseSlicingRefinable, BaseMobDestructible]
   id: MobFerret
   description: Just a silly little guy!
   components:
@@ -4025,11 +4170,10 @@
         Base: ferret_dead
       Dead:
         Base: ferret_dead
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeat
       amount: 3
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: InteractionPopup
     successChance: 0.8
     interactDelay: 1.5 # Avoids overlapping SFX due to spam - these SFX are a little longer than the typical 1 second.
@@ -4055,14 +4199,13 @@
     allowedEmotes: ['CreatureSqueak', 'CreatureWhimper', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
     screamId: CreatureWhimper
-    screamAction: ActionEmitSound
-    sounds:
-      Unsexed: FerretSpeechEmotes
+    emoteAction: ActionEmitSound
+    emoteSounds: FerretSpeechEmotes
   # end starcup
 
 - type: entity
   name: hamster
-  parent: [ SimpleMobBase, MobCombat, StripableInventoryBase]
+  parent: [ SimpleMobBase, MobCombat, StripableInventoryBase, BaseSlicingRefinable, MobNightVision]
   id: MobHamster
   description: A cute, fluffy, robust hamster.
   components:
@@ -4080,10 +4223,9 @@
     speechVerb: SmallMob
     allowedEmotes: ['CreatureSqueak', 'CreaturePurr', 'CreatureTrill', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
-    sounds:
-      Unsexed: HamsterSpeechEmotes
+    emoteSounds: HamsterSpeechEmotes
     screamId: CreatureTrill
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: TypingIndicator
     proto: rodentia
   # end starcup
@@ -4147,25 +4289,26 @@
   - type: FlavorProfile
     flavors:
     - meaty
-  - type: Hunger
-    baseDecayRate: 0.05 # starcup: was 0.3
+  - type: Satiation
+    satiations:
+      Hunger:
+        prototype: HamsterHunger
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 10
-        - ReagentId: Blood
-          Quantity: 55
-        - ReagentId: Fat
-          Quantity: 5
-  - type: Butcherable
-    spawned:
+  - type: Solution
+    id: food
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 10
+      - ReagentId: Blood # TODO Instead of this, eat from the bloodstream directly
+        Quantity: 55
+      - ReagentId: Fat
+        Quantity: 5
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeat
       amount: 1
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: ReplacementAccent
     accent: HamsterAccent # starcup
   - type: Tag
@@ -4228,7 +4371,7 @@
 
 - type: entity
   name: pig
-  parent: [SimpleMobBase, StripableInventoryBase]
+  parent: [SimpleMobBase, StripableInventoryBase, BaseSlicingRefinable, BaseMobDestructible]
   id: MobPig
   description: Oink.
   components:
@@ -4259,6 +4402,7 @@
     - VimPilot
     - CreatureEmotes # starcup
   - type: Reproductive
+    minHungerThreshold: Peckish
     partnerWhitelist:
       tags:
       - Pig
@@ -4273,12 +4417,10 @@
         Base: dead
       Dead:
         Base: dead
-  - type: Butcherable
-    butcheringType: Spike # starcup
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeatBacon
       amount: 6
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Grammar
     attributes:
       gender: epicene
@@ -4304,10 +4446,9 @@
     speechSounds: PigSpeechSounds
     allowedEmotes: ['CreatureScream', 'CreatureCough', 'CreatureOink', 'CreatureSneeze']
   - type: Vocal
-    sounds:
-      Unsexed: PigSpeechEmotes
+    emoteSounds: PigSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: AutoEmote
     emotes:
     - OinkAutoEmote
@@ -4315,7 +4456,7 @@
 
 - type: entity
   name: diona nymph
-  parent: [BaseMobAnimal, SimpleMobBase, StripableInventoryBase]
+  parent: [BaseMobAnimal, SimpleMobBase, StripableInventoryBase, BaseSlicingRefinable, BaseMobDestructible]
   id: MobDionaNymph
   description: It's like a cat, only.... branch-ier.
   components:
@@ -4353,8 +4494,8 @@
         Base: nymph_sleep
       Dead:
         Base: nymph_dead
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: MaterialWoodPlank1
       amount: 2
   - type: InteractionPopup
@@ -4380,10 +4521,9 @@
     speechSounds: NymphSpeechSounds
     allowedEmotes: ['CreatureChirp', 'CreatureLaugh', 'CreatureChitter', 'BuzzNonSilicon']
   - type: Vocal
-    sounds:
-      Unsexed: NymphSpeechEmotes
+    emoteSounds: NymphSpeechEmotes # starcup
     screamId: CreatureChirp
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepBug
@@ -4414,7 +4554,7 @@
 
 - type: entity
   name: reindeer buck
-  parent: [ SimpleMobBase, MobCombat ]
+  parent: [ SimpleMobBase, MobCombat, BaseSlicingRefinable, BaseMobDestructible ]
   id: MobReindeerBuck
   description: You think it can pull a sleigh?
   components:
@@ -4451,12 +4591,10 @@
         Base: reindeer_buck_dead
       Dead:
         Base: reindeer_buck_dead
-  - type: Butcherable
-    butcheringType: Spike # starcup
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeat
       amount: 4
-    dropOrgansOnButcher: true # starcup: butchering gives organs
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
@@ -4487,10 +4625,9 @@
     speechSounds: DeerSpeechSounds
     allowedEmotes: ['CreatureScream', 'CreatureBark', 'CreatureCough']
   - type: Vocal
-    sounds:
-      Unsexed: DeerSpeechEmotes
+    emoteSounds: DeerSpeechEmotes
     screamId: CreatureScream
-    screamAction: ActionEmitSound
+    emoteAction: ActionEmitSound
   - type: ReplacementAccent
     accent: DeerAccent
   - type: FootstepModifier
@@ -4532,80 +4669,3 @@
         Base: reindeer_doe_dead
       Dead:
         Base: reindeer_doe_dead
-
-- type: entity
-  parent: MobCorgiBase
-  id: MobCorgiSmart
-  name: smart corgi
-  description: An unusually smart dog.
-  components:
-  # Use corgi sprite, need to add handcuff layer
-  - type: Sprite
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: corgi
-    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
-      color: "#ffffff"
-      sprite: Objects/Misc/handcuffs.rsi # Would do a custom dog handcuff sprite but unfortunately handcuffs have their overlay baked-in to the cuff itself so this is mostly filler
-      state: body-overlay-2
-      visible: false
-  - type: UserInterface
-    interfaces:
-      enum.StrippingUiKey.Key:
-        type: StrippableBoundUserInterface
-      enum.StorageUiKey.Key:
-        type: StorageBoundUserInterface
-  # Custom inventory template
-  - type: Inventory
-    speciesId: dog
-    templateId: SmartCorgi
-    displacements:
-      belt:
-        sizeMaps:
-          32:
-            sprite: Mobs/Pets/displacements.rsi
-            state: corgi_belt_displacement
-      ears:
-        sizeMaps:
-          32:
-            sprite: Mobs/Pets/displacements.rsi
-            state: corgi_belt_displacement
-      head:
-        sizeMaps:
-          32:
-            sprite: Mobs/Pets/displacements.rsi
-            state: corgi_head_displacement
-  - type: Hands # HANDS!
-    activeHandId: Right
-    hands:
-      Right:
-        location: Right
-      Left:
-        location: Left
-  - type: Puller
-  - type: Cuffable # bad dog!
-  - type: BlockWriting # dogs can't write, paws unwieldy; mouth-writing is a myth
-  - type: Stripping
-  - type: ComplexInteraction
-  # Implement custom borgi body type
-  - type: RotationVisuals
-    defaultRotation: 90
-    horizontalRotation: 180
-  - type: Grammar
-    attributes:
-      gender: epicene # Gender neutral
-      proper: true
-  - type: Tag
-    tags:
-    - VimPilot
-    - CanPilot
-    - DoorBumpOpener
-    - CreatureEmotes # starcup
-  - type: StatusIcon
-    bounds: -0.5,-0.5,0.5,0.5
-  - type: JobStatus # marks them as crew
-  - type: NpcFactionMember
-    factions:
-    - NanoTrasen
-  - type: ItemOffer # starcup: item offering
-

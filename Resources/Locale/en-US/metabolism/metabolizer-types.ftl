@@ -10,3 +10,4 @@ metabolizer-type-dwarf = Dwarf
 # starcup: rename moth people to dopterae
 metabolizer-type-moth = Doptera
 metabolizer-type-arachnid = Arachnid
+metabolizer-type-changeling = Changeling

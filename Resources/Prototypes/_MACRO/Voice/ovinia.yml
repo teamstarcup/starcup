@@ -1,0 +1,103 @@
+- type: speechVerb
+  id: Ovinia
+  name: chat-speech-verb-name-ovinia
+  speechVerbStrings:
+  - chat-speech-verb-ovinia-1
+  - chat-speech-verb-ovinia-2
+  - chat-speech-verb-ovinia-3
+  - chat-speech-verb-ovinia-4
+
+- type: speechSounds
+  id: OviniaSpeechSounds # starcup: naming consistency, and easier id to search for
+  saySound:
+    path: /Audio/_MACRO/Voice/Ovinia/ovinia_say.ogg
+  askSound:
+    path: /Audio/_MACRO/Voice/Ovinia/ovinia_ask.ogg
+  exclaimSound:
+    path: /Audio/_MACRO/Voice/Ovinia/ovinia_exclaim.ogg
+
+- type: emoteSounds
+  id: MaleOvinia
+  voiceSelectorName: humanoid-profile-editor-voice-masculine # starcup
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: GoatScream # starcup
+    Laugh:
+      collection: MaleLaugh
+    Sneeze:
+      path: /Audio/_starcup/Animals/Goat/goat_sneeze.ogg # starcup
+    Cough:
+      path: /Audio/_starcup/Animals/Goat/goat_sneeze.ogg # starcup
+    Yawn:
+      collection: MaleYawn
+    Snore:
+      collection: Snores
+    #Honk:
+      #collection: BikeHorn
+    Sigh:
+      collection: MaleSigh
+    Crying:
+      collection: MaleCry
+    Whistle:
+      collection: Whistles
+    # begin starcup: we consider weh and hew to be lizard emotes
+    #Weh:
+      #collection: Weh
+    #Hew:
+      #collection: Hew
+    Baa:
+      collection: GoatSpeech
+    Moo:
+      collection: OviniaMoo
+    Bark:
+      collection: DeerBarks
+    Snort:
+      path: /Audio/_starcup/Animals/chuff.ogg
+    # end starcup
+    Gasp:
+      collection: MaleGasp
+    DefaultDeathgasp:
+      collection: MaleDeathGasp
+
+- type: emoteSounds
+  id: FemaleOvinia
+  voiceSelectorName: humanoid-profile-editor-voice-feminine
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: GoatScream # starcup
+    Laugh:
+      collection: FemaleLaugh
+    # begin starcup:
+    Sneeze:
+      path: /Audio/_starcup/Animals/Goat/goat_sneeze.ogg
+    Cough:
+      path: /Audio/_starcup/Animals/Goat/goat_sneeze.ogg
+    # end starcup
+    Yawn:
+      collection: FemaleYawn
+    Snore: # starcup
+      collection: Snores
+    Sigh:
+      collection: FemaleSigh
+    Crying:
+      collection: FemaleCry
+    # begin starcup:
+    Whistle:
+      collection: Whistles
+    Baa:
+      collection: GoatSpeech
+    Moo:
+      collection: OviniaMoo
+    Bark:
+      collection: DeerBarks
+    Snort:
+      path: /Audio/_starcup/Animals/chuff.ogg
+    # end starcup
+    Gasp:
+      collection: FemaleGasp
+    DefaultDeathgasp:
+      collection: FemaleDeathGasp

@@ -11,14 +11,13 @@ using Robust.Shared.Map.Components;
 
 namespace Content.Shared._starcup.Tools.Systems;
 
-public abstract class SharedScrubTileToolSystem : EntitySystem
+public abstract partial class SharedScrubTileToolSystem : EntitySystem
 {
-    [Dependency] private readonly IMapManager _mapManager = default!;
-    [Dependency] private readonly SharedMapSystem _maps = default!;
-    [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
-    [Dependency] private readonly TurfSystem _turfs = default!;
-    [Dependency] private readonly SharedInteractionSystem _interactionSystem = default!;
-    [Dependency] private readonly SharedToolSystem _toolSystem = default!;
+    [Dependency] private SharedMapSystem _maps = default!;
+    [Dependency] private SharedTransformSystem _transformSystem = default!;
+    [Dependency] private TurfSystem _turfs = default!;
+    [Dependency] private SharedInteractionSystem _interactionSystem = default!;
+    [Dependency] private SharedToolSystem _toolSystem = default!;
 
     private const string ScrubQuality = "Brushing";
 
@@ -45,7 +44,7 @@ public abstract class SharedScrubTileToolSystem : EntitySystem
         if (!HasScrubQuality(tool))
             return false;
 
-        if (!_mapManager.TryFindGridAt(_transformSystem.ToMapCoordinates(clickedCoords), out var gridUid, out var mapGrid))
+        if (!_maps.TryFindGridAt(_transformSystem.ToMapCoordinates(clickedCoords), out var gridUid, out var mapGrid))
             return false;
 
         var tileRef = _maps.GetTileRef(gridUid, mapGrid, clickedCoords);
@@ -79,12 +78,10 @@ public abstract class SharedScrubTileToolSystem : EntitySystem
             Log.Error("Attempted to scrub a tile on a non-existant grid?");
             return;
         }
-        if (!TryComp<DecalGridComponent>(gridUid, out var decalGrid))
-            return;
 
         var tileRef = _maps.GetTileRef(gridUid, grid, args.GridTile);
 
-        if (!TryDoScrub(tileRef, grid, decalGrid))
+        if (!TryDoScrub(tileRef, grid))
             return;
 
         args.Handled = true;
@@ -98,7 +95,7 @@ public abstract class SharedScrubTileToolSystem : EntitySystem
         return qualities.Contains(ScrubQuality);
     }
 
-    public virtual bool TryDoScrub(TileRef tileRef, MapGridComponent grid, DecalGridComponent decalGrid)
+    public virtual bool TryDoScrub(TileRef tileRef, MapGridComponent grid)
     {
         // Don't bother on the client, decals only remove on the server
         return true;

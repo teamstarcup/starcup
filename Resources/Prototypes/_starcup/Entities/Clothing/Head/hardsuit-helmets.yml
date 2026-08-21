@@ -76,8 +76,7 @@
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
   - type: TemperatureProtection
-    heatingCoefficient: 0.005
-    coolingCoefficient: 0.005
+    coefficient: 0.005 # this is better than TemperatureProtectionGreat
   - type: FireProtection
     reduction: 0.2
   - type: Armor

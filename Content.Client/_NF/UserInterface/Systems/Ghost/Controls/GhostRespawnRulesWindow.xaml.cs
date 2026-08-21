@@ -11,8 +11,8 @@ namespace Content.Client._NF.UserInterface.Systems.Ghost.Controls
     [GenerateTypedNameReferences]
     public sealed partial class GhostRespawnRulesWindow : FancyWindow
     {
-        [Dependency] private readonly IConfigurationManager _cfgManager = default!; // starcup
-        
+        [Dependency] private IConfigurationManager _cfgManager = default!; // starcup
+
         public PanelContainer RulesContainer => TextContainer;
         public RichTextLabel RulesLabel = new() { Margin = new Thickness(5, 5, 5, 5) };
         public Button RespawnButton => ConfirmRespawnButton;

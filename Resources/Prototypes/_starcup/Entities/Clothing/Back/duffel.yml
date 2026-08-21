@@ -74,3 +74,280 @@
     sprite: _starcup/Clothing/Back/Duffels/syndcomm.rsi
   - type: ClothingSpeedModifier
     sprintModifier: 1  # no penalty
+
+# Color variants
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelBlue
+  name: blue duffel bag
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+        color: "#4694d2"
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+        color: "#4694d2"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+        color: "#4694d2"
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/duffel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#4694d2"
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelBrown
+  name: brown duffel bag
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+        color: "#8e7167"
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+        color: "#8e7167"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+        color: "#8e7167"
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/duffel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#8e7167"
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelGreen
+  name: green duffel bag
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+        color: "#838e49"
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+        color: "#838e49"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+        color: "#838e49"
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/duffel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#838e49"
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelOrange
+  name: orange duffel bag
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+        color: "#f7742a"
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+        color: "#f7742a"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+        color: "#f7742a"
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/duffel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#f7742a"
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelPink
+  name: pink duffel bag
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+        color: "#d69aaa"
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+        color: "#d69aaa"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+        color: "#d69aaa"
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/duffel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#d69aaa"
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelPurple
+  name: purple duffel bag
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+        color: "#8362ac"
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+        color: "#8362ac"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+        color: "#8362ac"
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/duffel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#8362ac"
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelRed
+  name: red duffel bag
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+        color: "#f72216"
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+        color: "#f72216"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+        color: "#f72216"
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/duffel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#f72216"
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelTeal
+  name: teal duffel bag
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+        color: "#40bdc7"
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+        color: "#40bdc7"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+        color: "#40bdc7"
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/duffel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#40bdc7"
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelYellow
+  name: yellow duffel bag
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+        color: "#f2c641"
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+        color: "#f2c641"
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+        color: "#f2c641"
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/duffel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored
+      color: "#f2c641"
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelWhite
+  name: white duffel bag
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left_colored
+      right:
+      - state: inhand-right
+      - state: inhand-right_colored
+  - type: Clothing
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK_colored
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/duffel_colorable.rsi
+    layers:
+    - state: icon
+    - state: icon_colored

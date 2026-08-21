@@ -18,18 +18,18 @@ namespace Content.Server.StationEvents.Events;
 /// <remarks>
 /// starcup: DeltaV modified the upstream file but we want both event variants, so DeltaV's VentCrittersRule -> VentCrittersRuleLocalized and is moved here
 /// </remarks>
-public sealed class VentCrittersRuleLocalized : StationEventSystem<VentCrittersRuleLocalizedComponent> // starcup: VentCrittersRule -> VentCrittersRuleLocalized
+public sealed partial class VentCrittersRuleLocalized : StationEventSystem<VentCrittersRuleLocalizedComponent> // starcup: VentCrittersRule -> VentCrittersRuleLocalized
 {
     /*
      * DO NOT COPY PASTE THIS TO MAKE YOUR MOB EVENT.
      * USE THE PROTOTYPE.
      */
 
-    [Dependency] private readonly AntagSelectionSystem _antag = default!;
-    [Dependency] private readonly EntityTableSystem _entityTable = default!;
-    [Dependency] private readonly ISharedPlayerManager _player = default!;
-    [Dependency] private readonly NavMapSystem _navMap = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private AntagSelectionSystem _antag = default!;
+    [Dependency] private EntityTableSystem _entityTable = default!;
+    [Dependency] private ISharedPlayerManager _player = default!;
+    [Dependency] private NavMapSystem _navMap = default!;
+    [Dependency] private SharedTransformSystem _transform = default!;
 
     private List<EntityCoordinates> _locations = new();
 
@@ -59,7 +59,7 @@ public sealed class VentCrittersRuleLocalized : StationEventSystem<VentCrittersR
         if (comp.Location is not {} coords)
             return;
 
-        var players = _antag.GetTotalPlayerCount(_player.Sessions);
+        var players = _antag.GetActivePlayerCount(_player.Sessions);
         var min = comp.Min * players / comp.PlayerRatio;
         var max = comp.Max * players / comp.PlayerRatio;
         var count = Math.Max(RobustRandom.Next(min, max), 1);

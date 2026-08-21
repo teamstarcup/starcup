@@ -2,9 +2,9 @@ using Content.Shared.StatusEffectNew;
 
 namespace Content.Shared._starcup.StatusEffectsNew;
 
-public sealed class ComponentStatusEffectSystem : EntitySystem
+public sealed partial class ComponentStatusEffectSystem : EntitySystem
 {
-    [Dependency] private readonly IComponentFactory _componentFactory = default!;
+    [Dependency] private IComponentFactory _componentFactory = default!;
 
     public override void Initialize()
     {

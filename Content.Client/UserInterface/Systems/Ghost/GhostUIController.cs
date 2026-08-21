@@ -3,20 +3,22 @@ using Content.Client.Ghost;
 using Content.Client.UserInterface.Systems.Gameplay;
 using Content.Client.UserInterface.Systems.Ghost.Widgets;
 using Content.Shared.Ghost;
-using Robust.Shared.Console; // Frontier
+using Content.Shared.Ghost.Components;
+using Content.Shared.Ghost.Systems;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
 using Content.Shared._Corvax.Respawn; // Frontier
 using Robust.Shared.Configuration; // Frontier
+using Robust.Shared.Console; // Frontier
 
 namespace Content.Client.UserInterface.Systems.Ghost;
 
 // TODO hud refactor BEFORE MERGE fix ghost gui being too far up
-public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSystem>
+public sealed partial class GhostUIController : UIController, IOnSystemChanged<GhostSystem>
 {
-    [Dependency] private readonly IEntityNetworkManager _net = default!;
-    [Dependency] private readonly IConsoleHost _consoleHost = default!; // Frontier
-    // [Dependency] private readonly IConfigurationManager _cfg = default!; // Frontier // starcup - remove unused
+    [Dependency] private IEntityNetworkManager _net = default!;
+    [Dependency] private IConsoleHost _consoleHost = default!; // Frontier
+    // [Dependency] private IConfigurationManager _cfg = default!; // Frontier // starcup - remove unused
 
     [UISystemDependency] private readonly GhostSystem? _system = default;
 
@@ -145,6 +147,18 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         _net.SendSystemNetworkMessage(msg);
     }
 
+    private void OnWarpToRandomFollowedClicked()
+    {
+        var msg = new WarpToRandomFollowedRequestEvent();
+        _net.SendSystemNetworkMessage(msg);
+    }
+
+    private void OnWarpToRandomClicked()
+    {
+        var msg = new WarpToRandomRequestEvent();
+        _net.SendSystemNetworkMessage(msg);
+    }
+
     public void LoadGui()
     {
         if (Gui == null)
@@ -155,6 +169,8 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         Gui.GhostRolesPressed += GhostRolesPressed;
         Gui.TargetWindow.WarpClicked += OnWarpClicked;
         Gui.TargetWindow.OnGhostnadoClicked += OnGhostnadoClicked;
+        Gui.TargetWindow.OnWarpToRandomFollowedClicked += OnWarpToRandomFollowedClicked;
+        Gui.TargetWindow.OnWarpToRandomClicked += OnWarpToRandomClicked;
         Gui.GhostRespawnPressed += GuiOnGhostRespawnPressed; // Frontier
 
         UpdateGui();

@@ -9,11 +9,11 @@ using Robust.Shared.Timing;
 
 namespace Content.Client._starcup.MKC;
 
-public sealed class PowerCoreSystem : SharedPowerCoreSystem
+public sealed partial class PowerCoreSystem : SharedPowerCoreSystem
 {
-    [Dependency] private readonly IPlayerManager _player = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly AlertsSystem _alerts = default!;
+    [Dependency] private IPlayerManager _player = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private AlertsSystem _alerts = default!;
 
     private static readonly TimeSpan AlertUpdateDelay = TimeSpan.FromSeconds(0.5f);
     private TimeSpan _nextAlertUpdate = TimeSpan.Zero;

@@ -1,37 +1,12 @@
 - type: entity
   parent: BaseWall
-  id: WallBrambleGreenThick
-  name: thick brambles
-  suffix: green
-  description: These tough vines have grown tightly intertwined, blocking all sight of what's beyond.
+  abstract: true
+  id: BaseWallBramble
   components:
   - type: Damageable
-    damageContainer: StructuralInorganic
     damageModifierSet: WoodenStructure
-  - type: Sprite
-    sprite: _starcup/Structures/Walls/flora_bramble_wall_green_thick.rsi
-  - type: Icon
-    sprite: _starcup/Structures/Walls/flora_bramble_wall_green_thick.rsi
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 150
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          path: /Audio/_starcup/Effects/branch_break.ogg
-          params:
-            volume: 3
-            variation: 0.05
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          WallBrambleGreen:
-            min: 1
-            max: 1
-        offset: 0
+  - type: Injurable
+    damageContainer: StructuralInorganic
   - type: IconSmooth
     key: brambles
     base: wood
@@ -63,8 +38,41 @@
         Piercing: 1
     interactSound: /Audio/_starcup/Effects/hit_needle.ogg
 
+
 - type: entity
-  parent: WallBrambleGreenThick
+  parent: BaseWallBramble
+  id: WallBrambleGreenThick
+  name: thick brambles
+  suffix: green
+  description: These tough vines have grown tightly intertwined, blocking all sight of what's beyond.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Walls/flora_bramble_wall_green_thick.rsi
+  - type: Icon
+    sprite: _starcup/Structures/Walls/flora_bramble_wall_green_thick.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_starcup/Effects/branch_break.ogg
+          params:
+            volume: 3
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          WallBrambleGreen:
+            min: 1
+            max: 1
+        offset: 0
+
+- type: entity
+  parent: BaseWallBramble
   id: WallBrambleGreen
   name: brambles
   suffix: green
@@ -98,7 +106,7 @@
     enabled: false
 
 - type: entity
-  parent: WallBrambleGreenThick
+  parent: BaseWallBramble
   id: WallBrambleBrownThick
   suffix: brown
   components:
@@ -158,7 +166,7 @@
         offset: 0
 
 - type: entity
-  parent: WallBrambleGreenThick
+  parent: BaseWallBramble
   id: WallBramblePurpleThick
   suffix: purple
   components:

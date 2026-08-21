@@ -72,10 +72,6 @@
   - type: StatusEffects
     allowed:
     - Electrocution
-    - RatvarianLanguage
-    - PressureImmunity
-    - Muted
-    - TemporaryBlindness
     - Pacified
     - Flashed
     - Adrenaline
@@ -142,10 +138,7 @@
     speechSounds: Alto
   - type: DamageForceSay
   - type: Vocal
-    sounds:
-      Male: MaleHuman
-      Female: FemaleHuman
-      Unsexed: MaleHuman
+    emoteSounds: MaleHuman
   - type: Emoting
   - type: BodyEmotes
     soundsId: GeneralBodyEmotes
@@ -175,12 +168,19 @@
   - MobAtmosStandard
   - MobFlammable
   - BaseSpeciesMob
+  - BaseMobDestructible
+  - BaseHungerSlowdown
+  - BaseThirstSlowdown
   id: BaseSpeciesMobOrganic
   save: false
   components:
   # starcup: reminder that all updates to these components should be mirrored to BaseSpeciesMobSilicon!
-  - type: Hunger
-  - type: Thirst
+  - type: Satiation
+    satiations:
+      Hunger:
+        prototype: NormalSatiationHunger
+      Thirst:
+        prototype: NormalSatiationThirst
   - type: Barotrauma
     damage:
       types:
@@ -198,11 +198,9 @@
   - type: Fingerprint
   - type: Blindable
   - type: Temperature
-    currentTemperature: 310.15
-    specificHeat: 42
   - type: TemperatureDamage
     heatDamageThreshold: 325
-    coldDamageThreshold: 260
+    coldDamageThreshold: 273.15
     coldDamage:
       types:
         Cold: 0.1 #per second, scales with temperature & other constants
@@ -226,7 +224,6 @@
     rotAfter: 1200 # starcup: increase time to rot from 10 minutes to 20
   # begin starcup: people are not food
   # - type: Butcherable
-  #   butcheringType: Spike
   #   spawned:
   #     - id: FoodMeat
   #       amount: 5

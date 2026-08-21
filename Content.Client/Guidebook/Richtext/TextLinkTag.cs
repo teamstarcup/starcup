@@ -1,4 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.CodeAnalysis;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
@@ -10,9 +10,9 @@ using Content.Client.UserInterface.ControlExtensions;
 namespace Content.Client.Guidebook.RichText;
 
 [UsedImplicitly]
-public sealed class TextLinkTag : IMarkupTagHandler
+public sealed partial class TextLinkTag : IMarkupTagHandler // starcup: partial
 {
-    [Dependency] private readonly IUriOpener _uriOpener = null!;  // starcup: IUriOpener dependency for web hyperlinks
+    [Dependency] private IUriOpener _uriOpener = null!;  // starcup: IUriOpener dependency for web hyperlinks
 
     public static Color LinkColor => Color.CornflowerBlue;
 

@@ -13,16 +13,17 @@ using Robust.Shared.Player; // Frontier
 using Content.Shared.Ghost; // Frontier
 using Content.Server.Administration.Managers; // Frontier
 using Content.Server.Administration; // Frontier
-using Content.Shared.GameTicking; // Frontier
+using Content.Shared.GameTicking;
+using Content.Shared.Ghost.Components; // Frontier
 
 namespace Content.Server._Corvax.Respawn;
 
-public sealed class RespawnSystem : EntitySystem
+public sealed partial class RespawnSystem : EntitySystem
 {
-    [Dependency] private readonly IPlayerManager _player = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IAdminManager _admin = default!;
+    [Dependency] private IPlayerManager _player = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private IAdminManager _admin = default!;
 
     private float _respawnTime = 0f;
 

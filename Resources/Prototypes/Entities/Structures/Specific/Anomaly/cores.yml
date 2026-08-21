@@ -51,7 +51,7 @@
     ignited: true
   - type: Summonable # imp
     requiresBibleUser: false
-    specialItem: SpawnPointGhostAnomalitePyroclastic
+    summonEntity: SpawnPointGhostAnomalitePyroclastic
 
 - type: entity
   parent: BaseAnomalyCore
@@ -67,7 +67,7 @@
     castShadows: false
   - type: Summonable # imp
     requiresBibleUser: false
-    specialItem: SpawnPointGhostAnomaliteGravity
+    summonEntity: SpawnPointGhostAnomaliteGravity
 
 - type: entity
   parent: BaseAnomalyCore
@@ -83,7 +83,7 @@
     castShadows: false
   - type: Summonable # imp
     requiresBibleUser: false
-    specialItem: SpawnPointGhostAnomaliteIce
+    summonEntity: SpawnPointGhostAnomaliteIce
 
 - type: entity
   parent: BaseAnomalyCore
@@ -100,7 +100,7 @@
     castShadows: false
   - type: Summonable # imp
     requiresBibleUser: false
-    specialItem: SpawnPointGhostAnomaliteFlesh
+    summonEntity: SpawnPointGhostAnomaliteFlesh
 
 - type: entity
   parent: BaseAnomalyCore
@@ -116,7 +116,7 @@
     castShadows: false
   - type: Summonable # imp
     requiresBibleUser: false
-    specialItem: SpawnPointGhostAnomaliteRock
+    summonEntity: SpawnPointGhostAnomaliteRock
 
 - type: entity
   parent: BaseAnomalyCore
@@ -132,7 +132,7 @@
     castShadows: false
   - type: Summonable # imp
     requiresBibleUser: false
-    specialItem: SpawnPointGhostAnomaliteLiquid
+    summonEntity: SpawnPointGhostAnomaliteLiquid
 
 - type: entity
   parent: BaseAnomalyCore
@@ -148,7 +148,7 @@
     castShadows: false
   - type: Summonable # imp
     requiresBibleUser: false
-    specialItem: SpawnPointGhostAnomaliteBluespace
+    summonEntity: SpawnPointGhostAnomaliteBluespace
 
 - type: entity
   parent: BaseAnomalyCore
@@ -165,7 +165,7 @@
   - type: Electrified
   - type: Summonable # imp
     requiresBibleUser: false
-    specialItem: SpawnPointGhostAnomaliteElectricity
+    summonEntity: SpawnPointGhostAnomaliteElectricity
 
 - type: entity
   parent: BaseAnomalyCore
@@ -173,7 +173,7 @@
   suffix: Flora
   components:
   - type: Seed
-    seedId: anomalyBerry
+    plantId: AnomalyBerryPlants
   - type: Sprite
     sprite: Structures/Specific/Anomalies/Cores/flora_core.rsi
   - type: PointLight
@@ -183,7 +183,7 @@
     castShadows: false
   - type: Summonable # imp
     requiresBibleUser: false
-    specialItem: SpawnPointGhostAnomaliteFlora
+    summonEntity: SpawnPointGhostAnomaliteFlora
 
 - type: entity
   parent: [ BaseAnomalyCore, BaseShadow ]
@@ -199,7 +199,7 @@
     castShadows: false
   - type: Summonable # imp
     requiresBibleUser: false
-    specialItem: SpawnPointGhostAnomaliteShadow
+    summonEntity: SpawnPointGhostAnomaliteShadow
 
 - type: entity
   parent: BaseAnomalyCore
@@ -215,7 +215,7 @@
     castShadows: false
   - type: Summonable # imp
     requiresBibleUser: false
-    specialItem: SpawnPointGhostAnomaliteTech
+    summonEntity: SpawnPointGhostAnomaliteTech
 
 - type: entity
   parent: BaseAnomalyCore
@@ -358,7 +358,7 @@
   suffix: Flora, Inert
   components:
   - type: Seed
-    seedId: anomalyBerry
+    plantId: AnomalyBerryPlants
   - type: Sprite
     sprite: Structures/Specific/Anomalies/Cores/flora_core.rsi
   - type: PointLight

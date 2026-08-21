@@ -1,0 +1,182 @@
+- type: entityTable
+  id: AllColorableBackpacks
+  table: !type:GroupSelector
+    children:
+    - id: ClothingBackpack
+    - id: ClothingBackpackColorable
+    - id: ClothingBackpackBlue
+    - id: ClothingBackpackBrown
+    - id: ClothingBackpackGreen
+    - id: ClothingBackpackOrange
+    - id: ClothingBackpackPink
+    - id: ClothingBackpackPurple
+    - id: ClothingBackpackRed
+    - id: ClothingBackpackTeal
+    - id: ClothingBackpackYellow
+
+- type: entityTable
+  id: AllColorableDuffels
+  table: !type:GroupSelector
+    children:
+    - id: ClothingBackpackDuffel
+    - id: ClothingBackpackDuffelBlue
+    - id: ClothingBackpackDuffelBrown
+    - id: ClothingBackpackDuffelGreen
+    - id: ClothingBackpackDuffelOrange
+    - id: ClothingBackpackDuffelPink
+    - id: ClothingBackpackDuffelPurple
+    - id: ClothingBackpackDuffelRed
+    - id: ClothingBackpackDuffelTeal
+    - id: ClothingBackpackDuffelYellow
+    - id: ClothingBackpackDuffelWhite
+
+- type: entityTable
+  id: AllColorableSatchels
+  table: !type:GroupSelector
+    children:
+    - id: ClothingBackpackSatchel
+    - id: ClothingBackpackSatchelBlue
+    - id: ClothingBackpackSatchelBrown
+    - id: ClothingBackpackSatchelGreen
+    - id: ClothingBackpackSatchelOrange
+    - id: ClothingBackpackSatchelPink
+    - id: ClothingBackpackSatchelPurple
+    - id: ClothingBackpackSatchelRed
+    - id: ClothingBackpackSatchelTeal
+    - id: ClothingBackpackSatchelYellow
+    - id: ClothingBackpackSatchelWhite
+
+- type: entityTable
+  id: AllColorablePurses
+  table: !type:GroupSelector
+    children:
+    - id: ClothingBackpackPurseBlack
+    - id: ClothingBackpackPurseBlue
+    - id: ClothingBackpackPurseBrown
+    - id: ClothingBackpackPurseGreen
+    - id: ClothingBackpackPurseOrange
+    - id: ClothingBackpackPursePink
+    - id: ClothingBackpackPursePurple
+    - id: ClothingBackpackPurseRed
+    - id: ClothingBackpackPurseTeal
+    - id: ClothingBackpackPurseYellow
+    - id: ClothingBackpackPurseWhite
+
+# Spawners
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: BackpackSpawner
+  name: Random Backpack Spawner
+  suffix: Colored
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowred
+    - state: red
+    - sprite: _starcup/Clothing/Back/Backpacks/backpack_colorable.rsi
+      state: icon
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:NestedSelector
+      tableId: AllColorableBackpacks
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: DuffelSpawner
+  name: Random Duffel Bag Spawner
+  suffix: Colored
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowred
+    - state: red
+    - sprite: _starcup/Clothing/Back/Duffels/duffel_colorable.rsi
+      state: icon
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:NestedSelector
+      tableId: AllColorableDuffels
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SatchelSpawner
+  name: Random Satchel Spawner
+  suffix: Colored
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowred
+    - state: red
+    - sprite: _starcup/Clothing/Back/Satchels/satchel_colorable.rsi
+      state: icon
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:NestedSelector
+      tableId: AllColorableSatchels
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: PurseSpawner
+  name: Random Purse Spawner
+  suffix: Colored
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowred
+    - state: red
+    - sprite: _DEN/Clothing/Back/Misc/purse.rsi
+      state: icon
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:NestedSelector
+      tableId: AllColorablePurses
+
+# Vending machine spawners
+- type: entity
+  id: BackpackSpawnerVendor
+  name: random backpack
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Backpacks/backpack_colorable.rsi
+    state: icon
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:NestedSelector
+      tableId: AllColorableBackpacks
+
+- type: entity
+  id: DuffelSpawnerVendor
+  name: random duffel bag
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Duffels/duffel_colorable.rsi
+    state: icon
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:NestedSelector
+      tableId: AllColorableDuffels
+
+- type: entity
+  id: SatchelSpawnerVendor
+  name: random satchel
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Back/Satchels/satchel_colorable.rsi
+    state: icon
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:NestedSelector
+      tableId: AllColorableSatchels
+
+- type: entity
+  id: PurseSpawnerVendor
+  name: random purse
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Back/Misc/purse.rsi
+    state: icon
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:NestedSelector
+      tableId: AllColorablePurses

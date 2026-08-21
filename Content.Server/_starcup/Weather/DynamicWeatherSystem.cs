@@ -8,12 +8,12 @@ using Robust.Shared.Timing;
 
 namespace Content.Server._starcup.Weather;
 
-public sealed class DynamicWeatherSystem : EntitySystem
+public sealed partial class DynamicWeatherSystem : EntitySystem
 {
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly IRobustRandom _robustRandom = default!;
-    [Dependency] private readonly SharedWeatherSystem _weather = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
+    [Dependency] private IGameTiming _gameTiming = default!;
+    [Dependency] private IRobustRandom _robustRandom = default!;
+    [Dependency] private SharedWeatherSystem _weather = default!;
+    [Dependency] private IPrototypeManager _proto = default!;
 
     /// <summary>
     /// The meta-weather type that functions as a stand-in for no active weather event.

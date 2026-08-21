@@ -11,7 +11,8 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateHunger
+      - !type:Satiate
+        satiationType: Hunger
         conditions:
         - !type:ReagentCondition #Only satiates when eaten with nutriment
           reagent: Nutriment

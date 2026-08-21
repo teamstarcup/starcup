@@ -1,11 +1,8 @@
-﻿# This base is created so we don't have to define the different sprite path for each plushie job.
+# This base is created so we don't have to define the different sprite path for each plushie job.
 - type: entity
-  abstract: true
   parent: PlushieLizard
   id: BasePlushieLizardJob
-  components:
-  - type: Sprite
-    sprite: Objects/Fun/plushielizard_jobs.rsi
+  abstract: true
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -14,7 +11,18 @@
   description: An adorable stuffed toy that resembles an unathi as an atmospheric technician. Smells faintly of frezon. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: atmospherictechnician
+    sprite: Objects/Fun/plushielizard_jobs/atmostech.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/atmostech.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/atmostech.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -23,7 +31,18 @@
   description: An adorable stuffed toy that resembles an unathi as a bartender. Its tongue has alcohol stains on it. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: bartender
+    sprite: Objects/Fun/plushielizard_jobs/bartender.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/bartender.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/bartender.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.09"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -32,7 +51,18 @@
   description: An adorable stuffed toy that resembles an unathi as a botanist. There's prickly bits on its feet and it smells faintly of plant fertilizer. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: botanist
+    sprite: Objects/Fun/plushielizard_jobs/botanist.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/botanist.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/botanist.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.06"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -41,7 +71,18 @@
   description: An adorable stuffed toy that resembles an unathi as a boxer. The threads on its gloves are starting to come loose. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: boxer
+    sprite: Objects/Fun/plushielizard_jobs/boxer.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/boxer.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/boxer.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -62,7 +103,18 @@
   description: An adorable stuffed toy that resembles an unathi as a cargo technician. Crumbs of packing peanuts are stuck to its scales. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: cargotechnician
+    sprite: Objects/Fun/plushielizard_jobs/cargotech.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/cargotech.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/cargotech.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.06"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -71,7 +123,18 @@
   description: An adorable stuffed toy that resembles an unathi as a chaplain. It smells faintly of incense. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: chaplain
+    sprite: Objects/Fun/plushielizard_jobs/chaplain.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/chaplain.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/chaplain.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -80,7 +143,18 @@
   description: An adorable stuffed toy that resembles an unathi as a chef. It smells faintly of spices, with spots of oil on its apron.
   components:
   - type: Sprite
-    state: chef
+    sprite: Objects/Fun/plushielizard_jobs/chef.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/chef.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/chef.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.06"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -89,7 +163,18 @@
   description: An adorable stuffed toy that resembles an unathi as a chemist. Parts of the plushie are stained with chemicals. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: chemist
+    sprite: Objects/Fun/plushielizard_jobs/chemist.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/chemist.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/chemist.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -98,7 +183,18 @@
   description: An adorable stuffed toy that resembles an unathi as the chief engineer. It's covered in metal shavings and welding splatter. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: chiefengineer
+    sprite: Objects/Fun/plushielizard_jobs/chiefengineer.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/chiefengineer.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/chiefengineer.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.06"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -107,7 +203,18 @@
   description: An adorable stuffed toy that resembles an unathi as the chief medical officer. The plushie's tail has been sewn off and on again, probably from practicing surgery. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: chiefmedicalofficer
+    sprite: Objects/Fun/plushielizard_jobs/cmo.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/cmo.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/cmo.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.06"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -116,7 +223,7 @@
   description: An adorable stuffed toy that resembles an unathi as a clown. Its nose squeaks when you press it. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: clown
+    sprite: Objects/Fun/plushielizard_jobs/clown.rsi
   - type: EmitSoundOnUse
     sound:
       collection: BikeHorn
@@ -126,6 +233,17 @@
   - type: EmitSoundOnTrigger
     sound:
       collection: BikeHorn
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/clown.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/clown.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.09"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -134,7 +252,18 @@
   description: An adorable stuffed toy that resembles an unathi as a detective. Seems ready for a mystery. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: detective
+    sprite: Objects/Fun/plushielizard_jobs/detective.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/detective.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/detective.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.06"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -155,7 +284,18 @@
   description: An adorable stuffed toy that resembles an unathi as the head of security. It seems to have been ripped and re-stitched a few times. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: headofsecurity
+    sprite: Objects/Fun/plushielizard_jobs/hos.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/hos.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/hos.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.09"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -164,7 +304,18 @@
   description: An adorable stuffed toy that resembles an unathi as a janitor. It smells faintly of cleaning supplies. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: janitor
+    sprite: Objects/Fun/plushielizard_jobs/janitor.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/janitor.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/janitor.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.06"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -173,7 +324,18 @@
   description: An adorable stuffed toy that resembles an unathi as a lawyer. Its lawyer pin is barely hanging on from hours of fidgeting. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: lawyer
+    sprite: Objects/Fun/plushielizard_jobs/lawyer.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/lawyer.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/lawyer.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -182,7 +344,18 @@
   description: An adorable stuffed toy that resembles an unathi as a librarian. The color of the plushie has faded from years of desk-watching. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: librarian
+    sprite: Objects/Fun/plushielizard_jobs/librarian.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/librarian.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/librarian.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -191,7 +364,18 @@
   description: An adorable stuffed toy that resembles an unathi as a medical doctor. Seems to be well-washed. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: medicaldoctor
+    sprite: Objects/Fun/plushielizard_jobs/meddoctor.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/meddoctor.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/meddoctor.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.09"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -200,7 +384,18 @@
   description: An adorable stuffed toy that resembles an unathi as a medical intern. It smells faintly of antiseptic. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: medicalintern
+    sprite: Objects/Fun/plushielizard_jobs/medintern.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/medintern.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/medintern.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -209,7 +404,7 @@
   description: An adorable stuffed toy that resembles an unathi as a mime. It stares at you silently, its motives unknown. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: mime
+    sprite: Objects/Fun/plushielizard_jobs/mime.rsi
   - type: EmitSoundOnUse
     sound: null # mime is silent...
   - type: EmitSoundOnLand
@@ -225,6 +420,17 @@
   - type: MeleeWeapon
     wideAnimationRotation: 180
     soundHit: null
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/mime.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/mime.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.06"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -233,7 +439,18 @@
   description: An adorable stuffed toy that resembles an unathi as a musician. It smells faintly of sweat and has a few strings coming loose. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: musician
+    sprite: Objects/Fun/plushielizard_jobs/musician.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/musician.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/musician.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -242,7 +459,18 @@
   description: An adorable stuffed toy that resembles an unathi as a paramedic. The plushie has a few little bandages sewn on it. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: paramedic
+    sprite: Objects/Fun/plushielizard_jobs/paramedic.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/paramedic.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/paramedic.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.06"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -251,7 +479,18 @@
   description: An adorable stuffed toy that resembles an unathi as a passenger. Its eyes look at you, a little bit more beady than the rest. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: passenger
+    sprite: Objects/Fun/plushielizard_jobs/passenger.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/passenger.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/passenger.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -260,7 +499,18 @@
   description: An adorable stuffed toy that resembles an unathi as a psychologist. It seems to like to quietly listen to you. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: psychologist
+    sprite: Objects/Fun/plushielizard_jobs/psychologist.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/psychologist.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/psychologist.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -269,7 +519,18 @@
   description: An adorable stuffed toy that resembles an unathi as the quartermaster. Its covered in sticky residue left behind from thousands of shipment invoices. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: quartermaster
+    sprite: Objects/Fun/plushielizard_jobs/qm.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/qm.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/qm.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.06"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -278,7 +539,18 @@
   description: An adorable stuffed toy that resembles an unathi as a reporter. It smells faintly of ink. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: reporter
+    sprite: Objects/Fun/plushielizard_jobs/reporter.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/reporter.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/reporter.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -287,7 +559,18 @@
   description: An adorable stuffed toy that resembles an unathi as a research assistant. It smells faintly of burnt paper. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: researchassistant
+    sprite: Objects/Fun/plushielizard_jobs/researchassistant.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/researchassistant.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/researchassistant.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -296,7 +579,18 @@
   description: An adorable stuffed toy that resembles an unathi as the research director. There's a few burn marks on the plushie. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: researchdirector
+    sprite: Objects/Fun/plushielizard_jobs/rd.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/rd.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/rd.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.06"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -305,7 +599,18 @@
   description: An adorable stuffed toy that resembles an unathi as a salvage specialist. Seems like it's seen the coldness of space for a while. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: salvager
+    sprite: Objects/Fun/plushielizard_jobs/salvager.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/salvager.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/salvager.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -314,7 +619,18 @@
   description: An adorable stuffed toy that resembles an unathi as a scientist. There's a few bite marks on the plushie, probably from a curious monkey. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: scientist
+    sprite: Objects/Fun/plushielizard_jobs/scientist.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/scientist.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/scientist.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -323,7 +639,18 @@
   description: An adorable stuffed toy that resembles an unathi as a security cadet. Seems to have shock marks across the plushie. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: securitycadet
+    sprite: Objects/Fun/plushielizard_jobs/seccadet.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/seccadet.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/seccadet.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -332,7 +659,18 @@
   description: An adorable stuffed toy that resembles an unathi as a security officer. Its little armor vest is just as soft and fluffy as the rest of it. # starcup: rename lizardpeople to unathi, rewritten for tone
   components:
   - type: Sprite
-    state: securityofficer
+    sprite: Objects/Fun/plushielizard_jobs/secofficer.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/secofficer.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/secofficer.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.06"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -341,7 +679,18 @@
   description: An adorable stuffed toy that resembles an unathi as a service worker. Smells like a mix of cleaning supplies and food. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: serviceworker
+    sprite: Objects/Fun/plushielizard_jobs/serviceworker.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/serviceworker.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/serviceworker.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -350,7 +699,18 @@
   description: An adorable stuffed toy that resembles an unathi as a station engineer. It has oil stains on its hands. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: stationengineer
+    sprite: Objects/Fun/plushielizard_jobs/stationengi.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/stationengi.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/stationengi.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.06"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -359,7 +719,18 @@
   description: An adorable stuffed toy that resembles an unathi as a technical assistant. It smells faintly of burnt wires. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: technicalassistant
+    sprite: Objects/Fun/plushielizard_jobs/technicalassistant.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/technicalassistant.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/technicalassistant.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -368,7 +739,18 @@
   description: An adorable stuffed toy that resembles an unathi as a warden. Smells like black powder and gun oil. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: warden
+    sprite: Objects/Fun/plushielizard_jobs/warden.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/warden.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/warden.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.06"
 
 - type: entity
   parent: BasePlushieLizardJob
@@ -377,7 +759,18 @@
   description: An adorable stuffed toy that resembles an unathi as a zookeeper. It has some gorilla fur stuck to it. # starcup: rename lizardpeople to unathi
   components:
   - type: Sprite
-    state: zookeeper
+    sprite: Objects/Fun/plushielizard_jobs/zookeeper.rsi
+  - type: Item
+    sprite: Objects/Fun/plushielizard_jobs/zookeeper.rsi
+  - type: Clothing
+    sprite: Objects/Fun/plushielizard_jobs/zookeeper.rsi
+    slots:
+    - HEAD
+    quickEquip: false
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.06"
 
 - type: entity
   parent: BasePlushieLizardJob

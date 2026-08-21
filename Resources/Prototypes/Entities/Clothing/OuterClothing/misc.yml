@@ -73,7 +73,7 @@
     sprite: Clothing/OuterClothing/Misc/chef.rsi
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, TemperatureProtectionMinimal ] # starcup: temperature protection
   id: ClothingOuterHoodieBlack
   name: black hoodie
   description: A black hoodie. # starcup: rewritten for tone
@@ -84,7 +84,7 @@
     sprite: Clothing/OuterClothing/Misc/black_hoodie.rsi
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, TemperatureProtectionMinimal ] # starcup: temperature protection
   id: ClothingOuterHoodieGrey
   name: grey hoodie
   description: A grey hoodie.
@@ -111,7 +111,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: ClothingOuterBaseToggleable
+  parent: [ ClothingOuterBaseToggleable, TemperatureProtectionMinimal ] # starcup: hoodies are slightly temp protective
   id: ClothingOuterHoodieChaplain
   name: chaplain's hoodie
   description: Black and strict chaplain hoodie.
@@ -124,7 +124,7 @@
     clothingPrototype: ClothingHeadHatHoodChaplainHood
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, TemperatureProtection ] # starcup: Full ponchos have temperature protection
   id: ClothingOuterPonchoClassic
   name: classic poncho
   description: A warm and comfy classic poncho.
@@ -133,8 +133,8 @@
     sprite: Clothing/OuterClothing/Misc/classicponcho.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/classicponcho.rsi
-#  - type: AddAccentClothing # DeltaV - remove clothing-forced accents
-#    accent: SpanishAccent
+  # - type: SpanishAccent # DeltaV - remove clothing-forced accents
+  #   relayAccent: true
 
 - type: entity
   parent: ClothingOuterBase
@@ -159,7 +159,7 @@
     sprite: Clothing/OuterClothing/Misc/judge.rsi
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, TemperatureProtection ] # starcup: full ponchos have temperature protection
   id: ClothingOuterPoncho
   name: poncho
   description: A warm and comfy poncho.
@@ -168,11 +168,11 @@
     sprite: Clothing/OuterClothing/Misc/poncho.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/poncho.rsi
-#  - type: AddAccentClothing # DeltaV - remove clothing-forced accents
-#    accent: SpanishAccent
+  # - type: SpanishAccent # DeltaV - remove clothing-forced accents
+  #   relayAccent: true
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, TemperatureProtection ] # starcup: temperature protection: it's a winter coat
   id: ClothingOuterSanta
   name: santa suit
   description: Ho ho ho!
@@ -235,6 +235,17 @@
 
 - type: entity
   parent: ClothingOuterBase
+  id: ClothingOuterWizardFake
+  name: fake wizard robes
+  description: Covered in glittery stars and mystery stains. Instantly boosts your arcane fashion sense.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Misc/wizard_fake.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Misc/wizard_fake.rsi
+
+- type: entity
+  parent: ClothingOuterBase
   id: ClothingOuterSkub
   name: skub suit
   description: 'Skub is crudely written on the outside of this cylindrical suit.'
@@ -293,7 +304,7 @@
     sprite: Clothing/OuterClothing/Misc/hospitalgown.rsi
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterJacketBase, TemperatureProtection ] # starcup: like a winter coat
   id: ClothingOuterFlannelRed
   name: red flannel jacket
   description: An old fashioned red flannel jacket for space autumn.
@@ -325,11 +336,9 @@
         color: "#670a09"
       - state: equipped-OUTERCLOTHING-lines
         color: "#000000"
-  - type: TemperatureProtection
-    coolingCoefficient: 0.3
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterJacketBase, TemperatureProtection ] # starcup: temperature protection
   id: ClothingOuterFlannelBlue
   name: blue flannel jacket
   description: An old fashioned blue flannel jacket for space autumn.
@@ -361,11 +370,9 @@
         color: "#3232a6"
       - state: equipped-OUTERCLOTHING-lines
         color: "#000000"
-  - type: TemperatureProtection
-    coolingCoefficient: 0.3
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterJacketBase, TemperatureProtection ] # starcup: temperature protection
   id: ClothingOuterFlannelGreen
   name: green flannel jacket
   description: An old fashioned green flannel jacket for space autumn.
@@ -397,8 +404,6 @@
         color: "#164d0f"
       - state: equipped-OUTERCLOTHING-lines
         color: "#000000"
-  - type: TemperatureProtection
-    coolingCoefficient: 0.3
 
 - type: entity
   parent: ClothingOuterBase

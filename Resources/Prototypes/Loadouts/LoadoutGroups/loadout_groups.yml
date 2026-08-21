@@ -383,6 +383,7 @@
   # End starcup additions
 
 - type: loadoutGroup
+  parent: [ ColoredBackpacks, ColoredSatchels, ColoredDuffels, ColoredPurses ] # starcup
   id: CommonBackpack
   name: loadout-group-backpack
   loadouts:
@@ -920,9 +921,8 @@
   minLimit: 2
   hidden: true
   loadouts:
-  - EmergencyNitrogenMime
-  - EmergencyOxygenMime
-  - EmergencySpeciesMothMime
+  - EmergencyNitrogen
+  - EmergencyOxygen
   - LoadoutSpeciesVoxNitrogen
   - EmergencyBoxMKC # starcup
 
@@ -1699,6 +1699,7 @@
   - JensenCoat
   - TrenchCoat
   # end starcup
+  - SecurityOfficerWintercoat
 
 - type: loadoutGroup
   id: DetectiveJobTrinkets
@@ -1796,7 +1797,46 @@
 #  minLimit: 0
 #  loadouts:
 
+- type: loadoutGroup
+  id: TramDriverJumpsuit
+  name: loadout-group-tramdriver-jumpsuit
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - TramDriverJumpsuit
+
+- type: loadoutGroup
+  id: TramDriverOuterClothing
+  name: loadout-group-tramdriver-outerclothing
+  minLimit: 0
+  loadouts:
+  - TramDriverSuit
+
+- type: loadoutGroup
+  id: TramDriverHat
+  name: loadout-group-tramdriver-hat
+  loadouts:
+  - TramDriverHat
+
+- type: loadoutGroup
+  id: TramDriverGloves
+  name: loadout-group-tramdriver-gloves
+  minLimit: 0
+  loadouts:
+  - TramDriverGlovesWhite
+  - TramDriverGlovesBlack
+
 # Other
+
+- type: loadoutGroup
+  id: SurvivalExtendedAntag
+  name: loadout-group-survival-extended
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - EmergencyNitrogenExtendedAntag
+  - EmergencyOxygenExtendedAntag
+  - LoadoutSpeciesVoxNitrogen
 
 - type: loadoutGroup
   id: SurvivalSyndicate

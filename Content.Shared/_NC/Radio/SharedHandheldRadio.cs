@@ -1,3 +1,4 @@
+using Content.Shared.FixedPoint;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared._NC.Radio;
@@ -13,9 +14,9 @@ public sealed class HandheldRadioBoundUIState : BoundUserInterfaceState
 {
     public bool MicEnabled;
     public bool SpeakerEnabled;
-    public int Frequency;
+    public FixedPoint2 Frequency;
 
-    public HandheldRadioBoundUIState(bool micEnabled, bool speakerEnabled, int frequency)
+    public HandheldRadioBoundUIState(bool micEnabled, bool speakerEnabled, FixedPoint2 frequency)
     {
         MicEnabled = micEnabled;
         SpeakerEnabled = speakerEnabled;
