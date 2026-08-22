@@ -1,0 +1,47 @@
+# Ovinia
+- type: emote
+  id: Baa
+  name: chat-emote-name-baa
+  category: Vocal
+  available: false
+  icon: _starcup/Interface/Emotes/baa.png
+  whitelist:
+    requireAll: true
+    components:
+    - Vocal
+    #tags:
+    #- OviniaEmotes # starcup: we assign the emote manually, no need for the tag
+  chatMessages: [ chat-emote-msg-baa ]
+  chatTriggers:
+    - baas
+    - baa
+    - baahs
+    - baah
+    - baahed
+    - baah'd
+    - baahing
+    - bah
+    - bahs
+    - bahed
+    - bah'd
+    - bleats
+    - bleated
+    - bleating
+
+- type: emote
+  id: Moo
+  name: chat-emote-name-moo
+  category: Vocal
+  icon: _starcup/Interface/Emotes/moo.png
+  available: false
+  whitelist:
+    components:
+    - Vocal
+    #tags:
+    #- OviniaEmotes # starcup: we assign the emote manually, no need for the tag
+  chatMessages: [ chat-emote-msg-moo ]
+  chatTriggers:
+  - moos
+  - moo
+  - mooed
+  - moo'd

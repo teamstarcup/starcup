@@ -465,9 +465,14 @@
     useDelay: 1 # emote spam
     checkCanInteract: false
   - type: Sprite
-    sprite: Mobs/Customization/reptilian_parts.rsi
+    # begin starcup
+    #sprite: Mobs/Customization/reptilian_parts.rsi
+    #layers:
+    #- state: tail_smooth_behind
+    sprite: _starcup/Interface/Actions/actions_general.rsi
     layers:
-    - state: tail_smooth_behind
+    - state: tailwag
+    # end starcup
 
 - type: entity
   parent: BaseAction
@@ -530,9 +535,14 @@
     itemIconStyle: NoItem
     useDelay: 1 # Prevents Emote Spam
   - type: Sprite
-    sprite: Mobs/Customization/Vulpkanin/tail_markings.rsi
+    # begin starcup
+    #sprite: Mobs/Customization/Vulpkanin/tail_markings.rsi
+    #layers:
+    #- state: tail-wag-icon
+    sprite: _starcup/Interface/Actions/actions_general.rsi
     layers:
-    - state: tail-wag-icon
+    - state: tailwag
+    # end starcup
 
 - type: entity
   parent: BaseAction
