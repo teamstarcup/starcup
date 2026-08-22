@@ -19,7 +19,7 @@
 - type: entity
   name: cocktail glass
   description: For drinks meant to be slowly savored. Holds up to 15 units.
-  parent: [DrinkBaseMaterialGlass, DrinkBaseCup, DrinkVisualsFillOverlay]
+  parent: [DrinkBaseMaterialGlass, SolutionVeryTiny, DrinkBaseCup, DrinkVisualsFillOverlay]
   id: DrinkGlassCocktail
   components:
   - type: Sprite
@@ -27,7 +27,7 @@
   - type: Appearance
   - type: Solution
     solution:
-      maxVol: 15
+      maxVol: 15 # redundant, but leaving this here to be sure it always matches the description
   - type: SolutionContainerVisuals
     maxFillLevels: 3
     fillBaseName: fill-
@@ -45,7 +45,7 @@
   - type: Appearance
   - type: Solution
     solution:
-      maxVol: 30
+      maxVol: 30 # redundant, but leaving this here to be sure it always matches the description
   - type: SolutionContainerVisuals
     maxFillLevels: 9
     fillBaseName: fill-
@@ -69,19 +69,10 @@
   - type: Appearance
   - type: Solution
     solution:
-      maxVol: 30
+      maxVol: 30 # redundant, but leaving this here to be sure it always matches the description
   - type: SolutionContainerVisuals
     maxFillLevels: 1
     fillBaseName: fill-
-
-- type: entity
-  parent: DrinkGlass
-  id: DrinkChocolateGlassImitation
-  suffix: imitation chocolate
-  components:
-  - type: Solution
-    solution:
-      maxVol: 30
 
 - type: entity
   parent: DrinkGlass
@@ -90,7 +81,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: CherryLimeade
         Quantity: 30
@@ -105,7 +95,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: EvilPrincess
         Quantity: 30
@@ -121,7 +110,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: AdiosMotherfucker
         Quantity: 30
@@ -136,7 +124,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: Afterburner
         Quantity: 30
@@ -151,7 +138,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: Ambrosia
         Quantity: 30
@@ -166,7 +152,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: Appletini
         Quantity: 30
@@ -181,7 +166,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: Aviation
         Quantity: 30
@@ -196,7 +180,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: BlackVelvet
         Quantity: 30
@@ -211,7 +194,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: BlueLagoon
         Quantity: 30
@@ -226,7 +208,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: BrainScrambler
         Quantity: 30
@@ -241,7 +222,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: Bramble
         Quantity: 30
@@ -256,7 +236,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: BuzzedBunny
         Quantity: 30
@@ -271,7 +250,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: Cactus
         Quantity: 30
@@ -286,7 +264,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: CherryBomb
         Quantity: 30
@@ -301,7 +278,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: CorpseReviver
         Quantity: 30
@@ -316,7 +292,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: Cryptid
         Quantity: 30
@@ -331,7 +306,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: Earthquake
         Quantity: 30
@@ -346,7 +320,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: Eclipse
         Quantity: 30
@@ -361,7 +334,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: EmeraldBreeze
         Quantity: 30
@@ -376,7 +348,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: FaeriesCheer
         Quantity: 30
@@ -391,7 +362,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: GoblinsBrew
         Quantity: 30
@@ -406,7 +376,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: MoonMist
         Quantity: 30
@@ -421,7 +390,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: Mushburger
         Quantity: 30
@@ -436,7 +404,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: Necropolitan
         Quantity: 30
@@ -451,7 +418,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: ParadiseLost
         Quantity: 30
@@ -466,7 +432,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: RainbowShooter
         Quantity: 30
@@ -481,7 +446,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: RedDog
         Quantity: 30
@@ -496,7 +460,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: RedEye
         Quantity: 30
@@ -511,7 +474,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: SakuraMartini
         Quantity: 30
@@ -526,7 +488,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 30
       reagents:
       - ReagentId: Snakebite
         Quantity: 30

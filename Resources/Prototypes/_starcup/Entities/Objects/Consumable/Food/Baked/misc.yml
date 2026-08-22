@@ -8,14 +8,13 @@
   components:
   - type: Solution
     solution:
-      maxVol: 14
       reagents:
       - ReagentId: Nutriment
-        Quantity: 6
+        Quantity: 11
       - ReagentId: Vitamin
-        Quantity: 2
+        Quantity: 1
       - ReagentId: CocoaPowderImitation
-        Quantity: 2
+        Quantity: 1
 
 # Cookies
 
@@ -29,10 +28,9 @@
       - imitationchocolate
   - type: Solution
     solution:
-      maxVol: 6
       reagents:
       - ReagentId: Nutriment
-        Quantity: 5
+        Quantity: 6
 
 # Waffles/Pancakes
 
@@ -47,10 +45,9 @@
       - imitationchocolate
   - type: Solution
     solution:
-      maxVol: 5
       reagents:
       - ReagentId: Nutriment
-        Quantity: 5
+        Quantity: 11
 
 # Misc
 
@@ -66,10 +63,11 @@
       - imitationchocolate
   - type: Solution
     solution:
-      maxVol: 78
       reagents:
       - ReagentId: Nutriment
-        Quantity: 30
+        Quantity: 54
+      - ReagentId: Sugar
+        Quantity: 34
   - type: ToolRefinable
     refineResult:
     - id: FoodBakedBrownieImitation
@@ -87,9 +85,10 @@
       - imitationchocolate
   - type: Solution
     solution:
-      maxVol: 13
       reagents:
       - ReagentId: Nutriment
+        Quantity: 7
+      - ReagentId: Sugar
         Quantity: 5
 
 - type: entity
@@ -104,12 +103,13 @@
       - imitationchocolate
   - type: Solution
     solution:
-      maxVol: 228
       reagents:
       - ReagentId: Nutriment
-        Quantity: 30
+        Quantity: 56
+      - ReagentId: Sugar
+        Quantity: 32
       - ReagentId: THC
-        Quantity: 150
+        Quantity: 16
   - type: ToolRefinable
     refineResult:
     - id: FoodBakedCannabisBrownieImitation
@@ -125,14 +125,15 @@
       - sweet
       - magical
       - imitationchocolate
-  - type: Solution # starcup - remove SolutionContainerManager
+  - type: Solution
     solution:
-      maxVol: 38
       reagents:
       - ReagentId: Nutriment
-        Quantity: 5
+        Quantity: 7
+      - ReagentId: Sugar
+        Quantity: 4
       - ReagentId: THC
-        Quantity: 25
+        Quantity: 2
 
 # Empanadas
 - type: entity
@@ -145,10 +146,9 @@
     state: dumplings
   - type: Solution
     solution:
-      maxVol: 20
       reagents:
       - ReagentId: Nutriment
-        Quantity: 8
+        Quantity: 10
       - ReagentId: Protein
         Quantity: 2
   - type: FlavorProfile
