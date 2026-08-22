@@ -32,3 +32,4 @@ marking-HairFloralMidMoth = Floral wig (Medium)
 marking-HumanHairSusieMoth = Mean Girl Wig (Bangs)
 marking-HumanHairSusieNoBangsMoth = Mean Girl Wig
 marking-HumanHairShortAndPoofyMoth = Short & Poofy Wig
+marking-short_tasslesMoth = Short Tassels Wig
