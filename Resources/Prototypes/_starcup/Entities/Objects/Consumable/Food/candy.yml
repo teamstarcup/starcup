@@ -1,6 +1,6 @@
 # Base Prototypes
 - type: entity
-  parent: FoodBase
+  parent: [ SolutionVeryTiny, FoodBase ]
   id: FoodLollipop
   abstract: true
   name: lollipop
@@ -8,7 +8,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 5
       reagents:
       - ReagentId: Sugar
         Quantity: 3
@@ -31,7 +30,7 @@
     - Candy
 
 - type: entity
-  parent: FoodBase
+  parent: [ SolutionVeryTiny, FoodBase ]
   id: FoodGumball
   abstract: true
   name: gumball
@@ -39,7 +38,6 @@
   components:
   - type: Solution
     solution:
-      maxVol: 5
       reagents:
       - ReagentId: Sugar
         Quantity: 3

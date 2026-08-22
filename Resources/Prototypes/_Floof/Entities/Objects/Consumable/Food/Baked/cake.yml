@@ -5,7 +5,7 @@
 
 - type: entity
   name: incomplete cake
-  parent: FoodCakeBase
+  parent: [ SolutionLarge, FoodCakeBase ] # starcup - SolutionLarge (3x3 grid = 30x9 = 270u containers, 135u food)
   id: FoodCakeTieredBase
   abstract: true
   description: A frosted cake. Too large to eat in without slicing.
@@ -95,7 +95,7 @@
     state: triple
   - type: Solution # starcup - remove SolutionContainerManager
     solution:
-      maxVol: 200
+#      maxVol: 200 # starcup - redundant - 200u is pushing it a bit for food, but it's a wedding
       reagents:
       - ReagentId: Nutriment
         Quantity: 108
@@ -118,7 +118,7 @@
     state: slice
   - type: Solution # starcup - remove SolutionContainerManager
     solution:
-      maxVol: 15
+#      maxVol: 15 # starcup - redundant
       reagents:
       - ReagentId: Nutriment
         Quantity: 6

@@ -1,5 +1,5 @@
 - type: entity
-  parent: FoodSnackBase
+  parent: [ SolutionVeryTiny, FoodSnackBase ] # starcup - added SolutionVeryTiny
   id: FoodSnackGummyBear
   name: gummy bear
   description: Good luck getting three bites out of this.
@@ -17,7 +17,7 @@
     - Candy
   - type: Solution # starcup - remove SolutionContainerManager
     solution:
-      maxVol: 5
+#      maxVol: 5
       reagents:
       - ReagentId: Nutriment
         Quantity: 2
@@ -35,7 +35,7 @@
         yellow: ""
 
 - type: entity
-  parent: FoodSnackBase
+  parent: [ SolutionNormal, FoodSnackBase ] # starcup - SolutionNormal
   id: FoodSnackGummyWormLarge
   name: giant gummy worm
   description: You're not gonna eat the WHOLE thing, are you?
@@ -47,12 +47,12 @@
     size: Normal
   - type: Solution # starcup - remove SolutionContainerManager
     solution:
-      maxVol: 20
+#      maxVol: 20 # starcup - contains half of SolutionNormal, as standard for food
       reagents:
       - ReagentId: Nutriment
-        Quantity: 10
+        Quantity: 30 # starcup - x1.5
       - ReagentId: Sugar
-        Quantity: 10
+        Quantity: 30 # starcup - x1.5
 
 ## Larj bar
 
@@ -74,7 +74,7 @@
       path: /Audio/Effects/unwrap.ogg
 
 - type: entity
-  parent: [ FoodSnackBase, BaseSlicingRefinableFood ] # starcup - SlicableFood breaking change
+  parent: [ SolutionNormal, FoodSnackBase, BaseSlicingRefinableFood ] # starcup - SlicableFood breaking change, SolutionNormal
   id: FoodSnackChocolateBarLarjUnwrapped
   name: Larj bar
   description: A massive chocolate bar, Larj enough to split with your friends.
@@ -86,16 +86,16 @@
     size: Normal
   - type: Solution # starcup - remove SolutionContainerManager
     solution:
-      maxVol: 30
+#      maxVol: 30 # starcup - contains about 72u, or a bit over half of SolutionNormal
       reagents:
       - ReagentId: Nutriment
-        Quantity: 9
+        Quantity: 27 # starcup - 9 -> 27
       - ReagentId: Sugar
-        Quantity: 6
+        Quantity: 18 # starcup - 6 -> 18
       - ReagentId: Theobromine
-        Quantity: 6
+        Quantity: 18 # starcup - 6 -> 18
       - ReagentId: CocoaPowder
-        Quantity: 3
+        Quantity: 9 # starcup - 3 -> 9
   - type: ToolRefinable
     refineResult:
     - id: FoodSnackChocolateBarLarjChunk
@@ -114,23 +114,23 @@
     size: Small
   - type: Solution # starcup - remove SolutionContainerManager
     solution:
-      maxVol: 10
+#      maxVol: 10 # starcup - contains 20u
       reagents:
       - ReagentId: Nutriment
-        Quantity: 3
+        Quantity: 9 # starcup - x3
       - ReagentId: Sugar
-        Quantity: 2
+        Quantity: 6 # starcup - x3
       - ReagentId: Theobromine
-        Quantity: 2
+        Quantity: 6 # starcup - x3
       - ReagentId: CocoaPowder
-        Quantity: 1
+        Quantity: 3 # starcup - x3
   - type: ToolRefinable
     refineResult:
     - id: FoodSnackChocolateBarLarjPiece
       amount: 4
 
 - type: entity
-  parent: FoodSnackBase
+  parent: [ SolutionVeryTiny, FoodSnackBase ] # starcup - added SolutionVeryTiny
   id: FoodSnackChocolateBarLarjPiece
   name: Larj bar piece
   description: A tiny piece off of a colossal Larj bar.
@@ -142,22 +142,22 @@
     size: Tiny
   - type: Solution # starcup - remove SolutionContainerManager
     solution:
-      maxVol: 3
+#      maxVol: 3 # starcup - contains 2.5, proportionate to above values
       reagents:
       - ReagentId: Nutriment
-        Quantity: 0.75
+        Quantity: 2.25 # starcup - x3
       - ReagentId: Sugar
-        Quantity: 0.5
+        Quantity: 1.5 # starcup - x3
       - ReagentId: Theobromine
-        Quantity: 0.5
+        Quantity: 1.5 # starcup - x3
       - ReagentId: CocoaPowder
-        Quantity: 0.25
+        Quantity: 0.75 # starcup - x3
 
 ## Hard candies + wrapper
 
 - type: entity
   abstract: true
-  parent: FoodSnackBase
+  parent: [ SolutionVeryTiny, FoodSnackBase ] # starcup - added SolutionVeryTiny
   id: FoodSnackHardCandyBase
   name: hard candy
   description: A classic, fruit-flavored hard candy.
@@ -172,7 +172,7 @@
     - Candy
   - type: Solution # starcup - remove SolutionContainerManager
     solution:
-      maxVol: 5
+#      maxVol: 5
       reagents:
       - ReagentId: Nutriment
         Quantity: 2
