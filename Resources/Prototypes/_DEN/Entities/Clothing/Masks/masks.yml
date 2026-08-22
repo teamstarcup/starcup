@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2025 Angelo Fallaria
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 MajorMoth
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: MIT AND AGPL-3.0-or-later
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskKitsune
+  name: kitsune mask
+  description: What does the kitsune say? # TODO are we sure that's the take we're using
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Mask/kitsune_mask.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Mask/kitsune_mask.rsi
+  - type: IdentityBlocker
+  - type: HideLayerClothing
+    slots:
+    - Snout
