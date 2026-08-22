@@ -1,10 +1,12 @@
 # SPDX-FileCopyrightText: 2024 SleepyScarecrow
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
 # SPDX-FileCopyrightText: 2025 Rosycup
 # SPDX-FileCopyrightText: 2025 Skubman
-# SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
-# "# Fashion Update" denotes unsorted Den ports taken from Aurora/World Server/Nuclear 14
+#
+# "# NonDen" denotes unsorted Den ports taken from Aurora/World Server/Nuclear 14
 
 - type: entity
   parent: ClothingHeadBase
@@ -21,7 +23,18 @@
       - state: equipped-HELMET
         offset: "0, 0.025"
 
-- type: entity # Fashion Update - Aurora Station
+- type: entity # NonDen - Aurora Station
+  parent: ClothingHeadBase
+  id: ClothingHeadHatSunVisor
+  name: sun visor
+  description: A stylish visor intended for blocking out harsh sunlight.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/sun_visor.rsi # starcup - moved namespace, TODO - colored versions
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/sun_visor.rsi # starcup - moved namespace, TODO - colored versions
+
+- type: entity # NonDen - Aurora Station
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretArtist
   name: artist beret
@@ -38,6 +51,60 @@
   - type: Tag
     tags:
     - ClothMade
+
+- type: entity # NonDen - Aurora Station
+  parent: ClothingHeadBase
+  id: ClothingHeadHatFlatcapBartenderNanotrasen
+  name: bartender's nanotrasen flatcap # TODO rename
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/flatcap_nt.rsi # starcup - moved namespace
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/flatcap_nt.rsi # starcup - moved namespace
+
+- type: entity # NonDen - Aurora Station
+  parent: ClothingHeadBase
+  id: ClothingHeadHatFlatcapBartenderIdris
+  name: bartender's idris incorporated flatcap # TODO rename
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/flatcap_idris.rsi # starcup - moved namespace
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/flatcap_idris.rsi # starcup - moved namespace
+
+- type: entity # NonDen - Aurora Station
+  parent: ClothingHeadBase
+  id: ClothingHeadHatFlatcapBartenderOrion
+  name: bartender's orion express flatcap # TODO rename
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/flatcap_orion.rsi # starcup - moved namespace
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/flatcap_orion.rsi # starcup - moved namespace
+
+## RELIGIOUS
+
+- type: entity # NonDen - Aurora Station
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHijabColorable
+  name: hijab
+  description: Encompassing cloth headwear worn by some human cultures and religions.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/hijab.rsi # starcup - Den namespace TODO colored versions
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/hijab.rsi # starcup - Den namespace TODO colored versions
+
+- type: entity # NonDen - Aurora Station
+  parent: ClothingHeadBase # TODO weather protection
+  id: ClothingHeadHatTurbanColorable
+  name: turban
+  description: A sturdy cloth, worn around the head.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/turban.rsi # starcup - Den namespace TODO colored versions
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/turban.rsi # starcup - Den namespace TODO colored versions
 
 ## DINER
 
