@@ -82,6 +82,63 @@
   - type: Clothing
     sprite: _DEN/Clothing/Head/Hats/flatcap_orion.rsi # starcup - moved namespace
 
+## BEANIES
+- type: entity
+  parent: [ ClothingHeadBase, TemperatureProtectionMinimal ] # starcup - replaced ClothingHeadWinterHatLightBase
+  id: ClothingHeadHatBeanie
+  name: beanie
+  description: A head-hugging brimless winter cap. This one is tight.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/beanie.rsi # starcup - changed namespace TODO colored versions
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/beanie.rsi # starcup - changed namespace TODO colored versions
+  # - type: TemperatureProtection # DEN - Replace with winter hat protection
+  #   heatingCoefficient: 0.6
+  #   coolingCoefficient: 0.5
+
+- type: entity
+  parent: [ ClothingHeadBase, TemperatureProtectionMinimal ] # starcup - replaced ClothingHeadWinterHatLightBase
+  id: ClothingHeadHatBeanieWinter
+  name: winter beanie
+  description: A head-hugging brimless winter cap. This one has flaps that cover the ears.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/beanie_winter.rsi # starcup - changed namespace TODO colored versions
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/beanie_winter.rsi # starcup - changed namespace TODO colored versions
+  # - type: TemperatureProtection # DEN - Replace with winter hat protection
+  #   coolingCoefficient: 0.5
+
+- type: entity
+  parent: [ ClothingHeadBase, TemperatureProtectionMinimal ] # starcup - replaced ClothingHeadWinterHatLightBase
+  id: ClothingHeadHatBeanieSubmariner
+  name: submariner beanie
+  description: A design of tightly fitting beanie popular among Submarine station workers.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/beanie_submariner.rsi # starcup - changed namespace TODO colored versions
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/beanie_submariner.rsi # starcup - changed namespace TODO colored versions
+  # - type: TemperatureProtection # DEN - Replace with winter hat protection
+  #   coolingCoefficient: 0.5
+
+- type: entity
+  parent: [ ClothingHeadBase, TemperatureProtectionMinimal ] # starcup - replaced ClothingHeadWinterHatLightBase
+  id: ClothingHeadHatBeanieTight
+  name: tight beanie
+  description: A rather tight beanie that hides your hair.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/beanie_tight.rsi # starcup - changed namespace TODO colored versions
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/beanie_tight.rsi # starcup - changed namespace TODO colored versions
+  # - type: TemperatureProtection # DEN - Replace with winter hat protection
+  #   coolingCoefficient: 0.5
+  - type: HideLayerClothing
+    slots:
+    - Hair
+
 ## RELIGIOUS
 
 - type: entity # NonDen - Aurora Station
