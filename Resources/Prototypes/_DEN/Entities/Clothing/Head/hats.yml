@@ -40,13 +40,13 @@
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretArtist
   name: artist beret
-  description: A beret fit for an artist. # TODO - we can do better
+  description: A beret fit for an artist.
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Head/Hats/beret_artist.rsi # starcup - moved namespace
   - type: Clothing
     sprite: _DEN/Clothing/Head/Hats/beret_artist.rsi # starcup - moved namespace
-    clothingVisuals: # starcup - move up a bit to cover hair
+    clothingVisuals: # starcup - moved up a bit to cover hair
       head:
       - state: equipped-HELMET
         offset: "0, 0.025"
@@ -57,7 +57,8 @@
 - type: entity # NonDen - Aurora Station
   parent: ClothingHeadBase
   id: ClothingHeadHatFlatcapBartenderNanotrasen
-  name: bartender's nanotrasen flatcap # TODO rename
+  name: fancy blue flatcap # starcup - renamed bartender's nanotrasen flatcap
+  description: A lightweight cap purportedly favored by NanoTrasen bartenders. # starcup
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Head/Hats/flatcap_nt.rsi # starcup - moved namespace
@@ -67,7 +68,8 @@
 - type: entity # NonDen - Aurora Station
   parent: ClothingHeadBase
   id: ClothingHeadHatFlatcapBartenderIdris
-  name: bartender's idris incorporated flatcap # TODO rename
+  name: fancy white flatcap # starcup - renamed bartender's idris incorporated flatcap
+  description: A lightweight cap purportedly favored by off-sector bartenders. # starcup
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Head/Hats/flatcap_idris.rsi # starcup - moved namespace
@@ -77,7 +79,8 @@
 - type: entity # NonDen - Aurora Station
   parent: ClothingHeadBase
   id: ClothingHeadHatFlatcapBartenderOrion
-  name: bartender's orion express flatcap # TODO rename
+  name: fancy brown flatcap # starcup - renamed bartender's orion express flatcap
+  description: A lightweight cap purportedly favored by off-sector bartenders. # starcup
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Head/Hats/flatcap_orion.rsi # starcup - moved namespace
@@ -116,7 +119,7 @@
 ## RELIGIOUS
 
 - type: entity # NonDen - Aurora Station
-  parent: ClothingHeadBase
+  parent: [ ClothingHeadBase, TemperatureProtectionMinimal ] # starcup - added temp protection
   id: ClothingHeadHatHijabColorable
   name: hijab
   description: Encompassing cloth headwear worn by some human cultures and religions.
@@ -127,7 +130,7 @@
     sprite: _DEN/Clothing/Head/Hats/hijab.rsi # starcup - Den namespace
 
 - type: entity # NonDen - Aurora Station
-  parent: ClothingHeadBase # TODO weather protection
+  parent: [ ClothingHeadBase, TemperatureProtectionMinimal ] # starcup - added temp protection
   id: ClothingHeadHatTurbanColorable
   name: turban
   description: A sturdy cloth, worn around the head.
