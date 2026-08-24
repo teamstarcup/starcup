@@ -39,7 +39,7 @@
 
 # Cargo Technician
 - type: loadoutGroup
-  parent: [ Scarfs ]
+  parent: [ Scarfs, Neckerchiefs ]
   id: CargoTechnicianNeck
   name: loadout-group-cargo-technician-neck
   minLimit: 0
@@ -54,6 +54,14 @@
   loadouts:
   - CourierHead
   - MailCarrierHead
+
+- type: loadoutGroup
+  parent: [ Scarfs, Neckerchiefs ]
+  id: CourierNeck
+  name: loadout-group-courier-neck
+  minLimit: 0
+  loadouts:
+  - RedHoodCloak
 
 - type: loadoutGroup
   id: CourierJumpsuit
@@ -109,12 +117,13 @@
 
 # Salvage Specialist
 - type: loadoutGroup
-  parent: [ Scarfs ]
+  parent: [ Scarfs, Neckerchiefs ]
   id: SalvageSpecialistNeck
   name: loadout-group-salvage-specialist-neck
   minLimit: 0
   loadouts:
   - GoliathCloak
+  - UnathiMantle
 
 - type: loadoutGroup
   id: SalvageSpecialistID
