@@ -33,9 +33,9 @@
       clothingVisuals:
         neck:
           - state: equipped-NECK
-            color: "#38761d"
+            color: "#375b27"
     - type: Sprite
-      color: "#38761d"
+      color: "#375b27"
 
 - type: entity
   parent: ClothingNeckNeckerchief
@@ -49,3 +49,16 @@
             color: "#fc8cb8"
     - type: Sprite
       color: "#fc8cb8"
+
+- type: entity
+  parent: ClothingNeckNeckerchief
+  id: ClothingNeckNeckerchiefBrown
+  name: brown neckerchief
+  components:
+  - type: Clothing
+    clothingVisuals:
+      neck:
+      - state: equipped-NECK
+        color: "#41372e"
+  - type: Sprite
+    color: "#41372e"
