@@ -316,7 +316,7 @@
   parent: [ OrganBaseStomach, OrganOviniaInternal, OrganOviniaMetabolizer ]
   id: OrganOviniaStomach
   components:
-  - type: Stomach # Browser stomach
+  - type: Stomach # starcup - Browser stomach
     specialDigestible:
       tags:
       - Ruminant
@@ -326,6 +326,7 @@
       - Fruit
       - Vegetable
       - Wheat
+      - Pill
 
 - type: entity
   parent: [ OrganBaseLiver, OrganOviniaInternal, OrganOviniaMetabolizer ]

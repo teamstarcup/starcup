@@ -1,4 +1,15 @@
-- type: entity
+# SPDX-FileCopyrightText: 2025 ASaltySeabass
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Shaman
+# SPDX-FileCopyrightText: 2025 Sir Warock
+# SPDX-FileCopyrightText: 2025 Steven Higginbotham
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: MIT AND AGPL-3.0-or-later
+
+# "# Fashion Update" denotes unsorted Den ports taken from Aurora/World Server/Nuclear 14
+
+- type: entity # Fashion Update - Aurora Station
   parent: ClothingEyesGlassesCheapSunglasses
   id: ClothingEyesGlassesCheapSunglassesBig
   name: big sunglasses
@@ -8,6 +19,39 @@
     sprite: _DEN/Clothing/Eyes/Glasses/sunglasses_big.rsi
   - type: Clothing
     sprite: _DEN/Clothing/Eyes/Glasses/sunglasses_big.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity # Fashion Update - Aurora Station
+  parent: ClothingEyesGlasses
+  id: ClothingEyesGlassesHipster
+  name: tinted glasses # starcup - renamed from "hipster glasses"
+  description: A pretty pair of prescription peepers for seeing you through new hues. # starcup
+#  description: Made by Uncool. Co.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Eyes/Glasses/hipster.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Eyes/Glasses/hipster.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingEyesGlasses # changed from ClothingEyesBase
+  id: ClothingEyesGlassesRimless
+  name: rimless glasses
+  description: A pair of round, rimless glasses. Barely there.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Eyes/Glasses/rimless.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Eyes/Glasses/rimless.rsi
+    slots:
+    - HEAD
+    - EYES
+#  - type: VisionCorrection
   - type: Tag
     tags:
     - WhitelistChameleon

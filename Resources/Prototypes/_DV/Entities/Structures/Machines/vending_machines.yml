@@ -40,10 +40,14 @@
   - type: VendingMachineVisuals
     offState: off
     brokenState: broken
+    normalState: off # starcup
   - type: Sprite
     sprite: _DV/Structures/Machines/VendingMachines/mnkdrobe.rsi
     layers:
-    - state: off
+    - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off" # starcup - empty placeholder to avoid errors
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
