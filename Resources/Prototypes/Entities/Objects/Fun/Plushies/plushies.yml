@@ -329,10 +329,10 @@
   description: They say the unathi lady who knits these plushies has been rejecting buyout offers for the last 78 years. # starcup: replace lizards with unathi
   components:
   - type: Sprite
-    sprite: Objects/Fun/Plushies/lizard.rsi
+    sprite: _starcup/Objects/Fun/Plushies/lizard.rsi # starcup - revert to old upstream sprites
     state: icon
   - type: Item
-    sprite: Objects/Fun/Plushies/lizard.rsi
+    sprite: _starcup/Objects/Fun/Plushies/lizard.rsi # starcup - revert to old upstream sprites
   - type: EmitSoundOnUse
     sound: &PlushieLizardSound
       path: /Audio/Items/Toys/weh.ogg
@@ -353,7 +353,7 @@
     soundHit: *PlushieLizardSound
   - type: Clothing
     quickEquip: false
-    sprite: Objects/Fun/Plushies/lizard.rsi
+    sprite: _starcup/Objects/Fun/Plushies/lizard.rsi # starcup - revert to old upstream sprites
     slots:
     - HEAD
     clothingVisuals:
@@ -479,10 +479,10 @@
   description: An adorable stuffed toy that resembles a lizard in an EVA suit. Made by SyndComm in an initiative to help oni soldiers recover from their instinctive kobold fears after the Wars. "Welcome your new colleges as you do this plush, with open arms!" # starcup - NT-SC swap
   components:
   - type: Sprite
-    sprite: Objects/Fun/Plushies/lizard.rsi
+    sprite: _starcup/Objects/Fun/Plushies/lizard.rsi # starcup - revert to old upstream sprites
     state: plushie_spacelizard
   - type: Item
-    sprite: Objects/Fun/Plushies/lizard.rsi
+    sprite: _starcup/Objects/Fun/Plushies/lizard.rsi # starcup - revert to old upstream sprites
     heldPrefix: spacelizard
   - type: EmitSoundOnUse
     sound: &PlushieSpaceLizardSound
@@ -502,7 +502,7 @@
   - type: MeleeWeapon
     soundHit: *PlushieSpaceLizardSound
   - type: Clothing
-    sprite: Objects/Fun/Plushies/lizard.rsi
+    sprite: _starcup/Objects/Fun/Plushies/lizard.rsi # starcup - revert to old upstream sprites
     slots:
     - HEAD
     quickEquip: false
@@ -555,7 +555,7 @@
         Quantity: 10
   - type: Clothing
     quickEquip: false
-    sprite: Objects/Fun/Plushies/lizard.rsi
+    sprite: _starcup/Objects/Fun/Plushies/lizard.rsi # starcup - revert to old upstream sprites
     equippedPrefix: plushielizardinversed
     slots:
     - HEAD
