@@ -6,7 +6,7 @@
   parent: [ ClothingHandsButcherable, TemperatureProtectionMinimal ] # starcup - keep those arms warm
   id: ClothingHandsArmWarmersFingerless
   name: fingerless arm-warmers
-  description: A set of long, fingerless arm-warmers made from comfortable knit fabric. They WILL keep your arms warm, but not your fingers.
+  description: A set of long, fingerless arm-warmers made from comfortable knit fabric. They'll keep your arms warm, alright, but your digits are out of luck. # starcup - reworded second sentence
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Hands/ArmWarmers/plain.rsi # starcup - moved to Hands
@@ -33,7 +33,8 @@
 - type: entity
   parent: ClothingHandsArmWarmersFingerless
   id: ClothingHandsArmWarmersFingerlessValid
-  name: valid striped fingerless arm-warmers
+  name: blood-red striped fingerless arm-warmers # starcup - renamed from Valid
+  description: A set of long, fingerless arm-warmers made from comfortable knit fabric. They'll keep your traitor arms warm, alright, but your dastardly digits are out of luck. # starcup - added unique description
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Hands/ArmWarmers/valid.rsi

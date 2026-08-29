@@ -8,6 +8,9 @@
   abstract: true
   id: ClothingShoesBaseHeelStocking
   parent: ClothingShoesBaseSocks
+# begin starcup - they all have the same description, so just parent it. Tweaked wording slightly to reduce the flirtatiousness
+  description: Heels with stockings—sharp, shapely, and slightly less uncomfortable than heels without.
+# end starcup
   components:
   - type: FootstepModifier
     footstepSoundCollection:
@@ -24,7 +27,7 @@
   parent: ClothingShoesBaseHeelStocking
   id: ClothingShoesHeelsStockingsBlackBlack
   name: black gothic heelstockings
-  description: Heels with stockings. Meant to be worn together, they shape the legs just right—sharp, impossible to ignore once they're on.
+#  description: Heels with stockings. Meant to be worn together, they shape the legs just right—sharp, impossible to ignore once they're on.
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Shoes/Heels/blackheels_blackstockings.rsi
@@ -34,8 +37,8 @@
 - type: entity
   parent: [ClothingShoesBaseHeelStocking, ClothingShoesMilitaryBase]
   id: ClothingShoesHeelsStockingsBlackSec
-  name: Sec Heelstockings
-  description: Heels with stockings. Meant to be worn together, they shape the legs just right—sharp, impossible to ignore once they're on.
+  name: security heelstockings # starcup - renamed from Sec Heelstockings
+  description: Heels with stockings—sharp, shapely, and combat-ready. In theory. # starcup - added unique description
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Shoes/Heels/blackheels_secstockings.rsi
@@ -46,7 +49,7 @@
   parent: ClothingShoesBaseHeelStocking
   id: ClothingShoesHeelsStockingsWhiteWhite
   name: white classic heelstockings
-  description: Heels with stockings. Meant to be worn together, they shape the legs just right—sharp, impossible to ignore once they're on.
+#  description: Heels with stockings. Meant to be worn together, they shape the legs just right—sharp, impossible to ignore once they're on.
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Shoes/Heels/whiteheels_whitestockings.rsi
@@ -57,7 +60,7 @@
   parent: ClothingShoesBaseHeelStocking
   id: ClothingShoesHeelsStockingsWhiteBlack
   name: black cheerleader heelstockings
-  description: Heels with stockings. Meant to be worn together, they shape the legs just right—sharp, impossible to ignore once they're on.
+#  description: Heels with stockings. Meant to be worn together, they shape the legs just right—sharp, impossible to ignore once they're on.
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Shoes/Heels/whiteheels_blackstockings.rsi
@@ -68,7 +71,7 @@
   parent: ClothingShoesBaseHeelStocking
   id: ClothingShoesHeelsStockingsBlackWhite
   name: white cheerleader heelstockings
-  description: Heels with stockings. Meant to be worn together, they shape the legs just right—sharp, impossible to ignore once they're on.
+#  description: Heels with stockings. Meant to be worn together, they shape the legs just right—sharp, impossible to ignore once they're on.
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Shoes/Heels/blackheels_whitestockings.rsi
@@ -79,7 +82,7 @@
   parent: ClothingShoesBaseHeelStocking
   id: ClothingShoesHeelsStockingsBlackWPlain
   name: secretary heelstockings
-  description: Heels with stockings. Meant to be worn together, they shape the legs just right—sharp, impossible to ignore once they're on.
+#  description: Heels with stockings. Meant to be worn together, they shape the legs just right—sharp, impossible to ignore once they're on.
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Shoes/Heels/blackheels_plainwhitestockings.rsi
@@ -90,7 +93,7 @@
   parent: ClothingShoesBaseHeelStocking
   id: ClothingShoesHeelsStockingsWhiteWPlain
   name: all-white heelstockings
-  description: Heels with stockings. Meant to be worn together, they shape the legs just right—sharp, impossible to ignore once they're on.
+#  description: Heels with stockings. Meant to be worn together, they shape the legs just right—sharp, impossible to ignore once they're on.
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Shoes/Heels/whiteheels_plainwhitestockings.rsi
@@ -101,7 +104,7 @@
   parent: ClothingShoesBaseHeelStocking
   id: ClothingShoesHeelsStockingsWhiteBPlain
   name: office heelstockings
-  description: Heels with stockings. Meant to be worn together, they shape the legs just right—sharp, impossible to ignore once they're on.
+#  description: Heels with stockings. Meant to be worn together, they shape the legs just right—sharp, impossible to ignore once they're on.
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Shoes/Heels/whiteheels_plainblackstockings.rsi
