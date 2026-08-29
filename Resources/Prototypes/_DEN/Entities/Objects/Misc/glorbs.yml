@@ -81,35 +81,38 @@
   - type: ItemTogglePointLight
   - type: ItemToggle
     predictable: false
+# begin starcup - replaced slime_schlorp.ogg with bubble sounds
     soundActivate:
-      collection: Bubbles # starcup - replaced slime_schlorp.ogg
+      path: /Audio/_starcup/Emotes/Slime/bubble_01.ogg
       params:
         volume: -7
-#        pitch: 1.2
+        pitch: 1.2
         variation: 0.05
     soundDeactivate:
-      collection: Bubbles # starcup - replaced slime_schlorp.ogg
+      path: /Audio/_starcup/Emotes/Slime/bubble_02.ogg
       params:
         volume: -7
-#        pitch: 1.2
+        pitch: 1.2
         variation: 0.05
+# end starcup
   - type: StealTarget
     stealGroup: LAMP
-# begin starcup - removing unwanted tag and embeddable (creates issues bc we lack autoRemove)
+# begin starcup
   - type: EmitSoundOnCollide
     sound: &SlimeBubble
-      collection: Bubbles
+      path: /Audio/_starcup/Emotes/Slime/bubble_01.ogg # starcup - replaced slime_schlorp.ogg
       params:
         volume: -7
+        pitch: 1.2
         variation: 0.05
   - type: EmitSoundOnLand
     sound: *SlimeBubble
-#  - type: Tag
+#  - type: Tag # starcup - we don't have this
 #    tags:
 #    - IPCMaskWearable
 #  - type: EmbeddableProjectile
 #    removalTime: 0.2
-#    autoRemoveDuration: 0 # starcup - doesn't work
+#    autoRemoveDuration: 0 # starcup - we don't have this, so Embeddable conflicts with the use toggle
 #    sound:
 #      collection: Bubbles # starcup - replaced slime_schlorp.ogg
 #      params:

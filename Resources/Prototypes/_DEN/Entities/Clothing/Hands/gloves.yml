@@ -10,7 +10,7 @@
     sprite: _DEN/Clothing/Hands/Gloves/evening_gloves.rsi
 
 - type: entity
-  parent: ClothingHandsGlovesSyntheticBase
+  parent: [ ClothingHandsGlovesSyntheticBase, TemperatureProtectionMinimal ] # starcup - keep you warm
   id: ClothingHandsGlovesMittens
   name: mittens
   description: The other kind of insulating glove. Will protect your hands from the shock of freezing cold, but not much else.
