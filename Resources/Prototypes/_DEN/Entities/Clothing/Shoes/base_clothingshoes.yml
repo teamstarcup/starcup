@@ -8,10 +8,12 @@
   parent: ClothingShoesBaseButcherable
   id: ClothingShoesBaseSocks
   components:
-  - type: Clothing
-#    renderLayer: socks # starcup - for now this is basically a dummy placeholder parent
-  - type: HideLayerClothing
-#    force: true # starcup
-    slots:
-    - LFoot
-    - RFoot
+# begin starcup - for now this is basically a dummy placeholder parent, so none of this does anything.
+#  - type: Clothing
+#    renderLayer: socks
+#  - type: HideLayerClothing
+#    force: true
+#    slots:
+#    - LFoot
+#    - RFoot
+# end starcup
