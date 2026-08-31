@@ -14,7 +14,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
 
 - type: entity
-  parent: [ SolutionFood, SolutionToolSmall, Clothing ] # starcup - added SolutionFood and SolutionToolSmall
+  parent: [ SolutionFood, SolutionToolSmall, Clothing, BaseSlicingRefinable ] # starcup - added SolutionFood,BaseSlicingRefinable, and SolutionToolSmall
   id: ClothingClothWrap
   name: cloth wraps
   description: A roll of treated canvas used for wrapping claws or paws.
@@ -33,12 +33,12 @@
   - type: Construction
     graph: ClothingClothWrap
     node: shoes
-  - type: Butcherable
-    butcheringType: Knife
-    spawned:
-    - id: MaterialCloth1
-      amount: 1
-# begin starcup - outdated food stuff
+  # begin starcup - remove/replace outdated food stuff
+#  - type: Butcherable
+#    butcheringType: Knife
+#    spawned:
+#    - id: MaterialCloth1
+#      amount: 1
 #  - type: Food
 #    requiresSpecialDigestion: true
 #  - type: SolutionContainerManager
@@ -48,6 +48,7 @@
 #        reagents:
 #        - ReagentId: Fiber
 #          Quantity: 10
+# end starcup
   - type: Edible
     requiresSpecialDigestion: true
   - type: Solution
@@ -55,8 +56,15 @@
       reagents:
       - ReagentId: Fiber
         Quantity: 15
+  - type: ToolRefinable
+    refineResult:
+    - id: MaterialCloth1
+  - type: PhysicalComposition
+    materialComposition:
+      Cloth: 50
 # end starcup
   - type: Tag
     tags:
     - ClothMade
+    - Recyclable # starcup
     - WhitelistChameleon
