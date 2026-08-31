@@ -549,7 +549,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingHeadBase, BaseFoldable, TemperatureProtection ] # starcup temperature protection - cold-weather hats should work
+  parent: [ClothingHeadBase, BaseFoldable, TemperatureProtectionMinimal ] # starcup temperature protection - cold-weather hats should work
   id: ClothingHeadHatSantahat
   name: santa hat
   description: A festive hat worn by Santa Claus. Now with a foldable beard.
@@ -673,7 +673,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingHeadBase, BaseFoldable, TemperatureProtection ] # starcup - cold-weather hats should work
+  parent: [ClothingHeadBase, BaseFoldable, TemperatureProtectionMinimal ] # starcup - cold-weather hats should work
   id: ClothingHeadHatUshanka
   name: ushanka
   description: A fluffy, well-insulated winter hat in the style of an old human civilization. # starcup: rewritten for tone
@@ -697,7 +697,7 @@
       visible: false
 
 - type: entity
-  parent: [ ClothingHeadBase, TemperatureProtection ] # starcup: temperature protection
+  parent: [ ClothingHeadBase, TemperatureProtectionMinimal ] # starcup: temperature protection
   id: ClothingHeadHatCanadaBeanie
   name: red and white toque # starcup - renamed from "beanie"
   description: Red, white and snug. It radiates a homely feeling, if your home happens to be chilly and filled with coffeehouses.
