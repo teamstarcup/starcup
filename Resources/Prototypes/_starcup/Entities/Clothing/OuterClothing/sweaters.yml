@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ ClothingOuterBase, TemperatureProtection ]
+  parent: [ SolutionFood, SolutionNormal, ClothingOuterBase, TemperatureProtection ]
   id: ClothingOuterSweaterBase
   abstract: true
   components:
@@ -7,13 +7,12 @@
     size: Normal
   - type: Edible
     requiresSpecialDigestion: true
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 30
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 30
+  - type: Solution
+    solution:
+      maxVol: 30
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 30
   - type: Tag
     tags:
     - ClothMade

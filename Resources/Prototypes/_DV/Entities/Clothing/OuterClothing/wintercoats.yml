@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, TemperatureProtection ] # upstream: temperature protection
+  parent: [ClothingOuterStorageEdible, AllowSuitStorageClothing, TemperatureProtection ] # upstream: temperature protection, Jacket parent
   id: ClothingOuterArmoredWinterCoat
   components:
   - type: Item
@@ -12,15 +12,14 @@
         Slash: 0.75
         Piercing: 0.75
         Heat: 0.75
-  - type: Edible
-    requiresSpecialDigestion: true
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 30
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 30
+#  - type: Edible # starcup - unnecessary with reparenting to Jacket
+#    requiresSpecialDigestion: true
+#  - type: Solution
+#    solution:
+#      maxVol: 30
+#      reagents:
+#      - ReagentId: Fiber
+#        Quantity: 30
   - type: Tag
     tags:
     - ClothMade

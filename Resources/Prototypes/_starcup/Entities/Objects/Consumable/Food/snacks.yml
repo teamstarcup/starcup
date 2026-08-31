@@ -26,15 +26,13 @@
   - type: FlavorProfile
     flavors:
       - imitationchocolate
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 30
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 10
-        - ReagentId: CocoaPowderImitation
-          Quantity: 1
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 8
+      - ReagentId: CocoaPowderImitation
+        Quantity: 2
 
 - type: entity
   name: nano-treats

@@ -171,11 +171,10 @@
   - type: Sprite
     state: COOKIE!!!
   # begin starcup: add theobromine
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 6
-        reagents:
+  - type: Solution
+    solution:
+      maxVol: 15
+      reagents:
         - ReagentId: Nutriment
           Quantity: 5
         - ReagentId: Theobromine

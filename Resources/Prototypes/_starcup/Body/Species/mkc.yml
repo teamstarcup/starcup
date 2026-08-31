@@ -159,12 +159,11 @@
   abstract: true
   suffix: MKC
   components:
-  - type: SolutionContainerManager
-    solutions:
-      organ:
-        reagents:
-        - ReagentId: Oil
-          Quantity: 10
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Oil
+        Quantity: 10
 
 - type: entity
   parent: OrganMKC

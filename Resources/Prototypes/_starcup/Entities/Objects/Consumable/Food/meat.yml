@@ -12,12 +12,15 @@
   - type: Sprite
     sprite: _starcup/Objects/Consumable/Food/meat.rsi
     state: abyssalfish
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: CarpoToxin
-          Quantity: 8
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: CarpoToxin
+        Quantity: 8
+      - ReagentId: UncookedAnimalProteins
+        Quantity: 20
+      - ReagentId: Fat
+        Quantity: 2 # leaner
   - type: Extractable
     juiceSolution:
       reagents:
@@ -32,7 +35,7 @@
 
 - type: entity
   name: raw bad carp fillet
-  parent: FoodMeatFish
+  parent: [ SolutionVeryTiny, FoodMeatFish ] # much leaner
   id: FoodMeatBadFish
   description: Pale, dry, and musty.
   components:
@@ -43,12 +46,15 @@
   - type: Sprite
     sprite: _starcup/Objects/Consumable/Food/meat.rsi
     state: badfish
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: CarpoToxin
-          Quantity: 2
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: CarpoToxin
+        Quantity: 2
+      - ReagentId: UncookedAnimalProteins
+        Quantity: 5
+      - ReagentId: Fat
+        Quantity: 1
   - type: Extractable
     juiceSolution:
       reagents:
@@ -70,14 +76,6 @@
   components:
   - type: Sprite
     state: plain
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 9
-        - ReagentId: Fat
-          Quantity: 9
   - type: ToolRefinable
     refineResult:
     - id: FoodMeatCapybaraCutlet
@@ -101,14 +99,6 @@
   - type: Sprite
     layers:
     - state: plain-cooked
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 10
-        - ReagentId: Protein
-          Quantity: 5
   - type: ToolRefinable
     refineResult:
     - id: FoodMeatCapybaraCutlet
@@ -119,7 +109,7 @@
 
 - type: entity
   name: capybara cutlet
-  parent: FoodMeatBase
+  parent: FoodMeatCutletCookedBase
   id: FoodMeatCapybaraCutlet
   description: A cutlet of cooked capybara meat.
   components:
@@ -130,11 +120,3 @@
     - Meat
   - type: Sprite
     state: cutlet-cooked
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 2
-        - ReagentId: Protein
-          Quantity: 2

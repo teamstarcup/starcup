@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseItem
+  parent: [ BaseItem, SolutionVeryTiny, SolutionFood ] # starcup - SolutionFood, SolutionVeryTiny
   id: Rose
   name: rose # starcup - lowercase
   description: Smells like love.
@@ -44,10 +44,12 @@
   - type: Item
     sprite: _Impstation/Objects/Specific/Hydroponics/rose.rsi
     size: Small
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 2
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 6 # starcup - 2 -> 6
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 4 # starcup - yummy sheep treat
   - type: MeleeChemicalInjector
     solution: food
   - type: InjectableSolution
@@ -118,15 +120,14 @@
     damage:
       types:
         Piercing: 5
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 3
-        reagents:
-        - ReagentId: SulfuricAcid
-          Quantity: 1
-        - ReagentId: Razorium
-          Quantity: 1
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 6 # starcup - bumped 3 -> 6
+      reagents:
+      - ReagentId: SulfuricAcid
+        Quantity: 2 # starcup - +1
+      - ReagentId: Razorium
+        Quantity: 3 # starcup - +2
 
 - type: entity
   parent: [ Rose, BaseMajorContraband ] # starcup - Tier3Contraband -> BaseMajorContraband
@@ -142,12 +143,11 @@
       types:
         Piercing: 5
         Slash: 3
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: Tazinide
-          Quantity: 2
-        - ReagentId: PolytrinicAcid
-          Quantity: 3
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 6 # starcup - bumped 5->6
+      reagents:
+      - ReagentId: Tazinide
+        Quantity: 3 # starcup - +1
+      - ReagentId: PolytrinicAcid
+        Quantity: 3

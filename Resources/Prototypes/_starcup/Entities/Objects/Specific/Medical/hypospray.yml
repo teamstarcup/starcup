@@ -88,13 +88,12 @@
     maxFillLevels: 1
     changeColor: false
     emptySpriteName: medipen_silicon_empty
-  - type: SolutionContainerManager
-    solutions:
-      pen:
-        maxVol: 15
-        reagents:
-        - ReagentId: RescueNanites
-          Quantity: 15
+  - type: Solution
+    solution:
+      maxVol: 15
+      reagents:
+      - ReagentId: RescueNanites
+        Quantity: 15
 
 - type: entity
   parent: [ChemicalMedipen, BaseTraitorContraband]
@@ -123,13 +122,12 @@
     maxFillLevels: 1
     changeColor: false
     emptySpriteName: morphen_silicon_empty
-  - type: SolutionContainerManager
-    solutions:
-      pen:
-        maxVol: 30
-        reagents:
-        - ReagentId: ReconstructorNanites
-          Quantity: 30
+  - type: Solution
+    solution:
+      maxVol: 30
+      reagents:
+      - ReagentId: ReconstructorNanites
+        Quantity: 30
   - type: StaticPrice
     price: 1500
 
@@ -158,13 +156,12 @@
     layers:
     - state: overclockpen
       map: [ "enum.SolutionContainerLayers.Fill" ]
-  - type: SolutionContainerManager
-    solutions:
-      pen:
-        maxVol: 30
-        reagents:
-        - ReagentId: OverclockNanites
-          Quantity: 30
+  - type: Solution
+    solution:
+      maxVol: 30
+      reagents:
+      - ReagentId: OverclockNanites
+        Quantity: 30
   - type: SolutionContainerVisuals
     maxFillLevels: 1
     changeColor: false
@@ -197,13 +194,12 @@
     layers:
     - state: microoverclockpen
       map: [ "enum.SolutionContainerLayers.Fill" ]
-  - type: SolutionContainerManager
-    solutions:
-      pen:
-        maxVol: 15
-        reagents:
-        - ReagentId: OverclockNanites
-          Quantity: 15
+  - type: Solution
+    solution:
+      maxVol: 15
+      reagents:
+      - ReagentId: OverclockNanites
+        Quantity: 15
   - type: SolutionContainerVisuals
     maxFillLevels: 1
     changeColor: false

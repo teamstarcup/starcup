@@ -1,20 +1,18 @@
 # Base Prototypes
 - type: entity
-  parent: FoodBase
+  parent: [ SolutionVeryTiny, FoodBase ]
   id: FoodLollipop
   abstract: true
   name: lollipop
   description: Little stick candies in a dizzyingly wide variety of flavors.
   components:
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 3
-        - ReagentId: Nutriment
-          Quantity: 2
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 3
+      - ReagentId: Nutriment
+        Quantity: 2
   - type: Sprite
     sprite: _DV/Objects/Consumable/Food/candy.rsi
     layers:
@@ -32,21 +30,19 @@
     - Candy
 
 - type: entity
-  parent: FoodBase
+  parent: [ SolutionVeryTiny, FoodBase ]
   id: FoodGumball
   abstract: true
   name: gumball
   description: A perennial favorite of standoffish cartoon characters.
   components:
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 3
-        - ReagentId: Nutriment
-          Quantity: 2
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 3
+      - ReagentId: Nutriment
+        Quantity: 2
   - type: Sprite
     sprite: _DV/Objects/Consumable/Food/candy.rsi
     layers:
@@ -391,17 +387,16 @@
   - type: FlavorProfile
     flavors:
     - imitationchocolate
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 2
-        - ReagentId: CocoaPowderImitation
-          Quantity: 2
-        - ReagentId: Nutriment
-          Quantity: 1
+  - type: Solution
+    solution:
+      maxVol: 5
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 2
+      - ReagentId: CocoaPowderImitation
+        Quantity: 2
+      - ReagentId: Nutriment
+        Quantity: 1
 
 - type: entity
   name: homemade imitation chocolate heart
@@ -413,14 +408,13 @@
     sprite: _Impstation/Objects/Consumable/Food/candy.rsi
     layers:
     - state: homemadechocolate
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 15 # extra space for poison purposes
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 2
-        - ReagentId: CocoaPowderImitation
-          Quantity: 2
-        - ReagentId: Nutriment
-          Quantity: 1
+  - type: Solution
+    solution:
+      maxVol: 15 # extra space for poison purposes
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 2
+      - ReagentId: CocoaPowderImitation
+        Quantity: 2
+      - ReagentId: Nutriment
+        Quantity: 1

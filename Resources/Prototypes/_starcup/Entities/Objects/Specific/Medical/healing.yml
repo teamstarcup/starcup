@@ -9,13 +9,12 @@
     pillType: 8
   - type: Label
     localizedLabel: pill-label-caramexinin-10u
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Caramexinin
-          Quantity: 10
+  - type: Solution
+    solution:
+      maxVol: 20
+      reagents:
+      - ReagentId: Caramexinin
+        Quantity: 10
 
 - type: entity
   parent: PillCanister
@@ -42,13 +41,12 @@
     pillType: 2
   - type: Label
     localizedLabel: pill-label-ethyloxyephedrine-10u
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Ethyloxyephedrine
-          Quantity: 10
+  - type: Solution
+    solution:
+      maxVol: 20
+      reagents:
+      - ReagentId: Ethyloxyephedrine
+        Quantity: 10
 
 - type: entity
   parent: PillCanister

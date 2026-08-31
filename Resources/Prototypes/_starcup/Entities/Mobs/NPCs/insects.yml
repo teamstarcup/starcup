@@ -1,3 +1,16 @@
+# Solutions
+- type: entity
+  abstract: true
+  parent: [SolutionFood, SolutionTiny]
+  id: SolutionBug
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: GroundInsect
+        Quantity: 5
+
+# Bugs
 - type: entity
   name: flying insect
   parent: [ SimpleMobBase, FlyingMobBase ]
@@ -40,12 +53,6 @@
         Base: dead
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: GroundInsect
-          Quantity: 5
   - type: Butcherable
     spawned: [] # Should give nothing when you butcher it so we set the item id it needs to spawn to null
   - type: Item
@@ -82,7 +89,7 @@
 
 - type: entity
   name: giant flying insect
-  parent: [ SimpleMobBase, FlyingMobBase ]
+  parent: [ SimpleMobBase, FlyingMobBase, SolutionFood, SolutionSmall ]
   id: MobGiantFlyingInsect
   description: For those big buggers.
   abstract: true
@@ -131,12 +138,11 @@
         Base: dead
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: Slime
-          Quantity: 5
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Slime
+        Quantity: 15
   - type: Tag
     tags:
     - CreatureEmotes
@@ -263,7 +269,7 @@
   suffix: AI
   id: MobWaspSwarm
   description: They don't want any trouble.
-  parent: MobBeeSwarm
+  parent: [ MobBeeSwarm, SolutionBug]
   components:
   - type: Sprite
     layers:
@@ -281,19 +287,18 @@
     damage:
       types:
         Piercing: 2
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: GroundInsect
-          Quantity: 5
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: GroundInsect
+        Quantity: 5
 
 - type: entity
   name: flies
   suffix: AI
   id: MobFlySwarm
   description: A person's trash is a fly's treasure.
-  parent: MobFlyingInsect
+  parent: [ MobFlyingInsect, SolutionBug ]
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -312,19 +317,13 @@
         - FlyingMobMask
         layer:
         - FlyingMobLayer
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: GroundInsect
-          Quantity: 5
 
 - type: entity
   name: mosquitoes
   suffix: AI
   id: MobMosquitoSwarm
   description: That persistent buzzing on your ears...
-  parent: MobBeeSwarm
+  parent: [ MobBeeSwarm, SolutionBug ]
   components:
   - type: NpcFactionMember
     factions:
@@ -342,19 +341,13 @@
     damage:
       types:
         Piercing: 1
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: GroundInsect
-          Quantity: 5
 
 - type: entity
   name: fireflies
   suffix: AI
   id: MobFireflySwarm
   description: Beautiful lights in the night.
-  parent: MobFlyingInsect
+  parent: [ MobFlyingInsect, SolutionBug ]
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -408,8 +401,8 @@
   name: dragonfly
   suffix: AI
   id: MobDragonfly
-  description: Its whip-like tail moves with surprising dexteirty.
-  parent: MobFlyingInsect
+  description: Its whip-like tail moves with surprising dexterity.
+  parent: [ MobFlyingInsect, SolutionBug ]
   components:
   - type: NpcFactionMember
     factions:
@@ -567,6 +560,8 @@
   parent:
   - SimpleMobBase
   - BaseMobAnimal
+  - SolutionFood
+  - SolutionTiny
   id: MobBeetle
   description: A little friend with a tough shell and a valiant heart.
   components:
@@ -630,12 +625,11 @@
         prototype: MouseThirst
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: Slime
-          Quantity: 5
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Slime
+        Quantity: 10
   - type: Butcherable
     spawned:
     - id: FoodMeatSlime

@@ -5,13 +5,12 @@
   components:
   - type: Label
     localizedLabel: reagent-name-blood
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 10
-        reagents:
-        - ReagentId: Blood
-          Quantity: 10
+  - type: Solution
+    solution:
+      maxVol: 10
+      reagents:
+      - ReagentId: Blood
+        Quantity: 10
   - type: Tag
     tags:
     - CentrifugeCompatible

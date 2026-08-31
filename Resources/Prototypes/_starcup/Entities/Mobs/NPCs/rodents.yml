@@ -108,6 +108,7 @@
   parent:
   - SimpleMobBase
   - BaseMobAnimal
+  - SolutionVermin
   id: MobRat
   name: rat
   description: Slightly bigger and braver than your average mouse.
@@ -188,12 +189,6 @@
         prototype: MouseThirst
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 3
   - type: Butcherable
     spawned:
     - id: FoodMeatRat
@@ -282,6 +277,7 @@
   parent:
   - SimpleMobBase
   - BaseMobAnimal
+  - SolutionVermin
   id: MobRatLarge
   name: large rat
   description: A particularly portly pest.
@@ -348,12 +344,6 @@
         prototype: MouseThirst
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 3
   - type: Butcherable
     spawned:
     - id: FoodMeatRat
@@ -447,6 +437,7 @@
   parent:
   - SimpleMobBase
   - BaseMobAnimal
+  - SolutionVermin
   id: MobRatDire
   name: dire rat
   description: Aggressive, overgrown vent vermin, with teeth that look like they could shear steel.
@@ -513,12 +504,6 @@
         prototype: MouseThirst
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 3
   - type: Butcherable
     spawned:
     - id: FoodMeatRat
@@ -589,6 +574,7 @@
   parent:
   - SimpleMobBase
   - BaseMobAnimal
+  - SolutionVermin
   id: MobRatBristle
   name: bristle rat
   description: Also known as vent porcupines, they can fire their nasty quills at a distance.
@@ -655,12 +641,6 @@
         prototype: MouseThirst
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 3
   - type: Butcherable
     spawned:
     - id: FoodMeatRat

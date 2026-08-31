@@ -25,10 +25,9 @@
   id: PortableGeneratorJrPacmanFilled
   suffix: Welding Fuel, 8 kW, Filled
   components:
-  - type: SolutionContainerManager
-    solutions:
-      tank:
-        maxVol: 50
-        reagents:
-        - ReagentId: WeldingFuel
-          Quantity: 50
+  - type: Solution
+    solution:
+      maxVol: 60
+      reagents:
+      - ReagentId: WeldingFuel
+        Quantity: 60
