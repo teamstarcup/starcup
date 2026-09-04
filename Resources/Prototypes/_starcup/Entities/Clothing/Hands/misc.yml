@@ -1,0 +1,63 @@
+# Arm-Warmers
+- type: entity
+  parent: ClothingHandsWristCuffs
+  id: ClothingHandsWristCuffsBrown
+  name: brown wrist cuffs
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#723A02"
+      right:
+      - state: inhand-right
+        color: "#723A02"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+        color: "#723A02"
+  - type: Sprite
+    color: "#723A02"
+
+- type: entity
+  parent: ClothingHandsWristCuffs
+  id: ClothingHandsWristCuffsRed
+  name: red wrist cuffs
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#940000"
+      right:
+      - state: inhand-right
+        color: "#940000"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+        color: "#940000"
+  - type: Sprite
+    color: "#940000"
+
+- type: entity
+  parent: ClothingHandsWristCuffs
+  id: ClothingHandsWristCuffsBlack
+  name: black wrist cuffs
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#3f3f3f"
+      right:
+      - state: inhand-right
+        color: "#3f3f3f"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+        color: "#3f3f3f"
+  - type: Sprite
+    color: "#3f3f3f"
