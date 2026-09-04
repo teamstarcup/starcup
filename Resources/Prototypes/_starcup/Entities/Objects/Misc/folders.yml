@@ -10,9 +10,15 @@
     - state: folder-syndcomm
     - state: folder-base
   - type: Item
-    sprite: _starcup/Objects/Misc/folders.rsi
-    size: Small
-    shape: null
+    sprite: Objects/Misc/bureaucracy.rsi
+    size: Tiny
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#282828"
+      right:
+      - state: inhand-right
+        color: "#282828"
 
 - type: entity
   parent: BoxFolderCentComClipboard
