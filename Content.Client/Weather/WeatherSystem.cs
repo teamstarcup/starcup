@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Shared.CCVar; // starcup
 using Content.Shared.Light.Components;
 using Content.Shared.StatusEffectNew.Components;
 using Content.Shared.Weather;
@@ -7,6 +8,7 @@ using Robust.Client.GameObjects;
 using Robust.Client.Player;
 using Robust.Shared.Audio.Components;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Configuration; // starcup
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Player;
@@ -15,6 +17,7 @@ namespace Content.Client.Weather;
 
 public sealed partial class WeatherSystem : SharedWeatherSystem
 {
+    [Dependency] private IConfigurationManager _cfg = default!; // starcup
     [Dependency] private IPlayerManager _playerManager = default!;
     [Dependency] private AudioSystem _audio = default!;
     [Dependency] private MapSystem _mapSystem = default!;
@@ -24,10 +27,21 @@ public sealed partial class WeatherSystem : SharedWeatherSystem
     [Dependency] private EntityQuery<MapGridComponent> _gridQuery = default!;
     [Dependency] private EntityQuery<RoofComponent> _roofQuery = default!;
 
+    private float _ambienceGain; // starcup
+
     public override void Initialize()
     {
         base.Initialize();
 
+        // begin starcup: add weather volume to ambience slider
+        Subs.CVar(_cfg,
+            CCVars.AmbienceVolume,
+            value =>
+            {
+                _ambienceGain = value;
+            },
+            true);
+        // end starcup
         SubscribeLocalEvent<WeatherStatusEffectComponent, ComponentShutdown>(OnComponentShutdown);
     }
 
@@ -129,6 +143,7 @@ public sealed partial class WeatherSystem : SharedWeatherSystem
 
             var alpha = GetWeatherPercent((uid, status));
             alpha *= SharedAudioSystem.VolumeToGain(weather.Sound.Params.Volume);
+            alpha *= _ambienceGain; // starcup
             _audio.SetGain(weather.Stream, alpha, audio);
             audio.Occlusion = occlusion;
         }
