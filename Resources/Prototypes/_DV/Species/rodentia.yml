@@ -10,11 +10,12 @@
   femaleFirstNames: NamesRodentiaFemale
   lastNames: NamesRodentiaLast
   naming: LastFirst
-# begin starcup: height adjustments
-  baseScale: "0.75, 0.75"
-  minHeight: 0.95
-# end starcup
-  # begin starcup: move voices to species
+# begin starcup: height adjustments (Tiny category)
+#  baseScale: 0.8, 0.8
+  minHeight: 0.7
+  maxHeight: 0.8
+  defaultHeight: 0.7
+# move voices to species
   defaultSoundsBySex:
   - MaleRodentia
   - FemaleRodentia
@@ -22,4 +23,4 @@
   voices:
   - MaleRodentia
   - FemaleRodentia
-  # end starcup
+# end starcup

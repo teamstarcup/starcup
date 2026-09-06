@@ -5,9 +5,12 @@
   prototype: MobFelinid
   dollPrototype: AppearanceFelinid
   skinColoration: Hues # starcup
-  baseScale: "0.85, 0.85"
-  minHeight: 0.9 # starcup: height adjustments
-  # begin starcup: move voices to species
+# begin starcup: height adjustments (Small category)
+#  baseScale: "0.8, 0.8"
+  minHeight: 0.75
+  maxHeight: 0.9
+  defaultHeight: 0.8
+# move voices to species
   defaultSoundsBySex:
   - MaleFelinid
   - FemaleFelinid
@@ -15,4 +18,4 @@
   voices:
   - MaleFelinid
   - FemaleFelinid
-  # end starcup
+# end starcup
