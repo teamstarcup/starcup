@@ -323,5 +323,5 @@ if __name__ == "__main__":
     try:
         main()
     except Exception as e:
-        print(f"Failed to publish changelog to Discord: {e}", file=sys.stderr)
-        exit(1)
+        print(f"Failed to publish changelog to Discord!", file=sys.stderr)
+        raise e
