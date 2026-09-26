@@ -1,18 +1,139 @@
-# This action is pointed to in the "emoteAction:" field of the Vocal component to replace the default scream.
+# These actione are pointed to in the "emoteAction:" field of the Vocal component to replace the default scream.
 
 - type: entity
-  parent: BaseAction
-  id: ActionEmitSound
-  name: Vocalize
-  description: Emit a characteristic sound.
+  parent: ActionScream
+  id: ActionCreatureScream
+  description: Make a characteristic sound.
   components:
-  - type: Action
-    useDelay: 10
-    checkCanInteract: false
   - type: Sprite
     sprite: _starcup/Interface/Actions/actions_general.rsi
     layers:
     - state: emit_sound
   - type: InstantAction
     event: !type:EmoteActionEvent
-      emote: Scream
+      emote: CreatureScream
+
+- type: entity
+  parent: ActionCreatureScream
+  id: ActionCreatureBark
+  name: Bark
+  components:
+  - type: InstantAction
+    event: !type:EmoteActionEvent
+      emote: CreatureBark
+
+- type: entity
+  parent: ActionCreatureScream
+  id: ActionCreatureGrowl
+  name: Growl
+  components:
+  - type: InstantAction
+    event: !type:EmoteActionEvent
+      emote: CreatureGrowl
+
+- type: entity
+  parent: ActionCreatureScream
+  id: ActionCreatureSqueak
+  name: Squeak
+  components:
+  - type: InstantAction
+    event: !type:EmoteActionEvent
+      emote: CreatureSqueak
+
+- type: entity
+  parent: ActionCreatureScream
+  id: ActionCreatureWhimper
+  name: Whimper
+  components:
+  - type: InstantAction
+    event: !type:EmoteActionEvent
+      emote: CreatureWhimper
+
+- type: entity
+  parent: ActionCreatureScream
+  id: ActionCreatureHiss
+  name: Hiss
+  components:
+  - type: InstantAction
+    event: !type:EmoteActionEvent
+      emote: CreatureHiss
+
+- type: entity
+  parent: ActionCreatureScream
+  id: ActionCreatureTrill
+  name: Trill
+  components:
+  - type: InstantAction
+    event: !type:EmoteActionEvent
+      emote: CreatureTrill
+
+- type: entity
+  parent: ActionCreatureScream
+  id: ActionCreatureChirp
+  name: Chirp
+  components:
+  - type: InstantAction
+    event: !type:EmoteActionEvent
+      emote: CreatureChirp
+
+- type: entity
+  parent: ActionCreatureScream
+  id: ActionCreatureRoar
+  name: Roar
+  components:
+  - type: InstantAction
+    event: !type:EmoteActionEvent
+      emote: CreatureRoar
+
+- type: entity
+  parent: ActionCreatureScream
+  id: ActionCreatureBuzz
+  name: Buzz
+  components:
+  - type: InstantAction
+    event: !type:EmoteActionEvent
+      emote: BuzzNonSilicon
+
+- type: entity
+  parent: ActionCreatureScream
+  id: ActionCreatureSnap
+  name: Snap
+  components:
+  - type: InstantAction
+    event: !type:EmoteActionEvent
+      emote: ClawSnap
+
+- type: entity
+  parent: ActionCreatureSnap
+  id: ActionCreatureSnapMandible
+  components:
+  - type: InstantAction
+    event: !type:EmoteActionEvent
+      emote: MandibleSnap
+
+- type: entity
+  parent: ActionCreatureScream
+  id: ActionCreatureClick
+  name: Click
+  components:
+  - type: InstantAction
+    event: !type:EmoteActionEvent
+      emote: CreatureClick
+
+- type: entity
+  parent: ActionCreatureScream
+  id: ActionCreatureSimmer
+  name: Simmer
+  components:
+  - type: InstantAction
+    event: !type:EmoteActionEvent
+      emote: Simmer
+
+- type: entity
+  parent: ActionCreatureScream
+  id: ActionCreatureThumpFootSoft
+  name: Thump
+  components:
+  - type: InstantAction
+    event: !type:EmoteActionEvent
+      emote: ThumpFootSoft

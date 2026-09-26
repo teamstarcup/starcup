@@ -107,8 +107,7 @@
     allowedEmotes: ['CreatureSqueak', 'CreatureScream', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough']
   - type: Vocal
     emoteSounds: RatKingSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   # end starcup
   - type: ToolRefinable
     refineResult:
@@ -283,8 +282,7 @@
   # begin starcup: give animals a voice
   - type: Vocal
     emoteSounds: SqueakSpeechEmotes
-    screamId: CreatureSqueak
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureSqueak
     wilhelmProbability: 0.001
   - type: TypingIndicator
     proto: rodentia

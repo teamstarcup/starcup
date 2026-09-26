@@ -87,8 +87,7 @@
   # begin starcup: give animals a voice
   - type: Vocal
     emoteSounds: BatSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: TypingIndicator
     proto: rodentia
   - type: AutoEmote
@@ -302,8 +301,7 @@
   # begin starcup: give animals a voice
   - type: Vocal
     emoteSounds: CluckSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - CluckAutoEmote
@@ -475,8 +473,7 @@
     allowedEmotes: ['BuzzNonSilicon']
   - type: Vocal
     emoteSounds: BeetleSpeechEmotes
-    screamId: BuzzNonSilicon
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureBuzz
   - type: ReplacementAccent
     accent: crab
   - type: FootstepModifier
@@ -656,8 +653,7 @@
   - type: Vocal
     # begin starcup
     emoteSounds: MothroachSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
     wilhelmProbability: 0.001
   - type: AutoEmote
     emotes:
@@ -814,8 +810,7 @@
     allowedEmotes: ['Flutter', 'CreatureQuack', 'CreatureLaugh', 'CreatureScream']
   - type: Vocal
     emoteSounds: DuckSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - QuackAutoEmote
@@ -1048,8 +1043,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureCough', 'CreatureMoo', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: CowSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - MooAutoEmote
@@ -1157,8 +1151,7 @@
       collection: FootstepBug
   - type: Vocal
     emoteSounds: CrabSpeechEmotes
-    screamId: ClawSnap
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureSnap
   # end starcup
 
 - type: entity
@@ -1244,8 +1237,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureCough', 'CreatureBleat', 'CreatureSneeze'] # starcup
   - type: Vocal
     emoteSounds: GoatSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - BleatAutoEmote
@@ -1564,8 +1556,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureHonk', 'Flutter']
   - type: Vocal
     emoteSounds: GooseSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - HonkAutoEmote
@@ -1663,8 +1654,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureOok', 'CreatureGrowl', 'ChestBeating', 'CreatureCough', 'ThumpFistLoud']
   - type: Vocal
     emoteSounds: GorillaSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - OokAutoEmote
@@ -1734,8 +1724,7 @@
   - type: Vocal
     emoteSounds: KangarooSpeechEmotes # starcup
   # begin starcup
-    screamId: CreatureGrowl
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureGrowl
   - type: Speech
     speechVerb: LargeMob
     speechSounds: KangarooSpeechSounds
@@ -1908,8 +1897,7 @@
   # begin starcup
   - type: Vocal
     emoteSounds: MonkeySpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: Speech
     speechSounds: MonkeySpeechSounds
     speechVerb: Monkey
@@ -2285,8 +2273,7 @@
   # begin starcup: give animals a voice
   - type: Vocal
     emoteSounds: SqueakSpeechEmotes # starcup
-    screamId: CreatureSqueak
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureSqueak
     wilhelmProbability: 0.001
   - type: TypingIndicator
     proto: rodentia
@@ -2473,8 +2460,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureGrowl', 'CreatureHiss', 'CreatureWhimper', 'ThumpTailSoft', 'ThumpTailMany', 'ThumpTailLoud', 'TailWhip'] # Can't thump tail because no body component  # starcup: Hiss -> LizardHiss -> CreatureHiss
   - type: Vocal # Imp edit # no it's starcup again babyyy
     emoteSounds: LizardSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: ReplacementAccent
     accent: LizardAccent
   # end starcup
@@ -2592,8 +2578,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureWhimper', 'CreatureSqueak', 'ThumpTailSoft']
   - type: Vocal
     emoteSounds: LizardTinySpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: ReplacementAccent
     accent: GeckoAccent
   # end starcup
@@ -2676,8 +2661,7 @@
     allowedEmotes: ['CreatureWhimper', 'CreatureCroak']
   - type: Vocal
     emoteSounds: FrogSpeechEmotes
-    screamId: CreatureWhimper
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureWhimper
   - type: ReplacementAccent
     accent: FrogAccent
   - type: AutoEmote
@@ -2732,8 +2716,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureGrowl', 'CreatureSqueak', 'Flutter']
   - type: Vocal
     emoteSounds: ParrotSpeechEmotes # starcup
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: Tag
     tags:
     - CreatureEmotes
@@ -2849,8 +2832,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureChitter']
   - type: Vocal
     emoteSounds: PenguinSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: ReplacementAccent
     accent: PenguinAccent
   - type: AutoEmote
@@ -2992,8 +2974,7 @@
     allowedEmotes: ['CreatureHiss']
   - type: Vocal
     emoteSounds: SnakeSpeechEmotes
-    screamId: CreatureHiss
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureHiss
   - type: ReplacementAccent
     accent: xeno
   - type: Tag
@@ -3071,8 +3052,7 @@
   - type: Vocal
     emoteSounds: SpiderSpeechEmotes # starcup
     # begin starcup
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - ChitterAutoEmote
@@ -3320,8 +3300,7 @@
     allowedEmotes: ['CreatureHiss', 'CreatureYawn', 'CreatureCough','CreatureChitter', 'CreatureGrowl', 'CreatureLaugh', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: PossumSpeechEmotes
-    screamId: CreatureHiss
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureHiss
   - type: ReplacementAccent
     accent: xeno
   - type: AutoEmote
@@ -3411,8 +3390,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureChitter', 'CreatureBark', 'CreatureWhimper', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: RaccoonSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: ReplacementAccent
     accent: RaccoonAccent
   - type: AutoEmote
@@ -3510,8 +3488,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureBark', 'CreatureWhimper', 'CreatureCough', 'Shake', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: FoxSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: ReplacementAccent
     accent: FoxAccent
   - type: AutoEmote
@@ -3540,8 +3517,7 @@
     allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'CreatureCough', 'CreatureSneeze', 'Snuffle', 'Pant', 'Shake']
   - type: Vocal
     emoteSounds: SmallDogSpeechEmotes
-    screamId: CreatureBark
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureBark
   - type: ReplacementAccent
     accent: DogAccent
   - type: Tag
@@ -3734,8 +3710,7 @@
     allowedEmotes: ['CreatureBark', 'CreatureWhimper', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze', 'Snuffle', 'Pant', 'Shake']
   - type: Vocal
     emoteSounds: PuppySpeechEmotes
-    screamId: CreatureBark
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureBark
   # end starcup
 
 - type: entity
@@ -3780,8 +3755,7 @@
     allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: CatSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - MeowAutoEmote
@@ -4007,8 +3981,7 @@
     allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: CaracalSpeechEmotes
-    screamId: CreatureHiss
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureHiss
   # end starcup
 
 - type: entity
@@ -4057,8 +4030,7 @@
     allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: KittenSpeechEmotes
-    screamId: CreatureWhimper
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureWhimper
   # end starcup
 
 - type: entity
@@ -4127,8 +4099,7 @@
     allowedEmotes: ['CreatureBark', 'CreatureScream', 'CreatureSqueak', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: SlothSpeechEmotes
-    screamId: CreatureSqueak
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureSqueak
   - type: AutoEmote
     emotes:
     - SqueakAutoEmote
@@ -4198,8 +4169,7 @@
     speechVerb: SmallMob
     allowedEmotes: ['CreatureSqueak', 'CreatureWhimper', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
-    screamId: CreatureWhimper
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureWhimper
     emoteSounds: FerretSpeechEmotes
   # end starcup
 
@@ -4224,8 +4194,7 @@
     allowedEmotes: ['CreatureSqueak', 'CreaturePurr', 'CreatureTrill', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: HamsterSpeechEmotes
-    screamId: CreatureTrill
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureTrill
   - type: TypingIndicator
     proto: rodentia
   # end starcup
@@ -4447,8 +4416,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureCough', 'CreatureOink', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: PigSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - OinkAutoEmote
@@ -4521,9 +4489,8 @@
     speechSounds: NymphSpeechSounds
     allowedEmotes: ['CreatureChirp', 'CreatureLaugh', 'CreatureChitter', 'BuzzNonSilicon']
   - type: Vocal
-    emoteSounds: NymphSpeechEmotes # starcup
-    screamId: CreatureChirp
-    emoteAction: ActionEmitSound
+    emoteSounds: NymphSpeechEmotes
+    emoteAction: ActionCreatureChirp
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepBug
@@ -4626,8 +4593,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureBark', 'CreatureCough']
   - type: Vocal
     emoteSounds: DeerSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: ReplacementAccent
     accent: DeerAccent
   - type: FootstepModifier

@@ -332,8 +332,7 @@
     allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureCough']
   - type: Vocal
     emoteSounds: CatSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: ReplacementAccent
     accent: cat
   - type: Rest
@@ -419,8 +418,7 @@
     allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'CreatureCough', 'Snuffle', 'Pant', 'Shake']
   - type: Vocal
     emoteSounds: SmallDogSpeechEmotes
-    screamId: CreatureBark
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureBark
   - type: Tag
     tags:
     - CannotSuicide
@@ -535,8 +533,7 @@
     allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'CreatureCough', 'Snuffle', 'Pant', 'Shake']
   - type: Vocal
     emoteSounds: SmallDogSpeechEmotes
-    screamId: CreatureBark
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureBark
   # end starcup
   - type: MessyDrinker
   - type: Puller # starcup - go fetch!
