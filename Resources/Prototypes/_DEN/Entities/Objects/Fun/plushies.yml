@@ -1,0 +1,152 @@
+- type: entity
+  abstract: true
+  parent: BasePlushie
+  id: PlushieTeddyBearBase
+  name: teddy bear
+  description: Because everybody needs a friend. # reference to no joke the worst movie i have seen in my life
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Fun/teddybear.rsi
+    state: teddybear
+    layers:
+    - state: teddybear
+    - state: teddybear_ribbon
+      map: [ "ribbon" ]
+      visible: false
+  - type: Item
+    inhandVisuals: # TODO: get itemmapper inhands to work
+      left:
+      - state: teddybear-inhand-left
+      right:
+      - state: teddybear-inhand-right
+  - type: ItemSlots
+    slots:
+      ribbon:
+        name: ribbon
+        startingItem: ClothingNeckTeddyRibbon
+        whitelist:
+          tags:
+          - TeddyRibbon
+  - type: ContainerContainer
+    containers:
+      stash: !type:ContainerSlot {}
+      ribbon: !type:ContainerSlot {}
+#  - type: EntityTableContainerFill # starcup remove
+#    containers:
+#      stash: !type:NestedSelector
+#        tableId: RandomPlushieHeart
+  - type: ItemMapper
+    spriteLayers:
+    - ribbon
+    mapLayers:
+      ribbon:
+        whitelist:
+          tags:
+          - TeddyRibbon
+  - type: Appearance
+
+# only the original one gets it because recolorable sprites would make it complete ass
+- type: entity
+  parent: PlushieTeddyBearBase
+  id: PlushieTeddyBear
+  components:
+  - type: FoodSequenceElement
+    entries:
+      CottonBurger: TeddyBearPlushie
+
+- type: entity
+  parent: PlushieTeddyBearBase
+  id: PlushieTeddyBearRecolorable
+  suffix: recolorable
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Fun/teddybear.rsi
+    state: teddybear
+    layers:
+    - state: teddybear_base
+      color: "#cc9975"
+      map: [ "base" ]
+    - state: teddybear_accent
+      map: [ "accent" ]
+    - state: teddybear_ribbon
+      map: [ "ribbon" ]
+      visible: false
+  - type: Item
+    inhandVisuals: # TODO: get itemmapper inhands to work
+      left:
+      - state: teddybear_base-inhand-left
+        color: "#cc9975"
+        map: [ "base" ]
+      - state: teddybear_accent-inhand-left
+        map: [ "accent" ]
+      # - state: teddybear_ribbon-inhand-left
+      #   map: [ "ribbon" ]
+      right:
+      - state: teddybear_base-inhand-right
+        color: "#cc9975"
+        map: [ "base" ]
+      - state: teddybear_accent-inhand-right
+        map: [ "accent" ]
+      # - state: teddybear_ribbon-inhand-right
+      #   map: [ "ribbon" ]
+
+- type: entity
+  parent: PlushieTeddyBearRecolorable
+  id: PlushieTeddyBearRecolorablePlaid
+  suffix: recolorable, plaid
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Fun/teddybear.rsi
+    state: teddybear
+    layers:
+    - state: teddybear_base_plaid
+      color: "#cc9975"
+      map: [ "base" ]
+    - state: teddybear_accent
+      map: [ "accent" ]
+    - state: teddybear_ribbon
+      map: [ "ribbon" ]
+      visible: false
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: teddybear_base-inhand-left
+        color: "#cc9975"
+        map: [ "teddybear_base_plaid" ]
+      - state: teddybear_accent-inhand-left
+        map: [ "accent" ]
+      right:
+      - state: teddybear_base-inhand-right
+        color: "#cc9975"
+        map: [ "teddybear_base_plaid" ]
+      - state: teddybear_accent-inhand-right
+        map: [ "accent" ]
+
+- type: entity
+  parent: PlushieTeddyBearRecolorable
+  id: PlushieTeddyBearRecolorableRandom
+  name: teddy bear
+  suffix: random appearance
+  components:
+  - type: RandomSprite
+    getAllGroups: true
+    available:
+    - base:
+        teddybear_base: Teddybear
+        teddybear_base_plaid: Teddybear
+    - accent:
+        teddybear_accent: TeddybearAccent
+        teddybear_accent_muzzle: TeddybearAccent
+        teddybear_accent_plain: TeddybearAccent
+  - type: Item
+    inhandVisuals: # TODO: get itemmapper inhands to work
+      left:
+      - state: teddybear_base-inhand-left
+        map: [ "base" ]
+      - state: teddybear_accent-inhand-left
+        map: [ "accent" ]
+      right:
+      - state: teddybear_base-inhand-right
+        map: [ "base" ]
+      - state: teddybear_accent-inhand-right
+        map: [ "accent" ]

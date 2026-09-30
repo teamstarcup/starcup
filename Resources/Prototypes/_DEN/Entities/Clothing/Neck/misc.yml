@@ -93,3 +93,19 @@
   - type: EmitSoundOnCollide
     sound: *JingleSound
 #   end starcup
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckTeddyRibbon
+  name: teddy bear ribbon
+  description: A nice ribbon for your teddy bear.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Neck/Misc/teddyribbon.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Neck/Misc/teddyribbon.rsi
+  - type: Tag
+    tags:
+    - TeddyRibbon
+    - ClothMade
+    - WhitelistChameleon
