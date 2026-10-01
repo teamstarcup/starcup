@@ -241,6 +241,37 @@
   - type: BorgModuleIcon
     icon: { sprite: _starcup/Interface/Actions/actions_borg.rsi, state: robotics-rescue-module }
 
+- type: entity
+  id: BorgModuleSilence
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  name: silence cyborg module
+  description: Grants a cyborg all the tools it needs to say what needs to be said.
+  components:
+  - type: Sprite
+    layers:
+    - state: generic
+    - state: icon-template # TODO
+  - type: ItemBorgModule
+    hands:
+    - item: TapeRecorderFilled # TODO - needs to be un-ejectable (or needs a hand slot for tapes but i prefer former)
+    - item: AACTablet
+    - item: CrayonMimeBorg
+    - item: TravelCameraSafe # TODO - caused errors?
+    - hand:
+        emptyLabel: borg-slot-photograph-empty # TODO
+        emptyRepresentative: PhotographBlack
+        whitelist:
+          components:
+          - Paper
+    - hand:
+        emptyLabel: borg-slot-capgun-empty # TODO
+        emptyRepresentative: RevolverCapGunPlaceholder
+        whitelist:
+          tags:
+          - ToySidearm
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: artistry-module } # TODO
+
 # Container placeholders
 - type: entity
   id: BorgModuleIngredientPlaceholder
@@ -273,3 +304,13 @@
   - type: Sprite
     sprite: Objects/Consumable/Food/ingredients.rsi
     state: flour-big
+
+- type: entity
+  id: RevolverCapGunPlaceholder
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/capgun.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
