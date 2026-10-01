@@ -1,5 +1,5 @@
 - type: entity
-  parent: PresentRandom
+  parent: MysteryFigureBox # from PresentRandom
   id: PrizeBall
   name: prize ball
   description: I wonder what's inside! # starcup - fixed spelling/grammar
@@ -9,13 +9,13 @@
     layers:
     - state: prizeball
     # begin starcup - just base this on tables, no need to go crazy here. toys, jewelry, or candy.
-    - type: SpawnEntityTableOnTrigger
-      useMapCoords: true
-      table: !type:AllSelector
-        children:
-        - id: PresentTrash
-        - !type:NestedSelector
-          tableId: AllPrizesTable
+  - type: SpawnEntityTableOnTrigger
+    useMapCoords: true
+    table: !type:AllSelector
+      children:
+      - id: PresentTrash
+      - !type:NestedSelector
+        tableId: AllPrizesTable
 #  - type: SpawnItemsOnUse
 #    items:
 #    - id: PresentTrash
