@@ -47,7 +47,12 @@
     containers:
       entity_storage: !type:AllSelector
         children:
-        - id: BarberScissors
+        - !type:GroupSelector # barber tool
+          children:
+          - id: HairComb
+          - id: BarberScissors
+          - id: HandheldMirrorGold
+          - id: HandheldMirrorGray
         - !type:GroupSelector # flowers/hairpins
           rolls: 2
           children:

@@ -69,12 +69,14 @@
       children:
       - id: PlushieNar
       - id: PlushieRatvar
+      - id: PlushieGiantBear # starcup
     - !type:GroupSelector # Rare plushies
       weight: 0.1 # 1 in >210
       children:
       - id: PlushieHuman
       - id: PlushieGhost
       - id: PlushieLamp
+      - id: PlushieDragon # starcup
     - !type:GroupSelector # Legendary plushies
       weight: 0.002 # 1 in >10,500
       children:
@@ -87,6 +89,16 @@
     - id: PlushieZetan
     - id: PlushieMothRandom # from DeltaV
     - id: PlushieIPC # from DeltaV
+    - id: PlushieDoll
+    - id: PlushieDollHair
+    - id: PlushieUrsaMinor
+    - id: PlushieDeer
+    - id: PlushieOvinia
+    - id: PlushieHarpy
+    - !type:GroupSelector # teddybears
+      children:
+      - id: PlushieTeddyBearRecolorableRandom
+      - id: PlushieTeddyBear
     # end starcup
 
 # Weh!

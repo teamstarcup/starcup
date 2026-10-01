@@ -144,13 +144,21 @@
   parent: CrateGenericSteel
   id: CrateServiceTheatre
   name: theatrical performances crate
-  description: Contains a moth cloak, barber scissors, maid uniform, clown and mime attributes, and other performance charms.
+  description: Contains a moth cloak, hairdresser's equipment, maid uniform, clown and mime attributes, and other performance charms. # starcup - genericized scissors reference
   components:
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
         children:
-        - id: BarberScissors
+# begin starcup - replace scissors with a roll between the relevant tools
+#        - id: BarberScissors
+        - !type:GroupSelector # barber tool
+          children:
+          - id: HairComb
+          - id: BarberScissors
+          - id: HandheldMirrorGold
+          - id: HandheldMirrorGray
+# end starcup
         - id: ClothingOuterSuitMonkey
         - id: ClothingHeadHatAnimalMonkey
         - id: ClothingUniformJumpskirtJanimaid
