@@ -8,34 +8,17 @@
     sprite: _EE/Objects/Fun/prizeticket.rsi
     layers:
     - state: prizeball
-  - type: SpawnItemsOnUse
-    items:
-    - id: PresentTrash
-# begin starcup - just base this on tables, no need to go crazy here. toys, jewelry, or candy.
-    - !type:NestedSelector
-      tableId: AllToysTableGroupSelector
-      weight: 60
-      rolls: 1
-      orGroup: Prize
-    - !type:NestedSelector
-      tableId: TinyInstrumentTableGroupSelector
-      weight: 20
-      rolls: 1
-      orGroup: Prize
-    - !type:GroupSelector
-      weight: 5
-      children:
-      - id: ClothingNeckNecklaceGold
-      - id: ClothingNeckNecklaceSilver
-      - id: ClothingHeadHatCuteTiara
-      - id: ClothingHeadHatSimpleTiara
-      - id: ClothingNeckNecklacePendantGoldRuby
-      orGroup: Prize
-    - !type:NestedSelector
-      tableId: RandomCandyTable
-      weight: 15
-      rolls: 1
-      orGroup: Prize
+    # begin starcup - just base this on tables, no need to go crazy here. toys, jewelry, or candy.
+    - type: SpawnEntityTableOnTrigger
+      useMapCoords: true
+      table: !type:AllSelector
+        children:
+        - id: PresentTrash
+        - !type:NestedSelector
+          tableId: AllPrizesTable
+#  - type: SpawnItemsOnUse
+#    items:
+#    - id: PresentTrash
 #    - id: PrizeTicket10
 #      orGroup: Prize
 ##     Common
