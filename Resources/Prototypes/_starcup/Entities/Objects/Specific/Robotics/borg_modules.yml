@@ -259,7 +259,7 @@
     - item: TravelCameraSafe
     - hand:
         emptyLabel: borg-slot-documents-empty
-        emptyRepresentative: PhotographBlack
+        emptyRepresentative: DocumentsPlaceholder
         whitelist:
           components:
           - Paper
@@ -307,11 +307,22 @@
     state: flour-big
 
 - type: entity
-  id: RevolverCapGunPlaceholder
   parent: BaseItem
+  id: RevolverCapGunPlaceholder
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: Objects/Fun/capgun.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
+
+- type: entity
+  parent: BaseItem
+  id: DocumentsPlaceholder
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/photograph.rsi
+    layers:
+    - state: black
