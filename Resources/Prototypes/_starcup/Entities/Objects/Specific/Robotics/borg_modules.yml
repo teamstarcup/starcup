@@ -250,19 +250,20 @@
   - type: Sprite
     layers:
     - state: generic
-    - state: icon-template # TODO
+    - state: icon-template
   - type: ItemBorgModule
     hands:
-    - item: TapeRecorderFilled # TODO - needs to be un-ejectable (or needs a hand slot for tapes but i prefer former)
+    - item: TapeRecorderNotEjectable
     - item: AACTablet
     - item: CrayonMimeBorg
-    - item: TravelCameraSafe # TODO - caused errors?
+    - item: TravelCameraSafe
     - hand:
-        emptyLabel: borg-slot-photograph-empty # TODO
+        emptyLabel: borg-slot-documents-empty
         emptyRepresentative: PhotographBlack
         whitelist:
           components:
           - Paper
+          - TapeCassette
     - hand:
         emptyLabel: borg-slot-capgun-empty # TODO
         emptyRepresentative: RevolverCapGunPlaceholder
@@ -270,7 +271,7 @@
           tags:
           - ToySidearm
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: artistry-module } # TODO
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: no-action }
 
 # Container placeholders
 - type: entity

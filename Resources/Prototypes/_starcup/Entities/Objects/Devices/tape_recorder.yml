@@ -1,4 +1,32 @@
 - type: entity
+  parent: TapeRecorder
+  id: TapeRecorderNotEjectable
+  name: tape cassette deck
+  suffix: Filled, Not Ejectable
+  components:
+  - type: ItemSlots
+    slots:
+      cassette_tape:
+        disableEject: true
+        whitelist:
+          components:
+          - FitsInTapeRecorder
+  - type: ContainerFill
+    containers:
+      cassette_tape:
+      - CassetteTapeCyborg
+
+- type: entity
+  parent: CassetteTape
+  id: CassetteTapeCyborg
+  name: cassette tape
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Label
+    localizedLabel: label-cassette-internal-record
+
+# Custom Tapes
+- type: entity
   suffix: Ptarmigan Intro
   parent: CassetteTape
   id: CassetteTapeFilledPtarmigan
