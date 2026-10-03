@@ -1,0 +1,41 @@
+- type: gameMap
+  id: Transit
+  mapName: 'Transit'
+  mapPath: /Maps/_starcup/Transit.yml
+  maxRandomOffset: 0
+  randomRotation: false
+  minPlayers: 10
+  stations:
+    Transit:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Syndicate "Transit" {0}-{1}'
+          nameGenerator:
+            !type:SyndicateNameGenerator
+            prefixCreator: 'ED'
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/_starcup/Shuttles/emergency_transit.yml # changed to emergency_transit
+        - type: StationJobs
+          availableJobs: # jobs are effectively infinite for the purposes of this event
+            # command (8)
+	    SyndCommOperator: [ -1, -1 ]
+	    SyndCommAgent: [ -1, -1 ]
+	    SyndCommOfficer: [ -1, -1 ]
+	    SyndCommOfficial: [ -1, -1 ]
+            # service
+            Bartender: [ -1, -1 ]
+            Botanist: [ -1, -1 ]
+            Chef: [ -1, -1 ]
+            Chaplain: [ -1, -1 ]
+            Librarian: [ -1, -1 ]
+            ServiceWorker: [ -1, -1 ]
+            Reporter: [ -1, -1 ]
+            Clown: [ -1, -1 ]
+            Mime: [ -1, -1 ]
+            Musician: [ -1, -1 ]
+            # civilian
+            Passenger: [ -1, -1 ]
+            # silicon (1)
+            StationAi: [ 1, 1 ] # command should still be limited
+            Borg: [ -1, -1 ]
