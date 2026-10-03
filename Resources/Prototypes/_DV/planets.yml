@@ -5,9 +5,12 @@
   mapLight: "#A34931"
   addedComponents:
   - type: FTLDestination
-    whitelist:
-      components:
-      - MiningShuttle
+    # begin starcup
+    #    whitelist:
+    #      components:
+    #      - MiningShuttle
+    requireCoordinateDisk: true
+  # end starcup
   - type: WeatherScheduler # Regular ash storms
     stages:
     - duration: # 5-10 minutes of calm
@@ -52,9 +55,12 @@
   mapLight: "#2B3153"
   addedComponents:
   - type: FTLDestination
-    whitelist:
-      components:
-      - MiningShuttle
+  # begin starcup
+#    whitelist:
+#      components:
+#      - MiningShuttle
+    requireCoordinateDisk: true
+  # end starcup
   atmosphere:
     volume: 2500
     temperature: 180 # -93, extreme cold

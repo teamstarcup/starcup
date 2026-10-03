@@ -85,7 +85,8 @@ namespace Content.IntegrationTests.Tests
          // "/Maps/centcomm.yml",
             "/Maps/Shuttles/AdminSpawn/**", // admin gaming
     		"/Maps/_starcup/syndcomm.yml", // starcup: contains centcomm rubber stamp, centcomm folder, handheld crew monitor
-            "/Maps/_starcup/Events/event-syndcomm-epilogue.yml" // starcup: contains centcomm rubber stamp, centcomm folder, handheld crew monitor
+            "/Maps/_starcup/Events/event-syndcomm-epilogue.yml", // starcup: contains centcomm rubber stamp, centcomm folder, handheld crew monitor
+            "/Maps/_starcup/Events/event-reach-ptarmheist.yml" // starcup: contains perforator shuttle guns
         };
 
         /// <summary>
