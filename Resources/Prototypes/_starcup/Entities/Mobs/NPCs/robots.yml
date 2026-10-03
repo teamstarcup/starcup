@@ -1,0 +1,222 @@
+## Drones
+- type: entity
+  parent: [ MobSiliconBase, FlyingMobBase]
+  id: MobBaseDrone
+  abstract: true
+  name: robotic drone
+  description: Small, hovering robotic drones manufactured by all manner of corporations big and small can be found across the galaxy.
+  components:
+  - type: HTN
+    rootTask:
+      task: SimpleRangedHostileCompound
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _starcup/Mobs/Silicon/drones.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: base
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: base_eyes
+      shader: unshaded
+      color: "#990000"
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.30
+        density: 80
+        mask:
+        - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+        #BaseUnshaded: unshaded
+      Dead:
+        Base: dead
+        #BaseUnshaded: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      30: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      14: 0.7
+      20: 0.5
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2
+    baseSprintSpeed: 3
+  - type: CombatMode
+  - type: InteractionPopup
+    interactSuccessString: petting-success-cleanbot
+    interactFailureString: petting-failure-cleanbot
+    interactSuccessSound:
+      path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Pai
+    allowedEmotes: ['AmbientHumEmote']
+  - type: Vocal
+    emoteSounds: DroneVoiceEmotes
+  - type: Deathgasp
+    prototype: SiliconDeathgasp
+    needsCritical: false
+
+- type: entity
+  parent:
+  - MobBaseDrone
+  - MobHumAutoemote
+  id: MobSecurityDrone
+  name: security drone
+  description: A security drone equipped with a stunner.
+  components:
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _starcup/Mobs/Silicon/drones.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: base_security
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: base_eyes
+      shader: unshaded
+      color: "#990000"
+  - type: BatteryAmmoProvider
+    proto: BulletDisablerSmg
+    fireCost: 50
+  - type: BatterySelfRecharger
+    autoRechargeRate: 50
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: Gun
+    fireRate: 0.5
+    useKey: false
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+
+- type: entity
+  id: MobSecurityDroneHostile
+  parent: MobSecurityDrone
+  suffix: Hostile
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+  - type: HTN
+    rootTask:
+      task: SimpleRangedHostileCompound
+
+- type: entity
+  id: MobLaserDrone
+  parent: MobSecurityDrone
+  name: laser drone
+  description: A lethal security drone equipped with a laser.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _starcup/Mobs/Silicon/drones.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: base_cybersun
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: base_eyes
+      shader: unshaded
+      color: "#990000"
+  - type: BatteryAmmoProvider
+    proto: BulletEnergyTurretLaserWeak
+    fireCost: 50
+  - type: Gun
+    soundGunshot:
+      path: /Audio/_starcup/Weapons/Guns/Gunshots/laserblast.ogg
+
+- type: entity
+  id: MobLaserDroneHostile
+  parent: MobLaserDrone
+  suffix: Hostile
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+  - type: HTN
+    rootTask:
+      task: SimpleRangedHostileCompound
+
+- type: entity
+  id: MobViscerator
+  parent: MobBaseDrone
+  name: viscerator
+  description: A drone equipped with spinning blades and a sensor for things that need to be sliced.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _NF/Mobs/RogueSilicons/viscerator.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: base
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: base_lights
+      shader: unshaded
+      color: "#990000"
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+        #BaseUnshaded: unshaded
+      Dead:
+        Base: destroyed
+        #BaseUnshaded: destroyed
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: MeleeWeapon
+    animation: WeaponArcSlice
+    attackRate: 0.75
+    soundHit:
+      collection: SawCutting
+    damage:
+      types:
+        Slash: 7
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 4
+    baseSprintSpeed: 5
+
+## Projectiles
+- type: entity
+  name: laser bolt
+  id: BulletEnergyTurretLaserWeak
+  parent: BulletEnergyTurretLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Ammo
+    muzzleFlash: MuzzleFlashEffectHeavyLaser
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: heavylaser
+      shader: unshaded
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 10
+
+## Miscellaneous
+# This is here to add as an extra parent to robots that hum.
+- type: entity
+  id: MobHumAutoemote
+  components:
+  - type: AutoEmote
+    emotes:
+    - HumAutoEmote

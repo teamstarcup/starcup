@@ -28,6 +28,7 @@ chat-emote-name-whirr = Whirr
 chat-emote-name-boop = Boop
 chat-emote-name-dialup = Dial-up
 chat-emote-name-snort = Snort
+chat-emote-name-hum = Hum
 
 # Message
 chat-emote-msg-roar = roars!
@@ -57,3 +58,4 @@ chat-emote-msg-oink = oinks.
 chat-emote-msg-deathgasp-silicon =  suddenly goes silent, with a hiss of grinding servos and a screech of dying myomers.
 chat-emote-msg-dialup = tries to establish connection.
 chat-emote-msg-snort = snorts.
+chat-emote-msg-hum = hums.

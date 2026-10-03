@@ -206,3 +206,15 @@
   chatMessages: ["chat-emote-msg-buzz"]
   chatTriggers:
   - emotes
+
+# This is an emote for the purposes of a constant, 'ambient' autoemote.
+# It's a workaround for not having ambient sound components that check for a mob being dead to stop.
+- type: emote
+  id: AmbientHumEmote
+  name: chat-emote-name-hum
+  category: General
+  icon: Interface/Emotes/buzz.png
+  available: false
+  chatMessages: ["chat-emote-msg-hum"]
+  chatTriggers:
+  - emotes

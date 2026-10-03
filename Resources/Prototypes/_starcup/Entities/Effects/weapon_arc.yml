@@ -36,3 +36,16 @@
     state: gore
   - type: TimedDespawn
     lifetime: 0.399
+
+- type: entity
+  id: WeaponArcSlice
+  parent: WeaponArcStatic
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: WeaponArcVisuals
+    fadeOut: false
+  - type: Sprite
+    sprite: _starcup/Effects/arcs.rsi
+    state: slice
+  - type: TimedDespawn
+    lifetime: 0.399
