@@ -1,0 +1,54 @@
+- type: entity
+  id: IncubationPod
+  parent: [ BaseMachinePowered, BaseConstructibleMachineDestructible ]
+  name: incubation pod
+  description: Designed to incubate lab-grown specimens.
+  components:
+  - type: DeviceList
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: BasicDevice
+  - type: Sprite
+    sprite: _starcup/Structures/Machines/cloning.rsi
+    snapCardinals: true
+    layers:
+      - state: pod_xeno
+        map: ["base"]
+  - type: Physics
+    bodyType: Static
+  - type: Damageable
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+    - trigger: !type:DamageTrigger
+        damage: 175
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:SpawnEntitiesBehavior
+        offset: 0
+        spawn:
+          MobXenoDroneBiomorph:
+            min: 1
+            max: 1
+          SheetSteel1:
+            min: 1
+            max: 2
+          ShardGlassPlasma:
+            min: 1
+            max: 2
+  - type: Machine
+    board: CloningPodMachineCircuitboard
+  - type: MaterialStorage
+    materialWhiteList:
+    - Biomass
+  - type: WiresPanel
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: Appearance
+  - type: Climbable
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container

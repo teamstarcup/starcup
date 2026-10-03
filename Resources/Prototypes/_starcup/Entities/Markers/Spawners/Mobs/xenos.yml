@@ -1,0 +1,15 @@
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobXenoDroneBiomorph
+  name: Biomorph Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: alive
+      sprite: _starcup/Mobs/Aliens/Xenos/Biomorphs/Drone/biodrone.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobXenoDroneBiomorph

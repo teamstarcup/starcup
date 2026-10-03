@@ -33,3 +33,29 @@
   - type: ConditionalSpawner
     prototypes:
     - MobNanotrasenFootsoldierPilot
+
+- type: entity
+  name: Interdyne biodrone spawner
+  id: SpawnMobMobInterdyneBiodrone
+  parent: MarkerBaseStarcup
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - sprite: Mobs/Species/Human/parts.rsi
+      state: full
+    - sprite: Clothing/Shoes/Boots/combatboots.rsi
+      state: equipped-FEET
+    - sprite: Clothing/Uniforms/Jumpsuit/genetics.rsi
+      state: equipped-INNERCLOTHING
+    - sprite: _starcup/Clothing/OuterClothing/Coats/high-collar_coat.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Hands/Gloves/nitrile.rsi
+      state: equipped-HAND
+    - sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Interdyne.rsi
+      state: equipped-EYES
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobInterdyneBiodrone

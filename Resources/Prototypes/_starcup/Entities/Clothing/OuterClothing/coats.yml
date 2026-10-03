@@ -1,0 +1,15 @@
+- type: entity
+  parent: [ ClothingOuterStorageEdible, TemperatureProtection ] # starcup: temp protection
+  id: ClothingOuterCoatHighCollar
+  name: high-collared coat
+  description: A warm, tough coat that protects the chin.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/OuterClothing/Coats/high-collar_coat.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/OuterClothing/Coats/high-collar_coat.rsi
+  - type: TemperatureProtection
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.95
