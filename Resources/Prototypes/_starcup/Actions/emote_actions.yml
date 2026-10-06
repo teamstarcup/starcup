@@ -87,6 +87,15 @@
 
 - type: entity
   parent: ActionCreatureScream
+  id: ActionCreatureLaugh
+  name: Laugh
+  components:
+  - type: InstantAction
+    event: !type:EmoteActionEvent
+      emote: CreatureLaugh
+
+- type: entity
+  parent: ActionCreatureScream
   id: ActionCreatureBuzz
   name: Buzz
   components:
