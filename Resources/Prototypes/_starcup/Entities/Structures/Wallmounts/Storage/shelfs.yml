@@ -1,0 +1,17 @@
+- type: entity
+  parent: ShelfChemistry
+  id: ShelfChemistrySecureFilled
+  suffix: Chemistry, Secure, Filled
+  components:
+  - type: AccessReader
+    access: [["Chemistry"]]
+  - type: StorageFill
+    contents:
+    - id: PillCanisterEthyloxyephedrine
+    - id: PillCanisterSoretizone
+    - id: PillCanisterAgonolexyne
+    - id: PillCanisterNeurozenium
+    - id: PillCanisterCalmafluxine
+    - id: PillCanisterMannitol
+    - id: PrintedDocumentPermitPrescription
+      amount: 6
