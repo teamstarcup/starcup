@@ -1,0 +1,13 @@
+- type: constructionGraph
+  id: WebSuture
+  start: start
+  graph:
+    - node: start
+      edges:
+      - to: websuture
+        steps:
+        - material: WebSilkNurse
+          amount: 1
+          doAfter: 5
+    - node: websuture
+      entity: SimpleSuture1

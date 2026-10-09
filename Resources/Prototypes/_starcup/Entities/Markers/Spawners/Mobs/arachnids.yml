@@ -1,0 +1,203 @@
+# Giant spiders
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobGiantSpiderBlack
+  name: Black Spider Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: nurse
+      sprite: Mobs/Animals/spider.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobGiantSpiderBlack
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobGiantSpiderGuard
+  name: Guard Spider Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: guard
+      sprite: Mobs/Animals/spider.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobGiantSpiderGuard
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobGiantSpiderHunter
+  name: Hunter Spider Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: hunter
+      sprite: Mobs/Animals/spider.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobGiantSpiderHunter
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobGiantSpiderMidwife
+  name: Midwife Spider Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: midwife
+      sprite: Mobs/Animals/spider.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobGiantSpiderMidwife
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobGiantSpiderViper
+  name: Viper Spider Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: viper
+      sprite: Mobs/Animals/spider.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobGiantSpiderViper
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobGiantSpiderNurse
+  name: Nurse Spider Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: nurse
+      sprite: _starcup/Mobs/Animals/Arachnids/nurse_spider.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobGiantSpiderNurse
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobGiantSpiderTangle
+  name: Tangle Spider Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: base
+      sprite: _starcup/Mobs/Animals/Arachnids/tangle_spider.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobGiantSpiderTangle
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobGiantSpiderBreacher
+  name: Breacher Spider Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: base
+      sprite: _starcup/Mobs/Animals/Arachnids/breacher_spider.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobGiantSpiderBreacher
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobGiantSpiderTank
+  name: Tank Spider Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: base
+      sprite: _starcup/Mobs/Animals/Arachnids/tank_spider.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobGiantSpiderTank
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobGiantSpiderAmbush
+  name: Ambush Spider Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: base
+      sprite: _starcup/Mobs/Animals/Arachnids/ambush_spider.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobGiantSpiderAmbush
+
+# Small spiders
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobGiantSpiderling
+  name: Small Spider Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: spider
+      sprite: _starcup/Mobs/Animals/Arachnids/small_spider.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSpiderling
+
+# Random spawners
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnHostileSpider
+  name: Hostile Spider Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - sprite: _starcup/Mobs/Animals/Insects/generic_spawners.rsi
+      state: trash_vermin
+    - state: ai
+  - type: RandomSpawner
+    prototypes:
+    - MobGiantSpiderBlack
+    - MobGiantSpiderGuard
+    - MobGiantSpiderHunter
+    - MobGiantSpiderMidwife
+    - MobGiantSpiderViper
+    - MobGiantSpiderNurse
+    - MobGiantSpiderTangle
+    - MobGiantSpiderBreacher
+    - MobGiantSpiderTank
+    - MobGiantSpiderAmbush

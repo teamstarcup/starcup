@@ -1177,12 +1177,14 @@
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          MaterialWebSilk:
+      # begin starcup
+          MaterialWebSilk1: # changed from MaterialWebSilk (a full stack)
             min: 1
-            max: 1
+            max: 3 # changed from 1
       - !type:PlaySoundBehavior
         sound:
-          collection: WoodDestroy
+          collection: OrganicDestroy
+      # end starcup
   - type: IconSmooth
     key: webs
     base: wall

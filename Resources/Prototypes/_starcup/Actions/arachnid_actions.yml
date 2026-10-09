@@ -1,0 +1,13 @@
+- type: entity
+  parent: BaseAction
+  id: ActionWebWall
+  name: Web wall
+  description: Spin a wall of thick webbing.
+  components:
+  - type: Action
+  - type: Sprite
+    layers:
+    - sprite: Structures/Walls/web.rsi
+      state: full
+  - type: InstantAction
+    event: !type:SpawnWallAbilityActionEvent

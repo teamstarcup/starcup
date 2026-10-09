@@ -26,6 +26,7 @@
       - id: LizardMigrationLocalized
       - id: SandwaspMigrationLocalized
       - id: RoingusMigrationLocalized
+      - id: TarantulaMigrationLocalized
 
 - type: entityTable
   id: HostileCritterEventsTable
@@ -95,12 +96,12 @@
       prob: 0.02
 
 - type: entity
-  id: MothroachMigration # starcup: renamed from MothroachSpawn
+  id: MothroachMigration
   parent: BaseGameRule
   components:
   - type: StationEvent
     earliestStart: 15
-    minimumPlayers: 5 # starcup: 15 -> 5
+    minimumPlayers: 5
     weight: 4
     duration: 50
   - type: VentCrittersRule
@@ -416,6 +417,32 @@
     breakChance: 1.0
     replacement: GasVentPumpHiveSandwasp
 
+- type: entity
+  id: TarantulaMigrationLocalized
+  parent: WaspSpawnHorde
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement-deltav
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 20
+    minimumPlayers: 15
+    weight: 5
+    duration: 15
+    maxDuration: 30
+  - type: VentHordeRule
+    table: !type:AllSelector
+      children:
+      - !type:GroupSelector
+        rolls: 1
+        children:
+        - id: MobGiantSpider
+    passiveSound:
+      path: /Audio/_starcup/VentCritters/vent_spiders.ogg
+    endSound:
+      collection: MetalScrape
+      params:
+        volume: -5
 
 - type: entity
   id: RoingusMigrationLocalized
@@ -806,7 +833,25 @@
       - !type:GroupSelector
         rolls: 1, 2
         children:
-        - id: MobGiantSpiderAngry
+        #- id: MobGiantSpiderAngry # tarantulas will be neutral unless admin spawned
+        - id: MobGiantSpiderBlack
+        - id: MobGiantSpiderGuard
+        - id: MobGiantSpiderHunter
+          weight: 0.5
+        - id: MobGiantSpiderMidwife
+          weight: 0.2
+        - id: MobGiantSpiderViper
+          weight: 0.1
+        - id: MobGiantSpiderTangle
+          weight: 0.3
+        - id: MobGiantSpiderBreacher
+          weight: 0.2
+        - id: MobGiantSpiderTank
+          weight: 0.2
+        - id: MobGiantSpiderAmbush
+          weight: 0.1
+        - id: MobGiantSpiderNurse
+          weight: 0.1
 
 - type: entity
   id: XenoSpawnHordeLowPop

@@ -3095,6 +3095,8 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepGiantBug
+  - type: Damageable
+    damageModifierSet: Exoskeleton
   # end starcup
 
 - type: entity
@@ -3116,8 +3118,8 @@
   components:
   - type: NpcFactionMember
     factions:
-      - Xeno
     # begin starcup: bug politics real
+      - SimpleHostile # starcup: changed from Xeno
       - BugHunter
       - GiantBugHunter
     # end starcup
@@ -3136,8 +3138,6 @@
     raffle:
       settings: short
   - type: GhostTakeoverAvailable
-  - type: Puller # starcup
-    needsHands: false # starcup - allows for creepy spider dragging away bodies stuff, which plays well with the poison
 
 - type: entity
   name: tarantula
@@ -3175,6 +3175,14 @@
     damage:
       types:
         Piercing: 6
+  # begin starcup: tarantulas are the tankier spiders
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      120: Dead
+  - type: Damageable
+    damageModifierSet: ToughExoskeleton
+  # end starcup
 
 - type: entity
   parent:
@@ -3238,6 +3246,7 @@
   id: MobGiantSpiderWizard
   description: This spider looks a little magical
   suffix: Wizard
+  categories: [ HideSpawnMenu ] # starcup: we aren't going to spawn it, clutters the entity spawn menu
   components:
   - type: Accentless
     removes:
