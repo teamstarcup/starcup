@@ -45,11 +45,14 @@
   - Cane
   - WhiteCane
   - WalkingCane
+  - Wheelchair
   - PillCanisterNeurozenium
   - PillCanisterSoretizone
   - PillCanisterCalmafluxine
   - PillCanisterEthyloxyephedrine
   - PillCanisterAgonolexyne
+#  - PillCanisterMannitol
+  - PillCanisterIron
   - SmokingPipe
   - Joint
   - CigPackCandy
@@ -226,6 +229,8 @@
   - PlushieVox
   - PlushieVulp
   - PlushieRouny
+  - PlushieSpaceSheep
+  - PlushieSheep
   - PlushieXeno
   - PlushieZetan
   - PlushieDollHair
@@ -315,11 +320,17 @@
   loadouts:
   - TapeRecorder
   - BarFlask
+  - LithiumFlask
+  - WaterBottle
   - Pillow
   - HandheldMirrorGray
   - HandheldMirrorGold
   - HairComb
   - TailorsKnife
+  - UtilityKnife
+  - HandLabeler
+  - PersonalAI
+  - Whistle
 
 - type: loadoutGroup
   abstract: true
@@ -340,19 +351,67 @@
   - CardBoxBlack
   - BookRandomStory
   - PrizeBall
+  - CrayonWhite
+  - CrayonBlack
+  - CrayonRed
+  - CrayonOrange
+  - CrayonYellow
+  - CrayonGreen
+  - CrayonBlue
+  - CrayonPurple
+  - DiceBag
+  - Coin
+  - NewtonCradle
+  - TennisBall
+  - Football
+
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsFigurine
+  loadouts:
+  - FigurineNukie
+  - FigurineWizard
+  - FigurineWizardFake
+  - FigurineSpaceDragon
+  - FigurineQueen
+  - FigurineRatKing
+  - FigurineRatServant
+  - FigurineMouse
+  - FigurineSlime
+  - FigurineRipley
+  - FigurineFireRipley
+  - FigurineDeathRipley
+  - FigurineDurand
+  - FigurineMarauder
+  - FigurineSeraph
+  - FigurineMauler
+  - FigurineOdysseus
+  - FigurinePhazon
+  - FigurineReticence
+  - FigurineClown
+  - FigurineMime
 
 - type: loadoutGroup
   abstract: true
   id: TrinketsInstrument
   loadouts:
   - AcousticGuitar
+  - Banjo
+  - Lyre
   - Flute
+  - Clarinet
+  - Recorder
   - PanFlute
   - Ocarina
+  - Seashell
   - Harmonica
+  - Trumpet
   - MusicBox
   - Kalimba
   - Woodblock
+  - Violin
+  - Viola
+  - Microphone
 
 ## Cosmetics (primarily worn trinkets)
 - type: loadoutGroup
