@@ -43,10 +43,15 @@
       sprite: _starcup/Objects/Tools/pipe_wrench.rsi
       state: storage
   - type: MeleeWeapon
-    attackRate: 1
+    attackRate: 0.6
     damage:
       types:
-        Blunt: 8
+        Blunt: 9
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 3
 
 - type: entity
   name: free man's crowbar
