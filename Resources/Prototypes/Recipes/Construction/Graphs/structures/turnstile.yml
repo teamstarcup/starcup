@@ -1,12 +1,12 @@
 - type: constructionGraph
-  id: EnergyGate
+  id: Turnstile # starcup: EnergyGate begone
   start: start
   graph:
   - node: start
     actions:
     - !type:DeleteEntity { }
     edges:
-    - to: energyGate
+    - to: turnstile
       completed:
       - !type:SnapToGrid
       steps:
@@ -16,8 +16,8 @@
         amount: 1
         doAfter: 6
 
-  - node: energyGate
-    entity: EnergyGate
+  - node: turnstile # starcup: EnergyGate begone
+    entity: Turnstile # starcup: EnergyGate begone
     edges:
     - to: start
       completed:

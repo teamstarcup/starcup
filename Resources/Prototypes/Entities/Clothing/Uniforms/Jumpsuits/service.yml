@@ -34,8 +34,8 @@
     sprite: Clothing/Uniforms/Jumpsuits/Service/bartender_purple.rsi
 
 - type: entity
-  parent: ClothingUniformBase
-  id: [ ClothingUniformJumpsuitChaplain, ClothingUniformFoldableBaseImpstation ] # imp - Add foldable uniform jumpsuits
+  parent: [ ClothingUniformBase, ClothingUniformFoldableBaseImpstation ] # imp - Add foldable uniform jumpsuits
+  id: ClothingUniformJumpsuitChaplain
   name: chaplain's jumpsuit
   description: It's a black jumpsuit, often worn by religious folk.
   components:

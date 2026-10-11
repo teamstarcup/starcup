@@ -47,7 +47,7 @@ public sealed partial class InstrumentStandSystem : EntitySystem
         if (!HasComp<ItemSlotsComponent>(ent)) // starcup: prevent TryGetSlot from throwing errors in tests by checking if it has ItemSlotsComponent first
             return;
 
-        if (!_itemSlots.TryGetSlot(ent, ent.Comp.SlotId, out var itemSlot))
+        if (!_itemSlots.TryGetSlot(ent.AsType(), ent.Comp.SlotId, out var itemSlot))
             return;
 
         var hasInstrument = itemSlot.Item != null;
@@ -87,7 +87,7 @@ public sealed partial class InstrumentStandSystem : EntitySystem
     private void UpdateInstrumentStandInterface(Entity<InstrumentStandComponent> ent)
     {
         if (!TryComp<ActivatableUIComponent>(ent, out var aui)
-            || !_itemSlots.TryGetSlot(ent, ent.Comp.SlotId, out var itemSlot))
+            || !_itemSlots.TryGetSlot(ent.AsType(), ent.Comp.SlotId, out var itemSlot))
             return;
 
         var currentlyEnabled = aui.RequiredItems == null;

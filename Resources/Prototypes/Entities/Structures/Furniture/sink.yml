@@ -34,12 +34,6 @@
   - type: ReagentTank
   - type: Drain
     autoDrain: false
-  # begin starcup: added component to make sinks a drinkable container
-  - type: Edible
-    edible: Drink
-    solution: tank
-    destroyOnEmpty: false
-  # end starcup
   - type: DumpableSolution
     solution: drainBuffer
   - type: Edible
