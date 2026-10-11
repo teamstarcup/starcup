@@ -1,4 +1,5 @@
 using Content.Shared.Actions;
+using Content.Shared.Actions.Components;
 using Content.Shared.Bed.Sleep;
 using Content.Shared.DoAfter;
 using Content.Shared.Hands;
@@ -25,10 +26,8 @@ public abstract partial class SharedPseudoItemSystem : EntitySystem
     [Dependency] private SharedPopupSystem _popupSystem = default!;
     [Dependency] private SharedActionsSystem _actions = default!;
 
-    [ValidatePrototypeId<TagPrototype>]
-    private const string PreventTag = "PreventLabel";
-    [ValidatePrototypeId<EntityPrototype>]
-    private const string SleepActionId = "ActionSleep"; // The action used for sleeping inside bags. Currently uses the default sleep action (same as beds)
+    private static readonly ProtoId<TagPrototype> PreventTag = "PreventLabel";
+    private static readonly EntProtoId<ActionComponent> SleepActionId = "ActionSleep"; // The action used for sleeping inside bags. Currently uses the default sleep action (same as beds)
 
     public override void Initialize()
     {
