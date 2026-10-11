@@ -58,6 +58,7 @@
   id: ReinforcedGirder
   targetNode: reinforcedGirder
 
+# Classic: Readded.
 - type: construction
   parent: Girder
   id: ClockworkGirder
@@ -74,6 +75,7 @@
   id: ReinforcedWall
   targetNode: reinforcedWall
 
+# Classic: Readded.
 - type: construction
   parent: ClockworkGirder
   id: WallClock
@@ -95,6 +97,7 @@
   id: SilverWall
   targetNode: silverWall
 
+# Classic: Readded.
 - type: construction
   parent: Girder
   id: PlasticWall
@@ -122,6 +125,7 @@
   targetNode: diagonalshuttleWall
   canRotate: true
 
+# Classic: Readded.
 - type: construction
   parent: Girder
   id: ClownWall
@@ -152,6 +156,7 @@
   - !type:TileNotBlocked
     failIfSpace: false
 
+# Classic: Readded.
 - type: construction
   parent: Grille
   id: ClockGrille
@@ -165,6 +170,7 @@
   targetNode: grilleDiagonal
   canRotate: true
 
+# Classic: Readded.
 - type: construction
   parent: GrilleDiagonal
   id: ClockworkGrilleDiagonal
@@ -199,6 +205,7 @@
   id: TintedWindow
   targetNode: tintedWindow
 
+# Classic: Readded.
 - type: construction
   parent: BaseWindow
   id: ClockworkWindow
@@ -267,10 +274,37 @@
   canRotate: true
 
 - type: construction
+  id: WindowDirectionalCorner
+  graph: WindowDirectionalCorner
+  startNode: start
+  targetNode: windowDirectionalCorner
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+
+- type: construction
   parent: WindowDirectional
   id: WindowReinforcedDirectional
   targetNode: windowReinforcedDirectional
 
+- type: construction
+  id: WindowReinforcedDirectionalCorner
+  graph: WindowDirectionalCorner
+  startNode: start
+  targetNode: windowReinforcedDirectionalCorner
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+
+# Classic: Readded.
 - type: construction
   parent: WindowDirectional
   id: WindowClockworkDirectional
@@ -282,10 +316,36 @@
   targetNode: plasmaWindowDirectional
 
 - type: construction
+  id: PlasmaWindowDirectionalCorner
+  graph: WindowDirectionalCorner
+  startNode: start
+  targetNode: plasmaWindowDirectionalCorner
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+
+- type: construction
   parent: WindowDirectional
   id: PlasmaReinforcedWindowDirectional
   targetNode: plasmaReinforcedWindowDirectional
 # endregion Windows
+
+- type: construction
+  id: PlasmaReinforcedWindowDirectionalCorner
+  graph: WindowDirectionalCorner
+  startNode: start
+  targetNode: plasmaReinforcedWindowDirectionalCorner
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
 
 # region Firelocks
 - type: construction
@@ -341,6 +401,7 @@
       failIfSpace: false
     - !type:TileSubfloorCondition  # starcup: replaced TileType condition with TileSubfloorCondition
 
+# Classic: Readded.
 - type: construction
   parent: BaseStructureFullTile
   id: FloorBananium
@@ -352,6 +413,7 @@
   - !type:TileType
     targets:
     - Plating
+
 # endregion Floors
 
 # region Barricades
@@ -494,6 +556,7 @@
   id: AirlockGlass
   targetNode: glassAirlock
 
+# Classic: Readded.
 - type: construction
   parent: BaseStructureFullTile
   id: PinionAirlock
@@ -527,11 +590,7 @@
   graph: Windoor
   targetNode: windoor
 
-- type: construction
-  parent: Windoor
-  id: SecureWindoor
-  targetNode: windoorSecure
-
+# Classic: Readded.
 - type: construction
   parent: Windoor
   id: ClockworkWindoor
@@ -571,6 +630,7 @@
 # endregion Lighting
 
 # region Material Doors
+# Classic: Readded as the base recipe.
 - type: construction
   parent: BaseStructureFullTileDirectional
   id: MetalDoor
@@ -578,39 +638,47 @@
   targetNode: metalDoor
 
 - type: construction
+# Classic: Respritening uses SilverDoor.
   parent: MetalDoor
   id: WoodDoor
   targetNode: woodDoor
 
 - type: construction
+# Classic: Respritening uses SilverDoor.
   parent: MetalDoor
   id: PlasmaDoor
   targetNode: plasmaDoor
 
 - type: construction
+# Classic: Respritening uses SilverDoor.
   parent: MetalDoor
   id: GoldDoor
   targetNode: goldDoor
 
+# Classic: Readded.
 - type: construction
   parent: MetalDoor
   id: SilverDoor
   targetNode: silverDoor
 
 - type: construction
+# Classic: Respritening uses SilverDoor.
   parent: MetalDoor
   id: PaperDoor
   targetNode: paperDoor
 
 - type: construction
+# Classic: Respritening uses SilverDoor.
   parent: MetalDoor
   id: CardDoor
   targetNode: cardDoor
 
+# Classic: Readded.
 - type: construction
   parent: MetalDoor
   id: BananiumDoor
   targetNode: bananiumDoor
+
 # endregion Material Doors
 
 # region Plastic Flaps
@@ -661,9 +729,9 @@
 
 - type: construction
   parent: BaseStructureFullTileDirectional
-  id: Turnstile
-  graph: Turnstile
-  targetNode: turnstile
+  id: EnergyGate
+  graph: EnergyGate
+  targetNode: energyGate
 
 - type: construction
   parent: BaseStructureFullTileDirectional

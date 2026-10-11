@@ -46,7 +46,7 @@ public abstract partial class SharedWeatherSystem : EntitySystem
         // end upstream
             return false;
 
-        var anchoredEntities = _mapSystem.GetAnchoredEntitiesEnumerator(ent, ent.Comp1, tileRef.GridIndices);
+        var anchoredEntities = _mapSystem.GetAnchoredEntities(ent, ent.Comp1, tileRef.GridIndices);
 
         while (anchoredEntities.MoveNext(out var anchored))
         {

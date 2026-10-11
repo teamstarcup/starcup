@@ -1,21 +1,35 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "By Peptide90 for SS14",
+  "copyright": "By Peptide90 for SS14. Rotations by Codebreak.",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-      "name": "panel"
+      "name": "panel",
+      "directions": 4
     },
 	{
       "name": "static"
     },
     {
       "name": "on",
+      "directions": 4,
       "delays": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
         [
           1,
           2
@@ -24,7 +38,29 @@
     },
     {
       "name": "warning",
+      "directions": 4,
       "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
         [
           0.1,
           0.1,
