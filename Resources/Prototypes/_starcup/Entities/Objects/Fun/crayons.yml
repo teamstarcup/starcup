@@ -1,0 +1,16 @@
+- type: entity
+  parent: CrayonInedible
+  id: CrayonMimeBorg
+  name: electric mime crayon
+  description: Supposedly the most delicious crayon type in all the universes; unfortunately, you cannot eat.
+  components:
+  - type: Sprite
+    state: mime
+  - type: Item
+    heldPrefix: electric mime
+  - type: Crayon
+    deleteEmpty: false
+    color: white
+    selectableColor: false
+  - type: AutoRecharge
+    rechargeDuration: 5

@@ -1,4 +1,109 @@
 - type: entity
+  parent: BasePlushie
+  id: PlushieUrsaMinor
+  name: ursa minor plushie
+  description: You get the feeling that this plushie is higher ranked than you.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/toys.rsi
+    state: minor
+  - type: FlavorProfile
+    flavors:
+    - stardust
+  - type: FoodSequenceElement
+    entries:
+      CottonBurger: UrsaMinorPlushie
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieGiantBear
+  name: ursa massive plushie
+  description: If I have to carry this for one second longer I might die.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/toys.rsi
+    state: giantbearplush
+  - type: Item
+    size: Large
+    sprite: _Impstation/Objects/Fun/toys.rsi
+    inhandVisuals:
+      left:
+      - state: giantbearplush-inhand
+      right:
+      - state: giantbearplush-inhand
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Animals/bear.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Animals/bear.ogg
+  # begin starcup: fix weird bug?
+  - type: MeleeWeapon
+    attackRate: 0.5
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    damage:
+      types:
+        Blunt: 0
+#  - type: MeleeWeapon
+#    soundHit:
+#      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+# end starcup
+  - type: HeldSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.5
+# begin starcup - remove stamina damage
+#  - type: DamageOtherOnHit # if you get hit by this you deserve it
+#    damage:
+#      types:
+#        Blunt: 0 # DEN
+#    soundHit: /Audio/Animals/bear.ogg
+#    staminaCost: 50 # starcup
+#  - type: StaminaDamageOnHit # DEN
+#    damage: 5
+# end starcup
+  - type: MultiHandedItem
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieDoll
+  name: sentimental ragdoll
+  description: A cute little ragdoll! Aw, it even has buttons for eyes...
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/toys.rsi
+    state: doll_base
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: doll_base-inhand-left
+      right:
+      - state: doll_base-inhand-right
+  - type: FoodSequenceElement
+    entries:
+      CottonBurger: DollPlushie
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieDollHair
+  name: sentimental doll
+  description: Make sure to brush its hair and tuck it into bed every night.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/toys.rsi
+    state: doll_hair
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: doll_hair-inhand-left
+      right:
+      - state: doll_hair-inhand-right
+  - type: FoodSequenceElement
+    entries:
+      CottonBurger: HairDollPlushie
+
+- type: entity
   parent: FoamCutlass
   id: DevilPitchfork
   name: devil's pitchfork

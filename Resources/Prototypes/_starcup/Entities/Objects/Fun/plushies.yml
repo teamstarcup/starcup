@@ -78,3 +78,268 @@
       head:
       - state: equipped-HELMET
         offset: "0, 0.03"
+
+# TEDDY BEARS
+
+- type: entity
+  parent: PlushieTeddyBearBase
+  id: PlushieTeddyBearRecolorableLilac
+  name: teddy bear
+  suffix: Lilac
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Fun/teddybear.rsi
+    state: teddybear
+    layers:
+    - state: teddybear_base
+      color: "#d5c6e3"
+      map: [ "base" ]
+    - state: teddybear_accent
+      map: [ "accent" ]
+    - state: teddybear_ribbon
+      map: [ "ribbon" ]
+      visible: false
+  - type: Item
+    inhandVisuals: # TODO: get itemmapper inhands to work
+      left:
+      - state: teddybear_base-inhand-left
+        color: "#d5c6e3"
+        map: [ "base" ]
+      - state: teddybear_accent-inhand-left
+        map: [ "accent" ]
+      # - state: teddybear_ribbon-inhand-left
+      #   map: [ "ribbon" ]
+      right:
+      - state: teddybear_base-inhand-right
+        color: "#d5c6e3"
+        map: [ "base" ]
+      - state: teddybear_accent-inhand-right
+        map: [ "accent" ]
+      # - state: teddybear_ribbon-inhand-right
+      #   map: [ "ribbon" ]
+
+- type: entity
+  parent: PlushieTeddyBearBase
+  id: PlushieTeddyBearRecolorableSeafoam
+  name: teddy bear
+  suffix: Seafoam
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Fun/teddybear.rsi
+    state: teddybear
+    layers:
+    - state: teddybear_base
+      color: "#98e1df"
+      map: [ "base" ]
+    - state: teddybear_accent
+      color: "#dbe2e7"
+      map: [ "accent" ]
+    - state: teddybear_ribbon
+      map: [ "ribbon" ]
+      visible: false
+  - type: Item
+    inhandVisuals: # TODO: get itemmapper inhands to work
+      left:
+      - state: teddybear_base-inhand-left
+        color: "#9d6854"
+        map: [ "base" ]
+      - state: teddybear_accent-inhand-left
+        color: "#dbe2e7"
+        map: [ "accent" ]
+      # - state: teddybear_ribbon-inhand-left
+      #   map: [ "ribbon" ]
+      right:
+      - state: teddybear_base-inhand-right
+        color: "#9d6854"
+        map: [ "base" ]
+      - state: teddybear_accent-inhand-right
+        color: "#dbe2e7"
+        map: [ "accent" ]
+      # - state: teddybear_ribbon-inhand-right
+      #   map: [ "ribbon" ]
+
+- type: entity
+  parent: PlushieTeddyBearBase
+  id: PlushieTeddyBearRecolorableHickory
+  name: teddy bear
+  suffix: Hickory
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Fun/teddybear.rsi
+    state: teddybear
+    layers:
+    - state: teddybear_base
+      color: "#9d6854"
+      map: [ "base" ]
+    - state: teddybear_accent
+      map: [ "accent" ]
+    - state: teddybear_ribbon
+      map: [ "ribbon" ]
+      visible: false
+  - type: Item
+    inhandVisuals: # TODO: get itemmapper inhands to work
+      left:
+      - state: teddybear_base-inhand-left
+        color: "#9d6854"
+        map: [ "base" ]
+      - state: teddybear_accent-inhand-left
+        map: [ "accent" ]
+      # - state: teddybear_ribbon-inhand-left
+      #   map: [ "ribbon" ]
+      right:
+      - state: teddybear_base-inhand-right
+        color: "#9d6854"
+        map: [ "base" ]
+      - state: teddybear_accent-inhand-right
+        map: [ "accent" ]
+      # - state: teddybear_ribbon-inhand-right
+      #   map: [ "ribbon" ]
+
+- type: entity
+  parent: PlushieTeddyBearBase
+  id: PlushieTeddyBearRecolorableCandy
+  name: teddy bear
+  suffix: Candy
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Fun/teddybear.rsi
+    state: teddybear
+    layers:
+    - state: teddybear_base
+      color: "#76cbff"
+      map: [ "base" ]
+    - state: teddybear_accent
+      color: "#fab1ce"
+      map: [ "accent" ]
+    - state: teddybear_ribbon
+      map: [ "ribbon" ]
+      visible: false
+  - type: Item
+    inhandVisuals: # TODO: get itemmapper inhands to work
+      left:
+      - state: teddybear_base-inhand-left
+        color: "#76cbff"
+        map: [ "base" ]
+      - state: teddybear_accent-inhand-left
+        color: "#fab1ce"
+        map: [ "accent" ]
+      # - state: teddybear_ribbon-inhand-left
+      #   map: [ "ribbon" ]
+      right:
+      - state: teddybear_base-inhand-right
+        color: "#76cbff"
+        map: [ "base" ]
+      - state: teddybear_accent-inhand-right
+        color: "#fab1ce"
+        map: [ "accent" ]
+      # - state: teddybear_ribbon-inhand-right
+      #   map: [ "ribbon" ]
+
+- type: entity
+  parent: PlushieTeddyBearBase
+  id: PlushieTeddyBearRecolorableSnow
+  name: teddy bear
+  suffix: Snow
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Fun/teddybear.rsi
+    state: teddybear
+    layers:
+    - state: teddybear_base
+      color: "#e2dedf"
+      map: [ "base" ]
+    - state: teddybear_accent
+      map: [ "accent" ]
+    - state: teddybear_ribbon
+      map: [ "ribbon" ]
+      visible: false
+  - type: Item
+    inhandVisuals: # TODO: get itemmapper inhands to work
+      left:
+      - state: teddybear_base-inhand-left
+        color: "#e2dedf"
+        map: [ "base" ]
+      - state: teddybear_accent-inhand-left
+        map: [ "accent" ]
+      # - state: teddybear_ribbon-inhand-left
+      #   map: [ "ribbon" ]
+      right:
+      - state: teddybear_base-inhand-right
+        color: "#e2dedf"
+        map: [ "base" ]
+      - state: teddybear_accent-inhand-right
+        map: [ "accent" ]
+      # - state: teddybear_ribbon-inhand-right
+      #   map: [ "ribbon" ]
+
+- type: entity
+  parent: PlushieTeddyBearBase
+  id: PlushieTeddyBearRecolorableDarkGray
+  name: teddy bear
+  suffix: Dark Gray
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Fun/teddybear.rsi
+    state: teddybear
+    layers:
+    - state: teddybear_base
+      color: "#777879"
+      map: [ "base" ]
+    - state: teddybear_accent
+      map: [ "accent" ]
+    - state: teddybear_ribbon
+      map: [ "ribbon" ]
+      visible: false
+  - type: Item
+    inhandVisuals: # TODO: get itemmapper inhands to work
+      left:
+      - state: teddybear_base-inhand-left
+        color: "#777879"
+        map: [ "base" ]
+      - state: teddybear_accent-inhand-left
+        map: [ "accent" ]
+      # - state: teddybear_ribbon-inhand-left
+      #   map: [ "ribbon" ]
+      right:
+      - state: teddybear_base-inhand-right
+        color: "#777879"
+        map: [ "base" ]
+      - state: teddybear_accent-inhand-right
+        map: [ "accent" ]
+      # - state: teddybear_ribbon-inhand-right
+      #   map: [ "ribbon" ]
+
+- type: entity
+  parent: PlushieTeddyBearRecolorable
+  id: PlushieTeddyBearRecolorablePlaidRed
+  suffix: Red Plaid
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Fun/teddybear.rsi
+    state: teddybear
+    layers:
+    - state: teddybear_base_plaid
+      color: "#ce5e5e"
+      map: [ "base" ]
+    - state: teddybear_accent
+      map: [ "accent" ]
+      color: "#efa1a1"
+    - state: teddybear_ribbon
+      map: [ "ribbon" ]
+      visible: false
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: teddybear_base-inhand-left
+        color: "#ce5e5e"
+        map: [ "teddybear_base_plaid" ]
+      - state: teddybear_accent-inhand-left
+        color: "#efa1a1"
+        map: [ "accent" ]
+      right:
+      - state: teddybear_base-inhand-right
+        color: "#ce5e5e"
+        map: [ "teddybear_base_plaid" ]
+      - state: teddybear_accent-inhand-right
+        color: "#efa1a1"
+        map: [ "accent" ]

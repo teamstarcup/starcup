@@ -1,0 +1,21 @@
+- type: entity
+  name: blue designer pen # starcup - added more colors
+  parent: Pen
+  id: DesignerPen
+  description: A tasteful and elegant pen. The most expensive stimtoy you can legally own aboard this station. # starcup - de-nanotrasenify
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Misc/Pens/designer.rsi
+    state: icon
+  - type: Item
+    sprite: _DEN/Objects/Misc/Pens/designer.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+
+# begin starcup - enhanced stimming
+  - type: UseDelay
+    delay: 1
+# end starcup

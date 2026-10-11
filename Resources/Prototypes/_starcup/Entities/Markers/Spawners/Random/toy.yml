@@ -44,3 +44,40 @@
     - type: EntityTableSpawner
       table: !type:NestedSelector
         tableId: AllSpacebladesTable
+
+
+- type: entity
+  name: Random Prize Spawner
+  id: RandomPrizeSpawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _EE/Objects/Fun/prizeticket.rsi
+      state: prizeball
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: AllPrizesTable
+
+- type: entityTable
+  id: AllPrizesTable
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+        tableId: AllToysTable
+        weight: 75
+    - !type:NestedSelector
+        tableId: TinyInstrumentTable
+        weight: 10
+    - !type:GroupSelector
+        weight: 5
+        children:
+        - id: ClothingNeckNecklaceGold
+        - id: ClothingNeckNecklaceSilver
+        - id: ClothingHeadHatCuteTiara
+        - id: ClothingHeadHatSimpleTiara
+        - id: ClothingNeckNecklacePendantGoldRuby
+    - !type:NestedSelector
+        tableId: RandomCandyTable
+        weight: 10

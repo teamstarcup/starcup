@@ -13,6 +13,7 @@ import urllib.parse
 from pathlib import Path
 from typing import Any, Iterable
 
+import traceback # starcup
 import requests
 import yaml
 import time
@@ -233,20 +234,25 @@ def changelog_entries_to_message_lines(entries: Iterable[ChangelogEntry]) -> lis
         message_lines.append("\n")
         message_lines.append(f"**{contributor_name}** updated:\n")
 
-        for entry in group:
-            url = entry.get("url")
-            if url and not url.strip():
-                url = None
+        try:
+            for entry in group:
+                url = entry.get("url")
+                if url and not url.strip():
+                    url = None
 
-            for change in entry["changes"]:
-                emoji = TYPES_TO_EMOJI.get(change["type"], "❓")
-                message = change["message"]
+                for change in entry["changes"]:
+                    emoji = TYPES_TO_EMOJI.get(change["type"], "❓")
+                    message = change["message"]
 
-                labels = entry.get("labels") or []
-                if EXPERIMENTAL_LABEL in labels:
-                    emoji = f"{emoji}{EXPERIMENTAL_EMOJI}"
+                    if EXPERIMENTAL_LABEL in entry["labels"]:
+                        emoji = f"{emoji}{EXPERIMENTAL_EMOJI}"
 
-                message_lines.append(create_change_line(emoji, message, url))
+                    message_lines.append(create_change_line(emoji, message, url))
+# begin starcup
+        except Exception:
+            print(f"[Warning] Caught exception while building message lines:", file=sys.stderr)
+            print(traceback.format_exc(), file=sys.stderr)
+# end starcup
 
     return message_lines
 

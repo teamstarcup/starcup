@@ -1,0 +1,23 @@
+#Shortswords
+- type: entity
+  parent: [ BaseSword, BaseMajorContraband ]
+  id: CombatScalpel
+  name: combat scalpel
+  description: A thin, extremely sharp blade used by Interdyne's forces, not particularly weighty but still sharp enough to spill blood. Commonly referred to as an Oni scalpel or Oni fillet knife during the Neocorporate Wars.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/combat_scalpel.rsi
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 12
+        Bloodloss: 3
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: Item
+    storedSprite:
+      state: storage
+      sprite: _starcup/Objects/Weapons/Melee/combat_scalpel.rsi
+    shape:
+    - 0,0,0,2
+  - type: DisarmMalus

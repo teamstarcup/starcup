@@ -1,0 +1,81 @@
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobSecurityDrone
+  name: Security Drone Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: base_security
+      sprite: _starcup/Mobs/Silicon/drones.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSecurityDrone
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobSecurityDroneHostile
+  name: Security Drone Spawner
+  suffix: Hostile
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: base_security
+      sprite: _starcup/Mobs/Silicon/drones.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobSecurityDroneHostile
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobLaserDrone
+  name: Laser Drone Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: base_cybersun
+      sprite: _starcup/Mobs/Silicon/drones.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobLaserDrone
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobLaserDroneHostile
+  name: Laser Drone Spawner
+  suffix: Hostile
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: base_cybersun
+      sprite: _starcup/Mobs/Silicon/drones.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobLaserDroneHostile
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobViscerator
+  name: Viscerator Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: base
+      sprite: _NF/Mobs/RogueSilicons/viscerator.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobViscerator

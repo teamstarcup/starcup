@@ -76,6 +76,13 @@
   components:
   - type: StaticPrice
     price: 300
+# begin starcup - visible worn
+  - type: Clothing
+    sprite: _DEN/Clothing/Hands/goldenring.rsi
+    slots:
+    - GLOVES
+    - NECK
+# end starcup
 
 - type: entity
   abstract: true
@@ -85,3 +92,10 @@
   components:
   - type: StaticPrice
     price: 275
+# begin starcup - visible worn
+  - type: Clothing
+    sprite: _DEN/Clothing/Hands/sentimentalring.rsi
+    slots:
+    - GLOVES
+    - NECK
+# end starcup

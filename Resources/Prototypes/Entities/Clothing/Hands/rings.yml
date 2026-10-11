@@ -4,10 +4,21 @@
   name: gold ring
   description: A precious ring.
   components:
+# begin starcup - implement Den sprites
+#  - type: Sprite
+#    layers:
+#      - state: ring
+#        color: "#ffc833"
   - type: Sprite
+    sprite: _DEN/Clothing/Hands/goldenring.rsi
     layers:
-      - state: ring
-        color: "#ffc833"
+    - state: icon
+  - type: Clothing
+    sprite: _DEN/Clothing/Hands/goldenring.rsi
+    slots:
+    - GLOVES
+    - NECK
+# end starcup
 
 - type: entity
   parent: [ RingBase, SilverRingBase ]
@@ -15,9 +26,19 @@
   name: silver ring
   description: Looks slightly less valuable than a gold one.
   components:
+#  - type: Sprite
+#    layers:
+#      - state: ring
   - type: Sprite
+    sprite: _DEN/Clothing/Hands/sentimentalring.rsi
     layers:
-      - state: ring
+      - state: icon
+  - type: Clothing
+    sprite: _DEN/Clothing/Hands/sentimentalring.rsi
+    slots:
+    - GLOVES
+    - NECK
+# end starcup
 
 - type: entity
   parent: [ RingBase, GoldRingBase ]

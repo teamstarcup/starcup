@@ -32,3 +32,102 @@
     state: pen_hop_syndi
   - type: Item
     sprite: _starcup/Objects/Misc/pens.rsi
+
+# Designer Pens
+- type: entity
+  parent: DesignerPen
+  id: DesignerPenGold
+  name: gold designer pen
+  description: A tasteful and elegant pen featuring the iconic SyndComm black-and-gold. The most expensive stimtoy you can legally own aboard this station.
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Misc/Pens/designer.rsi
+    state: gold-icon
+  - type: Item
+    sprite: _DEN/Objects/Misc/Pens/designer.rsi
+    inhandVisuals:
+      left:
+      - state: gold-inhand-left
+      right:
+      - state: gold-inhand-right
+
+- type: entity
+  parent: DesignerPen
+  id: DesignerPenGreen
+  name: green designer pen
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Misc/Pens/designer.rsi
+    state: green-icon
+  - type: Item
+    sprite: _DEN/Objects/Misc/Pens/designer.rsi
+    inhandVisuals:
+      left:
+      - state: green-inhand-left
+      right:
+      - state: green-inhand-right
+
+- type: entity
+  parent: DesignerPen
+  id: DesignerPenRed
+  name: red designer pen
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Misc/Pens/designer.rsi
+    state: red-icon
+  - type: Item
+    sprite: _DEN/Objects/Misc/Pens/designer.rsi
+    inhandVisuals:
+      left:
+      - state: red-inhand-left
+      right:
+      - state: red-inhand-right
+
+- type: entity
+  parent: DesignerPen
+  id: DesignerPenPink
+  name: pink designer pen
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Misc/Pens/designer.rsi
+    state: pink-icon
+  - type: Item
+    sprite: _DEN/Objects/Misc/Pens/designer.rsi
+    inhandVisuals:
+      left:
+      - state: pink-inhand-left
+      right:
+      - state: pink-inhand-right
+
+- type: entity
+  parent: DesignerPen
+  id: DesignerPenOrange
+  name: orange designer pen
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Misc/Pens/designer.rsi
+    state: orange-icon
+  - type: Item
+    sprite: _DEN/Objects/Misc/Pens/designer.rsi
+    inhandVisuals:
+      left:
+      - state: orange-inhand-left
+      right:
+      - state: orange-inhand-right
+
+- type: entity
+  parent: DesignerPen
+  id: DesignerPenTrans
+  name: trans designer pen
+  description: A tasteful and elegant pen for jotting down items for the agenda.
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Misc/Pens/designer.rsi
+    state: trans-icon
+  - type: Item
+    sprite: _DEN/Objects/Misc/Pens/designer.rsi
+    inhandVisuals:
+      left:
+      - state: trans-inhand-left
+      right:
+      - state: trans-inhand-right

@@ -1,9 +1,8 @@
 - type: entity
-  name: NanoTrasen footsoldier spawner
-  id: SpawnMobNanotrasenFootSoldier
   parent: MarkerBase
+  id: SpawnMobNanotrasenFootSoldier
+  name: NanoTrasen footsoldier spawner
   components:
-#I don't know why they did it like this I just copied it
   - type: Sprite
     layers:
     - state: green
@@ -26,10 +25,36 @@
     - MobNanotrasenFootsoldier
 
 - type: entity
-  name: NanoTrasen shuttle pilot spawner
-  id: SpawnMobNanotrasenFootsoldierPilot
   parent: SpawnMobNanotrasenFootSoldier
+  id: SpawnMobNanotrasenFootsoldierPilot
+  name: NanoTrasen shuttle pilot spawner
   components:
   - type: ConditionalSpawner
     prototypes:
     - MobNanotrasenFootsoldierPilot
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobInterdyneBiodrone
+  name: Interdyne biodrone spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - sprite: Mobs/Species/Human/parts.rsi
+      state: full
+    - sprite: Clothing/Shoes/Boots/combatboots.rsi
+      state: equipped-FEET
+    - sprite: Clothing/Uniforms/Jumpsuit/genetics.rsi
+      state: equipped-INNERCLOTHING
+    - sprite: _starcup/Clothing/OuterClothing/Coats/high-collar_coat.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Hands/Gloves/nitrile.rsi
+      state: equipped-HAND
+    - sprite: _starcup/Clothing/Eyes/Glasses/Surplus_Ballistic_Goggles_Interdyne.rsi
+      state: equipped-EYES
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobInterdyneBiodrone

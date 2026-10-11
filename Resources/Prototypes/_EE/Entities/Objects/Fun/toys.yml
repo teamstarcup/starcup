@@ -1,0 +1,12 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushieDeer
+  name: deer plushie
+  description: A stuffed toy that resembles a deer!
+  components:
+  - type: Sprite
+    sprite: _EE/Objects/Fun/toys.rsi
+    state: deer
+  - type: FoodSequenceElement
+    entries:
+      CottonBurger: DeerPlushie
