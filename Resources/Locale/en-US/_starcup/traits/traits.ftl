@@ -19,7 +19,10 @@ trait-pottymouth-name = Potty mouth
 trait-pottymouth-desc = You're quite above improper language, sometimes even prone to minced oaths.
 
 trait-cant-accent-name = Cant
-trait-cant-accent-description = Ah, ye of li'le faith, I 'ave me ways of makin' meself 'eard.
+trait-cant-accent-description = Ye speak a clever li'le cant that only sometimes 'ampers other's understandin'.
+
+trait-devilscant-accent-name = Devil's Cant
+trait-devilscant-accent-description = Might be thon onis who ken this black tongue thum taught it tha—or elsewise tha learnt it on thy lonesome.
 
 trait-vowed-name = Vow of Silence
 trait-vowed-desc = You're serious about your vow, and uphold it outside of jobs that require one.
