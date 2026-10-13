@@ -12,18 +12,15 @@ namespace Content.Shared._Impstation.Speech.EntitySystems;
 
 public sealed partial class StiltedSpeechSystem : RelayAccentSystem<StiltedSpeechComponent>
 {
-    [Dependency] private ReplacementAccentSystem _replacement = default!; // starcup
-
     // @formatter:off
     private static readonly Regex RegexStartOfWord = new(@"(?:^|\s)([a-z])");
     // @formatter:on
 
     public override string Accentuate(string message, Entity<StiltedSpeechComponent>? ent = null) // starcup
     {
-        var msg = message; // starcup
-
-        // Capitalize the first letter of every word
-        msg = RegexStartOfWord.Replace(message, match => match.Value.ToUpper()); // starcup
+        var msg = // starcup
+            // Capitalize the first letter of every word
+            RegexStartOfWord.Replace(message, match => match.Value.ToUpper()); // starcup
 
         return msg; // starcup
     }
