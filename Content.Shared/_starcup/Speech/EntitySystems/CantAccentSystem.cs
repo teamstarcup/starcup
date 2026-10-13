@@ -19,8 +19,7 @@ public sealed partial class CantAccentSystem : RelayAccentSystem<CantAccentCompo
     public override string Accentuate(string message, Entity<CantAccentComponent>? ent = null)
     {
         // word replacements:
-        var msg =
-            _replacement.ApplyReplacements(message, "cant", ent?.Owner);
+            var msg = _replacement.ApplyReplacements(message, "cant", ent?.Owner);
 
         // regex changes:
         // replaces h with ' at the start of words, as in happiness -> 'appiness (like the French accent)
