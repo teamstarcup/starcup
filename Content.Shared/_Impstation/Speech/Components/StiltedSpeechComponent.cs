@@ -7,10 +7,11 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
 
-namespace Content.Server.Speech.Components;
+using Content.Shared.Speech.Components;
+using Robust.Shared.GameStates;
 
-[RegisterComponent]
-public sealed partial class StiltedSpeechComponent : Component
-{
+namespace Content.Shared._Impstation.Speech.Components;
+// starcup - moved to Content.Shared
 
-}
+[RegisterComponent, NetworkedComponent]
+public sealed partial class StiltedSpeechComponent : BaseAccentComponent;
