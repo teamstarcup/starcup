@@ -642,8 +642,8 @@
         # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 1
         Glass: 1
-        Steel: 3
         # end starcup
+        Plastic: 3
       tagRequirements:
         GlassBeaker:
           amount: 2
@@ -788,7 +788,7 @@
       stackRequirements:
         # begin starcup: preserve matter bin, capacitor, and manipulators
         Capacitor: 4
-        Steel: 5
+        Plasteel: 5
         Cable: 10
         # end starcup
     - type: PhysicalComposition
@@ -960,7 +960,7 @@
     stackRequirements:
       # begin starcup: preserve matter bin, capacitor, and manipulators
       Capacitor: 4
-      Steel: 5
+      Plasteel: 5
       # end starcup
 
 - type: entity
@@ -1262,6 +1262,7 @@
         CableHV: 5
         Glass: 2
         # end starcup
+        Plasteel: 2
 
 - type: entity
   id: SurveillanceCameraRouterCircuitboard
@@ -1361,7 +1362,7 @@
     - type: MachineBoard
       prototype: BoozeDispenserEmpty
       stackRequirements:
-        Steel: 5
+        Plastic: 5
       tagRequirements:
           GlassBeaker:
             amount: 1
@@ -1397,7 +1398,7 @@
       # begin starcup: preserve matter bin, capacitor, and manipulators
       Capacitor: 1
       MatterBin: 1
-      Steel: 5
+      Plasteel: 5
       # end starcup
 
 - type: entity
@@ -1411,7 +1412,7 @@
     - type: MachineBoard
       prototype: SodaDispenserEmpty
       stackRequirements:
-        Steel: 5
+        Plastic: 5
       tagRequirements:
           GlassBeaker:
             amount: 1
@@ -1480,7 +1481,7 @@
       # begin starcup: preserve matter bin, capacitor, and manipulators
       Capacitor: 4
       MatterBin: 3
-      Steel: 10
+      Plasteel: 10
       Glass: 5
       CableHV: 8
       Uranium: 2

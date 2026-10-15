@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseWallmountMachine
+  parent: [ BaseWallmountMachine, StructureHealthMachineFlimsy ]
   id: FireAlarm
   name: fire alarm
   description: A fire alarm. Spicy!
@@ -32,6 +32,7 @@
   - type: AtmosAlarmableVisuals
     layerMap: "fireAlarmState"
     alarmStates:
+  # Classic: Restored states.
       Normal: fire_off
       Warning: fire_off # shouldn't be alarming at a warning
       Danger: fire_on
@@ -69,8 +70,11 @@
     boardName: wires-board-name-firealarm
     layoutId: FireAlarm
   - type: Sprite
+  # Classic: Respritening renamed.
     sprite: Structures/Wallmounts/air_monitors.rsi
+#    offset: 0, -0.25 # Classic: Removed.
     layers:
+  # Classic: Restored states.
     - state: fire0
       map: ["fireAlarmBase"]
     - state: fire_off
@@ -83,21 +87,17 @@
     graph: FireAlarm
     node: fire_alarm
   - type: Damageable
-    damageModifierSet: Metallic
-  - type: Injurable
-    damageContainer: StructuralInorganic
+    damageModifierSet: PlasticMod
   - type: GuideHelp
     guides:
     - Networking
   - type: Destructible
     thresholds:
-    - trigger:
+    - trigger: &DamageMachineFlimsy
         !type:DamageTrigger
-        damage: 80
+        damage: 50
       behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior
+      - &SoundMetalGlassBreak !type:PlaySoundBehavior
         sound:
           collection: MetalGlassBreak
           params:
@@ -105,14 +105,16 @@
   - type: StationAiWhitelist
 
 - type: entity
-  parent: BaseWallmountMetallic
+  parent: [ BaseWallmountMetallic, StructureHealthMachineFlimsy ]
   id: FireAlarmAssembly
   name: fire alarm assembly
   description: A fire alarm assembly. Very mild.
   components:
   - type: Sprite
+  # Classic: Respritening renamed.
     sprite: Structures/Wallmounts/air_monitors.rsi
     layers:
+  # Classic: Restored state.
     - state: fire_b1
       map: [ "enum.ConstructionVisuals.Layer" ]
   - type: Appearance
@@ -120,24 +122,21 @@
     visuals:
       enum.ConstructionVisuals.Key:
         enum.ConstructionVisuals.Layer:
+  # Classic: Restored states.
           assembly: { state: fire_b1 }
           electronics: { state: fire_b2 }
   - type: Construction
     graph: FireAlarm
     node: assembly
+  - type: Damageable
+    damageModifierSet: PlasticMod
   - type: Destructible
     thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 15
+    - trigger: *DamageMachineFlimsy
       behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalGlassBreak
-          params:
-            volume: -4
+      - *SoundMetalGlassBreak
+
+# Classic: readded entities removed by Respritening.
 
 - type: entity
   id: FireAlarmXeno

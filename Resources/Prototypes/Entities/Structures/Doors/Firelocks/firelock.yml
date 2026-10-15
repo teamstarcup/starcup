@@ -192,6 +192,8 @@
       occludes: false
     - type: Construction
       node: FirelockGlass
+    - type: StaticPrice # merge-fix: 150 -> 180 to stop arbitrage test complaining
+      price: 180
 
 - type: entity
   id: FirelockEdge
@@ -228,7 +230,7 @@
     - type: Physics
       canCollide: false
     - type: StaticPrice
-      price: 100
+      price: 150 # merge-fix: 100 -> 150 to stop arbitrage complaining.
     - type: Construction
       graph: Firelock
       node: FirelockEdge

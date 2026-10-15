@@ -1,5 +1,7 @@
+# Classic: Restored this file from Respritening.
+# Classic: Modified damage modifiers.
 - type: entity
-  parent: BaseWindowStructure
+  parent: [ BaseDeltaPressureReinforcedGlass, BaseWindowStructure, StructureHealthBarrier ]
   id: ClockworkWindow
   name: clockwork window
   description: Don't smudge up the brass down there.
@@ -13,14 +15,12 @@
     fuelCost: 10
     doAfterDelay: 2
   - type: Damageable
-    damageModifierSet: RGlass
-  - type: Injurable
-    damageContainer: StructuralInorganic
+    damageModifierSet: GlassReinforcedMod
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 75
+        damage: 80
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -30,8 +30,6 @@
           ShardGlassClockwork:
             min: 1
             max: 2
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
   - type: IconSmooth
     base: cwindow
   - type: Construction
@@ -39,46 +37,6 @@
     node: clockworkWindow
   - type: DamageVisuals
     damageDivisor: 3
-
-- type: entity
-  parent: BaseWindowStructureDirectional
-  id: WindowClockworkDirectional
-  name: directional clockwork window
-  description: Don't smudge up the brass down there.
-  components:
-  - type: Sprite
-    sprite: Structures/Windows/directional.rsi
-    state: clock_window
-  - type: Icon
-    sprite: Structures/Windows/directional.rsi
-    state: clock_window
-  - type: Construction
-    graph: WindowDirectional
-    node: windowClockworkDirectional
-  - type: DamageVisuals
-    damageDivisor: 1.5
-  - type: Injurable
-    damageContainer: StructuralInorganic
-  - type: Damageable
-    damageModifierSet: RGlass
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 37
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: WindowShatter
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          ShardGlassClockwork:
-            min: 1
-            max: 2
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: StaticPrice
-    price: 22.5
 
 - type: entity
   parent: ClockworkWindow
@@ -128,3 +86,39 @@
   - type: Construction
     graph: WindowDiagonal
     node: clockworkWindowDiagonal
+
+- type: entity
+  parent: [ BaseDeltaPressureReinforcedGlassQuarter, BaseWindowStructureDirectional, StructureHealthBarrierWeak ]
+  id: WindowClockworkDirectional
+  name: directional clockwork window
+  description: Don't smudge up the brass down there.
+  components:
+  - type: Sprite
+    sprite: Structures/Windows/directional.rsi
+    state: clock_window
+  - type: Icon
+    sprite: Structures/Windows/directional.rsi
+    state: clock_window
+  - type: Construction
+    graph: WindowDirectional
+    node: windowClockworkDirectional
+  - type: DamageVisuals
+    damageDivisor: 1.5
+  - type: Damageable
+    damageModifierSet: GlassReinforcedMod
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ShardGlassClockwork:
+            min: 1
+            max: 2
+  - type: StaticPrice
+    price: 22.5
