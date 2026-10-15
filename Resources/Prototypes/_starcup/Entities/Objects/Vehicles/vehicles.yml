@@ -1,0 +1,10 @@
+- type: entity
+  parent: VehicleWheelchair
+  id: VehicleWheelchairFolded
+  name: wheelchair
+  suffix: folded
+  components:
+  - type: Foldable
+    folded: true
+  - type: Strap
+    enabled: False

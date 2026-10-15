@@ -8,6 +8,27 @@
     sprite: Objects/Misc/books.rsi
     state: book_icon
 
+- type: entity
+  id: LoadoutDummyCoin
+  categories: [ HideSpawnMenu ]
+  name: old coin
+  description: A flat bit of metal. If it was still in circulation, inflation would've made it worthless. Since it isn't, it's worth enough to keep in a book.
+
+- type: entity
+  id: LoadoutDummyWheelchair
+  categories: [ HideSpawnMenu ]
+  name: wheelchair
+  description: A chair with big wheels. It looks like you can move in these on your own.
+  components:
+  - type: Sprite
+    sprite: Objects/Vehicles/wheelchair.rsi
+    layers:
+    - state: wheelchair
+      map: ["unfoldedLayer"]
+    - state: wheelchair_folded
+      map: ["foldedLayer"]
+      visible: false
+
 # Medications
 - type: entity
   id: LoadoutDummyPillCanisterBase
@@ -51,3 +72,17 @@
   categories: [ HideSpawnMenu ]
   name: anxiety medication
   description: A canister of calmafluxine pills.
+
+- type: entity
+  parent: LoadoutDummyPillCanisterBase
+  id: LoadoutDummyMannitol
+  categories: [ HideSpawnMenu ]
+  name: head trauma medication
+  description: A canister of mannitol pills.
+
+- type: entity
+  parent: LoadoutDummyPillCanisterBase
+  id: LoadoutDummyIron
+  categories: [ HideSpawnMenu ]
+  name: blood deficiency medication
+  description: A canister of iron pills.
