@@ -82,3 +82,10 @@ stack-astro-cave-floor = cave dirt
 stack-astro-cavedrought-floor = cave dirt
 stack-astro-dirt-pale-floor = pale dirt
 stack-astro-dirt-twilight-floor = twilight dirt
+
+# materials
+## organic
+stack-silk-nurse = {$amount ->
+    [1] nurse silk
+   *[other] nurse silks
+}

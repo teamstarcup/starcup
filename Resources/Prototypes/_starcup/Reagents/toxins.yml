@@ -3,3 +3,18 @@
   parent: Theobromine
   name: reagent-name-caffeine
   desc: reagent-desc-caffeine
+
+- type: reagent
+  id: Ebriotoxin
+  name: reagent-name-ebriotoxin
+  group: Toxins
+  desc: reagent-desc-ebriotoxin
+  physicalDesc: reagent-physical-desc-fizzy
+  flavor: medicine
+  color: "#665379"
+  metabolisms:
+    Bloodstream:
+      metabolismRate: 0.02
+      effects:
+      - !type:Drunk
+        boozePower: 10
