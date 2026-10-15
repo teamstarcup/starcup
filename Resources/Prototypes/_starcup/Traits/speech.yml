@@ -24,3 +24,31 @@
   cost: 2
   components:
   - type: DevilsCantAccent
+
+- type: trait
+  id: NonverbalSevereAccent
+  name: trait-nonverbal-severe-accent-name # TODO
+  description: trait-nonverbal-severe-accent-description # TODO
+  category: SpeechTraits
+  cost: 2
+  components:
+  - type: ReplacementAccent
+    accent: SilentAccent
+
+- type: trait
+  id: NonverbalLightAccent
+  name: trait-nonverbal-light-accent-name # TODO
+  description: trait-nonverbal-light-accent-description # TODO
+  category: SpeechTraits
+  cost: 0
+  components:
+  - type: DevilsCantAccent
+
+#- type: trait
+#  id: RussianAccent
+#  name: trait-russian-name # TODO
+#  description: trait-russian-desc # TODO
+#  category: SpeechTraits
+#  cost: 2 # starcup
+#  components:
+#  - type: RussianAccent

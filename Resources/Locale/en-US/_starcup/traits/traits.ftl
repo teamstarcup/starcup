@@ -27,6 +27,12 @@ trait-devilscant-accent-description = Might be thon onis who ken this black tong
 trait-vowed-name = Vow of Silence
 trait-vowed-desc = You're serious about your vow, and uphold it outside of jobs that require one.
 
+trait-nonverbal-light-accent-name = Nonverbal (Light)
+trait-nonverbal-light-accent-desc = You don'-...
+
+trait-nonverbal-light-accent-name = Nonverbal (Light)
+trait-nonverbal-light-accent-desc = You don't t...
+
 trait-uncloneable-name = Uncloneable
 trait-uncloneable-desc = Due to some quirk in your physical composition, you cannot be reconstituted by medical cloning.
 
