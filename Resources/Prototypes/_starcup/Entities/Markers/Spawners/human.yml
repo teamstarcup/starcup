@@ -1,9 +1,8 @@
 - type: entity
-  name: NanoTrasen footsoldier spawner
-  id: SpawnMobNanotrasenFootSoldier
   parent: MarkerBase
+  id: SpawnMobNanotrasenFootSoldier
+  name: NanoTrasen footsoldier spawner
   components:
-#I don't know why they did it like this I just copied it
   - type: Sprite
     layers:
     - state: green
@@ -26,9 +25,9 @@
     - MobNanotrasenFootsoldier
 
 - type: entity
-  name: NanoTrasen shuttle pilot spawner
-  id: SpawnMobNanotrasenFootsoldierPilot
   parent: SpawnMobNanotrasenFootSoldier
+  id: SpawnMobNanotrasenFootsoldierPilot
+  name: NanoTrasen shuttle pilot spawner
   components:
   - type: ConditionalSpawner
     prototypes:
@@ -36,7 +35,7 @@
 
 - type: entity
   parent: MarkerBaseStarcup
-  id: SpawnMobMobInterdyneBiodrone
+  id: SpawnMobInterdyneBiodrone
   name: Interdyne biodrone spawner
   components:
   - type: Sprite

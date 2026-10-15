@@ -492,11 +492,13 @@
   name: cockroach
   description: This station is just crawling with bugs.
   components:
-  - type: Sprite
-    sprite: Mobs/Animals/cockroach.rsi
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: cockroach
+  # begin starcup: make roaches use our sprite
+#  - type: Sprite
+#    sprite: Mobs/Animals/cockroach.rsi
+#    layers:
+#    - map: ["enum.DamageStateVisualLayers.Base"]
+#      state: cockroach
+  # end starcup
   - type: DamageStateVisuals
     states:
       Alive:
