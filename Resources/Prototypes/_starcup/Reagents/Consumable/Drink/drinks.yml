@@ -75,3 +75,230 @@
   metamorphicMaxFillLevels: 3
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+
+- type: reagent
+  id: Cheermime
+  name: reagent-name-cheermime
+  parent: BaseDrink
+  desc: reagent-desc-cheermime
+  physicalDesc: reagent-physical-desc-fizzy
+  flavor: cheermime
+  color: "#d2262f"
+  metabolisms:
+    Digestion:
+      effects:
+      - !type:GenericStatusEffect
+        key: Muted
+        component: Muted
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/cheermime.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 6
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: Dragonslayer
+  name: reagent-name-dragonslayer
+  parent: BaseDrink
+  desc: reagent-desc-dragonslayer
+  physicalDesc: reagent-physical-desc-abrasive
+  flavor: dragonslayer
+  color: "#f4692e"
+  metabolisms:
+    Digestion:
+      effects:
+      - !type:ModifyBloodLevel
+        amount: 3
+      - !type:EvenHealthChange
+        damage:
+          Burn: -4
+          Brute: -4
+          Toxin: -3
+      - !type:HealthChange
+        damage:
+          types:
+            Bloodloss: -4
+      - !type:ModifyBleed
+        amount: -2
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/dragonslayer.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 3
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: DragonNaysayer
+  name: reagent-name-dragon-naysayer
+  parent: BaseDrink
+  desc: reagent-desc-dragon-naysayer
+  physicalDesc: reagent-physical-desc-abrasive
+  flavor: dragonnaysayer
+  color: "#b6978d"
+  metabolisms:
+    Digestion:
+      effects:
+      - !type:GenericStatusEffect
+        key: Muted
+        component: Muted
+      - !type:ModifyBloodLevel
+        amount: 3
+      - !type:EvenHealthChange
+        damage:
+          Burn: -4
+          Brute: -4
+          Toxin: -3
+      - !type:HealthChange
+        damage:
+          types:
+            Bloodloss: -4
+      - !type:ModifyBleed
+        amount: -2
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/dragon_naysayer.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 3
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: Hivemind
+  name: reagent-name-hivemind
+  parent: BaseDrink
+  desc: reagent-desc-hivemind
+  physicalDesc: reagent-physical-desc-enigmatic
+  flavor: hivemind
+  color: "#a75d82"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/hivemind.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: Hivemime
+  name: reagent-name-hivemime
+  parent: BaseDrink
+  desc: reagent-desc-hivemime
+  physicalDesc: reagent-physical-desc-enigmatic
+  flavor: hivemime
+  color: "#444444"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/hivemime.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: Sugarslime
+  name: reagent-name-sugarslime
+  parent: BaseDrink
+  desc: reagent-desc-sugarslime
+  physicalDesc: reagent-physical-desc-bubbly
+  flavor: sugarslime
+  color: "#8ae6fa"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/sugarslime.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: QuietConvert
+  name: reagent-name-quiet-convert
+  parent: BaseDrink
+  desc: reagent-desc-quiet-convert
+  physicalDesc: reagent-physical-desc-bubbling
+  flavor: quietconvert
+  color: "#515151"
+  metabolisms:
+    Digestion:
+      effects:
+      - !type:GenericStatusEffect
+        key: Muted
+        component: Muted
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/quiet_convert.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: SilentSister
+  name: reagent-name-silent-sister
+  parent: BaseDrink
+  desc: reagent-desc-silent-sister
+  physicalDesc: reagent-physical-desc-robust
+  flavor: silentsister
+  color: "#dd332f"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/silent_sister.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: SiliconMorningCoffee
+  name: reagent-name-silicon-morning-coffee
+  parent: BaseDrink
+  desc: reagent-desc-silicon-morning-coffee
+  physicalDesc: reagent-physical-desc-oily
+  flavor: siliconmorningcoffee
+  color: "#665140"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/silicon_morning_coffee.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: SweetUnion
+  name: reagent-name-sweet-union
+  parent: BaseDrink
+  desc: reagent-desc-sweet-union
+  physicalDesc: reagent-physical-desc-sweet
+  flavor: sweetunion
+  color: "#7e1d1d"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/sweet_union.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: Y2Koffee
+  name: reagent-name-y2koffee
+  parent: BaseDrink
+  desc: reagent-desc-y2koffee
+  physicalDesc: reagent-physical-desc-inky
+  flavor: y2koffee
+  color: "#464066"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/y2koffee.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: CourtJester
+  name: reagent-name-court-jester
+  parent: BaseDrink
+  desc: reagent-desc-court-jester
+  physicalDesc: reagent-physical-desc-starry
+  flavor: courtjester
+  color: "#efb6c0"
+  metamorphicSprite:
+    sprite: _starcup/Objects/Consumable/Drinks/court_jester.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 5
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false

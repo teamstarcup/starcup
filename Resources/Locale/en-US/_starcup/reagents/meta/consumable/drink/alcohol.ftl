@@ -1,87 +1,111 @@
 # New Drinks
-reagent-name-adios-motherfucker = adios, motherfucker
+reagent-name-adios-motherfucker = Adios, Motherfucker
 reagent-desc-adios-motherfucker = Much has been said about this cocktail's name, but at least no one can say that it isn't honest.
 
-reagent-name-afterburner = afterburner
+reagent-name-afterburner = Afterburner
 reagent-desc-afterburner = Originally mixed on a dare, then drank on a second, much more disastrous dare.
 
-reagent-name-ambrosia = ambrosia
+reagent-name-ambrosia = Ambrosia
 reagent-desc-ambrosia = Dragons may not be gods, but their taste can only be described as divine.
 
-reagent-name-appletini = appletini
+reagent-name-appletini = Appletini
 reagent-desc-appletini = Not technically a kind of martini. Not typically made with real apples, either.
 
-reagent-name-aviation = aviation
+reagent-name-aviation = Aviation
 reagent-desc-aviation = Ironically sends more people falling to the ground than lifting off of it.
 
-reagent-name-black-velvet = black velvet
+reagent-name-black-velvet = Black Velvet
 reagent-desc-black-velvet = For the classier, more discerning moody alcoholic.
 
 reagent-name-blue-lagoon = Blue Lagoon
 reagent-desc-blue-lagoon = Best known from Electra's attempts at trademarking the recipe during their resort world developments.
 
-reagent-name-brain-scrambler = brain scrambler
+reagent-name-brain-scrambler = Brain Scrambler
 reagent-desc-brain-scrambler = What's it taste like? Who knows, but it definitely tastes the most!
 
-reagent-name-bramble = bramble
+reagent-name-bramble = Bramble
 reagent-desc-bramble = An Augarvian blend, popular at vulpekin religious gatherings.
 
-reagent-name-buzzed-bunny = buzzed bunny
+reagent-name-buzzed-bunny = Buzzed Bunny
 reagent-desc-buzzed-bunny = Also known in some places as a rascally rabbit.
 
-reagent-name-cactus = cactus
+reagent-name-cactus = Cactus
 reagent-desc-cactus = Truly the most tsundere of cocktails.
 
-reagent-name-cherry-bomb = cherry bomb
+reagent-name-cherry-bomb = Cherry Bomb
 reagent-desc-cherry-bomb = Kablooey!
 
-reagent-name-corpse-reviver = corpse reviver
+reagent-name-corpse-reviver = Corpse Reviver
 reagent-desc-corpse-reviver = Not a medically approved resusicant, but you'd be forgiven for considering it one after a sip.
 
-reagent-name-cryptid = cryptid
+reagent-name-cryptid = Cryptid
 reagent-desc-cryptid = Named for being an uncommon enough blend that you'll never see it twice.
 
-reagent-name-earthquake = earthquake
+reagent-name-earthquake = Earthquake
 reagent-desc-earthquake = It'll leave you stumbling!
 
-reagent-name-eclipse = eclipse
+reagent-name-eclipse = Eclipse
 reagent-desc-eclipse = Hot as a corona, cool as the dark side of a moon.
 
-reagent-name-emerald-breeze = emerald breeze
+reagent-name-emerald-breeze = Emerald Breeze
 reagent-desc-emerald-breeze = Inspired by and named after the brilliant viridian storms of Jupiter-Psi.
 
-reagent-name-faeries-cheer = faerie's cheer
+reagent-name-faeries-cheer = Faerie's Cheer
 reagent-desc-faeries-cheer = For moonlit revels and meeting charming strangers in the woods.
 
-reagent-name-goblins-brew = goblin's brew
+reagent-name-goblins-brew = Goblin's Brew
 reagent-desc-goblins-brew = A concoction of a strange and terribly powerful nature.
 
-reagent-name-moon-mist = moon mist
+reagent-name-moon-mist = Moon Mist
 reagent-desc-moon-mist = It's a marvelous night for a moondance...
 
-reagent-name-mushburger = mushburger
+reagent-name-mushburger = Mushburger
 reagent-desc-mushburger = Even looking at this thing is enough to make you feel sick.
 
-reagent-name-necropolitan = necropolitan
+reagent-name-necropolitan = Necropolitan
 reagent-desc-necropolitan = A taste to die for!
 
-reagent-name-paradise-lost = paradise lost
+reagent-name-paradise-lost = Paradise Lost
 reagent-desc-paradise-lost = Hail, horrors, hail.
 
-reagent-name-rainbow-shooter = rainbow shooter
+reagent-name-rainbow-shooter = Rainbow Shooter
 reagent-desc-rainbow-shooter = Taste the rainbow!
 
-reagent-name-red-dog = red dog
+reagent-name-red-dog = Red Dog
 reagent-desc-red-dog = Traditionally served in very big tankards. What a red dog has to do with being very big is anyone's guess.
 
-reagent-name-red-eye = red eye
+reagent-name-red-eye = Red Eye
 reagent-desc-red-eye = It might look unappetizing, but as the "inventor" of this "cocktail" was known to say: Anything else is always something better.
 
-reagent-name-sakura-martini = sakura martini
+reagent-name-sakura-martini = Sakura Martini
 reagent-desc-sakura-martini = A frequent sight during moonlit seasonal festivals across a few different planets.
 
-reagent-name-snakebite = snakebite
+reagent-name-snakebite = Snakebite
 reagent-desc-snakebite = First invented by a Gothic priestess, whose faith happens to have a fairly substantial amount of symbolism involving snakes and the consumption of apples.
+
+reagent-name-silent-night = Silent Night
+reagent-desc-silent-night = A festive eggnog-based drink for mimes in the holiday spirit.
+
+reagent-name-mime-tai = Mime Tai
+reagent-desc-mime-tai = Orgeat not available? Nothing is better than nothing.
+
+reagent-name-bnw = Black and White
+reagent-desc-bnw = The classic beer cocktail, but the pale ale looks a little paler than usual? Must be Nothing.
+
+reagent-name-bluescreen-curacao = Bluescreen Curaçao
+reagent-desc-bluescreen-curacao = You used to need an illegal operation to get this stuff.
+
+reagent-name-coco-geisha = Coco Geisha
+reagent-desc-coco-geisha = The burn of whiskey and sake combined in a simple yet elegant cocktail.
+
+reagent-name-starcup = Cup of Stars
+reagent-desc-starcup =  Always worth insisting upon.
+
+reagent-name-original-sin = Original Sin
+reagent-desc-original-sin =  Damnation has never been this tempting.
+
+reagent-name-blue-skies-ahead = Blue Skies Ahead
+reagent-desc-blue-skies-ahead =  Rich cyan glints through crisp, crushed ice.
 
 # Rewritten Drinks
 reagent-desc-amasec-starcup = In the grim darkness of neocapitalism, there is only war.
@@ -150,12 +174,12 @@ reagent-desc-radler-starcup = A bright mixture of beer and lemonade, also someti
 
 reagent-desc-red-mead-starcup = Mead produced with "red honey", the exotic byproduct of a species of bloodsucking bee.
 
-reagent-name-rock-and-stone-starcup = rock 'n stone
+reagent-name-rock-and-stone-starcup = Rock 'n stone
 reagent-desc-rock-and-stone-starcup = A favored choice for groups of asteroid miners after a job. Or before a job. Or during a job.
 
 reagent-desc-silverjack-starcup = A little piece of cyberpunk dystopia in a glass.
 
-reagent-name-slimer-starcup = slimer
+reagent-name-slimer-starcup = Slimer
 reagent-desc-slimer-starcup = Sometimes, when making a cocktail, you just have to throw in the first things that pop into your mind.
 
 reagent-desc-syndicate-bomb-starcup = Somebody set up us the bomb.
