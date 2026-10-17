@@ -110,3 +110,21 @@
       shader: unshaded
   - type: TimedDespawn
     lifetime: 0.9
+
+- type: entity
+  parent: EffectNonDiegeticBase
+  id: EffectNonDiegeticSparkle
+  description: A short animation. Could be used to draw attention to something new or pretty.
+  suffix: Sparkle
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "effect" ]
+      state: twinkle
+      offset: 0,0
+      shader: unshaded
+  - type: TimedDespawn
+    lifetime: 1.5
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/_starcup/Effects/tinkling.ogg
