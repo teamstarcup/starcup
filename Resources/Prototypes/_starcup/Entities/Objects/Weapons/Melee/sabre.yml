@@ -1,0 +1,143 @@
+- type: entity
+  name: dueling sabre
+  parent: BaseItem
+  id: FencingSabrePlain
+  description:
+  components:
+  - type: Sprite
+    sprite: _DV/Objects/Weapons/Melee/shinai.rsi
+    state: icon
+  - type: StaminaDamageOnHit
+    damage: 10 # TODO
+  - type: MeleeWeapon
+    attackRate: 1 # average 15 stamina per second
+    range: 1 #TODO; weaker range and bad speed but can be swung
+    bluntStaminaDamageFactor: 2 # 10 + (5 modified by armor/resistances)
+    damage:
+      types:
+        Blunt: 2.5
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg #TODO
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Weapons/eblade1.ogg
+      params:
+        variation: 0.250
+    activatedSoundOnSwing:
+      path: /Audio/Weapons/eblademiss.ogg
+      params:
+        variation: 0.125
+  - type: Reflect
+    reflectProb: 0.05 # half that of captain's saber
+    spread: 90
+  - type: Item
+    sprite: _starcup/Objects/Weapons/Melee/dueling_sabre.rsi
+    storedSprite:
+      state: storage
+      sprite: _starcup/Objects/Weapons/Melee/dueling_sabre_storage_64x.rsi
+    shape:
+    - 0,0,0,3
+  - type: Tag
+    tags:
+    - Sabre
+    swingBeverage: true
+  - type: DisarmMalus # -30% chance--barehanded disarms are silly
+
+- type: entity
+  name: dueling sabre
+  parent: FencingDuelingSabrePlain
+  id: FencingDuelingSabreQuartz
+  description:
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/dueling_sabre_quartz.rsi
+    state: icon
+  - type: Item
+    sprite: _starcup/Objects/Weapons/Melee/dueling_sabre_quartz.rsi
+    storedSprite:
+      state: storage
+      sprite: _starcup/Objects/Weapons/Melee/dueling_sabre_quartz_storage_64x.rsi
+
+- type: entity
+  name: fencing foil
+  parent: BaseItem
+  id: FencingFoil
+  description: #TODO
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/foil.rsi
+    state: icon
+  - type: Item
+    sprite: _starcup/Objects/Weapons/Melee/foil.rsi
+    storedSprite:
+      state: storage
+      sprite: _starcup/Objects/Weapons/Melee/foil_storage_64x.rsi
+  - type: StaminaDamageOnHit
+    damage: 10 #TODO
+  - type: MeleeWeapon
+    attackRate: 1.5 # average 22.5 stamina per second (over boxing gloves 12 per second)
+    range: 1.25 # better range than gloves/saber
+    wideAnimationRotation: -135
+    bluntStaminaDamageFactor: 2 # 10 + (5 modified by armor/resistances)
+    damage:
+      types:
+        Blunt: 2.5
+    altDisarm: true # can't alt-strike, but can try to disarm
+    angle: 0
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg #TODO
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Weapons/eblade1.ogg
+      params:
+        variation: 0.250
+    activatedSoundOnSwing:
+      path: /Audio/Weapons/eblademiss.ogg
+      params:
+        variation: 0.125
+    swingBeverage: true # maybe?
+  - type: DisarmMalus #TODO
+
+- type: entity
+  name: fencing epee
+  parent: BaseItem
+  id: FencingSabreEpee
+  description: #TODO
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/epee.rsi
+    state: icon
+  - type: Item
+    sprite: _starcup/Objects/Weapons/Melee/epee.rsi
+    storedSprite:
+      state: storage
+      sprite: _starcup/Objects/Weapons/Melee/epee_storage_64x.rsi
+  - type: StaminaDamageOnHit
+    damage: 8 # ineffectual on a wideswing
+  - type: MeleeWeapon
+    attackRate: 0.75 # average 15 per second (or 7.5 with wideswing)
+    range: 1.75 # spear-level range, but has to be precise
+    wideAnimationRotation: -135
+    bluntStaminaDamageFactor: 4 # 8 + (12 modified by armor/resistances)
+    angle: 0
+    animation: WeaponArcThrust
+    damage:
+      types:
+        Blunt: 0.5 # basically nothing on a wideswing
+    clickDamageModifier: 6 # ups it to 3
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg #TODO
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Weapons/eblade1.ogg
+      params:
+        variation: 0.250
+    activatedSoundOnSwing:
+      path: /Audio/Weapons/eblademiss.ogg
+      params:
+        variation: 0.125
+    swingBeverage: true # maybe?
+  - type: DisarmMalus
+
+## AltDisarm = true/false - Does this entity do a disarm on alt attack.
+# ResetOnHandSelected = true/false - Starts attack cooldown when equipped if true.
+## BluntStaminaDamageFactor - take stamina damage equal to bluntDamage * this (affected by armors/resistances)
+## ClickDamageModifier - Multiplies damage by this amount for single-target attacks.
+## SwingBeverage - Allows each attack to take turns being either left or right.
