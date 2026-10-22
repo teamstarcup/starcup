@@ -20,3 +20,205 @@
     sprite: _starcup/Clothing/Belt/waistbag_maid.rsi
   - type: Clothing
     sprite: _starcup/Clothing/Belt/waistbag_maid.rsi
+
+- type: entity
+  parent: [ClothingBeltBase, ClothingSlotBase, BaseExaminableClothing]
+  id: ClothingBeltSheathBase
+  abstract: true
+  components:
+  - type: Item
+    size: Ginormous
+    shape:
+    - 0,0,1,2
+    storedOffset: 0,-2
+    storedRotation: 45
+  - type: Appearance
+
+# The filled equipped sheaths won't show up on the sprites as such.
+# We'll leave it just in case ItemMapper gets an upgrade later.
+
+- type: entity
+  parent: ClothingBeltSheathBase
+  id: ClothingBeltSheathSabre
+  name: dueling sabre sheath
+  description: A fancy sheath designed to hold a dueling sabre.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Belt/dueling_sabre_sheath.rsi
+    state: sheath
+  - type: Clothing
+    sprite: _starcup/Clothing/Belt/dueling_sabre_sheath.rsi
+  - type: ItemSlots
+    slots:
+      item:
+        name: spray-painter-style-cratesecure-weapon # hey, it's there
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/Items/sheath.ogg
+        ejectSound: /Audio/Items/unsheath.ogg
+        ejectOnBreak: true
+        whitelist:
+          tags:
+          - SabrePlain
+  - type: ItemMapper
+    mapLayers:
+      sheath-sabre:
+        whitelist:
+          tags:
+          - SabrePlain
+
+- type: entity
+  parent: ClothingBeltSheathBase
+  id: ClothingBeltSheathSabreQuartz
+  name: quartz sabre sheath
+  description: An elegant sheath designed to hold a quartz dueling sabre.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Belt/quartz_sabre_sheath.rsi
+    state: sheath
+  - type: Clothing
+    sprite: _starcup/Clothing/Belt/quartz_sabre_sheath.rsi
+  - type: ItemSlots
+    slots:
+      item:
+        name: spray-painter-style-cratesecure-weapon # hey, it's there
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/Items/sheath.ogg
+        ejectSound: /Audio/Items/unsheath.ogg
+        ejectOnBreak: true
+        whitelist:
+          tags:
+          - SabreQuartz
+  - type: ItemMapper
+    mapLayers:
+      sheath-sabre:
+        whitelist:
+          tags:
+          - SabreQuartz
+
+- type: entity
+  parent: ClothingBeltSheathBase
+  id: ClothingBeltSheathEpee
+  name: epee sheath
+  description: An ornate sheath designed to hold a dueling epee.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Belt/epee_sheath.rsi
+    state: sheath
+  - type: Clothing
+    sprite: _starcup/Clothing/Belt/epee_sheath.rsi
+  - type: ItemSlots
+    slots:
+      item:
+        name: spray-painter-style-cratesecure-weapon # hey, it's there
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/Items/sheath.ogg
+        ejectSound: /Audio/Items/unsheath.ogg
+        ejectOnBreak: true
+        whitelist:
+          tags:
+          - Epee
+  - type: ItemMapper
+    mapLayers:
+      sheath-sabre:
+        whitelist:
+          tags:
+          - Epee
+
+- type: entity
+  parent: ClothingBeltSheathBase
+  id: ClothingBeltSheathFoil
+  name: foil sheath
+  description: A colorful sheath designed to hold a dueling foil.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Belt/foil_sheath.rsi
+    state: sheath
+  - type: Clothing
+    sprite: _starcup/Clothing/Belt/foil_sheath.rsi
+  - type: ItemSlots
+    slots:
+      item:
+        name: spray-painter-style-cratesecure-weapon # hey, it's there
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/Items/sheath.ogg
+        ejectSound: /Audio/Items/unsheath.ogg
+        ejectOnBreak: true
+        whitelist:
+          tags:
+          - Foil
+  - type: ItemMapper
+    mapLayers:
+      sheath-sabre:
+        whitelist:
+          tags:
+          - Foil
+
+- type: entity
+  parent: [ ClothingBeltSheathBase, BaseMajorContraband, BaseExaminableClothing ]
+  id: ClothingBeltSheathRapier
+  name: rapier sheath
+  description: A plain sheath designed to hold a deadly rapier.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Belt/rapier_sheath.rsi
+    state: sheath
+  - type: Clothing
+    sprite: _starcup/Clothing/Belt/rapier_sheath.rsi
+  - type: ItemSlots
+    slots:
+      item:
+        name: spray-painter-style-cratesecure-weapon # hey, it's there
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/Items/sheath.ogg
+        ejectSound: /Audio/Items/unsheath.ogg
+        ejectOnBreak: true
+        whitelist:
+          tags:
+          - Rapier
+  - type: ItemMapper
+    mapLayers:
+      sheath-sabre:
+        whitelist:
+          tags:
+          - Rapier
+  - type: ExaminableClothing
+    examineText: clothing-contra-sheath
+
+- type: entity
+  parent: [ ClothingBeltSheathBase, BaseMajorContraband, BaseExaminableClothing ]
+  id: ClothingBeltSheathPlain
+  name: plain sheath
+  description: A plain sheath designed to hold a deadly cutlass—or a captain's stolen sabre.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Belt/generic_sheath.rsi
+    state: sheath
+  - type: Clothing
+    sprite: _starcup/Clothing/Belt/generic_sheath.rsi
+  - type: ItemSlots
+    slots:
+      item:
+        name: spray-painter-style-cratesecure-weapon # hey, it's there
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/Items/sheath.ogg
+        ejectSound: /Audio/Items/unsheath.ogg
+        ejectOnBreak: true
+        whitelist:
+          tags:
+          - Cutlass
+          - CaptainSabre
+  - type: ItemMapper
+    mapLayers:
+      sheath-sabre:
+        whitelist:
+          tags:
+          - Cutlass
+          - CaptainSabre
+  - type: ExaminableClothing
+    examineText: clothing-contra-sheath
