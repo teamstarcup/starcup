@@ -36,3 +36,27 @@
   - type: IconSmooth
     key: woods
     base: wood
+
+- type: entity
+  id: WallInvisibleNonDiegetic
+  name: invisible wall
+  suffix: DO NOT MAP
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Wall
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: Airtight
