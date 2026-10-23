@@ -479,7 +479,25 @@
       - !type:GroupSelector
         rolls: 4, 8
         children:
-        - id: MobGiantSpiderAngry
+        #- id: MobGiantSpiderAngry # tarantulas will be neutral unless admin spawned
+        - id: MobGiantSpiderBlack
+        - id: MobGiantSpiderGuard
+        - id: MobGiantSpiderHunter
+          weight: 0.5
+        - id: MobGiantSpiderMidwife
+          weight: 0.2
+        - id: MobGiantSpiderViper
+          weight: 0.1
+        - id: MobGiantSpiderTangle
+          weight: 0.3
+        - id: MobGiantSpiderBreacher
+          weight: 0.2
+        - id: MobGiantSpiderTank
+          weight: 0.2
+        - id: MobGiantSpiderAmbush
+          weight: 0.1
+        - id: MobGiantSpiderNurse
+          weight: 0.1
     passiveSound:
       path: /Audio/_starcup/VentCritters/vent_spiders.ogg
     endSound:
