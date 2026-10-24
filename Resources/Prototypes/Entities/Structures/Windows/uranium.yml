@@ -1,22 +1,22 @@
 - type: entity
-  parent: [BaseDeltaPressurePlasma, BaseWindowStructure, BaseRCDResistant]
+  parent: [BaseDeltaPressurePlasma, BaseWindowStructure, BaseRCDResistant, StructureHealthBarrier]
   id: UraniumWindow
   name: uranium window
   components:
   - type: Sprite
+  # Classic: Respritening renamed.
     sprite: Structures/Windows/uranium_window.rsi
   - type: Icon
+  # Classic: Respritening renamed.
     sprite: Structures/Windows/uranium_window.rsi
     state: full
   - type: Damageable
-    damageModifierSet: Glass
-  - type: Injurable
-    damageContainer: StructuralInorganic
+    damageModifierSet: GlassMod
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 100
+        damage: 80
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -26,8 +26,6 @@
           ShardGlassUranium:
             min: 1
             max: 2
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
   - type: IconSmooth
     base: uwindow
   - type: Construction
@@ -46,7 +44,7 @@
     resistance: 3
 
 - type: entity
-  parent: [BaseDeltaPressurePlasmaQuarter, BaseWindowStructureDirectional, BaseRCDResistant]
+  parent: [BaseDeltaPressurePlasmaQuarter, BaseWindowStructureDirectional, BaseRCDResistant, StructureHealthBarrierWeak]
   id: UraniumWindowDirectional
   name: directional uranium window
   components:
@@ -67,14 +65,12 @@
     damageOverlay:
       sprite: Structures/Windows/cracks_directional.rsi
   - type: Damageable
-    damageModifierSet: Glass
-  - type: Injurable
-    damageContainer: StructuralInorganic
+    damageModifierSet: GlassMod
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 50
+        damage: 30
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -84,12 +80,41 @@
           ShardGlassUranium:
             min: 1
             max: 1
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
   - type: StaticPrice
     price: 100
   - type: RadiationBlocker
     resistance: 1.5
+
+- type: entity
+  parent: UraniumWindowDirectional
+  id: UraniumWindowDirectionalCorner
+  suffix: Corner
+  components:
+  - type: Sprite
+    sprite: Structures/Windows/directional.rsi
+    state: uranium_window_corner
+  - type: Icon
+    sprite: Structures/Windows/directional.rsi
+    state: uranium_window_corner
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,-0.28125,-0.28125"
+        density: 1500
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: Construction
+    graph: WindowDirectionalCorner
+    node: uraniumWindowDirectionalCorner
+  - type: DamageVisuals
+    thresholds: [5, 10, 20]
+    trackAllDamage: true
+    damageOverlay:
+      sprite: Structures/Windows/cracks_directional_corner.rsi
 
 - type: entity
   parent: UraniumWindow
@@ -102,6 +127,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
+  # Classic: Respritening renamed.
     sprite: Structures/Windows/uranium_window_diagonal.rsi
     state: state0
   - type: Tag
@@ -110,9 +136,11 @@
     - Window
   - type: IconSmooth
     mode: Diagonal
+  # Classic: Restored smoothing group.
     key: windows
     base: state
   - type: Icon
+  # Classic: Respritening renamed.
     sprite: Structures/Windows/uranium_window_diagonal.rsi
     state: state0
   - type: Fixtures
@@ -135,7 +163,7 @@
     - East
   - type: DamageVisuals
     damageOverlay:
-      sprite: Structures/Windows/cracks_diagonal.rsi
+      sprite: Structures/Windows/cracks-diagonal.rsi
   - type: Construction
     graph: WindowDiagonal
     node: uraniumWindowDiagonal

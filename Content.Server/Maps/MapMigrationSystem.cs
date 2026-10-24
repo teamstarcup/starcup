@@ -19,6 +19,7 @@ public sealed partial class MapMigrationSystem : EntitySystem
 {
     [Dependency] private IResourceManager _resMan = default!;
 
+    private const string MigrationFile = "/migration.yml";
     private const string MigrationDir = "/Migrations/"; // DeltaV - dir instead of a single file
 
     public override void Initialize()
@@ -75,6 +76,7 @@ public sealed partial class MapMigrationSystem : EntitySystem
         // Begin DeltaV Changes - rewrote single path to finding files in a directory
         var files = _resMan.ContentFindFiles(MigrationDir)
             .Where(f => f.ToString().EndsWith(".yml"))
+            .Prepend(new ResPath(MigrationFile))
             .ToList();
 
         if (files.Count == 0)

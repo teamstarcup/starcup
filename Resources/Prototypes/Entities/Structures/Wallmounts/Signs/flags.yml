@@ -1,7 +1,7 @@
 - type: entity
-  parent: BaseSign
-  id: BaseFlag
   abstract: true
+  parent: BaseSignWeak
+  id: BaseFlag
   components:
   - type: Sprite
     sprite: Structures/Wallmounts/flags.rsi
@@ -30,6 +30,8 @@
             max: 5
         offset: 0
     # End DeltaV additions
+  - type: Damageable
+    damageModifierSet: ThreadMod
 
 - type: entity
   parent: BaseFlag

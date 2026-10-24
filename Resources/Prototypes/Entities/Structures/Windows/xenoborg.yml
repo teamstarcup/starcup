@@ -1,14 +1,17 @@
 - type: entity
   id: XenoborgWindow
   parent: PlastitaniumWindow
-  name: xenoborg window
+  name: mechadermis window
   components:
   - type: Sprite
     drawdepth: WallTops
+  # Classic: Respritening renamed.
     sprite: Structures/Windows/xenoborg.rsi
   - type: Icon
+  # Classic: Respritening renamed.
     sprite: Structures/Windows/xenoborg.rsi
     state: full
   - type: IconSmooth
+  # Classic: Restored smoothing group.
     key: windows
     base: xenoborg

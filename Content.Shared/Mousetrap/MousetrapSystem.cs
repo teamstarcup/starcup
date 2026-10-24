@@ -6,7 +6,7 @@ using Content.Shared._DV.Rodentia;
 
 namespace Content.Shared.Mousetrap;
 
-public sealed class MousetrapSystem : EntitySystem
+public sealed partial class MousetrapSystem : EntitySystem
 {
     public override void Initialize()
     {
