@@ -16,11 +16,12 @@ namespace Content.Shared.Tag;
 /// </summary>
 public sealed partial class TagSystem : EntitySystem
 {
-    [Dependency] private EntityQuery<TagComponent> _tagQuery = default!;
+    private EntityQuery<TagComponent> _tagQuery; // starcup: de-dependify
 
     public override void Initialize()
     {
         base.Initialize();
+        _tagQuery = GetEntityQuery<TagComponent>(); // starcup: de-dependify
 
 #if DEBUG
         SubscribeLocalEvent<TagComponent, ComponentInit>(OnTagInit);

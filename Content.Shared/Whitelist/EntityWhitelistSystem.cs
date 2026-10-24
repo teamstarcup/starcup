@@ -8,7 +8,7 @@ public sealed partial class EntityWhitelistSystem : EntitySystem
 {
     [Dependency] private TagSystem _tag = default!;
 
-    [Dependency] private EntityQuery<ItemComponent> _itemQuery = default!;
+    private EntityQuery<ItemComponent> _itemQuery; // starcup: de-dependify
 
     private CompName _itemComponentName = default;
     private CompName _tagComponentName = default;
@@ -18,6 +18,8 @@ public sealed partial class EntityWhitelistSystem : EntitySystem
         base.Initialize();
 
         // caching for minor performance improvement
+        _itemQuery = GetEntityQuery<ItemComponent>(); // starcup: de-dependify
+
         _itemComponentName = CompName.Get<ItemComponent>(Factory);
         _tagComponentName = CompName.Get<TagComponent>(Factory);
     }
