@@ -48,63 +48,57 @@
   parent: ClothingBeltSheathSabrePlain
   suffix: Filled
   components:
-  - type: EntityTableContainerFill
+  - type: ContainerFill
     containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: DuelingSabrePlain
+      item:
+      - DuelingSabrePlain
 
 - type: entity
   id: ClothingBeltSheathSabreQuartzFilled
   parent: ClothingBeltSheathSabreQuartz
   suffix: Filled
   components:
-  - type: EntityTableContainerFill
+  - type: ContainerFill
     containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: DuelingSabreQuartz
+      item:
+      - DuelingSabreQuartz
 
 - type: entity
   id: ClothingBeltSheathEpeeFilled
   parent: ClothingBeltSheathEpee
   suffix: Filled
   components:
-  - type: EntityTableContainerFill
+  - type: ContainerFill
     containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: DuelingEpee
+      item:
+      - DuelingEpee
 
 - type: entity
   id: ClothingBeltSheathFoilFilled
   parent: ClothingBeltSheathFoil
   suffix: Filled
   components:
-  - type: EntityTableContainerFill
+  - type: ContainerFill
     containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: DuelingFoil
+      item:
+      - DuelingFoil
 
 - type: entity
   id: ClothingBeltSheathRapierFilled
   parent: ClothingBeltSheathRapier
   suffix: Filled
   components:
-  - type: EntityTableContainerFill
+  - type: ContainerFill
     containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: DuelingRapier
+      item:
+      - DuelingRapier
 
 - type: entity
   id: ClothingBeltSheathCutlassFilled
   parent: ClothingBeltSheathPlain
-  suffix: Filled
+  suffix: Filled, Cutlass
   components:
-  - type: EntityTableContainerFill
+  - type: ContainerFill
     containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: Cutlass
+      item:
+      - Cutlass
