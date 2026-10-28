@@ -1,0 +1,24 @@
+- type: entity
+  parent: LockerBase
+  id: LockerWeaponsContender
+  name: weapons cabinet
+  description: This is where the contender keeps their sparring equipment.
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Storage/closet.rsi
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: weapons_cabinet
+    stateDoorOpen: weapons_cabinet_open
+    stateDoorClosed: weapons_cabinet_door
+  - type: AccessReader
+    access: [["Boxer"]]
+  - type: EntityStorage
+    closeSound:
+      path: /Audio/Effects/woodenclosetclose.ogg
+    openSound:
+      path: /Audio/Effects/woodenclosetopen.ogg
+  - type: Paintable
+    group: null # not shaped like other lockers
+
+# TODO: a filled variant when the contender job is added

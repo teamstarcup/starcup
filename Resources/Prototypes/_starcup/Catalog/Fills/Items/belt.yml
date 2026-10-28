@@ -13,3 +13,98 @@
         - id: LightReplacer
         - id: TrashBag # starcup: picking up trash is basically the first thing a janitor does at shift start
         - id: FeatherDuster
+
+- type: entity
+  id: ClothingBeltQuiverTrainingFilled
+  parent: ClothingBeltQuiver
+  suffix: Filled, Training
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ArrowCard
+          amount: 5
+        - id: Plunger
+          prob: 0.01
+
+- type: entity
+  id: ClothingBeltQuiverBlueTrainingFilled
+  parent: ClothingBeltQuiverBlue
+  suffix: Filled, Training
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ArrowCard
+          amount: 5
+        - id: Plunger
+          prob: 0.01
+
+# SHEATHS
+- type: entity
+  id: ClothingBeltSheathSabrePlainFilled
+  parent: ClothingBeltSheathSabrePlain
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DuelingSabrePlain
+
+- type: entity
+  id: ClothingBeltSheathSabreQuartzFilled
+  parent: ClothingBeltSheathSabreQuartz
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DuelingSabreQuartz
+
+- type: entity
+  id: ClothingBeltSheathEpeeFilled
+  parent: ClothingBeltSheathEpee
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DuelingEpee
+
+- type: entity
+  id: ClothingBeltSheathFoilFilled
+  parent: ClothingBeltSheathFoil
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DuelingFoil
+
+- type: entity
+  id: ClothingBeltSheathRapierFilled
+  parent: ClothingBeltSheathRapier
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DuelingRapier
+
+- type: entity
+  id: ClothingBeltSheathCutlassFilled
+  parent: ClothingBeltSheathPlain
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: Cutlass
