@@ -1,0 +1,84 @@
+- type: entity
+  parent: BaseBow
+  id: BaseBowTraining
+  name: training shortbow
+  description: A bow designed for archery practice, though those cardboard arrows still leave a bruise.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Guns/Bow/training_bow_blue.rsi
+    layers:
+    - state: unwielded
+      map: [ base ]
+    - state: unwielded-arrow
+      map: [ arrow ]
+      visible: false
+    - state: unwielded-plunger
+      map: [ plunger ]
+      visible: false
+  - type: ItemSlots
+    slots:
+      projectiles:
+        name: damage-projectile
+        startingItem: null
+        insertSound: /Audio/Weapons/Guns/Misc/arrow_nock.ogg
+        whitelist:
+          tags:
+          - SafeArrow
+          - Plunger
+  - type: Appearance
+  - type: ItemMapper
+    spriteLayers:
+    - arrow
+    - plunger
+    mapLayers:
+      arrow:
+        whitelist:
+          tags:
+          - SafeArrow
+      plunger:
+        whitelist:
+          tags:
+          - Plunger
+  - type: GenericVisualizer
+    visuals:
+      enum.WieldableVisuals.Wielded:
+        arrow:
+          True: { state: wielded-arrow }
+          False: { state: unwielded-arrow }
+        plunger:
+          True: { state: wielded-plunger }
+          False: { state: unwielded-plunger }
+        base:
+          True: { state: wielded }
+          False: { state: unwielded }
+  - type: PacifismAllowedGun
+
+- type: entity
+  parent: BaseBowTraining
+  id: BowTrainingBlue
+  name: blue training shortbow
+
+- type: entity
+  parent: BaseBowTraining
+  id: BowTrainingRed
+  name: red training shortbow
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Guns/Bow/training_bow_red.rsi
+
+- type: entity
+  parent: BaseBowTraining
+  id: BowTrainingGreen
+  name: green training shortbow
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Guns/Bow/training_bow_green.rsi
+
+- type: entity
+  parent: BaseBowTraining
+  id: BowTrainingYellow
+  name: yellow training shortbow
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Guns/Bow/training_bow_yellow.rsi
