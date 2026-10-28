@@ -22,6 +22,16 @@
     sprite: _starcup/Clothing/Belt/waistbag_maid.rsi
 
 - type: entity
+  parent: ClothingBeltQuiver
+  id: ClothingBeltQuiverBlue
+  suffix: Blue
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Belt/quiver.rsi
+
+# SHEATHS
+
+- type: entity
   parent: [ClothingBeltBase, ClothingSlotBase, BaseExaminableClothing]
   id: ClothingBeltSheathBase
   abstract: true

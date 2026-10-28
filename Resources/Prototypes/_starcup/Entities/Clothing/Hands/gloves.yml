@@ -40,3 +40,42 @@
     sprite: Clothing/Hands/Gloves/tacticalmaidgloves.rsi
   - type: Fiber
     fiberColor: fibers-black
+
+- type: entity
+  parent: ClothingHandsGlovesSyntheticBase
+  id: ClothingHandsFencing
+  name: fencing gloves
+  description: The protective gloves for an ambidextrous fencer.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Hands/Gloves/fencing.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Hands/Gloves/fencing.rsi
+  - type: Fiber
+    fiberColor: fibers-white
+
+- type: entity
+  parent: ClothingHandsGlovesSyntheticBase
+  id: ClothingHandsFencingSingleLeft
+  name: left fencing glove
+  description: The protective glove for a left-handed fencer.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Hands/Gloves/fencing_left.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Hands/Gloves/fencing_left.rsi
+  - type: Fiber
+    fiberColor: fibers-white
+
+- type: entity
+  parent: ClothingHandsGlovesSyntheticBase
+  id: ClothingHandsFencingSingleRight
+  name: right fencing glove
+  description: The protective glove for a right-handed fencer.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Hands/Gloves/fencing_right.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Hands/Gloves/fencing_right.rsi
+  - type: Fiber
+    fiberColor: fibers-white
