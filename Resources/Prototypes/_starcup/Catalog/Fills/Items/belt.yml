@@ -13,3 +13,92 @@
         - id: LightReplacer
         - id: TrashBag # starcup: picking up trash is basically the first thing a janitor does at shift start
         - id: FeatherDuster
+
+- type: entity
+  id: ClothingBeltQuiverTrainingFilled
+  parent: ClothingBeltQuiver
+  suffix: Filled, Training
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ArrowCard
+          amount: 5
+        - id: Plunger
+          prob: 0.01
+
+- type: entity
+  id: ClothingBeltQuiverBlueTrainingFilled
+  parent: ClothingBeltQuiverBlue
+  suffix: Filled, Training
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ArrowCard
+          amount: 5
+        - id: Plunger
+          prob: 0.01
+
+# SHEATHS
+- type: entity
+  id: ClothingBeltSheathSabrePlainFilled
+  parent: ClothingBeltSheathSabrePlain
+  suffix: Filled
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - DuelingSabrePlain
+
+- type: entity
+  id: ClothingBeltSheathSabreQuartzFilled
+  parent: ClothingBeltSheathSabreQuartz
+  suffix: Filled
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - DuelingSabreQuartz
+
+- type: entity
+  id: ClothingBeltSheathEpeeFilled
+  parent: ClothingBeltSheathEpee
+  suffix: Filled
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - DuelingEpee
+
+- type: entity
+  id: ClothingBeltSheathFoilFilled
+  parent: ClothingBeltSheathFoil
+  suffix: Filled
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - DuelingFoil
+
+- type: entity
+  id: ClothingBeltSheathRapierFilled
+  parent: ClothingBeltSheathRapier
+  suffix: Filled
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - DuelingRapier
+
+- type: entity
+  id: ClothingBeltSheathCutlassFilled
+  parent: ClothingBeltSheathPlain
+  suffix: Filled, Cutlass
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - Cutlass

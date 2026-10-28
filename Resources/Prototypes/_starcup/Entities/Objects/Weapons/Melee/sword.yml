@@ -1,4 +1,4 @@
-#Shortswords
+# Shortswords
 - type: entity
   parent: [ BaseSword, BaseMajorContraband ]
   id: CombatScalpel
@@ -21,3 +21,203 @@
     shape:
     - 0,0,0,2
   - type: DisarmMalus
+
+# Dueling
+- type: entity
+  name: dueling sabre
+  parent: BaseItem
+  id: DuelingSabrePlain
+  description: Swift and powerful when swung with grace. It's blunted, but lifting chins up with the tip is still not recommended.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/dueling_sabre.rsi
+    state: icon
+  - type: StaminaDamageOnHit
+    damage: 10
+  - type: MeleeWeapon
+    attackRate: 1 # average 15 stamina per second, middle of the three
+    range: 1.5 #default, worst range (but can be swung)
+    bluntStaminaDamageFactor: 2 # 10 + (3 modified by armor/resistances)
+    wideAnimationRotation: 135
+    damage:
+      types:
+        Blunt: 1.5
+    angle: 45 # down from 60, keep it interesting!
+    soundSwing:
+      collection: SwordMiss
+    soundHit:
+      path: /Audio/_starcup/Weapons/Swords/sword_hit.ogg
+      params:
+        variation: 0.125
+    swingBeverage: true
+  - type: Reflect
+    reflectProb: 0.05 # half that of captain's saber
+    spread: 90
+  - type: Item
+    sprite: _starcup/Objects/Weapons/Melee/dueling_sabre.rsi
+    storedSprite:
+      state: storage
+      sprite: _starcup/Objects/Weapons/Melee/dueling_sabre_storage_64x.rsi
+    shape:
+    - 0,0,0,3
+  - type: Tag
+    tags:
+    - SabrePlain
+  - type: DisarmMalus
+  - type: Tool # equivalent to plastic knife
+    speedModifier: 0.15
+    qualities:
+    - Slicing
+  - type: Utensil
+    types:
+    - Knife
+
+- type: entity
+  name: quartz dueling sabre
+  parent: DuelingSabrePlain
+  id: DuelingSabreQuartz
+  description: Swift and powerful when swung with everything you have and everything you are.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/dueling_sabre_quartz.rsi
+    state: icon
+  - type: Item
+    sprite: _starcup/Objects/Weapons/Melee/dueling_sabre_quartz.rsi
+    storedSprite:
+      state: storage
+      sprite: _starcup/Objects/Weapons/Melee/dueling_sabre_quartz_storage_64x.rsi
+    shape:
+    - 0,0,0,3
+  - type: MeleeWeapon
+    soundHit:
+      collection: WindChime
+      params:
+        volume: 50
+    wideAnimationRotation: -135
+  - type: Tag
+    tags:
+    - SabreQuartz
+
+- type: entity
+  name: dueling foil
+  parent: BaseItem
+  id: DuelingFoil
+  description: A weapon of precision as quick as a knife—but significantly less lethal, making it popular among pacifists.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/foil.rsi
+    state: icon
+  - type: Item
+    sprite: _starcup/Objects/Weapons/Melee/foil.rsi
+    storedSprite:
+      state: storage
+      sprite: _starcup/Objects/Weapons/Melee/foil_storage_64x.rsi
+    shape:
+    - 0,0,0,3
+  - type: StaminaDamageOnHit
+    damage: 10 # no bonus damage from blunt
+  - type: MeleeWeapon
+    attackRate: 1.5 # average 15 stamina per second (over boxing gloves 12 per second)
+    range: 1.5 # better range than gloves/saber
+    wideAnimationRotation: 135
+    damage:
+      types:
+        Blunt: 0.5
+    angle: 0
+    animation: WeaponArcThrust
+    soundSwing:
+      collection: SwordMiss
+    soundHit:
+      path: /Audio/_starcup/Weapons/Swords/sword_hit.ogg
+      params:
+        variation: 0.125
+  - type: DisarmMalus
+  - type: Tag
+    tags:
+    - Foil
+
+- type: entity
+  name: dueling epee
+  parent: BaseItem
+  id: DuelingEpee
+  description: Slow but powerful when aimed carefully towards a single target—ideally from some distance. Clumsy for those with pacifist implants.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/epee.rsi
+    state: icon
+  - type: Item
+    sprite: _starcup/Objects/Weapons/Melee/epee.rsi
+    storedSprite:
+      state: storage
+      sprite: _starcup/Objects/Weapons/Melee/epee_storage_64x.rsi
+    shape:
+    - 0,0,0,3
+  - type: StaminaDamageOnHit
+    damage: 8 # 2 lower than the others, fairly ineffectual on a wideswing
+  - type: MeleeWeapon
+    attackRate: 0.75 # average 15 per second (or 7.5 with wideswing) - and much worse
+    range: 1.65 # nearly spear-level range, but has to be precise
+    wideAnimationRotation: -135
+    bluntStaminaDamageFactor: 4 # 8 + (12 modified by armor/resistances)
+    angle: 0
+    animation: WeaponArcThrust
+    damage:
+      types:
+        Blunt: 0.5 # basically nothing on a wideswing, rewards precision
+    clickDamageModifier: 6 # ups it to 3
+    soundSwing:
+      collection: SwordMiss
+    soundHit:
+      path: /Audio/_starcup/Weapons/Swords/sword_hit.ogg
+      params:
+        variation: 0.125
+  - type: DisarmMalus
+  - type: Tag
+    tags:
+    - Epee
+
+- type: entity
+  name: rapier
+  parent: [ BaseItem, BaseMajorContraband ] # not sword bc I don't wanna give it knife utility
+  id: DuelingRapier
+  description: A weapon of precision as quick as a knife—but significantly more lethal. The wielder of this weapon knows that man is mortal.
+  components:
+  - type: Sprite
+    sprite: _starcup/Objects/Weapons/Melee/rapier.rsi
+    state: icon
+  - type: Item
+    sprite: _starcup/Objects/Weapons/Melee/rapier.rsi
+    storedSprite:
+      state: storage
+      sprite: _starcup/Objects/Weapons/Melee/rapier_storage_64x.rsi
+    shape:
+    - 0,0,0,3
+  - type: MeleeWeapon
+    wideAnimationRotation: 135
+    attackRate: 1.5 # quick as a cleaver/captain's sabre, but more precise and harder to get
+    range: 1.5
+    damage:
+      types:
+        Piercing: 15 # 2 less than captain's sabre
+    angle: 0
+    animation: WeaponArcThrust
+    soundSwing:
+      collection: SwordMiss
+    soundNoDamage:
+      path: /Audio/_starcup/Weapons/Swords/sword_hit.ogg
+      params:
+        variation: 0.125
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: DisarmMalus
+  - type: Tag
+    tags:
+    - Rapier
+  - type: Execution
+    doAfterDuration: 4.0
+
+# Quick Glossary for ease of reference:
+## DisarmMalus: Penalizes (or aids) disarm attempts against the wielder, with a default of 0.3 (-30% chance to disarm)>
+## BluntStaminaDamageFactor - take stamina damage equal to bluntDamage * this (affected by armors/resistances)
+## ClickDamageModifier - Multiplies damage by this amount for single-target attacks.
+## SwingBeverage - Allows each attack to take turns being either left or right.
