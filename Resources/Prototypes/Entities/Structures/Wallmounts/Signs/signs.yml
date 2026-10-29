@@ -268,11 +268,15 @@
 - type: entity
   parent: BaseSign
   id: SignAi
-  name: ai sign
+  name: AI sign # starcup: changed from "ai sign"
   description: A sign, indicating an AI is present.
   components:
   - type: Sprite
     state: ai
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedAi
+  # end starcup
 
 - type: entity
   parent: BaseSign

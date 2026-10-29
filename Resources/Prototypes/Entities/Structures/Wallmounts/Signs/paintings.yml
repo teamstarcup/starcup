@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown # starcup: unhangable posters
   id: PaintingBase
   abstract: true
   components:
@@ -14,6 +14,10 @@
   components:
   - type: Sprite
     state: painting0
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PaintingCurtainedEmpty
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -23,6 +27,10 @@
   components:
   - type: Sprite
     state: painting1
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedMoony
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -32,6 +40,10 @@
   components:
   - type: Sprite
     state: painting2
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedPersistenceOfMemory
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -41,6 +53,10 @@
   components:
   - type: Sprite
     state: painting3
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedTheSonOfMan
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -50,6 +66,10 @@
   components:
   - type: Sprite
     state: painting4
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedTheKiss
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -59,6 +79,10 @@
   components:
   - type: Sprite
     state: painting5
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedTheScream
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -68,6 +92,10 @@
   components:
   - type: Sprite
     state: painting6
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedTheGreatWave
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -77,6 +105,10 @@
   components:
   - type: Sprite
     state: painting7
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedCafeTerraceAtNight
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -86,6 +118,10 @@
   components:
   - type: Sprite
     state: painting8
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedNightHawks
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -95,6 +131,10 @@
   components:
   - type: Sprite
     state: painting9
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedSkeletonCigarette
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -104,6 +144,10 @@
   components:
   - type: Sprite
     state: painting10
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedSkeletonBoof
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -113,6 +157,10 @@
   components:
   - type: Sprite
     state: painting11
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedPrayerHands
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -122,6 +170,10 @@
   components:
   - type: Sprite
     state: painting12
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedOldGuitarist
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -131,6 +183,10 @@
   components:
   - type: Sprite
     state: painting13
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedOlympia
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -140,6 +196,10 @@
   components:
   - type: Sprite
     state: painting14
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedSaturn
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -149,6 +209,10 @@
   components:
   - type: Sprite
     state: painting15
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedSleepingGypsy
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -158,6 +222,10 @@
   components:
   - type: Sprite
     state: painting16
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedRedBlueYellow
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -167,6 +235,10 @@
   components:
   - type: Sprite
     state: painting17
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedAmogusTriptych
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -176,6 +248,10 @@
   components:
   - type: Sprite
     state: painting18
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedHelloWorld
+  # end starcup
 
 - type: entity
   parent: PaintingBase
@@ -185,3 +261,7 @@
   components:
   - type: Sprite
     state: painting19
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: NFPaintingCurtainedSadClown
+  # end starcup

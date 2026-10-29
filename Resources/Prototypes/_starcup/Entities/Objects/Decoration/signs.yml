@@ -1,0 +1,79 @@
+# Template for parenting purposes
+- type: entity
+  abstract: true
+  parent: BaseSign
+  id: BaseSignPullDown
+  components:
+  - type: DisassembleOnAltVerb
+    verbText: "disassemble-system-verb-pull-down"
+    disassembleTime: 2
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseSignCarried
+  name: sign
+  description: You should hang this up somewhere.
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Decoration/paintings.rsi
+    state: painting
+  - type: Item
+    size: Large
+  - type: Damageable
+  - type: Injurable
+    damageContainer: Inorganic
+  - type: DamageExaminable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+  - type: MeleeWeapon
+    soundHit:
+      collection: MetalThud
+    damage:
+      types:
+        Blunt: 10
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 4
+  - type: DamageOnHit
+    damage:
+      types:
+        Blunt: 4
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 8
+  - type: EmitSoundOnLand
+    sound:
+      collection: MetalThud
+      params:
+        variation: 0.25
+  - type: StaticPrice
+    price: 150
+  - type: DisassembleOnAltVerb
+    verbText: "disassemble-system-verb-pull-down"
+    disassembleTime: 2
+
+- type: entity
+  parent: BaseSignCarried
+  id: SignCarriedAi
+  name: AI sign
+  components:
+  - type: NFWallmountable
+    spawn: SignAi

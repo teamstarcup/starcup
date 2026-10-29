@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: BaseSign
+  parent: BaseSignPullDown # starcup: unhangable posters
   id: PosterBase
   components:
   - type: Sprite
@@ -25,9 +25,14 @@
   - type: Construction
     graph: PosterGraph
     node: start
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    soundFinished:
+      path: /Audio/Effects/poster_broken.ogg
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown # starcup: unhangable posters
   id: PosterBroken
   name: broken poster
   description: "You can't make out anything from the poster's original print. It's ruined."
@@ -50,6 +55,11 @@
   - type: Construction
     graph: PosterGraph
     node: tornPoster
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    soundFinished:
+      path: /Audio/Effects/poster_broken.ogg
+  # end starcup
 
 # Contraband
 - type: entity
@@ -60,6 +70,10 @@
   components:
   - type: Sprite
     state: poster1_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandFreeTonto
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -69,6 +83,11 @@
   components:
   - type: Sprite
     state: poster2_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitAtmosiaDeclarationIndependence
+  # end starcup
+
 
 - type: entity
   parent: PosterBase
@@ -78,6 +97,10 @@
   components:
   - type: Sprite
     state: poster3_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandFunPolice
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -87,6 +110,10 @@
   components:
   - type: Sprite
     state: poster4_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandRealExomorph
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -96,6 +123,11 @@
   components:
   - type: Sprite
     state: poster5_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitSyndicateRecruitment
+  # end starcup
+
 
 - type: entity
   parent: PosterBase
@@ -105,6 +137,10 @@
   components:
   - type: Sprite
     state: poster6_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandClown
+  # end starcup
 
 # begin starcup: removed for tone
 # - type: entity
@@ -125,6 +161,11 @@
   components:
   - type: Sprite
     state: poster8_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitGreyTide
+  # end starcup
+
 
 - type: entity
   parent: PosterBase
@@ -134,6 +175,10 @@
   components:
   - type: Sprite
     state: poster9_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandMissingGloves
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -143,6 +188,10 @@
   components:
   - type: Sprite
     state: poster10_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandHackingGuide
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -152,6 +201,10 @@
   components:
   - type: Sprite
     state: poster11_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandRIPBadger
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -161,6 +214,10 @@
   components:
   - type: Sprite
     state: poster12_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandAmbrosiaVulgaris
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -170,6 +227,10 @@
   components:
   - type: Sprite
     state: poster13_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandDonutCorp
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -179,6 +240,10 @@
   components:
   - type: Sprite
     state: poster14_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandEAT
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -188,6 +253,10 @@
   components:
   - type: Sprite
     state: poster15_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandTools
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -197,6 +266,10 @@
   components:
   - type: Sprite
     state: poster16_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandPower
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -206,15 +279,23 @@
   components:
   - type: Sprite
     state: poster17_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandSpaceCube
+  # end starcup
 
 - type: entity
   parent: PosterBase
   id: PosterContrabandCommunistState
   name: "Communist State"
-  description: "After the arrival of humans to the galaxy, interest in their native philosophy of communism experienced a resurgence." # starcup: rewritten for tone
+  description: "After the arrival of sector to the galaxy, interest in their native philosophy of communism experienced a resurgence." # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster18_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandCommunistState
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -224,6 +305,11 @@
   components:
   - type: Sprite
     state: poster19_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitLamarr
+  # end starcup
+
 
 - type: entity
   parent: PosterBase
@@ -233,6 +319,10 @@
   components:
   - type: Sprite
     state: poster20_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandBorgFancy
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -242,6 +332,10 @@
   components:
   - type: Sprite
     state: poster21_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandBorgFancyv2
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -251,6 +345,10 @@
   components:
   - type: Sprite
     state: poster22_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandKosmicheskayaStantsiya
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -260,6 +358,10 @@
   components:
   - type: Sprite
     state: poster23_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandRebelsUnite
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -269,6 +371,10 @@
   components:
   - type: Sprite
     state: poster24_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandC20r
+  # end starcup
 
 # begin starcup: removed for tone
 # - type: entity
@@ -289,6 +395,10 @@
   components:
   - type: Sprite
     state: poster26_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandRevolver
+  # end starcup
 
 # begin starcup: removed for tone
 # - type: entity
@@ -318,6 +428,10 @@
   components:
   - type: Sprite
     state: poster29_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandEnergySwords
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -327,6 +441,10 @@
   components:
   - type: Sprite
     state: poster30_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandRedRum
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -336,6 +454,10 @@
   components:
   - type: Sprite
     state: poster31_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandCC64KAd
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -345,6 +467,10 @@
   components:
   - type: Sprite
     state: poster32_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandPunchShit
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -354,6 +480,10 @@
   components:
   - type: Sprite
     state: poster33_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandTheGriffin
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -363,6 +493,10 @@
   components:
   - type: Sprite
     state: poster35_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandFreeDrone
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -372,6 +506,10 @@
   components:
   - type: Sprite
     state: poster36_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandRouny
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -381,6 +519,10 @@
   components:
   - type: Sprite
     state: poster37_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandRobustSoftdrinks
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -390,6 +532,10 @@
   components:
   - type: Sprite
     state: poster38_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandShamblersJuice
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -399,6 +545,10 @@
   components:
   - type: Sprite
     state: poster39_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandPwrGame
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -408,6 +558,10 @@
   components:
   - type: Sprite
     state: poster40_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandSunkist
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -417,6 +571,10 @@
   components:
   - type: Sprite
     state: poster41_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandSpaceCola
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -426,6 +584,10 @@
   components:
   - type: Sprite
     state: poster42_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandSpaceUp
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -435,6 +597,10 @@
   components:
   - type: Sprite
     state: poster43_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandKudzu
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -444,6 +610,10 @@
   components:
   - type: Sprite
     state: poster44_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandMaskedMen
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -453,6 +623,10 @@
   components:
   - type: Sprite
     state: poster45_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandUnreadableAnnouncement
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -462,6 +636,10 @@
   components:
   - type: Sprite
     state: poster46_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandFreeSyndicateEncryptionKey
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -471,6 +649,10 @@
   components:
   - type: Sprite
     state: poster47_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandBountyHunters
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -480,6 +662,10 @@
   components:
   - type: Sprite
     state: poster48_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandTheBigGasTruth
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -489,6 +675,10 @@
   components:
   - type: Sprite
     state: poster50_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandWehWatches
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -498,6 +688,10 @@
   components:
   - type: Sprite
     state: poster51_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandVoteWeh
+  # end starcup
 
 # These 3 originally from VEEGEE
 - type: entity
@@ -508,6 +702,10 @@
   components:
   - type: Sprite
     state: poster52_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandBeachStarYamamoto
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -517,6 +715,10 @@
   components:
   - type: Sprite
     state: poster53_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandHighEffectEngineering
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -526,6 +728,10 @@
   components:
   - type: Sprite
     state: poster54_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandNuclearDeviceInformational
+  # end starcup
 
 # begin starcup: removed for tone
 # - type: entity
@@ -542,10 +748,14 @@
   parent: PosterBase
   id: PosterContrabandRevolt
   name: "Revolt"
-  description: "Revolutionist propaganda, manufactured by the Syndicate."
+  description: "Syndicate Communications does not support armed revolts or mutiny." # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster56_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandRevolt
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -555,6 +765,10 @@
   components:
     - type: Sprite
       state: poster57_contraband
+  # begin starcup: unhangable posters
+    - type: DisassembleOnAltVerb
+      prototypeToSpawn: PosterRolledContrabandMoth
+  # end starcup
 
 # begin starcup: removed for tone
 # - type: entity
@@ -575,6 +789,10 @@
   components:
     - type: Sprite
       state: poster59_contraband
+  # begin starcup: unhangable posters
+    - type: DisassembleOnAltVerb
+      prototypeToSpawn: PosterRolledLegitDonk
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -584,6 +802,10 @@
   components:
     - type: Sprite
       state: poster60_contraband
+  # begin starcup: unhangable posters
+    - type: DisassembleOnAltVerb
+      prototypeToSpawn: PosterRolledLegitEnlistGorlex
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -593,6 +815,10 @@
   components:
     - type: Sprite
       state: poster61_contraband
+  # begin starcup: unhangable posters
+    - type: DisassembleOnAltVerb
+      prototypeToSpawn: PosterRolledLegitInterdyne
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -602,6 +828,10 @@
   components:
     - type: Sprite
       state: poster62_contraband
+  # begin starcup: unhangable posters
+    - type: DisassembleOnAltVerb
+      prototypeToSpawn: PosterRolledLegitWaffleCorp
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -611,6 +841,10 @@
   components:
     - type: Sprite
       state: poster63_contraband
+  # begin starcup: unhangable posters
+    - type: DisassembleOnAltVerb
+      prototypeToSpawn: PosterRolledContrabandMissingSpacepen
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -620,6 +854,10 @@
   components:
   - type: Sprite
     state: poster64_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandExoAcid
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -629,6 +867,10 @@
   components:
   - type: Sprite
     state: poster65_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandExoRun
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -638,6 +880,10 @@
   components:
   - type: Sprite
     state: poster66_contraband
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandExoChomp
+  # end starcup
 
 # Legit
 - type: entity
@@ -648,6 +894,10 @@
   components:
   - type: Sprite
     state: poster1_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandHereForYourSafety
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -657,6 +907,10 @@
   components:
   - type: Sprite
     state: poster2_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandNanotrasenLogo
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -666,6 +920,10 @@
   components:
   - type: Sprite
     state: poster3_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandCleanliness
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -675,6 +933,10 @@
   components:
   - type: Sprite
     state: poster4_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandHelpOthers
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -684,6 +946,10 @@
   components:
   - type: Sprite
     state: poster5_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandBuild
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -693,6 +959,10 @@
   components:
   - type: Sprite
     state: poster6_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandBlessThisSpess
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -702,6 +972,10 @@
   components:
   - type: Sprite
     state: poster7_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandScience
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -711,6 +985,10 @@
   components:
   - type: Sprite
     state: poster8_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandIan
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -720,6 +998,10 @@
   components:
   - type: Sprite
     state: poster9_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandObey
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -729,6 +1011,10 @@
   components:
   - type: Sprite
     state: poster10_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandWalk
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -738,6 +1024,10 @@
   components:
   - type: Sprite
     state: poster11_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandStateLaws
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -747,6 +1037,10 @@
   components:
   - type: Sprite
     state: poster12_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandLoveIan
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -756,6 +1050,10 @@
   components:
   - type: Sprite
     state: poster13_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandSpaceCops
+  # end starcup
 
 #- type: entity
 #  parent: PosterBase
@@ -765,6 +1063,11 @@
 #  components:
 #  - type: Sprite
 #    state: poster14_legit
+#  # begin starcup: unhangable posters
+#  - type: DisassembleOnAltVerb
+#    prototypeToSpawn: PosterRolledContrabandUeNo
+#    disassembleTime: 2
+#  # end starcup
 # end starcup
 
 - type: entity
@@ -775,6 +1078,10 @@
   components:
   - type: Sprite
     state: poster15_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandGetYourLEGS
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -784,6 +1091,10 @@
   components:
   - type: Sprite
     state: poster16_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandDoNotQuestion
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -793,6 +1104,10 @@
   components:
   - type: Sprite
     state: poster17_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandWorkForAFuture
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -802,6 +1117,10 @@
   components:
   - type: Sprite
     state: poster18_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitSoftCapPopArt
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -811,6 +1130,10 @@
   components:
   - type: Sprite
     state: poster19_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandSafetyInternals
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -820,6 +1143,10 @@
   components:
   - type: Sprite
     state: poster20_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandSafetyEyeProtection
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -829,6 +1156,10 @@
   components:
   - type: Sprite
     state: poster21_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandSafetyReport
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -838,6 +1169,10 @@
   components:
   - type: Sprite
     state: poster22_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandReportCrimes
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -847,6 +1182,10 @@
   components:
   - type: Sprite
     state: poster23_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitIonRifle
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -856,6 +1195,10 @@
   components:
   - type: Sprite
     state: poster24_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandFoamForceAd
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -865,6 +1208,10 @@
   components:
   - type: Sprite
     state: poster25_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandCohibaRobustoAd
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -874,6 +1221,10 @@
   components:
   - type: Sprite
     state: poster26_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContraband50thAnniversaryVintageReprint
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -883,6 +1234,10 @@
   components:
   - type: Sprite
     state: poster27_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitFruitBowl
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -892,6 +1247,10 @@
   components:
   - type: Sprite
     state: poster28_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandPDAAd
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -901,6 +1260,10 @@
   components:
   - type: Sprite
     state: poster29_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandEnlist
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -910,6 +1273,10 @@
   components:
   - type: Sprite
     state: poster30_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandNanomichiAd
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -919,6 +1286,10 @@
   components:
   - type: Sprite
     state: poster31_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContraband12Gauge
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -928,6 +1299,10 @@
   components:
   - type: Sprite
     state: poster32_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitHighClassMartini
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -937,6 +1312,10 @@
   components:
   - type: Sprite
     state: poster33_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitTheOwl
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -946,6 +1325,10 @@
   components:
   - type: Sprite
     state: poster34_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandNoERP
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -955,6 +1338,10 @@
   components:
   - type: Sprite
     state: poster35_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitCarbonDioxide
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -964,15 +1351,23 @@
   components:
   - type: Sprite
     state: poster36_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitDickGumshue
+  # end starcup
 
 - type: entity
   parent: PosterBase
   id: PosterLegitThereIsNoGasGiant
   name: "Charonic Planets"
-  description: "An informational poster from Electra reminding employees that any reports of life inhabiting Class-C \"Charonic\" planets are the result of persistent necrocosmic hallucinations." # starcup: rewritten for tone
+  description: An informational poster from Electra reminding employees that any reports of life inhabiting Class-C \"Charonic\" planets are the result of persistent necrocosmic hallucinations. # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster37_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitThereIsNoGasGiant
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -982,6 +1377,10 @@
   components:
   - type: Sprite
     state: poster38_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandJustAWeekAway
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -991,6 +1390,10 @@
   components:
   - type: Sprite
     state: poster39_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitSecWatch
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1000,6 +1403,10 @@
   components:
   - type: Sprite
     state: poster40_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandAnatomyPoster
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1009,6 +1416,11 @@
   components:
   - type: Sprite
     state: poster41_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PaintingCurtainedLegitMime
+    disassembleTime: 3
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1018,6 +1430,10 @@
   components:
   - type: Sprite
     state: poster42_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitCarpMount
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1027,6 +1443,11 @@
   components:
     - type: Sprite
       state: poster43_legit
+  # begin starcup: unhangable posters
+    - type: DisassembleOnAltVerb
+      prototypeToSpawn: PosterRolledLegitSafetyMothDelam
+  # end starcup
+
 
 - type: entity
   parent: PosterBase
@@ -1036,6 +1457,11 @@
   components:
     - type: Sprite
       state: poster44_legit
+  # begin starcup: unhangable posters
+    - type: DisassembleOnAltVerb
+      prototypeToSpawn: PosterRolledLegitSafetyMothEpi
+  # end starcup
+
 
 - type: entity
   parent: PosterBase
@@ -1045,6 +1471,11 @@
   components:
     - type: Sprite
       state: poster45_legit
+  # begin starcup: unhangable posters
+    - type: DisassembleOnAltVerb
+      prototypeToSpawn: PosterRolledLegitSafetyMothPiping
+  # end starcup
+
 
 - type: entity
   parent: PosterBase
@@ -1054,6 +1485,11 @@
   components:
     - type: Sprite
       state: poster46_legit
+  # begin starcup: unhangable posters
+    - type: DisassembleOnAltVerb
+      prototypeToSpawn: PosterRolledLegitSafetyMothMeth
+  # end starcup
+
 
 - type: entity
   parent: PosterBase
@@ -1063,6 +1499,11 @@
   components:
     - type: Sprite
       state: poster47_legit
+  # begin starcup: unhangable posters
+    - type: DisassembleOnAltVerb
+      prototypeToSpawn: PosterRolledLegitSafetyMothHardhat
+  # end starcup
+
 
 - type: entity
   parent: PosterBase
@@ -1074,6 +1515,8 @@
     - type: Sprite
       sprite: _starcup/Structures/Wallmounts/posters.rsi
       state: postervacation_legit
+    - type: DisassembleOnAltVerb
+      prototypeToSpawn: PosterRolledLegitVacation
   # end starcup
 
 - type: entity
@@ -1084,6 +1527,10 @@
   components:
     - type: Sprite
       state: poster49_legit
+  # begin starcup: unhangable posters
+    - type: DisassembleOnAltVerb
+      prototypeToSpawn: PosterRolledLegitPeriodicTable
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1093,6 +1540,10 @@
   components:
     - type: Sprite
       state: poster50_legit
+  # begin starcup: unhangable posters
+    - type: DisassembleOnAltVerb
+      prototypeToSpawn: PosterRolledContrabandRenault
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1102,6 +1553,10 @@
   components:
     - type: Sprite
       state: poster51_legit
+  # begin starcup: unhangable posters
+    - type: DisassembleOnAltVerb
+      prototypeToSpawn: PosterRolledContrabandNTTGC
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1111,6 +1566,10 @@
   components:
   - type: Sprite
     state: poster52_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitSafetyMothSSD
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1120,6 +1579,10 @@
   components:
   - type: Sprite
     state: poster53_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitOppenhopper
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1129,15 +1592,23 @@
   components:
   - type: Sprite
     state: poster54_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitTyrone
+  # end starcup
 
 - type: entity
   parent: PosterBase
   id: PosterLegitHelio
   name: Helio Logistics ad
-  description: "A poster advertising Helio Logistics and their adorable mascot. The slogan reads 'Come rain or shine, we deliver on time.'"
+  description: "A poster advertising Helio Logistics and their adorable mascot. The slogan reads 'Come rain or shine, we deliver on time.'" # starcup: added the Hawkmoon competitor part for tone.
   components:
   - type: Sprite
     state: poster55_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandHelio
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1147,9 +1618,12 @@
   components:
   - type: Sprite
     state: poster56_legit
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandBotanyFear
+  # end starcup
 
 #maps
-
 - type: entity
   parent: PosterBase
   id: PosterMapBagel
@@ -1158,6 +1632,10 @@
   components:
   - type: Sprite
     state: bagelmap
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledMapBagel
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1167,6 +1645,10 @@
   components:
   - type: Sprite
     state: deltamap
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledMapDelta
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1176,6 +1658,10 @@
   components:
   - type: Sprite
     state: marathonmap
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledMapMarathon
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1185,6 +1671,10 @@
   components:
   - type: Sprite
     state: moosemap
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledMapMoose
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1194,6 +1684,10 @@
   components:
   - type: Sprite
     state: packedmap
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledMapPacked
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1203,6 +1697,10 @@
   components:
   - type: Sprite
     state: pillarmap
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledMapPillar
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1212,6 +1710,10 @@
   components:
   - type: Sprite
     state: salternmap
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledMapSaltern
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1221,6 +1723,10 @@
   components:
   - type: Sprite
     state: splitmap
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledMapSplit
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1230,6 +1736,10 @@
   components:
   - type: Sprite
     state: lighthousemap
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledMapLighthouse
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1239,12 +1749,20 @@
   components:
   - type: Sprite
     state: waystationmap
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledMapWaystation
+  # end starcup
 
 - type: entity
   parent: PosterBase
   id: PosterMapOrigin
-  name: "origin map"
+  name: "Origin Map" # starcup: corrected capitalization
   description: "A map of Origin Station."
   components:
   - type: Sprite
     state: originmap
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledMapOrigin
+  # end starcup
