@@ -53,6 +53,9 @@
           True: { state: wielded }
           False: { state: unwielded }
   - type: PacifismAllowedGun
+  - type: Contraband
+    severity: Restricted
+    allowedDepartments: [ Civilian, Command, Security ]
 
 - type: entity
   parent: BaseBowTraining

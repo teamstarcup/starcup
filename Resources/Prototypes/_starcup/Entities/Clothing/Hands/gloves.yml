@@ -66,6 +66,14 @@
     sprite: _starcup/Clothing/Hands/Gloves/fencing_left.rsi
   - type: Fiber
     fiberColor: fibers-white
+  - type: MeleeWeapon # How dare you?!
+    damage:
+      types:
+        Blunt: 0
+    soundHit:
+      path: /Audio/_starcup/Weapons/Slap/slap.ogg
+      params:
+        variation: 0.125
 
 - type: entity
   parent: ClothingHandsGlovesSyntheticBase
@@ -79,3 +87,11 @@
     sprite: _starcup/Clothing/Hands/Gloves/fencing_right.rsi
   - type: Fiber
     fiberColor: fibers-white
+  - type: MeleeWeapon # she asks her how she dares! :o
+    damage:
+      types:
+        Blunt: 0
+    soundHit:
+      path: /Audio/_starcup/Weapons/Slap/slap.ogg
+      params:
+        variation: 0.125

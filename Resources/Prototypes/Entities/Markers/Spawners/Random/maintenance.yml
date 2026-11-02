@@ -399,6 +399,20 @@
       # begin starcup: add misc. tools & tweaks
       - id: CrashAxe
       - id: BrushAxe
+      - !type:NestedSelector
+        tableId: FencingWeaponsTable
+      - !type:AllSelector
+        children:
+        - !type:GroupSelector
+          children:
+          - id: BowTrainingBlue
+          - id: BowTrainingRed
+          - id: BowTrainingGreen
+          - id: BowTrainingYellow
+        - !type:GroupSelector
+          children:
+          - id: ClothingBeltQuiverTrainingFilled
+          - id: ClothingBeltQuiverBlueTrainingFilled
       # end starcup
     # Rare Group
     - !type:GroupSelector
@@ -428,6 +442,8 @@
       - id: ClothingHandsKnuckleDusters
       - !type:NestedSelector
         tableId: AllToyWeaponsTable
+      - !type:NestedSelector
+        tableId: FencingWeaponsSheathedTable
 
 - type: entity
   name: Maint Loot Spawner
