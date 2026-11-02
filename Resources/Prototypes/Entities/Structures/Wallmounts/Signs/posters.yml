@@ -28,7 +28,9 @@
   # begin starcup: unhangable posters
   - type: DisassembleOnAltVerb
     soundFinished:
-      path: /Audio/Effects/poster_broken.ogg
+      path: /Audio/_starcup/Items/Paper/paper_grab.ogg
+      params:
+        variation: 0.125
   # end starcup
 
 - type: entity
@@ -59,6 +61,9 @@
   - type: DisassembleOnAltVerb
     soundFinished:
       path: /Audio/Effects/poster_broken.ogg
+      params:
+        variation: 0.125
+    disassembleTime: 1
   # end starcup
 
 # Contraband

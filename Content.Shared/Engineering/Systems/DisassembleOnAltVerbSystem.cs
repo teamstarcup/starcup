@@ -4,6 +4,7 @@ using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Verbs;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
+using Robust.Shared.Timing;
 
 namespace Content.Shared.Engineering.Systems;
 
@@ -12,7 +13,8 @@ public sealed partial class DisassembleOnAltVerbSystem : EntitySystem
     [Dependency] private SharedDoAfterSystem _doAfter = default!;
     [Dependency] private SharedHandsSystem _handsSystem = default!;
     [Dependency] private INetManager _net = default!;
-    [Dependency] private SharedAudioSystem _audio = default!; // starcup audio stuff
+    [Dependency] private SharedAudioSystem _audio = default!; // starcup: Add sounds
+    [Dependency] private IGameTiming _timing = default!; // starcup: Add sounds
 
     public override void Initialize()
     {
@@ -65,11 +67,20 @@ public sealed partial class DisassembleOnAltVerbSystem : EntitySystem
 
     private void OnDisassembleDoAfter(Entity<DisassembleOnAltVerbComponent> entity, ref DisassembleDoAfterEvent args)
     {
-        //if (!_net.IsServer || args.Cancelled) // This is odd but it works :) // starcup: let predicted sound work
+        // begin starcup: original code below, unnecessary and prevents sound playing
+        //if (!_net.IsServer || args.Cancelled) // This is odd but it works :)
+        if (!_timing.IsFirstTimePredicted)
+            return;
+        // end starcup
+
         if (args.Cancelled)
             return;
+        // begin starcup: play sound after doAfter completion
+        _audio.PlayPredicted(entity.Comp.SoundFinished, entity, args.User, audioParams: null);
+        // end starcup
 
-        _audio.PlayPredicted(entity.Comp.SoundFinished, entity, args.User, audioParams: null); // starcup audio stuff
+        if (!_net.IsServer)
+            return;
 
         if (TrySpawnNextTo(entity.Comp.PrototypeToSpawn, entity.Owner, out var spawnedEnt))
             _handsSystem.TryPickup(args.User, spawnedEnt.Value);

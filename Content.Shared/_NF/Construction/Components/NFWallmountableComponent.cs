@@ -1,4 +1,5 @@
 using Content.Shared.DoAfter;
+using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
@@ -8,7 +9,7 @@ namespace Content.Shared._NF.Construction.Components;
 /// <summary>
 /// A component that spawns an entity (intended to be a wallmount) when interacting with a wall.
 /// </summary>
-[RegisterComponent, NetworkedComponent]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class NFWallmountableComponent : Component
 {
     /// <summary>
@@ -29,6 +30,12 @@ public sealed partial class NFWallmountableComponent : Component
     /// </summary>
     [DataField]
     public bool RotateToUser;
+
+    /// <summary>
+    ///     starcup: This gets played when the action is completed.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public SoundSpecifier? SoundFinished;
 }
 
 /// <summary>

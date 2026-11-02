@@ -13,6 +13,10 @@
     sprite: _NF/Objects/Decoration/posters.rsi
   - type: NFWallmountable
     spawn: RandomPosterAny
+    soundFinished:
+      path: /Audio/_starcup/Items/Paper/paper_place.ogg
+      params:
+        variation: 0.125
   - type: Damageable
   - type: Injurable
     damageContainer: Inorganic
@@ -97,8 +101,11 @@
   - type: MultiHandedItem
   - type: Item
     size: Ginormous
+  # begin starcup: damageContainer is now in Injurable component
   - type: Damageable
+  - type: Injurable
     damageContainer: Inorganic
+  # end starcup
   - type: DamageExaminable
   - type: Destructible
     thresholds:
@@ -123,7 +130,7 @@
       collection: MetalThud
     damage:
       types:
-        Blunt: 10
+        Blunt: 9 # starcup: nerfed from 10. Heavy but awkward to use as a weapon
   - type: DamageOtherOnHit
     damage:
       types:
@@ -138,7 +145,7 @@
         Blunt: 20
   - type: EmitSoundOnLand
     sound:
-      collection: MetalThud
+      collection: WoodThud # starcup
       params:
         variation: 0.25
   - type: StaticPrice

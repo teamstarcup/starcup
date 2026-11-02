@@ -6,6 +6,7 @@ using Content.Shared.Popups;
 using Content.Shared.Tag;
 using Content.Shared.Verbs;
 using Content.Shared.Wall;
+using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 
@@ -24,6 +25,7 @@ public sealed partial class NFWallmountableSystem : EntitySystem
     [Dependency] private SharedPopupSystem _popup = default!;
     [Dependency] private SharedTransformSystem _transform = default!;
     [Dependency] private TagSystem _tag = default!;
+    [Dependency] private SharedAudioSystem _audio = default!; // starcup: Add sounds
 
     private static readonly ProtoId<TagPrototype> StructureTag = "Structure"; // starcup: changed from obsolete Wall tag
     private static readonly ProtoId<TagPrototype> DiagonalTag = "Diagonal";
@@ -102,8 +104,10 @@ public sealed partial class NFWallmountableSystem : EntitySystem
             || !NoWallmountsAtEntity(args.Target.Value))
             return;
 
-        if (_net.IsClient)
-            return;
+        // starcup: commented this out, unnecessary and prevents sound being played
+        //if (_net.IsClient)
+        //    return;
+        // end starcup
 
         // Spawn our wallmount entity.
         var targetXform = Transform(args.Target.Value);
@@ -125,6 +129,10 @@ public sealed partial class NFWallmountableSystem : EntitySystem
         }
 
         _transform.SetLocalRotationNoLerp(spawn, angle);
+
+        // starcup: Play a sound when the wallmount entity is spawned.
+        _audio.PlayPredicted(ent.Comp.SoundFinished, spawn, args.User, audioParams: null);
+        // end starcup
 
         QueueDel(ent);
     }
