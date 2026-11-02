@@ -24,9 +24,9 @@
 
 # Dueling
 - type: entity
-  name: dueling sabre
   parent: BaseItem
   id: DuelingSabrePlain
+  name: dueling sabre
   description: Swift and powerful when swung with grace. It's blunted, but lifting chins up with the tip is still not recommended.
   components:
   - type: Sprite
@@ -35,9 +35,8 @@
   - type: StaminaDamageOnHit
     damage: 10
   - type: MeleeWeapon
-    attackRate: 1 # average 15 stamina per second, middle of the three
-    range: 1.5 #default, worst range (but can be swung)
-    bluntStaminaDamageFactor: 2 # 10 + (3 modified by armor/resistances)
+    attackRate: 1.25 # average 12.5 stamina per second, middle of the three
+    range: 1.5 # default
     wideAnimationRotation: 135
     damage:
       types:
@@ -73,9 +72,9 @@
     - Knife
 
 - type: entity
-  name: quartz dueling sabre
   parent: DuelingSabrePlain
   id: DuelingSabreQuartz
+  name: quartz dueling sabre
   description: Swift and powerful when swung with everything you have and everything you are.
   components:
   - type: Sprite
@@ -90,18 +89,16 @@
     - 0,0,0,3
   - type: MeleeWeapon
     soundHit:
-      collection: WindChime
-      params:
-        volume: 50
+      collection: CrystalSwordHit
     wideAnimationRotation: -135
   - type: Tag
     tags:
     - SabreQuartz
 
 - type: entity
-  name: dueling foil
   parent: BaseItem
   id: DuelingFoil
+  name: dueling foil
   description: A weapon of precision as quick as a knife—but significantly less lethal, making it popular among pacifists.
   components:
   - type: Sprite
@@ -137,10 +134,10 @@
     - Foil
 
 - type: entity
-  name: dueling epee
   parent: BaseItem
   id: DuelingEpee
-  description: Slow but powerful when aimed carefully towards a single target—ideally from some distance. Clumsy for those with pacifist implants.
+  name: dueling epee
+  description: Slow but powerful when aimed carefully towards a single target. Clumsy for those with pacifist implants.
   components:
   - type: Sprite
     sprite: _starcup/Objects/Weapons/Melee/epee.rsi
@@ -153,12 +150,11 @@
     shape:
     - 0,0,0,3
   - type: StaminaDamageOnHit
-    damage: 8 # 2 lower than the others, fairly ineffectual on a wideswing
+    damage: 12 # fairly ineffectual on a wideswing
   - type: MeleeWeapon
-    attackRate: 0.75 # average 15 per second (or 7.5 with wideswing) - and much worse
-    range: 1.65 # nearly spear-level range, but has to be precise
+    attackRate: 0.75 # average 18 per second (or 9 with wideswing) - strongest of the three, but needs the most precision
     wideAnimationRotation: -135
-    bluntStaminaDamageFactor: 4 # 8 + (12 modified by armor/resistances)
+    bluntStaminaDamageFactor: 4 # 12 + (0.5*6*4 = 12 modified by armor/resistances)
     angle: 0
     animation: WeaponArcThrust
     damage:
@@ -177,9 +173,9 @@
     - Epee
 
 - type: entity
-  name: rapier
   parent: [ BaseItem, BaseMajorContraband ] # not sword bc I don't wanna give it knife utility
   id: DuelingRapier
+  name: rapier
   description: A weapon of precision as quick as a knife—but significantly more lethal. The wielder of this weapon knows that man is mortal.
   components:
   - type: Sprite
