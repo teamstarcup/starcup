@@ -85,7 +85,11 @@ public sealed partial class FluidEjectorSystem : EntitySystem
         var bloodReferenceReagents = bloodReagentEvent.Reagents.Select(reagentId => reagentId.Prototype);
         var whitelistedReagents = metabolismWhitelistEvent.Reagents.Select(protoId => protoId.Id);
         if (!bodyReagents.Any(id => !bloodReferenceReagents.Contains(id) && !whitelistedReagents.Contains(id)))
+        {
+            ent.Comp.NextPopupTime = TimeSpan.Zero;
+            ent.Comp.NextUpdate = TimeSpan.Zero;
             return;
+        }
 
         if (ent.Comp.NextUpdate != TimeSpan.Zero)
             return;
