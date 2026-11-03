@@ -1,4 +1,5 @@
-﻿- type: entity
+# Classic: Respritening split these sprites into base + effects RSIs.
+- type: entity
   parent: AirlockRCDResistant
   id: AirlockShuttle
   suffix: Docking
@@ -30,24 +31,39 @@
           position: "0,-0.5"
         hard: false
   - type: Sprite
+  # Classic: Respritening renamed.
     sprite: Structures/Doors/Airlocks/Standard/shuttle.rsi
     snapCardinals: false
     layers:
+    # Classic: removed.
+    #- state: docking-clamp
+      #offset: 0, -1
     - state: closed
       map: ["enum.DoorVisualLayers.Base"]
     - state: closed_unlit
       shader: unshaded
+    # Classic: removed.
+      #sprite: Structures/Doors/Airlocks/Effects/airlock-effects-shuttle.rsi
       map: ["enum.DoorVisualLayers.BaseUnlit"]
+    # Classic: Respritening set visible: true
       visible: false
     - state: welded
+      # Classic: removed.
+      #sprite: Structures/Doors/Airlocks/Effects/airlock-effects-shuttle.rsi
       map: ["enum.WeldableLayers.BaseWelded"]
     - state: bolted_unlit
       shader: unshaded
+      # Classic: removed.
+      #sprite: Structures/Doors/Airlocks/Effects/airlock-effects-shuttle.rsi
       map: ["enum.DoorVisualLayers.BaseBolted"]
     - state: emergency_unlit
+      # Classic: removed.
+      #sprite: Structures/Doors/Airlocks/Effects/airlock-effects-shuttle.rsi
       map: ["enum.DoorVisualLayers.BaseEmergencyAccess"]
       shader: unshaded
     - state: panel_open
+      # Classic: removed.
+      #sprite: Structures/Doors/Airlocks/Effects/airlock-effects-shuttle.rsi
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
     - state: electrified_ai
       sprite: Interface/Misc/ai_hud.rsi
@@ -59,6 +75,12 @@
       shader: unshaded
       visible: false
       map: ["enum.ElectrifiedLayers.Sparks"]
+    # Classic: removed.
+    #- state: sparks
+      #sprite: Structures/Doors/Airlocks/Effects/airlock-effects.rsi
+      #map: ["enum.DoorVisualLayers.BaseEmagging"]
+      #shader: unshaded
+      #visible: false
   - type: Wires
     layoutId: Docking
   - type: Door
@@ -87,6 +109,13 @@
     price: 350
   - type: Paintable
     group: null
+  # Classic: Removed.
+#  - type: DirectionalArrowIndicator
+#    arrows:
+#    - offset: 0, -1.5
+  - type: StructureAligner
+    alignerType:
+    - DoNotAlign
 
 - type: entity
   id: AirlockGlassShuttle
@@ -94,6 +123,7 @@
   suffix: Glass, Docking
   components:
   - type: Sprite
+  # Classic: Respritening renamed.
     sprite: Structures/Doors/Airlocks/Glass/shuttle.rsi
   - type: Occluder
     enabled: false
@@ -118,6 +148,7 @@
     noRot: false
   - type: Rotatable
   - type: Sprite
+  # Classic: Respritening renamed.
     sprite: Structures/Doors/Airlocks/Glass/shuttle.rsi
     state: closed
     snapCardinals: false
@@ -130,6 +161,7 @@
   parent: AirlockGlassShuttle
   components:
   - type: Sprite
+  # Classic: Respritening renamed.
     sprite: Structures/Doors/Airlocks/Glass/shuttle_syndicate.rsi
 
 - type: entity
@@ -137,11 +169,14 @@
   id: AirlockShuttleSyndicate
   components:
   - type: Sprite
+  # Classic: Respritening renamed.
     sprite: Structures/Doors/Airlocks/Standard/shuttle_syndicate.rsi
 
 - type: entity
   parent: AirlockShuttle
   id: AirlockShuttleXenoborg
+  name: external mechadermis airlock
   components:
   - type: Sprite
+  # Classic: Respritening renamed.
     sprite: Structures/Doors/Airlocks/Standard/shuttle_xenoborg.rsi
