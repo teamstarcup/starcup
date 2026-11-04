@@ -1,4 +1,4 @@
-﻿namespace Content.Shared._starcup.Anomaly;
+namespace Content.Shared._starcup.Anomaly;
 
 /// <summary>
 /// starcup: Attach to an entity for the anomaly locator to consider it a valid target.
