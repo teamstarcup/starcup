@@ -1,0 +1,27 @@
+- type: entity
+  id: InvisiblePath
+  name: invisible path
+  suffix: DO NOT MAP
+  description: Faint sparkles light the way.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _starcup/Effects/non-diegetic.rsi
+    layers:
+    - state: twinkle
+      shader: unshaded
+    drawdepth: FloorTiles
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: WindChime
+      params:
+        volume: -2
+  - type: Tag
+    tags:
+    - Catwalk
