@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Shared._starcup.Metabolism;
 using Content.Shared.Body;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Events;
@@ -32,6 +33,7 @@ public sealed partial class FluidEjectorSystem : EntitySystem
     [Dependency] private StatusEffectsSystem _status = default!;
     [Dependency] private SharedPopupSystem _popup = default!;
     [Dependency] private DamageableSystem _damageableSystem = default!;
+    [Dependency] private MetabolizerWhitelistSystem _metabolizerWhitelist = default!;
 
     public override void Initialize()
     {
@@ -78,12 +80,12 @@ public sealed partial class FluidEjectorSystem : EntitySystem
         var bloodReagentEvent = new MetabolismExclusionEvent();
         RaiseLocalEvent(args.Body.Owner, ref bloodReagentEvent);
 
-        var metabolismWhitelistEvent = new MetabolismWhitelistEvent();
-        RaiseLocalEvent(args.Body.Owner, ref metabolismWhitelistEvent);
+        if (!_metabolizerWhitelist.GetMetabolizableReagents(args.Body, out var metabolizableReagents))
+            metabolizableReagents = [];
 
         var bodyReagents = args.Args.Solution.Comp.Solution.Contents.Select(r => r.Reagent.Prototype);
         var bloodReferenceReagents = bloodReagentEvent.Reagents.Select(reagentId => reagentId.Prototype);
-        var whitelistedReagents = metabolismWhitelistEvent.Reagents.Select(protoId => protoId.Id);
+        var whitelistedReagents = metabolizableReagents.Select(protoId => protoId.Id);
         if (!bodyReagents.Any(id => !bloodReferenceReagents.Contains(id) && !whitelistedReagents.Contains(id)))
         {
             ent.Comp.NextPopupTime = TimeSpan.Zero;
