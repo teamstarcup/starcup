@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   abstract: true
   parent: BaseStructure
   id: BaseMaterialDoor
@@ -54,6 +54,9 @@
     fx: EffectRCDDeconstruct6
   - type: Occluder
   - type: BlockWeather
+  - type: InteractionVerbs # EE: Interaction Verbs
+    allowedVerbs:
+    - KnockOn
 
 - type: entity
   abstract: true
