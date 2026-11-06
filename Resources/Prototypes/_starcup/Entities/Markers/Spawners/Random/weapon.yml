@@ -1,0 +1,48 @@
+- type: entity
+  parent: MarkerBase
+  id: RandomFencingWeapon
+  name: random fencing weapon spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _starcup/Objects/Weapons/Melee/dueling_sabre.rsi
+      state: icon
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: FencingWeaponsTable
+
+- type: entity
+  id: RandomFencingWeaponsSheathed
+  name: random sheathed fencing weapon spawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _starcup/Clothing/Belt/dueling_sabre_sheath.rsi
+      state: sheath-sabre
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: FencingWeaponsSheathedTable
+
+# Tables
+- type: entityTable
+  id: FencingWeaponsTable
+  table: !type:GroupSelector
+    children:
+    - id: DuelingSabrePlain
+    - id: DuelingSabreQuartz
+      weight: 0.1
+    - id: DuelingFoil
+    - id: DuelingEpee
+
+- type: entityTable
+  id: FencingWeaponsSheathedTable
+  table: !type:GroupSelector
+    children:
+    - id: ClothingBeltSheathSabrePlainFilled
+    - id: ClothingBeltSheathSabreQuartzFilled
+      weight: 0.1
+    - id: ClothingBeltSheathEpeeFilled
+    - id: ClothingBeltSheathFoilFilled
