@@ -15,6 +15,7 @@ public sealed partial class DisassembleOnAltVerbSystem : EntitySystem
     [Dependency] private INetManager _net = default!;
     [Dependency] private SharedAudioSystem _audio = default!; // starcup: Add sounds
     [Dependency] private IGameTiming _timing = default!; // starcup: Add sounds
+    [Dependency] private SharedTransformSystem _xform = default!; // starcup
 
     public override void Initialize()
     {
@@ -83,8 +84,14 @@ public sealed partial class DisassembleOnAltVerbSystem : EntitySystem
             return;
 
         if (TrySpawnNextTo(entity.Comp.PrototypeToSpawn, entity.Owner, out var spawnedEnt))
-            _handsSystem.TryPickup(args.User, spawnedEnt.Value);
-
+            // begin starcup: place next to disassembler if hands are occupied
+        {
+            if (!_handsSystem.TryPickup(args.User, spawnedEnt.Value))
+            {
+                _xform.PlaceNextTo(spawnedEnt.Value, args.User);
+            }
+        }
+            // end starcup
         QueueDel(entity.Owner);
     }
 }

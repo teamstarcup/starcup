@@ -104,10 +104,12 @@ public sealed partial class NFWallmountableSystem : EntitySystem
             || !NoWallmountsAtEntity(args.Target.Value))
             return;
 
-        // starcup: commented this out, unnecessary and prevents sound being played
-        //if (_net.IsClient)
-        //    return;
+        // starcup: Play a sound when the wallmount entity is spawned.
+        _audio.PlayPredicted(ent.Comp.SoundFinished, args.User, args.User, audioParams: null);
         // end starcup
+
+        if (_net.IsClient)
+            return;
 
         // Spawn our wallmount entity.
         var targetXform = Transform(args.Target.Value);
@@ -129,10 +131,6 @@ public sealed partial class NFWallmountableSystem : EntitySystem
         }
 
         _transform.SetLocalRotationNoLerp(spawn, angle);
-
-        // starcup: Play a sound when the wallmount entity is spawned.
-        _audio.PlayPredicted(ent.Comp.SoundFinished, spawn, args.User, audioParams: null);
-        // end starcup
 
         QueueDel(ent);
     }
