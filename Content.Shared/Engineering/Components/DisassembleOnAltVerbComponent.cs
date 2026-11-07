@@ -1,4 +1,5 @@
 using Content.Shared.DoAfter;
+using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
@@ -22,6 +23,18 @@ public sealed partial class DisassembleOnAltVerbComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public TimeSpan DisassembleTime = TimeSpan.FromSeconds(0);
+
+    ///
+    ///     starcup: Alternate verb text for things that wouldn't be 'disassembled' but taken down or something else.
+    ///
+    [DataField, AutoNetworkedField]
+    public string VerbText = "disassemble-system-verb-disassemble";
+
+    /// <summary>
+    ///     starcup: This gets played when the action is completed.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public SoundSpecifier? SoundFinished;
 }
 
 [Serializable, NetSerializable]
