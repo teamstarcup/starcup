@@ -620,6 +620,16 @@
     spawn: SignCargoDock
 
 - type: entity
+  parent: SignCarriedService
+  id: SignCarriedChapel
+  name: chapel sign
+  components:
+  - type: Sprite
+    state: chapel
+  - type: NFWallmountable
+    spawn: SignChapel
+
+- type: entity
   parent: SignCarriedMedical
   id: SignCarriedChem
   name: chemistry sign
@@ -648,6 +658,16 @@
     state: conference_room
   - type: NFWallmountable
     spawn: SignConference
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedCryo
+  name: cryosleep sign
+  components:
+  - type: Sprite
+    state: cryo
+  - type: NFWallmountable
+    spawn: SignCryo
 
 - type: entity
   parent: SignCarriedGeneral
@@ -728,16 +748,6 @@
     state: eva
   - type: NFWallmountable
     spawn: SignEVA
-
-- type: entity
-  parent: SignCarriedTriangleLargeYellow
-  id: SignCarriedElectrical
-  name: electrical sign
-  components:
-  - type: Sprite
-    state: electrical
-  - type: NFWallmountable
-    spawn: SignElectrical
 
 - type: entity
   parent: SignCarriedTriangleLargeYellow
@@ -1111,6 +1121,16 @@
 
 - type: entity
   parent: SignCarriedTriangleLargeYellow
+  id: SignCarriedExplosives
+  name: explosives warning sign
+  components:
+  - type: Sprite
+    state: explosives
+  - type: NFWallmountable
+    spawn: SignExplosives
+
+- type: entity
+  parent: SignCarriedTriangleLargeYellow
   id: SignCarriedFlammable
   name: flammable warning sign
   components:
@@ -1261,13 +1281,13 @@
 
 - type: entity
   parent: SignCarriedTriangle
-  id: SignBlankMed
+  id: SignCarriedBlankMed
   name: blank sign
   components:
   - type: Sprite
     state: medium_blank
   - type: NFWallmountable
-    spawn: SignCarriedBlankMed
+    spawn: SignCarriedMed
 
 - type: entity
   parent: SignCarriedTriangle
@@ -1401,16 +1421,6 @@
 
 - type: entity
   parent: SignCarriedRectangleLargeYellow
-  id: SignCarriedWarningCO2
-  name: CO2 warning sign
-  components:
-  - type: Sprite
-    state: atmos_co2
-  - type: NFWallmountable
-    spawn: WarningCO2
-
-- type: entity
-  parent: SignCarriedRectangleLargeYellow
   id: SignCarriedWarningN2
   name: N2 warning sign
   components:
@@ -1427,7 +1437,7 @@
   - type: Sprite
     state: atmos_n2o
   - type: NFWallmountable
-    spawn: WarningN20
+    spawn: WarningN2O
 
 - type: entity
   parent: SignCarriedRectangleLargeYellow
@@ -1780,7 +1790,7 @@
 
 - type: entity
   parent: SignCarriedPlaqueGolden
-  id: SignCarriedPlaqueGolden
+  id: SignCarriedPlaqueGold
   name: golden plaque
   components:
   - type: Sprite
