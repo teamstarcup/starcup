@@ -40,7 +40,6 @@ public sealed partial class FluidEjectorSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<BodyComponent, SolutionChangedEvent>(_body.RelayEvent);
-        SubscribeLocalEvent<FluidEjectorComponent, BodyRelayedEvent<SolutionChangedEvent>>(OnSolutionChanged);
     }
 
     public override void Update(float deltaTime)
@@ -69,6 +68,7 @@ public sealed partial class FluidEjectorSystem : EntitySystem
         }
     }
 
+    [SubscribeLocalEvent]
     private void OnSolutionChanged(Entity<FluidEjectorComponent> ent, ref BodyRelayedEvent<SolutionChangedEvent> args)
     {
         if (_mobState.IsDead(args.Body.Owner))
