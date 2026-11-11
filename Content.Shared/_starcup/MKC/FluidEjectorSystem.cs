@@ -60,12 +60,12 @@ public sealed partial class FluidEjectorSystem : EntitySystem
                 _popup.PopupClient(Loc.GetString("fluid-regulator-warning"), body, body, PopupType.LargeCaution);
             }
 
-            if (_gameTiming.CurTime >= fluidEjector.NextUpdate)
-            {
-                fluidEjector.NextUpdate = TimeSpan.Zero;
-                fluidEjector.NextPopupTime = TimeSpan.Zero;
-                DoFluidEject(body, fluidEjector);
-            }
+            if (_gameTiming.CurTime < fluidEjector.NextUpdate)
+                continue;
+
+            fluidEjector.NextUpdate = TimeSpan.Zero;
+            fluidEjector.NextPopupTime = TimeSpan.Zero;
+            DoFluidEject(body, fluidEjector);
         }
     }
 
@@ -74,7 +74,8 @@ public sealed partial class FluidEjectorSystem : EntitySystem
         if (_mobState.IsDead(args.Body.Owner))
             return;
 
-        if (args.Args.Solution.Comp.Id != ent.Comp.Solution)
+        var solutionComp = args.Args.Solution.Comp;
+        if (solutionComp.Id != ent.Comp.Solution)
             return;
 
         var bloodReagentEvent = new MetabolismExclusionEvent();
@@ -83,7 +84,7 @@ public sealed partial class FluidEjectorSystem : EntitySystem
         if (!_metabolizerWhitelist.GetMetabolizableReagents(args.Body, out var metabolizableReagents))
             metabolizableReagents = [];
 
-        var bodyReagents = args.Args.Solution.Comp.Solution.Contents.Select(r => r.Reagent.Prototype);
+        var bodyReagents = solutionComp.Solution.Contents.Select(r => r.Reagent.Prototype);
         var bloodReferenceReagents = bloodReagentEvent.Reagents.Select(reagentId => reagentId.Prototype);
         if (!bodyReagents.Any(id => !bloodReferenceReagents.Contains(id) && !metabolizableReagents.Contains(id)))
         {
