@@ -225,7 +225,7 @@ public abstract partial class SharedPowerCoreSystem : EntitySystem
 
         if (_battery.IsFull(powerCoreBattery))
         {
-            _popup.PopupClient(
+            _popup.PopupEntity(
                 Loc.GetString("power-core-full", ("organ", powerCore)),
                 bodyUid.Value,
                 bodyUid.Value
@@ -235,7 +235,7 @@ public abstract partial class SharedPowerCoreSystem : EntitySystem
 
         if (MathHelper.CloseToPercent(_battery.GetCharge(targetBattery), 0) && targetBattery.Comp.NetSyncEnabled)
         {
-            _popup.PopupClient(
+            _popup.PopupEntity(
                 Loc.GetString("power-core-battery-empty", ("target", target)),
                 bodyUid.Value,
                 bodyUid.Value
@@ -301,7 +301,7 @@ public abstract partial class SharedPowerCoreSystem : EntitySystem
         if (_timing.IsFirstTimePredicted)
             Spawn("EffectSparks", Transform(target.Owner).Coordinates);
 
-        _popup.PopupPredicted(
+        _popup.PopupEntity(
             Loc.GetString("power-core-drain", ("target", target)),
             powerCore.Owner,
             powerCore.Owner
