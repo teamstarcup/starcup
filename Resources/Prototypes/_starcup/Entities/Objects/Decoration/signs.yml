@@ -255,6 +255,18 @@
 - type: entity
   parent: BaseSignCarried
   abstract: true
+  id: SignCarriedRoundYellow
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: round-yellow-inhand-left
+      right:
+      - state: round-yellow-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
   id: SignCarriedSquareGreen
   components:
   - type: Item
@@ -393,6 +405,18 @@
       right:
       - state: plaque-kiddie
     size: Ginormous
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedWhite
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: white-inhand-left
+      right:
+      - state: white-inhand-right
 
 # Upstream signs
 - type: entity
@@ -1521,7 +1545,7 @@
   - type: NFWallmountable
     spawn: SignKiddiePlaque
 
-# Our signs
+# Rebrand
 - type: entity
   parent: SignCarriedCommandRebrand
   id: SignCarriedAiSyndie
@@ -1565,9 +1589,213 @@
 - type: entity
   parent: SignCarriedCommandRebrand
   id: SignCarriedHeadSyndie
-  name: bridge sign
+  name: head sign
   components:
   - type: Sprite
     state: commander_syndi
   - type: NFWallmountable
     spawn: SignHeadSyndie
+
+- type: entity
+  parent: SignCarriedCommandRebrand
+  id: SignCarriedVaultSyndie
+  name: vault sign
+  components:
+  - type: Sprite
+    state: vault_syndi
+  - type: NFWallmountable
+    spawn: SignVaultSyndie
+
+# Other signs
+- type: entity
+  parent: BaseSignCarried
+  id: SignCarriedChemDiamond
+  name: fire diamond sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: chemdiamond
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: square-multi-inhand-left
+      right:
+      - state: square-multi-inhand-right
+  - type: NFWallmountable
+    spawn: SignChemDiamond
+
+- type: entity
+  parent: SignCarriedWhite
+  id: SignCarriedEyeChart
+  name: eye chart
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: eyechart
+  - type: NFWallmountable
+    spawn: SignEyeChart
+
+- type: entity
+  parent: SignCarriedWhite
+  id: SignCarriedXenoBio
+  name: xenobiology chart
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: xenobio-guide
+  - type: NFWallmountable
+    spawn: SignXenoBio
+
+- type: entity
+  parent: SignCarriedSquareOrange
+  id: SignCarriedHazardBio
+  name: biohazard sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: bio
+  - type: NFWallmountable
+    spawn: SignHazardBio
+
+- type: entity
+  parent: SignCarriedMedical
+  id: SignCarriedBlueCross
+  name: medical sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: bluecross2
+  - type: NFWallmountable
+    spawn: SignBlueCross
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedHazardCold
+  name: cold hazard sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: cold
+  - type: NFWallmountable
+    spawn: SignHazardCold
+
+- type: entity
+  parent: SignCarriedSquareRed
+  id: SignCarriedHazardHeat
+  name: heat hazard sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: heat
+  - type: NFWallmountable
+    spawn: SignHazardHeat
+
+- type: entity
+  parent: SignCarriedSquareGreen
+  id: SignCarriedHazardRespirator
+  name: gas hazard sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: gasmask
+  - type: NFWallmountable
+    spawn: SignHazardRespirator
+
+- type: entity
+  parent: SignCarriedScience
+  id: SignCarriedHazardXeno
+  name: xeno hazard sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: xeno_warning
+  - type: NFWallmountable
+    spawn: SignHazardXeno
+
+- type: entity
+  parent: SignCarriedRoundYellow
+  id: SignCarriedHazardRadiation
+  name: radiation hazard sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: radiation
+  - type: NFWallmountable
+    spawn: SignHazardRadiation
+
+- type: entity
+  parent: SignCarriedTriangle
+  id: SignCarriedHazardShock
+  name: shock hazard sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: shock
+  - type: NFWallmountable
+    spawn: SignHazardShock
+
+- type: entity
+  parent: SignCarriedTriangle
+  id: SignCarriedCautionSecureArea
+  name: secure area notice sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: securearea
+  - type: NFWallmountable
+    spawn: SignCautionSecureArea
+
+- type: entity
+  parent: SignCarriedRoundForbidden
+  id: SignCarriedSmokingProhibited
+  name: no smoking sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: nosmoking
+  - type: NFWallmountable
+    spawn: SignSmokingProhibited
+
+- type: entity
+  parent: SignCarriedRoundAllowed
+  id: SignCarriedSmokingPermitted
+  name: smoking permitted sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: yessmoking
+  - type: NFWallmountable
+    spawn: SignSmokingPermitted
+
+- type: entity
+  parent: SignCarriedCommand
+  id: SignCarriedNanoTrasenZone
+  name: nanotrasen area sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: nanotrasen
+  - type: NFWallmountable
+    spawn: SignNanoTrasenZone
+
+- type: entity
+  parent: SignCarriedPlaqueGolden
+  id: SignCarriedPlaqueGolden
+  name: golden plaque
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: goldenplaque
+  - type: NFWallmountable
+    spawn: SignPlaqueGolden
+
+- type: entity
+  parent: SignCarriedPlaqueGray
+  id: SignCarriedPlaqueSilver
+  name: silver plaque
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: kiddieplaque
+  - type: NFWallmountable
+    spawn: SignPlaqueSilver
