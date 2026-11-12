@@ -10,7 +10,7 @@
     drawdepth: Doors
     layers:
     - state: turnstile
-      map: [ "enum.TurnstileVisualLayers.Base" ]
+      map: [ "barrier", "enum.TurnstileVisualLayers.Base" ] # starcup: add barrier
   - type: AnimationPlayer
   - type: Fixtures
     fixtures:
@@ -44,6 +44,15 @@
       - MobState # no mobs
       - Pullable # no dragging things in
   - type: Appearance
+  # begin starcup: add generic visualizer to restore animations
+  - type: GenericVisualizer
+    visuals:
+      enum.TurnstileVisualLayers.Base:
+        barrier:
+          Idle: { state: turnstile }
+          Spin: { state: operate }
+          Deny: { state: deny }
+  # end starcup
   - type: Damageable
     damageModifierSet: StrongMetallic
   - type: Injurable

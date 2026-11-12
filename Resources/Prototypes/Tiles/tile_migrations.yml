@@ -70,3 +70,80 @@
 - type: tileAlias
   id: FloorSteelBurnt
   target: FloorSteelDamaged
+
+# 2026/07/22
+# The respritening! With this one simple trick, i give 200 mappers a collective aneurysm.
+
+# 2026-09-03
+# Classic: reversed this migration to make post-Respritening maps migrate back.
+# And yes, you gave me a aneurysm.
+
+- type: tileAlias
+  id: FloorExoViscera
+  target: FloorXeno
+
+- type: tileAlias
+  id: FloorExoHull
+  target: FloorXenoSteel
+
+- type: tileAlias
+  id: FloorExoTechmaint
+  target: FloorXenoMaint
+
+- type: tileAlias
+  id: FloorExoBorg
+  target: FloorXenoborg
+
+- type: tileAlias
+  id: FloorExoCornerNE
+  target: FloorXenoSteelCorner
+
+- type: tileAlias
+  id: FloorExoCornerNW
+  target: FloorXenoSteelCorner
+
+- type: tileAlias
+  id: FloorExoCornerSE
+  target: FloorXenoSteelCorner
+
+- type: tileAlias
+  id: FloorExoCornerSW
+  target: FloorXenoSteelCorner
+
+- type: tileAlias
+  id: FloorExoHorizontal
+  target: FloorDarkSquiggly
+
+- type: tileAlias
+  id: FloorExoVertical
+  target: FloorDarkSquiggly
+
+- type: tileAlias
+  id: FloorGlassPlasma
+  target: FloorRGlass
+
+- type: tileAlias
+  id: FloorGlassPlastitanium
+  target: FloorRGlass
+
+- type: tileAlias
+  id: FloorGlassUranium
+  target: FloorRGlass
+
+- type: tileAlias
+  id: FloorDarkMarbleMono
+  target: FloorDarkMarble
+
+- type: tileAlias
+  id: FloorWhiteMarbleMono
+  target: FloorWhiteMarble
+
+# Classic: Special case!!!!
+# Respritening turned FloorTechMaint into FloorTechMaint2 and the maps are now baked with that
+# and the data is lost. I choose to restore it to FloorTechMaint because it looks closest to
+# what was originally used in most maps.
+# For downstreams: Remove this migration if you have old pre-Respritening map files and want to 
+# keep the original tiles.
+- type: tileAlias
+  id: FloorTechMaint2
+  target: FloorTechMaint

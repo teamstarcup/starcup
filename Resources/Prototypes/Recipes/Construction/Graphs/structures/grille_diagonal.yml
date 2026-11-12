@@ -13,7 +13,8 @@
             - material: MetalRod
               amount: 2
               doAfter: 1
-              
+
+        # Classic: Readded.
         - to: clockworkGrilleDiagonal
           completed:
             - !type:AdminLog
@@ -38,7 +39,8 @@
           steps:
             - tool: Cutting
               doAfter: 0.25
-              
+
+    # Classic: Readded.
     - node: clockworkGrilleDiagonal
       entity: ClockworkGrilleDiagonal
       edges:
