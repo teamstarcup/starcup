@@ -6,3 +6,10 @@
   components:
   - type: ComponentStatusEffect
     component: Hushed
+
+- type: entity
+  parent: SpeechStatusEffectBase
+  id: StatusEffectGlitched
+  name: glitched
+  components:
+  - type: SlurredAccent # TODO: Make a custom accent for proper glitchy-speak.
