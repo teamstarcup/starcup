@@ -467,6 +467,8 @@
     materialComposition:
       Bananium: 150
   - type: Sprite
+  # Classic: Respritening renamed.
+    sprite: Objects/Materials/materials.rsi
     state: bananium_3
     layers:
     - state: bananium_3
@@ -476,6 +478,7 @@
     count: 10
     baseLayer: base
     layerStates:
+  # Classic: States restored.
     - bananium
     - bananium_2
     - bananium_3
@@ -505,6 +508,8 @@
         Quantity: 5
   - type: Item
     heldPrefix: bananium
+  # Classic: Respritening renamed.
+    sprite: Objects/Materials/materials.rsi
 
 - type: entity
   parent: MaterialBananium
@@ -512,6 +517,7 @@
   suffix: Single
   components:
   - type: Sprite
+  # Classic: Respritening renamed.
     state: bananium
   - type: Stack
     count: 1

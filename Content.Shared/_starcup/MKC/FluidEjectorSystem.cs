@@ -25,7 +25,7 @@ public sealed partial class FluidEjectorSystem : EntitySystem
 
     [Dependency] private BodySystem _body = default!;
     [Dependency] private MovementModStatusSystem _movementMod = default!;
-    [Dependency] private SharedForensicsSystem _forensics = default!;
+    [Dependency] private ForensicsSystem _forensics = default!;
     [Dependency] private SharedPuddleSystem _puddle = default!;
     [Dependency] private IGameTiming _gameTiming = default!;
     [Dependency] private MobStateSystem _mobState = default!;
@@ -40,7 +40,6 @@ public sealed partial class FluidEjectorSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<BodyComponent, SolutionChangedEvent>(_body.RelayEvent);
-        SubscribeLocalEvent<FluidEjectorComponent, BodyRelayedEvent<SolutionChangedEvent>>(OnSolutionChanged);
     }
 
     public override void Update(float deltaTime)
@@ -57,24 +56,26 @@ public sealed partial class FluidEjectorSystem : EntitySystem
             if (_gameTiming.CurTime >= fluidEjector.NextPopupTime)
             {
                 fluidEjector.NextPopupTime = _gameTiming.CurTime + fluidEjector.PopupCooldown;
-                _popup.PopupClient(Loc.GetString("fluid-regulator-warning"), body, body, PopupType.LargeCaution);
+                _popup.PopupEntity(Loc.GetString("fluid-regulator-warning"), body, body, PopupType.LargeCaution);
             }
 
-            if (_gameTiming.CurTime >= fluidEjector.NextUpdate)
-            {
-                fluidEjector.NextUpdate = TimeSpan.Zero;
-                fluidEjector.NextPopupTime = TimeSpan.Zero;
-                DoFluidEject(body, fluidEjector);
-            }
+            if (_gameTiming.CurTime < fluidEjector.NextUpdate)
+                continue;
+
+            fluidEjector.NextUpdate = TimeSpan.Zero;
+            fluidEjector.NextPopupTime = TimeSpan.Zero;
+            DoFluidEject(body, fluidEjector);
         }
     }
 
+    [SubscribeLocalEvent]
     private void OnSolutionChanged(Entity<FluidEjectorComponent> ent, ref BodyRelayedEvent<SolutionChangedEvent> args)
     {
         if (_mobState.IsDead(args.Body.Owner))
             return;
 
-        if (args.Args.Solution.Comp.Id != ent.Comp.Solution)
+        var solutionComp = args.Args.Solution.Comp;
+        if (solutionComp.Id != ent.Comp.Solution)
             return;
 
         var bloodReagentEvent = new MetabolismExclusionEvent();
@@ -83,10 +84,9 @@ public sealed partial class FluidEjectorSystem : EntitySystem
         if (!_metabolizerWhitelist.GetMetabolizableReagents(args.Body, out var metabolizableReagents))
             metabolizableReagents = [];
 
-        var bodyReagents = args.Args.Solution.Comp.Solution.Contents.Select(r => r.Reagent.Prototype);
+        var bodyReagents = solutionComp.Solution.Contents.Select(r => r.Reagent.Prototype);
         var bloodReferenceReagents = bloodReagentEvent.Reagents.Select(reagentId => reagentId.Prototype);
-        var whitelistedReagents = metabolizableReagents.Select(protoId => protoId.Id);
-        if (!bodyReagents.Any(id => !bloodReferenceReagents.Contains(id) && !whitelistedReagents.Contains(id)))
+        if (!bodyReagents.Any(id => !bloodReferenceReagents.Contains(id) && !metabolizableReagents.Contains(id)))
         {
             ent.Comp.NextPopupTime = TimeSpan.Zero;
             ent.Comp.NextUpdate = TimeSpan.Zero;
@@ -146,7 +146,7 @@ public sealed partial class FluidEjectorSystem : EntitySystem
         var drunkennessTime = slowdownTime * 1.5;
         _status.TryUpdateStatusEffectDuration(uid, Drunk, drunkennessTime);
 
-        _popup.PopupPredicted(Loc.GetString("fluid-regulator-eject", ("person", Identity.Entity(uid, EntityManager))), uid, uid, PopupType.Large);
+        _popup.PopupEntity(Loc.GetString("fluid-regulator-eject", ("person", Identity.Entity(uid, EntityManager))), uid, uid, PopupType.Large);
 
         var damage = ejectedAmount * fluidEjector.EjectionDamage * fluidEjector.EjectionDamageMultiplier;
         _damageableSystem.TryChangeDamage(uid, damage, ignoreResistances: true);
