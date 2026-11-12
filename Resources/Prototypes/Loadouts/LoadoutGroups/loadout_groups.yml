@@ -2,7 +2,6 @@
 - type: loadoutGroup
   # begin starcup: use parenting for our additions
   parent:
-#  - Plushies
   - TrinketsGlorb
   - TrinketsBureaucracy
   - TrinketsLighter
@@ -10,8 +9,7 @@
   - TrinketsTreat
   - TrinketsToy
   - TrinketsPens
-#  - TrinketsCosmetic
-#  - TrinketsTowel
+  - TrinketsFigurine
   - TrinketsInstrument
   # end starcup
   id: Trinkets
@@ -478,6 +476,7 @@
 - type: loadoutGroup
   id: PassengerShoes
   name: loadout-group-passenger-shoes
+  minLimit: 0 # starcup
   loadouts:
   - BlackShoes
   - WinterBoots
@@ -878,6 +877,7 @@
 - type: loadoutGroup
   id: ClownShoes
   name: loadout-group-clown-shoes
+  minLimit: 0 # starcup
   loadouts:
   - ClownShoes
   - JesterShoes
@@ -1025,6 +1025,7 @@
   - RockGuitar
   - AcousticGuitar
   - Banjo
+  - Lyre
   - Violin
   - Viola
   - Cello
@@ -1155,6 +1156,7 @@
 - type: loadoutGroup
   id: CargoTechnicianShoes
   name: loadout-group-cargo-technician-shoes
+  minLimit: 0 # starcup
   loadouts:
   - BlackShoes
   - BrownShoes # starcup
@@ -1326,6 +1328,7 @@
 - type: loadoutGroup
   id: StationEngineerShoes
   name: loadout-group-station-engineer-shoes
+  minLimit: 0 # starcup
   loadouts:
   - WorkBoots
   - EngineeringWinterBoots
@@ -1514,6 +1517,7 @@
 - type: loadoutGroup
   id: ScientistShoes
   name: loadout-group-scientist-shoes
+  minLimit: 0 # starcup
   loadouts:
   - WhiteShoes
   - BlackShoes
@@ -1688,6 +1692,7 @@
 - type: loadoutGroup
   id: SecurityShoes
   name: loadout-group-security-shoes
+  minLimit: 0 # starcup
   loadouts:
   - JackBoots
   - SecurityWinterBoots

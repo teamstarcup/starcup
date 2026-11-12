@@ -9,27 +9,9 @@
 
 - type: stack
   parent: BaseTileStack
-  id: FloorTileShowroom
-  name: stack-showroom-tile
-  spawn: FloorTileItemShowroom
-
-- type: stack
-  parent: BaseTileStack
-  id: FloorTileHydro
-  name: stack-hydro-tile
-  spawn: FloorTileItemHydro
-
-- type: stack
-  parent: BaseTileStack
   id: FloorTileLime
   name: stack-lime-tile
   spawn: FloorTileItemLime
-
-- type: stack
-  parent: BaseTileStack
-  id: FloorTileDirty
-  name: stack-dirty-tile
-  spawn: FloorTileItemDirty
 
 - type: stack
   parent: BaseTileStack
@@ -79,6 +61,26 @@
   id: FloorTileLaundry
   name: stack-laundry-floor-tile
   spawn: FloorTileItemLaundry
+
+# Classic: restored tile stacks below.
+
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileShowroom
+  name: stack-showroom-tile
+  spawn: FloorTileItemShowroom
+
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileHydro
+  name: stack-hydro-tile
+  spawn: FloorTileItemHydro
+
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileDirty
+  name: stack-dirty-tile
+  spawn: FloorTileItemDirty
 
 # Patterned
 - type: stack

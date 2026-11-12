@@ -1,3 +1,8 @@
+# starcup - I removed buggy ContainerHeld component for now, as it was causing errorspam.
+# Replaced it with StorageFillVisualizer, like garbage bags.
+# This is imperfect! It means that the inhands have to look empty, and I also had to clunkily
+# add two dummy image files so it wouldn't instantly look filled at 1/6. It's a compromise.
+
 - type: entity
   parent: BaseItem
   id: CandyBucket
@@ -5,22 +10,33 @@
   description: A festive bucket for all your treats.
   components:
   - type: Sprite
-    sprite: Objects/Fun/candy_bucket.rsi
+    sprite: _starcup/Objects/Fun/Candybucket/candy_bucket.rsi # starcup - remapped for a cleaner future revert (I hope!)
     layers:
-    - state: empty_icon
-      map: [ "enum.ToggleableVisuals.Layer" ]
-  - type: ContainerHeld
-    threshold: 1
+# begin starcup (everything is us but the Normal item size and the Appearance component)
+    - state: icon-0
+#      map: [ "enum.ToggleableVisuals.Layer" ]
+      map: [ "enum.StorageFillLayers.Fill" ]
+#  - type: ContainerHeld
+#    threshold: 1
   - type: Item
-    heldPrefix: empty
+#    heldPrefix: empty
+    inhandVisuals:
+      left:
+      - state: empty-inhand-left
+      right:
+      - state: empty-inhand-right
     size: Normal
   - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-     enum.ToggleableVisuals.Enabled:
-        enum.ToggleableVisuals.Layer:
-          True: {state: full_icon}
-          False: {state: empty_icon}
+#  - type: GenericVisualizer
+#    visuals:
+#     enum.ToggleableVisuals.Enabled:
+#        enum.ToggleableVisuals.Layer:
+#          True: {state: full_icon}
+#          False: {state: empty_icon}
+  - type: StorageFillVisualizer
+    maxFillLevels: 4 # added two "dummy" images so it doesn't go from 0/6 empty to 1/6 filled.
+    fillBaseName: icon
+# end starcup
   - type: Storage
     maxItemSize: Small
     grid:

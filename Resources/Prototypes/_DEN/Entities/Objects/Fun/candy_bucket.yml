@@ -14,13 +14,16 @@
 #         True: {state: full_icon}
 #         False: {state: empty_icon}
 
+# starcup - removed the candybuckets' reliance on ContainerHeld for now (it's buggy) and remapped sprites to our namespace
+# just to make it easier to revert this later!
+
 - type: entity
   parent: CandyBucket
   id: CandyBucketPailCat
   suffix: cat pail
   components:
   - type: Sprite
-    sprite: _DEN/Objects/Fun/CandyBucket/cat.rsi
+    sprite: _starcup/Objects/Fun/Candybucket/cat.rsi # starcup
 
 - type: entity
   parent: CandyBucket
@@ -28,7 +31,7 @@
   suffix: clown pail
   components:
   - type: Sprite
-    sprite: _DEN/Objects/Fun/CandyBucket/clown.rsi
+    sprite: _starcup/Objects/Fun/Candybucket/clown.rsi # starcup
 
 - type: entity
   parent: CandyBucket
@@ -36,10 +39,14 @@
   suffix: ghost pail, glow-in-the-dark
   components:
   - type: Sprite
-    sprite: _DEN/Objects/Fun/CandyBucket/ghost.rsi
+    sprite: _starcup/Objects/Fun/Candybucket/ghost.rsi # starcup
     layers:
-    - state: empty_icon
-      map: ["enum.ToggleableVisuals.Layer"]
+# begin starcup
+#    - state: empty_icon
+#      map: ["enum.ToggleableVisuals.Layer"]
+    - state: icon-0
+      map: [ "enum.StorageFillLayers.Fill" ]
+# end starcup
     - state: overlay # Little bit of glow
       shader: unshaded
 
@@ -49,7 +56,7 @@
   suffix: pumpkin pail
   components:
   - type: Sprite
-    sprite: _DEN/Objects/Fun/CandyBucket/pumpkin.rsi
+    sprite: _starcup/Objects/Fun/Candybucket/pumpkin.rsi # starcup
 
 - type: entity
   parent: CandyBucket
@@ -57,59 +64,60 @@
   suffix: skeleton pail
   components:
   - type: Sprite
-    sprite: _DEN/Objects/Fun/CandyBucket/skeleton.rsi
+    sprite: _starcup/Objects/Fun/Candybucket/skeleton.rsi # starcup
 
 ## recolorable
+# starcup - commented these all out for now-they are too difficult to work in without the broken ContainerHeld component.
 
-- type: entity
-  parent: CandyBucket
-  id: CandyBucketPailPlain
-  suffix: pail
-  components:
-  - type: Sprite
-    sprite: _DEN/Objects/Fun/CandyBucket/plain.rsi
-    layers:
-    - state: empty_icon
-      color: "#25659f"
-      map: ["enum.DamageStateVisualLayers.Base"]
-    - state: candy
-      map: ["enum.ToggleableVisuals.Layer"]
-      visible: false
-    - state: handle
-  - type: GenericVisualizer
-    visuals:
-      enum.ToggleableVisuals.Enabled:
-        enum.ToggleableVisuals.Layer:
-          True: {visible: true}
-          False: {visible: false}
-
-- type: entity
-  parent: CandyBucketPailPlain
-  id: CandyBucketPailPlainRandom
-  suffix: pail, random color
-  components:
-  - type: RandomSprite
-    available:
-    - enum.DamageStateVisualLayers.Base: # This is defined in the parent prototype
-        empty_icon: PlasticToy
-
-- type: entity
-  parent: CandyBucketPailPlain
-  id: CandyBucketPailSmiley
-  suffix: smiley pail
-  components:
-  - type: Sprite
-    sprite: _DEN/Objects/Fun/CandyBucket/smiley.rsi
-    layers:
-    - state: empty_icon
-      color: "#EDE74E"
-      map: ["enum.DamageStateVisualLayers.Base"]
-    - state: candy
-      map: ["enum.ToggleableVisuals.Layer"]
-      visible: false
-    - state: handle
-
-- type: entity
-  parent: [CandyBucketPailSmiley, CandyBucketPailPlainRandom]
-  id: CandyBucketPailSmileyRandom
-  suffix: smiley pail, random color
+#- type: entity
+#  parent: CandyBucket
+#  id: CandyBucketPailPlain
+#  suffix: pail
+#  components:
+#  - type: Sprite
+#    sprite: _DEN/Objects/Fun/CandyBucket/plain.rsi
+#    layers:
+#    - state: empty_icon
+#      color: "#25659f"
+#      map: ["enum.DamageStateVisualLayers.Base"]
+#    - state: candy
+#      map: ["enum.ToggleableVisuals.Layer"]
+#      visible: false
+#    - state: handle
+#  - type: GenericVisualizer
+#    visuals:
+#      enum.ToggleableVisuals.Enabled:
+#        enum.ToggleableVisuals.Layer:
+#          True: {visible: true}
+#          False: {visible: false}
+#
+#- type: entity
+#  parent: CandyBucketPailPlain
+#  id: CandyBucketPailPlainRandom
+#  suffix: pail, random color
+#  components:
+#  - type: RandomSprite
+#    available:
+#    - enum.DamageStateVisualLayers.Base: # This is defined in the parent prototype
+#        empty_icon: PlasticToy
+#
+#- type: entity
+#  parent: CandyBucketPailPlain
+#  id: CandyBucketPailSmiley
+#  suffix: smiley pail
+#  components:
+#  - type: Sprite
+#    sprite: _DEN/Objects/Fun/CandyBucket/smiley.rsi
+#    layers:
+#    - state: empty_icon
+#      color: "#EDE74E"
+#      map: ["enum.DamageStateVisualLayers.Base"]
+#    - state: candy
+#      map: ["enum.ToggleableVisuals.Layer"]
+#      visible: false
+#    - state: handle
+#
+#- type: entity
+#  parent: [CandyBucketPailSmiley, CandyBucketPailPlainRandom]
+#  id: CandyBucketPailSmileyRandom
+#  suffix: smiley pail, random color

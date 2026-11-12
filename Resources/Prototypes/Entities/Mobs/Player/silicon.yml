@@ -34,6 +34,7 @@
   - type: StationAiOverlay
   - type: ShowElectrocutionHUD
   - type: ActionGrant
+    removeOnShutdown: false
     actions:
     - ActionJumpToCore
     - ActionAIViewLaws
@@ -214,7 +215,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 400
+        damage: 500
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -223,7 +224,7 @@
         acts: [ "Breakage" ]
     - trigger:
         !type:DamageTrigger
-        damage: 2000
+        damage: 1000
       behaviors:
       - !type:PlaySoundBehavior
         sound:

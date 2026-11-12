@@ -1,25 +1,25 @@
 - type: entity
-  parent: [BaseDeltaPressureReinforcedGlass, BaseWindowStructure, BaseRCDResistant]
+  parent: [BaseDeltaPressureReinforcedGlass, BaseWindowStructure, BaseRCDResistant, StructureHealthBarrierStrong]
   id: ShuttleWindow
   name: shuttle window
   components:
   - type: Sprite
+  # Classic: Respritening renamed.
     sprite: Structures/Windows/shuttle_window.rsi
   - type: Icon
+  # Classic: Respritening renamed.
     sprite: Structures/Windows/shuttle_window.rsi
     state: full
   - type: Repairable
     fuelCost: 15
     doAfterDelay: 3
   - type: Damageable
-    damageModifierSet: RGlass
-  - type: Injurable
-    damageContainer: StructuralInorganic
+    damageModifierSet: PlasteelMod
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 500
+        damage: 120
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -32,8 +32,6 @@
           PartRodMetal:
             min: 1
             max: 2
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
   - type: IconSmooth
     base: swindow
   - type: Construction
@@ -60,6 +58,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
+  # Classic: Respritening renamed.
     sprite: Structures/Windows/shuttle_window_diagonal.rsi
     state: state0
   - type: Tag
@@ -68,9 +67,11 @@
     - Window
   - type: IconSmooth
     mode: Diagonal
+  # Classic: Restored smoothing group.
     key: windows
     base: state
   - type: Icon
+  # Classic: Respritening renamed.
     sprite: Structures/Windows/shuttle_window_diagonal.rsi
     state: state0
   - type: Fixtures
@@ -93,4 +94,4 @@
     - East
   - type: DamageVisuals
     damageOverlay:
-      sprite: Structures/Windows/cracks_diagonal.rsi
+      sprite: Structures/Windows/cracks-diagonal.rsi
