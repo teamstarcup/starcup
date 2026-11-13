@@ -4,6 +4,14 @@
   sprite: /Textures/_starcup/Tiles/brickhorizontal.png
   variants: 9
   placementVariants: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+  # begin starcup: add edges
+  edgeSpritePriority: 6
+  edgeSprites:
+    South: /Textures/_starcup/Tiles/Interior/brick/double_edge_south.png
+    East: /Textures/_starcup/Tiles/Interior/brick/double_edge_east.png
+    North: /Textures/_starcup/Tiles/Interior/brick/double_edge_north.png
+    West: /Textures/_starcup/Tiles/Interior/brick/double_edge_west.png
+  # end starcup
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -18,6 +26,14 @@
   sprite: /Textures/_starcup/Tiles/brickvertical.png
   variants: 9
   placementVariants: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+  # begin starcup: add edges
+  edgeSpritePriority: 6
+  edgeSprites:
+    South: /Textures/_starcup/Tiles/Interior/brick/double_edge_east.png
+    East: /Textures/_starcup/Tiles/Interior/brick/double_edge_north_v.png
+    North: /Textures/_starcup/Tiles/Interior/brick/double_edge_west.png
+    West: /Textures/_starcup/Tiles/Interior/brick/double_edge_south_v.png
+  # end starcup
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
@@ -30,7 +46,7 @@
   id: FloorStarcupGrayBrick01
   name: gray brick floor
   sprite: /Textures/_starcup/Tiles/Stone/gray_brick01/base.png
-  edgeSpritePriority: 3
+  edgeSpritePriority: 6
   edgeSprites:
     SouthEast: /Textures/_starcup/Tiles/Stone/gray_brick01/single_edge.png
     NorthEast: /Textures/_starcup/Tiles/Stone/gray_brick01/single_edge.png
@@ -53,7 +69,7 @@
   name: dark gray brick floor
   parent: FloorStarcupGrayBrick01
   sprite: /Textures/_starcup/Tiles/Stone/dark_gray_brick/base.png
-  edgeSpritePriority: 1
+  edgeSpritePriority: 4 # same as natural rock as it's old brick
   edgeSprites:
     SouthEast: /Textures/_starcup/Tiles/Stone/dark_gray_brick/single_edge.png
     NorthEast: /Textures/_starcup/Tiles/Stone/dark_gray_brick/single_edge.png

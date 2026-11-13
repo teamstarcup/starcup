@@ -22,6 +22,7 @@
   - type: InteractionOutline
   - type: Sprite
     drawdepth: WallMountedItems
+#    offset: 0, 1 # Classic: Removed.
     layers:
     - map: ["enum.PoweredLightLayers.Base"]
       state: base
@@ -33,11 +34,9 @@
     energy: 0.8
     radius: 10
     softness: 1
-    offset: "0, 0.495"
-  - type: Damageable
-    damageModifierSet: Metallic
-  - type: Injurable
-    damageContainer: Inorganic
+  # Classic: Undo the damage caused by #44843.
+    offset: "0, -0.495"
+#    offset: "0, 0.25"
   - type: RCDDeconstructable
     cost: 4
     delay: 2
@@ -55,23 +54,29 @@
         - None
         layer:
         - TabletopMachineLayer
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 50
-      behaviors:
-      - !type:EmptyAllContainersBehaviour
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior
-        sound:
-          collection: GlassBreak
   - type: PlacementReplacement
     key: lights
 
 - type: entity
-  parent: BaseWallLight
+  abstract: true
+  parent: StructureHealthMachineFlimsy
+  id: BaseLightHousingDestructible
+  components:
+  - type: Damageable
+    damageModifierSet: SteelMod
+  - type: Destructible
+    thresholds:
+    - trigger: &DamageMachineFlimsy
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:EmptyAllContainersBehaviour
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+
+- type: entity
+  parent: [ BaseWallLight, BaseLightHousingDestructible ]
   id: AlwaysPoweredWallLight
   name: light
   suffix: Always powered
@@ -81,6 +86,7 @@
     graph: LightFixture
     node: tubeLight
   - type: Sprite
+  # Classic: Respritening renamed.
     sprite: Structures/Wallmounts/Lighting/light_tube.rsi
     layers:
     - map: ["enum.PoweredLightLayers.Base"]
@@ -90,9 +96,7 @@
       shader: unshaded
   - type: Destructible
     thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 50
+    - trigger: *DamageMachineFlimsy
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -108,7 +112,9 @@
   description: "A light fixture. Draws power and produces light when equipped with a light tube."
   components:
   - type: Sprite
+  # Classic: Respritening renamed.
     sprite: Structures/Wallmounts/Lighting/light_tube.rsi
+#    offset: 0, 1 # Classic: Removed.
     state: empty
   - type: PointLight
     enabled: false
@@ -251,7 +257,7 @@
 
 #Small lights
 - type: entity
-  parent: BaseWallLight
+  parent: [ BaseWallLight, BaseLightHousingDestructible ]
   id: SmallLight
   name: small light
   suffix: Always Powered
@@ -263,6 +269,7 @@
       sound:
         path: /Audio/Ambience/Objects/light_hum.ogg
     - type: Sprite
+    # Classic: Respritening renamed.
       sprite: Structures/Wallmounts/Lighting/light_small.rsi
       state: base
     - type: PointLight
@@ -284,9 +291,7 @@
           - TabletopMachineLayer
     - type: Destructible
       thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 50
+      - trigger: *DamageMachineFlimsy
         behaviors:
         - !type:SpawnEntitiesBehavior
           spawn:
@@ -305,13 +310,16 @@
   description: "A light fixture. Draws power and produces light when equipped with a light bulb."
   components:
   - type: Sprite
+  # Classic: Respritening renamed.
     sprite: Structures/Wallmounts/Lighting/light_small.rsi
     state: empty
   - type: AmbientSound
     enabled: false
   - type: PointLight
     enabled: false
-    offset: "0, 0.495"
+  # Classic: Undo the damage caused by #44843.
+    offset: "0, -0.495"
+#    offset: "0, 0.25"
   - type: ContainerContainer
     containers:
       light_bulb: !type:ContainerSlot
@@ -415,7 +423,7 @@
 
 #Emergency Lights
 - type: entity
-  parent: BaseWallLight
+  parent: [ BaseWallLight, BaseLightHousingDestructible ]
   id: EmergencyLight
   name: emergency light
   description: A small light with an internal battery that turns on as soon as it stops receiving any power. Electra Dynamics technology allows it to adapt its color to alert crew to the conditions of the station. # starcup - NT-SC swap
@@ -424,6 +432,7 @@
     enabled: false
     radius: 15  # starcup: 5 -> 15
     energy: 0.4  # starcup: 0.6 -> 0.4
+  # Classic: Restored offset.
     offset: "0, 0.4"
     color: "#7CFC00"
     lightMask: ConeDouble
@@ -441,7 +450,9 @@
   - type: RotatingLight
     speed: 40
   - type: Sprite
+  # Classic: Respritening renamed.
     sprite: Structures/Wallmounts/Lighting/emergency_light.rsi
+#    offset: 0, 1 # Classic: Removed.
     layers:
     - state: base
       map: [ "enum.EmergencyLightVisualLayers.Base" ]
@@ -453,14 +464,13 @@
       color: "#7CFC00"
       shader: "unshaded"
       visible: false
+  - type: Appearance
   - type: Construction
     graph: LightFixture
     node: emergencyLight
   - type: Destructible
     thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 50
+    - trigger: *DamageMachineFlimsy
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:

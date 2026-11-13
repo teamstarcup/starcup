@@ -5,17 +5,12 @@
   components:
   - type: Sprite
     sprite: Structures/Wallmounts/posters.rsi
-  - type: Damageable
-    damageModifierSet: Card
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
         damage: 5
       behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          path: /Audio/Effects/poster_broken.ogg
       - !type:SpawnEntitiesBehavior
         spawn:
           PosterBroken:
@@ -43,17 +38,6 @@
     drawdepth: WallTops
     sprite: Structures/Wallmounts/posters.rsi
     state: poster_broken
-  - type: Damageable
-    damageModifierSet: Card
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 5
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          path: /Audio/Effects/poster_broken.ogg
   - type: Construction
     graph: PosterGraph
     node: tornPoster
@@ -293,7 +277,7 @@
   parent: PosterBase
   id: PosterContrabandCommunistState
   name: "Communist State"
-  description: "After the arrival of sector to the galaxy, interest in their native philosophy of communism experienced a resurgence." # starcup: rewritten for tone
+  description: "After the arrival of humans to the sector, interest in their native philosophy of communism experienced a resurgence." # starcup: rewritten for tone
   components:
   - type: Sprite
     state: poster18_contraband
@@ -720,10 +704,6 @@
   components:
   - type: Sprite
     state: poster53_contraband
-  # begin starcup: unhangable posters
-  - type: DisassembleOnAltVerb
-    prototypeToSpawn: PosterRolledContrabandHighEffectEngineering
-  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -1629,6 +1609,7 @@
   # end starcup
 
 #maps
+
 - type: entity
   parent: PosterBase
   id: PosterMapBagel
