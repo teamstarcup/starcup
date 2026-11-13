@@ -1,6 +1,6 @@
-﻿using Content.Shared.Chat.Prototypes;
+using Content.Shared.Chat.Prototypes;
 using Robust.Shared.GameStates;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
+using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Mobs;
 
@@ -15,10 +15,9 @@ public sealed partial class DeathgaspComponent : Component
     /// <summary>
     ///     The emote prototype to use.
     /// </summary>
-    [DataField("prototype", customTypeSerializer:typeof(PrototypeIdSerializer<EmotePrototype>))]
-    [AutoNetworkedField]
-    public string Prototype = "DefaultDeathgasp";
-    
+    [DataField, AutoNetworkedField]
+    public ProtoId<EmotePrototype> Prototype = "DefaultDeathgasp";
+
     /// <summary>
     ///     Goobstation: Makes sure that the deathgasp is only displayed if the entity went critical before dying
     /// </summary>

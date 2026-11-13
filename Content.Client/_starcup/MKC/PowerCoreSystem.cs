@@ -26,10 +26,6 @@ public sealed partial class PowerCoreSystem : SharedPowerCoreSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<PowerCoreComponent, BodyRelayedEvent<LocalPlayerAttachedEvent>>(OnPlayerAttached);
-        SubscribeLocalEvent<PowerCoreComponent, BodyRelayedEvent<LocalPlayerDetachedEvent>>(OnPlayerDetached);
-        SubscribeLocalEvent<PowerCoreComponent, BodyRelayedEvent<OrganGotRemovedEvent>>(OnOrganRemoved);
-
         _powerCoreQuery = GetEntityQuery<PowerCoreComponent>();
         _bodyQuery = GetEntityQuery<BodyComponent>();
     }
@@ -83,16 +79,19 @@ public sealed partial class PowerCoreSystem : SharedPowerCoreSystem
         _alerts.ShowAlert((body, alerts), _batteryAlertPrototype, (short) alertLevel);
     }
 
+    [SubscribeLocalEvent]
     private void OnPlayerAttached(Entity<PowerCoreComponent> powerCore, ref BodyRelayedEvent<LocalPlayerAttachedEvent> args)
     {
         UpdateBatteryAlert(args.Body.Owner, powerCore);
     }
 
+    [SubscribeLocalEvent]
     private void OnPlayerDetached(Entity<PowerCoreComponent> powerCore, ref BodyRelayedEvent<LocalPlayerDetachedEvent> args)
     {
         _alerts.ClearAlert(args.Body.Owner, _batteryAlertPrototype);
     }
 
+    [SubscribeLocalEvent]
     private void OnOrganRemoved(Entity<PowerCoreComponent> powerCore, ref BodyRelayedEvent<OrganGotRemovedEvent> args)
     {
         _alerts.ClearAlert(args.Body.Owner, _batteryAlertPrototype);
