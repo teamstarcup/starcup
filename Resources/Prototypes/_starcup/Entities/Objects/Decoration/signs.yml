@@ -10,6 +10,15 @@
 
 - type: entity
   abstract: true
+  parent: BaseSignWeak
+  id: BaseSignWeakPullDown
+  components:
+  - type: DisassembleOnAltVerb
+    verbText: "disassemble-system-verb-pull-down"
+    disassembleTime: 2
+
+- type: entity
+  abstract: true
   parent: BaseItem
   id: BaseSignCarried
   suffix: Carried

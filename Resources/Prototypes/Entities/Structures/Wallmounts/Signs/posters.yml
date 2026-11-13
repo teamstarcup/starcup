@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: BaseSignPullDown # starcup: unhangable posters
+  parent: BaseSignWeakPullDown # starcup: unhangable posters
   id: PosterBase
   components:
   - type: Sprite
@@ -29,7 +29,7 @@
   # end starcup
 
 - type: entity
-  parent: BaseSignPullDown # starcup: unhangable posters
+  parent: BaseSignWeakPullDown # starcup: unhangable posters
   id: PosterBroken
   name: broken poster
   description: "You can't make out anything from the poster's original print. It's ruined."
