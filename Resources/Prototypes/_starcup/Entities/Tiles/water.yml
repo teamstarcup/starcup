@@ -1,72 +1,68 @@
 - type: entity
-  id: FloorStarcupWaterEntity
-  name: water
-  suffix: with edges, non-animated
-  description: Still waters to calm the soul.
-  placement:
-    mode: SnapgridCenter
-    snap:
-    - Wall
+  parent: FloorWaterEntity
+  id: FloorWaterEntityEdges
+  suffix: with edges
   components:
-  - type: FloorOccluder
-  - type: StepTrigger
-    requiredTriggeredSpeed: 0
-    intersectRatio: 0.1
-    blacklist:
-      tags:
-      - Catwalk
-  - type: TileEntityEffect
-    effects:
-    - !type:Extinguish
-  - type: Solution
-    id: pool
-    solution:
-      maxVol: 9999999
-      reagents:
-      - ReagentId: Water
-        Quantity: 9999999
-  - type: SolutionRegeneration
-    generated:
-      reagents:
-      - ReagentId: Water
-        Quantity: 100
-  - type: DrainableSolution
-    solution: pool
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
+  - type: Icon
+    sprite: Tiles/Planet/water.rsi
+    state: shoreline_water
+  - type: SmoothEdge
+  - type: Sprite
+    sprite: _starcup/Tiles/Planet/water_shoreline.rsi
+    layers:
+    - sprite: Tiles/Planet/water.rsi
+      state: shoreline_water
+    - map: [ "enum.EdgeLayer.South" ]
+      state: double_edge_south
+    - map: [ "enum.EdgeLayer.East" ]
+      state: double_edge_east
+    - map: [ "enum.EdgeLayer.North" ]
+      state: double_edge_north
+    - map: [ "enum.EdgeLayer.West" ]
+      state: double_edge_west
+
+- type: entity
+  parent: FloorWaterEntity
+  id: FloorWaterEntityDeep
+  name: deep water
+  description: That's a paddlin'.
+  components:
+  - type: Sprite
+    sprite: _starcup/Tiles/Planet/water_deep.rsi
+    layers:
+    - state: base
   - type: SpeedModifierContacts
     walkSpeedModifier: 0.5
     sprintSpeedModifier: 0.5
-  - type: SyncSprite
-  - type: Clickable
-  - type: Sprite
-    sprite: _starcup/Tiles/Planet/water.rsi
-    drawdepth: BelowFloor
-  - type: Icon
-    sprite: _starcup/Tiles/Planet/water.rsi
-    state: base_preview
-  - type: Transform
-    anchored: true
-  - type: IconSmooth
-    key: base
-    base: base_
-  - type: Physics
-    bodyType: Static
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.2,-0.2,0.2,0.2"
-        layer:
-        - SlipLayer
-        mask:
-        - ItemMask
-        density: 1000
-        hard: false
-  - type: Tag
-    tags:
-    - HideContextMenu
   - type: FootstepModifier
     footstepSoundCollection:
-      collection: FootstepWater
-      params:
-        volume: 8
+      path: /Audio/Effects/Fluids/watersplash.ogg
+
+- type: entity
+  parent: FloorWaterEntityDeep
+  id: FloorWaterEntityDeepEdges
+  suffix: with edges
+  components:
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
+  - type: Icon
+    sprite: _starcup/Tiles/Planet/water_deep.rsi
+    state: base
+  - type: SmoothEdge
+  - type: Sprite
+    sprite: _starcup/Tiles/Planet/water_deep.rsi
+    layers:
+    - sprite: _starcup/Tiles/Planet/water_deep.rsi
+      state: base
+    - map: [ "enum.EdgeLayer.South" ]
+      state: double_edge_south
+    - map: [ "enum.EdgeLayer.East" ]
+      state: double_edge_east
+    - map: [ "enum.EdgeLayer.North" ]
+      state: double_edge_north
+    - map: [ "enum.EdgeLayer.West" ]
+      state: double_edge_west

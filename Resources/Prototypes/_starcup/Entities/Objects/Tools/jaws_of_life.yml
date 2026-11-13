@@ -15,7 +15,7 @@
     size: Normal
   - type: MultipleTool
     entries:
-      - behavior: Prying
+      - behavior: [ Prying ]
         sprite:
           sprite: _starcup/Objects/Tools/jaws_of_life.rsi
           state: nt_jaws_pry
@@ -27,7 +27,7 @@
           path: /Audio/Items/change_jaws.ogg
           params:
             volume: -5
-      - behavior: Cutting
+      - behavior: [ Cutting ]
         sprite:
           sprite: _starcup/Objects/Tools/jaws_of_life.rsi
           state: nt_jaws_cutter

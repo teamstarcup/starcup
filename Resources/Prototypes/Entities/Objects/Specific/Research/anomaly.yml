@@ -103,12 +103,13 @@
         enum.ToggleableVisuals.Layer:
           True: { visible: true }
           False: { visible: false }
+  - type: ItemToggleExaminableStatus
   - type: ItemToggle
   - type: ProximityBeeper
   - type: ProximityDetector
     range: 20
     components:
-    - type: Anomaly
+    - type: AnomalyLocatorTarget # starcup: changed from Anomaly
   - type: Beeper
     isMuted: true
     minBeepInterval: 0.15

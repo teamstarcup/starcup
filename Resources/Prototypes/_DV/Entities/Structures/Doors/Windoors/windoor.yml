@@ -8,17 +8,8 @@
       board: [ DoorElectronicsMail ]
 
 - type: entity
-  parent: WindoorSecureCargoLocked
-  id: WindoorSecureMailLocked
-  suffix: Mail, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsMail ]
-
-- type: entity
-  parent: WindoorSecureScienceLocked
-  id: WindoorSecureRoboticsLocked
+  parent: WindoorScienceLocked
+  id: WindoorRoboticsLocked
   suffix: Robotics, Locked
   components:
   - type: ContainerFill

@@ -56,8 +56,12 @@ reagent-desc-phalanximine = An advanced chemical used in the treatment of cancer
 reagent-name-polypyrylium-oligomers = Polypyrylium Oligomers
 reagent-desc-polypyrylium-oligomers = A purple mixture of short polyelectrolyte chains not easily synthesized in the laboratory. Heals asphyxiation and brute damage. Stops bleeding over time.
 
+reagent-name-romerodone = romerodone
+reagent-desc-romerodone = A byproduct of centrifuging zombie blood, perhaps you could make a cure with this.
+
+
 reagent-name-ambuzol = ambuzol
-reagent-desc-ambuzol = A highly engineered substance able to halt the progression of a zombie infection.
+reagent-desc-ambuzol = A highly engineered substance able to cure the zombie infection.
 
 reagent-name-ambuzol-plus = ambuzol plus
 reagent-desc-ambuzol-plus = Further engineered with omnizine, inoculates the living against the infection.
@@ -100,8 +104,6 @@ reagent-desc-cognizine = A mysterious chemical which is able to make any non-sen
 
 reagent-name-ethyloxyephedrine = ethyloxyephedrine
 reagent-desc-ethyloxyephedrine = A mildly unstable medicine derived from desoxyephedrine, primarily used to combat narcolepsy.
-# starcup: pill label
-pill-label-ethyloxyephedrine-10u = { reagent-name-ethyloxyephedrine } 10u
 
 reagent-name-diphenylmethylamine = diphenylmethylamine
 reagent-desc-diphenylmethylamine = A more stable medicine than ethyloxyephedrine. Useful for keeping someone awake.

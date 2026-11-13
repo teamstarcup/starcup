@@ -1,6 +1,10 @@
-﻿- type: entity
+# Classic: Restored this file from Respritening.
+# Classic: Modified damage modifiers.
+- type: entity
   abstract: true
-  parent: BaseWindoorGeneric
+  # Classic: delta pressure added to match the modern windoors; clockwork glass is
+  # Classic: reinforced, so it takes the reinforced quarter-tile thresholds.
+  parent: [ BaseDeltaPressureReinforcedGlassQuarter, BaseWindoorGeneric ]
   id: BaseClockworkWindoor
   name: clockwork windoor
   components:
@@ -37,7 +41,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 100
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -47,8 +51,6 @@
           SheetBrass1:
             min: 0
             max: 2
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
   - type: Construction
     graph: Windoor
     node: windoorClockwork
@@ -56,3 +58,9 @@
     - board
   - type: StaticPrice
     price: 240
+  # Classic: tagged like the modern windoor families so the wires panel security
+  # Classic: graph can navigate back to this node.
+  - type: Tag
+    tags:
+    - WindoorClockwork
+    - DoorRemoteWhitelist
