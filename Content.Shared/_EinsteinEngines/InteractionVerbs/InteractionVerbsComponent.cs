@@ -15,4 +15,11 @@ public sealed partial class InteractionVerbsComponent : Component
 {
     [DataField, AutoNetworkedField]
     public List<ProtoId<InteractionVerbPrototype>> AllowedVerbs = new();
+
+    /// <summary>
+    /// Determines if the AllowedVerbs is the ONLY verbs available for that
+    /// entity regardless of the verbs granted to the user via OwnInteractionVerbs..
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool EnforceAllowedVerbs = false;
 }

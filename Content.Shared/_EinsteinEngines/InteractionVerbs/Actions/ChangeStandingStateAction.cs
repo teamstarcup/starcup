@@ -15,6 +15,13 @@ public sealed partial class ChangeStandingStateAction : InteractionAction
     [DataField]
     public bool MakeStanding, MakeLaying;
 
+    public override bool IsAllowed(InteractionArgs args, InteractionVerbPrototype proto, VerbDependencies deps)
+    {
+        if (!deps.EntMan.TryGetComponent<CrawlerComponent>(args.Target, out _))
+            return false;
+        return base.IsAllowed(args, proto, deps);
+    }
+
     public override bool CanPerform(InteractionArgs args, InteractionVerbPrototype proto, bool isBefore, VerbDependencies deps)
     {
         if (!deps.EntMan.TryGetComponent<StandingStateComponent>(args.Target, out var state))

@@ -20,6 +20,7 @@ namespace Content.Shared._EinsteinEngines.InteractionVerbs;
 [Prototype("Interaction")]
 public sealed partial class InteractionVerbPrototype : IPrototype, IInheritingPrototype
 {
+    [Dependency] private IEntityManager _entityManager = default!;
     /// <inheritdoc />
     [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<InteractionVerbPrototype>))]
     public string[]? Parents { get; set; }
@@ -107,25 +108,6 @@ public sealed partial class InteractionVerbPrototype : IPrototype, IInheritingPr
     /// </summary>
     [DataField]
     public bool GlobalCooldown = false;
-
-    /// <summary>
-    ///     Arguments of the do-after shown if <see cref="Delay"/> is greater than zero.
-    ///     The user, target, needHand, event, and other required parameters are set up automatically when the do-after is created.
-    /// </summary>
-    [DataField]
-    public DoAfterArgs DoAfter = new DoAfterArgs()
-    {
-        User = EntityUid.Invalid,
-        NetUser = NetEntity.Invalid,
-        BreakOnDamage = true,
-        //BreakOnTargetMove = true,
-        //BreakOnUserMove = true,
-        BreakOnMove = true,
-        BreakOnWeightlessMove = true,
-        RequireCanInteract = false,
-        // Never used, but must be present because the field is non-nullable and will error during serialization if not set.
-        Event = new _EinsteinEngines.InteractionVerbs.Events.InteractionVerbDoAfterEvent(default, default!)
-    };
 
     [DataField]
     public RangeSpecifier Range = new();

@@ -67,12 +67,17 @@ public abstract partial class SharedInteractionVerbsSystem : EntitySystem
 
     private void OnGetOwnVerbs(Entity<OwnInteractionVerbsComponent> entity, ref GetVerbsEvent<InnateVerb> args)
     {
+        if (TryComp(args.Target, out InteractionVerbsComponent? comp))
+        {
+            if (comp.EnforceAllowedVerbs && comp.AllowedVerbs.Count > 0)
+                return;
+        }
         var allVerbs = entity.Comp.AllowedVerbs;
 
         var getVerbsEv = new GetInteractionVerbsEvent(allVerbs);
         RaiseLocalEvent(entity, ref getVerbsEv);
 
-        // Global verbs are added here because they should be allowed even on entities that do not define any interactions
+        // Global verbs are added here because  they should be allowed even on entities that do not define any interactions
         AddAll(allVerbs.Select(_protoMan.Index).Union(_globalPrototypes), args, () => new InnateVerb());
     }
 
@@ -141,7 +146,13 @@ public abstract partial class SharedInteractionVerbsSystem : EntitySystem
             return true;
         }
 
-        var doAfter = new DoAfterArgs(proto.DoAfter)
+        var doAfter =
+
+            new DoAfterArgs(EntityManager,
+                args.User,
+                delay,
+                new Events.InteractionVerbDoAfterEvent(proto.ID, args),
+                EntityUid.Invalid)
         {
             User = args.User,
             Target = args.Target,
@@ -151,9 +162,9 @@ public abstract partial class SharedInteractionVerbsSystem : EntitySystem
             NeedHand = proto.RequiresHands,
             RequireCanInteract = proto.RequiresCanAccess,
             Delay = delay,
-            Event = new Events.InteractionVerbDoAfterEvent(proto.ID, args)
+            Event = new Events.InteractionVerbDoAfterEvent(proto.ID, args),
+            DuplicateCondition = DuplicateConditions.SameEvent,
         };
-
         var isSuccess = _doAfters.TryStartDoAfter(doAfter);
         if (isSuccess)
             CreateVerbEffects(proto.EffectDelayed, Delayed, proto, args);

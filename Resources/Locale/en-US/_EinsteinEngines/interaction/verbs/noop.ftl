@@ -1,8 +1,8 @@
-interaction-LookAt-name = Stare
-interaction-LookAt-description = Stare into the void and see it stare back.
-interaction-LookAt-success-self-popup = You stare at {THE($target)}.
-interaction-LookAt-success-target-popup = You feel {THE($user)} staring at you...
-interaction-LookAt-success-others-popup = {THE($user)} stares at {THE($target)}.
+interaction-LookAt-name = Look At
+interaction-LookAt-description = Staaaaaaaaaaaaaaaaaaaaaare.
+interaction-LookAt-success-self-popup = You look at at {THE($target)}.
+interaction-LookAt-success-target-popup = You feel {THE($user)} looking at at you...
+interaction-LookAt-success-others-popup = {THE($user)} looks at at {THE($target)}.
 
 interaction-Hug-name = Hug
 interaction-Hug-description = A hug a day keeps the psychological horrors beyond your comprehension away.
@@ -23,6 +23,7 @@ interaction-KnockOn-success-target-popup = {THE($user)} knocks on you.
 interaction-KnockOn-success-others-popup = {THE($user)} knocks on {THE($target)}.
 
 interaction-Rattle-name = Rattle
+interaction-Rattle-description = Shake your co-worker in a panic.
 interaction-Rattle-success-self-popup = You rattle {THE($target)}.
 interaction-Rattle-success-target-popup = {THE($user)} rattles you.
 interaction-Rattle-success-others-popup = {THE($user)} rattles {THE($target)}.
