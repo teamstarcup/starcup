@@ -108,6 +108,7 @@
   parent:
   - SimpleMobBase
   - BaseMobAnimal
+  - SolutionVermin
   id: MobRat
   name: rat
   description: Slightly bigger and braver than your average mouse.
@@ -188,12 +189,6 @@
         prototype: MouseThirst
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 3
   - type: Butcherable
     spawned:
     - id: FoodMeatRat
@@ -222,8 +217,7 @@
         Blunt: 0.1
   - type: Vocal
     emoteSounds: SqueakSpeechEmotes
-    screamId: CreatureSqueak
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureSqueak
     wilhelmProbability: 0.001
   - type: TypingIndicator
     proto: rodentia
@@ -282,6 +276,7 @@
   parent:
   - SimpleMobBase
   - BaseMobAnimal
+  - SolutionVermin
   id: MobRatLarge
   name: large rat
   description: A particularly portly pest.
@@ -348,12 +343,6 @@
         prototype: MouseThirst
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 3
   - type: Butcherable
     spawned:
     - id: FoodMeatRat
@@ -382,8 +371,7 @@
         Blunt: 0.1
   - type: Vocal
     emoteSounds: SqueakSpeechEmotes
-    screamId: CreatureSqueak
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureSqueak
     wilhelmProbability: 0.001
   - type: TypingIndicator
     proto: rodentia
@@ -447,6 +435,7 @@
   parent:
   - SimpleMobBase
   - BaseMobAnimal
+  - SolutionVermin
   id: MobRatDire
   name: dire rat
   description: Aggressive, overgrown vent vermin, with teeth that look like they could shear steel.
@@ -513,12 +502,6 @@
         prototype: MouseThirst
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 3
   - type: Butcherable
     spawned:
     - id: FoodMeatRat
@@ -544,8 +527,7 @@
         Blunt: 0.1
   - type: Vocal
     emoteSounds: PossumSpeechEmotes
-    screamId: CreatureHiss
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureHiss
     wilhelmProbability: 0.001
   - type: TypingIndicator
     proto: rodentia
@@ -589,6 +571,7 @@
   parent:
   - SimpleMobBase
   - BaseMobAnimal
+  - SolutionVermin
   id: MobRatBristle
   name: bristle rat
   description: Also known as vent porcupines, they can fire their nasty quills at a distance.
@@ -655,12 +638,6 @@
         prototype: MouseThirst
   - type: Extractable
     grindableSolutionName: food
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 3
   - type: Butcherable
     spawned:
     - id: FoodMeatRat
@@ -686,8 +663,7 @@
         Blunt: 0.1
   - type: Vocal
     emoteSounds: SqueakSpeechEmotes
-    screamId: CreatureSqueak
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureSqueak
     wilhelmProbability: 0.001
   - type: TypingIndicator
     proto: rodentia
@@ -860,8 +836,7 @@
     allowedEmotes: ['CreatureSqueak', 'CreaturePurr', 'CreatureTrill', 'CreatureYawn', 'CreatureCough']
   - type: Vocal
     emoteSounds: HamsterSpeechEmotes
-    screamId: CreatureTrill
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureTrill
   - type: TypingIndicator
     proto: rodentia
 

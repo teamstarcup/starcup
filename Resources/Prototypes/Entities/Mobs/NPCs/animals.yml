@@ -87,8 +87,7 @@
   # begin starcup: give animals a voice
   - type: Vocal
     emoteSounds: BatSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: TypingIndicator
     proto: rodentia
   - type: AutoEmote
@@ -289,9 +288,22 @@
       reagents:
       - ReagentId: Blood
         Quantity: 100
-  - type: EggLayer
-    eggSpawn:
-    - id: FoodEgg
+  - type: EntityProducerAction
+    insufficientSatiationPopup: action-popup-lay-egg-too-hungry
+    userPopup: action-popup-lay-egg-user
+    othersPopup: action-popup-lay-egg-others
+  - type: SatiationProduction
+    delay: 60
+    delayMax: 120
+    satiationUsage: 60
+    minimumSatiation: 60
+    automaticForPlayers: false
+  - type: EntityProducer
+    table:
+      id: FoodEgg
+  - type: ActionGrant
+    actions:
+    - ActionAnimalLayEgg
   - type: ReplacementAccent
     accent: chicken
   - type: SentienceTarget
@@ -302,8 +314,7 @@
   # begin starcup: give animals a voice
   - type: Vocal
     emoteSounds: CluckSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - CluckAutoEmote
@@ -475,8 +486,7 @@
     allowedEmotes: ['BuzzNonSilicon']
   - type: Vocal
     emoteSounds: BeetleSpeechEmotes
-    screamId: BuzzNonSilicon
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureBuzz
   - type: ReplacementAccent
     accent: crab
   - type: FootstepModifier
@@ -495,11 +505,13 @@
   name: cockroach
   description: This station is just crawling with bugs.
   components:
-  - type: Sprite
-    sprite: Mobs/Animals/cockroach.rsi
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: cockroach
+  # begin starcup: make roaches use our sprite
+#  - type: Sprite
+#    sprite: Mobs/Animals/cockroach.rsi
+#    layers:
+#    - map: ["enum.DamageStateVisualLayers.Base"]
+#      state: cockroach
+  # end starcup
   - type: DamageStateVisuals
     states:
       Alive:
@@ -656,8 +668,7 @@
   - type: Vocal
     # begin starcup
     emoteSounds: MothroachSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
     wilhelmProbability: 0.001
   - type: AutoEmote
     emotes:
@@ -797,9 +808,22 @@
       reagents:
       - ReagentId: Blood
         Quantity: 100
-  - type: EggLayer
-    eggSpawn:
-    - id: FoodEgg
+  - type: EntityProducerAction
+    insufficientSatiationPopup: action-popup-lay-egg-too-hungry
+    userPopup: action-popup-lay-egg-user
+    othersPopup: action-popup-lay-egg-others
+  - type: SatiationProduction
+    delay: 60
+    delayMax: 120
+    satiationUsage: 60
+    minimumSatiation: 60
+    automaticForPlayers: false
+  - type: EntityProducer
+    table:
+      id: FoodEgg
+  - type: ActionGrant
+    actions:
+    - ActionAnimalLayEgg
   - type: ReplacementAccent
     accent: duck
   - type: SentienceTarget
@@ -814,8 +838,7 @@
     allowedEmotes: ['Flutter', 'CreatureQuack', 'CreatureLaugh', 'CreatureScream']
   - type: Vocal
     emoteSounds: DuckSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - QuackAutoEmote
@@ -1000,18 +1023,18 @@
   - type: SolutionManager
     solutions:
     - SolutionUdder
-  - type: Udder
-    minHungerThreshold: Peckish
-    reagentId: Milk
-    quantityPerUpdate: 25
-    growthDelay: 30
+  - type: HarvestableSolution
+    solutionName: udder
+    verbText: udder-system-verb-milk
+    emptyMessage: udder-system-dry
+    successMessage: udder-system-success
   - type: ToolRefinable
     refineResult:
     - id: FoodMeat
       amount: 5
   - type: Grammar
     attributes:
-      gender: female # Here because of UdderComponent
+      gender: female # Milk-producing animals are female.
   - type: InteractionPopup
     successChance: 0.7
     interactDelay: 2 # Avoids overlapping SFX due to spam - these SFX are a little longer than the typical 1 second.
@@ -1048,8 +1071,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureCough', 'CreatureMoo', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: CowSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - MooAutoEmote
@@ -1069,6 +1091,16 @@
       reagents:
       - ReagentId: Milk
         Quantity: 30
+  - type: SatiationProduction
+    producer: Parent
+    delay: 30
+    minimumSatiationThreshold: Peckish
+  # TODO: toxins from bloodstream !?
+  - type: SolutionProducer
+    generated:
+      reagents:
+      - ReagentId: Milk
+        Quantity: 25
 
 - type: entity
   name: crab
@@ -1157,8 +1189,7 @@
       collection: FootstepBug
   - type: Vocal
     emoteSounds: CrabSpeechEmotes
-    screamId: ClawSnap
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureSnap
   # end starcup
 
 - type: entity
@@ -1215,13 +1246,11 @@
     solutions:
     - SolutionUdderGoat
     - SolutionWool
-  - type: Udder
-    minHungerThreshold: Peckish
-    reagentId: MilkGoat
-    quantityPerUpdate: 25
-    growthDelay: 20
-  - type: Wooly
-    minHungerThreshold: Peckish
+  - type: HarvestableSolution
+    solutionName: udder
+    verbText: udder-system-verb-milk
+    emptyMessage: udder-system-dry
+    successMessage: udder-system-success
   - type: Edible
     destroyOnEmpty: false
     solution: wool
@@ -1236,7 +1265,7 @@
       amount: 4
   - type: Grammar
     attributes:
-      gender: female # Here because of UdderComponent
+      gender: female # Milk-producing animals are female.
   - type: Speech
     speechSounds: Goat
     speechVerb: Goat
@@ -1244,8 +1273,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureLaugh', 'CreatureCough', 'CreatureBleat', 'CreatureSneeze'] # starcup
   - type: Vocal
     emoteSounds: GoatSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - BleatAutoEmote
@@ -1292,6 +1320,13 @@
       reagents:
       - ReagentId: MilkGoat
         Quantity: 30
+  - type: SatiationProduction
+    delay: 20
+  - type: SolutionProducer
+    generated:
+      reagents:
+      - ReagentId: MilkGoat
+        Quantity: 25
 
 - type: entity
   parent: SolutionLarge
@@ -1300,6 +1335,14 @@
   components:
   - type: Solution
     id: wool
+  - type: SatiationProduction
+    producer: Parent
+    minimumSatiationThreshold: Peckish
+  - type: SolutionProducer
+    generated:
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 25
 
 - type: entity
   abstract: true
@@ -1368,13 +1411,11 @@
     solutions:
     - SolutionUdderSheep
     - SolutionWoolSheep
-  - type: Udder
-    reagentId: MilkSheep
-    quantityPerUpdate: 25
-    growthDelay: 20
-    minHungerThreshold: Peckish
-  - type: Wooly
-    minHungerThreshold: Peckish
+  - type: HarvestableSolution
+    solutionName: udder
+    verbText: udder-system-verb-milk
+    emptyMessage: udder-system-dry
+    successMessage: udder-system-success
   - type: Shearable
     targetSolutionName: wool
     shearedProductId: MaterialCotton1 # Cotton is spawned because there is no wool item.
@@ -1393,7 +1434,7 @@
       amount: 4
   - type: Grammar
     attributes:
-      gender: female # Here because of UdderComponent
+      gender: female # Milk-producing animals are female.
   - type: Speech
     speechSounds: Sheep
     speechVerb: Sheep
@@ -1436,6 +1477,13 @@
       reagents:
       - ReagentId: MilkSheep
         Quantity: 25
+  - type: SatiationProduction
+    delay: 20
+  - type: SolutionProducer
+    generated:
+      reagents:
+      - ReagentId: MilkSheep
+        Quantity: 25
 
 - type: entity
   parent: SolutionWool
@@ -1458,6 +1506,11 @@
       reagents:
       - ReagentId: SpaceDrugs
         Quantity: 25
+  - type: SolutionProducer
+    generated:
+      reagents:
+      - ReagentId: SpaceDrugs
+        Quantity: 25
 
 - type: entity
   parent: [ MobSheepBase, SimpleMobBase, BaseMobDestructible ]
@@ -1476,8 +1529,6 @@
     energy: 0.5
   - type: RgbLightController
     layers: [ 1 ]
-  - type: Wooly
-    reagentId: SpaceDrugs
   - type: Shearable
     targetSolutionName: wool
     shearedProductId: LeavesCannabisRainbow
@@ -1564,8 +1615,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureHonk', 'Flutter']
   - type: Vocal
     emoteSounds: GooseSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - HonkAutoEmote
@@ -1663,8 +1713,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureOok', 'CreatureGrowl', 'ChestBeating', 'CreatureCough', 'ThumpFistLoud']
   - type: Vocal
     emoteSounds: GorillaSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - OokAutoEmote
@@ -1734,8 +1783,7 @@
   - type: Vocal
     emoteSounds: KangarooSpeechEmotes # starcup
   # begin starcup
-    screamId: CreatureGrowl
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureGrowl
   - type: Speech
     speechVerb: LargeMob
     speechSounds: KangarooSpeechSounds
@@ -1824,9 +1872,8 @@
     - map: [ "mask" ]
     - map: [ "head" ]
   - type: Hands
-    activeHandId: Hand
-    hands:
-      Hand:
+    startingHands:
+      hand_left:
         location: Left
   - type: ItemOffer # starcup: item offering
   - type: ComplexInteraction
@@ -1908,8 +1955,7 @@
   # begin starcup
   - type: Vocal
     emoteSounds: MonkeySpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: Speech
     speechSounds: MonkeySpeechSounds
     speechVerb: Monkey
@@ -2285,8 +2331,7 @@
   # begin starcup: give animals a voice
   - type: Vocal
     emoteSounds: SqueakSpeechEmotes # starcup
-    screamId: CreatureSqueak
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureSqueak
     wilhelmProbability: 0.001
   - type: TypingIndicator
     proto: rodentia
@@ -2473,8 +2518,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureGrowl', 'CreatureHiss', 'CreatureWhimper', 'ThumpTailSoft', 'ThumpTailMany', 'ThumpTailLoud', 'TailWhip'] # Can't thump tail because no body component  # starcup: Hiss -> LizardHiss -> CreatureHiss
   - type: Vocal # Imp edit # no it's starcup again babyyy
     emoteSounds: LizardSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: ReplacementAccent
     accent: LizardAccent
   # end starcup
@@ -2592,8 +2636,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureWhimper', 'CreatureSqueak', 'ThumpTailSoft']
   - type: Vocal
     emoteSounds: LizardTinySpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: ReplacementAccent
     accent: GeckoAccent
   # end starcup
@@ -2676,8 +2719,7 @@
     allowedEmotes: ['CreatureWhimper', 'CreatureCroak']
   - type: Vocal
     emoteSounds: FrogSpeechEmotes
-    screamId: CreatureWhimper
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureWhimper
   - type: ReplacementAccent
     accent: FrogAccent
   - type: AutoEmote
@@ -2732,8 +2774,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureGrowl', 'CreatureSqueak', 'Flutter']
   - type: Vocal
     emoteSounds: ParrotSpeechEmotes # starcup
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: Tag
     tags:
     - CreatureEmotes
@@ -2849,8 +2890,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureChitter']
   - type: Vocal
     emoteSounds: PenguinSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: ReplacementAccent
     accent: PenguinAccent
   - type: AutoEmote
@@ -2992,8 +3032,7 @@
     allowedEmotes: ['CreatureHiss']
   - type: Vocal
     emoteSounds: SnakeSpeechEmotes
-    screamId: CreatureHiss
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureHiss
   - type: ReplacementAccent
     accent: xeno
   - type: Tag
@@ -3071,8 +3110,7 @@
   - type: Vocal
     emoteSounds: SpiderSpeechEmotes # starcup
     # begin starcup
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - ChitterAutoEmote
@@ -3092,6 +3130,7 @@
     useSound:
       path: /Audio/Items/crowbar.ogg
   - type: PassiveDamage # Slight passive regen. Assuming one damage type, comes out to about 4 damage a minute from base.yml.
+    intervalHaltOnDamageTaken: 5s
     allowedStates:
     - Alive
     damage:
@@ -3320,8 +3359,7 @@
     allowedEmotes: ['CreatureHiss', 'CreatureYawn', 'CreatureCough','CreatureChitter', 'CreatureGrowl', 'CreatureLaugh', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: PossumSpeechEmotes
-    screamId: CreatureHiss
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureHiss
   - type: ReplacementAccent
     accent: xeno
   - type: AutoEmote
@@ -3411,8 +3449,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureChitter', 'CreatureBark', 'CreatureWhimper', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: RaccoonSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: ReplacementAccent
     accent: RaccoonAccent
   - type: AutoEmote
@@ -3510,8 +3547,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureBark', 'CreatureWhimper', 'CreatureCough', 'Shake', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: FoxSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: ReplacementAccent
     accent: FoxAccent
   - type: AutoEmote
@@ -3540,8 +3576,7 @@
     allowedEmotes: ['CreatureBark', 'CreatureSnarl', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHowl', 'CreatureCough', 'CreatureSneeze', 'Snuffle', 'Pant', 'Shake']
   - type: Vocal
     emoteSounds: SmallDogSpeechEmotes
-    screamId: CreatureBark
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureBark
   - type: ReplacementAccent
     accent: DogAccent
   - type: Tag
@@ -3734,8 +3769,7 @@
     allowedEmotes: ['CreatureBark', 'CreatureWhimper', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze', 'Snuffle', 'Pant', 'Shake']
   - type: Vocal
     emoteSounds: PuppySpeechEmotes
-    screamId: CreatureBark
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureBark
   # end starcup
 
 - type: entity
@@ -3780,8 +3814,7 @@
     allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: CatSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - MeowAutoEmote
@@ -3918,7 +3951,7 @@
       types:
         Slash: 6
         Piercing: 6
-        Structural: 15
+        Structural: 6 # Secondary breaching
 
 - type: entity
   name: space cat
@@ -4007,8 +4040,7 @@
     allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureScream', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: CaracalSpeechEmotes
-    screamId: CreatureHiss
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureHiss
   # end starcup
 
 - type: entity
@@ -4057,8 +4089,7 @@
     allowedEmotes: ['CreatureTrill', 'CreaturePurr', 'CreatureMeow', 'CreatureGrowl', 'CreatureWhimper', 'CreatureHiss', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: KittenSpeechEmotes
-    screamId: CreatureWhimper
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureWhimper
   # end starcup
 
 - type: entity
@@ -4127,8 +4158,7 @@
     allowedEmotes: ['CreatureBark', 'CreatureScream', 'CreatureSqueak', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: SlothSpeechEmotes
-    screamId: CreatureSqueak
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureSqueak
   - type: AutoEmote
     emotes:
     - SqueakAutoEmote
@@ -4198,8 +4228,7 @@
     speechVerb: SmallMob
     allowedEmotes: ['CreatureSqueak', 'CreatureWhimper', 'CreatureLaugh', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
-    screamId: CreatureWhimper
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureWhimper
     emoteSounds: FerretSpeechEmotes
   # end starcup
 
@@ -4224,8 +4253,7 @@
     allowedEmotes: ['CreatureSqueak', 'CreaturePurr', 'CreatureTrill', 'CreatureYawn', 'CreatureCough', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: HamsterSpeechEmotes
-    screamId: CreatureTrill
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureTrill
   - type: TypingIndicator
     proto: rodentia
   # end starcup
@@ -4447,8 +4475,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureCough', 'CreatureOink', 'CreatureSneeze']
   - type: Vocal
     emoteSounds: PigSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - OinkAutoEmote
@@ -4521,9 +4548,8 @@
     speechSounds: NymphSpeechSounds
     allowedEmotes: ['CreatureChirp', 'CreatureLaugh', 'CreatureChitter', 'BuzzNonSilicon']
   - type: Vocal
-    emoteSounds: NymphSpeechEmotes # starcup
-    screamId: CreatureChirp
-    emoteAction: ActionEmitSound
+    emoteSounds: NymphSpeechEmotes
+    emoteAction: ActionCreatureChirp
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepBug
@@ -4626,8 +4652,7 @@
     allowedEmotes: ['CreatureScream', 'CreatureBark', 'CreatureCough']
   - type: Vocal
     emoteSounds: DeerSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: ReplacementAccent
     accent: DeerAccent
   - type: FootstepModifier

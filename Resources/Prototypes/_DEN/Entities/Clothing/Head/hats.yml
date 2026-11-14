@@ -1,3 +1,145 @@
+# SPDX-FileCopyrightText: 2024 SleepyScarecrow
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+#
+# "# NonDen" denotes unsorted Den ports taken from Aurora/World Server/Nuclear 14
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatFeatheredCap
+  name: feathered cap
+  description: A green cap, with a smooth, white feather placed within the rim. It makes you want to shoot a bow.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/featheredcap.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/featheredcap.rsi
+    clothingVisuals: # starcup - move up a bit to cover hair
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.025"
+
+- type: entity # NonDen - Aurora Station
+  abstract: true # starcup - used for recoloring
+  parent: ClothingHeadBase
+  id: ClothingHeadHatSunVisor
+  name: sun visor
+  description: A stylish visor intended for blocking out harsh sunlight.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/sun_visor.rsi # starcup - moved namespace
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/sun_visor.rsi # starcup - moved namespace
+
+- type: entity # NonDen - Aurora Station
+  abstract: true # starcup - used for recoloring
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretArtist
+  name: artist beret
+  description: A beret fit for an artist.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/beret_artist.rsi # starcup - moved namespace
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/beret_artist.rsi # starcup - moved namespace
+    clothingVisuals: # starcup - moved up a bit to cover hair
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.025"
+  - type: Tag
+    tags:
+    - ClothMade
+
+- type: entity # NonDen - Aurora Station
+  parent: ClothingHeadBase
+  id: ClothingHeadHatFlatcapBartenderNanotrasen
+  name: fancy blue flatcap # starcup - renamed bartender's nanotrasen flatcap
+  description: A lightweight cap purportedly favored by NanoTrasen bartenders. # starcup
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/flatcap_nt.rsi # starcup - moved namespace
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/flatcap_nt.rsi # starcup - moved namespace
+
+- type: entity # NonDen - Aurora Station
+  parent: ClothingHeadBase
+  id: ClothingHeadHatFlatcapBartenderIdris
+  name: fancy white flatcap # starcup - renamed bartender's idris incorporated flatcap
+  description: A lightweight cap purportedly favored by off-sector bartenders. # starcup
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/flatcap_idris.rsi # starcup - moved namespace
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/flatcap_idris.rsi # starcup - moved namespace
+
+- type: entity # NonDen - Aurora Station
+  parent: ClothingHeadBase
+  id: ClothingHeadHatFlatcapBartenderOrion
+  name: fancy brown flatcap # starcup - renamed bartender's orion express flatcap
+  description: A lightweight cap purportedly favored by off-sector bartenders. # starcup
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/flatcap_orion.rsi # starcup - moved namespace
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/flatcap_orion.rsi # starcup - moved namespace
+
+## BEANIES
+- type: entity
+  parent: [ ClothingHeadBase, TemperatureProtectionMinimal ] # starcup - replaced ClothingHeadWinterHatLightBase
+  id: ClothingHeadHatBeanie
+  name: white beanie # starcup
+  description: A head-hugging brimless winter cap. This one is tight.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/beanie.rsi # starcup - changed namespace
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/beanie.rsi # starcup - changed namespace
+  # - type: TemperatureProtection # DEN - Replace with winter hat protection
+  #   heatingCoefficient: 0.6
+  #   coolingCoefficient: 0.5
+
+- type: entity
+  abstract: true # starcup - used for recoloring
+  parent: [ ClothingHeadBase, TemperatureProtectionMinimal ] # starcup - replaced ClothingHeadWinterHatLightBase
+  id: ClothingHeadHatBeanieWinter
+  name: winter beanie
+  description: A head-hugging brimless winter cap. This one has flaps that cover the ears.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/beanie_winter.rsi # starcup - changed namespace
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/beanie_winter.rsi # starcup - changed namespace
+  # - type: TemperatureProtection # DEN - Replace with winter hat protection
+  #   coolingCoefficient: 0.5
+
+## RELIGIOUS
+
+- type: entity # NonDen - Aurora Station
+  parent: [ ClothingHeadBase, TemperatureProtectionMinimal ] # starcup - added temp protection
+  id: ClothingHeadHatHijabColorable
+  name: white hijab # starcup - specific color
+  description: Encompassing cloth headwear worn by some human cultures and religions.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/hijab.rsi # starcup - Den namespace
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/hijab.rsi # starcup - Den namespace
+
+- type: entity # NonDen - Aurora Station
+  parent: [ ClothingHeadBase, TemperatureProtectionMinimal ] # starcup - added temp protection
+  id: ClothingHeadHatTurbanColorable
+  name: turban
+  description: A sturdy cloth, worn around the head.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Head/Hats/turban.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Head/Hats/turban.rsi
+
 ## DINER
 
 - type: entity

@@ -83,9 +83,11 @@ loadout-group-lawyer-id-starcup = Lawyer ID
 loadout-group-librarian-outerclothing = Librarian outer clothing
 loadout-group-librarian-shoes = Librarian shoes
 
+loadout-group-mime-gloves = Mime gloves
 loadout-group-mime-shoes = Mime shoes
 
 loadout-group-musician-glasses = Musician glasses
+loadout-group-musician-gloves = Musician gloves
 loadout-group-musician-shoes = Musician shoes
 loadout-group-musician-head = Musician head
 
@@ -105,6 +107,7 @@ loadout-group-service-worker-glasses = Service worker eyewear
 # Wildcards
 loadout-group-prisoner-jumpsuit = Prisoner jumpsuit
 loadout-group-prisoner-outerclothing = Prisoner outer clothing
+loadout-group-prisoner-gloves = Prisoner gloves
 
 # Misc
 loadout-group-plushies = Plushies

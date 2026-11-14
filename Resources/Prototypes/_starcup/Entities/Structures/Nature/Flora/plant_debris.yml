@@ -57,13 +57,12 @@
         Quantity: 5
       - ReagentId: Resin
         Quantity: 2
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 2
+  - type: Solution
+    solution:
+      maxVol: 5
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 2
   - type: Fixtures
     fixtures:
       fix1:
@@ -113,13 +112,12 @@
         Quantity: 4
       - ReagentId: Resin
         Quantity: 3
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 1
+  - type: Solution
+    solution:
+      maxVol: 5
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 1
 
 - type: entity
   parent: PlantDebrisGreen

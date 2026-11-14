@@ -2,14 +2,14 @@
 - type: loadoutGroup
   # begin starcup: use parenting for our additions
   parent:
-#  - Plushies
+  - TrinketsGlorb
   - TrinketsBureaucracy
   - TrinketsLighter
   - TrinketsUtility
   - TrinketsTreat
   - TrinketsToy
-#  - TrinketsCosmetic
-#  - TrinketsTowel
+  - TrinketsPens
+  - TrinketsFigurine
   - TrinketsInstrument
   # end starcup
   id: Trinkets
@@ -86,6 +86,14 @@
   - GlassesJamjar
   - GlassesJensen
   # begin starcup: Mothees Surplus Goggles Bonanza
+  - RimlessGlasses
+  - RimlessGlassesBlue
+  - RimlessGlassesPink
+  - RimlessGlassesRed
+  - TintedGlasses
+  - TintedGlassesBlue
+  - TintedGlassesPink
+  - TintedGlassesRed
   - SurpBallisticY
   - SurpBallisticG
   - SurpBallisticB
@@ -361,6 +369,7 @@
   # end starcup
 
 - type: loadoutGroup
+  parent: [ Armwarmers ]
   id: PassengerGloves
   name: loadout-group-passenger-gloves
   minLimit: 0
@@ -379,7 +388,24 @@
   - WhiteGloves
   - BlackGloves
   - FingerlessGloves
+  - MittensPlain
+  - MittensBlack
+  - MittensBlue
+  - MittensBrown
+  - MittensGreen
+  - MittensLightBlue
+  - MittensOrange
+  - MittensPink
+  - MittensPurple
+  - MittensRed
+  - MittensWhite
+  - MittensYellow
   - EveningGloves
+  - CuffsSpiked
+  - CuffsWhite
+  - CuffsRed
+  - CuffsBlack
+  - CuffsBrown
   # End starcup additions
 
 - type: loadoutGroup
@@ -393,12 +419,12 @@
   - LeatherSatchel # starcup
 
 - type: loadoutGroup
-  parent: [ NeckFashionable ] # starcup
+  parent: [ NeckFashionable, Cloaks ] # starcup
   id: PassengerNeck
   name: loadout-group-passenger-neck
   minLimit: 0
   loadouts:
-  - Mantle
+#  - Mantle # starcup - added with Cloaks
   - PlushieSnakeWorn # starcup
 
 - type: loadoutGroup
@@ -450,6 +476,7 @@
 - type: loadoutGroup
   id: PassengerShoes
   name: loadout-group-passenger-shoes
+  minLimit: 0 # starcup
   loadouts:
   - BlackShoes
   - WinterBoots
@@ -474,6 +501,14 @@
   - BrownCowboyBoots
   - BlackCowboyBoots
   - WhiteCowboyBoots
+  - SocksPlain
+  - SocksBloodred
+  - SocksBee
+  - SocksWhite
+  - SocksPurple
+  - SocksRainbow
+  - SocksCoder
+  - GetaSandals
   # end starcup
 
 #- type: loadoutGroup
@@ -489,6 +524,11 @@
   loadouts:
   - BartenderHead
   - BartenderBowler
+  # begin starcup additions
+  - BrownFlatCapFancy
+  - WhiteFlatCapFancy
+  - BlueFlatCapFancy
+  # end starcup
 
 - type: loadoutGroup
   id: BartenderJumpsuit
@@ -837,6 +877,7 @@
 - type: loadoutGroup
   id: ClownShoes
   name: loadout-group-clown-shoes
+  minLimit: 0 # starcup
   loadouts:
   - ClownShoes
   - JesterShoes
@@ -870,6 +911,12 @@
   - MimeHead
   - MimeFrenchBeret
   - MimeCap
+  # begin starcup additions
+  - BlackBeretArtist
+  - RedBeretArtist
+  - BlackEarmuffs
+  - BlackHijab
+  # end starcup additions
 
 - type: loadoutGroup
   id: MimeMask
@@ -879,6 +926,7 @@
   - MimeMaskSad
   - MimeMaskScared
   - MimeMaskBlushing
+  - KitsuneMask
 
 - type: loadoutGroup
   id: MimeJumpsuit
@@ -977,6 +1025,7 @@
   - RockGuitar
   - AcousticGuitar
   - Banjo
+  - Lyre
   - Violin
   - Viola
   - Cello
@@ -1067,6 +1116,12 @@
   minLimit: 0
   loadouts:
   - CargoTechnicianHead
+  # begin starcup
+  - ToqueKhaki
+  - ToqueBlack
+  - ToqueBlackPin
+  - BrownFlatCapFancy
+  # end starcup
 
 - type: loadoutGroup
   id: CargoTechnicianJumpsuit
@@ -1101,6 +1156,7 @@
 - type: loadoutGroup
   id: CargoTechnicianShoes
   name: loadout-group-cargo-technician-shoes
+  minLimit: 0 # starcup
   loadouts:
   - BlackShoes
   - BrownShoes # starcup
@@ -1272,6 +1328,7 @@
 - type: loadoutGroup
   id: StationEngineerShoes
   name: loadout-group-station-engineer-shoes
+  minLimit: 0 # starcup
   loadouts:
   - WorkBoots
   - EngineeringWinterBoots
@@ -1460,6 +1517,7 @@
 - type: loadoutGroup
   id: ScientistShoes
   name: loadout-group-scientist-shoes
+  minLimit: 0 # starcup
   loadouts:
   - WhiteShoes
   - BlackShoes
@@ -1634,6 +1692,7 @@
 - type: loadoutGroup
   id: SecurityShoes
   name: loadout-group-security-shoes
+  minLimit: 0 # starcup
   loadouts:
   - JackBoots
   - SecurityWinterBoots

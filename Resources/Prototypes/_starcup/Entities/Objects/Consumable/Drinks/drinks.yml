@@ -1,3 +1,5 @@
+# Glasses
+
 - type: entity
   name: old fashioned glass
   description: For stronger, meaner drinks. Holds up to 20 units.
@@ -7,10 +9,9 @@
   - type: Sprite
     sprite: _starcup/Objects/Consumable/Drinks/glass_oldfashioned.rsi
   - type: Appearance
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 20
+  - type: Solution
+    solution:
+      maxVol: 20
   - type: SolutionContainerVisuals
     maxFillLevels: 6
     fillBaseName: fill-
@@ -20,16 +21,15 @@
 - type: entity
   name: cocktail glass
   description: For drinks meant to be slowly savored. Holds up to 15 units.
-  parent: [DrinkBaseMaterialGlass, DrinkBaseCup, DrinkVisualsFillOverlay]
+  parent: [DrinkBaseMaterialGlass, SolutionVeryTiny, DrinkBaseCup, DrinkVisualsFillOverlay]
   id: DrinkGlassCocktail
   components:
   - type: Sprite
     sprite: _starcup/Objects/Consumable/Drinks/glass_cocktail.rsi
   - type: Appearance
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 15
+  - type: Solution
+    solution:
+      maxVol: 15 # redundant, but leaving this here to be sure it always matches the description
   - type: SolutionContainerVisuals
     maxFillLevels: 3
     fillBaseName: fill-
@@ -45,10 +45,9 @@
   - type: Sprite
     sprite: Objects/Consumable/Drinks/glass_clear.rsi
   - type: Appearance
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
+  - type: Solution
+    solution:
+      maxVol: 30 # redundant, but leaving this here to be sure it always matches the description
   - type: SolutionContainerVisuals
     maxFillLevels: 9
     fillBaseName: fill-
@@ -70,36 +69,25 @@
       map: [ "enum.SolutionContainerLayers.Fill" ]
       visible: false
   - type: Appearance
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
+  - type: Solution
+    solution:
+      maxVol: 30 # redundant, but leaving this here to be sure it always matches the description
   - type: SolutionContainerVisuals
     maxFillLevels: 1
     fillBaseName: fill-
 
-- type: entity
-  parent: DrinkGlass
-  id: DrinkChocolateGlassImitation
-  suffix: imitation chocolate
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
+# Drinks
 
 - type: entity
   parent: DrinkGlass
   id: DrinkCherryLimeade
-  suffix: cherry limeade
+  suffix: Cherry Limeade
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: CherryLimeade
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: CherryLimeade
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/cherrylimeade.rsi
     state: icon
@@ -107,17 +95,183 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkEvilPrincess
-  suffix: evil princess
+  suffix: Evil Princess
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: EvilPrincess
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: EvilPrincess
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/evilprincess.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkCheermimeGlass
+  suffix: Cheermime
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Cheermime
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/cheermime.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkCourtJesterGlass
+  suffix: Court Jester
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: CourtJester
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/court_jester.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkDragonslayerGlass
+  suffix: Dragonslayer
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Dragonslayer
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/dragonslayer.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkDragonNaysayerGlass
+  suffix: Dragon Naysayer
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: DragonNaysayer
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/dragon_naysayer.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkHivemindGlass
+  suffix: Hivemind
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Hivemind
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/hivemind.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkHivemimeGlass
+  suffix: Hivemime
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Hivemime
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/hivemime.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkQuietConvertGlass
+  suffix: Quiet Convert
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: QuietConvert
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/quiet_convert.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkSugarslimeGlass
+  suffix: Sugarslime
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Sugarslime
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/sugarslime.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkSilentSisterGlass
+  suffix: Silent Sister
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: SilentSister
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/silent_sister.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkSiliconMorningCoffeeGlass
+  suffix: Silicon Morning Coffee
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: SiliconMorningCoffee
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/silicon_morning_coffee.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkSweetUnionGlass
+  suffix: Sweet Union
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: SweetUnion
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/sweet_union.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkY2KoffeeGlass
+  suffix: Y2Koffee
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Y2Koffee
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/y2koffee.rsi
     state: icon
 
 # Alcohol
@@ -126,13 +280,11 @@
   id: DrinkAdiosMotherfucker
   suffix: adios, motherfucker
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: AdiosMotherfucker
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: AdiosMotherfucker
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/adiosmotherfucker.rsi
     state: icon
@@ -142,13 +294,11 @@
   id: DrinkAfterburner
   suffix: afterburner
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: Afterburner
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Afterburner
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/afterburner.rsi
     state: icon
@@ -158,13 +308,11 @@
   id: DrinkAmbrosia
   suffix: ambrosia
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: Ambrosia
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Ambrosia
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/ambrosia.rsi
     state: icon
@@ -174,13 +322,11 @@
   id: DrinkAppletini
   suffix: appletini
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: Appletini
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Appletini
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/appletini.rsi
     state: icon
@@ -190,13 +336,11 @@
   id: DrinkAviation
   suffix: aviation
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: Aviation
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Aviation
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/aviation.rsi
     state: icon
@@ -206,13 +350,11 @@
   id: DrinkBlackVelvet
   suffix: black velvet
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: BlackVelvet
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: BlackVelvet
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/blackvelvet.rsi
     state: icon
@@ -222,13 +364,11 @@
   id: DrinkBlueLagoon
   suffix: Blue Lagoon
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: BlueLagoon
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: BlueLagoon
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/bluelagoon.rsi
     state: icon
@@ -238,13 +378,11 @@
   id: DrinkBrainScrambler
   suffix: brain scrambler
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: BrainScrambler
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: BrainScrambler
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/brainscrambler.rsi
     state: icon
@@ -254,13 +392,11 @@
   id: DrinkBramble
   suffix: bramble
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: Bramble
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Bramble
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/bramble.rsi
     state: icon
@@ -270,13 +406,11 @@
   id: DrinkBuzzedBunny
   suffix: buzzed bunny
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: BuzzedBunny
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: BuzzedBunny
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/buzzedbunny.rsi
     state: icon
@@ -286,13 +420,11 @@
   id: DrinkCactus
   suffix: cactus
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: Cactus
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Cactus
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/cactus.rsi
     state: icon
@@ -300,15 +432,13 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkCherryBomb
-  suffix: cherry bomb
+  suffix: Cherry Bomb
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: CherryBomb
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: CherryBomb
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/cherrybomb.rsi
     state: icon
@@ -316,15 +446,13 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkCorpseReviver
-  suffix: corpse reviver
+  suffix: Corpse Reviver
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: CorpseReviver
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: CorpseReviver
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/corpsereviver.rsi
     state: icon
@@ -332,15 +460,13 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkCryptid
-  suffix: cryptid
+  suffix: Cryptid
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: Cryptid
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Cryptid
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/cryptid.rsi
     state: icon
@@ -348,15 +474,13 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkEarthquake
-  suffix: earthquake
+  suffix: Earthquake
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: Earthquake
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Earthquake
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/earthquake.rsi
     state: icon
@@ -364,15 +488,13 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkEclipse
-  suffix: eclipse
+  suffix: Eclipse
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: Eclipse
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Eclipse
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/eclipse.rsi
     state: icon
@@ -380,15 +502,13 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkEmeraldBreeze
-  suffix: emerald breeze
+  suffix: Emerald Breeze
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: EmeraldBreeze
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: EmeraldBreeze
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/emeraldbreeze.rsi
     state: icon
@@ -396,15 +516,13 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkFaeriesCheer
-  suffix: faerie's cheer
+  suffix: Faerie's Cheer
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: FaeriesCheer
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: FaeriesCheer
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/faeriescheer.rsi
     state: icon
@@ -412,15 +530,13 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkGoblinsBrew
-  suffix: goblin's brew
+  suffix: Goblin's Brew
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: GoblinsBrew
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: GoblinsBrew
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/goblinsbrew.rsi
     state: icon
@@ -428,15 +544,13 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkMoonMist
-  suffix: moon mist
+  suffix: Moon Mist
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: MoonMist
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: MoonMist
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/moonmist.rsi
     state: icon
@@ -444,15 +558,13 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkMushburger
-  suffix: mushburger
+  suffix: Mushburger
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: Mushburger
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Mushburger
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/mushburger.rsi
     state: icon
@@ -460,15 +572,13 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkNecropolitan
-  suffix: necropolitan
+  suffix: Necropolitan
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: Necropolitan
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Necropolitan
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/necropolitan.rsi
     state: icon
@@ -476,15 +586,13 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkParadiseLost
-  suffix: paradise lost
+  suffix: Paradise Lost
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: ParadiseLost
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: ParadiseLost
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/paradiselost.rsi
     state: icon
@@ -492,15 +600,13 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkRainbowShooter
-  suffix: rainbow shooter
+  suffix: Rainbow Shooter
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: RainbowShooter
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: RainbowShooter
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/rainbowshooter.rsi
     state: icon
@@ -508,15 +614,13 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkRedDog
-  suffix: red dog
+  suffix: Red Dog
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: RedDog
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: RedDog
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/reddog.rsi
     state: icon
@@ -524,15 +628,13 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkRedEye
-  suffix: red eye
+  suffix: Red Eye
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: RedEye
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: RedEye
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/redeye.rsi
     state: icon
@@ -540,15 +642,13 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkSakuraMartini
-  suffix: sakura martini
+  suffix: Sakura Martini
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: SakuraMartini
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: SakuraMartini
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/sakuramartini.rsi
     state: icon
@@ -556,15 +656,154 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkSnakebite
-  suffix: snakebite
+  suffix: Snakebite
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: Snakebite
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Snakebite
+        Quantity: 30
   - type: Icon
     sprite: _starcup/Objects/Consumable/Drinks/snakebite.rsi
+    state: icon
+
+# Cocktails
+- type: entity
+  parent: DrinkGlass
+  id: DrinkBlackAndWhiteGlass
+  suffix: Black and White
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: BlackAndWhite
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/black_and_white.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkBlueSkiesAheadGlass
+  suffix: Blue Skies Ahead
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: BlueSkiesAhead
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/sakeglass_purple.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkBluescreenCuracaoGlass
+  suffix: Bluescreen Curaçao
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: BluescreenCuracao
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/bluescreen_curacao.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkCocoGeishaGlass
+  suffix: Coco Geisha
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: CocoGeisha
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/coco_geisha.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkMimeTaiGlass
+  suffix: Mime Tai
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: MimeTai
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/mime_tai.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkMKCGlass
+  suffix: M.K.C.
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: MKCDrink
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/MKC_drink.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkOriginalSinGlass
+  suffix: Original Sin
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: OriginalSin
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/sakeglass_blue.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkPinkSquirrelGlass
+  suffix: Pink Squirrel
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: PinkSquirrel
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/pink_squirrel.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkSilentNightGlass
+  suffix: Silent Night
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: SilentNight
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/silent_night.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkStarcupGlass
+  suffix: Cup of Stars
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Starcup
+        Quantity: 30
+  - type: Icon
+    sprite: _starcup/Objects/Consumable/Drinks/starcup_white.rsi
     state: icon

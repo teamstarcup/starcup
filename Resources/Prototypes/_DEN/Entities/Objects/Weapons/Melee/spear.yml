@@ -58,10 +58,9 @@
     slots:
     - back
     - suitStorage
-  - type: SolutionContainerManager
-    solutions:
-      melee:
-        maxVol: 1
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 1
   - type: MeleeChemicalInjector
     solution: melee
   - type: RefillableSolution

@@ -1,0 +1,18 @@
+- type: entity
+  parent: Cane
+  id: WalkingCane
+  name: walking cane
+  description: A cane of a more modern design. # starcup - removed comma
+  components: # DEN: Removed redundant components (Appearance, DamageOtherOnHit, UseDelay)
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Melee/cane.rsi
+    state: walkingcane
+  - type: Item
+    sprite: _Impstation/Objects/Weapons/Melee/cane.rsi # starcup - no visible changes here, but added the offset cane wielded inhands
+  - type: MeleeWeapon
+    wideAnimationRotation: 45
+    damage:
+      types:
+        Blunt: 4
+  - type: StaminaDamageOnHit
+    damage: 4

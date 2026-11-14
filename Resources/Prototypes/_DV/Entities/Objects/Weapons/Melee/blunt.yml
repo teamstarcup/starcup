@@ -11,14 +11,21 @@
   - type: MeleeWeapon
     attackRate: 1.25
     range: 1.5 # -starcup 0.25 range
+    wideAnimationRotation: -135 # starcup
     bluntStaminaDamageFactor: 2.0
     damage:
       types:
         Blunt: 2.5 # starcup -1.5 damage
     soundHit:
       path: /Audio/Effects/woodenclosetclose.ogg
-#  - type: MeleeStaminaCost # starcup (we don't have this)
-#    swing: 5 # starcup
+# begin starcup - remove component we don't have and allow to be worn on the belt
+#  - type: MeleeStaminaCost
+#    swing: 5
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Belt
+# end starcup
   - type: StaminaDamageOnHit
     damage: 10
   - type: Item

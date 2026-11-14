@@ -1,7 +1,7 @@
 - type: entity
-  name: NanoTrasen footsoldier
   parent: MobHuman
   id: MobNanotrasenFootsoldier
+  name: NanoTrasen footsoldier
   components:
     - type: NpcFactionMember
       factions:
@@ -16,6 +16,19 @@
         task: SimpleHumanoidHostileCompound
 
 - type: entity
-  name: NanoTrasen shuttle pilot
   parent: MobNanotrasenFootsoldier
   id: MobNanotrasenFootsoldierPilot
+  name: NanoTrasen shuttle pilot
+
+- type: entity
+  parent: MobSyndicateFootsoldier
+  id: MobInterdyneBiodrone
+  name: biodrone
+  description: Interdyne's very own homunculi, disposable footsoldiers with no higher cognitive functions than their programming.
+  components:
+  - type: Loadout
+    prototypes:
+    - InterdyneBiodroneGear
+  - type: NameIdentifier
+    group: Biodrone
+  - type: Unrevivable

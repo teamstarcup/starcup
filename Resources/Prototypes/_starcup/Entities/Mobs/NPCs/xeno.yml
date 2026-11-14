@@ -1,0 +1,55 @@
+- type: entity
+  parent: MobXenoDrone
+  id: MobXenoDroneBiomorph
+  name: biomorph
+  description: A seemingly tame exomorph bound by neural-dampening restraints. Hubris incarnate.
+  components:
+  - type: NameIdentifier
+    group: Biomorph
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _starcup/Mobs/Aliens/Xenos/Biomorphs/Drone/biodrone.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: alive
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      80: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      40: 0.5
+  - type: MeleeWeapon
+    altDisarm: false
+    angle: 0
+    soundHit:
+      collection: AlienClaw
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 5
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.5
+    baseSprintSpeed: 3.5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 450
+        mask:
+        - MobMask
+        layer:
+        - MobLayer

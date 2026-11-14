@@ -34,6 +34,7 @@
   maxLimit: 6
   loadouts:
   - AACTablet
+  - AACTablet_SAS
   - HandheldStationMap
   - NoviceMark
   - OffsetCane
@@ -43,11 +44,15 @@
   - OffsetCaneSyndie
   - Cane
   - WhiteCane
+  - WalkingCane
+  - Wheelchair
   - PillCanisterNeurozenium
   - PillCanisterSoretizone
   - PillCanisterCalmafluxine
   - PillCanisterEthyloxyephedrine
   - PillCanisterAgonolexyne
+  - PillCanisterMannitol
+  - PillCanisterIron
   - SmokingPipe
   - Joint
   - CigPackCandy
@@ -94,6 +99,45 @@
   - RibbonBlackNeck
   - BowBlackNeck
   - BowRedNeck
+  - RibbonTeddyRedNeck
+
+## Neckerchiefs
+- type: loadoutGroup
+  abstract: true
+  id: Neckerchiefs
+  loadouts:
+  - WhiteNeckerchief
+  - GrayNeckerchief
+  - DarkGreenNeckerchief
+  - BlackNeckerchief
+  - PinkNeckerchief
+  - BrownNeckerchief
+
+## Chokers & Collars
+- type: loadoutGroup
+  abstract: true
+  id: Chokers
+  loadouts:
+  - BellCollar
+  - SpikedCollar
+  - BloodredChoker
+  - BlackChoker
+  - WhiteChoker
+  - BlueChoker
+  - PinkChoker
+
+## Cloaks & Mantles
+- type: loadoutGroup
+  abstract: true
+  id: Cloaks
+  loadouts:
+  - Mantle
+  - UnathiMantle
+  - GrayCloak
+  - RedHoodCloak
+  - WhiteCloak
+  - BlackCloak
+  - OldWrap
 
 ## Hair Ribbons & Bows
 - type: loadoutGroup
@@ -118,6 +162,24 @@
   - HairpinCloverWorn
   - HairpinButterflyWorn
   - HairpinMagneticWorn
+
+## Armwarmers
+- type: loadoutGroup
+  abstract: true
+  id: Armwarmers
+  loadouts:
+  - ArmWarmersFingerlessPurple
+  - ArmWarmersFingerlessStriped
+  - ArmWarmersFingerlessBloodred
+  - ArmWarmersFingerlessCoder
+  - ArmWarmersFingerlessWhite
+  - ArmWarmersPurple
+  - ArmWarmersRainbow
+  - ArmWarmersCoder
+  - ArmWarmersBee
+  - ArmWarmersPlain
+  - ArmWarmersStriped
+  - ArmWarmersBloodred
 
   ## Plushies
 - type: loadoutGroup
@@ -167,8 +229,21 @@
   - PlushieVox
   - PlushieVulp
   - PlushieRouny
+  - PlushieSpaceSheep
+  - PlushieSheep
   - PlushieXeno
   - PlushieZetan
+  - PlushieDollHair
+  - PlushieDoll
+  - PlushieTeddyBear
+  - PlushieTeddyBearPlaid
+  - PlushieTeddyBearLilac
+  - PlushieTeddyBearSeafoam
+  - PlushieTeddyBearHickory
+  - PlushieTeddyBearCandy
+  - PlushieTeddyBearSnow
+  - PlushieTeddyBearDarkGray
+  - PlushieTeddyBearPlaidRed
 
 ## Trinkets
 - type: loadoutGroup
@@ -192,6 +267,18 @@
 
 - type: loadoutGroup
   abstract: true
+  id: TrinketsPens
+  loadouts:
+  - DesignerPenTrans
+  - DesignerPenRed
+  - DesignerPenPink
+  - DesignerPenOrange
+  - DesignerPenGold
+  - DesignerPenGreen
+  - DesignerPenBlue
+
+- type: loadoutGroup
+  abstract: true
   id: TrinketsLighter
   loadouts:
   - CybersunFlippo
@@ -202,11 +289,48 @@
 
 - type: loadoutGroup
   abstract: true
+  id: TrinketsGlorb
+  loadouts:
+  - GlorbWhite
+  - GlorbRed
+  - GlorbVermilion
+  - GlorbOrange
+  - GlorbAmber
+  - GlorbYellow
+  - GlorbLime
+  - GlorbGreen
+  - GlorbMint
+  - GlorbCyan
+  - GlorbSkyBlue
+  - GlorbAzure
+  - GlorbBlue
+  - GlorbIndigo
+  - GlorbViolet
+  - GlorbPurple
+  - GlorbMagenta
+  - GlorbHotPink
+  - GlorbCrimson
+  - GlorbCoolWhite
+  - GlorbWarmWhite
+  - GlorbVoid
+
+- type: loadoutGroup
+  abstract: true
   id: TrinketsUtility
   loadouts:
   - TapeRecorder
   - BarFlask
+  - LithiumFlask
+  - WaterBottle
   - Pillow
+  - HandheldMirrorGray
+  - HandheldMirrorGold
+  - HairComb
+  - TailorsKnife
+  - UtilityKnife
+  - HandLabeler
+  - PersonalAI
+  - Whistle
 
 - type: loadoutGroup
   abstract: true
@@ -217,6 +341,11 @@
   - LollipopButterscotch
   - LollipopSourApple
   - LollipopStrawberry
+  - CandyBucket
+  - CandyBucketPailCat
+  - CandyBucketPailClown
+  - CandyBucketPailGhost
+  - CandyBucketPailSkeleton
 
 - type: loadoutGroup
   abstract: true
@@ -226,19 +355,68 @@
   - CardBoxSyndicate
   - CardBoxBlack
   - BookRandomStory
+  - PrizeBall
+  - CrayonWhite
+  - CrayonBlack
+  - CrayonRed
+  - CrayonOrange
+  - CrayonYellow
+  - CrayonGreen
+  - CrayonBlue
+  - CrayonPurple
+  - DiceBag
+  - Coin
+  - NewtonCradle
+  - TennisBall
+  - Football
+
+- type: loadoutGroup
+  abstract: true
+  id: TrinketsFigurine
+  loadouts:
+  - FigurineNukie
+  - FigurineWizard
+  - FigurineWizardFake
+  - FigurineSpaceDragon
+  - FigurineQueen
+  - FigurineRatKing
+  - FigurineRatServant
+  - FigurineMouse
+  - FigurineSlime
+  - FigurineRipley
+  - FigurineFireRipley
+  - FigurineDeathRipley
+  - FigurineDurand
+  - FigurineMarauder
+  - FigurineSeraph
+  - FigurineMauler
+  - FigurineOdysseus
+  - FigurinePhazon
+  - FigurineReticence
+  - FigurineClown
+  - FigurineMime
 
 - type: loadoutGroup
   abstract: true
   id: TrinketsInstrument
   loadouts:
   - AcousticGuitar
+  - Banjo
+  - Lyre
   - Flute
+  - Clarinet
+  - Recorder
   - PanFlute
   - Ocarina
+  - Seashell
   - Harmonica
+  - Trumpet
   - MusicBox
   - Kalimba
   - Woodblock
+  - Violin
+  - Viola
+  - Microphone
 
 ## Cosmetics (primarily worn trinkets)
 - type: loadoutGroup
@@ -279,6 +457,7 @@
   - BowRed
   - RibbonLargeBlack
   - RibbonLargeRed
+  - RibbonTeddyRed
 
 - type: loadoutGroup
   abstract: true

@@ -18,13 +18,12 @@
     available:
     - enum.DamageStateVisualLayers.Base:
         chalkheartcolorable: Pastel
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 2 # starcup - allows tiny injections
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 1
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 2 # starcup - allows tiny injections
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 1
   - type: RandomMetadata
     descriptionSegments: [ConversationHeartDescriptions]
   - type: Tag
@@ -54,7 +53,7 @@
 
 - type: entity
   name: chocolate heart
-  parent: FoodInjectableBase # starcup - foodmealbase -> foodinjectablebase, these aren't big hearty meals
+  parent: [ SolutionTiny, FoodInjectableBase ] # starcup - SolutionTiny, foodmealbase -> foodinjectablebase
   id: FoodChocolateHeart
   description: A mass-produced chocolate heart. How sweet.
   components:
@@ -64,17 +63,16 @@
     sprite: _Impstation/Objects/Consumable/Food/candy.rsi
     layers:
     - state: chocolateheart
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 2
-        - ReagentId: CocoaPowder
-          Quantity: 2
-        - ReagentId: Theobromine
-          Quantity: 1
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 10 # starcup - x2
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 4 # starcup - x2
+      - ReagentId: CocoaPowder
+        Quantity: 4 # starcup - x2
+      - ReagentId: Theobromine
+        Quantity: 2 # starcup - x2
   - type: Tag
     tags:
     - FoodSnack
@@ -150,21 +148,20 @@
     sprite: _Impstation/Objects/Consumable/Food/candy.rsi
     layers:
     - state: homemadechocolate
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 15 # extra space for poison purposes
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 2
-        - ReagentId: CocoaPowder
-          Quantity: 2
-        - ReagentId: Theobromine
-          Quantity: 1
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 20 # extra space for poison purposes # starcup - +10u
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 4 # starcup - x2
+      - ReagentId: CocoaPowder
+        Quantity: 4 # starcup - x2
+      - ReagentId: Theobromine
+        Quantity: 2 # starcup - x2
 
 - type: entity
   name: berry macaron
-  parent: FoodInjectableBase # starcup - foodmealbase -> foodinjectablebase, these aren't big hearty meals
+  parent: [SolutionVeryTiny, FoodInjectableBase] # starcup - SolutionVeryTiny, foodmealbase -> foodinjectablebase
   id: FoodMacaronBerry
   description: Complex to craft, beautiful to look at, why would you ruin this masterpiece by eating it? A perfect romantic treat. # starcup - macaroons aren't underwhelming!!
   components:
@@ -173,15 +170,14 @@
   - type: Sprite
     sprite: _Impstation/Objects/Consumable/Food/candy.rsi
     state: macaronberry
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 7 # starcup - for pumping in extra flavor
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 3
-        - ReagentId: JuiceBerry
-          Quantity: 2
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+#      maxVol: 7 # starcup - max matches donuts
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 4 # starcup +1u
+      - ReagentId: JuiceBerry
+        Quantity: 3 # starcup +1u
   - type: Tag
     tags:
     - FoodSnack
@@ -195,15 +191,14 @@
   components:
   - type: Sprite
     state: macaroncherry
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 7 # starcup - for pumping in extra flavor
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 3
-        - ReagentId: JuiceCherry
-          Quantity: 2
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+#      maxVol: 7 # starcup - max matches donuts
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 4 # starcup +1u
+      - ReagentId: JuiceCherry
+        Quantity: 3 # starcup +1u
 
 - type: entity
   name: cotton macaron
@@ -215,15 +210,14 @@
     requiresSpecialDigestion: true
   - type: Sprite
     state: macaroncotton
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 7 # starcup - for pumping in extra flavor
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 3
-        - ReagentId: Fiber
-          Quantity: 2
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+#      maxVol: 7 # starcup - max matches donuts
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 4 # starcup +1u
+      - ReagentId: Fiber
+        Quantity: 3 # starcup +1u
   - type: Tag
     tags:
     - FoodSnack
@@ -236,15 +230,14 @@
   components:
   - type: Sprite
     state: macaronlemon
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 7 # starcup - for pumping in extra flavor
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 3
-        - ReagentId: JuiceLemon
-          Quantity: 2
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+#      maxVol: 7 # starcup - max matches donuts
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 4 # starcup +1u
+      - ReagentId: JuiceLemon
+        Quantity: 3 # starcup +1u
 
 - type: entity
   name: mimana macaron
@@ -254,15 +247,14 @@
   components:
   - type: Sprite
     state: macaronmimana
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 7 # starcup - for pumping in extra nothingness
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 3
-        - ReagentId: MuteToxin
-          Quantity: 2
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+#      maxVol: 7 # starcup - max matches donuts
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 4 # starcup +1u
+      - ReagentId: MuteToxin
+        Quantity: 3 # starcup +1u
 
 - type: entity
   name: box of macarons

@@ -71,6 +71,14 @@
       steps:
       - tool: Slicing
         doAfter: 3
+    # begin starcup
+    - to: WallpaperBlackCornerOuter
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - tool: Slicing
+        doAfter: 3
+    # end starcup
   - node: WallpaperBeach
     entity: WallpaperBeach
     edges:
@@ -80,6 +88,14 @@
       steps:
       - tool: Slicing
         doAfter: 3
+    # begin starcup
+    - to: WallpaperBeachCornerOuter
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - tool: Slicing
+        doAfter: 3
+    # end starcup
   - node: WallpaperFish
     entity: WallpaperFish
     edges:
@@ -89,6 +105,14 @@
       steps:
       - tool: Slicing
         doAfter: 3
+    # begin starcup
+    - to: WallpaperFishCornerOuter
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - tool: Slicing
+        doAfter: 3
+    # end starcup
   - node: WallpaperGreen
     entity: WallpaperGreen
     edges:
@@ -98,6 +122,14 @@
       steps:
       - tool: Slicing
         doAfter: 3
+    # begin starcup
+    - to: WallpaperGreenCornerOuter
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - tool: Slicing
+        doAfter: 3
+    # end starcup
   - node: WallpaperPurple
     entity: WallpaperPurple
     edges:
@@ -107,6 +139,14 @@
       steps:
       - tool: Slicing
         doAfter: 3
+    # begin starcup
+    - to: WallpaperPurpleCornerOuter
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - tool: Slicing
+        doAfter: 3
+    # end starcup
   - node: WallpaperRainbow
     entity: WallpaperRainbow
     edges:
@@ -116,6 +156,14 @@
       steps:
       - tool: Slicing
         doAfter: 3
+    # begin starcup
+    - to: WallpaperRainbowCornerOuter
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - tool: Slicing
+        doAfter: 3
+    # end starcup
   - node: WallpaperRed
     entity: WallpaperRed
     edges:
@@ -125,6 +173,14 @@
       steps:
       - tool: Slicing
         doAfter: 3
+    # begin starcup
+    - to: WallpaperRedCornerOuter
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - tool: Slicing
+        doAfter: 3
+    # end starcup
   - node: WallpaperSka
     entity: WallpaperSka
     edges:
@@ -134,6 +190,14 @@
       steps:
       - tool: Slicing
         doAfter: 3
+    # begin starcup
+    - to: WallpaperSkaCornerOuter
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - tool: Slicing
+        doAfter: 3
+    # end starcup
   - node: WallpaperFishCorner
     entity: WallpaperFishCorner
   - node: WallpaperBeachCorner
@@ -150,6 +214,24 @@
     entity: WallpaperRedCorner
   - node: WallpaperSkaCorner
     entity: WallpaperSkaCorner
+  # begin starcup: add outer corners
+  - node: WallpaperFishCornerOuter
+    entity: WallpaperFishCornerOuter
+  - node: WallpaperBeachCornerOuter
+    entity: WallpaperBeachCornerOuter
+  - node: WallpaperBlackCornerOuter
+    entity: WallpaperBlackCornerOuter
+  - node: WallpaperGreenCornerOuter
+    entity: WallpaperGreenCornerOuter
+  - node: WallpaperPurpleCornerOuter
+    entity: WallpaperPurpleCornerOuter
+  - node: WallpaperRainbowCornerOuter
+    entity: WallpaperRainbowCornerOuter
+  - node: WallpaperRedCornerOuter
+    entity: WallpaperRedCornerOuter
+  - node: WallpaperSkaCornerOuter
+    entity: WallpaperSkaCornerOuter
+  # end starcup
 
 - type: constructionGraph
   id: WallDeco

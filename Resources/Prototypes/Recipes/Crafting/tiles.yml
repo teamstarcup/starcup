@@ -23,18 +23,6 @@
 
 - type: construction
   parent: BaseTile
-  id: TileBrassFilled
-  graph: TilesBrass
-  targetNode: filledPlate
-
-- type: construction
-  parent: BaseTile
-  id: TileBrassReebe
-  graph: TilesBrass
-  targetNode: reebe
-
-- type: construction
-  parent: BaseTile
   id: TileWhite
   graph: TileWhite
   targetNode: whitetile
@@ -57,3 +45,16 @@
   graph: TileWoodLarge
   targetNode: woodtilelarge
 # endregion Tiles
+
+# Classic: restored crafting recipes below.
+- type: construction
+  parent: BaseTile
+  id: TileBrassFilled
+  graph: TilesBrass
+  targetNode: filledPlate
+
+- type: construction
+  parent: BaseTile
+  id: TileBrassReebe
+  graph: TilesBrass
+  targetNode: reebe

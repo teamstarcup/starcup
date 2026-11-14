@@ -1,16 +1,14 @@
 - type: entity
-  parent: [DrinkVisualsOpenable, DrinkBottlePlasticBaseFull]
+  parent: [DrinkVisualsOpenable, CustomDrinkJugFilled]
   id: DrinkCoffeeJugDecaf
   name: decaf coffee jug
   description: Wake up juice, of the heated kind.
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 300
-        reagents:
-        - ReagentId: CoffeeDecaf
-          Quantity: 300
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: CoffeeDecaf
+        Quantity: 240
   - type: Label
     localizedLabel: reagent-name-coffee-decaf
 
@@ -20,12 +18,11 @@
   name: Sol Dry bottle
   description: Sweet ginger soda from outer space!
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: SolDry
-          Quantity: 100
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: SolDry
+        Quantity: 120
   - type: Label
     localizedLabel: reagent-name-sol-dry
   - type: Sprite

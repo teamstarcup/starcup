@@ -11,6 +11,18 @@
   - type: Sprite
     sprite: _DV/Objects/Misc/stamps.rsi
     state: stamp-admin-assistant
+  - type: Item
+    size: Tiny
+    sprite: Objects/Misc/stamps.rsi
+    inhandVisuals:
+      left:
+      - state: stamp-inhand-left
+      - state: handle-inhand-left
+        color: "#4191f2"
+      right:
+      - state: stamp-inhand-right
+      - state: handle-inhand-right
+        color: "#4191f2"
 
 - type: entity
   parent: RubberStampHop
@@ -25,6 +37,18 @@
   - type: Sprite
     sprite: _starcup/Objects/Misc/stamps.rsi
     state: stamp-hop-syndi
+  - type: Item
+    size: Tiny
+    sprite: Objects/Misc/stamps.rsi
+    inhandVisuals:
+      left:
+      - state: stamp-inhand-left
+      - state: handle-inhand-left
+        color: "#D363A7"
+      right:
+      - state: stamp-inhand-right
+      - state: handle-inhand-right
+        color: "#D363A7"
 
 - type: entity
   parent: RubberStampCaptain
@@ -39,6 +63,18 @@
   - type: Sprite
     sprite: _starcup/Objects/Misc/stamps.rsi
     state: stamp-cap-syndi
+  - type: Item
+    size: Tiny
+    sprite: Objects/Misc/stamps.rsi
+    inhandVisuals:
+      left:
+      - state: stamp-inhand-left
+      - state: handle-inhand-left
+        color: "#A81962"
+      right:
+      - state: stamp-inhand-right
+      - state: handle-inhand-right
+        color: "#A81962"
 
 - type: entity
   name: NanoTrasen rubber stamp
@@ -52,6 +88,18 @@
     stampState: "paper_stamp-admin-assistant"
   - type: Sprite
     state: stamp-cap
+  - type: Item
+    size: Tiny
+    sprite: Objects/Misc/stamps.rsi
+    inhandVisuals:
+      left:
+      - state: stamp-inhand-left
+      - state: handle-inhand-left
+        color: "#004385"
+      right:
+      - state: stamp-inhand-right
+      - state: handle-inhand-right
+        color: "#004385"
 
 - type: entity
   name: SyndComm rubber stamp
@@ -66,6 +114,18 @@
   - type: Sprite
     sprite: _starcup/Objects/Misc/stamps.rsi
     state: stamp-syndcomm
+  - type: Item
+    size: Tiny
+    sprite: Objects/Misc/stamps.rsi
+    inhandVisuals:
+      left:
+      - state: stamp-inhand-left
+      - state: handle-inhand-left
+        color: "#664400"
+      right:
+      - state: stamp-inhand-right
+      - state: handle-inhand-right
+        color: "#664400"
 
 - type: entity
   name: heart rubber stamp
@@ -81,3 +141,15 @@
   - type: Sprite
     sprite: _starcup/Objects/Misc/stamps.rsi
     state: stamp-heart
+  - type: Item
+    size: Tiny
+    sprite: Objects/Misc/stamps.rsi
+    inhandVisuals:
+      left:
+      - state: stamp-inhand-left
+      - state: handle-inhand-left
+        color: "#fc8cb8"
+      right:
+      - state: stamp-inhand-right
+      - state: handle-inhand-right
+        color: "#fc8cb8"

@@ -8,3 +8,33 @@
     sprite: _DEN/Clothing/Hands/Gloves/evening_gloves.rsi
   - type: Clothing
     sprite: _DEN/Clothing/Hands/Gloves/evening_gloves.rsi
+
+- type: entity
+  parent: [ ClothingHandsGlovesSyntheticBase, TemperatureProtectionMinimal ] # starcup - added TemperatureProtectionMinimal
+  id: ClothingHandsGlovesMittens
+  name: plain mittens # starcup - added "plain"
+  description: The other kind of insulating glove. Will protect your hands from the shock of freezing cold, but not much else.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Hands/Gloves/mittens.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Hands/Gloves/mittens.rsi
+  - type: Fiber
+    fiberColor: fibers-grey
+#  - type: TemperatureProtection # starcup - outdated
+#    coolingCoefficient: 0.8
+
+- type: entity
+  parent: ClothingHandsGlovesMittens
+  id: ClothingHandsGlovesMittensColor
+# begin starcup
+  name: white mittens
+#  suffix: colorable
+# end starcup
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Hands/Gloves/mittens_color.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Hands/Gloves/mittens_color.rsi
+  - type: Fiber
+    fiberColor: fibers-white

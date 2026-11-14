@@ -4,12 +4,11 @@
   name: jaegermister bottle
   description: A bittersweet alcohol that hasn't changed its recipe in nearly a thousand years.
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Jaegermister
-          Quantity: 100
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: Jaegermister
+        Quantity: 120 # starcup: adjusted to new upstream values
   - type: Label
     localizedLabel: reagent-name-jaegermister
   - type: Sprite

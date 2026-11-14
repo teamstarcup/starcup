@@ -69,15 +69,14 @@
     factions:
       - SimpleHostile
   - type: Injurable
-    damageContainer: StructuralInorganic
+    damageContainer: StructuralBiological
   # begin starcup
   - type: Speech
     speechSounds: OreCrabSpeechSounds
     allowedEmotes: ['CreatureChitter', 'ClawSnap']
   - type: Vocal
     emoteSounds: OreCrabSpeechEmotes
-    screamId: ClawSnap
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureSnap
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepBug

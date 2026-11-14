@@ -10,40 +10,40 @@ marking-VulpEarFade = Vulpekin (fade)
 
 marking-VulpEarSharp-vulp = Vulpekin ears (base)
 marking-VulpEarSharp-vulp-sharp = Vulpekin ears (sharp)
-marking-VulpEarSharp = Vulpekin (sharp)
+# marking-VulpEarSharp = Vulpekin (sharp)
 
-marking-VulpEarJackal-jackal = Jackal ears (base)
+# marking-VulpEarJackal-jackal = Jackal ears (base)
 marking-VulpEarJackal-jackal-inner = Jackal ears (inner)
-marking-VulpEarJackal = Vulpekin Jackal
+# marking-VulpEarJackal = Vulpekin Jackal
 
-marking-VulpEarTerrier-terrier = Terrier ears (base)
-marking-VulpEarTerrier-terrier-inner = Terrier ears (inner)
-marking-VulpEarTerrier = Vulpekin Terrier
+# marking-VulpEarTerrier-terrier = Terrier ears (base)
+# marking-VulpEarTerrier-terrier-inner = Terrier ears (inner)
+# marking-VulpEarTerrier = Vulpekin Terrier
 
 marking-VulpEarWolf-wolf = Wolf ears (base)
 marking-VulpEarWolf-wolf-inner = Wolf ears (inner)
 marking-VulpEarWolf = Vulpekin Wolf
 
-marking-VulpEarFennec-fennec = Fennec ears (base)
-marking-VulpEarFennec-fennec-inner = Fennec ears (inner)
+# marking-VulpEarFennec-fennec = Fennec ears (base)
+# marking-VulpEarFennec-fennec-inner = Fennec ears (inner)
 marking-VulpEarFennec = Vulpekin Fennec
 
-marking-VulpEarFox-fox = Fox ears
+# marking-VulpEarFox-fox = Fox ears
 marking-VulpEarFox = Vulpekin Fox
 
-marking-VulpEarOtie-otie = Otie ears (base)
-marking-VulpEarOtie-otie-inner = Otie ears (inner)
-marking-VulpEarOtie = Vulpekin Otie
+# marking-VulpEarOtie-otie = Otie ears (base)
+# marking-VulpEarOtie-otie-inner = Otie ears (inner)
+# marking-VulpEarOtie = Vulpekin Otie
 
 marking-VulpEarTajaran-msai = Tajaran ears (base)
 marking-VulpEarTajaran-msai-inner = Tajaran ears (inner)
 marking-VulpEarTajaran = Vulpekin Tajaran
 
-marking-VulpEarShock-shock = Shock ears
-marking-VulpEarShock = Vulpekin Shock
+# marking-VulpEarShock-shock = Shock ears
+# marking-VulpEarShock = Vulpekin Shock
 
-marking-VulpEarCoyote-coyote = Coyote ears
-marking-VulpEarCoyote = Vulpekin Coyote
+# marking-VulpEarCoyote-coyote = Coyote ears
+# marking-VulpEarCoyote = Vulpekin Coyote
 
 marking-VulpEarDalmatian-dalmatian = Dalmatian ears
 marking-VulpEarDalmatian = Vulpekin Dalmatian
@@ -55,7 +55,7 @@ marking-VulpSnoutAlt = Vulpekin Muzzle 2
 
 marking-VulpSnout-muzzle = Muzzle
 marking-VulpSnout-nose = Nose
-marking-VulpSnout = Vulpekin Muzzle
+# marking-VulpSnout = Vulpekin Muzzle
 
 marking-VulpSnoutSharp-muzzle_sharp = Muzzle
 marking-VulpSnoutSharp-nose = Nose
@@ -66,24 +66,24 @@ marking-VulpSnoutFade-nose = Nose
 marking-VulpSnoutFade = Vulpekin Muzzle (fade)
 
 marking-VulpSnoutNose-nose = Nose
-marking-VulpSnoutNose = Vulpekin Nose
+# marking-VulpSnoutNose = Vulpekin Nose
 
-marking-VulpSnoutMask-mask = Mask
+# marking-VulpSnoutMask-mask = Mask
 marking-VulpSnoutMask-nose = Nose
-marking-VulpSnoutMask = Vulpekin Mask
+# marking-VulpSnoutMask = Vulpekin Mask
 
-marking-VulpSnoutVulpine-vulpine = Vulpine (base)
+# marking-VulpSnoutVulpine-vulpine = Vulpine (base)
 marking-VulpSnoutVulpine-vulpine-lines = Vulpine (lines)
-marking-VulpSnoutVulpine = Vulpekin Vulpine
+# marking-VulpSnoutVulpine = Vulpekin Vulpine
 
 marking-VulpSnoutSwift-vulpine-lines = Swift
 marking-VulpSnoutSwift = Vulpekin Swift
 
-marking-VulpSnoutBlaze-blaze = Blaze
-marking-VulpSnoutBlaze = Vulpekin Blaze
+# marking-VulpSnoutBlaze-blaze = Blaze
+# marking-VulpSnoutBlaze = Vulpekin Blaze
 
-marking-VulpSnoutPatch-patch = Patch
-marking-VulpSnoutPatch = Vulpekin Patch
+# marking-VulpSnoutPatch-patch = Patch
+# marking-VulpSnoutPatch = Vulpekin Patch
 
 
 marking-VulpHeadTiger-tiger_head = Tiger stripes
@@ -112,9 +112,9 @@ marking-VulpTailAltTip-vulp_alt = Vulpekin tail (base)
 marking-VulpTailAltTip-vulp_alt-tip = Vulpekin tail (tip)
 marking-VulpTailAltTip = Vulpekin (alt, tip)
 
-marking-VulpTailLong-long = Long tail (base)
-marking-VulpTailLong-long-tip = Long tail (tip)
-marking-VulpTailLong = Vulpekin Long
+# marking-VulpTailLong-long = Long tail (base)
+# marking-VulpTailLong-long-tip = Long tail (tip)
+# marking-VulpTailLong = Vulpekin Long
 
 marking-VulpTailFox-fox = Fox tail (base)
 marking-VulpTailFox-fox-fade = Fox tail (fade)
@@ -140,9 +140,9 @@ marking-VulpTailCoyoteWag = Vulpekin Coyote (wag)
 marking-VulpTailCorgiWag-corgi_wag = Corgi tail
 marking-VulpTailCorgiWag = Vulpekin Corgi (wag)
 
-marking-VulpTailHusky-husky-inner = Husky tail (inner)
-marking-VulpTailHusky-husky-outer = Husky tail (outer)
-marking-VulpTailHusky = Vulpekin Husky
+# marking-VulpTailHusky-husky-inner = Husky tail (inner)
+# marking-VulpTailHusky-husky-outer = Husky tail (outer)
+# marking-VulpTailHusky = Vulpekin Husky
 
 marking-VulpTailHuskyAlt-husky = Husky tail
 marking-VulpTailHuskyAlt = Vulpekin Husky (alt)
@@ -154,27 +154,27 @@ marking-VulpTailFox3-fox3 = Fox tail (base)
 marking-VulpTailFox3-fox3-tip = Fox tail (tip)
 marking-VulpTailFox3 = Vulpekin Fox 3
 
-marking-VulpTailFennec-fennec = Fennec tail
-marking-VulpTailFennec = Vulpekin Fennec
+# marking-VulpTailFennec-fennec = Fennec tail
+# marking-VulpTailFennec = Vulpekin Fennec
 
 marking-VulpTailOtie-otie = Otie tail
 marking-VulpTailOtie = Vulpekin Otie
 
-marking-VulpTailFluffy-fluffy = Fluffy tail
-marking-VulpTailFluffy = Vulpekin Fluffy
+# marking-VulpTailFluffy-fluffy = Fluffy tail
+# marking-VulpTailFluffy = Vulpekin Fluffy
 
 marking-VulpTailDalmatianWag-dalmatian_wag = Dalmatian tail
 marking-VulpTailDalmatianWag = Vulpekin Dalmatian (wag)
 
 
-marking-VulpBellyCrest-belly_crest = Belly
-marking-VulpBellyCrest = Vulpekin Belly Crest
+# marking-VulpBellyCrest-belly_crest = Belly
+# marking-VulpBellyCrest = Vulpekin Belly Crest
 
-marking-VulpBellyFull-belly_full = Belly
-marking-VulpBellyFull = Vulpekin Belly 1
+# marking-VulpBellyFull-belly_full = Belly
+# marking-VulpBellyFull = Vulpekin Belly 1
 
-marking-VulpBellyFox-belly_fox = Belly
-marking-VulpBellyFox = Vulpekin Belly 2
+# marking-VulpBellyFox-belly_fox = Belly
+# marking-VulpBellyFox = Vulpekin Belly 2
 
 
 marking-VulpBodyPointsCrest-points_crest = Points (crest)
@@ -214,29 +214,29 @@ marking-VulpPointsSharpArms = Vulpekin Points Arms (sharp)
 
 # starcup: end renames
 
-marking-VulpHairAdhara = Adhara
-marking-VulpHairAnita = Anita
-marking-VulpHairApollo = Apollo
-marking-VulpHairBelle = Belle
-marking-VulpHairBraided = Braided Hair
-marking-VulpHairBun = Bun
-marking-VulpHairCleanCut = Clean Cut
-marking-VulpHairCurl = Curl
-marking-VulpHairHawk = Hawk
-marking-VulpHairJagged = Jagged
-marking-VulpHairJeremy = Jeremy
-marking-VulpHairKajam = Kajam
-marking-VulpHairKeid = Keid
-marking-VulpHairKleeia = Kleeia
-marking-VulpHairMizar = Mizar
-marking-VulpHairPunkBraided = Punk Braided
-marking-VulpHairRaine = Raine
-marking-VulpHairRough = Rough
-marking-VulpHairShort = Short Hair
-marking-VulpHairShort2 = Short Hair 2
-marking-VulpHairSpike = Spike
+# marking-VulpHairAdhara = Adhara
+# marking-VulpHairAnita = Anita
+# marking-VulpHairApollo = Apollo
+# marking-VulpHairBelle = Belle
+# marking-VulpHairBraided = Braided Hair
+# marking-VulpHairBun = Bun
+# marking-VulpHairCleanCut = Clean Cut
+# marking-VulpHairCurl = Curl
+# marking-VulpHairHawk = Hawk
+# marking-VulpHairJagged = Jagged
+# marking-VulpHairJeremy = Jeremy
+# marking-VulpHairKajam = Kajam
+# marking-VulpHairKeid = Keid
+# marking-VulpHairKleeia = Kleeia
+# marking-VulpHairMizar = Mizar
+# marking-VulpHairPunkBraided = Punk Braided
+# marking-VulpHairRaine = Raine
+# marking-VulpHairRough = Rough
+# marking-VulpHairShort = Short Hair
+# marking-VulpHairShort2 = Short Hair 2
+# marking-VulpHairSpike = Spike
 
-marking-VulpFacialHairRuff = Ruff
-marking-VulpFacialHairElder = Elder
-marking-VulpFacialHairElderChin = Elder Chin
-marking-VulpFacialHairKita = Kita
+# marking-VulpFacialHairRuff = Ruff
+# marking-VulpFacialHairElder = Elder
+# marking-VulpFacialHairElderChin = Elder Chin
+# marking-VulpFacialHairKita = Kita

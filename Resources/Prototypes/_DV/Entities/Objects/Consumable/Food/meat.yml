@@ -2,11 +2,10 @@
   parent: FoodMeatSnake
   id: FoodMeatSnakeSilvia
   components:
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 8
-        - ReagentId: Omnizine
-          Quantity: 8
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: UncookedAnimalProteins
+        Quantity: 8
+      - ReagentId: Omnizine
+        Quantity: 8

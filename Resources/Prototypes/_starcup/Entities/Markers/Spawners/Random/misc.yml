@@ -1,0 +1,15 @@
+- type: entity
+  id: RandomGlorb
+  name: random glorb spawner
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Sprite
+    layers:
+    - sprite: _DEN/Objects/Misc/glorb.rsi
+      state: icon
+      color: "#0000FF"
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: RandomGlorbTable

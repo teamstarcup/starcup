@@ -280,3 +280,18 @@
   force: true
   withChat: true
   hiddenFromChatWindow: true
+
+
+## Constant autoemotes
+# These are intended for sounds that mobs make constantly while alive but stop making when they're dead.
+# Things like hums or breathing or the like.
+
+- type: autoEmote
+  id: HumAutoEmote
+  emote: AmbientHumEmote
+  interval: 0.7
+  chance: 1
+  ignoreActionBlocker: false
+  force: true
+  withChat: false
+  hiddenFromChatWindow: true

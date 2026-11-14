@@ -3,13 +3,12 @@
   id: DrinkLovePotionGlass
   suffix: love potion
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: LovePotion
-          Quantity: 30
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+#      maxVol: 30 # starcup - redundant
+      reagents:
+      - ReagentId: LovePotion
+        Quantity: 30
   - type: Icon
     sprite: _Impstation/Objects/Consumable/Drinks/lovepotion.rsi
     state: icon

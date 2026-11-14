@@ -3399,40 +3399,20 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 4.5,-4.5
       parent: 1
-- proto: LiquidNitrogenCanister
+- proto: NitrogenCanister
   entities:
   - uid: 429
     components:
     - type: Transform
-      anchored: True
       pos: 7.5,-15.5
       parent: 1
-    - type: GasCanister
-      gasMixture:
-        volume: 1000
-        immutable: False
-        temperature: 293.15
-        moles:
-          Nitrogen: 18710.71
-    - type: Physics
-      bodyType: Static
-- proto: LiquidOxygenCanister
+- proto: OxygenCanister
   entities:
   - uid: 430
     components:
     - type: Transform
-      anchored: True
       pos: 6.5,-15.5
       parent: 1
-    - type: GasCanister
-      gasMixture:
-        volume: 1000
-        immutable: False
-        temperature: 293.15
-        moles:
-          Oxygen: 18710.71
-    - type: Physics
-      bodyType: Static
 - proto: LockerElectricalSuppliesFilled
   entities:
   - uid: 431

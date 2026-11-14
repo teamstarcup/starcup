@@ -1,0 +1,39 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushieOvinia
+  name: ovinia plushie
+  description: A stuffed toy that resembles an ovinia. Made with real wool!
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Fun/oviniaplushie.rsi
+    state: icon
+  - type: EmitSoundOnUse
+    sound:
+      collection: GoatSpeech # starcup - changed from OviniaPlushieSounds
+  - type: EmitSoundOnLand
+    sound:
+      collection: ToySqueak
+  - type: EmitSoundOnActivate
+    sound:
+      collection: GoatSpeech # starcup - changed from OviniaPlushieSounds
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: GoatSpeech # starcup - changed from OviniaPlushieSounds
+# begin starcup: fix weird bug?
+  - type: MeleeWeapon
+    attackRate: 0.333
+    wideAnimationRotation: 180
+    soundHit:
+      collection: GoatSpeech
+    damage:
+      types:
+        Blunt: 0
+#  - type: MeleeWeapon
+#    soundHit:
+#      collection: OviniaPlushieSounds
+  - type: Edible
+    useSound:
+      collection: GoatSpeech # starcup - changed from OviniaPlushieSounds
+  - type: FoodSequenceElement
+    entries:
+      CottonBurger: OviniaPlushie

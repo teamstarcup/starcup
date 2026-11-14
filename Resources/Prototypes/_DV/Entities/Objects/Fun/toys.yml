@@ -47,3 +47,34 @@
   - type: HeldSpeedModifier
     walkModifier: 0.7
     sprintModifier: 0.7
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieHarpy
+  name: harpy plushie
+  description: A stuffed toy that resembles a harpy. It can even stand on its feet!
+  components:
+  - type: Sprite
+    sprite: _DV/Objects/Fun/Toys/plushies.rsi
+    state: harpy
+  - type: EmitSoundOnUse
+    sound:
+      collection: HarpyPlushieSounds
+  - type: EmitSoundOnLand
+    sound:
+      collection: HarpyPlushieScreams
+  - type: EmitSoundOnActivate
+    sound:
+      collection: HarpyPlushieSounds
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: HarpyPlushieScreams
+  - type: MeleeWeapon
+    soundHit:
+      collection: ToySqueak
+  - type: Edible
+    useSound:
+      collection: HarpyPlushieScreams # starcup - they should scream when devoured!
+  - type: FoodSequenceElement
+    entries:
+      CottonBurger: HarpyPlushie

@@ -34,6 +34,18 @@
       map: ["enum.PaperVisualLayers.Stamp"]
       visible: false
       sprite: Objects/Misc/bureaucracy.rsi
+# begin starcup - add inhands
+  - type: Item
+    sprite: Objects/Misc/bureaucracy.rsi
+    size: Tiny
+    inhandVisuals:
+      left:
+      - state: paper-inhand-left
+        color: "#dad71a"
+      right:
+      - state: paper-inhand-right
+        color: "#dad71a"
+# end starcup
   - type: PaperVisuals
     contentMargin: 0.0, 0.0, 0.0, 0.0
     maxWritableArea: 368.0, 368.0
@@ -64,6 +76,18 @@
       map: ["enum.PaperVisualLayers.Stamp"]
       visible: false
       sprite: Objects/Misc/bureaucracy.rsi
+  # begin starcup - add inhands
+  - type: Item
+    sprite: Objects/Misc/bureaucracy.rsi
+    size: Tiny
+    inhandVisuals:
+      left:
+      - state: paper-inhand-left
+        color: "#ff8cba"
+      right:
+      - state: paper-inhand-right
+        color: "#ff8cba"
+  # end starcup
   - type: Tag
     tags:
     - Document
@@ -90,6 +114,18 @@
       map: ["enum.PaperVisualLayers.Stamp"]
       visible: false
       sprite: Objects/Misc/bureaucracy.rsi
+  # begin starcup - add inhands
+  - type: Item
+    sprite: Objects/Misc/bureaucracy.rsi
+    size: Tiny
+    inhandVisuals:
+      left:
+      - state: paper-inhand-left
+        color: "#9fd4a3"
+      right:
+      - state: paper-inhand-right
+        color: "#9fd4a3"
+  # end starcup
   - type: Tag
     tags:
     - Document
@@ -116,6 +152,18 @@
       map: ["enum.PaperVisualLayers.Stamp"]
       visible: false
       sprite: Objects/Misc/bureaucracy.rsi
+  # begin starcup - add inhands
+  - type: Item
+    sprite: Objects/Misc/bureaucracy.rsi
+    size: Tiny
+    inhandVisuals:
+      left:
+      - state: paper-inhand-left
+        color: "#00c2e7"
+      right:
+      - state: paper-inhand-right
+        color: "#00c2e7"
+  # end starcup
   - type: Tag
     tags:
     - Document

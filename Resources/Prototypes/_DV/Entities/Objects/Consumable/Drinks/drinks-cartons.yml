@@ -7,10 +7,9 @@
     sound:
       collection: bottleOpenSounds #Could use a new sound someday ¯\_(ツ)_/¯
   - type: Sealable
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 20
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 20
   - type: Item
     size: Small
   - type: MeleeWeapon
@@ -52,12 +51,11 @@
   name: orange juice box
   description: A great source of vitamins. Stay healthy!
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: JuiceOrange
-          Quantity: 20
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: JuiceOrange
+        Quantity: 20
   - type: Sprite
     sprite: _DV/Objects/Consumable/Drinks/juiceboxorange.rsi
 
@@ -67,12 +65,11 @@
   name: pineapple juice box
   description: Everyone's favourite juice.
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: JuicePineapple
-          Quantity: 20
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: JuicePineapple
+        Quantity: 20
   - type: Sprite
     sprite: _DV/Objects/Consumable/Drinks/juiceboxpineapple.rsi
 
@@ -82,12 +79,11 @@
   name: apple juice box
   description: Sweet apple juice. Don't be late for school!
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: JuiceApple
-          Quantity: 20
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: JuiceApple
+        Quantity: 20
   - type: Sprite
     sprite: _DV/Objects/Consumable/Drinks/juiceboxapple.rsi
 
@@ -97,12 +93,11 @@
   name: grape juice box
   description: Tasty grape juice in a fun little container. Non-alcoholic!
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: JuiceGrape
-          Quantity: 20
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: JuiceGrape
+        Quantity: 20
   - type: Sprite
     sprite: _DV/Objects/Consumable/Drinks/juiceboxgrape.rsi
 
@@ -112,13 +107,12 @@
   name: chocolate milk juice box
   description: Tasty chocolate juice and milk in a small box. Contains Theobromine.
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: HotCocoa
-          Quantity: 10
-        - ReagentId: Milk # The milk of chocolate milk
-          Quantity: 10
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: HotCocoa
+        Quantity: 10
+      - ReagentId: Milk # The milk of chocolate milk
+        Quantity: 10
   - type: Sprite
     sprite: _DV/Objects/Consumable/Drinks/juiceboxchocolate.rsi

@@ -12,10 +12,9 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 6
     fillBaseName: fill-
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 30
   - type: PhysicalComposition
     materialComposition:
       Plastic: 30
@@ -26,12 +25,11 @@
   name: orange Asterade™ bottle
   description: Ostensibly healthy for you. The label says "Outrageous Orange"
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: OrangeAsterade
-          Quantity: 30
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: OrangeAsterade
+        Quantity: 30
 
 - type: entity
   parent: DrinkAsteradeBottleFull
@@ -39,12 +37,11 @@
   name: purple Asterade™ bottle
   description: Ostensibly healthy for you. The label says "Boisterous Berry"
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: PurpleAsterade
-          Quantity: 30
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: PurpleAsterade
+        Quantity: 30
 
 - type: entity
   parent: DrinkAsteradeBottleFull
@@ -52,12 +49,11 @@
   name: red Asterade™ bottle
   description: Ostensibly healthy for you. The label says "Wild Watermelon"
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: RedAsterade
-          Quantity: 30
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: RedAsterade
+        Quantity: 30
 
 - type: entity
   parent: DrinkAsteradeBottleFull
@@ -65,12 +61,11 @@
   name: green Asterade™ bottle
   description: Ostensibly healthy for you. The label says "Lightning Lime"
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: GreenAsterade
-          Quantity: 30
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: GreenAsterade
+        Quantity: 30
 
 - type: entity
   parent: DrinkAsteradeBottleFull
@@ -78,12 +73,11 @@
   name: yellow Asterade™ bottle
   description: Ostensibly healthy for you. The label says "Preposterous Pineapple"
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: YellowAsterade
-          Quantity: 30
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: YellowAsterade
+        Quantity: 30
 
 - type: entity
   parent: DrinkAsteradeBottleFull
@@ -91,10 +85,9 @@
   name: lemon Asterade™ bottle
   description: Ostensibly healthy for you. The label says "Tesloose Lemon"
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
         - ReagentId: LemonAsterade
           Quantity: 30
 
@@ -104,9 +97,8 @@
   name: brown Asterade™ bottle
   description: Ostensibly healthy for you. The label has been scratched off and "Potato" has been written with a marker in its place.
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: BrownAsterade
-          Quantity: 30
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: BrownAsterade
+        Quantity: 30

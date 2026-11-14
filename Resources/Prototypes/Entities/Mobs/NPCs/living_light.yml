@@ -66,6 +66,7 @@
   - type: Injurable
     damageContainer: Inorganic
   - type: PassiveDamage
+    intervalHaltOnDamageTaken: 5s
     allowedStates:
     - Alive
     damage:
@@ -91,8 +92,7 @@
     allowedEmotes: ['CreatureLaugh', 'CreatureScream']
   - type: Vocal
     emoteSounds: LuminousSpeechEmotes
-    screamId: CreatureScream
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureScream
   - type: AutoEmote
     emotes:
     - LaughAutoEmote

@@ -4,12 +4,11 @@
   name: soju bottle
   description: It's like sake but if you're trying to get FUCKED. UP.
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Soju
-          Quantity: 100
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: Soju
+        Quantity: 120 # starcup: adjusted for new upstream values
   - type: Sprite
     sprite: _DV/Objects/Consumable/Drinks/sojubottle.rsi
 
@@ -19,13 +18,12 @@
   name: tokkuri
   description: Floral and full of osake!
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 100
-        reagents:
-        - ReagentId: Sake
-          Quantity: 100
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 120 # starcup: adjusted for new upstream values
+      reagents:
+      - ReagentId: Sake
+        Quantity: 120 # starcup: adjusted for new upstream values
   - type: Sprite
     sprite: _DV/Objects/Consumable/Drinks/saketokkuri.rsi
 
@@ -35,12 +33,11 @@
   name: flask of holy water
   description: A flask of holy water.
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Holywater
-          Quantity: 100
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: Holywater
+        Quantity: 120 # starcup: adjusted for new upstream values
   - type: Sprite
     sprite: _DV/Objects/Consumable/Drinks/flaskholywater.rsi
 - type: entity
@@ -49,12 +46,11 @@
   name: angobitters bottle
   description: Commonly used for mixed drinks, not drunk neat.
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Angobitters
-          Quantity: 50
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: Angobitters
+        Quantity: 60 # starcup: adjusted for new upstream values
   - type: Label
     localizedLabel: reagent-name-angobitters
   - type: Sprite

@@ -6,17 +6,15 @@
   id: FoodBakedMuffinChocolateImitation
   description: A delicious and spongy imitation chocolate muffin.
   components:
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 14
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 6
-        - ReagentId: Vitamin
-          Quantity: 2
-        - ReagentId: CocoaPowderImitation
-          Quantity: 2
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 11
+      - ReagentId: Vitamin
+        Quantity: 1
+      - ReagentId: CocoaPowderImitation
+        Quantity: 1
 
 # Cookies
 
@@ -28,13 +26,11 @@
   - type: FlavorProfile
     flavors:
       - imitationchocolate
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 6
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 5
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 6
 
 # Waffles/Pancakes
 
@@ -47,13 +43,11 @@
   - type: FlavorProfile
     flavors:
       - imitationchocolate
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 5
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 11
 
 # Misc
 
@@ -67,13 +61,13 @@
     flavors:
       - sweet
       - imitationchocolate
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 78
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 30
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 54
+      - ReagentId: Sugar
+        Quantity: 34
   - type: ToolRefinable
     refineResult:
     - id: FoodBakedBrownieImitation
@@ -89,13 +83,13 @@
     flavors:
       - sweet
       - imitationchocolate
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 13
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 5
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 7
+      - ReagentId: Sugar
+        Quantity: 5
 
 - type: entity
   name: imitation chocolate special brownies
@@ -107,15 +101,15 @@
       - sweet
       - magical
       - imitationchocolate
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 228
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 30
-        - ReagentId: THC
-          Quantity: 150
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 56
+      - ReagentId: Sugar
+        Quantity: 32
+      - ReagentId: THC
+        Quantity: 16
   - type: ToolRefinable
     refineResult:
     - id: FoodBakedCannabisBrownieImitation
@@ -131,15 +125,15 @@
       - sweet
       - magical
       - imitationchocolate
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 38
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 5
-        - ReagentId: THC
-          Quantity: 25
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 7
+      - ReagentId: Sugar
+        Quantity: 4
+      - ReagentId: THC
+        Quantity: 2
 
 # Empanadas
 - type: entity
@@ -150,15 +144,13 @@
   components:
   - type: Sprite
     state: dumplings
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 8
-        - ReagentId: Protein
-          Quantity: 2
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 10
+      - ReagentId: Protein
+        Quantity: 2
   - type: FlavorProfile
     flavors:
     - meaty

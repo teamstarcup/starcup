@@ -5,7 +5,7 @@
 
 - type: entity
   name: incomplete cake
-  parent: FoodCakeBase
+  parent: [ SolutionLarge, FoodCakeBase ] # starcup - SolutionLarge (3x3 grid = 30x9 = 270u containers, 135u food)
   id: FoodCakeTieredBase
   abstract: true
   description: A frosted cake. Too large to eat in without slicing.
@@ -56,17 +56,16 @@
     node: doubleFrosted
   - type: Sprite
     state: double
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 130
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 72
-        - ReagentId: Sugar
-          Quantity: 36
-        - ReagentId: Vitamin
-          Quantity: 12
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 130
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 72
+      - ReagentId: Sugar
+        Quantity: 36
+      - ReagentId: Vitamin
+        Quantity: 12
   - type: ToolRefinable
     refineResult:
     - id: FoodCakeTieredSlice
@@ -94,17 +93,16 @@
     node: tripleFrosted
   - type: Sprite
     state: triple
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 200
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 108
-        - ReagentId: Sugar
-          Quantity: 54
-        - ReagentId: Vitamin
-          Quantity: 18
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+#      maxVol: 200 # starcup - redundant - 200u is pushing it a bit for food, but it's a wedding
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 108
+      - ReagentId: Sugar
+        Quantity: 54
+      - ReagentId: Vitamin
+        Quantity: 18
   - type: ToolRefinable
     refineResult:
     - id: FoodCakeTieredSlice
@@ -118,14 +116,13 @@
   - type: Sprite
     sprite: _Floof/Objects/Consumable/Food/Baked/cake_tiered.rsi
     state: slice
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 15
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 6
-        - ReagentId: Sugar
-          Quantity: 3
-        - ReagentId: Vitamin
-          Quantity: 1
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+#      maxVol: 15 # starcup - redundant
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 6
+      - ReagentId: Sugar
+        Quantity: 3
+      - ReagentId: Vitamin
+        Quantity: 1

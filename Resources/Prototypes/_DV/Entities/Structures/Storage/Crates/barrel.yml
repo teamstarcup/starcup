@@ -77,10 +77,9 @@
   name: wooden keg
   description: A musty old wooden keg, with a tap attached to the front.
   components:
-  - type: SolutionContainerManager
-    solutions:
-      tank:
-        maxVol: 500
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 500
   - type: ExaminableSolution
     solution: tank
   - type: UserInterface
@@ -137,12 +136,11 @@
   components:
   - type: Label
     localizedLabel: reagent-name-root-beer
-  - type: SolutionContainerManager
-    solutions:
-      tank:
-        reagents:
-        - ReagentId: RootBeer
-          Quantity: 500
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: RootBeer
+        Quantity: 500
 
 - type: entity
   parent: WoodenKeg
@@ -152,12 +150,11 @@
   components:
   - type: Label
     localizedLabel: reagent-name-beer
-  - type: SolutionContainerManager
-    solutions:
-      tank:
-        reagents:
-        - ReagentId: Beer
-          Quantity: 500
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: Beer
+        Quantity: 500
 
 - type: entity
   parent: WoodenKeg
@@ -167,9 +164,8 @@
   components:
   - type: Label
     localizedLabel: reagent-name-wine
-  - type: SolutionContainerManager
-    solutions:
-      tank:
-        reagents:
-        - ReagentId: Wine
-          Quantity: 500
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      reagents:
+      - ReagentId: Wine
+        Quantity: 500

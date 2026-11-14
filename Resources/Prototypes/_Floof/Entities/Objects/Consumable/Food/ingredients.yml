@@ -12,12 +12,11 @@
   - type: Sprite
     sprite: _Floof/Objects/Consumable/Food/ingredients.rsi
     state: frosting-pipe
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 24
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 4
-        - ReagentId: Sugar
-          Quantity: 15
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 24
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 4
+      - ReagentId: Sugar
+        Quantity: 15

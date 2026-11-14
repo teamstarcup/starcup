@@ -16,11 +16,11 @@
           amount: !type:ConstantNumberSelector
             value: 3
         - id: FoodSnackGummyWormLarge
-          prob: 0.25
+          prob: 0.025 # starcup - x10 rarity due to extreme size
           amount: !type:RangeNumberSelector
             range: 1, 2
         - id: FoodSnackChocolateBarLarjWrapped
-          prob: 0.25
+          prob: 0.025 # starcup - x10 rarity due to extreme size
           amount: !type:RangeNumberSelector
             range: 1, 2
         - !type:NestedSelector

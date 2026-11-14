@@ -270,13 +270,12 @@
         offset: 0
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: SolutionContainerManager
-    solutions:
-      vasculature:
-        maxVol: 15
-        reagents:
-        - ReagentId: Resin
-          Quantity: 15
+  - type: Solution
+    solution:
+      maxVol: 15
+      reagents:
+      - ReagentId: Resin
+        Quantity: 15
 
 - type: entity
   parent: BaseTreeLarge
@@ -336,13 +335,12 @@
         offset: 0
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: SolutionContainerManager
-    solutions:
-      vasculature:
-        maxVol: 15
-        reagents:
-        - ReagentId: Resin
-          Quantity: 15
+  - type: Solution
+    solution:
+      maxVol: 15
+      reagents:
+      - ReagentId: Resin
+        Quantity: 15
 
 - type: entity
   parent: BaseStumpStarcup

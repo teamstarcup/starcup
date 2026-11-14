@@ -2,8 +2,8 @@
 
 ## Captain
 - type: entity
-  parent: WindoorSecureCommandLocked
-  id: WindoorSecureCaptainLocked
+  parent: WindoorCommandLocked
+  id: WindoorCaptainLocked
   suffix: Captain, Locked
   components:
   - type: ContainerFill
@@ -12,8 +12,8 @@
 
 ## Chief Engineer
 - type: entity
-  parent: WindoorSecureCommandLocked
-  id: WindoorSecureChiefEngineerLocked
+  parent: WindoorCommandLocked
+  id: WindoorChiefEngineerLocked
   suffix: ChiefEngineer, Locked
   components:
   - type: ContainerFill
@@ -22,8 +22,8 @@
 
 ## CMO
 - type: entity
-  parent: WindoorSecureCommandLocked
-  id: WindoorSecureChiefMedicalOfficerLocked
+  parent: WindoorCommandLocked
+  id: WindoorChiefMedicalOfficerLocked
   suffix: ChiefMedicalOfficer, Locked
   components:
   - type: ContainerFill
@@ -32,8 +32,8 @@
 
 ## HoS
 - type: entity
-  parent: WindoorSecureCommandLocked
-  id: WindoorSecureHeadOfSecurityLocked
+  parent: WindoorCommandLocked
+  id: WindoorHeadOfSecurityLocked
   suffix: HeadOfSecurity, Locked
   components:
   - type: ContainerFill
@@ -42,8 +42,8 @@
 
 ## Chief Engineer
 - type: entity
-  parent: WindoorSecureCommandLocked
-  id: WindoorSecureQuartermasterLocked
+  parent: WindoorCommandLocked
+  id: WindoorQuartermasterLocked
   suffix: Quartermaster, Locked
   components:
   - type: ContainerFill
@@ -54,8 +54,8 @@
 
 ## Paramedic
 - type: entity
-  parent: WindoorSecureSecurityLocked
-  id: WindoorSecureParamedicLocked
+  parent: WindoorSecurityLocked
+  id: WindoorParamedicLocked
   suffix: Paramedic, Locked
   components:
   - type: ContainerFill
@@ -64,8 +64,8 @@
 
 ## Psychologist
 - type: entity
-  parent: WindoorSecureMedicalLocked
-  id: WindoorSecurePsychologistLocked
+  parent: WindoorMedicalLocked
+  id: WindoorPsychologistLocked
   suffix: Psychologist, Locked
   components:
   - type: ContainerFill
@@ -76,8 +76,8 @@
 
 ## Combat Medic
 - type: entity
-  parent: WindoorSecureSecurityLocked
-  id: WindoorSecureBrigmedicLocked
+  parent: WindoorSecurityLocked
+  id: WindoorBrigmedicLocked
   suffix: Combat Medic, Locked
   components:
   - type: ContainerFill
@@ -88,8 +88,8 @@
 
 ## Boxer
 - type: entity
-  parent: WindoorSecureServiceLocked
-  id: WindoorSecureBoxerLocked
+  parent: WindoorServiceLocked
+  id: WindoorBoxerLocked
   suffix: Boxer, Locked
   components:
   - type: ContainerFill
@@ -98,28 +98,18 @@
 
 ## Clown
 - type: entity
-  parent: WindoorSecureServiceLocked
-  id: WindoorSecureClownLocked
+  parent: WindoorServiceLocked
+  id: WindoorClownLocked
   suffix: Clown, Locked
   components:
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsClown ]
 
-## Botanist
-- type: entity
-  parent: WindoorSecureServiceLocked
-  id: WindoorSecureHydroponicsLocked
-  suffix: Hydroponics, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsHydroponics ]
-
 ## Librarian
 - type: entity
-  parent: WindoorSecureServiceLocked
-  id: WindoorSecureLibraryLocked
+  parent: WindoorServiceLocked
+  id: WindoorLibraryLocked
   suffix: Library, Locked
   components:
   - type: ContainerFill
@@ -128,8 +118,8 @@
 
 ## Mime
 - type: entity
-  parent: WindoorSecureServiceLocked
-  id: WindoorSecureMimeLocked
+  parent: WindoorServiceLocked
+  id: WindoorMimeLocked
   suffix: Mime, Locked
   components:
   - type: ContainerFill
@@ -138,8 +128,8 @@
 
 ## Musician
 - type: entity
-  parent: WindoorSecureServiceLocked
-  id: WindoorSecureMusicianLocked
+  parent: WindoorServiceLocked
+  id: WindoorMusicianLocked
   suffix: Musician, Locked
   components:
   - type: ContainerFill
@@ -148,8 +138,8 @@
 
 ## Reporter
 - type: entity
-  parent: WindoorSecureServiceLocked
-  id: WindoorSecureReporterLocked
+  parent: WindoorServiceLocked
+  id: WindoorReporterLocked
   suffix: Reporter, Locked
   components:
   - type: ContainerFill
@@ -158,8 +148,8 @@
 
   # SyndComm
 - type: entity
-  parent: WindoorSecureCommandLocked
-  id: WindoorSecureSyndicateCommunicationsLocked
+  parent: WindoorCommandLocked
+  id: WindoorSyndicateCommunicationsLocked
   suffix: Syndicate Communications, Locked
   components:
   - type: ContainerFill

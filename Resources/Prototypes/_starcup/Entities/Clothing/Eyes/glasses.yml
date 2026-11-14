@@ -161,7 +161,6 @@
     tags:
     - WhitelistChameleon
 
-
 - type: entity
   parent: ClothingEyesBase
   id: ClothingEyesGlassesSurplusBallisticCanteen
@@ -181,3 +180,140 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+
+## Rimless Glasses
+- type: entity
+  parent: ClothingEyesGlassesRimless
+  id: ClothingEyesGlassesRimlessBlue
+  name: blue rimless glasses
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#2C82D3"
+      right:
+      - state: inhand-right
+        color: "#2C82D3"
+  - type: Clothing
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        color: "#2C82D3"
+      eyes:
+      - state: equipped-EYES
+        color: "#2C82D3"
+  - type: Sprite
+    color: "#2C82D3"
+
+- type: entity
+  parent: ClothingEyesGlassesRimless
+  id: ClothingEyesGlassesRimlessPink
+  name: pink rimless glasses
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#fc8cb8"
+      right:
+      - state: inhand-right
+        color: "#fc8cb8"
+  - type: Clothing
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        color: "#fc8cb8"
+      eyes:
+      - state: equipped-EYES
+        color: "#fc8cb8"
+  - type: Sprite
+    color: "#fc8cb8"
+
+- type: entity
+  parent: ClothingEyesGlassesRimless
+  id: ClothingEyesGlassesRimlessRed
+  name: red rimless glasses
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#D32C3A"
+      right:
+      - state: inhand-right
+        color: "#D32C3A"
+  - type: Clothing
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        color: "#D32C3A"
+      eyes:
+      - state: equipped-EYES
+        color: "#D32C3A"
+  - type: Sprite
+    color: "#D32C3A"
+
+## Hipster Glasses
+- type: entity
+  parent: ClothingEyesGlassesHipster
+  id: ClothingEyesGlassesHipsterRed
+  name: red tinted glasses
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#D32C3A"
+      right:
+      - state: inhand-right
+        color: "#D32C3A"
+  - type: Clothing
+    clothingVisuals:
+      eyes:
+      - state: equipped-EYES
+        color: "#D32C3A"
+  - type: Sprite
+    color: "#D32C3A"
+
+- type: entity
+  parent: ClothingEyesGlassesHipster
+  id: ClothingEyesGlassesHipsterPink
+  name: pink tinted glasses
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#fc8cb8"
+      right:
+      - state: inhand-right
+        color: "#fc8cb8"
+  - type: Clothing
+    clothingVisuals:
+      eyes:
+      - state: equipped-EYES
+        color: "#fc8cb8"
+  - type: Sprite
+    color: "#fc8cb8"
+
+- type: entity
+  parent: ClothingEyesGlassesHipster
+  id: ClothingEyesGlassesHipsterBlue
+  name: blue tinted glasses
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#2C82D3"
+      right:
+      - state: inhand-right
+        color: "#2C82D3"
+  - type: Clothing
+    clothingVisuals:
+      eyes:
+      - state: equipped-EYES
+        color: "#2C82D3"
+  - type: Sprite
+    color: "#2C82D3"

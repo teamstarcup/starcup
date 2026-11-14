@@ -65,13 +65,12 @@
   - type: Item
   - type: Sprite
     sprite: _DV/Objects/Consumable/Food/ration.rsi
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 15
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 15
+  - type: Solution # starcup - remove SolutionContainerManager
+    solution:
+      maxVol: 15
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 15
   - type: Tag
     tags:
     - Fruit # DeltaV - Allow anyone to eat it, hopefully

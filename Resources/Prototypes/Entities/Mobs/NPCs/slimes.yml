@@ -97,7 +97,6 @@
     damage:
       types:
         Blunt: 6
-        Structural: 4
         Caustic: 4
   - type: InteractionPopup
     successChance: 0.5
@@ -135,8 +134,7 @@
   - type: Vocal
     # begin starcup
     emoteSounds: FeralSlimeSpeechEmotes
-    screamId: Simmer
-    emoteAction: ActionEmitSound
+    emoteAction: ActionCreatureSimmer
   - type: AutoEmote
     emotes:
     - BubbleAutoEmote
@@ -199,7 +197,6 @@
       damage:
         types:
           Blunt: 6
-          Structural: 4
           Caustic: 1
           Poison: 4
 
@@ -239,7 +236,6 @@
       damage:
         types:
           Blunt: 6
-          Structural: 4
           Caustic: 4
 
 - type: entity
