@@ -1,0 +1,1820 @@
+# Template for parenting purposes
+- type: entity
+  abstract: true
+  parent: BaseSign
+  id: BaseSignPullDown
+  components:
+  - type: DisassembleOnAltVerb
+    verbText: "disassemble-system-verb-pull-down"
+    disassembleTime: 2
+
+- type: entity
+  abstract: true
+  parent: BaseSignWeak
+  id: BaseSignWeakPullDown
+  components:
+  - type: DisassembleOnAltVerb
+    verbText: "disassemble-system-verb-pull-down"
+    disassembleTime: 2
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseSignCarried
+  suffix: Carried
+  name: sign
+  description: You should hang this up somewhere.
+  components:
+  - type: Sprite
+    sprite: Structures/Wallmounts/signs.rsi
+  - type: Item
+    sprite: _starcup/Objects/Decoration/signs.rsi
+    size: Large
+  - type: Damageable
+  - type: Injurable
+    damageContainer: Inorganic
+  - type: DamageExaminable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+  - type: MeleeWeapon
+    soundHit:
+      collection: MetalThud
+    damage:
+      types:
+        Blunt: 3
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 4
+  - type: DamageOnHit
+    damage:
+      types:
+        Blunt: 4
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 6
+  - type: EmitSoundOnLand
+    sound:
+      collection: MetalThud
+      params:
+        variation: 0.25
+  - type: StaticPrice
+    price: 150
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedLarge
+  components:
+  - type: MeleeWeapon
+    soundHit:
+      collection: MetalThud
+    damage:
+      types:
+        Blunt: 7
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 6
+  - type: DamageOnHit
+    damage:
+      types:
+        Blunt: 6
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 6
+
+# Departmental parents
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedCommand
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: comm-nt-inhand-left
+      right:
+      - state: comm-nt-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedCommandRebrand
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/signs_rebrand.rsi
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: comm-sc-inhand-left
+      right:
+      - state: comm-sc-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedEngineering
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: eng-inhand-left
+      right:
+      - state: eng-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedGeneral
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: gen-inhand-left
+      right:
+      - state: gen-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedLogistics
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: logi-inhand-left
+      right:
+      - state: logi-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedMedical
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: med-inhand-left
+      right:
+      - state: med-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedScience
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: sci-inhand-left
+      right:
+      - state: sci-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedSecurity
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: sec-inhand-left
+      right:
+      - state: sec-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedService
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: serv-inhand-left
+      right:
+      - state: serv-inhand-right
+
+# Generic parents
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedOld
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: old-inhand-left
+      right:
+      - state: old-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedRoundAllowed
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: round-allowed-inhand-left
+      right:
+      - state: round-allowed-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedRoundForbidden
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: round-forbidden-inhand-left
+      right:
+      - state: round-forbidden-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedRoundRed
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: round-red-inhand-left
+      right:
+      - state: round-red-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedRoundYellow
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: round-yellow-inhand-left
+      right:
+      - state: round-yellow-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedSquareGreen
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: square-green-inhand-left
+      right:
+      - state: square-green-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedSquareMed
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: square-med-inhand-left
+      right:
+      - state: square-med-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedSquareOrange
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: square-orange-inhand-left
+      right:
+      - state: square-orange-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedSquareRed
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: square-red-inhand-left
+      right:
+      - state: square-red-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedTriangle
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: triangle-inhand-left
+      right:
+      - state: triangle-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedTriangleRed
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: triangle-red-inhand-left
+      right:
+      - state: triangle-red-inhand-right
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedTriangleLargeYellow
+  components:
+  - type: MultiHandedItem
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: triangle-large
+      right:
+      - state: triangle-large
+    size: Ginormous
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedTriangleLargeYellowBase
+  components:
+  - type: MultiHandedItem
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: triangle-large-base
+      right:
+      - state: triangle-large-base
+    size: Ginormous
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedRectangleLargeYellow
+  components:
+  - type: MultiHandedItem
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: rectangle-yellow
+      right:
+      - state: rectangle-yellow
+    size: Ginormous
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedPlaqueGolden
+  components:
+  - type: MultiHandedItem
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: plaque-golden
+      right:
+      - state: plaque-golden
+    size: Ginormous
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedPlaqueGray
+  components:
+  - type: MultiHandedItem
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: plaque-kiddie
+      right:
+      - state: plaque-kiddie
+    size: Ginormous
+
+- type: entity
+  parent: BaseSignCarried
+  abstract: true
+  id: SignCarriedWhite
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: white-inhand-left
+      right:
+      - state: white-inhand-right
+
+# Upstream signs
+- type: entity
+  parent: SignCarriedCommand
+  id: SignCarriedAi
+  name: AI sign
+  components:
+  - type: Sprite
+    state: ai
+  - type: NFWallmountable
+    spawn: SignAi
+
+- type: entity
+  parent: SignCarriedCommand
+  id: SignCarriedAiUpload
+  name: AI upload sign
+  components:
+  - type: Sprite
+    state: ai_upload
+  - type: NFWallmountable
+    spawn: SignAiUpload
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedArcade
+  name: arcade sign
+  components:
+  - type: Sprite
+    state: arcade
+  - type: NFWallmountable
+    spawn: SignArcade
+
+- type: entity
+  parent: SignCarriedSecurity
+  id: SignCarriedArmory
+  name: armory sign
+  components:
+  - type: Sprite
+    state: armory
+  - type: NFWallmountable
+    spawn: SignArmory
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedArrivals
+  name: arrivals sign
+  components:
+  - type: Sprite
+    state: arrivals
+  - type: NFWallmountable
+    spawn: SignArrivals
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedToolStorage
+  name: tool storage sign
+  components:
+  - type: Sprite
+    state: ass
+  - type: NFWallmountable
+    spawn: SignToolStorage
+
+- type: entity
+  parent: SignCarriedScience
+  id: SignCarriedAnomaly
+  name: xenoarcheology lab sign
+  components:
+  - type: Sprite
+    state: xenoarch
+  - type: NFWallmountable
+    spawn: SignAnomaly
+
+- type: entity
+  parent: SignCarriedScience
+  id: SignCarriedAnomaly2
+  name: anomaly lab sign
+  components:
+  - type: Sprite
+    state: anomaly
+  - type: NFWallmountable
+    spawn: SignAnomaly2
+
+- type: entity
+  parent: SignCarriedEngineering
+  id: SignCarriedAtmos
+  name: atmos sign
+  components:
+  - type: Sprite
+    state: atmos
+  - type: NFWallmountable
+    spawn: SignAtmos
+
+- type: entity
+  parent: SignCarriedService
+  id: SignCarriedBar
+  name: bar sign
+  components:
+  - type: Sprite
+    state: bar
+  - type: NFWallmountable
+    spawn: SignBar
+
+- type: entity
+  parent: SignCarriedMedical
+  id: SignCarriedBath
+  name: bathroom sign
+  components:
+  - type: Sprite
+    state: bath
+  - type: NFWallmountable
+    spawn: SignBath
+
+- type: entity
+  parent: SignCarriedService
+  id: SignCarriedKitchen
+  name: kitchen sign
+  components:
+  - type: Sprite
+    state: kitchen
+  - type: NFWallmountable
+    spawn: SignKitchen
+
+- type: entity
+  parent: SignCarriedService
+  id: SignCarriedTheater
+  name: theater sign
+  components:
+  - type: Sprite
+    state: drama2
+  - type: NFWallmountable
+    spawn: SignTheater
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedBarbershop
+  name: barbershop sign
+  components:
+  - type: Sprite
+    state: barbershop
+  - type: NFWallmountable
+    spawn: SignBarbershop
+
+- type: entity
+  parent: SignCarriedSquareOrange
+  id: SignCarriedBio
+  name: bio sign
+  components:
+  - type: Sprite
+    state: bio
+  - type: NFWallmountable
+    spawn: SignBio
+
+- type: entity
+  parent: SignCarriedTriangleLargeYellow
+  id: SignCarriedBiohazard
+  name: biohazard sign
+  components:
+  - type: Sprite
+    state: biohazard
+  - type: NFWallmountable
+    spawn: SignBiohazard
+
+- type: entity
+  parent: SignCarriedCommand
+  id: SignCarriedBridge
+  name: bridge sign
+  components:
+  - type: Sprite
+    state: bridge
+  - type: NFWallmountable
+    spawn: SignBridge
+
+- type: entity
+  parent: SignCarriedTriangleLargeYellow
+  id: SignCarriedCanisters
+  name: canisters sign
+  components:
+  - type: Sprite
+    state: canisters
+  - type: NFWallmountable
+    spawn: SignCanisters
+
+- type: entity
+  parent: SignCarriedLogistics
+  id: SignCarriedCargoDepartment
+  name: logistics sign
+  components:
+  - type: Sprite
+    state: cargo
+  - type: NFWallmountable
+    spawn: SignCargo
+
+- type: entity
+  parent: SignCarriedLogistics
+  id: SignCarriedCargoDock
+  name: cargo dock sign
+  components:
+  - type: Sprite
+    state: cargo_dock
+  - type: NFWallmountable
+    spawn: SignCargoDock
+
+- type: entity
+  parent: SignCarriedService
+  id: SignCarriedChapel
+  name: chapel sign
+  components:
+  - type: Sprite
+    state: chapel
+  - type: NFWallmountable
+    spawn: SignChapel
+
+- type: entity
+  parent: SignCarriedMedical
+  id: SignCarriedChem
+  name: chemistry sign
+  components:
+  - type: Sprite
+    state: chem
+  - type: NFWallmountable
+    spawn: SignChem
+
+- type: entity
+  parent: SignCarriedMedical
+  id: SignCarriedCloning
+  name: cloning sign
+  components:
+  - type: Sprite
+    state: cloning
+  - type: NFWallmountable
+    spawn: SignCloning
+
+- type: entity
+  parent: SignCarriedCommand
+  id: SignCarriedConference
+  name: conference room sign
+  components:
+  - type: Sprite
+    state: conference_room
+  - type: NFWallmountable
+    spawn: SignConference
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedCryo
+  name: cryosleep sign
+  components:
+  - type: Sprite
+    state: cryo
+  - type: NFWallmountable
+    spawn: SignCryo
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedDisposalSpace
+  name: disposal sign
+  components:
+  - type: Sprite
+    state: deathsposal
+  - type: NFWallmountable
+    spawn: SignDisposalSpace
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedDoors
+  name: doors sign
+  components:
+  - type: Sprite
+    state: doors
+  - type: NFWallmountable
+    spawn: SignDoors
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedRestroom
+  name: restroom sign
+  components:
+  - type: Sprite
+    state: restroom
+  - type: NFWallmountable
+    spawn: SignRestroom
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedMaterials
+  name: materials sign
+  components:
+  - type: Sprite
+    state: mats
+  - type: NFWallmountable
+    spawn: SignMaterials
+
+- type: entity
+  parent: SignCarriedEngineering
+  id: SignCarriedEngine
+  name: power sign
+  components:
+  - type: Sprite
+    state: engine
+  - type: NFWallmountable
+    spawn: SignEngine
+
+- type: entity
+  parent: SignCarriedEngineering
+  id: SignCarriedEngineeringDepartment
+  name: engineering sign
+  components:
+  - type: Sprite
+    state: eng
+  - type: NFWallmountable
+    spawn: SignEngineering
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedEscapePods
+  name: escape pods sign
+  components:
+  - type: Sprite
+    state: pods
+  - type: NFWallmountable
+    spawn: SignEscapePods
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedEVA
+  name: EVA sign
+  components:
+  - type: Sprite
+    state: eva
+  - type: NFWallmountable
+    spawn: SignEVA
+
+- type: entity
+  parent: SignCarriedTriangleLargeYellow
+  id: SignCarriedElectrical
+  name: electrical sign
+  components:
+  - type: Sprite
+    state: electrical
+  - type: NFWallmountable
+    spawn: SignElectrical
+
+- type: entity
+  parent: SignCarriedMedical
+  id: SignCarriedExamroom
+  name: examination room sign
+  components:
+  - type: Sprite
+    state: examroom
+  - type: NFWallmountable
+    spawn: SignExamroom
+
+- type: entity
+  parent: SignCarriedRoundRed
+  id: SignCarriedFire
+  name: fire sign
+  components:
+  - type: Sprite
+    state: fire
+  - type: NFWallmountable
+    spawn: SignFire
+
+- type: entity
+  parent: SignCarriedEngineering
+  id: SignCarriedGravity
+  name: gravity sign
+  components:
+  - type: Sprite
+    state: gravi
+  - type: NFWallmountable
+    spawn: SignGravity
+
+- type: entity
+  parent: SignCarriedCommand
+  id: SignCarriedHead
+  name: head sign
+  components:
+  - type: Sprite
+    state: commander
+  - type: NFWallmountable
+    spawn: SignHead
+
+- type: entity
+  parent: SignCarriedService
+  id: SignCarriedHydro1
+  name: hydro sign
+  components:
+  - type: Sprite
+    state: hydro
+  - type: NFWallmountable
+    spawn: SignHydro1
+
+- type: entity
+  parent: SignCarriedSecurity
+  id: SignCarriedInterrogation
+  name: interrogation sign
+  components:
+  - type: Sprite
+    state: interrogation
+  - type: NFWallmountable
+    spawn: SignInterrogation
+
+- type: entity
+  parent: SignCarriedService
+  id: SignCarriedJanitor
+  name: janitor sign
+  components:
+  - type: Sprite
+    state: janitor
+  - type: NFWallmountable
+    spawn: SignJanitor
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedLaundromat
+  name: laundromat sign
+  components:
+  - type: Sprite
+    state: laundromat
+  - type: NFWallmountable
+    spawn: SignLaundromat
+
+- type: entity
+  parent: SignCarriedSecurity
+  id: SignCarriedLawyer
+  name: law sign
+  components:
+  - type: Sprite
+    state: law
+  - type: NFWallmountable
+    spawn: SignLawyer
+
+- type: entity
+  parent: SignCarriedService
+  id: SignCarriedLibrary
+  name: library sign
+  components:
+  - type: Sprite
+    state: biblio
+  - type: NFWallmountable
+    spawn: SignLibrary
+
+- type: entity
+  parent: SignCarriedLogistics
+  id: SignCarriedMail
+  name: mail sign
+  components:
+  - type: Sprite
+    state: mail
+  - type: NFWallmountable
+    spawn: SignMail
+
+- type: entity
+  parent: SignCarriedMedical
+  id: SignCarriedMedicalDepartment
+  name: medbay sign
+  components:
+  - type: Sprite
+    state: medbay
+  - type: NFWallmountable
+    spawn: SignMedical
+
+- type: entity
+  parent: SignCarriedMedical
+  id: SignCarriedMorgue
+  name: morgue sign
+  components:
+  - type: Sprite
+    state: morgue
+  - type: NFWallmountable
+    spawn: SignMorgue
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedNews
+  name: news sign
+  components:
+  - type: Sprite
+    state: news
+  - type: NFWallmountable
+    spawn: SignNews
+
+- type: entity
+  parent: SignCarriedRoundForbidden
+  id: SignCarriedNosmoking
+  name: no smoking sign
+  components:
+  - type: Sprite
+    state: nosmoking
+  - type: NFWallmountable
+    spawn: SignNosmoking
+
+- type: entity
+  parent: SignCarriedSecurity
+  id: SignCarriedGenpop
+  name: genpop sign
+  components:
+  - type: Sprite
+    state: genpop
+  - type: NFWallmountable
+    spawn: SignGenpop
+
+- type: entity
+  parent: SignCarriedSecurity
+  id: SignCarriedPrison
+  name: prison sign
+  components:
+  - type: Sprite
+    state: prison
+  - type: NFWallmountable
+    spawn: SignPrison
+
+- type: entity
+  parent: SignCarriedMedical
+  id: SignCarriedPsychology
+  name: psychology sign
+  components:
+  - type: Sprite
+    state: psychology
+  - type: NFWallmountable
+    spawn: SignPsychology
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedReception
+  name: reception sign
+  components:
+  - type: Sprite
+    state: reception
+  - type: NFWallmountable
+    spawn: SignReception
+
+- type: entity
+  parent: SignCarriedScience
+  id: SignCarriedRND
+  name: research and development sign
+  components:
+  - type: Sprite
+    state: rnd
+  - type: NFWallmountable
+    spawn: SignRND
+
+- type: entity
+  parent: SignCarriedScience
+  id: SignCarriedRobo
+  name: robotics lab sign
+  components:
+  - type: Sprite
+    state: robo
+  - type: NFWallmountable
+    spawn: SignRobo
+
+- type: entity
+  parent: SignCarriedLogistics
+  id: SignCarriedSalvage
+  name: salvage sign
+  components:
+  - type: Sprite
+    state: salvage
+  - type: NFWallmountable
+    spawn: SignSalvage
+
+- type: entity
+  parent: SignCarriedScience
+  id: SignCarriedScienceDepartment
+  name: science sign
+  components:
+  - type: Sprite
+    state: sci
+  - type: NFWallmountable
+    spawn: SignScience
+
+- type: entity
+  parent: SignCarriedScience
+  id: SignCarriedServer
+  name: server sign
+  components:
+  - type: Sprite
+    state: data
+  - type: NFWallmountable
+    spawn: SignServer
+
+- type: entity
+  parent: SignCarriedEngineering
+  id: SignCarriedCans
+  name: canisters sign
+  components:
+  - type: Sprite
+    state: cans
+  - type: NFWallmountable
+    spawn: SignCans
+
+- type: entity
+  parent: SignCarriedScience
+  id: SignCarriedCansScience
+  name: canisters sign
+  components:
+  - type: Sprite
+    state: cans_sci
+  - type: NFWallmountable
+    spawn: SignCansScience
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedDock
+  name: evac sign
+  components:
+  - type: Sprite
+    state: dock
+  - type: NFWallmountable
+    spawn: SignShipDock
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedSpace
+  name: space sign
+  components:
+  - type: Sprite
+    state: space
+  - type: NFWallmountable
+    spawn: SignSpace
+
+- type: entity
+  parent: SignCarriedMedical
+  id: SignCarriedSurgery
+  name: surgery sign
+  components:
+  - type: Sprite
+    state: surgery
+  - type: NFWallmountable
+    spawn: SignSurgery
+
+- type: entity
+  parent: SignCarriedEngineering
+  id: SignCarriedTelecomms
+  name: telecomms sign
+  components:
+  - type: Sprite
+    state: telecoms
+  - type: NFWallmountable
+    spawn: SignTelecomms
+
+- type: entity
+  parent: SignCarriedScience
+  id: SignCarriedToxins
+  name: toxins sign
+  components:
+  - type: Sprite
+    state: toxins
+  - type: NFWallmountable
+    spawn: SignToxins
+
+- type: entity
+  parent: SignCarriedCommand
+  id: SignCarriedVault
+  name: vault sign
+  components:
+  - type: Sprite
+    state: vault
+  - type: NFWallmountable
+    spawn: SignVault
+
+- type: entity
+  parent: SignCarriedMedical
+  id: SignCarriedVirology
+  name: virology sign
+  components:
+  - type: Sprite
+    state: virology
+  - type: NFWallmountable
+    spawn: SignVirology
+
+- type: entity
+  parent: SignCarriedTriangleLargeYellow
+  id: SignCarriedCorrosives
+  name: corrosives warning sign
+  components:
+  - type: Sprite
+    state: corrosives
+  - type: NFWallmountable
+    spawn: SignCorrosives
+
+- type: entity
+  parent: SignCarriedTriangleLargeYellow
+  id: SignCarriedCryogenics
+  name: cryogenics warning sign
+  components:
+  - type: Sprite
+    state: cryogenics
+  - type: NFWallmountable
+    spawn: SignCryogenics
+
+- type: entity
+  parent: SignCarriedTriangleLargeYellow
+  id: SignCarriedDanger
+  name: danger warning sign
+  components:
+  - type: Sprite
+    state: danger
+  - type: NFWallmountable
+    spawn: SignDanger
+
+- type: entity
+  parent: SignCarriedTriangleLargeYellow
+  id: SignCarriedExplosives
+  name: explosives warning sign
+  components:
+  - type: Sprite
+    state: explosives
+  - type: NFWallmountable
+    spawn: SignExplosives
+
+- type: entity
+  parent: SignCarriedTriangleLargeYellow
+  id: SignCarriedFlammable
+  name: flammable warning sign
+  components:
+  - type: Sprite
+    state: flammable
+  - type: NFWallmountable
+    spawn: SignFlammable
+
+- type: entity
+  parent: SignCarriedTriangleLargeYellow
+  id: SignCarriedLaser
+  name: laser warning sign
+  components:
+  - type: Sprite
+    state: laser
+  - type: NFWallmountable
+    spawn: SignLaser
+
+- type: entity
+  parent: SignCarriedTriangleLargeYellow
+  id: SignCarriedMagnetics
+  name: magnetics warning sign
+  components:
+  - type: Sprite
+    state: magnetics
+  - type: NFWallmountable
+    spawn: SignMagnetics
+
+- type: entity
+  parent: SignCarriedTriangleLargeYellow
+  id: SignCarriedMemetic
+  name: memetic warning sign
+  components:
+  - type: Sprite
+    state: memetic
+  - type: NFWallmountable
+    spawn: SignMemetic
+
+- type: entity
+  parent: SignCarriedTriangleLargeYellow
+  id: SignCarriedSecure
+  name: secure sign
+  components:
+  - type: Sprite
+    state: secure
+  - type: NFWallmountable
+    spawn: SignSecure
+
+- type: entity
+  parent: SignCarriedTriangleLargeYellow
+  id: SignCarriedSecurearea
+  name: secure area sign
+  components:
+  - type: Sprite
+    state: securearea
+  - type: NFWallmountable
+    spawn: SignSecurearea
+
+- type: entity
+  parent: SignCarriedTriangleLargeYellowBase
+  id: SignCarriedShock
+  name: shock sign
+  components:
+  - type: Sprite
+    state: shock
+  - type: NFWallmountable
+    spawn: SignShock
+
+- type: entity
+  parent: SignCarriedTriangleLargeYellow
+  id: SignCarriedOptical
+  name: optical warning sign
+  components:
+  - type: Sprite
+    state: optical
+  - type: NFWallmountable
+    spawn: SignOptical
+
+- type: entity
+  parent: SignCarriedTriangleLargeYellow
+  id: SignCarriedOxidants
+  name: oxidants warning sign
+  components:
+  - type: Sprite
+    state: oxidants
+  - type: NFWallmountable
+    spawn: SignOxidants
+
+- type: entity
+  parent: SignCarriedTriangleLargeYellow
+  id: SignCarriedRadiation
+  name: radiation warning sign
+  components:
+  - type: Sprite
+    state: radiation
+  - type: NFWallmountable
+    spawn: SignRadiation
+
+- type: entity
+  parent: SignCarriedScience
+  id: SignCarriedXenobio
+  name: xenobio sign
+  components:
+  - type: Sprite
+    state: xenobio
+  - type: NFWallmountable
+    spawn: SignXenobio
+
+- type: entity
+  parent: SignCarriedScience
+  id: SignCarriedZomlab
+  name: zombie lab sign
+  components:
+  - type: Sprite
+    state: zomlab
+  - type: NFWallmountable
+    spawn: SignZomlab
+
+- type: entity
+  parent: SignCarriedTriangleRed
+  id: SignCarriedSecureMedRed
+  name: red secure sign
+  components:
+  - type: Sprite
+    state: medium_secure_red
+  - type: NFWallmountable
+    spawn: SignSecureMedRed
+
+- type: entity
+  parent: SignCarriedTriangle
+  id: SignCarriedSecureSmall
+  name: small secure sign
+  components:
+  - type: Sprite
+    state: small_secure
+  - type: NFWallmountable
+    spawn: SignSecureSmall
+
+- type: entity
+  parent: SignCarriedTriangleRed
+  id: SignCarriedSecureSmallRed
+  name: small red secure sign
+  components:
+  - type: Sprite
+    state: small_secure_red
+  - type: NFWallmountable
+    spawn: SignSecureSmallRed
+
+- type: entity
+  parent: SignCarriedTriangle
+  id: SignCarriedBlankMed
+  name: blank sign
+  components:
+  - type: Sprite
+    state: medium_blank
+  - type: NFWallmountable
+    spawn: SignBlankMed
+
+- type: entity
+  parent: SignCarriedTriangle
+  id: SignCarriedMagneticsMed
+  name: magnetics sign
+  components:
+  - type: Sprite
+    state: medium_magnetics
+  - type: NFWallmountable
+    spawn: SignMagneticsMed
+
+- type: entity
+  parent: SignCarriedTriangle
+  id: SignCarriedDangerMed
+  name: danger sign
+  components:
+  - type: Sprite
+    state: medium_danger
+  - type: NFWallmountable
+    spawn: SignDangerMed
+
+- type: entity
+  parent: SignCarriedTriangle
+  id: SignCarriedExplosivesMed
+  name: explosives sign
+  components:
+  - type: Sprite
+    state: medium_explosives
+  - type: NFWallmountable
+    spawn: ExplosivesSignMed
+
+- type: entity
+  parent: SignCarriedTriangle
+  id: SignCarriedCryogenicsMed
+  name: cryogenics sign
+  components:
+  - type: Sprite
+    state: medium_cryogenics
+  - type: NFWallmountable
+    spawn: SignCryogenicsMed
+
+- type: entity
+  parent: SignCarriedTriangle
+  id: SignCarriedElectricalMed
+  name: electrical sign
+  components:
+  - type: Sprite
+    state: medium_electrical
+  - type: NFWallmountable
+    spawn: SignElectricalMed
+
+- type: entity
+  parent: SignCarriedTriangle
+  id: SignCarriedBiohazardMed
+  name: biohazard sign
+  components:
+  - type: Sprite
+    state: medium_biohazard
+  - type: NFWallmountable
+    spawn: SignBiohazardMed
+
+- type: entity
+  parent: SignCarriedTriangle
+  id: SignCarriedRadiationMed
+  name: radiation sign
+  components:
+  - type: Sprite
+    state: medium_radiation
+  - type: NFWallmountable
+    spawn: SignRadiationMed
+
+- type: entity
+  parent: SignCarriedTriangle
+  id: SignCarriedFlammableMed
+  name: flammable sign
+  components:
+  - type: Sprite
+    state: medium_flammable
+  - type: NFWallmountable
+    spawn: SignFlammableMed
+
+- type: entity
+  parent: SignCarriedTriangle
+  id: SignCarriedLaserMed
+  name: laser sign
+  components:
+  - type: Sprite
+    state: medium_laser
+  - type: NFWallmountable
+    spawn: SignLaserMed
+
+- type: entity
+  parent: SignCarriedTriangle
+  id: SignCarriedSecureMed
+  name: secure sign
+  components:
+  - type: Sprite
+    state: medium_secure
+  - type: NFWallmountable
+    spawn: SignSecureMed
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedVox
+  name: vox area sign
+  components:
+  - type: Sprite
+    state: vox
+  - type: NFWallmountable
+    spawn: SignVox
+
+- type: entity
+  parent: SignCarriedRectangleLargeYellow
+  id: SignCarriedWarningAir
+  name: air warning sign
+  components:
+  - type: Sprite
+    state: atmos_air
+  - type: NFWallmountable
+    spawn: WarningAir
+
+- type: entity
+  parent: SignCarriedRectangleLargeYellow
+  id: SignCarriedWarningCO2
+  name: CO2 warning sign
+  components:
+  - type: Sprite
+    state: atmos_co2
+  - type: NFWallmountable
+    spawn: WarningCO2
+
+- type: entity
+  parent: SignCarriedRectangleLargeYellow
+  id: SignCarriedWarningN2
+  name: N2 warning sign
+  components:
+  - type: Sprite
+    state: atmos_n2
+  - type: NFWallmountable
+    spawn: WarningN2
+
+- type: entity
+  parent: SignCarriedRectangleLargeYellow
+  id: SignCarriedWarningN20
+  name: N20 warning sign
+  components:
+  - type: Sprite
+    state: atmos_n2o
+  - type: NFWallmountable
+    spawn: WarningN2O
+
+- type: entity
+  parent: SignCarriedRectangleLargeYellow
+  id: SignCarriedWarningO2
+  name: O2 warning sign
+  components:
+  - type: Sprite
+    state: atmos_o2
+  - type: NFWallmountable
+    spawn: WarningO2
+
+- type: entity
+  parent: SignCarriedRectangleLargeYellow
+  id: SignCarriedWarningPlasma
+  name: plasma waste sign
+  components:
+  - type: Sprite
+    state: atmos_plasma
+  - type: NFWallmountable
+    spawn: WarningPlasma
+
+- type: entity
+  parent: SignCarriedRectangleLargeYellow
+  id: SignCarriedWarningTritium
+  name: tritium waste sign
+  components:
+  - type: Sprite
+    state: atmos_tritium
+  - type: NFWallmountable
+    spawn: WarningTritium
+
+- type: entity
+  parent: SignCarriedRectangleLargeYellow
+  id: SignCarriedWarningWaste
+  name: atmos waste sign
+  components:
+  - type: Sprite
+    state: atmos_waste
+  - type: NFWallmountable
+    spawn: WarningWaste
+
+- type: entity
+  parent: BaseSignCarried
+  id: SignCarriedSmoking
+  name: no smoking sign
+  components:
+  - type: Sprite
+    state: nosmoking2
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: nosmoking-inhand-left
+      right:
+      - state: nosmoking-inhand-right
+  - type: NFWallmountable
+    spawn: SignSmoking
+
+- type: entity
+  parent: SignCarriedOld
+  id: SignCarriedSomethingOld
+  name: old sign
+  components:
+  - type: Sprite
+    state: something-old1
+  - type: NFWallmountable
+    spawn: SignSomethingOld
+
+- type: entity
+  parent: SignCarriedOld
+  id: SignCarriedSomethingOld2
+  name: old sign
+  components:
+  - type: Sprite
+    state: something-old2
+  - type: NFWallmountable
+    spawn: SignSomethingOld2
+
+- type: entity
+  parent: SignCarriedSecurity
+  id: SignCarriedSecurityDepartment
+  name: security sign
+  components:
+  - type: Sprite
+    state: security
+  - type: NFWallmountable
+    spawn: SignSecurity
+
+- type: entity
+  parent: SignCarriedSecurity
+  id: SignCarriedDetective
+  name: detective sign
+  components:
+  - type: Sprite
+    state: detective
+  - type: NFWallmountable
+    spawn: SignDetective
+
+- type: entity
+  parent: SignCarriedPlaqueGolden
+  id: SignCarriedPlaque
+  name: golden plaque
+  components:
+  - type: Sprite
+    state: goldenplaque
+  - type: NFWallmountable
+    spawn: SignPlaque
+
+- type: entity
+  parent: SignCarriedPlaqueGray
+  id: SignCarriedKiddiePlaque
+  name: kiddie plaque
+  components:
+  - type: Sprite
+    state: kiddieplaque
+  - type: NFWallmountable
+    spawn: SignKiddiePlaque
+
+# Rebrand
+- type: entity
+  parent: SignCarriedCommandRebrand
+  id: SignCarriedAiSyndie
+  name: AI sign
+  components:
+  - type: Sprite
+    state: ai_syndi
+  - type: NFWallmountable
+    spawn: SignAiSyndie
+
+- type: entity
+  parent: SignCarriedCommandRebrand
+  id: SignCarriedAiUploadSyndie
+  name: AI upload sign
+  components:
+  - type: Sprite
+    state: ai_upload_syndi
+  - type: NFWallmountable
+    spawn: SignAiUploadSyndie
+
+- type: entity
+  parent: SignCarriedCommandRebrand
+  id: SignCarriedBridgeSyndie
+  name: bridge sign
+  components:
+  - type: Sprite
+    state: bridge_syndi
+  - type: NFWallmountable
+    spawn: SignBridgeSyndie
+
+- type: entity
+  parent: SignCarriedCommandRebrand
+  id: SignCarriedConferenceSyndie
+  name: conference sign
+  components:
+  - type: Sprite
+    state: conference_room_syndi
+  - type: NFWallmountable
+    spawn: SignConferenceSyndie
+
+- type: entity
+  parent: SignCarriedCommandRebrand
+  id: SignCarriedHeadSyndie
+  name: head sign
+  components:
+  - type: Sprite
+    state: commander_syndi
+  - type: NFWallmountable
+    spawn: SignHeadSyndie
+
+- type: entity
+  parent: SignCarriedCommandRebrand
+  id: SignCarriedVaultSyndie
+  name: vault sign
+  components:
+  - type: Sprite
+    state: vault_syndi
+  - type: NFWallmountable
+    spawn: SignVaultSyndie
+
+# Other signs
+- type: entity
+  parent: BaseSignCarried
+  id: SignCarriedChemDiamond
+  name: fire diamond sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: chemdiamond
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: square-multi-inhand-left
+      right:
+      - state: square-multi-inhand-right
+  - type: NFWallmountable
+    spawn: SignChemDiamond
+
+- type: entity
+  parent: SignCarriedWhite
+  id: SignCarriedEyeChart
+  name: eye chart
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: eyechart
+  - type: NFWallmountable
+    spawn: SignEyeChart
+
+- type: entity
+  parent: SignCarriedWhite
+  id: SignCarriedXenoBio
+  name: xenobiology chart
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: xenobio-guide
+  - type: NFWallmountable
+    spawn: SignXenoBio
+
+- type: entity
+  parent: SignCarriedSquareOrange
+  id: SignCarriedHazardBio
+  name: biohazard sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: bio
+  - type: NFWallmountable
+    spawn: SignHazardBio
+
+- type: entity
+  parent: SignCarriedMedical
+  id: SignCarriedBlueCross
+  name: medical sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: bluecross2
+  - type: NFWallmountable
+    spawn: SignBlueCross
+
+- type: entity
+  parent: SignCarriedGeneral
+  id: SignCarriedHazardCold
+  name: cold hazard sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: cold
+  - type: NFWallmountable
+    spawn: SignHazardCold
+
+- type: entity
+  parent: SignCarriedSquareRed
+  id: SignCarriedHazardHeat
+  name: heat hazard sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: heat
+  - type: NFWallmountable
+    spawn: SignHazardHeat
+
+- type: entity
+  parent: SignCarriedSquareGreen
+  id: SignCarriedHazardRespirator
+  name: gas hazard sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: gasmask
+  - type: NFWallmountable
+    spawn: SignHazardRespirator
+
+- type: entity
+  parent: SignCarriedScience
+  id: SignCarriedHazardXeno
+  name: xeno hazard sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: xeno_warning
+  - type: NFWallmountable
+    spawn: SignHazardXeno
+
+- type: entity
+  parent: SignCarriedRoundYellow
+  id: SignCarriedHazardRadiation
+  name: radiation hazard sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: radiation
+  - type: NFWallmountable
+    spawn: SignHazardRadiation
+
+- type: entity
+  parent: SignCarriedTriangle
+  id: SignCarriedHazardShock
+  name: shock hazard sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: shock
+  - type: NFWallmountable
+    spawn: SignHazardShock
+
+- type: entity
+  parent: SignCarriedTriangle
+  id: SignCarriedCautionSecureArea
+  name: secure area notice sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: securearea
+  - type: NFWallmountable
+    spawn: SignCautionSecureArea
+
+- type: entity
+  parent: SignCarriedRoundForbidden
+  id: SignCarriedSmokingProhibited
+  name: no smoking sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: nosmoking
+  - type: NFWallmountable
+    spawn: SignSmokingProhibited
+
+- type: entity
+  parent: SignCarriedRoundAllowed
+  id: SignCarriedSmokingPermitted
+  name: smoking permitted sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: yessmoking
+  - type: NFWallmountable
+    spawn: SignSmokingPermitted
+
+- type: entity
+  parent: SignCarriedCommand
+  id: SignCarriedNanoTrasenZone
+  name: nanotrasen area sign
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: nanotrasen
+  - type: NFWallmountable
+    spawn: SignNanoTrasenZone
+
+- type: entity
+  parent: SignCarriedPlaqueGolden
+  id: SignCarriedPlaqueGold
+  name: golden plaque
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: goldenplaque
+  - type: NFWallmountable
+    spawn: SignPlaqueGolden
+
+- type: entity
+  parent: SignCarriedPlaqueGray
+  id: SignCarriedPlaqueSilver
+  name: silver plaque
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Signs/tg.rsi
+    state: kiddieplaque
+  - type: NFWallmountable
+    spawn: SignPlaqueSilver

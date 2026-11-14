@@ -266,115 +266,163 @@
 # Regular Signs
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignAi
-  name: ai sign
+  name: AI sign # starcup: changed from "ai sign"
   description: A sign, indicating an AI is present.
   components:
   - type: Sprite
     state: ai
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedAi
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignAiUpload
-  name: ai upload sign
+  name: AI upload sign # starcup: changed from "ai upload sign"
   description: A sign, indicating an AI is present.
   components:
     - type: Sprite
       state: ai_upload
+  # begin starcup: unhangable signs
+    - type: DisassembleOnAltVerb
+      prototypeToSpawn: SignCarriedAiUpload
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignArcade
   name: arcade sign
   description: A sign indicating the arcade.
   components:
   - type: Sprite
     state: arcade
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedArcade
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignArmory
   name: armory sign
   description: A sign indicating the armory.
   components:
   - type: Sprite
     state: armory
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedArmory
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignArrivals
   name: arrivals sign
   description: A sign indicating where the Arrivals shuttle will dock.
   components:
   - type: Sprite
     state: arrivals
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedArrivals
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignToolStorage
   name: tool storage sign
   description: A sign indicating the tool storage room.
   components:
   - type: Sprite
     state: ass
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedToolStorage
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignAnomaly
   name: xenoarcheology lab sign
   description: A sign indicating the xenoarchaeology lab.
   components:
   - type: Sprite
     state: xenoarch
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedAnomaly
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignAnomaly2
   name: anomaly lab sign
   description: A sign indicating the anomalous research lab.
   components:
   - type: Sprite
     state: anomaly
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedAnomaly2
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignAtmos
   name: atmos sign
   description: A sign indicating the atmospherics area.
   components:
   - type: Sprite
     state: atmos
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedAtmos
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignBar
   name: bar sign
   description: A sign indicating the bar.
   components:
   - type: Sprite
     state: bar
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedBar
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignBath
   name: bathroom sign
   description: A sign indicating the bathroom.
   components:
   - type: Sprite
     state: bath
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedBath
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignKitchen
   name: kitchen sign
   description: The heart of the home. And disease.
   components:
   - type: Sprite
     state: kitchen
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedKitchen
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignTheater
   name: theater sign
   description: Would it even be Space Station without drama?
@@ -389,421 +437,609 @@
         drama1: null
         drama2: null
         drama3: null
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedTheater
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignBarbershop
   name: barbershop sign
   description: A sign indicating the barbershop.
   components:
   - type: Sprite
     state: barbershop
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedBarbershop
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignBio
   name: bio sign
   description: A sign indicating the biology lab.
   components:
   - type: Sprite
     state: bio
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedBio
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignBiohazard
   name: biohazard sign
   description: A sign indicating a biohazard.
   components:
   - type: Sprite
     state: biohazard
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedBiohazard
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignBridge
   name: bridge sign
   description: A sign indicating the bridge.
   components:
   - type: Sprite
     state: bridge
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedBridge
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignCanisters
   name: canisters sign
   description: A sign warning the viewer about pressurised canisters.
   components:
   - type: Sprite
     state: canisters
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedCanisters
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignCargo
   name: logistics sign # DeltaV - Logistics Department replacing Cargo
   description: A sign indicating the logistics area. # DeltaV - Logistics Department replacing Cargo
   components:
   - type: Sprite
     state: cargo
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedCargoDepartment
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignCargoDock
   name: cargo dock sign
   description: A sign indicating a cargo dock.
   components:
   - type: Sprite
     state: cargo_dock
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedCargoDock
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignChapel
   name: chapel sign
   description: A sign indicating the chapel.
   components:
   - type: Sprite
     state: chapel
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedChapel
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignChem
   name: chemistry sign
   description: A sign indicating the chemistry lab.
   components:
   - type: Sprite
     state: chem
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedChem
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignCloning
   name: cloning sign
   description: A sign indicating the cloning lab.
   components:
   - type: Sprite
     state: cloning
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedCloning
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignConference
   name: conference room sign
   description: Where work happens.
   components:
   - type: Sprite
     state: conference_room
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedConference
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignCryo
   name: cryosleep sign
   description: A sign indicating the Cryosleep chamber, for those wishing to clock out early. # starcup: rewritten for tone
   components:
   - type: Sprite
     state: cryo
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedCryo
+  # end starcup
 
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignDisposalSpace
   name: disposal sign
   description: A sign indicating a disposal area.
   components:
   - type: Sprite
     state: deathsposal
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedDisposalSpace
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignDoors
   name: doors sign
   description: A sign indicating doors.
   components:
   - type: Sprite
     state: doors
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedDoors
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignRestroom
   name: restroom sign
   description: A sign indicating where you go to... What do you do here again?
   components:
   - type: Sprite
     state: restroom
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedRestroom
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignMaterials
   name: materials sign
   description: An omen to the juicy vault of steel, glass, and plastic that lays before you.
   components:
   - type: Sprite
     state: mats
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedMaterials
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignEngine
   name: power sign
   description: Where the powa happens.
   components:
   - type: Sprite
     state: engine
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedEngine
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignEngineering
   name: engineering sign
   description: A sign indicating the engineering area.
   components:
   - type: Sprite
     state: eng
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedEngineeringDepartment
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignEscapePods
   name: escape pods sign
   description: A sign indicating the escape pods.
   components:
   - type: Sprite
     state: pods
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedEscapePods
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignEVA
   name: EVA sign
   description: A sign indicating an EVA area. EVA equipment may be required beyond this point.
   components:
   - type: Sprite
     state: eva
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedEVA
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignElectrical
   name: electrical sign
   description: A sign indicating an electrical hazard.
   components:
   - type: Sprite
     state: electrical
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedElectrical
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignExamroom
   name: examination room sign
   description: A sign indicating a medical examination room.
   components:
   - type: Sprite
     state: examroom
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedExamroom
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignFire
   name: fire sign
   description: A sign indicating a fire hazard.
   components:
   - type: Sprite
     state: fire
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedFire
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignGravity
   name: gravity sign
   description: A sign indicating the gravity generator.
   components:
   - type: Sprite
     state: gravi
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedGravity
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignHead
   name: head sign
   description: An official sign indicating the dwellings of a SyndComm-certified department head. The head is ideally still attached to its body. # starcup - NT-SC swap and a stupid joke
   components:
   - type: Sprite
     state: commander
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedHead
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignHydro1
   name: hydro sign
   description: A sign indicating a hydroponics area.
   components:
   - type: Sprite
     state: hydro
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedHydro1
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignInterrogation
   name: interrogation sign
   description: A sign indicating an interrogation room.
   components:
   - type: Sprite
     state: interrogation
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedInterrogation
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignJanitor
   name: janitor sign
   description: A sign labelling an area where the janitor works.
   components:
   - type: Sprite
     state: janitor
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedJanitor
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignLaundromat
   name: laundromat sign
   description: A sign indicating the laundromat.
   components:
   - type: Sprite
     state: laundromat
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedLaundromat
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignLawyer
   name: law sign
   description: A sign indicating the presence of the (typically absent) rule of law.
   components:
   - type: Sprite
     state: law
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedLawyer
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignLibrary
   name: library sign
   description: A sign indicating the library.
   components:
   - type: Sprite
     state: biblio
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedLibrary
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignMail
   name: mail sign
   description: A sign indicating mail.
   components:
   - type: Sprite
     state: mail
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedMail
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignMedical
   name: medbay sign
   description: A sign indicating the medical bay.
   components:
   - type: Sprite
     state: medbay
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedMedicalDepartment
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignMorgue
   name: morgue sign
   description: A sign indicating the morgue.
   components:
   - type: Sprite
     state: morgue
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedMorgue
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignNews
   name: news sign
   description: A sign indicating where the Reporter works.
   components:
   - type: Sprite
     state: news
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedNews
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignNosmoking
   name: no smoking sign
   description: A sign indicating that smoking is not allowed in the vicinity.
   components:
   - type: Sprite
     state: nosmoking
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedNosmoking
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignGenpop
   name: genpop sign
   description: A sign indicating the genpop prison.
   components:
   - type: Sprite
     state: genpop
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedGenpop
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignPrison
   name: prison sign
   description: A sign indicating the prison.
   components:
   - type: Sprite
     state: prison
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedPrison
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignPsychology
   name: psychology sign
   description: A sign labelling an area where the Psychologist works.
   components:
   - type: Sprite
     state: psychology
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedPsychology
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignReception
   name: reception sign
   description: A sign indicating the reception.
   components:
   - type: Sprite
     state: reception
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedReception
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignRND
   name: research and development sign
   description: A sign indicating the research and development lab.
   components:
   - type: Sprite
     state: rnd
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedRND
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignRobo
   name: robo sign
   description: A sign indicating the robotics lab.
   components:
   - type: Sprite
     state: robo
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedRobo
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignSalvage
   name: salvage sign
   description: A sign indicating the salvage area.
   components:
   - type: Sprite
     state: salvage
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedSalvage
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignScience
   name: science sign
   description: A sign indicating the science area.
   components:
   - type: Sprite
     state: sci
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedScienceDepartment
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignServer
   name: server sign
   description: Ever heard of Big Data? This is it, chump. The biggest.
   components:
   - type: Sprite
     state: data
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedServer
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignCans
   name: canisters sign
   description: A sign indicating the auspicious presence of gas canisters.
   components:
   - type: Sprite
     state: cans
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedCans
+  # end starcup
 
 - type: entity
   parent: SignCans
@@ -812,154 +1048,222 @@
   components:
   - type: Sprite
     state: cans_sci
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedCansScience
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignShipDock
   name: evac sign
   description: A sign indicating the where the evac shuttle will (likely) arrive.
   components:
   - type: Sprite
-    sprite: _starcup/Structures/Wallmounts/signs.rsi # starcup: syndicate rebranding
+    sprite: _starcup/Structures/Wallmounts/Signs/signs_rebrand.rsi # starcup: syndicate rebranding
     state: dock
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedDock
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignSpace
   name: space sign
   description: A sign warning that the area ahead is nothing but cold, empty space.
   components:
   - type: Sprite
     state: space
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedSpace
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignSurgery
   name: surgery sign
   description: A sign indicating the operating theater.
   components:
   - type: Sprite
     state: surgery
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedSurgery
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignTelecomms
   name: telecomms sign
   description: A sign indicating the telecommunications room.
   components:
   - type: Sprite
     state: telecoms
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedTelecomms
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignToxins
   name: toxins sign
   description: A sign indicating the toxin lab.
   components:
   - type: Sprite
     state: toxins
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedToxins
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignVault
   name: vault sign
   description: A sign indicating the vault. Who knows what secrets lie inside?
   components:
   - type: Sprite
     state: vault
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedVault
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignVirology
   name: virology sign
   description: A sign indicating the virology lab.
   components:
   - type: Sprite
     state: virology
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedVirology
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignCorrosives
   name: corrosives warning sign
   description: A sign indicating a corrosive materials hazard.
   components:
   - type: Sprite
     state: corrosives
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedCorrosives
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignCryogenics
   name: cryogenics warning sign
   description: A sign indicating a cryogenic materials hazard. Bring a jacket!
   components:
   - type: Sprite
     state: cryogenics
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedCryogenics
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignDanger
   name: danger warning sign
   description: A sign warning against some danger.
   components:
   - type: Sprite
     state: danger
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedDanger
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignExplosives
   name: explosives warning sign
   description: A sign indicating an explosive materials hazard.
   components:
   - type: Sprite
     state: explosives
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedExplosives
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignFlammable
   name: flammable warning sign
   description: A sign indicating a flammable materials hazard.
   components:
   - type: Sprite
     state: flammable
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedFlammable
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignLaser
   name: laser warning sign
   description: A sign indicating a laser hazard.
   components:
   - type: Sprite
     state: laser
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedLaser
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignMagnetics
   name: magnetics warning sign
   description: A sign indicating a magnetic materials hazard.
   components:
   - type: Sprite
     state: magnetics
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedMagnetics
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignMemetic
   name: memetic warning sign
   description: A sign indicating a memetic hazard.
   components:
   - type: Sprite
     state: memetic
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedMemetic
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignSecure
   name: secure sign
   description: A sign indicating that the area ahead is a secure area.
   components:
   - type: Sprite
     state: secure
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedSecure
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignSecurearea
   name: secure area sign
   description: A sign indicating that the area ahead is a secure area.
@@ -967,333 +1271,481 @@
   - type: Sprite
     state: securearea
     snapCardinals: true
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedSecurearea
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignShock
   name: shock sign
   description: A sign indicating an electrical hazard.
   components:
   - type: Sprite
     state: shock
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedShock
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignOptical
   name: optical warning sign
   description: A sign indicating an optical radiation hazard.
   components:
   - type: Sprite
     state: optical
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedOptical
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignOxidants
   name: oxidants warning sign
   description: A sign indicating an oxidizing agent hazard.
   components:
   - type: Sprite
     state: oxidants
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedOxidants
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignRadiation
   name: radiation warning sign
   description: A sign indicating an ionizing radiation hazard.
   components:
   - type: Sprite
     state: radiation
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedRadiation
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignXenobio
   name: xenobio sign
   description: A sign indicating the xenobiology lab.
   components:
   - type: Sprite
     state: xenobio
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedXenobio
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignZomlab
   name: zombie lab sign
   description: The final remains of a shut-down Interdyne research project that aimed to reverse-engineer NanoTrasen's Romerol concoction. I wonder how that went... # starcup - NT-SC swap
   components:
   - type: Sprite
     state: zomlab
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedZomlab
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignSecureMedRed
   name: red secure sign
   description: A sign indicating that the area ahead is a secure area.
   components:
   - type: Sprite
     state: medium_secure_red
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedSecureMedRed
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignSecureSmall
   name: small secure sign
   description: A sign indicating that the area ahead is a secure area.
   components:
   - type: Sprite
     state: small_secure
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedSecureSmall
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignSecureSmallRed
   name: small red secure sign
   description: A sign indicating that the area ahead is a secure area.
   components:
   - type: Sprite
     state: small_secure_red
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedSecureSmallRed
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignBlankMed
   name: blank sign
   description: A blank sign.
   components:
   - type: Sprite
     state: medium_blank
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedBlankMed
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignMagneticsMed
   name: magnetics sign
   description: A sign indicating the use of magnets.
   components:
   - type: Sprite
     state: medium_magnetics
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedMagneticsMed
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignDangerMed
   name: danger sign
   description: A sign warning against some form of danger.
   components:
   - type: Sprite
     state: medium_danger
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedDangerMed
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: ExplosivesSignMed
   name: explosives sign
   description: A sign indicating explosive materials.
   components:
   - type: Sprite
     state: medium_explosives
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedExplosivesMed
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignCryogenicsMed
   name: cryogenics sign
   description: A sign indicating cryogenic materials.
   components:
   - type: Sprite
     state: medium_cryogenics
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedCryogenicsMed
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignElectricalMed
   name: electrical sign
   description: A sign indicating an electrical hazard.
   components:
   - type: Sprite
     state: medium_electrical
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedElectricalMed
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignBiohazardMed
   name: biohazard sign
   description: A sign indicating a biohazard.
   components:
   - type: Sprite
     state: medium_biohazard
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedBiohazardMed
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignRadiationMed
   name: radiation sign
   description: A sign indicating an ionizing radiation hazard.
   components:
   - type: Sprite
     state: medium_radiation
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedRadiationMed
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignFlammableMed
   name: flammable sign #when flammable component is done, this sign needs it
   description: A sign indicating flammable materials.
   components:
   - type: Sprite
     state: medium_flammable
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedFlammableMed
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignLaserMed
   name: laser sign
   description: A sign indicating a laser hazard.
   components:
   - type: Sprite
     state: medium_laser
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedLaserMed
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignSecureMed
   name: secure sign
   description: A sign indicating that the area ahead is a secure area.
   components:
   - type: Sprite
     state: medium_secure
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedSecureMed
+  # end starcup
 
 # TODO: make a fancier version of this sign
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignVox
   name: vox area sign
   description: A sign indicating that the area ahead is intended for Vox crew members and does not have an oxygen atmosphere.
   components:
   - type: Sprite
     state: vox
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedVox
+  # end starcup
 
 # Atmos Warnings
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: WarningAir
   name: air warning sign
   description: WARNING! Air flow tube. Ensure the flow is disengaged before working.
   components:
   - type: Sprite
     state: atmos_air
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedWarningAir
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: WarningCO2
   name: CO2 warning sign
   description: WARNING! CO2 flow tube. Ensure the flow is disengaged before working.
   components:
   - type: Sprite
     state: atmos_co2
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedWarningCO2
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: WarningN2
   name: N2 warning sign
   description: WARNING! N2 flow tube. Ensure the flow is disengaged before working.
   components:
   - type: Sprite
     state: atmos_n2
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedWarningN2
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: WarningN2O
   name: N2O warning sign
   description: WARNING! N2O flow tube. Ensure the flow is disengaged before working.
   components:
   - type: Sprite
     state: atmos_n2o
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedWarningN20
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: WarningO2
   name: O2 warning sign
   description: WARNING! O2 flow tube. Ensure the flow is disengaged before working.
   components:
   - type: Sprite
     state: atmos_o2
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedWarningO2
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: WarningPlasma
   name: plasma waste sign
   description: WARNING! Plasma flow tube. Ensure the flow is disengaged before working.
   components:
   - type: Sprite
     state: atmos_plasma
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedWarningPlasma
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: WarningTritium
   name: tritium waste sign
   description: WARNING! Tritium flow tube. Ensure the flow is disengaged before working.
   components:
   - type: Sprite
     state: atmos_tritium
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedWarningTritium
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: WarningWaste
   name: atmos waste sign
   description: WARNING! Waste flow tube. Ensure the flow is disengaged before working.
   components:
   - type: Sprite
     state: atmos_waste
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedWarningWaste
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignSmoking
   name: no smoking sign
   description: A warning sign which reads 'NO SMOKING'.
   components:
   - type: Sprite
     state: nosmoking2
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedSmoking
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignSomethingOld
   name: old sign
   description: Technical information of some sort, shame it's too worn-out to read.
   components:
   - type: Sprite
     state: something-old1
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedSomethingOld
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignSomethingOld2
   name: old sign
   description: Looks like a planet crashing by some station above it. It's kinda scary.
   components:
   - type: Sprite
     state: something-old2
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedSomethingOld2
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignSecurity
   name: security sign
   description: A sign depicting the security insignia.
   components:
   - type: Sprite
     state: security
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedSecurityDepartment
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignDetective
   name: detective sign
   description: A sign depicting the detective's office.
   components:
   - type: Sprite
     state: detective
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedDetective
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignPlaque
   name: golden plaque
   description: A prestigious golden plaque.
   components:
   - type: Sprite
     state: goldenplaque
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedPlaque
+  # end starcup
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown
   id: SignKiddiePlaque
   name: kiddie plaque
   description: A modest plaque.
   components:
   - type: Sprite
     state: kiddieplaque
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedKiddiePlaque
+  # end starcup
 
 - type: entity
   parent: BaseSign

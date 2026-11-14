@@ -1,0 +1,211 @@
+- type: entity
+  parent: PaintingBase
+  id: PaintingCalicoCat
+  name: Curious Calico
+  description: A painting of a calico cat peering at the viewer.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Paintings/apprehensive-act3027.rsi
+    state: calicat
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PaintingCurtainedCalicoCat
+
+- type: entity
+  parent: PaintingBase
+  id: PaintingDragonRoost
+  name: Dragon's Roost
+  description: A mighty purple dragon rests over its jeweled hoard.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Paintings/apprehensive-act3027.rsi
+    state: dragonroost
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PaintingCurtainedDragonRoost
+
+- type: entity
+  parent: PaintingBase
+  id: PaintingRainLizard1
+  name: Wonder
+  description: A lizard looks up to the stars in the fungal depths of a wet planet.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Paintings/apprehensive-act3027.rsi
+    state: rainlizard1
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PaintingCurtainedRainLizard1
+
+- type: entity
+  parent: PaintingBase
+  id: PaintingRainLizard2
+  name: The Wait
+  description: A painting of a lizard perched on a fungal bed in a misty planet.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Paintings/apprehensive-act3027.rsi
+    state: rainlizard2
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PaintingCurtainedRainLizard2
+
+- type: entity
+  parent: PaintingBase
+  id: PaintingRearingUnicorn
+  name: Rearing Unicorn
+  description: Mighty and free lord of the woodlands.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Paintings/apprehensive-act3027.rsi
+    state: rearingunicorn
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PaintingCurtainedRearingUnicorn
+
+- type: entity
+  parent: PaintingBase
+  id: PaintingLadyOfRevolution
+  name: Lady of Revolution
+  description: A painting of a woman with sword that rises among the spears of rebellious, oppressed children.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Paintings/assorted.rsi
+    state: revolution
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PaintingCurtainedLadyOfRevolution
+
+- type: entity
+  parent: PaintingBase
+  id: PaintingPillarOfDoom
+  name: Lady of Revolution
+  description: "'Oh, Pillar of Doom, tree of life! What are we, but mere echos of your sacred terror.'"
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Paintings/assorted.rsi
+    state: doompillar
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PaintingCurtainedPillarOfDoom
+
+# tgpaintings
+# All names were changed from "painting", with the exception of FramedPaintingDebug
+- type: entity
+  parent: PaintingBase
+  id: FramedPaintingDebug
+  name: painting
+  description: An onerously familiar painting.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Paintings/tgpaintings.rsi
+    state: debug
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PaintingCurtainedDebug
+
+- type: entity
+  parent: PaintingBase
+  id: FramedPaintingDesire
+  name: Desire
+  description: A framed painting of a still-beating heart served on a plate.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Paintings/tgpaintings.rsi
+    state: desire
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PaintingCurtainedDesire
+
+- type: entity
+  parent: PaintingBase
+  id: FramedPaintingRust
+  name: Rust
+  description: A lovely painting.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Paintings/tgpaintings.rsi
+    state: rust
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PaintingCurtainedRust
+
+- type: entity
+  parent: PaintingBase
+  id: FramedPaintingVines
+  name: Vines
+  description: A landscape painting of a cluster of vines strangling... something.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Paintings/tgpaintings.rsi
+    state: vines
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PaintingCurtainedVines
+
+- type: entity
+  parent: PaintingBase
+  id: FramedPaintingWeeping
+  name: Weeping
+  description: A lovely painting.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Paintings/tgpaintings.rsi
+    state: weeping
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PaintingCurtainedWeeping
+
+- type: entity
+  parent: PaintingBase
+  id: FramedPaintingFruit
+  name: Fruit
+  description: A crude yet appreciable painting of an orange.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Paintings/tgsquares.rsi
+    state: fruit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PaintingCurtainedFruit
+
+- type: entity
+  parent: PaintingBase
+  id: FramedPaintingRat
+  name: Mouse
+  description: A portrait of a mouse.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Paintings/tgsquares.rsi
+    state: rat
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PaintingCurtainedRat
+
+- type: entity
+  parent: PaintingBase
+  id: FramedPaintingRatvar
+  name: Ratvar
+  description: A portrait of true mathematical impossibility. # changed to fit our lore
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/Paintings/tgsquares.rsi
+    state: ratvar
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PaintingCurtainedRatvar
