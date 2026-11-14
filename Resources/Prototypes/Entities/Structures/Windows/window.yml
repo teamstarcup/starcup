@@ -78,6 +78,9 @@
     pylons:
     - Door
     - Firelock
+  - type: InteractionVerbs
+    allowedVerbs:
+    - KnockOn
 
 - type: entity
   parent: [ BaseWindowStructure, StructureHealthBarrier ]
@@ -106,6 +109,8 @@
           ShardGlass:
             min: 1
             max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
 
 - type: entity
   parent: Window
@@ -202,6 +207,9 @@
   - type: Construction
     graph: WindowDirectional
     node: windowDirectional
+  - type: InteractionVerbs
+    allowedVerbs:
+    - KnockOn
 
 - type: entity
   parent: [ BaseWindowStructureDirectional, StructureHealthBarrierWeak ]
@@ -229,6 +237,8 @@
           ShardGlass:
             min: 1
             max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
 
 - type: entity
   parent: WindowDirectional
