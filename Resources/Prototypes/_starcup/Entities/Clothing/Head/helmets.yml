@@ -24,3 +24,15 @@
     sprite: _starcup/Clothing/Head/Helmets/nt-raid.rsi
   - type: ExaminableClothing
     examineText: clothing-nanotrasen-raid-helmet
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHelmetFencing
+  name: fencing mask
+  description: The favored headwear for duelists and eccentric beekeepers.
+  components:
+  - type: Sprite
+    sprite: _starcup/Clothing/Head/Helmets/fencer.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Head/Helmets/fencer.rsi
+  - type: IdentityBlocker

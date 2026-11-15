@@ -170,16 +170,18 @@
   color: "#434b4d"
   boilingPoint: 2962.0
   meltingPoint: 1638.0
+# begin starcup - MKCs can get "drunk"
   metabolisms:
     Bloodstream:
       effects:
       - !type:ModifyStatusEffect
-        effectProto: StatusEffectDrunk
+        effectProto: StatusEffectMalfunctioning
         time: 6
         type: Add
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ MKC ]
+# end starcup
 
 - type: reagent
   id: SodiumPolyacrylate
