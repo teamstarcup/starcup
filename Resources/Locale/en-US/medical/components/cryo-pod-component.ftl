@@ -5,8 +5,8 @@ cryo-pod-examine = There's {INDEFINITE($beaker)} {$beaker} in here.
 cryo-pod-empty-beaker = It is empty!
 # Shown when a normal ejection through the eject verb is attempted on a locked pod.
 cryo-pod-locked = The ejection mechanism is unresponsive!
-
-cryo-pod-window-product-name = Nanotrasen CRPX-229
+# starcup: changed product name for the syndie swap
+cryo-pod-window-product-name = Interdyne CRPX-437
 cryo-pod-window-product-subtitle = Cryogenic Restoration Pod
 cryo-pod-window-loading = Loading
 cryo-pod-window-atmos-pressure = Pressure
