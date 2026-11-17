@@ -229,7 +229,15 @@
     requiredMobState:
     - Critical
     - Dead
-
+  - type: InteractionVerbs # exclude help interactions
+    enforceAllowedVerbs: true
+    allowedVerbs:
+    - LookAt
+    - WaveAt
+    - KnockOn
+    - Hug
+    - Pet
+    - ShakeOther
 - type: entity
   abstract: true
   parent: BaseBorgChassisNotIonStormable
