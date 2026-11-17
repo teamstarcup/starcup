@@ -46,10 +46,10 @@ public partial class NanotrasenStylesheet : CommonStylesheet
             [
                 // Declare the default font.
                 Element().Prop(Label.StylePropertyFont, BaseFont.GetFont(PrimaryFontSize)),
-                // Branding.
+                // Branding. starcup: syndie-swapped ntlogo for syndlogo
                 Element<TextureRect>()
                     .Class("NTLogoDark")
-                    .Prop(TextureRect.StylePropertyTexture, GetTexture(new ResPath("ntlogo.svg.png")))
+                    .Prop(TextureRect.StylePropertyTexture, GetTexture(new ResPath("syndlogo.svg.png")))
                     .Prop(Control.StylePropertyModulateSelf, Color.FromHex("#757575")),
             ],
             // Finally, load all the other sheetlets.

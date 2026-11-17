@@ -1,4 +1,4 @@
-﻿using Content.Server.Worldgen.Systems;
+using Content.Server.Worldgen.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
@@ -14,8 +14,8 @@ public sealed partial class WorldControllerComponent : Component
     /// <summary>
     ///     The prototype to use for chunks on this world map.
     /// </summary>
-    [DataField("chunkProto", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string ChunkProto = "WorldChunk";
+    [DataField("chunkProto")]
+    public EntProtoId ChunkProto = "WorldChunk";
 
     /// <summary>
     ///     An index of chunks owned by the controller.

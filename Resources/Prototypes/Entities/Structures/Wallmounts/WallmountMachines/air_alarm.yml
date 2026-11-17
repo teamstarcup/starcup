@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseWallmountMachine
+  parent: [ BaseWallmountMachine, StructureHealthMachineWeak ]
   id: AirAlarm
   name: air alarm
   description: An air alarm. Alarms... air?
@@ -72,29 +72,28 @@
   - type: Appearance
   - type: WiresVisuals
   - type: Sprite
+  # Classic: Respritening renamed.
     sprite: Structures/Wallmounts/air_monitors.rsi
+#    offset: 0, -0.25 # Classic: Removed.
     layers:
+  # Classic: Restored state.
     - state: alarmp
       map: ["airAlarmBase"]
     - state: alarm0
+      shader: unshaded
       map: ["airAlarmState"] # TODO: fire alarm enum
+  # Classic: Restored state.
     - state: alarmx
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Construction
     graph: AirAlarm
     node: air_alarm
-  - type: Damageable
-    damageModifierSet: Metallic
-  - type: Injurable
-    damageContainer: StructuralInorganic
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
         damage: 100
       behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
       - !type:PlaySoundBehavior
         sound:
           collection: MetalGlassBreak
@@ -106,14 +105,16 @@
     - DeviceMonitoringAndControl
 
 - type: entity
-  parent: BaseWallmountMetallic
+  parent: [ BaseWallmountMetallic, StructureHealthMachineFlimsy ]
   id: AirAlarmAssembly
   name: air alarm assembly
   description: An air alarm. Doesn't look like it'll be alarming air any time soon.
   components:
   - type: Sprite
+  # Classic: Respritening renamed.
     sprite: Structures/Wallmounts/air_monitors.rsi
     layers:
+  # Classic: Restored state.
     - state: alarm_b1
       map: [ "enum.ConstructionVisuals.Layer" ]
   - type: Appearance
@@ -121,6 +122,7 @@
     visuals:
       enum.ConstructionVisuals.Key:
         enum.ConstructionVisuals.Layer:
+  # Classic: Restored states.
           assembly: { state: alarm_b1 }
           electronics: { state: alarm_b1 }
   - type: Construction
@@ -132,15 +134,15 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 15
+        damage: 50
       behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
       - !type:PlaySoundBehavior
         sound:
           collection: MetalGlassBreak
           params:
             volume: -4
+
+# Classic: readded entities removed by Respritening.
 
 - type: entity
   id: AirAlarmXeno

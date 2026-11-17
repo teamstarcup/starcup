@@ -158,6 +158,7 @@
       proper: true
       gender: female
   - type: Godmode # starcup
+  - type: SpeakOnException
 
 - type: entity
   parent: [ MobCorgiPuppy, BaseSlicingRefinable ]
@@ -200,6 +201,9 @@
     - CreatureEmotes # starcup
   - type: StealTarget
     stealGroup: AnimalNamedCat
+  - type: SpeakOnException
+    speechCooldown: 3m
+    chanceSpeakNoAccent: 0.01
 
 - type: entity
   parent: [ BaseUniquePet, MobCatCalico ]
@@ -210,6 +214,9 @@
   - type: NpcFactionMember
     factions:
       - PetsNT
+  - type: SpeakOnException
+    speechCooldown: 2m
+    chanceSpeakNoAccent: 0.007
   - type: Grammar
     attributes:
       proper: true

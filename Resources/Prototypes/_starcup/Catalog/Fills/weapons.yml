@@ -43,7 +43,16 @@
     - id: Stunprod
     - id: BaseBallBat
     - id: ClothingHandsKnuckleDusters
-    - id: Cutlass
+    # begin starcup - add sheaths and dueling rapier
+    - !type:GroupSelector
+      children:
+      - id: Cutlass
+      - id: ClothingBeltSheathCutlassFilled
+    - !type:GroupSelector
+      children:
+      - id: DuelingRapier
+      - id: ClothingBeltSheathRapierFilled
+    # end starcup
     - id: Claymore
     - id: Katana
     - id: Machete

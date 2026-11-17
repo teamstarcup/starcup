@@ -1,0 +1,21 @@
+# All fersilicite-based MKC Drinks can be parented to this!
+# If you want to customize the drunkenness, add ModifyStatusEffect manually.
+# Be sure to add any new MKC drinks to the list on Body/Species/mkc.yml so they don't explode!
+- type: reagent
+  parent: BaseDrink
+  id: BaseAlcoholSilicon
+  group: Drinks
+  abstract: true
+  slipData:
+    requiredSlipSpeed: 3.5
+  friction: 0.4
+  metabolisms:
+    Bloodstream:
+      effects:
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectMalfunctioning
+        time: 7 # specialized drinks can last a bit longer
+        type: Add
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ MKC ]

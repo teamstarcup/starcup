@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseWallmount
+  parent: [ BaseWallmount, StructureHealthMachineWeak ]
   categories: [ HideSpawnMenu ]
   id: BaseAPC
   name: APC
@@ -29,7 +29,9 @@
     access: [["Engineering"]]
   - type: Sprite
     drawdepth: WallMountedItems
+  # Classic: Respritening renamed.
     sprite: Structures/Power/apc.rsi
+#    offset: 0, -0.25 # Classic: Removed.
     layers:
     - state: base
     - state: panel
@@ -38,28 +40,16 @@
     - state: display-charging
       shader: unshaded
       map: ["enum.ApcVisualLayers.ChargeState"]
-    - state: lock0-locked
-      shader: unshaded
-      map: ["enum.ApcVisualLayers.InterfaceLock"]
-      visible: false
+  # Classic: Restored state.
     - state: lock1-locked
-      shader: unshaded
-      map: ["enum.ApcVisualLayers.PanelLock"]
-      visible: false
-    - state: lock1-locked #when these are implemented get actual sprites.
       shader: unshaded
       map: ["enum.ApcVisualLayers.Equipment"]
       visible: false
-    - state: lock1-locked
-      shader: unshaded
-      map: ["enum.ApcVisualLayers.Lighting"]
-      visible: false
-    - state: lock1-locked
-      shader: unshaded
-      map: ["enum.ApcVisualLayers.Environment"]
-      visible: false
   - type: Appearance
   - type: ApcVisuals
+  # Classic: To-do: Make a new classic APC sprite for the new "tripped breaker", currently use "lack" as placeholder.
+    channelIndicatorSuffixes: [ null, null, null, null ]
+    screenStateSuffixes: [ "lack", "charging", "full", "remote", "lack" ]
   - type: Battery
     # Very important:
     # Disable networking to prevent the battery getting continuously dirtied every tick as it interacts with the power network.
@@ -83,6 +73,7 @@
     sourceNode: input
     loadNode: output
     collectionName: apc
+  # Classic: Respritening renamed.
     sprite: Structures/Power/apc.rsi
     state: static
   - type: BatteryCharger
@@ -117,9 +108,7 @@
     layoutId: APC
   - type: WiresVisuals
   - type: Damageable
-    damageModifierSet: StructuralMetallicStrong
-  - type: Injurable
-    damageContainer: StructuralInorganic
+    damageModifierSet: SteelMod
   - type: Destructible
     thresholds:
     - trigger:
@@ -129,10 +118,8 @@
       - !type:SpawnEntitiesBehavior
         spawn:
           SheetSteel1:
-            min: 1
-            max: 1
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
+            min: 0
+            max: 2
       - !type:PlaySoundBehavior
         sound:
           collection: MetalGlassBreak
@@ -157,7 +144,7 @@
 
 # APC under construction
 - type: entity
-  parent: BaseWallmountMetallic
+  parent: [ BaseWallmountMetallic, StructureHealthMachineFlimsy ]
   categories: [ HideSpawnMenu ]
   id: APCFrame
   name: APC frame
@@ -166,6 +153,7 @@
     mode: SnapgridCenter
   components:
   - type: Sprite
+  # Classic: Respritening renamed.
     sprite: Structures/Power/apc.rsi
     state: frame
   - type: Construction
@@ -180,14 +168,11 @@
       - !type:SpawnEntitiesBehavior
         spawn:
           SheetSteel1:
-            min: 1
-            max: 1
+            min: 0
+            max: 2
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-
 # Constructed APC
 - type: entity
   parent: BaseAPC
