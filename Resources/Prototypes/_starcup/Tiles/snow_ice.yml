@@ -13,3 +13,31 @@
   - 1.0
   - 1.0
   - 1.0
+
+- type: tile
+  id: FloorSnowOld # from the respritening
+  parent: FloorSnow
+  name: old snow
+  sprite: /Textures/_WizDen/Tiles/Snow/snow.png
+  variants: 16
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  # begin starcup
+  edgeSpritePriority: 9
+  edgeSprites:
+    SouthEast: /Textures/_WizDen/Tiles/Snow/single_edge_SE.png
+    NorthEast: /Textures/_WizDen/Tiles/Snow/single_edge_NE.png
+    NorthWest: /Textures/_WizDen/Tiles/Snow/single_edge_NW.png
+    SouthWest: /Textures/_WizDen/Tiles/Snow/single_edge_SW.png
+    South: /Textures/_WizDen/Tiles/Snow/snow_double_edge_S.png
+    East: /Textures/_WizDen/Tiles/Snow/snow_double_edge_E.png
+    North: /Textures/_WizDen/Tiles/Snow/snow_double_edge_N.png
+    West: /Textures/_WizDen/Tiles/Snow/snow_double_edge_W.png
+  # end starcup
+  footstepSounds:
+    collection: FootstepSnow

@@ -63,19 +63,26 @@
   id: FloorPlanetGrass
   parent: BaseFloorPlanet
   name: tiles-grass-planet-floor
-  sprite: /Textures/Tiles/Planet/Grass/grass.png
-  variants: 4
-  edgeSpritePriority: 5 # starcup
+  # begin starcup: porting over the respritening
+  sprite: /Textures/_WizDen/Tiles/Grass/grass.png
+  variants: 6
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 5
   edgeSprites:
-    # begin starcup: Rounded edges for a more natural look
-    SouthEast: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
+    SouthEast: /Textures/_WizDen/Tiles/Grass/single_edge_SE.png
+    NorthEast: /Textures/_WizDen/Tiles/Grass/single_edge_NE.png
+    NorthWest: /Textures/_WizDen/Tiles/Grass/single_edge_NW.png
+    SouthWest: /Textures/_WizDen/Tiles/Grass/single_edge_SW.png
+    South: /Textures/_WizDen/Tiles/Grass/double_edge_S.png
+    East: /Textures/_WizDen/Tiles/Grass/double_edge_E.png
+    North: /Textures/_WizDen/Tiles/Grass/double_edge_N.png
+    West: /Textures/_WizDen/Tiles/Grass/double_edge_W.png
     # end starcup
   baseTurf: FloorPlanetDirt
   footstepSounds:
@@ -120,6 +127,10 @@
   # begin starcup
   edgeSpritePriority: 9
   edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Planet/Snow/single_edge_SE.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/Snow/single_edge_NE.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/Snow/single_edge_NW.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/Snow/single_edge_SW.png
     South: /Textures/_starcup/Tiles/Planet/Snow/snow_double_edge_south.png
     East: /Textures/_starcup/Tiles/Planet/Snow/snow_double_edge_east.png
     North: /Textures/_starcup/Tiles/Planet/Snow/snow_double_edge_north.png
@@ -132,7 +143,13 @@
 - type: tile
   id: FloorIce
   name: tiles-ice
-  sprite: /Textures/Tiles/Planet/Snow/ice.png
+  sprite: /Textures/_WizDen/Tiles/Ice/ice.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
   edgeSpritePriority: 1 # starcup
   isSubfloor: true
   friction: 0.05
