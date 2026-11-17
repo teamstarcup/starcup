@@ -74,8 +74,14 @@
   isSpace: false
   heatCapacity: 10000
   mass: 200
-  #footstepSounds:
-  #  path: /Audio/_starcup/silence.ogg
+  footstepSounds:
+    path: /Audio/_starcup/silence.ogg
+
+- type: tile
+  parent: FloorTileInvisible
+  id: FloorTileInvisibleSubfloor # floating cables
+  name: invisible subfloor
+  isSubfloor: true
 
 - type: tile
   parent: FloorTileInvisible
