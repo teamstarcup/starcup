@@ -46,12 +46,12 @@
     attackRate: 0.6
     damage:
       types:
-        Blunt: 9
+        Blunt: 10
   - type: Wieldable
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 3
+        Blunt: 4
 
 - type: entity
   name: free man's crowbar
@@ -91,11 +91,11 @@
   - type: Tool
     qualities:
     - Prying
+    speedModifier: 0.7
     useSound:
       path: /Audio/Items/crowbar.ogg
   - type: ToolTileCompatible
     delay: 1.5 # slower than a crowbar
-  - type: Prying
   - type: Tag
     tags:
     - Hammer
