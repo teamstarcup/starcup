@@ -3,7 +3,7 @@
   name: grassy snow
   parent: FloorSnow
   sprite: /Textures/_starcup/Tiles/Planet/snow_grassy/snow.png
-  edgeSpritePriority: 9
+  edgeSpritePriority: 1150
   variants: 8
   placementVariants:
   - 1.0
@@ -14,3 +14,59 @@
   - 1.0
   - 1.0
   - 1.0
+
+- type: tile
+  id: FloorSnowGrassyCold
+  name: cold grassy snow
+  parent: FloorSnowGrassy
+  sprite: /Textures/_starcup/Tiles/Planet/snow_grassy_cold/snow.png
+
+- type: tile
+  id: FloorSnowGrassyDry
+  name: dry grassy snow
+  parent: FloorSnowGrassy
+  sprite: /Textures/_starcup/Tiles/Planet/snow_grassy_dry/snow.png
+
+- type: tile
+  id: FloorSnowOld # from the respritening
+  parent: FloorSnow
+  name: old snow
+  sprite: /Textures/_WizDen/Tiles/Snow/snow.png
+  variants: 6
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 1100
+  edgeSprites:
+    SouthEast: /Textures/_WizDen/Tiles/Snow/single_edge_SE.png
+    NorthEast: /Textures/_WizDen/Tiles/Snow/single_edge_NE.png
+    NorthWest: /Textures/_WizDen/Tiles/Snow/single_edge_NW.png
+    SouthWest: /Textures/_WizDen/Tiles/Snow/single_edge_SW.png
+    South: /Textures/_WizDen/Tiles/Snow/double_edge_S.png
+    East: /Textures/_WizDen/Tiles/Snow/double_edge_E.png
+    North: /Textures/_WizDen/Tiles/Snow/double_edge_N.png
+    West: /Textures/_WizDen/Tiles/Snow/double_edge_W.png
+  footstepSounds:
+    collection: FootstepSnow
+
+- type: tile
+  id: FloorIceDark
+  parent: FloorIce
+  name: dark ice
+  sprite: /Textures/_WizDen/Tiles/Ice/ice.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 106
+  edgeSprites:
+    South: /Textures/_starcup/Tiles/Planet/ice_dark/double_edge_S.png
+    East: /Textures/_starcup/Tiles/Planet/ice_dark/double_edge_E.png
+    North: /Textures/_starcup/Tiles/Planet/ice_dark/double_edge_N.png
+    West: /Textures/_starcup/Tiles/Planet/ice_dark/double_edge_W.png
