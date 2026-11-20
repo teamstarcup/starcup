@@ -3,7 +3,7 @@
   id: BaseFloorPlanet
   abstract: true
   heatCapacity: 10000
-  edgeSpritePriority: 2 # starcup
+  edgeSpritePriority: 200 # starcup
   isSubfloor: true
   footstepSounds:
     collection: FootstepAsteroid
@@ -18,14 +18,14 @@
   variants: 4
   # begin starcup
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
+    SouthEast: /Textures/_starcup/Tiles/Planet/dirt.rsi/single_edge_SE.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/dirt.rsi/single_edge_NE.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/dirt.rsi/single_edge_NW.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/dirt.rsi/single_edge_SW.png
+    South: /Textures/_starcup/Tiles/Planet/dirt.rsi/double_edge_S.png
+    East: /Textures/_starcup/Tiles/Planet/dirt.rsi/double_edge_E.png
+    North: /Textures/_starcup/Tiles/Planet/dirt.rsi/double_edge_N.png
+    West: /Textures/_starcup/Tiles/Planet/dirt.rsi/double_edge_W.png
   # end starcup
 
 # Desert
@@ -36,7 +36,7 @@
   sprite: /Textures/Tiles/Planet/Desert/desert.png
   variants: 6
   # begin starcup
-  edgeSpritePriority: 3
+  edgeSpritePriority: 350
   edgeSprites:
     South: /Textures/_starcup/Tiles/Planet/desert.rsi/double_edge_south.png
     East: /Textures/_starcup/Tiles/Planet/desert.rsi/double_edge_east.png
@@ -50,7 +50,7 @@
   sprite: /Textures/Tiles/Planet/Desert/low_desert.png
   variants: 6
   # begin starcup
-  edgeSpritePriority: 3
+  edgeSpritePriority: 340
   edgeSprites:
     South: /Textures/_starcup/Tiles/Planet/low_desert.rsi/double_edge_south.png
     East: /Textures/_starcup/Tiles/Planet/low_desert.rsi/double_edge_east.png
@@ -73,7 +73,7 @@
   - 1.0
   - 1.0
   - 1.0
-  edgeSpritePriority: 5
+  edgeSpritePriority: 550
   edgeSprites:
     SouthEast: /Textures/_WizDen/Tiles/Grass/single_edge_SE.png
     NorthEast: /Textures/_WizDen/Tiles/Grass/single_edge_NE.png
@@ -95,7 +95,7 @@
   parent: BaseFloorPlanet
   sprite: /Textures/Tiles/Planet/basalt.png
   # begin starcup
-  edgeSpritePriority: 1
+  edgeSpritePriority: 150
   edgeSprites:
     South: /Textures/_starcup/Tiles/Planet/basalt.rsi/double_edge_south.png
     East: /Textures/_starcup/Tiles/Planet/basalt.rsi/double_edge_east.png
@@ -125,7 +125,7 @@
   - 0.0116
   - 0.0116
   # begin starcup
-  edgeSpritePriority: 9
+  edgeSpritePriority: 1150
   edgeSprites:
     SouthEast: /Textures/_starcup/Tiles/Planet/Snow/single_edge_SE.png
     NorthEast: /Textures/_starcup/Tiles/Planet/Snow/single_edge_NE.png
@@ -143,14 +143,21 @@
 - type: tile
   id: FloorIce
   name: tiles-ice
-  sprite: /Textures/_WizDen/Tiles/Ice/ice.png
+  # begin starcup
+  sprite: /Textures/_starcup/Tiles/Planet/ice_light/ice.png
   variants: 4
   placementVariants:
   - 1.0
   - 1.0
   - 1.0
   - 1.0
-  edgeSpritePriority: 1 # starcup
+  edgeSpritePriority: 105
+  edgeSprites:
+    South: /Textures/_starcup/Tiles/Planet/ice_light/double_edge_S.png
+    East: /Textures/_starcup/Tiles/Planet/ice_light/double_edge_E.png
+    North: /Textures/_starcup/Tiles/Planet/ice_light/double_edge_N.png
+    West: /Textures/_starcup/Tiles/Planet/ice_light/double_edge_W.png
+  # end starcup
   isSubfloor: true
   friction: 0.05
   heatCapacity: 10000
@@ -165,7 +172,7 @@
   name: tiles-snow-dug
   sprite: /Textures/Tiles/Planet/Snow/snow_dug.png
   # begin starcup
-  edgeSpritePriority: 9
+  edgeSpritePriority: 1100
   edgeSprites:
     South: /Textures/_starcup/Tiles/Planet/Snow/snow_dug_double_edge_south.png
     East: /Textures/_starcup/Tiles/Planet/Snow/snow_dug_double_edge_east.png

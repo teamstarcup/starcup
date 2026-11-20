@@ -7,7 +7,7 @@
       tile: FloorPlanetDirtTwilight
     - !type:BiomeTileLayer
       threshold: -0.40
-      tile: FloorPlanetGrassyDirtTwilight
+      tile: FloorPlanetGrassBlueDark
       noise:
         seed: 0
         frequency: 0.03
@@ -23,7 +23,7 @@
     - !type:BiomeDecalLayer
       allowedTiles:
         - FloorPlanetDirtTwilight
-        - FloorPlanetGrassyDirtTwilight
+        - FloorPlanetGrassBlueDark
         - FloorPlanetGrassBlue
       threshold: 0.9
       divisions: 1
@@ -69,7 +69,7 @@
         frequency: 0.25
       allowedTiles:
         - FloorPlanetGrassBlue
-        - FloorPlanetGrassyDirtTwilight
+        - FloorPlanetGrassBlueDark
         - FloorPlanetDirtTwilight
       entities:
         - CrystalPink
@@ -95,7 +95,7 @@
     - !type:BiomeDecalLayer
       allowedTiles:
         - FloorPlanetGrassBlue
-        - FloorPlanetGrassyDirtTwilight
+        - FloorPlanetGrassBlueDark
         - FloorPlanetDirtTwilight
       threshold: 0.65
       invert: true
@@ -133,7 +133,7 @@
         frequency: 2
       allowedTiles:
         - FloorPlanetGrassBlue
-        - FloorPlanetGrassyDirtTwilight
+        - FloorPlanetGrassBlueDark
       entities:
         - FloraTreeDeadPurple
         - ShadowTree
@@ -148,7 +148,7 @@
         frequency: 2.25
       allowedTiles:
       #  - FloorPlanetGrassBlue
-        - FloorPlanetGrassyDirtTwilight
+        - FloorPlanetGrassBlueDark
         - FloorPlanetDirtTwilight
       entities:
         - FloraTreeHollowBase
@@ -156,7 +156,7 @@
     - !type:BiomeEntityLayer
       allowedTiles:
         - FloorPlanetGrassBlue
-        - FloorPlanetGrassyDirtTwilight
+        - FloorPlanetGrassBlueDark
         - FloorPlanetDirtTwilight
       threshold: -0.15
       noise:
@@ -174,7 +174,7 @@
     - !type:BiomeEntityLayer
       allowedTiles:
         - FloorPlanetGrassBlue
-        - FloorPlanetGrassyDirtTwilight
+        - FloorPlanetGrassBlueDark
         - FloorPlanetDirtTwilight
       threshold: 0.915
       noise:

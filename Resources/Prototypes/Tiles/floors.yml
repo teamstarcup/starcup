@@ -2,7 +2,7 @@
 - type: tile
   abstract: true
   id: BaseStationTile
-  edgeSpritePriority: 6 # starcup
+  edgeSpritePriority: 800 # starcup
   isSubfloor: false
   deconstructTools: [ Prying ]
   footstepSounds:
@@ -34,17 +34,9 @@
   - FloorPlanetGrassSnowy
   - FloorPlanetGrassGolden
   - FloorPlanetGrassBlue
-  - FloorPlanetGrassDarkEdges
-  - FloorPlanetGrassLightEdges
   - FloorPlanetDirtPale
-  - FloorPlanetDirtPaleGrassy
-  - FloorPlanetDirtPaleGrassyCold
-  - FloorPlanetDirtPaleGrassyGolden
   - FloorPlanetDirtPaleSnowy
-  - FloorPlanetDirtGrassy
-  - FloorPlanetDirtGrassyCold
-  - FloorPlanetDirtGrassyGolden
-  - FloorPlanetGrassyDirtTwilight
+  - FloorPlanetGrassBlueDark
   - FloorPlanetDirtTwilight
   - FloorPlanetDirtSnowy
   # end starcup
@@ -967,7 +959,7 @@
   name: tiles-asphalt
   sprite: /Textures/Tiles/Planet/Concrete/asphalt.png
   variants: 10
-  edgeSpritePriority: 3 # starcup
+  edgeSpritePriority: 345 # starcup
   baseTurf: FloorDirt
   isSubfloor: true
   footstepSounds:
@@ -978,18 +970,26 @@
 - type: tile
   id: FloorGrass
   name: tiles-planet-grass-floor
-  sprite: /Textures/Tiles/grass.png
-  # begin starcup
-  edgeSpritePriority: 5
+  # begin starcup: porting over the respritening
+  sprite: /Textures/_WizDen/Tiles/Grass/grass.png
+  variants: 6
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 550
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
+    SouthEast: /Textures/_WizDen/Tiles/Grass/single_edge_SE.png
+    NorthEast: /Textures/_WizDen/Tiles/Grass/single_edge_NE.png
+    NorthWest: /Textures/_WizDen/Tiles/Grass/single_edge_NW.png
+    SouthWest: /Textures/_WizDen/Tiles/Grass/single_edge_SW.png
+    South: /Textures/_WizDen/Tiles/Grass/double_edge_S.png
+    East: /Textures/_WizDen/Tiles/Grass/double_edge_E.png
+    North: /Textures/_WizDen/Tiles/Grass/double_edge_N.png
+    West: /Textures/_WizDen/Tiles/Grass/double_edge_W.png
   # end starcup
   baseTurf: FloorDirt
   isSubfloor: true
@@ -1002,18 +1002,26 @@
 - type: tile
   id: FloorGrassJungle
   name: tiles-jungle-grass-floor
-  sprite: /Textures/Tiles/grassjungle.png
-  # begin starcup
-  edgeSpritePriority: 8 # invasive, edges over artificial floors
+  # begin starcup: porting over the respritening
+  sprite: /Textures/_WizDen/Tiles/GrassJungle/grass.png
+  variants: 6
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 1000 # invasive, tiles over artificial floors
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/Grass/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/Grass/double_edge.png
+    SouthEast: /Textures/_WizDen/Tiles/GrassJungle/single_edge_SE.png
+    NorthEast: /Textures/_WizDen/Tiles/GrassJungle/single_edge_NE.png
+    NorthWest: /Textures/_WizDen/Tiles/GrassJungle/single_edge_NW.png
+    SouthWest: /Textures/_WizDen/Tiles/GrassJungle/single_edge_SW.png
+    South: /Textures/_WizDen/Tiles/GrassJungle/double_edge_S.png
+    East: /Textures/_WizDen/Tiles/GrassJungle/double_edge_E.png
+    North: /Textures/_WizDen/Tiles/GrassJungle/double_edge_N.png
+    West: /Textures/_WizDen/Tiles/GrassJungle/double_edge_W.png
   # end starcup
   baseTurf: FloorDirt
   isSubfloor: true
@@ -1026,19 +1034,26 @@
 - type: tile
   id: FloorGrassDark
   name: tiles-dark-grass-floor
-  sprite: /Textures/Tiles/grassdark.png
-  variants: 4
-  # begin starcup
-  edgeSpritePriority: 5
+  # begin starcup: porting over the respritening
+  sprite: /Textures/_WizDen/Tiles/GrassDark/grass.png
+  variants: 6
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 570
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/grass_dark/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/grass_dark/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/grass_dark/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/grass_dark/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/grass_dark/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/grass_dark/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/grass_dark/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/grass_dark/double_edge.png
+    SouthEast: /Textures/_WizDen/Tiles/GrassDark/single_edge_SE.png
+    NorthEast: /Textures/_WizDen/Tiles/GrassDark/single_edge_NE.png
+    NorthWest: /Textures/_WizDen/Tiles/GrassDark/single_edge_NW.png
+    SouthWest: /Textures/_WizDen/Tiles/GrassDark/single_edge_SW.png
+    South: /Textures/_WizDen/Tiles/GrassDark/double_edge_S.png
+    East: /Textures/_WizDen/Tiles/GrassDark/double_edge_E.png
+    North: /Textures/_WizDen/Tiles/GrassDark/double_edge_N.png
+    West: /Textures/_WizDen/Tiles/GrassDark/double_edge_W.png
   # end starcup
   baseTurf: FloorDirt
   isSubfloor: true
@@ -1050,19 +1065,26 @@
 - type: tile
   id: FloorGrassLight
   name: tiles-light-grass-floor
-  sprite: /Textures/Tiles/grasslight.png
-  variants: 4
-  # begin starcup
-  edgeSpritePriority: 5
+  # begin starcup: porting over the respritening
+  sprite: /Textures/_WizDen/Tiles/GrassLight/grass.png
+  variants: 6
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 580
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/grass_light/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/grass_light/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/grass_light/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/grass_light/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/grass_light/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/grass_light/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/grass_light/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/grass_light/double_edge.png
+    SouthEast: /Textures/_WizDen/Tiles/GrassLight/single_edge_SE.png
+    NorthEast: /Textures/_WizDen/Tiles/GrassLight/single_edge_NE.png
+    NorthWest: /Textures/_WizDen/Tiles/GrassLight/single_edge_NW.png
+    SouthWest: /Textures/_WizDen/Tiles/GrassLight/single_edge_SW.png
+    South: /Textures/_WizDen/Tiles/GrassLight/double_edge_S.png
+    East: /Textures/_WizDen/Tiles/GrassLight/double_edge_E.png
+    North: /Textures/_WizDen/Tiles/GrassLight/double_edge_N.png
+    West: /Textures/_WizDen/Tiles/GrassLight/double_edge_W.png
   # end starcup
   baseTurf: FloorDirt
   isSubfloor: true
@@ -1077,16 +1099,16 @@
   sprite: /Textures/Tiles/dirt.png
   variants: 4
   # begin starcup
-  edgeSpritePriority: 2
+  edgeSpritePriority: 220
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
+    SouthEast: /Textures/_starcup/Tiles/Planet/dirt.rsi/single_edge_SE.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/dirt.rsi/single_edge_NE.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/dirt.rsi/single_edge_NW.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/dirt.rsi/single_edge_SW.png
+    South: /Textures/_starcup/Tiles/Planet/dirt.rsi/double_edge_S.png
+    East: /Textures/_starcup/Tiles/Planet/dirt.rsi/double_edge_E.png
+    North: /Textures/_starcup/Tiles/Planet/dirt.rsi/double_edge_N.png
+    West: /Textures/_starcup/Tiles/Planet/dirt.rsi/double_edge_W.png
   # end starcup
   baseTurf: Plating
   isSubfloor: true
@@ -1127,7 +1149,7 @@
   id: FloorAsteroidSand
   parent: FloorAsteroidSandBorderless
   name: tiles-asteroid-sand
-  edgeSpritePriority: 3 # starcup
+  edgeSpritePriority: 305 # starcup
   edgeSprites:
     SouthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
     NorthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
@@ -1152,8 +1174,8 @@
 - type: tile
   id: FloorAsteroidSandDug
   parent: FloorAsteroidSandDugBorderless
-  name: tiles-asteroid-sand
-  edgeSpritePriority: 3 # starcup
+  name: tiles-asteroid-sand-dug
+  edgeSpritePriority: 305 # starcup
   edgeSprites:
     SouthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
     NorthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
@@ -1166,23 +1188,36 @@
 
 - type: tile
   id: FloorAsteroidSandRedBorderless
-  name: tiles-asteroid-sand-borderless
-  sprite: /Textures/Tiles/Asteroid/asteroid_red.png
-  variants: 13
+  # begin starcup: this was using the same name and sprite as regular asteroid sand
+  #name: tiles-asteroid-sand-borderless
+  #sprite: /Textures/Tiles/Asteroid/asteroid_red.png
+  #variants: 13
+  #placementVariants:
+  #- 0.8
+  #- 0.0166
+  #- 0.0166
+  #- 0.0166
+  #- 0.0166
+  #- 0.0166
+  #- 0.0166
+  #- 0.0166
+  #- 0.0166
+  #- 0.0166
+  #- 0.0166
+  #- 0.0116
+  #- 0.0116
+  name: borderless dry asteroid sand
+  sprite: /Textures/_WizDen/Tiles/Asteroid/asteroid.png
+  variants: 7
   placementVariants:
-  - 0.8
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0116
-  - 0.0116
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  # end starcup
   baseTurf: Space
   isSubfloor: true
   footstepSounds:
@@ -1193,17 +1228,19 @@
 - type: tile
   id: FloorAsteroidSandRed
   parent: FloorAsteroidSandRedBorderless
-  name: tiles-asteroid-sand
-  edgeSpritePriority: 3 # starcup
+  # begin starcup: this was using the same name and sprite as regular asteroid sand
+  name: dry asteroid sand
+  edgeSpritePriority: 304 # starcup
   edgeSprites:
-    SouthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    NorthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    NorthWest: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    SouthWest: /Textures/Tiles/Asteroid/asteroid_single_edge.png
-    South: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    East: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    North: /Textures/Tiles/Asteroid/asteroid_double_edge.png
-    West: /Textures/Tiles/Asteroid/asteroid_double_edge.png
+    SouthEast: /Textures/_WizDen/Tiles/Asteroid/single_edge_SE.png
+    NorthEast: /Textures/_WizDen/Tiles/Asteroid/single_edge_NE.png
+    NorthWest: /Textures/_WizDen/Tiles/Asteroid/single_edge_NW.png
+    SouthWest: /Textures/_WizDen/Tiles/Asteroid/single_edge_SW.png
+    South: /Textures/_WizDen/Tiles/Asteroid/double_edge_S.png
+    East: /Textures/_WizDen/Tiles/Asteroid/double_edge_E.png
+    North: /Textures/_WizDen/Tiles/Asteroid/double_edge_N.png
+    West: /Textures/_WizDen/Tiles/Asteroid/double_edge_W.png
+  # end starcup
 
 - type: tile
   id: FloorAsteroidTile
@@ -1233,7 +1270,7 @@
   id: FloorAsteroidIronsand
   parent: FloorAsteroidIronsandBorderless
   name: tiles-asteroid-ironsand
-  edgeSpritePriority: 3 # starcup
+  edgeSpritePriority: 315 # starcup
   edgeSprites:
     SouthEast: /Textures/Tiles/Asteroid/iron_single_edge.png
     NorthEast: /Textures/Tiles/Asteroid/iron_single_edge.png
@@ -1258,8 +1295,8 @@
 - type: tile
   id: FloorAsteroidSandUnvariantized
   parent: FloorAsteroidSandUnvariantizedBorderless
-  name: tiles-asteroid-sand
-  edgeSpritePriority: 3 # starcup
+  name: plain asteroid sand #tiles-asteroid-sand
+  edgeSpritePriority: 310 # starcup
   edgeSprites:
     SouthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
     NorthEast: /Textures/Tiles/Asteroid/asteroid_single_edge.png
@@ -1284,8 +1321,8 @@
 - type: tile
   id: FloorAsteroidIronsandUnvariantized
   parent: FloorAsteroidIronsandUnvariantizedBorderless
-  name: tiles-asteroid-ironsand
-  edgeSpritePriority: 3 # starcup
+  name: plain asteroid ironsand #tiles-asteroid-ironsand
+  edgeSpritePriority: 315 # starcup
   edgeSprites:
     SouthEast: /Textures/Tiles/Asteroid/iron_single_edge.png
     NorthEast: /Textures/Tiles/Asteroid/iron_single_edge.png
@@ -1303,7 +1340,7 @@
   sprite: /Textures/Tiles/cave.png
   variants: 7
   # begin starcup
-  edgeSpritePriority: 2
+  edgeSpritePriority: 210
   edgeSprites:
     SouthEast: /Textures/_starcup/Tiles/Planet/cave.rsi/single_edge.png
     NorthEast: /Textures/_starcup/Tiles/Planet/cave.rsi/single_edge.png
@@ -1326,7 +1363,7 @@
   sprite: /Textures/Tiles/cavedrought.png
   variants: 8
   # begin starcup
-  edgeSpritePriority: 2
+  edgeSpritePriority: 215
   edgeSprites:
     SouthEast: /Textures/_starcup/Tiles/Planet/cavedrought.rsi/single_edge.png
     NorthEast: /Textures/_starcup/Tiles/Planet/cavedrought.rsi/single_edge.png
@@ -1350,7 +1387,7 @@
   sprite: /Textures/Tiles/meat.png
   variants: 4
   # begin starcup
-  edgeSpritePriority: 8
+  edgeSpritePriority: 1000
   edgeSprites:
     South: /Textures/_starcup/Tiles/Misc/Meat/double_edge_south.png
     East: /Textures/_starcup/Tiles/Misc/Meat/double_edge_east.png
@@ -1453,18 +1490,27 @@
   parent: BaseStationTile
   id: FloorAstroGrass
   name: tiles-astro-grass
-  sprite: /Textures/Tiles/Planet/Grass/grass.png
-  variants: 4
-#  edgeSpritePriority: 1 # starcup: astro floors tile with regular artificial floors
+  # begin starcup: porting over the respritening
+  sprite: /Textures/_WizDen/Tiles/Grass/grass.png
+  variants: 6
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 550
   edgeSprites:
-    SouthEast: /Textures/Tiles/Planet/Grass/single_edge.png
-    NorthEast: /Textures/Tiles/Planet/Grass/single_edge.png
-    NorthWest: /Textures/Tiles/Planet/Grass/single_edge.png
-    SouthWest: /Textures/Tiles/Planet/Grass/single_edge.png
-    South: /Textures/Tiles/Planet/Grass/double_edge.png
-    East: /Textures/Tiles/Planet/Grass/double_edge.png
-    North: /Textures/Tiles/Planet/Grass/double_edge.png
-    West: /Textures/Tiles/Planet/Grass/double_edge.png
+    SouthEast: /Textures/_starcup/Tiles/Misc/AstroGrass/single_edge_SE.png
+    NorthEast: /Textures/_starcup/Tiles/Misc/AstroGrass/single_edge_NE.png
+    NorthWest: /Textures/_starcup/Tiles/Misc/AstroGrass/single_edge_NW.png
+    SouthWest: /Textures/_starcup/Tiles/Misc/AstroGrass/single_edge_SW.png
+    South: /Textures/_starcup/Tiles/Misc/AstroGrass/double_edge_S.png
+    East: /Textures/_starcup/Tiles/Misc/AstroGrass/double_edge_E.png
+    North: /Textures/_starcup/Tiles/Misc/AstroGrass/double_edge_N.png
+    West: /Textures/_starcup/Tiles/Misc/AstroGrass/double_edge_W.png
+  # end starcup
   deconstructTools: [ Digging ] # starcup
   footstepSounds:
     collection: FootstepGrass
@@ -1474,6 +1520,27 @@
   parent: [ BaseStationTile, FloorGrass ]
   id: FloorMowedAstroGrass
   name: tiles-mowed-astro-grass
+  # begin starcup: porting over the respritening
+  sprite: /Textures/_starcup/Tiles/Planet/grass_mowed/grass.png
+  variants: 6
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 549
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Misc/AstroGrass/single_edge_SE.png
+    NorthEast: /Textures/_starcup/Tiles/Misc/AstroGrass/single_edge_NE.png
+    NorthWest: /Textures/_starcup/Tiles/Misc/AstroGrass/single_edge_NW.png
+    SouthWest: /Textures/_starcup/Tiles/Misc/AstroGrass/single_edge_SW.png
+    South: /Textures/_starcup/Tiles/Misc/AstroGrass/double_edge_S.png
+    East: /Textures/_starcup/Tiles/Misc/AstroGrass/double_edge_E.png
+    North: /Textures/_starcup/Tiles/Misc/AstroGrass/double_edge_N.png
+    West: /Textures/_starcup/Tiles/Misc/AstroGrass/double_edge_W.png
+  # end starcup
   isSubfloor: false
   deconstructTools: [ Digging ] # starcup
   footstepSounds:
@@ -1494,6 +1561,18 @@
   parent: [ BaseStationTile, FloorGrassDark ]
   id: FloorDarkAstroGrass
   name: tiles-dark-astro-grass
+  # begin starcup
+  edgeSpritePriority: 551
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Misc/AstroGrassDark/single_edge_SE.png
+    NorthEast: /Textures/_starcup/Tiles/Misc/AstroGrassDark/single_edge_NE.png
+    NorthWest: /Textures/_starcup/Tiles/Misc/AstroGrassDark/single_edge_NW.png
+    SouthWest: /Textures/_starcup/Tiles/Misc/AstroGrassDark/single_edge_SW.png
+    South: /Textures/_starcup/Tiles/Misc/AstroGrassDark/double_edge_S.png
+    East: /Textures/_starcup/Tiles/Misc/AstroGrassDark/double_edge_E.png
+    North: /Textures/_starcup/Tiles/Misc/AstroGrassDark/double_edge_N.png
+    West: /Textures/_starcup/Tiles/Misc/AstroGrassDark/double_edge_W.png
+  # end starcup
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Digging ] # starcup
@@ -1505,6 +1584,18 @@
   parent: [ BaseStationTile, FloorGrassLight ]
   id: FloorLightAstroGrass
   name: tiles-light-astro-grass
+  # begin starcup
+  edgeSpritePriority: 552
+  edgeSprites:
+    SouthEast: /Textures/_starcup/Tiles/Misc/AstroGrassLight/single_edge_SE.png
+    NorthEast: /Textures/_starcup/Tiles/Misc/AstroGrassLight/single_edge_NE.png
+    NorthWest: /Textures/_starcup/Tiles/Misc/AstroGrassLight/single_edge_NW.png
+    SouthWest: /Textures/_starcup/Tiles/Misc/AstroGrassLight/single_edge_SW.png
+    South: /Textures/_starcup/Tiles/Misc/AstroGrassLight/double_edge_S.png
+    East: /Textures/_starcup/Tiles/Misc/AstroGrassLight/double_edge_E.png
+    North: /Textures/_starcup/Tiles/Misc/AstroGrassLight/double_edge_N.png
+    West: /Textures/_starcup/Tiles/Misc/AstroGrassLight/double_edge_W.png
+  # end starcup
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Digging ] # starcup
@@ -1517,7 +1608,22 @@
   parent: BaseStationTile
   id: FloorAstroIce
   name: tiles-astro-ice
-  sprite: /Textures/Tiles/Planet/Snow/ice.png
+  # begin starcup
+  #sprite: /Textures/Tiles/Planet/Snow/ice.png
+  sprite: /Textures/_starcup/Tiles/Planet/ice_light/ice.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 105
+  edgeSprites:
+    South: /Textures/_starcup/Tiles/Planet/ice_light/double_edge_S.png
+    East: /Textures/_starcup/Tiles/Planet/ice_light/double_edge_E.png
+    North: /Textures/_starcup/Tiles/Planet/ice_light/double_edge_N.png
+    West: /Textures/_starcup/Tiles/Planet/ice_light/double_edge_W.png
+  # end starcup
   friction: 0.05
   mobFriction: 0.05
   mobAcceleration: 0.1
@@ -1528,7 +1634,7 @@
   parent: [ BaseStationTile, FloorSnow ]
   id: FloorAstroSnow
   name: tiles-astro-snow
-  edgeSpritePriority: 9 # starcup
+  edgeSpritePriority: 1150 # starcup
   isSubfloor: false
   deconstructTools: [ Digging ] # starcup
   footstepSounds:
@@ -1540,7 +1646,7 @@
   parent: [ BaseStationTile, FloorAsteroidSand ]
   id: FloorAstroAsteroidSand
   name: tiles-astro-asteroid-sand
-  edgeSpritePriority: 3 # starcup
+  edgeSpritePriority: 800 # starcup
   isSubfloor: false
   deconstructTools: [ Digging ] # starcup
   itemDrop: FloorTileItemAstroAsteroidSand
