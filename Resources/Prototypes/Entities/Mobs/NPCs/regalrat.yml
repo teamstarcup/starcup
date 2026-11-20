@@ -2,7 +2,7 @@
   name: rat king
   suffix: original
   id: MobRatKing
-  parent: [ BaseMobRat, SimpleMobBase, MobCombat, BaseSlicingRefinable, MobNightVision, BaseMobDestructible, BaseThirstSlowdown ]
+  parent: [ BaseMobRat, SimpleMobBase, MobCombat, MobNightVision, BaseMobDestructible, BaseThirstSlowdown ] # starcup - removed BaseSlicingRefinable
   description: The sheperd of the swarm, its mind and voice. It speaks their holy word. And that word is *more.* # starcup: changed for tone
   components:
   - type: CombatMode
@@ -108,13 +108,16 @@
   - type: Vocal
     emoteSounds: RatKingSpeechEmotes
     emoteAction: ActionCreatureScream
-  # end starcup
-  - type: ToolRefinable
-    refineResult:
+  # starcup - require butchering station
+  - type: Butcherable
+    #  - type: ToolRefinable
+    #    refineResult:
+    spawned:
     - id: ClothingHeadHatFancyCrown #how did that get there?
       amount: 1
-    - id: FoodMeatRat
+    - id: FoodMeatRat # starcuo
       amount: 5
+  # end starcup
   - type: MobPrice
     price: 2500 # rat wealth
   - type: RandomMetadata

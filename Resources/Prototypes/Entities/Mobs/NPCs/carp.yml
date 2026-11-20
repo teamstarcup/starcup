@@ -216,7 +216,7 @@
 
 - type: entity
   name: sharkminnow
-  parent: [ BaseMobBloodsucker, BaseMobCarp, BaseSlicingRefinable ]
+  parent: [ BaseMobBloodsucker, BaseMobCarp ] # starcup - removed BaseSlicingRefinable
   id: MobShark
   description: A dangerous shark from the blackness of endless space, who loves to drink blood.
   components:
@@ -253,12 +253,16 @@
       Dead:
         Base: dead
         BaseUnshaded: dead_mouth
-  - type: ToolRefinable
-    refineResult:
-    - id: FoodMeatFish
+  # starcup - require butchering station
+  - type: Butcherable
+    #  - type: ToolRefinable
+    #    refineResult:
+    spawned:
+    - id: FoodMeat
       amount: 4
     - id: MaterialToothSharkminnow1
       amount: 3
+  # end starcup
   - type: MeleeWeapon
     damage:
       types:

@@ -1,7 +1,7 @@
 - type: entity
   name: laser raptor
   id: MobLaserRaptor
-  parent: [SimpleMobBase, BaseSlicingRefinable, BaseMobDestructible]
+  parent: [SimpleMobBase, BaseMobDestructible] # starcup - removed BaseSlicingRefinable
   description: From the Viking age.
   components:
     - type: NpcFactionMember
@@ -37,10 +37,14 @@
       thresholds:
         0: Alive
         100: Dead
-    - type: ToolRefinable
-      refineResult:
+  # starcup - require butchering station
+    - type: Butcherable
+      #  - type: ToolRefinable
+      #    refineResult:
+      spawned:
       - id: FoodMeatChicken
         amount: 2
+      # end starcup
     - type: MovementSpeedModifier
       baseWalkSpeed: 2
       baseSprintSpeed: 5
