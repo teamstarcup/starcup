@@ -43,8 +43,7 @@ station-beacon-supply = Logistics
 station-beacon-cargo = Logi Front
 # end starcup
 station-beacon-cargo-bay = Cargo Bay
-# starcup: rename cargo to logistics
-station-beacon-qm = LO
+station-beacon-qm = QM
 station-beacon-salvage = Salvage
 
 station-beacon-engineering = Engineering
