@@ -974,7 +974,7 @@
 
 - type: entity
   name: cow
-  parent: [ BaseMobRuminant, SimpleMobBase, BaseSlicingRefinable, BaseMobDestructible, BaseExaminableHunger ]
+  parent: [ BaseMobRuminant, SimpleMobBase, BaseMobDestructible, BaseExaminableHunger ] # starcup - removed BaseSlicingRefinable
   id: MobCow
   description: Moo.
   components:
@@ -1028,10 +1028,14 @@
     verbText: udder-system-verb-milk
     emptyMessage: udder-system-dry
     successMessage: udder-system-success
-  - type: ToolRefinable
-    refineResult:
+  # starcup - require butchering station
+  - type: Butcherable
+    #  - type: ToolRefinable
+    #    refineResult:
+    spawned:
     - id: FoodMeat
       amount: 5
+  # end starcup
   - type: Grammar
     attributes:
       gender: female # Milk-producing animals are female.
@@ -1104,7 +1108,7 @@
 
 - type: entity
   name: crab
-  parent: [ SimpleMobBase, BaseMobHemocyanin, BaseSlicingRefinable, BaseMobDestructible ]
+  parent: [ SimpleMobBase, BaseMobHemocyanin, BaseMobDestructible ] # starcup - removed BaseSlicingRefinable
   id: MobCrab
   description: A folk legend goes around that his claw snaps spacemen out of existence over distasteful remarks. Be polite and tolerant for your own safety.
   components:
@@ -1147,10 +1151,14 @@
         Base: dead
       Dead:
         Base: dead
-  - type: ToolRefinable
-    refineResult:
+# starcup - require butchering station
+  - type: Butcherable
+#  - type: ToolRefinable
+#    refineResult:
+    spawned:
     - id: FoodMeatCrab
       amount: 2
+# end starcup
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-crab
@@ -1194,7 +1202,7 @@
 
 - type: entity
   name: goat
-  parent: [ BaseMobRuminant, SimpleMobBase, BaseSlicingRefinable, BaseMobDestructible, BaseExaminableHunger ]
+  parent: [ BaseMobRuminant, SimpleMobBase, BaseMobDestructible, BaseExaminableHunger ] # starcup - remove BaseSlicingRefinable
   id: MobGoat
   description: Her spine consists of long sharp segments, no wonder she is so grumpy.
   components:
@@ -1259,10 +1267,14 @@
   - type: FlavorProfile
     flavors:
     - fiber
-  - type: ToolRefinable
-    refineResult:
+  # starcup - require butchering station
+  - type: Butcherable
+    #  - type: ToolRefinable
+    #    refineResult:
+    spawned:
     - id: FoodMeat
       amount: 4
+  # end starcup
   - type: Grammar
     attributes:
       gender: female # Milk-producing animals are female.
@@ -1346,7 +1358,7 @@
 
 - type: entity
   abstract: true
-  parent: [BaseMobRuminant, BaseSlicingRefinable, BaseExaminableHunger]
+  parent: [BaseMobRuminant, BaseExaminableHunger] # starcup - remove BaseSlicingRefinable
   id: MobSheepBase
   name: sheepBase
   description: A sheep.
@@ -1428,10 +1440,14 @@
     solution: wool
     requiresSpecialDigestion: true
     requireDead: false
-  - type: ToolRefinable
-    refineResult:
+  # starcup - require butchering station
+  - type: Butcherable
+    #  - type: ToolRefinable
+    #    refineResult:
+    spawned:
     - id: FoodMeat
       amount: 4
+  # end starcup
   - type: Grammar
     attributes:
       gender: female # Milk-producing animals are female.
@@ -1654,10 +1670,14 @@
         Base: dead
       Dead:
         Base: dead
-  - type: ToolRefinable
-    refineResult:
+  # starcup - require butchering station
+  - type: Butcherable
+    #  - type: ToolRefinable
+    #    refineResult:
+    spawned:
     - id: FoodMeat
       amount: 4
+  # end starcup
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
@@ -1726,7 +1746,7 @@
   - SimpleMobBase
   - MobCombat
   - StripableInventoryBase
-  - BaseSlicingRefinable
+#  - BaseSlicingRefinable # starcup
   - BaseMobDestructible
   id: MobKangaroo
   description: A large marsupial herbivore. It has powerful hind legs, with nails that resemble long claws.
@@ -1757,9 +1777,13 @@
     templateId: kangaroo
   - type: ReplacementAccent
     accent: kangaroo
-  - type: ToolRefinable
-    refineResult:
+  # starcup - require butchering station
+  - type: Butcherable
+    #  - type: ToolRefinable
+    #    refineResult:
+    spawned:
     - id: FoodMeat
+  # end starcup
   - type: DamageStateVisuals
     states:
       Alive:
@@ -2827,7 +2851,7 @@
 
 - type: entity
   name: penguin
-  parent: [SimpleMobBase, BaseSlicingRefinable, BaseMobDestructible]
+  parent: [SimpleMobBase, BaseMobDestructible] # starcup - removed BaseSlicingRefinable
   id: MobPenguin
   description: Their lives are constant pain due to their inner-body knees.
   components:
@@ -2857,10 +2881,14 @@
         Base: penguin_dead
       Dead:
         Base: penguin_dead
-  - type: ToolRefinable
-    refineResult:
+  # starcup - require butchering station
+  - type: Butcherable
+    #  - type: ToolRefinable
+    #    refineResult:
+    spawned:
     - id: FoodMeatPenguin
       amount: 3
+  # end starcup
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-bird
@@ -3046,7 +3074,7 @@
 # Code unique spider prototypes or combine them all into one spider and get a
 # random sprite state when you spawn it.
 - type: entity
-  parent: [ SimpleMobBase, BaseMobHemocyanin, MobCombat, BaseSlicingRefinable, MobNightVision, BaseMobDestructible ]
+  parent: [ SimpleMobBase, BaseMobHemocyanin, MobCombat, MobNightVision, BaseMobDestructible ] # starcup - removed BaseSlicingRefinable
   id: MobSpiderBase
   abstract: true
   components:
@@ -3069,10 +3097,14 @@
         - MobMask
         layer:
         - MobLayer
-  - type: ToolRefinable
-    refineResult:
+  # starcup - require butchering station
+  - type: Butcherable
+    #  - type: ToolRefinable
+    #    refineResult:
+    spawned:
     - id: FoodMeatSpider
       amount: 2
+  # end starcup
   - type: CombatMode
   - type: MobThresholds
     thresholds:
@@ -4399,7 +4431,7 @@
 
 - type: entity
   name: pig
-  parent: [SimpleMobBase, StripableInventoryBase, BaseSlicingRefinable, BaseMobDestructible]
+  parent: [SimpleMobBase, StripableInventoryBase, BaseMobDestructible] # starcup - removed BaseSlicingRefinable
   id: MobPig
   description: Oink.
   components:
@@ -4445,10 +4477,14 @@
         Base: dead
       Dead:
         Base: dead
-  - type: ToolRefinable
-    refineResult:
+  # starcup - require butchering station
+  - type: Butcherable
+    #  - type: ToolRefinable
+    #    refineResult:
+    spawned:
     - id: FoodMeatBacon
       amount: 6
+  # end starcup
   - type: Grammar
     attributes:
       gender: epicene
@@ -4580,7 +4616,7 @@
 
 - type: entity
   name: reindeer buck
-  parent: [ SimpleMobBase, MobCombat, BaseSlicingRefinable, BaseMobDestructible ]
+  parent: [ SimpleMobBase, MobCombat, BaseMobDestructible ] # starcup - removed BaseSlicingRefinable
   id: MobReindeerBuck
   description: You think it can pull a sleigh?
   components:
@@ -4617,10 +4653,14 @@
         Base: reindeer_buck_dead
       Dead:
         Base: reindeer_buck_dead
-  - type: ToolRefinable
-    refineResult:
+  # starcup - require butchering station
+  - type: Butcherable
+    #  - type: ToolRefinable
+    #    refineResult:
+    spawned:
     - id: FoodMeat
       amount: 4
+  # end starcup
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
