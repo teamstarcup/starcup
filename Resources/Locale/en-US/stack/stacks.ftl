@@ -80,6 +80,10 @@ stack-artifact-fragment = artifact {$amount ->
     [1] fragment
     *[other] fragments
 }
+stack-xenoborg-crystal = xenoborg {$amount ->
+    [1] crystal
+    *[other] crystals
+}
 stack-conveyor-belt = {$amount ->
     [1] conveyor belt
     *[other] conveyor belts
@@ -171,6 +175,9 @@ stack-white-steel-slats-tile-continuous = white steel continuous slat tile
 stack-steel-dark-checker-tile = steel dark checker tile
 stack-steel-light-checker-tile = steel light checker tile
 stack-steel-tile = steel tile
+stack-plastic-tile = plastic tile
+stack-plastic-dark-tile = dark plastic tile
+stack-plastic-white-tile = white plastic tile
 stack-wood-floor = wood floor
 stack-techmaint-floor = techmaint floor
 stack-techmaint-floor-dark = dark techmaint floor
@@ -253,15 +260,29 @@ stack-large-wood-floor = large wood floor
 stack-red-circuit-floor = red-circuit floor
 stack-asteroid-astro-sand-floor = asteroid astro-sand floor
 stack-desert-astro-sand-floor = desert astro-sand floor
+stack-white-marble-floor = white marble floor
+# stack-white-marble-mono-floor = white marble mono floor # Classic: Removed.
+stack-dark-marble-floor = dark marble floor
+# stack-dark-marble-mono-floor = dark marble mono floor # Classic: Removed.
+stack-plasma-marble-floor = plasmarble floor
+stack-uranium-marble-floor = uranium marble floor
+stack-astro-ironsand-floor = astro-ironsand floor
+stack-astro-ironsand-floor-borderless = borderless astro-ironsand floor
+# stack-exo-hull-floor = exodermis hull floor # Classic: Removed.
+# stack-exo-viscera-floor = exodermis viscera floor # Classic: Removed.
+# stack-exo-techmaint-floor = exodermis techmaint floor # Classic: Removed.
+# stack-exo-horizontal-floor = exodermis horizontal floor # Classic: Removed.
+# stack-exo-vertical-floor = exodermis vertical floor # Classic: Removed.
+# stack-exo-corner-ne-floor = exodermis NE corner floor # Classic: Removed.
+# stack-exo-corner-nw-floor = exodermis NW corner floor # Classic: Removed.
+# stack-exo-corner-se-floor = exodermis SE corner floor # Classic: Removed.
+# stack-exo-corner-sw-floor = exodermis SW corner floor # Classic: Removed.
+# stack-exo-borg-floor = mechadermis floor # Classic: Removed.
+
+# Classic: readded xeno tiles, Respritening replaced these with exodermis.
 stack-xeno-floor = xeno floor
 stack-xeno-steel = xeno steel tile
 stack-xeno-steel-corner = xeno steel corner tile
 stack-xenoborg = xenoborg tile
 stack-xeno-maint = xeno techmaint
-stack-dark-squiggly = dark steel squiggly tile
-stack-white-marble-floor = white marble floor
-stack-dark-marble-floor = dark marble floor
-stack-plasma-marble-floor = plasmarble floor
-stack-uranium-marble-floor = uranium marble floor
-stack-astro-ironsand-floor = astro-ironsand floor
-stack-astro-ironsand-floor-borderless = borderless astro-ironsand floor
+stack-dark-squiggly = dark steel squiggly tilet s

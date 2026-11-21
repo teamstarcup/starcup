@@ -1,0 +1,74 @@
+#Where all of the uniforms for the yet-to-be-implimented ship vs. ship gamemode go (or Nanotrasen VS. Syndicate, if you'd like.)
+#In its own file to further avoid bloating jumpsuits.yml.
+
+#CREW
+#Recruit
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitRecruitNT
+  name: recruit jumpsuit
+  description: A classy grey jumpsuit with blue trims. Perfect for the dignified helper.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuits/ShipVsShip/recruit_nt.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuits/ShipVsShip/recruit_nt.rsi
+
+- type: entity
+  parent: ClothingUniformBase # starcup: remove syndicate contraband label
+  id: ClothingUniformJumpsuitRecruitSyndie
+  name: syndicate recruit jumpsuit
+  description: The standard uniform for new members of SyndComm's many training programs. # starcup: rewritten for setting lore
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuits/ShipVsShip/recruit_syndie.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuits/ShipVsShip/recruit_syndie.rsi
+
+#Repairman
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitRepairmanNT
+  name: repairman jumpsuit
+  description: A jumpsuit that reminds you of a certain crew-sector work position. Hopefully, you won't have to do the same job as THOSE freaks.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuits/ShipVsShip/repairman_nt.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuits/ShipVsShip/repairman_nt.rsi
+
+- type: entity
+  parent: ClothingUniformBase # starcup: remove syndicate contraband label
+  id: ClothingUniformJumpsuitRepairmanSyndie
+  name: syndicate shipwright jumpsuit
+  description: Standard apparel for SyndComm shipwrights, designed for long thankless nights of repairing damaged stations. # starcup: rewritten for setting lore
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuits/ShipVsShip/repairman_syndie.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuits/ShipVsShip/repairman_syndie.rsi
+
+#Paramedic
+- type: entity
+  parent: ClothingUniformBase # starcup: remove syndicate contraband label
+  id: ClothingUniformJumpsuitParamedicSyndie
+  name: syndicate field medic jumpsuit # starcup: rewritten for clarity
+  description: Standard apparel for SyndComm field medics, who act as first responders in even the most distant parts of Syndicate space. # starcup: rewritten for setting lore
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuits/ShipVsShip/paramedic_syndie.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuits/ShipVsShip/paramedic_syndie.rsi
+
+#HEADS OF STAFF
+#Chief Engineer
+- type: entity
+  parent: [ ClothingUniformBase, BaseCommandContraband ] # starcup: remove syndicate contraband label
+  id: ClothingUniformJumpsuitChiefEngineerSyndie
+  name: syndicate chief shipwright jumpsuit # starcup: rewritten for clarity
+  description: Whether it's the wreckage caused by a rampant tesla engine or the blaze of a tritium burn gone wrong, SyndComm's shipwrights never fail to clean up the mess before the next shift. # starcup: rewritten for setting lore
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuits/ShipVsShip/ce_syndie.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuits/ShipVsShip/ce_syndie.rsi

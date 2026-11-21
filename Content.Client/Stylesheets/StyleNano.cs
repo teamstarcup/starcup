@@ -1411,8 +1411,9 @@ namespace Content.Client.Stylesheets
                     .Prop(Control.StylePropertyModulateSelf, Color.FromHex("#2F2F3B")),
 
                 // Window Footer
+                // starcup: syndie-sweapped ntlogo for syndlogo
                 Element<TextureRect>().Class("NTLogoDark")
-                    .Prop(TextureRect.StylePropertyTexture, resCache.GetTexture("/Textures/Interface/Nano/ntlogo.svg.png"))
+                    .Prop(TextureRect.StylePropertyTexture, resCache.GetTexture("/Textures/Interface/Nano/syndlogo.svg.png"))
                     .Prop(Control.StylePropertyModulateSelf, Color.FromHex("#757575")),
 
                 Element<Label>().Class("WindowFooterText")

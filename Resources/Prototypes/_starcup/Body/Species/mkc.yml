@@ -152,6 +152,8 @@
   - type: ScreenVision
   - type: Vocal
     emoteSounds: HumanoidSilicon
+  - type: Satiation # Allows MKCs to be changelings
+    satiations: {}
 
 - type: entity
   parent: OrganBase
@@ -347,6 +349,10 @@
     - JuiceThatMakesYouWeh
     - JuiceThatMakesYouHew
     - Holywater
+    - Nothing
+    # MKC drinks
+    - BluescreenCuracao
+    - MKCDrink
 
 - type: entity
   id: OrganMKCFluidRegulator

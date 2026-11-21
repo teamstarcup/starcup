@@ -2,12 +2,6 @@
 
 - type: stack
   parent: BaseTileStack
-  id: FloorTileMono
-  name: stack-mono-tile
-  spawn: FloorTileItemMono
-
-- type: stack
-  parent: BaseTileStack
   id: FloorTileMetalDiamond
   name: stack-steel-tile
   spawn: FloorTileItemMetalDiamond
@@ -23,3 +17,11 @@
   id: FloorTileStackGym
   name: stack-gym-floor-tile
   spawn: FloorTileItemGym
+
+# Classic: restored tile stacks below.
+
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileMono
+  name: stack-mono-tile
+  spawn: FloorTileItemMono

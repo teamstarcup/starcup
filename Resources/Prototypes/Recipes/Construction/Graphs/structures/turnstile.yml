@@ -1,5 +1,5 @@
 - type: constructionGraph
-  id: Turnstile
+  id: Turnstile # starcup: EnergyGate begone
   start: start
   graph:
   - node: start
@@ -16,8 +16,8 @@
         amount: 1
         doAfter: 6
 
-  - node: turnstile
-    entity: Turnstile
+  - node: turnstile # starcup: EnergyGate begone
+    entity: Turnstile # starcup: EnergyGate begone
     edges:
     - to: start
       completed:

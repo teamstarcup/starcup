@@ -33,24 +33,7 @@ public abstract partial class SharedPowerCoreSystem : EntitySystem
 
     private readonly SoundSpecifier? _drainSounds = new SoundCollectionSpecifier("sparks");
 
-    public override void Initialize()
-    {
-        base.Initialize();
-
-        SubscribeLocalEvent<PowerCoreComponent, MapInitEvent>(OnMapInit);
-
-        SubscribeLocalEvent<PowerDrinkableComponent, GetVerbsEvent<AlternativeVerb>>(OnAlternativeVerbs);
-        SubscribeLocalEvent<PowerDrinkableComponent, UseInHandEvent>(OnUseInHand);
-        SubscribeLocalEvent<PowerCoreComponent, BodyRelayedEvent<GetVerbsEvent<InnateVerb>>>(AddEnergyDrainVerb);
-        SubscribeLocalEvent<PowerCoreComponent, PowerCoreDoAfterEvent>(OnDoAfter);
-
-        SubscribeLocalEvent<PowerCoreComponent, RefreshChargeRateEvent>(OnRefreshChargeRate);
-        SubscribeLocalEvent<PowerCoreComponent, BatteryStateChangedEvent>(OnBatteryStateChanged);
-        SubscribeLocalEvent<PowerCoreComponent, BodyRelayedEvent<RefreshMovementSpeedModifiersEvent>>(UpdateMoveSpeedModifier);
-        SubscribeLocalEvent<PowerCoreComponent, OrganGotRemovedEvent>(OnOrganRemoved);
-        SubscribeLocalEvent<PowerCoreComponent, OrganGotInsertedEvent>(OnOrganInserted);
-    }
-
+    [SubscribeLocalEvent]
     private void OnMapInit(Entity<PowerCoreComponent> powerCore, ref MapInitEvent _)
     {
         Entity<BatteryComponent?> battery = (powerCore.Owner, null);
@@ -65,6 +48,7 @@ public abstract partial class SharedPowerCoreSystem : EntitySystem
         _movementSpeed.RefreshMovementSpeedModifiers(body.Value);
     }
 
+    [SubscribeLocalEvent]
     private void OnRefreshChargeRate(Entity<PowerCoreComponent> powerCore, ref RefreshChargeRateEvent args)
     {
         // TODO(starcup): This will drain power cores outside of bodies but OrganGotInsertedEvent is raised just
@@ -78,6 +62,7 @@ public abstract partial class SharedPowerCoreSystem : EntitySystem
         args.NewChargeRate -= powerCore.Comp.WattConsumption;
     }
 
+    [SubscribeLocalEvent]
     private void OnBatteryStateChanged(Entity<PowerCoreComponent> powerCore, ref BatteryStateChangedEvent args)
     {
         if (!TryGetContainingBody(powerCore, out var body))
@@ -134,6 +119,7 @@ public abstract partial class SharedPowerCoreSystem : EntitySystem
         return false;
     }
 
+    [SubscribeLocalEvent]
     private void UpdateMoveSpeedModifier(Entity<PowerCoreComponent> powerCore, ref BodyRelayedEvent<RefreshMovementSpeedModifiersEvent> args)
     {
         Entity<BatteryComponent?> battery = (powerCore.Owner, null);
@@ -150,6 +136,7 @@ public abstract partial class SharedPowerCoreSystem : EntitySystem
         args.Args.ModifySpeed(powerCore.Comp.LowPowerMovementSpeedMultiplier);
     }
 
+    [SubscribeLocalEvent]
     private void AddEnergyDrainVerb(Entity<PowerCoreComponent> powerCore,
         ref BodyRelayedEvent<GetVerbsEvent<InnateVerb>> args)
     {
@@ -180,6 +167,7 @@ public abstract partial class SharedPowerCoreSystem : EntitySystem
     /// <param name="uid"></param>
     /// <param name="drinkable"></param>
     /// <param name="args"></param>
+    [SubscribeLocalEvent]
     private void OnAlternativeVerbs(EntityUid uid, PowerDrinkableComponent drinkable, GetVerbsEvent<AlternativeVerb> args)
     {
         if (!args.CanInteract || !args.CanAccess)
@@ -207,6 +195,7 @@ public abstract partial class SharedPowerCoreSystem : EntitySystem
     /// </summary>
     /// <param name="entity"></param>
     /// <param name="args"></param>
+    [SubscribeLocalEvent]
     private void OnUseInHand(Entity<PowerDrinkableComponent> entity, ref UseInHandEvent args)
     {
         if (args.Handled)
@@ -236,7 +225,7 @@ public abstract partial class SharedPowerCoreSystem : EntitySystem
 
         if (_battery.IsFull(powerCoreBattery))
         {
-            _popup.PopupClient(
+            _popup.PopupEntity(
                 Loc.GetString("power-core-full", ("organ", powerCore)),
                 bodyUid.Value,
                 bodyUid.Value
@@ -246,7 +235,7 @@ public abstract partial class SharedPowerCoreSystem : EntitySystem
 
         if (MathHelper.CloseToPercent(_battery.GetCharge(targetBattery), 0) && targetBattery.Comp.NetSyncEnabled)
         {
-            _popup.PopupClient(
+            _popup.PopupEntity(
                 Loc.GetString("power-core-battery-empty", ("target", target)),
                 bodyUid.Value,
                 bodyUid.Value
@@ -264,6 +253,7 @@ public abstract partial class SharedPowerCoreSystem : EntitySystem
         return true;
     }
 
+    [SubscribeLocalEvent]
     private void OnDoAfter(Entity<PowerCoreComponent> powerCore, ref PowerCoreDoAfterEvent args)
     {
         if (args.Handled || args.Cancelled || args.Target is not {} target)
@@ -311,19 +301,21 @@ public abstract partial class SharedPowerCoreSystem : EntitySystem
         if (_timing.IsFirstTimePredicted)
             Spawn("EffectSparks", Transform(target.Owner).Coordinates);
 
-        _popup.PopupPredicted(
+        _popup.PopupEntity(
             Loc.GetString("power-core-drain", ("target", target)),
             powerCore.Owner,
             powerCore.Owner
             );
     }
 
+    [SubscribeLocalEvent]
     private void OnOrganRemoved(Entity<PowerCoreComponent> powerCore, ref OrganGotRemovedEvent args)
     {
         _battery.RefreshChargeRate(powerCore.Owner);
         _movementSpeed.RefreshMovementSpeedModifiers(args.Target);
     }
 
+    [SubscribeLocalEvent]
     private void OnOrganInserted(Entity<PowerCoreComponent> powerCore, ref OrganGotInsertedEvent args)
     {
         _battery.RefreshChargeRate(powerCore.Owner);

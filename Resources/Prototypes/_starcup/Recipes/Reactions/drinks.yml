@@ -26,6 +26,20 @@
     CherryLimeade: 5
 
 - type: reaction
+  id: Cheermime
+  requiredMixerCategories:
+  - Shake
+  reactants:
+    Nothing:
+      amount: 1
+    JuiceCherry:
+      amount: 1
+    SodaWater:
+      amount: 1
+  products:
+    Cheermime: 3
+
+- type: reaction
   id: EvilPrincess
   requiredMixerCategories:
   - Stir
@@ -433,3 +447,297 @@
       amount: 1
   products:
     Snakebite: 2
+
+- type: reaction
+  id: BlackAndWhite
+  reactants:
+    Ale:
+      amount: 1
+    Nothing:
+      amount: 1
+  products:
+    BlackAndWhite: 2
+
+- type: reaction
+  id: BlueSkiesAhead
+  requiredMixerCategories:
+  - Shake
+  reactants:
+    Sake:
+      amount: 1
+    Rum:
+      amount: 1
+    BlueCuracao:
+      amount: 1
+    JuiceLime:
+      amount: 1
+    Ice:
+      amount: 1
+  products:
+    BlueSkiesAhead: 5
+
+- type: reaction
+  id: BluescreenCuracao
+  requiredMixerCategories:
+  - Shake
+  reactants:
+    Fersilicite:
+      amount: 1
+    BlueCuracao:
+      amount: 2
+  products:
+    BluescreenCuracao: 3
+
+- type: reaction
+  id: CocoGeisha
+  requiredMixerCategories:
+  - Stir
+  reactants:
+    Sake:
+      amount: 1
+    Whiskey:
+      amount: 1
+    CoconutWater:
+      amount: 1
+    Sugar:
+      amount: 1
+    Angobitters:
+      amount: 1
+  products:
+    CocoGeisha: 5
+
+- type: reaction
+  id: CourtJester
+  requiredMixerCategories:
+  - Shake
+  reactants:
+    Laughter:
+      amount: 1
+    Cream:
+      amount: 1
+    RootBeer:
+      amount: 1
+  products:
+    CourtJester: 3
+
+- type: reaction
+  id: Dragonslayer
+  reactants:
+    Ichor:
+      amount: 1
+    Pyrazine:
+      amount: 1
+    Hotsauce:
+      amount: 1
+  products:
+    Dragonslayer: 3
+
+- type: reaction
+  id: DragonNaysayer
+  reactants:
+    Dragonslayer:
+      amount: 1
+    Nothing:
+      amount: 1
+  products:
+    DragonNaysayer: 2
+
+- type: reaction
+  id: Hivemind
+  reactants:
+    Honey:
+      amount: 1
+    MindbreakerToxin:
+      amount: 1
+    ChangelingSting:
+      amount: 1
+  products:
+    Hivemind: 3
+
+- type: reaction
+  id: Hivemime
+  reactants:
+    Hivemind:
+      amount: 1
+    Silencer:
+      amount: 1
+  products:
+    Hivemime: 2
+
+- type: reaction
+  id: MimeTai
+  requiredMixerCategories:
+  - Stir
+  reactants:
+    Rum:
+      amount: 1
+    JuiceOrange:
+      amount: 1
+    BlueCuracao:
+      amount: 1
+    JuiceLime:
+      amount: 1
+    Nothing:
+      amount: 1
+  products:
+    MimeTai: 6
+
+- type: reaction
+  id: MKCDrink
+  reactants:
+    Moonshine:
+      amount: 1
+    Ketchunaise:
+      amount: 1
+    Coffee:
+      amount: 1
+    WeldingFuel:
+      amount: 1
+      catalyst: true
+  products:
+    MKCDrink: 4
+
+- type: reaction
+  id: OriginalSin
+  requiredMixerCategories:
+  - Stir
+  reactants:
+    Sake:
+      amount: 1
+    Honey:
+      amount: 1
+    Vodka:
+      amount: 1
+    Absinthe:
+      amount: 1
+  products:
+    OriginalSin: 4
+
+- type: reaction
+  id: PinkSquirrel
+  requiredMixerCategories:
+  - Shake
+  reactants:
+    JuiceCherry:
+      amount: 1
+    Cream:
+      amount: 1
+    CoffeeLiqueur:
+      amount: 1
+    CocoaPowder:
+      amount: 1
+  products:
+    PinkSquirrel: 4
+
+- type: reaction
+  id: PinkSquirrelImitation
+  requiredMixerCategories:
+  - Shake
+  reactants:
+    JuiceCherry:
+      amount: 1
+    Cream:
+      amount: 1
+    CoffeeLiqueur:
+      amount: 1
+    CocoaPowderImitation:
+      amount: 1
+  products:
+    PinkSquirrel: 4
+
+- type: reaction
+  id: QuietConvert
+  reactants:
+    Sugarslime:
+      amount: 1
+    Nothing:
+      amount: 1
+  products:
+    QuietConvert: 2
+
+- type: reaction
+  id: SilentNight
+  reactants:
+    Eggnog:
+      amount: 1
+    Nothing:
+      amount: 1
+  products:
+    SilentNight: 2
+
+- type: reaction
+  id: SilentSister
+  reactants:
+    Nothing:
+      amount: 1
+    JuiceCherry:
+      amount: 1
+    JuiceBanana:
+      amount: 1
+  products:
+    SilentSister: 3
+
+- type: reaction
+  id: SiliconMorningCoffee
+  requiredMixerCategories:
+  - Shake
+  reactants:
+    WeldingFuel:
+      amount: 1
+    CafeLatte:
+      amount: 1
+  products:
+    SiliconMorningCoffee: 2
+
+- type: reaction
+  id: Sugarslime
+  reactants:
+    SodaWater:
+      amount: 1
+    Sugar:
+      amount: 1
+    Slime:
+      amount: 1
+  products:
+    Sugarslime: 3
+
+- type: reaction
+  id: Starcup
+  requiredMixerCategories:
+  - Shake
+  reactants:
+    CrushDepth:
+      amount: 3
+    MoonMist:
+      amount: 3
+    Nothing:
+      amount: 3
+    Bicaridine:
+      amount: 1
+    Plasma:
+      amount: 1
+  products:
+    Starcup: 11
+
+- type: reaction
+  id: SweetUnion
+  requiredMixerCategories:
+  - Stir
+  reactants:
+    QuietConvert:
+      amount: 1
+    SilentSister:
+      amount: 1
+  products:
+    SweetUnion: 2
+
+- type: reaction
+  id: Y2Koffee
+  minTemp: 340
+  reactants:
+    SiliconMorningCoffee:
+      amount: 1
+    Fersilicite:
+      amount: 1
+  products:
+    Y2Koffee: 2
