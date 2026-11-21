@@ -1,0 +1,251 @@
+# Templates for parenting
+- type: entity
+  parent: BaseItem
+  id: FlagCarriedBase
+  name: flag
+  suffix: Carried
+  abstract: true
+  description: An unhanged flag. You could probably wear it on your back like a cape.
+  components:
+  - type: Sprite
+    sprite: Structures/Wallmounts/flags.rsi
+    noRot: true
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-both
+      right:
+      - state: inhand-both
+    size: Ginormous
+  - type: Clothing
+    quickEquip: true
+    slots:
+    - neck
+  - type: StaticPrice
+    price: 25
+  - type: NFWallmountable
+    soundFinished:
+      collection: storageRustle
+      params:
+        variation: 0.125
+
+- type: entity
+  parent: FlagCarriedBase
+  id: FlagCarriedBaseDV
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Wallmounts/flags.rsi
+  - type: NFWallmountable
+    spawn: TransRoyalShrimpFlag # literally only here so it doesn't throw an error
+
+# Flags
+- type: entity
+  parent: FlagCarriedBase
+  id: FlagCarriedBlank
+  name: blank flag
+  components:
+  - type: Sprite
+    state: blank_flag
+  - type: Item
+    sprite: _starcup/Clothing/Neck/Flags/blank_flag.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Neck/Flags/blank_flag.rsi
+  - type: NFWallmountable
+    spawn: BlankFlag
+
+- type: entity
+  parent: [ FlagCarriedBase, BaseMinorContraband ]
+  id: FlagCarriedNT
+  name: Nanotrasen flag
+  components:
+  - type: Sprite
+    state: NT_flag
+  - type: Item
+    sprite: _starcup/Clothing/Neck/Flags/nt_flag.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Neck/Flags/nt_flag.rsi
+  - type: NFWallmountable
+    spawn: NTFlag
+
+- type: entity
+  parent: FlagCarriedBase
+  id: FlagCarriedSyndie
+  name: syndicate flag
+  components:
+  - type: Sprite
+    state: syndie_flag
+  - type: Item
+    sprite: _starcup/Clothing/Neck/Flags/syndie_flag.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Neck/Flags/syndie_flag.rsi
+  - type: NFWallmountable
+    spawn: SyndieFlag
+
+- type: entity
+  parent: FlagCarriedBase
+  id: FlagCarriedLGBTQ
+  name: LGBTQ flag
+  components:
+  - type: Sprite
+    state: lgbtq_flag
+  - type: Item
+    sprite: _starcup/Clothing/Neck/Flags/lgbtq_flag.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Neck/Flags/lgbtq_flag.rsi
+  - type: NFWallmountable
+    spawn: LGBTQFlag
+
+- type: entity
+  parent: FlagCarriedBase
+  id: FlagCarriedPirate
+  name: pirate flag
+  components:
+  - type: Sprite
+    state: pirate_flag
+  - type: Item
+    sprite: _starcup/Clothing/Neck/Flags/pirate_flag.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Neck/Flags/pirate_flag.rsi
+  - type: NFWallmountable
+    spawn: PirateFlag
+
+# DeltaV flags
+- type: entity
+  parent: FlagCarriedBaseDV
+  id: FlagCarriedAce
+  name: asexual flag
+  components:
+  - type: Sprite
+    state: ace_flag
+  - type: Item
+    sprite: _starcup/Clothing/Neck/Flags/ace_flag.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Neck/Flags/ace_flag.rsi
+  - type: NFWallmountable
+    spawn: AceFlag
+
+- type: entity
+  parent: FlagCarriedBaseDV
+  id: FlagCarriedAro
+  name: aromantic flag
+  components:
+  - type: Sprite
+    state: aro_flag
+  - type: Item
+    sprite: _starcup/Clothing/Neck/Flags/aro_flag.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Neck/Flags/aro_flag.rsi
+  - type: NFWallmountable
+    spawn: AroFlag
+
+- type: entity
+  parent: FlagCarriedBaseDV
+  id: FlagCarriedBi
+  name: bisexual flag
+  components:
+  - type: Sprite
+    state: bi_flag
+  - type: Item
+    sprite: _starcup/Clothing/Neck/Flags/bi_flag.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Neck/Flags/bi_flag.rsi
+  - type: NFWallmountable
+    spawn: BiFlag
+
+- type: entity
+  parent: FlagCarriedBaseDV
+  id: FlagCarriedEnby
+  name: nonbinary flag
+  components:
+  - type: Sprite
+    state: enby_flag
+  - type: Item
+    sprite: _starcup/Clothing/Neck/Flags/enby_flag.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Neck/Flags/enby_flag.rsi
+  - type: NFWallmountable
+    spawn: EnbyFlag
+
+- type: entity
+  parent: FlagCarriedBaseDV
+  id: FlagCarriedGay
+  name: gay flag
+  components:
+  - type: Sprite
+    state: gay_flag
+  - type: Item
+    sprite: _starcup/Clothing/Neck/Flags/gay_flag.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Neck/Flags/gay_flag.rsi
+  - type: NFWallmountable
+    spawn: GayFlag
+
+- type: entity
+  parent: FlagCarriedBaseDV
+  id: FlagCarriedIntersex
+  name: intersex flag
+  components:
+  - type: Sprite
+    state: intersex_flag
+  - type: Item
+    sprite: _starcup/Clothing/Neck/Flags/intersex_flag.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Neck/Flags/intersex_flag.rsi
+  - type: NFWallmountable
+    spawn: IntersexFlag
+
+- type: entity
+  parent: FlagCarriedBaseDV
+  id: FlagCarriedLesbian
+  name: lesbian flag
+  components:
+  - type: Sprite
+    state: les_flag
+  - type: Item
+    sprite: _starcup/Clothing/Neck/Flags/les_flag.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Neck/Flags/les_flag.rsi
+  - type: NFWallmountable
+    spawn: LesbianFlag
+
+- type: entity
+  parent: FlagCarriedBaseDV
+  id: FlagCarriedPan
+  name: pansexual flag
+  components:
+  - type: Sprite
+    state: pan_flag
+  - type: Item
+    sprite: _starcup/Clothing/Neck/Flags/pan_flag.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Neck/Flags/pan_flag.rsi
+  - type: NFWallmountable
+    spawn: PanFlag
+
+- type: entity
+  parent: FlagCarriedBaseDV
+  id: FlagCarriedTrans
+  name: transgender flag
+  components:
+  - type: Sprite
+    state: trans_flag
+  - type: Item
+    sprite: _starcup/Clothing/Neck/Flags/trans_flag.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Neck/Flags/trans_flag.rsi
+  - type: NFWallmountable
+    spawn: TransFlag
+
+- type: entity
+  parent: FlagCarriedBaseDV
+  id: FlagCarriedTransRoyalShrimp
+  name: trans royal shrimp flag
+  components:
+  - type: Sprite
+    state: trans_royal_shrimp_flag
+  - type: Item
+    sprite: _starcup/Clothing/Neck/Flags/trans_royal_shrimp_flag.rsi
+  - type: Clothing
+    sprite: _starcup/Clothing/Neck/Flags/trans_royal_shrimp_flag.rsi
+  - type: NFWallmountable
+    spawn: TransRoyalShrimpFlag

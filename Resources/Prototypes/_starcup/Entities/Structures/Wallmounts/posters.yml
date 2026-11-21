@@ -1,3 +1,4 @@
+# Legit
 - type: entity
   parent: PosterBase
   id: PosterLegitPPENoExcuseBlue
@@ -7,6 +8,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters.rsi
     state: poster-ppe-blue1
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitPPENoExcuseBlue
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitPPENoExcuseBlue
@@ -14,21 +18,27 @@
   components:
   - type: Sprite
     state: poster-ppe-pink1
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitPPENoExcusePink
+    disassembleTime: 2
 
 - type: entity
   parent: PosterBase
   id: PosterLegitElectra
-  name: "Electra Dynamics Energy Corporation"
+  name: "Electra Dynamics Power Incorporated"
   description: "A poster depicting the logo of Electra Dynamics, the energy and terraforming company."
   components:
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters.rsi
     state: poster-electra
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitElectra
+    disassembleTime: 2
 
 - type: entity
   parent: PosterBase
   id: PosterLegitElectraTattered
-  name: "Electra Dynamics Energy Corporation"
+  name: "Electra Dynamics Power Incorporated"
   suffix: Tattered
   description: "A tattered poster depicting the logo of Electra Dynamics, the energy and terraforming company."
   components:
@@ -45,6 +55,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters.rsi
     state: poster-hawkmoon-ad
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitHawkmoonAd
+    disassembleTime: 2
 
 - type: entity
   parent: PosterBase
@@ -59,16 +72,6 @@
 
 - type: entity
   parent: PosterBase
-  id: PosterContrabandHawkmoonAd
-  name: "Annihilation"
-  description: "A poster depicting an enormous laser destroying a moon. Allegedly what Hawkmoon has done in pursuit of more FTL lanes, but it may just be an ad for a cool movie."
-  components:
-  - type: Sprite
-    sprite: _starcup/Structures/Wallmounts/posters.rsi
-    state: poster-hawkmoon-ad-evil
-
-- type: entity
-  parent: PosterBase
   id: PosterLegitTrimaranBlueprint
   name: "Trimaran Freighter"
   description: "A blueprint for Hawkmoon Acquisitions's \"Trimaran\" class of freighters, intended for long-term crew habitation."
@@ -76,8 +79,24 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters.rsi
     state: poster-trimaran-blueprint
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitTrimaranBlueprint
+    disassembleTime: 2
 
-# rebrands
+- type: entity
+  parent: PosterBase
+  id: PosterLegitCybersunAd
+  name: "Cybersun Incorporated"
+  description: "To the next dawn."
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/posters.rsi
+    state: poster-cybersun-ad
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitCybersunAd
+    disassembleTime: 2
+
+# Rebrands
 - type: entity
   parent: PosterLegitHereForYourSafety
   id: PosterLegitHereForYourSafetySyndie
@@ -86,6 +105,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster1_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitHereForYourSafetySyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitNanotrasenLogo
@@ -96,6 +118,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster2_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitSyndicateLogo
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitCleanliness
@@ -105,6 +130,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster3_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitCleanlinessSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitHelpOthers
@@ -114,6 +142,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster4_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitHelpOthersSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitBuild
@@ -123,6 +154,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster5_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitBuildSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitBlessThisSpess
@@ -132,6 +166,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster6_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitBlessThisSpessSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitScience
@@ -141,6 +178,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster7_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitScienceSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitIan
@@ -150,6 +190,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster8_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitIanSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitObey
@@ -159,6 +202,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster9_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitObeySyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitWalk
@@ -168,6 +214,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster10_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitWalkSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitStateLaws
@@ -177,6 +226,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster11_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitStateLawsSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitLoveIan
@@ -186,6 +238,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster12_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitLoveIanSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitGetYourLEGS
@@ -195,6 +250,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster15_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitGetYourLEGSSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitDoNotQuestion
@@ -204,6 +262,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster16_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitDoNotQuestionSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitWorkForAFuture
@@ -213,6 +274,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster17_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitWorkForAFutureSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitSafetyInternals
@@ -222,6 +286,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster19_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitSafetyInternalsSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitSafetyEyeProtection
@@ -231,6 +298,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster20_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitSafetyEyeProtectionSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitSafetyReport
@@ -240,6 +310,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster21_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitSafetyReportSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitReportCrimes
@@ -249,6 +322,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster22_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitReportCrimesSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitFoamForceAd
@@ -258,6 +334,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster24_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitFoamForceAdSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitPDAAd
@@ -268,6 +347,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster28_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitPDAAdSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitNanomichiAd
@@ -278,6 +360,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster30_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitSyndmichiAd
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegit12Gauge
@@ -287,6 +372,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster31_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegit12GaugeSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitNoERP
@@ -297,6 +385,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster34_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitNoERPSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitJustAWeekAway
@@ -306,6 +397,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster38_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitJustAWeekAwaySyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitRenault
@@ -315,6 +409,9 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster50_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitRenaultSyndie
+    disassembleTime: 2
 
 - type: entity
   parent: PosterLegitNTTGC
@@ -325,3 +422,20 @@
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters_rebrand.rsi
     state: poster51_legit
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitSyndTCG
+    disassembleTime: 2
+
+# Contraband
+- type: entity
+  parent: PosterBase
+  id: PosterContrabandHawkmoonAd
+  name: "Annihilation"
+  description: "A poster depicting an enormous laser destroying a moon. Allegedly what Hawkmoon has done in pursuit of more FTL lanes, but it may just be an ad for a cool movie."
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/posters.rsi
+    state: poster-hawkmoon-ad-evil
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledContrabandHawkmoonAd
+    disassembleTime: 2
