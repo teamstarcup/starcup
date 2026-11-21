@@ -1,0 +1,69 @@
+- type: entity
+  parent: NFBasePaintingCurtained
+  id: BaseMirrorCarried
+  name: mirror
+  suffix: Carried
+  description: Handle with care.
+  components:
+  - type: Sprite
+    sprite: Structures/Wallmounts/mirror.rsi
+    state: mirror
+  - type: Item
+    sprite: _starcup/Objects/Decoration/mirror.rsi
+  - type: Damageable
+    damageModifierSet: GlassMod
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Slash: 8
+  - type: DamageOnHit
+    damage:
+      types:
+        Blunt: 8
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 5
+  - type: NFWallmountable
+    spawn: Mirror # literally only here so it doesn't throw an error
+
+- type: entity
+  parent: BaseMirrorCarried
+  id: MirrorRoundCarried
+  components:
+  - type: Sprite
+    state: mirror
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: mirror-round
+      right:
+      - state: mirror-round
+  - type: NFWallmountable
+    spawn: Mirror
+
+- type: entity
+  parent: BaseMirrorCarried
+  id: MirrorModernCarried
+  components:
+  - type: Sprite
+    state: rectangle-mirror
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: mirror-rectangle
+      right:
+      - state: mirror-rectangle
+  - type: NFWallmountable
+    spawn: MirrorModern

@@ -93,6 +93,7 @@
   parent: BaseItem
   id: NFBasePaintingCurtained
   name: painting
+  suffix: Carried
   description: A masterpiece hidden under cloth.
   components:
   - type: Sprite
@@ -105,6 +106,11 @@
   - type: Damageable
   - type: Injurable
     damageContainer: Inorganic
+  - type: NFWallmountable
+    soundFinished:
+      collection: HangFrame
+      params:
+        variation: 0.125
   # end starcup
   - type: DamageExaminable
   - type: Destructible

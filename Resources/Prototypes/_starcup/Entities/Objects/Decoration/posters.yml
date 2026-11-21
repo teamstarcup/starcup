@@ -7,6 +7,7 @@
 - type: entity
   parent: NFPosterRolledLegit
   id: PosterRolledMap
+  description: A rolled up map.
   components:
   - type: Sprite
     sprite: _starcup/Structures/Wallmounts/posters.rsi
@@ -463,7 +464,7 @@
     spawn: PosterLegitIonRifle
 
 - type: entity
-  parent: NFPosterRolledLegit
+  parent: NFBasePaintingCurtained # game treats it like a poster but come on. it's clearly a wooden frame
   id: PosterRolledLegitCarpMount
   name: Wall-mountable carp
   description: A great catch to display on the wall.
@@ -1377,3 +1378,28 @@
   components:
   - type: NFWallmountable
     spawn: PosterMapOrigin
+
+- type: entity
+  parent: PosterRolledMap
+  id: PosterRolledMapMetaRight
+  name: "Meta Map"
+  components:
+  - type: NFWallmountable
+    spawn: PosterMapMetaRight
+
+# DeltaV maps
+- type: entity
+  parent: PosterRolledMap
+  id: PosterRolledMapGlacier
+  name: "Glacier Map"
+  components:
+  - type: NFWallmountable
+    spawn: PosterMapGlacier
+
+- type: entity
+  parent: PosterRolledMap
+  id: PosterRolledMapShoukou
+  name: "Shōkō Map"
+  components:
+  - type: NFWallmountable
+    spawn: PosterMapShoukou

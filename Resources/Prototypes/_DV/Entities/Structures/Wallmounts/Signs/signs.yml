@@ -19,7 +19,7 @@
     state: direction_mail
 
 - type: entity
-  parent: BaseSign
+  parent: BaseSignPullDown # starcup
   id: SignConspiracyBoard
   name: conspiracy board
   description: Perfect for tracking the multiple layers of criminal activities.
@@ -28,3 +28,7 @@
     sprite: _DV/Structures/Wallmounts/conspiracy_board.rsi
     state: icon
     offset: "0.5,0"
+  # begin starcup: unhangable signs
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: SignCarriedConspiracyBoard
+  # end starcup

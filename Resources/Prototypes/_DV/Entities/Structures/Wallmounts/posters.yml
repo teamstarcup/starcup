@@ -8,6 +8,10 @@
   - type: Sprite
     sprite: _DV/Structures/Wallmounts/Posters/Hyenh.rsi
     state: glaciermap
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledMapGlacier
+  # end starcup
 
 - type: entity
   parent: PosterBase
@@ -18,3 +22,7 @@
   - type: Sprite
     sprite: _DV/Structures/Wallmounts/Posters/Hyenh.rsi
     state: shoukoumap
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledMapShoukou
+  # end starcup
