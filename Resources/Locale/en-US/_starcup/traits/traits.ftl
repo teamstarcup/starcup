@@ -19,19 +19,22 @@ trait-pottymouth-name = Potty mouth
 trait-pottymouth-desc = You're quite above improper language, sometimes even prone to minced oaths.
 
 trait-cant-accent-name = Cant
-trait-cant-accent-description = Ye speak a clever li'le cant that only sometimes 'ampers other's understandin'.
+trait-cant-accent-description = Ye speak a clever li'le cant that can be 'ard to grasp.
 
 trait-devilscant-accent-name = Devil's Cant
-trait-devilscant-accent-description = Might be thon onis who ken this black tongue thum taught it tha—or elsewise tha learnt it on thy lonesome.
+trait-devilscant-accent-description = Might be thum onis who ken this black tongue that taught it tha.
 
 trait-vowed-name = Vow of Silence
 trait-vowed-desc = You're serious about your vow, and uphold it outside of jobs that require one.
 
 trait-nonverbal-light-accent-name = Nonverbal (Light)
-trait-nonverbal-light-accent-desc = You don'-...
+trait-nonverbal-light-accent-desc = Words ar...
 
-trait-nonverbal-light-accent-name = Nonverbal (Light)
-trait-nonverbal-light-accent-desc = You don't t...
+trait-nonverbal-severe-accent-name = Nonverbal (Severe)
+trait-nonverbal-severe-accent-desc = ....!
+
+trait-german-name-starcup = Black Forest
+trait-german-desc-starcup = Zhis accent has very articulated consönants.
 
 trait-uncloneable-name = Uncloneable
 trait-uncloneable-desc = Due to some quirk in your physical composition, you cannot be reconstituted by medical cloning.

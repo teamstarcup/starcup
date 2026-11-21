@@ -27,22 +27,21 @@
 
 - type: trait
   id: NonverbalSevereAccent
-  name: trait-nonverbal-severe-accent-name # TODO
-  description: trait-nonverbal-severe-accent-description # TODO
+  name: trait-nonverbal-severe-accent-name
+  description: trait-nonverbal-severe-accent-desc
   category: SpeechTraits
   cost: 2
   components:
-  - type: ReplacementAccent
-    accent: SilentAccent
+  - type: NonverbalSevereAccent
 
 - type: trait
   id: NonverbalLightAccent
-  name: trait-nonverbal-light-accent-name # TODO
-  description: trait-nonverbal-light-accent-description # TODO
+  name: trait-nonverbal-light-accent-name
+  description: trait-nonverbal-light-accent-desc
   category: SpeechTraits
   cost: 0
   components:
-  - type: DevilsCantAccent
+  - type: NonverbalLightAccent
 
 #- type: trait
 #  id: RussianAccent
