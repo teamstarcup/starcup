@@ -13,3 +13,32 @@
         - id: MysterySpaceBladeBox
           amount: 16
           prob: 0.05
+
+- type: entity
+  id: CrateFunPosters
+  parent: CratePlastic
+  name: posters crate
+  description: A collection of ten Syndicate-approved posters and advertisements. Duplicates non refundable.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFPosterCorporate
+          amount: 10
+        - id: NFPosterContraband
+          amount: 3
+          prob: 0.05
+
+- type: entity
+  id: CrateFunPaintings
+  parent: CratePlastic
+  name: paintings crate
+  description: Five tasteful replicas of famous paintings to decorate any high-class office.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFPaintingCurtainedRandom
+          amount: 5
