@@ -112,6 +112,10 @@
         - id: ClothingCorpoJacketDonkChef
         - id: ClothingCorpoJacketDonkRoboticist
         - id: ClothingCorpoJacketFPA
+      # posters
+      - id: PosterRolledAny
+      amount: !type:RangeNumberSelector
+        range: 1, 2
       # end starcup
     # Uncommon Group
     - !type:GroupSelector
@@ -201,6 +205,9 @@
         - id: ClothingNeckCowBellCollar
         - id: ClothingHeadHatCuteTiara
         - id: RandomGlorb
+      # flags
+      - !type:NestedSelector
+        tableId: CarriedFlags
       # end starcup
     # Rare Group
     - !type:GroupSelector
@@ -212,7 +219,10 @@
       - id: WristwatchGold
       - id: RubberStampGreytide
       - id: MysteryLighterBox
-      - id: PrizeBall # starcup
+      # begin starcup
+      - id: PrizeBall
+      - id: NFPaintingCurtainedRandom
+      # end starcup
 
 - type: entity
   name: Maint Loot Spawner

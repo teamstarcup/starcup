@@ -13,6 +13,16 @@
     sprite: _starcup/Structures/Wallmounts/posters.rsi
     state: rolled_map
 
+- type: entity
+  parent: NFBasePoster
+  id: PosterRolledAny
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/posters.rsi
+    state: rolled_map
+  - type: NFWallmountable
+    spawn: RandomPosterAny
+
 # Legit posters
 
 - type: entity

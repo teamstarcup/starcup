@@ -1,0 +1,37 @@
+# Spawners
+- type: entity
+  parent: MarkerBaseStarcup
+  id: RandomCarriedFlag
+  name: random carried flag spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowred
+    - state: red
+    - sprite: _DV/Structures/Wallmounts/flags.rsi
+      state: trans_royal_shrimp_flag
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:NestedSelector
+      tableId: CarriedFlags
+
+# Entity tables
+- type: entityTable
+  id: CarriedFlags
+  table: !type:GroupSelector
+    children:
+    - id: FlagCarriedBlank
+    - id: FlagCarriedNT
+    - id: FlagCarriedSyndie
+    - id: FlagCarriedLGBTQ
+    - id: FlagCarriedPirate
+    - id: FlagCarriedAce
+    - id: FlagCarriedAro
+    - id: FlagCarriedBi
+    - id: FlagCarriedEnby
+    - id: FlagCarriedGay
+    - id: FlagCarriedIntersex
+    - id: FlagCarriedLesbian
+    - id: FlagCarriedPan
+    - id: FlagCarriedTrans
+    - id: FlagCarriedTransRoyalShrimp
