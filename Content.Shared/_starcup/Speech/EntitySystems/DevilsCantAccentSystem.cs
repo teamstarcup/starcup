@@ -16,18 +16,18 @@ public sealed partial class DevilsCantAccentSystem : RelayAccentSystem<DevilsCan
     private static readonly Regex RegexUpperFul = new(@"(?<=\w\w\w\w\w)((FUL)L?)(?:Y?)\b"); // it's all downhill from here
     private static readonly Regex RegexLowerVerbXToYou = new(@"(?<=(?<=give\s|gave\s|teach\s|taught\s|explain\s|explained\s).{2,10})(\sto\syou\b)");
     private static readonly Regex RegexUpperVerbXToYou = new(@"(?<=(?<=GIVE\s|GAVE\s|TEACH\s|TAUGHT\s|EXPLAIN\s|EXPLAINED\s).{2,10})(\sTO\sYOU\b)");
-    private static readonly Regex RegexLowerYoureX = new(@"(?<Group1>((?:(^|\.\s|\!\s|\?\s))You're\s|(?:(^|\.\s|\!\s|\?\s))you're\s))(?<Group2a>([a-z]))(?<Group2b>(([a-z]+(?<!ed))))(?<Group3>(\.|\!|~|!!|$))");
-    private static readonly Regex RegexUpperYoureX = new(@"(?<Group1>((?:(^|\.\s|\!\s|\?\s))YOU'RE\s))(?<Group2a>([A-Z]))(?<Group2b>(([A-Z]+(?<!ED))))(?<Group3>(\.|\!|~|!!|$))");
-    private static readonly Regex RegexLowerYoureXxxed = new(@"(?<Group1>((?:(^|\.\s|\!\s|\?\s))You're\s|(?:(^|\.\s|\!\s|\?\s))you're\s))(?<Group2a>([a-z]))(?<Group2b>((([a-z]+(?:( ?))){2,3})))(?<Group3>(\.|\!|~|!!|$))");
-    private static readonly Regex RegexUpperYoureXxxed = new(@"(?<Group1>((?:(^|\.\s|\!\s|\?\s))YOU'RE\s))(?<Group2a>([A-Z]))(?<Group2b>((([a-z]+(?:( ?))){2,3})))(?<Group3>(\.|\!|~|!!|$))");
-    private static readonly Regex RegexLowerImX = new(@"(?<=^|\.\s|\!\s|\?\s)(I'm\s|We're\s|i'm\s|we're\s)(?<Group2a>([a-z]))(?<Group2b>(([a-z]+(?<!ed))))(?<Group3>(\.|\!|~|!!|$))");
-    private static readonly Regex RegexUpperImX = new(@"(?<=^|\.\s|\!\s|\?\s)(I'M\s|WE'RE\s|I'M\s|WE'RE\s)(?<Group2a>([A-Z]))(?<Group2b>(([A-Z]+(?<!ED))))(?<Group3>(\.|\!|~|!!|$))");
-    private static readonly Regex RegexLowerImXxxed = new(@"(?<=^|\.\s|\!\s|\?\s)(I'm\s|We're\s|i'm\s|we're\s)(?<Group2a>([a-z]))(?<Group2b>((([a-z]+(?:( ?))){2,3})))(?<Group3>(\.|\!|~|!!|$))");
-    private static readonly Regex RegexUpperImXxxed = new(@"(?<=^|\.\s|\!\s|\?\s)(I'M\s|WE'RE\s|I'M\s|WE'RE\s)(?<Group2a>([A-Z]))(?<Group2b>((([A-Z]+(?:( ?))){2,3})))(?<Group3>(\.|\!|~|!!|$))");
-    private static readonly Regex RegexLowerThisIsXxx = new(@"(?<=^|\.\s|\!\s|\?\s)(This is\s|this is\s)(?<Group2a>([a-z]))(?<Group2b>((([a-z]+(?:( ?))){2,3})))(?<Group3>(\.|\!|~|!!|$))");
-    private static readonly Regex RegexUpperThisIsXxx = new(@"(?<=^|\.\s|\!\s|\?\s)(THIS IS\s)(?<Group2a>([A-Z]))(?<Group2b>((([A-Z]+(?:( ?))){2,3})))(?<Group3>(\.|\!|~|!!|$))");
-    private static readonly Regex RegexLowerThisIsntXxx = new(@"(?<=^|\.\s|\!\s|\?\s)(This isn't\s|this isn't\s)(?<Group2>((([a-z]+(?:( ?))){2,3})))(?<Group3>(\.|\!|~|!!|$))");
-    private static readonly Regex RegexUpperThisIsntXxx = new(@"(?<=^|\.\s|\!\s|\?\s)(THIS ISN'T\s)(?<Group2>((([A-Z]+(?:( ?))){2,3})))(?<Group3>(\.|\!|~|!!|$))");
+    private static readonly Regex RegexLowerYoureX = new(@"(?<=[.!?]\s|^)(?<Group1>You're\s|(?:(^|\.\s|\!\s|\?\s))you're\s)(?<Group2a>([a-z]))(?<Group2b>((([a-z]+(?:( ?))){2,3})))(?<Group3>(\.|\!|~|!!|$))");
+    private static readonly Regex RegexUpperYoureX = new(@"(?<=[.!?]\s|^)(?<Group1>YOU'RE\s)(?<Group2a>([A-Z]))(?<Group2b>(([A-Z]+(?<!ED))))(?<Group3>(\.|\!|~|!!|$))");
+    private static readonly Regex RegexLowerYoureXxxed = new(@"(?<=[.!?]\s|^)(?<Group1>You're\s|(?:(^|\.\s|\!\s|\?\s))you're\s)(?<Group2a>([a-z]))(?<Group2b>((([a-z]+(?:( ?))){2,3})))(?<Group3>(\.|\!|~|!!|$))");
+    private static readonly Regex RegexUpperYoureXxxed = new(@"(?<=[.!?]\s|^)(?<Group1>YOU'RE\s)(?<Group2a>([A-Z]))(?<Group2b>((([a-z]+(?:( ?))){2,3})))(?<Group3>(\.|\!|~|!!|$))");
+    private static readonly Regex RegexLowerImX = new(@"(?<=[.!?]\s|^)(I'm\s|We're\s|i'm\s|we're\s)(?<Group2a>([a-z]))(?<Group2b>(([a-z]+(?<!ed))))(?<Group3>(\.|\!|~|!!|$))");
+    private static readonly Regex RegexUpperImX = new(@"(?<=[.!?]\s|^)(I'M\s|WE'RE\s|I'M\s|WE'RE\s)(?<Group2a>([A-Z]))(?<Group2b>(([A-Z]+(?<!ED))))(?<Group3>(\.|\!|~|!!|$))");
+    private static readonly Regex RegexLowerImXxxed = new(@"(?<=[.!?]\s|^)(I'm\s|We're\s|i'm\s|we're\s)(?<Group2a>([a-z]))(?<Group2b>((([a-z]+(?:( ?))){2,3})))(?<Group3>(\.|\!|~|!!|$))");
+    private static readonly Regex RegexUpperImXxxed = new(@"(?<=[.!?]\s|^)(I'M\s|WE'RE\s|I'M\s|WE'RE\s)(?<Group2a>([A-Z]))(?<Group2b>((([A-Z]+(?:( ?))){2,3})))(?<Group3>(\.|\!|~|!!|$))");
+    private static readonly Regex RegexLowerThisIsXxx = new(@"(?<=[.!?]\s|^)(This is\s|this is\s)(?<Group2a>([a-z]))(?<Group2b>((([a-z]+(?:( ?))){2,3})))(?<Group3>(\.|\!|~|!!|$))");
+    private static readonly Regex RegexUpperThisIsXxx = new(@"(?<=[.!?]\s|^)(THIS IS\s)(?<Group2a>([A-Z]))(?<Group2b>((([A-Z]+(?:( ?))){2,3})))(?<Group3>(\.|\!|~|!!|$))");
+    private static readonly Regex RegexLowerThisIsntXxx = new(@"(?<=[.!?]\s|^)(This isn't\s|this isn't\s)(?<Group2>((([a-z]+(?:( ?))){2,3})))(?<Group3>(\.|\!|~|!!|$))");
+    private static readonly Regex RegexUpperThisIsntXxx = new(@"(?<=[.!?]\s|^)(THIS ISN'T\s)(?<Group2>((([A-Z]+(?:( ?))){2,3})))(?<Group3>(\.|\!|~|!!|$))");
 
     [Dependency] private ReplacementAccentSystem _replacement = default!;
 

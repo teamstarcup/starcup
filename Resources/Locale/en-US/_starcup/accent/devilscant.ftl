@@ -1,7 +1,6 @@
 
 # this is basically an aggressively watered-down Black Speech. it's straddling a delicate line.
-# word replacements are tricky to do Well, but Devil's Cant is supposed to sound a little weird.
-# I might just trim it down to the basics
+# word replacements are tricky to do Well.
 
 # Pronouns
 accent-devilscant-words-pronoun-1 = I'm
@@ -59,6 +58,7 @@ accent-devilscant-words-common-replace-9 = nay!
 accent-devilscant-words-special-1 = gosh!
 accent-devilscant-words-special-replace-1 = devil!
 accent-devilscant-words-special-2 = coming here
+accent-devilscant-words-special-2-b = comen here
 accent-devilscant-words-special-replace-2 = comen thuswise
 accent-devilscant-words-special-3 = boring
 accent-devilscant-words-special-replace-3 = yawnsome
