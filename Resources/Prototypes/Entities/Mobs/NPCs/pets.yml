@@ -552,6 +552,10 @@
   name: Morty
   description: The station's resident Didelphis virginiana. A sensitive but resilient kind of guy.
   components:
+  # begin starcup: bespoke sprite
+  - type: Sprite
+    sprite: _starcup/Mobs/Pets/morty.rsi
+  # end starcup
   - type: InteractionPopup
     successChance: 1.0 # Hey, c'mon, this is Morty we're talking about here.
     interactSuccessString: petting-success-possum
@@ -619,6 +623,10 @@
   name: Morticia
   description: A powerful creature of the night. Her eyeshadow is always on point.
   components:
+  # begin starcup: bespoke sprite
+  - type: Sprite
+    sprite: _starcup/Mobs/Pets/morticia.rsi
+  # end starcup
   - type: InteractionPopup
     successChance: 0.7
     interactSuccessString: petting-success-raccoon

@@ -1,26 +1,29 @@
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobMonkeyPunpunCold
   name: Pun Pun Spawner
   suffix: Bartender Pet, Cold
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: monkey
       sprite: Mobs/Animals/monkey.rsi
+    - state: ai
   - type: ConditionalSpawner
     prototypes:
     - MobMonkeyPunpunCold
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobHamsterHamletMime
   name: Hamster Mimelet Spawner
   suffix: Bridge Pet (crate)
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: icon-0
       sprite: Mobs/Animals/hamster.rsi
@@ -30,7 +33,7 @@
     - CrateNPCHamletMime
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobEngineeringPet
   name: Random Engineering Pet Spawner
   suffix: Engineering Pet
@@ -38,7 +41,10 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
+    - state: pet
+      sprite: _starcup/Markers/misc.rsi
     - state: ai
   - type: ConditionalSpawner
     prototypes:
@@ -47,7 +53,7 @@
     - MobPossumPoppy
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobSecurityPet
   name: Random Security Pet Spawner
   suffix: Security Pet
@@ -55,7 +61,10 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
+    - state: pet
+      sprite: _starcup/Markers/misc.rsi
     - state: ai
   - type: ConditionalSpawner
     prototypes:
@@ -64,7 +73,7 @@
     - MobBandito
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobBarPet
   name: Random Bar Pet Spawner
   suffix: Bar Pet
@@ -72,7 +81,10 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
+    - state: pet
+      sprite: _starcup/Markers/misc.rsi
     - state: ai
   - type: ConditionalSpawner
     prototypes:
@@ -80,7 +92,7 @@
     - MobDishduty
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobBarPetCold
   name: Random Cold Bar Pet Spawner
   suffix: Bar Pet, Cold
@@ -88,7 +100,10 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
+    - state: pet
+      sprite: _starcup/Markers/misc.rsi
     - state: ai
   - type: ConditionalSpawner
     prototypes:
@@ -96,7 +111,7 @@
     - MobDishduty
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobMaintsPet
   name: Random Maints Pet Spawner
   suffix: Maints Pet
@@ -104,7 +119,10 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
+    - state: pet
+      sprite: _starcup/Markers/misc.rsi
     - state: ai
   - type: ConditionalSpawner
     prototypes:
@@ -112,7 +130,7 @@
     - MobCatRuntime
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobKitchenPet
   name: Random Kitchen Pet Spawner
   suffix: Kitchen Pet
@@ -120,7 +138,10 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
+    - state: pet
+      sprite: _starcup/Markers/misc.rsi
     - state: ai
   - type: ConditionalSpawner
     prototypes:
@@ -129,7 +150,7 @@
     - MobHenrietta
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobSciencePet
   name: Random Science Pet Spawner
   suffix: Science Pet
@@ -137,7 +158,10 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
+    - state: pet
+      sprite: _starcup/Markers/misc.rsi
     - state: ai
   - type: ConditionalSpawner
     prototypes:
@@ -146,7 +170,7 @@
     - MobArcticFoxSiobhan
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobMedicalPet
   name: Random Medical Pet Spawner
   suffix: Medical Pet
@@ -154,16 +178,19 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
+    - state: pet
+      sprite: _starcup/Markers/misc.rsi
     - state: ai
   - type: ConditionalSpawner
     prototypes:
-    - MobPossumMortyOld
+    - MobPossumMorty
     - MobCobraSilvia
     - MobWalter
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobPsychPet
   name: Random Psych Pet Spawner
   suffix: Psych Pet
@@ -171,7 +198,10 @@
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
+    - state: pet
+      sprite: _starcup/Markers/misc.rsi
     - state: ai
   - type: ConditionalSpawner
     prototypes:
@@ -179,70 +209,87 @@
     - MobBingus
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobSlothDishduty
   name: Sloth Dishduty Spawner
   suffix: Bar Pet
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
+    - state: dishduty
+      sprite: _starcup/Mobs/Pets/dishduty.rsi
     - state: ai
   - type: ConditionalSpawner
     prototypes:
     - MobDishduty
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobSnakeGreenstuff
   name: Snake Greenstuff Spawner
   suffix: HoP Pet
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
+    - state: snake
+      sprite: _starcup/Mobs/Pets/greenstuff.rsi
     - state: ai
   - type: ConditionalSpawner
     prototypes:
     - MobGreenstuff
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobChickenHenrietta
   name: Chicken Henrietta Spawner
   suffix: Kitchen Pet
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
+    - state: henrietta
+      sprite: _starcup/Mobs/Pets/henrietta.rsi
     - state: ai
   - type: ConditionalSpawner
     prototypes:
     - MobHenrietta
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobSlimeGloom
   name: Slime Gloom Spawner
   suffix: Science Pet
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
+    - state: gloom
+      sprite: _starcup/Mobs/Pets/gloom.rsi
+    - state: gloomglow
+      sprite: _starcup/Mobs/Pets/gloom.rsi
     - state: ai
   - type: ConditionalSpawner
     prototypes:
     - MobGloom
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobBunnyStarbuck
   name: Bunny Starbuck Spawner
   suffix: Service Pet
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
+    - state: bunny
+      sprite: _Umbra/Mobs/Animals/bunny.rsi
     - state: ai
   - type: ConditionalSpawner
     prototypes:
