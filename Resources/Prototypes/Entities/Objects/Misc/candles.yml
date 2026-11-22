@@ -34,10 +34,10 @@
       alwaysCombustible: true
       canExtinguish: true
       firestacksOnIgnite: 3.0
-      firestackFade: -0.01
+      firestackFade: -0.005 # starcup - from 0.01, buffing burn length
       damage:
         types:
-          Heat: 0.1
+          Heat: 0.075 # starcup - from 0.1, buffing burn length
     - type: FireVisuals
       sprite: Objects/Misc/candles.rsi
       normalState: fire-big
