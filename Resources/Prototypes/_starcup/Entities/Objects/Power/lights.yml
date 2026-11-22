@@ -102,3 +102,15 @@
     lightEnergy: 0.5
     lightRadius: 6
     lightSoftness: 2
+
+- type: entity
+  parent: BaseLightTube
+  name: pink light tube
+  id: LightTubePinkAmbient
+  description: A light fixture.
+  components:
+  - type: LightBulb
+    color: "#ff66cc"
+    lightEnergy: 0.5
+    lightRadius: 6
+    lightSoftness: 2

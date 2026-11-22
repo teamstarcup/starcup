@@ -439,3 +439,27 @@
     energy: 0.5
     softness: 2
     color: "#4040FF"
+
+- type: entity
+  id: PoweredLightPostSmallPinkAmbient
+  suffix: "Pink, Ambient"
+  parent: PoweredLightPostSmall
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubePinkAmbient
+  - type: PointLight
+    radius: 6
+    energy: 0.5
+    softness: 2
+    color: "#ff66cc"
+
+- type: entity
+  id: AlwaysPoweredLightPostSmallPinkAmbient
+  suffix: "Always Powered, Pink, Ambient"
+  parent: LightPostSmall
+  components:
+  - type: PointLight
+    radius: 6
+    energy: 0.5
+    softness: 2
+    color: "#ff66cc"
