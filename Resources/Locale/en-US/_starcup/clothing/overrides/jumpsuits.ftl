@@ -2,10 +2,10 @@
 ent-ClothingUniformJumpsuitCargo = cargo tech jumpsuit
     .desc = A sturdy jumpsuit, issued to members of the Logistics department.
 
-ent-ClothingUniformJumpsuitQM = logistics officer's jumpsuit
+ent-ClothingUniformJumpsuitQM = quartermaster's jumpsuit
     .desc = 'What can brown do for you?'
 
-ent-ClothingUniformJumpsuitQMTurtleneck = logistics officer's turtleneck
+ent-ClothingUniformJumpsuitQMTurtleneck = quartermaster's turtleneck
     .desc = A sharp turtleneck made for the hardy work environment of supply.
 
 # Rewritten for tone
