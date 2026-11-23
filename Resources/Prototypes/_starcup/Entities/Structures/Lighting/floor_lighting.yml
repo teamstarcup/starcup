@@ -117,6 +117,20 @@
     softness: 2
     color: "#BFD3FF" # 12000K
 
+# dim
+- type: entity
+  parent: PoweredFloorLight
+  id: PoweredFloorLightDim
+  suffix: Dim
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeDim
+  - type: PointLight
+    color: "#ba473f"
+    lightEnergy: 0.5
+    lightRadius: 7
+    lightSoftness: 3
+
 # violet
 - type: entity
   id: PoweredFloorLightViolet
@@ -254,19 +268,19 @@
     softness: 0.5
     color: "#ff8227"
 
-# uncomment if literal black lights are needed
-#- type: entity
-#  id: PoweredFloorLightBlack
-#  suffix: Black
-#  parent: PoweredFloorLight
-#  components:
-#  - type: PoweredLight
-#    hasLampOnSpawn: LightTubeCrystalBlack
-#  - type: PointLight
-#    radius: 8
-#    energy: 1
-#    softness: 0.5
-#    color: "#363636"
+# silly, but
+- type: entity
+  parent: PoweredFloorLight
+  id: PoweredFloorLightBlack
+  suffix: Black
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCrystalBlack
+  - type: PointLight
+    radius: 8
+    energy: 1
+    softness: 0.5
+    color: "#363636"
 
 - type: entity
   id: PoweredFloorLightRed
@@ -293,3 +307,100 @@
     energy: 3
     softness: 0.5
     color: "#52ff39"
+
+# ambient
+- type: entity
+  parent: PoweredFloorLight
+  id: PoweredFloorLightRedAmbient
+  suffix: "Red, Ambient"
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeRedAmbient
+  - type: PointLight
+    radius: 6
+    energy: 0.5
+    softness: 2
+    color: "#FF4040"
+
+- type: entity
+  parent: AlwaysPoweredFloorLight
+  id: AlwaysPoweredFloorLightRedAmbient
+  suffix: "Always Powered, Red, Ambient"
+  components:
+  - type: PointLight
+    radius: 6
+    energy: 0.5
+    softness: 2
+    color: "#FF4040"
+
+- type: entity
+  parent: PoweredFloorLight
+  id: PoweredFloorLightGreenAmbient
+  suffix: "Green, Ambient"
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeGreenAmbient
+  - type: PointLight
+    radius: 6
+    energy: 0.5
+    softness: 2
+    color: "#40FF40"
+
+- type: entity
+  parent: AlwaysPoweredFloorLight
+  id: AlwaysPoweredFloorLightGreenAmbient
+  suffix: "Always Powered, Green, Ambient"
+  components:
+  - type: PointLight
+    radius: 6
+    energy: 0.5
+    softness: 2
+    color: "#40FF40"
+
+- type: entity
+  parent: PoweredFloorLight
+  id: PoweredFloorLightBlueAmbient
+  suffix: "Blue, Ambient"
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeBlueAmbient
+  - type: PointLight
+    radius: 6
+    energy: 0.5
+    softness: 2
+    color: "#4040FF"
+
+- type: entity
+  parent: AlwaysPoweredFloorLight
+  id: AlwaysPoweredFloorLightBlueAmbient
+  suffix: "Always Powered, Blue, Ambient"
+  components:
+  - type: PointLight
+    radius: 6
+    energy: 0.5
+    softness: 2
+    color: "#4040FF"
+
+- type: entity
+  parent: PoweredFloorLight
+  id: PoweredFloorLightPinkAmbient
+  suffix: "Pink, Ambient"
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubePinkAmbient
+  - type: PointLight
+    radius: 6
+    energy: 0.5
+    softness: 2
+    color: "#ff66cc"
+
+- type: entity
+  parent: AlwaysPoweredFloorLight
+  id: AlwaysPoweredFloorLightPinkAmbient
+  suffix: "Always Powered, Pink, Ambient"
+  components:
+  - type: PointLight
+    radius: 6
+    energy: 0.5
+    softness: 2
+    color: "#ff66cc"
