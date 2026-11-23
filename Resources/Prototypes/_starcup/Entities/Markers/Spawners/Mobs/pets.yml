@@ -294,3 +294,20 @@
   - type: ConditionalSpawner
     prototypes:
     - MobStarbuck
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobPossumPoppy
+  name: Possum Poppy Spawner
+  suffix: Engineering Pet
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: poppy
+      sprite: Mobs/Animals/possum.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobPossumPoppy
