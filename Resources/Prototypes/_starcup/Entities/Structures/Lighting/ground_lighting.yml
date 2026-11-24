@@ -114,6 +114,31 @@
     softness: 2
     color: "#BFD3FF" # 12000K color temp
 
+# dim
+- type: entity
+  parent: PoweredLightPostSmall
+  id: PoweredLightPostSmallDim
+  suffix: "Dim"
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeDim
+  - type: PointLight
+    color: "#ba473f"
+    lightEnergy: 0.5
+    lightRadius: 7
+    lightSoftness: 3
+
+- type: entity
+  parent: LightPostSmall
+  id: AlwaysPoweredLightPostSmallDim
+  suffix: "Always Powered, Dim"
+  components:
+  - type: PointLight
+    color: "#ba473f"
+    lightEnergy: 0.5
+    lightRadius: 7
+    lightSoftness: 3
+
 # empty
 - type: entity
   id: PoweredLightPostSmallBroken
@@ -245,30 +270,30 @@
     softness: 0.9
     color: "#ff8227"
 
-# literally black lights are useless. but they're here if we ever want them
-#- type: entity
-#  id: PoweredLightPostSmallBlack
-#  suffix: "Black"
-#  parent: PoweredLightPostSmall
-#  components:
-#  - type: PoweredLight
-#    hasLampOnSpawn: LightTubeCrystalBlack
-#  - type: PointLight
-#    radius: 10
-#    energy: 2.5
-#    softness: 0.9
-#    color: "#363636"
+# silly, but
+- type: entity
+  parent: PoweredLightPostSmall
+  id: PoweredLightPostSmallBlack
+  suffix: "Black"
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCrystalBlack
+  - type: PointLight
+    radius: 8
+    energy: 1
+    softness: 0.5
+    color: "#363636"
 
-#- type: entity
-#  id: AlwaysPoweredLightPostSmallBlack
-#  suffix: "Always Powered, Black"
-#  parent: LightPostSmall
-#  components:
-#  - type: PointLight
-#    radius: 10
-#    energy: 2.5
-#    softness: 0.9
-#    color: "#363636"
+- type: entity
+  id: AlwaysPoweredLightPostSmallBlack
+  suffix: "Always Powered, Black"
+  parent: LightPostSmall
+  components:
+  - type: PointLight
+    radius: 10
+    energy: 2.5
+    softness: 0.9
+    color: "#363636"
 
 - type: entity
   id: PoweredLightPostSmallRed
@@ -414,3 +439,27 @@
     energy: 0.5
     softness: 2
     color: "#4040FF"
+
+- type: entity
+  id: PoweredLightPostSmallPinkAmbient
+  suffix: "Pink, Ambient"
+  parent: PoweredLightPostSmall
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubePinkAmbient
+  - type: PointLight
+    radius: 6
+    energy: 0.5
+    softness: 2
+    color: "#ff66cc"
+
+- type: entity
+  id: AlwaysPoweredLightPostSmallPinkAmbient
+  suffix: "Always Powered, Pink, Ambient"
+  parent: LightPostSmall
+  components:
+  - type: PointLight
+    radius: 6
+    energy: 0.5
+    softness: 2
+    color: "#ff66cc"

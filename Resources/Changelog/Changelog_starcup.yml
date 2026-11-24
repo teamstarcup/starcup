@@ -1,26 +1,4 @@
 ﻿Entries:
-- author: K-Dynamic
-  changes:
-  - message: Renamed "shell box (X)" to "ammunition box (.50 X)" to match existing
-      naming scheme, and are thus easier to find in certain vendors and fabricators.
-    type: Tweak
-  id: 8067
-  time: '2025-03-15T16:43:49.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/35326
-- author: VerinSenpai
-  changes:
-  - message: Holopads now collide with walls instead of phasing through them.
-    type: Fix
-  id: 8068
-  time: '2025-03-16T00:41:50.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/34300
-- author: little-meow-meow
-  changes:
-  - message: Fixed players appearing to be crawling when they aren't.
-    type: Fix
-  id: 8069
-  time: '2025-07-16T13:40:45.0000000+00:00'
-  url: https://github.com/teamstarcup/starcup/pull/242
 - author: little-meow-meow
   changes:
   - message: Fixed players appearing to be crawling when they aren't.
@@ -4626,3 +4604,39 @@
   id: 8566
   time: '2026-11-13T22:41:11.0000000+00:00'
   url: https://github.com/teamstarcup/starcup/pull/1035
+- author: KoboldCatgirl
+  changes:
+  - message: The butchering station is once again the most humane method of killing
+      and butchering large animals, including cows, crabs, sheep, and pigs.
+    type: Fix
+  - message: Large animals like cows and pigs once again can't be butchered via knife.
+    type: Fix
+  id: 8567
+  time: '2026-11-21T18:49:47.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/1041
+- author: KoboldCatgirl
+  changes:
+  - message: The Logistics Officer has been renamed to Quartermaster, after a minor
+      Hawkmoon uniform shipment mixup.
+    type: Tweak
+  id: 8568
+  time: '2026-11-23T21:34:05.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/1044
+- author: KoboldCatgirl
+  changes:
+  - message: Fixed the occlusion on fireplaces so they shine in the right direction.
+    type: Fix
+  - message: (Non-Player Facing) Postlights now replace other light fixtures properly
+      when placed.
+    type: Fix
+  - message: (Non-Player Facing) New lights for mappers! Dim, black, and ambient pink
+      floor/post lights, plus ambient R/G/B floor lights
+    type: Add
+  - message: Candles now burn down slower and survive longer, lasting about 8-10 minutes.
+    type: Tweak
+  - message: Nerfed the RGB staff to only have 1 charge, which it recovers every 3
+      minutes.
+    type: Tweak
+  id: 8569
+  time: '2026-11-23T21:33:20.0000000+00:00'
+  url: https://github.com/teamstarcup/starcup/pull/1047

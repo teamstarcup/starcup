@@ -41,6 +41,18 @@
     - LightBulb
     - Trash
 
+- type: entity
+  parent: BaseLightTubeCrystal
+  name: dim light tube
+  id: LightTubeDim
+  description: A light fixture.
+  components:
+  - type: LightBulb
+    color: "#ba473f"
+    lightEnergy: 0.5
+    lightRadius: 7
+    lightSoftness: 3
+
 # colored
 - type: entity
   parent: BaseLightTube
@@ -87,6 +99,18 @@
   components:
   - type: LightBulb
     color: "#4040FF"
+    lightEnergy: 0.5
+    lightRadius: 6
+    lightSoftness: 2
+
+- type: entity
+  parent: BaseLightTube
+  name: pink light tube
+  id: LightTubePinkAmbient
+  description: A light fixture.
+  components:
+  - type: LightBulb
+    color: "#ff66cc"
     lightEnergy: 0.5
     lightRadius: 6
     lightSoftness: 2

@@ -12,10 +12,10 @@ ent-ClothingUniformJumpskirtBrigmedic = combat medic jumpskirt
 ent-ClothingUniformJumpskirtCargo = cargo tech jumpskirt
     .desc = A sturdy jumpskirt, issued to members of the Logistics department.
 
-ent-ClothingUniformJumpskirtQM = logistics officer's jumpskirt
+ent-ClothingUniformJumpskirtQM = quartermaster's jumpskirt
     .desc = 'What can brown do for you?'
 
-ent-ClothingUniformJumpskirtQMTurtleneck = logistics officer's turtleneck
+ent-ClothingUniformJumpskirtQMTurtleneck = quartermaster's turtleneck
     .desc = A sharp turtleneck made for the hardy work environment of supply.
 
 # Specific name to more generic ones

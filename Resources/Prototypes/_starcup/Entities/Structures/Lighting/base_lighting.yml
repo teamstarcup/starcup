@@ -64,6 +64,32 @@
     softness: 2
     color: "#BFD3FF" # 12000K
 
+# dim
+- type: entity
+  parent: Poweredlight
+  id: PoweredLightDim
+  description: "A light fixture. Draws power and produces light when equipped with a light tube."
+  suffix: Dim
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeDim
+  - type: PointLight
+    color: "#ba473f"
+    lightEnergy: 0.5
+    lightRadius: 7
+    lightSoftness: 3
+
+- type: entity
+  parent: AlwaysPoweredWallLight
+  id: AlwaysPoweredLightColdDim
+  suffix: Always Powered, Dim
+  components:
+  - type: PointLight
+    color: "#ba473f"
+    lightEnergy: 0.5
+    lightRadius: 7
+    lightSoftness: 3
+
 # colored
 - type: entity
   id: PoweredCyanSmallLight
@@ -135,20 +161,20 @@
     softness: 0.5
     color: "#ff8227"
 
-# commented in case we ever decide to use literally black lights
-#- type: entity
-#  id: PoweredBlackSmallLight
-#  suffix: Black
-#  parent: PoweredSmallLightEmpty
-#  components:
-#  - type: PoweredLight
-#    hasLampOnSpawn: LightBulbCrystalBlack
-#  - type: PointLight
-#    enabled: true
-#    radius: 6
-#    energy: 1
-#    softness: 0.5
-#    color: "#363636"
+# very silly to use these, but
+- type: entity
+  parent: PoweredSmallLightEmpty
+  id: PoweredBlackSmallLight
+  suffix: Black
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightBulbCrystalBlack
+  - type: PointLight
+    enabled: true
+    radius: 6
+    energy: 1
+    softness: 0.5
+    color: "#363636"
 
 - type: entity
   id: PoweredRedSmallLight
