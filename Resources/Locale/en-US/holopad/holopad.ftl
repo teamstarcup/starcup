@@ -64,8 +64,7 @@ holopad-command-lounge = Command - Lounge
 holopad-command-captain = Command - Captain
 holopad-command-hop = Command - HoP
 holopad-command-cmo = Command - CMO
-# starcup: rename QM to LO
-holopad-command-qm = Command - LO
+holopad-command-qm = Command - QM
 holopad-command-ce = Command - CE
 holopad-command-rd = Command - RD
 holopad-command-hos = Command - HoS

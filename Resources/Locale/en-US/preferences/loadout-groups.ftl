@@ -93,13 +93,11 @@ loadout-group-musician-jumpsuit = Musician jumpsuit
 loadout-group-musician-outerclothing = Musician outer clothing
 
 # Cargo
-# begin starcup: rename quartermaster to logistics officer
-loadout-group-quartermaster-head = Logistics Officer head
-loadout-group-quartermaster-jumpsuit = Logistics Officer jumpsuit
-loadout-group-quartermaster-neck = Logistics Officer neck
-loadout-group-quartermaster-outerclothing = Logistics Officer outer clothing
-loadout-group-quartermaster-shoes = Logistics Officer shoes
-# end starcup
+loadout-group-quartermaster-head = Quartermaster head
+loadout-group-quartermaster-jumpsuit = Quartermaster jumpsuit
+loadout-group-quartermaster-neck = Quartermaster neck
+loadout-group-quartermaster-outerclothing = Quartermaster outer clothing
+loadout-group-quartermaster-shoes = Quartermaster shoes
 
 loadout-group-cargo-technician-head = Cargo Technician head
 loadout-group-cargo-technician-jumpsuit = Cargo Technician jumpsuit

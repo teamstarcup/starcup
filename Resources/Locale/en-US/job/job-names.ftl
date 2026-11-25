@@ -39,10 +39,7 @@ job-name-musician = Musician
 job-name-paramedic = Paramedic
 job-name-passenger = Passenger
 job-name-psychologist = Psychologist
-# begin starcup
-#job-name-qm = Quartermaster
-job-name-qm = Logistics Officer
-# end starcup
+job-name-qm = Quartermaster
 job-name-rd = Research Director
 job-name-reporter = Reporter
 job-name-research-assistant = Research Assistant
@@ -118,10 +115,7 @@ JobMusician = Musician
 JobParamedic = Paramedic
 JobPassenger = Passenger
 JobPsychologist = Psychologist
-# begin starcup
-#JobQuartermaster = Quartermaster
-JobQuartermaster = Logistics Officer
-# end starcup
+JobQuartermaster = Quartermaster
 JobReporter = Reporter
 JobResearchAssistant = Research Assistant
 JobResearchDirector = Research Director

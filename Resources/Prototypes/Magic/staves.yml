@@ -8,9 +8,9 @@
   description: Helps fix the underabundance of RGB gear on the station.
   components:
   - type: LimitedCharges
-    maxCharges: 25
+    maxCharges: 1 # starcup - from 25 to 1
   - type: AutoRecharge
-    rechargeDuration: 30
+    rechargeDuration: 180 # starcup - from 30 seconds to 3 minutes
   - type: Sprite
     sprite: Objects/Weapons/Guns/Basic/staves.rsi
     layers:

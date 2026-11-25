@@ -74,7 +74,7 @@
 - type: entity
   name: space bear
   id: MobBearSpace
-  parent: [MobSpaceBasic, BaseSlicingRefinable, BaseMobDestructible]
+  parent: [MobSpaceBasic, BaseMobDestructible] # starcup - removed BaseSlicingRefinable
   description: It looks friendly. Why don't you give it a hug?
   components:
   - type: Sprite
@@ -95,13 +95,17 @@
         Base: bear_dead
       Dead:
         Base: bear_dead
-  - type: ToolRefinable
-    refineResult:
+  # starcup - require butchering station
+  - type: Butcherable
+    #  - type: ToolRefinable
+    #    refineResult:
+    spawned:
     - id: FoodMeatBear
       amount: 3
     - id: MaterialHideBear
       amount: 1
-      prob: 0.3
+      prob: 0.3 # TODO - test that this works
+  # end starcup
   - type: ReplacementAccent
     accent: genericAggressive
   - type: Vocal
@@ -140,7 +144,7 @@
 - type: entity
   name: space kangaroo
   id: MobKangarooSpace
-  parent: [MobSpaceBasic, StripableInventoryBase, BaseSlicingRefinable, BaseMobDestructible]
+  parent: [MobSpaceBasic, StripableInventoryBase, BaseMobDestructible] # starcup - removed BaseSlicingRefinable
   description: It looks friendly. Why don't you give it a hug?
   components:
   - type: Sprite
@@ -195,11 +199,14 @@
   # end starcup
   - type: ReplacementAccent
     accent: kangaroo
-  - type: ToolRefinable
-    refineResult:
+  # starcup - require butchering station
+  - type: Butcherable
+    #  - type: ToolRefinable
+    #    refineResult:
+    spawned:
     - id: FoodMeat
       amount: 1
-  # begin starcup: revert salvage damage nerf
+  # starcup: revert salvage damage nerf
   # - type: MobThresholds
   #   thresholds:
   #     0: Alive
@@ -216,7 +223,7 @@
 - type: entity
   name: space spider
   id: MobSpiderSpace
-  parent: [MobSpaceBasic, BaseSlicingRefinable, BaseMobDestructible]
+  parent: [MobSpaceBasic, BaseMobDestructible] # starcup - removed BaseSlicingRefinable
   description: It's so glowing, it looks dangerous.
   components:
   - type: Sprite
@@ -241,13 +248,16 @@
         BaseUnshaded: glow
       Dead:
         Base: spacespider_dead
-  - type: ToolRefinable
-    refineResult:
+  # starcup - require butchering station
+  - type: Butcherable
+    #  - type: ToolRefinable
+    #    refineResult:
+    spawned:
     - id: FoodMeatSpider
       amount: 2
     - id: EggSpider
       amount: 1
-      prob: 0.5
+      prob: 0.5 # TODO - test that this works
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
