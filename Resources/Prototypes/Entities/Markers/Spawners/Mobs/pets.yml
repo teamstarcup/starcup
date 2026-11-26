@@ -246,17 +246,22 @@
     - state: ai
   - type: ConditionalSpawner
     prototypes:
-    - MobPossumMortyOld
+    - MobPossumMorty # starcup: used to be the old one
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: SpawnMobRaccoonMorticia
   name: Raccoon Morticia Spawner
   suffix: QM Pet
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen # starcup
     - state: green
+    # begin starcup
+    - state: raccoon
+      sprite: _starcup/Mobs/Pets/morticia.rsi
+    # end starcup
     - state: ai
   - type: ConditionalSpawner
     prototypes:

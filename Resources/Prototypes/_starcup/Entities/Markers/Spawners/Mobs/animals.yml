@@ -1,11 +1,14 @@
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobChickenGeneric
   name: Generic Chicken Spawner
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
+    - state: chicken-0
+      sprite: Mobs/Animals/chicken.rsi
     - state: ai
   - type: RandomSpawner
     prototypes:
@@ -14,13 +17,14 @@
     - MobChicken2
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobChicken
   name: Chicken Spawner
   suffix: Black
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: chicken-0
       sprite: Mobs/Animals/chicken.rsi
@@ -29,13 +33,14 @@
     - MobChicken
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobChicken1
   name: Chicken Spawner
   suffix: Brown
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: chicken-1
       sprite: Mobs/Animals/chicken.rsi
@@ -44,13 +49,14 @@
     - MobChicken1
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobChicken2
   name: Chicken Spawner
   suffix: White
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: chicken-2
       sprite: Mobs/Animals/chicken.rsi
@@ -59,12 +65,13 @@
     - MobChicken2
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobBunny
   name: bunny spawner
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
     - state: icon
       sprite: _Umbra/Mobs/Animals/bunny.rsi
@@ -73,13 +80,33 @@
     - MobBunny
 
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup
   id: SpawnMobArcticFox
   name: arctic fox spawner
   components:
   - type: Sprite
     layers:
+    - state: shadowgreen
     - state: green
+    - state: arcticfox
+      sprite: _DV/Mobs/Pets/arcticfox.rsi
   - type: ConditionalSpawner
     prototypes:
     - MobArcticFox
+
+- type: entity
+  parent: MarkerBaseStarcup
+  id: SpawnMobRaccoon
+  name: Raccoon Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowgreen
+    - state: green
+    - state: raccoon
+      sprite: _starcup/Mobs/Animals/Procyons/raccoon_gray.rsi
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobRaccoon
+    - MobRaccoonBrown
