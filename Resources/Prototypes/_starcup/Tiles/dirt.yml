@@ -10,46 +10,16 @@
   - 0.0166
   - 0.0166
   - 0.0166
-  edgeSpritePriority: 2
+  edgeSpritePriority: 235
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge.png
-
-- type: tile
-  id: FloorPlanetDirtPaleGrassy
-  parent: FloorPlanetDirtPale
-  name: grassy pale dirt
-  sprite: /Textures/_starcup/Tiles/Planet/dirt_pale_grassy.rsi/dirt.png
-  variants: 8
-  placementVariants:
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  footstepSounds:
-    collection: FootstepGrass
-
-- type: tile
-  id: FloorPlanetDirtPaleGrassyCold
-  parent: FloorPlanetDirtPaleGrassy
-  name: cold grassy pale dirt
-  sprite: /Textures/_starcup/Tiles/Planet/dirt_pale_grassy_cold.rsi/dirt.png
-
-- type: tile
-  id: FloorPlanetDirtPaleGrassyGolden
-  parent: FloorPlanetDirtPaleGrassy
-  name: golden grassy pale dirt
-  sprite: /Textures/_starcup/Tiles/Planet/dirt_pale_grassy_golden.rsi/dirt.png
+    SouthEast: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge_SE.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge_NE.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge_NW.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge_SW.png
+    South: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge_S.png
+    East: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge_E.png
+    North: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge_N.png
+    West: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge_W.png
 
 - type: tile
   id: FloorPlanetDirtPaleSnowy
@@ -70,74 +40,27 @@
     collection: FootstepSnow
 
 - type: tile
-  id: FloorPlanetDirtGrassy
-  parent: FloorPlanetDirtPaleGrassy
-  name: grassy dirt
-  sprite: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/dirt.png
-  edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
-
-- type: tile
-  id: FloorPlanetDirtGrassyCold
-  parent: FloorPlanetDirtGrassy
-  name: cold grassy dirt
-  sprite: /Textures/_starcup/Tiles/Planet/dirt_grassy_cold.rsi/dirt.png
-
-- type: tile
-  id: FloorPlanetDirtGrassyGolden
-  parent: FloorPlanetDirtGrassy
-  name: cold grassy dirt
-  sprite: /Textures/_starcup/Tiles/Planet/dirt_grassy_golden.rsi/dirt.png
-
-- type: tile
   id: FloorPlanetDirtTwilight
   parent: FloorPlanetDirtPale
   name: twilight dirt
   sprite: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/dirt.png
-  variants: 8
+  variants: 5
   placementVariants:
   - 0.8
   - 0.0166
   - 0.0166
   - 0.0166
   - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
+  edgeSpritePriority: 230
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge.png
-
-- type: tile
-  id: FloorPlanetGrassyDirtTwilight
-  parent: FloorPlanetDirtTwilight
-  name: grassy twilight dirt
-  sprite: /Textures/_starcup/Tiles/Planet/dirt_twilight_grassy.rsi/dirt.png
-  variants: 8
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  footstepSounds:
-    collection: FootstepGrass
+    SouthEast: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge_SE.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge_NE.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge_NW.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge_SW.png
+    South: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge_S.png
+    East: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge_E.png
+    North: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge_N.png
+    West: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge_W.png
 
 - type: tile
   id: FloorPlanetDirtSnowy
@@ -156,3 +79,43 @@
   - 1.0
   footstepSounds:
     collection: FootstepSnow
+
+- type: tile
+  id: FloorPlanetDirtCompacted
+  parent: BaseFloorPlanet
+  name: compacted dirt
+  sprite: /Textures/_WizDen/Tiles/Dirt/dirt.png
+  variants: 5
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 225
+  edgeSprites:
+    SouthEast: /Textures/_WizDen/Tiles/Dirt/single_edge_SE.png
+    NorthEast: /Textures/_WizDen/Tiles/Dirt/single_edge_NE.png
+    NorthWest: /Textures/_WizDen/Tiles/Dirt/single_edge_NW.png
+    SouthWest: /Textures/_WizDen/Tiles/Dirt/single_edge_SW.png
+    South: /Textures/_WizDen/Tiles/Dirt/double_edge_S.png
+    East: /Textures/_WizDen/Tiles/Dirt/double_edge_E.png
+    North: /Textures/_WizDen/Tiles/Dirt/double_edge_N.png
+    West: /Textures/_WizDen/Tiles/Dirt/double_edge_W.png
+
+- type: tile
+  id: FloorCaveRocky
+  parent: FloorCave
+  name: rocky cave
+  sprite: /Textures/_WizDen/Tiles/Cave/cave.png
+  variants: 1
+  edgeSpritePriority: 211
+  edgeSprites:
+    SouthEast: /Textures/_WizDen/Tiles/Cave/single_edge_SE.png
+    NorthEast: /Textures/_WizDen/Tiles/Cave/single_edge_NE.png
+    NorthWest: /Textures/_WizDen/Tiles/Cave/single_edge_NW.png
+    SouthWest: /Textures/_WizDen/Tiles/Cave/single_edge_SW.png
+    South: /Textures/_WizDen/Tiles/Cave/double_edge_S.png
+    East: /Textures/_WizDen/Tiles/Cave/double_edge_E.png
+    North: /Textures/_WizDen/Tiles/Cave/double_edge_N.png
+    West: /Textures/_WizDen/Tiles/Cave/double_edge_W.png

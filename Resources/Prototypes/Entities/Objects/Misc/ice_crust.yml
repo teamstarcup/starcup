@@ -11,12 +11,41 @@
       soundGroups:
         Brute:
           collection: GlassBreak
+    # begin starcup
     - type: Sprite
-      sprite: Objects/Misc/ice_crust.rsi
+      sprite: _starcup/Objects/Misc/ice_crust.rsi
       layers:
-        - state: ice
+        - state: ice1
+          map: [ "base" ]
+          #map: ["enum.FoamVisualLayers.Base"]
+        - map: [ "enum.EdgeLayer.South" ]
+          state: double_edge_S
+        - map: [ "enum.EdgeLayer.East" ]
+          state: double_edge_E
+        - map: [ "enum.EdgeLayer.North" ]
+          state: double_edge_N
+        - map: [ "enum.EdgeLayer.West" ]
+          state: double_edge_W
       drawdepth: FloorObjects
-      color: "#ffffff44"
+    - type: SmoothEdge
+    - type: IconSmooth
+      mode: NoSprite
+      key: ice
+    - type: RandomSprite
+      available:
+      - base:
+          ice1: ""
+          ice2: ""
+          ice3: ""
+          ice4: ""
+    - type: Appearance
+    - type: DamageVisuals
+      thresholds: [2, 5, 7]
+      damageDivisor: 1
+      trackAllDamage: true
+      damageOverlay:
+        sprite: _starcup/Objects/Misc/ice_crust_cracks.rsi
+    # end starcup
     - type: Clickable
     - type: Transform
       anchored: true

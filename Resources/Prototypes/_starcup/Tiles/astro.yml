@@ -4,22 +4,24 @@
   name: cold astro-grass
   parent: FloorAstroGrass
   sprite: /Textures/_starcup/Tiles/Planet/grass_cold/grass.png
-  variants: 4
+  variants: 6
   placementVariants:
   - 1.0
   - 1.0
   - 1.0
   - 1.0
-  edgeSpritePriority: 6
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 548
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Astro/astro_grass_cold/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Astro/astro_grass_cold/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Astro/astro_grass_cold/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Astro/astro_grass_cold/single_edge.png
-    South: /Textures/_starcup/Tiles/Astro/astro_grass_cold/double_edge.png
-    East: /Textures/_starcup/Tiles/Astro/astro_grass_cold/double_edge.png
-    North: /Textures/_starcup/Tiles/Astro/astro_grass_cold/double_edge.png
-    West: /Textures/_starcup/Tiles/Astro/astro_grass_cold/double_edge.png
+    SouthEast: /Textures/_starcup/Tiles/Misc/AstroGrassCold/single_edge_SE.png
+    NorthEast: /Textures/_starcup/Tiles/Misc/AstroGrassCold/single_edge_NE.png
+    NorthWest: /Textures/_starcup/Tiles/Misc/AstroGrassCold/single_edge_NW.png
+    SouthWest: /Textures/_starcup/Tiles/Misc/AstroGrassCold/single_edge_SW.png
+    South: /Textures/_starcup/Tiles/Misc/AstroGrassCold/double_edge_S.png
+    East: /Textures/_starcup/Tiles/Misc/AstroGrassCold/double_edge_E.png
+    North: /Textures/_starcup/Tiles/Misc/AstroGrassCold/double_edge_N.png
+    West: /Textures/_starcup/Tiles/Misc/AstroGrassCold/double_edge_W.png
   baseTurf: Plating
   deconstructTools: [ Digging ]
   itemDrop: FloorTileItemAstroGrassCold
@@ -39,16 +41,6 @@
   - 1.0
   - 1.0
   - 1.0
-  edgeSpritePriority: 6
-  edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Astro/astro_grass_cold/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Astro/astro_grass_cold/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Astro/astro_grass_cold/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Astro/astro_grass_cold/single_edge.png
-    South: /Textures/_starcup/Tiles/Astro/astro_grass_cold/double_edge.png
-    East: /Textures/_starcup/Tiles/Astro/astro_grass_cold/double_edge.png
-    North: /Textures/_starcup/Tiles/Astro/astro_grass_cold/double_edge.png
-    West: /Textures/_starcup/Tiles/Astro/astro_grass_cold/double_edge.png
   baseTurf: Plating
   deconstructTools: [ Digging ]
   itemDrop: FloorTileItemAstroGrassSnowy
@@ -58,22 +50,24 @@
   name: twilight astro-grass
   parent: FloorAstroGrass
   sprite: /Textures/_starcup/Tiles/Planet/grass_twilight/grass.png
-  variants: 4
+  variants: 6
   placementVariants:
   - 1.0
   - 1.0
   - 1.0
   - 1.0
-  edgeSpritePriority: 6
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 561
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Astro/astro_grass_twilight/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Astro/astro_grass_twilight/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Astro/astro_grass_twilight/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Astro/astro_grass_twilight/single_edge.png
-    South: /Textures/_starcup/Tiles/Astro/astro_grass_twilight/double_edge.png
-    East: /Textures/_starcup/Tiles/Astro/astro_grass_twilight/double_edge.png
-    North: /Textures/_starcup/Tiles/Astro/astro_grass_twilight/double_edge.png
-    West: /Textures/_starcup/Tiles/Astro/astro_grass_twilight/double_edge.png
+    SouthEast: /Textures/_starcup/Tiles/Misc/AstroGrassTwilight/single_edge_SE.png
+    NorthEast: /Textures/_starcup/Tiles/Misc/AstroGrassTwilight/single_edge_NE.png
+    NorthWest: /Textures/_starcup/Tiles/Misc/AstroGrassTwilight/single_edge_NW.png
+    SouthWest: /Textures/_starcup/Tiles/Misc/AstroGrassTwilight/single_edge_SW.png
+    South: /Textures/_starcup/Tiles/Misc/AstroGrassTwilight/double_edge_S.png
+    East: /Textures/_starcup/Tiles/Misc/AstroGrassTwilight/double_edge_E.png
+    North: /Textures/_starcup/Tiles/Misc/AstroGrassTwilight/double_edge_N.png
+    West: /Textures/_starcup/Tiles/Misc/AstroGrassTwilight/double_edge_W.png
   baseTurf: Plating
   deconstructTools: [ Digging ]
   itemDrop: FloorTileItemAstroGrassTwilight
@@ -83,54 +77,26 @@
   name: golden astro-grass
   parent: FloorAstroGrass
   sprite: /Textures/_starcup/Tiles/Planet/grass_golden/grass.png
-  variants: 4
+  variants: 6
   placementVariants:
   - 1.0
   - 1.0
   - 1.0
   - 1.0
-  edgeSpritePriority: 6
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 562
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Astro/astro_grass_golden/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Astro/astro_grass_golden/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Astro/astro_grass_golden/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Astro/astro_grass_golden/single_edge.png
-    South: /Textures/_starcup/Tiles/Astro/astro_grass_golden/double_edge.png
-    East: /Textures/_starcup/Tiles/Astro/astro_grass_golden/double_edge.png
-    North: /Textures/_starcup/Tiles/Astro/astro_grass_golden/double_edge.png
-    West: /Textures/_starcup/Tiles/Astro/astro_grass_golden/double_edge.png
+    SouthEast: /Textures/_starcup/Tiles/Misc/AstroGrassGolden/single_edge_SE.png
+    NorthEast: /Textures/_starcup/Tiles/Misc/AstroGrassGolden/single_edge_NE.png
+    NorthWest: /Textures/_starcup/Tiles/Misc/AstroGrassGolden/single_edge_NW.png
+    SouthWest: /Textures/_starcup/Tiles/Misc/AstroGrassGolden/single_edge_SW.png
+    South: /Textures/_starcup/Tiles/Misc/AstroGrassGolden/double_edge_S.png
+    East: /Textures/_starcup/Tiles/Misc/AstroGrassGolden/double_edge_E.png
+    North: /Textures/_starcup/Tiles/Misc/AstroGrassGolden/double_edge_N.png
+    West: /Textures/_starcup/Tiles/Misc/AstroGrassGolden/double_edge_W.png
   deconstructTools: [ Cutting ]
   itemDrop: FloorTileItemAstroGrassGolden
-
-- type: tile
-  id: FloorAstroDarkGrassEdges
-  name: dark astro-grass with edges
-  parent: FloorGrassDark
-  edgeSpritePriority: 6
-  edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Astro/astro_grass_dark/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Astro/astro_grass_dark/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Astro/astro_grass_dark/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Astro/astro_grass_dark/single_edge.png
-    South: /Textures/_starcup/Tiles/Astro/astro_grass_dark/double_edge.png
-    East: /Textures/_starcup/Tiles/Astro/astro_grass_dark/double_edge.png
-    North: /Textures/_starcup/Tiles/Astro/astro_grass_dark/double_edge.png
-    West: /Textures/_starcup/Tiles/Astro/astro_grass_dark/double_edge.png
-
-- type: tile
-  id: FloorLightAstroGrassEdges
-  name: light astro-grass with edges
-  parent: FloorGrassLight
-  edgeSpritePriority: 6
-  edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Astro/astro_grass_light/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Astro/astro_grass_light/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Astro/astro_grass_light/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Astro/astro_grass_light/single_edge.png
-    South: /Textures/_starcup/Tiles/Astro/astro_grass_light/double_edge.png
-    East: /Textures/_starcup/Tiles/Astro/astro_grass_light/double_edge.png
-    North: /Textures/_starcup/Tiles/Astro/astro_grass_light/double_edge.png
-    West: /Textures/_starcup/Tiles/Astro/astro_grass_light/double_edge.png
 
 # Snow & ice
 
@@ -138,7 +104,7 @@
   id: FloorAstroSnowGrassy
   name: grassy astro-snow
   parent: FloorSnowGrassy
-  edgeSpritePriority: 6
+  edgeSpritePriority: 1150
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Digging ]
@@ -156,16 +122,16 @@
   - 1.0
   - 1.0
   - 1.0
-  edgeSpritePriority: 6
+  edgeSpritePriority: 540
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/dirt_grassy.rsi/double_edge.png
+    SouthEast: /Textures/_starcup/Tiles/Planet/dirt.rsi/single_edge_SE.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/dirt.rsi/single_edge_NE.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/dirt.rsi/single_edge_NW.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/dirt.rsi/single_edge_SW.png
+    South: /Textures/_starcup/Tiles/Planet/dirt.rsi/double_edge_S.png
+    East: /Textures/_starcup/Tiles/Planet/dirt.rsi/double_edge_E.png
+    North: /Textures/_starcup/Tiles/Planet/dirt.rsi/double_edge_N.png
+    West: /Textures/_starcup/Tiles/Planet/dirt.rsi/double_edge_W.png
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Digging ]
@@ -188,7 +154,7 @@
   - 1.0
   - 1.0
   - 1.0
-  edgeSpritePriority: 6
+  edgeSpritePriority: 539
   edgeSprites:
     SouthEast: /Textures/_starcup/Tiles/Planet/cave.rsi/single_edge.png
     NorthEast: /Textures/_starcup/Tiles/Planet/cave.rsi/single_edge.png
@@ -216,7 +182,7 @@
   - 1.0
   - 1.0
   - 1.0
-  edgeSpritePriority: 6
+  edgeSpritePriority: 541
   edgeSprites:
     SouthEast: /Textures/_starcup/Tiles/Planet/cavedrought.rsi/single_edge.png
     NorthEast: /Textures/_starcup/Tiles/Planet/cavedrought.rsi/single_edge.png
@@ -240,16 +206,16 @@
   - 0.0166
   - 0.0166
   - 0.0166
-  edgeSpritePriority: 6
+  edgeSpritePriority: 543
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge.png
+    SouthEast: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge_SE.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge_NE.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge_NW.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/single_edge_SW.png
+    South: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge_S.png
+    East: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge_E.png
+    North: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge_N.png
+    West: /Textures/_starcup/Tiles/Planet/dirt_pale.rsi/double_edge_W.png
   itemDrop: FloorTileItemAstroDirtPale
 
 - type: tile
@@ -257,24 +223,21 @@
   name: twilight astro-dirt
   parent: FloorAstroDirt
   sprite: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/dirt.png
-  variants: 8
+  variants: 5
   placementVariants:
   - 0.8
   - 0.0166
   - 0.0166
   - 0.0166
   - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  edgeSpritePriority: 6
+  edgeSpritePriority: 542
   edgeSprites:
-    SouthEast: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge.png
-    NorthEast: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge.png
-    NorthWest: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge.png
-    SouthWest: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge.png
-    South: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge.png
-    East: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge.png
-    North: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge.png
-    West: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge.png
+    SouthEast: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge_SE.png
+    NorthEast: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge_NE.png
+    NorthWest: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge_NW.png
+    SouthWest: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/single_edge_SW.png
+    South: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge_S.png
+    East: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge_E.png
+    North: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge_N.png
+    West: /Textures/_starcup/Tiles/Planet/dirt_twilight.rsi/double_edge_W.png
   itemDrop: FloorTileItemAstroDirtTwilight
