@@ -96,6 +96,32 @@
     prototypeToSpawn: PosterRolledLegitCybersunAd
     disassembleTime: 2
 
+- type: entity
+  parent: PosterBase
+  id: PosterLegitElectraAd
+  name: "Electra Dynamics Power Incorporated"
+  description: "Master the stars."
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/posters.rsi
+    state: poster-electra-2
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitElectraAd
+    disassembleTime: 2
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitInterdyneAd
+  name: "Interdyne Pharmaceuticals Laboratories"
+  description: "Synthesize the future."
+  components:
+  - type: Sprite
+    sprite: _starcup/Structures/Wallmounts/posters.rsi
+    state: poster-interdyne
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PosterRolledLegitInterdyneAd
+    disassembleTime: 2
+
 # Rebrands
 - type: entity
   parent: PosterLegitHereForYourSafety

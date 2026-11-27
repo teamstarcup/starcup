@@ -517,7 +517,7 @@
 - type: entity
   parent: NFPosterRolledLegit
   id: PosterRolledLegitElectra
-  name: "Electra Dynamics Energy Corporation"
+  name: "Electra Dynamics Energy Corporation rectangle poster"
   components:
   - type: NFWallmountable
     spawn: PosterLegitElectra
@@ -545,6 +545,22 @@
   components:
   - type: NFWallmountable
     spawn: PosterLegitCybersunAd
+
+- type: entity
+  parent: NFPosterRolledLegit
+  id: PosterRolledLegitElectraAd
+  name: "Electra Dynamics Energy Corporation hexagon poster"
+  components:
+  - type: NFWallmountable
+    spawn: PosterLegitElectraAd
+
+- type: entity
+  parent: NFPosterRolledLegit
+  id: PosterRolledLegitInterdyneAd
+  name: "Interdyne Pharmaceuticals Laboratories"
+  components:
+  - type: NFWallmountable
+    spawn: PosterLegitInterdyneAd
 
 # Contraband posters
 - type: entity
@@ -1010,14 +1026,6 @@
   components:
   - type: NFWallmountable
     spawn: PosterContrabandExoChomp
-
-- type: entity
-  parent: NFPosterRolledContraband
-  id: PosterRolledContrabandHereForYourSafetySyndie
-  name: "Here For Your Safety"
-  components:
-  - type: NFWallmountable
-    spawn: PosterLegitHereForYourSafetySyndie
 
 - type: entity
   parent: NFPosterRolledContraband
