@@ -105,6 +105,11 @@
         range: 1, 2
     - !type:NestedSelector
       tableId: SalvageInstrumentTable
+    # begin starcup
+    - id: PosterRolledAny
+      amount: !type:RangeNumberSelector
+        range: 1, 2
+    # end starcup
 
 - type: entityTable
   id: SalvageTreasureUncommon
@@ -130,6 +135,14 @@
     - id: WristwatchGold
     - !type:NestedSelector
       tableId: RingTableCommon
+    # begin starcup
+    - id: NFPaintingCurtainedRandom
+      weight: 0.5
+    - !type:NestedSelector
+      tableId: CarriedFlags
+    - id: PosterRolledLegitCarpMount
+      weight: 0.2
+    # end starcup
 
 - type: entityTable
   id: SalvageTreasureRare
@@ -163,6 +176,10 @@
           weight: 1
     - !type:NestedSelector
       tableId: RingTableRare
+    # begin starcup
+    - id: NFPaintingCurtainedRandom
+      weight: 0.8
+    # end starcup
 
 - type: entityTable
   id: SalvageTreasureLegendary
@@ -180,6 +197,9 @@
       tableId: RingTableRare
       rolls: !type:RangeNumberSelector
         range: 2, 3
+    # begin starcup
+    - id: NFPaintingCurtainedRandom
+    # end starcup
 
 # Equipment: Tools and things used by salvagers. Quote unquote "Gamer Loot"
 

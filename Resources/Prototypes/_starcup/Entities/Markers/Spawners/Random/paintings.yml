@@ -1,0 +1,60 @@
+# Spawners
+- type: entity
+  parent: MarkerBaseStarcup
+  id: RandomCurtainedPainting
+  name: random curtained painting spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: shadowred
+    - state: red
+    - sprite: _NF/Objects/Decoration/paintings.rsi
+      state: painting
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:NestedSelector
+      tableId: CurtainedPaintings
+
+# Entity tables
+- type: entityTable
+  id: CurtainedPaintings
+  table: !type:GroupSelector
+    children:
+    - id: NFPaintingCurtainedMoony
+    - id: NFPaintingCurtainedPersistenceOfMemory
+    - id: NFPaintingCurtainedTheSonOfMan
+    - id: NFPaintingCurtainedTheKiss
+    - id: NFPaintingCurtainedTheScream
+    - id: NFPaintingCurtainedTheGreatWave
+    - id: NFPaintingCurtainedCafeTerraceAtNight
+    - id: NFPaintingCurtainedNightHawks
+    - id: NFPaintingCurtainedSkeletonCigarette
+    - id: NFPaintingCurtainedSkeletonBoof
+    - id: NFPaintingCurtainedPrayerHands
+    - id: NFPaintingCurtainedOldGuitarist
+    - id: NFPaintingCurtainedOlympia
+    - id: NFPaintingCurtainedSaturn
+    - id: NFPaintingCurtainedSleepingGypsy
+    - id: NFPaintingCurtainedRedBlueYellow
+    - id: NFPaintingCurtainedAmogusTriptych
+    - id: NFPaintingCurtainedHelloWorld
+    - id: NFPaintingCurtainedSadClown
+    - id: PaintingCurtainedLegitMime
+    - id: PaintingCurtainedEmpty
+    - id: PaintingCurtainedCalicoCat
+    - id: PaintingCurtainedDragonRoost
+    - id: PaintingCurtainedRainLizard1
+    - id: PaintingCurtainedRainLizard2
+    - id: PaintingCurtainedRearingUnicorn
+    - id: PaintingCurtainedLadyOfRevolution
+    - id: PaintingCurtainedPillarOfDoom
+    - id: PaintingCurtainedDebug
+    - id: PaintingCurtainedDesire
+    - id: PaintingCurtainedRust
+    - id: PaintingCurtainedVines
+    - id: PaintingCurtainedWeeping
+    - id: PaintingCurtainedFruit
+    - id: PaintingCurtainedRat
+    - id: PaintingCurtainedRatvar
+    - id: PaintingCurtainedRedTide
+    - id: PaintingCurtainedHammer

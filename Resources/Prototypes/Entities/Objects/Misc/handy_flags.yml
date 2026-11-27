@@ -11,10 +11,10 @@
     sprite: Objects/Misc/Handy_Flags/blank_handy_flag.rsi
 
 - type: entity
-  parent: BaseItem
+  parent: [ BaseItem, BaseMinorContraband ] # starcup: Nanotrasen propaganda is contraband!
   id: NTHandyFlag
   name: Nanotrasen handheld flag
-  description: "Glory to NT! Wait, they really made a handheld flag for a corporation?"
+  description: "Death to Nanotrasen! Their hubris will be their end." # starcup: syndie rebrand
   components:
   - type: Sprite
     sprite: Objects/Misc/Handy_Flags/NT_handy_flag.rsi

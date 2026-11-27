@@ -35,6 +35,16 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalGlassBreak
+  # begin starcup
+  - type: DisassembleOnAltVerb
+    verbText: "disassemble-system-verb-pull-down"
+    disassembleTime: 3
+    soundFinished:
+      path: /Audio/_starcup/Items/WoodenFrames/pull-down.ogg
+      params:
+        variation: 0.125
+    prototypeToSpawn: MirrorRoundCarried
+  # end starcup
 
 - type: entity
   parent: Mirror
@@ -43,3 +53,7 @@
   components:
   - type: Sprite
     state: rectangle-mirror
+  # begin starcup
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: MirrorModernCarried
+  # end starcup

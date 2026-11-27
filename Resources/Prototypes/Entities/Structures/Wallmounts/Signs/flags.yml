@@ -32,6 +32,13 @@
     # End DeltaV additions
   - type: Damageable
     damageModifierSet: ThreadMod
+  # begin starcup
+  - type: DisassembleOnAltVerb
+    verbText: "disassemble-system-verb-pull-down"
+    disassembleTime: 3
+    soundFinished:
+      collection: storageRustle
+  # end starcup
 
 - type: entity
   parent: BaseFlag
@@ -41,24 +48,36 @@
   components:
   - type: Sprite
     state: blank_flag
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: FlagCarriedBlank
+  # end starcup
 
 - type: entity
   parent: BaseFlag
   id: NTFlag
   name: Nanotrasen flag
-  description: Glory to NT! Wait, they really made a flag for a corporation?
+  description: Death to Nanotrasen! Their hubris will be their end. # starcup: syndie rebrand
   components:
   - type: Sprite
     state: NT_flag
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: FlagCarriedNT
+  # end starcup
 
 - type: entity
   parent: BaseFlag
   id: SyndieFlag
   name: syndicate flag
-  description: Smells bloody. Death to NT!
+  description: Blood burning with pride. Glory to the Syndicate! # starcup: syndie rebrand
   components:
   - type: Sprite
     state: syndie_flag
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: FlagCarriedSyndie
+  # end starcup
 
 - type: entity
   parent: BaseFlag
@@ -71,6 +90,10 @@
   - type: Construction # DeltaV - Craftable Pride Flags
     graph: Flags
     node: LGBTQFlag
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: FlagCarriedLGBTQ
+  # end starcup
 
 - type: entity
   parent: BaseFlag
@@ -80,3 +103,7 @@
   components:
   - type: Sprite
     state: pirate_flag
+  # begin starcup: unhangable posters
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: FlagCarriedPirate
+  # end starcup

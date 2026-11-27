@@ -1,10 +1,11 @@
 - type: entity
-  parent: MarkerBase
+  parent: MarkerBaseStarcup # starcup
   id: RandomPainting
   name: random painting spawner
   components:
   - type: Sprite
     layers:
+    - state: shadowred # starcup
     - state: red
     - sprite: Structures/Wallmounts/paintings.rsi
       state: painting8
@@ -30,6 +31,23 @@
         # - id: PaintingSleepingGypsy # starcup: removed for tone
         - id: PaintingRedBlueYellow
         - id: PaintingHelloWorld
+        - id: PaintingSadClown # starcup: was missing from the spawner
+        # begin starcup: new paintings
+        - id: FramedPaintingDesire
+        - id: FramedPaintingRust
+        - id: FramedPaintingVines
+        - id: FramedPaintingWeeping
+        - id: FramedPaintingFruit
+        - id: FramedPaintingRat
+        - id: PaintingCalicoCat
+        - id: PaintingDragonRoost
+        - id: PaintingRainLizard1
+        - id: PaintingRainLizard2
+        - id: PaintingLadyOfRevolution
+        - id: PaintingPillarOfDoom
+        # starlight paintings
+        - id: PaintingRedTide
+        # end starcup
       - !type:GroupSelector
         weight: 1
         children:
@@ -37,3 +55,10 @@
         - id: PaintingEmpty
         - id: PaintingMoony
         - id: PaintingAmogusTriptych
+        - id: PosterLegitMime # starcup: we consider it closer to a painting
+        # begin starcup: new paintings
+        - id: FramedPaintingDebug
+        - id: FramedPaintingRatvar
+        - id: PaintingHammer
+        - id: PaintingRearingUnicorn
+        # end starcup
