@@ -18,8 +18,23 @@ trait-southern-desc = You ain't got any accent, an' you woulda known if you did.
 trait-pottymouth-name = Potty mouth
 trait-pottymouth-desc = You're quite above improper language, sometimes even prone to minced oaths.
 
+trait-cant-accent-name = Cant
+trait-cant-accent-description = Ye manner of speaking can be a li'le 'ard to grasp.
+
+trait-devilscant-accent-name = Devil's Cant
+trait-devilscant-accent-description = It might have been thum old oni soldiers who ken this black tongue that taught it tha.
+
 trait-vowed-name = Vow of Silence
 trait-vowed-desc = You're serious about your vow, and uphold it outside of jobs that require one.
+
+trait-nonverbal-light-accent-name = Nonverbal (Light)
+trait-nonverbal-light-accent-desc = Talking can be...
+
+trait-nonverbal-severe-accent-name = Nonverbal (Severe)
+trait-nonverbal-severe-accent-desc = ...!
+
+trait-german-name-starcup = Black Forest
+trait-german-desc-starcup = Zhis akzent has some fantastisch articulatiön.
 
 trait-uncloneable-name = Uncloneable
 trait-uncloneable-desc = Due to some quirk in your physical composition, you cannot be reconstituted by medical cloning.
